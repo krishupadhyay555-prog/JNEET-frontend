@@ -1,0 +1,20 @@
+# Environment
+.env
+.env.local
+.env.production
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug/test files — not for production
+test-db.js
+*.test.js
+*.spec.js
