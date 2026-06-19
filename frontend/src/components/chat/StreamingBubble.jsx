@@ -5,20 +5,19 @@ import { BouncingDots } from "./BouncingDots.jsx";
 
 export function StreamingBubble({ text }) {
   return (
-    <div className="flex items-end gap-2.5">
+    <div className="flex items-end gap-2.5 animate-message-in">
       {/* Avatar */}
-      <div className="w-7 h-7 rounded-full bg-[#1c1c30] border border-[#2a2a44]
-        flex items-center justify-center shrink-0 mb-0.5">
+      <div className="w-7 h-7 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md flex items-center justify-center shrink-0 mb-0.5 shadow-[0_6px_16px_rgba(0,0,0,0.2)]">
         <Bot size={12} className="text-violet-400" />
       </div>
 
       {/* Bubble */}
-      <div className="max-w-[76%]">
+      <div className="max-w-[86%] sm:max-w-[76%]">
         <div
-          className="bg-[#16162a] border border-[#22223a]
+          className="bg-white/[0.055] border border-white/10 backdrop-blur-xl
           rounded-t-2xl rounded-br-2xl rounded-bl-md
           px-4 py-2.5 text-[0.8375rem] leading-[1.65] tracking-[0.004em]
-          shadow-[0_1px_2px_rgba(0,0,0,0.2)]
+          shadow-[0_10px_30px_rgba(0,0,0,0.18)]
           min-w-[3rem]"
         >
           {text ? (

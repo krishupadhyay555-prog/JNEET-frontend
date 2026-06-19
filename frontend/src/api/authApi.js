@@ -14,4 +14,5 @@ export const authApi = {
   login:    (data) => api.post("/auth/login", data),
   logout:   ()     => api.post("/auth/logout"),
   getMe:    ()     => api.get("/auth/me"),
+  updateTargetExam: (data) => api.patch("/auth/me/target-exam", data),
 };

@@ -1,26 +1,17 @@
-// ============================================================
-//  JNEET+ AI — components/dashboard/ExamCountdown.jsx
-//  Counts down to the next NEET/JEE exam date.
-//  Dates auto-advance if past — always shows next upcoming.
-// ============================================================
-
 import { useState, useEffect } from "react";
 import { Timer } from "lucide-react";
+import { getTargetExam } from "../../config/targetExams.js";
 
-// Approximate exam dates — update annually
-const EXAM_DATES = {
-  NEET: { month: 4, day: 4, label: "NEET UG" },   // May 4
-  JEE:  { month: 0, day: 22, label: "JEE Mains" }, // Jan 22
-};
+function getExamDate(targetExamKey) {
+  const selected = getTargetExam(targetExamKey);
+  const fallback = getTargetExam("NEET_2027");
+  const info = selected ?? fallback;
 
-function getNextExamDate(examMode) {
-  const now  = new Date();
-  const info = EXAM_DATES[examMode];
-  let target = new Date(now.getFullYear(), info.month, info.day);
-  if (target <= now) {
-    target = new Date(now.getFullYear() + 1, info.month, info.day);
-  }
-  return { target, label: info.label };
+  return {
+    target: new Date(info.date),
+    label: info.label,
+    isFallback: !selected,
+  };
 }
 
 function formatCountdown(ms) {
@@ -36,8 +27,7 @@ function formatCountdown(ms) {
 function Digit({ value, label }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="bg-bg-panel border border-bg-border rounded-xl px-3 py-2
-        min-w-[48px] text-center">
+      <div className="bg-bg-panel border border-bg-border rounded-xl px-3 py-2 min-w-[48px] text-center">
         <span className="text-xl font-bold text-white tabular-nums font-mono">
           {String(value).padStart(2, "0")}
         </span>
@@ -49,10 +39,10 @@ function Digit({ value, label }) {
   );
 }
 
-export function ExamCountdown({ examMode }) {
-  const { target, label } = getNextExamDate(examMode);
+export function ExamCountdown({ targetExam }) {
+  const { target, label, isFallback } = getExamDate(targetExam);
   const [countdown, setCountdown] = useState(
-    formatCountdown(target - Date.now())
+    { days: 0, hours: 0, minutes: 0, seconds: 0 }
   );
 
   useEffect(() => {
@@ -62,30 +52,35 @@ export function ExamCountdown({ examMode }) {
     return () => clearInterval(id);
   }, [target]);
 
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  const dateStr = target.toLocaleDateString("en-IN", options);
+  const dateStr = target.toLocaleDateString("en-IN", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <div className="bg-bg-card border border-bg-border rounded-2xl p-4">
       <div className="flex items-center gap-2 mb-3">
         <Timer size={14} className="text-violet-400" />
         <span className="text-xs font-semibold text-gray-300">{label} Countdown</span>
-        <span className="ml-auto text-[10px] text-gray-700">{dateStr}</span>
+        <span className="ml-auto text-[10px] text-gray-700">
+          {isFallback ? "Choose target" : dateStr}
+        </span>
       </div>
 
       <div className="flex items-center justify-center gap-3">
-        <Digit value={countdown.days}    label="Days"    />
+        <Digit value={countdown.days}    label="Days"  />
         <span className="text-gray-700 text-lg font-bold mb-4">:</span>
-        <Digit value={countdown.hours}   label="Hours"   />
+        <Digit value={countdown.hours}   label="Hours" />
         <span className="text-gray-700 text-lg font-bold mb-4">:</span>
-        <Digit value={countdown.minutes} label="Mins"    />
+        <Digit value={countdown.minutes} label="Mins"  />
         <span className="text-gray-700 text-lg font-bold mb-4">:</span>
-        <Digit value={countdown.seconds} label="Secs"    />
+        <Digit value={countdown.seconds} label="Secs"  />
       </div>
 
       {countdown.days <= 30 && (
         <p className="text-center text-[11px] text-amber-500/80 mt-3 animate-pulse-soft">
-          ⚡ Final stretch! {countdown.days} days remaining — full focus mode.
+          Final stretch! {countdown.days} days remaining.
         </p>
       )}
     </div>

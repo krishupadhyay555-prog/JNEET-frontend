@@ -77,7 +77,7 @@ export default function AskAI() {
   }, [setBackendError, loadInitialData]);
 
   return (
-    <div className="flex h-screen bg-bg-base text-white overflow-hidden">
+    <div className="flex h-screen bg-bg-base text-white overflow-hidden chat-shell">
 
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -86,8 +86,7 @@ export default function AskAI() {
       <div className="flex-1 flex flex-col min-w-0 h-full relative">
 
         {/* Top bar */}
-        <div className="flex items-center gap-3 px-4 py-3.5
-          border-b border-bg-border bg-bg-surface shrink-0">
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-white/10 bg-bg-surface/80 backdrop-blur-xl shrink-0">
           <button
             onClick={() => setSidebarOpen(true)}
             className="md:hidden text-gray-600 hover:text-white transition p-1 rounded-lg
@@ -117,7 +116,7 @@ export default function AskAI() {
         {/* ── Messages area ──────────────────────────────── */}
         <div
           ref={messagesRef}
-          className="flex-1 overflow-y-auto px-4 py-6 space-y-5"
+          className="flex-1 overflow-y-auto px-3 sm:px-4 py-6 space-y-5 chat-scroll"
         >
           {/* Backend error — with retry button */}
           {backendError && (
@@ -160,9 +159,7 @@ export default function AskAI() {
         {showScrollBtn && !backendError && (
           <button
             onClick={scrollToBottom}
-            className="absolute bottom-[90px] right-5 bg-bg-card border border-bg-border
-              text-gray-400 hover:text-white p-2 rounded-full shadow-card
-              hover:bg-bg-hover transition animate-fade-in z-10"
+            className="absolute bottom-[90px] right-5 bg-bg-card/80 border border-white/10 backdrop-blur-xl text-gray-400 hover:text-white p-2 rounded-full shadow-card hover:bg-bg-hover transition animate-fade-in z-10"
           >
             <ChevronDown size={15} />
           </button>

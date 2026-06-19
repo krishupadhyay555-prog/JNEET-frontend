@@ -34,6 +34,12 @@ const envSchema = z.object({
 
   FRONTEND_URL: z.string().optional(),
 
+  RE_NEET_ACTIVE: z
+    .enum(["true", "false"])
+    .default("false"),
+
+  RE_NEET_DATE: z.string().optional(),
+
   COOKIE_SECRET: z
     .string({ required_error: "COOKIE_SECRET is required in .env" })
     .min(10, "COOKIE_SECRET must be at least 10 characters"), // Relaxed for dev
@@ -54,4 +60,7 @@ if (!parseResult.success) {
   process.exit(1);
 }
 
-export const env = parseResult.data;
+export const env = {
+  ...parseResult.data,
+  RE_NEET_ACTIVE: parseResult.data.RE_NEET_ACTIVE === "true",
+};

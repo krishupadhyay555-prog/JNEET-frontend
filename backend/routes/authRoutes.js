@@ -8,12 +8,13 @@ import { Router }  from "express";
 import { authLimiter }    from "../limiters/authLimiter.js";
 import { validate }       from "../middleware/validate.js";
 import { protect }        from "../middleware/authMiddleware.js";
-import { registerSchema, loginSchema } from "../schemas/authSchemas.js";
+import { registerSchema, loginSchema, targetExamSchema } from "../schemas/authSchemas.js";
 import {
   register,
   login,
   logout,
   getMe,
+  updateTargetExam,
 } from "../controllers/authController.js";
 
 const router = Router();
@@ -23,7 +24,8 @@ router.post("/register", authLimiter, validate(registerSchema), register);
 router.post("/login",    authLimiter, validate(loginSchema),    login);
 
 // Protected routes
-router.post("/logout", protect, logout);
+router.post("/logout", logout);
 router.get( "/me",     protect, getMe);
+router.patch("/me/target-exam", protect, validate(targetExamSchema), updateTargetExam);
 
 export default router;

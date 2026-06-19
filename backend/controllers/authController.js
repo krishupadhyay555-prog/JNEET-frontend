@@ -12,6 +12,7 @@
 import jwt   from "jsonwebtoken";
 import User  from "../models/User.js";
 import { env } from "../config/env.js";
+import { getTargetExamOption } from "../config/targetExams.js";
 
 // ── Cookie Configuration ──────────────────────────────────────
 // Centralised here so register and login always use identical settings.
@@ -20,7 +21,7 @@ function getCookieOptions() {
   return {
     httpOnly: true,   // JavaScript cannot access this cookie — XSS immune
     secure:   isProd, // HTTPS only in production
-    sameSite: isProd ? "strict" : "lax",  // CSRF protection
+    sameSite: isProd ? "none" : "lax",
     maxAge:   7 * 24 * 60 * 60 * 1000,   // 7 days in milliseconds
     path:     "/",
   };
@@ -61,6 +62,8 @@ function sendAuthResponse(user, statusCode, res, message) {
       name:      user.name,
       email:     user.email,
       examMode:  user.examMode,
+      targetExam: user.targetExam ?? null,
+      targetExamPromptDismissed: !!user.targetExamPromptDismissed,
       lastLogin: user.lastLogin,
       createdAt: user.createdAt,
     },
@@ -160,7 +163,7 @@ export const logout = (req, res) => {
   res.clearCookie("jneet_token", {
     httpOnly: true,
     secure:   env.NODE_ENV === "production",
-    sameSite: env.NODE_ENV === "production" ? "strict" : "lax",
+    sameSite: env.NODE_ENV === "production" ? "none" : "lax",
     path:     "/",
   });
 
@@ -192,6 +195,63 @@ export const getMe = async (req, res, next) => {
         name:      user.name,
         email:     user.email,
         examMode:  user.examMode,
+        targetExam: user.targetExam ?? null,
+        targetExamPromptDismissed: !!user.targetExamPromptDismissed,
+        wmsData:   user.wmsData,
+        lastLogin: user.lastLogin,
+        createdAt: user.createdAt,
+      },
+    });
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const updateTargetExam = async (req, res, next) => {
+  try {
+    const option = req.body.targetExam
+      ? getTargetExamOption(req.body.targetExam)
+      : null;
+
+    if (req.body.targetExam && !option) {
+      return res.status(400).json({
+        success: false,
+        error:   "Please select a valid target exam.",
+      });
+    }
+
+    const update = {
+      targetExam: option?.key ?? null,
+      targetExamPromptDismissed: !!req.body.targetExamPromptDismissed,
+    };
+
+    if (option) {
+      update.targetExamPromptDismissed = true;
+    }
+
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { $set: update },
+      { new: true, runValidators: true }
+    ).lean();
+
+    if (!user || !user.isActive) {
+      return res.status(404).json({
+        success: false,
+        error:   "User account not found or deactivated.",
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      student: {
+        _id:       user._id,
+        name:      user.name,
+        email:     user.email,
+        examMode:  user.examMode,
+        targetExam: user.targetExam ?? null,
+        targetExamPromptDismissed: !!user.targetExamPromptDismissed,
         wmsData:   user.wmsData,
         lastLogin: user.lastLogin,
         createdAt: user.createdAt,

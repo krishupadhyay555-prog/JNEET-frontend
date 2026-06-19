@@ -83,6 +83,15 @@ const userSchema = new mongoose.Schema(
       },
       required: [true, "Please select your exam mode (NEET or JEE)"],
     },
+    targetExam: {
+      type:    String,
+      trim:    true,
+      default: null,
+    },
+    targetExamPromptDismissed: {
+      type:    Boolean,
+      default: false,
+    },
     wmsData: {
       type:    [wmsEntrySchema],
       default: [],

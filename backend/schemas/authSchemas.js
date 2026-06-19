@@ -41,3 +41,16 @@ export const loginSchema = z.object({
     .string({ required_error: "Password is required" })
     .min(1, "Password is required"),
 });
+
+export const targetExamSchema = z.object({
+  targetExam: z
+    .string()
+    .trim()
+    .min(1)
+    .nullable()
+    .optional(),
+
+  targetExamPromptDismissed: z
+    .boolean()
+    .optional(),
+});

@@ -187,6 +187,47 @@ input:-webkit-autofill:focus {
   border: 1px solid rgba(30, 30, 56, 0.8);
 }
 
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.97) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out forwards;
+}
+
+.chat-shell {
+  background:
+    radial-gradient(circle at 50% -10%, rgba(91, 179, 255, 0.12), transparent 36%),
+    radial-gradient(circle at 100% 20%, rgba(91, 179, 255, 0.06), transparent 30%),
+    var(--bg-base);
+}
+
+.chat-scroll {
+  scroll-behavior: smooth;
+}
+
+@keyframes messageIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.99); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-message-in {
+  animation: messageIn 0.22s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-message-in,
+  .animate-scale-in {
+    animation: none;
+  }
+
+  html,
+  .chat-scroll {
+    scroll-behavior: auto;
+  }
+}
+
 /* ── Utility: Gradient text ── */
 .gradient-text {
   background: linear-gradient(135deg, #b89aff 0%, #8248fe 50%, #6121ce 100%);

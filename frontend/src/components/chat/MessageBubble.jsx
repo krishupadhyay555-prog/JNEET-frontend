@@ -8,15 +8,15 @@ export const MessageBubble = memo(function MessageBubble({ msg, onToggleSaved })
 
   return (
     <div
-      className={`flex items-end gap-2.5 group
+      className={`flex items-end gap-2.5 group animate-message-in
         ${isUser ? "flex-row-reverse" : "flex-row"}`}
     >
       {/* Avatar */}
       <div
-        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 mb-0.5
+        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 mb-0.5 shadow-[0_6px_16px_rgba(0,0,0,0.2)]
           ${isUser
             ? "bg-violet-600"
-            : "bg-[#1c1c30] border border-[#2a2a44]"
+            : "bg-white/[0.06] border border-white/10 backdrop-blur-md"
           }`}
       >
         {isUser
@@ -27,22 +27,21 @@ export const MessageBubble = memo(function MessageBubble({ msg, onToggleSaved })
 
       {/* Bubble */}
       <div
-        className={`flex flex-col gap-1 max-w-[76%]
+          className={`flex flex-col gap-1 max-w-[86%] sm:max-w-[76%]
           ${isUser ? "items-end" : "items-start"}`}
       >
         <div
           className={`
             px-4 py-2.5 text-[0.8375rem] leading-[1.65]
             tracking-[0.004em] break-words
-            transition-transform duration-150
-            hover:translate-y-[-1px]
+            transition duration-200 hover:translate-y-[-1px]
             ${isUser
-              ? `bg-violet-600 text-white
+              ? `bg-gradient-to-br from-violet-500 to-violet-700 text-white
                  rounded-t-2xl rounded-bl-2xl rounded-br-md
-                 shadow-[0_1px_2px_rgba(0,0,0,0.25)]`
-              : `bg-[#16162a] border border-[#22223a] text-[#f1f1ff]
+                 shadow-[0_10px_28px_rgba(74,161,230,0.16)]`
+              : `bg-white/[0.055] border border-white/10 text-[#f1f1ff] backdrop-blur-xl
                  rounded-t-2xl rounded-br-2xl rounded-bl-md
-                 shadow-[0_1px_2px_rgba(0,0,0,0.2)]`
+                 shadow-[0_10px_30px_rgba(0,0,0,0.18)]`
             }
           `}
         >

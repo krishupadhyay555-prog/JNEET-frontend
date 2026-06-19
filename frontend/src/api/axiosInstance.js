@@ -48,7 +48,9 @@ api.interceptors.response.use(
     // 401: session expired or invalid cookie — dispatch event so
     // AuthContext can react without a hard import cycle
     if (status === 401) {
-      window.dispatchEvent(new CustomEvent("jneet:unauthorized"));
+      window.dispatchEvent(new CustomEvent("jneet:unauthorized", {
+        detail: { url: error.config?.url ?? "" },
+      }));
     }
 
     return Promise.reject(error);

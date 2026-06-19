@@ -26,14 +26,14 @@ export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examM
     : "Physics · Chemistry · Maths";
 
   return (
-    <div className="shrink-0 px-4 py-4 border-t border-bg-border bg-bg-surface">
+    <div className="shrink-0 px-3 sm:px-4 py-4 border-t border-white/10 bg-bg-surface/80 backdrop-blur-xl">
       <div className="max-w-3xl mx-auto">
         <div
-          className={`flex gap-2 items-end rounded-2xl px-4 py-3
-            border transition-all duration-200
+          className={`flex gap-2 items-end rounded-2xl px-4 py-3 bg-white/[0.035] backdrop-blur-xl
+            border transition-all duration-200 shadow-[0_12px_40px_rgba(0,0,0,0.16)]
             ${isStreaming
-              ? "border-violet-600/40 shadow-[0_0_0_2px_rgba(130,72,254,0.08)]"
-              : "border-[#1e1e35] focus-within:border-violet-600/50 focus-within:shadow-[0_0_0_2px_rgba(130,72,254,0.06)]"
+              ? "border-violet-600/40 shadow-[0_0_0_2px_rgba(91,179,255,0.08)]"
+              : "border-white/10 focus-within:border-violet-500/50 focus-within:shadow-[0_0_0_2px_rgba(91,179,255,0.08)]"
             }`}
         >
           <textarea
@@ -53,7 +53,7 @@ export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examM
               onClick={onAbort}
               className="bg-red-500/10 hover:bg-red-500/20
                 border border-red-500/30 text-red-400
-                p-2 rounded-xl transition-all duration-150 shrink-0"
+                p-2 rounded-xl transition-all duration-150 shrink-0 active:scale-95"
             >
               <Square size={14} />
             </button>
@@ -64,7 +64,7 @@ export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examM
               className="bg-violet-600 hover:bg-violet-500 active:scale-95
                 disabled:bg-[#1a1a2e] disabled:text-[#3a3a5a] disabled:cursor-not-allowed
                 text-white p-2 rounded-xl transition-all duration-150 shrink-0
-                hover:shadow-[0_0_10px_rgba(130,72,254,0.35)]"
+                hover:shadow-[0_0_14px_rgba(91,179,255,0.35)]"
             >
               <Send size={14} />
             </button>
