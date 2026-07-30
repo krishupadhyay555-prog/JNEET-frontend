@@ -16,5 +16,4 @@ Thumbs.db
 
 # Debug/test files — not for production
 test-db.js
-*.test.js
 *.spec.js
