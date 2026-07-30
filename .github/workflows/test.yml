@@ -11,6 +11,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install root deps
+        run: npm install
+
       - name: Install frontend deps
         working-directory: ./frontend
         run: npm install
@@ -27,11 +30,11 @@ jobs:
         working-directory: ./backend
         run: npm test
         env:
-           MONGO_URI: mongodb://localhost:27017/test
-           JWT_SECRET: test_jwt_secret_key_for_ci_environment_only_12345
-           GEMINI_API_KEY: dummy_gemini_key_for_testing
-           COOKIE_SECRET: test_cookie_secret_for_ci_environment_only_12345
-           NODE_ENV: test
+          MONGO_URI: mongodb://localhost:27017/test
+          JWT_SECRET: test_jwt_secret_key_for_ci_environment_only_12345
+          GEMINI_API_KEY: dummy_gemini_key_for_testing
+          COOKIE_SECRET: test_cookie_secret_for_ci_environment_only_12345
+          NODE_ENV: test
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
