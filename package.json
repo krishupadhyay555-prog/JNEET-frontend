@@ -1,0 +1,22 @@
+{
+  "name": "jneet_ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishupadhyay555-prog/JNEET-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krishupadhyay555-prog/JNEET-frontend/issues"
+  },
+  "homepage": "https://github.com/krishupadhyay555-prog/JNEET-frontend#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^26.1.2"
+  }
+}
