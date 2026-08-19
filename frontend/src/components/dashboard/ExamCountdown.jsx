@@ -1,15 +1,28 @@
-import { useState, useEffect } from "react";
-import { Timer } from "lucide-react";
-import { getTargetExam } from "../../config/targetExams.js";
+// ============================================================
+//  JNEET+ AI — components/dashboard/ExamCountdown.jsx  (Fixed)
+//  FIXES:
+//    - Fallback is now dynamic (nearest upcoming exam) instead of
+//      a hardcoded "NEET_2027" that would eventually go stale too.
+//    - Tentative dates show "~" + a disclaimer instead of fake precision.
+//    - If a saved target has already passed, shows a clear message
+//      instead of a frozen 00:00:00:00 countdown.
+// ============================================================
 
-function getExamDate(targetExamKey) {
-  const selected = getTargetExam(targetExamKey);
-  const fallback = getTargetExam("NEET_2027");
+import { useState, useEffect } from "react";
+import { Timer, CalendarX } from "lucide-react";
+import { getTargetExam, getDefaultTargetExam } from "../../config/targetExams.js";
+
+function getExamInfo(targetExamKey) {
+  const selected = targetExamKey ? getTargetExam(targetExamKey) : null;
+  const fallback = getDefaultTargetExam();
   const info = selected ?? fallback;
+
+  if (!info) return null; // extreme edge case: no upcoming exams in the list at all
 
   return {
     target: new Date(info.date),
     label: info.label,
+    tentative: !!info.tentative,
     isFallback: !selected,
   };
 }
@@ -24,10 +37,13 @@ function formatCountdown(ms) {
   return { days, hours, minutes, seconds };
 }
 
-function Digit({ value, label }) {
+function Digit({ value, label, urgent }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="bg-bg-panel border border-bg-border rounded-xl px-3 py-2 min-w-[48px] text-center">
+      <div
+        className={`bg-bg-panel border rounded-xl px-3 py-2 min-w-[48px] text-center transition-colors duration-300
+          ${urgent ? "border-amber-600/50 shadow-glow-sm" : "border-bg-border"}`}
+      >
         <span className="text-xl font-bold text-white tabular-nums font-mono">
           {String(value).padStart(2, "0")}
         </span>
@@ -40,47 +56,87 @@ function Digit({ value, label }) {
 }
 
 export function ExamCountdown({ targetExam }) {
-  const { target, label, isFallback } = getExamDate(targetExam);
+  const examInfo = getExamInfo(targetExam);
+
   const [countdown, setCountdown] = useState(
     { days: 0, hours: 0, minutes: 0, seconds: 0 }
   );
 
   useEffect(() => {
-    const tick = () => setCountdown(formatCountdown(target - Date.now()));
+    if (!examInfo || examInfo.target.getTime() <= Date.now()) return;
+    const tick = () => setCountdown(formatCountdown(examInfo.target - Date.now()));
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [target]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [examInfo?.target?.getTime()]);
 
-  const dateStr = target.toLocaleDateString("en-IN", {
+  // No upcoming exam at all in the config — shouldn't normally happen
+  if (!examInfo) {
+    return (
+      <div className="bg-bg-card border border-bg-border rounded-2xl p-4 text-center">
+        <p className="text-xs text-gray-500">No upcoming exam dates available right now.</p>
+      </div>
+    );
+  }
+
+  const hasPassed = examInfo.target.getTime() <= Date.now();
+
+  const dateStr = examInfo.target.toLocaleDateString("en-IN", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 
+  // Defensive case: a previously-saved target's date has since passed
+  // (e.g. the exam happened between the user's last visit and today)
+  if (hasPassed) {
+    return (
+      <div className="bg-bg-card border border-bg-border rounded-2xl p-4 flex items-center gap-3 animate-fade-up">
+        <CalendarX size={16} className="text-gray-600 shrink-0" />
+        <div>
+          <p className="text-xs font-semibold text-gray-300">{examInfo.label} has already taken place</p>
+          <p className="text-[11px] text-gray-600 mt-0.5">Update your target exam to keep the countdown accurate.</p>
+        </div>
+      </div>
+    );
+  }
+
+  const urgent = countdown.days <= 30;
+
   return (
-    <div className="bg-bg-card border border-bg-border rounded-2xl p-4">
+    <div className="bg-bg-card border border-bg-border rounded-2xl p-4 animate-fade-up">
       <div className="flex items-center gap-2 mb-3">
         <Timer size={14} className="text-violet-400" />
-        <span className="text-xs font-semibold text-gray-300">{label} Countdown</span>
+        <span className="text-xs font-semibold text-gray-300">{examInfo.label} Countdown</span>
         <span className="ml-auto text-[10px] text-gray-700">
-          {isFallback ? "Choose target" : dateStr}
+          {examInfo.isFallback
+            ? "Choose target"
+            : examInfo.tentative
+              ? `~${dateStr} (tentative)`
+              : dateStr}
         </span>
       </div>
 
       <div className="flex items-center justify-center gap-3">
-        <Digit value={countdown.days}    label="Days"  />
+        <Digit value={countdown.days}    label="Days"  urgent={urgent} />
         <span className="text-gray-700 text-lg font-bold mb-4">:</span>
-        <Digit value={countdown.hours}   label="Hours" />
+        <Digit value={countdown.hours}   label="Hours" urgent={urgent} />
         <span className="text-gray-700 text-lg font-bold mb-4">:</span>
-        <Digit value={countdown.minutes} label="Mins"  />
+        <Digit value={countdown.minutes} label="Mins"  urgent={urgent} />
         <span className="text-gray-700 text-lg font-bold mb-4">:</span>
-        <Digit value={countdown.seconds} label="Secs"  />
+        <Digit value={countdown.seconds} label="Secs"  urgent={urgent} />
       </div>
 
-      {countdown.days <= 30 && (
+      {urgent && (
         <p className="text-center text-[11px] text-amber-500/80 mt-3 animate-pulse-soft">
           Final stretch! {countdown.days} days remaining.
+        </p>
+      )}
+
+      {examInfo.tentative && (
+        <p className="text-center text-[10px] text-gray-700 mt-2">
+          Official date not yet announced by NTA — based on past-year trends.
         </p>
       )}
     </div>

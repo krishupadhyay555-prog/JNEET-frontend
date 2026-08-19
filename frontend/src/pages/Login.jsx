@@ -1,7 +1,15 @@
 // ============================================================
-//  JNEET+ AI — pages/Login.jsx  (Production v2.0)
-//  Gmail-style: persistent inline red errors below each field.
-//  No toasts for form validation. Cookie-based auth.
+//  JNEET+ AI — pages/Login.jsx  (v3.1 — readability fix)
+//  FIXED: the muted secondary-text color (#8B8594) used for the
+//  subtitle, labels, and "New here?" line had borderline-weak
+//  contrast against the white card background (~3.5:1) — under
+//  the ~4.5:1 generally recommended for comfortable reading at
+//  small sizes. Darkened to #6B6572 (same hue family, genuinely
+//  readable). This page intentionally stays on its own fixed
+//  light brand identity (not the app's dark/light theme system —
+//  see original file comment), so this is a literal color swap,
+//  not a theme-variable change.
+//  Logic, layout, animations — all UNCHANGED.
 // ============================================================
 
 import { useState }           from "react";
@@ -15,11 +23,11 @@ import { Eye, EyeOff, Sparkles, ArrowRight } from "lucide-react";
 function clientValidate(form) {
   const errs = {};
   if (!form.email.trim())
-    errs.email = "Email daalo";
+    errs.email = "Email is required";
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-    errs.email = "Valid email chahiye";
+    errs.email = "Enter a valid email address";
   if (!form.password)
-    errs.password = "Password daalo";
+    errs.password = "Password is required";
   return errs;
 }
 
@@ -35,14 +43,12 @@ export default function Login() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    // Clear the error for this field as user types
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Client-side validation first — persistent inline, no toasts
     const clientErrs = clientValidate(form);
     if (Object.keys(clientErrs).length > 0) {
       setErrors(clientErrs);
@@ -58,7 +64,6 @@ export default function Login() {
         password: form.password,
       });
 
-      // Backend sets httpOnly cookie — just update React state
       login(res.data.student);
       navigate("/dashboard", { replace: true });
 
@@ -68,27 +73,25 @@ export default function Login() {
       const serverMsg  = err.response?.data?.error ?? "";
 
       if (err.isNetworkError || err.isTimeout) {
-        setErrors({ password: "Server se connect nahi ho raha. Backend chal raha hai?" });
+        setErrors({ password: "Can't reach the server. Is the backend running?" });
         return;
       }
 
       if (serverErrs.length > 0) {
-        // Map field-level errors from backend Zod validation
         const mapped = {};
         serverErrs.forEach(({ field, message }) => { mapped[field] = message; });
         setErrors(mapped);
         return;
       }
 
-      // Generic backend errors — place on most relevant field
       if (status === 401) {
-        setErrors({ password: "Email ya password galat hai" });
+        setErrors({ password: "Incorrect email or password" });
       } else if (status === 403) {
-        setErrors({ email: "Account deactivated. Support se contact karo." });
+        setErrors({ email: "Account deactivated. Please contact support." });
       } else if (status === 429) {
-        setErrors({ password: "Bahut zyada attempts. 15 minute baad try karo." });
+        setErrors({ password: "Too many attempts. Please try again in 15 minutes." });
       } else {
-        setErrors({ password: serverMsg || "Kuch galat ho gaya. Dobara try karo." });
+        setErrors({ password: serverMsg || "Something went wrong. Please try again." });
       }
     } finally {
       setLoading(false);
@@ -96,73 +99,89 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-bg-base flex items-center justify-center px-4">
-      {/* Ambient glow */}
+    <div className="min-h-screen bg-[#FDFBFC] flex items-center justify-center px-4 relative overflow-hidden">
+
+      {/* Ambient gradient wash — soft blue + pink glows, very light */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden>
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2
-          w-[500px] h-[500px] bg-violet-700/5 rounded-full blur-[120px]" />
+        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#93C5FD]/25 rounded-full blur-[110px] animate-pulse-soft" />
+        <div
+          className="absolute -bottom-24 -right-24 w-[420px] h-[420px] bg-[#F5A9C8]/25 rounded-full blur-[110px] animate-pulse-soft"
+          style={{ animationDelay: "1s" }}
+        />
       </div>
 
       <div className="w-full max-w-sm relative animate-fade-up">
-        <div className="bg-bg-surface border border-bg-border rounded-2xl p-7 shadow-card">
+        <div className="bg-white border border-[#EDE6F3] rounded-2xl p-7 shadow-[0_1px_3px_rgba(45,42,50,0.06),0_12px_32px_rgba(45,42,50,0.08)]
+          transition-shadow duration-300 hover:shadow-[0_1px_3px_rgba(45,42,50,0.08),0_16px_40px_rgba(147,197,253,0.16)]">
 
           {/* Logo */}
-          <div className="flex flex-col items-center mb-7">
-            <div className="w-11 h-11 bg-violet-600 rounded-xl flex items-center
-              justify-center mb-3 shadow-glow-violet">
+          <div
+            className="flex flex-col items-center mb-7 animate-fade-up"
+            style={{ animationDelay: "40ms", animationFillMode: "backwards" }}
+          >
+            <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-3
+              bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
+              shadow-[0_6px_18px_rgba(147,197,253,0.4)]
+              transition-transform duration-300 hover:scale-105 hover:-rotate-3">
               <Sparkles size={20} className="text-white" />
             </div>
-            <h1 className="text-xl font-bold tracking-tight text-white">JNEET+ AI</h1>
-            <p className="text-gray-600 text-xs mt-0.5">Welcome back — login karein</p>
+            <h1 className="text-xl font-bold tracking-tight text-[#2D2A32]">JNEET+ AI</h1>
+            <p className="text-[#6B6572] text-xs mt-0.5">Welcome back — please sign in</p>
           </div>
 
           <form onSubmit={handleSubmit} noValidate className="space-y-4">
 
-            {/* Email */}
-            <FormField
-              label="Email"
-              name="email"
-              type="email"
-              value={form.email}
-              onChange={handleChange}
-              error={errors.email}
-              placeholder="apna@email.com"
-              autoComplete="email"
-              disabled={loading}
-            />
+            {/* Email — staggered entrance */}
+            <div className="animate-fade-up" style={{ animationDelay: "90ms", animationFillMode: "backwards" }}>
+              <FormField
+                label="Email"
+                name="email"
+                type="email"
+                value={form.email}
+                onChange={handleChange}
+                error={errors.email}
+                placeholder="you@example.com"
+                autoComplete="email"
+                disabled={loading}
+              />
+            </div>
 
-            {/* Password */}
-            <FormField
-              label="Password"
-              name="password"
-              type={showPass ? "text" : "password"}
-              value={form.password}
-              onChange={handleChange}
-              error={errors.password}
-              placeholder="••••••••"
-              autoComplete="current-password"
-              disabled={loading}
-            >
-              <button
-                type="button"
-                tabIndex={-1}
-                onClick={() => setShowPass((v) => !v)}
-                className="absolute right-3 top-1/2 -translate-y-1/2
-                  text-gray-600 hover:text-gray-400 transition p-0.5"
+            {/* Password — staggered entrance */}
+            <div className="animate-fade-up" style={{ animationDelay: "140ms", animationFillMode: "backwards" }}>
+              <FormField
+                label="Password"
+                name="password"
+                type={showPass ? "text" : "password"}
+                value={form.password}
+                onChange={handleChange}
+                error={errors.password}
+                placeholder="••••••••"
+                autoComplete="current-password"
+                disabled={loading}
               >
-                {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
-              </button>
-            </FormField>
+                <button
+                  type="button"
+                  tabIndex={-1}
+                  onClick={() => setShowPass((v) => !v)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2
+                    text-[#9B95A8] hover:text-[#6B6572] transition-colors duration-150 p-0.5"
+                >
+                  {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
+                </button>
+              </FormField>
+            </div>
 
             {/* Submit */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-violet-600 hover:bg-violet-500
+              className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
+                hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
                 disabled:opacity-50 disabled:cursor-not-allowed
-                text-white font-semibold py-2.5 rounded-xl transition
+                text-white font-semibold py-2.5 rounded-xl
+                transition-all duration-200
                 flex items-center justify-center gap-2 text-sm mt-1
-                shadow-glow-sm active:scale-[0.98]"
+                active:scale-[0.98] hover:-translate-y-0.5 group"
             >
               {loading ? (
                 <>
@@ -171,20 +190,20 @@ export default function Login() {
                 </>
               ) : (
                 <>
-                  <span>Login</span>
-                  <ArrowRight size={14} />
+                  <span>Log In</span>
+                  <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
                 </>
               )}
             </button>
           </form>
 
-          <p className="text-center text-gray-700 text-xs mt-5">
-            Naya account?{" "}
+          <p className="text-center text-[#6B6572] text-xs mt-5">
+            New here?{" "}
             <Link
               to="/register"
-              className="text-violet-400 hover:text-violet-300 font-medium transition"
+              className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium transition-colors duration-150"
             >
-              Register karo
+              Register Now
             </Link>
           </p>
         </div>

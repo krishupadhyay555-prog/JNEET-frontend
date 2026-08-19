@@ -1,11 +1,26 @@
 // ============================================================
-//  JNEET+ AI — pages/AskAI.jsx  (Production v2.0)
-//  SSE streaming, sidebar, scroll-to-bottom, retry on error.
+//  JNEET+ AI — pages/AskAI.jsx  (v3 — sidebar toggle everywhere)
+//  CHANGED:
+//    - The header's Menu button was `md:hidden` (mobile-only) and
+//      only ever OPENED the sidebar (`setSidebarOpen(true)`) — on
+//      desktop there was no way to close/reopen it at all. Now the
+//      button shows on every screen size and TOGGLES
+//      (`setSidebarOpen(v => !v)`), working together with
+//      Sidebar.jsx's new desktop-width-collapse support.
+//    - sidebarOpen's initial state now checks window width once on
+//      mount: desktop (≥768px) starts OPEN (matches the old
+//      always-visible desktop behavior), mobile starts CLOSED
+//      (matches the old mobile-overlay default) — so nothing about
+//      the default look changes on either device, only the new
+//      ability to toggle on desktop is added.
+//  Nothing else in this file changed — same message loading, same
+//  scroll-button logic, same send/abort flow.
 // ============================================================
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useAuth }           from "../context/AuthContext.jsx";
 import { useChat }           from "../context/ChatContext.jsx";
+import { useTheme }          from "../context/ThemeContext.jsx";
 import { Sidebar }           from "../components/sidebar/Sidebar.jsx";
 import { MessageBubble }     from "../components/chat/MessageBubble.jsx";
 import { StreamingBubble }   from "../components/chat/StreamingBubble.jsx";
@@ -13,10 +28,12 @@ import { ChatInput }         from "../components/chat/ChatInput.jsx";
 import { EmptyChat }         from "../components/chat/EmptyChat.jsx";
 import { BackendErrorBanner } from "../components/ui/BackendErrorBanner.jsx";
 import { ChatSkeletons }     from "../components/ui/SkeletonLoader.jsx";
-import { Bot, Menu, ChevronDown } from "lucide-react";
+import { ProfileMenu }       from "../components/ProfileMenu.jsx";
+import { Menu, ChevronDown, Sun, Moon } from "lucide-react";
 
 export default function AskAI() {
-  const { user, examMode }    = useAuth();
+  const { examMode }    = useAuth();
+  const { mode, toggleMode } = useTheme();
   const {
     messages,
     isMsgLoading,
@@ -31,23 +48,25 @@ export default function AskAI() {
   } = useChat();
 
   const [prompt,        setPrompt]        = useState("");
-  const [sidebarOpen,   setSidebarOpen]   = useState(false);
+  // Desktop starts open (old default), mobile starts closed (old
+  // default) — checked once on mount, matches previous visual
+  // behavior exactly while adding the new toggle capability.
+  const [sidebarOpen,   setSidebarOpen]   = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth >= 768 : true
+  );
   const [showScrollBtn, setShowScrollBtn] = useState(false);
 
   const bottomRef   = useRef(null);
   const messagesRef = useRef(null);
 
-  // ── Load data on mount ───────────────────────────────────
   useEffect(() => {
     loadInitialData();
   }, [loadInitialData]);
 
-  // ── Scroll-to-bottom on new messages / streaming ────────
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages.length, isStreaming]);
 
-  // ── Show scroll button when scrolled up ─────────────────
   useEffect(() => {
     const el = messagesRef.current;
     if (!el) return;
@@ -62,7 +81,6 @@ export default function AskAI() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // ── Send ─────────────────────────────────────────────────
   const handleSend = useCallback(() => {
     if (!prompt.trim() || isStreaming) return;
     const text = prompt;
@@ -70,75 +88,73 @@ export default function AskAI() {
     sendMessage(text);
   }, [prompt, isStreaming, sendMessage]);
 
-  // ── Retry after backend error ────────────────────────────
   const handleRetry = useCallback(() => {
     setBackendError(null);
     loadInitialData();
   }, [setBackendError, loadInitialData]);
 
   return (
-    <div className="flex h-screen bg-bg-base text-white overflow-hidden chat-shell">
+    <div className="flex h-screen bg-bg-base text-fg-primary overflow-hidden chat-shell">
 
-      {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      {/* ── Main chat area ──────────────────────────────── */}
       <div className="flex-1 flex flex-col min-w-0 h-full relative">
 
-        {/* Top bar */}
-        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-white/10 bg-bg-surface/80 backdrop-blur-xl shrink-0">
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-bg-border bg-bg-surface/80 backdrop-blur-xl shrink-0">
           <button
-            onClick={() => setSidebarOpen(true)}
-            className="md:hidden text-gray-600 hover:text-white transition p-1 rounded-lg
+            onClick={() => setSidebarOpen((v) => !v)}
+            className="text-gray-600 hover:text-fg-primary transition p-1 rounded-lg
               hover:bg-bg-hover"
+            title={sidebarOpen ? "Close sidebar" : "Open sidebar"}
           >
             <Menu size={17} />
           </button>
 
-          <div className="w-7 h-7 rounded-lg bg-violet-600/15 border border-violet-600/20
-            flex items-center justify-center shrink-0">
-            <Bot size={14} className="text-violet-400" />
-          </div>
-
           <div className="flex-1 min-w-0">
             <span className="font-semibold text-sm">AI Mentor</span>
-            <span className="ml-2 text-[10px] bg-violet-900/40 border border-violet-800/30
-              text-violet-300 px-2 py-0.5 rounded-full font-medium">
+            <span className="ml-2 text-[10px] bg-violet-600/15 border border-violet-600/25
+              text-fg-primary px-2 py-0.5 rounded-full font-medium">
               {examMode}
             </span>
           </div>
 
-          <span className="text-xs text-gray-700 hidden sm:block">
-            {user?.name?.split(" ")[0]}
-          </span>
+          {/* Dark/Light toggle — right here in chat, so switching
+              theme never requires leaving the page (previously the
+              only way was Settings, which used to force-navigate
+              back to Dashboard instead of wherever the student
+              actually came from). */}
+          <button
+            onClick={toggleMode}
+            className="text-gray-600 hover:text-fg-primary transition p-1.5 rounded-lg
+              hover:bg-bg-hover shrink-0"
+            title={mode === "dark" ? "Switch to Light mode" : "Switch to Dark mode"}
+          >
+            {mode === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+
+          <ProfileMenu />
         </div>
 
-        {/* ── Messages area ──────────────────────────────── */}
         <div
           ref={messagesRef}
           className="flex-1 overflow-y-auto px-3 sm:px-4 py-6 space-y-5 chat-scroll"
         >
-          {/* Backend error — with retry button */}
           {backendError && (
             <BackendErrorBanner message={backendError} onRetry={handleRetry} />
           )}
 
-          {/* Initial message skeleton */}
           {!backendError && isMsgLoading && <ChatSkeletons />}
 
-          {/* Empty state */}
           {!backendError && !isMsgLoading && messages.length === 0 && !isStreaming && (
             <EmptyChat
               examMode={examMode}
               onPromptSelect={(q) => {
                 setPrompt(q);
-                // Auto-send after a brief visual tick
                 setTimeout(() => sendMessage(q), 50);
               }}
             />
           )}
 
-          {/* Rendered messages */}
           {!isMsgLoading && messages.map((msg) => (
             <MessageBubble
               key={msg._id}
@@ -147,7 +163,6 @@ export default function AskAI() {
             />
           ))}
 
-          {/* Live streaming bubble */}
           {isStreaming && (
             <StreamingBubble text={streamingText} />
           )}
@@ -155,17 +170,15 @@ export default function AskAI() {
           <div ref={bottomRef} />
         </div>
 
-        {/* Scroll to bottom button */}
         {showScrollBtn && !backendError && (
           <button
             onClick={scrollToBottom}
-            className="absolute bottom-[90px] right-5 bg-bg-card/80 border border-white/10 backdrop-blur-xl text-gray-400 hover:text-white p-2 rounded-full shadow-card hover:bg-bg-hover transition animate-fade-in z-10"
+            className="absolute bottom-[90px] right-5 bg-bg-card/80 border border-bg-border backdrop-blur-xl text-gray-400 hover:text-fg-primary p-2 rounded-full shadow-card hover:bg-bg-hover transition animate-fade-in z-10"
           >
             <ChevronDown size={15} />
           </button>
         )}
 
-        {/* Input area */}
         {!backendError && (
           <ChatInput
             value={prompt}

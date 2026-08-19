@@ -1,12 +1,9 @@
 // ============================================================
-//  JNEET+ AI — controllers/authController.js  (Production v2.0)
-//  FIXES:
-//    - JWT now sent as httpOnly cookie (not in response body)
-//    - Added logout() — clears the httpOnly cookie server-side
-//    - Removed inline Zod schemas (moved to schemas/authSchemas.js)
-//    - wmsData no longer sent on every auth response (perf fix)
-//    - Consistent error shape throughout
-//    - issuer + audience set on token (validated in authMiddleware)
+//  JNEET+ AI — controllers/authController.js  (v4 — wmsData removed)
+//  REMOVED: `wmsData` from getMe() and updateTargetExam()'s
+//  response objects — the field no longer exists on User.js.
+//  Everything else — register/login/logout logic, cookie config,
+//  error handling — is UNCHANGED.
 // ============================================================
 
 import jwt   from "jsonwebtoken";
@@ -14,44 +11,31 @@ import User  from "../models/User.js";
 import { env } from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
 
-// ── Cookie Configuration ──────────────────────────────────────
-// Centralised here so register and login always use identical settings.
 function getCookieOptions() {
   const isProd = env.NODE_ENV === "production";
   return {
-    httpOnly: true,   // JavaScript cannot access this cookie — XSS immune
-    secure:   isProd, // HTTPS only in production
+    httpOnly: true,
+    secure:   isProd,
     sameSite: isProd ? "none" : "lax",
-    maxAge:   7 * 24 * 60 * 60 * 1000,   // 7 days in milliseconds
+    maxAge:   7 * 24 * 60 * 60 * 1000,
     path:     "/",
   };
 }
 
-// ── Helper: Generate JWT ──────────────────────────────────────
 function generateToken(user) {
   return jwt.sign(
-    {
-      id:       user._id,
-      email:    user.email,
-      examMode: user.examMode,
-    },
+    { id: user._id, email: user.email, examMode: user.examMode },
     env.JWT_SECRET,
     {
       expiresIn: env.JWT_EXPIRES_IN || "7d",
-      issuer:    "jneet-ai",           // Verified in authMiddleware
-      audience:  "jneet-ai-client",   // Verified in authMiddleware
+      issuer:    "jneet-ai",
+      audience:  "jneet-ai-client",
     }
   );
 }
 
-// ── Helper: Set cookie and send auth response ─────────────────
-// NOTE: wmsData intentionally excluded from login/register response.
-// The frontend fetches it via /api/auth/me after login.
-// This keeps the auth response fast and small.
 function sendAuthResponse(user, statusCode, res, message) {
   const token = generateToken(user);
-
-  // Set the token in a secure httpOnly cookie
   res.cookie("jneet_token", token, getCookieOptions());
 
   return res.status(statusCode).json({
@@ -70,14 +54,10 @@ function sendAuthResponse(user, statusCode, res, message) {
   });
 }
 
-// ── REGISTER — POST /api/auth/register ───────────────────────
-// Note: req.body is already validated and sanitized by the
-// validate(registerSchema) middleware — no re-validation needed here.
 export const register = async (req, res, next) => {
   try {
     const { name, email, password, examMode } = req.body;
 
-    // Duplicate email check — give a field-specific error
     const existing = await User.findOne({ email }).lean();
     if (existing) {
       return res.status(409).json({
@@ -87,14 +67,12 @@ export const register = async (req, res, next) => {
       });
     }
 
-    // Create user — password is hashed by the pre('save') hook in User.js
     const newUser = await User.create({ name, email, password, examMode });
 
     console.log(`[Auth] ✅ Registered: ${newUser.email} (${newUser.examMode})`);
     sendAuthResponse(newUser, 201, res, "Account created! Welcome to JNEET+ AI.");
 
   } catch (err) {
-    // Mongoose unique index violation (race condition safety net)
     if (err.code === 11000) {
       return res.status(409).json({
         success:     false,
@@ -102,7 +80,6 @@ export const register = async (req, res, next) => {
         fieldErrors: [{ field: "email", message: "This email is already registered." }],
       });
     }
-    // Mongoose schema validation failure (should be caught by Zod first, but belt-and-suspenders)
     if (err.name === "ValidationError") {
       const messages = Object.values(err.errors).map((e) => e.message);
       return res.status(400).json({ success: false, error: messages.join(". ") });
@@ -111,21 +88,14 @@ export const register = async (req, res, next) => {
   }
 };
 
-// ── LOGIN — POST /api/auth/login ─────────────────────────────
 export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    // Find user with password field (normally excluded by select: false)
     const user = await User.findOne({ email }).select("+password");
 
-    // SECURITY: Use a single generic message for both
-    // "user not found" AND "wrong password" — prevents user enumeration.
     if (!user) {
-      return res.status(401).json({
-        success: false,
-        error:   "Invalid email or password.",
-      });
+      return res.status(401).json({ success: false, error: "Invalid email or password." });
     }
 
     if (!user.isActive) {
@@ -135,16 +105,11 @@ export const login = async (req, res, next) => {
       });
     }
 
-    // comparePassword() is defined on the model instance (fixed in User.js)
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
-      return res.status(401).json({
-        success: false,
-        error:   "Invalid email or password.",
-      });
+      return res.status(401).json({ success: false, error: "Invalid email or password." });
     }
 
-    // Update last login timestamp
     user.lastLogin = new Date();
     await user.save({ validateBeforeSave: false });
 
@@ -156,9 +121,6 @@ export const login = async (req, res, next) => {
   }
 };
 
-// ── LOGOUT — POST /api/auth/logout ───────────────────────────
-// With httpOnly cookies, logout MUST be server-side.
-// The client cannot clear an httpOnly cookie via JavaScript.
 export const logout = (req, res) => {
   res.clearCookie("jneet_token", {
     httpOnly: true,
@@ -167,25 +129,15 @@ export const logout = (req, res) => {
     path:     "/",
   });
 
-  return res.status(200).json({
-    success: true,
-    message: "Logged out successfully.",
-  });
+  return res.status(200).json({ success: true, message: "Logged out successfully." });
 };
 
-// ── GET ME — GET /api/auth/me ────────────────────────────────
-// Returns full profile including wmsData — the authoritative
-// source for the student's profile after login.
 export const getMe = async (req, res, next) => {
   try {
-    // req.user.id is set and guaranteed valid by authMiddleware
     const user = await User.findById(req.user.id).lean();
 
     if (!user || !user.isActive) {
-      return res.status(404).json({
-        success: false,
-        error:   "User account not found or deactivated.",
-      });
+      return res.status(404).json({ success: false, error: "User account not found or deactivated." });
     }
 
     return res.status(200).json({
@@ -197,7 +149,6 @@ export const getMe = async (req, res, next) => {
         examMode:  user.examMode,
         targetExam: user.targetExam ?? null,
         targetExamPromptDismissed: !!user.targetExamPromptDismissed,
-        wmsData:   user.wmsData,
         lastLogin: user.lastLogin,
         createdAt: user.createdAt,
       },
@@ -215,10 +166,7 @@ export const updateTargetExam = async (req, res, next) => {
       : null;
 
     if (req.body.targetExam && !option) {
-      return res.status(400).json({
-        success: false,
-        error:   "Please select a valid target exam.",
-      });
+      return res.status(400).json({ success: false, error: "Please select a valid target exam." });
     }
 
     const update = {
@@ -237,10 +185,7 @@ export const updateTargetExam = async (req, res, next) => {
     ).lean();
 
     if (!user || !user.isActive) {
-      return res.status(404).json({
-        success: false,
-        error:   "User account not found or deactivated.",
-      });
+      return res.status(404).json({ success: false, error: "User account not found or deactivated." });
     }
 
     return res.status(200).json({
@@ -252,7 +197,6 @@ export const updateTargetExam = async (req, res, next) => {
         examMode:  user.examMode,
         targetExam: user.targetExam ?? null,
         targetExamPromptDismissed: !!user.targetExamPromptDismissed,
-        wmsData:   user.wmsData,
         lastLogin: user.lastLogin,
         createdAt: user.createdAt,
       },

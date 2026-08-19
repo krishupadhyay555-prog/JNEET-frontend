@@ -1,14 +1,34 @@
+// ============================================================
+//  JNEET+ AI — components/dashboard/TargetExamModal.jsx  (v2)
+//  FIX (missing X on first-time registration):
+//    - The X (close) button was gated behind `allowLater`, which
+//      Dashboard.jsx deliberately sets to false for brand-new
+//      accounts (isNewAccount = true) — so first-time users had
+//      no way to close this modal at all except picking a target.
+//      The X now always renders regardless of allowLater; clicking
+//      it behaves exactly like "Later" (dismisses without a target
+//      selected, same handleLater() call).
+//    - The footer "Later" TEXT button is UNCHANGED — still gated
+//      by allowLater, so that specific wording/flow still only
+//      shows for returning users, exactly as before.
+//  Everything else — exam list, tentative badges, save flow — is
+//  UNCHANGED from the previous version.
+// ============================================================
+
 import { useMemo, useState } from "react";
 import { X, CalendarDays } from "lucide-react";
-import { TARGET_EXAMS } from "../../config/targetExams.js";
+import { getUpcomingTargetExams } from "../../config/targetExams.js";
 
 export function TargetExamModal({ user, open, onClose, onSave, allowLater = true }) {
   const [selected, setSelected] = useState(user?.targetExam ?? "");
   const [saving, setSaving] = useState(false);
 
+  // Computed once per mount — only exams that haven't happened yet.
+  const upcomingExams = useMemo(() => getUpcomingTargetExams(), []);
+
   const selectedExam = useMemo(
-    () => TARGET_EXAMS.find((exam) => exam.key === selected),
-    [selected]
+    () => upcomingExams.find((exam) => exam.key === selected),
+    [selected, upcomingExams]
   );
 
   if (!open) return null;
@@ -47,41 +67,60 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
               Your dashboard countdown will follow this target.
             </p>
           </div>
-          {allowLater && (
-            <button
-              type="button"
-              onClick={handleLater}
-              disabled={saving}
-              className="text-gray-600 hover:text-white p-1 rounded-lg hover:bg-white/5 transition"
-            >
-              <X size={16} />
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={handleLater}
+            disabled={saving}
+            className="text-gray-600 hover:text-white p-1 rounded-lg hover:bg-white/5 transition"
+          >
+            <X size={16} />
+          </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5">
-          {TARGET_EXAMS.map((exam) => (
-            <button
-              key={exam.key}
-              type="button"
-              onClick={() => setSelected(exam.key)}
-              className={`rounded-xl border px-3 py-3 text-left transition active:scale-[0.98]
-                ${selected === exam.key
-                  ? "bg-violet-600 text-white border-violet-500 shadow-glow-sm"
-                  : "bg-white/[0.03] text-gray-300 border-white/10 hover:border-violet-500/40 hover:bg-white/[0.05]"
-                }`}
-            >
-              <span className="block text-sm font-semibold">{exam.label}</span>
-              <span className="block text-[10px] opacity-70 mt-1">
-                {new Date(exam.date).toLocaleDateString("en-IN", {
-                  day: "numeric",
-                  month: "short",
-                  year: "numeric",
-                })}
-              </span>
-            </button>
-          ))}
-        </div>
+        {upcomingExams.length === 0 ? (
+          <p className="text-xs text-gray-500 text-center py-6">
+            No upcoming exam dates available right now — check back soon.
+          </p>
+        ) : (
+          <div className="grid grid-cols-2 gap-2.5">
+            {upcomingExams.map((exam, i) => (
+              <button
+                key={exam.key}
+                type="button"
+                onClick={() => setSelected(exam.key)}
+                style={{ animationDelay: `${i * 40}ms`, animationFillMode: "backwards" }}
+                className={`animate-fade-up rounded-xl border px-3 py-3 text-left transition active:scale-[0.98]
+                  ${selected === exam.key
+                    ? "bg-violet-600 text-white border-violet-500 shadow-glow-sm"
+                    : "bg-white/[0.03] text-gray-300 border-white/10 hover:border-violet-500/40 hover:bg-white/[0.05]"
+                  }`}
+              >
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <span className="block text-sm font-semibold">{exam.label}</span>
+                  {exam.tentative && (
+                    <span className="text-[8px] uppercase tracking-wide bg-amber-900/30 text-amber-400 border border-amber-700/30 rounded-full px-1.5 py-0.5">
+                      Tentative
+                    </span>
+                  )}
+                </div>
+                <span className="block text-[10px] opacity-70 mt-1">
+                  {exam.tentative ? "~" : ""}
+                  {new Date(exam.date).toLocaleDateString("en-IN", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {upcomingExams.some((e) => e.tentative) && (
+          <p className="text-[10px] text-gray-700 mt-3">
+            Tentative dates are based on past-year trends — NTA hasn't officially confirmed them yet.
+          </p>
+        )}
 
         <div className="flex items-center justify-between gap-3 mt-5">
           <p className="text-[11px] text-gray-600">

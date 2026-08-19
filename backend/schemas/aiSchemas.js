@@ -1,6 +1,16 @@
 // ============================================================
-//  JNEET+ AI — schemas/aiSchemas.js
-//  Validation shape for the /api/ai/ask route.
+//  JNEET+ AI — schemas/aiSchemas.js  (Fixed v2.1)
+//  FIX (root cause of "chat never saves" bug):
+//    - saveMessageSchema's sessionId was only `.optional()`, which
+//      in Zod means "the field can be MISSING (undefined)" — it
+//      does NOT mean "the field can be null". The frontend sends
+//      `sessionId: null` for a brand-new chat's first message,
+//      which Zod was rejecting with a 400 Bad Request. That 400
+//      meant EVERY new chat's first exchange silently failed to
+//      save — nothing ever reached the database in the first place.
+//    - Added `.nullable()` so both `undefined` (key omitted) and
+//      explicit `null` are accepted, matching what the frontend
+//      actually sends.
 // ============================================================
 
 import { z } from "zod";
@@ -12,17 +22,21 @@ export const askSchema = z.object({
     .min(1,    "Prompt cannot be empty")
     .max(5000, "Prompt exceeds the 5000-character limit"),
 
-  // Optional: client can pass sessionId for context threading
   sessionId: z
     .string()
     .regex(/^[a-f\d]{24}$/i, "Invalid sessionId format")
+    .nullable()
     .optional(),
 });
 
 export const saveMessageSchema = z.object({
+  // FIX: was `.optional()` only — now `.nullable().optional()` so
+  // an explicit `null` (sent for a brand-new chat) is accepted,
+  // not just a missing key.
   sessionId: z
     .string()
     .regex(/^[a-f\d]{24}$/i, "Invalid sessionId format")
+    .nullable()
     .optional(),
 
   userMessage: z.object({

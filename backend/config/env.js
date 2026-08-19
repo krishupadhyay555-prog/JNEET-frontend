@@ -1,5 +1,6 @@
 // ============================================================
-//  JNEET+ AI — config/env.js (FIXED)
+//  JNEET+ AI — config/env.js  (Updated)
+//  ADDED: ENABLE_AI_CHAT_TITLES flag — see comment below.
 // ============================================================
 
 import { z } from "zod";
@@ -24,7 +25,7 @@ const envSchema = z.object({
 
   JWT_SECRET: z
     .string({ required_error: "JWT_SECRET is required in .env" })
-    .min(10, "JWT_SECRET must be at least 10 characters"), // Thoda relax kar diya length ko
+    .min(10, "JWT_SECRET must be at least 10 characters"),
 
   JWT_EXPIRES_IN: z.string().default("7d"),
 
@@ -42,7 +43,17 @@ const envSchema = z.object({
 
   COOKIE_SECRET: z
     .string({ required_error: "COOKIE_SECRET is required in .env" })
-    .min(10, "COOKIE_SECRET must be at least 10 characters"), // Relaxed for dev
+    .min(10, "COOKIE_SECRET must be at least 10 characters"),
+
+  // NEW: AI-generated chat titles use an EXTRA Gemini call per new
+  // chat (on top of the main response call) — doubling quota usage.
+  // Default OFF so local development/testing doesn't burn through
+  // the free-tier daily limit (20 requests/day). Set to "true" in
+  // production once billing is enabled, or whenever quota isn't a
+  // concern anymore.
+  ENABLE_AI_CHAT_TITLES: z
+    .enum(["true", "false"])
+    .default("false"),
 });
 
 const parseResult = envSchema.safeParse(process.env);
@@ -63,4 +74,5 @@ if (!parseResult.success) {
 export const env = {
   ...parseResult.data,
   RE_NEET_ACTIVE: parseResult.data.RE_NEET_ACTIVE === "true",
+  ENABLE_AI_CHAT_TITLES: parseResult.data.ENABLE_AI_CHAT_TITLES === "true",
 };

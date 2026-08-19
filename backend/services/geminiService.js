@@ -1,5 +1,14 @@
 // ============================================================
-//  JNEET+ AI — services/geminiService.js  (Production v2.0)
+//  JNEET+ AI — services/geminiService.js  (v2.2 — language rule fixed)
+//  FIXED: buildSystemPrompt()'s language rule was just "Reply in
+//  same language (Hindi/Hinglish/English)" — vague enough that the
+//  model was defaulting to Hindi even for ambiguous short input
+//  like "hi" (which is an English greeting, not a Hindi-language
+//  signal). Now explicit: default to English always, only switch
+//  when the student's own words clearly indicate another language
+//  (now also explicitly includes Marathi / "any other language").
+//  Nothing else in this file changed — same retry/timeout logic,
+//  same streaming, same title generation, same error handling.
 // ============================================================
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
@@ -10,6 +19,7 @@ const GEMINI_MODEL = "gemini-2.5-flash";
 const STREAM_START_TIMEOUT_MS = 15000;
 const STREAM_CHUNK_TIMEOUT_MS = 30000;
 const NON_STREAM_TIMEOUT_MS = 30000;
+const TITLE_TIMEOUT_MS = 6000; // short — title is a nice-to-have, not critical
 const MAX_RETRIES = 2;
 const RETRY_BASE_DELAY_MS = 600;
 
@@ -93,7 +103,6 @@ async function runWithRetry(operation, label) {
   throw lastError;
 }
 
-// ✅ FIXED FUNCTION (ONLY THIS PART CHANGED)
 function buildSystemPrompt(examMode) {
   const subjects =
     examMode === "NEET"
@@ -104,7 +113,7 @@ function buildSystemPrompt(examMode) {
 
 CORE RULES (non-negotiable):
 1. SYLLABUS GUARD: You ONLY answer questions related to ${subjects}.
-2. LANGUAGE DETECTION: Reply in same language (Hindi/Hinglish/English).
+2. LANGUAGE: Default to English. ONLY switch language if the student's message clearly indicates another language (Hindi, Hinglish, Marathi, or any other language/script) — match their language/script exactly in that case. Short, ambiguous greetings like "hi", "hello", "ok" are English by default — reply in English to those unless the rest of their message is clearly in another language. Never assume Hindi/Hinglish just because the topic or exam is Indian — the student's own words decide the language, nothing else.
 3. RESPONSE QUALITY: Step-by-step, markdown, exam-focused.
 4. WEAK TOPIC AWARENESS: Teach weak topics better (silently).
 5. EXAM MODE: ${examMode}`;
@@ -245,6 +254,51 @@ export async function generateAIResponseStream(prompt, examMode, wmsContext = []
         console.warn("[Gemini] Stream cleanup warning:", cleanupErr.message);
       }
     }
+  }
+}
+
+// ── Chat title generation ───────────────────────────────────
+export async function generateChatTitle(userMessageContent) {
+  try {
+    const model = genAI.getGenerativeModel({
+      model: GEMINI_MODEL,
+      generationConfig: {
+        temperature: 0.3,
+        maxOutputTokens: 60,
+        thinkingConfig: { thinkingBudget: 0 },
+      },
+    });
+
+    const prompt = `Generate a short chat title (3-6 words max) summarizing what this student is asking about. Reply with ONLY the title text — no quotes, no punctuation at the end, no prefix like "Title:".
+
+Student's message: "${userMessageContent.slice(0, 500)}"
+
+Title:`;
+
+    const result = await withTimeout(
+      model.generateContent(prompt),
+      TITLE_TIMEOUT_MS,
+      "Gemini title generation"
+    );
+
+    const raw = result.response.text()?.trim() ?? "";
+    const title = raw
+      .replace(/^["'“”]+|["'“”]+$/g, "")
+      .replace(/\.$/, "")
+      .trim();
+
+    if (!title || title.length < 2 || title.length > 80) {
+      return null;
+    }
+
+    return title;
+
+  } catch (err) {
+    console.warn("[Gemini] Title generation failed — falling back to truncation:", {
+      message: err?.message,
+      code: err?.code,
+    });
+    return null;
   }
 }
 

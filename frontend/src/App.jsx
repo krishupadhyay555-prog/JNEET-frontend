@@ -1,19 +1,41 @@
 // ============================================================
-//  JNEET+ AI — App.jsx  (Production v2.0)
+//  JNEET+ AI — App.jsx  (v3 — accent sync added)
+//  ADDED: <AccentSync /> — bridges AuthContext (examMode) and
+//  ThemeContext (accentOverride) to set a data-accent attribute
+//  on <html>. Lives INSIDE AuthProvider so it can read examMode,
+//  but still has full access to ThemeContext because ThemeProvider
+//  wraps AuthProvider from further out — React context works
+//  through any number of nested providers in between.
+//  Resolution rule:
+//    accentOverride === "normal"        → data-accent="normal"
+//    examMode === "JEE"                 → data-accent="jee"
+//    examMode === "NEET" (or anything   → data-accent="neet"
+//      else / not yet loaded)
+//  This only visually matters in light mode (see index.css) —
+//  harmless no-op while in dark mode.
+//  Everything else is UNCHANGED from the previous version
+//  (RouteTracker / resume-last-page feature stays exactly as-is).
 // ============================================================
 
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Toaster }          from "react-hot-toast";
-import { AuthProvider }     from "./context/AuthContext.jsx";
+import { AuthProvider, useAuth } from "./context/AuthContext.jsx";
 import { ChatProvider }     from "./context/ChatContext.jsx";
+import { ThemeProvider, useTheme } from "./context/ThemeContext.jsx";
 import { ErrorBoundary }    from "./components/ui/ErrorBoundary.jsx";
 import { ProtectedRoute }   from "./components/ProtectedRoute.jsx";
 import Login                from "./pages/Login.jsx";
 import Register             from "./pages/Register.jsx";
 import Dashboard            from "./pages/Dashboard.jsx";
 import AskAI                from "./pages/AskAI.jsx";
+import Profile              from "./pages/Profile.jsx";
+import Settings             from "./pages/Settings.jsx";
+import WMS                  from "./pages/WMS.jsx";
+import Tests                from "./pages/Tests.jsx";
+import TestAttempt          from "./pages/TestAttempt.jsx";
+import TestResult           from "./pages/TestResult.jsx";
 
-// Toast config — dark theme, no validation toasts (those are inline)
 const TOAST_CONFIG = {
   duration: 3000,
   style: {
@@ -34,13 +56,65 @@ const TOAST_CONFIG = {
   },
 };
 
+// ── Resume-last-page feature (unchanged) ──────────────────────
+const LAST_PAGE_KEY = "jneet_last_page";
+const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/tests"];
+
+function getLastPage() {
+  try {
+    const saved = localStorage.getItem(LAST_PAGE_KEY);
+    return VALID_LAST_PAGES.includes(saved) ? saved : "/dashboard";
+  } catch {
+    return "/dashboard";
+  }
+}
+
+function RouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (VALID_LAST_PAGES.includes(location.pathname)) {
+      try {
+        localStorage.setItem(LAST_PAGE_KEY, location.pathname);
+      } catch {
+        // Non-critical — skip silently if storage isn't available.
+      }
+    }
+  }, [location.pathname]);
+
+  return null;
+}
+
+// ── NEW: Accent sync (NEET-green / JEE-blue / Normal) ─────────
+function AccentSync() {
+  const { examMode }      = useAuth();
+  const { accentOverride } = useTheme();
+
+  useEffect(() => {
+    let resolved;
+    if (accentOverride === "normal") {
+      resolved = "normal";
+    } else if (examMode === "JEE") {
+      resolved = "jee";
+    } else {
+      resolved = "neet"; // default / NEET / not-yet-loaded
+    }
+    document.documentElement.setAttribute("data-accent", resolved);
+  }, [examMode, accentOverride]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <ErrorBoundary resetOnRetry>
+      <ThemeProvider>
       <AuthProvider>
         <ChatProvider>
+          <AccentSync />
           <Toaster position="top-right" toastOptions={TOAST_CONFIG} />
           <BrowserRouter>
+            <RouteTracker />
             <Routes>
               {/* Public routes */}
               <Route path="/login"    element={<Login />}    />
@@ -63,14 +137,63 @@ export default function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <Profile />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/settings"
+                element={
+                  <ProtectedRoute>
+                    <Settings />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/wms"
+                element={
+                  <ProtectedRoute>
+                    <WMS />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/tests"
+                element={
+                  <ProtectedRoute>
+                    <Tests />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/test/attempt/:attemptId"
+                element={
+                  <ProtectedRoute>
+                    <TestAttempt />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/test/result/:attemptId"
+                element={
+                  <ProtectedRoute>
+                    <TestResult />
+                  </ProtectedRoute>
+                }
+              />
 
-              {/* Redirects */}
-              <Route path="/"  element={<Navigate to="/dashboard" replace />} />
-              <Route path="*"  element={<Navigate to="/dashboard" replace />} />
+              {/* Redirects — resume the last visited page */}
+              <Route path="/"  element={<Navigate to={getLastPage()} replace />} />
+              <Route path="*"  element={<Navigate to={getLastPage()} replace />} />
             </Routes>
           </BrowserRouter>
         </ChatProvider>
       </AuthProvider>
+      </ThemeProvider>
     </ErrorBoundary>
   );
 }

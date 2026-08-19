@@ -1,7 +1,13 @@
 // ============================================================
-//  JNEET+ AI — context/ChatContext.jsx
-//  Centralised chat state: sessions, messages, saved items.
-//  Error-resilient: backend failures don't crash the UI.
+//  JNEET+ AI — context/ChatContext.jsx  (v2.2 — English system text)
+//  CHANGED: all toast messages (system-generated feedback, not AI
+//  chat replies) converted from Hinglish to English — "Naya chat
+//  nahi ban paya" → "Could not create new chat", etc. Per the
+//  language rule: only the AI's own conversational replies should
+//  match the student's language; every other system/UI message
+//  stays English always.
+//  All logic (session load/select/save/delete, streaming, saved-
+//  toggle) is UNCHANGED from the previous version.
 // ============================================================
 
 import {
@@ -27,10 +33,10 @@ export function ChatProvider({ children }) {
   const [messages,         setMessages]         = useState([]);
   const [savedItems,       setSavedItems]        = useState([]);
   const [isSessionsLoaded, setIsSessionsLoaded] = useState(false);
-  const [isMsgLoading,     setIsMsgLoading]     = useState(false);  // initial msg load
-  const [isStreaming,      setIsStreaming]       = useState(false);  // AI streaming
+  const [isMsgLoading,     setIsMsgLoading]     = useState(false);
+  const [isStreaming,      setIsStreaming]       = useState(false);
   const [streamingText,    setStreamingText]     = useState("");
-  const [backendError,     setBackendError]      = useState(null);   // null = healthy
+  const [backendError,     setBackendError]      = useState(null);
 
   const abortRef = useRef(null);
   const latestLoadRef = useRef(0);
@@ -50,23 +56,37 @@ export function ChatProvider({ children }) {
     const requestId = ++latestLoadRef.current;
 
     try {
-      const [sessRes, savedRes] = await Promise.all([
+      const [sessResult, savedResult] = await Promise.allSettled([
         chatApi.getSessions(),
         chatApi.getSaved(),
       ]);
 
       if (requestId !== latestLoadRef.current) return;
 
-      const loadedSessions = (sessRes.data.sessions ?? []).map((session) => ({
-        ...session,
-        _id: normalizeSessionId(session._id),
-      }));
+      if (sessResult.status === "rejected") {
+        throw sessResult.reason;
+      }
+      const sessRes = sessResult.value;
+
+      const savedRes = savedResult.status === "fulfilled"
+        ? savedResult.value
+        : { data: { saved: [] } };
+
+      if (savedResult.status === "rejected") {
+        console.warn("[Chat] Failed to load saved items:", savedResult.reason?.message);
+      }
+
+      const loadedSessions = (sessRes.data.sessions ?? [])
+        .map((session) => ({
+          ...session,
+          _id: normalizeSessionId(session._id),
+        }))
+        .filter((session) => session._id);
 
       setSessions(loadedSessions);
       setSavedItems(savedRes.data.saved    ?? []);
       setIsSessionsLoaded(true);
 
-      // Restore last active session
       const lastId = normalizeSessionId(sessRes.data.activeSessionId);
       const canRestore = lastId && loadedSessions.some((session) => session._id === lastId);
 
@@ -89,7 +109,7 @@ export function ChatProvider({ children }) {
         ? "Cannot reach the server. Is the backend running?"
         : err.response?.data?.error ?? "Failed to load chat history.";
       setBackendError(msg);
-      setIsSessionsLoaded(true);  // unblock skeleton even on error
+      setIsSessionsLoaded(true);
       setIsMsgLoading(false);
     }
   }, [examMode, setActiveSession]);
@@ -137,6 +157,8 @@ export function ChatProvider({ children }) {
     setActiveSession(normalizedId);
     setMessages([]);
     await loadSession(normalizedId);
+
+    chatApi.activateSession(normalizedId).catch(() => {});
   }, [loadSession, setActiveSession]);
 
   // ── New session ──────────────────────────────────────────
@@ -144,6 +166,12 @@ export function ChatProvider({ children }) {
     try {
       const res = await chatApi.newSession();
       const sessionId = normalizeSessionId(res.data.sessionId);
+
+      if (!sessionId) {
+        toast.error("Could not create a new chat");
+        return null;
+      }
+
       const sess = {
         _id:          sessionId,
         title:        res.data.title,
@@ -156,7 +184,7 @@ export function ChatProvider({ children }) {
       setMessages([]);
       return sessionId;
     } catch {
-      toast.error("Naya chat nahi ban paya");
+      toast.error("Could not create a new chat");
       return null;
     }
   }, [setActiveSession]);
@@ -164,6 +192,12 @@ export function ChatProvider({ children }) {
   // ── Delete session ───────────────────────────────────────
   const deleteSession = useCallback(async (sessionId) => {
     const normalizedId = normalizeSessionId(sessionId);
+
+    if (!normalizedId) {
+      setSessions((prev) => prev.filter((s) => normalizeSessionId(s._id)));
+      return;
+    }
+
     try {
       await chatApi.deleteSession(normalizedId);
       const remaining = sessions.filter((s) => s._id !== normalizedId);
@@ -180,7 +214,7 @@ export function ChatProvider({ children }) {
         }
       }
     } catch {
-      toast.error("Delete nahi ho paya");
+      toast.error("Could not delete chat");
     }
   }, [loadSession, sessions, setActiveSession]);
 
@@ -188,7 +222,6 @@ export function ChatProvider({ children }) {
   const sendMessage = useCallback(async (prompt) => {
     if (!prompt.trim() || isStreaming) return;
 
-    // Optimistic user bubble
     const tempUserMsg = {
       _id:     `tmp-user-${Date.now()}`,
       role:    "user",
@@ -198,7 +231,6 @@ export function ChatProvider({ children }) {
     setIsStreaming(true);
     setStreamingText("");
 
-    // Cancel any previous stream
     abortRef.current?.abort();
 
     let sessionIdToUse = activeSessionRef.current;
@@ -215,7 +247,6 @@ export function ChatProvider({ children }) {
           setIsStreaming(false);
           setStreamingText("");
 
-          // Add final AI message
           const aiMsg = {
             _id:   `ai-${Date.now()}`,
             role:  "ai",
@@ -224,7 +255,6 @@ export function ChatProvider({ children }) {
           };
           setMessages((prev) => [...prev, aiMsg]);
 
-          // Persist in background
           try {
             const saveRes = await chatApi.saveMessage({
               sessionId:   sessionIdToUse,
@@ -259,15 +289,18 @@ export function ChatProvider({ children }) {
             }
           } catch (saveErr) {
             console.warn("[Chat] Save failed:", saveErr.message);
+            toast.error(
+              "This reply couldn't be saved — it may disappear on refresh.",
+              { duration: 6000 }
+            );
           }
         },
 
         onError: (errMsg) => {
           setIsStreaming(false);
           setStreamingText("");
-          // Remove optimistic user bubble on error
           setMessages((prev) => prev.filter((m) => m._id !== tempUserMsg._id));
-          toast.error(errMsg || "AI se jawab nahi aaya");
+          toast.error(errMsg || "AI could not respond");
         },
       }
     );
@@ -284,7 +317,6 @@ export function ChatProvider({ children }) {
   const toggleSaved = useCallback(async (msg) => {
     const nowSaved = !msg.saved;
 
-    // Optimistic update
     setMessages((prev) =>
       prev.map((m) => m._id === msg._id ? { ...m, saved: nowSaved } : m)
     );
@@ -296,10 +328,10 @@ export function ChatProvider({ children }) {
         sessionId:    activeSessionId,
         sessionTitle: sessions.find((s) => s._id === activeSessionId)?.title ?? "Chat",
       }, ...prev]);
-      toast.success("Concept save ho gaya ⭐");
+      toast.success("Saved ⭐");
     } else {
       setSavedItems((prev) => prev.filter((b) => b._id !== msg._id));
-      toast("Remove ho gaya", { icon: "🗑️" });
+      toast("Removed", { icon: "🗑️" });
     }
 
     try {
@@ -309,7 +341,6 @@ export function ChatProvider({ children }) {
         saved:     nowSaved,
       });
     } catch {
-      // Revert
       setMessages((prev) =>
         prev.map((m) => m._id === msg._id ? { ...m, saved: !nowSaved } : m)
       );
@@ -318,7 +349,7 @@ export function ChatProvider({ children }) {
           ? prev.filter((b) => b._id !== msg._id)
           : [{ ...msg, saved: true }, ...prev]
       );
-      toast.error("Save nahi ho paya");
+      toast.error("Could not save");
     }
   }, [activeSessionId, sessions]);
 

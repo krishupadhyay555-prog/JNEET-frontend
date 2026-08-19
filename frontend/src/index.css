@@ -7,18 +7,223 @@
   --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Design tokens */
-  --bg-base:    #08080f;
-  --bg-surface: #0e0e1c;
-  --bg-panel:   #11111f;
-  --bg-card:    #141428;
-  --bg-border:  #1e1e38;
-  --bg-hover:   #1a1a32;
+  /* Design tokens — DARK mode (default). Stored as space-separated
+     RGB triplets (not hex) so Tailwind's opacity modifiers like
+     bg-bg-card/50 keep working via rgb(var(--x) / <alpha-value>). */
+  --bg-base:    26 25 23;     /* #1a1917 */
+  --bg-surface: 33 31 29;     /* #211f1d */
+  --bg-panel:   38 36 33;     /* #262421 */
+  --bg-card:    43 41 37;     /* #2b2925 */
+  --bg-border:  58 55 51;     /* #3a3733 */
+  --bg-hover:   50 47 43;     /* #322f2b */
 
-  --violet-main: #8248fe;
-  --violet-light: #9f75ff;
-  --violet-dark:  #6121ce;
-  --violet-glow:  rgba(130, 72, 254, 0.2);
+  --fg-primary:   232 232 240; /* #e8e8f0 */
+  --fg-secondary: 168 163 153; /* muted body text */
+
+  --violet-main:  #b06a4a;
+  --violet-light: #c17c5c;
+  --violet-dark:  #824a35;
+  --violet-glow:  rgba(176, 106, 74, 0.18);
+
+  /* Full 11-stop ramp, as RGB triplets — this is what
+     tailwind.config.js's violet-{50..950} scale reads. Every
+     bg-violet-600 / text-violet-400 / border-violet-600 class
+     anywhere in the app resolves through THESE variables, which
+     is why overriding them per data-accent (below, and in the
+     html.light blocks) is enough to re-skin the whole app without
+     touching a single component file. Dark mode (default) keeps
+     the original terracotta ramp. */
+  --violet-50:  251 243 240;
+  --violet-100: 245 226 218;
+  --violet-200: 232 196 180;
+  --violet-300: 215 161 137;
+  --violet-400: 193 124 92;
+  --violet-500: 176 106 74;
+  --violet-600: 156 89 64;
+  --violet-700: 130 74 53;
+  --violet-800: 107 61 44;
+  --violet-900: 87 50 37;
+  --violet-950: 46 26 19;
+
+  /* Gray scale — dark mode ramp kept identical to Tailwind's
+     default gray palette (this always looked fine against the
+     dark background, so it's untouched). Light mode's ramp is
+     defined separately below, deliberately darker. */
+  --gray-50:  249 250 251;
+  --gray-100: 243 244 246;
+  --gray-200: 229 231 235;
+  --gray-300: 209 213 219;
+  --gray-400: 156 163 175;
+  --gray-500: 107 114 128;
+  --gray-600: 75  85  99;
+  --gray-700: 55  65  81;
+  --gray-800: 31  41  55;
+  --gray-900: 17  24  39;
+
+  /* FIX: Chrome renders native form controls (autofill highlight,
+     checkboxes, date pickers) based on this property, falling back
+     to the OS's dark/light preference when it's unset — which is
+     exactly why the email input showed a black autofill box on a
+     visually light page when the OS/Chrome was in dark mode. This
+     had nothing to do with the custom autofill box-shadow override
+     below; color-scheme wins first, for the browser's own widgets. */
+  color-scheme: dark;
+}
+
+/* ── LIGHT mode — activated by ThemeContext adding "light"
+   class to html. Same variable names, different values — every
+   component using the background and foreground theme tokens
+   flips automatically, no per-component changes needed.
+   This is the "Normal" skin — the neutral baseline. It's also
+   what data-accent="normal" falls back to (no override block
+   needed for that case, it just uses these values as-is).
+   NOTE: This is the ONLY html.light block in this file. A
+   duplicate debug block (with background: red !important)
+   existed here temporarily during troubleshooting and has been
+   removed — that was never a real fix, just a cache-buster. ── */
+html.light {
+  color-scheme: light;
+
+  --bg-base:    253 251 252;  /* #FDFBFC */
+  --bg-surface: 255 255 255;  /* #FFFFFF */
+  --bg-panel:   248 246 249;  /* #F8F6F9 */
+  --bg-card:    255 255 255;  /* #FFFFFF */
+  --bg-border:  237 230 243;  /* #EDE6F3 */
+  --bg-hover:   243 239 246;  /* #F3EFF6 */
+
+  --fg-primary:   45 42 50;   /* #2D2A32 */
+  --fg-secondary: 139 133 148; /* #8B8594 */
+
+  /* FIX (readability root cause): darkened, genuinely readable
+     ramp — every stop from 400 to 900 sits in a comfortably dark
+     range against a white/near-white background. "Subtlety" for
+     labels that used a high number (700) on purpose now comes
+     from their existing size/letter-spacing/uppercase treatment
+     instead of near-invisible contrast — much better for actual
+     reading, matches the "soft dark gray, not pure black" eye-
+     comfort research too. Shared by all three accent skins
+     (Normal/NEET/JEE) — gray stays neutral, never tinted. */
+  --gray-50:  250 250 250;
+  --gray-100: 244 244 245;
+  --gray-200: 228 228 231;
+  --gray-300: 212 212 216;
+  --gray-400: 82  82  91;
+  --gray-500: 63  63  70;
+  --gray-600: 45  45  50;
+  --gray-700: 39  39  42;
+  --gray-800: 24  24  27;
+  --gray-900: 9   9   11;
+}
+
+/* ── Accent skins — Normal / NEET / JEE.
+   IMPORTANT: these ONLY change --violet-* (the accent color used
+   for buttons, icons, CTAs, focus rings) — background/foreground
+   vars stay exactly as html.light's base above, shared by all
+   three skins. Earlier version wrongly tinted the whole background
+   green/blue too — fixed: accent should be a highlight, not a
+   background wash.
+   NEET/JEE now use a softer, lighter ramp (teal instead of
+   emerald, indigo shifted one stop lighter) for a more premium
+   "light glass" feel — "main" sits at the 400 stop rather than
+   500, and the 300 stop is exactly the #5EEAD4 / #A5B4FC swatch
+   colors already chosen in Settings.jsx, kept as --violet-light.
+   Each skin redefines the FULL 11-stop ramp (not just the 4
+   main/light/dark/glow vars) — this is what actually makes every
+   bg-violet-600 / text-violet-400 / etc across the whole app
+   follow the active accent, since tailwind.config.js's violet
+   scale reads these exact variable names.
+   These same NEET/JEE ramps are ALSO applied outside html.light
+   (see the html[data-accent] block further down) so dark mode gets
+   the same subject-wise highlight color too — only Normal is
+   light-mode-only, dark mode's own default (terracotta) stays as
+   dark mode's "Normal" look, unchanged. ── */
+html.light[data-accent="normal"] {
+  --violet-main:  #3f3f46;    /* zinc-700 — neutral grayish-black */
+  --violet-light: #52525b;
+  --violet-dark:  #18181b;
+  --violet-glow:  rgba(63, 63, 70, 0.14);
+
+  --violet-50:  250 250 250;
+  --violet-100: 244 244 245;
+  --violet-200: 228 228 231;
+  --violet-300: 212 212 216;
+  --violet-400: 161 161 170;
+  --violet-500: 113 113 122;
+  --violet-600: 82  82  91;
+  --violet-700: 63  63  70;
+  --violet-800: 39  39  42;
+  --violet-900: 24  24  27;
+  --violet-950: 9   9   11;
+}
+
+/* ── FIX (Claude-orange-in-dark-mode bug): this block was
+   missing entirely. When "Normal" accent was combined with Dark
+   mode, there was no matching override for either mode/accent
+   combination, so it silently fell through to :root's default
+   terracotta ramp — the exact orange this whole accent system was
+   built to move away from. Same zinc/gray family as the light-mode
+   Normal skin above (same neutral philosophy — no color, just
+   grayscale), but picks a LIGHT stop (300) as "main" instead of a
+   dark one (700), since dark backgrounds need a light-toned accent
+   to actually be visible — same reasoning already used for the
+   dark-mode NEET/JEE skins below. ── */
+html[data-accent="normal"]:not(.light) {
+  --violet-main:  #d4d4d8;    /* zinc-300 — grayish-white, visible on dark bg */
+  --violet-light: #e4e4e7;    /* zinc-200 */
+  --violet-dark:  #a1a1aa;    /* zinc-400 */
+  --violet-glow:  rgba(212, 212, 216, 0.14);
+
+  --violet-50:  250 250 250;
+  --violet-100: 244 244 245;
+  --violet-200: 228 228 231;
+  --violet-300: 212 212 216;
+  --violet-400: 161 161 170;
+  --violet-500: 113 113 122;
+  --violet-600: 82  82  91;
+  --violet-700: 63  63  70;
+  --violet-800: 39  39  42;
+  --violet-900: 24  24  27;
+  --violet-950: 9   9   11;
+}
+
+html.light[data-accent="neet"],
+html[data-accent="neet"]:not(.light) {
+  --violet-main:  #2dd4bf;    /* teal-400 — softer/lighter than emerald */
+  --violet-light: #5eead4;    /* teal-300 — matches the original swatch */
+  --violet-dark:  #0d9488;    /* teal-600 */
+  --violet-glow:  rgba(45, 212, 191, 0.18);
+
+  --violet-50:  240 253 250;
+  --violet-100: 204 251 241;
+  --violet-200: 153 246 228;
+  --violet-300: 94  234 212;
+  --violet-400: 45  212 191;
+  --violet-500: 20  184 166;
+  --violet-600: 13  148 136;
+  --violet-700: 15  118 110;
+  --violet-800: 17  94  89;
+  --violet-900: 19  78  74;
+  --violet-950: 4   47  46;
+}
+
+html.light[data-accent="jee"],
+html[data-accent="jee"]:not(.light) {
+  --violet-main:  #818cf8;    /* indigo-400 — softer/lighter than indigo-500 */
+  --violet-light: #a5b4fc;    /* indigo-300 — matches the original swatch */
+  --violet-dark:  #4f46e5;    /* indigo-600 */
+  --violet-glow:  rgba(129, 140, 248, 0.18);
+
+  --violet-50:  238 242 255;
+  --violet-100: 224 231 255;
+  --violet-200: 199 210 254;
+  --violet-300: 165 180 252;
+  --violet-400: 129 140 248;
+  --violet-500: 99  102 241;
+  --violet-600: 79  70  229;
+  --violet-700: 67  56  202;
+  --violet-800: 55  48  163;
+  --violet-900: 49  46  129;
+  --violet-950: 30  27  75;
 }
 
 /* ── Base Reset ── */
@@ -34,12 +239,13 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg-base);
-  color: #e8e8f0;
+  background: rgb(var(--bg-base));
+  color: rgb(var(--fg-primary));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100dvh;
   overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #root {
@@ -51,19 +257,19 @@ body {
 /* ── Custom Scrollbar ── */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #2a2a4a transparent;
+  scrollbar-color: rgb(var(--bg-border)) transparent;
 }
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a4a;
+  background: rgb(var(--bg-border));
   border-radius: 99px;
 }
-::-webkit-scrollbar-thumb:hover { background: #3a3a5a; }
+::-webkit-scrollbar-thumb:hover { background: rgb(var(--bg-hover)); }
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(130, 72, 254, 0.3);
+  background: rgba(176, 106, 74, 0.28);
   color: #fff;
 }
 
@@ -78,9 +284,9 @@ body {
 .skeleton {
   background: linear-gradient(
     90deg,
-    #141428 25%,
-    #1e1e38 50%,
-    #141428 75%
+    rgb(var(--bg-card)) 25%,
+    rgb(var(--bg-border)) 50%,
+    rgb(var(--bg-card)) 75%
   );
   background-size: 200% 100%;
   animation: skeleton 1.5s ease-in-out infinite;
@@ -91,27 +297,46 @@ body {
   100% { background-position: -200% 0; }
 }
 
-/* ── Markdown Prose Overrides ── */
+/* ── Markdown Prose Overrides ──
+   FIX: this entire block used to be hardcoded dark-mode hex
+   values — meaning the AI's markdown reply text rendered in
+   DARK colors even on a white light-mode background (near-
+   unreadable). Now fully theme-variable-driven:
+     - body/headings/bold/code all use --fg-primary — deliberately
+       NOT an accent color, keeping the reply box clean/neutral in
+       every theme (per requirement: AI reply must never look
+       "colorful", easy on the eyes, better than typical AI chat
+       UIs).
+     - secondary elements (bullets, counters, quotes) use
+       --fg-secondary.
+     - borders/backgrounds use the existing --bg-border/--bg-panel
+       tokens, so code blocks and tables sit correctly on every
+       skin without a single hardcoded color.
+   Companion fix: MessageBubble.jsx / StreamingBubble.jsx no
+   longer apply Tailwind's `prose-invert` modifier — that always
+   forced dark-theme colors regardless of actual theme, which
+   would have fought against these variables. Removing it lets
+   these overrides be the single source of truth. ── */
 .prose {
-  --tw-prose-body:        #c8c8d8;
-  --tw-prose-headings:    #b89aff;
-  --tw-prose-code:        #c084fc;
-  --tw-prose-pre-bg:      #0d0d1a;
-  --tw-prose-pre-code:    #e8e8f0;
-  --tw-prose-th-borders:  #2a2a4a;
-  --tw-prose-td-borders:  #1e1e38;
-  --tw-prose-bullets:     #6b6b8a;
-  --tw-prose-hr:          #1e1e38;
-  --tw-prose-quotes:      #9a9ab0;
-  --tw-prose-quote-borders: #7333ea;
-  --tw-prose-links:       #9f75ff;
-  --tw-prose-bold:        #e8e8f0;
-  --tw-prose-counters:    #6b6b8a;
+  --tw-prose-body:        rgb(var(--fg-primary));
+  --tw-prose-headings:    rgb(var(--fg-primary));
+  --tw-prose-code:        rgb(var(--fg-primary));
+  --tw-prose-pre-bg:      rgb(var(--bg-panel));
+  --tw-prose-pre-code:    rgb(var(--fg-primary));
+  --tw-prose-th-borders:  rgb(var(--bg-border));
+  --tw-prose-td-borders:  rgb(var(--bg-border));
+  --tw-prose-bullets:     rgb(var(--fg-secondary));
+  --tw-prose-hr:          rgb(var(--bg-border));
+  --tw-prose-quotes:      rgb(var(--fg-secondary));
+  --tw-prose-quote-borders: rgb(var(--bg-border));
+  --tw-prose-links:       rgb(var(--fg-primary));
+  --tw-prose-bold:        rgb(var(--fg-primary));
+  --tw-prose-counters:    rgb(var(--fg-secondary));
 }
 
 .prose pre {
-  background: #0b0b18 !important;
-  border: 1px solid #1e1e38 !important;
+  background: rgb(var(--bg-panel)) !important;
+  border: 1px solid rgb(var(--bg-border)) !important;
   border-radius: 10px !important;
   padding: 14px 16px !important;
   font-size: 12.5px !important;
@@ -120,13 +345,13 @@ body {
 }
 
 .prose code:not(pre code) {
-  background: #1a1a30;
-  color: #c084fc;
+  background: rgb(var(--bg-panel));
+  color: rgb(var(--fg-primary));
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 12px;
   font-family: var(--font-mono);
-  border: 1px solid #2a2a4a;
+  border: 1px solid rgb(var(--bg-border));
 }
 
 .prose table {
@@ -137,27 +362,27 @@ body {
 }
 
 .prose th {
-  background: #1a1a30;
-  color: #b89aff;
+  background: rgb(var(--bg-panel));
+  color: rgb(var(--fg-primary));
   font-weight: 600;
   text-align: left;
   padding: 8px 12px;
-  border: 1px solid #2a2a4a;
+  border: 1px solid rgb(var(--bg-border));
 }
 
 .prose td {
-  border: 1px solid #1e1e38;
+  border: 1px solid rgb(var(--bg-border));
   padding: 7px 12px;
-  color: #c8c8d8;
+  color: rgb(var(--fg-primary));
 }
 
 .prose blockquote {
-  border-left: 3px solid #7333ea;
+  border-left: 3px solid rgb(var(--bg-border));
   padding-left: 12px;
-  color: #9a9ab0;
+  color: rgb(var(--fg-secondary));
   font-style: normal;
   margin: 1rem 0;
-  background: #0f0f20;
+  background: rgb(var(--bg-panel));
   border-radius: 0 6px 6px 0;
   padding: 8px 12px 8px 16px;
 }
@@ -165,26 +390,39 @@ body {
 .prose p { margin: 0.6rem 0; line-height: 1.7; }
 .prose ul, .prose ol { margin: 0.5rem 0; padding-left: 1.4rem; }
 .prose li { margin: 0.3rem 0; }
-.prose h1, .prose h2, .prose h3 { margin: 1rem 0 0.5rem; }
-.prose strong { color: #e8e8f0; }
-.prose hr { border-color: #1e1e38; margin: 1.2rem 0; }
+.prose h1, .prose h2, .prose h3 { margin: 1rem 0 0.5rem; font-weight: 600; letter-spacing: -0.01em; }
+.prose strong { color: rgb(var(--fg-primary)); font-weight: 600; }
+.prose hr { border-color: rgb(var(--bg-border)); margin: 1.2rem 0; }
 
 /* ── Input autofill style reset ── */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px #0e0e1c inset !important;
-  -webkit-text-fill-color: #e8e8f0 !important;
-  caret-color: #e8e8f0;
-  border-color: #1e1e38 !important;
+  -webkit-box-shadow: 0 0 0 1000px rgb(var(--bg-surface)) inset !important;
+  -webkit-text-fill-color: rgb(var(--fg-primary)) !important;
+  caret-color: rgb(var(--fg-primary));
+  border-color: rgb(var(--bg-border)) !important;
 }
 
 /* ── Utility: Glass card ── */
 .glass-card {
-  background: rgba(20, 20, 40, 0.8);
+  background: rgba(38, 36, 33, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(30, 30, 56, 0.8);
+  border: 1px solid rgba(58, 55, 51, 0.8);
+}
+
+/* ── NEW Utility: Glass panel — theme-aware version of the above.
+   Unlike .glass-card (hardcoded dark colors), this reads the
+   current theme's own variables, so it automatically looks right
+   in dark mode AND in every light accent skin (Normal/NEET/JEE).
+   Opt-in only — added to specific card components, doesn't change
+   anything unless a component's className includes it. ── */
+.glass-panel {
+  background: rgb(var(--bg-card) / 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgb(var(--bg-border) / 0.7);
 }
 
 @keyframes scaleIn {
@@ -198,9 +436,9 @@ input:-webkit-autofill:focus {
 
 .chat-shell {
   background:
-    radial-gradient(circle at 50% -10%, rgba(91, 179, 255, 0.12), transparent 36%),
-    radial-gradient(circle at 100% 20%, rgba(91, 179, 255, 0.06), transparent 30%),
-    var(--bg-base);
+    radial-gradient(circle at 50% -10%, rgba(176, 106, 74, 0.10), transparent 36%),
+    radial-gradient(circle at 100% 20%, rgba(176, 106, 74, 0.05), transparent 30%),
+    rgb(var(--bg-base));
 }
 
 .chat-scroll {
@@ -230,7 +468,7 @@ input:-webkit-autofill:focus {
 
 /* ── Utility: Gradient text ── */
 .gradient-text {
-  background: linear-gradient(135deg, #b89aff 0%, #8248fe 50%, #6121ce 100%);
+  background: linear-gradient(135deg, #d7a189 0%, #b06a4a 50%, #824a35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,7 +1,15 @@
 // ============================================================
-//  JNEET+ AI — context/AuthContext.jsx
-//  Cookie-based auth. Zero localStorage. Zero next() calls.
-//  Session restored on mount via /api/auth/me.
+//  JNEET+ AI — context/AuthContext.jsx  (v2 — updateLanguage removed)
+//  REMOVED: updateLanguage(). It called userApi.updateLanguage(),
+//  which pointed at a backend route that never existed in
+//  authRoutes.js — this function would have 404'd if it had ever
+//  been triggered. Now that the Language section in Settings.jsx
+//  (its only caller) is gone too, there's no reason to keep it
+//  around as dead code.
+//  Everything else — login/logout/refreshUser/updateTargetExam/
+//  updateProfile/changePassword/deleteAccount, the auth-epoch
+//  guard against stale async responses, the unauthorized-event
+//  listener — is UNCHANGED.
 // ============================================================
 
 import {
@@ -13,6 +21,7 @@ import {
   useRef,
 } from "react";
 import { authApi } from "../api/authApi.js";
+import { userApi } from "../api/userApi.js";
 
 const AuthContext = createContext(null);
 
@@ -21,10 +30,6 @@ export function AuthProvider({ children }) {
   const [isInitializing, setIsInitializing] = useState(true);
   const authEpochRef = useRef(0);
 
-  // ── Restore session from httpOnly cookie on boot ─────────
-  // Calls /api/auth/me. If the cookie is valid the backend returns
-  // the user object. If not (expired / missing) it returns 401 and
-  // we land in the catch block — user stays null, no crash.
   useEffect(() => {
     let cancelled = false;
 
@@ -45,7 +50,6 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
-  // ── React to 401 events dispatched by axiosInstance ──────
   useEffect(() => {
     const handle = (event) => {
       const url = event.detail?.url ?? "";
@@ -57,16 +61,11 @@ export function AuthProvider({ children }) {
     return () => window.removeEventListener("jneet:unauthorized", handle);
   }, []);
 
-  // ── login: called by Register.jsx / Login.jsx after success ─
-  // Accepts the `student` object returned by the backend.
-  // The httpOnly cookie is already set by the browser at this point —
-  // we only need to update React state.
   const login = useCallback((userData) => {
     authEpochRef.current += 1;
     setUser(userData);
   }, []);
 
-  // ── logout: tells backend to clear the httpOnly cookie ───
   const logout = useCallback(async () => {
     try {
       await authApi.logout();
@@ -77,7 +76,6 @@ export function AuthProvider({ children }) {
     setUser(null);
   }, []);
 
-  // ── refreshUser: re-sync from server (e.g. after profile edit) ─
   const refreshUser = useCallback(async () => {
     try {
       const res = await authApi.getMe();
@@ -88,12 +86,28 @@ export function AuthProvider({ children }) {
   }, []);
 
   const updateTargetExam = useCallback(async (targetExam, targetExamPromptDismissed = true) => {
-    const res = await authApi.updateTargetExam({
-      targetExam,
-      targetExamPromptDismissed,
-    });
+    const res = await authApi.updateTargetExam({ targetExam, targetExamPromptDismissed });
     setUser(res.data.student);
     return res.data.student;
+  }, []);
+
+  // ── Profile — update name ──────────────────────────────────
+  const updateProfile = useCallback(async (data) => {
+    const res = await userApi.updateProfile(data);
+    setUser(res.data.student);
+    return res.data.student;
+  }, []);
+
+  // ── Change password (no user-state change needed) ─────────
+  const changePassword = useCallback(async (data) => {
+    await userApi.changePassword(data);
+  }, []);
+
+  // ── Delete (deactivate) own account ────────────────────────
+  const deleteAccount = useCallback(async (password) => {
+    await userApi.deleteAccount({ password });
+    authEpochRef.current += 1;
+    setUser(null);
   }, []);
 
   return (
@@ -107,6 +121,9 @@ export function AuthProvider({ children }) {
         logout,
         refreshUser,
         updateTargetExam,
+        updateProfile,
+        changePassword,
+        deleteAccount,
       }}
     >
       {children}

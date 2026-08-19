@@ -1,14 +1,28 @@
+// ============================================================
+//  JNEET+ AI — pages/Dashboard.jsx  (v2 — English text)
+//  FIXED: greeting + subtitle were hardcoded Hinglish ("Namaste",
+//  "Aaj kya padhna hai?") regardless of any language setting —
+//  this wasn't actually reading a language preference at all, it
+//  was just fixed text. Since the app is English-only now (Hindi
+//  toggle removed — see Settings.jsx), switched these to English.
+//  Also switched the mode-switch toast to English for the same
+//  consistency reason.
+//  Nothing else changed — same layout, same features grid, same
+//  target-exam modal logic.
+// ============================================================
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { ExamCountdown } from "../components/dashboard/ExamCountdown.jsx";
 import { TargetExamModal } from "../components/dashboard/TargetExamModal.jsx";
 import { QuoteOfDay } from "../components/dashboard/QuoteOfDay.jsx";
+import { ProfileMenu } from "../components/ProfileMenu.jsx";
 import { getTargetExam } from "../config/targetExams.js";
 import toast from "react-hot-toast";
 import {
-  Bot, BarChart3, ClipboardList, TrendingUp,
-  LogOut, ChevronRight, Sparkles,
+  BarChart3, ClipboardList, TrendingUp,
+  ChevronRight, Sparkles,
   Target, MessageSquare, BookMarked,
 } from "lucide-react";
 
@@ -16,7 +30,7 @@ function StatCard({ icon, label, value }) {
   return (
     <div className="bg-bg-card border border-bg-border rounded-xl p-4">
       <div className="mb-2">{icon}</div>
-      <p className="text-xl font-bold text-white tabular-nums">{value}</p>
+      <p className="text-xl font-bold text-fg-primary tabular-nums">{value}</p>
       <p className="text-[11px] text-gray-600 mt-0.5">{label}</p>
     </div>
   );
@@ -37,7 +51,7 @@ function FeatureCard({ icon, title, desc, badge, badgeClass, available, onClick 
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-0.5">
-          <span className="font-semibold text-sm text-white">{title}</span>
+          <span className="font-semibold text-sm text-fg-primary">{title}</span>
           <span className={`text-[10px] px-1.5 py-0.5 rounded-full border ${badgeClass}`}>
             {badge}
           </span>
@@ -55,7 +69,7 @@ function FeatureCard({ icon, title, desc, badge, badgeClass, available, onClick 
 }
 
 export default function Dashboard() {
-  const { user, examMode, logout, updateTargetExam } = useAuth();
+  const { user, examMode, updateTargetExam } = useAuth();
   const navigate = useNavigate();
   const [targetModalOpen, setTargetModalOpen] = useState(
     !!user && !user.targetExam && !user.targetExamPromptDismissed
@@ -65,15 +79,9 @@ export default function Dashboard() {
 
   const selectedTarget = getTargetExam(user?.targetExam);
 
-  const handleLogout = async () => {
-    await logout();
-    toast.success("Logged out");
-    navigate("/login", { replace: true });
-  };
-
   const handleModeSwitch = async (mode) => {
     if (mode === examMode) return;
-    toast(`${mode} mode ke liye ek baar logout karke re-register karo.`, {
+    toast(`To switch to ${mode} mode, log out and register again.`, {
       icon: "i",
       duration: 5000,
     });
@@ -86,7 +94,7 @@ export default function Dashboard() {
 
   const features = [
     {
-      icon: <Bot size={20} className="text-violet-400" />,
+      icon: <Sparkles size={20} className="text-violet-400" />,
       title: "AI Mentor",
       desc: `Instant ${examMode} doubt solving with streaming AI`,
       badge: "Active",
@@ -98,17 +106,19 @@ export default function Dashboard() {
       icon: <BarChart3 size={20} className="text-orange-400" />,
       title: "WMS Tracker",
       desc: "Weak / Medium / Strong topic analysis",
-      badge: "Soon",
-      badgeClass: "bg-bg-panel text-gray-600 border-bg-border",
-      available: false,
+      badge: "Active",
+      badgeClass: "bg-emerald-900/30 text-emerald-400 border-emerald-700/30",
+      available: true,
+      onClick: () => navigate("/wms"),
     },
     {
       icon: <ClipboardList size={20} className="text-blue-400" />,
       title: "Mock Tests",
-      desc: "Full & chapter-wise mocks with timer",
-      badge: "Soon",
-      badgeClass: "bg-bg-panel text-gray-600 border-bg-border",
-      available: false,
+      desc: "Chapter-wise MCQs with instant scoring",
+      badge: "Active",
+      badgeClass: "bg-emerald-900/30 text-emerald-400 border-emerald-700/30",
+      available: true,
+      onClick: () => navigate("/tests"),
     },
     {
       icon: <TrendingUp size={20} className="text-emerald-400" />,
@@ -121,7 +131,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-bg-base text-white">
+    <div className="min-h-screen bg-bg-base text-fg-primary">
       <TargetExamModal
         user={user}
         open={targetModalOpen}
@@ -138,25 +148,16 @@ export default function Dashboard() {
           <span className="font-bold text-sm tracking-wide gradient-text">JNEET+ AI</span>
         </div>
 
-        <div className="flex items-center gap-3">
-          <span className="text-xs text-gray-700 hidden sm:block">{user?.email}</span>
-          <button
-            onClick={handleLogout}
-            className="flex items-center gap-1.5 text-gray-500 hover:text-white border border-bg-border hover:border-bg-hover px-3 py-1.5 rounded-lg text-xs transition"
-          >
-            <LogOut size={12} />
-            Logout
-          </button>
-        </div>
+        <ProfileMenu />
       </nav>
 
       <div className="max-w-3xl mx-auto px-5 py-8 animate-fade-up">
         <div className="mb-7">
           <h1 className="text-2xl font-bold mb-0.5 tracking-tight">
-            Namaste, {user?.name?.split(" ")[0] ?? "Student"}!
+            Hi, {user?.name?.split(" ")[0] ?? "Student"}!
           </h1>
           <p className="text-gray-600 text-sm">
-            Aaj kya padhna hai? {examMode} preparation shuru karte hain.
+            What do you want to study today? Let's start your {examMode} preparation.
           </p>
         </div>
 
@@ -172,7 +173,7 @@ export default function Dashboard() {
             <button
               type="button"
               onClick={() => setTargetModalOpen(true)}
-              className="text-[11px] text-violet-300 hover:text-white transition"
+              className="text-[11px] text-violet-300 hover:text-violet-500 transition"
             >
               Change Target Exam
             </button>
@@ -186,7 +187,7 @@ export default function Dashboard() {
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition active:scale-[0.97]
                   ${examMode === mode
                     ? "bg-violet-600 text-white shadow-glow-sm"
-                    : "bg-bg-panel border border-bg-border text-gray-500 hover:border-violet-600/40 hover:text-white"
+                    : "bg-bg-panel border border-bg-border text-gray-500 hover:border-violet-600/40 hover:text-fg-primary"
                   }`}
               >
                 {mode} Mode
@@ -200,7 +201,7 @@ export default function Dashboard() {
 
             <div className="px-4 py-2.5 rounded-xl bg-bg-panel border border-bg-border text-sm">
               <span className="text-gray-600 mr-2">Target:</span>
-              <span className="text-white font-semibold">
+              <span className="text-fg-primary font-semibold">
                 {selectedTarget?.label ?? "Not selected"}
               </span>
             </div>

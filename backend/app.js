@@ -1,7 +1,12 @@
 // ============================================================
-//  JNEET+ AI — app.js
-//  Sirf Express app banata hai aur routes set karta hai.
-//  DB connect ya server.listen() YAHAN NAHI hota — testing ke liye alag rakha.
+//  JNEET+ AI — app.js  (v2 — wmsRoutes mounted)
+//  FIXED: wmsRoutes was never imported or mounted here at all —
+//  that's the entire root cause of "Route 'POST /api/wms' not
+//  found" and the failed GET requests. Added the import and the
+//  app.use("/api/wms", wmsRoutes) line, following the exact same
+//  pattern as the other three route mounts.
+//  Everything else — CORS config, security middleware, error
+//  handler, health check — is UNCHANGED.
 // ============================================================
 
 import express      from "express";
@@ -15,6 +20,10 @@ import { helmetMiddleware, sanitizeMiddleware } from "./middleware/security.js";
 import authRoutes   from "./routes/authRoutes.js";
 import aiRoutes     from "./routes/aiRoutes.js";
 import chatRoutes   from "./routes/chatRoutes.js";
+import userRoutes   from "./routes/userRoutes.js";
+import wmsRoutes     from "./routes/wmsRoutes.js";
+import testRoutes    from "./routes/testRoutes.js";
+import uploadRoutes  from "./routes/uploadRoutes.js";
 
 const app = express();
 
@@ -53,6 +62,10 @@ app.set("trust proxy", 1);
 app.use("/api/auth", authRoutes);
 app.use("/api/ai",   aiRoutes);
 app.use("/api/chat", chatRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/wms",  wmsRoutes);
+app.use("/api/test",   testRoutes);
+app.use("/api/upload", uploadRoutes);
 
 app.get("/health", (req, res) => {
   const dbState = mongoose.connection.readyState;
