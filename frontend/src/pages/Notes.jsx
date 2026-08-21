@@ -1,17 +1,15 @@
 // ============================================================
-//  JNEET+ AI — pages/Notes.jsx  (v3 — filter chips removed)
-//  REMOVED: the Physics/Chemistry/Biology quick-filter chips
-//  added in v2. Root issue: they only match notes that literally
-//  contain a subject-word somewhere in content/tag — a note that's
-//  just a raw formula ("F = ma") with no subject word anywhere
-//  would never surface under a chip, silently. True automatic
-//  subject-detection would need an AI classification call on every
-//  save (extra latency, extra API cost, a new failure point if
-//  Gemini is slow/down) — not worth that complexity/fragility for
-//  a low-stakes personal-notes feature. Back to plain manual
-//  tag + full-text search only — predictable, nothing hidden.
-//  UNCHANGED from v2: long-press/right-click context menu (Edit/
-//  Delete) on each note, editor view, save flow, all API calls.
+//  JNEET+ AI — pages/Notes.jsx  (v4 — right-click open bug fixed)
+//  FIXED (same root cause as SessionItem.jsx): right-click fires
+//  pointerdown(button=2) → contextmenu → pointerup, in that order.
+//  handlePointerUp had no check for WHICH button was pressed, so
+//  it fired onOpen() unconditionally on every right-click too —
+//  the note would open right after the context menu appeared.
+//  Added isPrimaryButtonRef, set in pointerdown, checked in
+//  pointerup — onOpen now only fires after a genuine left-
+//  click/tap, never after a right-click.
+//  Everything else — search, tag, context menu items, editor,
+//  save/delete flow — UNCHANGED from v3.
 // ============================================================
 
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -46,6 +44,7 @@ function NoteCard({ note, index, onOpen, onRequestMenu }) {
   const pressTimer = useRef(null);
   const startPos = useRef({ x: 0, y: 0 });
   const longPressFired = useRef(false);
+  const isPrimaryButtonRef = useRef(true);
 
   const clearTimer = () => {
     if (pressTimer.current) {
@@ -55,7 +54,13 @@ function NoteCard({ note, index, onOpen, onRequestMenu }) {
   };
 
   const handlePointerDown = (e) => {
-    if (e.button !== undefined && e.button !== 0) return; // ignore right/middle mouse here — onContextMenu handles right-click
+    // Touch events report e.button === 0 or undefined — only a
+    // real right/middle mouse click sets this to non-zero, so
+    // long-press (touch) is untouched while right-clicks are
+    // correctly flagged.
+    isPrimaryButtonRef.current = e.button === undefined || e.button === 0;
+    if (!isPrimaryButtonRef.current) return; // right/middle click — onContextMenu handles it, don't arm the timer
+
     longPressFired.current = false;
     startPos.current = { x: e.clientX, y: e.clientY };
     pressTimer.current = setTimeout(() => {
@@ -72,7 +77,12 @@ function NoteCard({ note, index, onOpen, onRequestMenu }) {
 
   const handlePointerUp = () => {
     clearTimer();
-    if (!longPressFired.current) onOpen(note._id);
+    // FIX: only open the note on a genuine left-click/tap that
+    // wasn't a long-press — never on a right-click's trailing
+    // pointerup event.
+    if (isPrimaryButtonRef.current && !longPressFired.current) {
+      onOpen(note._id);
+    }
   };
 
   const handleContextMenu = (e) => {

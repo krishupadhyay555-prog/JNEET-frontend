@@ -1,20 +1,19 @@
 // ============================================================
-//  JNEET+ AI — components/sidebar/SessionItem.jsx  (v2 — pin +
-//  rename + context menu)
-//  ADDED: right-click (desktop) / long-press (mobile, ~500ms) / a
-//  hover-visible three-dot button — all three open the same
-//  context menu (Rename / Pin / Delete), rendered by the PARENT
-//  (Sidebar.jsx) via onRequestMenu, same lifted-state pattern
-//  already used for Notes' NoteCard. A small filled Pin icon shows
-//  before the title when session.pinned is true. Inline rename:
-//  when isEditing is true (controlled by Sidebar), the title
-//  becomes a real text input — Enter/blur saves, Escape cancels.
-//  REMOVED: the old always-hover trash-icon button — Delete now
-//  lives in the context menu (with its existing confirm-on-second-
-//  click safety), so there's one control instead of two doing
-//  overlapping things.
-//  UNCHANGED: click-to-select, active-state styling, entrance
-//  animation.
+//  JNEET+ AI — components/sidebar/SessionItem.jsx  (v3 — right-
+//  click open+close bug fixed)
+//  FIXED (root cause): right-click fires pointerdown(button=2) →
+//  contextmenu → pointerup, in that order. handlePointerDown
+//  already skipped arming the long-press timer for non-left
+//  buttons, but handlePointerUp had NO such check — it fired
+//  onSelect() unconditionally whenever longPressFired was false,
+//  which was true for every right-click (the timer never even
+//  started). That's why right-click both opened the chat AND
+//  (via Sidebar's onClose in handleSelectSession) closed the
+//  mobile sidebar. Added isPrimaryButtonRef, set in pointerdown,
+//  checked in pointerup — onSelect now only fires after a genuine
+//  left-click/tap, never after a right-click.
+//  UNCHANGED: long-press detection, pin/rename display, inline
+//  rename input, context-menu trigger button.
 // ============================================================
 
 import { memo, useState, useRef, useEffect } from "react";
@@ -34,6 +33,7 @@ export const SessionItem = memo(function SessionItem({
   const pressTimer = useRef(null);
   const startPos = useRef({ x: 0, y: 0 });
   const longPressFired = useRef(false);
+  const isPrimaryButtonRef = useRef(true);
 
   useEffect(() => {
     if (isEditing) {
@@ -51,7 +51,15 @@ export const SessionItem = memo(function SessionItem({
 
   const handlePointerDown = (e) => {
     if (isEditing) return;
-    if (e.button !== undefined && e.button !== 0) return;
+
+    // Touch events report e.button === 0 too (or undefined) —
+    // only a real right/middle mouse click sets this to a
+    // non-zero value, so this correctly leaves long-press
+    // (touch) untouched while flagging real right-clicks.
+    isPrimaryButtonRef.current = e.button === undefined || e.button === 0;
+
+    if (!isPrimaryButtonRef.current) return; // right/middle click — let onContextMenu handle it, don't arm the timer
+
     longPressFired.current = false;
     startPos.current = { x: e.clientX, y: e.clientY };
     pressTimer.current = setTimeout(() => {
@@ -68,7 +76,12 @@ export const SessionItem = memo(function SessionItem({
 
   const handlePointerUp = () => {
     clearTimer();
-    if (!longPressFired.current && !isEditing) onSelect(session._id);
+    // FIX: only open the chat on a genuine left-click/tap that
+    // wasn't a long-press — never on a right-click's trailing
+    // pointerup event.
+    if (isPrimaryButtonRef.current && !longPressFired.current && !isEditing) {
+      onSelect(session._id);
+    }
   };
 
   const handleContextMenu = (e) => {
