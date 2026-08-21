@@ -1,5 +1,5 @@
 // ============================================================
-//  JNEET+ AI — schemas/testSchemas.js
+//  JNEET+ AI — schemas/testSchemas.js  (v2 — answerQuestionSchema added)
 // ============================================================
 
 import { z } from "zod";
@@ -30,4 +30,11 @@ export const submitTestSchema = z.object({
       })
     )
     .min(1, "No answers submitted."),
+});
+
+// NEW: single-question instant-answer (revision mode only) —
+// selectedIndex null means "skipped".
+export const answerQuestionSchema = z.object({
+  questionId:    z.string({ required_error: "Question ID is required" }).min(1),
+  selectedIndex: z.number().int().min(0).max(3).nullable(),
 });

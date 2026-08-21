@@ -1,8 +1,14 @@
 // ============================================================
-//  JNEET+ AI — pages/Tests.jsx  (v3 — Full Test option added)
-//  ADDED: a prominent "Full Test" card at the top — starts a
-//  complete NEET (180Q/720 marks) or JEE (75Q/300 marks) mock,
-//  separate from the chapter-wise revision cards below it.
+//  JNEET+ AI — pages/Tests.jsx  (v4 — revision routes to new page)
+//  CHANGED: handleStart() now navigates to /revision/attempt/:id
+//  (the new instant-feedback RevisionSession.jsx) instead of
+//  /test/attempt/:id — chapter-wise revision always creates
+//  mode: "revision" attempts, which is exactly what that new page
+//  is for. handleStartFull() is UNCHANGED — Full Test still goes
+//  to the existing exam-simulation TestAttempt.jsx, since that
+//  flow (timed, submit-at-end, no mid-test explanations) is
+//  correct for a full mock and must stay that way.
+//  Everything else UNCHANGED from v3.
 // ============================================================
 
 import { useState, useEffect, useCallback } from "react";
@@ -61,7 +67,7 @@ export default function Tests() {
         moderate: mix.moderate,
         tough: mix.tough,
       });
-      navigate(`/test/attempt/${res.data.attemptId}`);
+      navigate(`/revision/attempt/${res.data.attemptId}`);
     } catch (err) {
       toast.error(err.response?.data?.error || "Could not start test");
     } finally {
@@ -96,7 +102,6 @@ export default function Tests() {
 
       <div className="max-w-2xl mx-auto px-5 py-8 space-y-6">
 
-        {/* Full NEET/JEE-pattern mock — separate from chapter revision */}
         <div className="glass-panel rounded-2xl p-5">
           <div className="flex items-start gap-3 mb-3">
             <div className="w-10 h-10 rounded-xl bg-violet-600/15 border border-violet-600/25 flex items-center justify-center shrink-0">

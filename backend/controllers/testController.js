@@ -1,18 +1,20 @@
 // ============================================================
-//  JNEET+ AI — controllers/testController.js  (v2 — Test/Revision modes)
-//  ADDED: startFullTest() — generates a full NEET (180Q/720 marks)
-//  or JEE (75Q/300 marks) mock, pulling proportionally across ALL
-//  chapters within each subject (not filtered by chapter or
-//  difficulty — mimics a real exam's natural spread).
-//  CHANGED: startTest() (chapter-wise revision) now also stores
-//  subject/chapter on each question snapshot (needed for the
-//  upcoming WMS aggregation). submitTest() now always computes
-//  marksObtained (+4/-1) alongside the existing percentage score —
-//  harmless for revision, meaningful for test mode.
-//  Content-safety: startFullTest() checks there are ENOUGH
-//  questions per subject BEFORE creating anything — a half-built
-//  "720 mark test" that's actually 6 questions would be worse than
-//  a clear "not enough content yet" error.
+//  JNEET+ AI — controllers/testController.js  (v3 — instant-
+//  feedback answer endpoint for Revision mode)
+//  ADDED: answerQuestion() — POST /test/:attemptId/answer. Records
+//  ONE answer (or skip, selectedIndex: null) into the attempt
+//  document immediately (so progress survives a refresh/crash) and
+//  returns { isCorrect, correctIndex, explanation } right away —
+//  this is what powers the "instant red/green feedback" revision
+//  flow, distinct from the existing submit-at-end Mock Test flow.
+//  Explicitly rejects mode "test" (720/300-mark full mocks must
+//  stay submit-at-end, no mid-test answer leaking) and an already-
+//  submitted attempt.
+//  Does NOT touch correctCount/wrongCount/score/status — those are
+//  still computed by the EXISTING submitTest() below, which the
+//  frontend calls once at the very end of a revision session with
+//  the full accumulated answers array. No duplicate scoring logic.
+//  Everything else in this file — UNCHANGED from v2.
 // ============================================================
 
 import Question    from "../models/Question.js";
@@ -23,8 +25,6 @@ const SUBJECTS_BY_EXAM = {
   JEE:  ["Physics", "Chemistry", "Mathematics"],
 };
 
-// Full-test subject distribution — verified against the official
-// 2026 NEET/JEE Main patterns (see conversation notes).
 const FULL_TEST_CONFIG = {
   NEET: {
     maxMarks: 720,
@@ -36,9 +36,6 @@ const FULL_TEST_CONFIG = {
   },
   JEE: {
     maxMarks: 300,
-    // Simplified to all-MCQ for now (JEE's official 5 Numerical-
-    // Value Questions per subject are deferred — see conversation
-    // notes). 25 MCQ per subject instead of the official 20+5 split.
     subjects: [
       { subject: "Physics",     count: 25 },
       { subject: "Chemistry",  count: 25 },
@@ -86,9 +83,6 @@ async function pickForDifficulty(baseFilter, difficulty, count, excludeIds) {
   return picked;
 }
 
-// Same pooling pattern as pickForDifficulty, but for full tests —
-// pulls across ALL chapters and difficulties within one subject,
-// since a real exam's spread isn't filtered by either.
 async function pickRandomForSubject(examMode, subject, count, excludeIds) {
   if (count <= 0) return [];
   const filter = { examMode, subject };
@@ -110,8 +104,6 @@ async function pickRandomForSubject(examMode, subject, count, excludeIds) {
   return picked;
 }
 
-// ── POST /test/start — chapter-wise revision (unchanged behavior,
-// now also snapshots subject/chapter per question) ─────────────
 export const startTest = async (req, res, next) => {
   try {
     const { subject, chapter, easy = 0, moderate = 0, tough = 0 } = req.body;
@@ -194,15 +186,11 @@ export const startTest = async (req, res, next) => {
   }
 };
 
-// ── NEW: POST /test/start-full — full NEET/JEE-pattern mock ────
 export const startFullTest = async (req, res, next) => {
   try {
     const examMode = req.user.examMode;
     const config = FULL_TEST_CONFIG[examMode] ?? FULL_TEST_CONFIG.NEET;
 
-    // Check enough content exists BEFORE creating anything —
-    // a "720 mark test" that's actually 6 questions would be
-    // confusing and misleading, not a graceful partial test.
     const shortfalls = [];
     for (const s of config.subjects) {
       const available = await Question.countDocuments({ examMode, subject: s.subject });
@@ -265,7 +253,51 @@ export const startFullTest = async (req, res, next) => {
   }
 };
 
-// ── POST /test/:attemptId/submit ────────────────────────────
+// ── NEW: POST /test/:attemptId/answer — instant per-question
+// feedback (revision mode only) ────────────────────────────────
+export const answerQuestion = async (req, res, next) => {
+  try {
+    const { attemptId } = req.params;
+    const { questionId, selectedIndex } = req.body;
+
+    const attempt = await TestAttempt.findOne({ _id: attemptId, userId: req.user.id });
+    if (!attempt) {
+      return res.status(404).json({ success: false, error: "Test attempt not found." });
+    }
+
+    if (attempt.mode !== "revision") {
+      return res.status(400).json({
+        success: false,
+        error: "Instant feedback is only available in revision mode.",
+      });
+    }
+
+    if (attempt.status === "submitted") {
+      return res.status(409).json({ success: false, error: "This revision was already finished." });
+    }
+
+    const question = attempt.questions.find(
+      (q) => q.questionId.toString() === questionId
+    );
+    if (!question) {
+      return res.status(404).json({ success: false, error: "Question not found in this attempt." });
+    }
+
+    question.selectedIndex = selectedIndex;
+    await attempt.save();
+
+    return res.json({
+      success: true,
+      isCorrect: selectedIndex !== null && selectedIndex === question.correctIndex,
+      correctIndex: question.correctIndex,
+      explanation: question.explanation || "",
+    });
+
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const submitTest = async (req, res, next) => {
   try {
     const { attemptId } = req.params;
@@ -303,11 +335,7 @@ export const submitTest = async (req, res, next) => {
     attempt.wrongCount       = wrongCount;
     attempt.unattemptedCount = unattemptedCount;
     attempt.score            = Math.round((correctCount / attempt.totalQuestions) * 100);
-
-    // +4/-1 marking — computed always (harmless for revision,
-    // where the frontend simply won't show it), primary display
-    // for "test" mode.
-    attempt.marksObtained = correctCount * 4 - wrongCount * 1;
+    attempt.marksObtained    = correctCount * 4 - wrongCount * 1;
 
     attempt.status      = "submitted";
     attempt.submittedAt = new Date();
@@ -321,7 +349,6 @@ export const submitTest = async (req, res, next) => {
   }
 };
 
-// ── GET /test/:attemptId — for the review/result screen ─────
 export const getAttempt = async (req, res, next) => {
   try {
     const attempt = await TestAttempt.findOne({
@@ -358,7 +385,6 @@ export const getAttempt = async (req, res, next) => {
   }
 };
 
-// ── GET /test/chapters?subject=Physics ──────────────────────
 export const getAvailableChapters = async (req, res, next) => {
   try {
     const { subject } = req.query;
@@ -406,7 +432,6 @@ export const getAvailableChapters = async (req, res, next) => {
   }
 };
 
-// ── GET /test/history — past attempts list (no question data) ─
 export const getHistory = async (req, res, next) => {
   try {
     const attempts = await TestAttempt.find({

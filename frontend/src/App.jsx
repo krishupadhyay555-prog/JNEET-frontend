@@ -1,9 +1,9 @@
 // ============================================================
-//  JNEET+ AI — App.jsx  (v4 — Notes route added)
-//  ADDED: /notes route (protected) + added to VALID_LAST_PAGES so
-//  the resume-last-page feature works there too.
-//  Everything else — AccentSync, RouteTracker, all other routes —
-//  UNCHANGED from v3.
+//  JNEET+ AI — App.jsx  (v5 — Revision route added)
+//  ADDED: /revision/attempt/:attemptId (protected) → the new
+//  instant-feedback RevisionSession.jsx. TestAttempt.jsx and its
+//  route are UNCHANGED — still handles Full Test exam-simulation.
+//  Everything else UNCHANGED from v4.
 // ============================================================
 
 import { useEffect } from "react";
@@ -24,6 +24,7 @@ import WMS                  from "./pages/WMS.jsx";
 import Tests                from "./pages/Tests.jsx";
 import TestAttempt          from "./pages/TestAttempt.jsx";
 import TestResult           from "./pages/TestResult.jsx";
+import RevisionSession      from "./pages/RevisionSession.jsx";
 import Notes                from "./pages/Notes.jsx";
 
 const TOAST_CONFIG = {
@@ -46,7 +47,6 @@ const TOAST_CONFIG = {
   },
 };
 
-// ── Resume-last-page feature (unchanged) ──────────────────────
 const LAST_PAGE_KEY = "jneet_last_page";
 const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/tests", "/notes"];
 
@@ -75,7 +75,6 @@ function RouteTracker() {
   return null;
 }
 
-// ── Accent sync (NEET-green / JEE-blue / Normal) ───────────────
 function AccentSync() {
   const { examMode }      = useAuth();
   const { accentOverride } = useTheme();
@@ -123,6 +122,10 @@ export default function App() {
               <Route
                 path="/test/result/:attemptId"
                 element={<ProtectedRoute><TestResult /></ProtectedRoute>}
+              />
+              <Route
+                path="/revision/attempt/:attemptId"
+                element={<ProtectedRoute><RevisionSession /></ProtectedRoute>}
               />
 
               <Route path="/"  element={<Navigate to={getLastPage()} replace />} />
