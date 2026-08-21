@@ -1,12 +1,11 @@
 // ============================================================
-//  JNEET+ AI — models/Chat.js  (Production v2.0)
-//  FIXES:
-//    - Renamed `bookmarked` → `saved` at schema level (everywhere)
-//    - Fixed pre('save') hook: was using .map() on Mongoose
-//      DocumentArray which breaks change tracking. Now uses
-//      direct index-based mutation to preserve Mongoose internals.
-//    - Added compound index on (userId, examMode) for fast lookups
-//    - Added lean-safe virtuals for session summary
+//  JNEET+ AI — models/Chat.js  (v2.1 — pin support added)
+//  ADDED: `pinned` (Boolean) + `pinnedAt` (Date) on the session
+//  sub-schema. pinnedAt is used purely for sort-stability — when
+//  multiple sessions are pinned, they're ordered by "most-recently
+//  pinned first" rather than an arbitrary/unstable order.
+//  Everything else (saved-rename, pre-save session/message caps,
+//  compound index) is UNCHANGED from v2.0.
 // ============================================================
 
 import mongoose from "mongoose";
@@ -24,7 +23,6 @@ const messageSchema = new mongoose.Schema(
       required:  true,
       maxlength: 20000,
     },
-    // RENAMED: bookmarked → saved (requirement: "Saved" everywhere)
     saved: {
       type:    Boolean,
       default: false,
@@ -41,6 +39,14 @@ const chatSessionSchema = new mongoose.Schema(
       type:      String,
       default:   "New Chat",
       maxlength: 100,
+    },
+    pinned: {
+      type:    Boolean,
+      default: false,
+    },
+    pinnedAt: {
+      type:    Date,
+      default: null,
     },
     messages: {
       type:    [messageSchema],
@@ -75,21 +81,12 @@ const chatSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// ── Compound index: one chat doc per user per exam mode ───────
 chatSchema.index({ userId: 1, examMode: 1 }, { unique: true });
 
-// ── Pre-save: Enforce session/message limits ──────────────────
-// FIX: Original code used .map() which returns a plain JS array,
-// breaking Mongoose's DocumentArray change tracking and causing
-// silent data corruption. We now mutate sessions in-place using
-// direct index access, which Mongoose tracks correctly.
 chatSchema.pre("save", function () {
-  // Cap sessions at 30 — drop oldest first
   if (this.sessions.length > 30) {
     this.sessions.splice(0, this.sessions.length - 30);
   }
-
-  // Cap messages per session at 150 — drop oldest first
   for (let i = 0; i < this.sessions.length; i++) {
     const session = this.sessions[i];
     if (session.messages.length > 150) {

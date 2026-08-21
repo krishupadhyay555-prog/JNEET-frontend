@@ -1,21 +1,25 @@
 // ============================================================
-//  JNEET+ AI — controllers/chatController.js  (v2.2 — search added)
-//  ADDED: searchChats() — GET /chat/search?q=...
-//  Searches the FULL content of every message in every session
-//  (not just the title or last-message preview, which is what the
-//  sidebar's old client-side filter was limited to — that's why it
-//  missed matches buried mid-conversation). Fetches the user's one
-//  Chat document (small at this scale — a handful of sessions per
-//  student) and filters in JS, which is simpler and safer than a
-//  MongoDB aggregation pipeline for this size of data.
-//  Everything else in this file is UNCHANGED.
+//  JNEET+ AI — controllers/chatController.js  (v3 — pin + rename)
+//  ADDED:
+//    - renameSession() — PATCH /session/:sessionId/rename
+//    - toggleSessionPin() — PATCH /session/:sessionId/pin
+//    - getSessions() now returns `pinned`/`pinnedAt` per session,
+//      and re-orders the list: pinned sessions first (most-
+//      recently-pinned first among themselves), then the rest in
+//      the existing most-recent-first order — unchanged logic,
+//      just re-sliced after the existing .reverse().
+//    - searchChats() now also includes `pinned` on each result,
+//      so the pin indicator/menu stays correct even while a
+//      search is active (ordering during search is unaffected —
+//      only the default sidebar list gets pinned-to-top sorting).
+//  Everything else — session CRUD, message save/toggle-saved,
+//  saved-list — UNCHANGED from v2.2.
 // ============================================================
 
 import Chat from "../models/Chat.js";
 import { env } from "../config/env.js";
 import { generateChatTitle } from "../services/geminiService.js";
 
-// ── Helper: Generate a clean session title ────────────────────
 function generateTitle(content, maxLen = 48) {
   const clean = content.replace(/\s+/g, " ").trim();
   if (clean.length <= maxLen) return clean;
@@ -26,7 +30,6 @@ function generateTitle(content, maxLen = 48) {
   return safe + "…";
 }
 
-// ── Private Helper: Get or create the user's Chat document ───
 async function getOrCreateChat(userId, examMode) {
   return Chat.findOneAndUpdate(
     { userId, examMode },
@@ -46,33 +49,39 @@ async function getOrCreateChat(userId, examMode) {
   );
 }
 
-// ── GET /sessions — List all sessions (sidebar history) ──────
+// ── GET /sessions — pinned-first, then most-recent-first ─────
 export const getSessions = async (req, res, next) => {
   try {
     const chat = await Chat.findOne({
       userId:   req.user.id,
       examMode: req.user.examMode,
     })
-      .select("sessions._id sessions.title sessions.createdAt sessions.messages activeSessionId")
+      .select("sessions._id sessions.title sessions.createdAt sessions.messages sessions.pinned sessions.pinnedAt activeSessionId")
       .lean();
 
     if (!chat) {
       return res.json({ success: true, sessions: [], activeSessionId: null });
     }
 
-    const sessions = chat.sessions
-      .map((s) => ({
-        _id:          s._id,
-        title:        s.title,
-        messageCount: s.messages.length,
-        createdAt:    s.createdAt,
-        lastMessage:  s.messages[s.messages.length - 1]?.content?.slice(0, 80) || "",
-      }))
-      .reverse();
+    const mapped = chat.sessions.map((s) => ({
+      _id:          s._id,
+      title:        s.title,
+      messageCount: s.messages.length,
+      createdAt:    s.createdAt,
+      lastMessage:  s.messages[s.messages.length - 1]?.content?.slice(0, 80) || "",
+      pinned:       !!s.pinned,
+      pinnedAt:     s.pinnedAt || null,
+    }));
+
+    const recentFirst = mapped.reverse();
+    const pinned = recentFirst
+      .filter((s) => s.pinned)
+      .sort((a, b) => new Date(b.pinnedAt) - new Date(a.pinnedAt));
+    const unpinned = recentFirst.filter((s) => !s.pinned);
 
     return res.json({
       success: true,
-      sessions,
+      sessions: [...pinned, ...unpinned],
       activeSessionId: chat.activeSessionId,
     });
 
@@ -81,8 +90,6 @@ export const getSessions = async (req, res, next) => {
   }
 };
 
-// ── NEW: GET /search?q=... — Full-content search across all
-// sessions' messages, not just title/last-message. ────────────
 export const searchChats = async (req, res, next) => {
   try {
     const q = (req.query.q || "").trim();
@@ -95,7 +102,7 @@ export const searchChats = async (req, res, next) => {
       userId:   req.user.id,
       examMode: req.user.examMode,
     })
-      .select("sessions._id sessions.title sessions.createdAt sessions.messages")
+      .select("sessions._id sessions.title sessions.createdAt sessions.messages sessions.pinned")
       .lean();
 
     if (!chat) {
@@ -112,9 +119,6 @@ export const searchChats = async (req, res, next) => {
       );
 
       if (titleMatch || matchedMessage) {
-        // Snippet prefers the actual matched message (so the
-        // student sees WHY this chat matched), falling back to the
-        // last message if only the title matched.
         const snippetSource = matchedMessage
           ?? session.messages[session.messages.length - 1];
 
@@ -123,12 +127,13 @@ export const searchChats = async (req, res, next) => {
           title:        session.title,
           createdAt:    session.createdAt,
           messageCount: session.messages.length,
+          pinned:       !!session.pinned,
           snippet:      snippetSource?.content?.slice(0, 120) || "",
         });
       }
     }
 
-    results.reverse(); // most recent first, matching getSessions()
+    results.reverse();
 
     return res.json({ success: true, results });
 
@@ -137,7 +142,6 @@ export const searchChats = async (req, res, next) => {
   }
 };
 
-// ── GET /session/:sessionId — Get full messages for a session ─
 export const getSession = async (req, res, next) => {
   try {
     const { sessionId } = req.params;
@@ -166,7 +170,6 @@ export const getSession = async (req, res, next) => {
   }
 };
 
-// ── POST /session/new — Create a new chat session ────────────
 export const newSession = async (req, res, next) => {
   try {
     const chat = await getOrCreateChat(req.user.id, req.user.examMode);
@@ -192,7 +195,6 @@ export const newSession = async (req, res, next) => {
   }
 };
 
-// ── PATCH /session/:sessionId/activate — Mark a session active ─
 export const setActiveSession = async (req, res, next) => {
   try {
     const { sessionId } = req.params;
@@ -221,7 +223,66 @@ export const setActiveSession = async (req, res, next) => {
   }
 };
 
-// ── DELETE /session/:sessionId — Delete a session ────────────
+// ── NEW: PATCH /session/:sessionId/rename ────────────────────
+export const renameSession = async (req, res, next) => {
+  try {
+    const { sessionId } = req.params;
+    const { title } = req.body;
+
+    const chat = await Chat.findOne({
+      userId:   req.user.id,
+      examMode: req.user.examMode,
+    });
+
+    if (!chat) {
+      return res.status(404).json({ success: false, error: "Chat not found." });
+    }
+
+    const session = chat.sessions.find((s) => s._id.toString() === sessionId);
+    if (!session) {
+      return res.status(404).json({ success: false, error: "Session not found." });
+    }
+
+    session.title = title;
+    await chat.save();
+
+    return res.json({ success: true, title: session.title });
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── NEW: PATCH /session/:sessionId/pin — toggle pinned state ─
+export const toggleSessionPin = async (req, res, next) => {
+  try {
+    const { sessionId } = req.params;
+
+    const chat = await Chat.findOne({
+      userId:   req.user.id,
+      examMode: req.user.examMode,
+    });
+
+    if (!chat) {
+      return res.status(404).json({ success: false, error: "Chat not found." });
+    }
+
+    const session = chat.sessions.find((s) => s._id.toString() === sessionId);
+    if (!session) {
+      return res.status(404).json({ success: false, error: "Session not found." });
+    }
+
+    session.pinned = !session.pinned;
+    session.pinnedAt = session.pinned ? new Date() : null;
+    await chat.save();
+
+    return res.json({ success: true, pinned: session.pinned });
+
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const deleteSession = async (req, res, next) => {
   try {
     const { sessionId } = req.params;
@@ -259,7 +320,6 @@ export const deleteSession = async (req, res, next) => {
   }
 };
 
-// ── POST /message/save — Persist a user+AI message pair ──────
 export const saveMessage = async (req, res, next) => {
   try {
     const { sessionId, userMessage, aiMessage } = req.body;
@@ -309,7 +369,6 @@ export const saveMessage = async (req, res, next) => {
   }
 };
 
-// ── PATCH /message/save-toggle — Toggle saved on a message ───
 export const toggleSaved = async (req, res, next) => {
   try {
     const { sessionId, messageId, saved } = req.body;
@@ -347,7 +406,6 @@ export const toggleSaved = async (req, res, next) => {
   }
 };
 
-// ── GET /saved — Get all saved messages ──────────────────────
 export const getSaved = async (req, res, next) => {
   try {
     const chat = await Chat.findOne({

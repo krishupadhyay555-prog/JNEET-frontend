@@ -1,13 +1,16 @@
 // ============================================================
-//  JNEET+ AI — context/ChatContext.jsx  (v2.2 — English system text)
-//  CHANGED: all toast messages (system-generated feedback, not AI
-//  chat replies) converted from Hinglish to English — "Naya chat
-//  nahi ban paya" → "Could not create new chat", etc. Per the
-//  language rule: only the AI's own conversational replies should
-//  match the student's language; every other system/UI message
-//  stays English always.
-//  All logic (session load/select/save/delete, streaming, saved-
-//  toggle) is UNCHANGED from the previous version.
+//  JNEET+ AI — context/ChatContext.jsx  (v2.3 — rename + pin)
+//  ADDED:
+//    - renameSession(sessionId, newTitle) — optimistic local title
+//      update, reverts on API failure.
+//    - togglePin(sessionId) — optimistic local pinned toggle, then
+//      RE-SORTS the local sessions list using the same rule the
+//      backend uses (pinned-first, most-recently-pinned first among
+//      pinned, rest unchanged) — so the sidebar re-orders instantly
+//      without waiting for a round-trip re-fetch. Reverts (including
+//      the sort) on API failure.
+//  Everything else — session load/select/save/delete, streaming,
+//  saved-toggle — UNCHANGED from v2.2.
 // ============================================================
 
 import {
@@ -23,6 +26,17 @@ const ChatContext = createContext(null);
 function normalizeSessionId(id) {
   if (!id) return null;
   return id.toString();
+}
+
+// Same ordering rule as backend's getSessions() — keeps the
+// sidebar's pinned-to-top order stable after a local optimistic
+// pin/unpin, without needing a full re-fetch.
+function sortSessions(list) {
+  const pinned = list
+    .filter((s) => s.pinned)
+    .sort((a, b) => new Date(b.pinnedAt || 0) - new Date(a.pinnedAt || 0));
+  const unpinned = list.filter((s) => !s.pinned);
+  return [...pinned, ...unpinned];
 }
 
 export function ChatProvider({ children }) {
@@ -48,7 +62,6 @@ export function ChatProvider({ children }) {
     setActiveSessionId(normalizedId);
   }, []);
 
-  // ── Load sessions + saved from backend ──────────────────
   const loadInitialData = useCallback(async () => {
     if (!examMode) return;
 
@@ -114,7 +127,6 @@ export function ChatProvider({ children }) {
     }
   }, [examMode, setActiveSession]);
 
-  // ── Load a session's messages ────────────────────────────
   const loadSession = useCallback(async (sessionId, existingRequestId = null) => {
     const normalizedId = normalizeSessionId(sessionId);
     if (!normalizedId) return;
@@ -149,7 +161,6 @@ export function ChatProvider({ children }) {
     }
   }, []);
 
-  // ── Select a session ─────────────────────────────────────
   const selectSession = useCallback(async (sessionId) => {
     const normalizedId = normalizeSessionId(sessionId);
     if (!normalizedId || normalizedId === activeSessionRef.current) return;
@@ -161,7 +172,6 @@ export function ChatProvider({ children }) {
     chatApi.activateSession(normalizedId).catch(() => {});
   }, [loadSession, setActiveSession]);
 
-  // ── New session ──────────────────────────────────────────
   const newSession = useCallback(async () => {
     try {
       const res = await chatApi.newSession();
@@ -177,9 +187,11 @@ export function ChatProvider({ children }) {
         title:        res.data.title,
         messageCount: 0,
         lastMessage:  "",
+        pinned:       false,
+        pinnedAt:     null,
         createdAt:    new Date().toISOString(),
       };
-      setSessions((prev) => [sess, ...prev]);
+      setSessions((prev) => sortSessions([sess, ...prev]));
       setActiveSession(sessionId);
       setMessages([]);
       return sessionId;
@@ -189,7 +201,6 @@ export function ChatProvider({ children }) {
     }
   }, [setActiveSession]);
 
-  // ── Delete session ───────────────────────────────────────
   const deleteSession = useCallback(async (sessionId) => {
     const normalizedId = normalizeSessionId(sessionId);
 
@@ -218,7 +229,47 @@ export function ChatProvider({ children }) {
     }
   }, [loadSession, sessions, setActiveSession]);
 
-  // ── Send message with SSE streaming ─────────────────────
+  // ── NEW: Rename session (optimistic, reverts on failure) ────
+  const renameSession = useCallback(async (sessionId, newTitle) => {
+    const normalizedId = normalizeSessionId(sessionId);
+    const trimmed = newTitle?.trim();
+    if (!normalizedId || !trimmed) return;
+
+    const prevSessions = sessions;
+    setSessions((prev) =>
+      prev.map((s) => s._id === normalizedId ? { ...s, title: trimmed } : s)
+    );
+
+    try {
+      await chatApi.renameSession(normalizedId, trimmed);
+    } catch {
+      setSessions(prevSessions);
+      toast.error("Could not rename this chat");
+    }
+  }, [sessions]);
+
+  // ── NEW: Toggle pin (optimistic, re-sorts locally, reverts on
+  // failure) ────────────────────────────────────────────────────
+  const togglePin = useCallback(async (sessionId) => {
+    const normalizedId = normalizeSessionId(sessionId);
+    if (!normalizedId) return;
+
+    const prevSessions = sessions;
+    const optimistic = sessions.map((s) =>
+      s._id === normalizedId
+        ? { ...s, pinned: !s.pinned, pinnedAt: !s.pinned ? new Date().toISOString() : null }
+        : s
+    );
+    setSessions(sortSessions(optimistic));
+
+    try {
+      await chatApi.togglePin(normalizedId);
+    } catch {
+      setSessions(prevSessions);
+      toast.error("Could not update pin");
+    }
+  }, [sessions]);
+
   const sendMessage = useCallback(async (prompt) => {
     if (!prompt.trim() || isStreaming) return;
 
@@ -271,13 +322,15 @@ export function ChatProvider({ children }) {
               setSessions((prev) => {
                 const exists = prev.find((s) => s._id === sessionIdToUse);
                 if (exists) return prev;
-                return [{
+                return sortSessions([{
                   _id:          sessionIdToUse,
                   title:        newTitle || prompt.trim().slice(0, 50),
                   messageCount: 2,
                   lastMessage:  prompt.trim().slice(0, 60),
+                  pinned:       false,
+                  pinnedAt:     null,
                   createdAt:    new Date().toISOString(),
-                }, ...prev];
+                }, ...prev]);
               });
             } else if (newTitle) {
               setSessions((prev) =>
@@ -306,14 +359,12 @@ export function ChatProvider({ children }) {
     );
   }, [isStreaming, setActiveSession]);
 
-  // ── Abort streaming ──────────────────────────────────────
   const abortStream = useCallback(() => {
     abortRef.current?.abort();
     setIsStreaming(false);
     setStreamingText("");
   }, []);
 
-  // ── Toggle saved on a message ────────────────────────────
   const toggleSaved = useCallback(async (msg) => {
     const nowSaved = !msg.saved;
 
@@ -368,6 +419,8 @@ export function ChatProvider({ children }) {
     selectSession,
     newSession,
     deleteSession,
+    renameSession,
+    togglePin,
     sendMessage,
     abortStream,
     toggleSaved,

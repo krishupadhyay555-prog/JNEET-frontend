@@ -1,20 +1,28 @@
 // ============================================================
-//  JNEET+ AI — components/sidebar/Sidebar.jsx  (v5 — real logo)
-//  CHANGED: Sparkles icon in the header badge replaced with the
-//  app's own JN logo image (icon-192.png) — Sparkles looked like
-//  Gemini's icon, this is the actual brand mark.
-//  Everything else (search, tabs, history/saved logic, collapse
-//  animation) UNCHANGED from v4.
+//  JNEET+ AI — components/sidebar/Sidebar.jsx  (v6 — pin, rename,
+//  context menu wired up)
+//  ADDED: sessionMenu state (open ContextMenu with Rename/Pin/
+//  Delete) + editingSessionId state (which session is currently
+//  in inline-rename mode) — both lifted here so a single shared
+//  <ContextMenu /> instance serves every SessionItem, matching
+//  the pattern already used in Notes.jsx. Passed down to
+//  SessionItem in BOTH render paths (normal history list AND
+//  search-results list) so pin/rename/delete work identically
+//  whether or not a search is active.
+//  Everything else (search debounce, tabs, saved-tab logic,
+//  collapse animation, real JN logo) — UNCHANGED from v5.
 // ============================================================
 
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   X, Plus, Bookmark, LayoutDashboard, Search, Loader2,
+  Edit3, Pin, PinOff, Trash2,
 } from "lucide-react";
 import { useChat } from "../../context/ChatContext.jsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { chatApi } from "../../api/chatApi.js";
+import { ContextMenu }     from "../ui/ContextMenu.jsx";
 import { SessionItem }     from "./SessionItem.jsx";
 import { SavedItem }       from "./SavedItem.jsx";
 import { SidebarSkeletons } from "../ui/SkeletonLoader.jsx";
@@ -26,7 +34,8 @@ export function Sidebar({ isOpen, onClose }) {
     sessions, savedItems,
     activeSessionId, isSessionsLoaded,
     selectSession, newSession,
-    deleteSession, toggleSaved,
+    deleteSession, renameSession, togglePin,
+    toggleSaved,
   } = useChat();
 
   const [activeTab, setActiveTab] = useState("history");
@@ -35,6 +44,9 @@ export function Sidebar({ isOpen, onClose }) {
   const [searchResults, setSearchResults] = useState(null);
   const [searching, setSearching] = useState(false);
   const debounceRef = useRef(null);
+
+  const [sessionMenu, setSessionMenu] = useState(null); // { session, x, y } | null
+  const [editingSessionId, setEditingSessionId] = useState(null);
 
   useEffect(() => {
     if (activeTab !== "history" || !searchQuery.trim()) {
@@ -88,11 +100,39 @@ export function Sidebar({ isOpen, onClose }) {
     onClose?.();
   };
 
+  const handleFinishRename = (sessionId, newTitle) => {
+    setEditingSessionId(null);
+    if (newTitle) renameSession(sessionId, newTitle);
+  };
+
+  const menuItems = sessionMenu ? [
+    {
+      label: "Rename",
+      icon: Edit3,
+      onClick: () => setEditingSessionId(sessionMenu.session._id),
+    },
+    {
+      label: sessionMenu.session.pinned ? "Unpin" : "Pin",
+      icon: sessionMenu.session.pinned ? PinOff : Pin,
+      onClick: () => togglePin(sessionMenu.session._id),
+    },
+    {
+      label: "Delete",
+      icon: Trash2,
+      danger: true,
+      confirm: true,
+      onClick: () => deleteSession(sessionMenu.session._id),
+    },
+  ] : [];
+
+  // SessionItem expects `lastMessage` — search results carry
+  // `snippet` instead, so map here rather than touching SessionItem.
   const searchResultsForDisplay = (searchResults ?? []).map((r) => ({
     _id:         r._id,
     title:       r.title,
     lastMessage: r.snippet,
     createdAt:   r.createdAt,
+    pinned:      r.pinned,
   }));
 
   return (
@@ -169,7 +209,7 @@ export function Sidebar({ isOpen, onClose }) {
             </div>
           </div>
 
-          {/* ── Tabs — sliding highlight, not a hard swap ──── */}
+          {/* ── Tabs ─────────────────────────────────────────── */}
           <div className="relative flex mx-3 mb-2 bg-bg-panel rounded-xl p-1 gap-1 shrink-0">
             <div
               className="absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-lg bg-violet-600
@@ -194,7 +234,7 @@ export function Sidebar({ isOpen, onClose }) {
             ))}
           </div>
 
-          {/* ── Search ──────────────────────────────── */}
+          {/* ── Search ──────────────────────────────────────── */}
           <div className="px-3 pb-2 shrink-0">
             <div className="relative">
               {searching ? (
@@ -244,7 +284,9 @@ export function Sidebar({ isOpen, onClose }) {
                         index={i}
                         active={s._id?.toString() === activeSessionId?.toString()}
                         onSelect={handleSelectSession}
-                        onDelete={deleteSession}
+                        isEditing={editingSessionId === s._id}
+                        onFinishRename={handleFinishRename}
+                        onRequestMenu={(session, x, y) => setSessionMenu({ session, x, y })}
                       />
                     ))
                 )
@@ -264,7 +306,9 @@ export function Sidebar({ isOpen, onClose }) {
                       index={i}
                       active={s._id?.toString() === activeSessionId?.toString()}
                       onSelect={handleSelectSession}
-                      onDelete={deleteSession}
+                      isEditing={editingSessionId === s._id}
+                      onFinishRename={handleFinishRename}
+                      onRequestMenu={(session, x, y) => setSessionMenu({ session, x, y })}
                     />
                   ))
               )
@@ -309,6 +353,15 @@ export function Sidebar({ isOpen, onClose }) {
           </div>
         </div>
       </aside>
+
+      {sessionMenu && (
+        <ContextMenu
+          x={sessionMenu.x}
+          y={sessionMenu.y}
+          items={menuItems}
+          onClose={() => setSessionMenu(null)}
+        />
+      )}
     </>
   );
 }
