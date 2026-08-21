@@ -1,19 +1,17 @@
 // ============================================================
-//  JNEET+ AI — pages/Dashboard.jsx  (v3 — real logo + contrast fix)
-//  CHANGED:
-//    - Nav-bar Sparkles icon replaced with app's own JN logo image.
-//    - "AI Mentor" feature-card icon: Sparkles → GraduationCap
-//      (Sparkles looked like Gemini's icon everywhere it appeared).
-//    - "Change Target Exam" link: was text-violet-300 hover:text-
-//      violet-500, which reads NEAR-INVISIBLE in light mode under
-//      the NEET/JEE accent skins (light-teal / light-indigo text on
-//      a near-white background — well under readable contrast).
-//      Swapped to the new .link-accent CSS class (defined in
-//      index.css) which resolves to a properly-dark accent color
-//      in light mode and a properly-light one in dark mode, in
-//      every accent (Normal/NEET/JEE).
+//  JNEET+ AI — pages/Dashboard.jsx  (v4 — readability fix)
+//  FIXED: FeatureCard "Active" badges used bg-emerald-900/30
+//  text-emerald-400 — same "tuned for dark-mode only" pattern
+//  found in ExamCountdown/TargetExamModal. On the light-mode
+//  near-white card background, this combination has weak
+//  contrast. Swapped to bg-emerald-600/15 text-emerald-600
+//  border-emerald-600/30, readable in both modes.
+//  ADDED: passes onChangeTarget={() => setTargetModalOpen(true)}
+//  into <ExamCountdown /> so its new "Set target" corner-button
+//  actually opens the modal (previously that corner text did
+//  nothing when clicked).
 //  Everything else — layout, stats, features grid, target-exam
-//  modal logic — UNCHANGED from v2.
+//  modal open logic — UNCHANGED from v3.
 // ============================================================
 
 import { useState } from "react";
@@ -66,7 +64,7 @@ function FeatureCard({ icon, title, desc, badge, badgeClass, available, onClick 
       {available && (
         <ChevronRight
           size={16}
-          className="text-gray-700 group-hover:text-violet-400 transition shrink-0"
+          className="text-gray-600 group-hover:text-violet-500 transition shrink-0"
         />
       )}
     </div>
@@ -99,34 +97,34 @@ export default function Dashboard() {
 
   const features = [
     {
-      icon: <GraduationCap size={20} className="text-violet-400" />,
+      icon: <GraduationCap size={20} className="text-violet-500" />,
       title: "AI Mentor",
       desc: `Instant ${examMode} doubt solving with streaming AI`,
       badge: "Active",
-      badgeClass: "bg-emerald-900/30 text-emerald-400 border-emerald-700/30",
+      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
       available: true,
       onClick: () => navigate("/ask"),
     },
     {
-      icon: <BarChart3 size={20} className="text-orange-400" />,
+      icon: <BarChart3 size={20} className="text-orange-500" />,
       title: "WMS Tracker",
       desc: "Weak / Medium / Strong topic analysis",
       badge: "Active",
-      badgeClass: "bg-emerald-900/30 text-emerald-400 border-emerald-700/30",
+      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
       available: true,
       onClick: () => navigate("/wms"),
     },
     {
-      icon: <ClipboardList size={20} className="text-blue-400" />,
+      icon: <ClipboardList size={20} className="text-blue-500" />,
       title: "Mock Tests",
       desc: "Chapter-wise MCQs with instant scoring",
       badge: "Active",
-      badgeClass: "bg-emerald-900/30 text-emerald-400 border-emerald-700/30",
+      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
       available: true,
       onClick: () => navigate("/tests"),
     },
     {
-      icon: <TrendingUp size={20} className="text-emerald-400" />,
+      icon: <TrendingUp size={20} className="text-emerald-500" />,
       title: "Analytics",
       desc: "Performance trends & weak area insights",
       badge: "Soon",
@@ -182,7 +180,7 @@ export default function Dashboard() {
             <button
               type="button"
               onClick={() => setTargetModalOpen(true)}
-              className="text-[11px] link-accent transition"
+              className="text-[11px] link-accent font-medium transition"
             >
               Change Target Exam
             </button>
@@ -218,22 +216,25 @@ export default function Dashboard() {
         </div>
 
         <div className="mb-5">
-          <ExamCountdown targetExam={user?.targetExam} />
+          <ExamCountdown
+            targetExam={user?.targetExam}
+            onChangeTarget={() => setTargetModalOpen(true)}
+          />
         </div>
 
         <div className="grid grid-cols-3 gap-3 mb-6">
           <StatCard
-            icon={<Target size={15} className="text-violet-400" />}
+            icon={<Target size={15} className="text-violet-500" />}
             label="Exam Target"
             value={selectedTarget?.label ?? examMode}
           />
           <StatCard
-            icon={<BookMarked size={15} className="text-amber-400" />}
+            icon={<BookMarked size={15} className="text-amber-600" />}
             label="Saved Concepts"
             value="-"
           />
           <StatCard
-            icon={<MessageSquare size={15} className="text-blue-400" />}
+            icon={<MessageSquare size={15} className="text-blue-500" />}
             label="Mock Tests"
             value="0"
           />

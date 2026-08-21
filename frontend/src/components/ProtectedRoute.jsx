@@ -1,13 +1,17 @@
 // ============================================================
-//  JNEET+ AI — components/ProtectedRoute.jsx
-//  Waits for auth initialization before redirecting.
-//  Prevents flash of login screen on cookie-based session restore.
+//  JNEET+ AI — components/ProtectedRoute.jsx  (v2)
+//  CHANGED: the inline Sparkles-icon loading block replaced with
+//  the new <LoadingScreen /> component — same purpose (shown
+//  while /me is restoring the session, prevents a login-screen
+//  flash on page reload), but branded with the real JN logo and
+//  a small rotating caption instead of a generic sparkle+spinner.
+//  Everything else (auth-check logic, redirect behavior) is
+//  UNCHANGED.
 // ============================================================
 
 import { Navigate } from "react-router-dom";
 import { useAuth }  from "../context/AuthContext.jsx";
-import { Spinner }  from "./ui/Spinner.jsx";
-import { Sparkles } from "lucide-react";
+import { LoadingScreen } from "./ui/LoadingScreen.jsx";
 
 export function ProtectedRoute({ children }) {
   const { isLoggedIn, isInitializing } = useAuth();
@@ -15,16 +19,7 @@ export function ProtectedRoute({ children }) {
   // While restoring session from /me, show a neutral loading screen
   // — not a redirect, which would cause a flicker on page reload
   if (isInitializing) {
-    return (
-      <div className="min-h-screen bg-bg-base flex flex-col items-center justify-center gap-4">
-        <div className="w-10 h-10 bg-violet-600 rounded-xl flex items-center
-          justify-center shadow-glow-violet">
-          <Sparkles size={18} className="text-white" />
-        </div>
-        <Spinner size={20} />
-        <p className="text-xs text-gray-700 animate-pulse-soft">Loading your session...</p>
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   if (!isLoggedIn) return <Navigate to="/login" replace />;

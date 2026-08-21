@@ -1,11 +1,31 @@
 // ============================================================
-//  JNEET+ AI — components/dashboard/ExamCountdown.jsx  (Fixed)
-//  FIXES:
-//    - Fallback is now dynamic (nearest upcoming exam) instead of
-//      a hardcoded "NEET_2027" that would eventually go stale too.
-//    - Tentative dates show "~" + a disclaimer instead of fake precision.
-//    - If a saved target has already passed, shows a clear message
-//      instead of a frozen 00:00:00:00 countdown.
+//  JNEET+ AI — components/dashboard/ExamCountdown.jsx  (v2 —
+//  readability fix + wording fix)
+//  FIXED (root cause of "countdown invisible in light mode"):
+//    - Digit component had `text-white` HARDCODED. In light mode
+//      the digit boxes sit on bg-bg-panel (near-white), so white
+//      text on a near-white box was genuinely invisible — this
+//      wasn't a "faded on purpose" look, it was a real bug.
+//      Swapped to text-fg-primary, which is dark in light mode
+//      and light in dark mode, like every other themed text in
+//      the app.
+//    - "Choose target" → "Set target" (shorter, clearer, matches
+//      the active-verb style used elsewhere in the app, e.g.
+//      "Change Target Exam").
+//    - That corner label is now an actual button (was just a
+//      static span) that opens the target-exam modal directly —
+//      previously it looked like it should be clickable but did
+//      nothing, which is exactly the kind of "looks interactive,
+//      isn't" issue this project has hit before. New optional
+//      onChangeTarget prop; falls back to a plain span if the
+//      prop isn't passed, so this stays backward-compatible with
+//      any other place ExamCountdown might be used without it.
+//    - "Final stretch" message: amber-500/80 → amber-600, which
+//      has readable contrast on BOTH the near-black dark-mode
+//      background and the near-white light-mode one (500 was
+//      tuned for dark backgrounds only).
+//  UNCHANGED: countdown calculation logic, urgent threshold,
+//  tentative-date handling, hasPassed fallback state.
 // ============================================================
 
 import { useState, useEffect } from "react";
@@ -44,18 +64,18 @@ function Digit({ value, label, urgent }) {
         className={`bg-bg-panel border rounded-xl px-3 py-2 min-w-[48px] text-center transition-colors duration-300
           ${urgent ? "border-amber-600/50 shadow-glow-sm" : "border-bg-border"}`}
       >
-        <span className="text-xl font-bold text-white tabular-nums font-mono">
+        <span className="text-xl font-bold text-fg-primary tabular-nums font-mono">
           {String(value).padStart(2, "0")}
         </span>
       </div>
-      <span className="text-[9px] text-gray-700 mt-1 uppercase tracking-wider font-medium">
+      <span className="text-[9px] text-gray-600 mt-1 uppercase tracking-wider font-medium">
         {label}
       </span>
     </div>
   );
 }
 
-export function ExamCountdown({ targetExam }) {
+export function ExamCountdown({ targetExam, onChangeTarget }) {
   const examInfo = getExamInfo(targetExam);
 
   const [countdown, setCountdown] = useState(
@@ -75,7 +95,7 @@ export function ExamCountdown({ targetExam }) {
   if (!examInfo) {
     return (
       <div className="bg-bg-card border border-bg-border rounded-2xl p-4 text-center">
-        <p className="text-xs text-gray-500">No upcoming exam dates available right now.</p>
+        <p className="text-xs text-gray-600">No upcoming exam dates available right now.</p>
       </div>
     );
   }
@@ -95,7 +115,7 @@ export function ExamCountdown({ targetExam }) {
       <div className="bg-bg-card border border-bg-border rounded-2xl p-4 flex items-center gap-3 animate-fade-up">
         <CalendarX size={16} className="text-gray-600 shrink-0" />
         <div>
-          <p className="text-xs font-semibold text-gray-300">{examInfo.label} has already taken place</p>
+          <p className="text-xs font-semibold text-fg-primary">{examInfo.label} has already taken place</p>
           <p className="text-[11px] text-gray-600 mt-0.5">Update your target exam to keep the countdown accurate.</p>
         </div>
       </div>
@@ -107,35 +127,47 @@ export function ExamCountdown({ targetExam }) {
   return (
     <div className="bg-bg-card border border-bg-border rounded-2xl p-4 animate-fade-up">
       <div className="flex items-center gap-2 mb-3">
-        <Timer size={14} className="text-violet-400" />
-        <span className="text-xs font-semibold text-gray-300">{examInfo.label} Countdown</span>
-        <span className="ml-auto text-[10px] text-gray-700">
-          {examInfo.isFallback
-            ? "Choose target"
-            : examInfo.tentative
-              ? `~${dateStr} (tentative)`
-              : dateStr}
+        <Timer size={14} className="text-violet-500" />
+        <span className="text-xs font-semibold text-fg-primary">{examInfo.label} Countdown</span>
+        <span className="ml-auto text-[10px] text-gray-600">
+          {examInfo.isFallback ? (
+            onChangeTarget ? (
+              <button
+                type="button"
+                onClick={onChangeTarget}
+                className="link-accent font-medium transition"
+              >
+                Set target
+              </button>
+            ) : (
+              "Set target"
+            )
+          ) : examInfo.tentative ? (
+            `~${dateStr} (tentative)`
+          ) : (
+            dateStr
+          )}
         </span>
       </div>
 
       <div className="flex items-center justify-center gap-3">
         <Digit value={countdown.days}    label="Days"  urgent={urgent} />
-        <span className="text-gray-700 text-lg font-bold mb-4">:</span>
+        <span className="text-gray-600 text-lg font-bold mb-4">:</span>
         <Digit value={countdown.hours}   label="Hours" urgent={urgent} />
-        <span className="text-gray-700 text-lg font-bold mb-4">:</span>
+        <span className="text-gray-600 text-lg font-bold mb-4">:</span>
         <Digit value={countdown.minutes} label="Mins"  urgent={urgent} />
-        <span className="text-gray-700 text-lg font-bold mb-4">:</span>
+        <span className="text-gray-600 text-lg font-bold mb-4">:</span>
         <Digit value={countdown.seconds} label="Secs"  urgent={urgent} />
       </div>
 
       {urgent && (
-        <p className="text-center text-[11px] text-amber-500/80 mt-3 animate-pulse-soft">
+        <p className="text-center text-[11px] text-amber-600 mt-3 animate-pulse-soft">
           Final stretch! {countdown.days} days remaining.
         </p>
       )}
 
       {examInfo.tentative && (
-        <p className="text-center text-[10px] text-gray-700 mt-2">
+        <p className="text-center text-[10px] text-gray-600 mt-2">
           Official date not yet announced by NTA — based on past-year trends.
         </p>
       )}

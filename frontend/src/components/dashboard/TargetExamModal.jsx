@@ -1,18 +1,35 @@
 // ============================================================
-//  JNEET+ AI — components/dashboard/TargetExamModal.jsx  (v2)
-//  FIX (missing X on first-time registration):
-//    - The X (close) button was gated behind `allowLater`, which
-//      Dashboard.jsx deliberately sets to false for brand-new
-//      accounts (isNewAccount = true) — so first-time users had
-//      no way to close this modal at all except picking a target.
-//      The X now always renders regardless of allowLater; clicking
-//      it behaves exactly like "Later" (dismisses without a target
-//      selected, same handleLater() call).
-//    - The footer "Later" TEXT button is UNCHANGED — still gated
-//      by allowLater, so that specific wording/flow still only
-//      shows for returning users, exactly as before.
-//  Everything else — exam list, tentative badges, save flow — is
-//  UNCHANGED from the previous version.
+//  JNEET+ AI — components/dashboard/TargetExamModal.jsx  (v3 —
+//  readability fix)
+//  FIXED (root cause of "exam dates/years not clearly visible"):
+//  This modal was built with light-mode never considered — every
+//  color was hardcoded for a dark background specifically:
+//    - "text-white" heading            → text-fg-primary
+//    - "border-white/10" card border   → border-bg-border
+//    - unselected exam buttons used
+//      "bg-white/[0.03] text-gray-300 border-white/10" — on a
+//      light-mode white modal, a 3%-white tint is basically
+//      invisible, and gray-300 (light gray) text on a near-white
+//      background has almost no contrast. This is exactly why
+//      the exam dates ("years wagera") looked washed out — the
+//      date <span> has no color of its own, it inherits this
+//      broken parent color.
+//      → swapped to theme tokens: bg-bg-panel / text-gray-500 /
+//      border-bg-border, matching the same pattern already used
+//      for Dashboard's NEET/JEE mode-select buttons.
+//    - Close (X) and "Later" buttons: text-gray-600 hover:white,
+//      hover:bg-white/5 → hover:text-fg-primary, hover:bg-bg-hover
+//    - CalendarDays icon: text-violet-300 sat inside a
+//      bg-violet-600/15 tinted badge — 300 is a LIGHT ramp-stop,
+//      which has poor contrast against that light tint in light
+//      mode. Darkened to text-violet-600 (visible on the tint in
+//      both modes).
+//    - Tentative badge: bg-amber-900/30 text-amber-400 → the same
+//      "tuned for dark-mode only" issue as elsewhere in the app —
+//      swapped to bg-amber-600/15 text-amber-600, readable in
+//      both modes.
+//  UNCHANGED: modal open/close logic, exam selection/save flow,
+//  allowLater gating on the X button and footer "Later" button.
 // ============================================================
 
 import { useMemo, useState } from "react";
@@ -56,14 +73,14 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/55 backdrop-blur-sm animate-fade-in">
-      <div className="w-full max-w-md rounded-2xl border border-white/10 bg-bg-surface/90 shadow-card backdrop-blur-xl p-5 animate-scale-in">
+      <div className="w-full max-w-md rounded-2xl border border-bg-border bg-bg-surface/95 shadow-card backdrop-blur-xl p-5 animate-scale-in">
         <div className="flex items-start gap-3 mb-5">
           <div className="w-10 h-10 rounded-xl bg-violet-600/15 border border-violet-500/20 flex items-center justify-center shrink-0">
-            <CalendarDays size={18} className="text-violet-300" />
+            <CalendarDays size={18} className="text-violet-600" />
           </div>
           <div className="flex-1">
-            <h2 className="text-lg font-bold text-white">Which NEET exam are you preparing for?</h2>
-            <p className="text-xs text-gray-500 mt-1">
+            <h2 className="text-lg font-bold text-fg-primary">Which NEET exam are you preparing for?</h2>
+            <p className="text-xs text-gray-600 mt-1">
               Your dashboard countdown will follow this target.
             </p>
           </div>
@@ -71,14 +88,14 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
             type="button"
             onClick={handleLater}
             disabled={saving}
-            className="text-gray-600 hover:text-white p-1 rounded-lg hover:bg-white/5 transition"
+            className="text-gray-600 hover:text-fg-primary p-1 rounded-lg hover:bg-bg-hover transition"
           >
             <X size={16} />
           </button>
         </div>
 
         {upcomingExams.length === 0 ? (
-          <p className="text-xs text-gray-500 text-center py-6">
+          <p className="text-xs text-gray-600 text-center py-6">
             No upcoming exam dates available right now — check back soon.
           </p>
         ) : (
@@ -92,18 +109,18 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
                 className={`animate-fade-up rounded-xl border px-3 py-3 text-left transition active:scale-[0.98]
                   ${selected === exam.key
                     ? "bg-violet-600 text-white border-violet-500 shadow-glow-sm"
-                    : "bg-white/[0.03] text-gray-300 border-white/10 hover:border-violet-500/40 hover:bg-white/[0.05]"
+                    : "bg-bg-panel text-gray-500 border-bg-border hover:border-violet-500/40 hover:bg-bg-hover hover:text-fg-primary"
                   }`}
               >
                 <div className="flex items-center gap-1.5 flex-wrap">
                   <span className="block text-sm font-semibold">{exam.label}</span>
                   {exam.tentative && (
-                    <span className="text-[8px] uppercase tracking-wide bg-amber-900/30 text-amber-400 border border-amber-700/30 rounded-full px-1.5 py-0.5">
+                    <span className="text-[8px] uppercase tracking-wide bg-amber-600/15 text-amber-600 border border-amber-600/30 rounded-full px-1.5 py-0.5">
                       Tentative
                     </span>
                   )}
                 </div>
-                <span className="block text-[10px] opacity-70 mt-1">
+                <span className="block text-[10px] opacity-80 mt-1">
                   {exam.tentative ? "~" : ""}
                   {new Date(exam.date).toLocaleDateString("en-IN", {
                     day: "numeric",
@@ -117,7 +134,7 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
         )}
 
         {upcomingExams.some((e) => e.tentative) && (
-          <p className="text-[10px] text-gray-700 mt-3">
+          <p className="text-[10px] text-gray-600 mt-3">
             Tentative dates are based on past-year trends — NTA hasn't officially confirmed them yet.
           </p>
         )}
@@ -132,7 +149,7 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
                 type="button"
                 onClick={handleLater}
                 disabled={saving}
-                className="px-3 py-2 rounded-xl border border-white/10 text-xs text-gray-400 hover:text-white hover:bg-white/5 transition disabled:opacity-50"
+                className="px-3 py-2 rounded-xl border border-bg-border text-xs text-gray-500 hover:text-fg-primary hover:bg-bg-hover transition disabled:opacity-50"
               >
                 Later
               </button>
