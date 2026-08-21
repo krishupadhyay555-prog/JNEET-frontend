@@ -1,29 +1,19 @@
 // ============================================================
-//  JNEET+ AI — pages/Tests.jsx  (v4 — revision routes to new page)
-//  CHANGED: handleStart() now navigates to /revision/attempt/:id
-//  (the new instant-feedback RevisionSession.jsx) instead of
-//  /test/attempt/:id — chapter-wise revision always creates
-//  mode: "revision" attempts, which is exactly what that new page
-//  is for. handleStartFull() is UNCHANGED — Full Test still goes
-//  to the existing exam-simulation TestAttempt.jsx, since that
-//  flow (timed, submit-at-end, no mid-test explanations) is
-//  correct for a full mock and must stay that way.
-//  Everything else UNCHANGED from v3.
+//  JNEET+ AI — pages/Tests.jsx  (v5 — Full Test only)
+//  CHANGED: chapter-wise revision section REMOVED entirely — moved
+//  to its own page, Revision.jsx (route /revision), to eliminate
+//  the exact confusion reported: two very different flows (submit-
+//  at-end mock vs instant-feedback revision) sitting on one page
+//  made it easy to tap the wrong one. This page is now Full-Test-
+//  only, single clear purpose.
 // ============================================================
 
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, GraduationCap } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { testApi } from "../api/testApi.js";
-import { TestCard } from "../components/tests/TestCard.jsx";
-import { Spinner } from "../components/ui/Spinner.jsx";
 import toast from "react-hot-toast";
-
-const SUBJECTS_BY_EXAM = {
-  NEET: ["Physics", "Chemistry", "Biology"],
-  JEE:  ["Physics", "Chemistry", "Mathematics"],
-};
 
 const FULL_TEST_LABEL = {
   NEET: "180 questions · 720 marks · +4/−1 marking",
@@ -33,47 +23,8 @@ const FULL_TEST_LABEL = {
 export default function Tests() {
   const { examMode } = useAuth();
   const navigate = useNavigate();
-  const subjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
 
-  const [activeSubject, setActiveSubject] = useState(subjects[0]);
-  const [chapters, setChapters] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [starting, setStarting] = useState(false);
   const [startingFull, setStartingFull] = useState(false);
-
-  const loadChapters = useCallback(async (subject) => {
-    setLoading(true);
-    try {
-      const res = await testApi.getChapters(subject);
-      setChapters(res.data.chapters ?? []);
-    } catch {
-      toast.error("Could not load available tests");
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    loadChapters(activeSubject);
-  }, [activeSubject, loadChapters]);
-
-  const handleStart = async (chapter, mix) => {
-    setStarting(true);
-    try {
-      const res = await testApi.start({
-        subject: activeSubject,
-        chapter,
-        easy: mix.easy,
-        moderate: mix.moderate,
-        tough: mix.tough,
-      });
-      navigate(`/revision/attempt/${res.data.attemptId}`);
-    } catch (err) {
-      toast.error(err.response?.data?.error || "Could not start test");
-    } finally {
-      setStarting(false);
-    }
-  };
 
   const handleStartFull = async () => {
     setStartingFull(true);
@@ -97,11 +48,10 @@ export default function Tests() {
         >
           <ArrowLeft size={16} />
         </button>
-        <span className="font-semibold text-sm">Tests</span>
+        <span className="font-semibold text-sm">Mock Tests</span>
       </nav>
 
-      <div className="max-w-2xl mx-auto px-5 py-8 space-y-6">
-
+      <div className="max-w-2xl mx-auto px-5 py-8">
         <div className="glass-panel rounded-2xl p-5">
           <div className="flex items-start gap-3 mb-3">
             <div className="w-10 h-10 rounded-xl bg-violet-600/15 border border-violet-600/25 flex items-center justify-center shrink-0">
@@ -112,6 +62,9 @@ export default function Tests() {
               <p className="text-[11px] text-gray-600 mt-0.5">{FULL_TEST_LABEL[examMode]}</p>
             </div>
           </div>
+          <p className="text-xs text-gray-600 mb-4 leading-relaxed">
+            A complete, exam-pattern mock — timed feel, no explanations shown mid-test, just like the real exam. Results and review appear after you submit.
+          </p>
           <button
             onClick={handleStartFull}
             disabled={startingFull}
@@ -121,48 +74,6 @@ export default function Tests() {
           >
             {startingFull ? "Starting..." : "Start Full Test"}
           </button>
-        </div>
-
-        <div>
-          <p className="text-[10px] text-gray-700 uppercase tracking-widest font-medium mb-3">
-            Chapter-wise Revision
-          </p>
-
-          <div className="glass-panel rounded-2xl p-1.5 flex gap-1.5 mb-4">
-            {subjects.map((subj) => (
-              <button
-                key={subj}
-                onClick={() => setActiveSubject(subj)}
-                className={`flex-1 text-xs font-medium px-3 py-2 rounded-xl transition-all duration-150
-                  ${activeSubject === subj
-                    ? "bg-violet-600 text-white shadow-glow-sm"
-                    : "text-gray-600 hover:text-fg-primary"}`}
-              >
-                {subj}
-              </button>
-            ))}
-          </div>
-
-          {loading ? (
-            <div className="flex justify-center py-16">
-              <Spinner size={20} />
-            </div>
-          ) : chapters.length === 0 ? (
-            <p className="text-[11px] text-gray-700 text-center pt-10">
-              No questions available in {activeSubject} yet — check back soon.
-            </p>
-          ) : (
-            <div className="space-y-2">
-              {chapters.map((c) => (
-                <TestCard
-                  key={c.chapter}
-                  chapterInfo={c}
-                  onStart={handleStart}
-                  starting={starting}
-                />
-              ))}
-            </div>
-          )}
         </div>
       </div>
     </div>

@@ -1,9 +1,8 @@
 // ============================================================
-//  JNEET+ AI — App.jsx  (v5 — Revision route added)
-//  ADDED: /revision/attempt/:attemptId (protected) → the new
-//  instant-feedback RevisionSession.jsx. TestAttempt.jsx and its
-//  route are UNCHANGED — still handles Full Test exam-simulation.
-//  Everything else UNCHANGED from v4.
+//  JNEET+ AI — App.jsx  (v6 — Revision route added)
+//  ADDED: /revision (protected) → the new chapter-selection page.
+//  /revision/attempt/:attemptId (already added in v5) is UNCHANGED.
+//  Everything else UNCHANGED from v5.
 // ============================================================
 
 import { useEffect } from "react";
@@ -24,6 +23,7 @@ import WMS                  from "./pages/WMS.jsx";
 import Tests                from "./pages/Tests.jsx";
 import TestAttempt          from "./pages/TestAttempt.jsx";
 import TestResult           from "./pages/TestResult.jsx";
+import Revision             from "./pages/Revision.jsx";
 import RevisionSession      from "./pages/RevisionSession.jsx";
 import Notes                from "./pages/Notes.jsx";
 
@@ -48,7 +48,7 @@ const TOAST_CONFIG = {
 };
 
 const LAST_PAGE_KEY = "jneet_last_page";
-const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/tests", "/notes"];
+const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/tests", "/revision", "/notes"];
 
 function getLastPage() {
   try {
@@ -114,6 +114,7 @@ export default function App() {
               <Route path="/settings"  element={<ProtectedRoute><Settings /></ProtectedRoute>} />
               <Route path="/wms"       element={<ProtectedRoute><WMS /></ProtectedRoute>} />
               <Route path="/tests"     element={<ProtectedRoute><Tests /></ProtectedRoute>} />
+              <Route path="/revision"  element={<ProtectedRoute><Revision /></ProtectedRoute>} />
               <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
               <Route
                 path="/test/attempt/:attemptId"

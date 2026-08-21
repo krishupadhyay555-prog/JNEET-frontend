@@ -1,17 +1,15 @@
 // ============================================================
-//  JNEET+ AI — pages/Dashboard.jsx  (v4 — readability fix)
-//  FIXED: FeatureCard "Active" badges used bg-emerald-900/30
-//  text-emerald-400 — same "tuned for dark-mode only" pattern
-//  found in ExamCountdown/TargetExamModal. On the light-mode
-//  near-white card background, this combination has weak
-//  contrast. Swapped to bg-emerald-600/15 text-emerald-600
-//  border-emerald-600/30, readable in both modes.
-//  ADDED: passes onChangeTarget={() => setTargetModalOpen(true)}
-//  into <ExamCountdown /> so its new "Set target" corner-button
-//  actually opens the modal (previously that corner text did
-//  nothing when clicked).
-//  Everything else — layout, stats, features grid, target-exam
-//  modal open logic — UNCHANGED from v3.
+//  JNEET+ AI — pages/Dashboard.jsx  (v5 — Revision card added)
+//  CHANGED: the single "Mock Tests" feature card (which internally
+//  led to a page combining Full Test + Chapter Revision — the
+//  exact source of confusion just reported) is now TWO separate
+//  cards: "Mock Tests" (→ /tests, Full Test only) and "Revision"
+//  (→ /revision, chapter-wise instant feedback). This is a minimal,
+//  targeted fix — NOT yet the full 5-card dashboard redesign
+//  (Notes/WMS/Analytics repositioning) planned for the later
+//  Dashboard-integration phase; that still comes after Revision is
+//  fully verified working.
+//  Everything else UNCHANGED from v4.
 // ============================================================
 
 import { useState } from "react";
@@ -24,7 +22,7 @@ import { ProfileMenu } from "../components/ProfileMenu.jsx";
 import { getTargetExam } from "../config/targetExams.js";
 import toast from "react-hot-toast";
 import {
-  BarChart3, ClipboardList, TrendingUp,
+  BarChart3, ClipboardList, TrendingUp, RefreshCw,
   ChevronRight, GraduationCap,
   Target, MessageSquare, BookMarked,
 } from "lucide-react";
@@ -106,22 +104,31 @@ export default function Dashboard() {
       onClick: () => navigate("/ask"),
     },
     {
-      icon: <BarChart3 size={20} className="text-orange-500" />,
+      icon: <RefreshCw size={20} className="text-blue-500" />,
+      title: "Revision",
+      desc: "Chapter-wise practice with instant feedback",
+      badge: "Active",
+      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
+      available: true,
+      onClick: () => navigate("/revision"),
+    },
+    {
+      icon: <ClipboardList size={20} className="text-orange-500" />,
+      title: "Mock Tests",
+      desc: "Full exam-pattern test, instant scoring",
+      badge: "Active",
+      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
+      available: true,
+      onClick: () => navigate("/tests"),
+    },
+    {
+      icon: <BarChart3 size={20} className="text-purple-500" />,
       title: "WMS Tracker",
       desc: "Weak / Medium / Strong topic analysis",
       badge: "Active",
       badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
       available: true,
       onClick: () => navigate("/wms"),
-    },
-    {
-      icon: <ClipboardList size={20} className="text-blue-500" />,
-      title: "Mock Tests",
-      desc: "Chapter-wise MCQs with instant scoring",
-      badge: "Active",
-      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
-      available: true,
-      onClick: () => navigate("/tests"),
     },
     {
       icon: <TrendingUp size={20} className="text-emerald-500" />,
