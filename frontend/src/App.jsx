@@ -1,20 +1,9 @@
 // ============================================================
-//  JNEET+ AI — App.jsx  (v3 — accent sync added)
-//  ADDED: <AccentSync /> — bridges AuthContext (examMode) and
-//  ThemeContext (accentOverride) to set a data-accent attribute
-//  on <html>. Lives INSIDE AuthProvider so it can read examMode,
-//  but still has full access to ThemeContext because ThemeProvider
-//  wraps AuthProvider from further out — React context works
-//  through any number of nested providers in between.
-//  Resolution rule:
-//    accentOverride === "normal"        → data-accent="normal"
-//    examMode === "JEE"                 → data-accent="jee"
-//    examMode === "NEET" (or anything   → data-accent="neet"
-//      else / not yet loaded)
-//  This only visually matters in light mode (see index.css) —
-//  harmless no-op while in dark mode.
-//  Everything else is UNCHANGED from the previous version
-//  (RouteTracker / resume-last-page feature stays exactly as-is).
+//  JNEET+ AI — App.jsx  (v4 — Notes route added)
+//  ADDED: /notes route (protected) + added to VALID_LAST_PAGES so
+//  the resume-last-page feature works there too.
+//  Everything else — AccentSync, RouteTracker, all other routes —
+//  UNCHANGED from v3.
 // ============================================================
 
 import { useEffect } from "react";
@@ -35,6 +24,7 @@ import WMS                  from "./pages/WMS.jsx";
 import Tests                from "./pages/Tests.jsx";
 import TestAttempt          from "./pages/TestAttempt.jsx";
 import TestResult           from "./pages/TestResult.jsx";
+import Notes                from "./pages/Notes.jsx";
 
 const TOAST_CONFIG = {
   duration: 3000,
@@ -58,7 +48,7 @@ const TOAST_CONFIG = {
 
 // ── Resume-last-page feature (unchanged) ──────────────────────
 const LAST_PAGE_KEY = "jneet_last_page";
-const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/tests"];
+const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/tests", "/notes"];
 
 function getLastPage() {
   try {
@@ -85,7 +75,7 @@ function RouteTracker() {
   return null;
 }
 
-// ── NEW: Accent sync (NEET-green / JEE-blue / Normal) ─────────
+// ── Accent sync (NEET-green / JEE-blue / Normal) ───────────────
 function AccentSync() {
   const { examMode }      = useAuth();
   const { accentOverride } = useTheme();
@@ -97,7 +87,7 @@ function AccentSync() {
     } else if (examMode === "JEE") {
       resolved = "jee";
     } else {
-      resolved = "neet"; // default / NEET / not-yet-loaded
+      resolved = "neet";
     }
     document.documentElement.setAttribute("data-accent", resolved);
   }, [examMode, accentOverride]);
@@ -116,77 +106,25 @@ export default function App() {
           <BrowserRouter>
             <RouteTracker />
             <Routes>
-              {/* Public routes */}
               <Route path="/login"    element={<Login />}    />
               <Route path="/register" element={<Register />} />
 
-              {/* Protected routes */}
-              <Route
-                path="/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/ask"
-                element={
-                  <ProtectedRoute>
-                    <AskAI />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/profile"
-                element={
-                  <ProtectedRoute>
-                    <Profile />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/settings"
-                element={
-                  <ProtectedRoute>
-                    <Settings />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/wms"
-                element={
-                  <ProtectedRoute>
-                    <WMS />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/tests"
-                element={
-                  <ProtectedRoute>
-                    <Tests />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+              <Route path="/ask"       element={<ProtectedRoute><AskAI /></ProtectedRoute>} />
+              <Route path="/profile"   element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+              <Route path="/settings"  element={<ProtectedRoute><Settings /></ProtectedRoute>} />
+              <Route path="/wms"       element={<ProtectedRoute><WMS /></ProtectedRoute>} />
+              <Route path="/tests"     element={<ProtectedRoute><Tests /></ProtectedRoute>} />
+              <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
               <Route
                 path="/test/attempt/:attemptId"
-                element={
-                  <ProtectedRoute>
-                    <TestAttempt />
-                  </ProtectedRoute>
-                }
+                element={<ProtectedRoute><TestAttempt /></ProtectedRoute>}
               />
               <Route
                 path="/test/result/:attemptId"
-                element={
-                  <ProtectedRoute>
-                    <TestResult />
-                  </ProtectedRoute>
-                }
+                element={<ProtectedRoute><TestResult /></ProtectedRoute>}
               />
 
-              {/* Redirects — resume the last visited page */}
               <Route path="/"  element={<Navigate to={getLastPage()} replace />} />
               <Route path="*"  element={<Navigate to={getLastPage()} replace />} />
             </Routes>
