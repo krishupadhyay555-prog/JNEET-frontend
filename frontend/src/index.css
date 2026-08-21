@@ -25,14 +25,6 @@
   --violet-dark:  #824a35;
   --violet-glow:  rgba(176, 106, 74, 0.18);
 
-  /* Full 11-stop ramp, as RGB triplets — this is what
-     tailwind.config.js's violet-{50..950} scale reads. Every
-     bg-violet-600 / text-violet-400 / border-violet-600 class
-     anywhere in the app resolves through THESE variables, which
-     is why overriding them per data-accent (below, and in the
-     html.light blocks) is enough to re-skin the whole app without
-     touching a single component file. Dark mode (default) keeps
-     the original terracotta ramp. */
   --violet-50:  251 243 240;
   --violet-100: 245 226 218;
   --violet-200: 232 196 180;
@@ -45,10 +37,6 @@
   --violet-900: 87 50 37;
   --violet-950: 46 26 19;
 
-  /* Gray scale — dark mode ramp kept identical to Tailwind's
-     default gray palette (this always looked fine against the
-     dark background, so it's untouched). Light mode's ramp is
-     defined separately below, deliberately darker. */
   --gray-50:  249 250 251;
   --gray-100: 243 244 246;
   --gray-200: 229 231 235;
@@ -60,27 +48,9 @@
   --gray-800: 31  41  55;
   --gray-900: 17  24  39;
 
-  /* FIX: Chrome renders native form controls (autofill highlight,
-     checkboxes, date pickers) based on this property, falling back
-     to the OS's dark/light preference when it's unset — which is
-     exactly why the email input showed a black autofill box on a
-     visually light page when the OS/Chrome was in dark mode. This
-     had nothing to do with the custom autofill box-shadow override
-     below; color-scheme wins first, for the browser's own widgets. */
   color-scheme: dark;
 }
 
-/* ── LIGHT mode — activated by ThemeContext adding "light"
-   class to html. Same variable names, different values — every
-   component using the background and foreground theme tokens
-   flips automatically, no per-component changes needed.
-   This is the "Normal" skin — the neutral baseline. It's also
-   what data-accent="normal" falls back to (no override block
-   needed for that case, it just uses these values as-is).
-   NOTE: This is the ONLY html.light block in this file. A
-   duplicate debug block (with background: red !important)
-   existed here temporarily during troubleshooting and has been
-   removed — that was never a real fix, just a cache-buster. ── */
 html.light {
   color-scheme: light;
 
@@ -94,15 +64,6 @@ html.light {
   --fg-primary:   45 42 50;   /* #2D2A32 */
   --fg-secondary: 139 133 148; /* #8B8594 */
 
-  /* FIX (readability root cause): darkened, genuinely readable
-     ramp — every stop from 400 to 900 sits in a comfortably dark
-     range against a white/near-white background. "Subtlety" for
-     labels that used a high number (700) on purpose now comes
-     from their existing size/letter-spacing/uppercase treatment
-     instead of near-invisible contrast — much better for actual
-     reading, matches the "soft dark gray, not pure black" eye-
-     comfort research too. Shared by all three accent skins
-     (Normal/NEET/JEE) — gray stays neutral, never tinted. */
   --gray-50:  250 250 250;
   --gray-100: 244 244 245;
   --gray-200: 228 228 231;
@@ -115,30 +76,8 @@ html.light {
   --gray-900: 9   9   11;
 }
 
-/* ── Accent skins — Normal / NEET / JEE.
-   IMPORTANT: these ONLY change --violet-* (the accent color used
-   for buttons, icons, CTAs, focus rings) — background/foreground
-   vars stay exactly as html.light's base above, shared by all
-   three skins. Earlier version wrongly tinted the whole background
-   green/blue too — fixed: accent should be a highlight, not a
-   background wash.
-   NEET/JEE now use a softer, lighter ramp (teal instead of
-   emerald, indigo shifted one stop lighter) for a more premium
-   "light glass" feel — "main" sits at the 400 stop rather than
-   500, and the 300 stop is exactly the #5EEAD4 / #A5B4FC swatch
-   colors already chosen in Settings.jsx, kept as --violet-light.
-   Each skin redefines the FULL 11-stop ramp (not just the 4
-   main/light/dark/glow vars) — this is what actually makes every
-   bg-violet-600 / text-violet-400 / etc across the whole app
-   follow the active accent, since tailwind.config.js's violet
-   scale reads these exact variable names.
-   These same NEET/JEE ramps are ALSO applied outside html.light
-   (see the html[data-accent] block further down) so dark mode gets
-   the same subject-wise highlight color too — only Normal is
-   light-mode-only, dark mode's own default (terracotta) stays as
-   dark mode's "Normal" look, unchanged. ── */
 html.light[data-accent="normal"] {
-  --violet-main:  #3f3f46;    /* zinc-700 — neutral grayish-black */
+  --violet-main:  #3f3f46;
   --violet-light: #52525b;
   --violet-dark:  #18181b;
   --violet-glow:  rgba(63, 63, 70, 0.14);
@@ -156,21 +95,10 @@ html.light[data-accent="normal"] {
   --violet-950: 9   9   11;
 }
 
-/* ── FIX (Claude-orange-in-dark-mode bug): this block was
-   missing entirely. When "Normal" accent was combined with Dark
-   mode, there was no matching override for either mode/accent
-   combination, so it silently fell through to :root's default
-   terracotta ramp — the exact orange this whole accent system was
-   built to move away from. Same zinc/gray family as the light-mode
-   Normal skin above (same neutral philosophy — no color, just
-   grayscale), but picks a LIGHT stop (300) as "main" instead of a
-   dark one (700), since dark backgrounds need a light-toned accent
-   to actually be visible — same reasoning already used for the
-   dark-mode NEET/JEE skins below. ── */
 html[data-accent="normal"]:not(.light) {
-  --violet-main:  #d4d4d8;    /* zinc-300 — grayish-white, visible on dark bg */
-  --violet-light: #e4e4e7;    /* zinc-200 */
-  --violet-dark:  #a1a1aa;    /* zinc-400 */
+  --violet-main:  #d4d4d8;
+  --violet-light: #e4e4e7;
+  --violet-dark:  #a1a1aa;
   --violet-glow:  rgba(212, 212, 216, 0.14);
 
   --violet-50:  250 250 250;
@@ -188,9 +116,9 @@ html[data-accent="normal"]:not(.light) {
 
 html.light[data-accent="neet"],
 html[data-accent="neet"]:not(.light) {
-  --violet-main:  #2dd4bf;    /* teal-400 — softer/lighter than emerald */
-  --violet-light: #5eead4;    /* teal-300 — matches the original swatch */
-  --violet-dark:  #0d9488;    /* teal-600 */
+  --violet-main:  #2dd4bf;
+  --violet-light: #5eead4;
+  --violet-dark:  #0d9488;
   --violet-glow:  rgba(45, 212, 191, 0.18);
 
   --violet-50:  240 253 250;
@@ -208,9 +136,9 @@ html[data-accent="neet"]:not(.light) {
 
 html.light[data-accent="jee"],
 html[data-accent="jee"]:not(.light) {
-  --violet-main:  #818cf8;    /* indigo-400 — softer/lighter than indigo-500 */
-  --violet-light: #a5b4fc;    /* indigo-300 — matches the original swatch */
-  --violet-dark:  #4f46e5;    /* indigo-600 */
+  --violet-main:  #818cf8;
+  --violet-light: #a5b4fc;
+  --violet-dark:  #4f46e5;
   --violet-glow:  rgba(129, 140, 248, 0.18);
 
   --violet-50:  238 242 255;
@@ -297,26 +225,7 @@ body {
   100% { background-position: -200% 0; }
 }
 
-/* ── Markdown Prose Overrides ──
-   FIX: this entire block used to be hardcoded dark-mode hex
-   values — meaning the AI's markdown reply text rendered in
-   DARK colors even on a white light-mode background (near-
-   unreadable). Now fully theme-variable-driven:
-     - body/headings/bold/code all use --fg-primary — deliberately
-       NOT an accent color, keeping the reply box clean/neutral in
-       every theme (per requirement: AI reply must never look
-       "colorful", easy on the eyes, better than typical AI chat
-       UIs).
-     - secondary elements (bullets, counters, quotes) use
-       --fg-secondary.
-     - borders/backgrounds use the existing --bg-border/--bg-panel
-       tokens, so code blocks and tables sit correctly on every
-       skin without a single hardcoded color.
-   Companion fix: MessageBubble.jsx / StreamingBubble.jsx no
-   longer apply Tailwind's `prose-invert` modifier — that always
-   forced dark-theme colors regardless of actual theme, which
-   would have fought against these variables. Removing it lets
-   these overrides be the single source of truth. ── */
+/* ── Markdown Prose Overrides ── */
 .prose {
   --tw-prose-body:        rgb(var(--fg-primary));
   --tw-prose-headings:    rgb(var(--fg-primary));
@@ -412,12 +321,6 @@ input:-webkit-autofill:focus {
   border: 1px solid rgba(58, 55, 51, 0.8);
 }
 
-/* ── NEW Utility: Glass panel — theme-aware version of the above.
-   Unlike .glass-card (hardcoded dark colors), this reads the
-   current theme's own variables, so it automatically looks right
-   in dark mode AND in every light accent skin (Normal/NEET/JEE).
-   Opt-in only — added to specific card components, doesn't change
-   anything unless a component's className includes it. ── */
 .glass-panel {
   background: rgb(var(--bg-card) / 0.72);
   backdrop-filter: blur(16px);
@@ -472,4 +375,37 @@ input:-webkit-autofill:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ── NEW: Accent-colored link/text contrast fix ──
+   ROOT CAUSE: several buttons/links used Tailwind classes like
+   text-violet-300 / text-violet-400 for "accent-colored text".
+   Those two ramp-stops are tuned to work as ICON FILLS or as text
+   ON A DARK background — but under the NEET (teal) and JEE (indigo)
+   light-mode accent skins, stops 300/400 resolve to light-teal
+   (#5eead4/#2dd4bf) or light-indigo (#a5b4fc/#818cf8), which read
+   as barely-visible pale text on the app's near-white light-mode
+   background (well under readable contrast).
+   FIX: a dedicated pair of variables + a .link-accent class that
+   always picks a properly dark stop (700) in light mode and a
+   properly light stop (400) in dark mode — correct contrast in
+   every mode × every accent (Normal/NEET/JEE), without touching
+   the --violet-300/400 values used elsewhere for icons/borders/
+   backgrounds (those stay exactly as before). ── */
+:root {
+  --link-color:       rgb(var(--violet-400));
+  --link-color-hover: rgb(var(--violet-300));
+}
+
+html.light {
+  --link-color:       rgb(var(--violet-700));
+  --link-color-hover: rgb(var(--violet-800));
+}
+
+.link-accent {
+  color: var(--link-color);
+}
+
+.link-accent:hover {
+  color: var(--link-color-hover);
 }

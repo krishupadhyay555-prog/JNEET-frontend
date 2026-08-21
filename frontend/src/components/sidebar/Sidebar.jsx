@@ -1,26 +1,16 @@
 // ============================================================
-//  JNEET+ AI — components/sidebar/Sidebar.jsx  (v4 — real search + English text)
-//  CHANGED:
-//    - History tab search now calls the new backend endpoint
-//      (chatApi.searchChats) which searches FULL message content,
-//      not just title/last-message-preview. Debounced 350ms so it
-//      doesn't fire an API call on every keystroke.
-//    - Saved tab search stays client-side (unchanged) — saved
-//      items already carry their full content locally, no need
-//      for a network round-trip there.
-//    - ALL remaining Hinglish system/UI strings ("Koi chat nahi
-//      hai", "se koi chat nahi mili", etc.) converted to English —
-//      these are app-generated text, not the AI's own replies, so
-//      per the language rule they must always be English regardless
-//      of what language the student writes in.
-//  Desktop-collapse behavior (width animation) from the previous
-//  version is UNCHANGED.
+//  JNEET+ AI — components/sidebar/Sidebar.jsx  (v5 — real logo)
+//  CHANGED: Sparkles icon in the header badge replaced with the
+//  app's own JN logo image (icon-192.png) — Sparkles looked like
+//  Gemini's icon, this is the actual brand mark.
+//  Everything else (search, tabs, history/saved logic, collapse
+//  animation) UNCHANGED from v4.
 // ============================================================
 
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  Sparkles, X, Plus, Bookmark, LayoutDashboard, Search, Loader2,
+  X, Plus, Bookmark, LayoutDashboard, Search, Loader2,
 } from "lucide-react";
 import { useChat } from "../../context/ChatContext.jsx";
 import { useAuth } from "../../context/AuthContext.jsx";
@@ -42,8 +32,6 @@ export function Sidebar({ isOpen, onClose }) {
   const [activeTab, setActiveTab] = useState("history");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // History search — real backend results (full message content),
-  // null means "no search active, show the normal loaded list".
   const [searchResults, setSearchResults] = useState(null);
   const [searching, setSearching] = useState(false);
   const debounceRef = useRef(null);
@@ -71,7 +59,6 @@ export function Sidebar({ isOpen, onClose }) {
     return () => clearTimeout(debounceRef.current);
   }, [searchQuery, activeTab]);
 
-  // Saved tab — full content already loaded locally, plain filter.
   const filteredSaved = savedItems.filter((item) => {
     if (!searchQuery.trim()) return true;
     const q = searchQuery.toLowerCase();
@@ -101,8 +88,6 @@ export function Sidebar({ isOpen, onClose }) {
     onClose?.();
   };
 
-  // SessionItem expects `lastMessage` — search results carry
-  // `snippet` instead, so map here rather than touching SessionItem.
   const searchResultsForDisplay = (searchResults ?? []).map((r) => ({
     _id:         r._id,
     title:       r.title,
@@ -120,9 +105,6 @@ export function Sidebar({ isOpen, onClose }) {
         />
       )}
 
-      {/* Sidebar panel — outer wrapper animates width on desktop,
-          translate on mobile. overflow-hidden clips content cleanly
-          while collapsing so nothing spills out mid-animation. */}
       <aside
         className={`
           fixed md:relative z-30 md:z-auto
@@ -135,16 +117,17 @@ export function Sidebar({ isOpen, onClose }) {
           }
         `}
       >
-        {/* Fixed-width inner content — never squishes during the
-            outer width animation. */}
         <div className="w-[264px] h-full flex flex-col bg-bg-surface border-r border-bg-border">
 
           {/* ── Header ─────────────────────────────────────── */}
           <div className="flex items-center justify-between px-3 py-4 border-b border-bg-border shrink-0">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 bg-violet-600 rounded-lg flex items-center justify-center
-                shadow-glow-sm">
-                <Sparkles size={13} className="text-white" />
+              <div className="w-7 h-7 rounded-lg overflow-hidden shadow-glow-sm">
+                <img
+                  src="/icon-192.png"
+                  alt="JNEET+"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-bold text-sm tracking-wide gradient-text">JNEET+</span>
             </div>
@@ -211,8 +194,7 @@ export function Sidebar({ isOpen, onClose }) {
             ))}
           </div>
 
-          {/* ── Search — History = backend full-content search,
-              Saved = local filter ────────────────────────────── */}
+          {/* ── Search ──────────────────────────────── */}
           <div className="px-3 pb-2 shrink-0">
             <div className="relative">
               {searching ? (
@@ -246,7 +228,6 @@ export function Sidebar({ isOpen, onClose }) {
               !isSessionsLoaded ? (
                 <SidebarSkeletons />
               ) : searchQuery.trim() ? (
-                // Search mode — backend results
                 searching && searchResultsForDisplay.length === 0 ? (
                   <SidebarSkeletons />
                 ) : searchResultsForDisplay.length === 0 ? (

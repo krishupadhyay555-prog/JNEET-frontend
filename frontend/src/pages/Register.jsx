@@ -1,9 +1,9 @@
 // ============================================================
-//  JNEET+ AI — pages/Register.jsx  (v3.2 — readability fix)
-//  FIXED: same muted-text contrast fix as Login.jsx — #8B8594 →
-//  #6B6572 everywhere it was used for subtitle/label/footer text.
-//  Password rule (8+ chars, letter+number) from v3.1 unchanged.
-//  Logic, layout, animations — all UNCHANGED.
+//  JNEET+ AI — pages/Register.jsx  (v3.3 — real logo)
+//  CHANGED: the gradient-badge Sparkles icon replaced with the
+//  app's own JN logo image — the badge now just frames the actual
+//  logo instead of a generic sparkle. Everything else (validation,
+//  layout, colors, animations) UNCHANGED from v3.2.
 // ============================================================
 
 import { useState }          from "react";
@@ -12,7 +12,7 @@ import { useAuth }           from "../context/AuthContext.jsx";
 import { authApi }           from "../api/authApi.js";
 import { FormField }         from "../components/auth/FormField.jsx";
 import { Spinner }           from "../components/ui/Spinner.jsx";
-import { Eye, EyeOff, Sparkles, ArrowRight } from "lucide-react";
+import { Eye, EyeOff, ArrowRight } from "lucide-react";
 
 function validate(form) {
   const errs = {};
@@ -135,16 +135,19 @@ export default function Register() {
         <div className="bg-white border border-[#EDE6F3] rounded-2xl p-7 shadow-[0_1px_3px_rgba(45,42,50,0.06),0_12px_32px_rgba(45,42,50,0.08)]
           transition-shadow duration-300 hover:shadow-[0_1px_3px_rgba(45,42,50,0.08),0_16px_40px_rgba(147,197,253,0.16)]">
 
-          {/* Logo — gradient badge */}
+          {/* Logo — real JN icon */}
           <div
             className="flex flex-col items-center mb-7 animate-fade-up"
             style={{ animationDelay: "40ms", animationFillMode: "backwards" }}
           >
-            <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-3
-              bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
+            <div className="w-11 h-11 rounded-xl overflow-hidden mb-3
               shadow-[0_6px_18px_rgba(147,197,253,0.4)]
               transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-              <Sparkles size={20} className="text-white" />
+              <img
+                src="/icon-192.png"
+                alt="JNEET+ AI"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h1 className="text-xl font-bold tracking-tight text-[#2D2A32]">JNEET+ AI</h1>
             <p className="text-[#6B6572] text-xs mt-0.5">Create your account</p>

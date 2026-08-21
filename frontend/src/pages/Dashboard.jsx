@@ -1,14 +1,19 @@
 // ============================================================
-//  JNEET+ AI — pages/Dashboard.jsx  (v2 — English text)
-//  FIXED: greeting + subtitle were hardcoded Hinglish ("Namaste",
-//  "Aaj kya padhna hai?") regardless of any language setting —
-//  this wasn't actually reading a language preference at all, it
-//  was just fixed text. Since the app is English-only now (Hindi
-//  toggle removed — see Settings.jsx), switched these to English.
-//  Also switched the mode-switch toast to English for the same
-//  consistency reason.
-//  Nothing else changed — same layout, same features grid, same
-//  target-exam modal logic.
+//  JNEET+ AI — pages/Dashboard.jsx  (v3 — real logo + contrast fix)
+//  CHANGED:
+//    - Nav-bar Sparkles icon replaced with app's own JN logo image.
+//    - "AI Mentor" feature-card icon: Sparkles → GraduationCap
+//      (Sparkles looked like Gemini's icon everywhere it appeared).
+//    - "Change Target Exam" link: was text-violet-300 hover:text-
+//      violet-500, which reads NEAR-INVISIBLE in light mode under
+//      the NEET/JEE accent skins (light-teal / light-indigo text on
+//      a near-white background — well under readable contrast).
+//      Swapped to the new .link-accent CSS class (defined in
+//      index.css) which resolves to a properly-dark accent color
+//      in light mode and a properly-light one in dark mode, in
+//      every accent (Normal/NEET/JEE).
+//  Everything else — layout, stats, features grid, target-exam
+//  modal logic — UNCHANGED from v2.
 // ============================================================
 
 import { useState } from "react";
@@ -22,7 +27,7 @@ import { getTargetExam } from "../config/targetExams.js";
 import toast from "react-hot-toast";
 import {
   BarChart3, ClipboardList, TrendingUp,
-  ChevronRight, Sparkles,
+  ChevronRight, GraduationCap,
   Target, MessageSquare, BookMarked,
 } from "lucide-react";
 
@@ -94,7 +99,7 @@ export default function Dashboard() {
 
   const features = [
     {
-      icon: <Sparkles size={20} className="text-violet-400" />,
+      icon: <GraduationCap size={20} className="text-violet-400" />,
       title: "AI Mentor",
       desc: `Instant ${examMode} doubt solving with streaming AI`,
       badge: "Active",
@@ -142,8 +147,12 @@ export default function Dashboard() {
 
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-violet-600 rounded-lg flex items-center justify-center shadow-glow-sm">
-            <Sparkles size={13} className="text-white" />
+          <div className="w-7 h-7 rounded-lg overflow-hidden shadow-glow-sm">
+            <img
+              src="/icon-192.png"
+              alt="JNEET+ AI"
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="font-bold text-sm tracking-wide gradient-text">JNEET+ AI</span>
         </div>
@@ -173,7 +182,7 @@ export default function Dashboard() {
             <button
               type="button"
               onClick={() => setTargetModalOpen(true)}
-              className="text-[11px] text-violet-300 hover:text-violet-500 transition"
+              className="text-[11px] link-accent transition"
             >
               Change Target Exam
             </button>

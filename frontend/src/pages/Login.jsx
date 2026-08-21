@@ -1,15 +1,8 @@
 // ============================================================
-//  JNEET+ AI — pages/Login.jsx  (v3.1 — readability fix)
-//  FIXED: the muted secondary-text color (#8B8594) used for the
-//  subtitle, labels, and "New here?" line had borderline-weak
-//  contrast against the white card background (~3.5:1) — under
-//  the ~4.5:1 generally recommended for comfortable reading at
-//  small sizes. Darkened to #6B6572 (same hue family, genuinely
-//  readable). This page intentionally stays on its own fixed
-//  light brand identity (not the app's dark/light theme system —
-//  see original file comment), so this is a literal color swap,
-//  not a theme-variable change.
-//  Logic, layout, animations — all UNCHANGED.
+//  JNEET+ AI — pages/Login.jsx  (v3.2 — real logo)
+//  CHANGED: the gradient-badge Sparkles icon replaced with the
+//  app's own JN logo image. Everything else (validation, layout,
+//  colors, animations) UNCHANGED from v3.1.
 // ============================================================
 
 import { useState }           from "react";
@@ -18,7 +11,7 @@ import { useAuth }            from "../context/AuthContext.jsx";
 import { authApi }            from "../api/authApi.js";
 import { FormField }          from "../components/auth/FormField.jsx";
 import { Spinner }            from "../components/ui/Spinner.jsx";
-import { Eye, EyeOff, Sparkles, ArrowRight } from "lucide-react";
+import { Eye, EyeOff, ArrowRight } from "lucide-react";
 
 function clientValidate(form) {
   const errs = {};
@@ -114,16 +107,19 @@ export default function Login() {
         <div className="bg-white border border-[#EDE6F3] rounded-2xl p-7 shadow-[0_1px_3px_rgba(45,42,50,0.06),0_12px_32px_rgba(45,42,50,0.08)]
           transition-shadow duration-300 hover:shadow-[0_1px_3px_rgba(45,42,50,0.08),0_16px_40px_rgba(147,197,253,0.16)]">
 
-          {/* Logo */}
+          {/* Logo — real JN icon */}
           <div
             className="flex flex-col items-center mb-7 animate-fade-up"
             style={{ animationDelay: "40ms", animationFillMode: "backwards" }}
           >
-            <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-3
-              bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
+            <div className="w-11 h-11 rounded-xl overflow-hidden mb-3
               shadow-[0_6px_18px_rgba(147,197,253,0.4)]
               transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-              <Sparkles size={20} className="text-white" />
+              <img
+                src="/icon-192.png"
+                alt="JNEET+ AI"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h1 className="text-xl font-bold tracking-tight text-[#2D2A32]">JNEET+ AI</h1>
             <p className="text-[#6B6572] text-xs mt-0.5">Welcome back — please sign in</p>

@@ -1,16 +1,10 @@
 // ============================================================
-//  JNEET+ AI — components/chat/EmptyChat.jsx  (v3 — all text English)
-//  CHANGED: quick-prompt example questions AND the description
-//  line are now English (were Hinglish). Since the AI itself will
-//  still reply in whatever language the student actually types in
-//  their own message, these example prompts no longer need to
-//  demonstrate Hinglish phrasing — clicking one still sends a
-//  perfectly valid question, and the AI mirrors whatever language
-//  the student's own follow-up messages use from there.
-//  Everything else — icon, layout, prompt grid — is UNCHANGED.
+//  JNEET+ AI — components/chat/EmptyChat.jsx  (v4 — real logo)
+//  CHANGED: Sparkles icon (looked like Gemini's icon) replaced
+//  with the app's own JN logo image (frontend/public/icon-192.png).
+//  Everything else — quick-prompt grid, English text, layout — is
+//  UNCHANGED from v3.
 // ============================================================
-
-import { Sparkles } from "lucide-react";
 
 const QUICK_PROMPTS = {
   NEET: [
@@ -38,10 +32,13 @@ export function EmptyChat({ examMode, onPromptSelect }) {
     <div className="flex flex-col items-center justify-center h-full
       text-center gap-6 pb-20 px-4 animate-fade-up">
 
-      {/* Icon */}
-      <div className="w-16 h-16 bg-violet-600/10 border border-violet-600/20
-        rounded-2xl flex items-center justify-center shadow-glow-violet">
-        <Sparkles size={28} className="text-violet-400" />
+      {/* Icon — app's own JN logo, not a generic AI-sparkle */}
+      <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-glow-violet">
+        <img
+          src="/icon-192.png"
+          alt="JNEET+ AI"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Title */}
