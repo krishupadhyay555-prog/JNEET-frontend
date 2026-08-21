@@ -1,25 +1,27 @@
 // ============================================================
-//  JNEET+ AI — pages/Notes.jsx  (NEW)
-//  Phone-notes-style: no separate title field — the first line of
-//  content is used as the list preview (computed server-side).
-//  Tag is optional, freeform, used purely for search (e.g. a
-//  Physics formula accidentally written under Biology can still
-//  be found by tagging it).
-//  Search matches ANYWHERE in the text, not just the start —
-//  debounced 350ms, same pattern as Sidebar.jsx's chat search.
-//  Single-file list+editor (no extra routes) — tapping a note or
-//  the "+" button swaps the view in place, keeping navigation
-//  simple and avoiding new route wiring for a self-contained
-//  feature.
+//  JNEET+ AI — pages/Notes.jsx  (v3 — filter chips removed)
+//  REMOVED: the Physics/Chemistry/Biology quick-filter chips
+//  added in v2. Root issue: they only match notes that literally
+//  contain a subject-word somewhere in content/tag — a note that's
+//  just a raw formula ("F = ma") with no subject word anywhere
+//  would never surface under a chip, silently. True automatic
+//  subject-detection would need an AI classification call on every
+//  save (extra latency, extra API cost, a new failure point if
+//  Gemini is slow/down) — not worth that complexity/fragility for
+//  a low-stakes personal-notes feature. Back to plain manual
+//  tag + full-text search only — predictable, nothing hidden.
+//  UNCHANGED from v2: long-press/right-click context menu (Edit/
+//  Delete) on each note, editor view, save flow, all API calls.
 // ============================================================
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProfileMenu } from "../components/ProfileMenu.jsx";
+import { ContextMenu } from "../components/ui/ContextMenu.jsx";
 import { notesApi } from "../api/notesApi.js";
 import toast from "react-hot-toast";
 import {
-  ArrowLeft, Search, Plus, X, Trash2, Loader2, StickyNote,
+  ArrowLeft, Search, Plus, X, Trash2, Edit3, Loader2, StickyNote,
 } from "lucide-react";
 
 function formatRelative(dateStr) {
@@ -37,6 +39,83 @@ function formatRelative(dateStr) {
   return date.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 }
 
+const LONG_PRESS_MS = 500;
+const MOVE_CANCEL_PX = 10;
+
+function NoteCard({ note, index, onOpen, onRequestMenu }) {
+  const pressTimer = useRef(null);
+  const startPos = useRef({ x: 0, y: 0 });
+  const longPressFired = useRef(false);
+
+  const clearTimer = () => {
+    if (pressTimer.current) {
+      clearTimeout(pressTimer.current);
+      pressTimer.current = null;
+    }
+  };
+
+  const handlePointerDown = (e) => {
+    if (e.button !== undefined && e.button !== 0) return; // ignore right/middle mouse here — onContextMenu handles right-click
+    longPressFired.current = false;
+    startPos.current = { x: e.clientX, y: e.clientY };
+    pressTimer.current = setTimeout(() => {
+      longPressFired.current = true;
+      onRequestMenu(note, e.clientX, e.clientY);
+    }, LONG_PRESS_MS);
+  };
+
+  const handlePointerMove = (e) => {
+    const dx = Math.abs(e.clientX - startPos.current.x);
+    const dy = Math.abs(e.clientY - startPos.current.y);
+    if (dx > MOVE_CANCEL_PX || dy > MOVE_CANCEL_PX) clearTimer();
+  };
+
+  const handlePointerUp = () => {
+    clearTimer();
+    if (!longPressFired.current) onOpen(note._id);
+  };
+
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+    clearTimer();
+    onRequestMenu(note, e.clientX, e.clientY);
+  };
+
+  return (
+    <div
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={clearTimer}
+      onContextMenu={handleContextMenu}
+      style={{ animationDelay: `${index * 30}ms`, animationFillMode: "backwards" }}
+      className="animate-fade-up w-full text-left bg-bg-card border border-bg-border
+        hover:border-violet-600/40 hover:bg-bg-hover rounded-xl px-4 py-3.5
+        transition-all duration-150 cursor-pointer select-none"
+    >
+      <p
+        className="text-sm text-fg-primary font-medium leading-snug"
+        style={{
+          display: "-webkit-box",
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
+        }}
+      >
+        {note.preview}
+      </p>
+      <div className="flex items-center gap-2 mt-2">
+        {note.tag && (
+          <span className="text-[10px] bg-violet-600/10 text-violet-600 border border-violet-600/25 px-2 py-0.5 rounded-full font-medium">
+            {note.tag}
+          </span>
+        )}
+        <span className="text-[11px] text-gray-600">{formatRelative(note.updatedAt)}</span>
+      </div>
+    </div>
+  );
+}
+
 export default function Notes() {
   const navigate = useNavigate();
 
@@ -46,6 +125,8 @@ export default function Notes() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searching, setSearching]     = useState(false);
   const debounceRef = useRef(null);
+
+  const [menu, setMenu] = useState(null); // { note, x, y } | null
 
   const [view, setView]               = useState("list"); // "list" | "editor"
   const [activeNoteId, setActiveNoteId] = useState(null); // null = creating a new note
@@ -149,6 +230,16 @@ export default function Notes() {
     }
   };
 
+  const handleQuickDelete = async (noteId) => {
+    try {
+      await notesApi.remove(noteId);
+      toast.success("Note deleted");
+      loadNotes(searchQuery);
+    } catch {
+      toast.error("Couldn't delete this note. Try again.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center justify-between sticky top-0 z-10">
@@ -211,34 +302,13 @@ export default function Notes() {
           ) : (
             <div className="space-y-2.5">
               {notes.map((n, i) => (
-                <button
+                <NoteCard
                   key={n._id}
-                  onClick={() => openNote(n._id)}
-                  style={{ animationDelay: `${i * 30}ms`, animationFillMode: "backwards" }}
-                  className="animate-fade-up w-full text-left bg-bg-card border border-bg-border
-                    hover:border-violet-600/40 hover:bg-bg-hover rounded-xl px-4 py-3.5
-                    transition-all duration-150"
-                >
-                  <p
-                    className="text-sm text-fg-primary font-medium leading-snug"
-                    style={{
-                      display: "-webkit-box",
-                      WebkitLineClamp: 2,
-                      WebkitBoxOrient: "vertical",
-                      overflow: "hidden",
-                    }}
-                  >
-                    {n.preview}
-                  </p>
-                  <div className="flex items-center gap-2 mt-2">
-                    {n.tag && (
-                      <span className="text-[10px] bg-violet-600/10 text-violet-600 border border-violet-600/25 px-2 py-0.5 rounded-full font-medium">
-                        {n.tag}
-                      </span>
-                    )}
-                    <span className="text-[11px] text-gray-600">{formatRelative(n.updatedAt)}</span>
-                  </div>
-                </button>
+                  note={n}
+                  index={i}
+                  onOpen={openNote}
+                  onRequestMenu={(note, x, y) => setMenu({ note, x, y })}
+                />
               ))}
             </div>
           )}
@@ -252,6 +322,28 @@ export default function Notes() {
           >
             <Plus size={22} />
           </button>
+
+          {menu && (
+            <ContextMenu
+              x={menu.x}
+              y={menu.y}
+              onClose={() => setMenu(null)}
+              items={[
+                {
+                  label: "Edit",
+                  icon: Edit3,
+                  onClick: () => openNote(menu.note._id),
+                },
+                {
+                  label: "Delete",
+                  icon: Trash2,
+                  danger: true,
+                  confirm: true,
+                  onClick: () => handleQuickDelete(menu.note._id),
+                },
+              ]}
+            />
+          )}
         </div>
       ) : (
         <div
