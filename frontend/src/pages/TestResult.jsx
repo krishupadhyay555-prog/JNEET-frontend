@@ -1,5 +1,18 @@
 // ============================================================
-//  JNEET+ AI — pages/TestResult.jsx  (v3 — passes mode to review)
+//  JNEET+ AI — pages/TestResult.jsx  (v4 — mode-aware back navigation)
+//  FIXED (root cause of the multi-hop back-button chain reported):
+//  both the nav-bar back button AND the no-result fallback were
+//  hardcoded to navigate("/tests") regardless of attempt.mode.
+//  Since Tests.jsx and Revision.jsx are now two fully separate
+//  pages (Tests = Full Test only, Revision = chapter-wise
+//  instant-feedback), a result page for a REVISION attempt was
+//  incorrectly sending "back" to the Full Test page instead of
+//  back to Revision's chapter list — that's what produced the
+//  Result → Tests → Revision → Dashboard hop chain. Now checks
+//  attempt.mode ("test" vs "revision") and routes back to the
+//  correct originating page in both places.
+//  Everything else — result loading, ResultSummary, ReviewAnswer
+//  list — UNCHANGED from v3.
 // ============================================================
 
 import { useState, useEffect } from "react";
@@ -49,23 +62,28 @@ export default function TestResult() {
         <div className="text-center">
           <p className="text-sm text-gray-600 mb-3">No result to show.</p>
           <button
-            onClick={() => navigate("/tests")}
+            onClick={() => navigate("/dashboard")}
             className="text-xs text-violet-400 hover:text-violet-500 font-medium"
           >
-            Back to Tests
+            Back to Dashboard
           </button>
         </div>
       </div>
     );
   }
 
+  // FIX: route back to whichever page this attempt actually came
+  // from — Revision (chapter-wise, instant-feedback) or Tests
+  // (Full-Test-only page) — never hardcoded to one or the other.
+  const backPath = attempt.mode === "revision" ? "/revision" : "/tests";
+
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface/90 backdrop-blur-xl px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate("/tests", { replace: true })}
+          onClick={() => navigate(backPath, { replace: true })}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
-          title="Back to Tests"
+          title={attempt.mode === "revision" ? "Back to Revision" : "Back to Tests"}
         >
           <ArrowLeft size={16} />
         </button>
