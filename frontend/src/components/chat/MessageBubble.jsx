@@ -1,23 +1,19 @@
 // ============================================================
-//  JNEET+ AI — components/chat/MessageBubble.jsx  (v3 — theme-aware prose)
-//  FIX (AI reply unreadable in light mode):
-//    - Removed `prose-invert` — this Tailwind Typography modifier
-//      ALWAYS applies its own hardcoded dark-theme color set,
-//      completely regardless of the app's actual active theme. It
-//      was silently fighting the (also broken, now fixed)
-//      hardcoded .prose colors in index.css. Since index.css's
-//      .prose block is now fully theme-variable-driven, this
-//      modifier is not just unnecessary but actively wrong to
-//      keep — removing it lets the real theme colors show through
-//      correctly in dark, light-Normal, light-NEET, and light-JEE.
-//  Everything else — avatar, user-bubble gradient, save button
-//  logic — is UNCHANGED.
+//  JNEET+ AI — components/chat/MessageBubble.jsx  (v4 — real logo,
+//  last remaining Sparkles instance removed)
+//  CHANGED: AI-avatar Sparkles icon → app's own JN logo image
+//  (frontend/public/icon-192.png). This was the actual last place
+//  in the app still showing the Sparkles icon (the v3 header-
+//  comment claiming LoadingScreen was "the last place" was wrong —
+//  this file and StreamingBubble.jsx were both missed in that pass).
+//  Everything else — prose-invert removal, avatar sizing, user-
+//  bubble gradient, save-button logic — UNCHANGED from v3.
 // ============================================================
 
 import { memo } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Sparkles, User, Bookmark, BookmarkCheck } from "lucide-react";
+import { User, Bookmark, BookmarkCheck } from "lucide-react";
 
 export const MessageBubble = memo(function MessageBubble({ msg, onToggleSaved }) {
   const isUser = msg.role === "user";
@@ -31,7 +27,7 @@ export const MessageBubble = memo(function MessageBubble({ msg, onToggleSaved })
       <div
         className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 mb-0.5
           shadow-[0_6px_16px_rgba(0,0,0,0.2)] transition-transform duration-200
-          hover:scale-110
+          hover:scale-110 overflow-hidden
           ${isUser
             ? "bg-violet-600"
             : "bg-bg-panel border border-bg-border"
@@ -39,7 +35,7 @@ export const MessageBubble = memo(function MessageBubble({ msg, onToggleSaved })
       >
         {isUser
           ? <User size={12} className="text-white" />
-          : <Sparkles size={12} className="text-violet-400" />
+          : <img src="/icon-192.png" alt="JNEET+ AI" className="w-full h-full object-cover" />
         }
       </div>
 

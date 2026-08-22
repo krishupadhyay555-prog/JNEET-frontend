@@ -1,25 +1,23 @@
 // ============================================================
-//  JNEET+ AI — components/chat/StreamingBubble.jsx  (v3 — theme-aware prose)
-//  Same fix as MessageBubble.jsx — removed `prose-invert`, which
-//  always forced dark-theme markdown colors regardless of the
-//  actual active theme. index.css's .prose block is now fully
-//  theme-variable-driven, so this modifier was actively wrong to
-//  keep, not just redundant.
-//  Everything else — avatar, bubble shape, cursor, bouncing-dots
-//  loading state — is UNCHANGED.
+//  JNEET+ AI — components/chat/StreamingBubble.jsx  (v4 — real
+//  logo, last remaining Sparkles instance removed)
+//  CHANGED: avatar Sparkles icon → app's own JN logo image, same
+//  fix as MessageBubble.jsx v4 — this was the other genuinely-
+//  active Sparkles usage in the app.
+//  Everything else — prose-invert removal, bubble shape, cursor,
+//  bouncing-dots loading state — UNCHANGED from v3.
 // ============================================================
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { Sparkles } from "lucide-react";
 import { BouncingDots } from "./BouncingDots.jsx";
 
 export function StreamingBubble({ text }) {
   return (
     <div className="flex items-end gap-2.5 animate-message-in">
       {/* Avatar */}
-      <div className="w-7 h-7 rounded-full bg-bg-panel border border-bg-border flex items-center justify-center shrink-0 mb-0.5 shadow-[0_6px_16px_rgba(0,0,0,0.2)]">
-        <Sparkles size={12} className="text-violet-400" />
+      <div className="w-7 h-7 rounded-full bg-bg-panel border border-bg-border flex items-center justify-center shrink-0 mb-0.5 shadow-[0_6px_16px_rgba(0,0,0,0.2)] overflow-hidden">
+        <img src="/icon-192.png" alt="JNEET+ AI" className="w-full h-full object-cover" />
       </div>
 
       {/* Bubble */}
