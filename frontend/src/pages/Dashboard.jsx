@@ -1,46 +1,8 @@
 // ============================================================
-//  JNEET+ AI — pages/Dashboard.jsx  (v6 — full 5-card redesign)
-//  CHANGED (this is the "Dashboard integration" phase, following
-//  the mockup approved earlier):
-//    - The old 4-card "Features" grid (which included AI Mentor
-//      as one of the cards) is replaced with a 5-card grid:
-//      Revision, Mock Tests, WMS, Analytics, Notes — all equal
-//      weight, each with its own colored icon badge (teal/blue/
-//      purple/indigo/pink — deliberately no amber/orange, per
-//      earlier feedback that amber reads too close to Claude's
-//      own color).
-//    - AI Mentor moved OUT of the card grid entirely into a
-//      separate floating "Ask AI Mentor" pill button (bottom-
-//      right, fixed position) — the "distinct way to reach chat"
-//      that was discussed. Uses a plain MessageCircle icon, not
-//      Sparkles (that icon is fully retired app-wide now) and not
-//      a robot icon (retired earlier too).
-//      NOTE (scope): this floating button is only on Dashboard for
-//      now, not yet on every page — making it truly global would
-//      need a shared layout wrapper that doesn't exist yet (each
-//      page currently renders its own nav independently). Flagging
-//      this rather than silently under-delivering; can extend to
-//      other pages as a follow-up if wanted.
-//    - Revision and Mock Tests cards now show a real "Last done" /
-//      "Last given" relative date instead of a static "Active"
-//      badge with no information — computed client-side from the
-//      EXISTING testApi.getHistory() endpoint (no new backend
-//      needed): the history list is already sorted most-recent-
-//      first, so the first entry per mode gives its last-activity
-//      date.
-//    - Notes card shows a real saved-count from the EXISTING
-//      notesApi.list() endpoint.
-//    - The old 3-card stat row (Exam Target / Saved Concepts /
-//      Mock Tests count) is REMOVED — Exam Target duplicated the
-//      Exam Settings panel right above it, Saved Concepts was a
-//      permanent "-" placeholder duplicating the Sidebar's own
-//      Saved tab (per the earlier decision to keep Saved Concepts
-//      in ONE place only), and Mock Tests' static "0" is now
-//      superseded by the real last-given date on its own card.
-//      Removing this row also declutters the page, which was part
-//      of the original goal.
-//  UNCHANGED: nav bar, greeting, QuoteOfDay, Exam Settings panel,
-//  ExamCountdown, TargetExamModal logic.
+//  JNEET+ AI — pages/Dashboard.jsx  (v7 — Analytics unlocked)
+//  CHANGED: Analytics feature-card now available: true, navigates
+//  to the new /analytics page — no longer a "Soon" placeholder.
+//  Everything else UNCHANGED from v6.
 // ============================================================
 
 import { useState, useEffect } from "react";
@@ -112,7 +74,7 @@ export default function Dashboard() {
   const isNewAccount = !user?.lastLogin;
   const selectedTarget = getTargetExam(user?.targetExam);
 
-  const [lastTestAt, setLastTestAt]         = useState(undefined); // undefined = loading, null = never
+  const [lastTestAt, setLastTestAt]         = useState(undefined);
   const [lastRevisionAt, setLastRevisionAt] = useState(undefined);
   const [notesCount, setNotesCount]         = useState(undefined);
 
@@ -206,9 +168,9 @@ export default function Dashboard() {
       icon: <TrendingUp size={20} className="text-indigo-500" />,
       iconBg: "bg-indigo-500/10",
       title: "Analytics",
-      desc: "Performance trends & weak area insights (coming soon)",
-      available: false,
-      onClick: null,
+      desc: "Score trends, streaks & activity history",
+      available: true,
+      onClick: () => navigate("/analytics"),
     },
     {
       icon: <StickyNote size={20} className="text-pink-500" />,
@@ -319,8 +281,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Floating chat entry — deliberately separate from the
-          feature grid above, per the approved dashboard mockup. */}
       <button
         onClick={() => navigate("/ask")}
         className="fixed bottom-6 right-6 md:bottom-8 md:right-8 flex items-center gap-2

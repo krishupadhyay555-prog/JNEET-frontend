@@ -1,8 +1,7 @@
 // ============================================================
-//  JNEET+ AI — App.jsx  (v6 — Revision route added)
-//  ADDED: /revision (protected) → the new chapter-selection page.
-//  /revision/attempt/:attemptId (already added in v5) is UNCHANGED.
-//  Everything else UNCHANGED from v5.
+//  JNEET+ AI — App.jsx  (v7 — Analytics route added)
+//  ADDED: /analytics (protected) → the new full Analytics page.
+//  Everything else UNCHANGED from v6.
 // ============================================================
 
 import { useEffect } from "react";
@@ -20,6 +19,7 @@ import AskAI                from "./pages/AskAI.jsx";
 import Profile              from "./pages/Profile.jsx";
 import Settings             from "./pages/Settings.jsx";
 import WMS                  from "./pages/WMS.jsx";
+import Analytics            from "./pages/Analytics.jsx";
 import Tests                from "./pages/Tests.jsx";
 import TestAttempt          from "./pages/TestAttempt.jsx";
 import TestResult           from "./pages/TestResult.jsx";
@@ -48,7 +48,7 @@ const TOAST_CONFIG = {
 };
 
 const LAST_PAGE_KEY = "jneet_last_page";
-const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/tests", "/revision", "/notes"];
+const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/analytics", "/tests", "/revision", "/notes"];
 
 function getLastPage() {
   try {
@@ -113,6 +113,7 @@ export default function App() {
               <Route path="/profile"   element={<ProtectedRoute><Profile /></ProtectedRoute>} />
               <Route path="/settings"  element={<ProtectedRoute><Settings /></ProtectedRoute>} />
               <Route path="/wms"       element={<ProtectedRoute><WMS /></ProtectedRoute>} />
+              <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
               <Route path="/tests"     element={<ProtectedRoute><Tests /></ProtectedRoute>} />
               <Route path="/revision"  element={<ProtectedRoute><Revision /></ProtectedRoute>} />
               <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
