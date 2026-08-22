@@ -1,18 +1,49 @@
 // ============================================================
-//  JNEET+ AI — pages/Dashboard.jsx  (v5 — Revision card added)
-//  CHANGED: the single "Mock Tests" feature card (which internally
-//  led to a page combining Full Test + Chapter Revision — the
-//  exact source of confusion just reported) is now TWO separate
-//  cards: "Mock Tests" (→ /tests, Full Test only) and "Revision"
-//  (→ /revision, chapter-wise instant feedback). This is a minimal,
-//  targeted fix — NOT yet the full 5-card dashboard redesign
-//  (Notes/WMS/Analytics repositioning) planned for the later
-//  Dashboard-integration phase; that still comes after Revision is
-//  fully verified working.
-//  Everything else UNCHANGED from v4.
+//  JNEET+ AI — pages/Dashboard.jsx  (v6 — full 5-card redesign)
+//  CHANGED (this is the "Dashboard integration" phase, following
+//  the mockup approved earlier):
+//    - The old 4-card "Features" grid (which included AI Mentor
+//      as one of the cards) is replaced with a 5-card grid:
+//      Revision, Mock Tests, WMS, Analytics, Notes — all equal
+//      weight, each with its own colored icon badge (teal/blue/
+//      purple/indigo/pink — deliberately no amber/orange, per
+//      earlier feedback that amber reads too close to Claude's
+//      own color).
+//    - AI Mentor moved OUT of the card grid entirely into a
+//      separate floating "Ask AI Mentor" pill button (bottom-
+//      right, fixed position) — the "distinct way to reach chat"
+//      that was discussed. Uses a plain MessageCircle icon, not
+//      Sparkles (that icon is fully retired app-wide now) and not
+//      a robot icon (retired earlier too).
+//      NOTE (scope): this floating button is only on Dashboard for
+//      now, not yet on every page — making it truly global would
+//      need a shared layout wrapper that doesn't exist yet (each
+//      page currently renders its own nav independently). Flagging
+//      this rather than silently under-delivering; can extend to
+//      other pages as a follow-up if wanted.
+//    - Revision and Mock Tests cards now show a real "Last done" /
+//      "Last given" relative date instead of a static "Active"
+//      badge with no information — computed client-side from the
+//      EXISTING testApi.getHistory() endpoint (no new backend
+//      needed): the history list is already sorted most-recent-
+//      first, so the first entry per mode gives its last-activity
+//      date.
+//    - Notes card shows a real saved-count from the EXISTING
+//      notesApi.list() endpoint.
+//    - The old 3-card stat row (Exam Target / Saved Concepts /
+//      Mock Tests count) is REMOVED — Exam Target duplicated the
+//      Exam Settings panel right above it, Saved Concepts was a
+//      permanent "-" placeholder duplicating the Sidebar's own
+//      Saved tab (per the earlier decision to keep Saved Concepts
+//      in ONE place only), and Mock Tests' static "0" is now
+//      superseded by the real last-given date on its own card.
+//      Removing this row also declutters the page, which was part
+//      of the original goal.
+//  UNCHANGED: nav bar, greeting, QuoteOfDay, Exam Settings panel,
+//  ExamCountdown, TargetExamModal logic.
 // ============================================================
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { ExamCountdown } from "../components/dashboard/ExamCountdown.jsx";
@@ -20,51 +51,53 @@ import { TargetExamModal } from "../components/dashboard/TargetExamModal.jsx";
 import { QuoteOfDay } from "../components/dashboard/QuoteOfDay.jsx";
 import { ProfileMenu } from "../components/ProfileMenu.jsx";
 import { getTargetExam } from "../config/targetExams.js";
+import { testApi } from "../api/testApi.js";
+import { notesApi } from "../api/notesApi.js";
 import toast from "react-hot-toast";
 import {
-  BarChart3, ClipboardList, TrendingUp, RefreshCw,
-  ChevronRight, GraduationCap,
-  Target, MessageSquare, BookMarked,
+  RefreshCw, ClipboardList, BarChart3, TrendingUp, StickyNote,
+  ChevronRight, MessageCircle,
 } from "lucide-react";
 
-function StatCard({ icon, label, value }) {
-  return (
-    <div className="bg-bg-card border border-bg-border rounded-xl p-4">
-      <div className="mb-2">{icon}</div>
-      <p className="text-xl font-bold text-fg-primary tabular-nums">{value}</p>
-      <p className="text-[11px] text-gray-600 mt-0.5">{label}</p>
-    </div>
-  );
+function formatRelative(dateStr) {
+  if (!dateStr) return null;
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+
+  if (diffDays <= 0) return "Today";
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return `${diffDays} days ago`;
+  if (diffDays < 30) {
+    const weeks = Math.floor(diffDays / 7);
+    return weeks === 1 ? "1 week ago" : `${weeks} weeks ago`;
+  }
+  return date.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
 }
 
-function FeatureCard({ icon, title, desc, badge, badgeClass, available, onClick }) {
+function FeatureCard({ icon, iconBg, title, desc, available, onClick }) {
   return (
     <div
       onClick={available ? onClick : undefined}
-      className={`bg-bg-card border rounded-2xl p-5 flex items-center gap-4 transition group
+      className={`relative bg-bg-card border rounded-2xl p-5 flex items-center gap-4 transition group
         ${available
           ? "border-bg-border hover:border-violet-600/40 cursor-pointer"
           : "border-bg-border/50 opacity-40 cursor-not-allowed select-none"
         }`}
     >
-      <div className="w-11 h-11 rounded-xl bg-bg-panel flex items-center justify-center shrink-0 group-hover:scale-105 transition duration-150">
-        {icon}
-      </div>
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2 mb-0.5">
-          <span className="font-semibold text-sm text-fg-primary">{title}</span>
-          <span className={`text-[10px] px-1.5 py-0.5 rounded-full border ${badgeClass}`}>
-            {badge}
-          </span>
-        </div>
-        <p className="text-xs text-gray-600">{desc}</p>
-      </div>
       {available && (
         <ChevronRight
-          size={16}
-          className="text-gray-600 group-hover:text-violet-500 transition shrink-0"
+          size={15}
+          className="absolute top-4 right-4 text-gray-600 group-hover:text-violet-500 transition"
         />
       )}
+      <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-105 transition duration-150 ${iconBg}`}>
+        {icon}
+      </div>
+      <div className="flex-1 min-w-0 pr-4">
+        <p className="font-semibold text-sm text-fg-primary mb-0.5">{title}</p>
+        <p className="text-xs text-gray-600">{desc}</p>
+      </div>
     </div>
   );
 }
@@ -77,8 +110,41 @@ export default function Dashboard() {
   );
 
   const isNewAccount = !user?.lastLogin;
-
   const selectedTarget = getTargetExam(user?.targetExam);
+
+  const [lastTestAt, setLastTestAt]         = useState(undefined); // undefined = loading, null = never
+  const [lastRevisionAt, setLastRevisionAt] = useState(undefined);
+  const [notesCount, setNotesCount]         = useState(undefined);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    testApi.getHistory()
+      .then((res) => {
+        if (cancelled) return;
+        const attempts = res.data.attempts ?? [];
+        const lastTest     = attempts.find((a) => a.mode === "test");
+        const lastRevision = attempts.find((a) => a.mode === "revision");
+        setLastTestAt(lastTest?.submittedAt ?? null);
+        setLastRevisionAt(lastRevision?.submittedAt ?? null);
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setLastTestAt(null);
+          setLastRevisionAt(null);
+        }
+      });
+
+    notesApi.list()
+      .then((res) => {
+        if (!cancelled) setNotesCount((res.data.notes ?? []).length);
+      })
+      .catch(() => {
+        if (!cancelled) setNotesCount(null);
+      });
+
+    return () => { cancelled = true; };
+  }, []);
 
   const handleModeSwitch = async (mode) => {
     if (mode === examMode) return;
@@ -93,50 +159,64 @@ export default function Dashboard() {
     if (targetExam) toast.success("Target exam updated");
   };
 
+  const revisionDesc = lastRevisionAt === undefined
+    ? "Chapter-wise practice with instant feedback"
+    : lastRevisionAt
+      ? `Last done: ${formatRelative(lastRevisionAt)}`
+      : "Not started yet";
+
+  const testDesc = lastTestAt === undefined
+    ? "Full exam-pattern test, instant scoring"
+    : lastTestAt
+      ? `Last given: ${formatRelative(lastTestAt)}`
+      : "Not attempted yet";
+
+  const notesDesc = notesCount === undefined
+    ? "Your saved formulas and concepts"
+    : notesCount > 0
+      ? `${notesCount} note${notesCount === 1 ? "" : "s"} saved`
+      : "No notes yet";
+
   const features = [
     {
-      icon: <GraduationCap size={20} className="text-violet-500" />,
-      title: "AI Mentor",
-      desc: `Instant ${examMode} doubt solving with streaming AI`,
-      badge: "Active",
-      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
-      available: true,
-      onClick: () => navigate("/ask"),
-    },
-    {
-      icon: <RefreshCw size={20} className="text-blue-500" />,
+      icon: <RefreshCw size={20} className="text-teal-500" />,
+      iconBg: "bg-teal-500/10",
       title: "Revision",
-      desc: "Chapter-wise practice with instant feedback",
-      badge: "Active",
-      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
+      desc: revisionDesc,
       available: true,
       onClick: () => navigate("/revision"),
     },
     {
-      icon: <ClipboardList size={20} className="text-orange-500" />,
+      icon: <ClipboardList size={20} className="text-blue-500" />,
+      iconBg: "bg-blue-500/10",
       title: "Mock Tests",
-      desc: "Full exam-pattern test, instant scoring",
-      badge: "Active",
-      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
+      desc: testDesc,
       available: true,
       onClick: () => navigate("/tests"),
     },
     {
       icon: <BarChart3 size={20} className="text-purple-500" />,
+      iconBg: "bg-purple-500/10",
       title: "WMS Tracker",
       desc: "Weak / Medium / Strong topic analysis",
-      badge: "Active",
-      badgeClass: "bg-emerald-600/15 text-emerald-600 border-emerald-600/30",
       available: true,
       onClick: () => navigate("/wms"),
     },
     {
-      icon: <TrendingUp size={20} className="text-emerald-500" />,
+      icon: <TrendingUp size={20} className="text-indigo-500" />,
+      iconBg: "bg-indigo-500/10",
       title: "Analytics",
-      desc: "Performance trends & weak area insights",
-      badge: "Soon",
-      badgeClass: "bg-bg-panel text-gray-600 border-bg-border",
+      desc: "Performance trends & weak area insights (coming soon)",
       available: false,
+      onClick: null,
+    },
+    {
+      icon: <StickyNote size={20} className="text-pink-500" />,
+      iconBg: "bg-pink-500/10",
+      title: "Notes",
+      desc: notesDesc,
+      available: true,
+      onClick: () => navigate("/notes"),
     },
   ];
 
@@ -165,7 +245,7 @@ export default function Dashboard() {
         <ProfileMenu />
       </nav>
 
-      <div className="max-w-3xl mx-auto px-5 py-8 animate-fade-up">
+      <div className="max-w-3xl mx-auto px-5 py-8 pb-28 animate-fade-up">
         <div className="mb-7">
           <h1 className="text-2xl font-bold mb-0.5 tracking-tight">
             Hi, {user?.name?.split(" ")[0] ?? "Student"}!
@@ -222,28 +302,10 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="mb-5">
+        <div className="mb-6">
           <ExamCountdown
             targetExam={user?.targetExam}
             onChangeTarget={() => setTargetModalOpen(true)}
-          />
-        </div>
-
-        <div className="grid grid-cols-3 gap-3 mb-6">
-          <StatCard
-            icon={<Target size={15} className="text-violet-500" />}
-            label="Exam Target"
-            value={selectedTarget?.label ?? examMode}
-          />
-          <StatCard
-            icon={<BookMarked size={15} className="text-amber-600" />}
-            label="Saved Concepts"
-            value="-"
-          />
-          <StatCard
-            icon={<MessageSquare size={15} className="text-blue-500" />}
-            label="Mock Tests"
-            value="0"
           />
         </div>
 
@@ -256,6 +318,19 @@ export default function Dashboard() {
           ))}
         </div>
       </div>
+
+      {/* Floating chat entry — deliberately separate from the
+          feature grid above, per the approved dashboard mockup. */}
+      <button
+        onClick={() => navigate("/ask")}
+        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 flex items-center gap-2
+          bg-bg-card border border-bg-border hover:border-violet-600/50 text-fg-primary
+          px-5 py-3.5 rounded-full shadow-card transition-all duration-150
+          active:scale-95 hover:-translate-y-0.5 z-20"
+      >
+        <MessageCircle size={17} className="text-violet-500" />
+        <span className="text-sm font-medium">Ask AI Mentor</span>
+      </button>
     </div>
   );
 }
