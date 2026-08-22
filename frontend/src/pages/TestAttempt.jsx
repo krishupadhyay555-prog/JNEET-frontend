@@ -1,18 +1,22 @@
 // ============================================================
-//  JNEET+ AI — pages/TestAttempt.jsx  (v2 — rebuilt)
-//  ARCHITECTURE FIX: the previous version read attemptId+questions
-//  from React Router navigation `state` — which is tied to a
-//  specific history entry and can behave unpredictably with
-//  browser back/forward (exactly the "test section repeats" bug).
-//  Now the page reads `attemptId` from the URL itself
-//  (/test/attempt/:attemptId) and FETCHES its data fresh from the
-//  server on every mount — so back/forward/refresh always show the
-//  correct, current state, no matter how you arrived here.
-//  UX FIX: one question at a time (was all-questions-on-one-page)
-//  + a QuestionPalette to jump between them — matches standard
-//  exam-app UX (Testbook/Embibe/NTA-style), not a generic quiz feel.
-//  VISUAL: uses .glass-panel for the palette bar, matching the
-//  premium look already established in Settings.jsx.
+//  JNEET+ AI — pages/TestAttempt.jsx  (v3 — exit auto-submits
+//  partial progress)
+//  FIXED (root cause of "abandoned attempts never count in WMS"):
+//  the exit button previously just navigated away after a plain
+//  confirm() — the attempt stayed status: "in-progress" forever,
+//  and WMS/Analytics only aggregate status: "submitted" attempts.
+//  A student who quit halfway through a test got ZERO credit or
+//  weakness-signal from it, no matter how many questions they'd
+//  actually answered.
+//  Exit now calls the EXISTING handleSubmit() (same function the
+//  "Submit Test" button already uses) instead of a bare navigate —
+//  whatever's in local `answers` state gets submitted as-is
+//  (unanswered questions correctly become "unattempted", which
+//  WMS already understands as a weakness signal). No new scoring
+//  logic was written — this reuses the already-tested submit path.
+//  Confirm-dialog wording updated to reflect the new behavior.
+//  Everything else — one-question-at-a-time UI, QuestionPalette,
+//  timer, fetch-fresh-on-mount architecture — UNCHANGED from v2.
 // ============================================================
 
 import { useState, useEffect } from "react";
@@ -45,9 +49,6 @@ export default function TestAttempt() {
 
         const a = res.data.attempt;
 
-        // Already submitted (e.g. reached via back-button after
-        // finishing) — send straight to the result page instead of
-        // re-showing a "live" test.
         if (a.status === "submitted") {
           navigate(`/test/result/${attemptId}`, { replace: true });
           return;
@@ -112,18 +113,25 @@ export default function TestAttempt() {
     }
   };
 
+  const handleExit = async () => {
+    if (
+      window.confirm(
+        "Exit this test? Whatever you've answered so far will be submitted and scored — unanswered questions count as unattempted."
+      )
+    ) {
+      await handleSubmit();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface/90 backdrop-blur-xl px-5 py-3.5 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-3 min-w-0">
           <button
-            onClick={() => {
-              if (window.confirm("Exit this test? Your answers so far are saved, but the test will stay incomplete until you submit.")) {
-                navigate("/tests", { replace: true });
-              }
-            }}
-            className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover shrink-0"
-            title="Exit test"
+            onClick={handleExit}
+            disabled={submitting}
+            className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover shrink-0 disabled:opacity-50"
+            title="Exit and submit"
           >
             <ArrowLeft size={16} />
           </button>

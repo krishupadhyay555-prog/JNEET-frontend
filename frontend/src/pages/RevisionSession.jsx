@@ -1,21 +1,21 @@
 // ============================================================
-//  JNEET+ AI — pages/RevisionSession.jsx  (v2 — exit-route bug fixed)
-//  FIXED (root cause of "back opens Test section"): the exit/back
-//  button's navigate() target was accidentally left as "/tests"
-//  (copy-pasted from TestAttempt.jsx's identical exit-confirm
-//  pattern, without updating the destination for this page).
-//  Exiting a REVISION session must go back to /revision (the
-//  chapter-selection list this session was started from), never
-//  to /tests (the separate Full-Test page) — those are two
-//  completely different flows now that they're split into their
-//  own pages. This was a plain wrong-hardcoded-path bug, not a
-//  browser-history/routing-architecture issue.
-//  Everything else — instant-feedback flow, skip handling, finish/
-//  submit logic, fetch-fresh-on-mount from the URL — UNCHANGED
-//  from v1.
+//  JNEET+ AI — pages/RevisionSession.jsx  (v3 — exit auto-submits
+//  partial progress)
+//  FIXED (same root cause as TestAttempt.jsx v3): exiting a
+//  revision session previously just navigated to /revision after
+//  a plain confirm() — the attempt stayed "in-progress" forever
+//  and never counted in WMS/Analytics, even though individual
+//  answers were ALREADY being saved question-by-question via
+//  /test/:attemptId/answer. Exit now calls the EXISTING
+//  handleFinish() (same function "Finish Revision" already uses)
+//  instead of a bare navigate — submits localAnswers as-is, so the
+//  student sees a result immediately and it correctly counts.
+//  Confirm-dialog wording updated to reflect the new behavior.
+//  Everything else — instant-feedback flow, skip handling, mode-
+//  aware exit destination (v2 fix) — UNCHANGED.
 // ============================================================
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, X as XIcon, SkipForward, ChevronRight } from "lucide-react";
 import { testApi } from "../api/testApi.js";
@@ -128,6 +128,16 @@ export default function RevisionSession() {
     }
   };
 
+  const handleExit = async () => {
+    if (
+      window.confirm(
+        "Exit this revision? Whatever you've answered so far will be submitted and scored — unanswered questions count as unattempted."
+      )
+    ) {
+      await handleFinish();
+    }
+  };
+
   const goNext = () => {
     if (isLast) {
       handleFinish();
@@ -143,13 +153,10 @@ export default function RevisionSession() {
       <nav className="border-b border-bg-border bg-bg-surface/90 backdrop-blur-xl px-5 py-3.5 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-3 min-w-0">
           <button
-            onClick={() => {
-              if (window.confirm("Exit this revision? Your progress so far is saved, but it will stay incomplete until you finish.")) {
-                navigate("/revision", { replace: true });
-              }
-            }}
-            className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover shrink-0"
-            title="Exit"
+            onClick={handleExit}
+            disabled={finishing}
+            className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover shrink-0 disabled:opacity-50"
+            title="Exit and submit"
           >
             <ArrowLeft size={16} />
           </button>
