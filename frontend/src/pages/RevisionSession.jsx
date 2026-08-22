@@ -1,25 +1,18 @@
 // ============================================================
-//  JNEET+ AI — pages/RevisionSession.jsx  (NEW)
-//  The instant-feedback revision flow — deliberately separate
-//  from TestAttempt.jsx (which stays exam-simulation, submit-at-
-//  end, no explanations mid-test). Here, every answer OR skip
-//  immediately reveals correct/wrong (red/green) + a short
-//  explanation via the new /test/:attemptId/answer endpoint.
-//  Deliberately NO jump-palette (unlike Mock Test) — just linear
-//  Previous/Next + a progress bar. Fewer moving parts, fewer edge
-//  cases, matches the "simple but not confusing, never breaks"
-//  priority this project has repeatedly emphasized.
-//  Skipping records selectedIndex: null on the backend — the
-//  EXACT SAME "unattempted" signal the WMS aggregation already
-//  understands (no new WMS logic needed; a skipped question
-//  correctly counts toward that topic looking weaker, since not
-//  knowing an answer is itself a weakness signal).
-//  Reads attemptId from the URL (not nav state) and fetches fresh
-//  on mount — same architecture fix already applied to
-//  TestAttempt.jsx, for the same back/forward-safety reason.
-//  Finishing calls the EXISTING testApi.submit() with the answers
-//  accumulated locally as the student went — reuses the already-
-//  tested scoring logic in submitTest(), no duplication.
+//  JNEET+ AI — pages/RevisionSession.jsx  (v2 — exit-route bug fixed)
+//  FIXED (root cause of "back opens Test section"): the exit/back
+//  button's navigate() target was accidentally left as "/tests"
+//  (copy-pasted from TestAttempt.jsx's identical exit-confirm
+//  pattern, without updating the destination for this page).
+//  Exiting a REVISION session must go back to /revision (the
+//  chapter-selection list this session was started from), never
+//  to /tests (the separate Full-Test page) — those are two
+//  completely different flows now that they're split into their
+//  own pages. This was a plain wrong-hardcoded-path bug, not a
+//  browser-history/routing-architecture issue.
+//  Everything else — instant-feedback flow, skip handling, finish/
+//  submit logic, fetch-fresh-on-mount from the URL — UNCHANGED
+//  from v1.
 // ============================================================
 
 import { useState, useEffect, useRef } from "react";
@@ -39,16 +32,10 @@ export default function RevisionSession() {
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // { [questionId]: selectedIndex | null } — accumulated locally,
-  // sent as the final batch to submitTest() at the end.
   const [localAnswers, setLocalAnswers] = useState({});
-
-  // { [questionId]: { isCorrect, correctIndex, explanation, skipped } }
   const [feedback, setFeedback] = useState({});
   const [answering, setAnswering] = useState(false);
   const [finishing, setFinishing] = useState(false);
-
-  const loadedRef = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -65,7 +52,6 @@ export default function RevisionSession() {
           return;
         }
         if (a.mode !== "revision") {
-          // Safety net — this page is revision-only.
           navigate(`/test/attempt/${attemptId}`, { replace: true });
           return;
         }
@@ -73,7 +59,7 @@ export default function RevisionSession() {
         setAttempt(a);
       } catch {
         toast.error("Could not load this revision.");
-        navigate("/tests", { replace: true });
+        navigate("/revision", { replace: true });
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -159,7 +145,7 @@ export default function RevisionSession() {
           <button
             onClick={() => {
               if (window.confirm("Exit this revision? Your progress so far is saved, but it will stay incomplete until you finish.")) {
-                navigate("/tests", { replace: true });
+                navigate("/revision", { replace: true });
               }
             }}
             className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover shrink-0"
@@ -177,7 +163,6 @@ export default function RevisionSession() {
         </span>
       </nav>
 
-      {/* Progress bar */}
       <div className="h-1 bg-bg-panel">
         <div
           className="h-full bg-violet-600 transition-all duration-300 ease-out"
