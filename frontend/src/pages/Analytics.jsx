@@ -1,33 +1,13 @@
 // ============================================================
-//  JNEET+ AI — pages/Analytics.jsx  (NEW — full implementation,
-//  replacing the "Soon" placeholder)
-//  Purpose split vs WMS (deliberate, so the two pages never feel
-//  redundant): WMS = "where you stand right now" (a snapshot).
-//  Analytics = "how you've changed over time" (a timeline). Every
-//  number here comes from testApi.getHistory() (already existing,
-//  no new backend endpoint) — nothing is fabricated or estimated.
-//  Sections:
-//    1. Score trend — a pure-SVG line chart (no chart library
-//       installed in package.json, so this is hand-built with
-//       <polyline>/<circle>, zero new dependency risk) plotting
-//       `score` (already computed for every mode server-side) over
-//       the last up to 10 submitted attempts, oldest-to-newest.
-//       Test-mode and Revision-mode points get different colors so
-//       the two aren't visually conflated.
-//    2. Summary stat cards — total attempts, total questions
-//       answered, average accuracy, and a current-streak counter
-//       (consecutive days with at least one submitted attempt,
-//       computed client-side from real submittedAt dates).
-//    3. Activity by category — a simple horizontal bar count of
-//       revision attempts per subject, plus a separate "Full
-//       Tests" bar. NOTE: full-test attempts store subject as
-//       "All Subjects" (their real per-subject question breakdown
-//       isn't returned by getHistory, which deliberately strips
-//       the questions array for payload size) — so full tests are
-//       intentionally shown as their own category rather than
-//       guessed/split across subjects, to avoid inventing numbers.
-//    4. Recent activity feed — last 8 attempts as a compact list.
-//  Empty state shown if the student has zero submitted attempts.
+//  JNEET+ AI — pages/Analytics.jsx  (v1.1 — duplicate style-prop
+//  bug fixed)
+//  FIXED: the "Full tests" bar had TWO `style` attributes on the
+//  same JSX element (a genuine typo, not a design choice) — this
+//  is a duplicate-JSX-attribute error that would have broken the
+//  production build entirely (white-screen crash on this page).
+//  Merged into a single style object. Everything else — trend
+//  chart, stat cards, subject bars, recent activity feed —
+//  UNCHANGED from v1.
 // ============================================================
 
 import { useState, useEffect, useMemo } from "react";
@@ -288,9 +268,12 @@ export default function Analytics() {
                   </div>
                   <div className="h-2 rounded-full bg-bg-panel overflow-hidden">
                     <div
-                      style={{ width: `${(stats.fullTestCount / stats.maxCount) * 100}%`, transition: "width 0.5s ease-out" }}
+                      style={{
+                        width: `${(stats.fullTestCount / stats.maxCount) * 100}%`,
+                        background: "rgb(var(--violet-500))",
+                        transition: "width 0.5s ease-out",
+                      }}
                       className="h-full rounded-full"
-                      style={{ width: `${(stats.fullTestCount / stats.maxCount) * 100}%`, background: "rgb(var(--violet-500))" }}
                     />
                   </div>
                 </div>
