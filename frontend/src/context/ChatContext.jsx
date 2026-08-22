@@ -1,16 +1,32 @@
 // ============================================================
-//  JNEET+ AI — context/ChatContext.jsx  (v2.3 — rename + pin)
-//  ADDED:
-//    - renameSession(sessionId, newTitle) — optimistic local title
-//      update, reverts on API failure.
-//    - togglePin(sessionId) — optimistic local pinned toggle, then
-//      RE-SORTS the local sessions list using the same rule the
-//      backend uses (pinned-first, most-recently-pinned first among
-//      pinned, rest unchanged) — so the sidebar re-orders instantly
-//      without waiting for a round-trip re-fetch. Reverts (including
-//      the sort) on API failure.
-//  Everything else — session load/select/save/delete, streaming,
-//  saved-toggle — UNCHANGED from v2.2.
+//  JNEET+ AI — context/ChatContext.jsx  (v2.4 — fixed AI reply
+//  leaking into a different chat)
+//  FIXED (root cause of "answer shows in the wrong/new chat, then
+//  disappears"): messages/isStreaming/streamingText are global
+//  state, not scoped to a specific session. If a student switched
+//  chats or hit "New Chat" WHILE the AI was still streaming a
+//  reply, the in-flight stream's callbacks kept firing and:
+//    - onToken kept overwriting streamingText, which now rendered
+//      inside whichever chat the student had switched TO (wrong
+//      chat showing someone else's answer mid-type)
+//    - onDone then forcibly called setActiveSession() back to the
+//      ORIGINAL chat — but never re-fetched that chat's messages,
+//      so the reply appeared to "flash and vanish" on the next
+//      render/navigation.
+//  FIX: both selectSession() and newSession() now call
+//  abortStream() first if a stream is in-flight — switching chats
+//  or starting a new one always cleanly cancels the previous
+//  stream instead of letting it run across a session boundary.
+//  A toast tells the student their in-progress answer was
+//  interrupted, so it's not a silent mystery. As defense-in-depth
+//  (abort() may take a tick to actually stop the network stream),
+//  sendMessage's callbacks now also capture the session ID the
+//  stream belongs to and skip touching messages/streamingText if
+//  the active session has since changed — the answer is still
+//  saved to the CORRECT original session in the backend either
+//  way, it just won't render into the wrong place on screen.
+//  Everything else — session load/save/delete/rename/pin, saved-
+//  toggle — UNCHANGED from v2.3.
 // ============================================================
 
 import {
@@ -28,9 +44,6 @@ function normalizeSessionId(id) {
   return id.toString();
 }
 
-// Same ordering rule as backend's getSessions() — keeps the
-// sidebar's pinned-to-top order stable after a local optimistic
-// pin/unpin, without needing a full re-fetch.
 function sortSessions(list) {
   const pinned = list
     .filter((s) => s.pinned)
@@ -55,6 +68,9 @@ export function ChatProvider({ children }) {
   const abortRef = useRef(null);
   const latestLoadRef = useRef(0);
   const activeSessionRef = useRef(null);
+  // Which session the CURRENTLY in-flight stream belongs to — used
+  // to detect "user navigated away mid-stream" in the callbacks below.
+  const streamSessionRef = useRef(null);
 
   const setActiveSession = useCallback((sessionId) => {
     const normalizedId = normalizeSessionId(sessionId);
@@ -161,18 +177,35 @@ export function ChatProvider({ children }) {
     }
   }, []);
 
+  // ── NEW: cleanly cancel an in-flight stream before navigating
+  // away from the chat it belongs to. Warns the student rather
+  // than silently dropping their answer. ─────────────────────────
+  const interruptStreamIfAny = useCallback(() => {
+    if (isStreaming) {
+      abortRef.current?.abort();
+      setIsStreaming(false);
+      setStreamingText("");
+      streamSessionRef.current = null;
+      toast("Switched chats — the previous answer was stopped.", { icon: "i" });
+    }
+  }, [isStreaming]);
+
   const selectSession = useCallback(async (sessionId) => {
     const normalizedId = normalizeSessionId(sessionId);
     if (!normalizedId || normalizedId === activeSessionRef.current) return;
+
+    interruptStreamIfAny();
 
     setActiveSession(normalizedId);
     setMessages([]);
     await loadSession(normalizedId);
 
     chatApi.activateSession(normalizedId).catch(() => {});
-  }, [loadSession, setActiveSession]);
+  }, [loadSession, setActiveSession, interruptStreamIfAny]);
 
   const newSession = useCallback(async () => {
+    interruptStreamIfAny();
+
     try {
       const res = await chatApi.newSession();
       const sessionId = normalizeSessionId(res.data.sessionId);
@@ -199,7 +232,7 @@ export function ChatProvider({ children }) {
       toast.error("Could not create a new chat");
       return null;
     }
-  }, [setActiveSession]);
+  }, [setActiveSession, interruptStreamIfAny]);
 
   const deleteSession = useCallback(async (sessionId) => {
     const normalizedId = normalizeSessionId(sessionId);
@@ -207,6 +240,12 @@ export function ChatProvider({ children }) {
     if (!normalizedId) {
       setSessions((prev) => prev.filter((s) => normalizeSessionId(s._id)));
       return;
+    }
+
+    // Deleting the session currently streaming into would leave a
+    // dangling reference — cancel first, same as switching away.
+    if (streamSessionRef.current === normalizedId) {
+      interruptStreamIfAny();
     }
 
     try {
@@ -227,9 +266,8 @@ export function ChatProvider({ children }) {
     } catch {
       toast.error("Could not delete chat");
     }
-  }, [loadSession, sessions, setActiveSession]);
+  }, [loadSession, sessions, setActiveSession, interruptStreamIfAny]);
 
-  // ── NEW: Rename session (optimistic, reverts on failure) ────
   const renameSession = useCallback(async (sessionId, newTitle) => {
     const normalizedId = normalizeSessionId(sessionId);
     const trimmed = newTitle?.trim();
@@ -248,8 +286,6 @@ export function ChatProvider({ children }) {
     }
   }, [sessions]);
 
-  // ── NEW: Toggle pin (optimistic, re-sorts locally, reverts on
-  // failure) ────────────────────────────────────────────────────
   const togglePin = useCallback(async (sessionId) => {
     const normalizedId = normalizeSessionId(sessionId);
     if (!normalizedId) return;
@@ -270,6 +306,7 @@ export function ChatProvider({ children }) {
     }
   }, [sessions]);
 
+  // ── Send message with SSE streaming ─────────────────────
   const sendMessage = useCallback(async (prompt) => {
     if (!prompt.trim() || isStreaming) return;
 
@@ -285,26 +322,40 @@ export function ChatProvider({ children }) {
     abortRef.current?.abort();
 
     let sessionIdToUse = activeSessionRef.current;
+    // Snapshot which session THIS stream belongs to — every callback
+    // below checks this against the (possibly-changed) active session
+    // before touching any UI-visible state.
+    const streamOwnerSessionId = sessionIdToUse;
+    streamSessionRef.current = streamOwnerSessionId;
+
+    const belongsToActiveSession = () =>
+      streamSessionRef.current === streamOwnerSessionId &&
+      activeSessionRef.current === streamOwnerSessionId;
 
     abortRef.current = streamAsk(
       prompt.trim(),
       sessionIdToUse,
       {
         onToken: (_token, accumulated) => {
+          if (!belongsToActiveSession()) return;
           setStreamingText(accumulated);
         },
 
         onDone: async (fullText) => {
-          setIsStreaming(false);
-          setStreamingText("");
+          const stillActive = belongsToActiveSession();
 
-          const aiMsg = {
-            _id:   `ai-${Date.now()}`,
-            role:  "ai",
-            content: fullText,
-            saved: false,
-          };
-          setMessages((prev) => [...prev, aiMsg]);
+          if (stillActive) {
+            setIsStreaming(false);
+            setStreamingText("");
+
+            const aiMsg = {
+              _id:   `ai-${Date.now()}`,
+              role:  "ai",
+              content: fullText,
+              saved: false,
+            };
+            setMessages((prev) => [...prev, aiMsg]);
+          }
 
           try {
             const saveRes = await chatApi.saveMessage({
@@ -318,7 +369,7 @@ export function ChatProvider({ children }) {
 
             if (!sessionIdToUse && newSessId) {
               sessionIdToUse = normalizeSessionId(newSessId);
-              setActiveSession(sessionIdToUse);
+              if (stillActive) setActiveSession(sessionIdToUse);
               setSessions((prev) => {
                 const exists = prev.find((s) => s._id === sessionIdToUse);
                 if (exists) return prev;
@@ -342,14 +393,24 @@ export function ChatProvider({ children }) {
             }
           } catch (saveErr) {
             console.warn("[Chat] Save failed:", saveErr.message);
-            toast.error(
-              "This reply couldn't be saved — it may disappear on refresh.",
-              { duration: 6000 }
-            );
+            if (stillActive) {
+              toast.error(
+                "This reply couldn't be saved — it may disappear on refresh.",
+                { duration: 6000 }
+              );
+            }
+          } finally {
+            if (streamSessionRef.current === streamOwnerSessionId) {
+              streamSessionRef.current = null;
+            }
           }
         },
 
         onError: (errMsg) => {
+          if (streamSessionRef.current === streamOwnerSessionId) {
+            streamSessionRef.current = null;
+          }
+          if (!belongsToActiveSession()) return;
           setIsStreaming(false);
           setStreamingText("");
           setMessages((prev) => prev.filter((m) => m._id !== tempUserMsg._id));
@@ -363,6 +424,7 @@ export function ChatProvider({ children }) {
     abortRef.current?.abort();
     setIsStreaming(false);
     setStreamingText("");
+    streamSessionRef.current = null;
   }, []);
 
   const toggleSaved = useCallback(async (msg) => {
