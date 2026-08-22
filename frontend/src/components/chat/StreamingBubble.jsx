@@ -1,11 +1,14 @@
 // ============================================================
-//  JNEET+ AI — components/chat/StreamingBubble.jsx  (v4 — real
-//  logo, last remaining Sparkles instance removed)
-//  CHANGED: avatar Sparkles icon → app's own JN logo image, same
-//  fix as MessageBubble.jsx v4 — this was the other genuinely-
-//  active Sparkles usage in the app.
+//  JNEET+ AI — components/chat/StreamingBubble.jsx  (v5 — brand
+//  mark, animated)
+//  CHANGED: avatar → the same two-circle wave-mark as
+//  MessageBubble.jsx, but ANIMATED here — the blue and green
+//  circles pulse in a wave (out-of-phase scale), signaling "AI is
+//  actively responding." This is the one place in the app the
+//  animation plays; once the reply completes and hands off to a
+//  regular MessageBubble, the mark goes static.
 //  Everything else — prose-invert removal, bubble shape, cursor,
-//  bouncing-dots loading state — UNCHANGED from v3.
+//  bouncing-dots loading state — UNCHANGED from v4.
 // ============================================================
 
 import ReactMarkdown from "react-markdown";
@@ -15,9 +18,10 @@ import { BouncingDots } from "./BouncingDots.jsx";
 export function StreamingBubble({ text }) {
   return (
     <div className="flex items-end gap-2.5 animate-message-in">
-      {/* Avatar */}
-      <div className="w-7 h-7 rounded-full bg-bg-panel border border-bg-border flex items-center justify-center shrink-0 mb-0.5 shadow-[0_6px_16px_rgba(0,0,0,0.2)] overflow-hidden">
-        <img src="/icon-192.png" alt="JNEET+ AI" className="w-full h-full object-cover" />
+      {/* Avatar — animated wave mark, only while streaming */}
+      <div className="w-7 h-7 relative shrink-0 mb-0.5" aria-hidden="true">
+        <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-[#4a8fe8]/90 animate-wave-blue" />
+        <div className="absolute left-2.5 top-1 w-4 h-4 rounded-full bg-[#34b76a]/90 animate-wave-green" />
       </div>
 
       {/* Bubble */}

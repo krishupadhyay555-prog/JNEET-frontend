@@ -408,4 +408,18 @@ html.light {
 
 .link-accent:hover {
   color: var(--link-color-hover);
+}/* ── AI-response brand mark — wave-pulse animation (StreamingBubble only) ── */
+@keyframes waveBlue {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.18); }
+}
+@keyframes waveGreen {
+  0%, 100% { transform: scale(1.18); }
+  50%      { transform: scale(1); }
+}
+.animate-wave-blue {
+  animation: waveBlue 1.1s ease-in-out infinite;
+}
+.animate-wave-green {
+  animation: waveGreen 1.1s ease-in-out infinite;
 }

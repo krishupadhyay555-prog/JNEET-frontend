@@ -1,13 +1,16 @@
 // ============================================================
-//  JNEET+ AI — components/chat/MessageBubble.jsx  (v4 — real logo,
-//  last remaining Sparkles instance removed)
-//  CHANGED: AI-avatar Sparkles icon → app's own JN logo image
-//  (frontend/public/icon-192.png). This was the actual last place
-//  in the app still showing the Sparkles icon (the v3 header-
-//  comment claiming LoadingScreen was "the last place" was wrong —
-//  this file and StreamingBubble.jsx were both missed in that pass).
-//  Everything else — prose-invert removal, avatar sizing, user-
-//  bubble gradient, save-button logic — UNCHANGED from v3.
+//  JNEET+ AI — components/chat/MessageBubble.jsx  (v5 — brand mark)
+//  CHANGED: AI-avatar → the new two-circle wave-mark (blue+green,
+//  overlapping), replacing the JN-logo-image avatar. This mark is
+//  specifically the "AI response" signature — distinct from the
+//  JN logo, which stays the app's overall brand mark everywhere
+//  else (Sidebar, Dashboard, Login/Register — untouched).
+//  Static here (no animation) — this bubble renders a COMPLETED
+//  message, so nothing is "in progress." The animated version of
+//  this same mark lives in StreamingBubble.jsx, where it plays
+//  while the AI is actively generating.
+//  Everything else — prose-invert removal, user-bubble gradient,
+//  save-button logic — UNCHANGED from v4.
 // ============================================================
 
 import { memo } from "react";
@@ -24,20 +27,16 @@ export const MessageBubble = memo(function MessageBubble({ msg, onToggleSaved })
         ${isUser ? "flex-row-reverse" : "flex-row"}`}
     >
       {/* Avatar */}
-      <div
-        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 mb-0.5
-          shadow-[0_6px_16px_rgba(0,0,0,0.2)] transition-transform duration-200
-          hover:scale-110 overflow-hidden
-          ${isUser
-            ? "bg-violet-600"
-            : "bg-bg-panel border border-bg-border"
-          }`}
-      >
-        {isUser
-          ? <User size={12} className="text-white" />
-          : <img src="/icon-192.png" alt="JNEET+ AI" className="w-full h-full object-cover" />
-        }
-      </div>
+      {isUser ? (
+        <div className="w-7 h-7 rounded-full bg-violet-600 flex items-center justify-center shrink-0 mb-0.5 shadow-[0_6px_16px_rgba(0,0,0,0.2)] transition-transform duration-200 hover:scale-110">
+          <User size={12} className="text-white" />
+        </div>
+      ) : (
+        <div className="w-7 h-7 relative shrink-0 mb-0.5 transition-transform duration-200 hover:scale-110" aria-hidden="true">
+          <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-[#4a8fe8]/90" />
+          <div className="absolute left-2.5 top-1 w-4 h-4 rounded-full bg-[#34b76a]/90" />
+        </div>
+      )}
 
       {/* Bubble */}
       <div
