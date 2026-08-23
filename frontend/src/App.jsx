@@ -1,11 +1,32 @@
 // ============================================================
-//  JNEET+ AI — App.jsx  (v7 — Analytics route added)
-//  ADDED: /analytics (protected) → the new full Analytics page.
-//  Everything else UNCHANGED from v6.
+//  JNEET+ AI — App.jsx  (v8 — back-button fix + staleness timeout)
+//  FIXED (root cause of "back button exits the app instead of
+//  going to Dashboard"): the root "/" route used to navigate
+//  straight to getLastPage() with `replace: true`. Replace never
+//  creates a new browser-history entry — it overwrites the current
+//  one — so Dashboard never got a history entry of its own to land
+//  on. Pressing back had nothing app-internal to return to, so it
+//  jumped straight out of the tab's history to whatever page was
+//  open before jneetai.com.
+//  New RootRedirect component now does this in two steps: (1)
+//  replace the current entry with /dashboard (so Dashboard becomes
+//  the "base" of this session, same as before — no extra "/" entry
+//  left dangling), then (2) PUSH the actual last-page on top (a
+//  real new history entry). Back button now correctly lands on
+//  Dashboard first, and only exits the app on a second back-press
+//  — which is the expected, non-jarring behavior.
+//  ADDED: staleness check — getLastPage() now also reads a
+//  last-activity timestamp; if more than 8 hours have passed since
+//  the student was last active in the app, the resume-last-page
+//  feature is skipped entirely and Dashboard is shown fresh. This
+//  matches "if the student hasn't opened the app in 6-10 hours,
+//  just show Dashboard" — implemented as a simple client-side
+//  timestamp comparison, no backend change needed.
+//  Everything else — AccentSync, all other routes — UNCHANGED.
 // ============================================================
 
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { Toaster }          from "react-hot-toast";
 import { AuthProvider, useAuth } from "./context/AuthContext.jsx";
 import { ChatProvider }     from "./context/ChatContext.jsx";
@@ -47,11 +68,18 @@ const TOAST_CONFIG = {
   },
 };
 
+// ── Resume-last-page feature ────────────────────────────────
 const LAST_PAGE_KEY = "jneet_last_page";
+const LAST_ACTIVE_AT_KEY = "jneet_last_active_at";
+const STALE_AFTER_MS = 8 * 60 * 60 * 1000; // 8 hours of inactivity
 const VALID_LAST_PAGES = ["/dashboard", "/ask", "/profile", "/settings", "/wms", "/analytics", "/tests", "/revision", "/notes"];
 
 function getLastPage() {
   try {
+    const lastActiveAt = Number(localStorage.getItem(LAST_ACTIVE_AT_KEY) || 0);
+    const isStale = !lastActiveAt || (Date.now() - lastActiveAt) > STALE_AFTER_MS;
+    if (isStale) return "/dashboard";
+
     const saved = localStorage.getItem(LAST_PAGE_KEY);
     return VALID_LAST_PAGES.includes(saved) ? saved : "/dashboard";
   } catch {
@@ -66,11 +94,29 @@ function RouteTracker() {
     if (VALID_LAST_PAGES.includes(location.pathname)) {
       try {
         localStorage.setItem(LAST_PAGE_KEY, location.pathname);
+        localStorage.setItem(LAST_ACTIVE_AT_KEY, String(Date.now()));
       } catch {
         // Non-critical — skip silently if storage isn't available.
       }
     }
   }, [location.pathname]);
+
+  return null;
+}
+
+// ── NEW: two-step redirect so Dashboard always gets its own
+// history entry, and back-button behaves correctly. ────────────
+function RootRedirect() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const lastPage = getLastPage();
+    navigate("/dashboard", { replace: true });
+    if (lastPage !== "/dashboard") {
+      navigate(lastPage);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return null;
 }
@@ -130,8 +176,8 @@ export default function App() {
                 element={<ProtectedRoute><RevisionSession /></ProtectedRoute>}
               />
 
-              <Route path="/"  element={<Navigate to={getLastPage()} replace />} />
-              <Route path="*"  element={<Navigate to={getLastPage()} replace />} />
+              <Route path="/"  element={<RootRedirect />} />
+              <Route path="*"  element={<RootRedirect />} />
             </Routes>
           </BrowserRouter>
         </ChatProvider>
