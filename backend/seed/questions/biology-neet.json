@@ -1,1 +1,3410 @@
-[]
+[
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "Which of the following organelles is correctly described as semi-autonomous because it contains its own DNA and ribosomes?",
+    "options": [
+      "Golgi apparatus",
+      "Mitochondria",
+      "Lysosome",
+      "Endoplasmic reticulum"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mitochondria (and chloroplasts) contain their own circular DNA and 70S ribosomes, allowing limited self-replication, hence 'semi-autonomous'.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "The fluid mosaic model of the plasma membrane was proposed by:",
+    "options": [
+      "Robertson",
+      "Singer and Nicolson",
+      "Watson and Crick",
+      "Schleiden and Schwann"
+    ],
+    "correctIndex": 1,
+    "explanation": "Singer and Nicolson (1972) proposed the fluid mosaic model, describing the membrane as a fluid lipid bilayer with mosaic-like embedded proteins.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "Which cell organelle is primarily responsible for the post-translational modification and packaging of proteins for secretion?",
+    "options": [
+      "Rough endoplasmic reticulum only",
+      "Golgi apparatus",
+      "Peroxisome",
+      "Ribosome"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Golgi apparatus modifies, sorts, and packages proteins received from the ER into vesicles for secretion or intracellular use.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "Prokaryotic ribosomes have a sedimentation coefficient of 70S, made up of subunits of:",
+    "options": [
+      "30S and 40S",
+      "40S and 60S",
+      "30S and 50S",
+      "50S and 60S"
+    ],
+    "correctIndex": 2,
+    "explanation": "The 70S prokaryotic ribosome is composed of a smaller 30S subunit and a larger 50S subunit.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "Which of the following is NOT a function of the smooth endoplasmic reticulum?",
+    "options": [
+      "Lipid synthesis",
+      "Steroid hormone synthesis",
+      "Protein synthesis",
+      "Detoxification of drugs"
+    ],
+    "correctIndex": 2,
+    "explanation": "Protein synthesis occurs on ribosomes attached to the rough ER, not the smooth ER, which mainly synthesizes lipids and steroids and detoxifies substances.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "The 'suicidal bags' of the cell are:",
+    "options": [
+      "Peroxisomes",
+      "Lysosomes",
+      "Ribosomes",
+      "Glyoxysomes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lysosomes contain hydrolytic enzymes and can cause autolysis (self-digestion) of the cell when they rupture, hence the nickname 'suicidal bags'.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "Which of the following statements about the nucleolus is correct?",
+    "options": [
+      "It is bound by a double membrane",
+      "It is the site of ribosomal RNA synthesis and ribosome assembly",
+      "It contains DNA polymerase exclusively",
+      "It is found only in prokaryotic cells"
+    ],
+    "correctIndex": 1,
+    "explanation": "The nucleolus is a non-membrane-bound structure within the nucleus, primarily responsible for rRNA synthesis and ribosomal subunit assembly.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "moderate",
+    "questionText": "Cell wall in plant cells is mainly composed of:",
+    "options": [
+      "Chitin",
+      "Cellulose",
+      "Peptidoglycan",
+      "Keratin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Plant cell walls are primarily composed of cellulose, a polysaccharide of glucose units.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "moderate",
+    "questionText": "Which of the following is a characteristic feature of prokaryotic cells?",
+    "options": [
+      "Membrane-bound nucleus",
+      "Absence of a true nucleus",
+      "Presence of mitochondria",
+      "Presence of Golgi apparatus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Prokaryotic cells lack a membrane-bound nucleus; their genetic material lies free in the cytoplasm as a nucleoid.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "easy",
+    "questionText": "The cell theory was proposed by:",
+    "options": [
+      "Robert Hooke",
+      "Schleiden and Schwann",
+      "Rudolf Virchow alone",
+      "Charles Darwin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Schleiden and Schwann jointly proposed the cell theory in 1838-39, later extended by Virchow's principle that cells arise from pre-existing cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which of the following is the primary structure of a protein determined by?",
+    "options": [
+      "The three-dimensional folding of the polypeptide",
+      "The sequence of amino acids linked by peptide bonds",
+      "Hydrogen bonding between amino acids",
+      "Disulfide bridges between cysteine residues"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary structure refers strictly to the linear sequence of amino acids joined by peptide bonds; higher-order structures involve folding and bonding.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "An enzyme that catalyzes the same reaction type but acts on different substrates due to variation in amino acid sequence is called:",
+    "options": [
+      "A coenzyme",
+      "An isoenzyme",
+      "A holoenzyme",
+      "An apoenzyme"
+    ],
+    "correctIndex": 1,
+    "explanation": "Isoenzymes (isozymes) are different molecular forms of an enzyme that catalyze the same reaction but may differ in kinetic properties or substrate specificity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which bond links two amino acids together in a protein?",
+    "options": [
+      "Glycosidic bond",
+      "Peptide bond",
+      "Phosphodiester bond",
+      "Hydrogen bond"
+    ],
+    "correctIndex": 1,
+    "explanation": "Amino acids are linked by peptide bonds formed between the carboxyl group of one amino acid and the amino group of the next.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "The active site of an enzyme is best described as:",
+    "options": [
+      "The entire enzyme molecule",
+      "A specific region where the substrate binds and catalysis occurs",
+      "A region that only inhibitors can bind to",
+      "The region where ATP is generated"
+    ],
+    "correctIndex": 1,
+    "explanation": "The active site is a specific three-dimensional pocket on the enzyme where the substrate binds and the catalytic reaction takes place.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Which of the following is a nitrogenous base found only in RNA, not DNA?",
+    "options": [
+      "Adenine",
+      "Guanine",
+      "Cytosine",
+      "Uracil"
+    ],
+    "correctIndex": 3,
+    "explanation": "Uracil replaces thymine in RNA; thymine is exclusive to DNA.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Enzymes increase the rate of a reaction by:",
+    "options": [
+      "Increasing the free energy change of the reaction",
+      "Lowering the activation energy of the reaction",
+      "Making the reaction non-reversible",
+      "Increasing the temperature of the reaction"
+    ],
+    "correctIndex": 1,
+    "explanation": "Enzymes act as biological catalysts by lowering the activation energy required for a reaction, thereby speeding it up without altering ΔG.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "easy",
+    "questionText": "Which of the following is a monosaccharide?",
+    "options": [
+      "Sucrose",
+      "Starch",
+      "Glucose",
+      "Cellulose"
+    ],
+    "correctIndex": 2,
+    "explanation": "Glucose is a simple sugar (monosaccharide); the others are disaccharides or polysaccharides.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "easy",
+    "questionText": "The building blocks of proteins are:",
+    "options": [
+      "Nucleotides",
+      "Amino acids",
+      "Fatty acids",
+      "Monosaccharides"
+    ],
+    "correctIndex": 1,
+    "explanation": "Proteins are polymers made of amino acid monomers linked by peptide bonds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "During which phase of meiosis does crossing over between homologous chromosomes occur?",
+    "options": [
+      "Leptotene",
+      "Pachytene",
+      "Diplotene",
+      "Diakinesis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Crossing over between non-sister chromatids of homologous chromosomes occurs during pachytene, mediated by the synaptonemal complex.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "The checkpoint that monitors DNA damage and ensures accurate replication before a cell enters mitosis is located at the:",
+    "options": [
+      "G1/S checkpoint",
+      "G2/M checkpoint",
+      "Metaphase checkpoint",
+      "Anaphase checkpoint"
+    ],
+    "correctIndex": 1,
+    "explanation": "The G2/M checkpoint ensures all DNA is properly replicated and undamaged before the cell proceeds into mitosis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "Synapsis of homologous chromosomes occurs during which stage of prophase I of meiosis?",
+    "options": [
+      "Leptotene",
+      "Zygotene",
+      "Pachytene",
+      "Diplotene"
+    ],
+    "correctIndex": 1,
+    "explanation": "Synapsis, the pairing of homologous chromosomes, occurs during zygotene, forming a bivalent/tetrad.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "moderate",
+    "questionText": "The centromere divides and sister chromatids separate during which phase of mitosis?",
+    "options": [
+      "Prophase",
+      "Metaphase",
+      "Anaphase",
+      "Telophase"
+    ],
+    "correctIndex": 2,
+    "explanation": "During anaphase, the centromere splits and sister chromatids move to opposite poles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "moderate",
+    "questionText": "Meiosis results in the formation of how many daughter cells from one parent cell?",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "1"
+    ],
+    "correctIndex": 1,
+    "explanation": "Meiosis involves two successive divisions, producing four haploid daughter cells from one diploid parent cell.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "easy",
+    "questionText": "DNA replication occurs during which phase of the cell cycle?",
+    "options": [
+      "G1 phase",
+      "S phase",
+      "G2 phase",
+      "M phase"
+    ],
+    "correctIndex": 1,
+    "explanation": "DNA synthesis (replication) occurs specifically during the S (synthesis) phase of interphase.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "tough",
+    "questionText": "The scientific name of an organism, according to binomial nomenclature, is generally written in:",
+    "options": [
+      "Uppercase letters only",
+      "Roman script and printed in italics",
+      "Local vernacular language",
+      "Numerical codes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Binomial names are written in Latinized form, printed in italics (or underlined when handwritten), with the genus capitalized and species in lowercase.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "moderate",
+    "questionText": "The taxonomic hierarchy, from broadest to most specific, is correctly ordered as:",
+    "options": [
+      "Species → Genus → Family → Order → Class → Phylum → Kingdom",
+      "Kingdom → Phylum → Class → Order → Family → Genus → Species",
+      "Phylum → Kingdom → Class → Family → Order → Genus → Species",
+      "Kingdom → Class → Phylum → Order → Family → Species → Genus"
+    ],
+    "correctIndex": 1,
+    "explanation": "The standard hierarchy from broadest to narrowest is Kingdom, Phylum, Class, Order, Family, Genus, Species.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "easy",
+    "questionText": "The term 'taxonomy' refers to:",
+    "options": [
+      "The study of fossils",
+      "The science of classification of organisms",
+      "The study of cell structure",
+      "The study of heredity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Taxonomy is the branch of biology dealing with the identification, naming, and classification of organisms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "Which of the following is correctly matched with Whittaker's five-kingdom classification?",
+    "options": [
+      "Monera — includes eukaryotic unicellular organisms",
+      "Protista — includes prokaryotic organisms",
+      "Fungi — heterotrophic, cell wall made of chitin",
+      "Plantae — includes all heterotrophic organisms"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fungi are heterotrophic (absorptive nutrition) and have chitinous cell walls, distinguishing them from plants (cellulose walls, autotrophic).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "Viruses are considered non-living outside a host cell mainly because they:",
+    "options": [
+      "Lack any genetic material",
+      "Cannot replicate independently without a host cell's machinery",
+      "Cannot be crystallized",
+      "Lack a protein coat"
+    ],
+    "correctIndex": 1,
+    "explanation": "Viruses are obligate intracellular parasites that lack their own metabolic machinery and can only replicate using the host cell's ribosomes and enzymes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "Which of the following organisms is an example of Archaebacteria?",
+    "options": [
+      "E. coli",
+      "Methanogens",
+      "Cyanobacteria",
+      "Actinomycetes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Methanogens, found in the guts of ruminants and marshy areas, are archaebacteria known for producing methane in anaerobic conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "moderate",
+    "questionText": "Lichens represent a symbiotic association between:",
+    "options": [
+      "Algae and bacteria",
+      "Algae (or cyanobacteria) and fungi",
+      "Fungi and bryophytes",
+      "Bacteria and fungi"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lichens are a mutualistic association between a photosynthetic partner (algae/cyanobacteria) and a fungus.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "moderate",
+    "questionText": "Mycoplasma differs from other bacteria in that it:",
+    "options": [
+      "Has a rigid peptidoglycan cell wall",
+      "Completely lacks a cell wall",
+      "Is photosynthetic",
+      "Is multicellular"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mycoplasma are the smallest known living cells that completely lack a cell wall, unlike typical bacteria.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "easy",
+    "questionText": "Which kingdom, in the five-kingdom classification, includes only prokaryotic organisms?",
+    "options": [
+      "Protista",
+      "Fungi",
+      "Monera",
+      "Plantae"
+    ],
+    "correctIndex": 2,
+    "explanation": "Kingdom Monera comprises all prokaryotic organisms, including bacteria and cyanobacteria.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "In the life cycle of ferns (Pteridophytes), the dominant, independent generation is the:",
+    "options": [
+      "Gametophyte",
+      "Sporophyte",
+      "Both equally dominant",
+      "Neither; ferns lack alternation of generations"
+    ],
+    "correctIndex": 1,
+    "explanation": "In pteridophytes, the sporophyte (diploid) is the dominant, conspicuous, and independent phase, while the gametophyte (prothallus) is small and short-lived.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "Double fertilization, a characteristic feature of angiosperms, results in the formation of:",
+    "options": [
+      "Only the zygote",
+      "The zygote and primary endosperm nucleus",
+      "Two zygotes",
+      "Only the endosperm"
+    ],
+    "correctIndex": 1,
+    "explanation": "One male gamete fuses with the egg to form the zygote, and the other fuses with the two polar nuclei to form the triploid primary endosperm nucleus, together called double fertilization.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "Which group of plants is correctly described as having naked seeds not enclosed within a fruit?",
+    "options": [
+      "Angiosperms",
+      "Gymnosperms",
+      "Bryophytes",
+      "Pteridophytes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gymnosperms bear naked ovules/seeds not enclosed in an ovary, unlike angiosperms whose seeds develop within fruits.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "moderate",
+    "questionText": "Bryophytes are often called the amphibians of the plant kingdom because:",
+    "options": [
+      "They live only in water",
+      "They require water for fertilization but can grow on land",
+      "They have no roots",
+      "They lack chlorophyll"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bryophytes can live on land but depend on external water for the swimming male gametes to reach the egg, similar to amphibians needing water for reproduction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "easy",
+    "questionText": "Which of the following is a characteristic of gymnosperms?",
+    "options": [
+      "Flowers are always present",
+      "Seeds are enclosed in a fruit",
+      "Ovules are not enclosed by an ovary wall",
+      "They are all non-vascular"
+    ],
+    "correctIndex": 2,
+    "explanation": "A defining feature of gymnosperms is that their ovules (and hence seeds) are not enclosed within an ovary.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "Which phylum is characterized by the presence of a true coelom, segmented body, and closed circulatory system, exemplified by earthworms?",
+    "options": [
+      "Platyhelminthes",
+      "Nematoda",
+      "Annelida",
+      "Arthropoda"
+    ],
+    "correctIndex": 2,
+    "explanation": "Annelida (e.g., earthworm) is characterized by a true coelom (schizocoelom), metameric segmentation, and a closed circulatory system.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "Water vascular system for locomotion is a unique feature of which phylum?",
+    "options": [
+      "Mollusca",
+      "Echinodermata",
+      "Annelida",
+      "Arthropoda"
+    ],
+    "correctIndex": 1,
+    "explanation": "Echinoderms possess a unique water vascular system, using tube feet operated by hydraulic pressure for locomotion.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "Which class of vertebrates is characterized by a three-chambered heart (with an exception in crocodiles among reptiles) and being cold-blooded?",
+    "options": [
+      "Aves",
+      "Mammalia",
+      "Reptilia",
+      "Osteichthyes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reptiles generally have a three-chambered heart (crocodiles have a functionally four-chambered heart) and are ectothermic (cold-blooded).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "moderate",
+    "questionText": "The presence of a notochord at some stage of life is a defining feature of which group?",
+    "options": [
+      "Non-chordates",
+      "Chordates",
+      "Only fish",
+      "Only mammals"
+    ],
+    "correctIndex": 1,
+    "explanation": "All chordates possess a notochord at some stage of their life cycle, which may be replaced by the vertebral column in vertebrates.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "moderate",
+    "questionText": "Which of the following animals exhibits true metamorphosis with a larval stage called a tadpole?",
+    "options": [
+      "Fish",
+      "Frog",
+      "Lizard",
+      "Snake"
+    ],
+    "correctIndex": 1,
+    "explanation": "Frogs (Amphibia) undergo metamorphosis, transitioning from an aquatic tadpole larval stage to an adult with lungs and limbs.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "easy",
+    "questionText": "Sponges belong to which phylum?",
+    "options": [
+      "Cnidaria",
+      "Porifera",
+      "Ctenophora",
+      "Platyhelminthes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sponges belong to phylum Porifera, characterized by a pore-bearing body and a canal system.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "In which type of placentation are ovules borne on the central axis of the ovary, as seen in Dianthus?",
+    "options": [
+      "Marginal",
+      "Axile",
+      "Free central",
+      "Parietal"
+    ],
+    "correctIndex": 2,
+    "explanation": "In free central placentation, the ovules develop on a central axis, and no septa are present, as seen in Dianthus and Primrose.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "The arrangement of sepals and petals in relation to one another in a floral bud is called:",
+    "options": [
+      "Placentation",
+      "Aestivation",
+      "Phyllotaxy",
+      "Vernation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aestivation refers to the mode of arrangement of sepals or petals in the floral bud with respect to one another.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "The pea plant flower, with one large posterior petal, two lateral wing petals, and two anterior fused petals, exhibits which type of corolla?",
+    "options": [
+      "Papilionaceous",
+      "Caryophyllaceous",
+      "Cruciform",
+      "Campanulate"
+    ],
+    "correctIndex": 0,
+    "explanation": "The papilionaceous (butterfly-like) corolla is characteristic of the family Fabaceae, with a standard, two wings, and a keel.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "moderate",
+    "questionText": "A fruit developed from the ovary without fertilization is called:",
+    "options": [
+      "True fruit",
+      "False fruit",
+      "Parthenocarpic fruit",
+      "Aggregate fruit"
+    ],
+    "correctIndex": 2,
+    "explanation": "Parthenocarpic fruits develop without fertilization, and hence are typically seedless.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "easy",
+    "questionText": "The edible part of the mango fruit is the:",
+    "options": [
+      "Thin epicarp",
+      "Fleshy mesocarp",
+      "Hard endocarp",
+      "Seed coat"
+    ],
+    "correctIndex": 1,
+    "explanation": "In mango, the fleshy edible portion is the mesocarp, while the endocarp forms the hard stony layer around the seed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "In dicot stems, the vascular bundles are typically arranged as:",
+    "options": [
+      "Scattered throughout the ground tissue",
+      "Arranged in a ring, conjoint, collateral, and open",
+      "Radial, with xylem and phloem alternating",
+      "Concentric with xylem surrounding phloem"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dicot stems have vascular bundles arranged in a ring; they are conjoint (xylem and phloem together), collateral, and open (with cambium present).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "Casparian strips are found in which layer of the root, and are composed mainly of:",
+    "options": [
+      "Epidermis; cellulose",
+      "Endodermis; suberin",
+      "Cortex; lignin",
+      "Pericycle; cutin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Casparian strips are bands of suberin (and sometimes lignin) deposited in the radial and transverse walls of endodermal cells, regulating water movement.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "Vascular bundles in monocot roots are typically:",
+    "options": [
+      "Conjoint and collateral",
+      "Radial, with xylem and phloem on different radii",
+      "Bicollateral",
+      "Concentric"
+    ],
+    "correctIndex": 1,
+    "explanation": "In roots (both monocot and dicot), vascular bundles are radial — xylem and phloem lie on separate radii, not together as in stems.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "moderate",
+    "questionText": "The lateral meristem responsible for secondary growth in girth of a dicot stem is the:",
+    "options": [
+      "Apical meristem",
+      "Vascular cambium",
+      "Intercalary meristem",
+      "Protoderm"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vascular cambium is a lateral meristem that produces secondary xylem and phloem, increasing the girth of the stem.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "easy",
+    "questionText": "Xylem is primarily responsible for the transport of:",
+    "options": [
+      "Food from leaves to other parts",
+      "Water and minerals from roots to shoots",
+      "Hormones only",
+      "Oxygen for respiration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Xylem conducts water and dissolved minerals upward from the roots to the aerial parts of the plant.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "questionText": "Which type of epithelial tissue lines the inner surface of blood vessels?",
+    "options": [
+      "Squamous epithelium",
+      "Cuboidal epithelium",
+      "Columnar epithelium",
+      "Ciliated epithelium"
+    ],
+    "correctIndex": 0,
+    "explanation": "Simple squamous epithelium (specifically called endothelium in blood vessels) lines the inner surface of blood vessels, facilitating smooth blood flow.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "moderate",
+    "questionText": "Areolar connective tissue is mainly found:",
+    "options": [
+      "Only in bones",
+      "Beneath the skin, filling spaces between organs",
+      "Only in blood vessels",
+      "Only in the brain"
+    ],
+    "correctIndex": 1,
+    "explanation": "Areolar tissue is a loose connective tissue found beneath the skin and between organs, providing support and facilitating repair.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "easy",
+    "questionText": "Cardiac muscle fibers are characterized by the presence of:",
+    "options": [
+      "Multiple nuclei per cell and voluntary control",
+      "Intercalated discs and involuntary control",
+      "Spindle shape and no striations",
+      "Being present only in skeletal muscles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cardiac muscle is striated, involuntary, and uniquely features intercalated discs that connect adjacent cells for coordinated contraction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "According to the cohesion-tension theory, the ascent of sap in tall trees is mainly driven by:",
+    "options": [
+      "Root pressure alone",
+      "Transpirational pull created at the leaf surface, combined with cohesion of water molecules",
+      "Active transport by xylem cells",
+      "Osmotic pressure of guard cells only"
+    ],
+    "correctIndex": 1,
+    "explanation": "The cohesion-tension theory explains water ascent as a result of transpiration creating a pull (tension) at the top, while cohesive forces between water molecules maintain a continuous unbroken column.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "The pressure flow (mass flow) hypothesis explains the transport of:",
+    "options": [
+      "Water in xylem",
+      "Organic solutes (food) in phloem",
+      "Minerals from soil to root",
+      "Gases during respiration"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pressure flow hypothesis, proposed by Munch, explains translocation of photosynthates from source to sink through phloem via a pressure gradient.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "Guttation, the loss of water in liquid form from the tips of grass blades, occurs mainly due to:",
+    "options": [
+      "High transpiration rate during the day",
+      "Root pressure under conditions of high humidity and low transpiration",
+      "Osmotic pressure of the atmosphere",
+      "Active pumping by stomata"
+    ],
+    "correctIndex": 1,
+    "explanation": "Guttation occurs when root pressure pushes excess water and dissolved substances through hydathodes, typically at night or early morning when transpiration is minimal.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "moderate",
+    "questionText": "Water potential of pure water at standard atmospheric pressure is taken as:",
+    "options": [
+      "Maximum negative value",
+      "Zero",
+      "Always positive and large",
+      "Undefined"
+    ],
+    "correctIndex": 1,
+    "explanation": "By convention, pure water at standard atmospheric pressure and temperature has a water potential of zero, used as a reference point.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "easy",
+    "questionText": "The opening and closing of stomata is regulated by:",
+    "options": [
+      "Root hairs",
+      "Guard cells",
+      "Xylem vessels",
+      "Companion cells"
+    ],
+    "correctIndex": 1,
+    "explanation": "Guard cells surround the stomatal pore and regulate its opening and closing based on turgor pressure changes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "questionText": "Nitrogen fixation by Rhizobium in leguminous root nodules requires the enzyme:",
+    "options": [
+      "RuBisCO",
+      "Nitrogenase",
+      "Nitrate reductase",
+      "Catalase"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nitrogenase catalyzes the conversion of atmospheric nitrogen (N2) into ammonia, a process central to biological nitrogen fixation by symbiotic bacteria like Rhizobium.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "questionText": "Which micronutrient is a key component of chlorophyll but is not one of its central metal atoms?",
+    "options": [
+      "Magnesium",
+      "Nitrogen",
+      "Iron",
+      "Manganese"
+    ],
+    "correctIndex": 2,
+    "explanation": "Iron is required for chlorophyll synthesis (though not a structural component of the molecule itself), while magnesium forms the central atom of the chlorophyll ring.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "moderate",
+    "questionText": "Deficiency of which element commonly causes chlorosis (yellowing) in young leaves due to its immobility within the plant?",
+    "options": [
+      "Nitrogen",
+      "Iron",
+      "Potassium",
+      "Phosphorus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Iron is relatively immobile in plants, so its deficiency shows up as chlorosis in younger leaves first, unlike mobile nutrients like nitrogen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "easy",
+    "questionText": "Plants that can tolerate and grow in soils with high salt content are called:",
+    "options": [
+      "Xerophytes",
+      "Halophytes",
+      "Hydrophytes",
+      "Mesophytes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Halophytes are plants adapted to grow in saline soils or environments.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "tough",
+    "questionText": "In C4 plants, the first stable product of CO2 fixation is a 4-carbon compound formed in the mesophyll cells with the help of the enzyme:",
+    "options": [
+      "RuBisCO",
+      "PEP carboxylase",
+      "ATP synthase",
+      "Rubisco activase"
+    ],
+    "correctIndex": 1,
+    "explanation": "In C4 plants, PEP carboxylase fixes CO2 in mesophyll cells to form oxaloacetate (OAA), a 4-carbon compound, which is later converted to malate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "tough",
+    "questionText": "The light-independent reactions of photosynthesis (Calvin cycle) occur in the:",
+    "options": [
+      "Thylakoid membrane",
+      "Stroma of the chloroplast",
+      "Outer chloroplast membrane",
+      "Cytoplasm"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Calvin cycle (dark reactions) takes place in the stroma, the fluid matrix of the chloroplast surrounding the thylakoids.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "tough",
+    "questionText": "Photorespiration is a wasteful process that occurs when RuBisCO acts as an oxygenase instead of a carboxylase, and is more prevalent in:",
+    "options": [
+      "C4 plants due to low CO2 concentration",
+      "C3 plants under high oxygen and low CO2 conditions",
+      "CAM plants exclusively at night",
+      "Plants growing in water"
+    ],
+    "correctIndex": 1,
+    "explanation": "Photorespiration is more significant in C3 plants because RuBisCO's dual affinity for O2 and CO2 leads to oxygenation when CO2 levels are relatively low, especially in hot, dry conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "tough",
+    "questionText": "The Z-scheme of photosynthesis describes the electron transport pathway between:",
+    "options": [
+      "Photosystem I only",
+      "Photosystem II and Photosystem I in series",
+      "Stroma and thylakoid lumen directly",
+      "ATP synthase and RuBisCO"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Z-scheme describes the light-driven electron flow from water, through Photosystem II, then Photosystem I, ultimately reducing NADP+ to NADPH.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "tough",
+    "questionText": "CAM (Crassulacean Acid Metabolism) plants open their stomata primarily during the:",
+    "options": [
+      "Day, to maximize CO2 uptake",
+      "Night, to minimize water loss while fixing CO2",
+      "They never open their stomata",
+      "Both day and night equally"
+    ],
+    "correctIndex": 1,
+    "explanation": "CAM plants, adapted to arid conditions, open their stomata at night to take in CO2 (stored as malic acid) while minimizing water loss, then perform the Calvin cycle during the day with stomata closed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "moderate",
+    "questionText": "The primary pigment involved in the light reactions of photosynthesis is:",
+    "options": [
+      "Chlorophyll a",
+      "Chlorophyll b",
+      "Carotenoids",
+      "Xanthophylls"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chlorophyll a is the chief pigment directly involved in converting light energy to chemical energy at the reaction centre.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "moderate",
+    "questionText": "The splitting of water molecules during photosynthesis (photolysis) occurs in association with:",
+    "options": [
+      "Photosystem I",
+      "Photosystem II",
+      "The Calvin cycle",
+      "Mitochondria"
+    ],
+    "correctIndex": 1,
+    "explanation": "Photolysis of water occurs on the lumen side of Photosystem II, releasing oxygen, protons, and electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Higher Plants",
+    "difficulty": "easy",
+    "questionText": "The overall raw materials required for photosynthesis are:",
+    "options": [
+      "Oxygen and glucose",
+      "Carbon dioxide and water",
+      "Nitrogen and water",
+      "Oxygen and water"
+    ],
+    "correctIndex": 1,
+    "explanation": "Photosynthesis uses carbon dioxide and water, in the presence of light and chlorophyll, to produce glucose and oxygen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "The complete oxidation of one molecule of glucose during aerobic respiration yields a net ATP gain of approximately:",
+    "options": [
+      "2 ATP",
+      "8 ATP",
+      "36-38 ATP",
+      "100 ATP"
+    ],
+    "correctIndex": 2,
+    "explanation": "Complete aerobic respiration of glucose via glycolysis, Krebs cycle, and oxidative phosphorylation yields approximately 36-38 ATP molecules, depending on the shuttle system used.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "Glycolysis, the first stage of respiration, occurs in the:",
+    "options": [
+      "Mitochondrial matrix",
+      "Cytoplasm",
+      "Inner mitochondrial membrane",
+      "Nucleus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Glycolysis takes place in the cytoplasm (cytosol) and does not require oxygen, converting glucose into pyruvate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "In anaerobic respiration (fermentation) in yeast, pyruvate is converted into:",
+    "options": [
+      "Lactic acid",
+      "Ethanol and carbon dioxide",
+      "Citric acid",
+      "Acetyl-CoA"
+    ],
+    "correctIndex": 1,
+    "explanation": "In yeast, pyruvate undergoes fermentation to form ethanol and CO2, unlike in muscle cells where lactic acid fermentation occurs.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "moderate",
+    "questionText": "The Krebs cycle (citric acid cycle) takes place in the:",
+    "options": [
+      "Cytoplasm",
+      "Mitochondrial matrix",
+      "Outer mitochondrial membrane",
+      "Nucleus"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Krebs cycle occurs in the mitochondrial matrix, where acetyl-CoA is oxidized to release CO2 and generate reduced coenzymes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "moderate",
+    "questionText": "The respiratory quotient (RQ) for the complete oxidation of carbohydrates is approximately:",
+    "options": [
+      "0.7",
+      "0.8",
+      "1.0",
+      "1.3"
+    ],
+    "correctIndex": 2,
+    "explanation": "For carbohydrates, RQ (volume of CO2 released/volume of O2 consumed) is 1.0, since carbohydrates already contain sufficient oxygen relative to carbon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "easy",
+    "questionText": "The electron transport chain (ETC) during aerobic respiration is located in the:",
+    "options": [
+      "Cytoplasm",
+      "Inner mitochondrial membrane",
+      "Outer mitochondrial membrane",
+      "Nucleus"
+    ],
+    "correctIndex": 1,
+    "explanation": "The electron transport chain complexes are embedded in the inner mitochondrial membrane, where oxidative phosphorylation occurs.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "Which plant hormone is primarily responsible for apical dominance, where the growth of lateral buds is suppressed by the terminal bud?",
+    "options": [
+      "Cytokinin",
+      "Auxin",
+      "Gibberellin",
+      "Ethylene"
+    ],
+    "correctIndex": 1,
+    "explanation": "Auxin produced by the apical bud inhibits the growth of lateral (axillary) buds, a phenomenon known as apical dominance.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "Which hormone is commonly used to induce fruit ripening and is a gaseous plant hormone?",
+    "options": [
+      "Auxin",
+      "Ethylene",
+      "Abscisic acid",
+      "Cytokinin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ethylene, the only gaseous plant hormone, is well known for triggering fruit ripening and senescence.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "Abscisic acid is often referred to as a stress hormone because it primarily:",
+    "options": [
+      "Promotes rapid cell division",
+      "Promotes seed dormancy and stomatal closure under water stress",
+      "Stimulates flowering under all conditions",
+      "Increases fruit ripening speed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Abscisic acid (ABA) induces stomatal closure during water stress and maintains seed and bud dormancy, hence being called the stress hormone.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "moderate",
+    "questionText": "Gibberellins are well known for causing which of the following effects in plants?",
+    "options": [
+      "Stomatal closure",
+      "Bolting (rapid internode elongation)",
+      "Leaf abscission",
+      "Root initiation only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gibberellins are famous for inducing bolting — a rapid elongation of the stem/internodes — in rosette plants.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "The enzyme pepsin, active in the acidic environment of the stomach, primarily digests:",
+    "options": [
+      "Carbohydrates",
+      "Proteins",
+      "Lipids",
+      "Nucleic acids"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pepsin, secreted as inactive pepsinogen and activated by HCl, breaks down proteins into smaller peptides in the acidic stomach environment.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "Bile, secreted by the liver, aids in digestion mainly by:",
+    "options": [
+      "Directly digesting proteins",
+      "Emulsifying fats to increase surface area for lipase action",
+      "Neutralizing stomach acid completely",
+      "Digesting carbohydrates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bile salts emulsify large fat globules into smaller droplets, increasing the surface area available for pancreatic lipase to act upon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "Which pancreatic enzyme is responsible for the digestion of proteins into peptides in the small intestine?",
+    "options": [
+      "Amylase",
+      "Trypsin",
+      "Lipase",
+      "Maltase"
+    ],
+    "correctIndex": 1,
+    "explanation": "Trypsin, secreted as inactive trypsinogen and activated by enterokinase, hydrolyzes proteins and peptides in the small intestine.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "moderate",
+    "questionText": "Most of the absorption of digested food occurs in the:",
+    "options": [
+      "Stomach",
+      "Small intestine",
+      "Large intestine",
+      "Esophagus"
+    ],
+    "correctIndex": 1,
+    "explanation": "The small intestine, with its extensive surface area from villi and microvilli, is the primary site of nutrient absorption.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "easy",
+    "questionText": "Saliva contains which enzyme that begins the digestion of starch in the mouth?",
+    "options": [
+      "Pepsin",
+      "Salivary amylase (ptyalin)",
+      "Lipase",
+      "Trypsin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Salivary amylase, also called ptyalin, begins breaking down starch into maltose in the mouth.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "The majority of carbon dioxide is transported in the blood in the form of:",
+    "options": [
+      "Dissolved CO2 in plasma",
+      "Carbaminohemoglobin",
+      "Bicarbonate ions (HCO3−)",
+      "Carbonic acid crystals"
+    ],
+    "correctIndex": 2,
+    "explanation": "About 70% of CO2 is transported as bicarbonate ions in the plasma, formed via the action of carbonic anhydrase in red blood cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "The respiratory centre that primarily regulates the normal rhythm of breathing is located in the:",
+    "options": [
+      "Cerebrum",
+      "Medulla oblongata",
+      "Cerebellum",
+      "Spinal cord only"
+    ],
+    "correctIndex": 1,
+    "explanation": "The medulla oblongata houses the primary respiratory rhythm centre that controls the basic rate and depth of breathing.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "Oxygen dissociation curve of hemoglobin shifts to the right (releasing more oxygen to tissues) under conditions of:",
+    "options": [
+      "Decreased CO2 and increased pH",
+      "Increased CO2, decreased pH, and increased temperature",
+      "Decreased temperature only",
+      "Decreased 2,3-BPG"
+    ],
+    "correctIndex": 1,
+    "explanation": "A rightward shift (Bohr effect) occurs with increased CO2, decreased pH (more acidic), and higher temperature, all of which reduce hemoglobin's oxygen affinity, favoring oxygen release to metabolically active tissues.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "moderate",
+    "questionText": "The exchange of gases between alveoli and blood occurs primarily by:",
+    "options": [
+      "Active transport",
+      "Simple diffusion",
+      "Facilitated diffusion using carriers",
+      "Osmosis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gas exchange (O2 and CO2) across the thin alveolar-capillary membrane occurs by simple diffusion along their partial pressure gradients.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "easy",
+    "questionText": "The functional units of the lungs where gas exchange actually occurs are the:",
+    "options": [
+      "Bronchi",
+      "Bronchioles",
+      "Alveoli",
+      "Trachea"
+    ],
+    "correctIndex": 2,
+    "explanation": "Alveoli are the tiny air sacs in the lungs where actual gas exchange with the blood takes place.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "The pacemaker of the human heart, responsible for initiating the heartbeat, is the:",
+    "options": [
+      "Atrioventricular node (AV node)",
+      "Sinoatrial node (SA node)",
+      "Bundle of His",
+      "Purkinje fibers"
+    ],
+    "correctIndex": 1,
+    "explanation": "The SA node, located in the wall of the right atrium, generates the electrical impulse that initiates each heartbeat, hence called the natural pacemaker.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "The 'lub' sound of the heartbeat corresponds to the closure of which valves?",
+    "options": [
+      "Semilunar valves",
+      "Atrioventricular (tricuspid and bicuspid) valves",
+      "Both simultaneously",
+      "Neither, it is from atrial contraction"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 'lub' sound is produced by the closure of the atrioventricular (AV) valves during ventricular systole.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "Which blood group is considered the universal recipient?",
+    "options": [
+      "O",
+      "A",
+      "B",
+      "AB"
+    ],
+    "correctIndex": 3,
+    "explanation": "AB blood group individuals lack both anti-A and anti-B antibodies, allowing them to receive blood from any ABO group without an ABO-incompatibility reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "The normal cardiac output (blood pumped per minute) in a resting adult human is approximately:",
+    "options": [
+      "1 L/min",
+      "5 L/min",
+      "10 L/min",
+      "20 L/min"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cardiac output = stroke volume × heart rate ≈ 70 mL × 72 beats/min ≈ 5000 mL/min, i.e., approximately 5 L/min at rest.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "moderate",
+    "questionText": "Which of the following formed elements of blood is primarily responsible for blood clotting?",
+    "options": [
+      "Erythrocytes",
+      "Leukocytes",
+      "Platelets (thrombocytes)",
+      "Plasma proteins alone"
+    ],
+    "correctIndex": 2,
+    "explanation": "Platelets play a central role in the clotting cascade, aggregating at injury sites and releasing factors that promote coagulation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "moderate",
+    "questionText": "Normal human blood pressure is generally considered to be approximately:",
+    "options": [
+      "80/120 mmHg",
+      "120/80 mmHg",
+      "140/90 mmHg",
+      "100/60 mmHg"
+    ],
+    "correctIndex": 1,
+    "explanation": "Normal blood pressure is conventionally cited as 120 mmHg systolic over 80 mmHg diastolic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "easy",
+    "questionText": "Which type of blood cells are primarily responsible for transporting oxygen throughout the body?",
+    "options": [
+      "Leukocytes",
+      "Erythrocytes (RBCs)",
+      "Platelets",
+      "Plasma"
+    ],
+    "correctIndex": 1,
+    "explanation": "Erythrocytes contain hemoglobin, which binds and transports oxygen from the lungs to body tissues.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "easy",
+    "questionText": "The human heart is enclosed within a protective membranous sac called the:",
+    "options": [
+      "Peritoneum",
+      "Pericardium",
+      "Pleura",
+      "Meninges"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pericardium is the double-layered membranous sac that surrounds and protects the heart.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "The functional and structural unit of the kidney responsible for urine formation is the:",
+    "options": [
+      "Nephron",
+      "Bowman's capsule alone",
+      "Renal pelvis",
+      "Ureter"
+    ],
+    "correctIndex": 0,
+    "explanation": "The nephron, comprising the glomerulus, Bowman's capsule, and renal tubules, is the basic functional unit of the kidney.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "Reabsorption of glucose, amino acids, and most water occurs primarily in which part of the nephron?",
+    "options": [
+      "Distal convoluted tubule",
+      "Proximal convoluted tubule",
+      "Loop of Henle only",
+      "Collecting duct only"
+    ],
+    "correctIndex": 1,
+    "explanation": "The proximal convoluted tubule reabsorbs the majority of glucose, amino acids, and water (about 70-80%) from the filtrate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "The hormone that regulates water reabsorption in the collecting duct, increasing its permeability to water, is:",
+    "options": [
+      "Aldosterone",
+      "Antidiuretic hormone (ADH/vasopressin)",
+      "Renin",
+      "Insulin"
+    ],
+    "correctIndex": 1,
+    "explanation": "ADH (vasopressin) increases the permeability of the distal tubule and collecting duct to water, promoting water reabsorption and concentrated urine.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "moderate",
+    "questionText": "Humans are classified as which type of nitrogenous waste excreters, based on the primary excretory product?",
+    "options": [
+      "Ammonotelic",
+      "Ureotelic",
+      "Uricotelic",
+      "Aminotelic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Humans excrete urea as the primary nitrogenous waste, classifying them as ureotelic organisms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "easy",
+    "questionText": "Urine is temporarily stored in the:",
+    "options": [
+      "Kidney",
+      "Ureter",
+      "Urinary bladder",
+      "Urethra"
+    ],
+    "correctIndex": 2,
+    "explanation": "Urine formed by the kidneys travels through the ureters and is stored in the urinary bladder until micturition.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "questionText": "According to the sliding filament theory of muscle contraction, muscle shortening occurs due to:",
+    "options": [
+      "Shortening of actin and myosin filaments themselves",
+      "Sliding of actin filaments over myosin filaments without change in filament length",
+      "Breakdown of actin filaments",
+      "Elongation of the sarcomere"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the sliding filament theory, actin filaments slide over myosin filaments, shortening the sarcomere, while the lengths of the individual filaments remain unchanged.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "questionText": "The immediate source of energy for muscle contraction, regenerated from creatine phosphate during intense activity, is:",
+    "options": [
+      "Glucose",
+      "ATP",
+      "Glycogen",
+      "Lactic acid"
+    ],
+    "correctIndex": 1,
+    "explanation": "ATP directly powers muscle contraction; creatine phosphate serves as a rapid reserve to regenerate ATP during short bursts of intense activity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "questionText": "The total number of bones in the adult human axial skeleton is:",
+    "options": [
+      "80",
+      "126",
+      "206",
+      "300"
+    ],
+    "correctIndex": 0,
+    "explanation": "The axial skeleton (skull, vertebral column, ribs, sternum) comprises 80 bones out of the total 206 bones in the adult human skeleton.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "moderate",
+    "questionText": "The joint between the atlas and axis vertebrae, allowing rotational movement of the head, is an example of:",
+    "options": [
+      "Hinge joint",
+      "Pivot joint",
+      "Ball and socket joint",
+      "Gliding joint"
+    ],
+    "correctIndex": 1,
+    "explanation": "The atlantoaxial joint is a pivot joint that allows the rotational (side-to-side) movement of the head.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "easy",
+    "questionText": "The protein filament that gives skeletal muscle its striated appearance, along with actin, is:",
+    "options": [
+      "Collagen",
+      "Myosin",
+      "Keratin",
+      "Elastin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Actin and myosin filaments alternate within the sarcomere, producing the characteristic striped (striated) appearance of skeletal muscle.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "The resting membrane potential of a neuron is primarily maintained by the unequal distribution of which ions across the membrane?",
+    "options": [
+      "Only calcium ions",
+      "Sodium and potassium ions, maintained by the Na+/K+ pump",
+      "Only chloride ions",
+      "Only magnesium ions"
+    ],
+    "correctIndex": 1,
+    "explanation": "The resting potential is maintained mainly by the Na+/K+ ATPase pump, which keeps sodium concentration higher outside and potassium higher inside the neuron.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "The gap between two adjacent neurons through which nerve impulses are transmitted chemically is called the:",
+    "options": [
+      "Node of Ranvier",
+      "Synapse",
+      "Axon hillock",
+      "Myelin sheath"
+    ],
+    "correctIndex": 1,
+    "explanation": "A synapse is the junction between two neurons (or a neuron and effector) where neurotransmitters transmit the signal across the synaptic cleft.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "Which part of the human brain is primarily responsible for maintaining posture, balance, and coordination of voluntary movements?",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla oblongata",
+      "Hypothalamus"
+    ],
+    "correctIndex": 1,
+    "explanation": "The cerebellum coordinates voluntary movements, maintains posture, and ensures balance, though it does not initiate movements itself.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "The depolarization phase of an action potential is primarily due to the rapid influx of which ion?",
+    "options": [
+      "Potassium (K+)",
+      "Sodium (Na+)",
+      "Chloride (Cl−)",
+      "Calcium (Ca2+) only"
+    ],
+    "correctIndex": 1,
+    "explanation": "During depolarization, voltage-gated sodium channels open, causing a rapid influx of Na+ ions into the neuron, reversing the membrane potential.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "moderate",
+    "questionText": "A reflex arc typically involves signal transmission through which pathway?",
+    "options": [
+      "Receptor → effector directly, bypassing the spinal cord",
+      "Receptor → afferent neuron → spinal cord → efferent neuron → effector",
+      "Only within the brain",
+      "Effector → receptor → brain"
+    ],
+    "correctIndex": 1,
+    "explanation": "A typical reflex arc involves a receptor detecting a stimulus, an afferent (sensory) neuron carrying the signal to the spinal cord, and an efferent (motor) neuron carrying the response to an effector, often without direct brain involvement.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "easy",
+    "questionText": "The basic structural and functional unit of the nervous system is the:",
+    "options": [
+      "Nephron",
+      "Neuron",
+      "Sarcomere",
+      "Axon only"
+    ],
+    "correctIndex": 1,
+    "explanation": "The neuron is the fundamental structural and functional unit responsible for transmitting nerve impulses.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "Which hormone, secreted by the parathyroid gland, raises blood calcium levels by promoting bone resorption?",
+    "options": [
+      "Calcitonin",
+      "Parathyroid hormone (PTH)",
+      "Thyroxine",
+      "Insulin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Parathyroid hormone (PTH) increases blood calcium by stimulating bone resorption, reabsorption in kidneys, and activation of vitamin D.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "Hyposecretion of insulin from the beta cells of the pancreas leads to which condition?",
+    "options": [
+      "Diabetes insipidus",
+      "Diabetes mellitus",
+      "Cretinism",
+      "Acromegaly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Insufficient insulin secretion (or action) results in diabetes mellitus, characterized by high blood glucose levels.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "Which gland, often called the 'master gland', regulates the activity of most other endocrine glands through its tropic hormones?",
+    "options": [
+      "Thyroid",
+      "Pituitary gland",
+      "Adrenal gland",
+      "Pancreas"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pituitary gland is called the master gland because it secretes tropic hormones (like TSH, ACTH) that regulate other endocrine glands.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "moderate",
+    "questionText": "Adrenaline (epinephrine), secreted during stress, is produced by which part of the adrenal gland?",
+    "options": [
+      "Adrenal cortex",
+      "Adrenal medulla",
+      "Zona glomerulosa",
+      "Zona fasciculata"
+    ],
+    "correctIndex": 1,
+    "explanation": "Adrenaline and noradrenaline, the 'fight or flight' hormones, are secreted by the adrenal medulla.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "moderate",
+    "questionText": "Thyroxine, secreted by the thyroid gland, requires which essential trace element for its synthesis?",
+    "options": [
+      "Iron",
+      "Iodine",
+      "Zinc",
+      "Copper"
+    ],
+    "correctIndex": 1,
+    "explanation": "Iodine is an essential component required for the synthesis of thyroid hormones, including thyroxine (T4).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "easy",
+    "questionText": "Hormones are generally transported through the body via the:",
+    "options": [
+      "Nervous system directly",
+      "Bloodstream",
+      "Lymphatic system exclusively",
+      "Digestive tract"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hormones, being chemical messengers, are typically secreted into and transported by the bloodstream to target organs.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "In a typical angiosperm embryo sac, the total number of nuclei present at maturity (before fertilization) is generally:",
+    "options": [
+      "4",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctIndex": 3,
+    "explanation": "A mature angiosperm embryo sac typically has 8 nuclei arranged in 7 cells (one central cell contains two polar nuclei).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "The pollen tube, after entering the ovule, typically releases its two male gametes near the:",
+    "options": [
+      "Micropyle only",
+      "Egg apparatus (synergids region)",
+      "Antipodal cells",
+      "Nucellus periphery"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pollen tube grows through the micropyle and releases its contents, including two male gametes, into the region of the synergids near the egg apparatus, facilitating double fertilization.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "Apomixis, a form of asexual reproduction seen in some flowering plants, results in seed formation:",
+    "options": [
+      "Only after normal fertilization",
+      "Without the fusion of gametes",
+      "Only in gymnosperms",
+      "Only through vegetative propagation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Apomixis is a form of asexual reproduction that mimics sexual reproduction, producing seeds without the actual fusion of male and female gametes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "moderate",
+    "questionText": "The transfer of pollen grains from the anther to the stigma of the same flower is called:",
+    "options": [
+      "Cross-pollination",
+      "Self-pollination (autogamy)",
+      "Geitonogamy",
+      "Xenogamy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Autogamy (self-pollination) refers to the transfer of pollen from the anther to the stigma of the same flower.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "moderate",
+    "questionText": "The endosperm in angiosperms is typically formed from the fusion of a male gamete with the:",
+    "options": [
+      "Egg cell",
+      "Two polar nuclei",
+      "Synergid cells",
+      "Antipodal cells"
+    ],
+    "correctIndex": 1,
+    "explanation": "The second male gamete fuses with the two polar nuclei in the central cell to form the triploid primary endosperm nucleus.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "easy",
+    "questionText": "The male gametophyte in flowering plants is the:",
+    "options": [
+      "Ovule",
+      "Pollen grain",
+      "Embryo sac",
+      "Anther wall"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pollen grain represents the male gametophyte, developing from the microspore.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "Spermatogenesis, the process of sperm formation, occurs within which structure of the testis?",
+    "options": [
+      "Vas deferens",
+      "Seminiferous tubules",
+      "Epididymis",
+      "Prostate gland"
+    ],
+    "correctIndex": 1,
+    "explanation": "Spermatogenesis takes place within the seminiferous tubules of the testes, where germ cells develop into mature sperm.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "Ovulation, the release of the secondary oocyte from the ovary, is triggered primarily by a surge in:",
+    "options": [
+      "Follicle-stimulating hormone (FSH) alone",
+      "Luteinizing hormone (LH)",
+      "Progesterone alone",
+      "Estrogen decline"
+    ],
+    "correctIndex": 1,
+    "explanation": "A sudden mid-cycle surge in LH (LH surge) triggers ovulation, causing the mature Graafian follicle to rupture and release the oocyte.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "Fertilization in humans normally occurs in which part of the female reproductive tract?",
+    "options": [
+      "Uterus",
+      "Ampullary region of the fallopian tube",
+      "Cervix",
+      "Vagina"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fertilization typically occurs in the ampulla, the widest part of the fallopian tube (oviduct), shortly after ovulation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "The hormone human chorionic gonadotropin (hCG), used as the basis for pregnancy tests, is secreted by the:",
+    "options": [
+      "Ovary",
+      "Developing placenta (trophoblast)",
+      "Pituitary gland",
+      "Uterine endometrium"
+    ],
+    "correctIndex": 1,
+    "explanation": "hCG is secreted by the developing embryo's trophoblast (later the placenta) shortly after implantation, maintaining the corpus luteum during early pregnancy.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "moderate",
+    "questionText": "The average duration of human pregnancy (gestation period) is approximately:",
+    "options": [
+      "6 months",
+      "9 months (about 40 weeks)",
+      "12 months",
+      "3 months"
+    ],
+    "correctIndex": 1,
+    "explanation": "Human gestation typically lasts about 9 months, or approximately 40 weeks from the last menstrual period.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "moderate",
+    "questionText": "Which of the following structures nourishes and protects the developing embryo, and is expelled after childbirth?",
+    "options": [
+      "Amnion only",
+      "Placenta",
+      "Yolk sac",
+      "Chorion only"
+    ],
+    "correctIndex": 1,
+    "explanation": "The placenta provides nutrition, gas exchange, and waste removal for the developing fetus and is expelled as the 'afterbirth' following delivery.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "easy",
+    "questionText": "The site of production of testosterone in the male reproductive system is the:",
+    "options": [
+      "Seminiferous tubules",
+      "Leydig cells (interstitial cells)",
+      "Epididymis",
+      "Prostate gland"
+    ],
+    "correctIndex": 1,
+    "explanation": "Leydig cells, located between the seminiferous tubules, produce testosterone under the influence of luteinizing hormone.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "questionText": "Which of the following is a barrier method of contraception used to prevent both pregnancy and sexually transmitted infections?",
+    "options": [
+      "Intrauterine device (IUD)",
+      "Condom",
+      "Oral contraceptive pills",
+      "Tubectomy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Condoms act as a barrier, preventing sperm from reaching the egg, and are also effective in reducing the transmission of sexually transmitted infections.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "moderate",
+    "questionText": "In vitro fertilization (IVF) involves the fertilization of an egg with sperm:",
+    "options": [
+      "Inside the fallopian tube",
+      "Outside the body, in a laboratory setting",
+      "Inside the uterus directly",
+      "Inside the ovary"
+    ],
+    "correctIndex": 1,
+    "explanation": "IVF is an assisted reproductive technology where fertilization occurs outside the body (in vitro) before the embryo is transferred into the uterus.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "easy",
+    "questionText": "Amniocentesis, a prenatal diagnostic technique, is primarily used to detect:",
+    "options": [
+      "Blood pressure of the mother",
+      "Chromosomal and genetic abnormalities in the fetus",
+      "The exact date of delivery",
+      "Maternal blood group only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Amniocentesis involves analyzing fetal cells from amniotic fluid to detect chromosomal abnormalities and certain genetic disorders.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "In a dihybrid cross between two heterozygous individuals (AaBb × AaBb), the expected phenotypic ratio in the F2 generation, assuming independent assortment, is:",
+    "options": [
+      "3:1",
+      "9:3:3:1",
+      "1:2:1",
+      "1:1:1:1"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mendel's law of independent assortment predicts a 9:3:3:1 phenotypic ratio in the F2 generation of a dihybrid cross between two heterozygotes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A cross between a heterozygous individual and a homozygous recessive individual, used to determine the genotype of the heterozygote, is called a:",
+    "options": [
+      "Dihybrid cross",
+      "Test cross",
+      "Reciprocal cross",
+      "Back cross specifically to the dominant parent"
+    ],
+    "correctIndex": 1,
+    "explanation": "A test cross involves crossing an individual of unknown genotype (typically heterozygous suspect) with a homozygous recessive individual to reveal the genotype based on offspring ratios.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "In humans, hemophilia is inherited as an X-linked recessive trait. A carrier mother (XHXh) and a normal father (XHY) would be expected to produce sons who are affected with what probability?",
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "100%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sons receive their X chromosome only from the mother. A carrier mother (XHXh) passes Xh to half her sons, so 50% of sons are expected to be affected.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "Down syndrome in humans is caused by:",
+    "options": [
+      "A point mutation in a single gene",
+      "Trisomy of chromosome 21 (an extra copy)",
+      "Deletion of chromosome 21",
+      "A translocation involving the X chromosome only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Down syndrome results from trisomy 21, where an individual has three copies of chromosome 21 instead of the usual two.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "In ABO blood grouping, the alleles IA and IB are said to be related to each other as:",
+    "options": [
+      "Completely dominant over each other",
+      "Codominant to each other",
+      "Recessive to each other",
+      "Epistatic to each other"
+    ],
+    "correctIndex": 1,
+    "explanation": "IA and IB are codominant alleles; when both are present (genotype IAIB), both A and B antigens are expressed, giving blood group AB.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "When a cross between a red-flowered and white-flowered plant produces all pink-flowered offspring in F1, this is an example of:",
+    "options": [
+      "Complete dominance",
+      "Incomplete dominance",
+      "Codominance",
+      "Epistasis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Incomplete dominance results in a blended phenotype (pink) in heterozygotes, intermediate between the two parental phenotypes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "Genes that are located close together on the same chromosome and tend to be inherited together are said to show:",
+    "options": [
+      "Independent assortment",
+      "Linkage",
+      "Polygenic inheritance",
+      "Codominance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Linked genes, located near each other on the same chromosome, are inherited together more often than expected by independent assortment, unless separated by crossing over.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "questionText": "Mendel's law of segregation states that during gamete formation, the two alleles for a trait:",
+    "options": [
+      "Always blend together permanently",
+      "Separate from each other, so each gamete receives only one allele",
+      "Are duplicated in each gamete",
+      "Are lost completely in half the gametes"
+    ],
+    "correctIndex": 1,
+    "explanation": "The law of segregation states that allele pairs separate during gamete formation, so each gamete carries only one allele for each gene.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "questionText": "A pedigree analysis is primarily used to study the pattern of inheritance of a trait:",
+    "options": [
+      "In experimental fruit flies only",
+      "Within a family across generations",
+      "In bacterial colonies",
+      "In plant hybrids exclusively"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pedigree analysis traces the inheritance of a particular trait through several generations of a family, useful especially in humans where controlled crosses aren't possible.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "questionText": "Turner syndrome in humans results from which chromosomal abnormality?",
+    "options": [
+      "XXY genotype",
+      "XO (a single X chromosome, monosomy)",
+      "Trisomy 21",
+      "XYY genotype"
+    ],
+    "correctIndex": 1,
+    "explanation": "Turner syndrome (45, XO) results from the presence of only one X chromosome (monosomy of the X), affecting females.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "easy",
+    "questionText": "An organism's observable physical or biochemical characteristics are referred to as its:",
+    "options": [
+      "Genotype",
+      "Phenotype",
+      "Karyotype",
+      "Chromosome number"
+    ],
+    "correctIndex": 1,
+    "explanation": "Phenotype refers to the observable traits of an organism, resulting from the interaction between genotype and environment.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "According to the semi-conservative model of DNA replication proposed and confirmed by Meselson and Stahl, each daughter DNA molecule contains:",
+    "options": [
+      "Two entirely new strands",
+      "One parental strand and one newly synthesized strand",
+      "Two entirely parental strands",
+      "A mixture of RNA and DNA strands"
+    ],
+    "correctIndex": 1,
+    "explanation": "Semi-conservative replication means each new DNA double helix retains one original (parental) strand paired with one newly synthesized strand.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "The enzyme responsible for synthesizing a new DNA strand in the 5' to 3' direction during replication is:",
+    "options": [
+      "RNA polymerase",
+      "DNA polymerase",
+      "DNA ligase",
+      "Helicase"
+    ],
+    "correctIndex": 1,
+    "explanation": "DNA polymerase catalyzes the addition of nucleotides to the growing DNA strand, always synthesizing in the 5' to 3' direction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "The genetic code is described as degenerate because:",
+    "options": [
+      "Some amino acids are coded for by more than one codon",
+      "Each codon codes for more than one amino acid",
+      "It only works in prokaryotes",
+      "It has no stop codons"
+    ],
+    "correctIndex": 0,
+    "explanation": "Degeneracy of the genetic code refers to the fact that most amino acids are specified by more than one codon (synonymous codons).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "In the lac operon of E. coli, the lac repressor binds to the operator region and prevents transcription in the:",
+    "options": [
+      "Presence of lactose",
+      "Absence of lactose",
+      "Presence of glucose only",
+      "Both presence and absence of lactose equally"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the absence of lactose, the lac repressor binds the operator and blocks RNA polymerase, preventing transcription of the lac operon genes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "Which of the following experimentally demonstrated that DNA, not protein, is the genetic material, using bacteriophages labeled with radioactive isotopes?",
+    "options": [
+      "Griffith's transformation experiment",
+      "Hershey-Chase experiment",
+      "Meselson-Stahl experiment",
+      "Avery, MacLeod, and McCarty's experiment"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Hershey-Chase experiment used 32P (labeling DNA) and 35S (labeling protein) to show that DNA, not protein, enters bacterial cells and directs the production of new phages.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "During translation, the process of forming a peptide bond between amino acids occurs at the:",
+    "options": [
+      "P site of the ribosome, catalyzed by peptidyl transferase",
+      "E site of the ribosome",
+      "A site independently",
+      "Outside the ribosome entirely"
+    ],
+    "correctIndex": 0,
+    "explanation": "Peptide bond formation is catalyzed by peptidyl transferase activity of the ribosomal rRNA, occurring as the growing peptide chain transfers from the P site to the incoming amino acid at the A site.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "RNA polymerase II in eukaryotes is primarily responsible for the transcription of:",
+    "options": [
+      "Ribosomal RNA (rRNA)",
+      "Messenger RNA (mRNA) precursors (hnRNA)",
+      "Transfer RNA (tRNA)",
+      "Small nuclear RNA only"
+    ],
+    "correctIndex": 1,
+    "explanation": "RNA polymerase II transcribes protein-coding genes into heterogeneous nuclear RNA (hnRNA), which is then processed into mature mRNA.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "questionText": "The process by which mRNA is synthesized from a DNA template is called:",
+    "options": [
+      "Translation",
+      "Transcription",
+      "Replication",
+      "Reverse transcription"
+    ],
+    "correctIndex": 1,
+    "explanation": "Transcription is the synthesis of RNA (including mRNA) using DNA as a template, catalyzed by RNA polymerase.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "questionText": "Introns, unlike exons, are typically:",
+    "options": [
+      "Coding sequences that are translated",
+      "Non-coding sequences removed during RNA processing (splicing)",
+      "Present only in prokaryotic genes",
+      "Always translated into functional proteins"
+    ],
+    "correctIndex": 1,
+    "explanation": "Introns are non-coding intervening sequences removed from the primary transcript during RNA splicing, while exons are retained and translated.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "questionText": "A codon consists of how many nucleotides that specify a single amino acid?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "The genetic code is triplet in nature; each codon consists of three nucleotides that specify one amino acid (or a stop signal).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "easy",
+    "questionText": "The Human Genome Project aimed primarily to:",
+    "options": [
+      "Clone human beings",
+      "Sequence and map all the genes in the human genome",
+      "Cure all genetic diseases immediately",
+      "Create genetically modified humans"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Human Genome Project's primary goal was to identify, sequence, and map all genes present in the human genome.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "According to Darwin's theory of natural selection, evolution occurs primarily through:",
+    "options": [
+      "Inheritance of acquired characteristics",
+      "Differential survival and reproduction of individuals with favorable variations",
+      "Sudden large-scale mutations only",
+      "Use and disuse of organs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Darwin proposed that individuals with heritable variations favorable to their environment survive and reproduce more successfully, gradually shifting population characteristics over generations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "The Hardy-Weinberg principle states that allele frequencies in a population remain constant across generations, provided the population:",
+    "options": [
+      "Undergoes rapid mutation",
+      "Is in genetic equilibrium, with no selection, migration, mutation, or genetic drift",
+      "Undergoes natural selection actively",
+      "Is very small in size"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Hardy-Weinberg equilibrium holds under idealized conditions: no mutation, no migration, no selection, random mating, and infinitely large population size.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "Analogous structures, such as the wings of insects and birds, arise due to:",
+    "options": [
+      "Common ancestry (homology)",
+      "Convergent evolution, adapting to similar functions independently",
+      "Divergent evolution from a shared origin",
+      "Genetic drift alone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Analogous structures perform similar functions but evolved independently in unrelated lineages, a result of convergent evolution rather than common ancestry.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "questionText": "The forelimbs of humans, whales, and bats, though used for different functions, share a similar bone structure due to:",
+    "options": [
+      "Convergent evolution",
+      "Homology, arising from a common ancestor",
+      "Coincidence, with no evolutionary link",
+      "Analogous adaptation"
+    ],
+    "correctIndex": 1,
+    "explanation": "These structures are homologous, sharing a common underlying skeletal pattern inherited from a shared ancestor, despite differing functions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "questionText": "Industrial melanism, observed in the peppered moth (Biston betularia), is a classic example of evolution driven by:",
+    "options": [
+      "Genetic drift",
+      "Natural selection in response to changing environmental conditions",
+      "Sexual selection only",
+      "Random mutation without selective advantage"
+    ],
+    "correctIndex": 1,
+    "explanation": "The shift toward darker moth forms in polluted, soot-darkened areas is a well-documented example of natural selection favoring camouflage advantage.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "easy",
+    "questionText": "According to most scientific evidence, modern humans (Homo sapiens) are believed to have originated in:",
+    "options": [
+      "Europe",
+      "Africa",
+      "Asia",
+      "Australia"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fossil and genetic evidence strongly supports the 'Out of Africa' hypothesis for the origin of modern Homo sapiens.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "The pathogen responsible for causing malaria in humans, transmitted by the female Anopheles mosquito, belongs to the genus:",
+    "options": [
+      "Plasmodium",
+      "Trypanosoma",
+      "Entamoeba",
+      "Leishmania"
+    ],
+    "correctIndex": 0,
+    "explanation": "Malaria is caused by protozoan parasites of the genus Plasmodium, transmitted through the bite of an infected female Anopheles mosquito.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "AIDS (Acquired Immunodeficiency Syndrome) is caused by HIV, which primarily targets and destroys which type of immune cell?",
+    "options": [
+      "B-lymphocytes",
+      "Helper T-lymphocytes (CD4+ cells)",
+      "Neutrophils",
+      "Platelets"
+    ],
+    "correctIndex": 1,
+    "explanation": "HIV specifically infects and destroys helper T-lymphocytes (CD4+ cells), severely compromising the immune system's ability to fight infections.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "Antibodies of which class are the first to be produced during a primary immune response and are also found on the surface of B-lymphocytes?",
+    "options": [
+      "IgG",
+      "IgM",
+      "IgA",
+      "IgE"
+    ],
+    "correctIndex": 1,
+    "explanation": "IgM is the first antibody class produced in a primary immune response and is also a key component of the B-cell receptor complex.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "Active immunity, as opposed to passive immunity, involves:",
+    "options": [
+      "Direct injection of ready-made antibodies",
+      "The body's own immune system producing antibodies in response to an antigen",
+      "Only maternal antibody transfer",
+      "Only artificial serum administration"
+    ],
+    "correctIndex": 1,
+    "explanation": "Active immunity develops when the individual's own immune system responds to an antigen (via infection or vaccination), producing antibodies and memory cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "moderate",
+    "questionText": "Allergic reactions, such as those triggered by pollen or dust, are primarily mediated by which class of antibody?",
+    "options": [
+      "IgG",
+      "IgM",
+      "IgE",
+      "IgD"
+    ],
+    "correctIndex": 2,
+    "explanation": "IgE antibodies bind to mast cells and basophils, triggering the release of histamine and other mediators responsible for allergic symptoms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "moderate",
+    "questionText": "Cancer cells, unlike normal cells, are characterized primarily by:",
+    "options": [
+      "Controlled and limited cell division",
+      "Uncontrolled cell division and loss of contact inhibition",
+      "Complete inability to divide",
+      "Enhanced apoptosis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cancer cells lose the normal regulatory controls over cell division and contact inhibition, leading to uncontrolled proliferation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "easy",
+    "questionText": "Common cold in humans is caused by which type of pathogen?",
+    "options": [
+      "Bacteria",
+      "Virus (commonly rhinovirus)",
+      "Fungus",
+      "Protozoan"
+    ],
+    "correctIndex": 1,
+    "explanation": "The common cold is most frequently caused by rhinoviruses, though other viruses can also be responsible.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "easy",
+    "questionText": "Drug addiction commonly involves substances that act on which system of the body?",
+    "options": [
+      "Digestive system",
+      "Central nervous system",
+      "Skeletal system",
+      "Excretory system"
+    ],
+    "correctIndex": 1,
+    "explanation": "Most addictive drugs act on the central nervous system, altering neurotransmitter activity and producing psychoactive effects.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "tough",
+    "questionText": "Which breeding technique involves crossing two genetically dissimilar individuals or varieties to combine desirable traits and often exploit hybrid vigor?",
+    "options": [
+      "Inbreeding",
+      "Hybridization",
+      "Mutation breeding",
+      "Tissue culture"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hybridization involves crossing genetically different parents to combine desirable characteristics, often resulting in heterosis (hybrid vigor) in the offspring.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "moderate",
+    "questionText": "Apiculture refers to the practice of rearing which organism for economic benefit?",
+    "options": [
+      "Fish",
+      "Honeybees",
+      "Silkworms",
+      "Poultry"
+    ],
+    "correctIndex": 1,
+    "explanation": "Apiculture is the science and practice of beekeeping, primarily for honey and wax production.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "easy",
+    "questionText": "The rearing of fish on a large scale for food and commercial purposes is known as:",
+    "options": [
+      "Apiculture",
+      "Sericulture",
+      "Pisciculture",
+      "Horticulture"
+    ],
+    "correctIndex": 2,
+    "explanation": "Pisciculture refers to the controlled cultivation and rearing of fish, typically for food production.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "questionText": "Which microorganism is traditionally used in the production of the antibiotic penicillin?",
+    "options": [
+      "Saccharomyces cerevisiae",
+      "Penicillium notatum/chrysogenum",
+      "Lactobacillus",
+      "Streptococcus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Penicillin, the first widely used antibiotic, is produced by the fungus Penicillium notatum (and industrially by Penicillium chrysogenum).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "questionText": "Biogas, a mixture primarily composed of methane, is produced through the anaerobic digestion of organic matter by:",
+    "options": [
+      "Aerobic fungi",
+      "Methanogenic bacteria (archaea)",
+      "Cyanobacteria",
+      "Nitrogen-fixing bacteria"
+    ],
+    "correctIndex": 1,
+    "explanation": "Methanogens, a group of anaerobic archaea, break down organic matter to produce biogas rich in methane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "moderate",
+    "questionText": "Yeast (Saccharomyces cerevisiae) is commonly used industrially in the production of:",
+    "options": [
+      "Antibiotics",
+      "Alcoholic beverages and bread (through fermentation)",
+      "Vaccines",
+      "Vitamin B12 exclusively"
+    ],
+    "correctIndex": 1,
+    "explanation": "Yeast ferments sugars to produce ethanol and CO2, making it essential in brewing, winemaking, and bread-making.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "easy",
+    "questionText": "Lactobacillus bacteria are commonly used in the production of:",
+    "options": [
+      "Bread",
+      "Curd (yogurt)",
+      "Alcohol",
+      "Antibiotics"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lactobacillus ferments milk sugar (lactose) into lactic acid, converting milk into curd/yogurt.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "Restriction endonucleases, essential tools in genetic engineering, function by:",
+    "options": [
+      "Joining two DNA fragments together",
+      "Cutting DNA at specific palindromic recognition sequences",
+      "Synthesizing new DNA strands",
+      "Unwinding the DNA double helix"
+    ],
+    "correctIndex": 1,
+    "explanation": "Restriction endonucleases recognize specific palindromic sequences and cut the DNA at or near these sites, enabling precise genetic manipulation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "The enzyme used to join two DNA fragments together by forming phosphodiester bonds during recombinant DNA technology is:",
+    "options": [
+      "Restriction endonuclease",
+      "DNA ligase",
+      "DNA polymerase",
+      "Reverse transcriptase"
+    ],
+    "correctIndex": 1,
+    "explanation": "DNA ligase seals the nicks between DNA fragments, joining them together by forming phosphodiester bonds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "The Polymerase Chain Reaction (PCR) technique is primarily used to:",
+    "options": [
+      "Sequence an entire genome directly",
+      "Amplify a specific segment of DNA exponentially in vitro",
+      "Separate DNA fragments by size",
+      "Insert foreign genes into a host organism"
+    ],
+    "correctIndex": 1,
+    "explanation": "PCR allows exponential amplification of a specific DNA segment in vitro using repeated cycles of denaturation, annealing, and extension.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "moderate",
+    "questionText": "A vector commonly used to carry foreign DNA into a host cell during genetic engineering is a:",
+    "options": [
+      "Ribosome",
+      "Plasmid",
+      "Lysosome",
+      "Golgi vesicle"
+    ],
+    "correctIndex": 1,
+    "explanation": "Plasmids are small, circular, self-replicating DNA molecules commonly used as vectors to introduce foreign genes into host cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "moderate",
+    "questionText": "Gel electrophoresis is a technique used to separate DNA fragments based primarily on their:",
+    "options": [
+      "Color",
+      "Size (and charge), based on their migration through a gel",
+      "Nitrogen content",
+      "Temperature tolerance"
+    ],
+    "correctIndex": 1,
+    "explanation": "In gel electrophoresis, DNA fragments migrate through a gel matrix under an electric field, separating primarily based on size.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "easy",
+    "questionText": "The full form of PCR, a key technique in molecular biology, is:",
+    "options": [
+      "Protein Chain Reaction",
+      "Polymerase Chain Reaction",
+      "Plasmid Cloning Reaction",
+      "Peptide Coding Reaction"
+    ],
+    "correctIndex": 1,
+    "explanation": "PCR stands for Polymerase Chain Reaction, used to amplify specific DNA sequences.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "questionText": "Bt cotton, a genetically modified crop, is engineered to express a toxin gene derived from which bacterium, conferring resistance to certain insect pests?",
+    "options": [
+      "Escherichia coli",
+      "Bacillus thuringiensis",
+      "Agrobacterium tumefaciens",
+      "Rhizobium leguminosarum"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bt crops express insecticidal proteins (Cry proteins) derived from the soil bacterium Bacillus thuringiensis, providing resistance to specific insect pests.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "questionText": "Gene therapy, aimed at correcting genetic disorders, primarily involves:",
+    "options": [
+      "Surgical removal of the defective organ",
+      "Insertion of a normal functional gene into an individual's cells to compensate for a defective gene",
+      "Complete replacement of all chromosomes",
+      "Only dietary modifications"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gene therapy attempts to treat genetic disorders by delivering a normal copy of a gene into a patient's cells to compensate for a mutated, non-functional gene.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "moderate",
+    "questionText": "Golden rice, a genetically modified crop, has been engineered to have enhanced levels of:",
+    "options": [
+      "Vitamin C",
+      "Beta-carotene (a precursor of vitamin A)",
+      "Iron only",
+      "Protein content"
+    ],
+    "correctIndex": 1,
+    "explanation": "Golden rice is genetically engineered to biosynthesize beta-carotene, addressing vitamin A deficiency in populations reliant on rice as a staple.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "easy",
+    "questionText": "Recombinant human insulin, used to treat diabetes, is commercially produced using genetically engineered:",
+    "options": [
+      "Plants",
+      "Bacteria (e.g., E. coli)",
+      "Animals directly",
+      "Viruses"
+    ],
+    "correctIndex": 1,
+    "explanation": "Human insulin genes are inserted into bacteria like E. coli, which then produce human insulin for commercial use.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "When a population grows in an environment with limited resources, the growth pattern typically follows which curve, eventually leveling off at the carrying capacity?",
+    "options": [
+      "Exponential (J-shaped) growth",
+      "Logistic (S-shaped) growth",
+      "Linear growth",
+      "Random fluctuation with no pattern"
+    ],
+    "correctIndex": 1,
+    "explanation": "Logistic growth (S-shaped curve) reflects population growth that slows as resources become limiting, eventually stabilizing near the carrying capacity (K).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "The interaction in which one species benefits while the other is unaffected is termed:",
+    "options": [
+      "Mutualism",
+      "Commensalism",
+      "Parasitism",
+      "Competition"
+    ],
+    "correctIndex": 1,
+    "explanation": "Commensalism is an interspecific interaction where one species benefits and the other is neither harmed nor helped.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "An organism's ecological niche refers to:",
+    "options": [
+      "Only its physical habitat location",
+      "Its complete functional role and requirements within an ecosystem",
+      "Only the food it consumes",
+      "Only its geographic range"
+    ],
+    "correctIndex": 1,
+    "explanation": "A niche encompasses an organism's total functional role, including its habitat, resource use, and interactions with other species.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "moderate",
+    "questionText": "Which of the following is an example of a density-dependent factor affecting population growth?",
+    "options": [
+      "Temperature",
+      "Availability of food, which becomes scarcer as population density increases",
+      "Natural disasters unrelated to population size",
+      "Day length"
+    ],
+    "correctIndex": 1,
+    "explanation": "Density-dependent factors, like food availability and competition, intensify as population density increases, regulating population size.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "moderate",
+    "questionText": "Parasitism is an interspecific interaction in which:",
+    "options": [
+      "Both species benefit equally",
+      "One species (the parasite) benefits at the expense of the other (the host)",
+      "Neither species is affected",
+      "Both species are harmed equally"
+    ],
+    "correctIndex": 1,
+    "explanation": "In parasitism, the parasite derives nutrition or benefit from the host, often causing harm to the host organism.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "easy",
+    "questionText": "A group of individuals of the same species living in a particular geographical area at a given time is called a:",
+    "options": [
+      "Community",
+      "Population",
+      "Ecosystem",
+      "Biome"
+    ],
+    "correctIndex": 1,
+    "explanation": "A population consists of individuals of a single species inhabiting a specific area during a specific time period.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "In an ecological pyramid of energy, energy transfer between successive trophic levels is generally reduced to approximately what fraction of the previous level, according to the 10% law?",
+    "options": [
+      "50%",
+      "25%",
+      "10%",
+      "1%"
+    ],
+    "correctIndex": 2,
+    "explanation": "According to Lindeman's 10% law, only about 10% of energy is transferred from one trophic level to the next, with the rest lost mainly as heat.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "Primary productivity of an ecosystem refers to:",
+    "options": [
+      "The total biomass of consumers",
+      "The rate of biomass or organic matter production by producers through photosynthesis",
+      "The rate of decomposition",
+      "The total number of species present"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary productivity is the rate at which producers (autotrophs) convert light energy into chemical energy stored as biomass, via photosynthesis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "Decomposers, such as bacteria and fungi, play a crucial role in ecosystems by:",
+    "options": [
+      "Producing their own food through photosynthesis",
+      "Breaking down dead organic matter and recycling nutrients back into the ecosystem",
+      "Consuming only living organisms",
+      "Fixing atmospheric nitrogen exclusively"
+    ],
+    "correctIndex": 1,
+    "explanation": "Decomposers break down dead organic material, releasing nutrients back into the soil/environment, essential for nutrient cycling.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "moderate",
+    "questionText": "An ecological pyramid that is generally inverted (in shape) in certain ecosystems, such as a pond ecosystem, is the pyramid of:",
+    "options": [
+      "Energy",
+      "Biomass (in some cases, such as ponds)",
+      "Numbers exclusively in grassland",
+      "None of these are ever inverted"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a pond ecosystem, the pyramid of biomass can be inverted since producer (phytoplankton) biomass at any instant is less than that of consumers, despite high productivity turnover.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "easy",
+    "questionText": "The flow of energy in an ecosystem is generally described as:",
+    "options": [
+      "Cyclic",
+      "Unidirectional (one-way)",
+      "Bidirectional",
+      "Random"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unlike nutrients, energy flows unidirectionally through an ecosystem, from producers to various levels of consumers, ultimately lost as heat.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "easy",
+    "questionText": "Organisms that manufacture their own food using sunlight, water, and carbon dioxide are called:",
+    "options": [
+      "Consumers",
+      "Producers",
+      "Decomposers",
+      "Detritivores"
+    ],
+    "correctIndex": 1,
+    "explanation": "Producers, mainly green plants and algae, synthesize their own organic food through photosynthesis, forming the base of most food chains.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "According to the species-area relationship proposed by ecologists, the relationship between species richness and area is generally best described as:",
+    "options": [
+      "A linear relationship",
+      "A rectangular hyperbola/logarithmic relationship",
+      "An inverse linear relationship",
+      "No relationship at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "The species-area relationship generally follows a logarithmic curve, where species richness increases with area but at a decreasing rate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "'Hotspots' of biodiversity are regions characterized by:",
+    "options": [
+      "Low species richness and low endemism",
+      "High species richness combined with high levels of endemism and significant habitat loss threat",
+      "Only tropical rainforests",
+      "Regions with no human impact"
+    ],
+    "correctIndex": 1,
+    "explanation": "Biodiversity hotspots are regions with exceptionally high species richness and endemism, but which also face significant threats from habitat destruction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "moderate",
+    "questionText": "In-situ conservation of biodiversity refers to the conservation of species:",
+    "options": [
+      "In zoos and botanical gardens outside their natural habitat",
+      "Within their natural habitat, such as in national parks and sanctuaries",
+      "Only through seed banks",
+      "Only through cryopreservation"
+    ],
+    "correctIndex": 1,
+    "explanation": "In-situ conservation protects species within their natural habitats, such as national parks, wildlife sanctuaries, and biosphere reserves.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "easy",
+    "questionText": "Ex-situ conservation of endangered species commonly involves facilities such as:",
+    "options": [
+      "National parks",
+      "Zoos and botanical gardens",
+      "Wildlife sanctuaries",
+      "Biosphere reserves"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ex-situ conservation protects species outside their natural habitat, in facilities like zoos, botanical gardens, and seed banks.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "questionText": "The primary cause of the depletion of the stratospheric ozone layer is the release of:",
+    "options": [
+      "Carbon dioxide",
+      "Chlorofluorocarbons (CFCs)",
+      "Methane",
+      "Nitrogen gas"
+    ],
+    "correctIndex": 1,
+    "explanation": "CFCs, once widely used in refrigerants and aerosols, release chlorine atoms in the stratosphere that catalytically destroy ozone molecules.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "questionText": "Eutrophication, the excessive nutrient enrichment of water bodies leading to oxygen depletion, is primarily caused by:",
+    "options": [
+      "Excessive sunlight alone",
+      "Runoff of nitrogen and phosphorus-rich fertilizers into water bodies",
+      "Cold water temperatures",
+      "Absence of aquatic plants"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nutrient runoff, especially nitrates and phosphates from fertilizers, causes excessive algal growth, which upon decomposition depletes dissolved oxygen in water bodies.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "moderate",
+    "questionText": "Which of the following gases is considered the most significant contributor to the greenhouse effect due to its high atmospheric concentration?",
+    "options": [
+      "Methane",
+      "Carbon dioxide",
+      "Nitrous oxide",
+      "Ozone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Although other gases have higher warming potential per molecule, carbon dioxide's much higher atmospheric concentration makes it the largest overall contributor to the greenhouse effect.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "easy",
+    "questionText": "Biological Oxygen Demand (BOD) is used as an indicator of:",
+    "options": [
+      "Air pollution levels",
+      "The degree of organic pollution in water",
+      "Soil fertility",
+      "Radioactive contamination"
+    ],
+    "correctIndex": 1,
+    "explanation": "BOD measures the amount of oxygen required by microorganisms to decompose organic matter in water, indicating the level of organic pollution.",
+    "imageUrl": null
+  }
+]
