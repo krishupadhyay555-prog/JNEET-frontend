@@ -1,1 +1,3010 @@
-[]
+[
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the number of moles present in 5.6 L of a gas at STP.",
+    "options": [
+      "0.1 mol",
+      "0.25 mol",
+      "0.5 mol",
+      "1 mol"
+    ],
+    "correctIndex": 1,
+    "explanation": "At STP, 1 mole of any gas occupies 22.4 L. Moles = 5.6/22.4 = 0.25 mol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the molarity of a solution prepared by dissolving 4 g of NaOH (M=40) in enough water to make 500 mL of solution.",
+    "options": [
+      "0.1 M",
+      "0.2 M",
+      "0.4 M",
+      "0.5 M"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moles of NaOH = 4/40 = 0.1 mol. Molarity = 0.1 mol/0.5 L = 0.2 M.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the normality of a 0.1 M H2SO4 solution (n-factor = 2).",
+    "options": [
+      "0.05 N",
+      "0.1 N",
+      "0.2 N",
+      "0.4 N"
+    ],
+    "correctIndex": 2,
+    "explanation": "Normality = Molarity × n-factor = 0.1 × 2 = 0.2 N.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the mass of O2 required to completely react with 4 g of H2 to form water (2H2 + O2 → 2H2O; H=1, O=16).",
+    "options": [
+      "8 g",
+      "16 g",
+      "32 g",
+      "64 g"
+    ],
+    "correctIndex": 2,
+    "explanation": "Moles of H2 = 4/2 = 2 mol. From the equation, 2 mol H2 requires 1 mol O2 = 32 g.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the equivalent weight of KMnO4 (molar mass 158) when it acts as an oxidizing agent in acidic medium, gaining 5 electrons per Mn.",
+    "options": [
+      "15.8",
+      "31.6",
+      "52.7",
+      "79"
+    ],
+    "correctIndex": 1,
+    "explanation": "Equivalent weight = molar mass/n-factor = 158/5 = 31.6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the percentage of water of crystallization in CuSO4·5H2O (CuSO4 = 160, H2O = 18).",
+    "options": [
+      "18%",
+      "26%",
+      "36%",
+      "45%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Total molar mass = 160 + 5×18 = 250. Percentage water = (90/250)×100 = 36%.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "moderate",
+    "questionText": "The number of moles of electrons required to reduce 1 mole of MnO4− to Mn2+ is:",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "7"
+    ],
+    "correctIndex": 2,
+    "explanation": "Manganese goes from +7 in MnO4− to +2 in Mn2+, a change of 5, requiring 5 electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "easy",
+    "questionText": "One mole of any ideal gas at STP occupies a volume of:",
+    "options": [
+      "11.2 L",
+      "22.4 L",
+      "44.8 L",
+      "1 L"
+    ],
+    "correctIndex": 1,
+    "explanation": "By Avogadro's law, one mole of any ideal gas occupies 22.4 L at STP.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "Calculate the wavelength of the second line of the Balmer series in the hydrogen spectrum (R = 1.097 × 10^7 m⁻¹).",
+    "options": [
+      "410 nm",
+      "434 nm",
+      "486 nm",
+      "656 nm"
+    ],
+    "correctIndex": 2,
+    "explanation": "Balmer series has n1=2. Second line corresponds to n2=4: 1/λ = R(1/4−1/16) = 3R/16, giving λ ≈ 486 nm.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "Calculate the de Broglie wavelength of an electron moving with velocity 1×10^6 m/s (mass of electron = 9.1×10⁻³¹ kg, h = 6.63×10⁻³⁴ J·s).",
+    "options": [
+      "0.073 nm",
+      "0.73 nm",
+      "7.3 nm",
+      "73 nm"
+    ],
+    "correctIndex": 1,
+    "explanation": "λ = h/(mv) = 6.63×10⁻³⁴/(9.1×10⁻³¹ × 1×10⁶) ≈ 7.29×10⁻¹⁰ m = 0.73 nm.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "Calculate the energy of an electron in the first Bohr orbit of the He+ ion (energy of H in ground state = −13.6 eV).",
+    "options": [
+      "−13.6 eV",
+      "−27.2 eV",
+      "−54.4 eV",
+      "−3.4 eV"
+    ],
+    "correctIndex": 2,
+    "explanation": "E = −13.6 × Z²/n² = −13.6 × 4/1 = −54.4 eV for He+ (Z=2) in n=1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "Which quantum number determines the shape of an atomic orbital?",
+    "options": [
+      "Principal quantum number (n)",
+      "Azimuthal quantum number (l)",
+      "Magnetic quantum number (ml)",
+      "Spin quantum number (ms)"
+    ],
+    "correctIndex": 1,
+    "explanation": "The azimuthal (angular momentum) quantum number l determines the shape of the orbital (s, p, d, f).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "Chromium (Z=24) has the anomalous ground-state configuration [Ar]3d⁵4s¹. The number of unpaired electrons in Cr is:",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctIndex": 2,
+    "explanation": "All 5 electrons in the half-filled 3d subshell are unpaired, plus the single 4s electron, giving 6 unpaired electrons total.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "moderate",
+    "questionText": "Heisenberg's uncertainty principle states that it is impossible to simultaneously determine precisely the:",
+    "options": [
+      "Mass and volume of a particle",
+      "Position and momentum of a particle",
+      "Charge and mass of a particle",
+      "Energy and mass of a particle"
+    ],
+    "correctIndex": 1,
+    "explanation": "The uncertainty principle places a fundamental limit on the precision with which position and momentum can both be known simultaneously.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "moderate",
+    "questionText": "According to Pauli's exclusion principle, the maximum number of electrons that can occupy a single orbital is:",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "An orbital can hold a maximum of 2 electrons, provided they have opposite spins.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "easy",
+    "questionText": "The maximum number of electrons that can be accommodated in the M shell (n=3) when completely filled is:",
+    "options": [
+      "8",
+      "18",
+      "32",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "Maximum electrons in a shell = 2n². For n=3, this is 2×9 = 18.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "The hybridization of sulfur in SF6 is:",
+    "options": [
+      "sp3",
+      "sp3d",
+      "sp3d2",
+      "sp3d3"
+    ],
+    "correctIndex": 2,
+    "explanation": "SF6 has 6 bond pairs around sulfur with an octahedral geometry, requiring sp3d2 hybridization.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Using VSEPR theory, predict the molecular shape of ClF3.",
+    "options": [
+      "Trigonal planar",
+      "T-shaped",
+      "Pyramidal",
+      "Linear"
+    ],
+    "correctIndex": 1,
+    "explanation": "ClF3 has 5 electron pairs (3 bonding, 2 lone pairs) in a trigonal bipyramidal arrangement, giving a T-shaped molecular geometry.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "The bond order of the NO molecule, according to molecular orbital theory, is:",
+    "options": [
+      "1.5",
+      "2",
+      "2.5",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explanation": "NO has 15 electrons; molecular orbital theory gives it a bond order of 2.5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which of the following molecules has the highest dipole moment?",
+    "options": [
+      "CH4",
+      "NH3",
+      "H2O",
+      "HF"
+    ],
+    "correctIndex": 3,
+    "explanation": "Among these, HF has the highest dipole moment (~1.91 D) due to the large electronegativity difference and small bond length.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "The total number of sigma and pi bonds present in a molecule of benzene (C6H6) are respectively:",
+    "options": [
+      "6σ and 6π",
+      "12σ and 3π",
+      "15σ and 3π",
+      "9σ and 6π"
+    ],
+    "correctIndex": 1,
+    "explanation": "Benzene has 12 sigma bonds (6 C−C and 6 C−H) and 3 delocalized pi bonds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "According to hybridization theory, the geometry of XeF4 is:",
+    "options": [
+      "Tetrahedral",
+      "Square planar",
+      "Octahedral",
+      "See-saw"
+    ],
+    "correctIndex": 1,
+    "explanation": "XeF4 has sp3d2 hybridization with 2 lone pairs occupying axial positions, resulting in a square planar molecular geometry.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "According to molecular orbital theory, the bond order of the peroxide ion O2^2− is:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctIndex": 1,
+    "explanation": "O2 has a bond order of 2; adding 2 more electrons (to form O2^2−) fills additional antibonding orbitals, reducing the bond order to 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "moderate",
+    "questionText": "Resonance structures of a molecule differ from one another only in the:",
+    "options": [
+      "Position of atoms",
+      "Position of electrons (or lone pairs)",
+      "Molecular formula",
+      "Total number of atoms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Resonance structures represent the same arrangement of atoms with only the electron (or lone pair) positions differing.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "moderate",
+    "questionText": "Which of the following molecules is non-polar overall despite having individually polar bonds?",
+    "options": [
+      "H2O",
+      "NH3",
+      "CO2",
+      "HCl"
+    ],
+    "correctIndex": 2,
+    "explanation": "CO2 is linear and symmetric, so the two polar C=O bond dipoles cancel out, making the molecule non-polar overall.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "easy",
+    "questionText": "A bond formed by the complete transfer of one or more electrons from one atom to another is called a(n):",
+    "options": [
+      "Covalent bond",
+      "Ionic bond",
+      "Metallic bond",
+      "Hydrogen bond"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ionic bonds form through the complete transfer of electrons, creating oppositely charged ions that attract each other.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "tough",
+    "questionText": "Calculate the pressure exerted by 2 moles of an ideal gas in a 10 L container at 300 K (R = 0.0821 L·atm/mol·K).",
+    "options": [
+      "2.46 atm",
+      "4.93 atm",
+      "9.85 atm",
+      "24.6 atm"
+    ],
+    "correctIndex": 1,
+    "explanation": "P = nRT/V = (2×0.0821×300)/10 ≈ 4.93 atm.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "tough",
+    "questionText": "At constant temperature, if the pressure of a fixed amount of gas is tripled, its volume becomes:",
+    "options": [
+      "3 times the original",
+      "1/3rd of the original",
+      "9 times the original",
+      "Unchanged"
+    ],
+    "correctIndex": 1,
+    "explanation": "By Boyle's law, V ∝ 1/P at constant temperature, so tripling pressure reduces volume to one-third.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "tough",
+    "questionText": "The rate of diffusion of gases A and B under identical conditions is in the ratio 2:1. If the molar mass of A is 16, find the molar mass of B.",
+    "options": [
+      "4",
+      "16",
+      "32",
+      "64"
+    ],
+    "correctIndex": 3,
+    "explanation": "By Graham's law, rA/rB = √(MB/MA). Setting 2 = √(MB/16) gives MB = 64.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "tough",
+    "questionText": "Calculate the RMS velocity of oxygen molecules at 300 K (R = 8.314 J/mol·K, M = 0.032 kg/mol).",
+    "options": [
+      "300 m/s",
+      "350 m/s",
+      "484 m/s",
+      "600 m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "v_rms = √(3RT/M) = √(3×8.314×300/0.032) ≈ 484 m/s.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "tough",
+    "questionText": "The Van der Waals equation introduces correction terms to the ideal gas law to account for:",
+    "options": [
+      "Only intermolecular attractive forces",
+      "Only the finite volume of gas molecules",
+      "Both intermolecular forces and the finite volume of gas molecules",
+      "Neither of these factors"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Van der Waals equation corrects for both intermolecular attractions (pressure correction, 'a' term) and the finite volume occupied by molecules ('b' term).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "moderate",
+    "questionText": "At the critical temperature of a substance, the liquid and gas phases:",
+    "options": [
+      "Behave as ideal gases exclusively",
+      "Can be liquefied by pressure alone regardless of temperature",
+      "Become indistinguishable from each other",
+      "Cannot exist under any conditions"
+    ],
+    "correctIndex": 2,
+    "explanation": "At the critical temperature and pressure, the distinction between liquid and gas phases disappears.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "moderate",
+    "questionText": "For an ideal gas, the compressibility factor Z (=PV/nRT) is always equal to:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "A value greater than 1 always"
+    ],
+    "correctIndex": 2,
+    "explanation": "For an ideal gas, PV=nRT exactly, so Z=1 under all conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "easy",
+    "questionText": "Which gas law states that at constant pressure, the volume of a fixed mass of gas is directly proportional to its absolute temperature?",
+    "options": [
+      "Boyle's law",
+      "Charles' law",
+      "Avogadro's law",
+      "Dalton's law"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charles' law states V ∝ T at constant pressure.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "Calculate ΔH for the reaction C(s) + O2(g) → CO2(g), given ΔHf°(CO2) = −393.5 kJ/mol.",
+    "options": [
+      "+393.5 kJ/mol",
+      "−393.5 kJ/mol",
+      "−196.75 kJ/mol",
+      "+196.75 kJ/mol"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔH = ΔHf(products) − ΔHf(reactants) = −393.5 − 0 = −393.5 kJ/mol, since elements in their standard states have ΔHf°=0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction, ΔH = −185 kJ/mol and ΔS = −129 J/K/mol. Calculate ΔG at 298 K.",
+    "options": [
+      "−146.6 kJ/mol",
+      "−223.4 kJ/mol",
+      "+146.6 kJ/mol",
+      "−185 kJ/mol"
+    ],
+    "correctIndex": 0,
+    "explanation": "ΔG = ΔH − TΔS = −185000 − 298×(−129) = −185000 + 38442 ≈ −146558 J ≈ −146.6 kJ/mol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "One mole of an ideal gas is compressed isothermally and reversibly from 10 L to 1 L at 300 K. Calculate the magnitude of work done on the gas (R = 8.314 J/mol·K).",
+    "options": [
+      "2.49 kJ",
+      "5.74 kJ",
+      "11.48 kJ",
+      "23 kJ"
+    ],
+    "correctIndex": 1,
+    "explanation": "W(by gas) = nRT ln(V2/V1) = 8.314×300×ln(0.1) ≈ −5744 J, so the magnitude of work done on the gas is about 5.74 kJ.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "The standard enthalpy of combustion of methane is −890 kJ/mol. Calculate the heat released when 8 g of methane (M=16) is completely combusted.",
+    "options": [
+      "222.5 kJ",
+      "445 kJ",
+      "890 kJ",
+      "1780 kJ"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moles of CH4 = 8/16 = 0.5 mol. Heat released = 0.5 × 890 = 445 kJ.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For an ideal gas undergoing isothermal expansion, the change in internal energy (ΔU) is:",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Cannot be determined"
+    ],
+    "correctIndex": 2,
+    "explanation": "Internal energy of an ideal gas depends only on temperature; since temperature is constant in an isothermal process, ΔU = 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "Given bond enthalpies: H−H = 436 kJ/mol, Cl−Cl = 242 kJ/mol, H−Cl = 431 kJ/mol, calculate ΔH for H2(g) + Cl2(g) → 2HCl(g).",
+    "options": [
+      "+184 kJ/mol",
+      "−184 kJ/mol",
+      "+92 kJ/mol",
+      "−92 kJ/mol"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔH = (bonds broken) − (bonds formed) = (436+242) − (2×431) = 678 − 862 = −184 kJ/mol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "moderate",
+    "questionText": "Hess's law is a direct consequence of the fact that enthalpy is a:",
+    "options": [
+      "Path-dependent function",
+      "State function",
+      "Purely extensive property with no other implications",
+      "Purely intensive property"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since enthalpy is a state function, its change depends only on initial and final states, not the path — the basis of Hess's law.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "moderate",
+    "questionText": "According to the second law of thermodynamics, the entropy of the universe in any spontaneous process:",
+    "options": [
+      "Decreases",
+      "Increases",
+      "Remains exactly constant",
+      "Becomes zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "The second law states that the total entropy of the universe increases for any spontaneous process.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "moderate",
+    "questionText": "For an exothermic reaction, the sign of the enthalpy change (ΔH) is conventionally:",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Undefined"
+    ],
+    "correctIndex": 1,
+    "explanation": "Exothermic reactions release heat to the surroundings, corresponding to a negative ΔH by convention.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "easy",
+    "questionText": "The SI unit of enthalpy is:",
+    "options": [
+      "Joule",
+      "Kelvin",
+      "Pascal",
+      "Mole"
+    ],
+    "correctIndex": 0,
+    "explanation": "Enthalpy, being a form of energy, is measured in joules (or kJ/mol for molar quantities).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For PCl5(g) ⇌ PCl3(g) + Cl2(g), at equilibrium [PCl5]=0.5 M and [PCl3]=[Cl2]=0.1 M each. Calculate Kc.",
+    "options": [
+      "0.01",
+      "0.02",
+      "0.05",
+      "0.2"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kc = [PCl3][Cl2]/[PCl5] = (0.1×0.1)/0.5 = 0.01/0.5 = 0.02.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For a weak base BOH with Kb = 1×10⁻⁵, calculate [OH−] in a 0.01 M solution.",
+    "options": [
+      "≈3.16×10⁻⁴ M",
+      "1×10⁻⁵ M",
+      "1×10⁻⁷ M",
+      "1×10⁻² M"
+    ],
+    "correctIndex": 0,
+    "explanation": "[OH−] ≈ √(KbC) = √(1×10⁻⁵ × 1×10⁻²) = √(1×10⁻⁷) ≈ 3.16×10⁻⁴ M.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "Calculate the pH of a 0.001 M HCl solution, assuming complete dissociation.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "pH = −log[H+] = −log(0.001) = 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "The solubility product (Ksp) of AgCl is 1.8×10⁻¹⁰. Calculate its molar solubility in pure water.",
+    "options": [
+      "≈1.34×10⁻⁵ M",
+      "1.8×10⁻¹⁰ M",
+      "1.8×10⁻⁵ M",
+      "3.6×10⁻¹⁰ M"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ksp = s², so s = √(1.8×10⁻¹⁰) ≈ 1.34×10⁻⁵ M.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "Buffer solutions resist changes in pH mainly because they contain:",
+    "options": [
+      "Only a strong acid",
+      "A weak acid (or base) along with its conjugate base (or acid) in significant amounts",
+      "Only pure water",
+      "Only a strong base"
+    ],
+    "correctIndex": 1,
+    "explanation": "A buffer's weak acid/base and conjugate pair can neutralize small additions of either H+ or OH−, minimizing pH change.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "According to Le Chatelier's principle, adding an inert gas at constant volume to a gaseous equilibrium system will:",
+    "options": [
+      "Shift the equilibrium toward products",
+      "Shift the equilibrium toward reactants",
+      "Have no effect on the equilibrium position",
+      "Always shift toward the side with fewer moles"
+    ],
+    "correctIndex": 2,
+    "explanation": "At constant volume, adding an inert gas doesn't change the partial pressures or concentrations of reacting species, so equilibrium is unaffected.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "moderate",
+    "questionText": "The pH of a neutral aqueous solution at 25°C is:",
+    "options": [
+      "0",
+      "7",
+      "14",
+      "1"
+    ],
+    "correctIndex": 1,
+    "explanation": "At 25°C, pure water has [H+]=[OH−]=10⁻⁷ M, giving a neutral pH of 7.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "moderate",
+    "questionText": "The common ion effect refers to the suppression of ionization of a weak electrolyte upon addition of:",
+    "options": [
+      "An unrelated salt",
+      "A strong electrolyte containing a common ion",
+      "Pure water",
+      "Heat alone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Adding a strong electrolyte that shares a common ion with the weak electrolyte shifts its equilibrium backward, suppressing further ionization.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "moderate",
+    "questionText": "Given Kp = Kc(RT)^Δn, if Δn = 0 for a reaction, then:",
+    "options": [
+      "Kp = Kc",
+      "Kp = Kc × RT",
+      "Kp = Kc/RT",
+      "Kp is undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "When Δn=0, (RT)^0=1, so Kp equals Kc exactly.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "easy",
+    "questionText": "An acid that ionizes completely in aqueous solution is classified as a:",
+    "options": [
+      "Weak acid",
+      "Strong acid",
+      "Buffer",
+      "Amphoteric substance"
+    ],
+    "correctIndex": 1,
+    "explanation": "Strong acids, by definition, undergo essentially complete ionization in water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the standard cell potential for Zn(s) + Cu2+(aq) → Zn2+(aq) + Cu(s), given E°(Cu2+/Cu)=+0.34 V and E°(Zn2+/Zn)=−0.76 V.",
+    "options": [
+      "0.42 V",
+      "1.10 V",
+      "−0.42 V",
+      "−1.10 V"
+    ],
+    "correctIndex": 1,
+    "explanation": "E°cell = E°cathode − E°anode = 0.34 − (−0.76) = 1.10 V.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "Using the Nernst equation, calculate the cell potential at 298 K for the cell above if [Zn2+]=0.1 M and [Cu2+]=1 M (E°cell=1.10 V, n=2).",
+    "options": [
+      "1.07 V",
+      "1.10 V",
+      "1.13 V",
+      "1.16 V"
+    ],
+    "correctIndex": 2,
+    "explanation": "E = E° − (0.0591/n)log([Zn2+]/[Cu2+]) = 1.10 − (0.02955)×log(0.1) = 1.10 + 0.0296 ≈ 1.13 V.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "A current of 5 A is passed through molten NaCl for 3860 seconds. Calculate the mass of sodium deposited (Na=23, F=96500 C/mol).",
+    "options": [
+      "2.3 g",
+      "4.6 g",
+      "9.2 g",
+      "11.5 g"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charge = 5×3860 = 19300 C = 0.2 F. Since Na+ + e− → Na, 0.2 mol Na is deposited = 0.2×23 = 4.6 g.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the equivalent (molar) conductance of a 0.1 M electrolyte solution with specific conductance 0.0129 S/cm.",
+    "options": [
+      "12.9",
+      "129",
+      "1290",
+      "1.29"
+    ],
+    "correctIndex": 1,
+    "explanation": "Λm = κ×1000/C = 0.0129×1000/0.1 = 129 S·cm²/mol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "In the disproportionation of Cl2 in cold dilute NaOH (Cl2+2NaOH→NaCl+NaOCl+H2O), the oxidation state of chlorine changes from 0 to:",
+    "options": [
+      "−1 and +1",
+      "+1 and +3",
+      "−1 and −1",
+      "0 and +1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chlorine disproportionates from 0 to −1 (in NaCl, reduction) and +1 (in NaOCl, oxidation).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "Calculate the oxidation number of chromium in K2Cr2O7.",
+    "options": [
+      "+3",
+      "+4",
+      "+6",
+      "+7"
+    ],
+    "correctIndex": 2,
+    "explanation": "Let Cr = x. 2(+1) + 2x + 7(−2) = 0 → 2 + 2x − 14 = 0 → x = +6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "moderate",
+    "questionText": "In an electrochemical cell, reduction always occurs at the:",
+    "options": [
+      "Anode",
+      "Cathode",
+      "Salt bridge",
+      "Both electrodes equally"
+    ],
+    "correctIndex": 1,
+    "explanation": "By definition, reduction occurs at the cathode in both galvanic and electrolytic cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "moderate",
+    "questionText": "Kohlrausch's law of independent migration of ions is used to calculate the:",
+    "options": [
+      "Rate constant of a reaction",
+      "Limiting molar conductivity of a weak electrolyte",
+      "Equilibrium constant of a reaction",
+      "pH of a solution directly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kohlrausch's law allows calculation of the limiting molar conductivity of a weak electrolyte from the ionic conductivities of strong electrolytes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "moderate",
+    "questionText": "A galvanic (voltaic) cell converts:",
+    "options": [
+      "Electrical energy into chemical energy",
+      "Chemical energy into electrical energy",
+      "Heat directly into electrical energy",
+      "Light into electrical energy"
+    ],
+    "correctIndex": 1,
+    "explanation": "A galvanic cell generates electrical energy from a spontaneous chemical (redox) reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "easy",
+    "questionText": "Faraday's first law of electrolysis states that the mass of substance deposited is directly proportional to the:",
+    "options": [
+      "Quantity of charge (electricity) passed",
+      "Temperature of the electrolyte",
+      "Distance between the electrodes",
+      "Color of the electrolyte solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Faraday's first law: mass deposited ∝ quantity of electric charge passed through the electrolyte.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "A first-order reaction has a rate constant of 0.0693 min⁻¹. Calculate its half-life.",
+    "options": [
+      "5 min",
+      "10 min",
+      "15 min",
+      "20 min"
+    ],
+    "correctIndex": 1,
+    "explanation": "t1/2 = 0.693/k = 0.693/0.0693 = 10 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "The rate constant of a reaction doubles when temperature rises from 300 K to 310 K. Estimate the activation energy (R = 8.314 J/mol·K).",
+    "options": [
+      "26.8 kJ/mol",
+      "53.6 kJ/mol",
+      "107.2 kJ/mol",
+      "5.36 kJ/mol"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using ln(k2/k1) = (Ea/R)(1/T1 − 1/T2): ln2 = (Ea/8.314)×(1/300−1/310), solving gives Ea ≈ 53.6 kJ/mol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a zero-order reaction, the rate of reaction is independent of the:",
+    "options": [
+      "Temperature",
+      "Concentration of reactant",
+      "Presence of a catalyst",
+      "Activation energy"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a zero-order reaction, the rate remains constant regardless of reactant concentration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "The half-life of a first-order reaction is independent of the:",
+    "options": [
+      "Rate constant",
+      "Initial concentration of the reactant",
+      "Temperature (indirectly through k)",
+      "Nature of the reaction"
+    ],
+    "correctIndex": 1,
+    "explanation": "For first-order reactions, t1/2 = 0.693/k, which does not depend on the initial concentration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a second-order reaction, the unit of the rate constant k is:",
+    "options": [
+      "s⁻¹",
+      "mol/L/s",
+      "L/mol/s",
+      "mol²/L²/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a second-order reaction, rate = k[A]², so k has units of L·mol⁻¹·s⁻¹ (equivalently L/mol/s).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "moderate",
+    "questionText": "The order of a chemical reaction is generally determined:",
+    "options": [
+      "Directly from the stoichiometric coefficients of the balanced equation",
+      "Experimentally, based on how rate depends on concentration",
+      "Purely from molecularity in all cases",
+      "Theoretically, without any experiment"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reaction order must be determined experimentally and does not necessarily match the stoichiometric coefficients.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "moderate",
+    "questionText": "A catalyst increases the rate of reaction by altering the:",
+    "options": [
+      "Enthalpy of the reaction",
+      "Activation energy, via an alternate pathway",
+      "Equilibrium constant of the reaction",
+      "Entropy of the system"
+    ],
+    "correctIndex": 1,
+    "explanation": "Catalysts provide an alternate reaction pathway with lower activation energy, without changing the overall thermodynamics.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "easy",
+    "questionText": "The rate of a chemical reaction generally increases with an increase in:",
+    "options": [
+      "The volume of the reaction container",
+      "Temperature",
+      "The addition of an inert, non-reacting gas at constant volume",
+      "Time elapsed since the reaction started"
+    ],
+    "correctIndex": 1,
+    "explanation": "Increased temperature raises the kinetic energy of molecules, increasing the frequency and effectiveness of collisions, thus raising the reaction rate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "questionText": "Calculate the molality of a solution containing 10 g of glucose (M=180) dissolved in 250 g of water.",
+    "options": [
+      "0.111 m",
+      "0.222 m",
+      "0.444 m",
+      "1.0 m"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moles of glucose = 10/180 ≈ 0.0556 mol. Molality = 0.0556/0.25 kg ≈ 0.222 mol/kg.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "questionText": "Calculate the boiling point elevation of a solution of 6 g urea (M=60) in 500 g water (Kb for water = 0.52 K·kg/mol).",
+    "options": [
+      "0.052 K",
+      "0.104 K",
+      "0.208 K",
+      "0.52 K"
+    ],
+    "correctIndex": 1,
+    "explanation": "Molality = (6/60)/0.5 = 0.2 mol/kg. ΔTb = Kb×m = 0.52×0.2 = 0.104 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "questionText": "The relative lowering of vapor pressure of a solution, according to Raoult's law, is equal to the mole fraction of the:",
+    "options": [
+      "Solvent",
+      "Solute",
+      "Both solute and solvent equally",
+      "Neither of the components"
+    ],
+    "correctIndex": 1,
+    "explanation": "Raoult's law states that the relative lowering of vapor pressure equals the mole fraction of the non-volatile solute.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "questionText": "Calculate the freezing point depression of a 0.1 m aqueous NaCl solution, assuming complete dissociation (i=2, Kf=1.86 K·kg/mol).",
+    "options": [
+      "0.186 K",
+      "0.372 K",
+      "0.744 K",
+      "1.86 K"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔTf = i×Kf×m = 2×1.86×0.1 = 0.372 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "questionText": "Calculate the osmotic pressure of a solution containing 1 mole of solute in 1 liter of solution at 300 K (R = 0.0821 L·atm/mol·K).",
+    "options": [
+      "8.21 atm",
+      "24.6 atm",
+      "49.3 atm",
+      "82.1 atm"
+    ],
+    "correctIndex": 1,
+    "explanation": "π = CRT = 1×0.0821×300 ≈ 24.6 atm.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "moderate",
+    "questionText": "For a solute that dissociates completely into n ions in solution, the Van't Hoff factor (i) is approximately equal to:",
+    "options": [
+      "1/n",
+      "n",
+      "n²",
+      "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "For complete dissociation into n ions, the Van't Hoff factor i approaches n.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "moderate",
+    "questionText": "Henry's law relates the solubility of a gas in a liquid to the gas's:",
+    "options": [
+      "Temperature dependence only",
+      "Partial pressure above the liquid",
+      "Molar volume",
+      "Liquid's viscosity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Henry's law states that the solubility of a gas in a liquid is directly proportional to its partial pressure above the liquid surface.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "easy",
+    "questionText": "Colligative properties of a solution depend primarily on the:",
+    "options": [
+      "Chemical nature of the solute",
+      "Number of solute particles present, not their identity",
+      "Color of the solute",
+      "Molecular weight of the solvent only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Colligative properties (boiling point elevation, freezing point depression, osmotic pressure, vapor pressure lowering) depend on the number of solute particles, not their chemical identity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "difficulty": "tough",
+    "questionText": "Physical adsorption of gases on solid surfaces generally decreases with an increase in:",
+    "options": [
+      "Surface area of the adsorbent",
+      "Temperature",
+      "Pressure of the gas",
+      "Nature of the adsorbent alone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Physisorption is exothermic, so higher temperatures generally decrease the extent of adsorption (Le Chatelier-type behavior).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which type of colloid has both the dispersed phase and the dispersion medium as liquids?",
+    "options": [
+      "Sol",
+      "Emulsion",
+      "Aerosol",
+      "Foam"
+    ],
+    "correctIndex": 1,
+    "explanation": "An emulsion is a colloidal dispersion of one liquid in another immiscible liquid.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "difficulty": "moderate",
+    "questionText": "The Tyndall effect, the scattering of light by colloidal particles, occurs because colloidal particle size is:",
+    "options": [
+      "Much smaller than the wavelength of visible light",
+      "Comparable to the wavelength of visible light",
+      "Much larger than the wavelength of visible light",
+      "Irrelevant to how light interacts with the particles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Colloidal particles have sizes comparable to the wavelength of visible light, which causes noticeable light scattering.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "difficulty": "moderate",
+    "questionText": "In physisorption, the primary forces of attraction between adsorbate and adsorbent are:",
+    "options": [
+      "Covalent bonds",
+      "Van der Waals forces",
+      "Ionic bonds",
+      "Metallic bonds"
+    ],
+    "correctIndex": 1,
+    "explanation": "Physisorption involves weak Van der Waals forces, unlike chemisorption which involves stronger chemical bonding.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Surface Chemistry",
+    "difficulty": "easy",
+    "questionText": "A catalyst that exists in the same physical phase as the reactants is termed a(n):",
+    "options": [
+      "Heterogeneous catalyst",
+      "Homogeneous catalyst",
+      "Autocatalyst",
+      "Negative catalyst"
+    ],
+    "correctIndex": 1,
+    "explanation": "Homogeneous catalysis occurs when the catalyst is in the same phase as the reactants.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "The general electronic configuration of Group 1 (alkali metal) elements is:",
+    "options": [
+      "ns1",
+      "ns2",
+      "ns2np1",
+      "ns2np5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alkali metals have a single valence electron in the outermost s orbital, giving the configuration ns1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which of the following elements has the highest electronegativity on the Pauling scale?",
+    "options": [
+      "Oxygen",
+      "Chlorine",
+      "Fluorine",
+      "Nitrogen"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fluorine has the highest electronegativity (approximately 4.0) of all elements.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Atomic radius generally decreases across a period from left to right mainly due to:",
+    "options": [
+      "Increasing shielding effect",
+      "Increasing effective nuclear charge acting on the same principal shell",
+      "Decreasing number of electrons",
+      "Addition of a new electron shell"
+    ],
+    "correctIndex": 1,
+    "explanation": "As protons are added across a period without adding new shells, the effective nuclear charge increases, pulling electrons closer and shrinking atomic radius.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "moderate",
+    "questionText": "Electron affinity generally becomes more negative across a period, with notable exceptions in elements with:",
+    "options": [
+      "Only alkali metal configurations",
+      "Stable half-filled or completely filled subshell configurations (e.g., N, noble gases)",
+      "Only transition metal configurations",
+      "Only halogens"
+    ],
+    "correctIndex": 1,
+    "explanation": "Elements with extra electronic stability (like N's half-filled p3 or noble gases' filled shells) show anomalously low (less favorable) electron affinities.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "moderate",
+    "questionText": "The diagonal relationship in the periodic table is best exemplified by the similarity between:",
+    "options": [
+      "Elements in the same group",
+      "Elements in the same period",
+      "Elements placed diagonally across periods (e.g., Li and Mg)",
+      "Elements with identical atomic mass"
+    ],
+    "correctIndex": 2,
+    "explanation": "The diagonal relationship refers to similarities between elements diagonally placed, such as lithium and magnesium, due to comparable charge density.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "easy",
+    "questionText": "Metallic character in the periodic table generally increases:",
+    "options": [
+      "Across a period from left to right",
+      "Down a group",
+      "Diagonally toward the top-right corner",
+      "In a random, unpredictable pattern"
+    ],
+    "correctIndex": 1,
+    "explanation": "Metallic character increases down a group due to decreasing ionization energy and increasing atomic size.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which allotrope of phosphorus is more reactive and must be stored under water due to its instability in air?",
+    "options": [
+      "Red phosphorus",
+      "White phosphorus",
+      "Black phosphorus",
+      "Violet phosphorus"
+    ],
+    "correctIndex": 1,
+    "explanation": "White phosphorus is highly reactive and spontaneously ignites in air, so it is stored under water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Based on VSEPR theory, the shape of the XeF2 molecule is:",
+    "options": [
+      "Bent",
+      "Linear",
+      "T-shaped",
+      "Square planar"
+    ],
+    "correctIndex": 1,
+    "explanation": "XeF2 has sp3d hybridization with 3 lone pairs occupying equatorial positions, giving a linear molecular shape.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which oxide of nitrogen is commonly known as laughing gas, used as a mild anesthetic?",
+    "options": [
+      "NO",
+      "N2O",
+      "NO2",
+      "N2O5"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nitrous oxide (N2O) is commonly referred to as laughing gas.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Boric acid (H3BO3) behaves as a weak monobasic acid mainly because it:",
+    "options": [
+      "Directly donates a proton like a typical Bronsted acid",
+      "Acts as a Lewis acid, accepting a hydroxide ion from water",
+      "Behaves as a strong Bronsted base",
+      "Does not dissolve in water at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Boric acid accepts OH− from water (Lewis acid behavior), releasing H+ indirectly, rather than acting as a classical Bronsted acid.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "The most stable oxidation state of lead (Pb) in its compounds is generally:",
+    "options": [
+      "+2",
+      "+4",
+      "0",
+      "+6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Due to the inert pair effect, +2 is the more stable oxidation state for lead, while +4 is relatively less stable.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Interhalogen compounds are generally more chemically reactive than the parent halogens themselves mainly because:",
+    "options": [
+      "They contain only one type of halogen atom",
+      "The bond between two different halogens is weaker than the X−X bond in a diatomic halogen",
+      "They lack any lone pairs of electrons",
+      "They are always purely ionic compounds"
+    ],
+    "correctIndex": 1,
+    "explanation": "The bond between two dissimilar halogens (X−X') is generally weaker than the corresponding X−X bond, making interhalogens more reactive.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "Silicones are polymeric compounds with a repeating backbone made of alternating:",
+    "options": [
+      "Carbon and hydrogen atoms",
+      "Silicon and oxygen atoms",
+      "Carbon and nitrogen atoms",
+      "Silicon and carbon atoms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Silicones have a Si−O−Si−O backbone, with organic groups attached to the silicon atoms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "Which noble gas was the first to be experimentally shown to form true chemical compounds?",
+    "options": [
+      "Helium",
+      "Neon",
+      "Argon",
+      "Xenon"
+    ],
+    "correctIndex": 3,
+    "explanation": "Xenon was the first noble gas shown to form compounds, such as XePtF6, prepared by Neil Bartlett in 1962.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "easy",
+    "questionText": "The most abundant element in the Earth's crust, after oxygen, is:",
+    "options": [
+      "Carbon",
+      "Silicon",
+      "Aluminum",
+      "Iron"
+    ],
+    "correctIndex": 1,
+    "explanation": "Silicon is the second most abundant element in the Earth's crust after oxygen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "easy",
+    "questionText": "Ozone (O3) is an allotropic form of the element:",
+    "options": [
+      "Nitrogen",
+      "Oxygen",
+      "Sulfur",
+      "Carbon"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ozone (O3) is a triatomic allotrope of oxygen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Transition metals commonly show variable oxidation states mainly because of the:",
+    "options": [
+      "Large size of their atoms",
+      "Small energy difference between the (n−1)d and ns orbitals",
+      "High electronegativity",
+      "Presence of only s electrons in their valence shell"
+    ],
+    "correctIndex": 1,
+    "explanation": "The small energy gap between (n−1)d and ns orbitals allows electrons from both to participate in bonding, enabling multiple oxidation states.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which of the following transition metal ions is expected to be colorless due to a completely empty d-orbital configuration?",
+    "options": [
+      "Ti3+",
+      "V3+",
+      "Sc3+",
+      "Cr3+"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sc3+ has a d0 configuration, so no d-d electronic transitions are possible, making it colorless.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "The catalytic activity of many transition metals is largely attributed to their ability to show:",
+    "options": [
+      "High melting points",
+      "Variable oxidation states and the ability to form complexes/intermediates",
+      "Diamagnetic behavior in all cases",
+      "Low density"
+    ],
+    "correctIndex": 1,
+    "explanation": "Variable oxidation states allow transition metals to form intermediate complexes with reactants, facilitating catalysis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Interstitial compounds formed by transition metals with small atoms like carbon, hydrogen, or nitrogen are generally:",
+    "options": [
+      "Soft, with low melting points",
+      "Very hard, with high melting points",
+      "Volatile liquids at room temperature",
+      "Non-conducting insulators"
+    ],
+    "correctIndex": 1,
+    "explanation": "Interstitial compounds are typically extremely hard and have high melting points, retaining metallic conductivity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "The general electronic configuration of transition (d-block) elements is:",
+    "options": [
+      "ns2np1-6",
+      "(n−1)d1-10 ns0-2",
+      "(n−2)f1-14",
+      "ns1 only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Transition elements are characterized by a partially filled (n−1)d subshell alongside the ns subshell.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "Lanthanoids and actinoids together are collectively known as the:",
+    "options": [
+      "Alkali metals",
+      "Inner transition elements",
+      "Noble gases",
+      "Halogens"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lanthanoids and actinoids, characterized by filling of f-orbitals, are together called inner transition elements.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "easy",
+    "questionText": "The most common and stable oxidation state exhibited by lanthanoid elements is:",
+    "options": [
+      "+1",
+      "+2",
+      "+3",
+      "+4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lanthanoids most commonly and stably exhibit the +3 oxidation state.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "easy",
+    "questionText": "Mercury is a unique metal because at room temperature it exists as a:",
+    "options": [
+      "Gas",
+      "Liquid",
+      "Radioactive solid",
+      "Non-metallic solid"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mercury is the only metal that is liquid at standard room temperature.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Calculate the effective atomic number (EAN) of cobalt in [Co(NH3)6]3+ (atomic number of Co = 27).",
+    "options": [
+      "24",
+      "30",
+      "33",
+      "36"
+    ],
+    "correctIndex": 3,
+    "explanation": "Co3+ has 27−3=24 electrons. Each of the 6 NH3 ligands donates 2 electrons: 24+12=36.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "The IUPAC name of [Co(NH3)5Cl]Cl2 is:",
+    "options": [
+      "Pentaamminechloridocobalt(III) chloride",
+      "Pentaamminecobalt(III) chloride",
+      "Chloridopentaamminecobalt(II) chloride",
+      "Hexaamminecobalt(III) chloride"
+    ],
+    "correctIndex": 0,
+    "explanation": "The complex contains Co(III), five ammine ligands, and one chlorido ligand, giving the name pentaamminechloridocobalt(III) chloride.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "The number of geometrical isomers possible for an octahedral complex of the type [Ma4b2] is:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 1,
+    "explanation": "[Ma4b2] octahedral complexes can exist as cis and trans isomers, giving 2 geometrical isomers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "According to Crystal Field Theory, the d-orbitals in an octahedral complex split into two energy levels known as:",
+    "options": [
+      "t2g and eg",
+      "e and t2",
+      "dxy and dz2 sets only",
+      "sp3d2 sets only"
+    ],
+    "correctIndex": 0,
+    "explanation": "In an octahedral field, d-orbitals split into the lower-energy t2g set and the higher-energy eg set.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "A strong field ligand like CN− typically causes which type of behavior in an octahedral complex?",
+    "options": [
+      "Small splitting energy, favoring a high-spin complex",
+      "Large splitting energy, favoring a low-spin complex",
+      "No orbital splitting at all",
+      "Splitting only observed in tetrahedral complexes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Strong field ligands like CN− cause a large crystal field splitting, favoring pairing of electrons in the lower t2g orbitals (low-spin).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "The coordination number of nickel in [Ni(CO)4] is:",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "[Ni(CO)4] is tetrahedral with 4 CO ligands directly bonded to Ni, giving a coordination number of 4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "moderate",
+    "questionText": "A ligand capable of binding to a central metal atom through two donor atoms simultaneously is called a:",
+    "options": [
+      "Monodentate ligand",
+      "Bidentate ligand",
+      "Ambidentate ligand",
+      "Polydentate ligand exclusively above 2 donors"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bidentate ligands, like ethylenediamine, coordinate through exactly two donor atoms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "moderate",
+    "questionText": "EDTA (ethylenediaminetetraacetic acid) is a classic example of a:",
+    "options": [
+      "Monodentate ligand",
+      "Bidentate ligand",
+      "Hexadentate (polydentate) ligand",
+      "Unidentate ligand"
+    ],
+    "correctIndex": 2,
+    "explanation": "EDTA has six donor atoms (2 N and 4 O), making it a hexadentate ligand.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "easy",
+    "questionText": "In coordination chemistry, the central metal atom/ion is generally regarded as a:",
+    "options": [
+      "Lewis base",
+      "Lewis acid",
+      "Ligand itself",
+      "Counter ion"
+    ],
+    "correctIndex": 1,
+    "explanation": "The central metal ion accepts electron pairs from ligands, behaving as a Lewis acid.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "easy",
+    "questionText": "Werner's theory of coordination compounds introduced the important concept of:",
+    "options": [
+      "Only ionic bonding in complexes",
+      "Primary and secondary valencies",
+      "Only covalent bonding in complexes",
+      "The octet rule for transition metals"
+    ],
+    "correctIndex": 1,
+    "explanation": "Werner distinguished between primary valency (ionizable, corresponding to oxidation state) and secondary valency (coordination number).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "General Principles of Metallurgy",
+    "difficulty": "tough",
+    "questionText": "The process of concentrating an ore by exploiting differences in the wettability of ore and gangue particles is called:",
+    "options": [
+      "Magnetic separation",
+      "Froth flotation",
+      "Leaching",
+      "Roasting"
+    ],
+    "correctIndex": 1,
+    "explanation": "Froth flotation separates sulfide ores from gangue based on differences in surface wettability using frothing agents.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "General Principles of Metallurgy",
+    "difficulty": "tough",
+    "questionText": "In the extraction of iron in a blast furnace, the primary reducing agent used is:",
+    "options": [
+      "Hydrogen gas",
+      "Carbon monoxide",
+      "Aluminum metal",
+      "Sodium metal"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbon monoxide, generated within the furnace, reduces iron oxides to metallic iron.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "General Principles of Metallurgy",
+    "difficulty": "tough",
+    "questionText": "The process of heating an ore strongly in the presence of excess air to remove volatile impurities such as sulfur and arsenic is called:",
+    "options": [
+      "Calcination",
+      "Roasting",
+      "Smelting",
+      "Refining"
+    ],
+    "correctIndex": 1,
+    "explanation": "Roasting involves heating sulfide ores in excess air, converting them to oxides and removing volatile impurities.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "General Principles of Metallurgy",
+    "difficulty": "moderate",
+    "questionText": "Electrolytic refining is used to obtain metals of very high purity, notably exemplified in the industrial purification of:",
+    "options": [
+      "Iron",
+      "Copper",
+      "Bauxite ore",
+      "Sulfur"
+    ],
+    "correctIndex": 1,
+    "explanation": "Electrolytic refining is a standard method for producing high-purity copper from blister copper.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "General Principles of Metallurgy",
+    "difficulty": "easy",
+    "questionText": "Calcination is a metallurgical process typically used to remove which type of impurity from carbonate or hydrated ores?",
+    "options": [
+      "Only sulfur impurities",
+      "Moisture, CO2, and other volatile matter",
+      "Only metal oxide impurities",
+      "Only silica"
+    ],
+    "correctIndex": 1,
+    "explanation": "Calcination involves heating an ore (usually carbonate or hydrated) in limited air to drive off moisture and volatile substances like CO2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "difficulty": "tough",
+    "questionText": "Hydrogen exhibits properties resembling both alkali metals and halogens mainly because it:",
+    "options": [
+      "Is a true metal",
+      "Has one electron in its valence shell (like alkali metals) but needs one more to complete its shell (like halogens)",
+      "Is radioactive",
+      "Cannot form any compounds"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hydrogen's single valence electron and near-complete duplet electron shell give it dual chemical character, resembling both groups.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "difficulty": "moderate",
+    "questionText": "Heavy water, used as a moderator in nuclear reactors, has the chemical formula:",
+    "options": [
+      "H2O2",
+      "D2O",
+      "H2O",
+      "HDO"
+    ],
+    "correctIndex": 1,
+    "explanation": "Heavy water is deuterium oxide, D2O, where hydrogen is replaced by its heavier isotope deuterium.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "difficulty": "moderate",
+    "questionText": "Hydrogen peroxide (H2O2) can act as both an oxidizing and a reducing agent because the oxygen in it exists in the:",
+    "options": [
+      "Highest possible oxidation state",
+      "Intermediate oxidation state of −1",
+      "Lowest oxidation state of −2",
+      "Zero oxidation state"
+    ],
+    "correctIndex": 1,
+    "explanation": "Oxygen in H2O2 has an oxidation state of −1, intermediate between 0 (O2) and −2 (H2O/oxides), enabling dual redox behavior.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "difficulty": "easy",
+    "questionText": "The most abundant naturally occurring isotope of hydrogen is:",
+    "options": [
+      "Deuterium",
+      "Tritium",
+      "Protium",
+      "None of these"
+    ],
+    "correctIndex": 2,
+    "explanation": "Protium (¹H), with no neutrons, makes up the vast majority (>99.98%) of naturally occurring hydrogen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "s-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which alkali metal shows an anomalous diagonal relationship with magnesium due to similar charge density?",
+    "options": [
+      "Sodium",
+      "Lithium",
+      "Potassium",
+      "Cesium"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lithium's small size and high charge density give it a diagonal relationship with magnesium, sharing several chemical similarities.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "s-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which alkaline earth metal does not impart any characteristic color to a Bunsen flame test?",
+    "options": [
+      "Calcium",
+      "Beryllium",
+      "Strontium",
+      "Barium"
+    ],
+    "correctIndex": 1,
+    "explanation": "Beryllium (and to a large extent magnesium) does not show a characteristic flame color, unlike the heavier alkaline earth metals.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "s-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "Alkali metals act as strong reducing agents mainly because of their:",
+    "options": [
+      "High electronegativity",
+      "Low ionization energy",
+      "Small atomic size",
+      "High electron affinity"
+    ],
+    "correctIndex": 1,
+    "explanation": "The low ionization energy of alkali metals allows them to readily lose their valence electron, making them strong reducing agents.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "s-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "Among the alkaline earth metal sulfates, which is the most soluble in water?",
+    "options": [
+      "BeSO4",
+      "MgSO4",
+      "CaSO4",
+      "BaSO4"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solubility of alkaline earth metal sulfates decreases down the group; BeSO4 is the most soluble.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "s-Block Elements",
+    "difficulty": "easy",
+    "questionText": "The general electronic configuration of Group 2 (alkaline earth metal) elements is:",
+    "options": [
+      "ns1",
+      "ns2",
+      "ns2np1",
+      "ns2np6"
+    ],
+    "correctIndex": 1,
+    "explanation": "Alkaline earth metals have two valence electrons in the outermost s orbital, giving the configuration ns2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "tough",
+    "questionText": "The IUPAC name of CH3-CH(CH3)-CH2-CH3 is:",
+    "options": [
+      "Isobutane",
+      "2-methylbutane",
+      "n-pentane",
+      "2,2-dimethylpropane"
+    ],
+    "correctIndex": 1,
+    "explanation": "The longest chain has 4 carbons (butane) with a methyl substituent at position 2, giving 2-methylbutane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "tough",
+    "questionText": "Which of the following alkyl groups exhibits the strongest +I (inductive) effect?",
+    "options": [
+      "−CH3",
+      "−C2H5",
+      "−CH(CH3)2",
+      "−C(CH3)3"
+    ],
+    "correctIndex": 3,
+    "explanation": "The tertiary butyl group (−C(CH3)3) generally shows the strongest +I effect among simple alkyl substituents.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "tough",
+    "questionText": "Which of the following species acts as a nucleophile?",
+    "options": [
+      "H+",
+      "CN−",
+      "BF3",
+      "AlCl3"
+    ],
+    "correctIndex": 1,
+    "explanation": "CN− is an electron-pair donor (nucleophile), while the others are electron-pair acceptors (electrophiles/Lewis acids).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "tough",
+    "questionText": "The most stable conformation of ethane, with minimum torsional strain, is the:",
+    "options": [
+      "Eclipsed conformation",
+      "Staggered conformation",
+      "Fully overlapping conformation",
+      "Bent conformation"
+    ],
+    "correctIndex": 1,
+    "explanation": "The staggered conformation minimizes electron-electron repulsion between C-H bonds, making it the most stable form of ethane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "tough",
+    "questionText": "Optical isomerism (chirality) arises in molecules that possess:",
+    "options": [
+      "A plane of symmetry",
+      "A chiral (asymmetric) carbon center, lacking a plane of symmetry",
+      "Only carbon-carbon double bonds",
+      "Only single bonds throughout"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chirality requires the absence of any internal symmetry plane, typically resulting from a carbon bonded to four different groups.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "moderate",
+    "questionText": "Homolytic fission (cleavage) of a covalent bond produces:",
+    "options": [
+      "Carbocations",
+      "Free radicals",
+      "Carbanions exclusively",
+      "Only nucleophiles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Homolytic fission splits the bonding electron pair equally between the two fragments, generating free radicals.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "moderate",
+    "questionText": "Compounds having the same molecular formula but different structural arrangements of atoms are called:",
+    "options": [
+      "Geometrical isomers specifically",
+      "Structural isomers",
+      "Optical isomers exclusively",
+      "Conformers"
+    ],
+    "correctIndex": 1,
+    "explanation": "Structural (constitutional) isomers share a molecular formula but differ in how their atoms are connected.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry - Some Basic Principles and Techniques",
+    "difficulty": "easy",
+    "questionText": "The functional group −COOH represents which class of organic compound?",
+    "options": [
+      "Aldehyde",
+      "Ketone",
+      "Carboxylic acid",
+      "Ester"
+    ],
+    "correctIndex": 2,
+    "explanation": "The −COOH group is characteristic of carboxylic acids.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Markovnikov's rule for the addition of HX to an unsymmetrical alkene states that the halogen adds to the carbon atom:",
+    "options": [
+      "Bearing more hydrogen atoms",
+      "Bearing fewer hydrogen atoms (forming the more stable carbocation intermediate)",
+      "Chosen at random",
+      "Only at a terminal carbon regardless of substitution"
+    ],
+    "correctIndex": 1,
+    "explanation": "Markovnikov addition proceeds via the more stable carbocation, placing the halide on the more substituted carbon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Ozonolysis of an alkene followed by reductive workup (Zn/H2O) yields:",
+    "options": [
+      "Only carboxylic acids",
+      "Aldehydes and/or ketones, depending on substitution",
+      "Only alcohols",
+      "Only alkanes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reductive ozonolysis cleaves the C=C double bond to give aldehydes (from less substituted carbons) or ketones (from more substituted carbons).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "The Wurtz reaction is used to convert alkyl halides into alkanes with an increased carbon chain, using which reagent?",
+    "options": [
+      "Anhydrous AlCl3",
+      "Sodium metal in dry ether",
+      "Concentrated H2SO4",
+      "Aqueous NaOH"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Wurtz reaction couples two alkyl halide molecules using sodium metal in dry ether, forming a longer-chain alkane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Benzene preferentially undergoes electrophilic substitution rather than addition reactions mainly because substitution:",
+    "options": [
+      "Destroys the aromatic ring entirely",
+      "Preserves the ring's aromatic stability (resonance energy)",
+      "Cannot occur with electrophiles",
+      "Only occurs under extreme conditions and is otherwise impossible"
+    ],
+    "correctIndex": 1,
+    "explanation": "Substitution allows benzene to retain its stabilizing aromatic delocalization, unlike addition which would disrupt this stability.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Friedel-Crafts alkylation of benzene is typically carried out using an alkyl halide in the presence of which catalyst?",
+    "options": [
+      "Anhydrous AlCl3",
+      "Only dilute HCl",
+      "Only concentrated H2SO4",
+      "Only aqueous NaOH"
+    ],
+    "correctIndex": 0,
+    "explanation": "Anhydrous AlCl3 acts as a Lewis acid catalyst, generating the carbocation electrophile needed for Friedel-Crafts alkylation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "moderate",
+    "questionText": "Alkynes generally show significant reactivity toward addition reactions mainly because they possess:",
+    "options": [
+      "Only single bonds",
+      "Two pi bonds, providing multiple reactive sites",
+      "No functional group at all",
+      "An inability to undergo any addition reactions"
+    ],
+    "correctIndex": 1,
+    "explanation": "The two pi bonds in the carbon-carbon triple bond of alkynes provide reactive sites for successive addition reactions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "moderate",
+    "questionText": "The general molecular formula for saturated open-chain alkanes is:",
+    "options": [
+      "CnH2n",
+      "CnH2n+2",
+      "CnH2n−2",
+      "CnHn"
+    ],
+    "correctIndex": 1,
+    "explanation": "Alkanes follow the general formula CnH2n+2, reflecting full saturation with single bonds only.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "easy",
+    "questionText": "Methane, the simplest alkane, has the molecular formula:",
+    "options": [
+      "CH2",
+      "CH3",
+      "CH4",
+      "C2H6"
+    ],
+    "correctIndex": 2,
+    "explanation": "Methane is CH4, the simplest saturated hydrocarbon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "SN2 nucleophilic substitution reactions proceed with:",
+    "options": [
+      "Retention of configuration at the reacting carbon",
+      "Inversion of configuration (Walden inversion) at the reacting carbon",
+      "Complete racemization always",
+      "No specific stereochemical outcome"
+    ],
+    "correctIndex": 1,
+    "explanation": "SN2 reactions occur via a single concerted backside attack, resulting in inversion of configuration at the reacting carbon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Among primary, secondary, and tertiary alkyl halides, which undergoes SN2 substitution most readily, all else being equal?",
+    "options": [
+      "Methyl halide (least hindered)",
+      "A secondary alkyl halide",
+      "A tertiary alkyl halide",
+      "They all react at identical rates"
+    ],
+    "correctIndex": 0,
+    "explanation": "SN2 rate decreases with increasing steric hindrance around the reacting carbon, so methyl (and primary) halides react fastest.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "The Finkelstein reaction is used to convert alkyl chlorides or bromides into alkyl iodides using which reagent?",
+    "options": [
+      "NaCl in water",
+      "NaI in dry acetone",
+      "NaOH in water",
+      "KCl in ethanol"
+    ],
+    "correctIndex": 1,
+    "explanation": "NaI in dry acetone drives the Finkelstein reaction via precipitation of NaCl or NaBr, favoring formation of the alkyl iodide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "moderate",
+    "questionText": "Grignard reagents are prepared by reacting alkyl halides with magnesium metal in the presence of:",
+    "options": [
+      "Water",
+      "Dry ether",
+      "Aqueous ethanol",
+      "Concentrated H2SO4"
+    ],
+    "correctIndex": 1,
+    "explanation": "Grignard reagent formation requires anhydrous (dry) ether as the solvent, since Grignard reagents react violently with water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "moderate",
+    "questionText": "Vinyl halides (halogens attached directly to an sp2 carbon of a C=C double bond) are generally less reactive toward nucleophilic substitution mainly due to:",
+    "options": [
+      "Steric hindrance alone",
+      "Resonance giving the C−X bond partial double-bond character",
+      "The complete absence of any halogen atom",
+      "The unusually high electronegativity of carbon"
+    ],
+    "correctIndex": 1,
+    "explanation": "Resonance delocalization of the halogen lone pair into the pi system strengthens and shortens the C−X bond, reducing its reactivity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "easy",
+    "questionText": "DDT, a well-known haloarene compound, was historically used primarily as a(n):",
+    "options": [
+      "Fertilizer",
+      "Insecticide",
+      "Antibiotic",
+      "Industrial solvent"
+    ],
+    "correctIndex": 1,
+    "explanation": "DDT was widely used as an insecticide before its environmental persistence led to restrictions on its use.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "tough",
+    "questionText": "The Lucas test, used to distinguish primary, secondary, and tertiary alcohols, involves reaction with:",
+    "options": [
+      "Dilute HCl alone",
+      "Concentrated HCl with anhydrous ZnCl2",
+      "Aqueous NaOH",
+      "KMnO4 solution"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Lucas reagent (conc. HCl + anhydrous ZnCl2) reacts at different rates with primary, secondary, and tertiary alcohols, distinguishing them by turbidity onset time.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "tough",
+    "questionText": "The Williamson synthesis is a standard method for the preparation of:",
+    "options": [
+      "Alcohols",
+      "Ethers",
+      "Aldehydes",
+      "Ketones"
+    ],
+    "correctIndex": 1,
+    "explanation": "Williamson ether synthesis involves reacting an alkyl halide with a sodium alkoxide to form an ether.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "tough",
+    "questionText": "Phenol reacts with bromine water to produce a white precipitate of:",
+    "options": [
+      "Monobromophenol",
+      "2,4,6-tribromophenol",
+      "Dibromophenol",
+      "No visible precipitate forms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Phenol readily undergoes electrophilic substitution with bromine water at three positions, forming an insoluble white precipitate of 2,4,6-tribromophenol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "moderate",
+    "questionText": "Ethers are generally less chemically reactive than alcohols primarily because they:",
+    "options": [
+      "Have higher boiling points",
+      "Lack a reactive −OH hydrogen for hydrogen bonding and typical reactions",
+      "Contain a reactive carbonyl group",
+      "Are always strongly acidic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Without the reactive −OH group present in alcohols, ethers are relatively inert under many typical reaction conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "moderate",
+    "questionText": "Among primary, secondary, and tertiary alcohols, which would show the fastest positive result (turbidity within about 5 minutes) in the Lucas test?",
+    "options": [
+      "Primary alcohol",
+      "Secondary alcohol",
+      "Tertiary alcohol",
+      "All react at the same rate"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tertiary alcohols react fastest with the Lucas reagent because they form the most stable carbocation intermediate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "easy",
+    "questionText": "The general formula for saturated monohydric alcohols is:",
+    "options": [
+      "CnH2nOH",
+      "CnH2n+1OH",
+      "CnH2n−1OH",
+      "CnH2n+2OH"
+    ],
+    "correctIndex": 1,
+    "explanation": "Saturated monohydric alcohols follow the formula CnH2n+1OH.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "The Cannizzaro reaction is characteristic of aldehydes that:",
+    "options": [
+      "Have alpha-hydrogens available",
+      "Lack an alpha-hydrogen (e.g., formaldehyde, benzaldehyde)",
+      "Are actually ketones",
+      "Are actually carboxylic acids"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aldehydes without alpha-hydrogens undergo base-catalyzed disproportionation (Cannizzaro reaction) instead of aldol reactions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Fehling's test distinguishes aliphatic aldehydes from ketones; a positive test produces a:",
+    "options": [
+      "Silver mirror on the test tube walls",
+      "Brick-red precipitate of Cu2O",
+      "A distinct yellow precipitate",
+      "No visible color change at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aliphatic aldehydes reduce Fehling's solution (Cu2+) to give a brick-red precipitate of Cu2O.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Among acetic acid and its chlorinated derivatives, which is the strongest acid due to inductive electron-withdrawal?",
+    "options": [
+      "Acetic acid",
+      "Chloroacetic acid",
+      "Dichloroacetic acid",
+      "Trichloroacetic acid"
+    ],
+    "correctIndex": 3,
+    "explanation": "Trichloroacetic acid has the most electron-withdrawing chlorine substituents, stabilizing its conjugate base best and making it the strongest acid among these.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "The Hell-Volhard-Zelinsky (HVZ) reaction is used to introduce a halogen specifically at the:",
+    "options": [
+      "Beta-carbon of a carboxylic acid",
+      "Alpha-carbon of a carboxylic acid",
+      "Carbonyl carbon directly",
+      "Terminal carbon regardless of proximity to the carboxyl group"
+    ],
+    "correctIndex": 1,
+    "explanation": "The HVZ reaction selectively halogenates the alpha-carbon adjacent to the carboxylic acid group.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Aldol condensation involves a carbonyl compound with alpha-hydrogens reacting under the influence of:",
+    "options": [
+      "Only a strong acid, with no base required",
+      "A base, forming a beta-hydroxy aldehyde or ketone intermediate",
+      "Water alone, with no catalyst",
+      "Only halogens as the reagent"
+    ],
+    "correctIndex": 1,
+    "explanation": "Base-catalyzed aldol addition forms a carbanion at the alpha-carbon, which attacks another carbonyl compound to form a beta-hydroxy carbonyl product.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "moderate",
+    "questionText": "Which functional group is common to both aldehydes and ketones?",
+    "options": [
+      "Hydroxyl group (−OH)",
+      "Carbonyl group (C=O)",
+      "Carboxyl group (−COOH)",
+      "Amino group (−NH2)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Both aldehydes and ketones contain a carbonyl group; they differ in what is attached to the carbonyl carbon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "moderate",
+    "questionText": "Esters are typically prepared by reacting a carboxylic acid with an alcohol in the presence of:",
+    "options": [
+      "A base catalyst only",
+      "An acid catalyst (e.g., concentrated H2SO4)",
+      "Water alone, without any catalyst",
+      "No catalyst is needed at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fischer esterification is acid-catalyzed, typically using concentrated H2SO4 to drive the equilibrium toward ester formation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "easy",
+    "questionText": "The IUPAC suffix used when naming a ketone is:",
+    "options": [
+      "-al",
+      "-one",
+      "-oic acid",
+      "-ol"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ketones are named with the suffix '-one' in IUPAC nomenclature.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "The Hofmann bromamide degradation reaction converts an amide into a primary amine with:",
+    "options": [
+      "The same number of carbon atoms as the original amide",
+      "One less carbon atom than the original amide",
+      "One more carbon atom than the original amide",
+      "Two more carbon atoms than the original amide"
+    ],
+    "correctIndex": 1,
+    "explanation": "During Hofmann degradation, the carbonyl carbon is lost as CO2, resulting in an amine with one fewer carbon than the starting amide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Diazonium salts, prepared from primary aromatic amines, are useful synthetic intermediates because they:",
+    "options": [
+      "Are completely unreactive under all conditions",
+      "Can be converted into a wide variety of other functional groups via substitution reactions",
+      "Only decompose without any further synthetic use",
+      "Cannot react with any nucleophiles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Diazonium salts undergo Sandmeyer and related reactions, allowing conversion of the −N2+ group into halides, nitriles, phenols, and more.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Considering steric and solvation effects in aqueous solution, the general basicity order of methylamine, dimethylamine, and trimethylamine is typically:",
+    "options": [
+      "Primary > secondary > tertiary",
+      "Secondary > primary > tertiary",
+      "Tertiary > secondary > primary",
+      "All three show identical basicity"
+    ],
+    "correctIndex": 1,
+    "explanation": "In aqueous solution, secondary amines are often more basic than primary amines due to inductive effects, but tertiary amines are less basic due to steric hindrance to solvation of the resulting cation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "moderate",
+    "questionText": "The Gabriel phthalimide synthesis is specifically useful for preparing:",
+    "options": [
+      "Pure primary amines, free from secondary/tertiary amine contamination",
+      "Secondary amines exclusively",
+      "Tertiary amines exclusively",
+      "Quaternary ammonium salts exclusively"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Gabriel synthesis is specifically valued because it produces pure primary amines without over-alkylation issues.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "moderate",
+    "questionText": "Amines are generally more basic than amides mainly because:",
+    "options": [
+      "Amides have a more available (less delocalized) lone pair on nitrogen",
+      "The nitrogen lone pair in amides is delocalized into the carbonyl group, reducing its availability",
+      "Amines contain no nitrogen atom",
+      "Amides are always positively charged species"
+    ],
+    "correctIndex": 1,
+    "explanation": "Resonance delocalization of the amide nitrogen's lone pair into the carbonyl significantly reduces its basicity compared to a simple amine.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "easy",
+    "questionText": "The characteristic functional group present in all amines is the:",
+    "options": [
+      "Hydroxyl group (−OH)",
+      "Amino group (−NH2 or a substituted derivative)",
+      "Carboxyl group (−COOH)",
+      "Aldehyde group (−CHO)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Amines are defined by the presence of a nitrogen-containing amino functional group.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "The pyranose form of glucose refers to its cyclic structure containing a:",
+    "options": [
+      "Five-membered ring",
+      "Six-membered ring (with one oxygen atom)",
+      "Seven-membered ring",
+      "Four-membered ring"
+    ],
+    "correctIndex": 1,
+    "explanation": "The pyranose form of glucose is a six-membered ring, analogous in shape to pyran, containing one oxygen atom within the ring.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Denaturation of a protein primarily disrupts its:",
+    "options": [
+      "Primary structure (amino acid sequence)",
+      "Secondary and tertiary structure, without breaking peptide bonds",
+      "Molecular formula entirely",
+      "Nothing observable at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Denaturation disrupts the hydrogen bonds and other interactions maintaining secondary/tertiary structure, while the primary sequence of amino acids remains intact.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "DNA differs structurally from RNA mainly because DNA contains the sugar:",
+    "options": [
+      "Ribose",
+      "Deoxyribose",
+      "Glucose",
+      "Fructose"
+    ],
+    "correctIndex": 1,
+    "explanation": "DNA contains deoxyribose (lacking one oxygen at the 2' position compared to ribose found in RNA).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Deficiency of which vitamin is classically associated with the disease scurvy?",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin K"
+    ],
+    "correctIndex": 1,
+    "explanation": "Scurvy results from a deficiency of vitamin C (ascorbic acid), essential for collagen synthesis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "easy",
+    "questionText": "Proteins are biological polymers built from monomer units called:",
+    "options": [
+      "Nucleotides",
+      "Amino acids",
+      "Monosaccharides",
+      "Fatty acids"
+    ],
+    "correctIndex": 1,
+    "explanation": "Proteins are polymers of amino acids linked together by peptide bonds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "difficulty": "tough",
+    "questionText": "Nylon-6,6, a synthetic condensation polymer, is formed by the reaction between:",
+    "options": [
+      "Ethylene glycol and terephthalic acid",
+      "Hexamethylenediamine and adipic acid",
+      "Styrene monomers alone",
+      "Vinyl chloride monomers alone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nylon-6,6 is formed via condensation polymerization of hexamethylenediamine and adipic acid, releasing water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "difficulty": "moderate",
+    "questionText": "Natural rubber is a polymer primarily derived from the monomer unit:",
+    "options": [
+      "Ethylene",
+      "Isoprene (2-methyl-1,3-butadiene)",
+      "Styrene",
+      "Propylene"
+    ],
+    "correctIndex": 1,
+    "explanation": "Natural rubber is cis-1,4-polyisoprene, a polymer of the isoprene monomer.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "difficulty": "moderate",
+    "questionText": "Polymers formed by simple addition of monomer units, without the elimination of any small molecule, are called:",
+    "options": [
+      "Condensation polymers",
+      "Addition polymers",
+      "Copolymers specifically",
+      "Biodegradable polymers specifically"
+    ],
+    "correctIndex": 1,
+    "explanation": "Addition polymerization simply links monomers together (often via chain reactions), with no small molecule byproduct released.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "difficulty": "easy",
+    "questionText": "PVC, a widely used commercial plastic, stands for:",
+    "options": [
+      "Polyvinyl chloride",
+      "Polyvinyl carbonate",
+      "Polyvinyl cellulose",
+      "Polyvinyl carbamate"
+    ],
+    "correctIndex": 0,
+    "explanation": "PVC is short for polyvinyl chloride, formed by addition polymerization of vinyl chloride monomers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "difficulty": "tough",
+    "questionText": "Antihistamine drugs are used to treat allergic reactions primarily by:",
+    "options": [
+      "Directly killing the causative pathogens",
+      "Blocking the action of histamine at its receptor sites",
+      "Reducing systemic blood pressure",
+      "Acting as broad-spectrum antibiotics"
+    ],
+    "correctIndex": 1,
+    "explanation": "Antihistamines competitively block histamine receptors, preventing histamine from triggering typical allergic symptoms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "difficulty": "moderate",
+    "questionText": "Analgesic drugs are primarily used for the purpose of:",
+    "options": [
+      "Reducing fever exclusively, with no other effect",
+      "Relieving pain",
+      "Killing bacteria",
+      "Lowering blood sugar levels"
+    ],
+    "correctIndex": 1,
+    "explanation": "Analgesics are pain-relieving medications; some also have antipyretic (fever-reducing) effects, but pain relief is their primary role.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "difficulty": "moderate",
+    "questionText": "Soaps are generally the sodium or potassium salts of:",
+    "options": [
+      "Short-chain alcohols",
+      "Long-chain fatty acids",
+      "Amino acids",
+      "Simple monosaccharides"
+    ],
+    "correctIndex": 1,
+    "explanation": "Soaps are metal (usually Na or K) salts of long-chain fatty acids, produced via saponification of fats/oils.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "difficulty": "easy",
+    "questionText": "Antibiotics are substances specifically used to act against:",
+    "options": [
+      "Only viruses",
+      "Microorganisms, particularly bacteria",
+      "Only fungal infections",
+      "Only parasitic worms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Antibiotics are specifically effective against bacteria (and some other microorganisms), but are not effective against viruses.",
+    "imageUrl": null
+  }
+]
