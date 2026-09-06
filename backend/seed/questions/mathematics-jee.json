@@ -1,1 +1,3938 @@
-[]
+[
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "questionText": "If A={1,2,3,4} and B={2,4,6,8}, find A∩B.",
+    "options": [
+      "{2,4}",
+      "{1,2,3,4,6,8}",
+      "{1,3}",
+      "{6,8}"
+    ],
+    "correctIndex": 0,
+    "explanation": "The intersection contains elements common to both sets: 2 and 4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "questionText": "If n(A)=5, n(B)=3, and n(A∩B)=2, find n(A∪B).",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "correctIndex": 1,
+    "explanation": "n(A∪B) = n(A)+n(B)−n(A∩B) = 5+3−2 = 6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "questionText": "If f(x)=2x+3 and g(x)=x², find (f∘g)(2).",
+    "options": [
+      "7",
+      "9",
+      "11",
+      "13"
+    ],
+    "correctIndex": 2,
+    "explanation": "g(2)=4, then f(4)=2(4)+3=11.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "questionText": "Find the domain of f(x) = 1/√(x−3).",
+    "options": [
+      "x≥3",
+      "x>3",
+      "x≤3",
+      "x<3"
+    ],
+    "correctIndex": 1,
+    "explanation": "The expression under the root must be strictly positive (can't be zero, since it's in the denominator), so x−3>0, giving x>3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "questionText": "If R={(x,y) : x,y∈ℤ, x²+y²=25}, find the number of ordered pairs in R.",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "16"
+    ],
+    "correctIndex": 2,
+    "explanation": "Integer solutions: (0,±5),(±5,0),(±3,±4),(±4,±3), giving 2+2+4+4=12 ordered pairs.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "questionText": "A relation R on A={1,2,3} is R={(1,1),(2,2),(3,3),(1,2),(2,1)}. This relation is:",
+    "options": [
+      "Only reflexive",
+      "Only symmetric",
+      "An equivalence relation",
+      "Neither reflexive nor symmetric"
+    ],
+    "correctIndex": 2,
+    "explanation": "R is reflexive (all (a,a) present), symmetric ((1,2) and (2,1) both present), and transitive (checking all combinations holds), making it an equivalence relation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "questionText": "Find the range of f(x) = x² − 4x + 5.",
+    "options": [
+      "(−∞,1]",
+      "[1,∞)",
+      "(−∞,∞)",
+      "[0,∞)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Completing the square: f(x)=(x−2)²+1, with minimum value 1, so the range is [1,∞).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "moderate",
+    "questionText": "If A and B are disjoint sets, n(A∪B) equals:",
+    "options": [
+      "n(A)+n(B)",
+      "n(A)−n(B)",
+      "n(A)×n(B)",
+      "n(A)/n(B)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since disjoint sets have no common elements, n(A∩B)=0, so n(A∪B)=n(A)+n(B).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "moderate",
+    "questionText": "A function f:A→B is one-one (injective) if:",
+    "options": [
+      "Every element of B has a pre-image in A",
+      "Different elements of A always map to different elements of B",
+      "f(x)=f(y) never restricts x and y",
+      "It is always onto as well"
+    ],
+    "correctIndex": 1,
+    "explanation": "Injectivity means distinct inputs always produce distinct outputs.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "easy",
+    "questionText": "The number of elements in the power set of a set with n elements is:",
+    "options": [
+      "n",
+      "n²",
+      "2^n",
+      "n!"
+    ],
+    "correctIndex": 2,
+    "explanation": "A set with n elements has 2^n subsets, forming its power set.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "Find the modulus of the complex number z=3+4i.",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "correctIndex": 2,
+    "explanation": "|z|=√(3²+4²)=√25=5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "Simplify i^19, where i=√−1.",
+    "options": [
+      "i",
+      "−i",
+      "1",
+      "−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "i^19 = i^(16+3) = (i^4)^4 × i³ = 1×(−i) = −i.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "Find the roots of x² − 5x + 6 = 0.",
+    "options": [
+      "1, 6",
+      "2, 3",
+      "−2, −3",
+      "−1, −6"
+    ],
+    "correctIndex": 1,
+    "explanation": "Factoring: (x−2)(x−3)=0, giving roots x=2 and x=3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "If the discriminant of ax²+bx+c=0 is negative, the roots are:",
+    "options": [
+      "Real and equal",
+      "Real and distinct",
+      "Complex conjugates (non-real)",
+      "Always rational"
+    ],
+    "correctIndex": 2,
+    "explanation": "A negative discriminant means the square root involves an imaginary number, giving a pair of complex conjugate roots.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "Find the conjugate of z=2−3i.",
+    "options": [
+      "2+3i",
+      "−2+3i",
+      "−2−3i",
+      "3−2i"
+    ],
+    "correctIndex": 0,
+    "explanation": "The conjugate of a+bi is a−bi, so the conjugate of 2−3i is 2+3i.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "If z=1+i, find z².",
+    "options": [
+      "2",
+      "2i",
+      "−2",
+      "1+2i"
+    ],
+    "correctIndex": 1,
+    "explanation": "(1+i)² = 1+2i+i² = 1+2i−1 = 2i.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "Find the sum of the roots of 2x² − 7x + 3 = 0.",
+    "options": [
+      "3.5",
+      "−3.5",
+      "7",
+      "−7"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sum of roots = −b/a = 7/2 = 3.5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "Find the product of the roots of x² + 5x − 6 = 0.",
+    "options": [
+      "6",
+      "−6",
+      "5",
+      "−5"
+    ],
+    "correctIndex": 1,
+    "explanation": "Product of roots = c/a = −6/1 = −6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "questionText": "Find the value of k for which x² − 4x + k = 0 has equal (repeated) roots.",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "correctIndex": 1,
+    "explanation": "For equal roots, discriminant = 0: 16 − 4k = 0, giving k = 4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "moderate",
+    "questionText": "Find the argument of the complex number z=1+i.",
+    "options": [
+      "0",
+      "π/4",
+      "π/2",
+      "π"
+    ],
+    "correctIndex": 1,
+    "explanation": "arg(z) = tan⁻¹(1/1) = π/4 (45°), and z lies in the first quadrant.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "moderate",
+    "questionText": "The value of √−4 is expressed as:",
+    "options": [
+      "4i",
+      "2i",
+      "−4",
+      "4"
+    ],
+    "correctIndex": 1,
+    "explanation": "√−4 = √4 × √−1 = 2i.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "easy",
+    "questionText": "The value of i² is:",
+    "options": [
+      "1",
+      "−1",
+      "i",
+      "−i"
+    ],
+    "correctIndex": 1,
+    "explanation": "By definition, i²=−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "If A=[[1,2],[3,4]], find |A|.",
+    "options": [
+      "−2",
+      "2",
+      "10",
+      "−10"
+    ],
+    "correctIndex": 0,
+    "explanation": "|A| = (1×4) − (2×3) = 4 − 6 = −2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "If A=[[2,0],[0,3]], find A⁻¹.",
+    "options": [
+      "[[1/2,0],[0,1/3]]",
+      "[[2,0],[0,3]]",
+      "[[1/2,0],[0,−1/3]]",
+      "[[−1/2,0],[0,−1/3]]"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a diagonal matrix, the inverse simply takes the reciprocal of each diagonal element.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "For matrices A (order 2×3) and B (order 3×2), find the order of AB.",
+    "options": [
+      "3×3",
+      "2×2",
+      "2×3",
+      "3×2"
+    ],
+    "correctIndex": 1,
+    "explanation": "Multiplying a 2×3 matrix by a 3×2 matrix gives a 2×2 matrix.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "A square matrix A such that A²=A is called:",
+    "options": [
+      "Idempotent matrix",
+      "Orthogonal matrix",
+      "Symmetric matrix",
+      "Skew-symmetric matrix"
+    ],
+    "correctIndex": 0,
+    "explanation": "A matrix satisfying A²=A is called idempotent.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "The determinant of a skew-symmetric matrix of odd order is always:",
+    "options": [
+      "1",
+      "−1",
+      "0",
+      "Undefined"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a skew-symmetric matrix of odd order, |A| = |Aᵀ| = |−A| = (−1)^n|A|, and for odd n this forces |A|=0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "Find x such that the determinant |x,2;3,x| = 0.",
+    "options": [
+      "±√6",
+      "±6",
+      "±2",
+      "±3"
+    ],
+    "correctIndex": 0,
+    "explanation": "x² − 6 = 0, giving x = ±√6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "If A=[[1,2],[2,1]], find A+Aᵀ.",
+    "options": [
+      "[[2,4],[4,2]]",
+      "[[0,0],[0,0]]",
+      "[[1,2],[2,1]]",
+      "[[2,0],[0,2]]"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since A is already symmetric, Aᵀ=A, so A+Aᵀ=2A=[[2,4],[4,2]].",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "questionText": "Find the number of all possible 2×2 matrices with each entry being either 0 or 1.",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "correctIndex": 2,
+    "explanation": "Each of the 4 entries has 2 possible values, giving 2^4 = 16 total matrices.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "moderate",
+    "questionText": "A matrix A is called symmetric if:",
+    "options": [
+      "A=Aᵀ",
+      "A=−Aᵀ",
+      "A²=I",
+      "A=A⁻¹"
+    ],
+    "correctIndex": 0,
+    "explanation": "A symmetric matrix equals its own transpose.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "moderate",
+    "questionText": "The 2×2 identity matrix is:",
+    "options": [
+      "[[1,0],[0,1]]",
+      "[[0,1],[1,0]]",
+      "[[1,1],[1,1]]",
+      "[[0,0],[0,0]]"
+    ],
+    "correctIndex": 0,
+    "explanation": "The identity matrix has 1s on the main diagonal and 0s elsewhere.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "easy",
+    "questionText": "A matrix with an equal number of rows and columns is called a:",
+    "options": [
+      "Row matrix",
+      "Column matrix",
+      "Square matrix",
+      "Rectangular matrix"
+    ],
+    "correctIndex": 2,
+    "explanation": "A matrix with equal rows and columns (n×n) is a square matrix.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "easy",
+    "questionText": "The transpose of a matrix is obtained by interchanging its:",
+    "options": [
+      "Rows and columns",
+      "Diagonal elements only",
+      "Signs of all elements",
+      "Nothing; it remains unchanged"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transposing a matrix swaps its rows and columns.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "questionText": "Find the number of ways to arrange the letters of the word 'MATH'.",
+    "options": [
+      "12",
+      "24",
+      "48",
+      "120"
+    ],
+    "correctIndex": 1,
+    "explanation": "With 4 distinct letters, the number of arrangements is 4! = 24.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "questionText": "Find the value of ⁵P₃.",
+    "options": [
+      "10",
+      "20",
+      "60",
+      "120"
+    ],
+    "correctIndex": 2,
+    "explanation": "⁵P₃ = 5!/(5−3)! = 120/2 = 60.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "questionText": "Find the value of ⁶C₂.",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "30"
+    ],
+    "correctIndex": 2,
+    "explanation": "⁶C₂ = 6!/(2!×4!) = 15.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "questionText": "Find the number of ways to select 3 students from a group of 8.",
+    "options": [
+      "24",
+      "48",
+      "56",
+      "336"
+    ],
+    "correctIndex": 2,
+    "explanation": "⁸C₃ = 8!/(3!×5!) = 56.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "questionText": "Find the number of diagonals in a hexagon (6 sides).",
+    "options": [
+      "6",
+      "9",
+      "12",
+      "15"
+    ],
+    "correctIndex": 1,
+    "explanation": "Number of diagonals = n(n−3)/2 = 6×3/2 = 9.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "questionText": "Find the number of distinct arrangements of the letters of 'STATISTICS' (S=3, T=3, I=2, A=1, C=1, 10 letters total).",
+    "options": [
+      "3628800",
+      "50400",
+      "151200",
+      "25200"
+    ],
+    "correctIndex": 1,
+    "explanation": "Arrangements = 10!/(3!×3!×2!×1!×1!) = 3628800/72 = 50400.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "questionText": "In how many ways can 4 boys and 3 girls be seated in a row such that no two girls sit together?",
+    "options": [
+      "144",
+      "720",
+      "1440",
+      "5040"
+    ],
+    "correctIndex": 2,
+    "explanation": "Arrange 4 boys first (4!=24 ways), creating 5 gaps; place 3 girls in 3 of these gaps (⁵P₃=60 ways). Total = 24×60 = 1440.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "moderate",
+    "questionText": "The value of 0! is:",
+    "options": [
+      "0",
+      "1",
+      "Undefined",
+      "−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "By convention, 0! is defined to be 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "moderate",
+    "questionText": "The fundamental principle of counting states that if one event can occur in m ways and a second (independent) event in n ways, both together can occur in:",
+    "options": [
+      "m+n ways",
+      "m×n ways",
+      "m−n ways",
+      "m/n ways"
+    ],
+    "correctIndex": 1,
+    "explanation": "The multiplication principle states the total number of ways is the product m×n.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "questionText": "ⁿCᵣ is given by the formula:",
+    "options": [
+      "n!/(r!(n−r)!)",
+      "n!/r!",
+      "n!×r!",
+      "n!−r!"
+    ],
+    "correctIndex": 0,
+    "explanation": "The combination formula is ⁿCᵣ = n!/(r!(n−r)!).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "questionText": "Find the coefficient of x³ in the expansion of (1+x)⁷.",
+    "options": [
+      "21",
+      "35",
+      "42",
+      "70"
+    ],
+    "correctIndex": 1,
+    "explanation": "The coefficient of x³ is ⁷C₃ = 35.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "questionText": "Find the number of terms in the expansion of (x+y)^10.",
+    "options": [
+      "10",
+      "11",
+      "20",
+      "21"
+    ],
+    "correctIndex": 1,
+    "explanation": "The expansion of (x+y)^n has n+1 terms, so (x+y)^10 has 11 terms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "questionText": "Find the middle term in the expansion of (x+y)^6.",
+    "options": [
+      "15x²y⁴",
+      "20x³y³",
+      "15x⁴y²",
+      "6x⁵y"
+    ],
+    "correctIndex": 1,
+    "explanation": "For even n=6, the single middle term is T4 = ⁶C₃x³y³ = 20x³y³.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "questionText": "The general term in the expansion of (x+a)^n is given by:",
+    "options": [
+      "ⁿCᵣ x^(n−r) a^r",
+      "ⁿCᵣ x^r a^(n−r)",
+      "ⁿCᵣ x^n a^r",
+      "n!/(r!) x^r"
+    ],
+    "correctIndex": 0,
+    "explanation": "The (r+1)th term is Tr+1 = ⁿCᵣ x^(n−r) a^r.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "questionText": "Find the coefficient of x⁵ in the expansion of (2+x)⁷.",
+    "options": [
+      "21",
+      "84",
+      "168",
+      "336"
+    ],
+    "correctIndex": 1,
+    "explanation": "General term: ⁷Cᵣ 2^(7−r) x^r. For r=5: ⁷C₅ × 2² = 21×4 = 84.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "questionText": "The sum of all binomial coefficients in the expansion of (1+x)^n is:",
+    "options": [
+      "n",
+      "2^n",
+      "n²",
+      "2n"
+    ],
+    "correctIndex": 1,
+    "explanation": "Setting x=1 in (1+x)^n gives the sum of coefficients = 2^n.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "moderate",
+    "questionText": "In the expansion of (1+x)^n, the coefficient of x^r is:",
+    "options": [
+      "ⁿCᵣ",
+      "ⁿPᵣ",
+      "n!",
+      "n/r"
+    ],
+    "correctIndex": 0,
+    "explanation": "The coefficient of x^r in (1+x)^n is the binomial coefficient ⁿCᵣ.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "moderate",
+    "questionText": "The binomial theorem is used to expand expressions of the form:",
+    "options": [
+      "(x+y)^n",
+      "x^n+y^n",
+      "x/y",
+      "√(x+y)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The binomial theorem provides a formula for expanding powers of a binomial (x+y)^n.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "questionText": "The number of terms in the expansion of (a+b)^n is:",
+    "options": [
+      "n",
+      "n+1",
+      "n−1",
+      "2n"
+    ],
+    "correctIndex": 1,
+    "explanation": "The expansion of (a+b)^n always has exactly n+1 terms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "questionText": "Pascal's triangle is used to find:",
+    "options": [
+      "Binomial coefficients",
+      "Prime numbers",
+      "Square roots",
+      "Logarithms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each row of Pascal's triangle gives the binomial coefficients for the corresponding power.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "Find the 10th term of an AP with first term 3 and common difference 4.",
+    "options": [
+      "35",
+      "39",
+      "43",
+      "47"
+    ],
+    "correctIndex": 1,
+    "explanation": "a10 = a + 9d = 3 + 9(4) = 39.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "Find the sum of the first 10 terms of the AP: 2, 4, 6, 8, ...",
+    "options": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sn = n/2[2a+(n−1)d] = 10/2[4+9(2)] = 5×22 = 110.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "Find the sum to infinity of the GP: 1, 1/2, 1/4, 1/8, ...",
+    "options": [
+      "1",
+      "1.5",
+      "2",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "S∞ = a/(1−r) = 1/(1−0.5) = 2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "Find the 5th term of a GP with first term 2 and common ratio 3.",
+    "options": [
+      "54",
+      "162",
+      "486",
+      "1458"
+    ],
+    "correctIndex": 1,
+    "explanation": "a5 = a×r⁴ = 2×81 = 162.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "If the sum of the first n terms of an AP is Sn = 3n² + 2n, find the first term.",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9"
+    ],
+    "correctIndex": 1,
+    "explanation": "a1 = S1 = 3(1)²+2(1) = 5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "Find the arithmetic mean between 4 and 16.",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "20"
+    ],
+    "correctIndex": 1,
+    "explanation": "Arithmetic mean = (4+16)/2 = 10.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "Find the geometric mean between 4 and 16.",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "20"
+    ],
+    "correctIndex": 0,
+    "explanation": "Geometric mean = √(4×16) = √64 = 8.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "questionText": "Find the sum of the series 1+2+3+...+n.",
+    "options": [
+      "n(n+1)/2",
+      "n(n−1)/2",
+      "n²/2",
+      "n(n+1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sum of the first n natural numbers is n(n+1)/2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "moderate",
+    "questionText": "In an AP, the common difference d represents:",
+    "options": [
+      "The first term",
+      "The constant difference between consecutive terms",
+      "The last term",
+      "The number of terms"
+    ],
+    "correctIndex": 1,
+    "explanation": "The common difference is the fixed value added to each term to get the next term.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "moderate",
+    "questionText": "A geometric progression (GP) is a sequence in which each term (after the first) is obtained by:",
+    "options": [
+      "Adding a constant to the previous term",
+      "Multiplying the previous term by a constant ratio",
+      "Squaring the previous term",
+      "Taking the square root of the previous term"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a GP, consecutive terms have a constant ratio between them.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "questionText": "The nth term of an AP with first term a and common difference d is:",
+    "options": [
+      "a+(n−1)d",
+      "a+nd",
+      "a×n×d",
+      "a−nd"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard formula for the nth term of an AP is a+(n−1)d.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "questionText": "The formula for the sum of the first n natural numbers is used to compute sums like:",
+    "options": [
+      "1+2+3+...+n",
+      "1×2×3×...×n",
+      "1²+2²+...+n²",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "This formula specifically applies to the sum of the first n natural numbers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "questionText": "Evaluate lim(x→2) (x²−4)/(x−2).",
+    "options": [
+      "0",
+      "2",
+      "4",
+      "Undefined"
+    ],
+    "correctIndex": 2,
+    "explanation": "Factoring: (x−2)(x+2)/(x−2) = x+2, so the limit as x→2 is 4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "questionText": "Evaluate lim(x→0) sin(x)/x.",
+    "options": [
+      "0",
+      "1",
+      "∞",
+      "Undefined"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a standard limit, equal to 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "questionText": "Evaluate lim(x→∞) (3x²+2x)/(x²+1).",
+    "options": [
+      "0",
+      "1",
+      "3",
+      "∞"
+    ],
+    "correctIndex": 2,
+    "explanation": "Dividing numerator and denominator by x²: (3+2/x)/(1+1/x²) → 3/1 = 3 as x→∞.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "questionText": "A function f(x) is continuous at x=a if:",
+    "options": [
+      "lim(x→a) f(x) = f(a)",
+      "f(a) is defined only, nothing else needed",
+      "lim(x→a) f(x) exists only, without matching f(a)",
+      "f is differentiable at a"
+    ],
+    "correctIndex": 0,
+    "explanation": "Continuity at a point requires the limit to exist AND equal the function's actual value there.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "questionText": "Evaluate lim(x→0) (eˣ−1)/x.",
+    "options": [
+      "0",
+      "1",
+      "e",
+      "Undefined"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a standard limit, equal to 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "questionText": "If f(x)=|x|, then f is:",
+    "options": [
+      "Continuous and differentiable everywhere",
+      "Continuous everywhere but not differentiable at x=0",
+      "Discontinuous at x=0",
+      "Neither continuous nor differentiable anywhere"
+    ],
+    "correctIndex": 1,
+    "explanation": "|x| is continuous everywhere but has a sharp corner at x=0, where it's not differentiable.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "questionText": "Evaluate lim(x→1) (x³−1)/(x−1).",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "Undefined"
+    ],
+    "correctIndex": 2,
+    "explanation": "Factoring: (x−1)(x²+x+1)/(x−1) = x²+x+1, which at x=1 gives 1+1+1=3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "moderate",
+    "questionText": "Every differentiable function is necessarily:",
+    "options": [
+      "Continuous",
+      "Discontinuous",
+      "Undefined",
+      "Non-real"
+    ],
+    "correctIndex": 0,
+    "explanation": "Differentiability at a point implies continuity there (though the converse isn't always true).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "moderate",
+    "questionText": "The limit of a constant function c as x approaches any value a is:",
+    "options": [
+      "0",
+      "c",
+      "a",
+      "Undefined"
+    ],
+    "correctIndex": 1,
+    "explanation": "A constant function's value doesn't change, so its limit anywhere is simply c.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "moderate",
+    "questionText": "L'Hopital's rule is applied to limits of the indeterminate form:",
+    "options": [
+      "0/0 or ∞/∞",
+      "1/0",
+      "Any finite value",
+      "0×1"
+    ],
+    "correctIndex": 0,
+    "explanation": "L'Hopital's rule specifically resolves 0/0 or ∞/∞ indeterminate forms by differentiating numerator and denominator.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "easy",
+    "questionText": "A function is continuous on an interval if it is continuous at:",
+    "options": [
+      "Only the endpoints",
+      "Every point in that interval",
+      "Only one specific point",
+      "No points at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Continuity on an interval requires continuity at every single point within it.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "easy",
+    "questionText": "The derivative of a function represents its:",
+    "options": [
+      "Area under the curve",
+      "Rate of change",
+      "Sum of a series",
+      "Maximum value"
+    ],
+    "correctIndex": 1,
+    "explanation": "The derivative gives the instantaneous rate of change of the function.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "questionText": "Find the derivative of f(x) = x³ + 2x² − 5x + 3.",
+    "options": [
+      "3x²+4x−5",
+      "3x²+2x−5",
+      "x²+4x−5",
+      "3x²+4x+3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Differentiating term by term: d/dx(x³)=3x², d/dx(2x²)=4x, d/dx(−5x)=−5, giving f'(x)=3x²+4x−5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "questionText": "Find the derivative of f(x) = sin(x)cos(x).",
+    "options": [
+      "cos(2x)",
+      "sin(x)+cos(x)",
+      "−sin(2x)",
+      "2cos(x)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the product rule: f'(x)=cos²x−sin²x=cos(2x).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "questionText": "Find dy/dx if y = e^(3x).",
+    "options": [
+      "e^(3x)",
+      "3e^(3x)",
+      "3xe^(3x)",
+      "e^(3x)/3"
+    ],
+    "correctIndex": 1,
+    "explanation": "By the chain rule, dy/dx = 3e^(3x).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "questionText": "Find the derivative of f(x) = ln(x²+1).",
+    "options": [
+      "2x/(x²+1)",
+      "1/(x²+1)",
+      "2x",
+      "x/(x²+1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the chain rule: f'(x) = (1/(x²+1)) × 2x = 2x/(x²+1).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "questionText": "If y = x^x, find dy/dx using logarithmic differentiation.",
+    "options": [
+      "x^x(ln x + 1)",
+      "x^x ln(x)",
+      "x·x^(x−1)",
+      "x^x"
+    ],
+    "correctIndex": 0,
+    "explanation": "Taking ln of both sides: ln y = x ln x. Differentiating: (1/y)dy/dx = ln x + 1, so dy/dx = x^x(ln x + 1).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "questionText": "Find the derivative of f(x) = 1/x².",
+    "options": [
+      "−2/x³",
+      "2/x³",
+      "−1/x³",
+      "1/x³"
+    ],
+    "correctIndex": 0,
+    "explanation": "f(x)=x⁻², so f'(x)=−2x⁻³=−2/x³.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "questionText": "Using the chain rule, find the derivative of f(x) = sin(x²).",
+    "options": [
+      "cos(x²)",
+      "2x cos(x²)",
+      "2x sin(x²)",
+      "x² cos(x)"
+    ],
+    "correctIndex": 1,
+    "explanation": "f'(x) = cos(x²) × 2x = 2x cos(x²).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "moderate",
+    "questionText": "The derivative of a constant function is:",
+    "options": [
+      "0",
+      "1",
+      "The constant itself",
+      "Undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "A constant function doesn't change, so its rate of change (derivative) is 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "moderate",
+    "questionText": "The derivative of x^n with respect to x is:",
+    "options": [
+      "nx^(n−1)",
+      "x^(n−1)",
+      "nx^n",
+      "x^n/n"
+    ],
+    "correctIndex": 0,
+    "explanation": "By the power rule, d/dx(x^n) = nx^(n−1).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "easy",
+    "questionText": "The derivative of sin(x) with respect to x is:",
+    "options": [
+      "cos(x)",
+      "−cos(x)",
+      "−sin(x)",
+      "sin(x)"
+    ],
+    "correctIndex": 0,
+    "explanation": "d/dx(sin x) = cos x, a standard derivative.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "questionText": "Find the slope of the tangent to y=x² at x=3.",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "12"
+    ],
+    "correctIndex": 1,
+    "explanation": "dy/dx=2x, at x=3: slope=2(3)=6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "questionText": "Find the interval on which f(x)=x²−4x+3 is increasing.",
+    "options": [
+      "x<2",
+      "x>2",
+      "−2<x<2",
+      "All real x"
+    ],
+    "correctIndex": 1,
+    "explanation": "f'(x)=2x−4. Setting f'(x)>0 gives x>2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "questionText": "Find the maximum value of f(x) = −x² + 4x + 1.",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "correctIndex": 2,
+    "explanation": "f'(x)=−2x+4=0 gives x=2. f(2)=−4+8+1=5, which is the maximum since the parabola opens downward.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "questionText": "A particle moves according to s(t)=t³−6t²+9t. Find its velocity at t=2.",
+    "options": [
+      "−3",
+      "0",
+      "3",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "v(t)=s'(t)=3t²−12t+9. At t=2: 12−24+9=−3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "questionText": "Find the point on the curve y=x² where the tangent line is parallel to the x-axis.",
+    "options": [
+      "(0,0)",
+      "(1,1)",
+      "(2,4)",
+      "(−1,1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "A tangent parallel to the x-axis has slope 0. dy/dx=2x=0 gives x=0, so the point is (0,0).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "questionText": "Find the maximum possible area of a rectangle with a fixed perimeter of 20 units.",
+    "options": [
+      "20",
+      "24",
+      "25",
+      "30"
+    ],
+    "correctIndex": 2,
+    "explanation": "With l+w=10, area is maximized when l=w=5 (a square), giving area = 25.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "questionText": "Find the rate of change of the area of a circle with respect to its radius, evaluated at r=5.",
+    "options": [
+      "5π",
+      "10π",
+      "25π",
+      "50π"
+    ],
+    "correctIndex": 1,
+    "explanation": "A=πr², dA/dr=2πr. At r=5: dA/dr=10π.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "questionText": "A function f(x) has a local maximum at x=a if:",
+    "options": [
+      "f'(a)=0 and f''(a)<0",
+      "f'(a)=0 and f''(a)>0",
+      "f'(a)≠0",
+      "f(a)=0"
+    ],
+    "correctIndex": 0,
+    "explanation": "The second derivative test states a critical point is a local maximum when f''(a) is negative.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "questionText": "Rolle's theorem requires which condition on the function's values at the endpoints a and b?",
+    "options": [
+      "f(a)=f(b)",
+      "f(a)≠f(b)",
+      "f'(a)=f'(b)",
+      "f(a)=0 specifically"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rolle's theorem requires f(a)=f(b), along with continuity and differentiability, to guarantee a point where f'(c)=0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "questionText": "The second derivative test is primarily used to determine:",
+    "options": [
+      "The slope of a tangent line",
+      "Whether a critical point is a maximum, minimum, or neither",
+      "The area under a curve",
+      "The domain of a function"
+    ],
+    "correctIndex": 1,
+    "explanation": "The sign of f''(x) at a critical point classifies it as a local max, min, or (if zero) inconclusive.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "easy",
+    "questionText": "A tangent line to a curve at a point touches the curve:",
+    "options": [
+      "At exactly that point locally, matching the curve's slope there",
+      "At two points always",
+      "At infinitely many points",
+      "At no points"
+    ],
+    "correctIndex": 0,
+    "explanation": "A tangent line touches the curve at a single point (locally) and has the same slope as the curve there.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "easy",
+    "questionText": "Applications of derivatives include finding:",
+    "options": [
+      "Maxima, minima, and rates of change",
+      "Only areas under curves",
+      "Only probabilities",
+      "Only sums of series"
+    ],
+    "correctIndex": 0,
+    "explanation": "Derivatives are widely used to analyze rates of change and find optimal (maximum/minimum) values.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫x³ dx.",
+    "options": [
+      "x⁴/4 + C",
+      "x²/2 + C",
+      "3x² + C",
+      "x⁴ + C"
+    ],
+    "correctIndex": 0,
+    "explanation": "By the power rule for integration, ∫x³ dx = x⁴/4 + C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫cos(x) dx.",
+    "options": [
+      "sin(x)+C",
+      "−sin(x)+C",
+      "cos(x)+C",
+      "−cos(x)+C"
+    ],
+    "correctIndex": 0,
+    "explanation": "The antiderivative of cos(x) is sin(x)+C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫e^(2x) dx.",
+    "options": [
+      "e^(2x)+C",
+      "(1/2)e^(2x)+C",
+      "2e^(2x)+C",
+      "(1/2)eˣ+C"
+    ],
+    "correctIndex": 1,
+    "explanation": "∫e^(kx)dx = (1/k)e^(kx)+C, so for k=2: (1/2)e^(2x)+C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫(1/x) dx.",
+    "options": [
+      "ln|x|+C",
+      "1/x²+C",
+      "x²/2+C",
+      "−1/x+C"
+    ],
+    "correctIndex": 0,
+    "explanation": "The antiderivative of 1/x is ln|x|+C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫sec²(x) dx.",
+    "options": [
+      "tan(x)+C",
+      "sec(x)+C",
+      "cot(x)+C",
+      "−tan(x)+C"
+    ],
+    "correctIndex": 0,
+    "explanation": "The antiderivative of sec²(x) is tan(x)+C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "questionText": "Using substitution, evaluate ∫2x·cos(x²) dx.",
+    "options": [
+      "sin(x²)+C",
+      "cos(x²)+C",
+      "−sin(x²)+C",
+      "x²sin(x)+C"
+    ],
+    "correctIndex": 0,
+    "explanation": "Let u=x², du=2x dx. The integral becomes ∫cos(u)du = sin(u)+C = sin(x²)+C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫x·eˣ dx using integration by parts.",
+    "options": [
+      "xeˣ − eˣ + C",
+      "xeˣ + eˣ + C",
+      "eˣ + C",
+      "x²eˣ/2 + C"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using ∫u dv = uv−∫v du with u=x, dv=eˣdx: = xeˣ − ∫eˣdx = xeˣ − eˣ + C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "moderate",
+    "questionText": "The integral of a sum of two functions equals:",
+    "options": [
+      "The sum of their individual integrals",
+      "The product of their integrals",
+      "Their difference always",
+      "It cannot be determined generally"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integration is linear: ∫(f+g)dx = ∫f dx + ∫g dx.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "moderate",
+    "questionText": "Integration is the reverse process of:",
+    "options": [
+      "Differentiation",
+      "Addition",
+      "Multiplication",
+      "Taking limits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integration and differentiation are inverse operations of each other.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "moderate",
+    "questionText": "The constant of integration 'C' is included because:",
+    "options": [
+      "An indefinite integral represents a whole family of antiderivatives differing by a constant",
+      "It is always exactly zero",
+      "It must always be negative",
+      "It has no real mathematical purpose"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since the derivative of any constant is zero, all antiderivatives of a function differ only by a constant, hence 'C'.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "easy",
+    "questionText": "Evaluate ∫k dx, where k is a constant.",
+    "options": [
+      "kx+C",
+      "k+C",
+      "0",
+      "k²x+C"
+    ],
+    "correctIndex": 0,
+    "explanation": "The integral of a constant k with respect to x is kx+C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "easy",
+    "questionText": "The symbol ∫ represents:",
+    "options": [
+      "Integration",
+      "Differentiation",
+      "Summation of a finite series",
+      "Limits"
+    ],
+    "correctIndex": 0,
+    "explanation": "The elongated 'S' symbol ∫ denotes the process of integration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫(0 to 2) x² dx.",
+    "options": [
+      "4/3",
+      "8/3",
+      "4",
+      "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "[x³/3] from 0 to 2 = 8/3 − 0 = 8/3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫(0 to π) sin(x) dx.",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "π"
+    ],
+    "correctIndex": 2,
+    "explanation": "[−cos(x)] from 0 to π = −cos(π)−(−cos(0)) = 1+1 = 2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫(1 to 2) (1/x) dx.",
+    "options": [
+      "ln2",
+      "1",
+      "2",
+      "e"
+    ],
+    "correctIndex": 0,
+    "explanation": "[ln(x)] from 1 to 2 = ln2 − ln1 = ln2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "questionText": "Using the property ∫(a to b)f(x)dx = ∫(a to b)f(a+b−x)dx, evaluate ∫(0 to π/2) sin(x)/(sin(x)+cos(x)) dx.",
+    "options": [
+      "π/4",
+      "π/2",
+      "π",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Let I be the integral; applying the property with x→π/2−x gives a second expression for I with sin/cos swapped. Adding both gives 2I=∫(0 to π/2)1 dx=π/2, so I=π/4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫(−1 to 1) x³ dx.",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "−1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since x³ is an odd function, its integral over a symmetric interval [−a,a] is always 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "questionText": "Evaluate ∫(0 to 1) (2x+3) dx.",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 2,
+    "explanation": "[x²+3x] from 0 to 1 = (1+3) − 0 = 4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "questionText": "Find the area under the curve y=x² between x=0 and x=1.",
+    "options": [
+      "1/4",
+      "1/3",
+      "1/2",
+      "1"
+    ],
+    "correctIndex": 1,
+    "explanation": "∫(0 to1)x²dx = [x³/3] = 1/3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "moderate",
+    "questionText": "The fundamental theorem of calculus relates:",
+    "options": [
+      "Differentiation and integration",
+      "Addition and subtraction",
+      "Limits and continuity",
+      "Sets and functions"
+    ],
+    "correctIndex": 0,
+    "explanation": "This theorem establishes integration as the inverse process of differentiation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "moderate",
+    "questionText": "If f(x) is an even function, ∫(−a to a) f(x)dx equals:",
+    "options": [
+      "0",
+      "2∫(0 to a)f(x)dx",
+      "∫(0 to a)f(x)dx",
+      "−2∫(0 to a)f(x)dx"
+    ],
+    "correctIndex": 1,
+    "explanation": "For even functions, the symmetric portions add up, giving twice the integral from 0 to a.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "moderate",
+    "questionText": "Definite integrals are primarily used to calculate:",
+    "options": [
+      "The slope of a tangent",
+      "Area under a curve between two limits",
+      "The derivative at a point",
+      "The domain of a function"
+    ],
+    "correctIndex": 1,
+    "explanation": "A definite integral computes the net signed area under a curve between two specified limits.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "easy",
+    "questionText": "In ∫(a to b) f(x)dx, 'a' and 'b' are called the:",
+    "options": [
+      "Lower and upper limits of integration",
+      "Coefficients",
+      "Variables of integration",
+      "Constants of integration"
+    ],
+    "correctIndex": 0,
+    "explanation": "'a' is the lower limit and 'b' is the upper limit of the definite integral.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "questionText": "Find the area enclosed between the curve y=x² and the line y=x, from x=0 to x=1.",
+    "options": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Area = ∫(0to1)(x−x²)dx = [x²/2−x³/3] from 0to1 = (1/2−1/3) = 1/6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "questionText": "Find the area under the curve y=4−x² between x=−2 and x=2.",
+    "options": [
+      "16/3",
+      "32/3",
+      "8",
+      "16"
+    ],
+    "correctIndex": 1,
+    "explanation": "Since the function is even, area = 2∫(0to2)(4−x²)dx = 2[4x−x³/3] from 0to2 = 2×(16/3) = 32/3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "questionText": "Find the area bounded by y=sin(x) and the x-axis, from x=0 to x=π.",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "π"
+    ],
+    "correctIndex": 2,
+    "explanation": "Since sin(x) is non-negative on [0,π], the area equals ∫(0toπ)sin(x)dx = 2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "questionText": "The area between two curves y=f(x) and y=g(x) from x=a to x=b, where f(x)≥g(x), is given by:",
+    "options": [
+      "∫(a to b)[f(x)−g(x)]dx",
+      "∫(a to b)[f(x)+g(x)]dx",
+      "f(b)−g(a)",
+      "∫(a to b)f(x)g(x)dx"
+    ],
+    "correctIndex": 0,
+    "explanation": "The area between two curves is found by integrating the difference of the upper and lower functions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "questionText": "To find the area under a curve using integration, we integrate the function with respect to:",
+    "options": [
+      "The variable along the relevant axis (usually x)",
+      "A constant only",
+      "Time exclusively, regardless of the axes involved",
+      "Nothing; area cannot be found via integration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integration with respect to x (or y) accumulates infinitesimal strips of area under the curve.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "easy",
+    "questionText": "Applications of integrals are primarily used to calculate:",
+    "options": [
+      "Areas and volumes",
+      "Only probabilities",
+      "Only limits",
+      "Only derivatives"
+    ],
+    "correctIndex": 0,
+    "explanation": "A major application of integration is computing areas under curves and volumes of solids.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "easy",
+    "questionText": "The area of a region bounded by a curve above the x-axis is conventionally taken as:",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "Areas are conventionally reported as positive quantities, even if the raw integral could be signed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "questionText": "Find the order of the differential equation d²y/dx² + 3(dy/dx) + y = 0.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "The order is determined by the highest derivative present, which here is the second derivative.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "questionText": "Find the degree of the differential equation (dy/dx)³ + y = x.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correctIndex": 2,
+    "explanation": "The degree is the power of the highest-order derivative, which here is (dy/dx) raised to the power 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "questionText": "Solve the differential equation dy/dx = y.",
+    "options": [
+      "y=Ae^x",
+      "y=Ax",
+      "y=A/x",
+      "y=A cos(x)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Separating variables: dy/y=dx, integrating gives ln|y|=x+C, so y=Ae^x.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "questionText": "Find the general solution of dy/dx = 2x.",
+    "options": [
+      "y=x²+C",
+      "y=2x+C",
+      "y=x+C",
+      "y=2x²+C"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integrating both sides: y=∫2x dx = x²+C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "questionText": "Find the differential equation representing the family of curves y=mx, where m is an arbitrary parameter.",
+    "options": [
+      "x(dy/dx)=y",
+      "y(dy/dx)=x",
+      "dy/dx=x",
+      "dy/dx=constant only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Differentiating y=mx gives dy/dx=m=y/x, which rearranges to x(dy/dx)=y.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "moderate",
+    "questionText": "A differential equation is said to be linear if the dependent variable and its derivatives:",
+    "options": [
+      "Appear only to the first degree and are not multiplied together",
+      "Can be raised to any power",
+      "Appear only as constants",
+      "Are freely multiplied by each other"
+    ],
+    "correctIndex": 0,
+    "explanation": "Linearity requires the dependent variable and its derivatives to appear only to the first power, without products between them.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "moderate",
+    "questionText": "The general solution of a differential equation contains:",
+    "options": [
+      "No arbitrary constants",
+      "Arbitrary constants equal in number to the order of the equation",
+      "Exactly one constant always, regardless of order",
+      "Infinitely many unrelated constants"
+    ],
+    "correctIndex": 1,
+    "explanation": "The number of arbitrary constants in the general solution matches the order of the differential equation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "easy",
+    "questionText": "A differential equation is an equation involving:",
+    "options": [
+      "A function and its derivatives",
+      "Only constants",
+      "Only algebraic expressions with no derivatives",
+      "Matrices exclusively"
+    ],
+    "correctIndex": 0,
+    "explanation": "By definition, a differential equation relates a function to one or more of its derivatives.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "easy",
+    "questionText": "The order of a differential equation is determined by the:",
+    "options": [
+      "Highest order derivative present",
+      "Number of terms in the equation",
+      "Highest power of the dependent variable",
+      "Number of constants present"
+    ],
+    "correctIndex": 0,
+    "explanation": "Order refers specifically to the highest derivative appearing in the equation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "easy",
+    "questionText": "Differential equations are widely used to model:",
+    "options": [
+      "Rates of change in real-world phenomena",
+      "Only static, unchanging quantities",
+      "Only probabilities",
+      "Only geometric shapes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Differential equations are the natural language for describing how quantities change over time or space.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "questionText": "Find the slope of the line passing through points (2,3) and (5,9).",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "correctIndex": 1,
+    "explanation": "Slope = (9−3)/(5−2) = 6/3 = 2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "questionText": "Find the equation of the line with slope 2 passing through (1,3).",
+    "options": [
+      "y=2x+1",
+      "y=2x−1",
+      "y=x+2",
+      "y=2x+3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using y−3=2(x−1): y=2x−2+3=2x+1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "questionText": "Find the distance between the point (3,4) and the line 3x+4y−5=0.",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 2,
+    "explanation": "Distance = |3(3)+4(4)−5|/√(3²+4²) = |9+16−5|/5 = 20/5 = 4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "questionText": "Two lines are parallel if their slopes are:",
+    "options": [
+      "Equal",
+      "Negative reciprocals of each other",
+      "Zero",
+      "Undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "Parallel lines never meet and always have identical slopes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "questionText": "Two lines are perpendicular if the product of their slopes is:",
+    "options": [
+      "0",
+      "1",
+      "−1",
+      "Undefined"
+    ],
+    "correctIndex": 2,
+    "explanation": "Perpendicular lines have slopes that are negative reciprocals, so their product is always −1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "questionText": "Find the equation of a line passing through the origin with slope 3.",
+    "options": [
+      "y=3x",
+      "y=x+3",
+      "y=3x+1",
+      "x=3y"
+    ],
+    "correctIndex": 0,
+    "explanation": "A line through the origin has no y-intercept term, giving y=3x.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "questionText": "Find the x-intercept of the line 2x+3y=6.",
+    "options": [
+      "2",
+      "3",
+      "6",
+      "−3"
+    ],
+    "correctIndex": 1,
+    "explanation": "Setting y=0: 2x=6, giving x=3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "moderate",
+    "questionText": "The general equation of a straight line is:",
+    "options": [
+      "ax+by+c=0",
+      "ax²+by+c=0",
+      "ax+by²=c",
+      "a/x+b/y=c"
+    ],
+    "correctIndex": 0,
+    "explanation": "The standard general form of a line's equation is ax+by+c=0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "moderate",
+    "questionText": "The slope-intercept form of a line is:",
+    "options": [
+      "y=mx+c",
+      "x=my+c",
+      "y=mx²+c",
+      "my=x+c"
+    ],
+    "correctIndex": 0,
+    "explanation": "y=mx+c expresses a line's equation using its slope m and y-intercept c.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "questionText": "The slope of a horizontal line is:",
+    "options": [
+      "0",
+      "1",
+      "Undefined",
+      "−1"
+    ],
+    "correctIndex": 0,
+    "explanation": "A horizontal line has no vertical rise, giving a slope of 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "questionText": "Find the equation of a circle with center (0,0) and radius 5.",
+    "options": [
+      "x²+y²=25",
+      "x²+y²=5",
+      "x²−y²=25",
+      "x+y=5"
+    ],
+    "correctIndex": 0,
+    "explanation": "A circle centered at the origin with radius r has the equation x²+y²=r², so here x²+y²=25.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "questionText": "Find the center and radius of the circle x²+y²−4x−6y+4=0.",
+    "options": [
+      "Center(2,3), r=3",
+      "Center(4,6), r=2",
+      "Center(−2,−3), r=3",
+      "Center(2,3), r=9"
+    ],
+    "correctIndex": 0,
+    "explanation": "Completing the square: (x−2)²+(y−3)²=4+9−4=9, giving center (2,3) and radius 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "questionText": "Find the equation of a circle with center (1,2) and radius 4.",
+    "options": [
+      "(x−1)²+(y−2)²=16",
+      "(x+1)²+(y+2)²=16",
+      "(x−1)²+(y−2)²=4",
+      "(x−2)²+(y−1)²=16"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard form (x−h)²+(y−k)²=r² with (h,k)=(1,2) and r=4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "questionText": "How many points does the line y=x+2 have in common with the circle x²+y²=4?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Infinitely many"
+    ],
+    "correctIndex": 2,
+    "explanation": "Substituting gives 2x²+4x=0, so x=0 or x=−2, yielding two distinct intersection points.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "questionText": "Find the radius of the circle x²+y²=49.",
+    "options": [
+      "7",
+      "49",
+      "14",
+      "24.5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Comparing with x²+y²=r², r²=49, so r=7.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "moderate",
+    "questionText": "The general equation of a circle is:",
+    "options": [
+      "x²+y²+2gx+2fy+c=0",
+      "ax+by+c=0",
+      "x²−y²=r²",
+      "xy=c"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the standard general form of a circle's equation, with center (−g,−f) and radius √(g²+f²−c).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "moderate",
+    "questionText": "Two circles are said to be concentric if they have:",
+    "options": [
+      "The same center but different radii",
+      "The same radius but different centers",
+      "Both the same center and the same radius",
+      "No relationship at all"
+    ],
+    "correctIndex": 0,
+    "explanation": "Concentric circles share a common center while differing in radius.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "questionText": "The standard equation of a circle with center (h,k) and radius r is:",
+    "options": [
+      "(x−h)²+(y−k)²=r²",
+      "(x+h)²+(y+k)²=r",
+      "x²+y²=r²",
+      "hx+ky=r"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the standard (Cartesian) form of a circle's equation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "questionText": "A line that touches a circle at exactly one point is called a:",
+    "options": [
+      "Secant",
+      "Tangent",
+      "Chord",
+      "Diameter"
+    ],
+    "correctIndex": 1,
+    "explanation": "A tangent line touches a circle at exactly one point without crossing into its interior.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "questionText": "The longest possible chord of a circle is its:",
+    "options": [
+      "Radius",
+      "Diameter",
+      "Tangent",
+      "Secant"
+    ],
+    "correctIndex": 1,
+    "explanation": "The diameter, passing through the center, is the longest chord of a circle.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "Find the equation of a parabola with vertex at the origin and focus at (3,0).",
+    "options": [
+      "y²=12x",
+      "y²=3x",
+      "x²=12y",
+      "y²=6x"
+    ],
+    "correctIndex": 0,
+    "explanation": "For y²=4ax with focus at (a,0)=(3,0), a=3, giving y²=12x.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "Find the eccentricity of the ellipse x²/25 + y²/16 = 1.",
+    "options": [
+      "3/5",
+      "4/5",
+      "1/5",
+      "9/25"
+    ],
+    "correctIndex": 0,
+    "explanation": "a²=25, b²=16. e=√(1−b²/a²)=√(1−16/25)=√(9/25)=3/5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "Find the length of the latus rectum of the parabola y²=8x.",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "correctIndex": 2,
+    "explanation": "The latus rectum length is 4a; here 4a=8, so the latus rectum itself equals 8.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "Find the equation of an ellipse with a=5, b=3, centered at the origin, major axis along the x-axis.",
+    "options": [
+      "x²/25+y²/9=1",
+      "x²/9+y²/25=1",
+      "x²/5+y²/3=1",
+      "x²−y²=25−9"
+    ],
+    "correctIndex": 0,
+    "explanation": "With semi-major axis a=5 and semi-minor axis b=3 along x and y respectively, the equation is x²/25+y²/9=1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "The eccentricity of a hyperbola is always:",
+    "options": [
+      "Less than 1",
+      "Equal to 1",
+      "Greater than 1",
+      "Equal to 0"
+    ],
+    "correctIndex": 2,
+    "explanation": "By definition, a hyperbola's eccentricity always exceeds 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "Find the foci of the ellipse x²/25 + y²/16 = 1.",
+    "options": [
+      "(±3,0)",
+      "(±4,0)",
+      "(±5,0)",
+      "(±9,0)"
+    ],
+    "correctIndex": 0,
+    "explanation": "c²=a²−b²=25−16=9, so c=3, giving foci at (±3,0).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "For a hyperbola x²/a² − y²/b² = 1, the relationship between a, b, and the focal distance c is:",
+    "options": [
+      "c²=a²+b²",
+      "c²=a²−b²",
+      "c=a+b",
+      "c²=a²×b²"
+    ],
+    "correctIndex": 0,
+    "explanation": "For hyperbolas (unlike ellipses), c²=a²+b².",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "Find the equation of the directrix of the parabola y²=4x.",
+    "options": [
+      "x=−1",
+      "x=1",
+      "y=−1",
+      "y=1"
+    ],
+    "correctIndex": 0,
+    "explanation": "For y²=4ax with a=1, the directrix is x=−a=−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "The eccentricity of any parabola is exactly:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Greater than 1"
+    ],
+    "correctIndex": 2,
+    "explanation": "By definition, a parabola always has eccentricity exactly 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "questionText": "Find the length of the major axis of the ellipse x²/36 + y²/25 = 1.",
+    "options": [
+      "6",
+      "10",
+      "12",
+      "25"
+    ],
+    "correctIndex": 2,
+    "explanation": "a²=36, so a=6. The major axis length is 2a=12.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "moderate",
+    "questionText": "A conic section is formed by the intersection of a plane with a:",
+    "options": [
+      "Double-napped cone",
+      "Sphere",
+      "Cylinder only",
+      "Cube"
+    ],
+    "correctIndex": 0,
+    "explanation": "Conic sections (circle, ellipse, parabola, hyperbola) all result from slicing a double-napped cone at different angles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "moderate",
+    "questionText": "The eccentricity of a circle is:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "A circle can be viewed as a special ellipse with eccentricity 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "questionText": "A parabola is the locus of points equidistant from a fixed point (focus) and a fixed line called the:",
+    "options": [
+      "Directrix",
+      "Axis",
+      "Vertex",
+      "Latus rectum"
+    ],
+    "correctIndex": 0,
+    "explanation": "The directrix is the fixed reference line used in the geometric definition of a parabola.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "questionText": "An ellipse has how many foci?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 1,
+    "explanation": "An ellipse has exactly two foci, located symmetrically along its major axis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "questionText": "Find the distance between the points (1,2,3) and (4,6,8).",
+    "options": [
+      "5",
+      "5√2",
+      "7",
+      "50"
+    ],
+    "correctIndex": 1,
+    "explanation": "d=√((4−1)²+(6−2)²+(8−3)²)=√(9+16+25)=√50=5√2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "questionText": "Find the direction cosines of the line joining (0,0,0) and (1,1,1).",
+    "options": [
+      "(1/√3,1/√3,1/√3)",
+      "(1,1,1)",
+      "(1/3,1/3,1/3)",
+      "(√3,√3,√3)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Direction ratios are (1,1,1), with magnitude √3, giving direction cosines of (1/√3,1/√3,1/√3).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "questionText": "Find the midpoint of the segment joining (2,4,6) and (4,8,10).",
+    "options": [
+      "(3,6,8)",
+      "(6,12,16)",
+      "(2,4,4)",
+      "(1,2,2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Midpoint = ((2+4)/2,(4+8)/2,(6+10)/2) = (3,6,8).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "questionText": "The equation of the xy-plane in three-dimensional coordinate geometry is:",
+    "options": [
+      "z=0",
+      "x=0",
+      "y=0",
+      "x=y=z"
+    ],
+    "correctIndex": 0,
+    "explanation": "The xy-plane consists of all points where the z-coordinate is 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "questionText": "Two lines with direction ratios (a1,b1,c1) and (a2,b2,c2) are perpendicular if:",
+    "options": [
+      "a1a2+b1b2+c1c2=0",
+      "a1/a2=b1/b2=c1/c2",
+      "a1+a2=0",
+      "a1a2=b1b2=c1c2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Perpendicularity of two lines in 3D corresponds to their direction ratios having a zero dot product.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "moderate",
+    "questionText": "The sum of the squares of the direction cosines of any line is always:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Undefined"
+    ],
+    "correctIndex": 1,
+    "explanation": "By definition, l²+m²+n²=1 for the direction cosines of any line.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "moderate",
+    "questionText": "The distance of a point (x,y,z) from the origin in 3D space is given by:",
+    "options": [
+      "√(x²+y²+z²)",
+      "x+y+z",
+      "x²+y²+z²",
+      "xyz"
+    ],
+    "correctIndex": 0,
+    "explanation": "This follows directly from the 3D distance formula (an extension of the Pythagorean theorem).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "easy",
+    "questionText": "In three-dimensional geometry, a point is represented by an ordered triplet of the form:",
+    "options": [
+      "(x,y,z)",
+      "(x,y)",
+      "(x,y,z,w)",
+      "x only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Points in 3D space require three coordinates: x, y, and z.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "easy",
+    "questionText": "The three coordinate planes in 3D geometry are:",
+    "options": [
+      "xy-plane, yz-plane, and zx-plane",
+      "Only the xy-plane",
+      "x-axis, y-axis, and z-axis",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "3D space is divided by three mutually perpendicular coordinate planes: xy, yz, and zx.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "easy",
+    "questionText": "Two lines in 3D space that neither intersect nor are parallel are called:",
+    "options": [
+      "Parallel lines",
+      "Skew lines",
+      "Perpendicular lines",
+      "Coincident lines"
+    ],
+    "correctIndex": 1,
+    "explanation": "Skew lines are non-intersecting, non-parallel lines that exist only in three (or more) dimensions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "questionText": "Find the magnitude of the vector a = 3i + 4j.",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "correctIndex": 2,
+    "explanation": "|a| = √(3²+4²) = √25 = 5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "questionText": "Find the dot product of vectors a=(1,2,3) and b=(4,5,6).",
+    "options": [
+      "12",
+      "24",
+      "32",
+      "40"
+    ],
+    "correctIndex": 2,
+    "explanation": "a·b = 1(4)+2(5)+3(6) = 4+10+18 = 32.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "questionText": "If a and b are perpendicular vectors (neither being zero), then a·b equals:",
+    "options": [
+      "0",
+      "1",
+      "|a||b|",
+      "−1"
+    ],
+    "correctIndex": 0,
+    "explanation": "The dot product of two perpendicular vectors is always zero, since cos(90°)=0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "questionText": "Find the unit vector in the direction of a=(3,4).",
+    "options": [
+      "(3/5,4/5)",
+      "(3,4)",
+      "(4/5,3/5)",
+      "(1,1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "|a|=5, so the unit vector is (3/5,4/5).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "questionText": "Find the cross product of a=(1,0,0) and b=(0,1,0).",
+    "options": [
+      "(0,0,1)",
+      "(1,0,0)",
+      "(0,1,0)",
+      "(1,1,1)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the determinant formula for cross product, a×b = (0,0,1), consistent with i×j=k.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "questionText": "If a·b=0 for two non-zero vectors a and b, the angle between them is:",
+    "options": [
+      "0°",
+      "45°",
+      "90°",
+      "180°"
+    ],
+    "correctIndex": 2,
+    "explanation": "A zero dot product between two non-zero vectors implies the angle between them is 90°.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "moderate",
+    "questionText": "The magnitude of a vector a=(x,y,z) is given by:",
+    "options": [
+      "√(x²+y²+z²)",
+      "x+y+z",
+      "x²+y²+z²",
+      "xyz"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is the standard formula for the magnitude (length) of a 3D vector.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "moderate",
+    "questionText": "A vector with magnitude exactly 1 is called a:",
+    "options": [
+      "Zero vector",
+      "Unit vector",
+      "Position vector",
+      "Null vector"
+    ],
+    "correctIndex": 1,
+    "explanation": "A unit vector is defined as any vector with magnitude 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "easy",
+    "questionText": "The magnitude of the zero vector is:",
+    "options": [
+      "0",
+      "1",
+      "Undefined",
+      "Infinite"
+    ],
+    "correctIndex": 0,
+    "explanation": "By definition, the zero vector has magnitude 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "easy",
+    "questionText": "Vector addition follows which fundamental geometric law?",
+    "options": [
+      "Triangle law (or parallelogram law) of vector addition",
+      "Pythagorean theorem exclusively",
+      "Law of cosines only",
+      "None of these"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vectors can be geometrically added using the triangle law or, equivalently, the parallelogram law.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "questionText": "Find the mean of the data: 2, 4, 6, 8, 10.",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mean = (2+4+6+8+10)/5 = 30/5 = 6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "questionText": "Find the median of the data: 3, 5, 7, 9, 11.",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "correctIndex": 2,
+    "explanation": "With 5 sorted data points, the median is the middle value: 7.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "questionText": "Find the variance of the data: 2, 4, 6 (mean=4).",
+    "options": [
+      "2",
+      "8/3",
+      "4",
+      "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "Variance = [(2−4)²+(4−4)²+(6−4)²]/3 = [4+0+4]/3 = 8/3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "questionText": "Find the mode of the data: 2, 3, 3, 4, 5, 3, 6.",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 1,
+    "explanation": "The value 3 appears most frequently (3 times), making it the mode.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "moderate",
+    "questionText": "The standard deviation of a data set is defined as the:",
+    "options": [
+      "Square of the variance",
+      "Square root of the variance",
+      "Same as the mean",
+      "Same as the range"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard deviation = √variance.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "moderate",
+    "questionText": "The range of a data set is defined as:",
+    "options": [
+      "Maximum value minus minimum value",
+      "Sum of all values",
+      "Average of all values",
+      "The middle value"
+    ],
+    "correctIndex": 0,
+    "explanation": "Range = highest value − lowest value in the data set.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "questionText": "The mean of a data set is also commonly known as the:",
+    "options": [
+      "Average",
+      "Mode",
+      "Median",
+      "Range"
+    ],
+    "correctIndex": 0,
+    "explanation": "'Mean' and 'average' are used interchangeably for this measure of central tendency.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "questionText": "Statistics deals primarily with the collection, analysis, and interpretation of:",
+    "options": [
+      "Data",
+      "Only geometric shapes",
+      "Only algebraic equations",
+      "Only probabilities"
+    ],
+    "correctIndex": 0,
+    "explanation": "Statistics is fundamentally the science of working with data.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "questionText": "A die is rolled once. Find the probability of getting an even number.",
+    "options": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "correctIndex": 2,
+    "explanation": "Favorable outcomes {2,4,6} = 3 out of 6 total, giving P = 3/6 = 1/2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "questionText": "Two coins are tossed. Find the probability of getting at least one head.",
+    "options": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "correctIndex": 2,
+    "explanation": "Total outcomes: HH, HT, TH, TT (4 total). At least one head: HH, HT, TH = 3 outcomes, giving P = 3/4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "questionText": "A card is drawn from a standard deck of 52 cards. Find the probability it is a king.",
+    "options": [
+      "1/13",
+      "1/4",
+      "1/52",
+      "4/13"
+    ],
+    "correctIndex": 0,
+    "explanation": "There are 4 kings out of 52 cards, giving P = 4/52 = 1/13.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "questionText": "If P(A)=0.4, P(B)=0.5, and A, B are independent events, find P(A∩B).",
+    "options": [
+      "0.1",
+      "0.2",
+      "0.4",
+      "0.9"
+    ],
+    "correctIndex": 1,
+    "explanation": "For independent events, P(A∩B) = P(A)×P(B) = 0.4×0.5 = 0.2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "questionText": "Two dice are rolled. Find the probability that the sum of the numbers shown is 7.",
+    "options": [
+      "1/6",
+      "1/9",
+      "1/12",
+      "1/36"
+    ],
+    "correctIndex": 0,
+    "explanation": "There are 6 favorable outcomes (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) out of 36 total, giving P = 6/36 = 1/6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "questionText": "A bag contains 3 red and 2 blue balls. Find the probability of drawing a red ball.",
+    "options": [
+      "2/5",
+      "3/5",
+      "1/2",
+      "1/5"
+    ],
+    "correctIndex": 1,
+    "explanation": "There are 3 red balls out of 5 total, giving P = 3/5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "questionText": "If P(A)=0.3 and P(B)=0.4, and A and B are mutually exclusive, find P(A∪B).",
+    "options": [
+      "0.12",
+      "0.7",
+      "0.1",
+      "1.0"
+    ],
+    "correctIndex": 1,
+    "explanation": "For mutually exclusive events, P(A∪B) = P(A)+P(B) = 0.3+0.4 = 0.7.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "questionText": "The probability of an impossible event is:",
+    "options": [
+      "0",
+      "1",
+      "0.5",
+      "Undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "An impossible event, by definition, has a probability of exactly 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "questionText": "The probability of a sure (certain) event is:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Undefined"
+    ],
+    "correctIndex": 2,
+    "explanation": "A certain event, by definition, has a probability of exactly 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "questionText": "The sum of the probabilities of all possible outcomes of an experiment is always:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Dependent on the experiment"
+    ],
+    "correctIndex": 2,
+    "explanation": "The total probability across the entire sample space must always sum to 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "questionText": "Probability values always lie within the range:",
+    "options": [
+      "0 to 1",
+      "−1 to 1",
+      "0 to 100",
+      "Any real number"
+    ],
+    "correctIndex": 0,
+    "explanation": "Probability is always a value between 0 (impossible) and 1 (certain), inclusive.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "questionText": "Two events are called mutually exclusive if they:",
+    "options": [
+      "Cannot occur simultaneously",
+      "Always occur together",
+      "Are independent of each other",
+      "Have equal probability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mutually exclusive events cannot both happen at the same time.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Find the value of sin(30°) + cos(60°).",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "1.5"
+    ],
+    "correctIndex": 2,
+    "explanation": "sin30°=1/2 and cos60°=1/2, so their sum is 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Simplify sin²(x) + cos²(x).",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "sin(2x)"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is the fundamental Pythagorean trigonometric identity, always equal to 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Find the value of tan(45°).",
+    "options": [
+      "0",
+      "1",
+      "√3",
+      "1/√3"
+    ],
+    "correctIndex": 1,
+    "explanation": "tan(45°) = sin(45°)/cos(45°) = 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Solve for x: sin(x) = 1/2, for 0≤x≤π/2.",
+    "options": [
+      "15°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "correctIndex": 1,
+    "explanation": "sin(30°) = 1/2, within the given range.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Find the value of cos(0°).",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Undefined"
+    ],
+    "correctIndex": 2,
+    "explanation": "cos(0°) = 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Using the double angle formula, sin(2x) equals:",
+    "options": [
+      "2sin(x)cos(x)",
+      "sin²(x)−cos²(x)",
+      "1−2sin²(x)",
+      "2cos²(x)−1"
+    ],
+    "correctIndex": 0,
+    "explanation": "The double angle formula for sine is sin(2x)=2sin(x)cos(x).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Find the value of tan(60°).",
+    "options": [
+      "1",
+      "√3",
+      "1/√3",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "tan(60°) = sin(60°)/cos(60°) = (√3/2)/(1/2) = √3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "questionText": "Solve cos(x)=0 for x in the range 0≤x≤2π.",
+    "options": [
+      "π/2 and 3π/2",
+      "0 and π",
+      "π/4 and 3π/4",
+      "π and 2π"
+    ],
+    "correctIndex": 0,
+    "explanation": "cos(x)=0 at x=π/2 and x=3π/2 within one full cycle.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "moderate",
+    "questionText": "The period of the sine function sin(x) is:",
+    "options": [
+      "π",
+      "2π",
+      "π/2",
+      "4π"
+    ],
+    "correctIndex": 1,
+    "explanation": "sin(x) repeats its values every 2π radians.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "moderate",
+    "questionText": "The value of sin(90°) is:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Undefined"
+    ],
+    "correctIndex": 2,
+    "explanation": "sin(90°) = 1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "easy",
+    "questionText": "The trigonometric identity 1+tan²(x) equals:",
+    "options": [
+      "sec²(x)",
+      "cosec²(x)",
+      "sin²(x)",
+      "cos²(x)"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is a standard Pythagorean identity: 1+tan²x=sec²x.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "easy",
+    "questionText": "The value of sin(0°) is:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "sin(0°) = 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "questionText": "Find the value of sin⁻¹(1/2).",
+    "options": [
+      "π/6",
+      "π/4",
+      "π/3",
+      "π/2"
+    ],
+    "correctIndex": 0,
+    "explanation": "sin(π/6)=1/2, and π/6 lies within the principal range of sin⁻¹.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "questionText": "Find the value of cos⁻¹(0).",
+    "options": [
+      "0",
+      "π/4",
+      "π/2",
+      "π"
+    ],
+    "correctIndex": 2,
+    "explanation": "cos(π/2)=0, and π/2 lies within the principal range [0,π] of cos⁻¹.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "questionText": "Find the value of tan⁻¹(1).",
+    "options": [
+      "0",
+      "π/6",
+      "π/4",
+      "π/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "tan(π/4)=1, and π/4 lies within the principal range of tan⁻¹.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "questionText": "The domain of sin⁻¹(x) is:",
+    "options": [
+      "[−1,1]",
+      "(−∞,∞)",
+      "[0,1]",
+      "[−π,π]"
+    ],
+    "correctIndex": 0,
+    "explanation": "Since sine only takes values between −1 and 1, its inverse function's domain is restricted to [−1,1].",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "questionText": "The range of the principal value branch of cos⁻¹(x) is:",
+    "options": [
+      "[0,π]",
+      "[−π/2,π/2]",
+      "(−∞,∞)",
+      "[−π,0]"
+    ],
+    "correctIndex": 0,
+    "explanation": "The principal value branch of cos⁻¹(x) is conventionally defined to be [0,π].",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "questionText": "The range of the principal value branch of tan⁻¹(x) is:",
+    "options": [
+      "(−π/2,π/2)",
+      "[0,π]",
+      "[−1,1]",
+      "(−∞,∞)"
+    ],
+    "correctIndex": 0,
+    "explanation": "tan⁻¹(x)'s principal value branch is the open interval (−π/2,π/2).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "questionText": "sin⁻¹(x) is also commonly referred to as:",
+    "options": [
+      "Arcsine",
+      "Cosecant",
+      "Arccosine",
+      "Cotangent"
+    ],
+    "correctIndex": 0,
+    "explanation": "sin⁻¹(x) is another notation for the arcsine function.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "easy",
+    "questionText": "The value of sin⁻¹(0) is:",
+    "options": [
+      "0",
+      "π/2",
+      "π",
+      "Undefined"
+    ],
+    "correctIndex": 0,
+    "explanation": "sin(0)=0, so sin⁻¹(0)=0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "tough",
+    "questionText": "Find the negation of the statement 'All students are hardworking'.",
+    "options": [
+      "Some students are not hardworking",
+      "No students are hardworking",
+      "All students are lazy",
+      "Some students are hardworking"
+    ],
+    "correctIndex": 0,
+    "explanation": "The negation of a universal statement ('All ... are ...') is an existential statement asserting at least one exception exists.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "tough",
+    "questionText": "A statement that is either true or false, but not both, is called a:",
+    "options": [
+      "Proposition",
+      "Question",
+      "Command",
+      "Exclamation"
+    ],
+    "correctIndex": 0,
+    "explanation": "In mathematical logic, a proposition is a declarative statement with a definite truth value.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "tough",
+    "questionText": "The compound statement 'p AND q' is true only when:",
+    "options": [
+      "Both p and q are true",
+      "Either p or q is true",
+      "Neither p nor q is true",
+      "p is true regardless of q"
+    ],
+    "correctIndex": 0,
+    "explanation": "A conjunction (AND) is true only if both individual statements are true.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "moderate",
+    "questionText": "The compound statement 'p OR q' is false only when:",
+    "options": [
+      "Both p and q are false",
+      "Both p and q are true",
+      "p alone is true",
+      "q alone is true"
+    ],
+    "correctIndex": 0,
+    "explanation": "A disjunction (OR) is false only when both statements are false; it's true otherwise.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "moderate",
+    "questionText": "The contrapositive of 'if p then q' is:",
+    "options": [
+      "If not q then not p",
+      "If not p then not q",
+      "If q then p",
+      "If not p then q"
+    ],
+    "correctIndex": 0,
+    "explanation": "The contrapositive of a conditional statement reverses and negates both parts, and is logically equivalent to the original statement.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "easy",
+    "questionText": "A statement that is always true, regardless of the truth values of its components, is called a:",
+    "options": [
+      "Tautology",
+      "Contradiction",
+      "Contingency",
+      "Fallacy"
+    ],
+    "correctIndex": 0,
+    "explanation": "A tautology is a compound statement that is true under every possible interpretation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Linear Programming",
+    "difficulty": "tough",
+    "questionText": "In a linear programming problem, the function to be maximized or minimized is called the:",
+    "options": [
+      "Objective function",
+      "Constraint",
+      "Feasible region",
+      "Corner point"
+    ],
+    "correctIndex": 0,
+    "explanation": "The objective function is the specific linear expression that the LPP seeks to optimize.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Linear Programming",
+    "difficulty": "tough",
+    "questionText": "The set of all points satisfying the constraints of a linear programming problem is called the:",
+    "options": [
+      "Feasible region",
+      "Objective function",
+      "Corner point",
+      "Optimal solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "The feasible region contains all points that satisfy every constraint simultaneously.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Linear Programming",
+    "difficulty": "tough",
+    "questionText": "According to the corner point theorem, the optimal solution of an LPP (if it exists) occurs at a:",
+    "options": [
+      "Corner (vertex) point of the feasible region",
+      "The center of the feasible region",
+      "Any random point inside the feasible region",
+      "Point outside the feasible region"
+    ],
+    "correctIndex": 0,
+    "explanation": "The corner point theorem states that the optimal value of the objective function occurs at one of the vertices of the feasible region.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Linear Programming",
+    "difficulty": "moderate",
+    "questionText": "In a linear programming problem, the constraints are typically expressed as:",
+    "options": [
+      "Linear inequalities",
+      "Quadratic equations",
+      "Trigonometric functions",
+      "Exponential functions"
+    ],
+    "correctIndex": 0,
+    "explanation": "LPP constraints are always linear inequalities (or equalities) in the decision variables.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Linear Programming",
+    "difficulty": "moderate",
+    "questionText": "A feasible region is called bounded if:",
+    "options": [
+      "It can be enclosed within a circle of finite radius",
+      "It extends infinitely in some direction",
+      "It has no solutions at all",
+      "It contains no corner points"
+    ],
+    "correctIndex": 0,
+    "explanation": "A bounded feasible region is finite in extent and can be completely enclosed within some circle.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Linear Programming",
+    "difficulty": "easy",
+    "questionText": "Linear programming is used to solve problems involving:",
+    "options": [
+      "Optimization of a linear objective function subject to linear constraints",
+      "Only differential equations",
+      "Only probability problems",
+      "Only geometric constructions"
+    ],
+    "correctIndex": 0,
+    "explanation": "LPP specifically deals with optimizing (maximizing/minimizing) a linear function under linear constraints.",
+    "imageUrl": null
+  }
+]
