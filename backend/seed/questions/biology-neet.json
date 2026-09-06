@@ -3406,60 +3406,823 @@
     "correctIndex": 1,
     "explanation": "BOD measures the amount of oxygen required by microorganisms to decompose organic matter in water, indicating the level of organic pollution.",
     "imageUrl": null
-  }
-,
-{"examMode": "NEET","subject": "Biology","chapter": "The Living World","difficulty": "easy","questionText": "Which taxonomic category contains organisms that are more closely related to each other than organisms belonging to different genera?","options": ["Family", "Genus", "Order", "Class"],"correctIndex": 1,"explanation": "A genus is a group of closely related species. Species belonging to the same genus share more similarities than species placed in different genera.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Biological Classification","difficulty": "moderate","questionText": "Which feature most reliably distinguishes archaebacteria from eubacteria?","options": ["Presence of ribosomes", "Absence of a true nucleus", "Distinctive cell wall composition", "Ability to reproduce asexually"],"correctIndex": 2,"explanation": "Archaebacterial cell walls differ chemically from those of eubacteria and generally lack peptidoglycan. Both groups are prokaryotic and possess ribosomes.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Plant Kingdom","difficulty": "tough","questionText": "In which plant group is the gametophyte the dominant, independent plant body while the sporophyte remains attached to and nutritionally dependent on it?","options": ["Pteridophytes", "Gymnosperms", "Bryophytes", "Angiosperms"],"correctIndex": 2,"explanation": "Bryophytes have a dominant gametophytic phase. Their sporophyte remains attached to the gametophyte and depends on it for nutrition.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Animal Kingdom","difficulty": "moderate","questionText": "An animal has a water vascular system, tube feet, and adult radial symmetry, while its larva is bilaterally symmetrical. Which phylum does it belong to?","options": ["Annelida", "Mollusca", "Echinodermata", "Arthropoda"],"correctIndex": 2,"explanation": "The water vascular system and tube feet are characteristic features of echinoderms. Echinoderm larvae are bilateral, whereas adults generally show radial symmetry.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Morphology of Flowering Plants","difficulty": "moderate","questionText": "A leaf has parallel venation and its vascular bundles are generally arranged in a similar pattern throughout the leaf. This combination is most characteristic of which group?","options": ["Dicotyledonous plants", "Monocotyledonous plants", "Gymnosperms", "Bryophytes"],"correctIndex": 1,"explanation": "Monocot leaves typically show parallel venation and have vascular bundles distributed relatively uniformly. Reticulate venation is more characteristic of dicot leaves.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Anatomy of Flowering Plants","difficulty": "tough","questionText": "Which statement correctly compares the vascular bundles of a typical dicot stem with those of a typical monocot stem?","options": ["Both have closed vascular bundles arranged randomly", "Dicot bundles are generally open and arranged in a ring, whereas monocot bundles are generally closed and scattered", "Dicot bundles are closed and scattered, whereas monocot bundles are open and arranged in a ring", "Both have open vascular bundles arranged in a ring"],"correctIndex": 1,"explanation": "Typical dicot stems possess conjoint, collateral, open vascular bundles arranged in a ring, while monocot stems generally have closed vascular bundles scattered in the ground tissue.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Structural Organisation in Animals","difficulty": "easy","questionText": "Which type of epithelial tissue is best suited for rapid diffusion, such as in the walls of alveoli?","options": ["Simple cuboidal epithelium", "Simple squamous epithelium", "Stratified squamous epithelium", "Compound cuboidal epithelium"],"correctIndex": 1,"explanation": "Simple squamous epithelium consists of a single thin layer of cells and facilitates rapid diffusion. It forms the lining of structures such as alveoli and blood vessels.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Cell: The Unit of Life","difficulty": "tough","questionText": "A cell contains 80S ribosomes in its cytoplasm and possesses membrane-bound organelles. Which conclusion is most appropriate?","options": ["It must be a prokaryotic cell", "It must be a eukaryotic cell", "It cannot contain DNA", "It must lack a nucleus"],"correctIndex": 1,"explanation": "Cytoplasmic 80S ribosomes and membrane-bound organelles are characteristic of eukaryotic cells. Prokaryotic cells characteristically possess 70S ribosomes and lack membrane-bound organelles.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Biomolecules","difficulty": "moderate","questionText": "Which bond directly links two amino acids together in a protein molecule?","options": ["Glycosidic bond", "Peptide bond", "Phosphodiester bond", "Hydrogen bond"],"correctIndex": 1,"explanation": "A peptide bond forms between the carboxyl group of one amino acid and the amino group of another, with elimination of a water molecule.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Cell Cycle and Cell Division","difficulty": "tough","questionText": "A diploid cell with 20 chromosomes undergoes meiosis. How many chromosomes and DNA molecules are present in each daughter cell immediately after completion of meiosis II?","options": ["20 chromosomes and 20 DNA molecules", "10 chromosomes and 10 DNA molecules", "10 chromosomes and 20 DNA molecules", "20 chromosomes and 10 DNA molecules"],"correctIndex": 1,"explanation": "Meiosis reduces the chromosome number from 20 to 10. After meiosis II, sister chromatids have separated, so each chromosome consists of one DNA molecule, giving 10 chromosomes and 10 DNA molecules per daughter cell.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Transport in Plants","difficulty": "moderate","questionText": "According to the cohesion-tension theory, upward movement of water through xylem is primarily driven by which factor?","options": ["Root pressure alone", "Transpiration pull generated by evaporation of water from leaves", "Active pumping by xylem vessels", "Diffusion of water into leaves"],"correctIndex": 1,"explanation": "Evaporation of water from leaf surfaces generates negative pressure or tension in the xylem. Cohesion between water molecules transmits this tension downward through the continuous water column.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Mineral Nutrition","difficulty": "tough","questionText": "Which observation most strongly indicates that an element is essential for plant growth rather than merely beneficial?","options": ["Its addition increases plant height", "Plants can complete their life cycle without it", "Its deficiency can be corrected only by supplying that particular element", "It is present in the soil"],"correctIndex": 2,"explanation": "An essential element is one whose absence prevents a plant from completing its life cycle and whose deficiency is specifically corrected by supplying that element.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Photosynthesis in Plants","difficulty": "tough","questionText": "In the Calvin cycle, the first stable product formed after fixation of carbon dioxide in a C3 plant is:","options": ["Pyruvic acid", "Oxaloacetic acid", "3-phosphoglyceric acid", "Phosphoenolpyruvate"],"correctIndex": 2,"explanation": "In C3 plants, CO2 combines with ribulose bisphosphate and the unstable six-carbon intermediate immediately splits into two molecules of 3-phosphoglyceric acid, the first stable product.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Respiration in Plants","difficulty": "moderate","questionText": "During aerobic respiration, the majority of ATP is generated during which stage?","options": ["Glycolysis", "Krebs cycle", "Oxidative phosphorylation", "Fermentation"],"correctIndex": 2,"explanation": "Most ATP generated during aerobic respiration is produced through oxidative phosphorylation associated with the electron transport system and chemiosmosis in mitochondria.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Plant Growth and Development","difficulty": "tough","questionText": "A plant shoot bends toward a unilateral light source because auxin becomes concentrated on the shaded side. What is the immediate effect of this auxin redistribution in the shoot?","options": ["Reduced cell elongation on the shaded side", "Enhanced cell elongation on the shaded side", "Enhanced cell division only on the illuminated side", "Complete inhibition of growth on the shaded side"],"correctIndex": 1,"explanation": "In shoots, auxin promotes cell elongation. Its higher concentration on the shaded side causes greater elongation there, producing curvature toward the light.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Digestion and Absorption","difficulty": "easy","questionText": "Which enzyme begins the digestion of starch in the human digestive system?","options": ["Pepsin", "Salivary amylase", "Trypsin", "Lipase"],"correctIndex": 1,"explanation": "Salivary amylase, secreted by the salivary glands, begins starch digestion in the mouth by breaking starch into smaller carbohydrates.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Breathing and Exchange of Gases","difficulty": "tough","questionText": "Which change promotes the unloading of oxygen from haemoglobin in actively respiring tissues?","options": ["Decrease in carbon dioxide concentration", "Increase in blood pH", "Decrease in temperature", "Increase in carbon dioxide concentration"],"correctIndex": 3,"explanation": "Actively respiring tissues produce more CO2, which lowers pH and decreases haemoglobin's affinity for oxygen. This promotes oxygen unloading in those tissues.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Body Fluids and Circulation","difficulty": "moderate","questionText": "Which chamber of the human heart pumps oxygenated blood into the systemic circulation?","options": ["Right atrium", "Right ventricle", "Left atrium", "Left ventricle"],"correctIndex": 3,"explanation": "The left ventricle receives oxygenated blood from the left atrium and pumps it into the aorta for distribution to the body.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Excretory Products and their Elimination","difficulty": "tough","questionText": "Which segment of the nephron is primarily responsible for establishing the medullary osmotic gradient through its counter-current mechanism?","options": ["Bowman's capsule", "Loop of Henle", "Proximal convoluted tubule", "Collecting duct alone"],"correctIndex": 1,"explanation": "The descending and ascending limbs of the loop of Henle have different permeabilities and transport properties, allowing them to establish the medullary osmotic gradient through counter-current multiplication.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Locomotion and Movement","difficulty": "moderate","questionText": "During skeletal muscle contraction, which region of the sarcomere decreases in length while the thick and thin filaments themselves retain their lengths?","options": ["A band", "I band", "Thick filament", "Thin filament"],"correctIndex": 1,"explanation": "During contraction, thin filaments slide toward the centre of the sarcomere. The I band decreases in width, while the A band remains essentially unchanged.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Neural Control and Coordination","difficulty": "tough","questionText": "At a chemical synapse, arrival of an action potential at the presynaptic terminal directly causes:","options": ["Opening of voltage-gated calcium channels", "Immediate breakdown of acetylcholine in the postsynaptic membrane", "Closure of all ion channels in the presynaptic membrane", "Replication of neurotransmitter receptors"],"correctIndex": 0,"explanation": "Depolarisation of the presynaptic terminal opens voltage-gated calcium channels. Calcium influx triggers synaptic vesicles to fuse with the membrane and release neurotransmitter.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Chemical Coordination and Integration","difficulty": "moderate","questionText": "Which hormone is released from the posterior pituitary but is synthesized in the hypothalamus?","options": ["Growth hormone", "Thyroxine", "Oxytocin", "Adrenocorticotropic hormone"],"correctIndex": 2,"explanation": "Oxytocin is synthesized by hypothalamic neurons and transported to the posterior pituitary, from where it is released into the bloodstream.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Sexual Reproduction in Flowering Plants","difficulty": "tough","questionText": "In a typical angiosperm, the fusion of one male gamete with the egg and the other male gamete with the polar nuclei results respectively in:","options": ["Syngamy and triple fusion", "Triple fusion and syngamy", "Pollination and fertilisation", "Germination and syngamy"],"correctIndex": 0,"explanation": "Fusion of a male gamete with the egg is syngamy and produces the diploid zygote. Fusion of the second male gamete with the two polar nuclei is triple fusion and produces the triploid primary endosperm nucleus.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Human Reproduction","difficulty": "moderate","questionText": "Which hormone surge is directly responsible for triggering ovulation in a typical human menstrual cycle?","options": ["FSH surge", "LH surge", "Progesterone surge", "hCG surge"],"correctIndex": 1,"explanation": "A sharp mid-cycle surge in luteinising hormone induces ovulation, leading to the release of the secondary oocyte from the mature ovarian follicle.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Reproductive Health","difficulty": "easy","questionText": "Which contraceptive method primarily prevents sperm from entering the female reproductive tract by acting as a physical barrier?","options": ["Condom", "Oral contraceptive pill", "Copper-releasing IUD", "Vasectomy"],"correctIndex": 0,"explanation": "A condom is a barrier method that physically prevents semen and sperm from entering the female reproductive tract. It also helps reduce transmission of sexually transmitted infections.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Principles of Inheritance and Variation","difficulty": "tough","questionText": "A heterozygous tall pea plant is crossed with a dwarf plant. If tallness is completely dominant over dwarfness, what proportion of offspring is expected to be dwarf?","options": ["0%", "25%", "50%", "75%"],"correctIndex": 2,"explanation": "The cross is Tt × tt. Half the offspring are expected to be Tt and tall, while half are tt and dwarf, giving a dwarf proportion of 50%.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Molecular Basis of Inheritance","difficulty": "tough","questionText": "During DNA replication, which enzyme primarily joins adjacent Okazaki fragments on the lagging strand?","options": ["DNA helicase", "DNA ligase", "RNA polymerase", "DNA-dependent RNA polymerase"],"correctIndex": 1,"explanation": "DNA ligase seals the nicks between adjacent Okazaki fragments by forming phosphodiester bonds, producing a continuous DNA strand.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Evolution","difficulty": "moderate","questionText": "Which evolutionary process can directly introduce new alleles into a population by bringing genetic material from another population?","options": ["Genetic drift", "Gene flow", "Natural selection", "Genetic recombination only"],"correctIndex": 1,"explanation": "Gene flow occurs when individuals or their gametes move between populations and reproduce, introducing alleles into the recipient population.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Human Health and Disease","difficulty": "tough","questionText": "Which cells are primarily responsible for producing antibodies during a humoral immune response?","options": ["B lymphocytes and their plasma-cell derivatives", "Red blood cells", "Neutrophils only", "Platelets"],"correctIndex": 0,"explanation": "B lymphocytes differentiate into plasma cells, which secrete antibodies. This constitutes the antibody-mediated or humoral immune response.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Strategies for Enhancement in Food Production","difficulty": "moderate","questionText": "In animal breeding, repeated mating of animals from different breeds is mainly carried out to:","options": ["Eliminate all genetic variation", "Combine desirable traits from different breeds", "Produce only homozygous offspring", "Prevent hybridisation"],"correctIndex": 1,"explanation": "Cross-breeding combines desirable characteristics of different breeds. It is commonly used to obtain offspring with improved combinations of useful traits.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Microbes in Human Welfare","difficulty": "easy","questionText": "Which microorganism is commonly used in the commercial production of ethanol?","options": ["Lactobacillus", "Saccharomyces cerevisiae", "Rhizobium", "Methanobacterium"],"correctIndex": 1,"explanation": "Saccharomyces cerevisiae, commonly called baker's or brewer's yeast, carries out alcoholic fermentation and is widely used for ethanol production.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Biotechnology: Principles and Processes","difficulty": "tough","questionText": "In recombinant DNA technology, why is a selectable marker included in a cloning vector?","options": ["To increase the size of the host cell", "To identify cells that have received the vector", "To prevent DNA replication", "To destroy all recombinant DNA"],"correctIndex": 1,"explanation": "Selectable markers allow transformed host cells carrying the vector to be identified or selected, commonly through resistance to a particular antibiotic.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Biotechnology and its Applications","difficulty": "moderate","questionText": "Recombinant human insulin was developed using biotechnology because insulin obtained directly from animal pancreas could cause which major problem in some patients?","options": ["It always lacked biological activity", "It could produce undesirable immune reactions", "It could not contain amino acids", "It was composed entirely of carbohydrates"],"correctIndex": 1,"explanation": "Animal-derived insulin, particularly bovine or porcine insulin, could differ slightly from human insulin and may provoke immune reactions in some individuals. Recombinant human insulin is structurally identical to human insulin.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Organisms and Populations","difficulty": "tough","questionText": "A population grows rapidly when resources are abundant, but its growth rate slows as resources become limiting and eventually approaches a stable population size. Which model describes this pattern?","options": ["Exponential growth model", "Logistic growth model", "Geometric decay model", "Linear growth model"],"correctIndex": 1,"explanation": "Logistic growth incorporates environmental resistance and carrying capacity. Population growth is rapid initially but slows as the population approaches carrying capacity.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Ecosystem","difficulty": "moderate","questionText": "In an ecosystem, approximately what fraction of the energy available at one trophic level is transferred to the next trophic level?","options": ["1%", "10%", "50%", "90%"],"correctIndex": 1,"explanation": "According to the ten percent law, only about 10% of the energy at one trophic level is transferred to the next level, while the remainder is largely lost as heat and through metabolic activities.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Biodiversity and Conservation","difficulty": "tough","questionText": "Which conservation strategy protects species by maintaining them within their natural habitats?","options": ["Ex situ conservation", "In situ conservation", "Artificial selection", "Cryopreservation only"],"correctIndex": 1,"explanation": "In situ conservation protects organisms within their natural ecosystems, such as through biosphere reserves, national parks, and wildlife sanctuaries.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Environmental Issues","difficulty": "moderate","questionText": "Which pollutant is primarily responsible for ozone-layer depletion through catalytic destruction of ozone molecules in the stratosphere?","options": ["Chlorofluorocarbons", "Carbon dioxide", "Methane", "Nitrogen gas"],"correctIndex": 0,"explanation": "Chlorofluorocarbons release chlorine radicals in the stratosphere under ultraviolet radiation. These radicals catalytically destroy ozone molecules.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "The Living World","difficulty": "tough","questionText": "A taxonomist identifies an unknown organism by comparing its observable characteristics with descriptions and identification keys. Which taxonomic aid is most directly being used when two contrasting alternatives are repeatedly presented?","options": ["Herbarium", "Taxonomic key", "Museum", "Botanical garden"],"correctIndex": 1,"explanation": "A taxonomic key uses pairs of contrasting characters to progressively identify an unknown organism. It is based on observable diagnostic features.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Biological Classification","difficulty": "tough","questionText": "Which combination correctly describes viruses?","options": ["Cellular organisms capable of independent metabolism", "Acellular entities that can reproduce only inside living host cells", "Prokaryotic cells lacking ribosomes", "Multicellular organisms with protein-only genetic material"],"correctIndex": 1,"explanation": "Viruses are acellular infectious entities containing genetic material enclosed in a protein coat. They depend on living host cells for replication.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Cell: The Unit of Life","difficulty": "moderate","questionText": "Which organelle is primarily responsible for modifying, sorting, and packaging proteins for secretion or delivery to other cellular destinations?","options": ["Golgi apparatus", "Lysosome", "Peroxisome", "Centrosome"],"correctIndex": 0,"explanation": "The Golgi apparatus modifies proteins and lipids received from the endoplasmic reticulum and sorts them into vesicles for secretion or delivery to specific cellular locations.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Cell Cycle and Cell Division","difficulty": "moderate","questionText": "During which stage of mitosis do chromosomes align approximately at the equatorial plane of the cell?","options": ["Prophase", "Metaphase", "Anaphase", "Telophase"],"correctIndex": 1,"explanation": "During metaphase, chromosomes become maximally condensed and align at the equatorial plate before sister chromatids separate during anaphase.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Photosynthesis in Plants","difficulty": "tough","questionText": "In C4 plants, the initial fixation of carbon dioxide into a four-carbon compound occurs primarily in which cells?","options": ["Bundle sheath cells", "Mesophyll cells", "Guard cells only", "Root hair cells"],"correctIndex": 1,"explanation": "In C4 plants, mesophyll cells initially fix CO2 using phosphoenolpyruvate carboxylase to form a four-carbon compound. The resulting acids are subsequently transported to bundle sheath cells.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Breathing and Exchange of Gases","difficulty": "easy","questionText": "Which respiratory pigment carries most of the oxygen in human blood?","options": ["Myoglobin", "Haemoglobin", "Chlorophyll", "Bilirubin"],"correctIndex": 1,"explanation": "Most oxygen in human blood is transported reversibly bound to haemoglobin present inside red blood cells. Only a small fraction is dissolved directly in plasma.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Body Fluids and Circulation","difficulty": "tough","questionText": "If the sinoatrial node stops functioning properly, which structure can normally act as a secondary pacemaker of the heart?","options": ["Atrioventricular node", "Aorta", "Mitral valve", "Papillary muscle"],"correctIndex": 0,"explanation": "The atrioventricular node can generate rhythmic impulses at a slower rate and therefore acts as a secondary pacemaker when the sinoatrial node fails.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Excretory Products and their Elimination","difficulty": "moderate","questionText": "Which process moves substances from the blood in the glomerular capillaries into Bowman's capsule during urine formation?","options": ["Selective reabsorption", "Glomerular filtration", "Tubular secretion", "Active transport from collecting duct"],"correctIndex": 1,"explanation": "Glomerular filtration is the pressure-driven movement of water and small dissolved substances from glomerular capillaries into Bowman's capsule, forming the initial filtrate.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Chemical Coordination and Integration","difficulty": "tough","questionText": "A decrease in blood calcium concentration stimulates secretion of which hormone, which acts to increase blood calcium levels?","options": ["Calcitonin", "Parathyroid hormone", "Insulin", "Aldosterone"],"correctIndex": 1,"explanation": "Low blood calcium stimulates secretion of parathyroid hormone from the parathyroid glands. It raises blood calcium levels by promoting calcium mobilisation, renal conservation, and activation of vitamin D.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Principles of Inheritance and Variation","difficulty": "tough","questionText": "In a dihybrid cross involving two independently assorting heterozygous parents, what phenotypic ratio is expected when complete dominance occurs at both loci?","options": ["1:1", "3:1", "9:3:3:1", "1:2:1"],"correctIndex": 2,"explanation": "For AaBb × AaBb with independent assortment and complete dominance, the classical phenotypic ratio is 9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Molecular Basis of Inheritance","difficulty": "tough","questionText": "If a DNA template strand has the sequence 3'-TACGGA-5', what is the corresponding mRNA sequence produced during transcription?","options": ["5'-AUGCCU-3'", "5'-UACGGA-3'", "3'-AUGCCU-5'", "5'-ATGCCT-3'"],"correctIndex": 0,"explanation": "RNA is synthesized complementary to the template strand and in the 5' to 3' direction. The complement of 3'-TACGGA-5' is 5'-AUGCCU-3'.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Human Health and Disease","difficulty": "moderate","questionText": "Which type of immunity develops when a person receives antibodies produced outside the body, providing immediate but temporary protection?","options": ["Active natural immunity", "Passive immunity", "Active acquired immunity", "Cell-mediated immunity only"],"correctIndex": 1,"explanation": "Passive immunity results from receiving ready-made antibodies from an external source. It provides immediate protection but generally does not generate long-lasting immunological memory.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Ecosystem","difficulty": "easy","questionText": "Which organisms form the first trophic level in a typical terrestrial ecosystem?","options": ["Herbivores", "Carnivores", "Producers", "Decomposers"],"correctIndex": 2,"explanation": "Producers occupy the first trophic level because they synthesize organic food from inorganic substances using light or chemical energy.","imageUrl": null},
-{"examMode": "NEET","subject": "Biology","chapter": "Biodiversity and Conservation","difficulty": "tough","questionText": "Which statement best explains why biodiversity loss can reduce ecosystem stability?","options": ["All species perform exactly the same ecological role", "Loss of species can reduce functional redundancy and weaken ecosystem responses to environmental changes", "Species diversity always decreases primary productivity", "Biodiversity prevents all ecological succession"],"correctIndex": 1,"explanation": "Greater biodiversity can provide functional redundancy and a wider range of ecological responses. Loss of species may therefore make ecosystems less resilient to environmental disturbances.","imageUrl": null}
-,
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "easy",
+    "questionText": "Which taxonomic category contains organisms that are more closely related to each other than organisms belonging to different genera?",
+    "options": [
+      "Family",
+      "Genus",
+      "Order",
+      "Class"
+    ],
+    "correctIndex": 1,
+    "explanation": "A genus is a group of closely related species. Species belonging to the same genus share more similarities than species placed in different genera.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "moderate",
+    "questionText": "Which feature most reliably distinguishes archaebacteria from eubacteria?",
+    "options": [
+      "Presence of ribosomes",
+      "Absence of a true nucleus",
+      "Distinctive cell wall composition",
+      "Ability to reproduce asexually"
+    ],
+    "correctIndex": 2,
+    "explanation": "Archaebacterial cell walls differ chemically from those of eubacteria and generally lack peptidoglycan. Both groups are prokaryotic and possess ribosomes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "In which plant group is the gametophyte the dominant, independent plant body while the sporophyte remains attached to and nutritionally dependent on it?",
+    "options": [
+      "Pteridophytes",
+      "Gymnosperms",
+      "Bryophytes",
+      "Angiosperms"
+    ],
+    "correctIndex": 2,
+    "explanation": "Bryophytes have a dominant gametophytic phase. Their sporophyte remains attached to the gametophyte and depends on it for nutrition.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "moderate",
+    "questionText": "An animal has a water vascular system, tube feet, and adult radial symmetry, while its larva is bilaterally symmetrical. Which phylum does it belong to?",
+    "options": [
+      "Annelida",
+      "Mollusca",
+      "Echinodermata",
+      "Arthropoda"
+    ],
+    "correctIndex": 2,
+    "explanation": "The water vascular system and tube feet are characteristic features of echinoderms. Echinoderm larvae are bilateral, whereas adults generally show radial symmetry.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "moderate",
+    "questionText": "A leaf has parallel venation and its vascular bundles are generally arranged in a similar pattern throughout the leaf. This combination is most characteristic of which group?",
+    "options": [
+      "Dicotyledonous plants",
+      "Monocotyledonous plants",
+      "Gymnosperms",
+      "Bryophytes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Monocot leaves typically show parallel venation and have vascular bundles distributed relatively uniformly. Reticulate venation is more characteristic of dicot leaves.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "Which statement correctly compares the vascular bundles of a typical dicot stem with those of a typical monocot stem?",
+    "options": [
+      "Both have closed vascular bundles arranged randomly",
+      "Dicot bundles are generally open and arranged in a ring, whereas monocot bundles are generally closed and scattered",
+      "Dicot bundles are closed and scattered, whereas monocot bundles are open and arranged in a ring",
+      "Both have open vascular bundles arranged in a ring"
+    ],
+    "correctIndex": 1,
+    "explanation": "Typical dicot stems possess conjoint, collateral, open vascular bundles arranged in a ring, while monocot stems generally have closed vascular bundles scattered in the ground tissue.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "easy",
+    "questionText": "Which type of epithelial tissue is best suited for rapid diffusion, such as in the walls of alveoli?",
+    "options": [
+      "Simple cuboidal epithelium",
+      "Simple squamous epithelium",
+      "Stratified squamous epithelium",
+      "Compound cuboidal epithelium"
+    ],
+    "correctIndex": 1,
+    "explanation": "Simple squamous epithelium consists of a single thin layer of cells and facilitates rapid diffusion. It forms the lining of structures such as alveoli and blood vessels.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A cell contains 80S ribosomes in its cytoplasm and possesses membrane-bound organelles. Which conclusion is most appropriate?",
+    "options": [
+      "It must be a prokaryotic cell",
+      "It must be a eukaryotic cell",
+      "It cannot contain DNA",
+      "It must lack a nucleus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cytoplasmic 80S ribosomes and membrane-bound organelles are characteristic of eukaryotic cells. Prokaryotic cells characteristically possess 70S ribosomes and lack membrane-bound organelles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Which bond directly links two amino acids together in a protein molecule?",
+    "options": [
+      "Glycosidic bond",
+      "Peptide bond",
+      "Phosphodiester bond",
+      "Hydrogen bond"
+    ],
+    "correctIndex": 1,
+    "explanation": "A peptide bond forms between the carboxyl group of one amino acid and the amino group of another, with elimination of a water molecule.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "A diploid cell with 20 chromosomes undergoes meiosis. How many chromosomes and DNA molecules are present in each daughter cell immediately after completion of meiosis II?",
+    "options": [
+      "20 chromosomes and 20 DNA molecules",
+      "10 chromosomes and 10 DNA molecules",
+      "10 chromosomes and 20 DNA molecules",
+      "20 chromosomes and 10 DNA molecules"
+    ],
+    "correctIndex": 1,
+    "explanation": "Meiosis reduces the chromosome number from 20 to 10. After meiosis II, sister chromatids have separated, so each chromosome consists of one DNA molecule, giving 10 chromosomes and 10 DNA molecules per daughter cell.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "moderate",
+    "questionText": "According to the cohesion-tension theory, upward movement of water through xylem is primarily driven by which factor?",
+    "options": [
+      "Root pressure alone",
+      "Transpiration pull generated by evaporation of water from leaves",
+      "Active pumping by xylem vessels",
+      "Diffusion of water into leaves"
+    ],
+    "correctIndex": 1,
+    "explanation": "Evaporation of water from leaf surfaces generates negative pressure or tension in the xylem. Cohesion between water molecules transmits this tension downward through the continuous water column.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "questionText": "Which observation most strongly indicates that an element is essential for plant growth rather than merely beneficial?",
+    "options": [
+      "Its addition increases plant height",
+      "Plants can complete their life cycle without it",
+      "Its deficiency can be corrected only by supplying that particular element",
+      "It is present in the soil"
+    ],
+    "correctIndex": 2,
+    "explanation": "An essential element is one whose absence prevents a plant from completing its life cycle and whose deficiency is specifically corrected by supplying that element.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "In the Calvin cycle, the first stable product formed after fixation of carbon dioxide in a C3 plant is:",
+    "options": [
+      "Pyruvic acid",
+      "Oxaloacetic acid",
+      "3-phosphoglyceric acid",
+      "Phosphoenolpyruvate"
+    ],
+    "correctIndex": 2,
+    "explanation": "In C3 plants, CO2 combines with ribulose bisphosphate and the unstable six-carbon intermediate immediately splits into two molecules of 3-phosphoglyceric acid, the first stable product.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "moderate",
+    "questionText": "During aerobic respiration, the majority of ATP is generated during which stage?",
+    "options": [
+      "Glycolysis",
+      "Krebs cycle",
+      "Oxidative phosphorylation",
+      "Fermentation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Most ATP generated during aerobic respiration is produced through oxidative phosphorylation associated with the electron transport system and chemiosmosis in mitochondria.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "A plant shoot bends toward a unilateral light source because auxin becomes concentrated on the shaded side. What is the immediate effect of this auxin redistribution in the shoot?",
+    "options": [
+      "Reduced cell elongation on the shaded side",
+      "Enhanced cell elongation on the shaded side",
+      "Enhanced cell division only on the illuminated side",
+      "Complete inhibition of growth on the shaded side"
+    ],
+    "correctIndex": 1,
+    "explanation": "In shoots, auxin promotes cell elongation. Its higher concentration on the shaded side causes greater elongation there, producing curvature toward the light.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "easy",
+    "questionText": "Which enzyme begins the digestion of starch in the human digestive system?",
+    "options": [
+      "Pepsin",
+      "Salivary amylase",
+      "Trypsin",
+      "Lipase"
+    ],
+    "correctIndex": 1,
+    "explanation": "Salivary amylase, secreted by the salivary glands, begins starch digestion in the mouth by breaking starch into smaller carbohydrates.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "Which change promotes the unloading of oxygen from haemoglobin in actively respiring tissues?",
+    "options": [
+      "Decrease in carbon dioxide concentration",
+      "Increase in blood pH",
+      "Decrease in temperature",
+      "Increase in carbon dioxide concentration"
+    ],
+    "correctIndex": 3,
+    "explanation": "Actively respiring tissues produce more CO2, which lowers pH and decreases haemoglobin's affinity for oxygen. This promotes oxygen unloading in those tissues.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "moderate",
+    "questionText": "Which chamber of the human heart pumps oxygenated blood into the systemic circulation?",
+    "options": [
+      "Right atrium",
+      "Right ventricle",
+      "Left atrium",
+      "Left ventricle"
+    ],
+    "correctIndex": 3,
+    "explanation": "The left ventricle receives oxygenated blood from the left atrium and pumps it into the aorta for distribution to the body.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "Which segment of the nephron is primarily responsible for establishing the medullary osmotic gradient through its counter-current mechanism?",
+    "options": [
+      "Bowman's capsule",
+      "Loop of Henle",
+      "Proximal convoluted tubule",
+      "Collecting duct alone"
+    ],
+    "correctIndex": 1,
+    "explanation": "The descending and ascending limbs of the loop of Henle have different permeabilities and transport properties, allowing them to establish the medullary osmotic gradient through counter-current multiplication.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "moderate",
+    "questionText": "During skeletal muscle contraction, which region of the sarcomere decreases in length while the thick and thin filaments themselves retain their lengths?",
+    "options": [
+      "A band",
+      "I band",
+      "Thick filament",
+      "Thin filament"
+    ],
+    "correctIndex": 1,
+    "explanation": "During contraction, thin filaments slide toward the centre of the sarcomere. The I band decreases in width, while the A band remains essentially unchanged.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "At a chemical synapse, arrival of an action potential at the presynaptic terminal directly causes:",
+    "options": [
+      "Opening of voltage-gated calcium channels",
+      "Immediate breakdown of acetylcholine in the postsynaptic membrane",
+      "Closure of all ion channels in the presynaptic membrane",
+      "Replication of neurotransmitter receptors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Depolarisation of the presynaptic terminal opens voltage-gated calcium channels. Calcium influx triggers synaptic vesicles to fuse with the membrane and release neurotransmitter.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "moderate",
+    "questionText": "Which hormone is released from the posterior pituitary but is synthesized in the hypothalamus?",
+    "options": [
+      "Growth hormone",
+      "Thyroxine",
+      "Oxytocin",
+      "Adrenocorticotropic hormone"
+    ],
+    "correctIndex": 2,
+    "explanation": "Oxytocin is synthesized by hypothalamic neurons and transported to the posterior pituitary, from where it is released into the bloodstream.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "In a typical angiosperm, the fusion of one male gamete with the egg and the other male gamete with the polar nuclei results respectively in:",
+    "options": [
+      "Syngamy and triple fusion",
+      "Triple fusion and syngamy",
+      "Pollination and fertilisation",
+      "Germination and syngamy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fusion of a male gamete with the egg is syngamy and produces the diploid zygote. Fusion of the second male gamete with the two polar nuclei is triple fusion and produces the triploid primary endosperm nucleus.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "moderate",
+    "questionText": "Which hormone surge is directly responsible for triggering ovulation in a typical human menstrual cycle?",
+    "options": [
+      "FSH surge",
+      "LH surge",
+      "Progesterone surge",
+      "hCG surge"
+    ],
+    "correctIndex": 1,
+    "explanation": "A sharp mid-cycle surge in luteinising hormone induces ovulation, leading to the release of the secondary oocyte from the mature ovarian follicle.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "easy",
+    "questionText": "Which contraceptive method primarily prevents sperm from entering the female reproductive tract by acting as a physical barrier?",
+    "options": [
+      "Condom",
+      "Oral contraceptive pill",
+      "Copper-releasing IUD",
+      "Vasectomy"
+    ],
+    "correctIndex": 0,
+    "explanation": "A condom is a barrier method that physically prevents semen and sperm from entering the female reproductive tract. It also helps reduce transmission of sexually transmitted infections.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A heterozygous tall pea plant is crossed with a dwarf plant. If tallness is completely dominant over dwarfness, what proportion of offspring is expected to be dwarf?",
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "correctIndex": 2,
+    "explanation": "The cross is Tt × tt. Half the offspring are expected to be Tt and tall, while half are tt and dwarf, giving a dwarf proportion of 50%.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "During DNA replication, which enzyme primarily joins adjacent Okazaki fragments on the lagging strand?",
+    "options": [
+      "DNA helicase",
+      "DNA ligase",
+      "RNA polymerase",
+      "DNA-dependent RNA polymerase"
+    ],
+    "correctIndex": 1,
+    "explanation": "DNA ligase seals the nicks between adjacent Okazaki fragments by forming phosphodiester bonds, producing a continuous DNA strand.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "questionText": "Which evolutionary process can directly introduce new alleles into a population by bringing genetic material from another population?",
+    "options": [
+      "Genetic drift",
+      "Gene flow",
+      "Natural selection",
+      "Genetic recombination only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gene flow occurs when individuals or their gametes move between populations and reproduce, introducing alleles into the recipient population.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "Which cells are primarily responsible for producing antibodies during a humoral immune response?",
+    "options": [
+      "B lymphocytes and their plasma-cell derivatives",
+      "Red blood cells",
+      "Neutrophils only",
+      "Platelets"
+    ],
+    "correctIndex": 0,
+    "explanation": "B lymphocytes differentiate into plasma cells, which secrete antibodies. This constitutes the antibody-mediated or humoral immune response.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "moderate",
+    "questionText": "In animal breeding, repeated mating of animals from different breeds is mainly carried out to:",
+    "options": [
+      "Eliminate all genetic variation",
+      "Combine desirable traits from different breeds",
+      "Produce only homozygous offspring",
+      "Prevent hybridisation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cross-breeding combines desirable characteristics of different breeds. It is commonly used to obtain offspring with improved combinations of useful traits.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "easy",
+    "questionText": "Which microorganism is commonly used in the commercial production of ethanol?",
+    "options": [
+      "Lactobacillus",
+      "Saccharomyces cerevisiae",
+      "Rhizobium",
+      "Methanobacterium"
+    ],
+    "correctIndex": 1,
+    "explanation": "Saccharomyces cerevisiae, commonly called baker's or brewer's yeast, carries out alcoholic fermentation and is widely used for ethanol production.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "In recombinant DNA technology, why is a selectable marker included in a cloning vector?",
+    "options": [
+      "To increase the size of the host cell",
+      "To identify cells that have received the vector",
+      "To prevent DNA replication",
+      "To destroy all recombinant DNA"
+    ],
+    "correctIndex": 1,
+    "explanation": "Selectable markers allow transformed host cells carrying the vector to be identified or selected, commonly through resistance to a particular antibiotic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "moderate",
+    "questionText": "Recombinant human insulin was developed using biotechnology because insulin obtained directly from animal pancreas could cause which major problem in some patients?",
+    "options": [
+      "It always lacked biological activity",
+      "It could produce undesirable immune reactions",
+      "It could not contain amino acids",
+      "It was composed entirely of carbohydrates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Animal-derived insulin, particularly bovine or porcine insulin, could differ slightly from human insulin and may provoke immune reactions in some individuals. Recombinant human insulin is structurally identical to human insulin.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "A population grows rapidly when resources are abundant, but its growth rate slows as resources become limiting and eventually approaches a stable population size. Which model describes this pattern?",
+    "options": [
+      "Exponential growth model",
+      "Logistic growth model",
+      "Geometric decay model",
+      "Linear growth model"
+    ],
+    "correctIndex": 1,
+    "explanation": "Logistic growth incorporates environmental resistance and carrying capacity. Population growth is rapid initially but slows as the population approaches carrying capacity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "moderate",
+    "questionText": "In an ecosystem, approximately what fraction of the energy available at one trophic level is transferred to the next trophic level?",
+    "options": [
+      "1%",
+      "10%",
+      "50%",
+      "90%"
+    ],
+    "correctIndex": 1,
+    "explanation": "According to the ten percent law, only about 10% of the energy at one trophic level is transferred to the next level, while the remainder is largely lost as heat and through metabolic activities.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "Which conservation strategy protects species by maintaining them within their natural habitats?",
+    "options": [
+      "Ex situ conservation",
+      "In situ conservation",
+      "Artificial selection",
+      "Cryopreservation only"
+    ],
+    "correctIndex": 1,
+    "explanation": "In situ conservation protects organisms within their natural ecosystems, such as through biosphere reserves, national parks, and wildlife sanctuaries.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "moderate",
+    "questionText": "Which pollutant is primarily responsible for ozone-layer depletion through catalytic destruction of ozone molecules in the stratosphere?",
+    "options": [
+      "Chlorofluorocarbons",
+      "Carbon dioxide",
+      "Methane",
+      "Nitrogen gas"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chlorofluorocarbons release chlorine radicals in the stratosphere under ultraviolet radiation. These radicals catalytically destroy ozone molecules.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "tough",
+    "questionText": "A taxonomist identifies an unknown organism by comparing its observable characteristics with descriptions and identification keys. Which taxonomic aid is most directly being used when two contrasting alternatives are repeatedly presented?",
+    "options": [
+      "Herbarium",
+      "Taxonomic key",
+      "Museum",
+      "Botanical garden"
+    ],
+    "correctIndex": 1,
+    "explanation": "A taxonomic key uses pairs of contrasting characters to progressively identify an unknown organism. It is based on observable diagnostic features.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "Which combination correctly describes viruses?",
+    "options": [
+      "Cellular organisms capable of independent metabolism",
+      "Acellular entities that can reproduce only inside living host cells",
+      "Prokaryotic cells lacking ribosomes",
+      "Multicellular organisms with protein-only genetic material"
+    ],
+    "correctIndex": 1,
+    "explanation": "Viruses are acellular infectious entities containing genetic material enclosed in a protein coat. They depend on living host cells for replication.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "moderate",
+    "questionText": "Which organelle is primarily responsible for modifying, sorting, and packaging proteins for secretion or delivery to other cellular destinations?",
+    "options": [
+      "Golgi apparatus",
+      "Lysosome",
+      "Peroxisome",
+      "Centrosome"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Golgi apparatus modifies proteins and lipids received from the endoplasmic reticulum and sorts them into vesicles for secretion or delivery to specific cellular locations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "moderate",
+    "questionText": "During which stage of mitosis do chromosomes align approximately at the equatorial plane of the cell?",
+    "options": [
+      "Prophase",
+      "Metaphase",
+      "Anaphase",
+      "Telophase"
+    ],
+    "correctIndex": 1,
+    "explanation": "During metaphase, chromosomes become maximally condensed and align at the equatorial plate before sister chromatids separate during anaphase.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "In C4 plants, the initial fixation of carbon dioxide into a four-carbon compound occurs primarily in which cells?",
+    "options": [
+      "Bundle sheath cells",
+      "Mesophyll cells",
+      "Guard cells only",
+      "Root hair cells"
+    ],
+    "correctIndex": 1,
+    "explanation": "In C4 plants, mesophyll cells initially fix CO2 using phosphoenolpyruvate carboxylase to form a four-carbon compound. The resulting acids are subsequently transported to bundle sheath cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "easy",
+    "questionText": "Which respiratory pigment carries most of the oxygen in human blood?",
+    "options": [
+      "Myoglobin",
+      "Haemoglobin",
+      "Chlorophyll",
+      "Bilirubin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Most oxygen in human blood is transported reversibly bound to haemoglobin present inside red blood cells. Only a small fraction is dissolved directly in plasma.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "If the sinoatrial node stops functioning properly, which structure can normally act as a secondary pacemaker of the heart?",
+    "options": [
+      "Atrioventricular node",
+      "Aorta",
+      "Mitral valve",
+      "Papillary muscle"
+    ],
+    "correctIndex": 0,
+    "explanation": "The atrioventricular node can generate rhythmic impulses at a slower rate and therefore acts as a secondary pacemaker when the sinoatrial node fails.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "moderate",
+    "questionText": "Which process moves substances from the blood in the glomerular capillaries into Bowman's capsule during urine formation?",
+    "options": [
+      "Selective reabsorption",
+      "Glomerular filtration",
+      "Tubular secretion",
+      "Active transport from collecting duct"
+    ],
+    "correctIndex": 1,
+    "explanation": "Glomerular filtration is the pressure-driven movement of water and small dissolved substances from glomerular capillaries into Bowman's capsule, forming the initial filtrate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "A decrease in blood calcium concentration stimulates secretion of which hormone, which acts to increase blood calcium levels?",
+    "options": [
+      "Calcitonin",
+      "Parathyroid hormone",
+      "Insulin",
+      "Aldosterone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Low blood calcium stimulates secretion of parathyroid hormone from the parathyroid glands. It raises blood calcium levels by promoting calcium mobilisation, renal conservation, and activation of vitamin D.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "In a dihybrid cross involving two independently assorting heterozygous parents, what phenotypic ratio is expected when complete dominance occurs at both loci?",
+    "options": [
+      "1:1",
+      "3:1",
+      "9:3:3:1",
+      "1:2:1"
+    ],
+    "correctIndex": 2,
+    "explanation": "For AaBb × AaBb with independent assortment and complete dominance, the classical phenotypic ratio is 9 A_B_ : 3 A_bb : 3 aaB_ : 1 aabb.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "If a DNA template strand has the sequence 3'-TACGGA-5', what is the corresponding mRNA sequence produced during transcription?",
+    "options": [
+      "5'-AUGCCU-3'",
+      "5'-UACGGA-3'",
+      "3'-AUGCCU-5'",
+      "5'-ATGCCT-3'"
+    ],
+    "correctIndex": 0,
+    "explanation": "RNA is synthesized complementary to the template strand and in the 5' to 3' direction. The complement of 3'-TACGGA-5' is 5'-AUGCCU-3'.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "moderate",
+    "questionText": "Which type of immunity develops when a person receives antibodies produced outside the body, providing immediate but temporary protection?",
+    "options": [
+      "Active natural immunity",
+      "Passive immunity",
+      "Active acquired immunity",
+      "Cell-mediated immunity only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Passive immunity results from receiving ready-made antibodies from an external source. It provides immediate protection but generally does not generate long-lasting immunological memory.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "easy",
+    "questionText": "Which organisms form the first trophic level in a typical terrestrial ecosystem?",
+    "options": [
+      "Herbivores",
+      "Carnivores",
+      "Producers",
+      "Decomposers"
+    ],
+    "correctIndex": 2,
+    "explanation": "Producers occupy the first trophic level because they synthesize organic food from inorganic substances using light or chemical energy.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "Which statement best explains why biodiversity loss can reduce ecosystem stability?",
+    "options": [
+      "All species perform exactly the same ecological role",
+      "Loss of species can reduce functional redundancy and weaken ecosystem responses to environmental changes",
+      "Species diversity always decreases primary productivity",
+      "Biodiversity prevents all ecological succession"
+    ],
+    "correctIndex": 1,
+    "explanation": "Greater biodiversity can provide functional redundancy and a wider range of ecological responses. Loss of species may therefore make ecosystems less resilient to environmental disturbances.",
+    "imageUrl": null
+  },
   {
     "examMode": "NEET",
     "subject": "Biology",
@@ -4706,6 +5469,2086 @@
     ],
     "correctIndex": 0,
     "explanation": "Endemic species are restricted to a particular geographical region. Areas with high endemism are especially important for biodiversity conservation because local habitat loss can cause global extinction of those species.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A secretory cell produces a large quantity of a protein that must be exported outside the cell. Which sequence best represents the major intracellular route followed by this protein?",
+    "options": [
+      "Ribosome on rough ER → ER lumen → Golgi apparatus → secretory vesicle",
+      "Free ribosome → lysosome → nucleus → secretory vesicle",
+      "Smooth ER → mitochondrion → Golgi apparatus → nucleus",
+      "Nucleus → peroxisome → lysosome → plasma membrane"
+    ],
+    "correctIndex": 0,
+    "explanation": "Secretory proteins are synthesised by ribosomes attached to rough ER, enter the ER, are modified and sorted by the Golgi apparatus, and are finally transported in secretory vesicles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A cell is experimentally deprived of functional mitochondria but its cytoplasmic glycolytic machinery remains intact. Which process can still provide ATP directly in the cytoplasm?",
+    "options": [
+      "Glycolysis",
+      "Krebs cycle",
+      "Oxidative phosphorylation",
+      "Electron transport through the inner mitochondrial membrane"
+    ],
+    "correctIndex": 0,
+    "explanation": "Glycolysis occurs in the cytoplasm and can generate ATP by substrate-level phosphorylation without mitochondria. The Krebs cycle and oxidative phosphorylation require mitochondrial structures.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A membrane-bound organelle contains its own circular DNA and 70S ribosomes and can synthesise some of its proteins. Which inference is most appropriate?",
+    "options": [
+      "It is a lysosome",
+      "It is a mitochondrion or chloroplast",
+      "It is the Golgi apparatus",
+      "It is the endoplasmic reticulum"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mitochondria and chloroplasts contain their own DNA and 70S ribosomes, supporting the endosymbiotic origin of these organelles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A plant cell placed in a strongly hypertonic solution gradually loses water and its plasma membrane pulls away from the cell wall. Which process has occurred?",
+    "options": [
+      "Deplasmolysis",
+      "Plasmolysis",
+      "Endocytosis",
+      "Imbibition"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a hypertonic solution, water leaves the cell by exosmosis. Continued water loss causes the protoplast to shrink away from the cell wall, producing plasmolysis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Two proteins contain the same amino acids but differ in the order in which those amino acids are arranged. Which level of protein organisation is directly different?",
+    "options": [
+      "Primary structure",
+      "Secondary structure only",
+      "Tertiary structure only",
+      "Quaternary structure only"
+    ],
+    "correctIndex": 0,
+    "explanation": "The primary structure of a protein is its specific linear sequence of amino acids. Changing the order of amino acids therefore changes the primary structure.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "An enzyme loses its catalytic activity after exposure to a very high temperature, even though its amino acid composition has not changed. Which explanation is most appropriate?",
+    "options": [
+      "The enzyme has undergone denaturation and lost its functional conformation",
+      "All peptide bonds have necessarily been hydrolysed",
+      "The enzyme has been converted into a carbohydrate",
+      "The substrate has permanently become an enzyme"
+    ],
+    "correctIndex": 0,
+    "explanation": "High temperature can disrupt the interactions maintaining an enzyme's three-dimensional structure. This denaturation changes the active site and can abolish catalytic activity without necessarily breaking peptide bonds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "A nucleic acid contains ribose sugar and uracil as one of its nitrogenous bases. Which conclusion follows?",
+    "options": [
+      "It is DNA",
+      "It is RNA",
+      "It is a protein",
+      "It is a polysaccharide"
+    ],
+    "correctIndex": 1,
+    "explanation": "RNA contains ribose sugar and uses uracil, whereas DNA contains deoxyribose and thymine. Therefore the described nucleic acid is RNA.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "A meiotic cell has completed DNA replication but has not yet begun meiosis I. Compared with its original unreplicated state, which statement is correct?",
+    "options": [
+      "Chromosome number has doubled and DNA content is unchanged",
+      "Chromosome number is unchanged but DNA content has doubled",
+      "Both chromosome number and DNA content have doubled",
+      "Both chromosome number and DNA content have become half"
+    ],
+    "correctIndex": 1,
+    "explanation": "DNA replication duplicates each chromosome into two sister chromatids but does not change the chromosome number. Thus DNA content doubles while chromosome number remains unchanged.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "A cell entering meiosis I contains homologous chromosomes that pair and exchange corresponding segments. Which combination of events is represented?",
+    "options": [
+      "Synapsis followed by crossing over during prophase I",
+      "Centromere division followed by cytokinesis",
+      "DNA replication followed by translation",
+      "Chromatid separation during telophase II"
+    ],
+    "correctIndex": 0,
+    "explanation": "Homologous chromosomes pair during synapsis in prophase I, and crossing over occurs between non-sister chromatids of homologous chromosomes during this stage.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A flower has stamens attached to the petals rather than directly to the thalamus. Which term describes this condition?",
+    "options": [
+      "Epipetalous",
+      "Epiphyllous",
+      "Polyandrous",
+      "Monadelphous"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stamens that are attached to petals are described as epipetalous. This condition is common in several members of dicot families.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A fruit develops from the ovary as well as other floral parts such as the thalamus. Which category does this fruit belong to?",
+    "options": [
+      "True fruit",
+      "False or accessory fruit",
+      "Aggregate fruit only",
+      "Multiple fruit only"
+    ],
+    "correctIndex": 1,
+    "explanation": "A true fruit develops only from the ovary, whereas a false or accessory fruit involves additional floral parts. Apple is a standard example of an accessory fruit.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A transverse section shows a central pith, vascular bundles arranged in a ring, medullary rays between bundles, and distinct cortex and pith. Which organ is most consistent with these features?",
+    "options": [
+      "Typical dicot stem",
+      "Typical monocot stem",
+      "Root hair",
+      "Mature sieve tube"
+    ],
+    "correctIndex": 0,
+    "explanation": "A typical dicot stem has distinct cortex and pith, medullary rays, and vascular bundles arranged in a ring. Monocot stems generally lack such a distinct ring arrangement.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A root is undergoing secondary growth. Which meristematic activity contributes directly to the formation of secondary xylem and secondary phloem?",
+    "options": [
+      "Vascular cambium",
+      "Apical meristem",
+      "Protoderm",
+      "Ground meristem"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vascular cambium is a lateral meristem responsible for secondary growth. It produces secondary xylem toward the inside and secondary phloem toward the outside.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "A plant is exposed to strong sunlight and dry air. Stomata initially open sufficiently for gas exchange but later tend to close because of excessive water loss. Which process is directly being regulated?",
+    "options": [
+      "Transpiration",
+      "Protein translation",
+      "DNA replication",
+      "Seed formation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stomatal closure reduces the loss of water vapour from leaves. Thus stomata regulate transpiration while also controlling gas exchange.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "A plant cell has a lower water potential than the surrounding solution. Assuming no barrier prevents water movement, what is the expected direction of net water movement?",
+    "options": [
+      "From the cell to the solution",
+      "From the solution into the cell",
+      "No movement is possible",
+      "Water moves only through xylem"
+    ],
+    "correctIndex": 1,
+    "explanation": "Water moves spontaneously from a region of higher water potential to lower water potential. Therefore water tends to enter the cell from the surrounding solution.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "questionText": "A plant cannot synthesise certain amino acids efficiently when nitrate availability is severely reduced. Which process is most directly limited first?",
+    "options": [
+      "Nitrogen assimilation",
+      "Photolysis of water",
+      "Starch hydrolysis in seeds",
+      "Transpiration through cuticle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nitrate is an important inorganic nitrogen source for plants. Its reduction and subsequent assimilation provide nitrogen needed for amino acids, proteins, nucleic acids, and other compounds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "questionText": "A leguminous plant grows normally in nitrogen-poor soil when associated with a particular bacterium in its root nodules. What is the key benefit of this association?",
+    "options": [
+      "Conversion of atmospheric nitrogen into a form usable by the plant",
+      "Direct conversion of glucose into oxygen",
+      "Suppression of all root respiration",
+      "Prevention of water absorption"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rhizobium in legume root nodules fixes atmospheric nitrogen into biologically useful nitrogenous compounds. This symbiotic association improves nitrogen availability to the plant.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "A researcher provides a plant with water containing oxygen isotopes and observes labelled oxygen gas being released during photosynthesis. Which process accounts for this oxygen release?",
+    "options": [
+      "Splitting of water during the light reaction",
+      "Reduction of carbon dioxide in the Calvin cycle",
+      "Conversion of glucose into pyruvate",
+      "Reduction of nitrate in roots"
+    ],
+    "correctIndex": 0,
+    "explanation": "Oxygen released during photosynthesis originates from the photolysis of water during the light-dependent reactions. The Calvin cycle uses CO2 but does not release the oxygen gas.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "A plant is exposed to light of a wavelength that chlorophyll absorbs poorly. Assuming all other factors remain suitable, what is the most likely effect on photosynthetic activity?",
+    "options": [
+      "Photosynthetic activity tends to be lower",
+      "Photosynthesis must become independent of light",
+      "Carbon fixation becomes impossible at every wavelength",
+      "Respiration necessarily stops"
+    ],
+    "correctIndex": 0,
+    "explanation": "Photosynthetic pigments absorb some wavelengths more efficiently than others. Wavelengths poorly absorbed by chlorophyll generally support lower photosynthetic activity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "A molecule of glucose is converted into two molecules of pyruvate in a sequence occurring outside the mitochondrion. Which statement correctly describes this stage?",
+    "options": [
+      "It is glycolysis and occurs in the cytoplasm",
+      "It is the Krebs cycle and occurs in the matrix",
+      "It is oxidative phosphorylation and occurs on thylakoids",
+      "It is fermentation and occurs only in chloroplasts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Glycolysis converts one glucose molecule into two pyruvate molecules and occurs in the cytoplasm. It does not directly require oxygen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "A plant cell converts pyruvate into acetyl-CoA before it enters the Krebs cycle. During this conversion, which important event occurs?",
+    "options": [
+      "Oxidative decarboxylation of pyruvate",
+      "Reduction of oxygen into glucose",
+      "Photolysis of water",
+      "Direct synthesis of starch"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pyruvate undergoes oxidative decarboxylation to form acetyl-CoA, releasing CO2 and generating reduced coenzymes before acetyl-CoA enters the Krebs cycle.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "A shoot is placed horizontally. After some time, its stem curves upward while the root curves downward. Which combination best explains the response?",
+    "options": [
+      "Stem and root both show identical auxin responses",
+      "Differential sensitivity to auxin causes opposite growth responses",
+      "Neither organ responds to gravity",
+      "Only cytokinin causes the entire response"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gravitropism involves redistribution of auxin. Roots and shoots differ in their sensitivity to auxin, causing opposite growth responses to gravity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "A plant hormone promotes stomatal closure during water stress and also contributes to maintenance of seed dormancy. Which hormone is described?",
+    "options": [
+      "Auxin",
+      "Gibberellin",
+      "Abscisic acid",
+      "Cytokinin"
+    ],
+    "correctIndex": 2,
+    "explanation": "Abscisic acid is an important stress hormone that promotes stomatal closure during water deficit and is also associated with seed dormancy.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "A pancreatic secretion enters the small intestine and contains inactive proteolytic enzymes. Why are many pancreatic proteases secreted in inactive forms?",
+    "options": [
+      "To prevent digestion of pancreatic and surrounding tissues",
+      "To prevent all protein digestion in the intestine",
+      "Because inactive enzymes cannot ever be activated",
+      "Because proteins are absorbed only in the stomach"
+    ],
+    "correctIndex": 0,
+    "explanation": "Proteases such as trypsinogen are secreted as inactive zymogens, reducing the risk of autodigestion of pancreatic tissue. They are activated after reaching the appropriate intestinal environment.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "A person lacks sufficient lactase activity and develops digestive discomfort after consuming large amounts of milk. Which immediate biochemical problem is responsible?",
+    "options": [
+      "Poor hydrolysis of lactose",
+      "Poor hydrolysis of triglycerides",
+      "Failure of protein digestion by pepsin",
+      "Failure of bile production"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lactase hydrolyses lactose into simpler sugars that can be absorbed. Low lactase activity leaves more lactose undigested in the intestinal lumen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "A person has normal alveolar ventilation but a markedly reduced haemoglobin concentration. Which consequence is most likely despite normal oxygen diffusion into the blood?",
+    "options": [
+      "Reduced oxygen-carrying capacity of blood",
+      "Complete absence of oxygen diffusion",
+      "Increased carbon dioxide production by alveoli",
+      "Conversion of haemoglobin into plasma proteins"
+    ],
+    "correctIndex": 0,
+    "explanation": "Haemoglobin carries most oxygen in blood. A reduced haemoglobin concentration lowers the oxygen-carrying capacity even when alveolar oxygen diffusion itself remains normal.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "In systemic tissues, carbon dioxide concentration rises because of cellular respiration. Which combined changes favour oxygen unloading from haemoglobin?",
+    "options": [
+      "Lower CO2 and higher pH",
+      "Higher CO2 and lower pH",
+      "Higher oxygen and higher pH",
+      "Lower CO2 and lower temperature"
+    ],
+    "correctIndex": 1,
+    "explanation": "Increased CO2 lowers tissue pH and reduces haemoglobin's affinity for oxygen. This facilitates oxygen unloading in actively respiring tissues.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "A red blood cell enters the pulmonary artery from the right ventricle. Which sequence correctly describes its next major route before returning to the left atrium?",
+    "options": [
+      "Pulmonary artery → lungs → pulmonary veins → left atrium",
+      "Aorta → body tissues → vena cava → left atrium",
+      "Pulmonary artery → aorta → lungs → left atrium",
+      "Vena cava → lungs → pulmonary artery → left atrium"
+    ],
+    "correctIndex": 0,
+    "explanation": "Blood pumped from the right ventricle enters the pulmonary artery, reaches the lungs for gas exchange, and returns through pulmonary veins to the left atrium.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "A patient has abnormally low platelet numbers. Which physiological process would be most directly impaired?",
+    "options": [
+      "Blood clot formation",
+      "Oxygen transport by haemoglobin",
+      "Antibody synthesis by B cells",
+      "Impulse conduction by neurons"
+    ],
+    "correctIndex": 0,
+    "explanation": "Platelets are important for haemostasis and blood clot formation. Severe thrombocytopenia therefore increases the risk of prolonged bleeding.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "A person becomes dehydrated and plasma osmolarity rises. Which response helps conserve water by producing a smaller volume of concentrated urine?",
+    "options": [
+      "Reduced ADH secretion",
+      "Increased ADH secretion",
+      "Complete inhibition of water reabsorption",
+      "Increased ANF secretion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Increased plasma osmolarity stimulates ADH release. ADH increases water permeability of the distal nephron and collecting ducts, enhancing water reabsorption and concentrating urine.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "A nephron segment actively transports sodium chloride but has very low permeability to water. Which nephron region best matches this description?",
+    "options": [
+      "Descending limb of loop of Henle",
+      "Ascending limb of loop of Henle",
+      "Bowman's capsule",
+      "Glomerular capillary"
+    ],
+    "correctIndex": 1,
+    "explanation": "The ascending limb, particularly its thick segment, actively transports ions and is relatively impermeable to water. This contributes to formation of the medullary osmotic gradient.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "questionText": "During muscle contraction, ATP binds to the myosin head. What immediate effect does ATP binding have on the actin-myosin interaction?",
+    "options": [
+      "It promotes detachment of myosin from actin",
+      "It permanently locks myosin onto actin",
+      "It destroys tropomyosin",
+      "It releases calcium from the sarcoplasmic reticulum"
+    ],
+    "correctIndex": 0,
+    "explanation": "ATP binding to the myosin head reduces its affinity for actin and causes detachment. ATP hydrolysis then energises the myosin head for another cycle.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "questionText": "A muscle fibre is prevented from releasing calcium ions from its sarcoplasmic reticulum. Which event would be most directly impaired?",
+    "options": [
+      "Exposure of active sites on actin",
+      "Synthesis of DNA",
+      "Formation of red blood cells",
+      "Secretion of bile"
+    ],
+    "correctIndex": 0,
+    "explanation": "Calcium binds to troponin during skeletal muscle contraction and causes tropomyosin to move away from actin's myosin-binding sites. Without calcium release, this activation step is impaired.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "A neurotransmitter released into a synaptic cleft binds to receptors on the postsynaptic membrane. Which event occurs before the neurotransmitter can produce its postsynaptic effect?",
+    "options": [
+      "Release of neurotransmitter from the presynaptic terminal",
+      "DNA replication in the postsynaptic neuron",
+      "Formation of a new synaptic vesicle inside the nucleus",
+      "Division of the postsynaptic neuron"
+    ],
+    "correctIndex": 0,
+    "explanation": "Neurotransmitter must first be released from the presynaptic terminal into the synaptic cleft. It can then diffuse across the cleft and bind receptors on the postsynaptic membrane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "A neuron receives repeated excitatory signals that collectively bring its membrane potential to threshold. What does this illustrate?",
+    "options": [
+      "Summation leading to action potential generation",
+      "Permanent inhibition of the neuron",
+      "Loss of all membrane potential",
+      "Direct hormonal activation of skeletal muscle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multiple excitatory inputs can summate and depolarise the membrane sufficiently to reach threshold. Once threshold is reached, an action potential can be generated.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "A person consumes a carbohydrate-rich meal and blood glucose rises. Which endocrine response promotes uptake and utilisation of glucose by many body cells?",
+    "options": [
+      "Increased insulin secretion",
+      "Increased glucagon secretion",
+      "Increased parathyroid hormone secretion",
+      "Increased melatonin secretion"
+    ],
+    "correctIndex": 0,
+    "explanation": "Elevated blood glucose stimulates pancreatic beta cells to release insulin. Insulin promotes glucose uptake and storage and helps lower blood glucose concentration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "During fasting, blood glucose tends to decline. Which hormonal change helps restore blood glucose by promoting glycogen breakdown and glucose production?",
+    "options": [
+      "Increased glucagon secretion",
+      "Increased insulin secretion",
+      "Decreased glucagon with increased insulin",
+      "Increased calcitonin secretion"
+    ],
+    "correctIndex": 0,
+    "explanation": "Low blood glucose stimulates pancreatic alpha cells to secrete glucagon. Glucagon promotes glycogen breakdown and contributes to maintenance of blood glucose.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A pollen grain contains a vegetative cell and a generative cell at the time it is shed. The generative cell subsequently divides. What does it produce?",
+    "options": [
+      "Two male gametes",
+      "Two egg cells",
+      "Three antipodal cells",
+      "One zygote"
+    ],
+    "correctIndex": 0,
+    "explanation": "The generative cell undergoes mitotic division to form two male gametes. These gametes participate in syngamy and triple fusion during double fertilisation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A flowering plant produces pollen grains that are genetically identical to the parent plant because no meiotic variation occurs before pollen formation. Which normal cellular event would have to be absent for this condition?",
+    "options": [
+      "Meiosis during microsporogenesis",
+      "Mitosis in the vegetative cell",
+      "Pollen tube growth",
+      "Syngamy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Microspore mother cells undergo meiosis to produce haploid microspores. Meiosis introduces chromosome segregation and recombination, so its absence would prevent normal meiotic variation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "A male reproductive disorder selectively damages Sertoli cells while Leydig cells remain functional. Which process is most directly expected to be impaired?",
+    "options": [
+      "Support and nourishment of developing germ cells",
+      "Secretion of testosterone by Leydig cells",
+      "Production of seminal fructose by prostate gland",
+      "Ovulation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sertoli cells support and nourish developing sperm cells and participate in spermatogenesis. Leydig cells, in contrast, are the primary source of testosterone in the testes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "A female reproductive cycle proceeds normally through ovulation, after which the ruptured follicle transforms into a temporary endocrine structure. Which structure is this?",
+    "options": [
+      "Corpus luteum",
+      "Primary follicle",
+      "Corpus albicans before ovulation",
+      "Graafian follicle before maturation"
+    ],
+    "correctIndex": 0,
+    "explanation": "After ovulation, the ruptured Graafian follicle develops into the corpus luteum. It secretes progesterone and helps maintain the uterine endometrium.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "If fertilisation does not occur, the corpus luteum eventually degenerates. Which hormonal consequence contributes directly to menstruation?",
+    "options": [
+      "Fall in progesterone causing loss of endometrial support",
+      "Rise in hCG maintaining the endometrium",
+      "Permanent rise in testosterone",
+      "Rise in insulin causing uterine shedding"
+    ],
+    "correctIndex": 0,
+    "explanation": "Without fertilisation, the corpus luteum degenerates and progesterone levels fall. Loss of hormonal support causes degeneration and shedding of the endometrium during menstruation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "questionText": "A couple chooses a contraceptive method that prevents sperm production permanently by blocking the sperm-carrying ducts. Which procedure is described?",
+    "options": [
+      "Vasectomy",
+      "Tubectomy",
+      "Intrauterine device insertion",
+      "Oral hormonal contraception"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vasectomy involves cutting or blocking the vas deferens, preventing sperm from entering the semen. Testosterone production and sexual function are not the primary targets of the procedure.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "questionText": "A contraceptive method prevents ovulation by maintaining hormonal conditions that suppress the normal release of pituitary gonadotropins. Which method works primarily through this mechanism?",
+    "options": [
+      "Hormonal oral contraceptive pills",
+      "Condoms",
+      "Copper IUD only",
+      "Tubectomy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Combined oral contraceptives contain hormones that exert negative feedback on the hypothalamic-pituitary-ovarian axis, suppressing gonadotropin release and preventing ovulation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A red-flowered plant is crossed with a white-flowered plant and all F1 offspring have an intermediate pink phenotype. What inheritance pattern does this observation suggest?",
+    "options": [
+      "Complete dominance",
+      "Incomplete dominance",
+      "Codominance",
+      "Sex-linked inheritance"
+    ],
+    "correctIndex": 1,
+    "explanation": "In incomplete dominance, neither allele completely masks the other, producing an intermediate heterozygous phenotype such as pink flowers from red and white parents.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A person with blood group AB and a person with blood group O have children. Which blood groups can their offspring normally have?",
+    "options": [
+      "Only AB",
+      "Only O",
+      "A or B",
+      "A, B, AB or O"
+    ],
+    "correctIndex": 2,
+    "explanation": "The cross IAIB × ii produces IAi or IBi offspring. Therefore the children can have blood group A or B, but not AB or O.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A man affected by an X-linked recessive disorder marries a woman who is homozygous normal. What is expected for their daughters and sons, respectively?",
+    "options": [
+      "All daughters are carriers and all sons are normal",
+      "All daughters are affected and all sons are affected",
+      "All daughters are normal non-carriers and all sons are carriers",
+      "Half of daughters and half of sons are affected"
+    ],
+    "correctIndex": 0,
+    "explanation": "The affected father contributes his affected X chromosome to every daughter, while the normal mother contributes a normal X, making all daughters carriers. Sons receive the father's Y and a normal X from the mother, so they are unaffected.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A genetic disorder results from an abnormal chromosome number rather than a change in a single gene. Which meiotic event can directly produce such an abnormal chromosome number in gametes?",
+    "options": [
+      "Nondisjunction",
+      "Translation",
+      "Crossing over only",
+      "DNA repair"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nondisjunction is the failure of homologous chromosomes or sister chromatids to separate properly during meiosis. It can produce gametes with abnormal chromosome numbers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "A DNA molecule is replicated semiconservatively. After one complete round of replication in a medium containing only unlabelled nucleotides, what is expected for each daughter DNA molecule if the starting DNA was fully labelled?",
+    "options": [
+      "Each molecule contains one labelled and one unlabelled strand",
+      "Both strands of every molecule remain labelled",
+      "Both strands of every molecule are unlabelled",
+      "One molecule is fully labelled and the other is fully unlabelled"
+    ],
+    "correctIndex": 0,
+    "explanation": "Semiconservative replication preserves each parental strand as a template for one new strand. Therefore, after one round, every daughter molecule contains one original labelled strand and one newly synthesised unlabelled strand.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "A mutation inserts one nucleotide into the coding region of a gene and changes the reading frame of all codons downstream. Which type of mutation is this?",
+    "options": [
+      "Frameshift mutation",
+      "Silent mutation",
+      "Point mutation with no effect",
+      "Chromosomal duplication only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Insertion or deletion of nucleotides in numbers not divisible by three shifts the reading frame. Consequently, downstream codons and potentially the entire amino acid sequence are altered.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "A newly synthesised DNA strand contains many short segments that are later joined to form a continuous strand. Which strand and enzyme combination is involved?",
+    "options": [
+      "Lagging strand and DNA ligase",
+      "Leading strand and RNA polymerase",
+      "Lagging strand and ribosome",
+      "Leading strand and DNA ligase only for every nucleotide"
+    ],
+    "correctIndex": 0,
+    "explanation": "The lagging strand is synthesised discontinuously as Okazaki fragments. DNA ligase joins adjacent fragments to form a continuous DNA strand.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "A population contains individuals with different heritable variations, but environmental conditions consistently favour one phenotype, which leaves more offspring. What long-term population-level change is expected?",
+    "options": [
+      "The favourable allele can increase in frequency",
+      "All genetic variation must immediately disappear",
+      "The environment directly changes every individual's DNA in the same way",
+      "Acquired traits automatically become inherited"
+    ],
+    "correctIndex": 0,
+    "explanation": "Natural selection acts on heritable variation. Individuals with advantageous heritable phenotypes contribute more offspring, causing associated alleles to increase in frequency over generations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "The forelimbs of humans, bats, whales, and certain other vertebrates share a basic skeletal pattern but perform different functions. What does this pattern primarily indicate?",
+    "options": [
+      "Common ancestry and divergent evolution",
+      "Independent origin through identical mutations",
+      "Convergent evolution only",
+      "Absence of evolutionary relationship"
+    ],
+    "correctIndex": 0,
+    "explanation": "Homologous structures share a common structural origin despite functional differences. Their presence supports common ancestry and divergent evolution.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "A patient develops antibodies after vaccination but does not immediately show disease-specific protection at the same level as a person receiving preformed antibodies. Which distinction explains this difference?",
+    "options": [
+      "Vaccination induces active immunity, whereas injected antibodies provide passive immunity",
+      "Vaccination provides only passive immunity",
+      "Injected antibodies always generate stronger memory cells",
+      "Passive immunity requires prior exposure to the pathogen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vaccination stimulates the person's own immune system and can generate memory, constituting active immunity. Administration of preformed antibodies provides passive immunity without requiring the recipient to produce those antibodies.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "A person repeatedly develops symptoms after exposure to an otherwise harmless environmental substance because the immune system mounts an exaggerated response. Which condition best represents this mechanism?",
+    "options": [
+      "Allergy",
+      "Autoimmune disease only",
+      "AIDS",
+      "Cancer"
+    ],
+    "correctIndex": 0,
+    "explanation": "Allergy is an exaggerated immune response to normally harmless environmental antigens or allergens. It commonly involves release of mediators such as histamine from mast cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "A patient is infected with a bacterium that produces a toxin responsible for much of the disease symptoms. Which treatment principle would be most directly useful in addition to appropriate antimicrobial therapy?",
+    "options": [
+      "Neutralisation of the toxin using appropriate antibodies",
+      "Removal of all red blood cells",
+      "Permanent inhibition of antibody formation",
+      "Blocking oxygen transport in all tissues"
+    ],
+    "correctIndex": 0,
+    "explanation": "Some bacterial diseases are strongly associated with toxins. Appropriate antitoxins can neutralise specific toxins by binding to them and reducing their biological effects.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "tough",
+    "questionText": "A breeder repeatedly selects individuals showing superior milk yield and uses them for reproduction. Over generations, the frequency of alleles associated with the desirable trait may increase. Which method is illustrated?",
+    "options": [
+      "Artificial selection",
+      "Natural selection only",
+      "Mutation breeding without selection",
+      "Clonal propagation only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Artificial selection deliberately chooses parents possessing desirable traits. Repeated selection can increase the representation of favourable genetic variants in a breeding population.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "tough",
+    "questionText": "A plant breeder crosses two genetically different varieties and observes offspring with improved performance compared with both parents. Which phenomenon is most directly described?",
+    "options": [
+      "Hybrid vigour or heterosis",
+      "Mutation without recombination",
+      "Apomixis",
+      "Vegetative propagation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hybrid vigour, or heterosis, refers to superior performance of certain hybrids compared with their parents for selected traits such as growth, yield, or fertility.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "questionText": "A microorganism is added to milk and converts lactose into lactic acid, lowering the pH and helping transform milk into curd. Which organism is primarily associated with this process?",
+    "options": [
+      "Lactobacillus",
+      "Rhizobium",
+      "Methanobacterium",
+      "Aspergillus niger"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lactobacillus converts lactose into lactic acid during curd formation. The resulting increase in acidity causes milk proteins to coagulate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "questionText": "A sewage-treatment plant uses microbial communities to reduce organic matter before the treated water is released. Which biological process is primarily responsible for this reduction?",
+    "options": [
+      "Microbial degradation of organic matter",
+      "Photosynthetic oxygen production by roots only",
+      "DNA replication of human cells",
+      "Formation of mineral crystals only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Microorganisms in sewage treatment consume and degrade organic matter, reducing the organic load and biochemical oxygen demand of the wastewater.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "A restriction enzyme recognises a specific DNA sequence and cuts DNA at or near that sequence. Why are such enzymes useful in recombinant DNA technology?",
+    "options": [
+      "They allow DNA molecules to be cut at specific sites for controlled recombination",
+      "They randomly destroy every DNA molecule",
+      "They translate DNA into proteins",
+      "They synthesise RNA primers without templates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Restriction enzymes recognise specific nucleotide sequences and cleave DNA at defined sites. This allows desired DNA fragments and vectors to be prepared for recombinant DNA formation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "A researcher wants to amplify a specific DNA segment but does not want to amplify the entire genome equally. Which PCR component determines the boundaries of the region to be amplified?",
+    "options": [
+      "Primers",
+      "Ribosomes",
+      "Restriction fragments alone",
+      "Antibodies"
+    ],
+    "correctIndex": 0,
+    "explanation": "PCR primers are designed to bind to sequences flanking the target region. DNA synthesis from these primers selectively amplifies the intervening segment.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "questionText": "A genetically modified organism is developed to produce a therapeutic human protein in large quantities. What is the major advantage of using recombinant DNA technology in this context?",
+    "options": [
+      "Large-scale production of a desired biological product",
+      "Complete elimination of all mutations in organisms",
+      "Prevention of every infectious disease",
+      "Conversion of proteins into carbohydrates"
+    ],
+    "correctIndex": 0,
+    "explanation": "Recombinant DNA technology can introduce a desired gene into suitable host cells, allowing the host to produce large quantities of the required protein under controlled conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "questionText": "A plant is genetically modified to produce an insecticidal protein that becomes active inside the alkaline gut of a susceptible insect. Which biotechnology application is represented?",
+    "options": [
+      "Bt crop technology",
+      "Gene therapy",
+      "RNA vaccine production",
+      "Artificial insemination"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bt crops contain genes from Bacillus thuringiensis that encode insecticidal proteins. These proteins become active in the alkaline insect gut and damage the insect's intestinal epithelium.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "A population has a birth rate greater than its death rate and receives no immigrants or emigrants. What is the expected direction of change in population size?",
+    "options": [
+      "Increase",
+      "Decrease",
+      "No change",
+      "Immediate extinction"
+    ],
+    "correctIndex": 0,
+    "explanation": "With no migration, population size depends on the balance between natality and mortality. If births exceed deaths, the population increases.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "A desert plant has a thick cuticle and reduced leaf surface area. Which ecological challenge are these adaptations primarily helping it overcome?",
+    "options": [
+      "Excessive water loss",
+      "Low oxygen concentration in roots",
+      "High availability of water",
+      "Excessive nitrogen fixation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Desert plants face severe water scarcity. Thick cuticles and reduced leaf surfaces decrease transpiration and help conserve water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "A species of bird lays many eggs but provides relatively little parental care, while another species lays few eggs and invests heavily in each offspring. Which life-history contrast is illustrated?",
+    "options": [
+      "Different reproductive strategies associated with parental investment",
+      "Identical population growth strategies",
+      "Absence of natural selection",
+      "Only a difference in body temperature"
+    ],
+    "correctIndex": 0,
+    "explanation": "Species differ in reproductive strategies and parental investment. Producing many offspring with less investment contrasts with producing fewer offspring with greater parental care.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "An ecosystem receives sunlight, and producers convert part of this energy into chemical energy. As energy moves through successive trophic levels, why does the available energy decrease?",
+    "options": [
+      "Much energy is lost as heat during metabolic processes",
+      "Energy is destroyed by herbivores",
+      "Consumers convert all energy into matter",
+      "Producers permanently retain all captured energy"
+    ],
+    "correctIndex": 0,
+    "explanation": "Energy transfer between trophic levels is inefficient because organisms use much of the energy for metabolism, with a substantial portion dissipated as heat.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "A dead plant enters the decomposition pathway. Microorganisms first break complex organic material into simpler substances and eventually release inorganic nutrients back into the environment. Which overall process is involved?",
+    "options": [
+      "Decomposition and mineralisation",
+      "Photosynthesis only",
+      "Primary production only",
+      "Predation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decomposers break down dead organic matter, and mineralisation converts organic forms of nutrients into inorganic forms that can re-enter nutrient cycles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "A grassland ecosystem is experimentally deprived of decomposers while producers and consumers remain present for some time. Which long-term consequence is most likely?",
+    "options": [
+      "Reduced recycling of nutrients",
+      "Permanent increase in nutrient availability",
+      "Complete elimination of respiration",
+      "Immediate increase in energy transfer efficiency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Decomposers are essential for breaking down dead organic matter and recycling nutrients. Their absence would disrupt nutrient cycling and eventually impair ecosystem productivity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "A conservationist chooses to protect a region containing a large number of species, many of which are restricted to that region. Why is such an area a high conservation priority?",
+    "options": [
+      "It combines high species richness with high endemism",
+      "It contains no ecological interactions",
+      "It has no evolutionary history",
+      "It necessarily has the lowest genetic diversity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Regions with high species richness and many endemic species contain substantial unique biodiversity. Habitat loss in such regions can therefore cause disproportionately large biodiversity losses.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "A critically endangered animal is maintained in a zoological park where controlled breeding is attempted, while its natural habitat is being restored separately. Which conservation strategy is represented by the zoological park?",
+    "options": [
+      "Ex situ conservation",
+      "In situ conservation",
+      "Natural succession",
+      "Habitat fragmentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maintaining and breeding endangered species outside their natural habitats is ex situ conservation. Habitat protection within the natural range would represent in situ conservation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "questionText": "A city experiences severe respiratory problems during a period with high concentrations of suspended particulate matter. Which property makes very small particles particularly harmful when inhaled?",
+    "options": [
+      "They can penetrate deeply into the respiratory tract",
+      "They are always converted into oxygen",
+      "They cannot enter the lungs",
+      "They increase haemoglobin synthesis immediately"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fine particulate matter can penetrate deeply into the respiratory system and interfere with normal respiratory function, contributing to respiratory and cardiovascular problems.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "questionText": "A greenhouse gas increases significantly in the atmosphere and contributes to enhanced retention of terrestrial heat. Which environmental phenomenon is directly associated with this mechanism?",
+    "options": [
+      "Global warming",
+      "Ozone formation only",
+      "Acid rain only",
+      "Biomagnification"
+    ],
+    "correctIndex": 0,
+    "explanation": "Greenhouse gases absorb and re-emit infrared radiation, increasing heat retention in the atmosphere. An enhanced greenhouse effect contributes to global warming.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "tough",
+    "questionText": "A scientist compares several organisms using a series of contrasting morphological characters and reaches an identification after selecting one alternative at each step. Which taxonomic tool is being used?",
+    "options": [
+      "Taxonomic key",
+      "Herbarium",
+      "Botanical garden",
+      "Museum specimen only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Taxonomic keys use pairs of contrasting characters to identify organisms step by step. Each choice directs the user toward the next appropriate identification point.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "moderate",
+    "questionText": "Two organisms belong to the same family but different genera. Compared with organisms belonging to different families, these two organisms are generally expected to share:",
+    "options": [
+      "More common characteristics",
+      "No common characteristics",
+      "Exactly the same species name",
+      "Exactly the same chromosome number"
+    ],
+    "correctIndex": 0,
+    "explanation": "Taxonomic categories become broader from species to kingdom. Organisms within the same family generally share more similarities than organisms placed in different families.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "An organism is prokaryotic and survives in an extremely salty environment. Its cellular organisation lacks a true nucleus, but its membrane and cell wall show features distinct from typical eubacteria. Which group is most appropriate?",
+    "options": [
+      "Archaebacteria",
+      "Fungi",
+      "Protista",
+      "Animalia"
+    ],
+    "correctIndex": 0,
+    "explanation": "Archaebacteria include extremophiles such as halophiles and differ from eubacteria in important biochemical and cell-wall characteristics while remaining prokaryotic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "An organism is unicellular, eukaryotic, and photosynthetic, but it is not classified as a typical multicellular plant. Which kingdom most appropriately accommodates many such organisms?",
+    "options": [
+      "Protista",
+      "Monera",
+      "Animalia",
+      "Fungi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Protista includes many unicellular eukaryotes, including photosynthetic forms such as unicellular algae. Their eukaryotic organisation distinguishes them from Monera.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "A plant requires water for sperm to reach the archegonium and possesses a dominant sporophytic generation with vascular tissues but no seeds. Which group best matches these features?",
+    "options": [
+      "Pteridophytes",
+      "Angiosperms",
+      "Gymnosperms",
+      "Bryophytes only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pteridophytes are vascular plants that reproduce through spores rather than seeds. Their male gametes require water for movement toward the archegonium.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "A plant produces flowers and fruits, and its seeds develop within an ovary before fruit formation. Which major plant group is indicated?",
+    "options": [
+      "Angiosperms",
+      "Bryophytes",
+      "Pteridophytes",
+      "Gymnosperms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Angiosperms are flowering plants in which ovules are enclosed within ovaries. After fertilisation, the ovary generally develops into a fruit enclosing the seeds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "An animal is diploblastic, radially symmetrical, and possesses specialised stinging cells used for prey capture and defence. Which phylum is most appropriate?",
+    "options": [
+      "Cnidaria",
+      "Annelida",
+      "Arthropoda",
+      "Chordata"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cnidarians are diploblastic and generally radially symmetrical. Their characteristic cnidoblasts or cnidocytes contain stinging structures used in defence and prey capture.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "An animal is segmented, triploblastic, bilaterally symmetrical, and possesses a true coelom with a closed circulatory system. Which phylum best fits these characteristics?",
+    "options": [
+      "Annelida",
+      "Porifera",
+      "Cnidaria",
+      "Platyhelminthes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Annelids are triploblastic, bilaterally symmetrical, segmented coelomates and generally possess a closed circulatory system.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "questionText": "A tissue has a single layer of cells that is specialised for secretion and absorption, and its cells appear approximately cube-shaped. Which epithelial tissue is described?",
+    "options": [
+      "Simple cuboidal epithelium",
+      "Simple squamous epithelium",
+      "Stratified squamous epithelium",
+      "Ciliated columnar epithelium"
+    ],
+    "correctIndex": 0,
+    "explanation": "Simple cuboidal epithelium consists of a single layer of cube-shaped cells and commonly performs functions such as secretion and absorption.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "questionText": "A tissue contracts rhythmically without conscious control and is present in the wall of the heart. Which muscle tissue is responsible?",
+    "options": [
+      "Cardiac muscle",
+      "Skeletal muscle",
+      "Smooth muscle",
+      "Connective tissue"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cardiac muscle forms the myocardium and contracts involuntarily and rhythmically. Its specialised structure allows coordinated contraction of the heart.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "easy",
+    "questionText": "Which organ produces bile that assists in the digestion of fats?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Stomach",
+      "Small intestine"
+    ],
+    "correctIndex": 0,
+    "explanation": "The liver produces bile, which contains bile salts that emulsify fats and facilitate their digestion and absorption.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "easy",
+    "questionText": "Which structure is the principal site of gaseous exchange between air and blood in human lungs?",
+    "options": [
+      "Alveoli",
+      "Trachea",
+      "Larynx",
+      "Bronchi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Alveoli provide a large, thin respiratory surface surrounded by capillaries, allowing efficient exchange of oxygen and carbon dioxide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "moderate",
+    "questionText": "A food chain begins with green plants and proceeds to herbivores and then carnivores. If the herbivore level contains 1,000 units of usable energy, approximately how much would reach the next trophic level according to the ten percent law?",
+    "options": [
+      "10 units",
+      "100 units",
+      "500 units",
+      "900 units"
+    ],
+    "correctIndex": 1,
+    "explanation": "The ten percent law states that approximately 10% of the energy at one trophic level is transferred to the next. Ten percent of 1,000 units is 100 units.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "questionText": "A heterozygous individual for a dominant-recessive trait is crossed with a homozygous recessive individual. What fraction of offspring is expected to show the dominant phenotype?",
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "100%"
+    ],
+    "correctIndex": 2,
+    "explanation": "The cross Aa × aa produces equal numbers of Aa and aa offspring. Aa shows the dominant phenotype, so approximately 50% are expected to be dominant.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A cell is treated with a drug that specifically disrupts microtubule assembly. Which cellular process is most directly expected to be affected during cell division?",
+    "options": [
+      "Formation of the spindle apparatus",
+      "DNA replication",
+      "Transcription of rRNA",
+      "Formation of the cell wall in animal cells"
+    ],
+    "correctIndex": 0,
+    "explanation": "Microtubules are essential components of the mitotic spindle. Disrupting their assembly directly impairs chromosome segregation during cell division.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A cell has an extensive network of interconnected membranous tubules and sacs studded with ribosomes on its cytoplasmic surface. Which organelle is described, and what is its primary function?",
+    "options": [
+      "Rough endoplasmic reticulum; synthesis of proteins destined for secretion or membranes",
+      "Smooth endoplasmic reticulum; lipid synthesis only",
+      "Golgi apparatus; protein modification only",
+      "Mitochondria; ATP synthesis"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rough ER is studded with ribosomes and is primarily responsible for synthesizing proteins that will be secreted, inserted into membranes, or sent to other organelles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "A globular protein loses its biological activity when the pH of its environment is drastically altered, even though no covalent bonds are broken. Which explanation best accounts for this loss of activity?",
+    "options": [
+      "Disruption of ionic and hydrogen bonds altering its three-dimensional conformation",
+      "Complete hydrolysis of all peptide bonds",
+      "Conversion of the protein into a nucleic acid",
+      "Total loss of all amino acids from the molecule"
+    ],
+    "correctIndex": 0,
+    "explanation": "Extreme pH changes can disrupt non-covalent interactions such as ionic and hydrogen bonds that maintain a protein's three-dimensional shape, leading to denaturation and loss of activity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "An enzyme requires a non-protein organic molecule to be tightly or loosely associated with it before catalysis can occur. If this non-protein component is a small organic molecule rather than a metal ion, it is generally termed a:",
+    "options": [
+      "Coenzyme",
+      "Prosthetic group exclusively",
+      "Apoenzyme",
+      "Holoenzyme only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Coenzymes are organic non-protein molecules that assist enzyme catalysis, often by transferring specific chemical groups, and are distinct from metal ion cofactors.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "A cell fails to properly attach spindle fibres to the kinetochores of one chromosome pair during metaphase. If the cell cycle checkpoint functions normally, what is the most likely outcome?",
+    "options": [
+      "The cell cycle is arrested until proper attachment occurs",
+      "The cell proceeds directly to cytokinesis regardless",
+      "DNA replication is triggered again immediately",
+      "The chromosome is expelled from the cell without division"
+    ],
+    "correctIndex": 0,
+    "explanation": "The spindle assembly checkpoint monitors kinetochore attachment and delays anaphase onset until all chromosomes are properly attached, preventing missegregation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "In a cell undergoing meiosis, recombinant chromatids are produced due to an event during prophase I. If this event fails to occur at all in a particular meiocyte, which direct genetic consequence is expected among its gametes?",
+    "options": [
+      "Reduced genetic recombination between linked genes on that chromosome",
+      "Complete absence of chromosome segregation",
+      "Doubling of chromosome number in gametes",
+      "Immediate cell death"
+    ],
+    "correctIndex": 0,
+    "explanation": "Crossing over during prophase I generates new allele combinations on chromatids. Its absence reduces recombination between genes located on the same chromosome.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A flower has its ovary positioned above the point of attachment of other floral whorls, and the sepals, petals, and stamens arise below the ovary. Which type of flower is being described?",
+    "options": [
+      "Hypogynous",
+      "Perigynous",
+      "Epigynous",
+      "Actinomorphic only"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a hypogynous flower, the ovary is superior, positioned above the other floral whorls, which arise from below it on the thalamus.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A leguminous plant shows leaflets modified into tendrils that help the plant climb. Which type of leaf modification is this, and what is its functional advantage?",
+    "options": [
+      "Modification into tendrils for climbing support",
+      "Modification into spines for protection",
+      "Modification into storage organs for food reserve",
+      "Modification into bud scales for protection"
+    ],
+    "correctIndex": 0,
+    "explanation": "In some climbing plants, leaflets are modified into thread-like tendrils that coil around a support, allowing the plant to climb.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A xerophytic plant has thick cuticle, sunken stomata, and multiple layers of epidermis. Which combined anatomical role do these features primarily serve?",
+    "options": [
+      "Reduction of water loss through transpiration",
+      "Enhancement of photosynthetic rate only",
+      "Increased uptake of minerals",
+      "Enhanced gas exchange efficiency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Thick cuticle, sunken stomata, and multiple epidermal layers all reduce water loss, an adaptation crucial for plants in water-scarce environments.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A woody dicot stem shows alternating light and dark concentric rings when cut transversely. Which seasonal activity of the vascular cambium is most directly responsible for this pattern?",
+    "options": [
+      "Differential rates of secondary xylem formation in different seasons",
+      "Formation of cork cells only",
+      "Complete cessation of all cambial activity",
+      "Formation of new phloem fibres exclusively"
+    ],
+    "correctIndex": 0,
+    "explanation": "Growth rings arise from seasonal variation in cambial activity, producing springwood (larger, lighter vessels) and autumn wood (smaller, denser vessels) that appear as alternating rings.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "questionText": "A connective tissue contains widely spaced cells embedded in a matrix that is rich in calcium salts, providing rigidity. Which tissue is being described?",
+    "options": [
+      "Bone",
+      "Areolar tissue",
+      "Blood",
+      "Cartilage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bone is a specialised connective tissue with a hard, calcified matrix that provides rigidity and structural support to the body.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "A researcher applies a metabolic inhibitor that blocks ATP production in root cells. Which process is most directly expected to be impaired as a result?",
+    "options": [
+      "Active uptake of mineral ions by roots",
+      "Passive diffusion of water into root hairs",
+      "Transpiration from leaf surfaces",
+      "Guttation through hydathodes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Active absorption of mineral ions requires ATP for transport against concentration gradients. Blocking ATP production directly impairs this active uptake process.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "questionText": "A hydroponically grown plant shows stunted growth and interveinal chlorosis in young leaves despite receiving nitrogen, phosphorus, and potassium. Which category of nutrient deficiency is most likely responsible?",
+    "options": [
+      "Deficiency of a relatively immobile micronutrient such as iron",
+      "Excess of nitrogen supply",
+      "Deficiency of carbon dioxide",
+      "Excess of water supply alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Symptoms appearing specifically in young leaves, despite adequate macronutrients, often indicate deficiency of an immobile micronutrient like iron, which cannot be readily remobilised from older tissue.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "An experiment exposes isolated chloroplasts to light in the absence of CO2 but with an artificial electron acceptor. ATP and NADPH are still produced. Which conclusion is most appropriate?",
+    "options": [
+      "Light reactions can proceed independently of CO2 fixation",
+      "The Calvin cycle must occur before the light reactions",
+      "CO2 is required for the light reactions to occur",
+      "ATP synthesis depends directly on the Calvin cycle enzymes"
+    ],
+    "correctIndex": 0,
+    "explanation": "The light reactions, which generate ATP and NADPH, do not require CO2 directly. CO2 is used later in the Calvin cycle, which is a separate, though linked, process.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "A plant is grown under conditions of very high light intensity but a strictly limited supply of carbon dioxide. Which factor is most likely to become the primary limiting factor for photosynthesis under these conditions?",
+    "options": [
+      "Carbon dioxide concentration",
+      "Light intensity",
+      "Water availability necessarily",
+      "Temperature necessarily"
+    ],
+    "correctIndex": 0,
+    "explanation": "According to the law of limiting factors, when light is abundant but CO2 is scarce, CO2 concentration becomes the primary factor limiting the rate of photosynthesis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "A researcher measures the respiratory quotient of a germinating seed and finds a value close to 0.7. Which type of stored respiratory substrate is most consistent with this value?",
+    "options": [
+      "Fats",
+      "Carbohydrates",
+      "Organic acids",
+      "Simple sugars exclusively"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fats have a lower proportion of oxygen relative to carbon compared with carbohydrates, resulting in a lower respiratory quotient of about 0.7 when used as the primary respiratory substrate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "A plant is exposed to a synthetic auxin analogue at a very high concentration on its broad-leaved dicot weeds selectively, causing abnormal uncontrolled growth and eventual death, while grasses remain largely unaffected. Which broad application does this best represent?",
+    "options": [
+      "Use of a selective herbicide",
+      "Use of a fungicide",
+      "Use of a fertiliser",
+      "Use of an insect repellent"
+    ],
+    "correctIndex": 0,
+    "explanation": "Synthetic auxins such as 2,4-D are used as selective herbicides because they induce excessive, uncontrolled growth in broad-leaved dicot weeds while sparing narrow-leaved grasses.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "A person's stomach fails to produce sufficient hydrochloric acid. Which immediate consequence is most directly expected regarding protein digestion?",
+    "options": [
+      "Reduced activation of pepsinogen into active pepsin",
+      "Complete inability to digest carbohydrates",
+      "Enhanced fat emulsification by bile",
+      "Immediate increase in intestinal motility"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hydrochloric acid is required to convert inactive pepsinogen into active pepsin. Reduced HCl secretion impairs this activation and hence protein digestion in the stomach.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "A person breathes air with an unusually low partial pressure of oxygen for an extended period. Over time, the body increases red blood cell production. Which physiological benefit does this adaptation directly provide?",
+    "options": [
+      "Increased oxygen-carrying capacity of the blood",
+      "Decreased haemoglobin affinity for oxygen permanently",
+      "Reduced total blood volume",
+      "Complete elimination of the need for lungs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Increased red blood cell (and haemoglobin) production enhances the blood's ability to carry oxygen, compensating for lower atmospheric oxygen availability.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "A person's electrocardiogram shows a normal P wave but an abnormally delayed QRS complex following it. Which part of the heart's conduction system is most likely functioning abnormally?",
+    "options": [
+      "The pathway between the SA node and ventricular depolarisation, such as the AV node or bundle branches",
+      "The systemic veins only",
+      "The pulmonary artery only",
+      "The skeletal muscles of the chest wall"
+    ],
+    "correctIndex": 0,
+    "explanation": "The P wave represents atrial depolarisation, while the QRS complex represents ventricular depolarisation. A delay between them suggests a conduction problem in the pathway connecting the two, such as the AV node.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "A person has a genetic defect that impairs reabsorption of glucose in the proximal convoluted tubule despite normal blood glucose levels. Which term best describes glucose appearing in the urine under these conditions?",
+    "options": [
+      "Renal glycosuria",
+      "Diabetes mellitus necessarily",
+      "Normal physiological filtration only",
+      "Complete kidney failure"
+    ],
+    "correctIndex": 0,
+    "explanation": "When tubular reabsorption of glucose is defective despite normal blood glucose, glucose appears in urine due to a renal transport defect, termed renal glycosuria, rather than elevated blood sugar.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "questionText": "A person has a condition in which the sarcoplasmic reticulum cannot efficiently pump calcium back into its lumen after a contraction. Which immediate effect on the muscle is most likely?",
+    "options": [
+      "Prolonged or sustained muscle contraction due to persistent calcium in the sarcoplasm",
+      "Immediate and permanent muscle relaxation",
+      "Complete inability of calcium to bind troponin at all",
+      "Instant conversion of muscle tissue into connective tissue"
+    ],
+    "correctIndex": 0,
+    "explanation": "If calcium is not efficiently removed from the sarcoplasm, tropomyosin remains displaced from actin's binding sites, and the muscle tends to remain contracted longer than normal.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "A drug selectively blocks voltage-gated potassium channels on a neuron's membrane without affecting sodium channels. Which phase of the action potential would be most directly prolonged?",
+    "options": [
+      "Repolarisation",
+      "Depolarisation",
+      "The resting potential before any stimulus",
+      "Synthesis of neurotransmitter in the cell body"
+    ],
+    "correctIndex": 0,
+    "explanation": "Repolarisation depends on the efflux of potassium ions through voltage-gated potassium channels. Blocking these channels would prolong the repolarisation phase.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "A tumour in the anterior pituitary secretes excessive growth hormone in an adult after epiphyseal plate closure. Which condition is most consistent with this scenario?",
+    "options": [
+      "Acromegaly",
+      "Gigantism specifically",
+      "Dwarfism",
+      "Cretinism"
+    ],
+    "correctIndex": 0,
+    "explanation": "Excess growth hormone after epiphyseal closure in adults causes acromegaly, characterised by enlargement of extremities and soft tissues, rather than an overall increase in height as seen in gigantism.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A flowering plant is self-incompatible due to genetic mechanisms that prevent its own pollen from fertilising its ovules, even though the pollen is otherwise viable. Which broad reproductive strategy does this promote?",
+    "options": [
+      "Cross-pollination and genetic variation among offspring",
+      "Complete self-fertilisation",
+      "Apomixis exclusively",
+      "Vegetative propagation only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Self-incompatibility mechanisms prevent self-fertilisation, encouraging cross-pollination, which increases genetic variation in the resulting offspring.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "A woman's blood test during early pregnancy shows a rapid rise in a particular hormone that maintains the corpus luteum before the placenta fully takes over hormone production. Which hormone is described?",
+    "options": [
+      "Human chorionic gonadotropin (hCG)",
+      "Follicle-stimulating hormone (FSH)",
+      "Luteinising hormone (LH) at menopause levels",
+      "Oxytocin"
+    ],
+    "correctIndex": 0,
+    "explanation": "hCG, secreted by the developing trophoblast, maintains the corpus luteum and its progesterone secretion during the early weeks of pregnancy before placental hormone production is established.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A cross between two heterozygous tall pea plants (Tt x Tt) produces 400 offspring. Based on expected Mendelian ratios, approximately how many offspring are expected to be homozygous dominant?",
+    "options": [
+      "100",
+      "200",
+      "300",
+      "400"
+    ],
+    "correctIndex": 0,
+    "explanation": "The expected genotype ratio is 1 TT : 2 Tt : 1 tt. Of 400 offspring, approximately one-fourth, or 100, are expected to be homozygous dominant (TT).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "In a particular family, an X-linked recessive trait is expressed only in males across several generations, while carrier females remain phenotypically unaffected. Which inheritance pattern is most consistent with this observation?",
+    "options": [
+      "X-linked recessive inheritance",
+      "Autosomal dominant inheritance",
+      "Y-linked inheritance",
+      "Autosomal recessive inheritance"
+    ],
+    "correctIndex": 0,
+    "explanation": "X-linked recessive traits are typically expressed in males (who have only one X chromosome) while heterozygous females remain unaffected carriers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "During eukaryotic transcription, the primary transcript undergoes addition of a modified guanine nucleotide at its 5' end. What is the functional significance of this modification?",
+    "options": [
+      "It protects the mRNA and assists in ribosome recognition during translation initiation",
+      "It directly codes for an additional amino acid",
+      "It prevents transcription from ever terminating",
+      "It converts mRNA into tRNA"
+    ],
+    "correctIndex": 0,
+    "explanation": "5' capping with a modified guanine nucleotide protects mRNA from degradation and is important for ribosome binding during the initiation of translation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "Two geographically isolated populations of a single ancestral species accumulate independent genetic changes over a long period. If individuals from the two populations can no longer interbreed successfully, what has most likely occurred?",
+    "options": [
+      "Speciation through geographic isolation",
+      "Convergent evolution within a single population",
+      "Complete absence of any evolutionary change",
+      "Immediate extinction of both populations"
+    ],
+    "correctIndex": 0,
+    "explanation": "Geographic isolation followed by independent accumulation of genetic differences can lead to reproductive isolation and the formation of new species, a process called allopatric speciation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "A person's immune system mistakenly attacks the insulin-producing cells of their own pancreas, leading to destruction of these cells. Which broad category of disease does this represent?",
+    "options": [
+      "Autoimmune disease",
+      "Allergic reaction",
+      "Immunodeficiency disease",
+      "Infectious disease caused by a pathogen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Autoimmune diseases occur when the immune system incorrectly targets the body's own healthy cells or tissues, as seen in type 1 diabetes affecting pancreatic beta cells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "A scientist wants to confirm that a bacterial colony has successfully taken up a recombinant plasmid containing an antibiotic resistance gene alongside the gene of interest. Which experimental approach directly tests for successful transformation?",
+    "options": [
+      "Growing the bacteria on a medium containing the corresponding antibiotic",
+      "Measuring the bacterium's overall size",
+      "Observing the colour of the bacterial colony without any selection",
+      "Counting the total number of colonies regardless of resistance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bacteria that have taken up the plasmid carrying the antibiotic resistance gene will survive on a selective medium containing that antibiotic, while non-transformed bacteria will not survive.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "In a particular ecosystem, the pyramid of numbers is inverted because a single large producer supports numerous smaller herbivores and even more numerous smaller parasites. Which ecosystem type commonly shows this exact pattern?",
+    "options": [
+      "A tree-based ecosystem with insects and parasites",
+      "A grassland ecosystem with grazing animals",
+      "A pond ecosystem with phytoplankton",
+      "An ocean ecosystem with large fish only"
+    ],
+    "correctIndex": 0,
+    "explanation": "In a tree ecosystem, one large tree (producer) can support numerous smaller herbivorous insects, which in turn support even more numerous smaller parasites, producing an inverted pyramid of numbers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "A species shows a life-history strategy of maturing quickly, reproducing early, and producing many offspring with minimal parental care, typically in unpredictable or short-lived habitats. Which ecological strategy is best represented?",
+    "options": [
+      "r-selected strategy",
+      "K-selected strategy",
+      "Mutualistic strategy",
+      "Commensal strategy"
+    ],
+    "correctIndex": 0,
+    "explanation": "r-selected species prioritise rapid reproduction and high offspring number over parental investment, an advantageous strategy in unstable or unpredictable environments.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "A government declares a specific area as legally protected, restricting activities such as hunting, grazing, and forestry, while still permitting some regulated human activity for local communities. Which type of protected area is most consistent with this description?",
+    "options": [
+      "Wildlife sanctuary",
+      "Zoological park",
+      "Botanical garden",
+      "Seed bank"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wildlife sanctuaries are protected areas where certain human activities are restricted to conserve wildlife, though limited regulated activities for local communities may still be permitted, unlike stricter national parks.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "questionText": "A coastal region experiences a sudden and significant decline in fish populations after an industrial effluent discharge introduces heavy metals into the water. Which type of pollution is primarily responsible for this ecological impact?",
+    "options": [
+      "Water pollution due to industrial heavy metal contamination",
+      "Noise pollution",
+      "Ozone depletion",
+      "Soil erosion unrelated to chemicals"
+    ],
+    "correctIndex": 0,
+    "explanation": "Industrial discharge containing heavy metals directly contaminates water bodies, harming aquatic organisms and reducing fish populations through toxic effects and bioaccumulation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "A plant group shows an alternation of generations in which the gametophyte is dominant, but unlike bryophytes, it possesses specialised conducting tissue. Based on standard classification, which combination of features would be unusual and require careful reconsideration?",
+    "options": [
+      "Vascular tissue combined with a dominant gametophyte",
+      "Vascular tissue combined with a dominant sporophyte",
+      "Non-vascular tissue combined with a dominant gametophyte",
+      "Non-vascular tissue combined with a dominant sporophyte"
+    ],
+    "correctIndex": 0,
+    "explanation": "Standard plant groups with vascular tissue, such as pteridophytes and seed plants, have a dominant sporophyte. A dominant gametophyte combined with vascular tissue does not correspond to any standard classified group, making this combination inconsistent with typical classification.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "An animal is acoelomate, triploblastic, bilaterally symmetrical, and shows flame cells as part of its excretory system. Which phylum best matches these characteristics?",
+    "options": [
+      "Platyhelminthes",
+      "Annelida",
+      "Nematoda",
+      "Arthropoda"
+    ],
+    "correctIndex": 0,
+    "explanation": "Platyhelminthes (flatworms) are acoelomate, triploblastic, bilaterally symmetrical animals, and many possess flame cells for osmoregulation and excretion.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "moderate",
+    "questionText": "An organism is unicellular, prokaryotic, and photosynthetic, using chlorophyll a similar to green plants. Which group is most consistent with this description?",
+    "options": [
+      "Cyanobacteria",
+      "Fungi",
+      "Protozoa",
+      "Viruses"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cyanobacteria are photosynthetic prokaryotes that use chlorophyll a, similar to green plants, despite lacking a true nucleus and membrane-bound organelles.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "moderate",
+    "questionText": "A collection of preserved plant specimens, mounted on sheets and arranged according to a widely accepted classification system, is maintained for reference and identification. Which taxonomic aid is being described?",
+    "options": [
+      "Herbarium",
+      "Botanical garden",
+      "Zoological park",
+      "Museum of fossils only"
+    ],
+    "correctIndex": 0,
+    "explanation": "A herbarium is a collection of dried, pressed plant specimens mounted on sheets, arranged systematically, and used for taxonomic reference and identification.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "moderate",
+    "questionText": "A patient has a blockage that specifically prevents bile from reaching the small intestine, though pancreatic secretions remain unaffected. Which nutrient's digestion is most directly and specifically impaired?",
+    "options": [
+      "Fats",
+      "Proteins",
+      "Carbohydrates",
+      "Nucleic acids"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bile is essential for emulsifying fats. Without bile reaching the intestine, fat digestion by lipase becomes markedly less efficient, even though pancreatic lipase itself is present.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "moderate",
+    "questionText": "A forest ecosystem has a food chain: grass → deer → tiger. If the deer population contains 5,000 units of available energy, approximately how much energy is expected to reach the tiger population?",
+    "options": [
+      "500 units",
+      "50 units",
+      "2,500 units",
+      "5,000 units"
+    ],
+    "correctIndex": 0,
+    "explanation": "Applying the ten percent law for one trophic transfer from deer to tiger: 10% of 5,000 units is 500 units.",
     "imageUrl": null
   }
 ]
