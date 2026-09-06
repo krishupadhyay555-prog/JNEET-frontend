@@ -3459,4 +3459,1253 @@
 {"examMode": "NEET","subject": "Biology","chapter": "Human Health and Disease","difficulty": "moderate","questionText": "Which type of immunity develops when a person receives antibodies produced outside the body, providing immediate but temporary protection?","options": ["Active natural immunity", "Passive immunity", "Active acquired immunity", "Cell-mediated immunity only"],"correctIndex": 1,"explanation": "Passive immunity results from receiving ready-made antibodies from an external source. It provides immediate protection but generally does not generate long-lasting immunological memory.","imageUrl": null},
 {"examMode": "NEET","subject": "Biology","chapter": "Ecosystem","difficulty": "easy","questionText": "Which organisms form the first trophic level in a typical terrestrial ecosystem?","options": ["Herbivores", "Carnivores", "Producers", "Decomposers"],"correctIndex": 2,"explanation": "Producers occupy the first trophic level because they synthesize organic food from inorganic substances using light or chemical energy.","imageUrl": null},
 {"examMode": "NEET","subject": "Biology","chapter": "Biodiversity and Conservation","difficulty": "tough","questionText": "Which statement best explains why biodiversity loss can reduce ecosystem stability?","options": ["All species perform exactly the same ecological role", "Loss of species can reduce functional redundancy and weaken ecosystem responses to environmental changes", "Species diversity always decreases primary productivity", "Biodiversity prevents all ecological succession"],"correctIndex": 1,"explanation": "Greater biodiversity can provide functional redundancy and a wider range of ecological responses. Loss of species may therefore make ecosystems less resilient to environmental disturbances.","imageUrl": null}
+,
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A eukaryotic cell is treated with a compound that prevents the fusion of transport vesicles with their target membranes. Which cellular process would be affected most directly?",
+    "options": [
+      "Protein synthesis on ribosomes",
+      "Intracellular trafficking and secretion",
+      "DNA replication in the nucleus",
+      "ATP synthesis in mitochondria"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vesicle fusion is essential for transporting proteins and other materials between membrane-bound compartments and for secretion outside the cell. Blocking fusion therefore directly disrupts intracellular trafficking.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "questionText": "A cell contains a membrane-bound organelle with hydrolytic enzymes and maintains an acidic internal environment. If this organelle ruptures extensively, which consequence is most likely?",
+    "options": [
+      "Enhanced photosynthesis",
+      "Digestion of cellular components",
+      "Increased DNA replication",
+      "Increased synthesis of ribosomal RNA"
+    ],
+    "correctIndex": 1,
+    "explanation": "The organelle described is a lysosome, which contains hydrolytic enzymes. Extensive lysosomal rupture can release these enzymes and contribute to intracellular digestion or autolysis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "An enzyme-catalysed reaction reaches a maximum rate at a particular substrate concentration. Increasing the substrate concentration further produces almost no additional increase in rate. Which explanation best fits this observation?",
+    "options": [
+      "All enzyme active sites are effectively occupied by substrate",
+      "The enzyme has been converted into a lipid",
+      "The substrate has stopped diffusing",
+      "The reaction has become independent of enzyme concentration"
+    ],
+    "correctIndex": 0,
+    "explanation": "At sufficiently high substrate concentration, most or all active sites are occupied and the enzyme becomes saturated. Further substrate addition therefore produces little additional increase in reaction rate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "A biochemical analysis shows that a polymer contains repeating units joined by phosphodiester linkages and includes nitrogenous bases. Which class of biomolecule is being analysed?",
+    "options": [
+      "Polysaccharide",
+      "Protein",
+      "Nucleic acid",
+      "Lipid"
+    ],
+    "correctIndex": 2,
+    "explanation": "Nucleic acids are polymers of nucleotides in which adjacent nucleotides are connected through phosphodiester linkages. Their nitrogenous bases distinguish them from polysaccharides and proteins.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "A diploid organism has 16 chromosomes in its somatic cells. After meiosis is completed in one meiocyte, how many cells are produced and what chromosome number does each normally contain?",
+    "options": [
+      "2 cells, each with 16 chromosomes",
+      "2 cells, each with 8 chromosomes",
+      "4 cells, each with 8 chromosomes",
+      "4 cells, each with 16 chromosomes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Meiosis consists of two successive divisions following one round of DNA replication. A diploid cell with 16 chromosomes therefore produces four haploid cells containing 8 chromosomes each.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "questionText": "A dividing cell shows chromosomes moving toward opposite poles, with each chromosome now consisting of a single chromatid. Which event has occurred immediately before this stage?",
+    "options": [
+      "Pairing of homologous chromosomes",
+      "Separation of sister chromatids",
+      "DNA replication",
+      "Formation of the nucleolus"
+    ],
+    "correctIndex": 1,
+    "explanation": "The described movement occurs during anaphase after centromeres divide and sister chromatids separate. Each separated chromatid is then regarded as an individual chromosome.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A plant has a modified underground stem that bears nodes, internodes, scale leaves, and buds. Which observation would most strongly support identifying the organ as a stem rather than a root?",
+    "options": [
+      "Presence of root hairs",
+      "Presence of nodes and axillary buds",
+      "Presence of a root cap",
+      "Absence of chlorophyll"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nodes, internodes, leaves, and axillary buds are characteristic features of stems. Underground stems such as rhizomes can therefore be distinguished from roots by these structures.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A transverse section of a plant organ shows vascular bundles arranged in a ring, with cambium present between xylem and phloem. Which conclusion is most appropriate?",
+    "options": [
+      "It is characteristic of a typical dicot stem",
+      "It is characteristic of a typical monocot root",
+      "It must be a monocot stem",
+      "It must be a leaf"
+    ],
+    "correctIndex": 0,
+    "explanation": "Typical dicot stems have vascular bundles arranged in a ring and possess open bundles containing cambium between xylem and phloem. Monocot stem bundles are generally scattered and closed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "A plant is placed in a humid environment where the water-vapour gradient between leaf and atmosphere becomes very small. Which process is expected to decrease most directly?",
+    "options": [
+      "Transpiration",
+      "Mineral absorption by roots",
+      "DNA replication",
+      "Cell division in meristems"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transpiration depends strongly on the water-vapour gradient between internal leaf spaces and the atmosphere. High humidity reduces this gradient and therefore lowers transpiration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "questionText": "If the phloem tissue of a plant is experimentally removed in a complete ring around the stem while xylem remains intact, what is expected near the region above the ring after some time?",
+    "options": [
+      "Accumulation of transported organic solutes",
+      "Immediate cessation of water entry into roots",
+      "Complete loss of xylem vessels",
+      "Permanent closure of all stomata"
+    ],
+    "correctIndex": 0,
+    "explanation": "Phloem transports organic solutes from source to sink. Removing phloem around the stem interrupts downward translocation and can cause sugars to accumulate above the girdled region.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "questionText": "A plant develops chlorosis first in its older leaves because a mineral nutrient can be efficiently mobilised from older tissues toward actively growing regions. Which type of nutrient deficiency does this pattern suggest?",
+    "options": [
+      "Deficiency of a highly mobile nutrient",
+      "Deficiency of an immobile nutrient",
+      "Deficiency of a nutrient that cannot enter roots",
+      "Deficiency of carbon dioxide"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mobile nutrients can be transported from older leaves to younger tissues when supply is insufficient, so deficiency symptoms commonly appear first in older leaves.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "A C4 plant is exposed to conditions that favour high photorespiration. Compared with a typical C3 plant under the same conditions, which feature helps the C4 plant maintain carbon fixation more efficiently?",
+    "options": [
+      "Direct fixation of oxygen by Rubisco",
+      "Concentration of CO2 around Rubisco in bundle sheath cells",
+      "Complete absence of chloroplasts in mesophyll cells",
+      "Use of mitochondria instead of chloroplasts for carbon fixation"
+    ],
+    "correctIndex": 1,
+    "explanation": "C4 plants initially fix CO2 in mesophyll cells and transport four-carbon acids to bundle sheath cells, where CO2 is released and concentrated around Rubisco. This suppresses photorespiration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "questionText": "A leaf is illuminated while carbon dioxide is excluded from its surroundings. Which change would most directly limit the Calvin cycle despite continued absorption of light energy?",
+    "options": [
+      "Reduced availability of CO2 for carbon fixation",
+      "Complete absence of chlorophyll",
+      "Immediate destruction of all thylakoid membranes",
+      "Inability of water to enter the roots"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Calvin cycle requires CO2 as the carbon source. Even if the light reactions continue to provide ATP and reducing power, carbon fixation is limited when external CO2 is unavailable.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "A plant tissue receives very little oxygen but still needs to regenerate NAD+ so that glycolysis can continue. Which pathway can accomplish this temporarily?",
+    "options": [
+      "Alcoholic fermentation",
+      "Calvin cycle",
+      "Photorespiration only",
+      "Oxidative phosphorylation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Under oxygen-limited conditions, plant cells can carry out alcoholic fermentation. This regenerates NAD+ from NADH, allowing glycolysis to continue producing ATP.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "A gardener removes the terminal bud of a young shoot, after which lateral branches begin to grow more actively. Which plant-growth phenomenon best explains this response?",
+    "options": [
+      "Apical dominance",
+      "Photoperiodism",
+      "Vernalisation",
+      "Seed dormancy"
+    ],
+    "correctIndex": 0,
+    "explanation": "The apical bud produces auxin, which contributes to suppression of lateral bud growth. Removing the terminal bud reduces apical dominance and allows lateral branches to develop.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "questionText": "A flowering plant requires exposure to a specific duration of low temperature before it can flower normally. Which phenomenon is being demonstrated?",
+    "options": [
+      "Phototropism",
+      "Vernalisation",
+      "Apical dominance",
+      "Geotropism"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vernalisation is the promotion of flowering by exposure to a suitable low-temperature treatment. It is particularly important in certain winter varieties and biennial plants.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "A person has severely reduced bile secretion but normal pancreatic enzyme secretion. Which digestive process would be impaired most directly?",
+    "options": [
+      "Emulsification of fats",
+      "Digestion of proteins by pepsin in the stomach",
+      "Absorption of glucose through intestinal villi",
+      "Digestion of starch by salivary amylase"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bile salts emulsify fats into smaller droplets, increasing the surface area available for lipase action. Reduced bile secretion therefore impairs efficient fat digestion.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "questionText": "A nutrient is absorbed from the intestinal lumen into epithelial cells and then transported through lacteals rather than directly into blood capillaries. Which substance best fits this pathway?",
+    "options": [
+      "Glucose",
+      "Amino acids",
+      "Fat-derived chylomicrons",
+      "Mineral ions"
+    ],
+    "correctIndex": 2,
+    "explanation": "Long-chain fat products are reassembled into triglycerides and packaged into chylomicrons, which enter intestinal lacteals and subsequently reach the bloodstream through the lymphatic system.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "A person moves from sea level to a high-altitude environment where atmospheric oxygen pressure is lower. Which immediate change most directly challenges oxygen loading in pulmonary capillaries?",
+    "options": [
+      "Higher partial pressure of oxygen in alveoli",
+      "Lower partial pressure of oxygen in alveoli",
+      "Complete absence of carbon dioxide",
+      "Increased haemoglobin destruction"
+    ],
+    "correctIndex": 1,
+    "explanation": "At high altitude, atmospheric and consequently alveolar oxygen partial pressure decreases. This reduces the driving gradient for oxygen diffusion from alveoli into pulmonary blood.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "questionText": "A person has damage to the respiratory membrane that makes it substantially thicker while alveolar surface area remains unchanged. What is the most likely consequence?",
+    "options": [
+      "Faster diffusion of oxygen",
+      "Reduced efficiency of gas exchange",
+      "Complete conversion of oxygen into carbon dioxide",
+      "Increased oxygen partial pressure in tissues"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gas diffusion across the respiratory membrane becomes less efficient as diffusion distance increases. A thicker respiratory membrane therefore reduces the efficiency of oxygen and carbon dioxide exchange.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "A blockage prevents normal return of lymph from a body region to the bloodstream. Which consequence is most directly expected in that region?",
+    "options": [
+      "Accumulation of interstitial fluid",
+      "Immediate increase in red blood cell production",
+      "Complete cessation of arterial flow",
+      "Loss of all plasma proteins from blood"
+    ],
+    "correctIndex": 0,
+    "explanation": "The lymphatic system returns excess interstitial fluid and proteins to the blood. Impaired lymph drainage therefore promotes accumulation of fluid in tissues, producing oedema.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "questionText": "During a cardiac cycle, the ventricles are contracting and the semilunar valves are open while the atrioventricular valves are closed. Which event is occurring?",
+    "options": [
+      "Ventricular systole with blood ejection",
+      "Ventricular filling",
+      "Atrial filling only",
+      "Complete cardiac diastole"
+    ],
+    "correctIndex": 0,
+    "explanation": "During ventricular systole, ventricular pressure rises above arterial pressure, opening the semilunar valves and ejecting blood. The atrioventricular valves remain closed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "A hormone increases water permeability of the distal nephron and collecting ducts, causing more water to be reabsorbed. Which hormone is responsible?",
+    "options": [
+      "ADH",
+      "Aldosterone",
+      "ANF",
+      "Renin"
+    ],
+    "correctIndex": 0,
+    "explanation": "Antidiuretic hormone increases water permeability of the distal tubules and collecting ducts, promoting water reabsorption and concentrating the urine.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and their Elimination",
+    "difficulty": "tough",
+    "questionText": "If the afferent arteriole entering a glomerulus becomes substantially constricted, what is the most direct effect on glomerular filtration?",
+    "options": [
+      "Glomerular filtration pressure tends to decrease",
+      "Glomerular filtration necessarily increases",
+      "Bowman's capsule disappears",
+      "Tubular secretion stops completely"
+    ],
+    "correctIndex": 0,
+    "explanation": "Constriction of the afferent arteriole reduces blood flow and pressure entering the glomerular capillaries. This tends to reduce glomerular filtration pressure and GFR.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "questionText": "A skeletal muscle fibre contracts after calcium ions are released into the sarcoplasm. What is the immediate molecular consequence that permits actin-myosin interaction?",
+    "options": [
+      "Calcium binds to troponin and shifts tropomyosin",
+      "Calcium destroys actin",
+      "ATP permanently detaches myosin from actin",
+      "Troponin blocks the myosin-binding sites more strongly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Calcium binds to troponin, producing a conformational change that moves tropomyosin away from the active sites on actin. Myosin can then bind to actin and initiate cross-bridge cycling.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "A stimulus reaches threshold at the membrane of a neuron. Which sequence best describes the major electrical events that follow?",
+    "options": [
+      "Na+ influx and depolarisation followed by K+ efflux and repolarisation",
+      "K+ influx followed by permanent depolarisation",
+      "Ca2+ efflux followed by DNA replication",
+      "Na+ efflux followed by chloride synthesis"
+    ],
+    "correctIndex": 0,
+    "explanation": "An action potential begins with opening of voltage-gated sodium channels and Na+ influx, causing depolarisation. Subsequent K+ efflux contributes to repolarisation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "A reflex response occurs before a person consciously perceives the painful stimulus. Which explanation best accounts for this rapid response?",
+    "options": [
+      "The response can be integrated through the spinal cord before conscious processing in the brain",
+      "Pain receptors directly contract skeletal muscles without neurons",
+      "The cerebral cortex is permanently inactive during reflexes",
+      "Hormones replace all neuronal signalling during reflexes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Many reflex arcs are integrated at the spinal cord level, allowing a rapid motor response before conscious perception and interpretation by the brain.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "A person experiences prolonged stress. Which combination represents the major endocrine response associated with the adrenal cortex and medulla respectively?",
+    "options": [
+      "Cortisol and adrenaline",
+      "Thyroxine and insulin",
+      "Insulin and cortisol",
+      "Adrenaline and growth hormone"
+    ],
+    "correctIndex": 0,
+    "explanation": "The adrenal cortex secretes glucocorticoids such as cortisol during prolonged stress, while the adrenal medulla releases catecholamines such as adrenaline during acute stress responses.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "A patient has very low thyroid hormone levels, and the thyroid gland itself is unable to respond adequately to stimulation. Which pituitary hormone would be expected to increase because of reduced negative feedback?",
+    "options": [
+      "TSH",
+      "ADH",
+      "Oxytocin",
+      "Insulin"
+    ],
+    "correctIndex": 0,
+    "explanation": "Thyroid hormones exert negative feedback on the hypothalamus and pituitary. Reduced thyroid hormone levels therefore tend to increase TSH secretion, although a primary thyroid defect may leave thyroid hormone production low.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "A pollen grain germinates on a compatible stigma and produces a pollen tube. Which structure carried through the pollen tube ultimately participates directly in double fertilisation?",
+    "options": [
+      "Two male gametes",
+      "Two synergids",
+      "The egg cell",
+      "The antipodal cells"
+    ],
+    "correctIndex": 0,
+    "explanation": "The generative cell of the pollen grain produces two male gametes, which travel through the pollen tube. One fuses with the egg and the other participates in triple fusion.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "questionText": "An angiosperm embryo sac contains a haploid egg, two haploid synergids, three haploid antipodals, and two polar nuclei. If one male gamete fuses with the egg and the other with both polar nuclei, what is the ploidy of the resulting zygote and primary endosperm nucleus respectively?",
+    "options": [
+      "2n and 3n",
+      "3n and 2n",
+      "n and 2n",
+      "2n and 2n"
+    ],
+    "correctIndex": 0,
+    "explanation": "Syngamy combines two haploid nuclei to form a diploid zygote. Triple fusion combines the haploid male gamete with two haploid polar nuclei, producing a triploid primary endosperm nucleus.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "A mature ovarian follicle ruptures and releases a secondary oocyte. Which hormonal event most directly preceded this process?",
+    "options": [
+      "A sharp increase in LH concentration",
+      "A sharp increase in hCG before fertilisation",
+      "A fall in FSH to zero",
+      "A sudden increase in prolactin"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ovulation is triggered by the mid-cycle LH surge. The mature Graafian follicle ruptures and releases the secondary oocyte following this hormonal event.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "A sperm reaches the ovum but cannot penetrate the zona pellucida because its acrosomal enzymes are inactive. Which step of fertilisation is primarily affected?",
+    "options": [
+      "Recognition and penetration of the egg coverings",
+      "Implantation in the uterus",
+      "Formation of the placenta",
+      "Cleavage of the zygote after implantation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Acrosomal enzymes help sperm penetrate the egg coverings, particularly the zona pellucida. If these enzymes are inactive, penetration and subsequent fertilisation are impaired.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "questionText": "A couple has blocked fallopian tubes but produces normal gametes. Which assisted reproductive technique can bypass the site where fertilisation normally occurs by bringing the gametes together outside the body?",
+    "options": [
+      "IVF followed by embryo transfer",
+      "Vasectomy",
+      "Condom use",
+      "Periodic abstinence"
+    ],
+    "correctIndex": 0,
+    "explanation": "In IVF, sperm and ova are brought together under laboratory conditions and the resulting embryo is transferred into the reproductive tract. This can bypass blocked fallopian tubes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A woman with genotype IAi and a man with genotype IBi have a child. Which set of blood groups can occur among their children?",
+    "options": [
+      "Only A and B",
+      "Only AB and O",
+      "A, B, AB and O",
+      "Only O"
+    ],
+    "correctIndex": 2,
+    "explanation": "The cross IAi × IBi produces IAIB, IAi, IBi and ii genotypes. These correspond to AB, A, B and O blood groups respectively.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "A carrier woman for an X-linked recessive disorder marries a phenotypically normal man. Assuming equal probability of male and female births, which statement is correct?",
+    "options": [
+      "All daughters will be affected",
+      "Half of the sons are expected to be affected",
+      "All sons will be carriers but unaffected",
+      "Half of the daughters must be affected"
+    ],
+    "correctIndex": 1,
+    "explanation": "A carrier female has one normal and one affected X chromosome, while the male has a normal X. Each son has a 50% chance of receiving the affected X from the mother and becoming affected.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "questionText": "Two genes located on the same chromosome show a recombination frequency substantially below 50%. What does this observation indicate?",
+    "options": [
+      "The genes are necessarily on different chromosomes",
+      "The genes are linked",
+      "The genes cannot undergo crossing over",
+      "Both genes must be recessive"
+    ],
+    "correctIndex": 1,
+    "explanation": "A recombination frequency below 50% indicates linkage because genes located relatively close together on the same chromosome tend to be inherited together more often than independently assorting genes.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "A mutation changes a DNA codon but the resulting mRNA codon still specifies the same amino acid. What type of mutation is this?",
+    "options": [
+      "Silent mutation",
+      "Frameshift mutation",
+      "Nonsense mutation",
+      "Chromosomal deletion"
+    ],
+    "correctIndex": 0,
+    "explanation": "A silent mutation changes a nucleotide sequence without changing the amino acid encoded by the affected codon because the genetic code is degenerate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "questionText": "During transcription of a protein-coding gene, RNA polymerase uses one DNA strand as a template. If the template sequence is read in the 3' to 5' direction, in which direction is the RNA strand synthesized?",
+    "options": [
+      "3' to 5'",
+      "5' to 3'",
+      "Both directions simultaneously",
+      "Direction varies randomly"
+    ],
+    "correctIndex": 1,
+    "explanation": "RNA polymerase reads the DNA template strand in the 3' to 5' direction while synthesising RNA in the 5' to 3' direction by adding nucleotides to the 3' end.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "Two unrelated organisms possess structures with similar basic anatomical organisation but perform different functions. Which evolutionary concept is most consistent with this observation?",
+    "options": [
+      "Homologous organs indicating divergent evolution",
+      "Analogous organs indicating divergent evolution",
+      "Homologous organs indicating convergent evolution",
+      "Vestigial organs indicating mutation only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Homologous organs share a common basic structural plan but may perform different functions. Their presence is evidence for common ancestry and divergent evolution.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "questionText": "In a population, individuals with a particular heritable phenotype consistently leave more offspring than individuals with alternative phenotypes. Over generations, the associated allele becomes more common. Which mechanism best explains this change?",
+    "options": [
+      "Natural selection",
+      "Genetic drift alone",
+      "Artificial hybridisation",
+      "Acquired inheritance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Natural selection increases the representation of heritable variants that improve reproductive success. Consequently, advantageous alleles can rise in frequency over generations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "A patient is exposed to a pathogen for the second time after recovering from the first infection. The second response is faster and stronger because of which immunological feature?",
+    "options": [
+      "Memory cells generated during the primary response",
+      "Permanent absence of antibodies",
+      "Destruction of all lymphocytes",
+      "Reduced specificity of immune receptors"
+    ],
+    "correctIndex": 0,
+    "explanation": "The primary immune response generates memory B and T cells. On subsequent exposure, these memory cells enable a faster and stronger secondary immune response.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "questionText": "A patient infected with HIV progressively develops severe susceptibility to opportunistic infections. Which immune-cell population is most directly targeted by HIV?",
+    "options": [
+      "Helper T lymphocytes",
+      "Red blood cells",
+      "Platelets",
+      "Mature skeletal muscle cells"
+    ],
+    "correctIndex": 0,
+    "explanation": "HIV primarily infects helper T lymphocytes, especially CD4+ cells. Their progressive depletion weakens immune coordination and increases susceptibility to opportunistic infections.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "tough",
+    "questionText": "A dairy farmer selects animals that consistently produce high-quality milk and uses them as parents for subsequent generations. Which breeding objective is being pursued?",
+    "options": [
+      "Improvement of desirable economic traits",
+      "Elimination of all variation",
+      "Production of genetically identical clones only",
+      "Prevention of artificial selection"
+    ],
+    "correctIndex": 0,
+    "explanation": "Selective breeding chooses individuals with desirable characteristics as parents so that favourable traits are preferentially represented in subsequent generations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "questionText": "An anaerobic microorganism is used in a biogas plant and produces methane as a major component of the resulting gas. Which group is most likely responsible?",
+    "options": [
+      "Methanogens",
+      "Lactobacilli",
+      "Cyanobacteria",
+      "Mycorrhizal fungi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Methanogens are anaerobic archaebacteria that produce methane during the breakdown of organic matter. They are important components of biogas production.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "A DNA fragment and a plasmid vector are cut using the same restriction enzyme before being mixed. Why is this treatment useful for recombinant DNA formation?",
+    "options": [
+      "It produces compatible ends that can base-pair before ligation",
+      "It permanently prevents DNA replication",
+      "It removes every gene from the plasmid",
+      "It converts DNA into RNA"
+    ],
+    "correctIndex": 0,
+    "explanation": "The same restriction enzyme can generate complementary or compatible ends on the vector and foreign DNA. These ends can pair, after which DNA ligase can join the fragments covalently.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "questionText": "A farmer grows a genetically modified crop containing a gene that produces a protein toxic to certain insect pests. Which advantage is directly associated with this modification?",
+    "options": [
+      "Increased resistance to targeted insect pests",
+      "Complete immunity to every plant disease",
+      "Permanent elimination of all weeds",
+      "Inability of the plant to reproduce"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bt crops contain genes derived from Bacillus thuringiensis that produce insecticidal proteins effective against susceptible insect pests. This provides targeted insect resistance.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "A population initially grows rapidly but later stabilises around a maximum number that the environment can sustainably support. Which ecological parameter determines this upper limit?",
+    "options": [
+      "Carrying capacity",
+      "Natality alone",
+      "Migration alone",
+      "Absolute growth rate only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Carrying capacity is the maximum population size that a particular environment can support sustainably under its available resources and conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "questionText": "Two species occupy the same habitat and require exactly the same limiting resource. If their ecological niches overlap completely and the resource remains limiting, which principle predicts that they cannot coexist indefinitely?",
+    "options": [
+      "Competitive exclusion principle",
+      "Ten percent law",
+      "Hardy-Weinberg principle",
+      "Lindeman's law"
+    ],
+    "correctIndex": 0,
+    "explanation": "The competitive exclusion principle states that two species competing for exactly the same limiting resource cannot coexist indefinitely under constant conditions; one tends to eliminate the other.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "If the biomass of producers in an aquatic ecosystem is measured at a particular instant, it may be lower than the biomass of primary consumers. Which ecological feature explains this apparent reversal?",
+    "options": [
+      "Rapid turnover of producer biomass",
+      "Absence of primary producers",
+      "Primary consumers performing photosynthesis",
+      "Energy being created at the consumer level"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aquatic ecosystems often have a biomass pyramid that may be inverted because phytoplankton have a very rapid turnover rate and are consumed quickly despite supporting a larger standing biomass of consumers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "questionText": "A pesticide becomes progressively more concentrated in organisms at higher trophic levels, with the highest concentration occurring in a top predator. Which ecological phenomenon is illustrated?",
+    "options": [
+      "Biomagnification",
+      "Primary succession",
+      "Eutrophication",
+      "Decomposition"
+    ],
+    "correctIndex": 0,
+    "explanation": "Biomagnification is the progressive increase in concentration of persistent, non-biodegradable pollutants at successive trophic levels, often producing the greatest concentration in top predators.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "A rare plant species is maintained in a seed bank rather than in its natural habitat. Which conservation strategy does this represent?",
+    "options": [
+      "In situ conservation",
+      "Ex situ conservation",
+      "Natural selection",
+      "Habitat fragmentation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Seed banks preserve genetic material outside the natural habitat of the species and therefore represent ex situ conservation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "A conservation programme protects a large natural ecosystem rather than isolating a single endangered species. Which advantage of in situ conservation is most directly represented?",
+    "options": [
+      "Protection of the species along with its ecological interactions",
+      "Complete removal of natural selection",
+      "Prevention of all mutations",
+      "Preservation of only reproductive cells"
+    ],
+    "correctIndex": 0,
+    "explanation": "In situ conservation maintains organisms within their natural ecosystems, thereby preserving not only the species but also its interactions with other organisms and environmental factors.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "questionText": "A lake receives excessive nutrient-rich runoff and subsequently develops dense algal growth followed by oxygen depletion and fish mortality. Which sequence best explains the event?",
+    "options": [
+      "Eutrophication followed by decomposition and oxygen depletion",
+      "Biomagnification followed by nitrogen fixation",
+      "Ozone depletion followed by algal death",
+      "Primary succession followed by desertification"
+    ],
+    "correctIndex": 0,
+    "explanation": "Excess nutrients stimulate algal growth. When the algae die, microbial decomposition consumes dissolved oxygen, potentially causing oxygen depletion and death of aquatic animals.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "questionText": "A pollutant is released into the atmosphere and reacts with sunlight to generate secondary pollutants that contribute to photochemical smog. Which condition favours this phenomenon?",
+    "options": [
+      "High concentrations of nitrogen oxides and hydrocarbons under strong sunlight",
+      "Complete absence of sunlight",
+      "Only high atmospheric oxygen without pollutants",
+      "Continuous heavy rainfall"
+    ],
+    "correctIndex": 0,
+    "explanation": "Photochemical smog forms through sunlight-driven reactions involving nitrogen oxides and hydrocarbons, producing secondary pollutants such as ozone and other oxidants.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "moderate",
+    "questionText": "A researcher assigns an organism a universally recognised scientific name consisting of two words. Which nomenclatural system is being used?",
+    "options": [
+      "Trinomial nomenclature",
+      "Binomial nomenclature",
+      "Polynomial nomenclature",
+      "Numerical taxonomy"
+    ],
+    "correctIndex": 1,
+    "explanation": "Binomial nomenclature assigns each species a two-part scientific name consisting of the genus name followed by the specific epithet.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "An organism is unicellular, eukaryotic, lacks a cell wall, and obtains nutrition heterotrophically. Which broad kingdom is the most appropriate classification?",
+    "options": [
+      "Monera",
+      "Protista",
+      "Plantae",
+      "Fungi"
+    ],
+    "correctIndex": 1,
+    "explanation": "Protists are predominantly unicellular eukaryotes with diverse nutritional modes. A unicellular eukaryote lacking a cell wall and showing heterotrophic nutrition fits this kingdom.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "A plant has vascular tissues but does not produce seeds. Its sporophyte is the dominant independent phase, while gametophytes are relatively small. Which group best fits these features?",
+    "options": [
+      "Bryophytes",
+      "Pteridophytes",
+      "Gymnosperms",
+      "Angiosperms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pteridophytes are vascular cryptogams. Their sporophyte is dominant and independent, but they reproduce through spores rather than seeds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "An animal possesses a notochord at least during some stage of its development and also shows a dorsal hollow nerve cord. Which major phylum is indicated?",
+    "options": [
+      "Chordata",
+      "Arthropoda",
+      "Mollusca",
+      "Annelida"
+    ],
+    "correctIndex": 0,
+    "explanation": "A notochord and dorsal hollow nerve cord are defining chordate characteristics. Other chordate features include pharyngeal slits and a post-anal tail at some developmental stage.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "questionText": "A tissue has cells embedded in an abundant extracellular matrix and primarily provides structural support and binding between organs. Which tissue category is most appropriate?",
+    "options": [
+      "Connective tissue",
+      "Epithelial tissue",
+      "Nervous tissue",
+      "Muscular tissue"
+    ],
+    "correctIndex": 0,
+    "explanation": "Connective tissue is characterised by cells embedded in an extracellular matrix and performs functions including binding, support, protection, and transport.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "questionText": "A tissue is specialised for rapid transmission of electrical signals and contains cells with long processes capable of conducting impulses. Which tissue is described?",
+    "options": [
+      "Epithelial tissue",
+      "Connective tissue",
+      "Muscular tissue",
+      "Nervous tissue"
+    ],
+    "correctIndex": 3,
+    "explanation": "Nervous tissue contains neurons specialised for receiving and transmitting electrical signals. Their processes allow rapid communication across the body.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "moderate",
+    "questionText": "A digestive enzyme functions optimally in the strongly acidic environment of the stomach. Which enzyme best fits this description?",
+    "options": [
+      "Trypsin",
+      "Pepsin",
+      "Pancreatic lipase",
+      "Salivary amylase"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pepsin functions in the acidic environment of the stomach and begins protein digestion. It is formed from pepsinogen in the presence of hydrochloric acid.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "questionText": "After fertilisation, the developing embryo attaches to the uterine wall. Which process is being described?",
+    "options": [
+      "Ovulation",
+      "Implantation",
+      "Spermatogenesis",
+      "Menstruation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Implantation is the attachment and embedding of the developing blastocyst into the uterine endometrium, allowing further development and establishment of maternal support.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "questionText": "A contraceptive method releases copper ions inside the uterus. Which effect contributes to its contraceptive action?",
+    "options": [
+      "Enhanced sperm motility",
+      "Suppression of sperm motility and fertilising capacity",
+      "Permanent destruction of ovarian follicles",
+      "Increase in ovulation frequency"
+    ],
+    "correctIndex": 1,
+    "explanation": "Copper-releasing IUDs increase phagocytosis of sperms and reduce sperm motility and fertilising capacity, thereby providing effective contraception.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "moderate",
+    "questionText": "A vaccine is administered to a healthy person before exposure to a particular pathogen. What is the primary purpose of this intervention?",
+    "options": [
+      "To provide immediate digestion of the pathogen",
+      "To induce an immune response and immunological memory",
+      "To permanently eliminate all lymphocytes",
+      "To prevent formation of antibodies"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vaccination exposes the immune system to antigenic material in a safe form, inducing a primary immune response and memory that can provide stronger protection on later exposure.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "questionText": "During PCR, a DNA sample undergoes repeated cycles involving denaturation, primer annealing, and extension. If all three cycles are completed correctly, what is the principal outcome?",
+    "options": [
+      "Amplification of the selected DNA sequence",
+      "Conversion of DNA into protein",
+      "Permanent destruction of primers",
+      "Formation of a complete organism"
+    ],
+    "correctIndex": 0,
+    "explanation": "PCR repeatedly copies a selected DNA region using primers and a thermostable DNA polymerase. Repeated cycles lead to exponential amplification of the target sequence.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "questionText": "A patient with a genetic disorder receives a functional copy of a defective gene using a therapeutic vector. Which broad biotechnology approach is being attempted?",
+    "options": [
+      "Gene therapy",
+      "Hybrid seed production",
+      "Bioremediation",
+      "Artificial insemination"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gene therapy attempts to treat genetic disorders by introducing or otherwise providing a functional gene to compensate for a defective gene or its product.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "moderate",
+    "questionText": "In a food chain, only a fraction of energy at one trophic level reaches the next. If producers contain 10,000 units of energy, approximately how much would reach primary consumers according to the ten percent law?",
+    "options": [
+      "10 units",
+      "100 units",
+      "1,000 units",
+      "5,000 units"
+    ],
+    "correctIndex": 2,
+    "explanation": "According to the ten percent law, about 10% of energy passes to the next trophic level. Ten percent of 10,000 units is 1,000 units.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "questionText": "A pea plant with genotype Tt is crossed with another Tt plant. If T is completely dominant over t, what proportion of the offspring is expected to show the recessive phenotype?",
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "correctIndex": 1,
+    "explanation": "The cross Tt × Tt gives TT, Tt, Tt and tt in the expected 1:2:1 genotype ratio. Only tt is recessive, so 25% are expected to show the recessive phenotype.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "questionText": "A DNA molecule contains 30% adenine. Assuming normal double-stranded complementary DNA, what percentage of the bases is cytosine?",
+    "options": [
+      "20%",
+      "30%",
+      "35%",
+      "40%"
+    ],
+    "correctIndex": 0,
+    "explanation": "By Chargaff's rule, adenine equals thymine, so A + T = 60%. The remaining 40% consists of G and C equally, giving cytosine as 20%.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "questionText": "A hormone binds to an intracellular receptor and alters gene expression in its target cell. Which type of hormone most characteristically acts through this mechanism?",
+    "options": [
+      "Steroid hormone",
+      "Peptide hormone",
+      "Protein hormone only at the cell membrane",
+      "Catecholamine"
+    ],
+    "correctIndex": 0,
+    "explanation": "Steroid hormones are lipid-soluble and can cross the plasma membrane. They bind intracellular receptors and influence transcription and gene expression.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "questionText": "A neuron is exposed to a stimulus that opens ligand-gated sodium channels on its membrane. If sufficient sodium enters to reach threshold, what is the likely next major event?",
+    "options": [
+      "Generation of an action potential",
+      "Permanent hyperpolarisation without ion movement",
+      "Immediate DNA replication",
+      "Formation of a new neuron"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sodium entry depolarises the neuronal membrane. If threshold is reached, voltage-gated channels are activated and an action potential is generated.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "moderate",
+    "questionText": "A seed fails to germinate despite having adequate water, oxygen, and a suitable temperature, but treatment with a growth-regulating substance promotes germination. Which hormone commonly promotes breaking of seed dormancy and germination?",
+    "options": [
+      "Abscisic acid",
+      "Gibberellin",
+      "Ethylene only",
+      "Cytokinin only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gibberellins promote seed germination in many plants and can help overcome dormancy. Abscisic acid, in contrast, is strongly associated with dormancy and stress responses.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "questionText": "A cell oxidises glucose completely under aerobic conditions. Which sequence correctly represents the major stages through which carbon from glucose passes before complete oxidation?",
+    "options": [
+      "Glycolysis, pyruvate oxidation, Krebs cycle",
+      "Krebs cycle, glycolysis, fermentation",
+      "Fermentation, glycolysis, photosynthesis",
+      "Photosynthesis, glycolysis, fermentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Glucose first undergoes glycolysis to form pyruvate. Under aerobic conditions, pyruvate is converted to acetyl-CoA and enters the Krebs cycle, where its carbon is progressively oxidised.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "questionText": "An animal is triploblastic, bilaterally symmetrical, has a true coelom, and possesses jointed appendages with a chitinous exoskeleton. Which phylum best fits these characteristics?",
+    "options": [
+      "Platyhelminthes",
+      "Annelida",
+      "Arthropoda",
+      "Echinodermata"
+    ],
+    "correctIndex": 2,
+    "explanation": "Arthropods are triploblastic, bilaterally symmetrical, coelomate animals characterised by jointed appendages and a chitinous exoskeleton.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "questionText": "An organism obtains nutrients by extracellular digestion followed by absorption and possesses a cell wall containing chitin. Which kingdom best matches these characteristics?",
+    "options": [
+      "Plantae",
+      "Animalia",
+      "Fungi",
+      "Protista"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fungi are heterotrophic organisms that generally digest food extracellularly and absorb the products. Their cell walls typically contain chitin.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "questionText": "A seed-bearing plant has naked ovules that are not enclosed within an ovary. Which group does it belong to?",
+    "options": [
+      "Bryophytes",
+      "Pteridophytes",
+      "Gymnosperms",
+      "Angiosperms"
+    ],
+    "correctIndex": 2,
+    "explanation": "Gymnosperms bear naked ovules that are not enclosed within an ovary. Angiosperms, in contrast, have ovules enclosed within an ovary.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "questionText": "A region contains many species found nowhere else on Earth. Conservationists consider this region especially important for biodiversity protection. Which term best describes such species distribution?",
+    "options": [
+      "Endemism",
+      "Biomagnification",
+      "Eutrophication",
+      "Succession"
+    ],
+    "correctIndex": 0,
+    "explanation": "Endemic species are restricted to a particular geographical region. Areas with high endemism are especially important for biodiversity conservation because local habitat loss can cause global extinction of those species.",
+    "imageUrl": null
+  }
 ]
