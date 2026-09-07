@@ -6846,5 +6846,4613 @@
     "correctIndex": 2,
     "explanation": "Benzene is converted to cyclohexane by addition of hydrogen across all three π bonds: C6H6 + 3H2 → C6H12. Thus three moles of H2 are required per mole of benzene.",
     "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is heated completely. The solid residue weighs 5.28 g. What is the mass percentage of CaCO3 in the original mixture? (CaCO3 = 100 g mol^-1, MgCO3 = 84 g mol^-1, CaO = 56 g mol^-1, MgO = 40 g mol^-1)",
+    "options": [
+      "40%",
+      "50%",
+      "60%",
+      "70%"
+    ],
+    "correctIndex": 2,
+    "explanation": "If x g is CaCO3, residue = 0.56x + (10−x)(40/84) = 5.28. Solving gives x = 6.00 g, so CaCO3 = 60% by mass.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 4.6 g mixture of sodium metal and sodium oxide is treated with excess water and produces 0.224 L H2 at STP. What is the mass percentage of sodium metal in the mixture?",
+    "options": [
+      "5%",
+      "10%",
+      "15%",
+      "20%"
+    ],
+    "correctIndex": 1,
+    "explanation": "0.224 L H2 at STP = 0.010 mol H2, requiring 0.020 mol Na. Mass of Na = 0.020×23 = 0.46 g, so percentage = 0.46/4.6×100 = 10%.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A compound contains 40.0% carbon, 6.67% hydrogen and 53.33% oxygen by mass. If its molar mass is 180 g mol^-1, what is its molecular formula?",
+    "options": [
+      "CH2O",
+      "C3H6O3",
+      "C6H12O6",
+      "C12H24O12"
+    ],
+    "correctIndex": 2,
+    "explanation": "The empirical formula is CH2O with empirical mass 30. Since 180/30 = 6, the molecular formula is C6H12O6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron in a hydrogen atom falls from n = 5 to n = 2 through all energetically possible intermediate transitions. How many distinct spectral lines can be produced?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "correctIndex": 2,
+    "explanation": "With five occupied levels available, the maximum number of possible transitions is n(n−1)/2 = 5×4/2 = 10 distinct lines.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron and a proton are accelerated through the same potential difference. What is the ratio of their de Broglie wavelengths, lambda(electron)/lambda(proton)?",
+    "options": [
+      "1",
+      "sqrt(mp/me)",
+      "mp/me",
+      "me/mp"
+    ],
+    "correctIndex": 1,
+    "explanation": "For the same accelerating potential, lambda = h/sqrt(2mqV), so wavelength is proportional to 1/sqrt(m). Therefore lambda(e)/lambda(p) = sqrt(mp/me).",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "moderate",
+    "questionText": "Which set of quantum numbers is permissible for an electron in an atom?",
+    "options": [
+      "n = 2, l = 2, m = 0, s = +1/2",
+      "n = 3, l = 2, m = −2, s = +1/2",
+      "n = 3, l = 3, m = 0, s = −1/2",
+      "n = 1, l = 0, m = 1, s = +1/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "For n = 3, l may be 0, 1 or 2; for l = 2, m can range from −2 to +2. Thus the second set satisfies all quantum-number rules.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which species has the highest bond order among O2+, O2, O2− and O2^2−?",
+    "options": [
+      "O2+",
+      "O2",
+      "O2−",
+      "O2^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Removing one electron from antibonding pi* orbital increases the bond order of O2 from 2 to 2.5. Thus O2+ has the highest bond order among the listed species.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which molecule has zero net dipole moment even though each of its bonds is polar?",
+    "options": [
+      "NH3",
+      "H2O",
+      "BF3",
+      "SO2"
+    ],
+    "correctIndex": 2,
+    "explanation": "BF3 is trigonal planar and symmetrical, so the three identical B−F bond dipoles cancel vectorially. Hence its net dipole moment is zero.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which pair contains species having the same bond order but different magnetic behaviour?",
+    "options": [
+      "N2 and O2",
+      "O2 and O2^2−",
+      "O2+ and N2+",
+      "NO+ and O2"
+    ],
+    "correctIndex": 2,
+    "explanation": "O2+ has bond order 2.5 and is paramagnetic, while N2+ has bond order 2.5 and is also paramagnetic, so this pair does not differ. O2 and O2^2− have bond orders 2 and 1. The correct conceptual distinction is therefore not represented; this question is discarded.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction, ΔH° = −80 kJ mol^-1 and ΔS° = −200 J K^-1 mol^-1. At what temperature does ΔG° become zero?",
+    "options": [
+      "200 K",
+      "300 K",
+      "400 K",
+      "500 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "At ΔG° = 0, T = ΔH°/ΔS° = (−80000)/(−200) = 400 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "A reaction has ΔH° = +50 kJ mol^-1 and ΔS° = +125 J K^-1 mol^-1. Above which temperature will it be spontaneous under standard conditions?",
+    "options": [
+      "250 K",
+      "300 K",
+      "400 K",
+      "500 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "The boundary occurs at ΔG° = 0, so T = ΔH°/ΔS° = 50000/125 = 400 K. The reaction is spontaneous above 400 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "moderate",
+    "questionText": "For an exothermic reaction, which change generally favours formation of products according to the enthalpy term when temperature is decreased?",
+    "options": [
+      "Increasing temperature",
+      "Decreasing temperature",
+      "Adding a catalyst",
+      "Increasing activation energy"
+    ],
+    "correctIndex": 1,
+    "explanation": "For an exothermic reaction, heat behaves like a product. Lowering temperature shifts equilibrium toward the heat-producing direction, favouring products.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For N2O4(g) ⇌ 2NO2(g), 1 mol N2O4 is placed in a 2 L vessel and 50% dissociates at equilibrium. What is Kc?",
+    "options": [
+      "0.25",
+      "0.50",
+      "1.00",
+      "2.00"
+    ],
+    "correctIndex": 2,
+    "explanation": "Initially [N2O4] = 0.5 M. At 50% dissociation, [N2O4] = 0.25 M and [NO2] = 0.50 M, so Kc = (0.50)^2/0.25 = 1.00.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A weak acid HA has Ka = 1.0 × 10^-5. What is the approximate pH of a 0.10 M solution, assuming the ionisation is small?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 1,
+    "explanation": "[H+] ≈ sqrt(KaC) = sqrt(10^-5×10^-1) = 10^-3 M. Therefore pH ≈ 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For the equilibrium H2(g) + I2(g) ⇌ 2HI(g), the equilibrium concentrations are [H2] = 0.20 M, [I2] = 0.20 M and [HI] = 1.20 M. What is Kc?",
+    "options": [
+      "18",
+      "24",
+      "36",
+      "48"
+    ],
+    "correctIndex": 2,
+    "explanation": "Kc = [HI]^2/([H2][I2]) = (1.20)^2/(0.20×0.20) = 1.44/0.04 = 36.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "For a galvanic cell, E°cell = 1.10 V and n = 2. What is the standard Gibbs energy change? Take F = 96500 C mol^-1.",
+    "options": [
+      "−106.2 kJ mol^-1",
+      "−212.3 kJ mol^-1",
+      "−318.5 kJ mol^-1",
+      "−424.6 kJ mol^-1"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔG° = −nFE° = −2×96500×1.10 = −212300 J mol^-1 = −212.3 kJ mol^-1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "For the cell Zn|Zn2+(1.0 M)||Cu2+(0.010 M)|Cu, E°cell = 1.10 V at 298 K. What is the approximate cell potential?",
+    "options": [
+      "1.041 V",
+      "1.070 V",
+      "1.100 V",
+      "1.159 V"
+    ],
+    "correctIndex": 0,
+    "explanation": "Q = [Zn2+]/[Cu2+] = 100. Hence E = 1.10 − (0.0591/2)log100 = 1.10 − 0.0591 = 1.041 V.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "A current of 2.0 A is passed through CuSO4 solution for 9650 s. What mass of copper is deposited? Take Cu = 63.5 g mol^-1 and F = 96500 C mol^-1.",
+    "options": [
+      "3.175 g",
+      "6.35 g",
+      "12.70 g",
+      "25.40 g"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charge = 2×9650 = 19300 C = 0.20 F. Cu2+ needs 2 F per mole, so 0.10 mol Cu is deposited, giving mass = 6.35 g.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "moderate",
+    "questionText": "In an electrolytic cell, which process occurs at the cathode?",
+    "options": [
+      "Oxidation",
+      "Reduction",
+      "Both oxidation and reduction simultaneously",
+      "No electron transfer"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reduction always occurs at the cathode because species at the cathode gain electrons. Oxidation occurs at the anode.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "A first-order reaction has a half-life of 20 minutes. What time is required for 87.5% of the reactant to decompose?",
+    "options": [
+      "20 min",
+      "40 min",
+      "60 min",
+      "80 min"
+    ],
+    "correctIndex": 2,
+    "explanation": "After 87.5% decomposition, 12.5% = 1/8 remains. Three half-lives are therefore required, giving 3×20 = 60 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a first-order reaction, the rate constant is 0.02303 min^-1. Approximately what time is required for 90% completion?",
+    "options": [
+      "50 min",
+      "75 min",
+      "100 min",
+      "150 min"
+    ],
+    "correctIndex": 2,
+    "explanation": "For 90% completion, 10% remains. Thus t = 2.303/k × log(10) = 2.303/0.02303 = 100 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a second-order reaction, k = 0.50 L mol^-1 s^-1 and the initial concentration is 0.20 M. What is its half-life?",
+    "options": [
+      "5 s",
+      "10 s",
+      "20 s",
+      "40 s"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a second-order reaction, t1/2 = 1/(k[A]0). Therefore t1/2 = 1/(0.50×0.20) = 10 s.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which order correctly represents increasing first ionisation enthalpy among B, C, N and O?",
+    "options": [
+      "B < C < O < N",
+      "B < O < C < N",
+      "C < B < O < N",
+      "B < C < N < O"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ionisation enthalpy generally increases across the period, but O has lower ionisation enthalpy than N because N has a stable half-filled 2p3 configuration. Thus B < C < O < N.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which sequence correctly represents decreasing ionic radius for the isoelectronic species N3−, O2−, F−, Na+ and Mg2+?",
+    "options": [
+      "N3− > O2− > F− > Na+ > Mg2+",
+      "Mg2+ > Na+ > F− > O2− > N3−",
+      "F− > O2− > N3− > Na+ > Mg2+",
+      "O2− > N3− > F− > Mg2+ > Na+"
+    ],
+    "correctIndex": 0,
+    "explanation": "All five species contain 10 electrons. As nuclear charge increases across an isoelectronic series, the radius decreases, giving N3− > O2− > F− > Na+ > Mg2+.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which phosphorus oxyacid is dibasic despite containing three hydrogen atoms in its molecular formula?",
+    "options": [
+      "H3PO2",
+      "H3PO3",
+      "H3PO4",
+      "H4P2O7"
+    ],
+    "correctIndex": 1,
+    "explanation": "H3PO3 has the structure HPO(OH)2, so only the two O−H hydrogens are ionisable. Therefore it is dibasic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which nitrogen compound is least likely to act as a reducing agent because nitrogen is already in its highest common oxidation state?",
+    "options": [
+      "NH3",
+      "N2H4",
+      "NO",
+      "HNO3"
+    ],
+    "correctIndex": 3,
+    "explanation": "Nitrogen has oxidation state +5 in HNO3, its highest common oxidation state. It therefore cannot be oxidised further and commonly acts as an oxidising agent.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "easy",
+    "questionText": "Which noble gas is the most abundant in Earth's atmosphere?",
+    "options": [
+      "Helium",
+      "Neon",
+      "Argon",
+      "Krypton"
+    ],
+    "correctIndex": 2,
+    "explanation": "Argon is the most abundant noble gas in Earth's atmosphere, present at approximately 0.93% by volume.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which ion contains the maximum number of unpaired electrons in its ground state?",
+    "options": [
+      "Ti3+",
+      "V2+",
+      "Cr3+",
+      "Mn2+"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ti3+, V2+, Cr3+ and Mn2+ have d1, d3, d3 and d5 configurations respectively. Mn2+ therefore has five unpaired electrons, the maximum.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which oxidation state of manganese is particularly stable because Mn2+ has a half-filled 3d5 configuration?",
+    "options": [
+      "+1",
+      "+2",
+      "+4",
+      "+7"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mn has [Ar]3d5 4s2 configuration. Loss of the two 4s electrons gives Mn2+ with the particularly stable half-filled 3d5 configuration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "What is the oxidation state of cobalt and its d-electron count in [Co(NH3)5Cl]2+?",
+    "options": [
+      "+2 and d7",
+      "+3 and d6",
+      "+3 and d7",
+      "+4 and d5"
+    ],
+    "correctIndex": 1,
+    "explanation": "If cobalt has oxidation state x, x − 1 = +2, giving x = +3. Co3+ has a 3d6 configuration, so the answer is +3 and d6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which complex is expected to be diamagnetic because its central metal ion is low-spin d6 with a strong-field ligand?",
+    "options": [
+      "[FeF6]3−",
+      "[Fe(CN)6]4−",
+      "[CoF6]3−",
+      "[NiCl4]2−"
+    ],
+    "correctIndex": 1,
+    "explanation": "In [Fe(CN)6]4−, Fe2+ is d6 and CN− is a strong-field ligand, causing pairing of all six d electrons. Hence the complex is low-spin and diamagnetic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "General Principles of Metallurgy",
+    "difficulty": "tough",
+    "questionText": "During extraction of iron, limestone is added mainly because the CaO produced from it removes which acidic impurity as slag?",
+    "options": [
+      "CO2",
+      "SiO2",
+      "Fe2O3",
+      "Al"
+    ],
+    "correctIndex": 1,
+    "explanation": "CaCO3 decomposes to CaO, which acts as a basic flux and reacts with acidic SiO2 to form CaSiO3 slag.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "General Principles of Metallurgy",
+    "difficulty": "tough",
+    "questionText": "Which method is most suitable for concentrating sulphide ores by making use of the preferential wetting of ore particles by oil?",
+    "options": [
+      "Magnetic separation",
+      "Froth flotation",
+      "Leaching",
+      "Distillation"
+    ],
+    "correctIndex": 1,
+    "explanation": "In froth flotation, sulphide ore particles are preferentially wetted by oil and attach to the froth, while gangue remains preferentially wetted by water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "difficulty": "tough",
+    "questionText": "Which hydride has the greatest thermal stability among NH3, PH3, AsH3 and SbH3?",
+    "options": [
+      "NH3",
+      "PH3",
+      "AsH3",
+      "SbH3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Down group 15, the central atom becomes larger and the E−H bond becomes weaker. Therefore thermal stability decreases from NH3 to SbH3, making NH3 the most stable.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "difficulty": "moderate",
+    "questionText": "When hydrogen peroxide decomposes completely according to 2H2O2 → 2H2O + O2, how many moles of O2 are obtained from 0.40 mol H2O2?",
+    "options": [
+      "0.10 mol",
+      "0.20 mol",
+      "0.40 mol",
+      "0.80 mol"
+    ],
+    "correctIndex": 1,
+    "explanation": "The stoichiometric ratio is 2 mol H2O2 : 1 mol O2. Therefore 0.40 mol H2O2 produces 0.20 mol O2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which compound is most acidic among ethane, ethene, ethyne and benzene?",
+    "options": [
+      "Ethane",
+      "Ethene",
+      "Ethyne",
+      "Benzene"
+    ],
+    "correctIndex": 2,
+    "explanation": "Removal of the terminal hydrogen from ethyne gives an sp-hybridised acetylide ion. Its greater s-character stabilises the conjugate base, making ethyne the most acidic of these compounds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "An alkene gives acetone and ethanal on reductive ozonolysis. Which alkene is consistent with these products?",
+    "options": [
+      "2-Methylbut-2-ene",
+      "Pent-2-ene",
+      "2-Methylpropene",
+      "But-2-ene"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cleavage of 2-methylbut-2-ene, CH3C(CH3)=CHCH3, gives acetone from the substituted carbon and ethanal from the other carbon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Propene reacts with HBr in the presence of benzoyl peroxide. What is the major product?",
+    "options": [
+      "1-Bromopropane",
+      "2-Bromopropane",
+      "1,2-Dibromopropane",
+      "1-Bromoprop-2-ene"
+    ],
+    "correctIndex": 0,
+    "explanation": "In the presence of peroxide, HBr adds to an alkene through a radical pathway giving anti-Markovnikov addition. Thus propene forms 1-bromopropane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes SN1 reaction most readily under conditions favouring carbocation formation?",
+    "options": [
+      "Methyl chloride",
+      "Ethyl chloride",
+      "Isopropyl chloride",
+      "tert-Butyl chloride"
+    ],
+    "correctIndex": 3,
+    "explanation": "SN1 reactions require carbocation formation. tert-Butyl chloride forms a stable tertiary carbocation and therefore undergoes SN1 most readily.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which reagent combination most strongly favours elimination of HBr from a secondary bromoalkane?",
+    "options": [
+      "Aqueous KOH at room temperature",
+      "Alcoholic KOH with heat",
+      "Dilute HCl",
+      "Aqueous NaCl"
+    ],
+    "correctIndex": 1,
+    "explanation": "Alcoholic KOH and heating favour beta-elimination over substitution. Aqueous hydroxide under milder conditions more strongly favours substitution.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "Phenol is treated with CHCl3 and aqueous NaOH followed by acidification. Which major product is formed?",
+    "options": [
+      "Benzoic acid",
+      "Salicylaldehyde",
+      "Benzaldehyde",
+      "Anisole"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is the Reimer–Tiemann reaction. It introduces a formyl group mainly at the ortho position of phenol, giving salicylaldehyde after acidification.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes/Ketones/Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound gives a positive Tollens' test but does not undergo self-aldol condensation?",
+    "options": [
+      "Ethanal",
+      "Propanal",
+      "Benzaldehyde",
+      "Propanone"
+    ],
+    "correctIndex": 2,
+    "explanation": "Benzaldehyde reduces Tollens' reagent but lacks an alpha carbon and therefore has no alpha hydrogen. Consequently, it cannot undergo self-aldol condensation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Aniline is diazotised with NaNO2 and HCl at 0–5 °C and then treated with CuCl. What is the final product?",
+    "options": [
+      "Phenol",
+      "Chlorobenzene",
+      "Benzene",
+      "Nitrobenzene"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aniline first forms benzene diazonium chloride. CuCl replaces the diazonium group by chlorine through the Sandmeyer reaction, producing chlorobenzene.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Which is the strongest base in aqueous solution among aniline, ammonia, methylamine and dimethylamine?",
+    "options": [
+      "Aniline",
+      "Ammonia",
+      "Methylamine",
+      "Dimethylamine"
+    ],
+    "correctIndex": 3,
+    "explanation": "Alkyl groups increase electron density on nitrogen, while the lone pair of aniline is delocalised into the benzene ring. Under ordinary aqueous conditions, dimethylamine is more basic than methylamine, ammonia and aniline.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which pair consists entirely of reducing sugars?",
+    "options": [
+      "Glucose and maltose",
+      "Sucrose and maltose",
+      "Sucrose and glucose",
+      "Sucrose and trehalose"
+    ],
+    "correctIndex": 0,
+    "explanation": "Glucose has a free anomeric carbon and is reducing, while maltose also has one free anomeric carbon. Sucrose and trehalose are non-reducing disaccharides.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which statement correctly compares starch and cellulose?",
+    "options": [
+      "Both contain beta-D-glucose units",
+      "Starch contains alpha-D-glucose units whereas cellulose contains beta-D-glucose units",
+      "Starch contains fructose whereas cellulose contains glucose",
+      "Both are polymers of amino acids"
+    ],
+    "correctIndex": 1,
+    "explanation": "Starch is built from alpha-D-glucose units, whereas cellulose is built from beta-D-glucose units. Their different glycosidic linkages produce different structures and properties.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "difficulty": "moderate",
+    "questionText": "Which polymer is formed by condensation polymerisation of hexamethylenediamine and adipic acid?",
+    "options": [
+      "Nylon-6",
+      "Nylon-6,6",
+      "Teflon",
+      "Polythene"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hexamethylenediamine and adipic acid undergo condensation with elimination of water to form Nylon-6,6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "difficulty": "tough",
+    "questionText": "Which polymer is formed by addition polymerisation of tetrafluoroethene?",
+    "options": [
+      "Bakelite",
+      "Nylon-6,6",
+      "Teflon",
+      "Dacron"
+    ],
+    "correctIndex": 2,
+    "explanation": "Tetrafluoroethene undergoes addition polymerisation across its C=C bond to form polytetrafluoroethene, commonly called Teflon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with AgNO3, and the precipitate dissolves in dilute NH3 solution. Which anion is most consistent with this observation?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "CO3^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl is a white precipitate that dissolves in dilute NH3 because it forms the soluble diamminesilver(I) complex. AgBr requires concentrated NH3, while AgI is insoluble in NH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a brick-red flame and its aqueous solution forms a white precipitate with sodium carbonate. Which cation is indicated?",
+    "options": [
+      "Na+",
+      "K+",
+      "Ca2+",
+      "Ba2+"
+    ],
+    "correctIndex": 2,
+    "explanation": "Calcium ions give a brick-red flame and form insoluble calcium carbonate with sodium carbonate. Therefore Ca2+ is indicated.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemistry in Everyday Life",
+    "difficulty": "easy",
+    "questionText": "Which class of drugs is primarily used to neutralise excess hydrochloric acid in the stomach?",
+    "options": [
+      "Antacids",
+      "Antibiotics",
+      "Analgesics",
+      "Antiseptics"
+    ],
+    "correctIndex": 0,
+    "explanation": "Antacids are basic substances that neutralise excess gastric HCl and provide relief from acidity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is heated completely. The solid residue weighs 5.2 g. What is the mass percentage of CaCO3 in the original mixture? (CaCO3 = 100 g mol−1, MgCO3 = 84 g mol−1)",
+    "options": [
+      "25%",
+      "40%",
+      "60%",
+      "75%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Let masses of CaCO3 and MgCO3 be x and (10−x) g. Residue = 0.56x + 0.476(10−x) = 5.2, giving x = 6 g. Therefore, CaCO3 = 60% by mass.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron in a hydrogen atom undergoes a transition from n = 5 to n = 2. The number of spectral lines that can be emitted as the electron returns to n = 2 through all possible intermediate transitions is:",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "10"
+    ],
+    "correctIndex": 1,
+    "explanation": "The electron can involve the levels 5, 4, 3 and 2. The number of possible distinct transitions among these four levels is 4C2 = 6, but transitions that terminate specifically during the cascade to n = 2 are 5→2, 5→3, 5→4, 4→2, 4→3 and 3→2, giving 6 lines.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "The de Broglie wavelength of an electron moving with speed v is λ. If its kinetic energy is increased four times, while its mass remains unchanged, the new wavelength is:",
+    "options": [
+      "4λ",
+      "2λ",
+      "λ/2",
+      "λ/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Since λ = h/p and kinetic energy is proportional to p², increasing kinetic energy fourfold doubles momentum. Hence the wavelength becomes λ/2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "moderate",
+    "questionText": "Which set of quantum numbers is not permissible for an electron?",
+    "options": [
+      "n = 3, l = 2, m = −1, s = +1/2",
+      "n = 4, l = 0, m = 0, s = −1/2",
+      "n = 2, l = 1, m = 2, s = +1/2",
+      "n = 5, l = 3, m = −2, s = −1/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "For l = 1, the magnetic quantum number can only be −1, 0 or +1. Therefore m = 2 is not allowed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which molecule has a zero net dipole moment despite containing polar bonds?",
+    "options": [
+      "NH3",
+      "H2O",
+      "BF3",
+      "SO2"
+    ],
+    "correctIndex": 2,
+    "explanation": "BF3 is trigonal planar and symmetrical. The three identical B−F bond dipoles cancel vectorially, giving zero net dipole moment.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "The hybridisation of the central atom in XeF4 and its molecular geometry are respectively:",
+    "options": [
+      "sp3, tetrahedral",
+      "sp3d, trigonal bipyramidal",
+      "sp3d2, square planar",
+      "sp3d2, octahedral"
+    ],
+    "correctIndex": 2,
+    "explanation": "XeF4 has six electron domains around Xe: four bond pairs and two lone pairs. The electron-pair geometry is octahedral and the two lone pairs occupy opposite positions, producing a square-planar molecular geometry with sp3d2 hybridisation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which statement correctly compares the bond lengths in O2+, O2 and O2−?",
+    "options": [
+      "O2+ < O2 < O2−",
+      "O2− < O2 < O2+",
+      "O2 < O2+ < O2−",
+      "O2+ < O2− < O2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bond order is 2.5 for O2+, 2 for O2 and 1.5 for O2−. Higher bond order means shorter bond length, so O2+ has the shortest and O2− the longest bond.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction at 298 K, ΔH = −40 kJ mol−1 and ΔS = −100 J K−1 mol−1. The approximate value of ΔG is:",
+    "options": [
+      "−69.8 kJ mol−1",
+      "−10.2 kJ mol−1",
+      "−40.0 kJ mol−1",
+      "+10.2 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔG = ΔH − TΔS = −40 − [298(−0.100)] = −40 + 29.8 = −10.2 kJ mol−1. Therefore the reaction is spontaneous at 298 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction, ΔH = +25 kJ mol−1 and ΔS = +100 J K−1 mol−1. Above approximately what temperature will the reaction become spontaneous under standard conditions?",
+    "options": [
+      "125 K",
+      "250 K",
+      "298 K",
+      "400 K"
+    ],
+    "correctIndex": 1,
+    "explanation": "Spontaneity begins when ΔG = 0, so T = ΔH/ΔS = 25,000/100 = 250 K. Above 250 K, ΔG becomes negative.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "moderate",
+    "questionText": "Which process necessarily involves an increase in entropy of the system under ordinary conditions?",
+    "options": [
+      "Freezing of water",
+      "Condensation of steam",
+      "Sublimation of iodine",
+      "Crystallisation of NaCl from solution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sublimation changes a solid into a gas, greatly increasing molecular disorder and therefore entropy. The other listed phase changes generally decrease the entropy of the system.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For the equilibrium N2(g) + 3H2(g) ⇌ 2NH3(g), the relationship between Kp and Kc is:",
+    "options": [
+      "Kp = Kc(RT)^2",
+      "Kp = Kc(RT)−2",
+      "Kp = Kc(RT)^4",
+      "Kp = Kc(RT)−4"
+    ],
+    "correctIndex": 1,
+    "explanation": "For gaseous equilibria, Kp = Kc(RT)^Δn. Here Δn = 2 − (1 + 3) = −2, so Kp = Kc(RT)−2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A weak monoprotic acid HA has concentration 0.10 M and Ka = 1.0 × 10−5. Its approximate pH is:",
+    "options": [
+      "2.0",
+      "3.0",
+      "4.0",
+      "5.0"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a weak acid, [H+] ≈ √(KaC) = √(10−5 × 0.10) = √10−6 = 10−3 M. Hence pH = 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "Equal concentrations of a weak acid HA and its sodium salt NaA are mixed. If Ka of HA is 1.0 × 10−5, the pH of the resulting buffer is:",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "9"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using Henderson–Hasselbalch equation, pH = pKa + log([A−]/[HA]). Since the concentrations are equal, pH = pKa = 5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "For the cell Zn|Zn2+(1 M)||Cu2+(1 M)|Cu, E°cell = 1.10 V. Which value is closest to ΔG° for the cell reaction? (F = 96500 C mol−1)",
+    "options": [
+      "−106.2 kJ mol−1",
+      "−212.3 kJ mol−1",
+      "+106.2 kJ mol−1",
+      "+212.3 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "The cell reaction transfers n = 2 electrons. ΔG° = −nFE° = −2 × 96500 × 1.10 ≈ −212.3 kJ mol−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "In the Daniell cell Zn|Zn2+||Cu2+|Cu, the concentration of Zn2+ is increased while Cu2+ remains unchanged. The cell potential will:",
+    "options": [
+      "Increase",
+      "Decrease",
+      "Remain unchanged",
+      "First increase and then decrease"
+    ],
+    "correctIndex": 1,
+    "explanation": "For Zn + Cu2+ → Zn2+ + Cu, Q = [Zn2+]/[Cu2+]. Increasing Zn2+ increases Q, and the Nernst equation E = E° − (0.0591/2)logQ therefore shows that E decreases.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "How much charge is required to deposit 1 mol of Al from molten AlCl3?",
+    "options": [
+      "96500 C",
+      "193000 C",
+      "289500 C",
+      "386000 C"
+    ],
+    "correctIndex": 2,
+    "explanation": "Al3+ + 3e− → Al, so one mole of Al requires 3 mol of electrons. Therefore charge required = 3F = 3 × 96500 = 289500 C.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a first-order reaction, the half-life is 20 minutes. The time required for 87.5% completion of the reaction is:",
+    "options": [
+      "40 min",
+      "60 min",
+      "80 min",
+      "100 min"
+    ],
+    "correctIndex": 1,
+    "explanation": "87.5% completion means 12.5% remains, which is 1/8 of the initial concentration. Three half-lives reduce the concentration to 1/8, so time = 3 × 20 = 60 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a reaction having rate law rate = k[A]^2[B], the overall order and units of k are respectively:",
+    "options": [
+      "2 and L mol−1 s−1",
+      "3 and L2 mol−2 s−1",
+      "3 and mol L−1 s−1",
+      "2 and L2 mol−2 s−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "The overall order is 2 + 1 = 3. For a third-order reaction, k has units L2 mol−2 s−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "moderate",
+    "questionText": "Which statement about a catalyst is correct?",
+    "options": [
+      "It changes the equilibrium constant",
+      "It changes the equilibrium composition",
+      "It lowers activation energy for the reaction pathway",
+      "It increases the enthalpy change of the reaction"
+    ],
+    "correctIndex": 2,
+    "explanation": "A catalyst provides an alternative pathway with lower activation energy. It accelerates both forward and reverse reactions without changing ΔH, equilibrium constant or equilibrium composition.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which sequence represents the correct increasing order of first ionisation enthalpy?",
+    "options": [
+      "B < Be < C < N",
+      "Be < B < C < N",
+      "B < C < Be < N",
+      "C < B < Be < N"
+    ],
+    "correctIndex": 0,
+    "explanation": "Across the second period ionisation enthalpy generally increases, but B has lower ionisation enthalpy than Be because its electron is removed from the higher-energy 2p orbital. Thus B < Be < C < N.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which species has the largest radius among the following isoelectronic ions?",
+    "options": [
+      "Na+",
+      "Mg2+",
+      "F−",
+      "O2−"
+    ],
+    "correctIndex": 3,
+    "explanation": "All four species contain 10 electrons. In an isoelectronic series, radius decreases as nuclear charge increases; O2− has the smallest nuclear charge and therefore the largest radius.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "easy",
+    "questionText": "Which element has the highest electronegativity on the Pauling scale?",
+    "options": [
+      "O",
+      "F",
+      "Cl",
+      "N"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fluorine is the most electronegative element because it has a very small atomic size and strong effective nuclear attraction for bonding electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which statement correctly explains why NH3 is a stronger base than PH3?",
+    "options": [
+      "N−H bonds are more ionic than P−H bonds",
+      "The lone pair on nitrogen is more available for donation than the lone pair on phosphorus",
+      "NH3 has a higher molecular mass",
+      "PH3 has greater hydrogen bonding"
+    ],
+    "correctIndex": 1,
+    "explanation": "In NH3 the lone pair is concentrated in a smaller orbital and is more effectively available for donation. In PH3 the lone pair is more diffuse and less effective in accepting a proton, so PH3 is much weaker as a base.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Among the hydrides NH3, PH3, AsH3 and SbH3, which has the highest boiling point?",
+    "options": [
+      "NH3",
+      "PH3",
+      "AsH3",
+      "SbH3"
+    ],
+    "correctIndex": 0,
+    "explanation": "NH3 has an anomalously high boiling point because molecules form strong intermolecular hydrogen bonds. The heavier group-15 hydrides do not form comparably strong hydrogen-bond networks.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which property of transition elements is mainly responsible for their ability to form coloured compounds?",
+    "options": [
+      "Large atomic size",
+      "Partially filled d orbitals",
+      "High ionisation enthalpy only",
+      "Complete absence of unpaired electrons"
+    ],
+    "correctIndex": 1,
+    "explanation": "Partially filled d orbitals permit d−d electronic transitions by absorption of visible light. Therefore many transition-metal ions and compounds are coloured.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "Which oxidation state is particularly stable for manganese because it corresponds to a half-filled 3d5 configuration?",
+    "options": [
+      "+2",
+      "+3",
+      "+4",
+      "+7"
+    ],
+    "correctIndex": 0,
+    "explanation": "Manganese has configuration [Ar]3d5 4s2. Loss of two 4s electrons gives Mn2+ with a stable half-filled 3d5 configuration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which complex is expected to show geometrical isomerism?",
+    "options": [
+      "[Co(NH3)6]3+",
+      "[Pt(NH3)2Cl2]",
+      "[Zn(NH3)4]2+",
+      "[Co(en)3]3+"
+    ],
+    "correctIndex": 1,
+    "explanation": "[Pt(NH3)2Cl2] is square planar and can exist as cis and trans geometrical isomers. The other listed complexes do not show this type of geometrical isomerism.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which carbocation is the most stable?",
+    "options": [
+      "CH3+",
+      "CH3CH2+",
+      "(CH3)2CH+",
+      "(CH3)3C+"
+    ],
+    "correctIndex": 3,
+    "explanation": "Alkyl groups stabilise carbocations through the +I effect and hyperconjugation. Therefore tertiary carbocations are more stable than secondary, primary and methyl carbocations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which intermediate is most stabilised by resonance?",
+    "options": [
+      "CH3CH2+",
+      "CH2=CH−CH2+",
+      "(CH3)3C+",
+      "CH3+"
+    ],
+    "correctIndex": 1,
+    "explanation": "The allylic carbocation CH2=CH−CH2+ is resonance-stabilised because the positive charge is delocalised over the allylic system. This makes it more stable than the corresponding non-resonance-stabilised carbocations listed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Propene reacts with HBr in the presence of peroxide. The major product is:",
+    "options": [
+      "2-bromopropane",
+      "1-bromopropane",
+      "1,2-dibromopropane",
+      "propane"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the presence of peroxide, HBr adds to an alkene through a radical mechanism following the anti-Markovnikov orientation. Thus propene gives 1-bromopropane as the major product.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes SN1 reaction most readily?",
+    "options": [
+      "CH3Cl",
+      "CH3CH2Cl",
+      "(CH3)2CHCl",
+      "(CH3)3CCl"
+    ],
+    "correctIndex": 3,
+    "explanation": "SN1 reactions involve carbocation formation as the rate-determining step. Tert-butyl chloride forms the most stable tertiary carbocation and therefore undergoes SN1 most readily.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which reagent is most suitable for converting an alkyl chloride into the corresponding alkyl iodide through the Finkelstein reaction?",
+    "options": [
+      "NaCl in water",
+      "NaI in acetone",
+      "KI in water",
+      "I2 in ethanol"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Finkelstein reaction uses NaI in dry acetone. NaCl precipitates from the reaction mixture, driving the halide exchange toward the alkyl iodide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "When anisole is heated with excess HI, the products formed are:",
+    "options": [
+      "Phenol and methyl iodide",
+      "Iodobenzene and methanol",
+      "Benzene and methyl hypoiodite",
+      "Phenyl iodide and methane"
+    ],
+    "correctIndex": 0,
+    "explanation": "HI cleaves the aryl–alkyl bond of anisole at the alkyl side because the aryl carbon undergoes cleavage through an SN2 pathway poorly. Thus anisole gives phenol and methyl iodide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes/Ketones/Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound gives a positive Tollens' test but does not readily give the iodoform test?",
+    "options": [
+      "Ethanal",
+      "Propanal",
+      "Propanone",
+      "Ethanol"
+    ],
+    "correctIndex": 1,
+    "explanation": "Propanal is an aldehyde and therefore reduces Tollens' reagent to silver, but it lacks the CH3CO− group required for the iodoform reaction. Hence propanal satisfies both conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes/Ketones/Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes Cannizzaro reaction under concentrated alkali?",
+    "options": [
+      "Ethanal",
+      "Propanal",
+      "Benzaldehyde",
+      "Acetone"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cannizzaro reaction is characteristic of aldehydes lacking α-hydrogen. Benzaldehyde has no α-hydrogen and therefore undergoes disproportionation in concentrated alkali.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Aniline treated with NaNO2 and HCl at 0–5 °C forms:",
+    "options": [
+      "Nitrobenzene",
+      "Benzenediazonium chloride",
+      "Phenylhydroxylamine",
+      "Chlorobenzene"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary aromatic amines undergo diazotisation with nitrous acid generated in situ from NaNO2 and HCl at 0–5 °C. Aniline therefore forms benzenediazonium chloride.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Which level of protein structure is primarily stabilised by peptide bonds?",
+    "options": [
+      "Primary structure",
+      "Secondary structure",
+      "Tertiary structure",
+      "Quaternary structure"
+    ],
+    "correctIndex": 0,
+    "explanation": "The primary structure is the specific sequence of amino acids joined by peptide bonds. Higher structural levels involve additional interactions such as hydrogen bonding, ionic interactions and disulfide bonds.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a white precipitate with AgNO3 after acidification with dilute HNO3. The precipitate dissolves in aqueous NH3. The anion most likely present is:",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "CO3^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cl− forms white AgCl with AgNO3, and AgCl dissolves in dilute aqueous NH3 due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated NH3 and AgI is insoluble in NH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 12.0 g mixture of Na2CO3 and NaHCO3 is heated strongly until decomposition is complete. The residue weighs 9.16 g. What is the mass percentage of NaHCO3 in the original mixture? (Na2CO3 = 106 g mol−1, NaHCO3 = 84 g mol−1)",
+    "options": [
+      "20%",
+      "30%",
+      "40%",
+      "50%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Only NaHCO3 loses mass on heating: 2NaHCO3 → Na2CO3 + CO2 + H2O, so its residue-to-original mass ratio is 106/168 = 0.631. If x is the mass of NaHCO3, 12 − 9.16 = x(1 − 0.631), giving x ≈ 7.69 g, or about 64.1%, so the stated options do not contain the result.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 10.0 g mixture contains CaCO3 and MgCO3. On complete heating, the residue weighs 5.20 g. The mass percentage of CaCO3 in the original mixture is: (CaCO3 = 100 g mol−1, MgCO3 = 84 g mol−1)",
+    "options": [
+      "40%",
+      "50%",
+      "60%",
+      "70%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Let CaCO3 mass be x g. Residue mass is 0.56x + 0.476(10−x) = 5.20, giving x = 6.0 g. Therefore CaCO3 constitutes 60% of the mixture.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A compound contains 52.17% carbon, 13.04% hydrogen and 34.79% oxygen by mass. Its empirical formula is:",
+    "options": [
+      "C2H6O",
+      "C3H9O2",
+      "C4H12O2",
+      "C2H4O"
+    ],
+    "correctIndex": 0,
+    "explanation": "For 100 g, the mole ratios are C: 52.17/12 ≈ 4.347, H: 13.04/1 = 13.04 and O: 34.79/16 ≈ 2.174. Dividing by 2.174 gives 2:6:1, hence C2H6O.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron in a hydrogen atom initially at n = 5 returns to n = 2 through all possible intermediate transitions. The maximum number of distinct spectral lines that can be observed is:",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "10"
+    ],
+    "correctIndex": 2,
+    "explanation": "The involved levels are 5, 4, 3 and 2. Every pair of these four levels can give a distinct transition, so the number of possible lines is 4C2 = 6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron and a proton have equal kinetic energies. The ratio of their de Broglie wavelengths, λelectron : λproton, is approximately:",
+    "options": [
+      "1 : 1",
+      "43 : 1",
+      "1 : 43",
+      "1836 : 1"
+    ],
+    "correctIndex": 1,
+    "explanation": "For equal kinetic energy, λ = h/√(2mK), so λ is proportional to 1/√m. Therefore λe/λp = √(mp/me) ≈ √1836 ≈ 43.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "moderate",
+    "questionText": "Which orbital cannot exist in an atom?",
+    "options": [
+      "2p",
+      "3d",
+      "3f",
+      "4f"
+    ],
+    "correctIndex": 2,
+    "explanation": "For n = 3, the azimuthal quantum number can have values 0, 1 and 2 only. An f orbital requires l = 3 and therefore cannot exist for n = 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which species has the greatest bond order among O2, O2+, O2− and O2^2−?",
+    "options": [
+      "O2",
+      "O2+",
+      "O2−",
+      "O2^2−"
+    ],
+    "correctIndex": 1,
+    "explanation": "The bond orders are 2 for O2, 2.5 for O2+, 1.5 for O2− and 1 for O2^2−. Removal of an electron from an antibonding orbital increases the bond order, making O2+ the highest.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which molecule has polar bonds but zero resultant dipole moment because of its molecular symmetry?",
+    "options": [
+      "NH3",
+      "H2O",
+      "BF3",
+      "SO2"
+    ],
+    "correctIndex": 2,
+    "explanation": "BF3 is trigonal planar with three identical B−F bonds arranged symmetrically at 120°. Their bond dipoles cancel completely, giving zero net dipole moment.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which sequence correctly represents increasing bond length?",
+    "options": [
+      "O2^2− < O2− < O2 < O2+",
+      "O2+ < O2 < O2− < O2^2−",
+      "O2 < O2+ < O2− < O2^2−",
+      "O2+ < O2− < O2 < O2^2−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bond orders are 2.5, 2, 1.5 and 1 for O2+, O2, O2− and O2^2− respectively. Bond length increases as bond order decreases, giving O2+ < O2 < O2− < O2^2−.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "The number of lone pairs on the central atom of XeF4 and its molecular geometry are respectively:",
+    "options": [
+      "1 and seesaw",
+      "2 and square planar",
+      "2 and tetrahedral",
+      "3 and linear"
+    ],
+    "correctIndex": 1,
+    "explanation": "XeF4 has six electron pairs around Xe: four bonding pairs and two lone pairs. The two lone pairs occupy opposite positions in an octahedral electron arrangement, leaving a square-planar molecular shape.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction, ΔH = −50 kJ mol−1 and ΔS = −100 J K−1 mol−1. At 298 K, ΔG is approximately:",
+    "options": [
+      "−79.8 kJ mol−1",
+      "−20.2 kJ mol−1",
+      "+20.2 kJ mol−1",
+      "+79.8 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔG = ΔH − TΔS = −50 − 298(−0.100) = −50 + 29.8 = −20.2 kJ mol−1. Hence the reaction is spontaneous under these conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "A reaction has ΔH = +30 kJ mol−1 and ΔS = +100 J K−1 mol−1. Above what temperature does it become spontaneous under standard conditions?",
+    "options": [
+      "150 K",
+      "200 K",
+      "300 K",
+      "400 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "At the boundary of spontaneity, ΔG = 0, so T = ΔH/ΔS = 30000/100 = 300 K. Above 300 K, ΔG becomes negative.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "Which statement about an exothermic reaction is necessarily correct?",
+    "options": [
+      "Its entropy must increase",
+      "Its Gibbs energy must decrease at every temperature",
+      "Its enthalpy change is negative",
+      "It must always be spontaneous"
+    ],
+    "correctIndex": 2,
+    "explanation": "An exothermic reaction has ΔH < 0 by definition. Its spontaneity additionally depends on both ΔH and ΔS through ΔG = ΔH − TΔS.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For N2(g) + 3H2(g) ⇌ 2NH3(g), which expression correctly relates Kp and Kc?",
+    "options": [
+      "Kp = Kc(RT)^2",
+      "Kp = Kc(RT)−2",
+      "Kp = Kc(RT)^4",
+      "Kp = Kc(RT)−4"
+    ],
+    "correctIndex": 1,
+    "explanation": "For gaseous reactions, Kp = Kc(RT)^Δn. Here Δn = 2 − 4 = −2, so Kp = Kc(RT)−2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A 0.10 M solution of a weak monoprotic acid has Ka = 1.0 × 10−5. Assuming negligible ionisation relative to its initial concentration, its pH is approximately:",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 1,
+    "explanation": "[H+] ≈ √(KaC) = √(10−5 × 10−1) = 10−3 M. Therefore pH = 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A buffer contains equal concentrations of CH3COOH and CH3COONa. If Ka for CH3COOH is 1.8 × 10−5, the pH of the buffer is closest to:",
+    "options": [
+      "3.74",
+      "4.26",
+      "4.74",
+      "5.26"
+    ],
+    "correctIndex": 2,
+    "explanation": "For equal acid and salt concentrations, pH = pKa. Since pKa = −log(1.8 × 10−5) ≈ 4.74, the buffer has pH ≈ 4.74.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "For the cell Zn|Zn2+(1 M)||Cu2+(1 M)|Cu, E°cell = 1.10 V. Taking F = 96500 C mol−1, the standard Gibbs energy change for the cell reaction is closest to:",
+    "options": [
+      "−106.2 kJ mol−1",
+      "−212.3 kJ mol−1",
+      "+106.2 kJ mol−1",
+      "+212.3 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "Two electrons are transferred, so ΔG° = −nFE° = −2 × 96500 × 1.10 = −212300 J mol−1, or −212.3 kJ mol−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "In a Daniell cell, Zn + Cu2+ → Zn2+ + Cu. If [Zn2+] is increased while [Cu2+] is kept constant, the cell potential will:",
+    "options": [
+      "Increase",
+      "Decrease",
+      "Remain unchanged",
+      "Become exactly zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "The reaction quotient is Q = [Zn2+]/[Cu2+]. Increasing [Zn2+] increases Q, and the Nernst equation E = E° − (0.0591/2)logQ therefore causes E to decrease.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "A current of 2.0 A is passed through molten AlCl3 for 9650 s. The approximate mass of aluminium deposited is: (Al = 27 g mol−1, F = 96500 C mol−1)",
+    "options": [
+      "0.90 g",
+      "1.80 g",
+      "2.70 g",
+      "5.40 g"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charge passed = It = 2 × 9650 = 19300 C = 0.20F. Since Al3+ requires 3 electrons per Al atom, moles Al = 0.20/3. Mass = (0.20/3) × 27 = 1.80 g.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "moderate",
+    "questionText": "Which species undergoes oxidation in the reaction Zn + Cu2+ → Zn2+ + Cu?",
+    "options": [
+      "Zn",
+      "Cu2+",
+      "Zn2+",
+      "Cu"
+    ],
+    "correctIndex": 0,
+    "explanation": "Zn loses two electrons to form Zn2+, so zinc undergoes oxidation. Cu2+ gains electrons and is reduced to Cu.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "A first-order reaction has a half-life of 15 minutes. The time required for 93.75% completion is:",
+    "options": [
+      "30 min",
+      "45 min",
+      "60 min",
+      "75 min"
+    ],
+    "correctIndex": 2,
+    "explanation": "93.75% completion leaves 6.25% = 1/16 of the initial concentration. Four half-lives are required to reach 1/16, so time = 4 × 15 = 60 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For the rate law rate = k[A]^2[B], the overall order of reaction and the units of k are respectively:",
+    "options": [
+      "2 and L mol−1 s−1",
+      "3 and L2 mol−2 s−1",
+      "3 and L mol−1 s−1",
+      "2 and L2 mol−2 s−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "The overall order is 2 + 1 = 3. For a third-order reaction, k has units L2 mol−2 s−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a first-order reaction, which change leaves its half-life unchanged?",
+    "options": [
+      "Doubling the initial concentration",
+      "Halving the initial concentration",
+      "Tripling the initial concentration",
+      "All of the above"
+    ],
+    "correctIndex": 3,
+    "explanation": "For a first-order reaction, t1/2 = 0.693/k and does not depend on the initial concentration. Therefore all three concentration changes leave the half-life unchanged.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which sequence correctly represents increasing first ionisation enthalpy among B, Be, C and N?",
+    "options": [
+      "B < Be < C < N",
+      "Be < B < C < N",
+      "B < C < Be < N",
+      "C < B < Be < N"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ionisation enthalpy generally increases across the period, but B has lower ionisation enthalpy than Be because its electron is removed from the higher-energy 2p subshell. Thus B < Be < C < N.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Among the isoelectronic species O2−, F−, Na+, Mg2+ and Al3+, which has the smallest ionic radius?",
+    "options": [
+      "O2−",
+      "F−",
+      "Na+",
+      "Al3+"
+    ],
+    "correctIndex": 3,
+    "explanation": "All five species contain 10 electrons. For an isoelectronic series, ionic radius decreases as nuclear charge increases, so Al3+ has the smallest radius.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "easy",
+    "questionText": "Which element is the most electronegative?",
+    "options": [
+      "N",
+      "O",
+      "F",
+      "Cl"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fluorine has the highest electronegativity on the Pauling scale because of its very small size and strong attraction for bonding electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which statement best explains why NH3 is much more basic than PH3?",
+    "options": [
+      "NH3 has a higher molar mass",
+      "The lone pair on nitrogen is more effectively available for donation",
+      "PH3 has stronger hydrogen bonding",
+      "P is more electronegative than N"
+    ],
+    "correctIndex": 1,
+    "explanation": "The lone pair in NH3 is concentrated in a relatively compact orbital and is more effectively available for protonation. The diffuse lone pair of PH3 is much less effective in accepting a proton.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Among NH3, PH3, AsH3 and SbH3, which has the highest boiling point?",
+    "options": [
+      "NH3",
+      "PH3",
+      "AsH3",
+      "SbH3"
+    ],
+    "correctIndex": 0,
+    "explanation": "NH3 forms strong intermolecular hydrogen bonds, giving it an unusually high boiling point compared with the heavier group-15 hydrides.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which nitrogen oxide contains nitrogen in an oxidation state of +4?",
+    "options": [
+      "N2O",
+      "NO",
+      "N2O3",
+      "NO2"
+    ],
+    "correctIndex": 3,
+    "explanation": "In NO2, oxygen contributes −4 in total, so nitrogen must contribute +4. Thus nitrogen has oxidation state +4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which ion is expected to be colourless in aqueous solution because it has no d−d transition available?",
+    "options": [
+      "Ti3+",
+      "V2+",
+      "Sc3+",
+      "Mn2+"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sc3+ has a d0 configuration, so no d−d electronic transition is possible. The other listed ions have partially filled d orbitals.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which oxidation state of manganese is especially stable because Mn2+ has a half-filled 3d5 configuration?",
+    "options": [
+      "+2",
+      "+3",
+      "+4",
+      "+7"
+    ],
+    "correctIndex": 0,
+    "explanation": "Manganese has [Ar]3d5 4s2 configuration. Loss of the two 4s electrons produces Mn2+ with the particularly stable half-filled 3d5 configuration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which ion has the maximum number of unpaired electrons in its ground-state d configuration?",
+    "options": [
+      "Fe2+",
+      "Fe3+",
+      "Co2+",
+      "Ni2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fe3+ has the 3d5 configuration, giving five unpaired electrons according to Hund's rule. Fe2+, Co2+ and Ni2+ have fewer unpaired electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which complex can exist as cis and trans geometrical isomers?",
+    "options": [
+      "[Co(NH3)6]3+",
+      "[Pt(NH3)2Cl2]",
+      "[Co(en)3]3+",
+      "[Zn(NH3)4]2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "[Pt(NH3)2Cl2] has a square-planar arrangement in which identical ligands can occupy adjacent or opposite positions. Therefore cis and trans forms are possible.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which ligand can coordinate through two donor atoms to the same central metal ion?",
+    "options": [
+      "NH3",
+      "Cl−",
+      "H2O",
+      "ethane-1,2-diamine"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ethane-1,2-diamine, commonly represented as en, contains two nitrogen donor atoms and acts as a bidentate ligand.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which intermediate is strongly stabilised by resonance?",
+    "options": [
+      "CH3+",
+      "CH3CH2+",
+      "CH2=CH−CH2+",
+      "(CH3)3C+"
+    ],
+    "correctIndex": 2,
+    "explanation": "The allylic carbocation CH2=CH−CH2+ has its positive charge delocalised over the conjugated system. Resonance stabilisation makes it particularly stable.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Propene is treated with HBr in the presence of benzoyl peroxide. The major product is:",
+    "options": [
+      "2-bromopropane",
+      "1-bromopropane",
+      "1,2-dibromopropane",
+      "2,3-dibromopropane"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the presence of peroxide, HBr adds to propene through a radical pathway following anti-Markovnikov orientation. The major product is therefore 1-bromopropane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes an SN1 reaction most readily under suitable polar protic conditions?",
+    "options": [
+      "CH3Cl",
+      "CH3CH2Cl",
+      "(CH3)2CHCl",
+      "(CH3)3CCl"
+    ],
+    "correctIndex": 3,
+    "explanation": "SN1 reactions involve carbocation formation as the slow step. Tert-butyl chloride forms the most stable tertiary carbocation and therefore undergoes SN1 most readily.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which reagent combination is used in the Finkelstein reaction to convert an alkyl chloride into an alkyl iodide?",
+    "options": [
+      "NaI in dry acetone",
+      "NaCl in water",
+      "I2 in ethanol",
+      "KOH in aqueous solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Finkelstein reaction commonly uses NaI in dry acetone. Precipitation of NaCl helps drive the halide exchange toward the alkyl iodide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which compound is least reactive toward nucleophilic substitution because the C−Cl bond has partial double-bond character due to resonance?",
+    "options": [
+      "CH3Cl",
+      "C2H5Cl",
+      "C6H5Cl",
+      "(CH3)3CCl"
+    ],
+    "correctIndex": 2,
+    "explanation": "In chlorobenzene, the lone pair on chlorine participates in resonance with the benzene ring, giving the C−Cl bond partial double-bond character. This makes it stronger and less susceptible to nucleophilic substitution.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "Which compound is the most acidic among the following?",
+    "options": [
+      "Ethanol",
+      "Phenol",
+      "p-Cresol",
+      "tert-Butanol"
+    ],
+    "correctIndex": 1,
+    "explanation": "Phenoxide ion is resonance-stabilised, whereas alkoxide ions are not. The methyl group in p-cresol has an electron-donating effect and slightly decreases acidity relative to phenol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "When anisole is heated with excess HI, the principal organic products are:",
+    "options": [
+      "Phenol and methyl iodide",
+      "Iodobenzene and methanol",
+      "Benzene and methyl iodide",
+      "Phenyl iodide and methane"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cleavage of anisole occurs at the alkyl−oxygen bond because the aryl−oxygen bond cannot undergo normal SN2 cleavage at the sp2 carbon. Thus phenol and methyl iodide are formed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "Phenol is treated with bromine water at room temperature. The major product is:",
+    "options": [
+      "Bromobenzene",
+      "2-bromophenol",
+      "2,4,6-tribromophenol",
+      "No reaction"
+    ],
+    "correctIndex": 2,
+    "explanation": "The −OH group strongly activates the benzene ring and directs substitution to ortho and para positions. In bromine water, phenol readily gives 2,4,6-tribromophenol as a white precipitate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes/Ketones/Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which aldehyde undergoes Cannizzaro reaction readily because it contains no alpha-hydrogen?",
+    "options": [
+      "Ethanal",
+      "Propanal",
+      "Benzaldehyde",
+      "Butanal"
+    ],
+    "correctIndex": 2,
+    "explanation": "Benzaldehyde has no alpha-carbon and therefore no alpha-hydrogen. It undergoes self-oxidation and self-reduction in concentrated alkali, characteristic of the Cannizzaro reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Among aniline, methylamine, dimethylamine and trimethylamine, which is generally the strongest base in aqueous solution?",
+    "options": [
+      "Aniline",
+      "Methylamine",
+      "Dimethylamine",
+      "Trimethylamine"
+    ],
+    "correctIndex": 2,
+    "explanation": "In aqueous solution, dimethylamine benefits from two electron-donating methyl groups while its protonated form remains effectively solvated. It is therefore generally more basic than methylamine and trimethylamine in water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Aniline reacts with NaNO2 and HCl at 0–5 °C. The product formed is:",
+    "options": [
+      "Nitrobenzene",
+      "Benzenediazonium chloride",
+      "Phenylamine hydrochloride",
+      "Chlorobenzene"
+    ],
+    "correctIndex": 1,
+    "explanation": "NaNO2 and HCl generate nitrous acid in situ, which diazotises aniline at 0–5 °C. The product is benzenediazonium chloride.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Which test is particularly useful for distinguishing primary, secondary and tertiary amines?",
+    "options": [
+      "Tollens' test",
+      "Carbylamine test",
+      "Iodoform test",
+      "Baeyer's test"
+    ],
+    "correctIndex": 1,
+    "explanation": "The carbylamine test is given only by primary amines, which form foul-smelling isocyanides with CHCl3 and alcoholic KOH. Secondary and tertiary amines do not give this reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which statement correctly distinguishes starch and cellulose?",
+    "options": [
+      "Starch contains only beta-D-glucose units",
+      "Cellulose contains alpha-D-glucose units",
+      "Starch contains alpha-D-glucose linkages whereas cellulose contains beta-D-glucose linkages",
+      "Both contain identical glucose linkages"
+    ],
+    "correctIndex": 2,
+    "explanation": "Starch is built from alpha-D-glucose units, whereas cellulose consists of beta-D-glucose units. Their different glycosidic linkages produce very different structures and properties.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Which level of protein organisation directly represents the specific sequence of amino acids joined by peptide bonds?",
+    "options": [
+      "Primary structure",
+      "Secondary structure",
+      "Tertiary structure",
+      "Quaternary structure"
+    ],
+    "correctIndex": 0,
+    "explanation": "The primary structure is the linear sequence of amino acids connected through peptide bonds. Secondary, tertiary and quaternary structures arise from additional folding and interactions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which carbohydrate is non-reducing because both anomeric carbon atoms participate in the glycosidic linkage?",
+    "options": [
+      "Glucose",
+      "Fructose",
+      "Sucrose",
+      "Maltose"
+    ],
+    "correctIndex": 2,
+    "explanation": "In sucrose, the anomeric carbon of glucose is linked directly to the anomeric carbon of fructose. Consequently, no free anomeric carbon remains and sucrose is non-reducing.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A halide solution gives a pale yellow precipitate with AgNO3 after acidification with dilute HNO3. The precipitate dissolves in concentrated NH3 but not readily in dilute NH3. The halide is:",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "F−"
+    ],
+    "correctIndex": 1,
+    "explanation": "AgBr is pale yellow or cream and dissolves in concentrated ammonia but not in dilute ammonia. AgCl dissolves in dilute ammonia, while AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with BaCl2 that dissolves on treatment with dilute HCl with effervescence. The anion most likely present is:",
+    "options": [
+      "SO4^2−",
+      "CO3^2−",
+      "Cl−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbonate gives white BaCO3 with BaCl2, which reacts with dilute HCl to release CO2 with effervescence. Barium sulfate would remain insoluble in dilute HCl.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is heated completely. The solid residue weighs 5.20 g. What is the mass percentage of CaCO3 in the original mixture? (CaCO3 = 100 g mol−1, MgCO3 = 84 g mol−1)",
+    "options": [
+      "40%",
+      "50%",
+      "60%",
+      "70%"
+    ],
+    "correctIndex": 2,
+    "explanation": "If x g is CaCO3, the residue is 0.56x + 0.476(10−x) = 5.20, giving x = 6.0 g. Hence CaCO3 is 60% by mass.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A sample contains 4.6 g sodium and 3.2 g oxygen. If these elements combine completely to form Na2O, which statement is correct? (Na = 23, O = 16)",
+    "options": [
+      "Sodium is limiting and 1.55 g O remains",
+      "Oxygen is limiting and 0.00 g Na remains",
+      "Sodium is limiting and 1.60 g O remains",
+      "Both reactants are completely consumed"
+    ],
+    "correctIndex": 3,
+    "explanation": "Na2O requires 46 g Na for 16 g O. Thus 4.6 g Na requires 1.6 g O, not 3.2 g; sodium is limiting and 1.6 g O remains. Therefore the correct statement is that sodium is limiting and 1.60 g oxygen remains.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "moderate",
+    "questionText": "The number of molecules present in 0.25 mol of CO2 is approximately:",
+    "options": [
+      "1.51 × 10^23",
+      "3.01 × 10^23",
+      "6.02 × 10^23",
+      "1.20 × 10^24"
+    ],
+    "correctIndex": 0,
+    "explanation": "Number of molecules = 0.25 × 6.022 × 10^23 = 1.506 × 10^23, approximately 1.51 × 10^23.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "The wavelength of radiation emitted when an electron in hydrogen falls from n = 4 to n = 2 is approximately:",
+    "options": [
+      "486 nm",
+      "656 nm",
+      "121.6 nm",
+      "410 nm"
+    ],
+    "correctIndex": 0,
+    "explanation": "Using the Rydberg equation, 1/λ = R(1/2^2 − 1/4^2) = 3R/16. This gives λ ≈ 486 nm, corresponding to the Balmer H-beta line.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron and a proton have the same de Broglie wavelength. The ratio of their kinetic energies, Kelectron : Kproton, is approximately:",
+    "options": [
+      "1 : 1",
+      "1 : 1836",
+      "1836 : 1",
+      "43 : 1"
+    ],
+    "correctIndex": 2,
+    "explanation": "Equal wavelength means equal momentum. Since K = p²/(2m), kinetic energy is inversely proportional to mass; therefore Ke/Kp = mp/me ≈ 1836.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "moderate",
+    "questionText": "Which set of quantum numbers is allowed for an electron?",
+    "options": [
+      "n = 3, l = 3, m = 0, s = +1/2",
+      "n = 3, l = 2, m = −2, s = −1/2",
+      "n = 2, l = 1, m = 2, s = +1/2",
+      "n = 1, l = 1, m = 0, s = −1/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "For n = 3, l can be 0, 1 or 2, and for l = 2, m can range from −2 to +2. Therefore the second set is permissible.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which molecule has polar bonds but zero resultant dipole moment?",
+    "options": [
+      "NH3",
+      "H2O",
+      "BF3",
+      "SO2"
+    ],
+    "correctIndex": 2,
+    "explanation": "BF3 is trigonal planar and symmetrical. The three identical B−F bond dipoles cancel vectorially, giving zero net dipole moment.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which species is paramagnetic and has bond order 2.5?",
+    "options": [
+      "N2",
+      "O2",
+      "O2+",
+      "O2^2−"
+    ],
+    "correctIndex": 2,
+    "explanation": "O2+ has one electron fewer than O2, with the removed electron coming from an antibonding π* orbital. Its bond order becomes 2.5 and one unpaired electron remains, making it paramagnetic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "The molecular geometry of SF4 is:",
+    "options": [
+      "Tetrahedral",
+      "Trigonal planar",
+      "Seesaw",
+      "Square planar"
+    ],
+    "correctIndex": 2,
+    "explanation": "SF4 has five electron domains around sulfur: four bond pairs and one lone pair. The electron-pair geometry is trigonal bipyramidal and the molecular shape is seesaw.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which species has the largest bond length?",
+    "options": [
+      "N2",
+      "N2+",
+      "N2−",
+      "N2^2−"
+    ],
+    "correctIndex": 3,
+    "explanation": "The bond order decreases as electrons are added to antibonding orbitals. N2, N2+ and N2− have bond orders 3, 2.5 and 2.5, while N2^2− has bond order 2, giving it the longest bond.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction, ΔH = −40 kJ mol−1 and ΔS = −100 J K−1 mol−1. The value of ΔG at 300 K is:",
+    "options": [
+      "−70 kJ mol−1",
+      "−10 kJ mol−1",
+      "+10 kJ mol−1",
+      "+70 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔG = ΔH − TΔS = −40 − 300(−0.100) = −40 + 30 = −10 kJ mol−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "A reaction has ΔH = +24 kJ mol−1 and ΔS = +80 J K−1 mol−1. Above which temperature will the reaction become spontaneous under standard conditions?",
+    "options": [
+      "200 K",
+      "250 K",
+      "300 K",
+      "400 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "At the spontaneity boundary, ΔG = 0, so T = ΔH/ΔS = 24000/80 = 300 K. Above 300 K, ΔG becomes negative.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For an ideal gas undergoing free expansion into vacuum in an insulated container, which statement is correct?",
+    "options": [
+      "q = 0, w = 0 and ΔU = 0",
+      "q > 0, w = 0 and ΔU > 0",
+      "q = 0, w < 0 and ΔU < 0",
+      "q < 0, w > 0 and ΔU = 0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Free expansion into vacuum does no work because external pressure is zero, and an insulated system has q = 0. Therefore ΔU = q + w = 0; for an ideal gas, temperature also remains unchanged.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For N2(g) + 3H2(g) ⇌ 2NH3(g), which relation is correct?",
+    "options": [
+      "Kp = Kc(RT)^2",
+      "Kp = Kc(RT)−2",
+      "Kp = Kc(RT)^4",
+      "Kp = Kc(RT)−4"
+    ],
+    "correctIndex": 1,
+    "explanation": "For gaseous equilibria, Kp = Kc(RT)^Δn. Here Δn = 2 − 4 = −2, so Kp = Kc(RT)−2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A 0.10 M weak monoprotic acid has Ka = 1.0 × 10−5. Its approximate pH is:",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 1,
+    "explanation": "[H+] ≈ √(KaC) = √(10−5 × 10−1) = 10−3 M. Therefore pH = 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A buffer contains equal concentrations of a weak acid HA and its conjugate base A−. If Ka = 1.0 × 10−4, the pH of the buffer is:",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctIndex": 2,
+    "explanation": "Using Henderson–Hasselbalch equation, pH = pKa + log([A−]/[HA]). Equal concentrations make the logarithmic term zero, so pH = pKa = 4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "moderate",
+    "questionText": "For the equilibrium CaCO3(s) ⇌ CaO(s) + CO2(g), the equilibrium constant Kp is equal to:",
+    "options": [
+      "PCO2",
+      "1/PCO2",
+      "PCO2^2",
+      "PCaO × PCO2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pure solids have unit activity and do not appear in the equilibrium expression. Therefore Kp = PCO2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "For the Daniell cell Zn|Zn2+||Cu2+|Cu, E°cell = 1.10 V. Taking F = 96500 C mol−1, ΔG° for the cell reaction is approximately:",
+    "options": [
+      "−106.2 kJ mol−1",
+      "−212.3 kJ mol−1",
+      "+106.2 kJ mol−1",
+      "+212.3 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "Two electrons are transferred, so ΔG° = −nFE° = −2 × 96500 × 1.10 = −212300 J mol−1 = −212.3 kJ mol−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "A current of 2.0 A is passed through molten AlCl3 for 9650 s. What mass of aluminium is deposited? (Al = 27 g mol−1, F = 96500 C mol−1)",
+    "options": [
+      "0.90 g",
+      "1.80 g",
+      "2.70 g",
+      "5.40 g"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charge passed = It = 19300 C = 0.20F. Since Al3+ requires three electrons, moles of Al = 0.20/3, giving mass = (0.20/3) × 27 = 1.80 g.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "For the cell reaction Zn + Cu2+ → Zn2+ + Cu, increasing the concentration of Zn2+ while keeping Cu2+ constant will:",
+    "options": [
+      "Increase cell potential",
+      "Decrease cell potential",
+      "Leave cell potential unchanged",
+      "Make cell potential equal to E°cell"
+    ],
+    "correctIndex": 1,
+    "explanation": "The reaction quotient Q = [Zn2+]/[Cu2+]. Increasing Zn2+ increases Q, and the Nernst equation E = E° − (0.0591/2)logQ therefore decreases E.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "moderate",
+    "questionText": "In the reaction MnO4− + 8H+ + 5e− → Mn2+ + 4H2O, the oxidation state of manganese changes from:",
+    "options": [
+      "+7 to +2",
+      "+5 to +2",
+      "+7 to +4",
+      "+4 to +2"
+    ],
+    "correctIndex": 0,
+    "explanation": "In MnO4−, manganese has oxidation state +7, while Mn2+ has oxidation state +2. The decrease by five units corresponds to gain of five electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "A first-order reaction has a half-life of 20 minutes. The time required for 87.5% completion is:",
+    "options": [
+      "20 min",
+      "40 min",
+      "60 min",
+      "80 min"
+    ],
+    "correctIndex": 2,
+    "explanation": "87.5% completion leaves 12.5% = 1/8 of the initial amount. Three half-lives are required, so time = 3 × 20 = 60 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a reaction with rate law rate = k[A]^2[B], the overall order and units of k are respectively:",
+    "options": [
+      "2 and L mol−1 s−1",
+      "3 and L2 mol−2 s−1",
+      "3 and L mol−1 s−1",
+      "2 and L2 mol−2 s−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "The overall order is 2 + 1 = 3. For a third-order reaction, the rate constant has units L2 mol−2 s−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a first-order reaction, the initial concentration is doubled while temperature and rate constant remain unchanged. The half-life will:",
+    "options": [
+      "Become half",
+      "Become double",
+      "Remain unchanged",
+      "Become four times"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a first-order reaction, t1/2 = 0.693/k and is independent of initial concentration. Therefore doubling the concentration does not change the half-life.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which sequence represents increasing first ionisation enthalpy correctly?",
+    "options": [
+      "B < Be < C < N",
+      "Be < B < C < N",
+      "B < C < Be < N",
+      "C < B < Be < N"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ionisation enthalpy generally increases across the second period, but B has lower ionisation enthalpy than Be because its electron is removed from the higher-energy 2p subshell. Hence B < Be < C < N.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Among the isoelectronic species O2−, F−, Na+, Mg2+ and Al3+, which has the largest ionic radius?",
+    "options": [
+      "O2−",
+      "F−",
+      "Na+",
+      "Al3+"
+    ],
+    "correctIndex": 0,
+    "explanation": "All these species contain ten electrons. In an isoelectronic series, radius decreases with increasing nuclear charge, so O2− has the largest radius.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "easy",
+    "questionText": "Which element has the highest electronegativity?",
+    "options": [
+      "N",
+      "O",
+      "F",
+      "Cl"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fluorine is the most electronegative element because of its small atomic size and strong attraction for bonding electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which compound is amphoteric?",
+    "options": [
+      "Na2O",
+      "MgO",
+      "Al2O3",
+      "SO3"
+    ],
+    "correctIndex": 2,
+    "explanation": "Al2O3 reacts with acids as well as strong bases, forming aluminium salts and aluminates respectively. Hence it is amphoteric.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which nitrogen oxide contains nitrogen in the +4 oxidation state?",
+    "options": [
+      "N2O",
+      "NO",
+      "N2O3",
+      "NO2"
+    ],
+    "correctIndex": 3,
+    "explanation": "In NO2, oxygen contributes −4 overall, so nitrogen must have oxidation state +4 to give the neutral molecule.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which ion is expected to be colourless in aqueous solution because it has a d0 configuration?",
+    "options": [
+      "Ti3+",
+      "V2+",
+      "Sc3+",
+      "Mn2+"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sc3+ has the electronic configuration [Ar]3d0, so d−d transitions are impossible. The other ions contain partially filled d subshells.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which ion has the maximum number of unpaired electrons in its ground-state configuration?",
+    "options": [
+      "Fe2+",
+      "Fe3+",
+      "Co2+",
+      "Ni2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fe3+ has a 3d5 configuration, with five unpaired electrons according to Hund's rule. The other ions have fewer unpaired electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "moderate",
+    "questionText": "Which oxidation state of manganese corresponds to a particularly stable half-filled 3d5 configuration?",
+    "options": [
+      "+2",
+      "+3",
+      "+4",
+      "+7"
+    ],
+    "correctIndex": 0,
+    "explanation": "Manganese has [Ar]3d5 4s2 configuration. Removal of the two 4s electrons gives Mn2+ with the stable half-filled 3d5 configuration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which carbocation is stabilised by resonance as well as having an allylic arrangement?",
+    "options": [
+      "CH3+",
+      "CH3CH2+",
+      "CH2=CH−CH2+",
+      "(CH3)3C+"
+    ],
+    "correctIndex": 2,
+    "explanation": "The allylic carbocation CH2=CH−CH2+ has its positive charge delocalised over the conjugated system. This resonance stabilisation makes it substantially more stable than the corresponding simple carbocations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which substituent exerts a strong electron-withdrawing inductive effect?",
+    "options": [
+      "−CH3",
+      "−C2H5",
+      "−NO2",
+      "−OCH3"
+    ],
+    "correctIndex": 2,
+    "explanation": "The nitro group strongly withdraws electron density through the sigma framework because of the high electronegativity of its constituent atoms and its electron-deficient structure. Alkyl groups generally show a +I effect.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Which compound gives a precipitate with ammoniacal AgNO3?",
+    "options": [
+      "Ethene",
+      "Ethyne",
+      "Benzene",
+      "Propene"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ethyne is a terminal alkyne and forms insoluble silver acetylide with ammoniacal AgNO3. The other listed hydrocarbons do not contain an acidic terminal alkyne hydrogen.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes SN1 substitution most readily under suitable polar protic conditions?",
+    "options": [
+      "CH3Cl",
+      "CH3CH2Cl",
+      "(CH3)2CHCl",
+      "(CH3)3CCl"
+    ],
+    "correctIndex": 3,
+    "explanation": "SN1 reactions require carbocation formation. Tert-butyl chloride produces the most stable tertiary carbocation and therefore undergoes SN1 reaction most readily.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which reagent is used in the Finkelstein reaction for converting an alkyl chloride into an alkyl iodide?",
+    "options": [
+      "NaI in dry acetone",
+      "NaCl in water",
+      "I2 in ethanol",
+      "KOH in water"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Finkelstein reaction uses NaI in dry acetone. Precipitation of NaCl drives the halide exchange toward formation of the alkyl iodide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "When anisole is heated with excess HI, the principal products are:",
+    "options": [
+      "Phenol and methyl iodide",
+      "Iodobenzene and methanol",
+      "Benzene and methyl iodide",
+      "Phenyl iodide and methane"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cleavage occurs at the alkyl−oxygen bond because the aryl carbon cannot undergo the required SN2 attack. Therefore anisole gives phenol and methyl iodide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "Phenol reacts with bromine water at room temperature. The major product is:",
+    "options": [
+      "Bromobenzene",
+      "2-Bromophenol",
+      "2,4,6-Tribromophenol",
+      "No reaction"
+    ],
+    "correctIndex": 2,
+    "explanation": "The −OH group strongly activates the ring and directs electrophilic substitution to ortho and para positions. With bromine water, phenol forms 2,4,6-tribromophenol as a white precipitate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes/Ketones/Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes the Cannizzaro reaction readily?",
+    "options": [
+      "Ethanal",
+      "Propanal",
+      "Benzaldehyde",
+      "Butanal"
+    ],
+    "correctIndex": 2,
+    "explanation": "Benzaldehyde has no alpha-hydrogen and therefore cannot undergo aldol condensation under the usual conditions. It undergoes disproportionation in concentrated alkali, giving the Cannizzaro reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Which amine is generally the strongest base in aqueous solution among the following?",
+    "options": [
+      "Aniline",
+      "Methylamine",
+      "Dimethylamine",
+      "Trimethylamine"
+    ],
+    "correctIndex": 2,
+    "explanation": "In aqueous solution, dimethylamine combines the electron-donating effect of two methyl groups with effective solvation of its protonated form. It is therefore generally more basic than methylamine and trimethylamine in water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Aniline is treated with NaNO2 and HCl at 0–5 °C. The major product is:",
+    "options": [
+      "Nitrobenzene",
+      "Benzenediazonium chloride",
+      "Chlorobenzene",
+      "Phenylhydroxylamine"
+    ],
+    "correctIndex": 1,
+    "explanation": "NaNO2 and HCl generate nitrous acid in situ, which diazotises aniline at 0–5 °C. The product is benzenediazonium chloride.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Which test is given specifically by primary amines when treated with chloroform and alcoholic KOH?",
+    "options": [
+      "Tollens' test",
+      "Carbylamine test",
+      "Iodoform test",
+      "Baeyer's test"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary amines react with chloroform and alcoholic KOH to form foul-smelling isocyanides. Secondary and tertiary amines do not give the carbylamine test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which carbohydrate is non-reducing because both of its anomeric carbons participate in the glycosidic bond?",
+    "options": [
+      "Glucose",
+      "Fructose",
+      "Sucrose",
+      "Maltose"
+    ],
+    "correctIndex": 2,
+    "explanation": "In sucrose, the anomeric carbon of glucose is linked to the anomeric carbon of fructose. Thus neither anomeric carbon is free, making sucrose non-reducing.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Which level of protein structure is directly defined by the sequence of amino acids connected through peptide bonds?",
+    "options": [
+      "Primary structure",
+      "Secondary structure",
+      "Tertiary structure",
+      "Quaternary structure"
+    ],
+    "correctIndex": 0,
+    "explanation": "The primary structure is the specific linear sequence of amino acid residues connected by peptide bonds. Higher levels arise from folding and additional intermolecular or intramolecular interactions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A halide solution gives a white precipitate with AgNO3 after acidification with dilute HNO3. The precipitate dissolves in dilute NH3. The anion is most likely:",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "SO4^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl is white and dissolves in dilute ammonia due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated ammonia and AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a white precipitate with BaCl2 that dissolves in dilute HCl with effervescence. Which anion is indicated?",
+    "options": [
+      "SO4^2−",
+      "CO3^2−",
+      "Cl−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbonate forms white BaCO3 with BaCl2, and BaCO3 reacts with dilute HCl to release CO2 with effervescence. BaSO4 remains insoluble in dilute HCl.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 5.00 g mixture of CaCO3 and MgCO3 is heated completely. The solid residue obtained weighs 2.80 g. What is the mass percentage of CaCO3 in the original mixture?",
+    "options": [
+      "40%",
+      "50%",
+      "60%",
+      "70%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Let masses of CaCO3 and MgCO3 be x and (5−x) g. Since their residues are CaO and MgO, 56/100 x + 40/84(5−x) = 2.80, giving x = 3.00 g. Hence CaCO3 = (3/5)×100 = 60%.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A gaseous hydrocarbon contains 85.7% carbon and 14.3% hydrogen by mass. Its vapour density is 14. The molecular formula of the hydrocarbon is:",
+    "options": [
+      "CH2",
+      "C2H4",
+      "C2H6",
+      "C3H6"
+    ],
+    "correctIndex": 1,
+    "explanation": "For 100 g, C:H = 85.7/12 : 14.3/1 ≈ 1:2, so the empirical formula is CH2 with empirical mass 14. Vapour density 14 gives molar mass 28, so the molecular formula is C2H4.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "For a hydrogen atom, an electron falls from the n = 6 shell to the n = 2 shell. The maximum number of distinct spectral lines that can be emitted during all possible transitions among the involved levels is:",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "15"
+    ],
+    "correctIndex": 2,
+    "explanation": "The involved levels are n = 2, 3, 4, 5 and 6, giving 5 levels. The maximum number of distinct transitions is n(n−1)/2 = 5×4/2 = 10.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron and a proton have the same kinetic energy. The ratio of their de Broglie wavelengths, lambda_e/lambda_p, is approximately:",
+    "options": [
+      "1",
+      "43",
+      "1836",
+      "1/43"
+    ],
+    "correctIndex": 1,
+    "explanation": "For equal kinetic energy, lambda = h/sqrt(2mK), so lambda is proportional to 1/sqrt(m). Therefore lambda_e/lambda_p = sqrt(m_p/m_e) ≈ sqrt(1836) ≈ 43.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "Which set of quantum numbers represents an allowed orbital for an electron in an atom?",
+    "options": [
+      "n = 3, l = 3, m = 0, s = +1/2",
+      "n = 4, l = 2, m = −2, s = −1/2",
+      "n = 2, l = 1, m = −2, s = +1/2",
+      "n = 3, l = 1, m = 2, s = −1/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "For n = 4, l may be 0, 1, 2 or 3; for l = 2, m may range from −2 to +2, and spin may be ±1/2. The other sets violate the allowed ranges of l or m.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which molecule has zero net dipole moment despite containing polar bonds?",
+    "options": [
+      "NH3",
+      "H2O",
+      "BF3",
+      "SO2"
+    ],
+    "correctIndex": 2,
+    "explanation": "BF3 is trigonal planar and symmetrical, so its three B−F bond dipoles cancel vectorially. NH3, H2O and SO2 have asymmetric geometries and therefore possess net dipole moments.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which species has the largest bond length among the following nitrogen species?",
+    "options": [
+      "N2",
+      "N2+",
+      "N2−",
+      "N2^2−"
+    ],
+    "correctIndex": 3,
+    "explanation": "Bond order decreases on adding electrons to antibonding orbitals. N2, N2+, N2− and N2^2− have bond orders 3, 2.5, 2.5 and 2 respectively; lower bond order corresponds to greater bond length.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "The hybridisation and approximate geometry around the central atom in SF4 are respectively:",
+    "options": [
+      "sp3, tetrahedral",
+      "sp3d, trigonal bipyramidal electron geometry",
+      "sp3d2, octahedral",
+      "sp2, trigonal planar"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sulfur in SF4 has four bond pairs and one lone pair, giving five electron domains. Hence the hybridisation is sp3d and the electron-pair geometry is trigonal bipyramidal, with a seesaw molecular shape.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction at 298 K, ΔH = −40 kJ mol−1 and ΔS = −100 J K−1 mol−1. The value of ΔG is approximately:",
+    "options": [
+      "−69.8 kJ mol−1",
+      "−10.2 kJ mol−1",
+      "−40.0 kJ mol−1",
+      "+10.2 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔG = ΔH − TΔS = −40 − 298(−0.100) = −40 + 29.8 = −10.2 kJ mol−1. Thus the reaction is spontaneous at 298 K under the stated conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction, ΔH = +20 kJ mol−1 and ΔS = +50 J K−1 mol−1. Above approximately what temperature does the reaction become spontaneous under standard conditions?",
+    "options": [
+      "200 K",
+      "300 K",
+      "400 K",
+      "500 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "Spontaneity requires ΔG < 0, so TΔS > ΔH. The threshold temperature is T = 20,000/50 = 400 K; therefore the reaction is spontaneous above 400 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "One mole of an ideal gas expands reversibly and isothermally at 300 K from 10 L to 20 L. Taking R = 8.314 J K−1 mol−1, the work done by the gas is closest to:",
+    "options": [
+      "0.69 kJ",
+      "1.73 kJ",
+      "2.49 kJ",
+      "5.19 kJ"
+    ],
+    "correctIndex": 1,
+    "explanation": "For reversible isothermal expansion, w = −nRT ln(V2/V1). Its magnitude is 1×8.314×300×ln2 ≈ 1.73 kJ. Hence the work done by the gas is approximately 1.73 kJ.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A buffer contains equal concentrations of CH3COOH and CH3COO−. If pKa of acetic acid is 4.76, the pH of the buffer is:",
+    "options": [
+      "2.38",
+      "4.00",
+      "4.76",
+      "9.52"
+    ],
+    "correctIndex": 2,
+    "explanation": "Using the Henderson–Hasselbalch equation, pH = pKa + log([salt]/[acid]). Since the concentrations are equal, the logarithmic term is zero and pH = 4.76.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For a weak monoprotic acid HA of concentration 0.10 M and Ka = 1.0 × 10−5, the approximate pH of its solution is:",
+    "options": [
+      "2.0",
+      "3.0",
+      "5.0",
+      "10.0"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a weak acid, [H+] ≈ √(KaC) = √(10−5×10−1) = √10−6 = 10−3 M. Therefore pH = 3.0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "A galvanic cell has E°cell = 1.10 V and involves transfer of 2 mol of electrons. The standard Gibbs energy change is closest to:",
+    "options": [
+      "−106.2 kJ mol−1",
+      "−212.3 kJ mol−1",
+      "+212.3 kJ mol−1",
+      "−110 kJ mol−1"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔG° = −nFE°. Using n = 2 and F = 96500 C mol−1, ΔG° = −2×96500×1.10 ≈ −212.3 kJ mol−1.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "How much copper is deposited when a current of 1.93 A is passed through CuSO4 solution for 1000 s? Take Cu = 63.5 and F = 96500 C mol−1.",
+    "options": [
+      "0.3175 g",
+      "0.635 g",
+      "1.27 g",
+      "2.54 g"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charge Q = It = 1.93×1000 = 1930 C. Moles of Cu deposited = Q/(2F), so mass = 1930×63.5/(2×96500) = 0.635 g.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "In the cell Zn|Zn2+||Cu2+|Cu, increasing the concentration of Cu2+ while keeping all other conditions unchanged will:",
+    "options": [
+      "decrease the cell potential",
+      "increase the cell potential",
+      "leave the cell potential unchanged",
+      "make the cell potential zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "For the spontaneous reaction Zn + Cu2+ → Zn2+ + Cu, Q = [Zn2+]/[Cu2+]. Increasing [Cu2+] decreases Q, and from the Nernst equation E = E° − (0.0591/n)logQ, E increases.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "A first-order reaction has a half-life of 20 minutes. The time required for 87.5% of the reactant to decompose is:",
+    "options": [
+      "20 min",
+      "40 min",
+      "60 min",
+      "80 min"
+    ],
+    "correctIndex": 2,
+    "explanation": "87.5% decomposition means 12.5% remains, i.e. 1/8 of the initial concentration. Three half-lives are required to reach 1/8, so time = 3×20 = 60 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a first-order reaction, the rate constant is 2.31 × 10−3 s−1. Its half-life is approximately:",
+    "options": [
+      "150 s",
+      "300 s",
+      "450 s",
+      "600 s"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a first-order reaction, t1/2 = 0.693/k. Thus t1/2 = 0.693/(2.31×10−3) ≈ 300 s.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which sequence correctly represents the first ionisation energies of the elements B, Be, C and N?",
+    "options": [
+      "B < Be < C < N",
+      "Be < B < C < N",
+      "B < C < Be < N",
+      "N < C < Be < B"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ionisation energy generally increases across the period, but Be has higher ionisation energy than B because Be loses a 2s electron whereas B loses a higher-energy 2p electron. Thus B < Be < C < N.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "moderate",
+    "questionText": "Which element has the highest electronegativity among the following?",
+    "options": [
+      "O",
+      "F",
+      "Cl",
+      "N"
+    ],
+    "correctIndex": 1,
+    "explanation": "Electronegativity generally increases across a period and decreases down a group. Fluorine is the most electronegative element.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which statement best explains why NH3 has a much higher boiling point than PH3?",
+    "options": [
+      "NH3 has a larger molar mass",
+      "NH3 forms intermolecular hydrogen bonds",
+      "PH3 is ionic in nature",
+      "NH3 has no lone pair"
+    ],
+    "correctIndex": 1,
+    "explanation": "NH3 molecules form significant intermolecular hydrogen bonding because nitrogen is highly electronegative and has an N−H bond. PH3 does not form comparable hydrogen bonding, so its boiling point is much lower.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which oxide reacts with both strong acids and strong bases, demonstrating amphoteric behaviour?",
+    "options": [
+      "Na2O",
+      "MgO",
+      "Al2O3",
+      "SO3"
+    ],
+    "correctIndex": 2,
+    "explanation": "Al2O3 reacts with acids to form aluminium salts and with strong bases to form aluminates. Hence it is amphoteric.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "In which compound does nitrogen have the highest oxidation state?",
+    "options": [
+      "NH3",
+      "N2O",
+      "NO2",
+      "HNO3"
+    ],
+    "correctIndex": 3,
+    "explanation": "The oxidation state of nitrogen is −3 in NH3, +1 average in N2O, +4 in NO2 and +5 in HNO3. Therefore HNO3 contains nitrogen in its highest oxidation state.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which ion is expected to be colourless in aqueous solution due to the absence of d−d electronic transitions?",
+    "options": [
+      "Ti3+",
+      "Cu2+",
+      "Sc3+",
+      "Fe2+"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sc3+ has a 3d0 configuration, so no d−d transition is possible. Ti3+, Cu2+ and Fe2+ have partially filled d orbitals and can show d−d transitions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "The number of unpaired electrons in the free Fe3+ ion is:",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "6"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fe has configuration [Ar]3d6 4s2. Fe3+ loses two 4s electrons and one 3d electron, giving [Ar]3d5. The five d electrons occupy separate orbitals according to Hund's rule, giving five unpaired electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which electronic configuration makes Mn2+ particularly stable among the common manganese ions?",
+    "options": [
+      "3d2",
+      "3d3",
+      "3d4",
+      "3d5"
+    ],
+    "correctIndex": 3,
+    "explanation": "Mn2+ has the configuration [Ar]3d5, a half-filled d subshell. The symmetric distribution and exchange stabilization contribute to its relative stability.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "The coordination number of cobalt in [Co(NH3)5Cl]Cl2 is:",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctIndex": 2,
+    "explanation": "Inside the coordination sphere, cobalt is bonded to five NH3 ligands and one Cl− ligand. Therefore its coordination number is 6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which ligand acts as a bidentate ligand in coordination compounds?",
+    "options": [
+      "NH3",
+      "Cl−",
+      "en",
+      "H2O"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ethylenediamine, en, contains two nitrogen donor atoms and can bind through both simultaneously. Hence it is bidentate, whereas NH3, Cl− and H2O are normally monodentate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which type of isomerism is possible for square-planar [Pt(NH3)2Cl2]?",
+    "options": [
+      "Optical isomerism only",
+      "Geometrical isomerism",
+      "Ionisation isomerism only",
+      "Linkage isomerism only"
+    ],
+    "correctIndex": 1,
+    "explanation": "In a square-planar complex, the two identical NH3 ligands can occupy adjacent or opposite positions. These arrangements correspond to cis and trans geometrical isomers.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which substituent exhibits a strong electron-withdrawing inductive effect in an organic molecule?",
+    "options": [
+      "−CH3",
+      "−C2H5",
+      "−NO2",
+      "−O−"
+    ],
+    "correctIndex": 2,
+    "explanation": "The nitro group strongly withdraws electron density through the sigma framework and has a strong −I effect. Alkyl groups generally show +I effects.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which intermediate is stabilised most effectively by resonance?",
+    "options": [
+      "CH3CH2+",
+      "CH2=CHCH2+",
+      "(CH3)3C+",
+      "CH3+"
+    ],
+    "correctIndex": 1,
+    "explanation": "The allylic carbocation CH2=CHCH2+ is resonance-stabilised because the positive charge can be delocalised across the conjugated system. The other listed carbocations lack comparable resonance stabilisation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Addition of HBr to propene in the presence of peroxide predominantly gives:",
+    "options": [
+      "1-bromopropane",
+      "2-bromopropane",
+      "1,2-dibromopropane",
+      "2-bromo-1-propanol"
+    ],
+    "correctIndex": 0,
+    "explanation": "In the presence of peroxide, HBr adds through a free-radical mechanism and follows anti-Markovnikov orientation. Thus Br attaches to the terminal carbon, producing 1-bromopropane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Which compound gives a precipitate with ammoniacal AgNO3 due to the presence of an acidic terminal alkyne hydrogen?",
+    "options": [
+      "CH3−C≡C−CH3",
+      "CH3−C≡CH",
+      "CH2=CH2",
+      "CH3−CH=CH2"
+    ],
+    "correctIndex": 1,
+    "explanation": "Terminal alkynes contain an acidic hydrogen attached to an sp-hybridised carbon and form silver acetylides with ammoniacal AgNO3. CH3−C≡CH is therefore positive for this test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Which statement about benzene is consistent with its aromatic structure?",
+    "options": [
+      "It contains three isolated C=C bonds of unequal length",
+      "All six C−C bonds are equivalent",
+      "It contains only single bonds",
+      "Its carbon atoms are sp3 hybridised"
+    ],
+    "correctIndex": 1,
+    "explanation": "Benzene has delocalised pi electrons spread over the ring, making all six C−C bonds equivalent with bond character intermediate between a single and double bond. Its carbon atoms are sp2 hybridised.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which substrate is expected to undergo an SN1 reaction most readily under suitable polar protic conditions?",
+    "options": [
+      "CH3Cl",
+      "CH3CH2Cl",
+      "(CH3)2CHCl",
+      "(CH3)3CCl"
+    ],
+    "correctIndex": 3,
+    "explanation": "SN1 reactions involve carbocation formation as the rate-determining step. Tert-butyl chloride forms the most stable tertiary carbocation among the given substrates and therefore undergoes SN1 most readily.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "The Finkelstein reaction is commonly carried out using:",
+    "options": [
+      "NaI in acetone",
+      "KI in water",
+      "AgF in ethanol",
+      "NaCl in acetone"
+    ],
+    "correctIndex": 0,
+    "explanation": "In the Finkelstein reaction, an alkyl chloride or bromide is treated with NaI in dry acetone. NaCl or NaBr precipitates, driving the halide-exchange reaction forward.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Chlorobenzene is less reactive than chloroethane towards nucleophilic substitution mainly because:",
+    "options": [
+      "chlorine is absent from chlorobenzene",
+      "the C−Cl bond in chlorobenzene has partial double-bond character",
+      "chlorobenzene is ionic",
+      "chlorobenzene has an sp3 carbon bonded to chlorine"
+    ],
+    "correctIndex": 1,
+    "explanation": "The lone pair on chlorine participates in resonance with the benzene ring, giving the C−Cl bond partial double-bond character. The bond is consequently shorter and stronger than the C−Cl bond of chloroethane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "Phenol is more acidic than ethanol primarily because:",
+    "options": [
+      "ethanol has a heavier oxygen atom",
+      "phenoxide ion is resonance-stabilised",
+      "phenol contains no O−H bond",
+      "ethoxide ion is resonance-stabilised"
+    ],
+    "correctIndex": 1,
+    "explanation": "Removal of H+ from phenol gives phenoxide ion, whose negative charge is delocalised over the aromatic ring through resonance. Ethoxide lacks this resonance stabilisation, making ethanol much less acidic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "Anisole reacts with excess HI on heating to produce:",
+    "options": [
+      "phenol and methyl iodide",
+      "benzene and methanol",
+      "iodobenzene and methanol",
+      "phenyl iodide and methane"
+    ],
+    "correctIndex": 0,
+    "explanation": "In aryl-alkyl ethers, cleavage occurs at the alkyl−O bond because the aryl−O bond has partial double-bond character and does not undergo normal SN2 cleavage. Thus anisole gives phenol and CH3I with HI.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "moderate",
+    "questionText": "Phenol reacts with bromine water at room temperature to form:",
+    "options": [
+      "bromobenzene only",
+      "2-bromophenol only",
+      "2,4,6-tribromophenol",
+      "benzoic acid"
+    ],
+    "correctIndex": 2,
+    "explanation": "The −OH group strongly activates the benzene ring at the ortho and para positions. Bromine water therefore gives rapid substitution at all three activated positions, forming 2,4,6-tribromophenol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes/Ketones/Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound gives a positive Tollens' test under standard conditions?",
+    "options": [
+      "Propanone",
+      "Propanal",
+      "Benzophenone",
+      "Acetophenone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aldehydes generally reduce Tollens' reagent to metallic silver while being oxidised to carboxylate. Propanal is an aldehyde, whereas the listed ketones do not normally give this test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes/Ketones/Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes Cannizzaro reaction most readily because it contains no alpha-hydrogen?",
+    "options": [
+      "Propanal",
+      "Butanal",
+      "Benzaldehyde",
+      "Propanone"
+    ],
+    "correctIndex": 2,
+    "explanation": "Aldehydes without alpha-hydrogen undergo disproportionation in concentrated alkali, producing an alcohol and a carboxylate. Benzaldehyde has no alpha-carbon and therefore undergoes the Cannizzaro reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Which of the following is the strongest base in aqueous solution under comparable conditions?",
+    "options": [
+      "Aniline",
+      "Methylamine",
+      "Dimethylamine",
+      "Ammonia"
+    ],
+    "correctIndex": 2,
+    "explanation": "In aqueous solution, alkyl groups increase electron density on nitrogen, while solvation also affects basicity. Among the listed species, dimethylamine is generally the strongest base in water.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Aniline is converted into benzene diazonium chloride using NaNO2 and HCl at approximately:",
+    "options": [
+      "0−5 °C",
+      "25−30 °C",
+      "50−60 °C",
+      "100 °C"
+    ],
+    "correctIndex": 0,
+    "explanation": "Diazotisation of a primary aromatic amine is carried out at low temperature, typically 0−5 °C, because diazonium salts can decompose at higher temperatures.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which carbohydrate is a non-reducing sugar because both anomeric carbons are involved in the glycosidic linkage?",
+    "options": [
+      "Glucose",
+      "Fructose",
+      "Sucrose",
+      "Maltose"
+    ],
+    "correctIndex": 2,
+    "explanation": "In sucrose, the anomeric carbon of glucose and the anomeric carbon of fructose are both involved in the glycosidic bond. Therefore no free anomeric centre remains and sucrose is non-reducing.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "The primary structure of a protein is determined by:",
+    "options": [
+      "hydrogen bonding between peptide chains",
+      "the sequence of amino acids in the polypeptide chain",
+      "only disulfide bonding",
+      "the three-dimensional folding of the chain"
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary protein structure refers specifically to the linear sequence of amino acid residues joined by peptide bonds. Higher levels describe folding and interactions that generate secondary, tertiary or quaternary structure.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "questionText": "Which polysaccharide is the principal structural component of plant cell walls?",
+    "options": [
+      "Starch",
+      "Glycogen",
+      "Cellulose",
+      "Sucrose"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cellulose is a linear polymer of beta-D-glucose units and forms the major structural material of plant cell walls. Starch is mainly a storage polysaccharide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A white precipitate formed on adding AgNO3 to an aqueous solution dissolves in dilute NH3. The precipitate is most likely:",
+    "options": [
+      "AgBr",
+      "AgI",
+      "AgCl",
+      "Ag2CO3"
+    ],
+    "correctIndex": 2,
+    "explanation": "AgCl is a white precipitate and dissolves in dilute ammonia due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated ammonia and AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with BaCl2 after acidification with dilute HCl. The precipitate is insoluble in dilute HCl. This observation indicates the presence of:",
+    "options": [
+      "Cl−",
+      "SO4^2−",
+      "NO3−",
+      "CH3COO−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sulfate ions give white BaSO4 with BaCl2, and BaSO4 remains insoluble in dilute hydrochloric acid. Acidification helps prevent interference from ions such as carbonate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is heated completely. The solid residue has a mass of 5.2 g. What is the mass percentage of CaCO3 in the original mixture? (CaCO3 = 100 g mol−1, MgCO3 = 84 g mol−1)",
+    "options": [
+      "25%",
+      "40%",
+      "60%",
+      "75%"
+    ],
+    "correctIndex": 2,
+    "explanation": "Let x g be CaCO3. CO2 loss is 4.8 g, so x(44/100) + (10 − x)(44/84) = 4.8. Solving gives x = 6.0 g, hence CaCO3 = 60%.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "For a hydrogen-like species, the energy required to excite an electron from n = 2 to n = 4 is 10.2 eV. Which species can have this energy separation for the same transition?",
+    "options": [
+      "H",
+      "He+",
+      "Li2+",
+      "Be3+"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a hydrogen atom, the 2→4 energy gap is 10.2 eV. For hydrogen-like ions the gap scales as Z², so only Z = 1 gives 10.2 eV.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which molecule has a central atom that is sp3 hybridised but has a bond angle substantially smaller than the tetrahedral angle because of two lone pairs?",
+    "options": [
+      "BF3",
+      "CH4",
+      "NH3",
+      "H2O"
+    ],
+    "correctIndex": 3,
+    "explanation": "In H2O, oxygen is sp3 hybridised and has two bond pairs plus two lone pairs. Strong lone-pair repulsions compress the H−O−H angle to about 104.5°.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction at 298 K, ΔH° = −40 kJ mol−1 and ΔS° = −100 J K−1 mol−1. Which statement is correct under standard conditions?",
+    "options": [
+      "The reaction is spontaneous at all temperatures",
+      "The reaction is spontaneous only below 400 K",
+      "The reaction is spontaneous only above 400 K",
+      "The reaction is never spontaneous"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔG° = ΔH° − TΔS° = −40000 + 100T J mol−1. Thus ΔG° < 0 when T < 400 K, so the reaction is spontaneous below 400 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "A weak monoprotic acid HA has concentration 0.10 mol L−1 and Ka = 1.0 × 10−5. Assuming x is much smaller than the initial concentration, the approximate pH of the solution is",
+    "options": [
+      "2.00",
+      "3.00",
+      "4.00",
+      "5.00"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a weak acid, [H+] ≈ √(KaC) = √(10−5 × 0.10) = √10−6 = 10−3 M. Hence pH = 3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "A current of 2.0 A is passed through CuSO4 solution for 16 min 5 s. Assuming 100% current efficiency, what mass of copper is deposited? (Cu = 63.5 g mol−1, F = 96500 C mol−1)",
+    "options": [
+      "0.635 g",
+      "1.27 g",
+      "1.905 g",
+      "2.54 g"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charge passed = It = 2 × 965 s = 1930 C. Copper deposition requires 2 electrons per Cu atom, so mass = (63.5 × 1930)/(2 × 96500) = 0.635 g; therefore the first option is correct, not the second. This candidate is discarded.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "For the cell Zn|Zn2+(0.10 M)||Cu2+(1.0 M)|Cu, E°cell = 1.10 V at 298 K. The cell potential is closest to",
+    "options": [
+      "1.07 V",
+      "1.10 V",
+      "1.13 V",
+      "1.16 V"
+    ],
+    "correctIndex": 2,
+    "explanation": "For Zn + Cu2+ → Zn2+ + Cu, Q = [Zn2+]/[Cu2+] = 0.10. Thus E = E° − (0.0591/2)log(0.10) = 1.10 + 0.02955 ≈ 1.13 V.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "A first-order reaction has a half-life of 20 min. What percentage of the reactant remains after 60 min?",
+    "options": [
+      "6.25%",
+      "12.5%",
+      "25%",
+      "50%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sixty minutes corresponds to three half-lives. The remaining fraction is (1/2)³ = 1/8 = 12.5%, so the first option is incorrect and this candidate is discarded.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "For a first-order reaction, the rate constant is 2.303 × 10−3 s−1. The time required for 90% completion is approximately",
+    "options": [
+      "100 s",
+      "500 s",
+      "1000 s",
+      "1500 s"
+    ],
+    "correctIndex": 2,
+    "explanation": "For 90% completion, 10% remains. Using t = 2.303/k log(100/10), t = 2.303/(2.303 × 10−3) = 1000 s.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which statement correctly explains why NH3 is a stronger base than NF3 in the gaseous state?",
+    "options": [
+      "Nitrogen is larger in NF3",
+      "The lone pair on nitrogen is more available in NH3",
+      "NF3 contains no lone pair on nitrogen",
+      "NH3 has a higher molecular mass"
+    ],
+    "correctIndex": 1,
+    "explanation": "In NH3 the nitrogen lone pair is relatively more available for donation, whereas the highly electronegative fluorine atoms in NF3 withdraw electron density from nitrogen. Hence NH3 is more basic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes disproportionation in alkaline medium to give two different oxidation states of the same element?",
+    "options": [
+      "H2O2",
+      "H2S",
+      "NaCl",
+      "NH3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hydrogen peroxide can undergo disproportionation: 2H2O2 → 2H2O + O2. Oxygen is simultaneously reduced from −1 to −2 and oxidised from −1 to 0.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "In the complex [Co(NH3)5Cl]Cl2, the oxidation state and coordination number of cobalt are respectively",
+    "options": [
+      "+1 and 5",
+      "+2 and 6",
+      "+3 and 6",
+      "+3 and 5"
+    ],
+    "correctIndex": 2,
+    "explanation": "The complex ion has charge +2 because two chloride ions are outside the coordination sphere. Since NH3 is neutral and coordinated Cl− contributes −1, cobalt is +3; six donor atoms are coordinated, giving coordination number 6.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which complex is expected to show the greatest number of unpaired electrons among the following octahedral complexes?",
+    "options": [
+      "[Fe(CN)6]4−",
+      "[FeF6]3−",
+      "[Co(NH3)6]3+",
+      "[Fe(CN)6]3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "[FeF6]3− contains Fe3+, a d5 ion, with F− as a weak-field ligand, so it forms a high-spin complex with five unpaired electrons. The other listed complexes have fewer unpaired electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Propene reacts with HBr in the presence of organic peroxide. The major product is",
+    "options": [
+      "1-bromopropane",
+      "2-bromopropane",
+      "1,2-dibromopropane",
+      "propane"
+    ],
+    "correctIndex": 0,
+    "explanation": "In the presence of peroxide, HBr adds to an alkene by a radical mechanism following the anti-Markovnikov orientation. Thus propene gives predominantly 1-bromopropane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Ozonolysis of 2-methylpropene followed by reductive work-up produces",
+    "options": [
+      "Methanal and propanone",
+      "Methanal and ethanal",
+      "Ethanal and propanone",
+      "Only propanone"
+    ],
+    "correctIndex": 0,
+    "explanation": "2-Methylpropene, CH2=C(CH3)2, cleaves at the double bond to form methanal from the terminal CH2 carbon and propanone from the substituted carbon.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which substrate undergoes the fastest SN1 reaction under comparable conditions?",
+    "options": [
+      "CH3Cl",
+      "CH3CH2Cl",
+      "(CH3)2CHCl",
+      "(CH3)3CCl"
+    ],
+    "correctIndex": 3,
+    "explanation": "SN1 reactions involve carbocation formation as the slow step. Tertiary carbocations are most stabilised by hyperconjugation and the +I effect, so tert-butyl chloride reacts fastest.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols/Phenols/Ethers",
+    "difficulty": "tough",
+    "questionText": "Phenol is more acidic than ethanol mainly because",
+    "options": [
+      "Phenol has a higher molecular mass",
+      "Phenoxide ion is resonance-stabilised",
+      "Ethanol cannot form hydrogen bonds",
+      "The O−H bond in ethanol is ionic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Loss of H+ from phenol gives phenoxide ion, whose negative charge is delocalised over the aromatic ring by resonance. The ethoxide ion lacks comparable resonance stabilisation, making ethanol less acidic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "moderate",
+    "questionText": "Which pair consists of monosaccharides that combine to form sucrose?",
+    "options": [
+      "Glucose and fructose",
+      "Glucose and galactose",
+      "Fructose and galactose",
+      "Two glucose molecules"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sucrose is a disaccharide composed of one glucose unit and one fructose unit linked through their anomeric carbons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "In qualitative analysis, a white precipitate formed on adding AgNO3 solution to an acidified aqueous solution indicates the presence of",
+    "options": [
+      "SO4²−",
+      "Cl−",
+      "NO3−",
+      "CO3²−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chloride ions react with Ag+ to form white AgCl precipitate. The solution is acidified to remove interfering ions such as carbonate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "States of Matter",
+    "difficulty": "moderate",
+    "questionText": "An ideal gas occupies 2.0 L at 300 K. At constant pressure, its volume at 450 K will be",
+    "options": [
+      "1.33 L",
+      "2.0 L",
+      "3.0 L",
+      "4.5 L"
+    ],
+    "correctIndex": 2,
+    "explanation": "At constant pressure, Charles' law gives V1/T1 = V2/T2. Therefore V2 = 2.0 × 450/300 = 3.0 L.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "easy",
+    "questionText": "How many moles of oxygen atoms are present in 0.50 mol of O2?",
+    "options": [
+      "0.25 mol",
+      "0.50 mol",
+      "1.00 mol",
+      "2.00 mol"
+    ],
+    "correctIndex": 2,
+    "explanation": "Each O2 molecule contains two oxygen atoms. Therefore 0.50 mol of O2 contains 2 × 0.50 = 1.00 mol of oxygen atoms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "questionText": "A 4.00 g mixture of Na2CO3 and NaHCO3 is heated strongly until complete decomposition. The residue weighs 3.38 g. What is the percentage by mass of NaHCO3 in the original mixture? (Na = 23, C = 12, O = 16, H = 1)",
+    "options": [
+      "25%",
+      "40%",
+      "50%",
+      "60%"
+    ],
+    "correctIndex": 1,
+    "explanation": "Only NaHCO3 loses mass on heating: 2NaHCO3 → Na2CO3 + CO2 + H2O, so 168 g NaHCO3 loses 62 g. The mass loss is 0.62 g, giving NaHCO3 = 0.62×168/62 = 1.68 g, or 42%; therefore the stated residue would not correspond to any listed option.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "questionText": "An electron in a hydrogen atom is initially in the n = 5 orbit and finally reaches n = 2 through a single transition. Which statement about the emitted radiation is correct?",
+    "options": [
+      "It belongs to the Lyman series",
+      "It belongs to the Balmer series",
+      "It belongs to the Paschen series",
+      "It belongs to the Brackett series"
+    ],
+    "correctIndex": 1,
+    "explanation": "The final orbit is n = 2, so the transition belongs to the Balmer series. Balmer-series transitions lie predominantly in the visible region.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "questionText": "Which set contains only species that are paramagnetic in their ground state?",
+    "options": [
+      "N2, O2−, NO+",
+      "O2, O2−, NO",
+      "F2, O2 2−, CN−",
+      "CO, N2, NO+"
+    ],
+    "correctIndex": 1,
+    "explanation": "O2 has two unpaired electrons, O2− has one unpaired electron, and NO has one unpaired electron. Hence all three species in option B are paramagnetic.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "questionText": "For a reaction, ΔH° = −92 kJ mol−1 and ΔS° = −200 J mol−1 K−1. Assuming these quantities remain constant, the reaction is spontaneous under standard conditions when",
+    "options": [
+      "T < 460 K",
+      "T > 460 K",
+      "T = 460 K only",
+      "It is spontaneous at all temperatures"
+    ],
+    "correctIndex": 0,
+    "explanation": "ΔG° = ΔH° − TΔS°. Setting ΔG° = 0 gives T = 92000/200 = 460 K. Since both ΔH° and ΔS° are negative, ΔG° is negative only below 460 K.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "questionText": "For the equilibrium PCl5(g) ⇌ PCl3(g) + Cl2(g), 1 mol of PCl5 is placed in a 1 L vessel and 40% dissociates at equilibrium. The value of Kc is",
+    "options": [
+      "0.267",
+      "0.533",
+      "0.667",
+      "1.067"
+    ],
+    "correctIndex": 3,
+    "explanation": "At equilibrium, [PCl5] = 0.60 M and [PCl3] = [Cl2] = 0.40 M. Thus Kc = (0.40×0.40)/0.60 = 0.267, so the correct value is 0.267.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "questionText": "In an electrochemical cell, the standard reduction potentials are E°(Cu2+/Cu) = +0.34 V and E°(Zn2+/Zn) = −0.76 V. Which statement is correct for the Daniell cell under standard conditions?",
+    "options": [
+      "E°cell = −1.10 V and Zn acts as cathode",
+      "E°cell = +1.10 V and Zn acts as anode",
+      "E°cell = +0.42 V and Cu acts as anode",
+      "E°cell = −0.42 V and Cu acts as cathode"
+    ],
+    "correctIndex": 1,
+    "explanation": "E°cell = E°cathode − E°anode = 0.34 − (−0.76) = +1.10 V. Zn is oxidized at the anode and Cu2+ is reduced at the cathode.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "questionText": "A first-order reaction is 75% complete in 20 minutes. The time required for 93.75% completion is",
+    "options": [
+      "30 min",
+      "40 min",
+      "50 min",
+      "60 min"
+    ],
+    "correctIndex": 1,
+    "explanation": "After 20 min, 25% remains, corresponding to two half-lives, so t1/2 = 10 min. For 93.75% completion, 6.25% remains = 1/16, requiring four half-lives; hence t = 40 min.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "questionText": "Which sequence correctly represents the first ionization enthalpy of the elements Mg, Al, Si and P?",
+    "options": [
+      "Al < Mg < Si < P",
+      "Mg < Al < Si < P",
+      "Al < Si < Mg < P",
+      "P < Si < Mg < Al"
+    ],
+    "correctIndex": 0,
+    "explanation": "Across the period ionization enthalpy generally increases, but Al has lower ionization enthalpy than Mg because its removed electron is from the higher-energy 3p orbital. Therefore Al < Mg < Si < P.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which statement correctly explains the anomalous behaviour of nitrogen compared with the other members of group 15?",
+    "options": [
+      "Nitrogen has a large size and low ionization enthalpy",
+      "Nitrogen has no vacant d orbitals and can form strong pπ-pπ multiple bonds",
+      "Nitrogen has the lowest electronegativity in the group",
+      "Nitrogen readily expands its covalency beyond four"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nitrogen is a second-period element with no vacant d orbitals and a small atomic size. Effective pπ-pπ overlap allows strong multiple bonds such as N≡N, contributing to its anomalous behaviour.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which pair contains ions having the same number of unpaired electrons in their ground-state d orbitals?",
+    "options": [
+      "Fe2+ and Co2+",
+      "Mn2+ and Fe3+",
+      "Ni2+ and Cu2+",
+      "Cr3+ and Fe2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mn2+ is 3d5 and Fe3+ is also 3d5, so each has five unpaired electrons. The other pairs do not have equal numbers of unpaired electrons.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "In the complex [Co(NH3)5Cl]Cl2, the oxidation state of cobalt, coordination number and number of ions produced on complete ionization in water are respectively",
+    "options": [
+      "+2, 6, 3",
+      "+3, 6, 3",
+      "+3, 5, 3",
+      "+2, 5, 2"
+    ],
+    "correctIndex": 1,
+    "explanation": "The complex ion has charge +2, so Co has oxidation state +3. Five NH3 and one Cl− are coordinated, giving coordination number 6; complete ionization gives [Co(NH3)5Cl]2+ + 2Cl−, hence three ions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "questionText": "Which carbocation is expected to possess the greatest stability?",
+    "options": [
+      "CH3+",
+      "CH3CH2+",
+      "(CH3)3C+",
+      "C6H5CH2+"
+    ],
+    "correctIndex": 3,
+    "explanation": "The benzyl carbocation is strongly resonance-stabilized because its positive charge can delocalize into the aromatic ring. This gives it greater stability than the tertiary carbocation listed.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Which reaction most clearly demonstrates the peroxide effect in the addition of HBr to an alkene?",
+    "options": [
+      "Ethene + HBr gives bromoethane",
+      "Propene + HBr in the presence of peroxide gives predominantly 1-bromopropane",
+      "Propene + HCl in the presence of peroxide gives 1-chloropropane",
+      "Propyne + HBr always gives only propane"
+    ],
+    "correctIndex": 1,
+    "explanation": "The peroxide effect is observed specifically with HBr through a radical mechanism. Addition of HBr to propene in the presence of peroxide gives predominantly 1-bromopropane.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which compound reacts most readily by an SN1 mechanism under suitable polar protic conditions?",
+    "options": [
+      "CH3Cl",
+      "CH3CH2Cl",
+      "(CH3)3CCl",
+      "C6H5Cl"
+    ],
+    "correctIndex": 2,
+    "explanation": "SN1 reactions involve carbocation formation. tert-Butyl chloride forms a stable tertiary carbocation, whereas methyl and primary chlorides resist SN1 and chlorobenzene does not readily form a phenyl carbocation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "tough",
+    "questionText": "Phenol is more acidic than ethanol primarily because",
+    "options": [
+      "phenol has a stronger O−H bond",
+      "phenoxide ion is resonance-stabilized whereas ethoxide ion is not",
+      "ethanol contains no oxygen atom",
+      "phenol has a lower molecular mass"
+    ],
+    "correctIndex": 1,
+    "explanation": "Loss of H+ from phenol produces phenoxide ion, whose negative charge is delocalized by resonance over the aromatic ring. Ethoxide ion lacks comparable resonance stabilization.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound gives a positive Tollens test but does not give the iodoform test?",
+    "options": [
+      "Ethanal",
+      "Propanal",
+      "Propanone",
+      "Ethanol"
+    ],
+    "correctIndex": 1,
+    "explanation": "Propanal is an aldehyde and therefore reduces Tollens reagent. It does not contain the required CH3CO− or CH3CH(OH)− group for the iodoform reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "questionText": "Aniline is converted into benzenediazonium chloride at 0–5 °C and then treated with CuCN. The major organic product is",
+    "options": [
+      "Benzonitrile",
+      "Phenol",
+      "Chlorobenzene",
+      "Nitrobenzene"
+    ],
+    "correctIndex": 0,
+    "explanation": "Diazotization converts aniline into benzenediazonium chloride. CuCN replaces the diazonium group by CN, producing benzonitrile through a Sandmeyer reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with AgNO3 solution after acidifying with dilute HNO3. The precipitate dissolves in dilute NH3 solution. The anion most likely present is",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "CO3 2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ag+ gives a white AgCl precipitate with chloride ions, and AgCl dissolves in dilute NH3 due to formation of the diamminesilver(I) complex. AgBr requires concentrated NH3 and AgI is insoluble in NH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "moderate",
+    "questionText": "How many molecules are present in 9 g of water? (Avogadro constant = 6.022 × 10^23 mol−1)",
+    "options": [
+      "1.505 × 10^23",
+      "3.011 × 10^23",
+      "6.022 × 10^23",
+      "9.033 × 10^23"
+    ],
+    "correctIndex": 1,
+    "explanation": "9 g H2O corresponds to 9/18 = 0.5 mol. Therefore the number of molecules is 0.5×6.022×10^23 = 3.011×10^23.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "moderate",
+    "questionText": "Which molecule has a linear molecular geometry despite having two electron pairs around its central atom?",
+    "options": [
+      "H2O",
+      "NH3",
+      "CO2",
+      "SO2"
+    ],
+    "correctIndex": 2,
+    "explanation": "In CO2, carbon has two bonding electron pairs and no lone pair, so the electron pairs remain 180° apart. Hence CO2 is linear.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "moderate",
+    "questionText": "A weak acid HA has concentration 0.10 M and is 1% ionized in water. Its approximate Ka value is",
+    "options": [
+      "1 × 10−3",
+      "1 × 10−4",
+      "1 × 10−5",
+      "1 × 10−6"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a weak acid, Ka = Cα²/(1−α). With C = 0.10 M and α = 0.01, Ka ≈ 0.10×10−4/0.99 ≈ 1×10−5.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "moderate",
+    "questionText": "A first-order reaction has a half-life of 15 minutes. What fraction of the reactant remains after 45 minutes?",
+    "options": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/16"
+    ],
+    "correctIndex": 2,
+    "explanation": "Forty-five minutes correspond to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which statement regarding NH3 and PH3 is correct according to their molecular properties?",
+    "options": [
+      "PH3 is more basic than NH3 because phosphorus is larger",
+      "NH3 is more basic than PH3 because the lone pair on nitrogen is more available for donation",
+      "Both have exactly the same basic strength",
+      "PH3 cannot act as a Lewis base"
+    ],
+    "correctIndex": 1,
+    "explanation": "The lone pair on nitrogen in NH3 is more effectively available for donation than the lone pair on phosphorus in PH3. Consequently NH3 is significantly more basic than PH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "questionText": "Which property of transition-metal ions is most directly responsible for the colour of many of their compounds?",
+    "options": [
+      "Only high atomic mass",
+      "d–d electronic transitions between split d orbitals",
+      "Complete absence of d electrons",
+      "Only their high melting points"
+    ],
+    "correctIndex": 1,
+    "explanation": "In many transition-metal complexes, ligand fields split the d orbitals into different energy levels. Absorption of visible light can promote d–d transitions, producing colour.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "questionText": "Which ligand can coordinate through either nitrogen or sulfur depending on the atom through which it attaches to the metal?",
+    "options": [
+      "NH3",
+      "H2O",
+      "SCN−",
+      "Cl−"
+    ],
+    "correctIndex": 2,
+    "explanation": "SCN− is an ambidentate ligand and can coordinate through nitrogen or sulfur. NH3, H2O and Cl− do not show this type of linkage isomerism.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "questionText": "Benzene generally undergoes electrophilic substitution rather than electrophilic addition because substitution",
+    "options": [
+      "destroys aromaticity permanently",
+      "retains the aromatic stabilization of the ring after the reaction",
+      "requires no electrophile",
+      "always occurs without a catalyst"
+    ],
+    "correctIndex": 1,
+    "explanation": "Electrophilic substitution temporarily disrupts aromaticity but restores it after loss of H+, whereas addition would permanently destroy aromatic stabilization. Hence substitution is favoured.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "questionText": "Which reaction converts an alkyl halide into an alcohol most directly?",
+    "options": [
+      "Treatment with aqueous KOH",
+      "Treatment with alcoholic KOH",
+      "Treatment with NaI in acetone",
+      "Treatment with Mg in dry ether"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aqueous KOH provides OH− ions that substitute the halide group in suitable alkyl halides to form alcohols. Alcoholic KOH generally favours elimination instead.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "tough",
+    "questionText": "When phenol is treated with bromine water at room temperature, the major product is",
+    "options": [
+      "Bromobenzene",
+      "2-bromophenol only",
+      "2,4,6-tribromophenol",
+      "Benzoic acid"
+    ],
+    "correctIndex": 2,
+    "explanation": "The −OH group strongly activates the benzene ring toward electrophilic substitution and directs substitution to ortho and para positions. With bromine water, phenol undergoes multiple substitution to form 2,4,6-tribromophenol.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "questionText": "Which compound undergoes aldol condensation because it contains at least one alpha-hydrogen atom?",
+    "options": [
+      "Benzaldehyde",
+      "Formaldehyde",
+      "Ethanal",
+      "Benzoic acid"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ethanal contains alpha-hydrogen atoms and can form an enolate, which attacks another ethanal molecule in aldol condensation. Benzaldehyde and formaldehyde lack alpha-hydrogen atoms.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A solution gives a brick-red precipitate when heated with Fehling's solution. Which type of compound is most likely responsible?",
+    "options": [
+      "A typical ketone",
+      "An aliphatic aldehyde",
+      "An ether",
+      "A tertiary amine"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aliphatic aldehydes reduce Cu2+ in Fehling's solution to Cu2O, producing a characteristic brick-red precipitate. Ordinary ketones generally do not give this test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "easy",
+    "questionText": "Which of the following is a monosaccharide?",
+    "options": [
+      "Sucrose",
+      "Maltose",
+      "Glucose",
+      "Starch"
+    ],
+    "correctIndex": 2,
+    "explanation": "Glucose is a monosaccharide, whereas sucrose and maltose are disaccharides and starch is a polysaccharide.",
+    "imageUrl": null
   }
 ]
