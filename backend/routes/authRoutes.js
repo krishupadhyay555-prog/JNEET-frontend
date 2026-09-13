@@ -1,11 +1,9 @@
 // ============================================================
-//  JNEET+ AI — routes/authRoutes.js  (v3 — Forgot Password routes)
-//  ADDED: POST /forgot-password and POST /reset-password, both
-//  public (no `protect` needed — the whole point is the user is
-//  logged out) and both rate-limited with the SAME authLimiter
-//  already used for /register and /login, since OTP endpoints are
-//  exactly the kind of thing that needs brute-force protection.
-//  Everything else UNCHANGED from v2.0.
+//  JNEET+ AI — routes/authRoutes.js  (v4 — Email Verification)
+//  ADDED: POST /verify-email and POST /resend-verification, both
+//  public and rate-limited with the same authLimiter as every other
+//  auth endpoint.
+//  Everything else UNCHANGED from v3.
 // ============================================================
 
 import { Router }  from "express";
@@ -18,6 +16,8 @@ import {
   targetExamSchema,
   forgotPasswordSchema,
   resetPasswordSchema,
+  verifyEmailSchema,
+  resendVerificationSchema,
 } from "../schemas/authSchemas.js";
 import {
   register,
@@ -27,6 +27,8 @@ import {
   updateTargetExam,
   forgotPassword,
   resetPassword,
+  verifyEmail,
+  resendVerification,
 } from "../controllers/authController.js";
 
 const router = Router();
@@ -35,11 +37,13 @@ const router = Router();
 router.post("/register", authLimiter, validate(registerSchema), register);
 router.post("/login",    authLimiter, validate(loginSchema),    login);
 
-// Forgot Password flow — also public (user is logged out) and
-// rate-limited for the same brute-force-protection reasons as
-// register/login.
+// Forgot Password flow
 router.post("/forgot-password", authLimiter, validate(forgotPasswordSchema), forgotPassword);
 router.post("/reset-password",  authLimiter, validate(resetPasswordSchema),  resetPassword);
+
+// Signup Email Verification flow
+router.post("/verify-email",        authLimiter, validate(verifyEmailSchema),        verifyEmail);
+router.post("/resend-verification", authLimiter, validate(resendVerificationSchema), resendVerification);
 
 // Protected routes
 router.post("/logout", logout);

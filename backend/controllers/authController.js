@@ -1,12 +1,23 @@
 // ============================================================
-//  JNEET+ AI — controllers/authController.js  (v6 — password reuse check)
-//  ADDED: resetPassword now rejects setting the new password to the
-//  same value as the current one (bcrypt.compare against the
-//  existing hash before overwriting) — catches accidental
-//  no-op resets and mildly improves password hygiene.
-//  Everything else — forgotPassword, OTP verification, attempt
-//  limiting, session invalidation via passwordChangedAt — UNCHANGED
-//  from v5.
+//  JNEET+ AI — controllers/authController.js  (v7 — Email Verification)
+//  ADDED: register() no longer logs the user in immediately. It
+//  creates the account (isEmailVerified: false), sends a
+//  verification OTP, and returns a "check your email" response
+//  instead of a cookie. Two new endpoints:
+//    - verifyEmail(email, otp): same OTP-checking pattern as
+//      resetPassword (hash compare, 10-min expiry, 3-attempt cap).
+//      On success, sets isEmailVerified true and THEN logs the user
+//      in (this is the only place a fresh signup gets its cookie).
+//    - resendVerification(email): generic-response pattern (never
+//      reveals whether an email exists or is already verified) that
+//      issues a fresh OTP if the account exists and isn't verified
+//      yet.
+//  login() now also blocks unverified accounts with a 403 and a
+//  `requiresVerification: true` flag so the frontend can route the
+//  user back to the verification step instead of a generic error.
+//  Everything else — logout/getMe/updateTargetExam, forgotPassword/
+//  resetPassword (including password-reuse check and session
+//  invalidation) — UNCHANGED from v6.
 // ============================================================
 
 import jwt      from "jsonwebtoken";
@@ -15,7 +26,7 @@ import bcrypt   from "bcryptjs";
 import User     from "../models/User.js";
 import { env }  from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
-import { sendPasswordResetOtp } from "../services/emailService.js";
+import { sendPasswordResetOtp, sendVerificationOtp } from "../services/emailService.js";
 
 function getCookieOptions() {
   const isProd = env.NODE_ENV === "production";
@@ -60,6 +71,20 @@ function sendAuthResponse(user, statusCode, res, message) {
   });
 }
 
+// Generates a 6-digit OTP, hashes it, and saves it onto whichever
+// pair of fields is passed in (reset* or email*) — shared by
+// forgotPassword and register/resendVerification so the exact same
+// crypto/hash/expiry logic isn't duplicated three times.
+async function issueOtp(user, hashField, expiryField, attemptsField) {
+  const otp = crypto.randomInt(0, 1000000).toString().padStart(6, "0");
+  const salt = await bcrypt.genSalt(10);
+  user[hashField]     = await bcrypt.hash(otp, salt);
+  user[expiryField]   = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
+  user[attemptsField] = 0;
+  await user.save({ validateBeforeSave: false });
+  return otp;
+}
+
 export const register = async (req, res, next) => {
   try {
     const { name, email, password, examMode } = req.body;
@@ -73,10 +98,32 @@ export const register = async (req, res, next) => {
       });
     }
 
-    const newUser = await User.create({ name, email, password, examMode });
+    const newUser = await User.create({ name, email, password, examMode, isEmailVerified: false });
 
-    console.log(`[Auth] ✅ Registered: ${newUser.email} (${newUser.examMode})`);
-    sendAuthResponse(newUser, 201, res, "Account created! Welcome to JNEET+ AI.");
+    const otp = await issueOtp(newUser, "emailOtpHash", "emailOtpExpiresAt", "emailOtpAttempts");
+
+    try {
+      await sendVerificationOtp(newUser.email, otp, newUser.name);
+    } catch (emailErr) {
+      // The account still exists even if this specific email attempt
+      // failed — the user can use "resend code" on the verification
+      // screen, which will try again. We don't roll back account
+      // creation here; failing to send once shouldn't force them to
+      // re-fill the entire signup form.
+      console.error("[Auth] Failed to send verification email:", emailErr.message);
+    }
+
+    console.log(`[Auth] ✅ Registered (pending verification): ${newUser.email} (${newUser.examMode})`);
+
+    // Deliberately NOT calling sendAuthResponse here — no cookie is
+    // set until the email is verified. The frontend uses this
+    // response to move to the "enter your code" step.
+    return res.status(201).json({
+      success: true,
+      requiresVerification: true,
+      email: newUser.email,
+      message: "Account created! Check your email for a verification code.",
+    });
 
   } catch (err) {
     if (err.code === 11000) {
@@ -114,6 +161,19 @@ export const login = async (req, res, next) => {
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
       return res.status(401).json({ success: false, error: "Invalid email or password." });
+    }
+
+    // Block login until the signup verification OTP has been
+    // confirmed. requiresVerification lets the frontend route the
+    // user straight back to the "enter your code" screen instead of
+    // showing a generic error.
+    if (!user.isEmailVerified) {
+      return res.status(403).json({
+        success: false,
+        requiresVerification: true,
+        email: user.email,
+        error: "Please verify your email before logging in.",
+      });
     }
 
     user.lastLogin = new Date();
@@ -213,7 +273,7 @@ export const updateTargetExam = async (req, res, next) => {
   }
 };
 
-// ── NEW: Forgot Password flow ──────────────────────────────────
+// ── Forgot Password flow ────────────────────────────────────────
 
 export const forgotPassword = async (req, res, next) => {
   try {
@@ -221,9 +281,6 @@ export const forgotPassword = async (req, res, next) => {
 
     const user = await User.findOne({ email });
 
-    // Deliberately generic response whether or not the user exists,
-    // to prevent email enumeration. We only actually send an email
-    // and touch the database if the user is real.
     const genericResponse = {
       success: true,
       message: "If an account exists with this email, a reset code has been sent.",
@@ -233,23 +290,11 @@ export const forgotPassword = async (req, res, next) => {
       return res.status(200).json(genericResponse);
     }
 
-    // Generate a cryptographically random 6-digit OTP (000000-999999,
-    // zero-padded). crypto.randomInt is used instead of Math.random,
-    // which is not suitable for anything security-sensitive.
-    const otp = crypto.randomInt(0, 1000000).toString().padStart(6, "0");
-
-    const salt = await bcrypt.genSalt(10);
-    user.resetOtpHash      = await bcrypt.hash(otp, salt);
-    user.resetOtpExpiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
-    user.resetOtpAttempts  = 0;
-    await user.save({ validateBeforeSave: false });
+    const otp = await issueOtp(user, "resetOtpHash", "resetOtpExpiresAt", "resetOtpAttempts");
 
     try {
       await sendPasswordResetOtp(user.email, otp, user.name);
     } catch (emailErr) {
-      // If the email genuinely fails to send, don't leave a dangling
-      // OTP the user can never receive — clear it and surface a real
-      // error instead of the generic success message.
       user.resetOtpHash = null;
       user.resetOtpExpiresAt = null;
       await user.save({ validateBeforeSave: false });
@@ -319,11 +364,6 @@ export const resetPassword = async (req, res, next) => {
       });
     }
 
-    // Prevent "resetting" to the exact same password the account
-    // already has — this usually means the user didn't actually
-    // mean to change anything, or forgot they already knew it.
-    // bcrypt.compare against the CURRENT hash (selected above via
-    // +password) catches this before we overwrite anything.
     const isSameAsOld = await bcrypt.compare(newPassword, user.password);
     if (isSameAsOld) {
       return res.status(400).json({
@@ -332,26 +372,138 @@ export const resetPassword = async (req, res, next) => {
       });
     }
 
-    // OTP correct — set the new password and clear all reset fields.
-    // Setting `password` here triggers the pre-save bcrypt-hash hook
-    // on the User model automatically, same as register/login.
     user.password = newPassword;
     user.resetOtpHash = null;
     user.resetOtpExpiresAt = null;
     user.resetOtpAttempts = 0;
-
-    // This is the session-invalidation step: any JWT issued before
-    // this moment will be rejected by authMiddleware.js on its next
-    // use, logging the user out of every other device/tab.
     user.passwordChangedAt = new Date();
 
     await user.save();
 
     console.log(`[Auth] 🔒 Password reset successful: ${user.email}`);
-
-    // Log the user in immediately on the device that just completed
-    // the reset, so they don't have to separately log in again here.
     sendAuthResponse(user, 200, res, "Password reset successful. You're now logged in.");
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── NEW: Signup Email Verification flow ─────────────────────────
+
+export const verifyEmail = async (req, res, next) => {
+  try {
+    const { email, otp } = req.body;
+
+    const user = await User.findOne({ email }).select(
+      "+emailOtpHash +emailOtpExpiresAt +emailOtpAttempts"
+    );
+
+    if (!user || !user.isActive || !user.emailOtpHash || !user.emailOtpExpiresAt) {
+      return res.status(400).json({
+        success: false,
+        error:   "Invalid or expired verification code. Please request a new one.",
+      });
+    }
+
+    if (user.isEmailVerified) {
+      // Already verified (e.g. user double-submitted) — just log
+      // them in cleanly instead of erroring.
+      user.emailOtpHash = null;
+      user.emailOtpExpiresAt = null;
+      user.emailOtpAttempts = 0;
+      await user.save({ validateBeforeSave: false });
+      return sendAuthResponse(user, 200, res, "Email already verified. You're now logged in.");
+    }
+
+    if (user.emailOtpExpiresAt.getTime() < Date.now()) {
+      user.emailOtpHash = null;
+      user.emailOtpExpiresAt = null;
+      user.emailOtpAttempts = 0;
+      await user.save({ validateBeforeSave: false });
+      return res.status(400).json({
+        success: false,
+        error:   "This verification code has expired. Please request a new one.",
+      });
+    }
+
+    if (user.emailOtpAttempts >= 3) {
+      user.emailOtpHash = null;
+      user.emailOtpExpiresAt = null;
+      user.emailOtpAttempts = 0;
+      await user.save({ validateBeforeSave: false });
+      return res.status(429).json({
+        success: false,
+        error:   "Too many incorrect attempts. Please request a new verification code.",
+      });
+    }
+
+    const isOtpValid = await bcrypt.compare(otp, user.emailOtpHash);
+
+    if (!isOtpValid) {
+      user.emailOtpAttempts += 1;
+      await user.save({ validateBeforeSave: false });
+      const remaining = 3 - user.emailOtpAttempts;
+      return res.status(400).json({
+        success: false,
+        error:   remaining > 0
+          ? `Incorrect code. ${remaining} attempt${remaining === 1 ? "" : "s"} remaining.`
+          : "Incorrect code. Please request a new verification code.",
+      });
+    }
+
+    // Correct OTP — activate the account and clear all OTP fields.
+    user.isEmailVerified = true;
+    user.emailOtpHash = null;
+    user.emailOtpExpiresAt = null;
+    user.emailOtpAttempts = 0;
+    user.lastLogin = new Date();
+    await user.save({ validateBeforeSave: false });
+
+    console.log(`[Auth] ✅ Email verified: ${user.email}`);
+
+    // This is the moment a freshly registered user actually gets
+    // logged in for the first time.
+    sendAuthResponse(user, 200, res, "Email verified! Welcome to JNEET+ AI.");
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const resendVerification = async (req, res, next) => {
+  try {
+    const { email } = req.body;
+
+    const user = await User.findOne({ email });
+
+    // Same generic-response pattern as forgotPassword — never reveal
+    // whether the email exists or is already verified.
+    const genericResponse = {
+      success: true,
+      message: "If an unverified account exists with this email, a new code has been sent.",
+    };
+
+    if (!user || !user.isActive || user.isEmailVerified) {
+      return res.status(200).json(genericResponse);
+    }
+
+    const otp = await issueOtp(user, "emailOtpHash", "emailOtpExpiresAt", "emailOtpAttempts");
+
+    try {
+      await sendVerificationOtp(user.email, otp, user.name);
+    } catch (emailErr) {
+      user.emailOtpHash = null;
+      user.emailOtpExpiresAt = null;
+      await user.save({ validateBeforeSave: false });
+      console.error("[Auth] Failed to resend verification email:", emailErr.message);
+      return res.status(502).json({
+        success: false,
+        error:   "Could not send the verification email right now. Please try again in a few minutes.",
+      });
+    }
+
+    console.log(`[Auth] 🔁 Verification OTP resent: ${user.email}`);
+    return res.status(200).json(genericResponse);
 
   } catch (err) {
     next(err);

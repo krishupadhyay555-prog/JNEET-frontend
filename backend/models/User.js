@@ -1,23 +1,19 @@
 // ============================================================
-//  JNEET+ AI — models/User.js  (v6 — forgot-password OTP fields added)
-//  ADDED (for Forgot Password / OTP feature):
-//    - resetOtpHash: the OTP is NEVER stored in plain text — only
-//      its bcrypt hash, same approach already used for the login
-//      password. select:false so it's never accidentally returned
-//      in any query response.
-//    - resetOtpExpiresAt: OTP is valid for 10 minutes only.
-//    - resetOtpAttempts: counts failed verification attempts for
-//      the CURRENT otp — locks after 3 to prevent brute-forcing a
-//      6-digit code. Reset to 0 whenever a fresh OTP is issued.
-//    - passwordChangedAt: timestamp of the last successful
-//      password change (via reset). authMiddleware.js compares
-//      this against the JWT's issued-at time — any token issued
-//      BEFORE the last password change is rejected, so resetting
-//      your password logs out every other device/session
-//      automatically (session invalidation), without needing any
-//      change to how tokens are generated.
+//  JNEET+ AI — models/User.js  (v7 — email verification fields)
+//  ADDED (for Signup Email Verification / OTP feature):
+//    - isEmailVerified: false by default. A newly registered user
+//      cannot log in until this becomes true (see login() in
+//      authController.js). Verified the same way password-reset
+//      OTPs work — hashed OTP, 10-min expiry, 3-attempt cap.
+//    - emailOtpHash / emailOtpExpiresAt / emailOtpAttempts: same
+//      pattern as resetOtpHash/resetOtpExpiresAt/resetOtpAttempts,
+//      but for the SEPARATE signup-verification flow — kept as
+//      distinct fields (not reused) so a pending password-reset
+//      OTP and a pending email-verification OTP never collide if
+//      both happen to be in flight for the same user at once.
 //  Everything else — name/email/password rules, examMode,
-//  targetExam, comparePassword — UNCHANGED from v5.
+//  targetExam, forgot-password fields, comparePassword — UNCHANGED
+//  from v6.
 // ============================================================
 
 import mongoose from "mongoose";
@@ -64,11 +60,17 @@ const userSchema = new mongoose.Schema(
     lastLogin: { type: Date, default: null },
     isActive: { type: Boolean, default: true },
 
-    // ── Forgot Password / OTP fields (NEW) ──────────────────────
+    // ── Forgot Password / OTP fields ────────────────────────────
     resetOtpHash:       { type: String, default: null, select: false },
     resetOtpExpiresAt:  { type: Date,   default: null, select: false },
     resetOtpAttempts:   { type: Number, default: 0,    select: false },
     passwordChangedAt:  { type: Date,   default: null },
+
+    // ── Signup Email Verification / OTP fields (NEW) ────────────
+    isEmailVerified:    { type: Boolean, default: false },
+    emailOtpHash:       { type: String, default: null, select: false },
+    emailOtpExpiresAt:  { type: Date,   default: null, select: false },
+    emailOtpAttempts:   { type: Number, default: 0,    select: false },
   },
   { timestamps: true }
 );

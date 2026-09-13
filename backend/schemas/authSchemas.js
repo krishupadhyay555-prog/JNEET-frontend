@@ -1,12 +1,10 @@
 // ============================================================
-//  JNEET+ AI — schemas/authSchemas.js  (v3 — Forgot Password schemas)
-//  ADDED: forgotPasswordSchema (just needs a valid email) and
-//  resetPasswordSchema (email + the 6-digit OTP + a new password,
-//  reusing the EXACT same strength rule as registerSchema so users
-//  can't set a weaker password during reset than they could during
-//  signup).
-//  Everything else — registerSchema, loginSchema, targetExamSchema
-//  — UNCHANGED from v2.
+//  JNEET+ AI — schemas/authSchemas.js  (v4 — Email Verification)
+//  ADDED: verifyEmailSchema (email + 6-digit OTP) and
+//  resendVerificationSchema (just email) — for the new signup
+//  email-verification flow.
+//  Everything else — registerSchema, loginSchema, targetExamSchema,
+//  forgotPasswordSchema, resetPasswordSchema — UNCHANGED from v3.
 // ============================================================
 
 import { z } from "zod";
@@ -62,7 +60,7 @@ export const targetExamSchema = z.object({
     .optional(),
 });
 
-// ── NEW: Forgot Password flow ──────────────────────────────────
+// ── Forgot Password flow ──────────────────────────────────────
 
 export const forgotPasswordSchema = z.object({
   email: z
@@ -85,12 +83,34 @@ export const resetPasswordSchema = z.object({
     .length(6, "OTP must be exactly 6 digits")
     .regex(/^\d{6}$/, "OTP must contain only numbers"),
 
-  // Same strength rule as registerSchema — a reset shouldn't allow
-  // a weaker password than signup would have.
   newPassword: z
     .string({ required_error: "New password is required" })
     .min(8,   "Password must be at least 8 characters")
     .max(128, "Password is too long")
     .regex(/[A-Za-z]/, "Password must include at least one letter")
     .regex(/[0-9]/,    "Password must include at least one number"),
+});
+
+// ── NEW: Signup Email Verification flow ────────────────────────
+
+export const verifyEmailSchema = z.object({
+  email: z
+    .string({ required_error: "Email is required" })
+    .trim()
+    .toLowerCase()
+    .email("Please provide a valid email address"),
+
+  otp: z
+    .string({ required_error: "OTP is required" })
+    .trim()
+    .length(6, "OTP must be exactly 6 digits")
+    .regex(/^\d{6}$/, "OTP must contain only numbers"),
+});
+
+export const resendVerificationSchema = z.object({
+  email: z
+    .string({ required_error: "Email is required" })
+    .trim()
+    .toLowerCase()
+    .email("Please provide a valid email address"),
 });

@@ -1,21 +1,8 @@
 // ============================================================
-//  JNEET+ AI — services/emailService.js  (v2 — Brevo HTTPS API)
-//  REWRITTEN: no longer uses Nodemailer + SMTP. Render's free tier
-//  blocks all outbound traffic on SMTP ports (25/465/587), which
-//  made the previous SMTP-based version silently unreachable in
-//  production. This version calls Brevo's transactional email
-//  REST API directly over plain HTTPS (port 443), which is never
-//  blocked by any hosting provider. Uses Node's built-in fetch
-//  (available natively since Node 18+, no extra dependency needed
-//  — nodemailer can be uninstalled: `npm uninstall nodemailer`).
-//
-//  Get your API key from: Brevo dashboard → Settings → SMTP & API
-//  → API Keys tab (NOT the SMTP tab — different key, different
-//  purpose). EMAIL_FROM should be an address on your verified
-//  sender/domain (until jneetai.com is domain-verified in Brevo,
-//  use the email address your Brevo account itself is registered
-//  under — Brevo allows sending from your own account email
-//  immediately, no extra verification needed for that one address).
+//  JNEET+ AI — services/emailService.js  (v3 — verification email)
+//  ADDED: sendVerificationOtp() — same Brevo HTTPS API approach as
+//  sendPasswordResetOtp(), different copy (welcome/verify tone
+//  instead of reset tone). Shared sendEmail() helper unchanged.
 // ============================================================
 
 import { env } from "../config/env.js";
@@ -72,6 +59,32 @@ export async function sendPasswordResetOtp(toEmail, otp, studentName) {
   await sendEmail({
     to: toEmail,
     subject: "Your JNEET+ AI password reset code",
+    html,
+    text,
+  });
+}
+
+export async function sendVerificationOtp(toEmail, otp, studentName) {
+  const safeName = studentName?.split(" ")[0] || "Student";
+
+  const html = `
+    <div style="font-family: 'DM Sans', Arial, sans-serif; max-width: 480px; margin: 0 auto; padding: 24px; color: #1a1a1a;">
+      <h2 style="color: #7c3aed; margin-bottom: 4px;">JNEET+ AI</h2>
+      <p>Hi ${safeName},</p>
+      <p>Welcome to JNEET+ AI! Use the code below to verify your email and activate your account:</p>
+      <div style="background: #f4f0ff; border-radius: 12px; padding: 20px; text-align: center; margin: 24px 0;">
+        <span style="font-size: 32px; font-weight: 700; letter-spacing: 8px; color: #7c3aed;">${otp}</span>
+      </div>
+      <p style="font-size: 13px; color: #666;">This code is valid for <strong>10 minutes</strong>. If you didn't create an account with us, you can safely ignore this email.</p>
+      <p style="font-size: 13px; color: #999; margin-top: 32px;">— The JNEET+ AI Team</p>
+    </div>
+  `;
+
+  const text = `Hi ${safeName},\n\nWelcome to JNEET+ AI! Your email verification code is: ${otp}\n\nThis code is valid for 10 minutes. If you didn't create an account with us, you can safely ignore this email.\n\n— The JNEET+ AI Team`;
+
+  await sendEmail({
+    to: toEmail,
+    subject: "Verify your email for JNEET+ AI",
     html,
     text,
   });
