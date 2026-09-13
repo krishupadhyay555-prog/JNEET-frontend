@@ -1,30 +1,12 @@
 // ============================================================
-//  JNEET+ AI — controllers/authController.js  (v5 — Forgot Password)
-//  ADDED: forgotPassword and resetPassword controller functions.
-//
-//  Security decisions made here (matching earlier discussion):
-//    - OTP is a 6-digit code, generated with crypto (not Math.random,
-//      which isn't cryptographically secure).
-//    - OTP is bcrypt-hashed before storage — same treatment as the
-//      login password. The plain OTP only ever exists in memory
-//      long enough to email it; it's never persisted anywhere.
-//    - 10-minute expiry (resetOtpExpiresAt).
-//    - Max 3 verification attempts per issued OTP (resetOtpAttempts)
-//      — after that, the OTP is invalidated and a new one must be
-//      requested. Prevents brute-forcing a 6-digit code (1 in a
-//      million per guess, but even so — no unlimited guessing).
-//    - forgotPassword ALWAYS returns the same success message
-//      whether or not the email exists in the database. This is
-//      deliberate: it prevents "email enumeration" (an attacker
-//      probing which emails are registered by checking which ones
-//      trigger a different response).
-//    - On successful reset, passwordChangedAt is set to now(). The
-//      `protect` middleware (authMiddleware.js) compares this
-//      against each JWT's issued-at time, so every device that was
-//      logged in before the reset gets logged out automatically —
-//      the user must log in fresh with the new password everywhere.
-//  Everything else — register/login/logout/getMe/updateTargetExam
-//  — UNCHANGED from v4.
+//  JNEET+ AI — controllers/authController.js  (v6 — password reuse check)
+//  ADDED: resetPassword now rejects setting the new password to the
+//  same value as the current one (bcrypt.compare against the
+//  existing hash before overwriting) — catches accidental
+//  no-op resets and mildly improves password hygiene.
+//  Everything else — forgotPassword, OTP verification, attempt
+//  limiting, session invalidation via passwordChangedAt — UNCHANGED
+//  from v5.
 // ============================================================
 
 import jwt      from "jsonwebtoken";
@@ -334,6 +316,19 @@ export const resetPassword = async (req, res, next) => {
         error:   remaining > 0
           ? `Incorrect code. ${remaining} attempt${remaining === 1 ? "" : "s"} remaining.`
           : "Incorrect code. Please request a new reset code.",
+      });
+    }
+
+    // Prevent "resetting" to the exact same password the account
+    // already has — this usually means the user didn't actually
+    // mean to change anything, or forgot they already knew it.
+    // bcrypt.compare against the CURRENT hash (selected above via
+    // +password) catches this before we overwrite anything.
+    const isSameAsOld = await bcrypt.compare(newPassword, user.password);
+    if (isSameAsOld) {
+      return res.status(400).json({
+        success: false,
+        error:   "That's your current password. Please choose a different one.",
       });
     }
 
