@@ -102,6 +102,8 @@ export default function Login() {
 
       if (status === 429) {
         setErrors({ password: "Too many attempts. Please try again in 15 minutes." });
+      } else if (status === 423) {
+        setErrors({ password: err.response?.data?.error || "This account is temporarily locked. Please try again later." });
       } else {
         // Never surface raw backend/route text for unexpected statuses.
         setErrors({ password: "Something went wrong on our end. Please try again in a moment." });

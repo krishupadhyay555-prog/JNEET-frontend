@@ -85,6 +85,15 @@ export default function Register() {
     arrivedForVerification ? "Please verify your email to continue. Enter the code sent to your inbox, or resend a new one below." : ""
   );
   const [resending,  setResending]  = useState(false);
+  const [cooldown,   setCooldown]   = useState(arrivedForVerification ? 60 : 0);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setInterval(() => {
+      setCooldown((c) => (c > 0 ? c - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [cooldown]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -117,6 +126,7 @@ export default function Register() {
       // No login() / navigate here anymore — the account exists but
       // isn't verified yet. Move to the OTP step instead.
       setInfoMsg("Account created! Check your email for a 6-digit code (and check spam).");
+      setCooldown(60);
       setStep(2);
 
     } catch (err) {
@@ -189,14 +199,21 @@ export default function Register() {
   };
 
   const handleResend = async () => {
+    if (cooldown > 0) return;
     setResending(true);
     setErrors({});
     try {
       await authApi.resendVerification({ email: form.email.trim().toLowerCase() });
       setInfoMsg("A new code has been sent. Check your inbox (and spam folder).");
-    } catch {
-      setInfoMsg("");
-      setErrors({ otp: "Couldn't resend the code right now. Please try again in a moment." });
+      setCooldown(60);
+    } catch (err) {
+      if (err.response?.status === 429) {
+        setErrors({ otp: err.response?.data?.error || "Please wait a moment before requesting another code." });
+        setCooldown(60);
+      } else {
+        setInfoMsg("");
+        setErrors({ otp: "Couldn't resend the code right now. Please try again in a moment." });
+      }
     } finally {
       setResending(false);
     }
@@ -395,10 +412,14 @@ export default function Register() {
               <button
                 type="button"
                 onClick={handleResend}
-                disabled={resending || loading}
-                className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors duration-150 disabled:opacity-50"
+                disabled={resending || loading || cooldown > 0}
+                className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed disabled:text-[#8B8594]"
               >
-                {resending ? "Resending..." : "Resend code"}
+                {resending
+                  ? "Resending..."
+                  : cooldown > 0
+                    ? `Resend code (${cooldown}s)`
+                    : "Resend code"}
               </button>
 
               <button

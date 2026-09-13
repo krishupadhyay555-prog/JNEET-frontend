@@ -1,19 +1,25 @@
 // ============================================================
-//  JNEET+ AI — models/User.js  (v7 — email verification fields)
-//  ADDED (for Signup Email Verification / OTP feature):
-//    - isEmailVerified: false by default. A newly registered user
-//      cannot log in until this becomes true (see login() in
-//      authController.js). Verified the same way password-reset
-//      OTPs work — hashed OTP, 10-min expiry, 3-attempt cap.
-//    - emailOtpHash / emailOtpExpiresAt / emailOtpAttempts: same
-//      pattern as resetOtpHash/resetOtpExpiresAt/resetOtpAttempts,
-//      but for the SEPARATE signup-verification flow — kept as
-//      distinct fields (not reused) so a pending password-reset
-//      OTP and a pending email-verification OTP never collide if
-//      both happen to be in flight for the same user at once.
-//  Everything else — name/email/password rules, examMode,
-//  targetExam, forgot-password fields, comparePassword — UNCHANGED
-//  from v6.
+//  JNEET+ AI — models/User.js  (v8 — account lockout + TTL cleanup)
+//  ADDED (standard production hardening):
+//    - failedLoginAttempts / accountLockedUntil: PER-ACCOUNT login
+//      lockout, separate from the existing PER-IP rate limiter
+//      (authLimiter.js). The rate limiter alone doesn't stop an
+//      attacker who spreads password guesses across many IPs at one
+//      specific victim's account — this does. 5 wrong passwords
+//      locks that one account for 15 minutes, independent of who's
+//      trying or from where.
+//    - A partial TTL index on `createdAt`, scoped to
+//      { isEmailVerified: false }: MongoDB automatically deletes any
+//      account that never completed email verification within 48
+//      hours. This is standard hygiene — without it, unverified
+//      "ghost" accounts (typos, abandoned signups, someone testing
+//      whether an email works) accumulate forever and permanently
+//      occupy that email address's uniqueness slot. Once an account
+//      verifies, isEmailVerified flips to true and it falls outside
+//      this filter permanently — verified accounts are NEVER
+//      auto-deleted.
+//  Everything else — password-reset OTP fields, email-verification
+//  OTP fields, passwordChangedAt — UNCHANGED from v7.
 // ============================================================
 
 import mongoose from "mongoose";
@@ -66,13 +72,30 @@ const userSchema = new mongoose.Schema(
     resetOtpAttempts:   { type: Number, default: 0,    select: false },
     passwordChangedAt:  { type: Date,   default: null },
 
-    // ── Signup Email Verification / OTP fields (NEW) ────────────
+    // ── Signup Email Verification / OTP fields ──────────────────
     isEmailVerified:    { type: Boolean, default: false },
     emailOtpHash:       { type: String, default: null, select: false },
     emailOtpExpiresAt:  { type: Date,   default: null, select: false },
     emailOtpAttempts:   { type: Number, default: 0,    select: false },
+
+    // ── Per-account login lockout (NEW) ─────────────────────────
+    failedLoginAttempts: { type: Number, default: 0,    select: false },
+    accountLockedUntil:  { type: Date,   default: null, select: false },
   },
   { timestamps: true }
+);
+
+// Partial TTL index — only applies to documents where
+// isEmailVerified is false. MongoDB's background TTL monitor
+// deletes matching documents once `createdAt` is older than
+// expireAfterSeconds (48 hours here). Verified accounts (the vast
+// majority, long-term) are completely unaffected by this index.
+userSchema.index(
+  { createdAt: 1 },
+  {
+    expireAfterSeconds: 48 * 60 * 60,
+    partialFilterExpression: { isEmailVerified: false },
+  }
 );
 
 userSchema.pre("save", async function () {

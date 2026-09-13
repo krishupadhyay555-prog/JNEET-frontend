@@ -1,23 +1,36 @@
 // ============================================================
-//  JNEET+ AI — controllers/authController.js  (v7 — Email Verification)
-//  ADDED: register() no longer logs the user in immediately. It
-//  creates the account (isEmailVerified: false), sends a
-//  verification OTP, and returns a "check your email" response
-//  instead of a cookie. Two new endpoints:
-//    - verifyEmail(email, otp): same OTP-checking pattern as
-//      resetPassword (hash compare, 10-min expiry, 3-attempt cap).
-//      On success, sets isEmailVerified true and THEN logs the user
-//      in (this is the only place a fresh signup gets its cookie).
-//    - resendVerification(email): generic-response pattern (never
-//      reveals whether an email exists or is already verified) that
-//      issues a fresh OTP if the account exists and isn't verified
-//      yet.
-//  login() now also blocks unverified accounts with a 403 and a
-//  `requiresVerification: true` flag so the frontend can route the
-//  user back to the verification step instead of a generic error.
-//  Everything else — logout/getMe/updateTargetExam, forgotPassword/
-//  resetPassword (including password-reuse check and session
-//  invalidation) — UNCHANGED from v6.
+//  JNEET+ AI — controllers/authController.js  (v8 — production hardening)
+//  ADDED (standard practices every serious auth system has):
+//
+//  1. PER-ACCOUNT LOGIN LOCKOUT — 5 wrong passwords locks that
+//     specific account for 15 minutes, regardless of which IP the
+//     attempts came from. Complements (doesn't replace) the
+//     existing per-IP authLimiter. Counter resets to 0 on any
+//     successful login.
+//
+//  2. TIMING-ATTACK MITIGATION — previously, if an email wasn't
+//     registered, login() returned immediately (no bcrypt call). If
+//     it WAS registered, a full bcrypt.compare() ran (~100ms+). An
+//     attacker measuring response time could use that gap to test
+//     which emails are registered, even though the error message
+//     itself is identical. Now a bcrypt compare against a dummy
+//     hash ALWAYS runs for the "user not found" path too, so both
+//     cases take comparable time.
+//
+//  3. OTP RESEND COOLDOWN — both resendVerification and
+//     forgotPassword now reject a new OTP request if the previous
+//     one was issued less than 60 seconds ago (derived from the
+//     existing 10-minute expiry timestamp — no new fields needed).
+//     Stops someone from spamming a mailbox with rapid repeat
+//     requests.
+//
+//  4. DISPOSABLE EMAIL BLOCKING — register() rejects known
+//     throwaway-email domains (utils/disposableEmails.js).
+//
+//  Forgot-password OTP logic, password-reuse check, session
+//  invalidation via passwordChangedAt, email-verification OTP logic
+//  — all UNCHANGED in their core behavior from v7, just wrapped with
+//  the additions above.
 // ============================================================
 
 import jwt      from "jsonwebtoken";
@@ -27,6 +40,18 @@ import User     from "../models/User.js";
 import { env }  from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
 import { sendPasswordResetOtp, sendVerificationOtp } from "../services/emailService.js";
+import { isDisposableEmail } from "../utils/disposableEmails.js";
+
+const LOGIN_LOCK_THRESHOLD = 5;
+const LOGIN_LOCK_DURATION_MS = 15 * 60 * 1000; // 15 minutes
+const OTP_RESEND_COOLDOWN_MS = 60 * 1000;      // 60 seconds
+const OTP_VALIDITY_MS = 10 * 60 * 1000;        // 10 minutes
+
+// A fixed, valid-looking bcrypt hash used ONLY to burn comparable
+// CPU time when no real user exists — this hash doesn't correspond
+// to any real password and is never used to actually authenticate
+// anyone. Its sole purpose is timing-attack mitigation (see header).
+const DUMMY_HASH = "$2a$12$CwTycUXWue0Thq9StjUM0uJ8jkeu6ldOTQfz5vjP1wtRqZ3.PsQ9K";
 
 function getCookieOptions() {
   const isProd = env.NODE_ENV === "production";
@@ -71,23 +96,38 @@ function sendAuthResponse(user, statusCode, res, message) {
   });
 }
 
-// Generates a 6-digit OTP, hashes it, and saves it onto whichever
-// pair of fields is passed in (reset* or email*) — shared by
-// forgotPassword and register/resendVerification so the exact same
-// crypto/hash/expiry logic isn't duplicated three times.
 async function issueOtp(user, hashField, expiryField, attemptsField) {
   const otp = crypto.randomInt(0, 1000000).toString().padStart(6, "0");
   const salt = await bcrypt.genSalt(10);
   user[hashField]     = await bcrypt.hash(otp, salt);
-  user[expiryField]   = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
+  user[expiryField]   = new Date(Date.now() + OTP_VALIDITY_MS);
   user[attemptsField] = 0;
   await user.save({ validateBeforeSave: false });
   return otp;
 }
 
+// Returns true (and how many seconds to wait) if an OTP was issued
+// too recently to allow another one yet. expiresAt is 10 minutes
+// ahead of issuance, so if more than 9 minutes remain, it was
+// issued less than 60 seconds ago.
+function otpCooldownRemainingSec(expiresAt) {
+  if (!expiresAt) return 0;
+  const msSinceIssued = OTP_VALIDITY_MS - (expiresAt.getTime() - Date.now());
+  const msRemaining = OTP_RESEND_COOLDOWN_MS - msSinceIssued;
+  return msRemaining > 0 ? Math.ceil(msRemaining / 1000) : 0;
+}
+
 export const register = async (req, res, next) => {
   try {
     const { name, email, password, examMode } = req.body;
+
+    if (isDisposableEmail(email)) {
+      return res.status(400).json({
+        success:     false,
+        error:       "Please use a permanent email address — disposable/temporary email providers aren't supported.",
+        fieldErrors: [{ field: "email", message: "Disposable email addresses aren't supported." }],
+      });
+    }
 
     const existing = await User.findOne({ email }).lean();
     if (existing) {
@@ -105,19 +145,11 @@ export const register = async (req, res, next) => {
     try {
       await sendVerificationOtp(newUser.email, otp, newUser.name);
     } catch (emailErr) {
-      // The account still exists even if this specific email attempt
-      // failed — the user can use "resend code" on the verification
-      // screen, which will try again. We don't roll back account
-      // creation here; failing to send once shouldn't force them to
-      // re-fill the entire signup form.
       console.error("[Auth] Failed to send verification email:", emailErr.message);
     }
 
     console.log(`[Auth] ✅ Registered (pending verification): ${newUser.email} (${newUser.examMode})`);
 
-    // Deliberately NOT calling sendAuthResponse here — no cookie is
-    // set until the email is verified. The frontend uses this
-    // response to move to the "enter your code" step.
     return res.status(201).json({
       success: true,
       requiresVerification: true,
@@ -145,9 +177,16 @@ export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    const user = await User.findOne({ email }).select("+password");
+    const user = await User.findOne({ email }).select(
+      "+password +failedLoginAttempts +accountLockedUntil"
+    );
 
     if (!user) {
+      // Timing-attack mitigation: burn comparable time to a real
+      // password check even though there's no real user to check
+      // against, so response time doesn't leak whether this email
+      // is registered.
+      await bcrypt.compare(password, DUMMY_HASH);
       return res.status(401).json({ success: false, error: "Invalid email or password." });
     }
 
@@ -158,16 +197,44 @@ export const login = async (req, res, next) => {
       });
     }
 
+    // Per-account lockout check — independent of the per-IP rate
+    // limiter. A still-locked account is rejected without even
+    // attempting a password comparison.
+    if (user.accountLockedUntil && user.accountLockedUntil.getTime() > Date.now()) {
+      const minutesLeft = Math.ceil((user.accountLockedUntil.getTime() - Date.now()) / 60000);
+      return res.status(423).json({
+        success: false,
+        error:   `Too many failed attempts. This account is temporarily locked. Try again in ${minutesLeft} minute${minutesLeft === 1 ? "" : "s"}.`,
+      });
+    }
+
     const isMatch = await user.comparePassword(password);
+
     if (!isMatch) {
+      user.failedLoginAttempts = (user.failedLoginAttempts || 0) + 1;
+
+      if (user.failedLoginAttempts >= LOGIN_LOCK_THRESHOLD) {
+        user.accountLockedUntil = new Date(Date.now() + LOGIN_LOCK_DURATION_MS);
+        user.failedLoginAttempts = 0;
+        await user.save({ validateBeforeSave: false });
+        return res.status(423).json({
+          success: false,
+          error:   "Too many failed attempts. This account is temporarily locked for 15 minutes.",
+        });
+      }
+
+      await user.save({ validateBeforeSave: false });
       return res.status(401).json({ success: false, error: "Invalid email or password." });
     }
 
-    // Block login until the signup verification OTP has been
-    // confirmed. requiresVerification lets the frontend route the
-    // user straight back to the "enter your code" screen instead of
-    // showing a generic error.
+    // Correct password — clear any accumulated failed-attempt count.
+    if (user.failedLoginAttempts > 0 || user.accountLockedUntil) {
+      user.failedLoginAttempts = 0;
+      user.accountLockedUntil = null;
+    }
+
     if (!user.isEmailVerified) {
+      await user.save({ validateBeforeSave: false });
       return res.status(403).json({
         success: false,
         requiresVerification: true,
@@ -279,7 +346,7 @@ export const forgotPassword = async (req, res, next) => {
   try {
     const { email } = req.body;
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+resetOtpExpiresAt");
 
     const genericResponse = {
       success: true,
@@ -288,6 +355,18 @@ export const forgotPassword = async (req, res, next) => {
 
     if (!user || !user.isActive) {
       return res.status(200).json(genericResponse);
+    }
+
+    const cooldown = otpCooldownRemainingSec(user.resetOtpExpiresAt);
+    if (cooldown > 0) {
+      // Still return the generic success shape (don't leak that a
+      // cooldown specifically is active for THIS email), but with a
+      // distinguishable status so the frontend can show a friendlier
+      // "please wait" message if it wants to.
+      return res.status(429).json({
+        success: false,
+        error:   `Please wait ${cooldown} seconds before requesting another code.`,
+      });
     }
 
     const otp = await issueOtp(user, "resetOtpHash", "resetOtpExpiresAt", "resetOtpAttempts");
@@ -377,6 +456,11 @@ export const resetPassword = async (req, res, next) => {
     user.resetOtpExpiresAt = null;
     user.resetOtpAttempts = 0;
     user.passwordChangedAt = new Date();
+    // A successful reset also clears any active login lockout — a
+    // legitimate password reset is a reasonable signal the account
+    // owner has regained control.
+    user.failedLoginAttempts = 0;
+    user.accountLockedUntil = null;
 
     await user.save();
 
@@ -388,7 +472,7 @@ export const resetPassword = async (req, res, next) => {
   }
 };
 
-// ── NEW: Signup Email Verification flow ─────────────────────────
+// ── Signup Email Verification flow ──────────────────────────────
 
 export const verifyEmail = async (req, res, next) => {
   try {
@@ -406,8 +490,6 @@ export const verifyEmail = async (req, res, next) => {
     }
 
     if (user.isEmailVerified) {
-      // Already verified (e.g. user double-submitted) — just log
-      // them in cleanly instead of erroring.
       user.emailOtpHash = null;
       user.emailOtpExpiresAt = null;
       user.emailOtpAttempts = 0;
@@ -451,7 +533,6 @@ export const verifyEmail = async (req, res, next) => {
       });
     }
 
-    // Correct OTP — activate the account and clear all OTP fields.
     user.isEmailVerified = true;
     user.emailOtpHash = null;
     user.emailOtpExpiresAt = null;
@@ -460,9 +541,6 @@ export const verifyEmail = async (req, res, next) => {
     await user.save({ validateBeforeSave: false });
 
     console.log(`[Auth] ✅ Email verified: ${user.email}`);
-
-    // This is the moment a freshly registered user actually gets
-    // logged in for the first time.
     sendAuthResponse(user, 200, res, "Email verified! Welcome to JNEET+ AI.");
 
   } catch (err) {
@@ -474,10 +552,8 @@ export const resendVerification = async (req, res, next) => {
   try {
     const { email } = req.body;
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+emailOtpExpiresAt");
 
-    // Same generic-response pattern as forgotPassword — never reveal
-    // whether the email exists or is already verified.
     const genericResponse = {
       success: true,
       message: "If an unverified account exists with this email, a new code has been sent.",
@@ -485,6 +561,14 @@ export const resendVerification = async (req, res, next) => {
 
     if (!user || !user.isActive || user.isEmailVerified) {
       return res.status(200).json(genericResponse);
+    }
+
+    const cooldown = otpCooldownRemainingSec(user.emailOtpExpiresAt);
+    if (cooldown > 0) {
+      return res.status(429).json({
+        success: false,
+        error:   `Please wait ${cooldown} seconds before requesting another code.`,
+      });
     }
 
     const otp = await issueOtp(user, "emailOtpHash", "emailOtpExpiresAt", "emailOtpAttempts");

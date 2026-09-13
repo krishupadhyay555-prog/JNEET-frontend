@@ -102,7 +102,7 @@ export default function ForgotPassword() {
         // these are written to be user-facing (e.g. "Enter a valid email").
         setErrors({ email: err.response?.data?.error || "Please check your email and try again." });
       } else if (status === 429) {
-        setErrors({ email: "Too many attempts. Please try again in 15 minutes." });
+        setErrors({ email: err.response?.data?.error || "Too many attempts. Please try again in 15 minutes." });
       } else {
         // Any other status (404, 500, or anything unexpected) — never
         // surface the raw backend/route message to the user. Always a
