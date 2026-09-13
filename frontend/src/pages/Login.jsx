@@ -1,8 +1,14 @@
 // ============================================================
-//  JNEET+ AI — pages/Login.jsx  (v3.2 — real logo)
-//  CHANGED: the gradient-badge Sparkles icon replaced with the
-//  app's own JN logo image. Everything else (validation, layout,
-//  colors, animations) UNCHANGED from v3.1.
+//  JNEET+ AI — pages/Login.jsx  (v3.3 — Email Verification aware)
+//  CHANGED: status 403 from the backend can now mean TWO different
+//  things — a genuinely deactivated account, OR an unverified
+//  signup (new requiresVerification flag added in authController
+//  v7). Previously both showed "Account deactivated", which was
+//  actively wrong for the second case. Now: if requiresVerification
+//  is true, the user is redirected straight to Register.jsx's OTP
+//  step (via navigation state) instead of seeing an error at all —
+//  a genuinely deactivated account still shows the original message.
+//  Everything else (Forgot password link, layout) UNCHANGED from v3.2.
 // ============================================================
 
 import { useState }           from "react";
@@ -63,10 +69,9 @@ export default function Login() {
     } catch (err) {
       const status     = err.response?.status;
       const serverErrs = err.response?.data?.fieldErrors ?? [];
-      const serverMsg  = err.response?.data?.error ?? "";
 
       if (err.isNetworkError || err.isTimeout) {
-        setErrors({ password: "Can't reach the server. Is the backend running?" });
+        setErrors({ password: "Can't reach the server. Please try again in a moment." });
         return;
       }
 
@@ -79,12 +84,27 @@ export default function Login() {
 
       if (status === 401) {
         setErrors({ password: "Incorrect email or password" });
-      } else if (status === 403) {
+        return;
+      }
+
+      if (status === 403) {
+        // Two different meanings for the same status code — check
+        // the flag before assuming "deactivated".
+        if (err.response?.data?.requiresVerification) {
+          navigate("/register", {
+            state: { step: 2, email: err.response.data.email || form.email.trim().toLowerCase() },
+          });
+          return;
+        }
         setErrors({ email: "Account deactivated. Please contact support." });
-      } else if (status === 429) {
+        return;
+      }
+
+      if (status === 429) {
         setErrors({ password: "Too many attempts. Please try again in 15 minutes." });
       } else {
-        setErrors({ password: serverMsg || "Something went wrong. Please try again." });
+        // Never surface raw backend/route text for unexpected statuses.
+        setErrors({ password: "Something went wrong on our end. Please try again in a moment." });
       }
     } finally {
       setLoading(false);
@@ -94,7 +114,6 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-[#FDFBFC] flex items-center justify-center px-4 relative overflow-hidden">
 
-      {/* Ambient gradient wash — soft blue + pink glows, very light */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden>
         <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#93C5FD]/25 rounded-full blur-[110px] animate-pulse-soft" />
         <div

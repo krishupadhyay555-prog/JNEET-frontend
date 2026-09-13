@@ -1,18 +1,23 @@
 // ============================================================
-//  JNEET+ AI — pages/Register.jsx  (v3.3 — real logo)
-//  CHANGED: the gradient-badge Sparkles icon replaced with the
-//  app's own JN logo image — the badge now just frames the actual
-//  logo instead of a generic sparkle. Everything else (validation,
-//  layout, colors, animations) UNCHANGED from v3.2.
+//  JNEET+ AI — pages/Register.jsx  (v4 — Email Verification, 2-step)
+//  CHANGED: register() no longer logs the user in directly. On a
+//  successful 201, the backend returns { requiresVerification: true,
+//  email } instead of { student }. This page now has a second step
+//  (mirroring ForgotPassword.jsx's pattern) where the user enters
+//  the 6-digit code emailed to them; only THAT step's success
+//  actually logs them in (backend returns the full student payload
+//  there) and navigates to /dashboard. Includes a "Resend code"
+//  action. Styling/layout unchanged from v3.3 for step 1; step 2
+//  reuses the same card/animation patterns.
 // ============================================================
 
-import { useState }          from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useState, useEffect }          from "react";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useAuth }           from "../context/AuthContext.jsx";
 import { authApi }           from "../api/authApi.js";
 import { FormField }         from "../components/auth/FormField.jsx";
 import { Spinner }           from "../components/ui/Spinner.jsx";
-import { Eye, EyeOff, ArrowRight } from "lucide-react";
+import { Eye, EyeOff, ArrowRight, ArrowLeft } from "lucide-react";
 
 function validate(form) {
   const errs = {};
@@ -43,19 +48,43 @@ function validate(form) {
   return errs;
 }
 
+function validateOtp(form) {
+  const errs = {};
+  if (!form.otp.trim())
+    errs.otp = "Enter the code from your email";
+  else if (!/^\d{6}$/.test(form.otp.trim()))
+    errs.otp = "Code must be 6 digits";
+  return errs;
+}
+
 export default function Register() {
   const { login }   = useAuth();
   const navigate    = useNavigate();
+  const location    = useLocation();
+
+  // If Login.jsx redirected here because the account exists but
+  // isn't verified yet, location.state carries { step: 2, email }
+  // so we can skip straight to the OTP screen instead of making the
+  // user re-fill the whole signup form.
+  const arrivedForVerification = location.state?.step === 2 && location.state?.email;
+
+  // step 1 = the registration form, step 2 = entering the emailed code
+  const [step, setStep] = useState(arrivedForVerification ? 2 : 1);
 
   const [form, setForm] = useState({
     name:     "",
-    email:    "",
+    email:    arrivedForVerification ? location.state.email : "",
     password: "",
     examMode: "NEET",
+    otp:      "",
   });
-  const [errors,   setErrors]   = useState({});
-  const [loading,  setLoading]  = useState(false);
-  const [showPass, setShowPass] = useState(false);
+  const [errors,     setErrors]     = useState({});
+  const [loading,    setLoading]    = useState(false);
+  const [showPass,   setShowPass]   = useState(false);
+  const [infoMsg,    setInfoMsg]    = useState(
+    arrivedForVerification ? "Please verify your email to continue. Enter the code sent to your inbox, or resend a new one below." : ""
+  );
+  const [resending,  setResending]  = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,15 +107,17 @@ export default function Register() {
     setErrors({});
 
     try {
-      const res = await authApi.register({
+      await authApi.register({
         name:     form.name.trim(),
         email:    form.email.trim().toLowerCase(),
         password: form.password,
         examMode: form.examMode,
       });
 
-      login(res.data.student);
-      navigate("/dashboard", { replace: true });
+      // No login() / navigate here anymore — the account exists but
+      // isn't verified yet. Move to the OTP step instead.
+      setInfoMsg("Account created! Check your email for a 6-digit code (and check spam).");
+      setStep(2);
 
     } catch (err) {
       const status     = err.response?.status;
@@ -94,7 +125,7 @@ export default function Register() {
       const serverMsg  = err.response?.data?.error        ?? "";
 
       if (err.isNetworkError || err.isTimeout) {
-        setErrors({ name: "Can't reach the server. Is the backend running?" });
+        setErrors({ name: "Can't reach the server. Please try again in a moment." });
         return;
       }
 
@@ -111,18 +142,69 @@ export default function Register() {
         setErrors({ email: "This email is already registered. Please log in instead." });
       } else if (status === 429) {
         setErrors({ name: "Too many attempts. Please try again later." });
+      } else if (status === 400) {
+        setErrors({ name: serverMsg || "Please check your details and try again." });
       } else {
-        setErrors({ name: serverMsg || "Something went wrong. Please try again." });
+        setErrors({ name: "Something went wrong on our end. Please try again in a moment." });
       }
     } finally {
       setLoading(false);
     }
   };
 
+  const handleVerify = async (e) => {
+    e.preventDefault();
+
+    const clientErrs = validateOtp(form);
+    if (Object.keys(clientErrs).length > 0) {
+      setErrors(clientErrs);
+      return;
+    }
+
+    setLoading(true);
+    setErrors({});
+
+    try {
+      const res = await authApi.verifyEmail({
+        email: form.email.trim().toLowerCase(),
+        otp:   form.otp.trim(),
+      });
+
+      login(res.data.student);
+      navigate("/dashboard", { replace: true });
+
+    } catch (err) {
+      const status = err.response?.status;
+
+      if (err.isNetworkError || err.isTimeout) {
+        setErrors({ otp: "Can't reach the server. Please try again in a moment." });
+      } else if (status === 400 || status === 429) {
+        setErrors({ otp: err.response?.data?.error || "Invalid or expired code. Please try again." });
+      } else {
+        setErrors({ otp: "Something went wrong on our end. Please try again in a moment." });
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleResend = async () => {
+    setResending(true);
+    setErrors({});
+    try {
+      await authApi.resendVerification({ email: form.email.trim().toLowerCase() });
+      setInfoMsg("A new code has been sent. Check your inbox (and spam folder).");
+    } catch {
+      setInfoMsg("");
+      setErrors({ otp: "Couldn't resend the code right now. Please try again in a moment." });
+    } finally {
+      setResending(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#FDFBFC] flex items-center justify-center px-4 py-8 relative overflow-hidden">
 
-      {/* Ambient gradient wash — soft blue + pink glows, very light */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#93C5FD]/25 rounded-full blur-[110px] animate-pulse-soft" />
         <div
@@ -150,117 +232,185 @@ export default function Register() {
               />
             </div>
             <h1 className="text-xl font-bold tracking-tight text-[#2D2A32]">JNEET+ AI</h1>
-            <p className="text-[#6B6572] text-xs mt-0.5">Create your account</p>
+            <p className="text-[#6B6572] text-xs mt-0.5">
+              {step === 1 ? "Create your account" : "Verify your email"}
+            </p>
           </div>
 
-          <form onSubmit={handleSubmit} noValidate className="space-y-4">
-
-            {/* Name */}
-            <div className="animate-fade-up" style={{ animationDelay: "80ms", animationFillMode: "backwards" }}>
-              <FormField
-                label="Full Name"
-                name="name"
-                type="text"
-                value={form.name}
-                onChange={handleChange}
-                error={errors.name}
-                placeholder="Your name"
-                autoComplete="name"
-                disabled={loading}
-              />
+          {infoMsg && step === 2 && (
+            <div className="bg-[#EBF5FF] border border-[#93C5FD]/40 text-[#2D6CB0] text-xs rounded-xl px-3.5 py-2.5 mb-4 animate-fade-in">
+              {infoMsg}
             </div>
+          )}
 
-            {/* Email */}
-            <div className="animate-fade-up" style={{ animationDelay: "120ms", animationFillMode: "backwards" }}>
-              <FormField
-                label="Email"
-                name="email"
-                type="email"
-                value={form.email}
-                onChange={handleChange}
-                error={errors.email}
-                placeholder="you@example.com"
-                autoComplete="email"
-                disabled={loading}
-              />
-            </div>
+          {step === 1 ? (
+            <form onSubmit={handleSubmit} noValidate className="space-y-4">
 
-            {/* Password */}
-            <div className="animate-fade-up" style={{ animationDelay: "160ms", animationFillMode: "backwards" }}>
-              <FormField
-                label="Password"
-                name="password"
-                type={showPass ? "text" : "password"}
-                value={form.password}
-                onChange={handleChange}
-                error={errors.password}
-                placeholder="Min. 8 characters, letters + numbers"
-                autoComplete="new-password"
-                disabled={loading}
-              >
-                <button
-                  type="button"
-                  tabIndex={-1}
-                  onClick={() => setShowPass((v) => !v)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9B95A8] hover:text-[#6B6572] transition-colors duration-150 p-0.5"
-                >
-                  {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
-                </button>
-              </FormField>
-            </div>
-
-            {/* Exam mode */}
-            <div className="animate-fade-up" style={{ animationDelay: "200ms", animationFillMode: "backwards" }}>
-              <label className="text-xs text-[#6B6572] block mb-1.5 font-medium">
-                Which exam are you preparing for?
-              </label>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { value: "NEET", label: "🩺 NEET UG"   },
-                  { value: "JEE",  label: "⚙️ JEE Mains" },
-                ].map(({ value, label }) => (
-                  <button
-                    key={value}
-                    type="button"
-                    onClick={() => setForm((p) => ({ ...p, examMode: value }))}
-                    className={[
-                      "py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 border active:scale-[0.97]",
-                      form.examMode === value
-                        ? "bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8] border-transparent text-white shadow-[0_4px_14px_rgba(147,197,253,0.35)]"
-                        : "bg-white border-[#EDE6F3] text-[#6B6572] hover:border-[#93C5FD]/50 hover:text-[#2D2A32]",
-                    ].join(" ")}
-                  >
-                    {label}
-                  </button>
-                ))}
+              {/* Name */}
+              <div className="animate-fade-up" style={{ animationDelay: "80ms", animationFillMode: "backwards" }}>
+                <FormField
+                  label="Full Name"
+                  name="name"
+                  type="text"
+                  value={form.name}
+                  onChange={handleChange}
+                  error={errors.name}
+                  placeholder="Your name"
+                  autoComplete="name"
+                  disabled={loading}
+                />
               </div>
-            </div>
 
-            {/* Submit */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
-                hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
-                disabled:opacity-50 disabled:cursor-not-allowed
-                text-white font-semibold py-2.5 rounded-xl
-                transition-all duration-200
-                flex items-center justify-center gap-2 text-sm mt-1
-                active:scale-[0.98] hover:-translate-y-0.5 group"
-            >
-              {loading ? (
-                <>
-                  <Spinner size={15} />
-                  <span>Creating account...</span>
-                </>
-              ) : (
-                <>
-                  <span>Create Account</span>
-                  <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                </>
-              )}
-            </button>
-          </form>
+              {/* Email */}
+              <div className="animate-fade-up" style={{ animationDelay: "120ms", animationFillMode: "backwards" }}>
+                <FormField
+                  label="Email"
+                  name="email"
+                  type="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  error={errors.email}
+                  placeholder="you@example.com"
+                  autoComplete="email"
+                  disabled={loading}
+                />
+              </div>
+
+              {/* Password */}
+              <div className="animate-fade-up" style={{ animationDelay: "160ms", animationFillMode: "backwards" }}>
+                <FormField
+                  label="Password"
+                  name="password"
+                  type={showPass ? "text" : "password"}
+                  value={form.password}
+                  onChange={handleChange}
+                  error={errors.password}
+                  placeholder="Min. 8 characters, letters + numbers"
+                  autoComplete="new-password"
+                  disabled={loading}
+                >
+                  <button
+                    type="button"
+                    tabIndex={-1}
+                    onClick={() => setShowPass((v) => !v)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9B95A8] hover:text-[#6B6572] transition-colors duration-150 p-0.5"
+                  >
+                    {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
+                  </button>
+                </FormField>
+              </div>
+
+              {/* Exam mode */}
+              <div className="animate-fade-up" style={{ animationDelay: "200ms", animationFillMode: "backwards" }}>
+                <label className="text-xs text-[#6B6572] block mb-1.5 font-medium">
+                  Which exam are you preparing for?
+                </label>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { value: "NEET", label: "🩺 NEET UG"   },
+                    { value: "JEE",  label: "⚙️ JEE Mains" },
+                  ].map(({ value, label }) => (
+                    <button
+                      key={value}
+                      type="button"
+                      onClick={() => setForm((p) => ({ ...p, examMode: value }))}
+                      className={[
+                        "py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 border active:scale-[0.97]",
+                        form.examMode === value
+                          ? "bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8] border-transparent text-white shadow-[0_4px_14px_rgba(147,197,253,0.35)]"
+                          : "bg-white border-[#EDE6F3] text-[#6B6572] hover:border-[#93C5FD]/50 hover:text-[#2D2A32]",
+                      ].join(" ")}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
+                  hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
+                  disabled:opacity-50 disabled:cursor-not-allowed
+                  text-white font-semibold py-2.5 rounded-xl
+                  transition-all duration-200
+                  flex items-center justify-center gap-2 text-sm mt-1
+                  active:scale-[0.98] hover:-translate-y-0.5 group"
+              >
+                {loading ? (
+                  <>
+                    <Spinner size={15} />
+                    <span>Creating account...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Create Account</span>
+                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+                  </>
+                )}
+              </button>
+            </form>
+          ) : (
+            <form onSubmit={handleVerify} noValidate className="space-y-4">
+              <div className="animate-fade-up" style={{ animationDelay: "40ms", animationFillMode: "backwards" }}>
+                <FormField
+                  label="6-digit code"
+                  name="otp"
+                  type="text"
+                  value={form.otp}
+                  onChange={handleChange}
+                  error={errors.otp}
+                  placeholder="000000"
+                  autoComplete="one-time-code"
+                  disabled={loading}
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
+                  hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
+                  disabled:opacity-50 disabled:cursor-not-allowed
+                  text-white font-semibold py-2.5 rounded-xl
+                  transition-all duration-200
+                  flex items-center justify-center gap-2 text-sm mt-1
+                  active:scale-[0.98] hover:-translate-y-0.5 group"
+              >
+                {loading ? (
+                  <>
+                    <Spinner size={15} />
+                    <span>Verifying...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Verify & Continue</span>
+                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+                  </>
+                )}
+              </button>
+
+              <button
+                type="button"
+                onClick={handleResend}
+                disabled={resending || loading}
+                className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors duration-150 disabled:opacity-50"
+              >
+                {resending ? "Resending..." : "Resend code"}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => { setStep(1); setErrors({}); setInfoMsg(""); }}
+                className="w-full flex items-center justify-center gap-1.5 text-[#8B8594] hover:text-[#6B6572] text-xs mt-1 transition-colors duration-150"
+              >
+                <ArrowLeft size={12} />
+                <span>Back to edit details</span>
+              </button>
+            </form>
+          )}
 
           <p className="text-center text-[#6B6572] text-xs mt-5">
             Already have an account?{" "}

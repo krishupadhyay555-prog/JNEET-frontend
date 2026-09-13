@@ -1,7 +1,7 @@
 // ============================================================
-//  JNEET+ AI — api/authApi.js  (v2 — Forgot Password added)
-//  ADDED: forgotPassword, resetPassword — matching new backend
-//  routes POST /api/auth/forgot-password and POST /api/auth/reset-password.
+//  JNEET+ AI — api/authApi.js  (v3 — Email Verification added)
+//  ADDED: verifyEmail, resendVerification — matching new backend
+//  routes POST /api/auth/verify-email and POST /api/auth/resend-verification.
 //  Everything else UNCHANGED.
 // ============================================================
 
@@ -16,4 +16,7 @@ export const authApi = {
 
   forgotPassword: (data) => api.post("/auth/forgot-password", data),
   resetPassword:  (data) => api.post("/auth/reset-password", data),
+
+  verifyEmail:        (data) => api.post("/auth/verify-email", data),
+  resendVerification: (data) => api.post("/auth/resend-verification", data),
 };
