@@ -1,39 +1,54 @@
 // ============================================================
-//  JNEET+ AI — services/emailService.js  (NEW)
-//  Sends transactional emails via Brevo's SMTP relay using
-//  Nodemailer. Currently only used for the Forgot Password OTP
-//  flow, but written generically (sendEmail helper) so any future
-//  transactional email (e.g. welcome email, receipt) can reuse the
-//  same transporter without duplicating SMTP setup.
+//  JNEET+ AI — services/emailService.js  (v2 — Brevo HTTPS API)
+//  REWRITTEN: no longer uses Nodemailer + SMTP. Render's free tier
+//  blocks all outbound traffic on SMTP ports (25/465/587), which
+//  made the previous SMTP-based version silently unreachable in
+//  production. This version calls Brevo's transactional email
+//  REST API directly over plain HTTPS (port 443), which is never
+//  blocked by any hosting provider. Uses Node's built-in fetch
+//  (available natively since Node 18+, no extra dependency needed
+//  — nodemailer can be uninstalled: `npm uninstall nodemailer`).
 //
-//  Credentials come from Brevo dashboard → Settings → SMTP & API →
-//  SMTP tab. EMAIL_FROM should be an address on your verified
-//  domain (e.g. noreply@jneetai.com) — requires domain verification
-//  in Brevo (adds DNS TXT records, free) for best deliverability;
-//  until that's done, Brevo's own sending address will work too.
+//  Get your API key from: Brevo dashboard → Settings → SMTP & API
+//  → API Keys tab (NOT the SMTP tab — different key, different
+//  purpose). EMAIL_FROM should be an address on your verified
+//  sender/domain (until jneetai.com is domain-verified in Brevo,
+//  use the email address your Brevo account itself is registered
+//  under — Brevo allows sending from your own account email
+//  immediately, no extra verification needed for that one address).
 // ============================================================
 
-import nodemailer from "nodemailer";
 import { env } from "../config/env.js";
 
-const transporter = nodemailer.createTransport({
-  host: env.BREVO_SMTP_HOST,
-  port: Number(env.BREVO_SMTP_PORT),
-  secure: false, // Brevo uses STARTTLS on port 587, not implicit TLS
-  auth: {
-    user: env.BREVO_SMTP_USER,
-    pass: env.BREVO_SMTP_PASS,
-  },
-});
+const BREVO_API_URL = "https://api.brevo.com/v3/smtp/email";
 
 async function sendEmail({ to, subject, html, text }) {
-  await transporter.sendMail({
-    from: `"JNEET+ AI" <${env.EMAIL_FROM}>`,
-    to,
-    subject,
-    html,
-    text,
+  if (!env.BREVO_API_KEY || !env.EMAIL_FROM) {
+    throw new Error(
+      "Email service is not configured (missing BREVO_API_KEY or EMAIL_FROM in environment variables)."
+    );
+  }
+
+  const response = await fetch(BREVO_API_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      "api-key": env.BREVO_API_KEY,
+    },
+    body: JSON.stringify({
+      sender: { name: "JNEET+ AI", email: env.EMAIL_FROM },
+      to: [{ email: to }],
+      subject,
+      htmlContent: html,
+      textContent: text,
+    }),
   });
+
+  if (!response.ok) {
+    const errBody = await response.text().catch(() => "");
+    throw new Error(`Brevo API error (${response.status}): ${errBody}`);
+  }
 }
 
 export async function sendPasswordResetOtp(toEmail, otp, studentName) {

@@ -1,15 +1,24 @@
 // ============================================================
-//  JNEET+ AI — config/env.js  (Updated — Brevo SMTP vars added)
-//  ADDED: BREVO_SMTP_HOST, BREVO_SMTP_PORT, BREVO_SMTP_USER,
-//  BREVO_SMTP_PASS, EMAIL_FROM — needed for the Forgot Password
-//  OTP email feature (services/emailService.js). Get the SMTP
-//  credentials from your Brevo dashboard: Settings → SMTP & API →
-//  SMTP tab. EMAIL_FROM is the address emails will appear to come
-//  from (e.g. noreply@jneetai.com) — this only works once you've
-//  verified jneetai.com as a sender domain in Brevo (adds a couple
-//  of DNS TXT records, free, no real inbox needed for this).
-//  Following the same fail-fast pattern as every other required
-//  env var already in this file — everything else UNCHANGED.
+//  JNEET+ AI — config/env.js  (v3 — Brevo API key, optional vars)
+//  CHANGED (critical fix): the 5 SMTP-based Brevo vars are replaced
+//  with just 2: BREVO_API_KEY and EMAIL_FROM — and both are now
+//  OPTIONAL (.optional() instead of required). Two real bugs this
+//  fixes:
+//    1. Render's FREE TIER blocks all outbound SMTP traffic on
+//       ports 25/465/587 (a policy change Render made in Sept 2025).
+//       Brevo's SMTP relay uses port 587, so it was silently
+//       unreachable from Render — this is why forgot-password
+//       requests were hanging/failing with "can't reach server".
+//       Switching to Brevo's HTTPS REST API (services/emailService.js)
+//       avoids this entirely, since port 443 is never blocked.
+//    2. Making these vars REQUIRED broke GitHub Actions CI (and any
+//       other environment without Brevo configured) — process.exit(1)
+//       fired on every test run because CI has no .env file with
+//       these values. Making them optional means the app (and CI)
+//       can boot fine without them; the forgot-password FEATURE
+//       simply returns a clear error if actually invoked without a
+//       configured API key, instead of crashing the entire server.
+//  Everything else UNCHANGED from the previous version.
 // ============================================================
 
 import { z } from "zod";
@@ -58,27 +67,12 @@ const envSchema = z.object({
     .enum(["true", "false"])
     .default("false"),
 
-  // ── NEW: Brevo SMTP (for Forgot Password OTP emails) ─────────
-  BREVO_SMTP_HOST: z
-    .string({ required_error: "BREVO_SMTP_HOST is required in .env" })
-    .min(1, "BREVO_SMTP_HOST cannot be empty"),
-
-  BREVO_SMTP_PORT: z
-    .string()
-    .regex(/^\d+$/, "BREVO_SMTP_PORT must be a number")
-    .default("587"),
-
-  BREVO_SMTP_USER: z
-    .string({ required_error: "BREVO_SMTP_USER is required in .env" })
-    .min(1, "BREVO_SMTP_USER cannot be empty"),
-
-  BREVO_SMTP_PASS: z
-    .string({ required_error: "BREVO_SMTP_PASS is required in .env" })
-    .min(1, "BREVO_SMTP_PASS cannot be empty"),
-
-  EMAIL_FROM: z
-    .string({ required_error: "EMAIL_FROM is required in .env" })
-    .min(1, "EMAIL_FROM cannot be empty"),
+  // ── Brevo transactional email API (Forgot Password OTP) ───────
+  // OPTIONAL on purpose — see file header. If either is missing,
+  // the app boots fine everywhere (including CI); only an actual
+  // forgot-password request will surface a clear runtime error.
+  BREVO_API_KEY: z.string().optional(),
+  EMAIL_FROM:    z.string().optional(),
 });
 
 const parseResult = envSchema.safeParse(process.env);
@@ -101,3 +95,9 @@ export const env = {
   RE_NEET_ACTIVE: parseResult.data.RE_NEET_ACTIVE === "true",
   ENABLE_AI_CHAT_TITLES: parseResult.data.ENABLE_AI_CHAT_TITLES === "true",
 };
+
+// Non-fatal warning (not process.exit) if email isn't configured —
+// visible in logs but never crashes the app or CI.
+if (!env.BREVO_API_KEY || !env.EMAIL_FROM) {
+  console.warn("[env] ⚠️  BREVO_API_KEY / EMAIL_FROM not set — Forgot Password emails will not send until configured.");
+}
