@@ -35,6 +35,7 @@ import { ErrorBoundary }    from "./components/ui/ErrorBoundary.jsx";
 import { ProtectedRoute }   from "./components/ProtectedRoute.jsx";
 import Login                from "./pages/Login.jsx";
 import Register             from "./pages/Register.jsx";
+import ForgotPassword       from "./pages/ForgotPassword.jsx";
 import Dashboard            from "./pages/Dashboard.jsx";
 import AskAI                from "./pages/AskAI.jsx";
 import Profile              from "./pages/Profile.jsx";
@@ -153,6 +154,7 @@ export default function App() {
             <Routes>
               <Route path="/login"    element={<Login />}    />
               <Route path="/register" element={<Register />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
 
               <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
               <Route path="/ask"       element={<ProtectedRoute><AskAI /></ProtectedRoute>} />

@@ -1,10 +1,8 @@
 // ============================================================
-//  JNEET+ AI — api/authApi.js
-//  Matches backend v2 routes:
-//    POST /api/auth/register
-//    POST /api/auth/login
-//    POST /api/auth/logout
-//    GET  /api/auth/me
+//  JNEET+ AI — api/authApi.js  (v2 — Forgot Password added)
+//  ADDED: forgotPassword, resetPassword — matching new backend
+//  routes POST /api/auth/forgot-password and POST /api/auth/reset-password.
+//  Everything else UNCHANGED.
 // ============================================================
 
 import api from "./axiosInstance.js";
@@ -15,4 +13,7 @@ export const authApi = {
   logout:   ()     => api.post("/auth/logout"),
   getMe:    ()     => api.get("/auth/me"),
   updateTargetExam: (data) => api.patch("/auth/me/target-exam", data),
+
+  forgotPassword: (data) => api.post("/auth/forgot-password", data),
+  resetPassword:  (data) => api.post("/auth/reset-password", data),
 };

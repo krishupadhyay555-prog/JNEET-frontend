@@ -165,6 +165,14 @@ export default function Login() {
                   {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
                 </button>
               </FormField>
+              <div className="text-right mt-1.5">
+                <Link
+                  to="/forgot-password"
+                  className="text-[#8B8594] hover:text-[#5B9FE8] text-xs transition-colors duration-150"
+                >
+                  Forgot password?
+                </Link>
+              </div>
             </div>
 
             {/* Submit */}
