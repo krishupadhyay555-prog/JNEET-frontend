@@ -1,28 +1,10 @@
 // ============================================================
-//  JNEET+ AI — App.jsx  (v8 — back-button fix + staleness timeout)
-//  FIXED (root cause of "back button exits the app instead of
-//  going to Dashboard"): the root "/" route used to navigate
-//  straight to getLastPage() with `replace: true`. Replace never
-//  creates a new browser-history entry — it overwrites the current
-//  one — so Dashboard never got a history entry of its own to land
-//  on. Pressing back had nothing app-internal to return to, so it
-//  jumped straight out of the tab's history to whatever page was
-//  open before jneetai.com.
-//  New RootRedirect component now does this in two steps: (1)
-//  replace the current entry with /dashboard (so Dashboard becomes
-//  the "base" of this session, same as before — no extra "/" entry
-//  left dangling), then (2) PUSH the actual last-page on top (a
-//  real new history entry). Back button now correctly lands on
-//  Dashboard first, and only exits the app on a second back-press
-//  — which is the expected, non-jarring behavior.
-//  ADDED: staleness check — getLastPage() now also reads a
-//  last-activity timestamp; if more than 8 hours have passed since
-//  the student was last active in the app, the resume-last-page
-//  feature is skipped entirely and Dashboard is shown fresh. This
-//  matches "if the student hasn't opened the app in 6-10 hours,
-//  just show Dashboard" — implemented as a simple client-side
-//  timestamp comparison, no backend change needed.
-//  Everything else — AccentSync, all other routes — UNCHANGED.
+//  JNEET+ AI — App.jsx  (v9 — Forgot Password route added)
+//  ADDED: import for ForgotPassword.jsx + its public route
+//  "/forgot-password", placed alongside /login and /register since
+//  it's a public, pre-login page.
+//  Everything else — RootRedirect, staleness timeout, AccentSync,
+//  all other routes — UNCHANGED from v8.
 // ============================================================
 
 import { useEffect } from "react";
@@ -105,7 +87,7 @@ function RouteTracker() {
   return null;
 }
 
-// ── NEW: two-step redirect so Dashboard always gets its own
+// ── two-step redirect so Dashboard always gets its own
 // history entry, and back-button behaves correctly. ────────────
 function RootRedirect() {
   const navigate = useNavigate();
@@ -152,8 +134,8 @@ export default function App() {
           <BrowserRouter>
             <RouteTracker />
             <Routes>
-              <Route path="/login"    element={<Login />}    />
-              <Route path="/register" element={<Register />} />
+              <Route path="/login"           element={<Login />}          />
+              <Route path="/register"        element={<Register />}       />
               <Route path="/forgot-password" element={<ForgotPassword />} />
 
               <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
