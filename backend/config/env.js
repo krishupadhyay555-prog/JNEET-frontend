@@ -1,6 +1,15 @@
 // ============================================================
-//  JNEET+ AI — config/env.js  (Updated)
-//  ADDED: ENABLE_AI_CHAT_TITLES flag — see comment below.
+//  JNEET+ AI — config/env.js  (Updated — Brevo SMTP vars added)
+//  ADDED: BREVO_SMTP_HOST, BREVO_SMTP_PORT, BREVO_SMTP_USER,
+//  BREVO_SMTP_PASS, EMAIL_FROM — needed for the Forgot Password
+//  OTP email feature (services/emailService.js). Get the SMTP
+//  credentials from your Brevo dashboard: Settings → SMTP & API →
+//  SMTP tab. EMAIL_FROM is the address emails will appear to come
+//  from (e.g. noreply@jneetai.com) — this only works once you've
+//  verified jneetai.com as a sender domain in Brevo (adds a couple
+//  of DNS TXT records, free, no real inbox needed for this).
+//  Following the same fail-fast pattern as every other required
+//  env var already in this file — everything else UNCHANGED.
 // ============================================================
 
 import { z } from "zod";
@@ -45,15 +54,31 @@ const envSchema = z.object({
     .string({ required_error: "COOKIE_SECRET is required in .env" })
     .min(10, "COOKIE_SECRET must be at least 10 characters"),
 
-  // NEW: AI-generated chat titles use an EXTRA Gemini call per new
-  // chat (on top of the main response call) — doubling quota usage.
-  // Default OFF so local development/testing doesn't burn through
-  // the free-tier daily limit (20 requests/day). Set to "true" in
-  // production once billing is enabled, or whenever quota isn't a
-  // concern anymore.
   ENABLE_AI_CHAT_TITLES: z
     .enum(["true", "false"])
     .default("false"),
+
+  // ── NEW: Brevo SMTP (for Forgot Password OTP emails) ─────────
+  BREVO_SMTP_HOST: z
+    .string({ required_error: "BREVO_SMTP_HOST is required in .env" })
+    .min(1, "BREVO_SMTP_HOST cannot be empty"),
+
+  BREVO_SMTP_PORT: z
+    .string()
+    .regex(/^\d+$/, "BREVO_SMTP_PORT must be a number")
+    .default("587"),
+
+  BREVO_SMTP_USER: z
+    .string({ required_error: "BREVO_SMTP_USER is required in .env" })
+    .min(1, "BREVO_SMTP_USER cannot be empty"),
+
+  BREVO_SMTP_PASS: z
+    .string({ required_error: "BREVO_SMTP_PASS is required in .env" })
+    .min(1, "BREVO_SMTP_PASS cannot be empty"),
+
+  EMAIL_FROM: z
+    .string({ required_error: "EMAIL_FROM is required in .env" })
+    .min(1, "EMAIL_FROM cannot be empty"),
 });
 
 const parseResult = envSchema.safeParse(process.env);

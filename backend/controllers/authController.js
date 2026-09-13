@@ -1,15 +1,39 @@
 // ============================================================
-//  JNEET+ AI — controllers/authController.js  (v4 — wmsData removed)
-//  REMOVED: `wmsData` from getMe() and updateTargetExam()'s
-//  response objects — the field no longer exists on User.js.
-//  Everything else — register/login/logout logic, cookie config,
-//  error handling — is UNCHANGED.
+//  JNEET+ AI — controllers/authController.js  (v5 — Forgot Password)
+//  ADDED: forgotPassword and resetPassword controller functions.
+//
+//  Security decisions made here (matching earlier discussion):
+//    - OTP is a 6-digit code, generated with crypto (not Math.random,
+//      which isn't cryptographically secure).
+//    - OTP is bcrypt-hashed before storage — same treatment as the
+//      login password. The plain OTP only ever exists in memory
+//      long enough to email it; it's never persisted anywhere.
+//    - 10-minute expiry (resetOtpExpiresAt).
+//    - Max 3 verification attempts per issued OTP (resetOtpAttempts)
+//      — after that, the OTP is invalidated and a new one must be
+//      requested. Prevents brute-forcing a 6-digit code (1 in a
+//      million per guess, but even so — no unlimited guessing).
+//    - forgotPassword ALWAYS returns the same success message
+//      whether or not the email exists in the database. This is
+//      deliberate: it prevents "email enumeration" (an attacker
+//      probing which emails are registered by checking which ones
+//      trigger a different response).
+//    - On successful reset, passwordChangedAt is set to now(). The
+//      `protect` middleware (authMiddleware.js) compares this
+//      against each JWT's issued-at time, so every device that was
+//      logged in before the reset gets logged out automatically —
+//      the user must log in fresh with the new password everywhere.
+//  Everything else — register/login/logout/getMe/updateTargetExam
+//  — UNCHANGED from v4.
 // ============================================================
 
-import jwt   from "jsonwebtoken";
-import User  from "../models/User.js";
-import { env } from "../config/env.js";
+import jwt      from "jsonwebtoken";
+import crypto   from "crypto";
+import bcrypt   from "bcryptjs";
+import User     from "../models/User.js";
+import { env }  from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
+import { sendPasswordResetOtp } from "../services/emailService.js";
 
 function getCookieOptions() {
   const isProd = env.NODE_ENV === "production";
@@ -201,6 +225,138 @@ export const updateTargetExam = async (req, res, next) => {
         createdAt: user.createdAt,
       },
     });
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── NEW: Forgot Password flow ──────────────────────────────────
+
+export const forgotPassword = async (req, res, next) => {
+  try {
+    const { email } = req.body;
+
+    const user = await User.findOne({ email });
+
+    // Deliberately generic response whether or not the user exists,
+    // to prevent email enumeration. We only actually send an email
+    // and touch the database if the user is real.
+    const genericResponse = {
+      success: true,
+      message: "If an account exists with this email, a reset code has been sent.",
+    };
+
+    if (!user || !user.isActive) {
+      return res.status(200).json(genericResponse);
+    }
+
+    // Generate a cryptographically random 6-digit OTP (000000-999999,
+    // zero-padded). crypto.randomInt is used instead of Math.random,
+    // which is not suitable for anything security-sensitive.
+    const otp = crypto.randomInt(0, 1000000).toString().padStart(6, "0");
+
+    const salt = await bcrypt.genSalt(10);
+    user.resetOtpHash      = await bcrypt.hash(otp, salt);
+    user.resetOtpExpiresAt = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
+    user.resetOtpAttempts  = 0;
+    await user.save({ validateBeforeSave: false });
+
+    try {
+      await sendPasswordResetOtp(user.email, otp, user.name);
+    } catch (emailErr) {
+      // If the email genuinely fails to send, don't leave a dangling
+      // OTP the user can never receive — clear it and surface a real
+      // error instead of the generic success message.
+      user.resetOtpHash = null;
+      user.resetOtpExpiresAt = null;
+      await user.save({ validateBeforeSave: false });
+      console.error("[Auth] Failed to send password reset email:", emailErr.message);
+      return res.status(502).json({
+        success: false,
+        error:   "Could not send the reset email right now. Please try again in a few minutes.",
+      });
+    }
+
+    console.log(`[Auth] 🔑 Password reset OTP sent: ${user.email}`);
+    return res.status(200).json(genericResponse);
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const resetPassword = async (req, res, next) => {
+  try {
+    const { email, otp, newPassword } = req.body;
+
+    const user = await User.findOne({ email }).select(
+      "+resetOtpHash +resetOtpExpiresAt +resetOtpAttempts +password"
+    );
+
+    if (!user || !user.isActive || !user.resetOtpHash || !user.resetOtpExpiresAt) {
+      return res.status(400).json({
+        success: false,
+        error:   "Invalid or expired reset code. Please request a new one.",
+      });
+    }
+
+    if (user.resetOtpExpiresAt.getTime() < Date.now()) {
+      user.resetOtpHash = null;
+      user.resetOtpExpiresAt = null;
+      user.resetOtpAttempts = 0;
+      await user.save({ validateBeforeSave: false });
+      return res.status(400).json({
+        success: false,
+        error:   "This reset code has expired. Please request a new one.",
+      });
+    }
+
+    if (user.resetOtpAttempts >= 3) {
+      user.resetOtpHash = null;
+      user.resetOtpExpiresAt = null;
+      user.resetOtpAttempts = 0;
+      await user.save({ validateBeforeSave: false });
+      return res.status(429).json({
+        success: false,
+        error:   "Too many incorrect attempts. Please request a new reset code.",
+      });
+    }
+
+    const isOtpValid = await bcrypt.compare(otp, user.resetOtpHash);
+
+    if (!isOtpValid) {
+      user.resetOtpAttempts += 1;
+      await user.save({ validateBeforeSave: false });
+      const remaining = 3 - user.resetOtpAttempts;
+      return res.status(400).json({
+        success: false,
+        error:   remaining > 0
+          ? `Incorrect code. ${remaining} attempt${remaining === 1 ? "" : "s"} remaining.`
+          : "Incorrect code. Please request a new reset code.",
+      });
+    }
+
+    // OTP correct — set the new password and clear all reset fields.
+    // Setting `password` here triggers the pre-save bcrypt-hash hook
+    // on the User model automatically, same as register/login.
+    user.password = newPassword;
+    user.resetOtpHash = null;
+    user.resetOtpExpiresAt = null;
+    user.resetOtpAttempts = 0;
+
+    // This is the session-invalidation step: any JWT issued before
+    // this moment will be rejected by authMiddleware.js on its next
+    // use, logging the user out of every other device/tab.
+    user.passwordChangedAt = new Date();
+
+    await user.save();
+
+    console.log(`[Auth] 🔒 Password reset successful: ${user.email}`);
+
+    // Log the user in immediately on the device that just completed
+    // the reset, so they don't have to separately log in again here.
+    sendAuthResponse(user, 200, res, "Password reset successful. You're now logged in.");
 
   } catch (err) {
     next(err);

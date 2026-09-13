@@ -1,16 +1,12 @@
 // ============================================================
-//  JNEET+ AI — schemas/authSchemas.js  (v2 — stronger password rule)
-//  CHANGED: password rule only.
-//    - min length 6 → 8
-//    - added: must contain at least one letter AND one number
-//  Email validation UNCHANGED — z.string().email() already
-//  correctly rejects malformed input (missing @, no domain, etc).
-//  What it can't do — and nothing purely format-based can — is
-//  confirm the email address actually belongs to a real, reachable
-//  inbox. That needs an email-verification-link flow (separate
-//  feature: needs a User model change + an email-sending service,
-//  neither of which exist yet — next step, not guessed here).
-//  Everything else in this file is UNCHANGED.
+//  JNEET+ AI — schemas/authSchemas.js  (v3 — Forgot Password schemas)
+//  ADDED: forgotPasswordSchema (just needs a valid email) and
+//  resetPasswordSchema (email + the 6-digit OTP + a new password,
+//  reusing the EXACT same strength rule as registerSchema so users
+//  can't set a weaker password during reset than they could during
+//  signup).
+//  Everything else — registerSchema, loginSchema, targetExamSchema
+//  — UNCHANGED from v2.
 // ============================================================
 
 import { z } from "zod";
@@ -48,11 +44,6 @@ export const loginSchema = z.object({
     .toLowerCase()
     .email("Please provide a valid email address"),
 
-  // Login intentionally does NOT re-check the strength rule here —
-  // an existing user's password was valid under whatever rule was
-  // active when they registered. Login only confirms "non-empty";
-  // the actual correctness check is the bcrypt compare in
-  // authController.js, not this schema.
   password: z
     .string({ required_error: "Password is required" })
     .min(1, "Password is required"),
@@ -69,4 +60,37 @@ export const targetExamSchema = z.object({
   targetExamPromptDismissed: z
     .boolean()
     .optional(),
+});
+
+// ── NEW: Forgot Password flow ──────────────────────────────────
+
+export const forgotPasswordSchema = z.object({
+  email: z
+    .string({ required_error: "Email is required" })
+    .trim()
+    .toLowerCase()
+    .email("Please provide a valid email address"),
+});
+
+export const resetPasswordSchema = z.object({
+  email: z
+    .string({ required_error: "Email is required" })
+    .trim()
+    .toLowerCase()
+    .email("Please provide a valid email address"),
+
+  otp: z
+    .string({ required_error: "OTP is required" })
+    .trim()
+    .length(6, "OTP must be exactly 6 digits")
+    .regex(/^\d{6}$/, "OTP must contain only numbers"),
+
+  // Same strength rule as registerSchema — a reset shouldn't allow
+  // a weaker password than signup would have.
+  newPassword: z
+    .string({ required_error: "New password is required" })
+    .min(8,   "Password must be at least 8 characters")
+    .max(128, "Password is too long")
+    .regex(/[A-Za-z]/, "Password must include at least one letter")
+    .regex(/[0-9]/,    "Password must include at least one number"),
 });

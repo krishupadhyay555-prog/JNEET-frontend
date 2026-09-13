@@ -1,16 +1,23 @@
 // ============================================================
-//  JNEET+ AI — models/User.js  (v5 — wmsData removed)
-//  REMOVED: the `wmsData` embedded array and its sub-schema. WMS
-//  is no longer manually self-reported — it's now calculated live
-//  from the student's TestAttempt history (see wmsController.js /
-//  wmsScoringService.js). Nothing reads or writes user.wmsData
-//  anymore, so keeping it around would just be dead weight —
-//  same reasoning as removing `language` earlier.
-//  Safe change: any existing wmsData on old documents in MongoDB
-//  just becomes an orphaned, ignored field — Mongoose won't touch
-//  it, nothing reads it, no migration needed.
-//  Everything else — password rule, examMode, targetExam, etc — is
-//  UNCHANGED.
+//  JNEET+ AI — models/User.js  (v6 — forgot-password OTP fields added)
+//  ADDED (for Forgot Password / OTP feature):
+//    - resetOtpHash: the OTP is NEVER stored in plain text — only
+//      its bcrypt hash, same approach already used for the login
+//      password. select:false so it's never accidentally returned
+//      in any query response.
+//    - resetOtpExpiresAt: OTP is valid for 10 minutes only.
+//    - resetOtpAttempts: counts failed verification attempts for
+//      the CURRENT otp — locks after 3 to prevent brute-forcing a
+//      6-digit code. Reset to 0 whenever a fresh OTP is issued.
+//    - passwordChangedAt: timestamp of the last successful
+//      password change (via reset). authMiddleware.js compares
+//      this against the JWT's issued-at time — any token issued
+//      BEFORE the last password change is rejected, so resetting
+//      your password logs out every other device/session
+//      automatically (session invalidation), without needing any
+//      change to how tokens are generated.
+//  Everything else — name/email/password rules, examMode,
+//  targetExam, comparePassword — UNCHANGED from v5.
 // ============================================================
 
 import mongoose from "mongoose";
@@ -56,6 +63,12 @@ const userSchema = new mongoose.Schema(
 
     lastLogin: { type: Date, default: null },
     isActive: { type: Boolean, default: true },
+
+    // ── Forgot Password / OTP fields (NEW) ──────────────────────
+    resetOtpHash:       { type: String, default: null, select: false },
+    resetOtpExpiresAt:  { type: Date,   default: null, select: false },
+    resetOtpAttempts:   { type: Number, default: 0,    select: false },
+    passwordChangedAt:  { type: Date,   default: null },
   },
   { timestamps: true }
 );
