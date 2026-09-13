@@ -93,15 +93,21 @@ export default function ForgotPassword() {
       setInfoMsg("If an account exists with this email, a 6-digit code has been sent. Check your inbox (and spam folder).");
       setStep(2);
     } catch (err) {
-      const status    = err.response?.status;
-      const serverMsg = err.response?.data?.error ?? "";
+      const status = err.response?.status;
 
       if (err.isNetworkError || err.isTimeout) {
-        setErrors({ email: "Can't reach the server. Is the backend running?" });
+        setErrors({ email: "Can't reach the server. Please try again in a moment." });
+      } else if (status === 400) {
+        // Only trust the backend message for validation-style errors —
+        // these are written to be user-facing (e.g. "Enter a valid email").
+        setErrors({ email: err.response?.data?.error || "Please check your email and try again." });
       } else if (status === 429) {
         setErrors({ email: "Too many attempts. Please try again in 15 minutes." });
       } else {
-        setErrors({ email: serverMsg || "Something went wrong. Please try again." });
+        // Any other status (404, 500, or anything unexpected) — never
+        // surface the raw backend/route message to the user. Always a
+        // clean, generic fallback instead.
+        setErrors({ email: "Something went wrong on our end. Please try again in a moment." });
       }
     } finally {
       setLoading(false);
@@ -133,15 +139,17 @@ export default function ForgotPassword() {
       navigate("/dashboard", { replace: true });
 
     } catch (err) {
-      const status    = err.response?.status;
-      const serverMsg = err.response?.data?.error ?? "";
+      const status = err.response?.status;
 
       if (err.isNetworkError || err.isTimeout) {
-        setErrors({ otp: "Can't reach the server. Is the backend running?" });
-      } else if (status === 429) {
-        setErrors({ otp: serverMsg || "Too many incorrect attempts. Please request a new code." });
+        setErrors({ otp: "Can't reach the server. Please try again in a moment." });
+      } else if (status === 400 || status === 429) {
+        // These ARE written to be user-facing (wrong/expired code,
+        // attempts remaining, etc.) — safe to show directly.
+        setErrors({ otp: err.response?.data?.error || "Invalid or expired code. Please try again." });
       } else {
-        setErrors({ otp: serverMsg || "Invalid or expired code. Please try again." });
+        // Any other status — never surface raw backend/route text.
+        setErrors({ otp: "Something went wrong on our end. Please try again in a moment." });
       }
     } finally {
       setLoading(false);
