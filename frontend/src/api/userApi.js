@@ -11,5 +11,6 @@ export const userApi = {
   changePassword:    (data) => api.patch("/user/password", data),
   deleteAccount:     (data) => api.delete("/user/account", { data }),
   setDateOfBirth:    (data) => api.patch("/user/date-of-birth", data),
+  updateExamMode: (examMode) => api.patch("/user/exam-mode", { examMode }),
   updatePreferences: (data) => api.patch("/user/preferences", data),
 };

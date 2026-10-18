@@ -17,6 +17,7 @@ import {
   deleteAccountSchema,
   dateOfBirthSchema,
   preferencesSchema,
+  examModeSchema,
 } from "../schemas/userSchemas.js";
 import {
   updateProfile,
@@ -24,6 +25,7 @@ import {
   deleteAccount,
   setDateOfBirth,
   updatePreferences,
+  updateExamMode,
 } from "../controllers/userController.js";
 
 const router = Router();
@@ -35,5 +37,6 @@ router.patch( "/password",      authLimiter, validate(changePasswordSchema), cha
 router.delete("/account",       authLimiter, validate(deleteAccountSchema),  deleteAccount);
 router.patch( "/date-of-birth", otpIpLimiter, validate(dateOfBirthSchema),   setDateOfBirth);
 router.patch( "/preferences",   validate(preferencesSchema),    updatePreferences);
+router.patch( "/exam-mode",     validate(examModeSchema),       updateExamMode);
 
 export default router;

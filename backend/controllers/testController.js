@@ -28,6 +28,7 @@ const SUBJECTS_BY_EXAM = {
 const FULL_TEST_CONFIG = {
   NEET: {
     maxMarks: 720,
+    durationMinutes: 200,   // NTA: 3h 20m
     subjects: [
       { subject: "Physics",   count: 45 },
       { subject: "Chemistry", count: 45 },
@@ -36,6 +37,7 @@ const FULL_TEST_CONFIG = {
   },
   JEE: {
     maxMarks: 300,
+    durationMinutes: 180,   // NTA: 3h
     subjects: [
       { subject: "Physics",     count: 25 },
       { subject: "Chemistry",  count: 25 },
@@ -220,6 +222,7 @@ export const startFullTest = async (req, res, next) => {
       chapter: `${examMode} Full Test`,
       mode: "test",
       maxMarks: config.maxMarks,
+      durationMinutes: config.durationMinutes,
       questions: shuffled.map((q) => ({
         questionId:    q._id,
         subject:       q.subject,
@@ -240,6 +243,8 @@ export const startFullTest = async (req, res, next) => {
       attemptId: attempt._id,
       totalQuestions: attempt.totalQuestions,
       maxMarks: attempt.maxMarks,
+      durationMinutes: attempt.durationMinutes,
+      startedAt: attempt.startedAt,
       questions: attempt.questions.map((q) => ({
         questionId: q.questionId,
         questionText: q.questionText,
@@ -434,16 +439,20 @@ export const getAvailableChapters = async (req, res, next) => {
 
 export const getHistory = async (req, res, next) => {
   try {
-    const attempts = await TestAttempt.find({
-      userId: req.user.id,
-      status: "submitted",
-    })
-      .select("-questions")
-      .sort({ submittedAt: -1 })
-      .limit(50)
-      .lean();
+    // Each exam keeps its own history: a student who switches NEET <-> JEE
+    // must not see (or have averaged in) the other exam's attempts.
+    const filter = { userId: req.user.id, examMode: req.user.examMode, status: "submitted" };
 
-    return res.json({ success: true, attempts });
+    const [attempts, total] = await Promise.all([
+      TestAttempt.find(filter)
+        .select("-questions")
+        .sort({ submittedAt: -1 })
+        .limit(50)
+        .lean(),
+      TestAttempt.countDocuments(filter),
+    ]);
+
+    return res.json({ success: true, attempts, total });
 
   } catch (err) {
     next(err);

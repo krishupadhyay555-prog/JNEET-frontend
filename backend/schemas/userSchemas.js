@@ -46,3 +46,10 @@ export const preferencesSchema = z.object({
     invalid_type_error: "Invalid teaching style",
   }),
 });
+
+export const examModeSchema = z.object({
+  examMode: z.enum(["NEET", "JEE"], {
+    required_error: "Choose NEET or JEE",
+    invalid_type_error: "examMode must be either NEET or JEE",
+  }),
+});

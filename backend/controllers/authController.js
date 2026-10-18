@@ -325,7 +325,7 @@ export const getMe = async (req, res, next) => {
 export const updateTargetExam = async (req, res, next) => {
   try {
     const option = req.body.targetExam
-      ? getTargetExamOption(req.body.targetExam)
+      ? getTargetExamOption(req.body.targetExam, req.user.examMode)
       : null;
 
     if (req.body.targetExam && !option) {
@@ -339,11 +339,8 @@ export const updateTargetExam = async (req, res, next) => {
 
     if (option) update.targetExamPromptDismissed = true;
 
-    const user = await User.findByIdAndUpdate(
-      req.user.id,
-      { $set: update },
-      { new: true, runValidators: true }
-    ).lean();
+    await User.updateOne({ _id: req.user.id }, { $set: update }, { runValidators: true });
+    const user = await User.findById(req.user.id).lean();
 
     if (!user || !user.isActive) {
       return res.status(404).json({ success: false, error: "User account not found or deactivated." });

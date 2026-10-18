@@ -20,6 +20,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, X as XIcon, SkipForward, ChevronRight } from "lucide-react";
 import { testApi } from "../api/testApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
+import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
 import toast from "react-hot-toast";
 
 const OPTION_LETTERS = ["A", "B", "C", "D"];
@@ -36,6 +37,7 @@ export default function RevisionSession() {
   const [feedback, setFeedback] = useState({});
   const [answering, setAnswering] = useState(false);
   const [finishing, setFinishing] = useState(false);
+  const [confirmExit, setConfirmExit] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -56,6 +58,16 @@ export default function RevisionSession() {
           return;
         }
 
+        // Resuming after a refresh: answers already saved on the server come back,
+        // and we continue from the first question not answered yet.
+        const restored = {};
+        let firstOpen = -1;
+        a.questions.forEach((q, i) => {
+          if (q.selectedIndex !== null && q.selectedIndex !== undefined) restored[q.questionId] = q.selectedIndex;
+          else if (firstOpen === -1) firstOpen = i;
+        });
+        setLocalAnswers(restored);
+        setCurrentIndex(firstOpen === -1 ? a.questions.length - 1 : firstOpen);
         setAttempt(a);
       } catch {
         toast.error("Could not load this revision.");
@@ -67,6 +79,26 @@ export default function RevisionSession() {
 
     return () => { cancelled = true; };
   }, [attemptId, navigate]);
+
+  // A restored answer has no explanation on screen yet — re-submitting the SAME
+  // choice is idempotent on the server and returns the feedback for it.
+  const currentQid = attempt?.questions?.[currentIndex]?.questionId;
+  const restoredChoice = currentQid !== undefined ? localAnswers[currentQid] : undefined;
+  const needsFeedback = currentQid !== undefined && restoredChoice !== undefined && !feedback[currentQid];
+  useEffect(() => {
+    if (!needsFeedback) return undefined;
+    let cancelled = false;
+    testApi.answerQuestion(attemptId, { questionId: currentQid, selectedIndex: restoredChoice })
+      .then((res) => {
+        if (cancelled) return;
+        setFeedback((prev) => ({ ...prev, [currentQid]: {
+          isCorrect: res.data.isCorrect, correctIndex: res.data.correctIndex,
+          explanation: res.data.explanation, skipped: restoredChoice === null,
+        } }));
+      })
+      .catch(() => { /* feedback is a nicety; the answer itself is already saved */ });
+    return () => { cancelled = true; };
+  }, [needsFeedback, attemptId, currentQid, restoredChoice]);
 
   if (loading) {
     return (
@@ -122,21 +154,17 @@ export default function RevisionSession() {
       await testApi.submit(attemptId, payload);
       navigate(`/test/result/${attemptId}`, { replace: true });
     } catch (err) {
-      toast.error(err.response?.data?.error || "Could not finish this revision.");
+      if (err.response?.status === 409) {
+        navigate(`/test/result/${attemptId}`, { replace: true });
+      } else {
+        toast.error(err.isNetworkError ? "No connection — try again once you're back online." : (err.response?.data?.error || "Could not finish this revision."));
+      }
     } finally {
       setFinishing(false);
     }
   };
 
-  const handleExit = async () => {
-    if (
-      window.confirm(
-        "Exit this revision? Whatever you've answered so far will be submitted and scored — unanswered questions count as unattempted."
-      )
-    ) {
-      await handleFinish();
-    }
-  };
+  const handleExit = () => setConfirmExit(true);
 
   const goNext = () => {
     if (isLast) {
@@ -150,6 +178,17 @@ export default function RevisionSession() {
 
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
+      <ConfirmDialog
+        open={confirmExit}
+        title="Exit this revision?"
+        message="Whatever you've answered so far will be submitted and scored — unanswered questions count as unattempted."
+        confirmLabel="Submit & exit"
+        cancelLabel="Keep going"
+        tone="danger"
+        busy={finishing}
+        onConfirm={() => { setConfirmExit(false); handleFinish(); }}
+        onCancel={() => setConfirmExit(false)}
+      />
       <nav className="border-b border-bg-border bg-bg-surface/90 backdrop-blur-xl px-5 py-3.5 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-3 min-w-0">
           <button

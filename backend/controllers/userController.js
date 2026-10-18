@@ -51,7 +51,9 @@ export const changePassword = async (req, res, next) => {
     }
 
     if (!(await user.comparePassword(currentPassword))) {
-      return res.status(401).json({
+      // 400, not 401: the student IS signed in — a 401 would make the app think the
+      // session expired and log them out for a simple typo.
+      return res.status(400).json({
         success: false,
         error:   "Current password is incorrect.",
         fieldErrors: [{ field: "currentPassword", message: "Current password is incorrect." }],
@@ -91,7 +93,7 @@ export const deleteAccount = async (req, res, next) => {
     }
 
     if (!(await user.comparePassword(password))) {
-      return res.status(401).json({
+      return res.status(400).json({
         success: false,
         error:   "Incorrect password.",
         fieldErrors: [{ field: "password", message: "Incorrect password." }],
@@ -159,6 +161,33 @@ export const setDateOfBirth = async (req, res, next) => {
     }
 
     return res.json({ success: true, student: toStudent(user), parentRequestSent });
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── Switch between NEET and JEE ──────────────────────────────────
+// Chats, tests and progress are kept separately per exam, so switching never
+// deletes anything — it just shows the other exam's own data. The saved target
+// date belongs to the old exam, so it is cleared and the student is asked again.
+export const updateExamMode = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user.id);
+    if (!user || !user.isActive) {
+      return res.status(404).json({ success: false, error: "User not found." });
+    }
+
+    const { examMode } = req.body;
+    if (user.examMode !== examMode) {
+      user.examMode = examMode;
+      user.targetExam = null;
+      user.targetExamPromptDismissed = false;
+      await user.save({ validateBeforeSave: false });
+      setSessionCookie(res, user);
+    }
+
+    return res.json({ success: true, student: toStudent(user) });
 
   } catch (err) {
     next(err);

@@ -27,6 +27,7 @@ export const getSummary = async (req, res, next) => {
           // a real ObjectId), and every student would just see an
           // empty WMS summary forever with no error to explain why.
           userId: new mongoose.Types.ObjectId(req.user.id),
+          examMode: req.user.examMode,   // each exam has its own weak/strong map
           status: "submitted",
         },
       },

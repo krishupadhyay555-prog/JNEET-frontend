@@ -12,6 +12,7 @@ import { ExamCountdown } from "../components/dashboard/ExamCountdown.jsx";
 import { TargetExamModal } from "../components/dashboard/TargetExamModal.jsx";
 import { QuoteOfDay } from "../components/dashboard/QuoteOfDay.jsx";
 import { ProfileMenu } from "../components/ProfileMenu.jsx";
+import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
 import { getTargetExam } from "../config/targetExams.js";
 import { testApi } from "../api/testApi.js";
 import { notesApi } from "../api/notesApi.js";
@@ -39,11 +40,14 @@ function formatRelative(dateStr) {
 
 function FeatureCard({ icon, iconBg, title, desc, available, onClick }) {
   return (
-    <div
+    <button
+      type="button"
       onClick={available ? onClick : undefined}
-      className={`relative bg-bg-card border rounded-2xl p-5 flex items-center gap-4 transition group
+      disabled={!available}
+      className={`relative w-full text-left bg-bg-card border rounded-2xl p-5 flex items-center gap-4 transition group
+        active:scale-[0.985] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500/50
         ${available
-          ? "border-bg-border hover:border-violet-600/40 cursor-pointer"
+          ? "border-bg-border hover:border-violet-600/40 hover:-translate-y-0.5 hover:shadow-card cursor-pointer"
           : "border-bg-border/50 opacity-40 cursor-not-allowed select-none"
         }`}
     >
@@ -60,19 +64,20 @@ function FeatureCard({ icon, iconBg, title, desc, available, onClick }) {
         <p className="font-semibold text-sm text-fg-primary mb-0.5">{title}</p>
         <p className="text-xs text-gray-600">{desc}</p>
       </div>
-    </div>
+    </button>
   );
 }
 
 export default function Dashboard() {
-  const { user, examMode, updateTargetExam } = useAuth();
+  const { user, examMode, updateTargetExam, switchExamMode } = useAuth();
   const navigate = useNavigate();
   const [targetModalOpen, setTargetModalOpen] = useState(
     !!user && !user.targetExam && !user.targetExamPromptDismissed
   );
 
   const isNewAccount = !user?.lastLogin;
-  const selectedTarget = getTargetExam(user?.targetExam);
+  const found = getTargetExam(user?.targetExam);
+  const selectedTarget = found && found.examMode === examMode ? found : null;
 
   const [lastTestAt, setLastTestAt]         = useState(undefined);
   const [lastRevisionAt, setLastRevisionAt] = useState(undefined);
@@ -80,6 +85,8 @@ export default function Dashboard() {
 
   useEffect(() => {
     let cancelled = false;
+    setLastTestAt(undefined);       // switching exams: show neutral text until this exam's data arrives
+    setLastRevisionAt(undefined);
 
     testApi.getHistory()
       .then((res) => {
@@ -106,14 +113,29 @@ export default function Dashboard() {
       });
 
     return () => { cancelled = true; };
-  }, []);
+  }, [examMode]);
 
-  const handleModeSwitch = async (mode) => {
-    if (mode === examMode) return;
-    toast(`To switch to ${mode} mode, log out and register again.`, {
-      icon: "i",
-      duration: 5000,
-    });
+  // NEET <-> JEE: nothing is deleted — each exam keeps its own chats, tests and progress.
+  const [pendingMode, setPendingMode] = useState(null);
+  const [switching, setSwitching] = useState(false);
+
+  const confirmModeSwitch = async () => {
+    if (!pendingMode) return;
+    setSwitching(true);
+    try {
+      await switchExamMode(pendingMode);
+      toast.success(`Switched to ${pendingMode} mode`);
+      setPendingMode(null);
+      setTargetModalOpen(true);            // ask which exam they are targeting now
+    } catch (err) {
+      toast.error(err.response?.data?.error || "Could not switch exam mode. Please try again.");
+    } finally {
+      setSwitching(false);
+    }
+  };
+
+  const handleModeSwitch = (mode) => {
+    if (mode !== examMode) setPendingMode(mode);
   };
 
   const handleTargetSave = async (targetExam, dismissed = true) => {
@@ -184,7 +206,18 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
+      <ConfirmDialog
+        open={!!pendingMode}
+        title={`Switch to ${pendingMode} mode?`}
+        message={`Your ${examMode} chats, tests and progress are kept safe — you'll see them again whenever you switch back. Revision, mock tests and the AI mentor will now follow ${pendingMode}.`}
+        confirmLabel={`Switch to ${pendingMode}`}
+        busy={switching}
+        onConfirm={confirmModeSwitch}
+        onCancel={() => setPendingMode(null)}
+      />
+
       <TargetExamModal
+        key={examMode}
         user={user}
         open={targetModalOpen}
         allowLater={!isNewAccount}
@@ -239,6 +272,7 @@ export default function Dashboard() {
             {["NEET", "JEE"].map((mode) => (
               <button
                 key={mode}
+                aria-pressed={examMode === mode}
                 onClick={() => handleModeSwitch(mode)}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition active:scale-[0.97]
                   ${examMode === mode
@@ -267,6 +301,7 @@ export default function Dashboard() {
         <div className="mb-6">
           <ExamCountdown
             targetExam={user?.targetExam}
+            examMode={examMode}
             onChangeTarget={() => setTargetModalOpen(true)}
           />
         </div>

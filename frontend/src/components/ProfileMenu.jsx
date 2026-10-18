@@ -96,6 +96,9 @@ export function ProfileMenu() {
       <button
         ref={buttonRef}
         onClick={() => setOpen((v) => !v)}
+        aria-label="Account menu"
+        aria-haspopup="menu"
+        aria-expanded={open}
         className="flex items-center gap-2 pl-1.5 pr-2.5 py-1.5 rounded-full
           border border-transparent hover:border-bg-border hover:bg-bg-hover
           transition-all duration-150 active:scale-95"
@@ -113,6 +116,7 @@ export function ProfileMenu() {
       {open && createPortal(
         <div
           ref={menuRef}
+          role="menu"
           style={{ position: "fixed", top: menuPos.top, right: menuPos.right }}
           className="w-64 bg-bg-surface border border-bg-border
             rounded-2xl shadow-card overflow-hidden z-[999] animate-scale-in origin-top-right"

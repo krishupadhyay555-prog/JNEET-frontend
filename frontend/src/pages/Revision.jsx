@@ -15,6 +15,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import { useGoBack } from "../hooks/useGoBack.js";
 import { ArrowLeft } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { testApi } from "../api/testApi.js";
@@ -30,6 +31,7 @@ const SUBJECTS_BY_EXAM = {
 export default function Revision() {
   const { examMode } = useAuth();
   const navigate = useNavigate();
+  const goBack = useGoBack();
   const subjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
 
   const [activeSubject, setActiveSubject] = useState(subjects[0]);
@@ -75,7 +77,7 @@ export default function Revision() {
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate(-1)}
+          onClick={goBack}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
           title="Back"
         >

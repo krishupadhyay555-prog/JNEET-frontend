@@ -12,6 +12,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import { useGoBack } from "../hooks/useGoBack.js";
 import { ArrowLeft, TrendingUp, Flame, ClipboardList, Target } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { testApi } from "../api/testApi.js";
@@ -22,8 +23,12 @@ const SUBJECTS_BY_EXAM = {
   JEE:  ["Physics", "Chemistry", "Mathematics"],
 };
 
-function dayKey(dateStr) {
-  return new Date(dateStr).toISOString().slice(0, 10);
+// Calendar day in the STUDENT's own timezone (an IST student studying at 1 am
+// must count for that day, not the previous UTC day).
+function dayKey(dateOrStr) {
+  const d = new Date(dateOrStr);
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
 function computeStreak(attempts) {
@@ -31,16 +36,14 @@ function computeStreak(attempts) {
 
   const uniqueDays = [...new Set(attempts.map((a) => dayKey(a.submittedAt)))].sort().reverse();
 
-  const todayKey = dayKey(new Date().toISOString());
-  const yesterdayKey = dayKey(new Date(Date.now() - 86400000).toISOString());
+  const todayKey = dayKey(new Date());
+  const yesterdayKey = dayKey(new Date(Date.now() - 86400000));
 
   if (uniqueDays[0] !== todayKey && uniqueDays[0] !== yesterdayKey) return 0;
 
   let streak = 1;
   for (let i = 1; i < uniqueDays.length; i++) {
-    const prev = new Date(uniqueDays[i - 1]);
-    const curr = new Date(uniqueDays[i]);
-    const diffDays = Math.round((prev - curr) / 86400000);
+    const diffDays = Math.round((new Date(`${uniqueDays[i - 1]}T12:00:00`) - new Date(`${uniqueDays[i]}T12:00:00`)) / 86400000);
     if (diffDays === 1) {
       streak += 1;
     } else {
@@ -123,14 +126,19 @@ function StatCard({ icon, label, value }) {
 export default function Analytics() {
   const { examMode } = useAuth();
   const navigate = useNavigate();
+  const goBack = useGoBack();
   const subjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
 
   const [attempts, setAttempts] = useState(null);
+  const [historyTotal, setHistoryTotal] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     testApi.getHistory()
-      .then((res) => setAttempts((res.data.attempts ?? []).slice().reverse())) // oldest-first for the trend chart
+      .then((res) => {
+        setAttempts((res.data.attempts ?? []).slice().reverse()); // oldest-first for the trend chart
+        setHistoryTotal(res.data.total ?? (res.data.attempts ?? []).length);
+      })
       .catch(() => {
         toast.error("Could not load your analytics");
         setAttempts([]);
@@ -162,7 +170,7 @@ export default function Analytics() {
     const maxCount = Math.max(1, fullTestCount, ...Object.values(bySubjectCount));
 
     return {
-      totalAttempts: attempts.length,
+      totalAttempts: Math.max(historyTotal, attempts.length),
       totalQuestions,
       avgAccuracy,
       streak,
@@ -170,7 +178,7 @@ export default function Analytics() {
       fullTestCount,
       maxCount,
     };
-  }, [attempts, subjects]);
+  }, [attempts, subjects, historyTotal]);
 
   const recentAttempts = attempts ? attempts.slice(-8).reverse() : [];
 
@@ -178,7 +186,7 @@ export default function Analytics() {
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate(-1)}
+          onClick={goBack}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
           title="Back"
         >

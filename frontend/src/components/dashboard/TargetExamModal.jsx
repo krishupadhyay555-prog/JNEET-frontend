@@ -32,29 +32,36 @@
 //  allowLater gating on the X button and footer "Later" button.
 // ============================================================
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { X, CalendarDays } from "lucide-react";
 import { getUpcomingTargetExams } from "../../config/targetExams.js";
 
 export function TargetExamModal({ user, open, onClose, onSave, allowLater = true }) {
+  const examMode = user?.examMode ?? "NEET";
   const [selected, setSelected] = useState(user?.targetExam ?? "");
   const [saving, setSaving] = useState(false);
 
   // Computed once per mount — only exams that haven't happened yet.
-  const upcomingExams = useMemo(() => getUpcomingTargetExams(), []);
+  const upcomingExams = useMemo(() => getUpcomingTargetExams(examMode), [examMode]);
 
   const selectedExam = useMemo(
     () => upcomingExams.find((exam) => exam.key === selected),
     [selected, upcomingExams]
   );
 
-  if (!open) return null;
+  // Escape = "Later" (only when the student is allowed to skip)
+  useEffect(() => {
+    if (!open || !allowLater) return;
+    const onKey = (e) => { if (e.key === "Escape") onSave(null, true).then(onClose).catch(() => {}); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, allowLater, onSave, onClose]);
 
   const handleSave = async () => {
-    if (!selected) return;
+    if (!selectedExam) return;
     setSaving(true);
     try {
-      await onSave(selected);
+      await onSave(selectedExam.key);
       onClose();
     } finally {
       setSaving(false);
@@ -71,15 +78,17 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
     }
   };
 
+  if (!open) return null;
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/55 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/55 backdrop-blur-sm animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="target-exam-title">
       <div className="w-full max-w-md rounded-2xl border border-bg-border bg-bg-surface/95 shadow-card backdrop-blur-xl p-5 animate-scale-in">
         <div className="flex items-start gap-3 mb-5">
           <div className="w-10 h-10 rounded-xl bg-violet-600/15 border border-violet-500/20 flex items-center justify-center shrink-0">
             <CalendarDays size={18} className="text-violet-600" />
           </div>
           <div className="flex-1">
-            <h2 className="text-lg font-bold text-fg-primary">Which NEET exam are you preparing for?</h2>
+            <h2 id="target-exam-title" className="text-lg font-bold text-fg-primary">Which {examMode} exam are you preparing for?</h2>
             <p className="text-xs text-gray-600 mt-1">
               Your dashboard countdown will follow this target.
             </p>
@@ -88,6 +97,7 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
             type="button"
             onClick={handleLater}
             disabled={saving}
+            aria-label="Close"
             className="text-gray-600 hover:text-fg-primary p-1 rounded-lg hover:bg-bg-hover transition"
           >
             <X size={16} />
@@ -135,7 +145,7 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
 
         {upcomingExams.some((e) => e.tentative) && (
           <p className="text-[10px] text-gray-600 mt-3">
-            Tentative dates are based on past-year trends — NTA hasn't officially confirmed them yet.
+            Tentative dates are based on past-year trends — NTA hasn't officially confirmed them yet. Always check the official NTA / JoSAA notice.
           </p>
         )}
 
@@ -157,7 +167,7 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
             <button
               type="button"
               onClick={handleSave}
-              disabled={!selected || saving}
+              disabled={!selectedExam || saving}
               className="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {saving ? "Saving..." : "Save Target"}

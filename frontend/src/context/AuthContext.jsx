@@ -117,6 +117,13 @@ export function AuthProvider({ children }) {
     return res.data.student;
   }, []);
 
+  // Switch between NEET and JEE (each keeps its own chats, tests and progress).
+  const switchExamMode = useCallback(async (examMode) => {
+    const res = await userApi.updateExamMode(examMode);
+    setUser(res.data.student);
+    return res.data.student;
+  }, []);
+
   // Replace the cached student with a fresh payload returned by an endpoint
   const setStudent = useCallback((student) => {
     if (student) setUser(student);
@@ -155,6 +162,7 @@ export function AuthProvider({ children }) {
         refreshUser,
         setStudent,
         updateTargetExam,
+        switchExamMode,
         updateProfile,
         changePassword,
         deleteAccount,
