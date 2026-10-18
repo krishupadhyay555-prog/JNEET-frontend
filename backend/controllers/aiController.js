@@ -44,7 +44,7 @@ async function writeLedger(row) {
 }
 
 export const askAI = async (req, res, next) => {
-  const { prompt, sessionId } = req.body;
+  const { prompt, sessionId, replaceFromMessageId } = req.body;
   const user = req.user;
 
   try {
@@ -96,6 +96,7 @@ export const askAI = async (req, res, next) => {
         userId: user.id,
         examMode: user.examMode,
         sessionId,
+        replaceFromMessageId,
       });
     } catch (err) {
       console.warn("[AI] could not load history (continuing without):", err.message);

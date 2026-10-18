@@ -41,7 +41,7 @@ export function shapeHistory(messages, {
   return picked;
 }
 
-export async function loadHistory({ userId, examMode, sessionId }) {
+export async function loadHistory({ userId, examMode, sessionId, replaceFromMessageId = null }) {
   if (!sessionId) return [];
 
   // Positional projection: reads only the one requested session.
@@ -51,5 +51,10 @@ export async function loadHistory({ userId, examMode, sessionId }) {
   ).lean();
 
   const session = chat?.sessions?.[0];
-  return shapeHistory(session?.messages);
+  let messages = session?.messages;
+  if (replaceFromMessageId && messages) {
+    const at = messages.findIndex((m) => String(m._id) === String(replaceFromMessageId));
+    if (at >= 0) messages = messages.slice(0, at);
+  }
+  return shapeHistory(messages);
 }

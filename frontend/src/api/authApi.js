@@ -10,7 +10,7 @@ export const authApi = {
   register: (data) => api.post("/auth/register", data),
   login:    (data) => api.post("/auth/login", data),
   logout:   ()     => api.post("/auth/logout"),
-  getMe:    ()     => api.get("/auth/me"),
+  getMe:    ()     => api.get("/auth/me", { timeout: 8000 }),
   updateTargetExam: (data) => api.patch("/auth/me/target-exam", data),
 
   forgotPassword: (data) => api.post("/auth/forgot-password", data),

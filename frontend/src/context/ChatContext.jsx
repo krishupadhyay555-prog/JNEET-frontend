@@ -30,7 +30,7 @@
 // ============================================================
 
 import {
-  createContext, useContext, useState, useCallback, useRef,
+  createContext, useContext, useState, useCallback, useRef, useEffect,
 } from "react";
 import { chatApi }  from "../api/chatApi.js";
 import { streamAsk, aiApi } from "../api/aiApi.js";
@@ -43,6 +43,9 @@ function normalizeSessionId(id) {
   if (!id) return null;
   return id.toString();
 }
+
+// Real (saved) message ids are 24-char Mongo ids; anything else is a local placeholder.
+const isServerId = (id) => typeof id === "string" && /^[a-f\d]{24}$/i.test(id);
 
 function sortSessions(list) {
   const pinned = list
@@ -72,6 +75,10 @@ export function ChatProvider({ children }) {
   const [failedPrompt,     setFailedPrompt]      = useState(null);
 
   const abortRef = useRef(null);
+  const messagesRef = useRef([]);
+  // Latest partial answer of the stream in flight (so "Stop" keeps what was written)
+  const partialRef = useRef(null);
+  useEffect(() => { messagesRef.current = messages; }, [messages]);
   const latestLoadRef = useRef(0);
   const activeSessionRef = useRef(null);
   // Which session the CURRENTLY in-flight stream belongs to — used
@@ -322,15 +329,24 @@ export function ChatProvider({ children }) {
   }, [sessions]);
 
   // ── Send message with SSE streaming ─────────────────────
-  const sendMessage = useCallback(async (prompt) => {
-    if (!prompt.trim() || isStreaming) return;
+  // opts.truncateFromId: regenerate / edit — the turn starting at this (saved)
+  // user message is replaced by the new one. The old turn is only removed on
+  // the server once the new answer has arrived, so a failure loses nothing.
+  const sendMessage = useCallback(async (prompt, opts = {}) => {
+    const text = prompt?.trim();
+    if (!text || isStreaming) return;
+    const truncateFromId = isServerId(opts.truncateFromId) ? opts.truncateFromId : null;
 
-    const tempUserMsg = {
-      _id:     `tmp-user-${Date.now()}`,
-      role:    "user",
-      content: prompt.trim(),
-    };
-    setMessages((prev) => [...prev, tempUserMsg]);
+    const backup = messagesRef.current;
+    const tempKey = `tmp-${Date.now()}`;
+    const tempUserMsg = { _id: `tmp-user-${tempKey}`, key: `u-${tempKey}`, role: "user", content: text };
+    const tempAiId = `tmp-ai-${tempKey}`;
+
+    setMessages((prev) => {
+      if (!truncateFromId) return [...prev, tempUserMsg];
+      const at = prev.findIndex((m) => m._id === truncateFromId);
+      return [...(at >= 0 ? prev.slice(0, at) : prev), tempUserMsg];
+    });
     setIsStreaming(true);
     setStreamingText("");
     setAiNotice(null);
@@ -349,90 +365,105 @@ export function ChatProvider({ children }) {
       streamSessionRef.current === streamOwnerSessionId &&
       activeSessionRef.current === streamOwnerSessionId;
 
+    // Shared by a normal finish and by "Stop" (which keeps the partial answer).
+    const finalize = async (fullText, newUsage) => {
+      partialRef.current = null;
+      const stillActive = belongsToActiveSession();
+      if (newUsage) setUsage(newUsage);
+
+      if (stillActive) {
+        setIsStreaming(false);
+        setStreamingText("");
+        setMessages((prev) => [...prev, { _id: tempAiId, key: `a-${tempKey}`, role: "ai", content: fullText, saved: false, feedback: null }]);
+      }
+
+      try {
+        if (truncateFromId && sessionIdToUse) {
+          await chatApi.truncate(sessionIdToUse, truncateFromId);
+        }
+        const saveRes = await chatApi.saveMessage({
+          sessionId:   sessionIdToUse,
+          userMessage: { content: text },
+          aiMessage:   { content: fullText },
+        });
+
+        const { sessionId: newSessId, title: newTitle, userMessageId, aiMessageId } = saveRes.data;
+
+        // Swap placeholders for the real ids so save / feedback / regenerate / edit work.
+        if (userMessageId || aiMessageId) {
+          setMessages((prev) => prev.map((m) => {
+            if (m._id === tempUserMsg._id && userMessageId) return { ...m, _id: userMessageId };
+            if (m._id === tempAiId && aiMessageId) return { ...m, _id: aiMessageId };
+            return m;
+          }));
+        }
+
+        if (!sessionIdToUse && newSessId) {
+          sessionIdToUse = normalizeSessionId(newSessId);
+          if (stillActive) setActiveSession(sessionIdToUse);
+          setSessions((prev) => {
+            const exists = prev.find((s) => s._id === sessionIdToUse);
+            if (exists) return prev;
+            return sortSessions([{
+              _id:          sessionIdToUse,
+              title:        newTitle || text.slice(0, 50),
+              messageCount: 2,
+              lastMessage:  text.slice(0, 60),
+              pinned:       false,
+              pinnedAt:     null,
+              createdAt:    new Date().toISOString(),
+            }, ...prev]);
+          });
+        } else if (newTitle) {
+          setSessions((prev) =>
+            prev.map((s) => s._id === sessionIdToUse
+              ? { ...s, title: newTitle, lastMessage: text.slice(0, 60), messageCount: truncateFromId ? s.messageCount : s.messageCount + 2 }
+              : s
+            )
+          );
+        }
+      } catch (saveErr) {
+        console.warn("[Chat] Save failed:", saveErr.message);
+        if (stillActive) {
+          toast.error(
+            "This reply couldn't be saved — it may disappear on refresh.",
+            { duration: 6000 }
+          );
+        }
+      } finally {
+        if (streamSessionRef.current === streamOwnerSessionId) {
+          streamSessionRef.current = null;
+        }
+      }
+    };
+
+    partialRef.current = null;
     abortRef.current = streamAsk(
-      prompt.trim(),
+      text,
       sessionIdToUse,
       {
         onToken: (_token, accumulated) => {
+          partialRef.current = { text: accumulated, finalize };
           if (!belongsToActiveSession()) return;
           setStreamingText(accumulated);
         },
 
-        onDone: async (fullText, newUsage) => {
-          const stillActive = belongsToActiveSession();
-          if (newUsage) setUsage(newUsage);
-
-          if (stillActive) {
-            setIsStreaming(false);
-            setStreamingText("");
-
-            const aiMsg = {
-              _id:   `ai-${Date.now()}`,
-              role:  "ai",
-              content: fullText,
-              saved: false,
-            };
-            setMessages((prev) => [...prev, aiMsg]);
-          }
-
-          try {
-            const saveRes = await chatApi.saveMessage({
-              sessionId:   sessionIdToUse,
-              userMessage: { content: prompt.trim() },
-              aiMessage:   { content: fullText },
-            });
-
-            const newSessId = saveRes.data.sessionId;
-            const newTitle  = saveRes.data.title;
-
-            if (!sessionIdToUse && newSessId) {
-              sessionIdToUse = normalizeSessionId(newSessId);
-              if (stillActive) setActiveSession(sessionIdToUse);
-              setSessions((prev) => {
-                const exists = prev.find((s) => s._id === sessionIdToUse);
-                if (exists) return prev;
-                return sortSessions([{
-                  _id:          sessionIdToUse,
-                  title:        newTitle || prompt.trim().slice(0, 50),
-                  messageCount: 2,
-                  lastMessage:  prompt.trim().slice(0, 60),
-                  pinned:       false,
-                  pinnedAt:     null,
-                  createdAt:    new Date().toISOString(),
-                }, ...prev]);
-              });
-            } else if (newTitle) {
-              setSessions((prev) =>
-                prev.map((s) => s._id === sessionIdToUse
-                  ? { ...s, title: newTitle, messageCount: s.messageCount + 2 }
-                  : s
-                )
-              );
-            }
-          } catch (saveErr) {
-            console.warn("[Chat] Save failed:", saveErr.message);
-            if (stillActive) {
-              toast.error(
-                "This reply couldn't be saved — it may disappear on refresh.",
-                { duration: 6000 }
-              );
-            }
-          } finally {
-            if (streamSessionRef.current === streamOwnerSessionId) {
-              streamSessionRef.current = null;
-            }
-          }
-        },
+        onDone: finalize,
 
         onError: (errMsg, info = {}) => {
+          partialRef.current = null;
           if (streamSessionRef.current === streamOwnerSessionId) {
             streamSessionRef.current = null;
           }
           if (!belongsToActiveSession()) return;
           setIsStreaming(false);
           setStreamingText("");
-          setMessages((prev) => prev.filter((m) => m._id !== tempUserMsg._id));
-          setFailedPrompt({ text: prompt.trim(), nonce: Date.now() });
+          if (truncateFromId) {
+            setMessages(backup);            // nothing was lost: put the old turn back
+          } else {
+            setMessages((prev) => prev.filter((m) => m._id !== tempUserMsg._id));
+            setFailedPrompt({ text, nonce: Date.now() });
+          }
 
           if (info.code === "DAILY_LIMIT") {
             setUsage({ remaining: 0, limit: info.limit ?? null, resetsAt: info.resetsAt ?? null });
@@ -443,15 +474,57 @@ export function ChatProvider({ children }) {
             toast.error(errMsg || "The AI mentor couldn't respond. Please try again.");
           }
         },
-      }
+      },
+      { replaceFromMessageId: truncateFromId }
     );
   }, [isStreaming, setActiveSession]);
 
+  // Stop: keep whatever was already written (like Claude / ChatGPT) and save it.
   const abortStream = useCallback(() => {
+    const partial = partialRef.current;
     abortRef.current?.abort();
-    setIsStreaming(false);
-    setStreamingText("");
-    streamSessionRef.current = null;
+    if (partial?.text?.trim()) {
+      partial.finalize(partial.text, null);
+    } else {
+      partialRef.current = null;
+      setIsStreaming(false);
+      setStreamingText("");
+      streamSessionRef.current = null;
+    }
+  }, []);
+
+  // Regenerate the answer to the user message before this AI message.
+  const regenerate = useCallback((aiMsgId) => {
+    const list = messagesRef.current;
+    const i = list.findIndex((m) => m._id === aiMsgId);
+    let j = i - 1;
+    while (j >= 0 && list[j].role !== "user") j--;
+    if (i < 0 || j < 0) return;
+    if (!isServerId(list[j]._id)) { toast("Hold on — still saving this chat. Try again in a moment."); return; }
+    sendMessage(list[j].content, { truncateFromId: list[j]._id });
+  }, [sendMessage]);
+
+  // Edit a sent question: the conversation continues from the edited version.
+  const editMessage = useCallback((userMsgId, newText) => {
+    const msg = messagesRef.current.find((m) => m._id === userMsgId);
+    const text = newText?.trim();
+    if (!msg || !text || text === msg.content) return;
+    if (!isServerId(msg._id)) { toast("Hold on — still saving this chat. Try again in a moment."); return; }
+    sendMessage(text, { truncateFromId: msg._id });
+  }, [sendMessage]);
+
+  // 👍 / 👎 on an AI answer (tap again to clear).
+  const setFeedback = useCallback(async (msg, value) => {
+    if (!isServerId(msg._id) || !activeSessionRef.current) { toast("Hold on — still saving this reply."); return; }
+    const next = msg.feedback === value ? null : value;
+    setMessages((prev) => prev.map((m) => m._id === msg._id ? { ...m, feedback: next } : m));
+    try {
+      await chatApi.setFeedback({ sessionId: activeSessionRef.current, messageId: msg._id, value: next });
+      if (next) toast.success(next === "up" ? "Thanks for the feedback" : "Thanks — we'll use it to improve", { duration: 1800 });
+    } catch {
+      setMessages((prev) => prev.map((m) => m._id === msg._id ? { ...m, feedback: msg.feedback ?? null } : m));
+      toast.error("Couldn't save feedback");
+    }
   }, []);
 
   const toggleSaved = useCallback(async (msg) => {
@@ -513,6 +586,9 @@ export function ChatProvider({ children }) {
     togglePin,
     sendMessage,
     abortStream,
+    regenerate,
+    editMessage,
+    setFeedback,
     toggleSaved,
   };
 

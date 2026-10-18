@@ -15,6 +15,7 @@ import jwt  from "jsonwebtoken";
 import User from "../models/User.js";
 import { env } from "../config/env.js";
 import { isAiLocked } from "../utils/studentPayload.js";
+import { setSessionCookie } from "../utils/authCookie.js";
 
 export const protect = async (req, res, next) => {
   try {
@@ -62,6 +63,12 @@ export const protect = async (req, res, next) => {
         success: false,
         error:   "Your password was recently changed. Please login again.",
       });
+    }
+
+    // Rolling session: a student who keeps using the app is never logged out;
+    // the cookie is renewed at most once a day.
+    if (decoded.iat && Date.now() / 1000 - decoded.iat > 24 * 60 * 60) {
+      setSessionCookie(res, user);
     }
 
     req.user = {

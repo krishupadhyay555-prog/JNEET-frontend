@@ -289,3 +289,13 @@ describe("Preferences and date of birth", () => {
     expect((await c.patch("/api/user/date-of-birth").send({ dateOfBirth: "1999-01-01" })).status).toBe(409);
   });
 });
+
+describe("Session length", () => {
+  it("sessions last 15 days", async () => {
+    const { body } = await signedInClient();
+    const res = await client().post("/api/auth/login").send({ email: body.email, password: body.password });
+    const cookie = res.headers["set-cookie"].join(";");
+    const maxAge = Number(/Max-Age=(\d+)/i.exec(cookie)[1]);
+    expect(maxAge).toBe(15 * 24 * 60 * 60);
+  });
+});

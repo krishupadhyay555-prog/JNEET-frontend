@@ -358,10 +358,18 @@ export const saveMessage = async (req, res, next) => {
 
     await chat.save();
 
+    // Return the real ids so the UI can save / give feedback on a message
+    // that was created in this very session (it only had temporary ids).
+    const msgs = session.messages;
+    const ai   = msgs[msgs.length - 1];
+    const usr  = msgs[msgs.length - 2];
+
     return res.json({
-      success:   true,
-      sessionId: session._id,
-      title:     session.title,
+      success:       true,
+      sessionId:     session._id,
+      title:         session.title,
+      userMessageId: usr?._id ?? null,
+      aiMessageId:   ai?._id ?? null,
     });
 
   } catch (err) {
@@ -434,6 +442,49 @@ export const getSaved = async (req, res, next) => {
 
     return res.json({ success: true, saved });
 
+  } catch (err) {
+    next(err);
+  }
+};
+
+// POST /api/chat/session/:sessionId/truncate  { fromMessageId }
+// Deletes that message and everything after it. Edit and Regenerate use this
+// so the AI never sees the replaced turn as context.
+export const truncateSession = async (req, res, next) => {
+  try {
+    const { sessionId } = req.params;
+    const { fromMessageId } = req.body;
+
+    const chat = await Chat.findOne({ userId: req.user.id, examMode: req.user.examMode });
+    const session = chat?.sessions.find((s) => s._id.toString() === sessionId);
+    if (!session) return res.status(404).json({ success: false, error: "Session not found." });
+
+    const idx = session.messages.findIndex((m) => m._id.toString() === fromMessageId);
+    if (idx === -1) return res.status(404).json({ success: false, error: "Message not found." });
+
+    session.messages.splice(idx);
+    await chat.save();
+
+    return res.json({ success: true, messageCount: session.messages.length });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// PATCH /api/chat/message/feedback  { sessionId, messageId, value: "up"|"down"|null }
+export const setFeedback = async (req, res, next) => {
+  try {
+    const { sessionId, messageId, value } = req.body;
+
+    const chat = await Chat.findOne({ userId: req.user.id, examMode: req.user.examMode });
+    const session = chat?.sessions.find((s) => s._id.toString() === sessionId);
+    const msg = session?.messages.find((m) => m._id.toString() === messageId);
+    if (!msg || msg.role !== "ai") return res.status(404).json({ success: false, error: "Message not found." });
+
+    msg.feedback = value;
+    await chat.save();
+
+    return res.json({ success: true, feedback: msg.feedback });
   } catch (err) {
     next(err);
   }

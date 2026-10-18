@@ -36,7 +36,9 @@ const envSchema = z.object({
     .string({ required_error: "JWT_SECRET is required in .env" })
     .min(10, "JWT_SECRET must be at least 10 characters"),
 
-  JWT_EXPIRES_IN: z.string().default("7d"),
+  JWT_EXPIRES_IN: z.string().optional(), // legacy: ignored — see SESSION_DAYS
+  // How long a login lasts (rolling: renewed while the student keeps using the app)
+  SESSION_DAYS: intString(15),
 
   // Legacy — no longer used by the app.
   GEMINI_API_KEY: z.string().optional(),
@@ -116,6 +118,7 @@ export const env = {
   ENABLE_AI_CHAT_TITLES: data.ENABLE_AI_CHAT_TITLES === "true",
   REQUIRE_PARENT_CONSENT_FOR_AI: data.REQUIRE_PARENT_CONSENT_FOR_AI === "true",
   AI_MAX_OUTPUT_TOKENS: toInt(data.AI_MAX_OUTPUT_TOKENS),
+  SESSION_DAYS: toInt(data.SESSION_DAYS) || 15,
   AI_DAILY: {
     free:  toInt(data.AI_DAILY_FREE),
     pro:   toInt(data.AI_DAILY_PRO),

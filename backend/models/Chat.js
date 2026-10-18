@@ -28,6 +28,12 @@ const messageSchema = new mongoose.Schema(
       default: false,
       index:   true,
     },
+    // Student's thumbs up/down on an AI answer (quality signal; null = none)
+    feedback: {
+      type:    String,
+      enum:    ["up", "down", null],
+      default: null,
+    },
   },
   { _id: true, timestamps: true }
 );

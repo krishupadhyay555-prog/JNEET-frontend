@@ -303,6 +303,7 @@ function StatCard({ stat }) {
   );
 }
 
+// eslint-disable-next-line no-unused-vars -- used as <Icon /> below
 function SectionHeader({ icon: Icon, title, subtitle, action }) {
   return (
     <div className="mb-5 flex items-center justify-between gap-4">

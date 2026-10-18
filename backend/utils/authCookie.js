@@ -37,7 +37,7 @@ export function baseCookieOptions() {
 }
 
 export function sessionCookieOptions() {
-  return { ...baseCookieOptions(), maxAge: 7 * 24 * 60 * 60 * 1000 };
+  return { ...baseCookieOptions(), maxAge: env.SESSION_DAYS * 24 * 60 * 60 * 1000 };
 }
 
 export function generateToken(user) {
@@ -45,7 +45,7 @@ export function generateToken(user) {
     { id: user._id, email: user.email, examMode: user.examMode, tv: user.tokenVersion || 0 },
     env.JWT_SECRET,
     {
-      expiresIn: env.JWT_EXPIRES_IN || "7d",
+      expiresIn: `${env.SESSION_DAYS}d`,
       issuer:    "jneet-ai",
       audience:  "jneet-ai-client",
     }

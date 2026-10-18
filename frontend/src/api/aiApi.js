@@ -14,7 +14,7 @@ export const aiApi = {
   usage: () => api.get("/ai/usage"),
 };
 
-export function streamAsk(prompt, sessionId, { onToken, onDone, onError }) {
+export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { replaceFromMessageId = null } = {}) {
   const controller = new AbortController();
 
   const baseURL = import.meta.env.DEV
@@ -27,7 +27,7 @@ export function streamAsk(prompt, sessionId, { onToken, onDone, onError }) {
         method:      "POST",
         credentials: "include",
         headers:     { "Content-Type": "application/json" },
-        body:        JSON.stringify({ prompt, ...(sessionId && { sessionId }) }),
+        body:        JSON.stringify({ prompt, ...(sessionId && { sessionId }), ...(sessionId && replaceFromMessageId && { replaceFromMessageId }) }),
         signal:      controller.signal,
       });
 

@@ -16,6 +16,9 @@ import { useState, useEffect, useRef } from "react";
 export function ContextMenu({ x, y, items, onClose }) {
   const [armedIndex, setArmedIndex] = useState(null);
   const menuRef = useRef(null);
+  // The finger that released a long-press is re-delivered as mouse events /
+  // a click right where the menu just opened — ignore those for a moment.
+  const openedAt = useRef(Date.now());
   const [pos, setPos] = useState({ left: x, top: y });
 
   useEffect(() => {
@@ -30,6 +33,7 @@ export function ContextMenu({ x, y, items, onClose }) {
 
   useEffect(() => {
     const handleOutside = (e) => {
+      if (Date.now() - openedAt.current < 400) return;
       if (menuRef.current && !menuRef.current.contains(e.target)) onClose();
     };
     const handleEscape = (e) => {
@@ -46,6 +50,7 @@ export function ContextMenu({ x, y, items, onClose }) {
   }, [onClose]);
 
   const handleItemClick = (item, index) => {
+    if (Date.now() - openedAt.current < 350) return;
     if (item.confirm && armedIndex !== index) {
       setArmedIndex(index);
       return;

@@ -16,7 +16,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProfileMenu } from "../components/ProfileMenu.jsx";
 import { ContextMenu } from "../components/ui/ContextMenu.jsx";
-import { notesApi } from "../api/notesApi.js";
+import { notesApi, pendingCount, flushOutbox } from "../api/notesApi.js";
 import toast from "react-hot-toast";
 import {
   ArrowLeft, Search, Plus, X, Trash2, Edit3, Loader2, StickyNote,
@@ -129,6 +129,8 @@ function NoteCard({ note, index, onOpen, onRequestMenu }) {
 export default function Notes() {
   const navigate = useNavigate();
 
+  const [offline, setOffline] = useState(false);   // showing the on-device copy
+  const [pending, setPending] = useState(0);       // changes waiting to sync
   const [notes, setNotes]     = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -150,6 +152,8 @@ export default function Notes() {
     try {
       const res = await notesApi.list(q?.trim() || undefined);
       setNotes(res.data.notes ?? []);
+      setOffline(!!res.data.offline);
+      setPending(await pendingCount());
     } catch {
       toast.error("Couldn't load your notes. Try again.");
     } finally {
@@ -157,6 +161,23 @@ export default function Notes() {
       setSearching(false);
     }
   }, []);
+
+  // Reflect connectivity + sync status live.
+  useEffect(() => {
+    const refresh = async () => setPending(await pendingCount());
+    const goOnline = async () => { await flushOutbox(); loadNotes(); };
+    const goOffline = () => setOffline(true);
+    window.addEventListener("online", goOnline);
+    window.addEventListener("offline", goOffline);
+    window.addEventListener("jneet:notes-pending", refresh);
+    window.addEventListener("jneet:notes-synced", refresh);
+    return () => {
+      window.removeEventListener("online", goOnline);
+      window.removeEventListener("offline", goOffline);
+      window.removeEventListener("jneet:notes-pending", refresh);
+      window.removeEventListener("jneet:notes-synced", refresh);
+    };
+  }, [loadNotes]);
 
   useEffect(() => {
     loadNotes();
@@ -190,8 +211,8 @@ export default function Notes() {
       const res = await notesApi.get(id);
       setEditContent(res.data.note.content);
       setEditTag(res.data.note.tag || "");
-    } catch {
-      toast.error("Couldn't open this note.");
+    } catch (err) {
+      toast.error(err?.isNetworkError ? "This note isn't saved on this device yet. Open it once while online." : "Couldn't open this note.");
       setView("list");
     } finally {
       setEditLoading(false);
@@ -210,12 +231,13 @@ export default function Notes() {
     }
     setSaving(true);
     try {
+      let res;
       if (activeNoteId) {
-        await notesApi.update(activeNoteId, { content: editContent, tag: editTag });
+        res = await notesApi.update(activeNoteId, { content: editContent, tag: editTag });
       } else {
-        await notesApi.create({ content: editContent, tag: editTag });
+        res = await notesApi.create({ content: editContent, tag: editTag });
       }
-      toast.success("Note saved");
+      toast.success(res.data.offline ? "Saved on this device — will sync when you're online" : "Note saved");
       closeEditor();
       loadNotes(searchQuery);
     } catch {
@@ -229,8 +251,8 @@ export default function Notes() {
     if (!activeNoteId) return;
     setDeleting(true);
     try {
-      await notesApi.remove(activeNoteId);
-      toast.success("Note deleted");
+      const r = await notesApi.remove(activeNoteId);
+      toast.success(r.data.offline ? "Deleted — will sync when you're online" : "Note deleted");
       closeEditor();
       loadNotes(searchQuery);
     } catch {
@@ -242,8 +264,8 @@ export default function Notes() {
 
   const handleQuickDelete = async (noteId) => {
     try {
-      await notesApi.remove(noteId);
-      toast.success("Note deleted");
+      const r = await notesApi.remove(noteId);
+      toast.success(r.data.offline ? "Deleted — will sync when you're online" : "Note deleted");
       loadNotes(searchQuery);
     } catch {
       toast.error("Couldn't delete this note. Try again.");
@@ -266,6 +288,14 @@ export default function Notes() {
         </div>
         <ProfileMenu />
       </nav>
+
+      {(offline || pending > 0) && (
+        <div role="status" className="flex items-center justify-center gap-2 px-4 py-2 text-xs bg-amber-500/10 text-amber-600 border-b border-amber-500/20 animate-fade-up">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-400" />
+          {offline ? "You're offline — your notes are available and changes will sync automatically." : "Syncing your changes…"}
+          {pending > 0 ? ` (${pending} pending)` : ""}
+        </div>
+      )}
 
       {view === "list" ? (
         <div className="max-w-2xl mx-auto px-5 py-6 animate-fade-up">
@@ -329,6 +359,7 @@ export default function Notes() {
               bg-violet-600 hover:bg-violet-500 text-white flex items-center justify-center
               shadow-glow-violet transition-all duration-150 active:scale-95 hover:-translate-y-0.5 z-20"
             title="New note"
+            aria-label="New note"
           >
             <Plus size={22} />
           </button>

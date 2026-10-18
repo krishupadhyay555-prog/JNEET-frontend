@@ -35,12 +35,15 @@ export const SessionItem = memo(function SessionItem({
   const longPressFired = useRef(false);
   const isPrimaryButtonRef = useRef(true);
 
+  // Entering rename mode resets the draft to the current title (derived during render, not in an effect).
+  const [wasEditing, setWasEditing] = useState(isEditing);
+  if (isEditing !== wasEditing) {
+    setWasEditing(isEditing);
+    if (isEditing) setDraftTitle(session.title);
+  }
   useEffect(() => {
-    if (isEditing) {
-      setDraftTitle(session.title);
-      requestAnimationFrame(() => inputRef.current?.select());
-    }
-  }, [isEditing, session.title]);
+    if (isEditing) requestAnimationFrame(() => inputRef.current?.select());
+  }, [isEditing]);
 
   const clearTimer = () => {
     if (pressTimer.current) {

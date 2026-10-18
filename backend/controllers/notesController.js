@@ -12,6 +12,8 @@
 
 import Note from "../models/Note.js";
 
+const MAX_NOTES_PER_USER = 500;
+
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -79,6 +81,12 @@ export const getNote = async (req, res, next) => {
 export const createNote = async (req, res, next) => {
   try {
     const { content, tag } = req.body;
+
+    // Fair-use cap so one account cannot fill the database.
+    const count = await Note.countDocuments({ userId: req.user.id });
+    if (count >= MAX_NOTES_PER_USER) {
+      return res.status(409).json({ success: false, error: `You've reached the limit of ${MAX_NOTES_PER_USER} notes. Delete some old notes to add new ones.` });
+    }
 
     const note = await Note.create({
       userId:  req.user.id,

@@ -468,3 +468,55 @@ describe('Chat Model — Data Integrity Limits', () => {
     expect(chat.sessions[0].messages[0].content).toBe('Message 1') // "Message 0" dropped
   })
 })
+// ────────────────────────────────────────────────────────────
+describe('Chat — message ids, truncate (edit/regenerate) and feedback', () => {
+  async function seed() {
+    const saved = await agent.post('/api/chat/message/save').send({
+      sessionId: null,
+      userMessage: { content: 'What is inertia?' },
+      aiMessage: { content: 'Resistance to change in motion.' },
+    })
+    const sessionId = saved.body.sessionId
+    const second = await agent.post('/api/chat/message/save').send({
+      sessionId,
+      userMessage: { content: 'And momentum?' },
+      aiMessage: { content: 'mass × velocity.' },
+    })
+    return { sessionId, first: saved.body, second: second.body }
+  }
+
+  it('returns real message ids so a fresh reply can be saved/rated immediately', async () => {
+    const { sessionId, first } = await seed()
+    expect(first.userMessageId).toMatch(/^[a-f\d]{24}$/)
+    expect(first.aiMessageId).toMatch(/^[a-f\d]{24}$/)
+    const r = await agent.patch('/api/chat/message/save-toggle').send({ sessionId, messageId: first.aiMessageId, saved: true })
+    expect(r.statusCode).toBe(200)
+  })
+
+  it('truncates from a message onward and keeps earlier turns', async () => {
+    const { sessionId, second } = await seed()
+    const t = await agent.post(`/api/chat/session/${sessionId}/truncate`).send({ fromMessageId: second.userMessageId })
+    expect(t.statusCode).toBe(200)
+    expect(t.body.messageCount).toBe(2)
+    const got = await agent.get(`/api/chat/session/${sessionId}`)
+    expect(got.body.session.messages.map((m) => m.content)).toEqual(['What is inertia?', 'Resistance to change in motion.'])
+  })
+
+  it('stores thumbs feedback on AI messages only', async () => {
+    const { sessionId, first } = await seed()
+    const up = await agent.patch('/api/chat/message/feedback').send({ sessionId, messageId: first.aiMessageId, value: 'up' })
+    expect(up.statusCode).toBe(200)
+    expect(up.body.feedback).toBe('up')
+    const cleared = await agent.patch('/api/chat/message/feedback').send({ sessionId, messageId: first.aiMessageId, value: null })
+    expect(cleared.body.feedback).toBeNull()
+    const onUser = await agent.patch('/api/chat/message/feedback').send({ sessionId, messageId: first.userMessageId, value: 'up' })
+    expect(onUser.statusCode).toBe(404)
+  })
+
+  it("cannot truncate or rate another user's chat", async () => {
+    const { sessionId, first } = await seed()
+    const other = (await signedInClient({ name: 'Other' })).c
+    expect((await other.post(`/api/chat/session/${sessionId}/truncate`).send({ fromMessageId: first.userMessageId })).statusCode).toBe(404)
+    expect((await other.patch('/api/chat/message/feedback').send({ sessionId, messageId: first.aiMessageId, value: 'down' })).statusCode).toBe(404)
+  })
+})

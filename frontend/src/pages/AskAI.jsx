@@ -1,5 +1,5 @@
 // ============================================================
-//  JNEET+ AI — pages/AskAI.jsx  (v3 — sidebar toggle everywhere)
+//  JNEET+ AI — pages/AskAI.jsx  (v4 — hover-rail sidebar, message actions)
 //  CHANGED:
 //    - The header's Menu button was `md:hidden` (mobile-only) and
 //      only ever OPENED the sidebar (`setSidebarOpen(true)`) — on
@@ -19,6 +19,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useAuth }           from "../context/AuthContext.jsx";
+import { useMediaQuery }     from "../hooks/useMediaQuery.js";
 import { useChat }           from "../context/ChatContext.jsx";
 import { useTheme }          from "../context/ThemeContext.jsx";
 import { Sidebar }           from "../components/sidebar/Sidebar.jsx";
@@ -50,15 +51,28 @@ export default function AskAI() {
     sendMessage,
     abortStream,
     toggleSaved,
+    regenerate,
+    editMessage,
+    setFeedback,
   } = useChat();
 
   const [prompt,        setPrompt]        = useState("");
   // Desktop starts open (old default), mobile starts closed (old
   // default) — checked once on mount, matches previous visual
   // behavior exactly while adding the new toggle capability.
-  const [sidebarOpen,   setSidebarOpen]   = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth >= 768 : true
-  );
+  // Desktop: a slim rail that opens when the cursor touches it; "pinned" keeps it
+  // open (remembered on this device). Mobile: a slide-over drawer.
+  const [pinned, setPinned] = useState(() => {
+    try { return localStorage.getItem("jneet.sidebar.pinned") === "1"; } catch { return false; }
+  });
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const togglePinned = useCallback(() => {
+    setPinned((v) => {
+      try { localStorage.setItem("jneet.sidebar.pinned", v ? "0" : "1"); } catch { /* storage blocked */ }
+      return !v;
+    });
+  }, []);
   const [showScrollBtn, setShowScrollBtn] = useState(false);
 
   const bottomRef   = useRef(null);
@@ -115,16 +129,17 @@ export default function AskAI() {
   return (
     <div className="flex h-screen bg-bg-base text-fg-primary overflow-hidden chat-shell">
 
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar pinned={pinned} onTogglePin={togglePinned} mobileOpen={mobileOpen} onMobileClose={() => setMobileOpen(false)} />
 
       <div className="flex-1 flex flex-col min-w-0 h-full relative">
 
         <div className="flex items-center gap-3 px-4 py-3.5 border-b border-bg-border bg-bg-surface/80 backdrop-blur-xl shrink-0">
           <button
-            onClick={() => setSidebarOpen((v) => !v)}
-            className="text-gray-600 hover:text-fg-primary transition p-1 rounded-lg
-              hover:bg-bg-hover"
-            title={sidebarOpen ? "Close sidebar" : "Open sidebar"}
+            onClick={() => (isDesktop ? togglePinned() : setMobileOpen(true))}
+            className="text-gray-600 hover:text-fg-primary transition p-1.5 rounded-lg
+              hover:bg-bg-hover active:scale-90 md:hidden"
+            title="Open sidebar"
+            aria-label="Open sidebar"
           >
             <Menu size={17} />
           </button>
@@ -171,11 +186,16 @@ export default function AskAI() {
             />
           )}
 
-          {!isMsgLoading && messages.map((msg) => (
+          {!isMsgLoading && messages.map((msg, i) => (
             <MessageBubble
-              key={msg._id}
+              key={msg.key || msg._id}
               msg={msg}
+              isLastAi={msg.role === "ai" && i === messages.length - 1}
+              busy={isStreaming}
               onToggleSaved={toggleSaved}
+              onRegenerate={regenerate}
+              onEdit={editMessage}
+              onFeedback={setFeedback}
             />
           ))}
 
