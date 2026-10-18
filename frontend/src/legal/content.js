@@ -213,7 +213,7 @@ export const LEGAL = {
     path: "/refund",
     file: "refund-policy.html",
     title: "Refund & Cancellation Policy",
-    intro: `${B.product} is free to use at launch. This page explains how refunds and cancellation will work once paid plans are available. No payment is taken until a paid plan is clearly shown to you at checkout.`,
+    intro: `${B.product} is free to use at launch. This page explains how payments, refunds and cancellation will work once paid plans are available. No payment is taken until a paid plan is clearly shown to you at checkout.`,
     sections: [
       {
         h: "1. Free plan",
@@ -229,11 +229,10 @@ export const LEGAL = {
       },
       {
         h: "3. Refunds",
+        p: ["All purchases are final: paid plans are non-refundable once purchased, and we do not give refunds for unused time or because you changed your mind. Please try the free plan first to see if JNEET+ AI suits you."],
         ul: [
-          "Charged twice or by mistake: we refund the extra or mistaken charge in full.",
-          "Paid but access wasn't activated because of a technical fault we cannot fix: full refund.",
-          "Changed your mind: you can ask for a refund within 7 days of buying a plan if you have barely used it. Email us from your registered address.",
-          "After that, passes are non-refundable for the period already paid, but you keep access until it ends.",
+          "The only exceptions are our own errors: if you were charged twice, charged the wrong amount, or paid and your plan was never activated because of a fault on our side, we will correct it or refund the affected amount in full.",
+          "Nothing here limits any right you have under Indian consumer law that cannot be waived.",
         ],
         p2: ["Approved refunds go back to the original payment method and normally reach you within 5–7 working days, depending on your bank."],
       },

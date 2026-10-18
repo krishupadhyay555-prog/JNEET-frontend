@@ -33,6 +33,8 @@ import Notes                from "./pages/Notes.jsx";
 import Legal                from "./pages/Legal.jsx";
 import ParentConsent        from "./pages/ParentConsent.jsx";
 import NotFound             from "./pages/NotFound.jsx";
+import Landing              from "./pages/Landing.jsx";
+import { LoadingScreen }    from "./components/ui/LoadingScreen.jsx";
 
 const TOAST_CONFIG = {
   duration: 3000,
@@ -107,6 +109,13 @@ function RootRedirect() {
   return null;
 }
 
+// "/" → public landing page for visitors, the app for signed-in students
+function Home() {
+  const { isLoggedIn, isInitializing } = useAuth();
+  if (isInitializing) return <LoadingScreen />;
+  return isLoggedIn ? <RootRedirect /> : <Landing />;
+}
+
 function AccentSync() {
   const { examMode }      = useAuth();
   const { accentOverride } = useTheme();
@@ -168,7 +177,7 @@ export default function App() {
                 element={<ProtectedRoute><RevisionSession /></ProtectedRoute>}
               />
 
-              <Route path="/"  element={<RootRedirect />} />
+              <Route path="/"  element={<Home />} />
               <Route path="*"  element={<NotFound />} />
             </Routes>
           </BrowserRouter>
