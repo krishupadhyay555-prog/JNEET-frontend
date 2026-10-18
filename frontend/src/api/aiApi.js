@@ -4,7 +4,8 @@
 //  - onError(message, info): info = { code, status, limit, resetsAt, plan }
 //    so the UI can show a proper "daily limit reached" / "ask your parent
 //    to approve" state instead of a generic error.
-//  - onDone(fullText, usage): usage = { remaining, limit, resetsAt } | null
+//  - onDone(fullText, usage, policy): usage = { remaining, limit, resetsAt } | null;
+//    policy = { level, strikes, pausedUntil } | null (set when the message broke the 18+ policy)
 // ============================================================
 
 import api from "./axiosInstance.js";
@@ -12,6 +13,7 @@ import api from "./axiosInstance.js";
 export const aiApi = {
   ping:  () => api.get("/ai/ping"),
   usage: () => api.get("/ai/usage"),
+  policy: () => api.get("/ai/policy"),
 };
 
 export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { replaceFromMessageId = null } = {}) {
@@ -40,6 +42,7 @@ export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { rep
           limit: data.limit ?? null,
           resetsAt: data.resetsAt ?? null,
           plan: data.plan ?? null,
+          resumesAt: data.resumesAt ?? null,
         });
         return;
       }
@@ -75,7 +78,7 @@ export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { rep
             onToken?.(data.token, fullText);
           }
           if (data.done) {
-            onDone?.(data.fullText ?? fullText, data.usage ?? null);
+            onDone?.(data.fullText ?? fullText, data.usage ?? null, data.policy ?? null);
             return;
           }
         }

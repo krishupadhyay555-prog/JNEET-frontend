@@ -79,6 +79,7 @@ const envSchema = z.object({
   AI_EFFORT_PRO:      z.string().default("medium"),
   AI_EFFORT_ELITE:    z.string().default("medium"),
   AI_MAX_OUTPUT_TOKENS: intString(4096),
+  AI_MODERATION_PROVIDER: z.enum(["true", "false"]).default("true"),
 
   // Daily doubts per plan (IST day) and deep-solves per month
   AI_DAILY_FREE:   intString(5),
@@ -118,6 +119,7 @@ export const env = {
   ENABLE_AI_CHAT_TITLES: data.ENABLE_AI_CHAT_TITLES === "true",
   REQUIRE_PARENT_CONSENT_FOR_AI: data.REQUIRE_PARENT_CONSENT_FOR_AI === "true",
   AI_MAX_OUTPUT_TOKENS: toInt(data.AI_MAX_OUTPUT_TOKENS),
+  AI_MODERATION_PROVIDER: data.AI_MODERATION_PROVIDER === "true",
   SESSION_DAYS: toInt(data.SESSION_DAYS) || 15,
   AI_DAILY: {
     free:  toInt(data.AI_DAILY_FREE),

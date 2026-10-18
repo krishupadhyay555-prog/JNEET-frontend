@@ -13,8 +13,8 @@
 //  page, never the exam-simulation TestAttempt page.
 // ============================================================
 
-import { useState, useEffect, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useGoBack } from "../hooks/useGoBack.js";
 import { ArrowLeft } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
@@ -34,7 +34,11 @@ export default function Revision() {
   const goBack = useGoBack();
   const subjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
 
-  const [activeSubject, setActiveSubject] = useState(subjects[0]);
+  // Arriving from "Revise this chapter" on the Weakness Tracker: open that subject
+  // and highlight the chapter (only if it belongs to the student's current exam).
+  const { state: navState } = useLocation();
+  const wanted = navState && subjects.includes(navState.subject) ? navState : null;
+  const [activeSubject, setActiveSubject] = useState(wanted?.subject ?? subjects[0]);
   const [chapters, setChapters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [starting, setStarting] = useState(false);
@@ -54,6 +58,11 @@ export default function Revision() {
   useEffect(() => {
     loadChapters(activeSubject);
   }, [activeSubject, loadChapters]);
+
+  const focusRef = useRef(null);
+  useEffect(() => {
+    if (!loading) focusRef.current?.scrollIntoView({ block: "center", behavior: "smooth" });
+  }, [loading, chapters]);
 
   const handleStart = async (chapter, mix) => {
     setStarting(true);
@@ -120,12 +129,18 @@ export default function Revision() {
         ) : (
           <div className="space-y-2">
             {chapters.map((c) => (
-              <TestCard
+              <div
                 key={c.chapter}
-                chapterInfo={c}
-                onStart={handleStart}
-                starting={starting}
-              />
+                ref={wanted && wanted.subject === activeSubject && wanted.chapter === c.chapter ? focusRef : undefined}
+                className={wanted && wanted.subject === activeSubject && wanted.chapter === c.chapter
+                  ? "rounded-2xl ring-2 ring-violet-500/50 ring-offset-2 ring-offset-bg-base" : undefined}
+              >
+                <TestCard
+                  chapterInfo={c}
+                  onStart={handleStart}
+                  starting={starting}
+                />
+              </div>
             ))}
           </div>
         )}

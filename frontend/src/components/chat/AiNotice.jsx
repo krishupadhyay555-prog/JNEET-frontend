@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Link }     from "react-router-dom";
 import toast        from "react-hot-toast";
 import { consentApi } from "../../api/authApi.js";
-import { Clock, ShieldCheck, CloudOff, X } from "lucide-react";
+import { Clock, ShieldCheck, CloudOff, PauseCircle, X } from "lucide-react";
 
 export function AiNotice({ notice, onDismiss }) {
   const [sending, setSending] = useState(false);
@@ -54,6 +54,20 @@ export function AiNotice({ notice, onDismiss }) {
           {sending ? "Sending…" : "Email my parent again"}
         </button>
         <Link to="/settings" className="underline underline-offset-2 hover:opacity-80">Change parent's email</Link>
+      </>
+    );
+  } else if (notice.code === "CHAT_PAUSED") {
+    icon = <PauseCircle size={16} />;
+    title = "AI chat is paused for a short break";
+    const t = notice.resumesAt ? new Date(notice.resumesAt) : null;
+    const when = t && !Number.isNaN(t.getTime())
+      ? t.toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit" })
+      : null;
+    body = `This happened because 18+ content isn't allowed on JNEET+ and it was repeated after warnings.${when ? ` The chat opens again at ${when}.` : ""} Tests, Revision and Notes keep working.`;
+    actions = (
+      <>
+        <Link to="/revision" className="underline underline-offset-2 hover:opacity-80">Revise a chapter</Link>
+        <Link to="/tests" className="underline underline-offset-2 hover:opacity-80">Take a mock test</Link>
       </>
     );
   } else if (notice.code === "AI_BUSY") {

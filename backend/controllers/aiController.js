@@ -6,6 +6,9 @@
 //    2. Under-18 without parent approval?  (403 JSON, code
 //                                           PARENT_CONSENT_REQUIRED)
 //    3. Global daily budget circuit breaker (503 JSON)
+//       3b. AI chat paused after repeated 18+ requests (429 CHAT_PAUSED)
+//       3c. 18+ request → policy reply (warning / final warning / pause),
+//           never counted against the quota (see services/ai/policy.js)
 //    4. Daily quota for the user's plan     (429 JSON, code DAILY_LIMIT)
 //       — a message that looks like distress is never counted or
 //         blocked: a student in trouble must always get an answer
@@ -30,6 +33,8 @@ import {
 import { loadHistory } from "../services/ai/history.js";
 import { reserveDoubt, getUsageSnapshot, istDayKey } from "../services/ai/quota.js";
 import { isOverBudget } from "../services/ai/budget.js";
+import { isAdultRequest } from "../services/ai/moderation.js";
+import { recordAdultFlag, getPolicySummary } from "../services/ai/policy.js";
 import { estimateCost } from "../services/ai/prices.js";
 import { env } from "../config/env.js";
 
@@ -65,6 +70,32 @@ export const askAI = async (req, res, next) => {
     }
 
     const distress = detectDistress(prompt);
+
+    // A student in distress is never paused or warned — they always get an answer.
+    if (!distress && user.chatPausedUntil && new Date(user.chatPausedUntil) > new Date()) {
+      return res.status(429).json({
+        success: false,
+        code: "CHAT_PAUSED",
+        error: "The AI chat is paused for a short while because of our 18+ content policy. Tests, Revision and Notes still work.",
+        resumesAt: new Date(user.chatPausedUntil).toISOString(),
+      });
+    }
+
+    if (!distress && (await isAdultRequest(prompt))) {
+      const verdict = await recordAdultFlag(user.id);
+      res.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+      res.setHeader("Cache-Control", "no-cache, no-transform");
+      res.setHeader("X-Accel-Buffering", "no");
+      res.flushHeaders();
+      res.write(`data: ${JSON.stringify({ token: verdict.message })}\n\n`);
+      res.write(`data: ${JSON.stringify({
+        done: true,
+        fullText: verdict.message,
+        usage: null,
+        policy: { level: verdict.level, strikes: verdict.strikes, pausedUntil: verdict.pausedUntil?.toISOString() ?? null },
+      })}\n\n`);
+      return res.end();
+    }
 
     if (!distress && (await isOverBudget())) {
       console.error("[AI] daily budget reached — refusing new questions");
@@ -219,7 +250,18 @@ export const askAI = async (req, res, next) => {
 export const getUsage = async (req, res, next) => {
   try {
     const snapshot = await getUsageSnapshot(req.user.id, req.user.plan);
-    return res.json({ success: true, ...snapshot, aiLocked: req.user.aiLocked });
+    const paused = req.user.chatPausedUntil && new Date(req.user.chatPausedUntil) > new Date()
+      ? new Date(req.user.chatPausedUntil).toISOString() : null;
+    return res.json({ success: true, ...snapshot, aiLocked: req.user.aiLocked, pausedUntil: paused });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// GET /api/ai/policy — the student's own "account notices" (shown in Analytics)
+export const getPolicy = async (req, res, next) => {
+  try {
+    return res.json({ success: true, policy: await getPolicySummary(req.user.id) });
   } catch (err) {
     next(err);
   }

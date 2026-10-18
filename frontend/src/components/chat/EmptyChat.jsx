@@ -21,7 +21,7 @@ const QUICK_PROMPTS = {
     "What is Le Chatelier's Principle?",
     "Explain the properties of complex numbers",
     "Solve a numerical on the first law of thermodynamics",
-    "Find the roots of a quadratic equation",
+    "How do I decide between substitution and integration by parts?",
   ],
 };
 
@@ -72,6 +72,11 @@ export function EmptyChat({ examMode, onPromptSelect }) {
           </button>
         ))}
       </div>
+
+      <p className="text-[11px] text-gray-600 max-w-sm leading-relaxed">
+        ✍️ Keep a notebook and pen ready — I'll often ask you to write the key steps by hand.
+        That is what makes it stick.
+      </p>
     </div>
   );
 }

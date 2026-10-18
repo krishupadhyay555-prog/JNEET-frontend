@@ -9,57 +9,30 @@
 //  over TestAttempt data, not a separate stored/editable record.
 // ============================================================
 
-import mongoose from "mongoose";
 import TestAttempt from "../models/TestAttempt.js";
-import { buildWMSSummary } from "../services/wmsScoringService.js";
+import { buildWMSSummary, foldAttempts } from "../services/wmsScoringService.js";
+
+// Only the most recent attempts count: a student who has improved must see
+// that improvement, and the work done per request stays bounded.
+export const WMS_RECENT_ATTEMPTS = 30;
 
 // ── GET /wms/summary ─────────────────────────────────────────
 export const getSummary = async (req, res, next) => {
   try {
-    const rows = await TestAttempt.aggregate([
-      {
-        $match: {
-          // FIX: .aggregate() does NOT auto-cast string IDs to
-          // ObjectId the way .find()/.findOne() do — it talks to
-          // MongoDB directly, bypassing Mongoose's casting layer.
-          // Without this explicit conversion, this match would
-          // silently match zero documents (a string never equals
-          // a real ObjectId), and every student would just see an
-          // empty WMS summary forever with no error to explain why.
-          userId: new mongoose.Types.ObjectId(req.user.id),
-          examMode: req.user.examMode,   // each exam has its own weak/strong map
-          status: "submitted",
-        },
-      },
-      { $unwind: "$questions" },
-      {
-        $group: {
-          _id: { subject: "$questions.subject", chapter: "$questions.chapter" },
-          total: { $sum: 1 },
-          correct: {
-            $sum: {
-              $cond: [
-                { $eq: ["$questions.selectedIndex", "$questions.correctIndex"] },
-                1, 0,
-              ],
-            },
-          },
-          unattempted: {
-            $sum: {
-              $cond: [
-                { $eq: ["$questions.selectedIndex", null] },
-                1, 0,
-              ],
-            },
-          },
-        },
-      },
-    ]);
+    const attempts = await TestAttempt.find({
+      userId: req.user.id,
+      examMode: req.user.examMode,   // each exam has its own weak/strong map
+      status: "submitted",
+    })
+      .sort({ submittedAt: -1 })
+      .limit(WMS_RECENT_ATTEMPTS)
+      .select("questions.subject questions.chapter questions.selectedIndex questions.correctIndex")
+      .lean();
 
-    const summary = buildWMSSummary(rows);
+    const summary = buildWMSSummary(foldAttempts(attempts));
+    summary.window = { attempts: attempts.length, max: WMS_RECENT_ATTEMPTS };
 
     return res.json({ success: true, summary });
-
   } catch (err) {
     next(err);
   }

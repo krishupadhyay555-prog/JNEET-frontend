@@ -115,7 +115,7 @@ export default function WMS() {
           </div>
         ) : (
           <>
-            <ProgressGraph overall={summary.overall} />
+            <ProgressGraph overall={summary.overall} window={summary.window} />
 
             <div>
               <p className="text-[10px] text-gray-700 uppercase tracking-widest font-medium mb-3">

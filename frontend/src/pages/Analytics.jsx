@@ -13,9 +13,10 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGoBack } from "../hooks/useGoBack.js";
-import { ArrowLeft, TrendingUp, Flame, ClipboardList, Target } from "lucide-react";
+import { ArrowLeft, TrendingUp, Flame, ClipboardList, Target, ShieldAlert } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { testApi } from "../api/testApi.js";
+import { aiApi } from "../api/aiApi.js";
 import toast from "react-hot-toast";
 
 const SUBJECTS_BY_EXAM = {
@@ -113,6 +114,38 @@ function TrendChart({ attempts }) {
   );
 }
 
+const NOTICE_LABEL = {
+  warning:            "Warning 1 — 18+ content request (not allowed)",
+  final_warning:      "Final warning — 18+ content request",
+  paused:             "AI chat paused for 1 hour — 18+ policy",
+  repeat_after_pause: "Remark: repeated 18+ requests after warnings and a pause",
+};
+
+function AccountNotices({ policy }) {
+  if (!policy || !policy.events?.length) return null;
+  const serious = policy.events.some((e) => e.kind === "repeat_after_pause");
+  return (
+    <div className={`rounded-2xl border p-4 ${serious ? "border-red-500/30 bg-red-500/5" : "border-amber-500/30 bg-amber-500/5"}`}>
+      <div className="flex items-center gap-2 mb-2">
+        <ShieldAlert size={15} className={serious ? "text-red-500" : "text-amber-600"} />
+        <p className="text-xs font-semibold text-fg-primary">Account notices</p>
+      </div>
+      <p className="text-[11px] text-gray-600 leading-relaxed mb-2.5">
+        JNEET+ is for NEET UG / JEE Mains preparation only. 18+ content is not allowed; repeated
+        attempts pause the AI chat and are noted here. A clean month clears the count.
+      </p>
+      <ul className="space-y-1">
+        {policy.events.map((e, i) => (
+          <li key={`${e.at}-${i}`} className="flex items-center justify-between gap-3 text-[11px]">
+            <span className="text-fg-primary">{NOTICE_LABEL[e.kind] ?? "Policy notice"}</span>
+            <span className="text-gray-600 shrink-0 tabular-nums">{formatShortDate(e.at)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function StatCard({ icon, label, value }) {
   return (
     <div className="bg-bg-card border border-bg-border rounded-xl p-3.5">
@@ -132,6 +165,11 @@ export default function Analytics() {
   const [attempts, setAttempts] = useState(null);
   const [historyTotal, setHistoryTotal] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [policy, setPolicy] = useState(null);
+
+  useEffect(() => {
+    aiApi.policy().then((r) => setPolicy(r.data?.policy ?? null)).catch(() => { /* notices are optional */ });
+  }, []);
 
   useEffect(() => {
     testApi.getHistory()
@@ -149,7 +187,10 @@ export default function Analytics() {
   const stats = useMemo(() => {
     if (!attempts || attempts.length === 0) return null;
 
-    const totalQuestions = attempts.reduce((sum, a) => sum + (a.totalQuestions || 0), 0);
+    // Questions the student actually answered (skipped ones don't count).
+    const totalQuestions = attempts.reduce(
+      (sum, a) => sum + Math.max(0, (a.totalQuestions || 0) - (a.unattemptedCount || 0)), 0
+    );
     const avgAccuracy = Math.round(
       attempts.reduce((sum, a) => sum + (a.score || 0), 0) / attempts.length
     );
@@ -199,6 +240,7 @@ export default function Analytics() {
       </nav>
 
       <div className="max-w-2xl mx-auto px-5 py-8 space-y-5">
+        <AccountNotices policy={policy} />
         {loading ? (
           <div className="space-y-3">
             <div className="h-[200px] rounded-2xl skeleton" />
@@ -302,7 +344,10 @@ export default function Analytics() {
                       <p className="text-xs font-medium text-fg-primary truncate">
                         {a.mode === "test" ? `${examMode} Full Test` : `${a.subject} · ${a.chapter}`}
                       </p>
-                      <p className="text-[10px] text-gray-600">{formatShortDate(a.submittedAt)}</p>
+                      <p className="text-[10px] text-gray-600">
+                        {formatShortDate(a.submittedAt)}
+                        {a.mode === "test" && a.maxMarks ? ` · ${a.marksObtained ?? 0}/${a.maxMarks} marks` : ""}
+                      </p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <span className="text-xs font-semibold text-fg-primary tabular-nums">{a.score}%</span>

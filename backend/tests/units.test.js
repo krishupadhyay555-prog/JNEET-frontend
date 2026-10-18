@@ -137,3 +137,33 @@ describe("otp + email helpers", () => {
     expect(escapeHtml(`<img src=x onerror="a()">`)).not.toContain("<");
   });
 });
+
+describe("chat retention (pruneChat)", () => {
+  const mk = (n, extra = {}) => ({ title: `s${n}`, pinned: false, messages: [{ content: "hi" }], ...extra });
+  it("drops the oldest UNPINNED chat past 30 and never a pinned one", async () => {
+    const { pruneChat } = await import("../models/Chat.js");
+    const sessions = [mk(0, { pinned: true }), ...Array.from({ length: 30 }, (_, i) => mk(i + 1))];
+    pruneChat({ sessions });
+    expect(sessions.length).toBe(30);
+    expect(sessions[0].title).toBe("s0");          // pinned oldest survives
+    expect(sessions.some((s) => s.title === "s1")).toBe(false); // oldest unpinned went
+    expect(sessions.at(-1).title).toBe("s30");     // newest kept
+  });
+  it("keeps a document under the size cap by removing old unpinned chats first", async () => {
+    const { pruneChat } = await import("../models/Chat.js");
+    const big = "x".repeat(20000);
+    const sessions = Array.from({ length: 10 }, (_, i) => ({ title: `s${i}`, pinned: i === 0, messages: Array.from({ length: 100 }, () => ({ content: big })) }));
+    pruneChat({ sessions }, { MAX_SESSIONS: 30, MAX_MESSAGES: 150, MAX_BYTES: 5 * 1024 * 1024 });
+    const bytes = sessions.reduce((n, s) => n + s.messages.reduce((m, x) => m + x.content.length, 0), 0);
+    expect(bytes).toBeLessThanOrEqual(5 * 1024 * 1024);
+    expect(sessions[0].title).toBe("s0");
+    expect(sessions.at(-1).title).toBe("s9");
+  });
+  it("trims messages per chat to 150", async () => {
+    const { pruneChat } = await import("../models/Chat.js");
+    const sessions = [{ title: "a", pinned: false, messages: Array.from({ length: 200 }, (_, i) => ({ content: String(i) })) }];
+    pruneChat({ sessions });
+    expect(sessions[0].messages.length).toBe(150);
+    expect(sessions[0].messages[0].content).toBe("50");
+  });
+});

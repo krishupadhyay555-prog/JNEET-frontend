@@ -99,6 +99,22 @@ const userSchema = new mongoose.Schema(
     dateOfBirth: { type: Date, default: null },
     consent:     { type: consentSchema, default: () => ({}) },
 
+    // 18+ policy record (category + time only, never message text).
+    policy: {
+      strikes:     { type: Number, default: 0 },
+      flagsTotal:  { type: Number, default: 0 },
+      lastFlagAt:  { type: Date,   default: null },
+      pausedUntil: { type: Date,   default: null },
+      events: {
+        type: [new mongoose.Schema(
+          { at: { type: Date, required: true },
+            kind: { type: String, enum: ["warning", "final_warning", "paused", "repeat_after_pause"], required: true } },
+          { _id: false }
+        )],
+        default: [],
+      },
+    },
+
     persona: {
       type:    String,
       enum:    ["mentor", "fun"],

@@ -112,7 +112,17 @@ export default function AskAI() {
   const limitReached = usage?.limit != null && usage.remaining === 0;
   const notice = aiNotice ?? (limitReached ? { code: "DAILY_LIMIT", limit: usage.limit, resetsAt: usage.resetsAt } : null);
 
-  const blocked = aiNotice?.code === "PARENT_CONSENT_REQUIRED" || (usage?.limit != null && usage.remaining === 0);
+  const paused = aiNotice?.code === "CHAT_PAUSED";
+  const pausedUntil = paused ? aiNotice.resumesAt : null;
+  // Re-open the chat automatically the moment the pause ends.
+  useEffect(() => {
+    if (!pausedUntil) return undefined;
+    const ms = new Date(pausedUntil).getTime() - Date.now();
+    const t = setTimeout(() => setAiNotice(null), Math.max(0, Number.isFinite(ms) ? ms : 0) + 500);
+    return () => clearTimeout(t);
+  }, [pausedUntil, setAiNotice]);
+
+  const blocked = paused || aiNotice?.code === "PARENT_CONSENT_REQUIRED" || (usage?.limit != null && usage.remaining === 0);
 
   const handleSend = useCallback(() => {
     if (!prompt.trim() || isStreaming || blocked) return;
@@ -217,7 +227,7 @@ export default function AskAI() {
 
         {!backendError && notice && (
           <div className="px-3 sm:px-4 shrink-0">
-            <AiNotice notice={notice} onDismiss={aiNotice ? () => setAiNotice(null) : undefined} />
+            <AiNotice notice={notice} onDismiss={aiNotice && !paused ? () => setAiNotice(null) : undefined} />
           </div>
         )}
 

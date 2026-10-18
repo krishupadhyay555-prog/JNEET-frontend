@@ -17,16 +17,18 @@ const SUBJECT_ICON = {
   Mathematics: Sigma,
 };
 
-const STATUS_LABEL = { W: "Weak", M: "Medium", S: "Strong" };
+const STATUS_LABEL = { W: "Weak", M: "Medium", S: "Strong", N: "Need more data" };
 const STATUS_CLASS = {
   W: "text-red-600 bg-red-600/10",
   M: "text-amber-600 bg-amber-600/10",
   S: "text-emerald-600 bg-emerald-600/10",
+  N: "text-gray-600 bg-bg-panel",
 };
 const BAR_CLASS = {
   W: "bg-red-600",
   M: "bg-amber-600",
   S: "bg-emerald-600",
+  N: "bg-gray-500",
 };
 
 export function SubjectIndicator({ subject, stats }) {

@@ -123,7 +123,8 @@ export function ChatProvider({ children }) {
         .then((r) => {
           const d = r.data?.daily;
           if (d) setUsage({ remaining: d.remaining, limit: d.limit, resetsAt: d.resetsAt });
-          if (r.data?.aiLocked) setAiNotice((n) => n ?? { code: "PARENT_CONSENT_REQUIRED", message: "Your parent or guardian needs to approve your account before you can use the AI mentor." });
+          if (r.data?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: r.data.pausedUntil });
+          else if (r.data?.aiLocked) setAiNotice((n) => n ?? { code: "PARENT_CONSENT_REQUIRED", message: "Your parent or guardian needs to approve your account before you can use the AI mentor." });
         })
         .catch(() => { /* usage is a nicety; the chat works without it */ });
 
@@ -366,8 +367,9 @@ export function ChatProvider({ children }) {
       activeSessionRef.current === streamOwnerSessionId;
 
     // Shared by a normal finish and by "Stop" (which keeps the partial answer).
-    const finalize = async (fullText, newUsage) => {
+    const finalize = async (fullText, newUsage, policy = null) => {
       partialRef.current = null;
+      if (policy?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: policy.pausedUntil });
       const stillActive = belongsToActiveSession();
       if (newUsage) setUsage(newUsage);
 
@@ -468,6 +470,8 @@ export function ChatProvider({ children }) {
           if (info.code === "DAILY_LIMIT") {
             setUsage({ remaining: 0, limit: info.limit ?? null, resetsAt: info.resetsAt ?? null });
             setAiNotice({ code: info.code, message: errMsg, resetsAt: info.resetsAt ?? null, limit: info.limit ?? null });
+          } else if (info.code === "CHAT_PAUSED") {
+            setAiNotice({ code: info.code, message: errMsg, resumesAt: info.resumesAt ?? null });
           } else if (["PARENT_CONSENT_REQUIRED", "AI_BUSY", "AI_NOT_CONFIGURED"].includes(info.code)) {
             setAiNotice({ code: info.code, message: errMsg });
           } else {
