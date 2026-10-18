@@ -18,7 +18,7 @@
 
 import Chat from "../models/Chat.js";
 import { env } from "../config/env.js";
-import { generateChatTitle } from "../services/geminiService.js";
+import { generateChatTitle } from "../services/ai/index.js";
 
 function generateTitle(content, maxLen = 48) {
   const clean = content.replace(/\s+/g, " ").trim();

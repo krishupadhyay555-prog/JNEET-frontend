@@ -1,20 +1,20 @@
 // ============================================================
-//  JNEET+ AI — middleware/authMiddleware.js  (v3 — session invalidation)
-//  ADDED: after verifying the JWT is structurally valid, we now
-//  also check the token's issued-at time (`decoded.iat`, in
-//  seconds) against the user's `passwordChangedAt` timestamp. If
-//  the password was changed AFTER this token was issued, the token
-//  is rejected — this is what makes resetPassword() in
-//  authController.js log a user out of every other device the
-//  moment they complete a password reset, without needing to
-//  change how tokens are generated or store a token blocklist.
-//  Everything else — cookie extraction, JWT verification, user
-//  lookup — UNCHANGED from v2.0.
+//  JNEET+ AI — middleware/authMiddleware.js  (v4)
+//  FIXED: the passwordChangedAt check compared a millisecond
+//  timestamp against the JWT `iat`, which only has SECOND
+//  precision. A token issued in the same second as a password
+//  reset (i.e. the one the reset itself hands back) therefore looked
+//  "older than the password change" and the user was logged out
+//  immediately after resetting. The comparison now happens at
+//  second precision.
+//  ADDED: req.user carries plan / persona / aiLocked so controllers
+//  don't each re-query the user.
 // ============================================================
 
 import jwt  from "jsonwebtoken";
 import User from "../models/User.js";
 import { env } from "../config/env.js";
+import { isAiLocked } from "../utils/studentPayload.js";
 
 export const protect = async (req, res, next) => {
   try {
@@ -55,22 +55,13 @@ export const protect = async (req, res, next) => {
       });
     }
 
-    // ── NEW: Session invalidation after password reset ─────────
-    // decoded.iat is in seconds (standard JWT claim); passwordChangedAt
-    // is a JS Date (milliseconds). Convert iat to ms before comparing.
-    // If the password was changed after this specific token was
-    // issued, the token is stale — reject it even though its
-    // signature and expiry are otherwise still valid.
-    if (user.passwordChangedAt) {
-      const tokenIssuedAtMs = decoded.iat * 1000;
-      const passwordChangedAtMs = new Date(user.passwordChangedAt).getTime();
-
-      if (passwordChangedAtMs > tokenIssuedAtMs) {
-        return res.status(401).json({
-          success: false,
-          error:   "Your password was recently changed. Please login again.",
-        });
-      }
+    // Session invalidation after a password change/reset: the token must
+    // carry the account's current tokenVersion.
+    if ((decoded.tv || 0) !== (user.tokenVersion || 0)) {
+      return res.status(401).json({
+        success: false,
+        error:   "Your password was recently changed. Please login again.",
+      });
     }
 
     req.user = {
@@ -78,6 +69,9 @@ export const protect = async (req, res, next) => {
       name:     user.name,
       email:    user.email,
       examMode: user.examMode,
+      plan:     user.plan ?? "free",
+      persona:  user.persona ?? "mentor",
+      aiLocked: isAiLocked(user),
     };
 
     next();

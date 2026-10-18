@@ -1,15 +1,16 @@
 // ============================================================
-//  JNEET+ AI — routes/authRoutes.js  (v4 — Email Verification)
-//  ADDED: POST /verify-email and POST /resend-verification, both
-//  public and rate-limited with the same authLimiter as every other
-//  auth endpoint.
-//  Everything else UNCHANGED from v3.
+//  JNEET+ AI — routes/authRoutes.js  (v5 — OTP limiters + login code)
+//  ADDED: POST /login-code and /login-code/verify (passwordless
+//  login), and per-IP + per-mailbox limiters on every endpoint that
+//  SENDS a code (authLimiter only counts failures, so successful
+//  sends were previously unlimited).
 // ============================================================
 
 import { Router }  from "express";
-import { authLimiter }    from "../limiters/authLimiter.js";
-import { validate }       from "../middleware/validate.js";
-import { protect }        from "../middleware/authMiddleware.js";
+import { authLimiter }  from "../limiters/authLimiter.js";
+import { otpIpLimiter, otpEmailLimiter } from "../limiters/otpLimiter.js";
+import { validate }     from "../middleware/validate.js";
+import { protect }      from "../middleware/authMiddleware.js";
 import {
   registerSchema,
   loginSchema,
@@ -18,6 +19,8 @@ import {
   resetPasswordSchema,
   verifyEmailSchema,
   resendVerificationSchema,
+  loginCodeRequestSchema,
+  loginCodeVerifySchema,
 } from "../schemas/authSchemas.js";
 import {
   register,
@@ -29,23 +32,31 @@ import {
   resetPassword,
   verifyEmail,
   resendVerification,
+  requestLoginCode,
+  verifyLoginCode,
 } from "../controllers/authController.js";
 
 const router = Router();
 
-// Public routes — rate limited + validated
-router.post("/register", authLimiter, validate(registerSchema), register);
-router.post("/login",    authLimiter, validate(loginSchema),    login);
+// Endpoints that send an email: validate -> IP limit -> mailbox limit
+const sendsCode = [otpIpLimiter, otpEmailLimiter];
 
-// Forgot Password flow
-router.post("/forgot-password", authLimiter, validate(forgotPasswordSchema), forgotPassword);
-router.post("/reset-password",  authLimiter, validate(resetPasswordSchema),  resetPassword);
+router.post("/register", validate(registerSchema), ...sendsCode, authLimiter, register);
+router.post("/login",    authLimiter, validate(loginSchema), login);
 
-// Signup Email Verification flow
-router.post("/verify-email",        authLimiter, validate(verifyEmailSchema),        verifyEmail);
-router.post("/resend-verification", authLimiter, validate(resendVerificationSchema), resendVerification);
+// Passwordless login
+router.post("/login-code",        validate(loginCodeRequestSchema), ...sendsCode, requestLoginCode);
+router.post("/login-code/verify", authLimiter, validate(loginCodeVerifySchema), verifyLoginCode);
 
-// Protected routes
+// Forgot password
+router.post("/forgot-password", validate(forgotPasswordSchema), ...sendsCode, forgotPassword);
+router.post("/reset-password",  authLimiter, validate(resetPasswordSchema), resetPassword);
+
+// Signup email verification
+router.post("/verify-email",        authLimiter, validate(verifyEmailSchema), verifyEmail);
+router.post("/resend-verification", validate(resendVerificationSchema), ...sendsCode, resendVerification);
+
+// Protected
 router.post("/logout", logout);
 router.get( "/me",     protect, getMe);
 router.patch("/me/target-exam", protect, validate(targetExamSchema), updateTargetExam);

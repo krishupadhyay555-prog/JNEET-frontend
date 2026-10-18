@@ -1,29 +1,56 @@
 // ============================================================
-//  JNEET+ AI — models/User.js  (v8 — account lockout + TTL cleanup)
-//  ADDED (standard production hardening):
-//    - failedLoginAttempts / accountLockedUntil: PER-ACCOUNT login
-//      lockout, separate from the existing PER-IP rate limiter
-//      (authLimiter.js). The rate limiter alone doesn't stop an
-//      attacker who spreads password guesses across many IPs at one
-//      specific victim's account — this does. 5 wrong passwords
-//      locks that one account for 15 minutes, independent of who's
-//      trying or from where.
-//    - A partial TTL index on `createdAt`, scoped to
-//      { isEmailVerified: false }: MongoDB automatically deletes any
-//      account that never completed email verification within 48
-//      hours. This is standard hygiene — without it, unverified
-//      "ghost" accounts (typos, abandoned signups, someone testing
-//      whether an email works) accumulate forever and permanently
-//      occupy that email address's uniqueness slot. Once an account
-//      verifies, isEmailVerified flips to true and it falls outside
-//      this filter permanently — verified accounts are NEVER
-//      auto-deleted.
-//  Everything else — password-reset OTP fields, email-verification
-//  OTP fields, passwordChangedAt — UNCHANGED from v7.
+//  JNEET+ AI — models/User.js  (v9 — launch hardening)
+//  ADDED on top of v8:
+//    - emailNormalized (unique, sparse): duplicate-signup detection
+//      across Gmail dots / "+tags" (see utils/email.js). Sparse so
+//      legacy users without the field don't collide.
+//    - loginOtp*: passwordless "email me a code" login.
+//    - dateOfBirth + consent{}: DOB age gate and the record of what
+//      was accepted (Terms/Privacy version, timestamp, IP) plus the
+//      parental-approval state for users under 18.
+//    - persona: "mentor" (default) | "fun" AI explanation style.
+//    - plan: "free" | "pro" | "elite" — drives AI quotas.
+//    - deletedAt: set when an account is anonymised (hard-delete job).
+//  Everything else (OTP fields, lockout, TTL cleanup of unverified
+//  accounts, password hashing) is UNCHANGED.
 // ============================================================
 
 import mongoose from "mongoose";
 import bcrypt   from "bcryptjs";
+
+const consentSchema = new mongoose.Schema(
+  {
+    termsVersion:   { type: String, default: null },
+    privacyVersion: { type: String, default: null },
+    acceptedAt:     { type: Date,   default: null },
+    acceptedIp:     { type: String, default: null },
+
+    // Parental approval (only meaningful when ageGroup === "minor")
+    ageGroup: {
+      type:    String,
+      enum:    ["adult", "minor", null],
+      default: null,
+    },
+    parentEmail: { type: String, default: null, lowercase: true, trim: true },
+    parentStatus: {
+      type:    String,
+      enum:    ["not_required", "pending", "granted", "revoked"],
+      default: "not_required",
+    },
+    parentRequestedAt: { type: Date,   default: null },
+    parentDecidedAt:   { type: Date,   default: null },
+    parentDecidedIp:   { type: String, default: null },
+    parentDecidedUa:   { type: String, default: null },
+    parentMethod:      { type: String, default: null }, // e.g. "email_link"
+    parentNoticeVersion: { type: String, default: null },
+
+    // Hashed single-use tokens (never store the raw token)
+    parentTokenHash:        { type: String, default: null, select: false },
+    parentTokenExpiresAt:   { type: Date,   default: null, select: false },
+    parentRevokeTokenHash:  { type: String, default: null, select: false },
+  },
+  { _id: false }
+);
 
 const userSchema = new mongoose.Schema(
   {
@@ -46,6 +73,12 @@ const userSchema = new mongoose.Schema(
         "Please provide a valid email address",
       ],
     },
+    emailNormalized: {
+      type:   String,
+      unique: true,
+      sparse: true,
+      select: false,
+    },
     password: {
       type:      String,
       required:  [true, "Password is required"],
@@ -63,14 +96,32 @@ const userSchema = new mongoose.Schema(
     targetExam: { type: String, trim: true, default: null },
     targetExamPromptDismissed: { type: Boolean, default: false },
 
+    dateOfBirth: { type: Date, default: null },
+    consent:     { type: consentSchema, default: () => ({}) },
+
+    persona: {
+      type:    String,
+      enum:    ["mentor", "fun"],
+      default: "mentor",
+    },
+    plan: {
+      type:    String,
+      enum:    ["free", "pro", "elite"],
+      default: "free",
+    },
+
     lastLogin: { type: Date, default: null },
-    isActive: { type: Boolean, default: true },
+    isActive:  { type: Boolean, default: true },
+    deletedAt: { type: Date, default: null },
 
     // ── Forgot Password / OTP fields ────────────────────────────
     resetOtpHash:       { type: String, default: null, select: false },
     resetOtpExpiresAt:  { type: Date,   default: null, select: false },
     resetOtpAttempts:   { type: Number, default: 0,    select: false },
     passwordChangedAt:  { type: Date,   default: null },
+    // Bumped on password change/reset: every JWT carries the version it was
+    // issued under, so older sessions die instantly (exact, no clock games).
+    tokenVersion:       { type: Number, default: 0 },
 
     // ── Signup Email Verification / OTP fields ──────────────────
     isEmailVerified:    { type: Boolean, default: false },
@@ -78,7 +129,12 @@ const userSchema = new mongoose.Schema(
     emailOtpExpiresAt:  { type: Date,   default: null, select: false },
     emailOtpAttempts:   { type: Number, default: 0,    select: false },
 
-    // ── Per-account login lockout (NEW) ─────────────────────────
+    // ── Passwordless "email me a login code" ────────────────────
+    loginOtpHash:       { type: String, default: null, select: false },
+    loginOtpExpiresAt:  { type: Date,   default: null, select: false },
+    loginOtpAttempts:   { type: Number, default: 0,    select: false },
+
+    // ── Per-account login lockout ───────────────────────────────
     failedLoginAttempts: { type: Number, default: 0,    select: false },
     accountLockedUntil:  { type: Date,   default: null, select: false },
   },
@@ -88,8 +144,8 @@ const userSchema = new mongoose.Schema(
 // Partial TTL index — only applies to documents where
 // isEmailVerified is false. MongoDB's background TTL monitor
 // deletes matching documents once `createdAt` is older than
-// expireAfterSeconds (48 hours here). Verified accounts (the vast
-// majority, long-term) are completely unaffected by this index.
+// expireAfterSeconds (48 hours here). Verified accounts are never
+// auto-deleted.
 userSchema.index(
   { createdAt: 1 },
   {
@@ -97,6 +153,10 @@ userSchema.index(
     partialFilterExpression: { isEmailVerified: false },
   }
 );
+
+// Parent-consent link lookups
+userSchema.index({ "consent.parentTokenHash": 1 }, { sparse: true });
+userSchema.index({ "consent.parentRevokeTokenHash": 1 }, { sparse: true });
 
 userSchema.pre("save", async function () {
   if (!this.isModified("password")) return;

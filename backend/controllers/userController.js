@@ -1,37 +1,27 @@
 // ============================================================
-//  JNEET+ AI — controllers/userController.js  (v2 — language removed)
-//  REMOVED:
-//    - `language` from toStudent() — the field no longer exists on
-//      User.js, so `user.language ?? "en"` was always resolving to
-//      "en" from nothing.
-//    - updateLanguage() entirely — nothing calls it anymore
-//      (AuthContext.jsx and Settings.jsx's language section were
-//      already removed).
-//  If userRoutes.js still has a route pointing at updateLanguage,
-//  that route needs removing too — send that file and I'll clean
-//  it up in the same pass.
-//  Everything else — updateProfile, changePassword, deleteAccount —
-//  is UNCHANGED.
+//  JNEET+ AI — controllers/userController.js  (v3 — launch hardening)
+//  CHANGED:
+//    - changePassword now records passwordChangedAt (so every OTHER
+//      device is logged out — previously a changed password left
+//      old sessions alive) and re-issues THIS device's cookie so the
+//      user isn't kicked out of the session they just used.
+//    - deleteAccount: deactivates immediately, stamps deletedAt and
+//      starts a 30-day grace period; services/accountPurge.js then
+//      permanently erases the data. Cookie cleared with the SAME
+//      attributes it was set with.
+//    - toStudent comes from utils/studentPayload.js (the old local
+//      copy returned a field that no longer exists).
+//  ADDED: setDateOfBirth (legacy accounts), updatePreferences (AI
+//  persona).
 // ============================================================
 
 import User from "../models/User.js";
-import { env } from "../config/env.js";
+import { toStudent } from "../utils/studentPayload.js";
+import { setSessionCookie, clearSessionCookie } from "../utils/authCookie.js";
+import { parseDob, calcAge, ADULT_AGE } from "../utils/age.js";
+import { requestParentConsent, parentEmailIsSelf } from "../services/consentService.js";
+import { TERMS_VERSION, PRIVACY_VERSION } from "../config/legal.js";
 
-function toStudent(user) {
-  return {
-    _id:       user._id,
-    name:      user.name,
-    email:     user.email,
-    examMode:  user.examMode,
-    targetExam: user.targetExam ?? null,
-    targetExamPromptDismissed: !!user.targetExamPromptDismissed,
-    wmsData:   user.wmsData,
-    lastLogin: user.lastLogin,
-    createdAt: user.createdAt,
-  };
-}
-
-// ── PATCH /user/profile — Update name ─────────────────────────
 export const updateProfile = async (req, res, next) => {
   try {
     const { name } = req.body;
@@ -44,30 +34,23 @@ export const updateProfile = async (req, res, next) => {
     if (name !== undefined) user.name = name;
     await user.save();
 
-    return res.json({
-      success: true,
-      message: "Profile updated.",
-      student: toStudent(user),
-    });
+    return res.json({ success: true, message: "Profile updated.", student: toStudent(user) });
 
   } catch (err) {
     next(err);
   }
 };
 
-// ── PATCH /user/password — Change password ────────────────────
 export const changePassword = async (req, res, next) => {
   try {
     const { currentPassword, newPassword } = req.body;
 
-    // Need password field explicitly — schema has select:false by default
     const user = await User.findById(req.user.id).select("+password");
     if (!user || !user.isActive) {
       return res.status(404).json({ success: false, error: "User not found." });
     }
 
-    const isMatch = await user.comparePassword(currentPassword);
-    if (!isMatch) {
+    if (!(await user.comparePassword(currentPassword))) {
       return res.status(401).json({
         success: false,
         error:   "Current password is incorrect.",
@@ -75,34 +58,29 @@ export const changePassword = async (req, res, next) => {
       });
     }
 
-    // Assigning triggers the pre('save') hash hook automatically.
-    // The model's minlength:[8,...] validator runs here too (save()
-    // isn't passed validateBeforeSave:false), so length is enforced —
-    // but the letter+number REGEX rule only lives in authSchemas.js
-    // (Zod), which register/login routes use via validate() middleware.
-    // This route's letter+number enforcement depends entirely on
-    // whatever validate() + schema userRoutes.js wires up here — not
-    // visible in this file. Flagging this, not guessing: send
-    // userRoutes.js to confirm the same strength rule actually applies
-    // to password changes, not just registration.
+    if (await user.comparePassword(newPassword)) {
+      return res.status(400).json({
+        success: false,
+        error:   "Your new password must be different from the current one.",
+        fieldErrors: [{ field: "newPassword", message: "Your new password must be different from the current one." }],
+      });
+    }
+
     user.password = newPassword;
+    user.passwordChangedAt = new Date();
+    user.tokenVersion = (user.tokenVersion || 0) + 1;
     await user.save();
 
-    return res.json({ success: true, message: "Password updated successfully." });
+    // Other devices are now logged out; keep THIS one signed in.
+    setSessionCookie(res, user);
+
+    return res.json({ success: true, message: "Password updated. Other devices have been logged out." });
 
   } catch (err) {
     next(err);
   }
 };
 
-// ── DELETE /user/account — Deactivate own account ─────────────
-// Soft delete (isActive: false) — not a hard delete. This means:
-//   - Login/protect() middleware immediately rejects this account
-//     everywhere in the app (they already check `isActive`), with
-//     zero extra code needed elsewhere.
-//   - Support can reverse it if it was accidental or disputed.
-// Requires the current password as confirmation — a destructive
-// action should never fire from a single misplaced click.
 export const deleteAccount = async (req, res, next) => {
   try {
     const { password } = req.body;
@@ -112,8 +90,7 @@ export const deleteAccount = async (req, res, next) => {
       return res.status(404).json({ success: false, error: "User not found." });
     }
 
-    const isMatch = await user.comparePassword(password);
-    if (!isMatch) {
+    if (!(await user.comparePassword(password))) {
       return res.status(401).json({
         success: false,
         error:   "Incorrect password.",
@@ -122,16 +99,82 @@ export const deleteAccount = async (req, res, next) => {
     }
 
     user.isActive = false;
+    user.deletedAt = new Date();
     await user.save({ validateBeforeSave: false });
 
-    res.clearCookie("jneet_token", {
-      httpOnly: true,
-      secure:   env.NODE_ENV === "production",
-      sameSite: env.NODE_ENV === "production" ? "none" : "lax",
-      path:     "/",
+    clearSessionCookie(res);
+
+    return res.json({
+      success: true,
+      message: "Account deleted. Your data will be permanently erased within 30 days.",
     });
 
-    return res.json({ success: true, message: "Account deleted." });
+  } catch (err) {
+    next(err);
+  }
+};
+
+// ── Legacy accounts: add a date of birth ─────────────────────────
+export const setDateOfBirth = async (req, res, next) => {
+  try {
+    const { dateOfBirth, parentEmail } = req.body;
+
+    const user = await User.findById(req.user.id);
+    if (!user || !user.isActive) {
+      return res.status(404).json({ success: false, error: "User not found." });
+    }
+    if (user.dateOfBirth) {
+      return res.status(409).json({ success: false, error: "Date of birth is already set. Contact support to change it." });
+    }
+
+    const minor = calcAge(dateOfBirth) < ADULT_AGE;
+
+    if (minor && !parentEmail) {
+      return res.status(400).json({
+        success: false,
+        error: "A parent or guardian's email is required for students under 18.",
+        fieldErrors: [{ field: "parentEmail", message: "A parent or guardian's email is required for students under 18." }],
+      });
+    }
+    if (minor && parentEmailIsSelf(user.email, parentEmail)) {
+      return res.status(400).json({
+        success: false,
+        error: "This must be your parent or guardian's email, not yours.",
+        fieldErrors: [{ field: "parentEmail", message: "This must be your parent or guardian's email, not yours." }],
+      });
+    }
+
+    user.dateOfBirth = parseDob(dateOfBirth);
+    user.consent.ageGroup = minor ? "minor" : "adult";
+    user.consent.parentStatus = minor ? "pending" : "not_required";
+    // Existing users accept the current documents by continuing to use the service.
+    user.consent.termsVersion = user.consent.termsVersion ?? TERMS_VERSION;
+    user.consent.privacyVersion = user.consent.privacyVersion ?? PRIVACY_VERSION;
+    user.consent.acceptedAt = user.consent.acceptedAt ?? new Date();
+    await user.save({ validateBeforeSave: false });
+
+    let parentRequestSent = null;
+    if (minor) {
+      parentRequestSent = (await requestParentConsent(user, { parentEmail })).sent;
+    }
+
+    return res.json({ success: true, student: toStudent(user), parentRequestSent });
+
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const updatePreferences = async (req, res, next) => {
+  try {
+    await User.updateOne({ _id: req.user.id }, { $set: { persona: req.body.persona } });
+    const user = await User.findById(req.user.id).lean();
+
+    if (!user || !user.isActive) {
+      return res.status(404).json({ success: false, error: "User not found." });
+    }
+
+    return res.json({ success: true, student: toStudent(user) });
 
   } catch (err) {
     next(err);

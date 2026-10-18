@@ -10,7 +10,7 @@
 //    - Logout revokes chat access immediately
 //    - Data integrity: session cap (30) and message cap (150)
 //
-//  NOTE: generateChatTitle (the real Gemini call) is mocked to
+//  NOTE: generateChatTitle (the real AI call) is mocked to
 //  always return null in this file. This makes every test
 //  deterministic and fast — assertions exercise OUR fallback
 //  logic, not the live behavior of a third-party AI, which would
@@ -19,14 +19,14 @@
 // ============================================================
 
 import { describe, it, expect, beforeAll, afterAll, beforeEach, vi } from 'vitest'
-import request from 'supertest'
 import mongoose from 'mongoose'
-import { MongoMemoryServer } from 'mongodb-memory-server'
-import app from '../app.js'
+import { clearMailbox } from './mailbox.js'
+import { connectTestDb, disconnectTestDb, signedInClient } from './helpers.js'
 import User from '../models/User.js'
 import Chat from '../models/Chat.js'
 
-vi.mock('../services/geminiService.js', async (importOriginal) => {
+vi.mock('../services/emailService.js', async (orig) => (await import('./mailbox.js')).mailMock(orig))
+vi.mock('../services/ai/index.js', async (importOriginal) => {
   const actual = await importOriginal()
   return {
     ...actual,
@@ -34,32 +34,19 @@ vi.mock('../services/geminiService.js', async (importOriginal) => {
   }
 })
 
-let mongoServer
 let agent // authenticated "browser session" for the primary test user
 
-beforeAll(async () => {
-  mongoServer = await MongoMemoryServer.create()
-  const uri = mongoServer.getUri()
-  await mongoose.connect(uri)
-})
+beforeAll(connectTestDb)
 
 beforeEach(async () => {
   await User.deleteMany({})
   await Chat.deleteMany({})
 
-  agent = request.agent(app)
-  await agent.post('/api/auth/register').send({
-    name: 'Test Student',
-    email: 'chattest@example.com',
-    password: 'Password123',
-    examMode: 'NEET',
-  })
+  clearMailbox()
+  agent = (await signedInClient()).c
 })
 
-afterAll(async () => {
-  await mongoose.disconnect()
-  await mongoServer.stop()
-})
+afterAll(disconnectTestDb)
 
 // ────────────────────────────────────────────────────────────
 describe('Chat — Session Creation', () => {
@@ -394,11 +381,7 @@ describe('Chat — Security: Cross-User Isolation', () => {
   it('prevents one user from VIEWING another user\'s session', async () => {
     const created = await agent.post('/api/chat/session/new')
 
-    const userB = request.agent(app)
-    await userB.post('/api/auth/register').send({
-      name: 'Other Student', email: 'other1@example.com',
-      password: 'Password123', examMode: 'NEET',
-    })
+    const userB = (await signedInClient({ name: 'Other Student' })).c
 
     const getRes = await userB.get(`/api/chat/session/${created.body.sessionId}`)
     expect(getRes.statusCode).toBe(404)
@@ -407,11 +390,7 @@ describe('Chat — Security: Cross-User Isolation', () => {
   it('prevents one user from DELETING another user\'s session', async () => {
     const created = await agent.post('/api/chat/session/new')
 
-    const userB = request.agent(app)
-    await userB.post('/api/auth/register').send({
-      name: 'Other Student', email: 'other2@example.com',
-      password: 'Password123', examMode: 'NEET',
-    })
+    const userB = (await signedInClient({ name: 'Other Student' })).c
 
     const deleteRes = await userB.delete(`/api/chat/session/${created.body.sessionId}`)
     expect(deleteRes.statusCode).toBe(404)
@@ -424,11 +403,7 @@ describe('Chat — Security: Cross-User Isolation', () => {
   it('prevents one user from seeing another user\'s sessions in their own list', async () => {
     await agent.post('/api/chat/session/new')
 
-    const userB = request.agent(app)
-    await userB.post('/api/auth/register').send({
-      name: 'Other Student', email: 'other3@example.com',
-      password: 'Password123', examMode: 'NEET',
-    })
+    const userB = (await signedInClient({ name: 'Other Student' })).c
 
     const listRes = await userB.get('/api/chat/sessions')
     expect(listRes.body.sessions.length).toBe(0)
