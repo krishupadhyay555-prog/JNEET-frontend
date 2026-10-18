@@ -5,7 +5,7 @@ import User from "../models/User.js";
 import { mailbox, clearMailbox } from "./mailbox.js";
 import {
   connectTestDb, disconnectTestDb, client, registerBody, signedInClient,
-  uniqueEmail, STRONG_PASSWORD,
+  uniqueEmail,
 } from "./helpers.js";
 
 vi.mock("../services/emailService.js", async (orig) => (await import("./mailbox.js")).mailMock(orig));

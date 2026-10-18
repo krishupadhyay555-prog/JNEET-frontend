@@ -26,7 +26,7 @@ export const authLimiter = rateLimit({
 
   // v7 REQUIRED signature: (req, res, next, options)
   // `next` must be accepted even if not called — omitting it breaks the chain
-  handler: (req, res, _next, _options) => {
+  handler: (req, res) => {
     // resetTime is a Date in v7 — call .getTime() to get epoch ms
     const resetMs      = req.rateLimit?.resetTime instanceof Date
       ? req.rateLimit.resetTime.getTime()

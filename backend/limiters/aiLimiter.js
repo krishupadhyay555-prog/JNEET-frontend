@@ -23,7 +23,7 @@ export const aiLimiter = rateLimit({
   },
 
   // v7 REQUIRED signature: (req, res, next, options)
-  handler: (req, res, _next, _options) => {
+  handler: (req, res) => {
     const resetMs       = req.rateLimit?.resetTime instanceof Date
       ? req.rateLimit.resetTime.getTime()
       : Date.now() + 60 * 1000;
