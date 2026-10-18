@@ -63,9 +63,10 @@ function PageTransition({ children }) {
 const TOAST_CONFIG = {
   duration: 3000,
   style: {
-    background:  "#141428",
-    color:       "#e8e8f0",
-    border:      "1px solid #1e1e38",
+    background:  "rgb(var(--bg-card))",
+    color:       "rgb(var(--fg-primary))",
+    border:      "1px solid rgb(var(--bg-border))",
+    boxShadow:   "0 8px 28px rgba(0,0,0,0.14)",
     fontSize:    "13px",
     fontFamily:  "'DM Sans', system-ui, sans-serif",
     borderRadius: "12px",
@@ -174,7 +175,7 @@ export default function App() {
       <AuthProvider>
         <>
           <AccentSync />
-          <Toaster position="top-right" toastOptions={TOAST_CONFIG} />
+          <Toaster position="top-center" toastOptions={TOAST_CONFIG} />
           <BrowserRouter>
             <ChatScope>
             <RouteTracker />
