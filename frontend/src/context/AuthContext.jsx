@@ -91,6 +91,11 @@ export function AuthProvider({ children }) {
     return res.data.student;
   }, []);
 
+  // Replace the cached student with a fresh payload returned by an endpoint
+  const setStudent = useCallback((student) => {
+    if (student) setUser(student);
+  }, []);
+
   // ── Profile — update name ──────────────────────────────────
   const updateProfile = useCallback(async (data) => {
     const res = await userApi.updateProfile(data);
@@ -120,6 +125,7 @@ export function AuthProvider({ children }) {
         login,
         logout,
         refreshUser,
+        setStudent,
         updateTargetExam,
         updateProfile,
         changePassword,
@@ -131,6 +137,7 @@ export function AuthProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   const ctx = useContext(AuthContext);
   if (!ctx) throw new Error("useAuth must be used inside <AuthProvider>");

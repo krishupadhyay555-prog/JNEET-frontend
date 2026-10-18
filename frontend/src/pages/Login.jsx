@@ -1,238 +1,221 @@
 // ============================================================
-//  JNEET+ AI — pages/Login.jsx  (v3.3 — Email Verification aware)
-//  CHANGED: status 403 from the backend can now mean TWO different
-//  things — a genuinely deactivated account, OR an unverified
-//  signup (new requiresVerification flag added in authController
-//  v7). Previously both showed "Account deactivated", which was
-//  actively wrong for the second case. Now: if requiresVerification
-//  is true, the user is redirected straight to Register.jsx's OTP
-//  step (via navigation state) instead of seeing an error at all —
-//  a genuinely deactivated account still shows the original message.
-//  Everything else (Forgot password link, layout) UNCHANGED from v3.2.
+//  JNEET+ AI — pages/Login.jsx  (v5)
+//  Two ways in, like Claude / Google:
+//    - email + password
+//    - "Email me a code" (passwordless, 6-box OTP)
+//  Unverified accounts are sent to the code screen on /register.
 // ============================================================
 
-import { useState }           from "react";
-import { useNavigate, Link }  from "react-router-dom";
-import { useAuth }            from "../context/AuthContext.jsx";
-import { authApi }            from "../api/authApi.js";
-import { FormField }          from "../components/auth/FormField.jsx";
-import { Spinner }            from "../components/ui/Spinner.jsx";
-import { Eye, EyeOff, ArrowRight } from "lucide-react";
+import { useState }          from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { useAuth }           from "../context/AuthContext.jsx";
+import { authApi }           from "../api/authApi.js";
+import { FormField }         from "../components/auth/FormField.jsx";
+import { OtpInput }          from "../components/auth/OtpInput.jsx";
+import { AuthShell, SubmitButton, Notice } from "../components/auth/AuthShell.jsx";
+import { useCountdown }      from "../hooks/useCountdown.js";
+import { Eye, EyeOff, Mail, KeyRound, ArrowLeft } from "lucide-react";
 
-function clientValidate(form) {
-  const errs = {};
-  if (!form.email.trim())
-    errs.email = "Email is required";
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-    errs.email = "Enter a valid email address";
-  if (!form.password)
-    errs.password = "Password is required";
-  return errs;
-}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function Login() {
-  const { login }  = useAuth();
-  const navigate   = useNavigate();
+  const { login } = useAuth();
+  const navigate  = useNavigate();
 
+  // "password" | "code-email" | "code-enter"
+  const [mode,     setMode]     = useState("password");
   const [form,     setForm]     = useState({ email: "", password: "" });
+  const [otp,      setOtp]      = useState("");
   const [errors,   setErrors]   = useState({});
+  const [formErr,  setFormErr]  = useState("");
+  const [notice,   setNotice]   = useState(null);
   const [loading,  setLoading]  = useState(false);
   const [showPass, setShowPass] = useState(false);
+  const [cooldown, startCooldown] = useCountdown(0);
+
+  const email = form.email.trim().toLowerCase();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
+    setForm((p) => ({ ...p, [name]: value }));
+    if (errors[name]) setErrors((p) => ({ ...p, [name]: "" }));
+    if (formErr) setFormErr("");
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const switchMode = (next) => {
+    setMode(next); setErrors({}); setFormErr(""); setNotice(null); setOtp("");
+  };
 
-    const clientErrs = clientValidate(form);
-    if (Object.keys(clientErrs).length > 0) {
-      setErrors(clientErrs);
-      return;
+  const goVerify = (mail) => navigate("/register", { state: { step: 2, email: mail || email } });
+
+  // Shared handling of auth errors that mean the same thing on every path.
+  const handleCommonError = (err, field) => {
+    const status = err.response?.status;
+    const data   = err.response?.data ?? {};
+    if (err.isNetworkError || err.isTimeout) { setErrors({ [field]: "Can't reach the server. Check your connection and try again." }); return true; }
+    if (status === 403 && data.requiresVerification) { goVerify(data.email); return true; }
+    if (status === 403) { setErrors({ [field]: data.error || "This account is deactivated. Please contact support." }); return true; }
+    if (status === 423) { setErrors({ [field]: data.error || "This account is temporarily locked. Please try again later." }); return true; }
+    if (status === 429) {
+      const mins = data.retryAfter ? Math.max(1, Math.ceil(data.retryAfter / 60)) : null;
+      setErrors({ [field]: mins ? `Too many attempts. Try again in about ${mins} minute${mins === 1 ? "" : "s"}.` : "Too many attempts. Please try again later." });
+      return true;
     }
+    return false;
+  };
 
-    setLoading(true);
-    setErrors({});
+  const submitPassword = async (e) => {
+    e.preventDefault();
+    const errs = {};
+    if (!email) errs.email = "Email is required";
+    else if (!EMAIL_RE.test(email)) errs.email = "Enter a valid email address";
+    if (!form.password) errs.password = "Password is required";
+    if (Object.keys(errs).length) { setErrors(errs); return; }
 
+    setLoading(true); setErrors({});
     try {
-      const res = await authApi.login({
-        email:    form.email.trim().toLowerCase(),
-        password: form.password,
-      });
-
+      const res = await authApi.login({ email, password: form.password });
       login(res.data.student);
       navigate("/dashboard", { replace: true });
-
     } catch (err) {
-      const status     = err.response?.status;
-      const serverErrs = err.response?.data?.fieldErrors ?? [];
+      if (handleCommonError(err, "password")) return;
+      const fields = err.response?.data?.fieldErrors ?? [];
+      if (fields.length) setErrors(Object.fromEntries(fields.map(({ field, message }) => [field, message])));
+      else if (err.response?.status === 401) setErrors({ password: "Incorrect email or password" });
+      else setErrors({ password: "Something went wrong on our side. Please try again in a moment." });
+    } finally {
+      setLoading(false);
+    }
+  };
 
-      if (err.isNetworkError || err.isTimeout) {
-        setErrors({ password: "Can't reach the server. Please try again in a moment." });
-        return;
-      }
+  const sendCode = async (e) => {
+    e?.preventDefault();
+    if (!email) { setErrors({ email: "Email is required" }); return; }
+    if (!EMAIL_RE.test(email)) { setErrors({ email: "Enter a valid email address" }); return; }
+    if (cooldown > 0 && mode === "code-enter") return;
 
-      if (serverErrs.length > 0) {
-        const mapped = {};
-        serverErrs.forEach(({ field, message }) => { mapped[field] = message; });
-        setErrors(mapped);
-        return;
-      }
-
-      if (status === 401) {
-        setErrors({ password: "Incorrect email or password" });
-        return;
-      }
-
-      if (status === 403) {
-        // Two different meanings for the same status code — check
-        // the flag before assuming "deactivated".
-        if (err.response?.data?.requiresVerification) {
-          navigate("/register", {
-            state: { step: 2, email: err.response.data.email || form.email.trim().toLowerCase() },
-          });
-          return;
-        }
-        setErrors({ email: "Account deactivated. Please contact support." });
-        return;
-      }
-
+    setLoading(true); setErrors({});
+    try {
+      const res = await authApi.requestLoginCode({ email });
+      setNotice({ tone: "success", text: "If this email has an account, a 6-digit code is on its way. Check Spam too." });
+      startCooldown(res.data?.resendAfter ?? 60);
+      setOtp("");
+      setMode("code-enter");
+    } catch (err) {
+      const status = err.response?.status;
       if (status === 429) {
-        setErrors({ password: "Too many attempts. Please try again in 15 minutes." });
-      } else if (status === 423) {
-        setErrors({ password: err.response?.data?.error || "This account is temporarily locked. Please try again later." });
-      } else {
-        // Never surface raw backend/route text for unexpected statuses.
-        setErrors({ password: "Something went wrong on our end. Please try again in a moment." });
+        setErrors({ email: err.response?.data?.error || "Please wait a moment before requesting another code." });
+        startCooldown(err.response?.data?.retryAfter ?? 60);
+      } else if (status === 502 || status === 503) {
+        setErrors({ email: err.response?.data?.error || "We couldn't send the email right now. Try again in a few minutes, or log in with your password." });
+      } else if (!handleCommonError(err, "email")) {
+        setErrors({ email: "Something went wrong on our side. Please try again." });
       }
     } finally {
       setLoading(false);
     }
   };
 
+  const verifyCode = async (code) => {
+    if (loading) return;
+    if (!/^\d{6}$/.test(code)) { setErrors({ otp: "Enter the 6-digit code" }); return; }
+    setLoading(true); setErrors({});
+    try {
+      const res = await authApi.verifyLoginCode({ email, otp: code });
+      login(res.data.student);
+      navigate("/dashboard", { replace: true });
+    } catch (err) {
+      setOtp("");
+      if (handleCommonError(err, "otp")) return;
+      if (err.response?.status === 400 || err.response?.status === 401) setErrors({ otp: err.response?.data?.error || "That code is incorrect or expired." });
+      else setErrors({ otp: "Something went wrong on our side. Please try again." });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // ── Enter the emailed code ───────────────────────────────────
+  if (mode === "code-enter") {
+    return (
+      <AuthShell
+        title="Check your email"
+        subtitle={<>Enter the code sent to <span className="font-medium text-[#2D2A32]">{email}</span></>}
+        footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}
+      >
+        {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
+        <form onSubmit={(e) => { e.preventDefault(); verifyCode(otp); }} noValidate className="space-y-4">
+          <OtpInput value={otp} onChange={setOtp} onComplete={verifyCode} disabled={loading} error={errors.otp} idPrefix="login-otp" />
+          <SubmitButton loading={loading} loadingText="Checking…" disabled={otp.length !== 6}>Log in</SubmitButton>
+          <button type="button" onClick={sendCode} disabled={loading || cooldown > 0}
+            className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]">
+            {cooldown > 0 ? `Send a new code in ${cooldown}s` : "Send a new code"}
+          </button>
+          <button type="button" onClick={() => switchMode("password")}
+            className="w-full flex items-center justify-center gap-1.5 text-[#8B8594] hover:text-[#6B6572] text-xs transition-colors">
+            <ArrowLeft size={12} /><span>Use password instead</span>
+          </button>
+        </form>
+      </AuthShell>
+    );
+  }
+
+  // ── Ask for email to send a code ─────────────────────────────
+  if (mode === "code-email") {
+    return (
+      <AuthShell title="Log in with a code" subtitle="We'll email you a 6-digit code — no password needed"
+        footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}>
+        <form onSubmit={sendCode} noValidate className="space-y-4">
+          <FormField label="Email" name="email" type="email" value={form.email} onChange={handleChange}
+            error={errors.email} placeholder="you@example.com" autoComplete="email" disabled={loading}
+            autoCapitalize="none" spellCheck={false} inputMode="email" />
+          <SubmitButton loading={loading} loadingText="Sending…">Email me a code</SubmitButton>
+          <button type="button" onClick={() => switchMode("password")}
+            className="w-full flex items-center justify-center gap-1.5 text-[#8B8594] hover:text-[#6B6572] text-xs transition-colors">
+            <KeyRound size={12} /><span>Use password instead</span>
+          </button>
+        </form>
+      </AuthShell>
+    );
+  }
+
+  // ── Password login (default) ─────────────────────────────────
   return (
-    <div className="min-h-screen bg-[#FDFBFC] flex items-center justify-center px-4 relative overflow-hidden">
+    <AuthShell title="JNEET+ AI" subtitle="Welcome back"
+      footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}>
+      {formErr ? <Notice tone="error">{formErr}</Notice> : null}
+      <form onSubmit={submitPassword} noValidate className="space-y-4">
+        <FormField label="Email" name="email" type="email" value={form.email} onChange={handleChange}
+          error={errors.email} placeholder="you@example.com" autoComplete="username" disabled={loading}
+          autoCapitalize="none" spellCheck={false} inputMode="email" />
 
-      <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden>
-        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#93C5FD]/25 rounded-full blur-[110px] animate-pulse-soft" />
-        <div
-          className="absolute -bottom-24 -right-24 w-[420px] h-[420px] bg-[#F5A9C8]/25 rounded-full blur-[110px] animate-pulse-soft"
-          style={{ animationDelay: "1s" }}
-        />
-      </div>
-
-      <div className="w-full max-w-sm relative animate-fade-up">
-        <div className="bg-white border border-[#EDE6F3] rounded-2xl p-7 shadow-[0_1px_3px_rgba(45,42,50,0.06),0_12px_32px_rgba(45,42,50,0.08)]
-          transition-shadow duration-300 hover:shadow-[0_1px_3px_rgba(45,42,50,0.08),0_16px_40px_rgba(147,197,253,0.16)]">
-
-          {/* Logo — real JN icon */}
-          <div
-            className="flex flex-col items-center mb-7 animate-fade-up"
-            style={{ animationDelay: "40ms", animationFillMode: "backwards" }}
-          >
-            <div className="w-11 h-11 rounded-xl overflow-hidden mb-3
-              shadow-[0_6px_18px_rgba(147,197,253,0.4)]
-              transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-              <img
-                src="/icon-192.png"
-                alt="JNEET+ AI"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h1 className="text-xl font-bold tracking-tight text-[#2D2A32]">JNEET+ AI</h1>
-            <p className="text-[#6B6572] text-xs mt-0.5">Welcome back — please sign in</p>
-          </div>
-
-          <form onSubmit={handleSubmit} noValidate className="space-y-4">
-
-            {/* Email — staggered entrance */}
-            <div className="animate-fade-up" style={{ animationDelay: "90ms", animationFillMode: "backwards" }}>
-              <FormField
-                label="Email"
-                name="email"
-                type="email"
-                value={form.email}
-                onChange={handleChange}
-                error={errors.email}
-                placeholder="you@example.com"
-                autoComplete="email"
-                disabled={loading}
-              />
-            </div>
-
-            {/* Password — staggered entrance */}
-            <div className="animate-fade-up" style={{ animationDelay: "140ms", animationFillMode: "backwards" }}>
-              <FormField
-                label="Password"
-                name="password"
-                type={showPass ? "text" : "password"}
-                value={form.password}
-                onChange={handleChange}
-                error={errors.password}
-                placeholder="••••••••"
-                autoComplete="current-password"
-                disabled={loading}
-              >
-                <button
-                  type="button"
-                  tabIndex={-1}
-                  onClick={() => setShowPass((v) => !v)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2
-                    text-[#9B95A8] hover:text-[#6B6572] transition-colors duration-150 p-0.5"
-                >
-                  {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
-                </button>
-              </FormField>
-              <div className="text-right mt-1.5">
-                <Link
-                  to="/forgot-password"
-                  className="text-[#8B8594] hover:text-[#5B9FE8] text-xs transition-colors duration-150"
-                >
-                  Forgot password?
-                </Link>
-              </div>
-            </div>
-
-            {/* Submit */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
-                hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
-                disabled:opacity-50 disabled:cursor-not-allowed
-                text-white font-semibold py-2.5 rounded-xl
-                transition-all duration-200
-                flex items-center justify-center gap-2 text-sm mt-1
-                active:scale-[0.98] hover:-translate-y-0.5 group"
-            >
-              {loading ? (
-                <>
-                  <Spinner size={15} />
-                  <span>Logging in...</span>
-                </>
-              ) : (
-                <>
-                  <span>Log In</span>
-                  <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                </>
-              )}
+        <div>
+          <FormField label="Password" name="password" type={showPass ? "text" : "password"}
+            value={form.password} onChange={handleChange} error={errors.password}
+            placeholder="••••••••" autoComplete="current-password" disabled={loading}>
+            <button type="button" onClick={() => setShowPass((v) => !v)}
+              aria-label={showPass ? "Hide password" : "Show password"}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9B95A8] hover:text-[#6B6572] transition-colors p-0.5">
+              {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
             </button>
-          </form>
-
-          <p className="text-center text-[#6B6572] text-xs mt-5">
-            New here?{" "}
-            <Link
-              to="/register"
-              className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium transition-colors duration-150"
-            >
-              Register Now
+          </FormField>
+          <div className="text-right mt-1.5">
+            <Link to="/forgot-password" className="text-[#8B8594] hover:text-[#5B9FE8] text-xs transition-colors">
+              Forgot password?
             </Link>
-          </p>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <SubmitButton loading={loading} loadingText="Logging in…">Log in</SubmitButton>
+
+        <div className="flex items-center gap-3 text-[11px] text-[#B8B2C2]" aria-hidden="true">
+          <span className="flex-1 h-px bg-[#EDE6F3]" />or<span className="flex-1 h-px bg-[#EDE6F3]" />
+        </div>
+
+        <button type="button" onClick={() => switchMode("code-email")}
+          className="w-full flex items-center justify-center gap-2 border border-[#EDE6F3] hover:border-[#93C5FD]/60 hover:bg-[#F7FAFF] text-[#2D2A32] text-sm font-medium py-2.5 rounded-xl transition-all active:scale-[0.98]">
+          <Mail size={14} /> Email me a login code
+        </button>
+      </form>
+    </AuthShell>
   );
 }

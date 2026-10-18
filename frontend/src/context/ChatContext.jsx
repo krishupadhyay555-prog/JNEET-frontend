@@ -33,7 +33,7 @@ import {
   createContext, useContext, useState, useCallback, useRef,
 } from "react";
 import { chatApi }  from "../api/chatApi.js";
-import { streamAsk } from "../api/aiApi.js";
+import { streamAsk, aiApi } from "../api/aiApi.js";
 import { useAuth }  from "./AuthContext.jsx";
 import toast        from "react-hot-toast";
 
@@ -64,6 +64,12 @@ export function ChatProvider({ children }) {
   const [isStreaming,      setIsStreaming]       = useState(false);
   const [streamingText,    setStreamingText]     = useState("");
   const [backendError,     setBackendError]      = useState(null);
+  // { remaining, limit, resetsAt } for today's AI doubts (null = unknown yet)
+  const [usage,            setUsage]             = useState(null);
+  // Why the AI can't answer right now: { code, message, resetsAt?, limit? }
+  const [aiNotice,         setAiNotice]          = useState(null);
+  // A prompt that failed to send, handed back so the student doesn't retype it
+  const [failedPrompt,     setFailedPrompt]      = useState(null);
 
   const abortRef = useRef(null);
   const latestLoadRef = useRef(0);
@@ -104,6 +110,15 @@ export function ChatProvider({ children }) {
       if (savedResult.status === "rejected") {
         console.warn("[Chat] Failed to load saved items:", savedResult.reason?.message);
       }
+
+      // Non-blocking: today's remaining AI doubts
+      aiApi.usage()
+        .then((r) => {
+          const d = r.data?.daily;
+          if (d) setUsage({ remaining: d.remaining, limit: d.limit, resetsAt: d.resetsAt });
+          if (r.data?.aiLocked) setAiNotice((n) => n ?? { code: "PARENT_CONSENT_REQUIRED", message: "Your parent or guardian needs to approve your account before you can use the AI mentor." });
+        })
+        .catch(() => { /* usage is a nicety; the chat works without it */ });
 
       const loadedSessions = (sessRes.data.sessions ?? [])
         .map((session) => ({
@@ -318,6 +333,8 @@ export function ChatProvider({ children }) {
     setMessages((prev) => [...prev, tempUserMsg]);
     setIsStreaming(true);
     setStreamingText("");
+    setAiNotice(null);
+    setFailedPrompt(null);
 
     abortRef.current?.abort();
 
@@ -341,8 +358,9 @@ export function ChatProvider({ children }) {
           setStreamingText(accumulated);
         },
 
-        onDone: async (fullText) => {
+        onDone: async (fullText, newUsage) => {
           const stillActive = belongsToActiveSession();
+          if (newUsage) setUsage(newUsage);
 
           if (stillActive) {
             setIsStreaming(false);
@@ -406,7 +424,7 @@ export function ChatProvider({ children }) {
           }
         },
 
-        onError: (errMsg) => {
+        onError: (errMsg, info = {}) => {
           if (streamSessionRef.current === streamOwnerSessionId) {
             streamSessionRef.current = null;
           }
@@ -414,7 +432,16 @@ export function ChatProvider({ children }) {
           setIsStreaming(false);
           setStreamingText("");
           setMessages((prev) => prev.filter((m) => m._id !== tempUserMsg._id));
-          toast.error(errMsg || "AI could not respond");
+          setFailedPrompt({ text: prompt.trim(), nonce: Date.now() });
+
+          if (info.code === "DAILY_LIMIT") {
+            setUsage({ remaining: 0, limit: info.limit ?? null, resetsAt: info.resetsAt ?? null });
+            setAiNotice({ code: info.code, message: errMsg, resetsAt: info.resetsAt ?? null, limit: info.limit ?? null });
+          } else if (["PARENT_CONSENT_REQUIRED", "AI_BUSY", "AI_NOT_CONFIGURED"].includes(info.code)) {
+            setAiNotice({ code: info.code, message: errMsg });
+          } else {
+            toast.error(errMsg || "The AI mentor couldn't respond. Please try again.");
+          }
         },
       }
     );
@@ -476,6 +503,7 @@ export function ChatProvider({ children }) {
     isStreaming,
     streamingText,
     backendError, setBackendError,
+    usage, aiNotice, setAiNotice, failedPrompt, setFailedPrompt,
     loadInitialData,
     loadSession,
     selectSession,
@@ -491,6 +519,7 @@ export function ChatProvider({ children }) {
   return <ChatContext.Provider value={value}>{children}</ChatContext.Provider>;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useChat() {
   const ctx = useContext(ChatContext);
   if (!ctx) throw new Error("useChat must be used inside <ChatProvider>");

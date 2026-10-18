@@ -1,341 +1,147 @@
 // ============================================================
-//  JNEET+ AI — pages/ForgotPassword.jsx  (NEW)
-//  Two-step flow on a single page:
-//    Step 1: enter email -> request OTP (authApi.forgotPassword)
-//    Step 2: enter the 6-digit OTP + new password -> reset
-//            (authApi.resetPassword). On success, the backend logs
-//            the user straight in (same response shape as login),
-//            so we reuse useAuth().login() + navigate to dashboard,
-//            exactly like Login.jsx does.
-//  Styling/layout intentionally mirrors Login.jsx exactly (same
-//  card, gradient background, FormField component, button style)
-//  so it feels like part of the same auth flow, not a bolted-on page.
+//  JNEET+ AI — pages/ForgotPassword.jsx  (v4)
+//  Step 1: enter email → code is emailed (answer never reveals whether
+//          the account exists).
+//  Step 2: six-box code + new password (strength meter) → backend logs
+//          the student in on success and every other device is signed out.
 // ============================================================
 
-import { useState }           from "react";
-import { useNavigate, Link }  from "react-router-dom";
-import { useAuth }            from "../context/AuthContext.jsx";
-import { authApi }            from "../api/authApi.js";
-import { FormField }          from "../components/auth/FormField.jsx";
-import { Spinner }            from "../components/ui/Spinner.jsx";
-import { Eye, EyeOff, ArrowRight, ArrowLeft } from "lucide-react";
+import { useState }          from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { useAuth }           from "../context/AuthContext.jsx";
+import { authApi }           from "../api/authApi.js";
+import { FormField }         from "../components/auth/FormField.jsx";
+import { OtpInput }          from "../components/auth/OtpInput.jsx";
+import { PasswordStrength } from "../components/auth/PasswordStrength.jsx";
+import { passwordMeetsPolicy } from "../utils/password.js";
+import { AuthShell, SubmitButton, Notice } from "../components/auth/AuthShell.jsx";
+import { useCountdown }      from "../hooks/useCountdown.js";
+import { Eye, EyeOff, ArrowLeft } from "lucide-react";
 
-function validateEmailStep(form) {
-  const errs = {};
-  if (!form.email.trim())
-    errs.email = "Email is required";
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-    errs.email = "Enter a valid email address";
-  return errs;
-}
-
-function validateResetStep(form) {
-  const errs = {};
-  if (!form.otp.trim())
-    errs.otp = "Enter the code from your email";
-  else if (!/^\d{6}$/.test(form.otp.trim()))
-    errs.otp = "Code must be 6 digits";
-
-  if (!form.newPassword)
-    errs.newPassword = "New password is required";
-  else if (form.newPassword.length < 8)
-    errs.newPassword = "Password must be at least 8 characters";
-  else if (!/[A-Za-z]/.test(form.newPassword) || !/[0-9]/.test(form.newPassword))
-    errs.newPassword = "Password must include a letter and a number";
-
-  if (!form.confirmPassword)
-    errs.confirmPassword = "Please confirm your new password";
-  else if (form.newPassword !== form.confirmPassword)
-    errs.confirmPassword = "Passwords don't match";
-
-  return errs;
-}
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function ForgotPassword() {
-  const { login }  = useAuth();
-  const navigate   = useNavigate();
+  const { login } = useAuth();
+  const navigate  = useNavigate();
 
-  // step 1 = requesting the OTP, step 2 = entering OTP + new password
-  const [step, setStep] = useState(1);
-
-  const [form, setForm] = useState({
-    email: "",
-    otp: "",
-    newPassword: "",
-    confirmPassword: "",
-  });
+  const [step,     setStep]     = useState(1);
+  const [email,    setEmail]    = useState("");
+  const [otp,      setOtp]      = useState("");
+  const [password, setPassword] = useState("");
   const [errors,   setErrors]   = useState({});
+  const [notice,   setNotice]   = useState(null);
   const [loading,  setLoading]  = useState(false);
   const [showPass, setShowPass] = useState(false);
-  const [infoMsg,  setInfoMsg]  = useState("");
+  const [cooldown, startCooldown] = useCountdown(0);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  const clean = email.trim().toLowerCase();
 
-  const handleRequestOtp = async (e) => {
-    e.preventDefault();
+  const requestCode = async (e) => {
+    e?.preventDefault();
+    if (!clean) { setErrors({ email: "Email is required" }); return; }
+    if (!EMAIL_RE.test(clean)) { setErrors({ email: "Enter a valid email address" }); return; }
+    if (step === 2 && cooldown > 0) return;
 
-    const clientErrs = validateEmailStep(form);
-    if (Object.keys(clientErrs).length > 0) {
-      setErrors(clientErrs);
-      return;
-    }
-
-    setLoading(true);
-    setErrors({});
-    setInfoMsg("");
-
+    setLoading(true); setErrors({});
     try {
-      await authApi.forgotPassword({ email: form.email.trim().toLowerCase() });
-      setInfoMsg("If an account exists with this email, a 6-digit code has been sent. Check your inbox (and spam folder).");
-      setStep(2);
+      const res = await authApi.forgotPassword({ email: clean });
+      setNotice({ tone: "success", text: "If an account exists for this email, a reset code is on its way. Check Spam too." });
+      startCooldown(res.data?.resendAfter ?? 60);
+      setOtp(""); setStep(2);
     } catch (err) {
       const status = err.response?.status;
-
-      if (err.isNetworkError || err.isTimeout) {
-        setErrors({ email: "Can't reach the server. Please try again in a moment." });
-      } else if (status === 400) {
-        // Only trust the backend message for validation-style errors —
-        // these are written to be user-facing (e.g. "Enter a valid email").
-        setErrors({ email: err.response?.data?.error || "Please check your email and try again." });
-      } else if (status === 429) {
-        setErrors({ email: err.response?.data?.error || "Too many attempts. Please try again in 15 minutes." });
-      } else {
-        // Any other status (404, 500, or anything unexpected) — never
-        // surface the raw backend/route message to the user. Always a
-        // clean, generic fallback instead.
-        setErrors({ email: "Something went wrong on our end. Please try again in a moment." });
-      }
+      if (err.isNetworkError || err.isTimeout) setErrors({ email: "Can't reach the server. Check your connection and try again." });
+      else if (status === 429) {
+        setErrors({ email: err.response?.data?.error || "Too many requests. Please try again later." });
+        startCooldown(err.response?.data?.retryAfter ?? 60);
+      } else if (status === 502 || status === 503) setErrors({ email: err.response?.data?.error || "We couldn't send the email right now. Please try again in a few minutes." });
+      else if (status === 400) setErrors({ email: err.response?.data?.error || "Please check the email and try again." });
+      else setErrors({ email: "Something went wrong on our side. Please try again." });
     } finally {
       setLoading(false);
     }
   };
 
-  const handleResetPassword = async (e) => {
+  const resetPassword = async (e) => {
     e.preventDefault();
+    const errs = {};
+    if (!/^\d{6}$/.test(otp)) errs.otp = "Enter the 6-digit code";
+    if (!password) errs.password = "New password is required";
+    else if (!passwordMeetsPolicy(password)) errs.password = "Use at least 8 characters with a letter and a number";
+    if (Object.keys(errs).length) { setErrors(errs); return; }
 
-    const clientErrs = validateResetStep(form);
-    if (Object.keys(clientErrs).length > 0) {
-      setErrors(clientErrs);
-      return;
-    }
-
-    setLoading(true);
-    setErrors({});
-
+    setLoading(true); setErrors({});
     try {
-      const res = await authApi.resetPassword({
-        email:       form.email.trim().toLowerCase(),
-        otp:         form.otp.trim(),
-        newPassword: form.newPassword,
-      });
-
-      // Backend logs the user in immediately on successful reset —
-      // same response shape as login, so we can reuse it directly.
+      const res = await authApi.resetPassword({ email: clean, otp, newPassword: password });
       login(res.data.student);
       navigate("/dashboard", { replace: true });
-
     } catch (err) {
       const status = err.response?.status;
-
-      if (err.isNetworkError || err.isTimeout) {
-        setErrors({ otp: "Can't reach the server. Please try again in a moment." });
-      } else if (status === 400 || status === 429) {
-        // These ARE written to be user-facing (wrong/expired code,
-        // attempts remaining, etc.) — safe to show directly.
-        setErrors({ otp: err.response?.data?.error || "Invalid or expired code. Please try again." });
-      } else {
-        // Any other status — never surface raw backend/route text.
-        setErrors({ otp: "Something went wrong on our end. Please try again in a moment." });
-      }
+      const fields = err.response?.data?.fieldErrors ?? [];
+      if (err.isNetworkError || err.isTimeout) setErrors({ otp: "Can't reach the server. Try again in a moment." });
+      else if (fields.length) {
+        const mapped = Object.fromEntries(fields.map(({ field, message }) => [field === "newPassword" ? "password" : field, message]));
+        setErrors(mapped);
+      } else if (status === 400 || status === 429 || status === 423) {
+        setOtp("");
+        setErrors({ otp: err.response?.data?.error || "That code is incorrect or expired." });
+      } else setErrors({ otp: "Something went wrong on our side. Please try again." });
     } finally {
       setLoading(false);
     }
   };
 
+  const footer = <>Remembered it? <Link to="/login" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Log in</Link></>;
+
+  if (step === 1) {
+    return (
+      <AuthShell title="Reset your password" subtitle="We'll email you a 6-digit code" footer={footer}>
+        <form onSubmit={requestCode} noValidate className="space-y-4">
+          <FormField label="Email" name="email" type="email" value={email}
+            onChange={(e) => { setEmail(e.target.value); setErrors({}); }}
+            error={errors.email} placeholder="you@example.com" autoComplete="email" disabled={loading}
+            autoCapitalize="none" spellCheck={false} inputMode="email" />
+          <SubmitButton loading={loading} loadingText="Sending…">Send reset code</SubmitButton>
+        </form>
+      </AuthShell>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-[#FDFBFC] flex items-center justify-center px-4 relative overflow-hidden">
+    <AuthShell
+      title="Enter your reset code"
+      subtitle={<>Sent to <span className="font-medium text-[#2D2A32]">{clean}</span></>}
+      footer={footer}
+    >
+      {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
+      <form onSubmit={resetPassword} noValidate className="space-y-4">
+        <OtpInput value={otp} onChange={(v) => { setOtp(v); setErrors((p) => ({ ...p, otp: "" })); }}
+          disabled={loading} error={errors.otp} idPrefix="reset-otp" />
 
-      <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden>
-        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#93C5FD]/25 rounded-full blur-[110px] animate-pulse-soft" />
-        <div
-          className="absolute -bottom-24 -right-24 w-[420px] h-[420px] bg-[#F5A9C8]/25 rounded-full blur-[110px] animate-pulse-soft"
-          style={{ animationDelay: "1s" }}
-        />
-      </div>
-
-      <div className="w-full max-w-sm relative animate-fade-up">
-        <div className="bg-white border border-[#EDE6F3] rounded-2xl p-7 shadow-[0_1px_3px_rgba(45,42,50,0.06),0_12px_32px_rgba(45,42,50,0.08)]
-          transition-shadow duration-300 hover:shadow-[0_1px_3px_rgba(45,42,50,0.08),0_16px_40px_rgba(147,197,253,0.16)]">
-
-          <div
-            className="flex flex-col items-center mb-7 animate-fade-up"
-            style={{ animationDelay: "40ms", animationFillMode: "backwards" }}
-          >
-            <div className="w-11 h-11 rounded-xl overflow-hidden mb-3
-              shadow-[0_6px_18px_rgba(147,197,253,0.4)]
-              transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-              <img
-                src="/icon-192.png"
-                alt="JNEET+ AI"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h1 className="text-xl font-bold tracking-tight text-[#2D2A32]">JNEET+ AI</h1>
-            <p className="text-[#6B6572] text-xs mt-0.5">
-              {step === 1 ? "Reset your password" : "Enter your reset code"}
-            </p>
-          </div>
-
-          {infoMsg && step === 2 && (
-            <div className="bg-[#EBF5FF] border border-[#93C5FD]/40 text-[#2D6CB0] text-xs rounded-xl px-3.5 py-2.5 mb-4 animate-fade-in">
-              {infoMsg}
-            </div>
-          )}
-
-          {step === 1 ? (
-            <form onSubmit={handleRequestOtp} noValidate className="space-y-4">
-              <div className="animate-fade-up" style={{ animationDelay: "90ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="Email"
-                  name="email"
-                  type="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  error={errors.email}
-                  placeholder="you@example.com"
-                  autoComplete="email"
-                  disabled={loading}
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
-                  hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  text-white font-semibold py-2.5 rounded-xl
-                  transition-all duration-200
-                  flex items-center justify-center gap-2 text-sm mt-1
-                  active:scale-[0.98] hover:-translate-y-0.5 group"
-              >
-                {loading ? (
-                  <>
-                    <Spinner size={15} />
-                    <span>Sending code...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Send Reset Code</span>
-                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </>
-                )}
-              </button>
-            </form>
-          ) : (
-            <form onSubmit={handleResetPassword} noValidate className="space-y-4">
-              <div className="animate-fade-up" style={{ animationDelay: "40ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="6-digit code"
-                  name="otp"
-                  type="text"
-                  value={form.otp}
-                  onChange={handleChange}
-                  error={errors.otp}
-                  placeholder="000000"
-                  autoComplete="one-time-code"
-                  disabled={loading}
-                />
-              </div>
-
-              <div className="animate-fade-up" style={{ animationDelay: "90ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="New password"
-                  name="newPassword"
-                  type={showPass ? "text" : "password"}
-                  value={form.newPassword}
-                  onChange={handleChange}
-                  error={errors.newPassword}
-                  placeholder="••••••••"
-                  autoComplete="new-password"
-                  disabled={loading}
-                >
-                  <button
-                    type="button"
-                    tabIndex={-1}
-                    onClick={() => setShowPass((v) => !v)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2
-                      text-[#9B95A8] hover:text-[#6B6572] transition-colors duration-150 p-0.5"
-                  >
-                    {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
-                  </button>
-                </FormField>
-              </div>
-
-              <div className="animate-fade-up" style={{ animationDelay: "140ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="Confirm new password"
-                  name="confirmPassword"
-                  type={showPass ? "text" : "password"}
-                  value={form.confirmPassword}
-                  onChange={handleChange}
-                  error={errors.confirmPassword}
-                  placeholder="••••••••"
-                  autoComplete="new-password"
-                  disabled={loading}
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
-                  hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  text-white font-semibold py-2.5 rounded-xl
-                  transition-all duration-200
-                  flex items-center justify-center gap-2 text-sm mt-1
-                  active:scale-[0.98] hover:-translate-y-0.5 group"
-              >
-                {loading ? (
-                  <>
-                    <Spinner size={15} />
-                    <span>Resetting...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Reset Password</span>
-                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </>
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={() => { setStep(1); setErrors({}); setInfoMsg(""); }}
-                className="w-full flex items-center justify-center gap-1.5 text-[#8B8594] hover:text-[#6B6572] text-xs mt-1 transition-colors duration-150"
-              >
-                <ArrowLeft size={12} />
-                <span>Use a different email</span>
-              </button>
-            </form>
-          )}
-
-          <p className="text-center text-[#6B6572] text-xs mt-5">
-            Remembered your password?{" "}
-            <Link
-              to="/login"
-              className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium transition-colors duration-150"
-            >
-              Back to Login
-            </Link>
-          </p>
+        <div>
+          <FormField label="New password" name="password" type={showPass ? "text" : "password"}
+            value={password} onChange={(e) => { setPassword(e.target.value); setErrors((p) => ({ ...p, password: "" })); }}
+            error={errors.password} placeholder="Create a new password" autoComplete="new-password" disabled={loading}>
+            <button type="button" onClick={() => setShowPass((v) => !v)}
+              aria-label={showPass ? "Hide password" : "Show password"}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9B95A8] hover:text-[#6B6572] transition-colors p-0.5">
+              {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
+            </button>
+          </FormField>
+          <PasswordStrength password={password} />
         </div>
-      </div>
-    </div>
+
+        <SubmitButton loading={loading} loadingText="Resetting…" disabled={otp.length !== 6}>Reset password</SubmitButton>
+
+        <button type="button" onClick={requestCode} disabled={loading || cooldown > 0}
+          className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]">
+          {cooldown > 0 ? `Send a new code in ${cooldown}s` : "Send a new code"}
+        </button>
+        <button type="button" onClick={() => { setStep(1); setErrors({}); setNotice(null); }}
+          className="w-full flex items-center justify-center gap-1.5 text-[#8B8594] hover:text-[#6B6572] text-xs transition-colors">
+          <ArrowLeft size={12} /><span>Use a different email</span>
+        </button>
+      </form>
+    </AuthShell>
   );
 }

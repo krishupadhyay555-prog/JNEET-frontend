@@ -12,6 +12,7 @@
 import { Navigate } from "react-router-dom";
 import { useAuth }  from "../context/AuthContext.jsx";
 import { LoadingScreen } from "./ui/LoadingScreen.jsx";
+import { DobGate } from "./auth/DobGate.jsx";
 
 export function ProtectedRoute({ children }) {
   const { isLoggedIn, isInitializing } = useAuth();
@@ -23,5 +24,10 @@ export function ProtectedRoute({ children }) {
   }
 
   if (!isLoggedIn) return <Navigate to="/login" replace />;
-  return children;
+  return (
+    <>
+      {children}
+      <DobGate />
+    </>
+  );
 }

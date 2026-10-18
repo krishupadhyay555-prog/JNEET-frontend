@@ -1,449 +1,323 @@
 // ============================================================
-//  JNEET+ AI — pages/Register.jsx  (v4 — Email Verification, 2-step)
-//  CHANGED: register() no longer logs the user in directly. On a
-//  successful 201, the backend returns { requiresVerification: true,
-//  email } instead of { student }. This page now has a second step
-//  (mirroring ForgotPassword.jsx's pattern) where the user enters
-//  the 6-digit code emailed to them; only THAT step's success
-//  actually logs them in (backend returns the full student payload
-//  there) and navigates to /dashboard. Includes a "Resend code"
-//  action. Styling/layout unchanged from v3.3 for step 1; step 2
-//  reuses the same card/animation patterns.
+//  JNEET+ AI — pages/Register.jsx  (v5 — DOB, parent consent, A-grade OTP)
+//  Step 1: details (name, email, date of birth, password with strength
+//          meter, exam, parent e-mail when under 18, terms checkbox).
+//  Step 2: six-box code entry with autofill/paste, auto-submit,
+//          honest "we couldn't send it" handling and a resend timer
+//          driven by the server's `resendAfter`.
 // ============================================================
 
-import { useState, useEffect }          from "react";
+import { useState, useMemo }              from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import { useAuth }           from "../context/AuthContext.jsx";
-import { authApi }           from "../api/authApi.js";
-import { FormField }         from "../components/auth/FormField.jsx";
-import { Spinner }           from "../components/ui/Spinner.jsx";
-import { Eye, EyeOff, ArrowRight, ArrowLeft } from "lucide-react";
+import toast                              from "react-hot-toast";
+import { useAuth }        from "../context/AuthContext.jsx";
+import { authApi }        from "../api/authApi.js";
+import { FormField }      from "../components/auth/FormField.jsx";
+import { OtpInput }       from "../components/auth/OtpInput.jsx";
+import { PasswordStrength } from "../components/auth/PasswordStrength.jsx";
+import { passwordMeetsPolicy } from "../utils/password.js";
+import { AuthShell, SubmitButton, Notice } from "../components/auth/AuthShell.jsx";
+import { useCountdown }   from "../hooks/useCountdown.js";
+import { Eye, EyeOff, ArrowLeft } from "lucide-react";
 
-function validate(form) {
-  const errs = {};
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!form.name.trim())
-    errs.name = "Name is required";
-  else if (form.name.trim().length < 2)
-    errs.name = "Name must be at least 2 characters";
-  else if (form.name.trim().length > 50)
-    errs.name = "Name cannot exceed 50 characters";
-
-  if (!form.email.trim())
-    errs.email = "Email is required";
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-    errs.email = "Enter a valid email address";
-
-  if (!form.password)
-    errs.password = "Password is required";
-  else if (form.password.length < 8)
-    errs.password = "Password must be at least 8 characters";
-  else if (form.password.length > 128)
-    errs.password = "Password is too long";
-  else if (!/[A-Za-z]/.test(form.password))
-    errs.password = "Password must include at least one letter";
-  else if (!/[0-9]/.test(form.password))
-    errs.password = "Password must include at least one number";
-
-  return errs;
+function ageFromDob(dob) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dob)) return null;
+  const [y, m, d] = dob.split("-").map(Number);
+  const born = new Date(Date.UTC(y, m - 1, d));
+  if (born.getUTCFullYear() !== y || born.getUTCMonth() !== m - 1 || born.getUTCDate() !== d) return null;
+  const now = new Date();
+  if (born.getTime() > now.getTime()) return null;
+  let age = now.getUTCFullYear() - y;
+  const md = now.getUTCMonth() - (m - 1);
+  if (md < 0 || (md === 0 && now.getUTCDate() < d)) age -= 1;
+  return age;
 }
 
-function validateOtp(form) {
+function todayIso() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function validate(form, age) {
   const errs = {};
-  if (!form.otp.trim())
-    errs.otp = "Enter the code from your email";
-  else if (!/^\d{6}$/.test(form.otp.trim()))
-    errs.otp = "Code must be 6 digits";
+  const name = form.name.trim();
+  if (!name) errs.name = "Name is required";
+  else if (name.length < 2) errs.name = "Name must be at least 2 characters";
+  else if (name.length > 50) errs.name = "Name cannot exceed 50 characters";
+
+  if (!form.email.trim()) errs.email = "Email is required";
+  else if (!EMAIL_RE.test(form.email.trim())) errs.email = "Enter a valid email address";
+
+  if (!form.dateOfBirth) errs.dateOfBirth = "Date of birth is required";
+  else if (age === null) errs.dateOfBirth = "Enter a valid date of birth";
+  else if (age < 13) errs.dateOfBirth = "JNEET+ AI is for students aged 13 and above";
+
+  if (!form.password) errs.password = "Password is required";
+  else if (!passwordMeetsPolicy(form.password)) errs.password = "Use at least 8 characters with a letter and a number";
+
+  if (age !== null && age >= 13 && age < 18) {
+    if (!form.parentEmail.trim()) errs.parentEmail = "A parent or guardian's email is required";
+    else if (!EMAIL_RE.test(form.parentEmail.trim())) errs.parentEmail = "Enter a valid email address";
+    else if (form.parentEmail.trim().toLowerCase() === form.email.trim().toLowerCase())
+      errs.parentEmail = "This must be your parent or guardian's email, not yours";
+  }
+
+  if (!form.acceptTerms) errs.acceptTerms = "Please accept the Terms and Privacy Policy to continue";
   return errs;
 }
 
 export default function Register() {
-  const { login }   = useAuth();
-  const navigate    = useNavigate();
-  const location    = useLocation();
+  const { login } = useAuth();
+  const navigate  = useNavigate();
+  const location  = useLocation();
 
-  // If Login.jsx redirected here because the account exists but
-  // isn't verified yet, location.state carries { step: 2, email }
-  // so we can skip straight to the OTP screen instead of making the
-  // user re-fill the whole signup form.
-  const arrivedForVerification = location.state?.step === 2 && location.state?.email;
+  // Login.jsx sends unverified accounts straight to the code screen.
+  const arrived = location.state?.step === 2 && location.state?.email;
 
-  // step 1 = the registration form, step 2 = entering the emailed code
-  const [step, setStep] = useState(arrivedForVerification ? 2 : 1);
-
+  const [step, setStep] = useState(arrived ? 2 : 1);
   const [form, setForm] = useState({
-    name:     "",
-    email:    arrivedForVerification ? location.state.email : "",
-    password: "",
-    examMode: "NEET",
-    otp:      "",
+    name: "", email: arrived ? location.state.email : "", dateOfBirth: "",
+    password: "", parentEmail: "", examMode: "NEET", acceptTerms: false,
   });
-  const [errors,     setErrors]     = useState({});
-  const [loading,    setLoading]    = useState(false);
-  const [showPass,   setShowPass]   = useState(false);
-  const [infoMsg,    setInfoMsg]    = useState(
-    arrivedForVerification ? "Please verify your email to continue. Enter the code sent to your inbox, or resend a new one below." : ""
+  const [otp,      setOtp]      = useState("");
+  const [errors,   setErrors]   = useState({});
+  const [formErr,  setFormErr]  = useState("");
+  const [loading,  setLoading]  = useState(false);
+  const [showPass, setShowPass] = useState(false);
+  const [notice,   setNotice]   = useState(
+    arrived ? { tone: "info", text: "Please verify your email to continue. Enter the code we sent, or request a new one below." } : null
   );
-  const [resending,  setResending]  = useState(false);
-  const [cooldown,   setCooldown]   = useState(arrivedForVerification ? 60 : 0);
+  const [resending, setResending] = useState(false);
+  const [cooldown,  startCooldown] = useCountdown(arrived ? 0 : 0);
 
-  useEffect(() => {
-    if (cooldown <= 0) return;
-    const timer = setInterval(() => {
-      setCooldown((c) => (c > 0 ? c - 1 : 0));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [cooldown]);
+  const age     = useMemo(() => ageFromDob(form.dateOfBirth), [form.dateOfBirth]);
+  const isMinor = age !== null && age >= 13 && age < 18;
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
+    const { name, value, type, checked } = e.target;
+    setForm((p) => ({ ...p, [name]: type === "checkbox" ? checked : value }));
+    if (errors[name]) setErrors((p) => ({ ...p, [name]: "" }));
+    if (formErr) setFormErr("");
   };
 
-  const handleSubmit = async (e) => {
+  const submitDetails = async (e) => {
     e.preventDefault();
+    const errs = validate(form, age);
+    if (Object.keys(errs).length) { setErrors(errs); return; }
 
-    const clientErrs = validate(form);
-    if (Object.keys(clientErrs).length > 0) {
-      setErrors(clientErrs);
-      return;
-    }
-
-    setLoading(true);
-    setErrors({});
-
+    setLoading(true); setErrors({}); setFormErr("");
     try {
-      await authApi.register({
-        name:     form.name.trim(),
-        email:    form.email.trim().toLowerCase(),
+      const res = await authApi.register({
+        name: form.name.trim(),
+        email: form.email.trim().toLowerCase(),
         password: form.password,
         examMode: form.examMode,
+        dateOfBirth: form.dateOfBirth,
+        acceptTerms: true,
+        ...(isMinor ? { parentEmail: form.parentEmail.trim().toLowerCase() } : {}),
       });
 
-      // No login() / navigate here anymore — the account exists but
-      // isn't verified yet. Move to the OTP step instead.
-      setInfoMsg("Account created! Check your email for a 6-digit code (and check spam).");
-      setCooldown(60);
-      setStep(2);
-
-    } catch (err) {
-      const status     = err.response?.status;
-      const serverErrs = err.response?.data?.fieldErrors ?? [];
-      const serverMsg  = err.response?.data?.error        ?? "";
-
-      if (err.isNetworkError || err.isTimeout) {
-        setErrors({ name: "Can't reach the server. Please try again in a moment." });
-        return;
-      }
-
-      if (serverErrs.length > 0) {
-        const mapped = {};
-        serverErrs.forEach(({ field, message }) => {
-          mapped[field] = message;
-        });
-        setErrors(mapped);
-        return;
-      }
-
-      if (status === 409) {
-        setErrors({ email: "This email is already registered. Please log in instead." });
-      } else if (status === 429) {
-        setErrors({ name: "Too many attempts. Please try again later." });
-      } else if (status === 400) {
-        setErrors({ name: serverMsg || "Please check your details and try again." });
+      const { emailSent, resendAfter } = res.data;
+      setOtp("");
+      if (emailSent) {
+        setNotice({ tone: "success", text: "We've emailed you a 6-digit code. It can take a minute — check Spam or Promotions too." });
+        startCooldown(resendAfter || 60);
       } else {
-        setErrors({ name: "Something went wrong on our end. Please try again in a moment." });
+        setNotice({ tone: "warn", text: "Your account is created, but we couldn't send the code just now. Tap “Send a new code” below." });
+        startCooldown(0);
       }
+      setStep(2);
+    } catch (err) {
+      handleRegisterError(err);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleVerify = async (e) => {
-    e.preventDefault();
-
-    const clientErrs = validateOtp(form);
-    if (Object.keys(clientErrs).length > 0) {
-      setErrors(clientErrs);
-      return;
+  const handleRegisterError = (err) => {
+    const status = err.response?.status;
+    const fields = err.response?.data?.fieldErrors ?? [];
+    if (err.isNetworkError || err.isTimeout) {
+      setFormErr("Can't reach the server. Check your connection and try again.");
+    } else if (fields.length) {
+      setErrors(Object.fromEntries(fields.map(({ field, message }) => [field, message])));
+    } else if (status === 429) {
+      setFormErr("Too many attempts. Please wait a little and try again.");
+    } else if (status === 400) {
+      setFormErr(err.response?.data?.error || "Please check your details and try again.");
+    } else {
+      setFormErr("Something went wrong on our side. Please try again in a moment.");
     }
+  };
 
-    setLoading(true);
-    setErrors({});
-
+  const verify = async (code) => {
+    if (loading) return;
+    if (!/^\d{6}$/.test(code)) { setErrors({ otp: "Enter the 6-digit code" }); return; }
+    setLoading(true); setErrors({});
     try {
-      const res = await authApi.verifyEmail({
-        email: form.email.trim().toLowerCase(),
-        otp:   form.otp.trim(),
-      });
-
+      const res = await authApi.verifyEmail({ email: form.email.trim().toLowerCase(), otp: code });
       login(res.data.student);
+      if (res.data.parentRequestSent) {
+        toast.success("We've emailed your parent/guardian for approval of the AI mentor.", { duration: 6000 });
+      }
       navigate("/dashboard", { replace: true });
-
     } catch (err) {
       const status = err.response?.status;
-
-      if (err.isNetworkError || err.isTimeout) {
-        setErrors({ otp: "Can't reach the server. Please try again in a moment." });
-      } else if (status === 400 || status === 429) {
-        setErrors({ otp: err.response?.data?.error || "Invalid or expired code. Please try again." });
-      } else {
-        setErrors({ otp: "Something went wrong on our end. Please try again in a moment." });
-      }
+      setOtp("");
+      if (err.isNetworkError || err.isTimeout) setErrors({ otp: "Can't reach the server. Try again in a moment." });
+      else if (status === 400 || status === 429 || status === 423) setErrors({ otp: err.response?.data?.error || "That code is incorrect or expired." });
+      else setErrors({ otp: "Something went wrong on our side. Please try again." });
     } finally {
       setLoading(false);
     }
   };
 
-  const handleResend = async () => {
-    if (cooldown > 0) return;
-    setResending(true);
-    setErrors({});
+  const resend = async () => {
+    if (cooldown > 0 || resending) return;
+    setResending(true); setErrors({});
     try {
-      await authApi.resendVerification({ email: form.email.trim().toLowerCase() });
-      setInfoMsg("A new code has been sent. Check your inbox (and spam folder).");
-      setCooldown(60);
+      const res = await authApi.resendVerification({ email: form.email.trim().toLowerCase() });
+      setNotice({ tone: "success", text: "A new code is on its way. Check your inbox and Spam folder." });
+      startCooldown(res.data?.resendAfter ?? 60);
+      setOtp("");
     } catch (err) {
-      if (err.response?.status === 429) {
+      const s = err.response?.status;
+      if (s === 429) {
         setErrors({ otp: err.response?.data?.error || "Please wait a moment before requesting another code." });
-        setCooldown(60);
+        startCooldown(err.response?.data?.retryAfter ?? 60);
+      } else if (s === 502 || s === 503) {
+        setErrors({ otp: err.response?.data?.error || "We couldn't send the email right now. Please try again in a few minutes." });
       } else {
-        setInfoMsg("");
-        setErrors({ otp: "Couldn't resend the code right now. Please try again in a moment." });
+        setErrors({ otp: "Couldn't resend the code. Please try again in a moment." });
       }
     } finally {
       setResending(false);
     }
   };
 
-  return (
-    <div className="min-h-screen bg-[#FDFBFC] flex items-center justify-center px-4 py-8 relative overflow-hidden">
+  // ── Step 2 ──────────────────────────────────────────────────
+  if (step === 2) {
+    return (
+      <AuthShell
+        title="Verify your email"
+        subtitle={<>Code sent to <span className="font-medium text-[#2D2A32]">{form.email}</span></>}
+        footer={<>Already verified? <Link to="/login" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Log in</Link></>}
+      >
+        {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
 
-      <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#93C5FD]/25 rounded-full blur-[110px] animate-pulse-soft" />
-        <div
-          className="absolute -bottom-24 -right-24 w-[420px] h-[420px] bg-[#F5A9C8]/25 rounded-full blur-[110px] animate-pulse-soft"
-          style={{ animationDelay: "1s" }}
-        />
-      </div>
+        <form onSubmit={(e) => { e.preventDefault(); verify(otp); }} noValidate className="space-y-4">
+          <OtpInput value={otp} onChange={setOtp} onComplete={verify} disabled={loading} error={errors.otp} />
 
-      <div className="w-full max-w-sm relative animate-fade-up">
-        <div className="bg-white border border-[#EDE6F3] rounded-2xl p-7 shadow-[0_1px_3px_rgba(45,42,50,0.06),0_12px_32px_rgba(45,42,50,0.08)]
-          transition-shadow duration-300 hover:shadow-[0_1px_3px_rgba(45,42,50,0.08),0_16px_40px_rgba(147,197,253,0.16)]">
+          <SubmitButton loading={loading} loadingText="Verifying…" disabled={otp.length !== 6}>
+            Verify &amp; continue
+          </SubmitButton>
 
-          {/* Logo — real JN icon */}
-          <div
-            className="flex flex-col items-center mb-7 animate-fade-up"
-            style={{ animationDelay: "40ms", animationFillMode: "backwards" }}
+          <button
+            type="button"
+            onClick={resend}
+            disabled={resending || loading || cooldown > 0}
+            className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]"
           >
-            <div className="w-11 h-11 rounded-xl overflow-hidden mb-3
-              shadow-[0_6px_18px_rgba(147,197,253,0.4)]
-              transition-transform duration-300 hover:scale-105 hover:-rotate-3">
-              <img
-                src="/icon-192.png"
-                alt="JNEET+ AI"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h1 className="text-xl font-bold tracking-tight text-[#2D2A32]">JNEET+ AI</h1>
-            <p className="text-[#6B6572] text-xs mt-0.5">
-              {step === 1 ? "Create your account" : "Verify your email"}
-            </p>
+            {resending ? "Sending…" : cooldown > 0 ? `Send a new code in ${cooldown}s` : "Send a new code"}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => { setStep(1); setErrors({}); setNotice(null); }}
+            className="w-full flex items-center justify-center gap-1.5 text-[#8B8594] hover:text-[#6B6572] text-xs transition-colors"
+          >
+            <ArrowLeft size={12} />
+            <span>Wrong email? Go back</span>
+          </button>
+        </form>
+      </AuthShell>
+    );
+  }
+
+  // ── Step 1 ──────────────────────────────────────────────────
+  return (
+    <AuthShell
+      title="JNEET+ AI"
+      subtitle="Create your account"
+      footer={<>Already have an account? <Link to="/login" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Log in</Link></>}
+    >
+      {formErr ? <Notice tone="error">{formErr}</Notice> : null}
+
+      <form onSubmit={submitDetails} noValidate className="space-y-4">
+        <FormField label="Full name" name="name" value={form.name} onChange={handleChange}
+          error={errors.name} placeholder="Your name" autoComplete="name" disabled={loading} />
+
+        <FormField label="Email" name="email" type="email" value={form.email} onChange={handleChange}
+          error={errors.email} placeholder="you@example.com" autoComplete="email" disabled={loading}
+          autoCapitalize="none" spellCheck={false} inputMode="email" />
+
+        <FormField label="Date of birth" name="dateOfBirth" type="date" value={form.dateOfBirth}
+          onChange={handleChange} error={errors.dateOfBirth} disabled={loading}
+          autoComplete="bday" max={todayIso()} min="1920-01-01"
+          hint="We use this to keep younger students safe. It is never shown to anyone." />
+
+        {isMinor ? (
+          <div className="animate-fade-up">
+            <Notice tone="info">
+              You're under 18, so a parent or guardian needs to approve the AI mentor. Tests, revision and notes work right away.
+            </Notice>
+            <FormField label="Parent / guardian email" name="parentEmail" type="email"
+              value={form.parentEmail} onChange={handleChange} error={errors.parentEmail}
+              placeholder="parent@example.com" disabled={loading}
+              autoCapitalize="none" spellCheck={false} inputMode="email"
+              hint="We'll email them a one-time approval link after you verify your own email." />
           </div>
+        ) : null}
 
-          {infoMsg && step === 2 && (
-            <div className="bg-[#EBF5FF] border border-[#93C5FD]/40 text-[#2D6CB0] text-xs rounded-xl px-3.5 py-2.5 mb-4 animate-fade-in">
-              {infoMsg}
-            </div>
-          )}
-
-          {step === 1 ? (
-            <form onSubmit={handleSubmit} noValidate className="space-y-4">
-
-              {/* Name */}
-              <div className="animate-fade-up" style={{ animationDelay: "80ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="Full Name"
-                  name="name"
-                  type="text"
-                  value={form.name}
-                  onChange={handleChange}
-                  error={errors.name}
-                  placeholder="Your name"
-                  autoComplete="name"
-                  disabled={loading}
-                />
-              </div>
-
-              {/* Email */}
-              <div className="animate-fade-up" style={{ animationDelay: "120ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="Email"
-                  name="email"
-                  type="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  error={errors.email}
-                  placeholder="you@example.com"
-                  autoComplete="email"
-                  disabled={loading}
-                />
-              </div>
-
-              {/* Password */}
-              <div className="animate-fade-up" style={{ animationDelay: "160ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="Password"
-                  name="password"
-                  type={showPass ? "text" : "password"}
-                  value={form.password}
-                  onChange={handleChange}
-                  error={errors.password}
-                  placeholder="Min. 8 characters, letters + numbers"
-                  autoComplete="new-password"
-                  disabled={loading}
-                >
-                  <button
-                    type="button"
-                    tabIndex={-1}
-                    onClick={() => setShowPass((v) => !v)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9B95A8] hover:text-[#6B6572] transition-colors duration-150 p-0.5"
-                  >
-                    {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
-                  </button>
-                </FormField>
-              </div>
-
-              {/* Exam mode */}
-              <div className="animate-fade-up" style={{ animationDelay: "200ms", animationFillMode: "backwards" }}>
-                <label className="text-xs text-[#6B6572] block mb-1.5 font-medium">
-                  Which exam are you preparing for?
-                </label>
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { value: "NEET", label: "🩺 NEET UG"   },
-                    { value: "JEE",  label: "⚙️ JEE Mains" },
-                  ].map(({ value, label }) => (
-                    <button
-                      key={value}
-                      type="button"
-                      onClick={() => setForm((p) => ({ ...p, examMode: value }))}
-                      className={[
-                        "py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 border active:scale-[0.97]",
-                        form.examMode === value
-                          ? "bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8] border-transparent text-white shadow-[0_4px_14px_rgba(147,197,253,0.35)]"
-                          : "bg-white border-[#EDE6F3] text-[#6B6572] hover:border-[#93C5FD]/50 hover:text-[#2D2A32]",
-                      ].join(" ")}
-                    >
-                      {label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Submit */}
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
-                  hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  text-white font-semibold py-2.5 rounded-xl
-                  transition-all duration-200
-                  flex items-center justify-center gap-2 text-sm mt-1
-                  active:scale-[0.98] hover:-translate-y-0.5 group"
-              >
-                {loading ? (
-                  <>
-                    <Spinner size={15} />
-                    <span>Creating account...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Create Account</span>
-                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </>
-                )}
-              </button>
-            </form>
-          ) : (
-            <form onSubmit={handleVerify} noValidate className="space-y-4">
-              <div className="animate-fade-up" style={{ animationDelay: "40ms", animationFillMode: "backwards" }}>
-                <FormField
-                  label="6-digit code"
-                  name="otp"
-                  type="text"
-                  value={form.otp}
-                  onChange={handleChange}
-                  error={errors.otp}
-                  placeholder="000000"
-                  autoComplete="one-time-code"
-                  disabled={loading}
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
-                  hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
-                  disabled:opacity-50 disabled:cursor-not-allowed
-                  text-white font-semibold py-2.5 rounded-xl
-                  transition-all duration-200
-                  flex items-center justify-center gap-2 text-sm mt-1
-                  active:scale-[0.98] hover:-translate-y-0.5 group"
-              >
-                {loading ? (
-                  <>
-                    <Spinner size={15} />
-                    <span>Verifying...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Verify & Continue</span>
-                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </>
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={handleResend}
-                disabled={resending || loading || cooldown > 0}
-                className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed disabled:text-[#8B8594]"
-              >
-                {resending
-                  ? "Resending..."
-                  : cooldown > 0
-                    ? `Resend code (${cooldown}s)`
-                    : "Resend code"}
-              </button>
-
-              <button
-                type="button"
-                onClick={() => { setStep(1); setErrors({}); setInfoMsg(""); }}
-                className="w-full flex items-center justify-center gap-1.5 text-[#8B8594] hover:text-[#6B6572] text-xs mt-1 transition-colors duration-150"
-              >
-                <ArrowLeft size={12} />
-                <span>Back to edit details</span>
-              </button>
-            </form>
-          )}
-
-          <p className="text-center text-[#6B6572] text-xs mt-5">
-            Already have an account?{" "}
-            <Link
-              to="/login"
-              className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium transition-colors duration-150"
-            >
-              Log In
-            </Link>
-          </p>
+        <div>
+          <FormField label="Password" name="password" type={showPass ? "text" : "password"}
+            value={form.password} onChange={handleChange} error={errors.password}
+            placeholder="Create a password" autoComplete="new-password" disabled={loading}>
+            <button type="button" onClick={() => setShowPass((v) => !v)}
+              aria-label={showPass ? "Hide password" : "Show password"}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#9B95A8] hover:text-[#6B6572] transition-colors p-0.5">
+              {showPass ? <EyeOff size={14} /> : <Eye size={14} />}
+            </button>
+          </FormField>
+          <PasswordStrength password={form.password} />
         </div>
-      </div>
-    </div>
+
+        <fieldset>
+          <legend className="text-xs text-[#6B6572] block mb-1.5 font-medium">Which exam are you preparing for?</legend>
+          <div className="grid grid-cols-2 gap-3">
+            {[{ value: "NEET", label: "🩺 NEET UG" }, { value: "JEE", label: "⚙️ JEE Mains" }].map(({ value, label }) => (
+              <button key={value} type="button" aria-pressed={form.examMode === value}
+                onClick={() => setForm((p) => ({ ...p, examMode: value }))}
+                className={[
+                  "py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 border active:scale-[0.97]",
+                  form.examMode === value
+                    ? "bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8] border-transparent text-white shadow-[0_4px_14px_rgba(147,197,253,0.35)]"
+                    : "bg-white border-[#EDE6F3] text-[#6B6572] hover:border-[#93C5FD]/50 hover:text-[#2D2A32]",
+                ].join(" ")}>
+                {label}
+              </button>
+            ))}
+          </div>
+        </fieldset>
+
+        <div>
+          <label className="flex items-start gap-2.5 text-xs text-[#6B6572] leading-relaxed cursor-pointer">
+            <input type="checkbox" name="acceptTerms" checked={form.acceptTerms} onChange={handleChange}
+              disabled={loading} aria-invalid={errors.acceptTerms ? "true" : undefined}
+              className="mt-0.5 h-4 w-4 rounded border-[#EDE6F3] accent-[#5B9FE8] shrink-0" />
+            <span>
+              I agree to the{" "}
+              <Link to="/terms" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Terms of Service</Link>
+              {" "}and{" "}
+              <Link to="/privacy" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Privacy Policy</Link>.
+            </span>
+          </label>
+          {errors.acceptTerms ? <p role="alert" className="text-red-500 text-xs mt-1.5 animate-fade-in">{errors.acceptTerms}</p> : null}
+        </div>
+
+        <SubmitButton loading={loading} loadingText="Creating account…">Create account</SubmitButton>
+      </form>
+    </AuthShell>
   );
 }

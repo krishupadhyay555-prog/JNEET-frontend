@@ -30,6 +30,9 @@ import TestResult           from "./pages/TestResult.jsx";
 import Revision             from "./pages/Revision.jsx";
 import RevisionSession      from "./pages/RevisionSession.jsx";
 import Notes                from "./pages/Notes.jsx";
+import Legal                from "./pages/Legal.jsx";
+import ParentConsent        from "./pages/ParentConsent.jsx";
+import NotFound             from "./pages/NotFound.jsx";
 
 const TOAST_CONFIG = {
   duration: 3000,
@@ -137,6 +140,11 @@ export default function App() {
               <Route path="/login"           element={<Login />}          />
               <Route path="/register"        element={<Register />}       />
               <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/privacy"         element={<Legal doc="privacy" />} />
+              <Route path="/terms"           element={<Legal doc="terms" />}   />
+              <Route path="/refund"          element={<Legal doc="refund" />}  />
+              <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
+              <Route path="/parent-consent/:token"        element={<ParentConsent />} />
 
               <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
               <Route path="/ask"       element={<ProtectedRoute><AskAI /></ProtectedRoute>} />
@@ -161,7 +169,7 @@ export default function App() {
               />
 
               <Route path="/"  element={<RootRedirect />} />
-              <Route path="*"  element={<RootRedirect />} />
+              <Route path="*"  element={<NotFound />} />
             </Routes>
           </BrowserRouter>
         </ChatProvider>

@@ -26,6 +26,7 @@ import { MessageBubble }     from "../components/chat/MessageBubble.jsx";
 import { StreamingBubble }   from "../components/chat/StreamingBubble.jsx";
 import { ChatInput }         from "../components/chat/ChatInput.jsx";
 import { EmptyChat }         from "../components/chat/EmptyChat.jsx";
+import { AiNotice }          from "../components/chat/AiNotice.jsx";
 import { BackendErrorBanner } from "../components/ui/BackendErrorBanner.jsx";
 import { ChatSkeletons }     from "../components/ui/SkeletonLoader.jsx";
 import { ProfileMenu }       from "../components/ProfileMenu.jsx";
@@ -41,6 +42,10 @@ export default function AskAI() {
     streamingText,
     backendError,
     setBackendError,
+    usage,
+    aiNotice,
+    setAiNotice,
+    failedPrompt,
     loadInitialData,
     sendMessage,
     abortStream,
@@ -81,12 +86,26 @@ export default function AskAI() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // A prompt that couldn't be sent comes back into the box (nothing to retype).
+  // Derived during render (not in an effect) keyed on the failure's nonce.
+  const [seenFailNonce, setSeenFailNonce] = useState(null);
+  if (failedPrompt && failedPrompt.nonce !== seenFailNonce) {
+    setSeenFailNonce(failedPrompt.nonce);
+    if (!prompt.trim()) setPrompt(failedPrompt.text);
+  }
+
+  // When the last free doubt is used, say so right away (not only on the next failed send).
+  const limitReached = usage?.limit != null && usage.remaining === 0;
+  const notice = aiNotice ?? (limitReached ? { code: "DAILY_LIMIT", limit: usage.limit, resetsAt: usage.resetsAt } : null);
+
+  const blocked = aiNotice?.code === "PARENT_CONSENT_REQUIRED" || (usage?.limit != null && usage.remaining === 0);
+
   const handleSend = useCallback(() => {
-    if (!prompt.trim() || isStreaming) return;
+    if (!prompt.trim() || isStreaming || blocked) return;
     const text = prompt;
     setPrompt("");
     sendMessage(text);
-  }, [prompt, isStreaming, sendMessage]);
+  }, [prompt, isStreaming, blocked, sendMessage]);
 
   const handleRetry = useCallback(() => {
     setBackendError(null);
@@ -148,10 +167,7 @@ export default function AskAI() {
           {!backendError && !isMsgLoading && messages.length === 0 && !isStreaming && (
             <EmptyChat
               examMode={examMode}
-              onPromptSelect={(q) => {
-                setPrompt(q);
-                setTimeout(() => sendMessage(q), 50);
-              }}
+              onPromptSelect={(q) => { if (!blocked) sendMessage(q); }}
             />
           )}
 
@@ -179,8 +195,16 @@ export default function AskAI() {
           </button>
         )}
 
+        {!backendError && notice && (
+          <div className="px-3 sm:px-4 shrink-0">
+            <AiNotice notice={notice} onDismiss={aiNotice ? () => setAiNotice(null) : undefined} />
+          </div>
+        )}
+
         {!backendError && (
           <ChatInput
+            usage={usage}
+            blocked={blocked}
             value={prompt}
             onChange={setPrompt}
             onSend={handleSend}
