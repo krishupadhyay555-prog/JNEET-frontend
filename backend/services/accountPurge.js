@@ -36,11 +36,22 @@ export async function purgeDeletedAccounts(now = new Date()) {
   return purged;
 }
 
+// Abandoned tests (started, never finished) just take up space: each one stores a
+// full copy of its questions. Anything still "in-progress" after 14 days is dropped.
+export const STALE_ATTEMPT_DAYS = 14;
+export async function purgeStaleAttempts(now = new Date()) {
+  const cutoff = new Date(now.getTime() - STALE_ATTEMPT_DAYS * 24 * 60 * 60 * 1000);
+  const res = await TestAttempt.deleteMany({ status: "in-progress", startedAt: { $lte: cutoff } });
+  return res.deletedCount ?? 0;
+}
+
 export function startAccountPurgeJob() {
   const run = async () => {
     try {
       const n = await purgeDeletedAccounts();
       if (n) console.log(`[purge] erased ${n} deleted account(s)`);
+      const stale = await purgeStaleAttempts();
+      if (stale) console.log(`[purge] removed ${stale} abandoned test attempt(s)`);
     } catch (err) {
       console.error("[purge] failed:", err.message);
     }
