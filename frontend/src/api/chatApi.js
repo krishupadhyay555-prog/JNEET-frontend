@@ -14,4 +14,6 @@ export const chatApi = {
   saveMessage:     (data) => api.post("/chat/message/save", data),
   toggleSaved:     (data) => api.patch("/chat/message/save-toggle", data),
   getSaved:        ()     => api.get("/chat/saved"),
+  truncate:        (sessionId, fromMessageId) => api.post(`/chat/session/${sessionId}/truncate`, { fromMessageId }),
+  setFeedback:     (data) => api.patch("/chat/message/feedback", data),
 };

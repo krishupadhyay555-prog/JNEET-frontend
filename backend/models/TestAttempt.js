@@ -68,6 +68,9 @@ const testAttemptSchema = new mongoose.Schema(
     maxMarks:      { type: Number, default: null }, // 720 (NEET) / 300 (JEE)
     marksObtained: { type: Number, default: null }, // correct*4 - wrong*1
 
+    // Full mocks are timed (NEET 200 min / JEE 180 min); null for revision.
+    durationMinutes: { type: Number, default: null },
+
     status: {
       type: String,
       enum: ["in-progress", "submitted"],

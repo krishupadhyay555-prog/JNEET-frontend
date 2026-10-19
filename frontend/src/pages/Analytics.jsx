@@ -12,9 +12,11 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, TrendingUp, Flame, ClipboardList, Target } from "lucide-react";
+import { useGoBack } from "../hooks/useGoBack.js";
+import { ArrowLeft, TrendingUp, Flame, ClipboardList, Target, ShieldAlert } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { testApi } from "../api/testApi.js";
+import { aiApi } from "../api/aiApi.js";
 import toast from "react-hot-toast";
 
 const SUBJECTS_BY_EXAM = {
@@ -22,8 +24,12 @@ const SUBJECTS_BY_EXAM = {
   JEE:  ["Physics", "Chemistry", "Mathematics"],
 };
 
-function dayKey(dateStr) {
-  return new Date(dateStr).toISOString().slice(0, 10);
+// Calendar day in the STUDENT's own timezone (an IST student studying at 1 am
+// must count for that day, not the previous UTC day).
+function dayKey(dateOrStr) {
+  const d = new Date(dateOrStr);
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
 function computeStreak(attempts) {
@@ -31,16 +37,14 @@ function computeStreak(attempts) {
 
   const uniqueDays = [...new Set(attempts.map((a) => dayKey(a.submittedAt)))].sort().reverse();
 
-  const todayKey = dayKey(new Date().toISOString());
-  const yesterdayKey = dayKey(new Date(Date.now() - 86400000).toISOString());
+  const todayKey = dayKey(new Date());
+  const yesterdayKey = dayKey(new Date(Date.now() - 86400000));
 
   if (uniqueDays[0] !== todayKey && uniqueDays[0] !== yesterdayKey) return 0;
 
   let streak = 1;
   for (let i = 1; i < uniqueDays.length; i++) {
-    const prev = new Date(uniqueDays[i - 1]);
-    const curr = new Date(uniqueDays[i]);
-    const diffDays = Math.round((prev - curr) / 86400000);
+    const diffDays = Math.round((new Date(`${uniqueDays[i - 1]}T12:00:00`) - new Date(`${uniqueDays[i]}T12:00:00`)) / 86400000);
     if (diffDays === 1) {
       streak += 1;
     } else {
@@ -110,6 +114,38 @@ function TrendChart({ attempts }) {
   );
 }
 
+const NOTICE_LABEL = {
+  warning:            "Warning 1 — 18+ content request (not allowed)",
+  final_warning:      "Final warning — 18+ content request",
+  paused:             "AI chat paused for 1 hour — 18+ policy",
+  repeat_after_pause: "Remark: repeated 18+ requests after warnings and a pause",
+};
+
+function AccountNotices({ policy }) {
+  if (!policy || !policy.events?.length) return null;
+  const serious = policy.events.some((e) => e.kind === "repeat_after_pause");
+  return (
+    <div className={`rounded-2xl border p-4 ${serious ? "border-red-500/30 bg-red-500/5" : "border-amber-500/30 bg-amber-500/5"}`}>
+      <div className="flex items-center gap-2 mb-2">
+        <ShieldAlert size={15} className={serious ? "text-red-500" : "text-amber-600"} />
+        <p className="text-xs font-semibold text-fg-primary">Account notices</p>
+      </div>
+      <p className="text-[11px] text-gray-600 leading-relaxed mb-2.5">
+        JNEET+ is for NEET UG / JEE Mains preparation only. 18+ content is not allowed; repeated
+        attempts pause the AI chat and are noted here. A clean month clears the count.
+      </p>
+      <ul className="space-y-1">
+        {policy.events.map((e, i) => (
+          <li key={`${e.at}-${i}`} className="flex items-center justify-between gap-3 text-[11px]">
+            <span className="text-fg-primary">{NOTICE_LABEL[e.kind] ?? "Policy notice"}</span>
+            <span className="text-gray-600 shrink-0 tabular-nums">{formatShortDate(e.at)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function StatCard({ icon, label, value }) {
   return (
     <div className="bg-bg-card border border-bg-border rounded-xl p-3.5">
@@ -123,14 +159,24 @@ function StatCard({ icon, label, value }) {
 export default function Analytics() {
   const { examMode } = useAuth();
   const navigate = useNavigate();
+  const goBack = useGoBack();
   const subjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
 
   const [attempts, setAttempts] = useState(null);
+  const [historyTotal, setHistoryTotal] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [policy, setPolicy] = useState(null);
+
+  useEffect(() => {
+    aiApi.policy().then((r) => setPolicy(r.data?.policy ?? null)).catch(() => { /* notices are optional */ });
+  }, []);
 
   useEffect(() => {
     testApi.getHistory()
-      .then((res) => setAttempts((res.data.attempts ?? []).slice().reverse())) // oldest-first for the trend chart
+      .then((res) => {
+        setAttempts((res.data.attempts ?? []).slice().reverse()); // oldest-first for the trend chart
+        setHistoryTotal(res.data.total ?? (res.data.attempts ?? []).length);
+      })
       .catch(() => {
         toast.error("Could not load your analytics");
         setAttempts([]);
@@ -141,7 +187,10 @@ export default function Analytics() {
   const stats = useMemo(() => {
     if (!attempts || attempts.length === 0) return null;
 
-    const totalQuestions = attempts.reduce((sum, a) => sum + (a.totalQuestions || 0), 0);
+    // Questions the student actually answered (skipped ones don't count).
+    const totalQuestions = attempts.reduce(
+      (sum, a) => sum + Math.max(0, (a.totalQuestions || 0) - (a.unattemptedCount || 0)), 0
+    );
     const avgAccuracy = Math.round(
       attempts.reduce((sum, a) => sum + (a.score || 0), 0) / attempts.length
     );
@@ -162,7 +211,7 @@ export default function Analytics() {
     const maxCount = Math.max(1, fullTestCount, ...Object.values(bySubjectCount));
 
     return {
-      totalAttempts: attempts.length,
+      totalAttempts: Math.max(historyTotal, attempts.length),
       totalQuestions,
       avgAccuracy,
       streak,
@@ -170,7 +219,7 @@ export default function Analytics() {
       fullTestCount,
       maxCount,
     };
-  }, [attempts, subjects]);
+  }, [attempts, subjects, historyTotal]);
 
   const recentAttempts = attempts ? attempts.slice(-8).reverse() : [];
 
@@ -178,7 +227,7 @@ export default function Analytics() {
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate(-1)}
+          onClick={goBack}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
           title="Back"
         >
@@ -191,6 +240,7 @@ export default function Analytics() {
       </nav>
 
       <div className="max-w-2xl mx-auto px-5 py-8 space-y-5">
+        <AccountNotices policy={policy} />
         {loading ? (
           <div className="space-y-3">
             <div className="h-[200px] rounded-2xl skeleton" />
@@ -294,7 +344,10 @@ export default function Analytics() {
                       <p className="text-xs font-medium text-fg-primary truncate">
                         {a.mode === "test" ? `${examMode} Full Test` : `${a.subject} · ${a.chapter}`}
                       </p>
-                      <p className="text-[10px] text-gray-600">{formatShortDate(a.submittedAt)}</p>
+                      <p className="text-[10px] text-gray-600">
+                        {formatShortDate(a.submittedAt)}
+                        {a.mode === "test" && a.maxMarks ? ` · ${a.marksObtained ?? 0}/${a.maxMarks} marks` : ""}
+                      </p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <span className="text-xs font-semibold text-fg-primary tabular-nums">{a.score}%</span>

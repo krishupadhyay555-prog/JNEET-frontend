@@ -1,5 +1,5 @@
 // ============================================================
-//  JNEET+ AI — pages/AskAI.jsx  (v3 — sidebar toggle everywhere)
+//  JNEET+ AI — pages/AskAI.jsx  (v4 — hover-rail sidebar, message actions)
 //  CHANGED:
 //    - The header's Menu button was `md:hidden` (mobile-only) and
 //      only ever OPENED the sidebar (`setSidebarOpen(true)`) — on
@@ -19,6 +19,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useAuth }           from "../context/AuthContext.jsx";
+import { useMediaQuery }     from "../hooks/useMediaQuery.js";
 import { useChat }           from "../context/ChatContext.jsx";
 import { useTheme }          from "../context/ThemeContext.jsx";
 import { Sidebar }           from "../components/sidebar/Sidebar.jsx";
@@ -26,6 +27,7 @@ import { MessageBubble }     from "../components/chat/MessageBubble.jsx";
 import { StreamingBubble }   from "../components/chat/StreamingBubble.jsx";
 import { ChatInput }         from "../components/chat/ChatInput.jsx";
 import { EmptyChat }         from "../components/chat/EmptyChat.jsx";
+import { AiNotice }          from "../components/chat/AiNotice.jsx";
 import { BackendErrorBanner } from "../components/ui/BackendErrorBanner.jsx";
 import { ChatSkeletons }     from "../components/ui/SkeletonLoader.jsx";
 import { ProfileMenu }       from "../components/ProfileMenu.jsx";
@@ -41,19 +43,36 @@ export default function AskAI() {
     streamingText,
     backendError,
     setBackendError,
+    usage,
+    aiNotice,
+    setAiNotice,
+    failedPrompt,
     loadInitialData,
     sendMessage,
     abortStream,
     toggleSaved,
+    regenerate,
+    editMessage,
+    setFeedback,
   } = useChat();
 
   const [prompt,        setPrompt]        = useState("");
   // Desktop starts open (old default), mobile starts closed (old
   // default) — checked once on mount, matches previous visual
   // behavior exactly while adding the new toggle capability.
-  const [sidebarOpen,   setSidebarOpen]   = useState(() =>
-    typeof window !== "undefined" ? window.innerWidth >= 768 : true
-  );
+  // Desktop: a slim rail that opens when the cursor touches it; "pinned" keeps it
+  // open (remembered on this device). Mobile: a slide-over drawer.
+  const [pinned, setPinned] = useState(() => {
+    try { return localStorage.getItem("jneet.sidebar.pinned") === "1"; } catch { return false; }
+  });
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const togglePinned = useCallback(() => {
+    setPinned((v) => {
+      try { localStorage.setItem("jneet.sidebar.pinned", v ? "0" : "1"); } catch { /* storage blocked */ }
+      return !v;
+    });
+  }, []);
   const [showScrollBtn, setShowScrollBtn] = useState(false);
 
   const bottomRef   = useRef(null);
@@ -81,12 +100,36 @@ export default function AskAI() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // A prompt that couldn't be sent comes back into the box (nothing to retype).
+  // Derived during render (not in an effect) keyed on the failure's nonce.
+  const [seenFailNonce, setSeenFailNonce] = useState(null);
+  if (failedPrompt && failedPrompt.nonce !== seenFailNonce) {
+    setSeenFailNonce(failedPrompt.nonce);
+    if (!prompt.trim()) setPrompt(failedPrompt.text);
+  }
+
+  // When the last free doubt is used, say so right away (not only on the next failed send).
+  const limitReached = usage?.limit != null && usage.remaining === 0;
+  const notice = aiNotice ?? (limitReached ? { code: "DAILY_LIMIT", limit: usage.limit, resetsAt: usage.resetsAt } : null);
+
+  const paused = aiNotice?.code === "CHAT_PAUSED";
+  const pausedUntil = paused ? aiNotice.resumesAt : null;
+  // Re-open the chat automatically the moment the pause ends.
+  useEffect(() => {
+    if (!pausedUntil) return undefined;
+    const ms = new Date(pausedUntil).getTime() - Date.now();
+    const t = setTimeout(() => setAiNotice(null), Math.max(0, Number.isFinite(ms) ? ms : 0) + 500);
+    return () => clearTimeout(t);
+  }, [pausedUntil, setAiNotice]);
+
+  const blocked = paused || aiNotice?.code === "PARENT_CONSENT_REQUIRED" || (usage?.limit != null && usage.remaining === 0);
+
   const handleSend = useCallback(() => {
-    if (!prompt.trim() || isStreaming) return;
+    if (!prompt.trim() || isStreaming || blocked) return;
     const text = prompt;
     setPrompt("");
     sendMessage(text);
-  }, [prompt, isStreaming, sendMessage]);
+  }, [prompt, isStreaming, blocked, sendMessage]);
 
   const handleRetry = useCallback(() => {
     setBackendError(null);
@@ -96,16 +139,17 @@ export default function AskAI() {
   return (
     <div className="flex h-screen bg-bg-base text-fg-primary overflow-hidden chat-shell">
 
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar pinned={pinned} onTogglePin={togglePinned} mobileOpen={mobileOpen} onMobileClose={() => setMobileOpen(false)} />
 
       <div className="flex-1 flex flex-col min-w-0 h-full relative">
 
         <div className="flex items-center gap-3 px-4 py-3.5 border-b border-bg-border bg-bg-surface/80 backdrop-blur-xl shrink-0">
           <button
-            onClick={() => setSidebarOpen((v) => !v)}
-            className="text-gray-600 hover:text-fg-primary transition p-1 rounded-lg
-              hover:bg-bg-hover"
-            title={sidebarOpen ? "Close sidebar" : "Open sidebar"}
+            onClick={() => (isDesktop ? togglePinned() : setMobileOpen(true))}
+            className="text-gray-600 hover:text-fg-primary transition p-1.5 rounded-lg
+              hover:bg-bg-hover active:scale-90 md:hidden"
+            title="Open sidebar"
+            aria-label="Open sidebar"
           >
             <Menu size={17} />
           </button>
@@ -148,18 +192,20 @@ export default function AskAI() {
           {!backendError && !isMsgLoading && messages.length === 0 && !isStreaming && (
             <EmptyChat
               examMode={examMode}
-              onPromptSelect={(q) => {
-                setPrompt(q);
-                setTimeout(() => sendMessage(q), 50);
-              }}
+              onPromptSelect={(q) => { if (!blocked) sendMessage(q); }}
             />
           )}
 
-          {!isMsgLoading && messages.map((msg) => (
+          {!isMsgLoading && messages.map((msg, i) => (
             <MessageBubble
-              key={msg._id}
+              key={msg.key || msg._id}
               msg={msg}
+              isLastAi={msg.role === "ai" && i === messages.length - 1}
+              busy={isStreaming}
               onToggleSaved={toggleSaved}
+              onRegenerate={regenerate}
+              onEdit={editMessage}
+              onFeedback={setFeedback}
             />
           ))}
 
@@ -179,8 +225,16 @@ export default function AskAI() {
           </button>
         )}
 
+        {!backendError && notice && (
+          <div className="px-3 sm:px-4 shrink-0">
+            <AiNotice notice={notice} onDismiss={aiNotice && !paused ? () => setAiNotice(null) : undefined} />
+          </div>
+        )}
+
         {!backendError && (
           <ChatInput
+            usage={usage}
+            blocked={blocked}
             value={prompt}
             onChange={setPrompt}
             onSend={handleSend}

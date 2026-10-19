@@ -357,10 +357,25 @@ input:-webkit-autofill:focus {
   animation: messageIn 0.22s ease-out both;
 }
 
+/* Page-to-page transition (App.jsx PageTransition) */
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+.page-enter { animation: pageEnter 0.24s ease-out both; }
+
 @media (prefers-reduced-motion: reduce) {
   .animate-message-in,
-  .animate-scale-in {
+  .animate-scale-in,
+  .page-enter {
     animation: none;
+  }
+
+  /* everything else: no movement, near-instant state changes */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 
   html,

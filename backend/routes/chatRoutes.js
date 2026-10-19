@@ -7,7 +7,7 @@ import { Router }  from "express";
 import { protect }       from "../middleware/authMiddleware.js";
 import { validate }      from "../middleware/validate.js";
 import { saveMessageSchema, toggleSavedSchema } from "../schemas/aiSchemas.js";
-import { renameSessionSchema } from "../schemas/chatSchemas.js";
+import { renameSessionSchema, truncateSchema, feedbackSchema } from "../schemas/chatSchemas.js";
 import {
   getSessions,
   getSession,
@@ -18,6 +18,8 @@ import {
   toggleSessionPin,
   saveMessage,
   toggleSaved,
+  truncateSession,
+  setFeedback,
   getSaved,
   searchChats,
 } from "../controllers/chatController.js";
@@ -34,10 +36,12 @@ router.patch(  "/session/:sessionId/activate", setActiveSession);
 router.patch(  "/session/:sessionId/rename",   validate(renameSessionSchema), renameSession);
 router.patch(  "/session/:sessionId/pin",      toggleSessionPin);
 router.delete( "/session/:sessionId",          deleteSession);
+router.post(   "/session/:sessionId/truncate", validate(truncateSchema), truncateSession);
 
 router.post("/message/save",       validate(saveMessageSchema), saveMessage);
 
 router.patch("/message/save-toggle", validate(toggleSavedSchema), toggleSaved);
+router.patch("/message/feedback",    validate(feedbackSchema), setFeedback);
 router.get(  "/saved",               getSaved);
 
 export default router;

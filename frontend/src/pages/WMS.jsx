@@ -18,6 +18,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import { useGoBack } from "../hooks/useGoBack.js";
 import { ArrowLeft, ClipboardList, ChevronDown, ChevronUp } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { wmsApi } from "../api/wmsApi.js";
@@ -36,6 +37,7 @@ const COLLAPSED_LIMIT = 6;
 export default function WMS() {
   const { examMode } = useAuth();
   const navigate = useNavigate();
+  const goBack = useGoBack();
   const subjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
 
   const [summary, setSummary] = useState(null);
@@ -71,7 +73,7 @@ export default function WMS() {
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate(-1)}
+          onClick={goBack}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
           title="Back"
         >
@@ -113,7 +115,7 @@ export default function WMS() {
           </div>
         ) : (
           <>
-            <ProgressGraph overall={summary.overall} />
+            <ProgressGraph overall={summary.overall} window={summary.window} />
 
             <div>
               <p className="text-[10px] text-gray-700 uppercase tracking-widest font-medium mb-3">

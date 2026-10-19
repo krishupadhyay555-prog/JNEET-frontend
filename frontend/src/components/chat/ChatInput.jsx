@@ -22,7 +22,9 @@
 import { useRef, useEffect } from "react";
 import { Send, Square } from "lucide-react";
 
-export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examMode }) {
+const MAX_CHARS = 5000;
+
+export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examMode, usage, blocked }) {
   const textareaRef = useRef(null);
 
   useEffect(() => {
@@ -37,13 +39,9 @@ export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examM
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      if (!isStreaming && value.trim()) onSend();
+      if (!isStreaming && !blocked && value.trim()) onSend();
     }
   };
-
-  const subjects = examMode === "NEET"
-    ? "Physics · Chemistry · Biology"
-    : "Physics · Chemistry · Maths";
 
   return (
     <div className="shrink-0 px-3 sm:px-4 py-4 border-t border-bg-border bg-bg-surface/80 backdrop-blur-xl">
@@ -59,18 +57,22 @@ export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examM
           <textarea
             ref={textareaRef}
             className="flex-1 bg-transparent text-fg-primary placeholder-gray-500
-              resize-none focus:outline-none text-[0.875rem] leading-[1.6]
+              resize-none focus:outline-none text-base sm:text-[0.875rem] leading-[1.6]
               min-h-[22px] max-h-40 font-sans tracking-[0.002em]"
             placeholder={`Ask a ${examMode} question... (Enter = Send, Shift+Enter = New line)`}
             value={value}
-            onChange={(e) => onChange(e.target.value)}
+            onChange={(e) => onChange(e.target.value.slice(0, MAX_CHARS))}
             onKeyDown={handleKeyDown}
             rows={1}
+            maxLength={MAX_CHARS}
+            aria-label={`Ask the AI mentor a ${examMode} question`}
+            enterKeyHint="send"
           />
 
           {isStreaming ? (
             <button
               onClick={onAbort}
+              aria-label="Stop generating"
               className="bg-red-500/10 hover:bg-red-500/20
                 border border-red-500/30 text-red-400
                 p-2 rounded-xl transition-all duration-150 shrink-0 active:scale-95"
@@ -80,7 +82,8 @@ export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examM
           ) : (
             <button
               onClick={onSend}
-              disabled={!value.trim()}
+              aria-label="Send message"
+              disabled={!value.trim() || blocked}
               className="bg-violet-600 hover:bg-violet-500 active:scale-95
                 disabled:bg-bg-hover disabled:text-gray-400 disabled:cursor-not-allowed
                 text-white p-2 rounded-xl transition-all duration-150 shrink-0
@@ -91,9 +94,15 @@ export function ChatInput({ value, onChange, onSend, onAbort, isStreaming, examM
           )}
         </div>
 
-        <p className="text-center text-[10px] text-gray-700 mt-1.5 select-none">
-          {examMode} syllabus only — {subjects}
-        </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 text-[10px] text-gray-500 mt-1.5 select-none">
+          <span>AI can make mistakes — check important facts with NCERT.</span>
+          {usage && usage.limit != null ? (
+            <span className={usage.remaining === 0 ? "text-amber-500 font-medium" : ""} aria-live="polite">
+              {usage.remaining} of {usage.limit} doubts left today
+            </span>
+          ) : null}
+          {value.length > MAX_CHARS * 0.9 ? <span>{value.length}/{MAX_CHARS}</span> : null}
+        </div>
       </div>
     </div>
   );

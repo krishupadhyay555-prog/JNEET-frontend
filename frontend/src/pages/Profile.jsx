@@ -16,10 +16,11 @@
 // ============================================================
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useGoBack } from "../hooks/useGoBack.js";
 import { ArrowLeft, User, Lock, Calendar, Target, Save } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
+import { ChangePasswordSettings } from "../components/settings/ChangePasswordSettings.jsx";
 import toast from "react-hot-toast";
 
 function SectionCard({ icon, title, children }) {
@@ -53,15 +54,11 @@ function TextField({ label, ...props }) {
 }
 
 export default function Profile() {
-  const { user, updateProfile, changePassword } = useAuth();
-  const navigate = useNavigate();
+  const { user, updateProfile } = useAuth();
+  const goBack = useGoBack();
 
   const [name, setName] = useState(user?.name ?? "");
   const [nameSaving, setNameSaving] = useState(false);
-
-  const [pwForm, setPwForm] = useState({ currentPassword: "", newPassword: "", confirmPassword: "" });
-  const [pwErrors, setPwErrors] = useState({});
-  const [pwSaving, setPwSaving] = useState(false);
 
   const nameChanged = name.trim() !== "" && name.trim() !== user?.name;
 
@@ -82,54 +79,6 @@ export default function Profile() {
     }
   };
 
-  const handlePasswordChange = async (e) => {
-    e.preventDefault();
-    const errs = {};
-    if (!pwForm.currentPassword) errs.currentPassword = "Current password is required";
-
-    // Synced with authSchemas.js's registration rule — was
-    // previously a looser 6-char-only check here, which let
-    // someone "successfully" set a password that the rest of the
-    // app no longer considers strong enough.
-    if (!pwForm.newPassword || pwForm.newPassword.length < 8) {
-      errs.newPassword = "New password must be at least 8 characters";
-    } else if (!/[A-Za-z]/.test(pwForm.newPassword)) {
-      errs.newPassword = "New password must include at least one letter";
-    } else if (!/[0-9]/.test(pwForm.newPassword)) {
-      errs.newPassword = "New password must include at least one number";
-    }
-
-    if (pwForm.newPassword !== pwForm.confirmPassword)
-      errs.confirmPassword = "Passwords do not match";
-
-    if (Object.keys(errs).length > 0) {
-      setPwErrors(errs);
-      return;
-    }
-
-    setPwSaving(true);
-    setPwErrors({});
-    try {
-      await changePassword({
-        currentPassword: pwForm.currentPassword,
-        newPassword:     pwForm.newPassword,
-      });
-      toast.success("Password updated successfully");
-      setPwForm({ currentPassword: "", newPassword: "", confirmPassword: "" });
-    } catch (err) {
-      const serverErrs = err.response?.data?.fieldErrors ?? [];
-      if (serverErrs.length > 0) {
-        const mapped = {};
-        serverErrs.forEach(({ field, message }) => { mapped[field] = message; });
-        setPwErrors(mapped);
-      } else {
-        toast.error(err.response?.data?.error || "Could not update password");
-      }
-    } finally {
-      setPwSaving(false);
-    }
-  };
-
   const memberSince = user?.createdAt
     ? new Date(user.createdAt).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })
     : "—";
@@ -138,7 +87,7 @@ export default function Profile() {
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate(-1)}
+          onClick={goBack}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
           title="Back"
         >
@@ -190,57 +139,9 @@ export default function Profile() {
           </div>
         </SectionCard>
 
-        {/* Password */}
+        {/* Password — same component (strength meter, show/hide) as Settings */}
         <SectionCard icon={<Lock size={14} className="text-violet-400" />} title="Change Password">
-          <form onSubmit={handlePasswordChange} className="space-y-3">
-            <div>
-              <TextField
-                label="Current Password"
-                type="password"
-                value={pwForm.currentPassword}
-                onChange={(e) => setPwForm((p) => ({ ...p, currentPassword: e.target.value }))}
-                placeholder="••••••••"
-              />
-              {pwErrors.currentPassword && (
-                <p className="text-red-400 text-xs mt-1.5">{pwErrors.currentPassword}</p>
-              )}
-            </div>
-            <div>
-              <TextField
-                label="New Password"
-                type="password"
-                value={pwForm.newPassword}
-                onChange={(e) => setPwForm((p) => ({ ...p, newPassword: e.target.value }))}
-                placeholder="Min. 8 characters, letters + numbers"
-              />
-              {pwErrors.newPassword && (
-                <p className="text-red-400 text-xs mt-1.5">{pwErrors.newPassword}</p>
-              )}
-            </div>
-            <div>
-              <TextField
-                label="Confirm New Password"
-                type="password"
-                value={pwForm.confirmPassword}
-                onChange={(e) => setPwForm((p) => ({ ...p, confirmPassword: e.target.value }))}
-                placeholder="Re-enter new password"
-              />
-              {pwErrors.confirmPassword && (
-                <p className="text-red-400 text-xs mt-1.5">{pwErrors.confirmPassword}</p>
-              )}
-            </div>
-            <button
-              type="submit"
-              disabled={pwSaving}
-              className="flex items-center gap-2 bg-violet-600 hover:bg-violet-500
-                disabled:opacity-40 disabled:cursor-not-allowed
-                text-white text-xs font-semibold px-4 py-2 rounded-xl
-                transition-all duration-150 active:scale-95"
-            >
-              {pwSaving ? <Spinner size={13} /> : <Lock size={13} />}
-              Update Password
-            </button>
-          </form>
+          <ChangePasswordSettings />
         </SectionCard>
 
       </div>

@@ -7,7 +7,7 @@
 //  all other routes — UNCHANGED from v8.
 // ============================================================
 
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { Toaster }          from "react-hot-toast";
 import { AuthProvider, useAuth } from "./context/AuthContext.jsx";
@@ -19,24 +19,54 @@ import Login                from "./pages/Login.jsx";
 import Register             from "./pages/Register.jsx";
 import ForgotPassword       from "./pages/ForgotPassword.jsx";
 import Dashboard            from "./pages/Dashboard.jsx";
-import AskAI                from "./pages/AskAI.jsx";
-import Profile              from "./pages/Profile.jsx";
-import Settings             from "./pages/Settings.jsx";
-import WMS                  from "./pages/WMS.jsx";
-import Analytics            from "./pages/Analytics.jsx";
-import Tests                from "./pages/Tests.jsx";
-import TestAttempt          from "./pages/TestAttempt.jsx";
-import TestResult           from "./pages/TestResult.jsx";
-import Revision             from "./pages/Revision.jsx";
-import RevisionSession      from "./pages/RevisionSession.jsx";
 import Notes                from "./pages/Notes.jsx";
+import NotFound             from "./pages/NotFound.jsx";
+import { LoadingScreen }    from "./components/ui/LoadingScreen.jsx";
+
+
+// Heavy / rarely-first pages load on demand so the first screen is fast on a
+// weak network. Notes and Dashboard stay in the main bundle on purpose: they are
+// what must open offline. After a new deploy an old tab can ask for a chunk that
+// no longer exists — reload once to pick up the new version instead of crashing.
+function lazyPage(factory) {
+  return lazy(() => factory().catch((err) => {
+    const key = "jneet_chunk_reload";
+    if (!sessionStorage.getItem(key)) {
+      sessionStorage.setItem(key, "1");
+      window.location.reload();
+      return new Promise(() => {});
+    }
+    sessionStorage.removeItem(key);
+    throw err;
+  }));
+}
+const AskAI           = lazyPage(() => import("./pages/AskAI.jsx"));
+const Profile         = lazyPage(() => import("./pages/Profile.jsx"));
+const Settings        = lazyPage(() => import("./pages/Settings.jsx"));
+const WMS             = lazyPage(() => import("./pages/WMS.jsx"));
+const Analytics       = lazyPage(() => import("./pages/Analytics.jsx"));
+const Tests           = lazyPage(() => import("./pages/Tests.jsx"));
+const TestAttempt     = lazyPage(() => import("./pages/TestAttempt.jsx"));
+const TestResult      = lazyPage(() => import("./pages/TestResult.jsx"));
+const Revision        = lazyPage(() => import("./pages/Revision.jsx"));
+const RevisionSession = lazyPage(() => import("./pages/RevisionSession.jsx"));
+const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
+const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
+const Landing         = lazyPage(() => import("./pages/Landing.jsx"));
+
+// Soft page-to-page transition (keyed on the path so every navigation animates).
+function PageTransition({ children }) {
+  const { pathname } = useLocation();
+  return <div key={pathname} className="page-enter">{children}</div>;
+}
 
 const TOAST_CONFIG = {
   duration: 3000,
   style: {
-    background:  "#141428",
-    color:       "#e8e8f0",
-    border:      "1px solid #1e1e38",
+    background:  "rgb(var(--bg-card))",
+    color:       "rgb(var(--fg-primary))",
+    border:      "1px solid rgb(var(--bg-border))",
+    boxShadow:   "0 8px 28px rgba(0,0,0,0.14)",
     fontSize:    "13px",
     fontFamily:  "'DM Sans', system-ui, sans-serif",
     borderRadius: "12px",
@@ -104,6 +134,21 @@ function RootRedirect() {
   return null;
 }
 
+// "/" → public landing page for visitors, the app for signed-in students
+function Home() {
+  const { isLoggedIn, isInitializing } = useAuth();
+  if (isInitializing) return <LoadingScreen />;
+  return isLoggedIn ? <RootRedirect /> : <Landing />;
+}
+
+// Chat state belongs to ONE student in ONE exam. Keying the provider on both
+// throws the old state away on logout/login (shared devices!) and on a
+// NEET <-> JEE switch, so one account's chats can never show up in another.
+function ChatScope({ children }) {
+  const { user, examMode } = useAuth();
+  return <ChatProvider key={`${user?._id ?? "anon"}:${examMode}`}>{children}</ChatProvider>;
+}
+
 function AccentSync() {
   const { examMode }      = useAuth();
   const { accentOverride } = useTheme();
@@ -128,15 +173,23 @@ export default function App() {
     <ErrorBoundary resetOnRetry>
       <ThemeProvider>
       <AuthProvider>
-        <ChatProvider>
+        <>
           <AccentSync />
-          <Toaster position="top-right" toastOptions={TOAST_CONFIG} />
+          <Toaster position="top-center" toastOptions={TOAST_CONFIG} />
           <BrowserRouter>
+            <ChatScope>
             <RouteTracker />
+            <PageTransition>
+            <Suspense fallback={<LoadingScreen />}>
             <Routes>
               <Route path="/login"           element={<Login />}          />
               <Route path="/register"        element={<Register />}       />
               <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/privacy"         element={<Legal doc="privacy" />} />
+              <Route path="/terms"           element={<Legal doc="terms" />}   />
+              <Route path="/refund"          element={<Legal doc="refund" />}  />
+              <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
+              <Route path="/parent-consent/:token"        element={<ParentConsent />} />
 
               <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
               <Route path="/ask"       element={<ProtectedRoute><AskAI /></ProtectedRoute>} />
@@ -160,11 +213,14 @@ export default function App() {
                 element={<ProtectedRoute><RevisionSession /></ProtectedRoute>}
               />
 
-              <Route path="/"  element={<RootRedirect />} />
-              <Route path="*"  element={<RootRedirect />} />
+              <Route path="/"  element={<Home />} />
+              <Route path="*"  element={<NotFound />} />
             </Routes>
+            </Suspense>
+            </PageTransition>
+            </ChatScope>
           </BrowserRouter>
-        </ChatProvider>
+        </>
       </AuthProvider>
       </ThemeProvider>
     </ErrorBoundary>

@@ -25,11 +25,16 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle } from "lucide-react";
+import { useGoBack } from "../hooks/useGoBack.js";
+import { Link } from "react-router-dom";
+import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle, Bot, ShieldCheck, KeyRound } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import toast from "react-hot-toast";
+import { AiPersonaSettings } from "../components/settings/AiPersonaSettings.jsx";
+import { ParentConsentSettings } from "../components/settings/ParentConsentSettings.jsx";
+import { ChangePasswordSettings } from "../components/settings/ChangePasswordSettings.jsx";
 
 function SectionCard({ icon, title, subtitle, children }) {
   return (
@@ -48,9 +53,10 @@ function SectionCard({ icon, title, subtitle, children }) {
 }
 
 export default function Settings() {
-  const { examMode, logout, deleteAccount } = useAuth();
+  const { user, examMode, logout, deleteAccount } = useAuth();
   const { mode, setMode, accentOverride, setAccentOverride } = useTheme();
   const navigate = useNavigate();
+  const goBack = useGoBack();
 
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [deletePassword, setDeletePassword] = useState("");
@@ -91,7 +97,7 @@ export default function Settings() {
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate(-1)}
+          onClick={goBack}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
           title="Back"
         >
@@ -168,6 +174,31 @@ export default function Settings() {
           )}
         </SectionCard>
 
+        <SectionCard
+          icon={<Bot size={14} className="text-violet-400" />}
+          title="AI Mentor style"
+          subtitle="Same careful teaching either way — only the tone changes."
+        >
+          <AiPersonaSettings />
+        </SectionCard>
+
+        {user?.consent?.ageGroup === "minor" && (
+          <SectionCard
+            icon={<ShieldCheck size={14} className="text-violet-400" />}
+            title="Parent / guardian approval"
+          >
+            <ParentConsentSettings />
+          </SectionCard>
+        )}
+
+        <SectionCard
+          icon={<KeyRound size={14} className="text-violet-400" />}
+          title="Security"
+          subtitle="Changing your password logs you out of every other device."
+        >
+          <ChangePasswordSettings />
+        </SectionCard>
+
         {/* Danger zone */}
         <SectionCard icon={<LogOut size={14} className="text-red-400" />} title="Account">
           <button
@@ -185,7 +216,7 @@ export default function Settings() {
         <SectionCard
           icon={<AlertTriangle size={14} className="text-red-400" />}
           title="Danger Zone"
-          subtitle="This deactivates your account. Your data isn't permanently erased immediately — contact support within a reasonable window if this was a mistake."
+          subtitle="Your account is switched off immediately and permanently erased after 30 days. Email support within 30 days if this was a mistake."
         >
           {!deleteOpen ? (
             <button
@@ -201,13 +232,15 @@ export default function Settings() {
           ) : (
             <div className="bg-red-500/5 border border-red-500/25 rounded-xl p-4 animate-scale-in">
               <p className="text-xs text-red-300 mb-3 leading-relaxed">
-                Enter your password to permanently confirm this. This cannot be undone from within the app.
+                Enter your password to confirm. You'll be logged out everywhere, and your chats, notes and test history are erased after 30 days.
               </p>
               <input
                 type="password"
                 value={deletePassword}
                 onChange={(e) => { setDeletePassword(e.target.value); setDeleteError(""); }}
                 placeholder="Your password"
+                autoComplete="current-password"
+                aria-label="Your password"
                 className="w-full bg-bg-panel border border-bg-border rounded-xl px-4 py-2.5
                   text-sm text-fg-primary placeholder-gray-500 focus:outline-none
                   focus:border-red-500/60 focus:shadow-[0_0_0_3px_rgba(239,68,68,0.1)] transition-all duration-200 mb-2"
@@ -236,6 +269,12 @@ export default function Settings() {
             </div>
           )}
         </SectionCard>
+
+        <p className="text-center text-[11px] text-gray-500 pt-2 pb-6 space-x-3">
+          <Link to="/privacy" className="hover:text-fg-primary hover:underline">Privacy</Link>
+          <Link to="/terms" className="hover:text-fg-primary hover:underline">Terms</Link>
+          <Link to="/refund" className="hover:text-fg-primary hover:underline">Refunds</Link>
+        </p>
 
       </div>
     </div>

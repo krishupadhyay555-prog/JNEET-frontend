@@ -10,6 +10,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useGoBack } from "../hooks/useGoBack.js";
 import { ArrowLeft, GraduationCap } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { testApi } from "../api/testApi.js";
@@ -23,6 +24,7 @@ const FULL_TEST_LABEL = {
 export default function Tests() {
   const { examMode } = useAuth();
   const navigate = useNavigate();
+  const goBack = useGoBack();
 
   const [startingFull, setStartingFull] = useState(false);
 
@@ -42,7 +44,7 @@ export default function Tests() {
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <nav className="border-b border-bg-border bg-bg-surface px-5 py-3.5 flex items-center gap-3 sticky top-0 z-10">
         <button
-          onClick={() => navigate(-1)}
+          onClick={goBack}
           className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover"
           title="Back"
         >

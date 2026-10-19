@@ -47,7 +47,12 @@ api.interceptors.response.use(
 
     // 401: session expired or invalid cookie — dispatch event so
     // AuthContext can react without a hard import cycle
-    if (status === 401) {
+    // Credential checks on endpoints where the student is already signed in
+    // (confirm-password dialogs) must never be mistaken for "session expired".
+    const url = error.config?.url ?? "";
+    const isCredentialCheck = /\/user\/(password|account)$/.test(url);
+
+    if (status === 401 && !isCredentialCheck) {
       window.dispatchEvent(new CustomEvent("jneet:unauthorized", {
         detail: { url: error.config?.url ?? "" },
       }));

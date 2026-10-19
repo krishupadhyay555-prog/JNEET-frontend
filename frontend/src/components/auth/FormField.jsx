@@ -16,7 +16,10 @@ export function FormField({
   disabled,
   autoComplete,
   children,
+  hint,
+  ...inputProps
 }) {
+  const describedBy = error ? `${name}-error` : hint ? `${name}-hint` : undefined;
   return (
     <div>
       <label
@@ -36,6 +39,9 @@ export function FormField({
           disabled={disabled}
           placeholder={placeholder}
           autoComplete={autoComplete}
+          aria-invalid={error ? "true" : undefined}
+          aria-describedby={describedBy}
+          {...inputProps}
           className={[
             "w-full bg-white border rounded-xl px-4 py-2.5",
             "text-sm text-[#2D2A32] placeholder-[#B8B2C2]",
@@ -53,8 +59,12 @@ export function FormField({
         {children}
       </div>
 
+      {!error && hint ? (
+        <p id={`${name}-hint`} className="text-[#8B8594] text-[11px] mt-1.5 leading-snug">{hint}</p>
+      ) : null}
+
       {error ? (
-        <p className="text-red-500 text-xs mt-1.5 flex items-center gap-1.5 animate-fade-in">
+        <p id={`${name}-error`} role="alert" className="text-red-500 text-xs mt-1.5 flex items-center gap-1.5 animate-fade-in">
           <span className="w-3.5 h-3.5 rounded-full bg-red-100 border border-red-300 flex items-center justify-center text-[9px] font-bold shrink-0 text-red-500">
             !
           </span>

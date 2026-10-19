@@ -1,13 +1,20 @@
 // ============================================================
-//  JNEET+ AI — schemas/authSchemas.js  (v4 — Email Verification)
-//  ADDED: verifyEmailSchema (email + 6-digit OTP) and
-//  resendVerificationSchema (just email) — for the new signup
-//  email-verification flow.
-//  Everything else — registerSchema, loginSchema, targetExamSchema,
-//  forgotPasswordSchema, resetPasswordSchema — UNCHANGED from v3.
+//  JNEET+ AI — schemas/authSchemas.js  (v5 — DOB, consent, login code)
+//  CHANGED:
+//    - registerSchema: + dateOfBirth (YYYY-MM-DD, 13+), optional
+//      parentEmail (the controller requires it for under-18s),
+//      acceptTerms must be literally true.
+//    - Password / OTP / email rules now come from schemas/common.js
+//      so every endpoint enforces the same policy.
+//    - New: loginCodeRequestSchema / loginCodeVerifySchema
+//      (passwordless "email me a code" login).
+//  loginSchema stays permissive on the password (any non-empty
+//  string) on purpose — the policy applies when SETTING a password,
+//  never when checking one.
 // ============================================================
 
 import { z } from "zod";
+import { emailSchema, passwordSchema, otpSchema, dobSchema } from "./common.js";
 
 export const registerSchema = z.object({
   name: z
@@ -16,101 +23,49 @@ export const registerSchema = z.object({
     .min(2, "Name must be at least 2 characters")
     .max(50, "Name cannot exceed 50 characters"),
 
-  email: z
-    .string({ required_error: "Email is required" })
-    .trim()
-    .toLowerCase()
-    .email("Please provide a valid email address"),
-
-  password: z
-    .string({ required_error: "Password is required" })
-    .min(8,   "Password must be at least 8 characters")
-    .max(128, "Password is too long")
-    .regex(/[A-Za-z]/, "Password must include at least one letter")
-    .regex(/[0-9]/,    "Password must include at least one number"),
+  email: emailSchema,
+  password: passwordSchema,
 
   examMode: z.enum(["NEET", "JEE"], {
     required_error:     "Please select your exam (NEET or JEE)",
     invalid_type_error: "examMode must be either NEET or JEE",
   }),
+
+  dateOfBirth: dobSchema,
+
+  parentEmail: emailSchema.optional().or(z.literal("").transform(() => undefined)),
+
+  acceptTerms: z.literal(true, {
+    errorMap: () => ({ message: "Please accept the Terms and Privacy Policy to continue" }),
+  }),
 });
 
 export const loginSchema = z.object({
-  email: z
-    .string({ required_error: "Email is required" })
-    .trim()
-    .toLowerCase()
-    .email("Please provide a valid email address"),
-
+  email: emailSchema,
   password: z
     .string({ required_error: "Password is required" })
-    .min(1, "Password is required"),
+    .min(1, "Password is required")
+    .max(128, "Password is too long"),
 });
 
 export const targetExamSchema = z.object({
-  targetExam: z
-    .string()
-    .trim()
-    .min(1)
-    .nullable()
-    .optional(),
-
-  targetExamPromptDismissed: z
-    .boolean()
-    .optional(),
+  targetExam: z.string().trim().min(1).nullable().optional(),
+  targetExamPromptDismissed: z.boolean().optional(),
 });
 
 // ── Forgot Password flow ──────────────────────────────────────
-
-export const forgotPasswordSchema = z.object({
-  email: z
-    .string({ required_error: "Email is required" })
-    .trim()
-    .toLowerCase()
-    .email("Please provide a valid email address"),
-});
+export const forgotPasswordSchema = z.object({ email: emailSchema });
 
 export const resetPasswordSchema = z.object({
-  email: z
-    .string({ required_error: "Email is required" })
-    .trim()
-    .toLowerCase()
-    .email("Please provide a valid email address"),
-
-  otp: z
-    .string({ required_error: "OTP is required" })
-    .trim()
-    .length(6, "OTP must be exactly 6 digits")
-    .regex(/^\d{6}$/, "OTP must contain only numbers"),
-
-  newPassword: z
-    .string({ required_error: "New password is required" })
-    .min(8,   "Password must be at least 8 characters")
-    .max(128, "Password is too long")
-    .regex(/[A-Za-z]/, "Password must include at least one letter")
-    .regex(/[0-9]/,    "Password must include at least one number"),
+  email: emailSchema,
+  otp: otpSchema,
+  newPassword: passwordSchema,
 });
 
-// ── NEW: Signup Email Verification flow ────────────────────────
+// ── Signup email verification ─────────────────────────────────
+export const verifyEmailSchema = z.object({ email: emailSchema, otp: otpSchema });
+export const resendVerificationSchema = z.object({ email: emailSchema });
 
-export const verifyEmailSchema = z.object({
-  email: z
-    .string({ required_error: "Email is required" })
-    .trim()
-    .toLowerCase()
-    .email("Please provide a valid email address"),
-
-  otp: z
-    .string({ required_error: "OTP is required" })
-    .trim()
-    .length(6, "OTP must be exactly 6 digits")
-    .regex(/^\d{6}$/, "OTP must contain only numbers"),
-});
-
-export const resendVerificationSchema = z.object({
-  email: z
-    .string({ required_error: "Email is required" })
-    .trim()
-    .toLowerCase()
-    .email("Please provide a valid email address"),
-});
+// ── Passwordless login ("email me a code") ────────────────────
+export const loginCodeRequestSchema = z.object({ email: emailSchema });
+export const loginCodeVerifySchema = z.object({ email: emailSchema, otp: otpSchema });

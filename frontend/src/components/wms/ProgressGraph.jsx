@@ -14,7 +14,7 @@
 //  WMS summary API, no backend change needed.
 // ============================================================
 
-export function ProgressGraph({ overall }) {
+export function ProgressGraph({ overall, window: win = null }) {
   const { correct = 0, wrong = 0, unattempted = 0, total = 0, accuracyPct = 0 } = overall || {};
 
   if (total === 0) {
@@ -85,7 +85,7 @@ export function ProgressGraph({ overall }) {
       </div>
 
       <p className="text-[10px] text-gray-600 text-center mt-4 pt-4 border-t border-bg-border">
-        Based on {total} question{total === 1 ? "" : "s"} across all tests + revisions
+        Based on {total} question{total === 1 ? "" : "s"} from your last {win?.attempts ?? "few"} test / revision attempt{win?.attempts === 1 ? "" : "s"}
       </p>
     </div>
   );

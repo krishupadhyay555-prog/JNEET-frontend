@@ -32,9 +32,11 @@ import { useState, useEffect } from "react";
 import { Timer, CalendarX } from "lucide-react";
 import { getTargetExam, getDefaultTargetExam } from "../../config/targetExams.js";
 
-function getExamInfo(targetExamKey) {
-  const selected = targetExamKey ? getTargetExam(targetExamKey) : null;
-  const fallback = getDefaultTargetExam();
+function getExamInfo(targetExamKey, examMode) {
+  const found = targetExamKey ? getTargetExam(targetExamKey) : null;
+  // a saved target from the other exam (after switching NEET <-> JEE) is ignored
+  const selected = found && found.examMode === examMode ? found : null;
+  const fallback = getDefaultTargetExam(examMode);
   const info = selected ?? fallback;
 
   if (!info) return null; // extreme edge case: no upcoming exams in the list at all
@@ -75,8 +77,8 @@ function Digit({ value, label, urgent }) {
   );
 }
 
-export function ExamCountdown({ targetExam, onChangeTarget }) {
-  const examInfo = getExamInfo(targetExam);
+export function ExamCountdown({ targetExam, examMode = "NEET", onChangeTarget }) {
+  const examInfo = getExamInfo(targetExam, examMode);
 
   const [countdown, setCountdown] = useState(
     { days: 0, hours: 0, minutes: 0, seconds: 0 }

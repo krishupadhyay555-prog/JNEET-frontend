@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "dev:clean": "vite --force",
+    "prebuild": "node scripts/build-legal.mjs",
+    "legal": "node scripts/build-legal.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

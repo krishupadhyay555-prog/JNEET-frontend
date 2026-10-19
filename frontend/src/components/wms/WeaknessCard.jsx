@@ -9,16 +9,21 @@
 //  so this stays backward-compatible if used anywhere without it.
 // ============================================================
 
-const STATUS_LABEL = { W: "Weak", M: "Medium", S: "Strong" };
+import { Link } from "react-router-dom";
+import { RotateCcw } from "lucide-react";
+
+const STATUS_LABEL = { W: "Weak", M: "Medium", S: "Strong", N: "Few questions" };
 const STATUS_CLASS = {
   W: "text-red-600 bg-red-600/10 border-red-600/25",
   M: "text-amber-600 bg-amber-600/10 border-amber-600/25",
   S: "text-emerald-600 bg-emerald-600/10 border-emerald-600/25",
+  N: "text-gray-600 bg-bg-panel border-bg-border",
 };
 const RANK_CLASS = {
   W: "bg-red-600/10 text-red-600",
   M: "bg-amber-600/10 text-amber-600",
   S: "bg-emerald-600/10 text-emerald-600",
+  N: "bg-bg-panel text-gray-600",
 };
 
 export function WeaknessCard({ entry, rank = null }) {
@@ -41,9 +46,18 @@ export function WeaknessCard({ entry, rank = null }) {
 
       <div className="flex items-center gap-2 shrink-0">
         <span className="text-xs font-semibold text-fg-primary tabular-nums">{accuracyPct}%</span>
-        <span className={`text-[10px] font-semibold px-2 py-1 rounded-full border ${STATUS_CLASS[status]}`}>
+        <span className={`text-[10px] font-semibold px-2 py-1 rounded-full border whitespace-nowrap ${STATUS_CLASS[status]}`}>
           {STATUS_LABEL[status]}
         </span>
+        <Link
+          to="/revision"
+          state={{ subject, chapter }}
+          aria-label={`Revise ${chapter}`}
+          title="Revise this chapter"
+          className="p-1.5 rounded-lg text-gray-600 hover:text-fg-primary hover:bg-bg-hover transition"
+        >
+          <RotateCcw size={14} />
+        </Link>
       </div>
     </div>
   );

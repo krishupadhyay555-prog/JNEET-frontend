@@ -19,7 +19,7 @@
 //  timer, fetch-fresh-on-mount architecture — UNCHANGED from v2.
 // ============================================================
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight, Send } from "lucide-react";
 import { testApi } from "../api/testApi.js";
@@ -27,6 +27,7 @@ import { MCQCard } from "../components/tests/MCQCard.jsx";
 import { QuestionPalette } from "../components/tests/QuestionPalette.jsx";
 import { TestTimer } from "../components/tests/TestTimer.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
+import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
 import toast from "react-hot-toast";
 
 export default function TestAttempt() {
@@ -38,6 +39,12 @@ export default function TestAttempt() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  const [confirmExit, setConfirmExit] = useState(false);
+  const submittedRef = useRef(false);
+
+  // Progress lives on this device too: a refresh, a crash or the phone killing
+  // the tab in the middle of a 3-hour paper must not lose the answers.
+  const storeKey = `jneet.attempt.${attemptId}`;
 
   useEffect(() => {
     let cancelled = false;
@@ -62,6 +69,11 @@ export default function TestAttempt() {
             initialAnswers[q.questionId] = q.selectedIndex;
           }
         });
+        try {
+          const saved = JSON.parse(localStorage.getItem(storeKey) || "null");
+          if (saved?.answers) Object.assign(initialAnswers, saved.answers);
+          if (Number.isInteger(saved?.index) && saved.index >= 0 && saved.index < a.questions.length) setCurrentIndex(saved.index);
+        } catch { /* storage unavailable or corrupt — start from what the server has */ }
         setAnswers(initialAnswers);
 
       } catch {
@@ -73,7 +85,53 @@ export default function TestAttempt() {
     })();
 
     return () => { cancelled = true; };
-  }, [attemptId, navigate]);
+  }, [attemptId, navigate, storeKey]);
+
+  // keep the on-device copy current
+  useEffect(() => {
+    if (!attempt || submittedRef.current) return;
+    try { localStorage.setItem(storeKey, JSON.stringify({ answers, index: currentIndex })); } catch { /* ignore */ }
+  }, [answers, currentIndex, attempt, storeKey]);
+
+  // closing / reloading mid-test asks first (the browser shows its own wording)
+  useEffect(() => {
+    if (!attempt) return undefined;
+    const warn = (e) => { if (!submittedRef.current) { e.preventDefault(); e.returnValue = ""; } };
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, [attempt]);
+
+  const inFlightRef = useRef(false);
+  const handleSubmit = useCallback(async ({ timeUp = false } = {}) => {
+    if (!attempt || inFlightRef.current || submittedRef.current) return;
+    inFlightRef.current = true;
+    setSubmitting(true);
+    try {
+      await testApi.submit(attemptId, {
+        answers: attempt.questions.map((q) => ({
+          questionId: q.questionId,
+          selectedIndex: answers[q.questionId] ?? null,
+        })),
+      });
+      submittedRef.current = true;
+      try { localStorage.removeItem(storeKey); } catch { /* ignore */ }
+      if (timeUp) toast("Time is up — your test was submitted.", { icon: "⏰", duration: 5000 });
+      navigate(`/test/result/${attemptId}`, { replace: true });
+    } catch (err) {
+      if (err.response?.status === 409) {           // already submitted (other tab / auto-submit)
+        submittedRef.current = true;
+        try { localStorage.removeItem(storeKey); } catch { /* ignore */ }
+        navigate(`/test/result/${attemptId}`, { replace: true });
+      } else {
+        toast.error(err.isNetworkError
+          ? "No connection — your answers are saved on this device. Reconnect and tap Submit again."
+          : (err.response?.data?.error || "Could not submit test"));
+      }
+    } finally {
+      inFlightRef.current = false;
+      setSubmitting(false);
+    }
+  }, [attempt, answers, attemptId, navigate, storeKey]);
 
   if (loading) {
     return (
@@ -95,36 +153,21 @@ export default function TestAttempt() {
     setAnswers((prev) => ({ ...prev, [questionId]: index }));
   };
 
-  const handleSubmit = async () => {
-    setSubmitting(true);
-    try {
-      const payload = {
-        answers: questions.map((q) => ({
-          questionId: q.questionId,
-          selectedIndex: answers[q.questionId] ?? null,
-        })),
-      };
-      await testApi.submit(attemptId, payload);
-      navigate(`/test/result/${attemptId}`, { replace: true });
-    } catch (err) {
-      toast.error(err.response?.data?.error || "Could not submit test");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const handleExit = async () => {
-    if (
-      window.confirm(
-        "Exit this test? Whatever you've answered so far will be submitted and scored — unanswered questions count as unattempted."
-      )
-    ) {
-      await handleSubmit();
-    }
-  };
+  const handleExit = () => setConfirmExit(true);
 
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
+      <ConfirmDialog
+        open={confirmExit}
+        title="Exit this test?"
+        message="Whatever you've answered so far will be submitted and scored — unanswered questions count as unattempted."
+        confirmLabel="Submit & exit"
+        cancelLabel="Keep going"
+        tone="danger"
+        busy={submitting}
+        onConfirm={() => { setConfirmExit(false); handleSubmit(); }}
+        onCancel={() => setConfirmExit(false)}
+      />
       <nav className="border-b border-bg-border bg-bg-surface/90 backdrop-blur-xl px-5 py-3.5 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-3 min-w-0">
           <button
@@ -140,7 +183,7 @@ export default function TestAttempt() {
             <p className="text-[10px] text-gray-600">{attempt.subject}</p>
           </div>
         </div>
-        <TestTimer startedAt={attempt.startedAt} />
+        <TestTimer startedAt={attempt.startedAt} durationMinutes={attempt.durationMinutes} onExpire={() => handleSubmit({ timeUp: true })} />
       </nav>
 
       <div className="max-w-2xl mx-auto px-5 py-6 space-y-5">
@@ -179,7 +222,7 @@ export default function TestAttempt() {
 
           {isLast ? (
             <button
-              onClick={handleSubmit}
+              onClick={() => handleSubmit()}
               disabled={submitting}
               className="flex-1 flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500
                 disabled:opacity-50 text-white text-xs font-semibold px-4 py-2.5 rounded-xl
@@ -202,7 +245,7 @@ export default function TestAttempt() {
 
         {!isLast && allAnswered && (
           <button
-            onClick={handleSubmit}
+            onClick={() => handleSubmit()}
             disabled={submitting}
             className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500
               disabled:opacity-50 text-white text-xs font-semibold px-4 py-2.5 rounded-xl

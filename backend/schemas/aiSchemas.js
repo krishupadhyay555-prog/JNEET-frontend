@@ -27,6 +27,14 @@ export const askSchema = z.object({
     .regex(/^[a-f\d]{24}$/i, "Invalid sessionId format")
     .nullable()
     .optional(),
+
+  // Regenerate / edit: the turn starting at this message is being replaced,
+  // so the mentor's memory must not include it (or anything after it).
+  replaceFromMessageId: z
+    .string()
+    .regex(/^[a-f\d]{24}$/i, "Invalid message id")
+    .nullable()
+    .optional(),
 });
 
 export const saveMessageSchema = z.object({

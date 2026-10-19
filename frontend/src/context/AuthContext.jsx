@@ -22,6 +22,14 @@ import {
 } from "react";
 import { authApi } from "../api/authApi.js";
 import { userApi } from "../api/userApi.js";
+import { bindOfflineUser, clearOfflineData } from "../api/notesApi.js";
+
+// The signed-in student is remembered on this device so the app (and the
+// offline notes) still open with no network. It is cleared on logout and
+// whenever the server says the session is no longer valid.
+const CACHE_KEY = "jneet.student.v1";
+const readCached = () => { try { return JSON.parse(localStorage.getItem(CACHE_KEY)); } catch { return null; } };
+const writeCached = (u) => { try { u ? localStorage.setItem(CACHE_KEY, JSON.stringify(u)) : localStorage.removeItem(CACHE_KEY); } catch { /* storage blocked */ } };
 
 const AuthContext = createContext(null);
 
@@ -38,8 +46,15 @@ export function AuthProvider({ children }) {
       try {
         const res = await authApi.getMe();
         if (!cancelled && epoch === authEpochRef.current) setUser(res.data.student);
-      } catch {
-        if (!cancelled && epoch === authEpochRef.current) setUser(null);
+      } catch (err) {
+        if (!cancelled && epoch === authEpochRef.current) {
+          // No network / server asleep (not an auth failure): stay signed in
+          // from the remembered student so notes etc. still open.
+          const unreachable = !err.response || err.response.status >= 502;
+          const cached = unreachable ? readCached() : null;
+          setUser(cached);
+          if (!unreachable) writeCached(null);
+        }
       } finally {
         if (!cancelled) setIsInitializing(false);
       }
@@ -50,12 +65,21 @@ export function AuthProvider({ children }) {
     };
   }, []);
 
+  // Keep the device copy in sync and bind the offline notes cache to this student.
+  useEffect(() => {
+    if (!user) return;               // clearing happens explicitly on logout / invalid session
+    writeCached(user);
+    if (user._id || user.id) bindOfflineUser(user._id || user.id);
+  }, [user]);
+
   useEffect(() => {
     const handle = (event) => {
       const url = event.detail?.url ?? "";
       if (url.includes("/auth/me")) return;
       authEpochRef.current += 1;
       setUser(null);
+      writeCached(null);
+      clearOfflineData();
     };
     window.addEventListener("jneet:unauthorized", handle);
     return () => window.removeEventListener("jneet:unauthorized", handle);
@@ -74,6 +98,8 @@ export function AuthProvider({ children }) {
     }
     authEpochRef.current += 1;
     setUser(null);
+    writeCached(null);
+    clearOfflineData();
   }, []);
 
   const refreshUser = useCallback(async () => {
@@ -89,6 +115,18 @@ export function AuthProvider({ children }) {
     const res = await authApi.updateTargetExam({ targetExam, targetExamPromptDismissed });
     setUser(res.data.student);
     return res.data.student;
+  }, []);
+
+  // Switch between NEET and JEE (each keeps its own chats, tests and progress).
+  const switchExamMode = useCallback(async (examMode) => {
+    const res = await userApi.updateExamMode(examMode);
+    setUser(res.data.student);
+    return res.data.student;
+  }, []);
+
+  // Replace the cached student with a fresh payload returned by an endpoint
+  const setStudent = useCallback((student) => {
+    if (student) setUser(student);
   }, []);
 
   // ── Profile — update name ──────────────────────────────────
@@ -108,6 +146,8 @@ export function AuthProvider({ children }) {
     await userApi.deleteAccount({ password });
     authEpochRef.current += 1;
     setUser(null);
+    writeCached(null);
+    clearOfflineData();
   }, []);
 
   return (
@@ -120,7 +160,9 @@ export function AuthProvider({ children }) {
         login,
         logout,
         refreshUser,
+        setStudent,
         updateTargetExam,
+        switchExamMode,
         updateProfile,
         changePassword,
         deleteAccount,
@@ -131,6 +173,7 @@ export function AuthProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   const ctx = useContext(AuthContext);
   if (!ctx) throw new Error("useAuth must be used inside <AuthProvider>");
