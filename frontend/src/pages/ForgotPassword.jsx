@@ -6,10 +6,12 @@
 //          the student in on success and every other device is signed out.
 // ============================================================
 
-import { useState }          from "react";
+import { useRef, useState }  from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth }           from "../context/AuthContext.jsx";
 import { authApi }           from "../api/authApi.js";
+import { Captcha }           from "../components/security/Captcha.jsx";
+import { withCaptcha, CAPTCHA_ERROR } from "../utils/turnstile.js";
 import { FormField }         from "../components/auth/FormField.jsx";
 import { OtpInput }          from "../components/auth/OtpInput.jsx";
 import { PasswordStrength } from "../components/auth/PasswordStrength.jsx";
@@ -24,6 +26,7 @@ export default function ForgotPassword() {
   const { login } = useAuth();
   const navigate  = useNavigate();
 
+  const captchaRef = useRef(null);
   const [step,     setStep]     = useState(1);
   const [email,    setEmail]    = useState("");
   const [otp,      setOtp]      = useState("");
@@ -44,13 +47,15 @@ export default function ForgotPassword() {
 
     setLoading(true); setErrors({});
     try {
-      const res = await authApi.forgotPassword({ email: clean });
+      const res = await authApi.forgotPassword(await withCaptcha(captchaRef, { email: clean }));
       setNotice({ tone: "success", text: "If an account exists for this email, a reset code is on its way. Check Spam too." });
       startCooldown(res.data?.resendAfter ?? 60);
       setOtp(""); setStep(2);
     } catch (err) {
       const status = err.response?.status;
-      if (err.isNetworkError || err.isTimeout) setErrors({ email: "Can't reach the server. Check your connection and try again." });
+      if (err.isCaptchaError) setErrors({ email: CAPTCHA_ERROR });
+      else if (err.response?.data?.code === "CAPTCHA_FAILED") setErrors({ email: err.response.data.error || CAPTCHA_ERROR });
+      else if (err.isNetworkError || err.isTimeout) setErrors({ email: "Can't reach the server. Check your connection and try again." });
       else if (status === 429) {
         setErrors({ email: err.response?.data?.error || "Too many requests. Please try again later." });
         startCooldown(err.response?.data?.retryAfter ?? 60);
@@ -97,6 +102,7 @@ export default function ForgotPassword() {
     return (
       <AuthShell title="Reset your password" subtitle="We'll email you a 6-digit code" footer={footer}>
         <form onSubmit={requestCode} noValidate className="space-y-4">
+        <Captcha ref={captchaRef} />
           <FormField label="Email" name="email" type="email" value={email}
             onChange={(e) => { setEmail(e.target.value); setErrors({}); }}
             error={errors.email} placeholder="you@example.com" autoComplete="email" disabled={loading}
@@ -115,6 +121,7 @@ export default function ForgotPassword() {
     >
       {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
       <form onSubmit={resetPassword} noValidate className="space-y-4">
+        <Captcha ref={captchaRef} />
         <OtpInput value={otp} onChange={(v) => { setOtp(v); setErrors((p) => ({ ...p, otp: "" })); }}
           disabled={loading} error={errors.otp} idPrefix="reset-otp" />
 
