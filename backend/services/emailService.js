@@ -123,7 +123,12 @@ function layout({ preheader, heading, bodyHtml, footerHtml = "" }) {
 <tr><td align="center">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px;background:#ffffff;border-radius:16px;border:1px solid #ece6f5;font-family:'DM Sans',Arial,Helvetica,sans-serif;color:#1f1b2d;">
     <tr><td style="padding:28px 28px 8px;">
-      <div style="font-size:18px;font-weight:700;color:#5b6ee1;">JNEET+ AI</div>
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td style="padding-right:10px;vertical-align:middle;">
+          <img src="${escapeHtml(env.APP_URL)}/icon-192.png" width="36" height="36" alt="JNEET+ AI" style="display:block;border-radius:9px;border:0;">
+        </td>
+        <td style="vertical-align:middle;font-size:18px;font-weight:700;color:#5b6ee1;">JNEET+ AI</td>
+      </tr></table>
     </td></tr>
     <tr><td style="padding:8px 28px 4px;font-size:20px;font-weight:700;">${escapeHtml(heading)}</td></tr>
     <tr><td style="padding:8px 28px 24px;font-size:15px;line-height:1.55;">${bodyHtml}</td></tr>
