@@ -10,6 +10,7 @@ import { Router }  from "express";
 import { authLimiter }  from "../limiters/authLimiter.js";
 import { otpIpLimiter, otpEmailLimiter } from "../limiters/otpLimiter.js";
 import { validate }     from "../middleware/validate.js";
+import { requireCaptcha } from "../middleware/captcha.js";
 import { protect }      from "../middleware/authMiddleware.js";
 import {
   registerSchema,
@@ -41,20 +42,20 @@ const router = Router();
 // Endpoints that send an email: validate -> IP limit -> mailbox limit
 const sendsCode = [otpIpLimiter, otpEmailLimiter];
 
-router.post("/register", validate(registerSchema), ...sendsCode, authLimiter, register);
-router.post("/login",    authLimiter, validate(loginSchema), login);
+router.post("/register", requireCaptcha, validate(registerSchema), ...sendsCode, authLimiter, register);
+router.post("/login",    requireCaptcha, authLimiter, validate(loginSchema), login);
 
 // Passwordless login
-router.post("/login-code",        validate(loginCodeRequestSchema), ...sendsCode, requestLoginCode);
+router.post("/login-code",        requireCaptcha, validate(loginCodeRequestSchema), ...sendsCode, requestLoginCode);
 router.post("/login-code/verify", authLimiter, validate(loginCodeVerifySchema), verifyLoginCode);
 
 // Forgot password
-router.post("/forgot-password", validate(forgotPasswordSchema), ...sendsCode, forgotPassword);
+router.post("/forgot-password", requireCaptcha, validate(forgotPasswordSchema), ...sendsCode, forgotPassword);
 router.post("/reset-password",  authLimiter, validate(resetPasswordSchema), resetPassword);
 
 // Signup email verification
 router.post("/verify-email",        authLimiter, validate(verifyEmailSchema), verifyEmail);
-router.post("/resend-verification", validate(resendVerificationSchema), ...sendsCode, resendVerification);
+router.post("/resend-verification", requireCaptcha, validate(resendVerificationSchema), ...sendsCode, resendVerification);
 
 // Protected
 router.post("/logout", logout);

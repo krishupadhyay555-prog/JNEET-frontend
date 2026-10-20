@@ -51,7 +51,12 @@ async function seed() {
 
   for (const file of files) {
     const filePath = path.join(QUESTIONS_DIR, file);
-    const questions = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    const raw = fs.readFileSync(filePath, "utf-8");
+    if (!raw.trim()) {
+      console.log(`Skipped ${file} (empty)`);
+      continue;
+    }
+    const questions = JSON.parse(raw);
 
     for (const q of questions) {
       await Question.updateOne(
