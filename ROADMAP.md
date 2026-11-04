@@ -2,7 +2,7 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **1 Nov 2026**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
+> Last updated: **4 Nov 2026**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
 **Target:** a 10/10 product for NEET UG + JEE Main students — "iske bina prep nahi karunga".
@@ -190,6 +190,18 @@ With API (Luna, ~₹0.2 per 10-turn session):
 - [ ] **D59 AI mnemonics/stories** (made once, cached for all).
 
 Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 1–2 days; 8 games ≈ 3–4 weeks.
+
+### D-l. Founder feedback, 4 Nov 2026 (UI polish batch)
+- [ ] **D63 Notes search bar** — better search (fuzzy match, chapter/subject filters, highlight matches).
+- [ ] **D64 Remove JEE Advanced countdown** from `config/targetExams.js` (out of scope: JEE Main only; it also wrongly says "NTA" — Advanced is run by IITs). Advanced could be a later paid add-on, not now.
+- [ ] **D65 Motivation page** redesign.
+- [ ] **D66 Floating "Ask mentor" bar** — stays fixed at the bottom while scrolling in chat.
+- [ ] **D67 Chat layout** — fix top being cut off, lag, premium feel.
+- [ ] **D68 Fun / Mentor switch in chat** (toggle in the chat header) — test deeply.
+- [ ] **D69 Wording** — "That is what makes it stick" → clearer "That is how you remember it" (Hinglish-friendly).
+- [ ] **D70 Voice in 3D simulations** — narration via browser voice (₹0) / Sarvam for Pro.
+- [ ] **D71 Animations, themes, design polish on every page** (incl. Privacy, Terms, Legal, Settings).
+- [ ] **D72 Playable demo of Memory Card Match + game samples** before full build.
 
 ### D-k. Later / platform
 - [ ] **D60 Razorpay + Pro/Elite (Batch 6)** — 2% + GST per payment; ₹199 KYC.
