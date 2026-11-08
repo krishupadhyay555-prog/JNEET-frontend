@@ -2,7 +2,7 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **4 Nov 2026**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
+> Last updated: **8 Nov 2026**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
 **Target:** a 10/10 product for NEET UG + JEE Main students — "iske bina prep nahi karunga".
@@ -23,6 +23,25 @@
 - Verify every file actually parses/validates; never ask the founder to hand-merge JSON.
 - Quality bar: **polished, not MVP**. Detailed step-by-step guidance; never skip steps; one step at a time.
 - Commits: `update: <what>` with the Co-Authored-By / Claude-Session trailers.
+
+---
+
+## 0.5 Live status — what is actually on the website (check every session)
+
+Code only goes live after its PR is **merged into `main`**. Until then the founder will not see it, even if it is "done" here.
+
+| PR | What | Status (8 Nov 2026) |
+|---|---|---|
+| #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
+| #2 | Turnstile captcha, **email logo**, seed script skips empty files | ⏳ **Open — NOT live** |
+| #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ⏳ **Open — NOT live** |
+
+### Issue log (so it never repeats)
+| Date | Issue | Root cause | Fix / rule |
+|---|---|---|---|
+| 8 Nov 2026 | Email logo not showing | Code was in PR #2, which was never merged | Merge PR #2. **Rule:** every reply that ships code ends with "Live after you merge PR #N", and every session starts by listing open PRs |
+| Oct 2026 | OTP emails not arriving | Brevo IP blocking + unauthenticated domain + Gmail sender | Domain authenticated, sender verified, IP blocking off |
+| Oct 2026 | Seed script would crash | Six empty `*-batch2.json` files | Script skips empty files (PR #2) |
 
 ---
 
