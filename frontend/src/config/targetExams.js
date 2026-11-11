@@ -18,12 +18,10 @@ export const TARGET_EXAMS = [
   { key: "NEET_2028", label: "NEET 2028", date: "2028-05-07T03:30:00.000Z", tentative: true, examMode: "NEET" },
   { key: "NEET_2029", label: "NEET 2029", date: "2029-05-06T03:30:00.000Z", tentative: true, examMode: "NEET" },
   { key: "NEET_2030", label: "NEET 2030", date: "2030-05-05T03:30:00.000Z", tentative: true, examMode: "NEET" },
-  { key: "JEE_MAIN_2027", label: "JEE Main 2027", date: "2027-01-22T03:30:00.000Z", tentative: true, examMode: "JEE" },
-  { key: "JEE_ADV_2027", label: "JEE Advanced 2027", date: "2027-05-16T03:30:00.000Z", tentative: true, examMode: "JEE" },
+  { key: "JEE_MAIN_2027", label: "JEE Main 2027 (Session 1)", date: "2027-01-22T03:30:00.000Z", tentative: false, examMode: "JEE" },
+  { key: "JEE_MAIN_2027_S2", label: "JEE Main 2027 (Session 2)", date: "2027-04-02T03:30:00.000Z", tentative: true, examMode: "JEE" },
   { key: "JEE_MAIN_2028", label: "JEE Main 2028", date: "2028-01-22T03:30:00.000Z", tentative: true, examMode: "JEE" },
-  { key: "JEE_ADV_2028", label: "JEE Advanced 2028", date: "2028-05-21T03:30:00.000Z", tentative: true, examMode: "JEE" },
   { key: "JEE_MAIN_2029", label: "JEE Main 2029", date: "2029-01-22T03:30:00.000Z", tentative: true, examMode: "JEE" },
-  { key: "JEE_ADV_2029", label: "JEE Advanced 2029", date: "2029-05-20T03:30:00.000Z", tentative: true, examMode: "JEE" },
 ];
 
 // Look up one target by key (any exam).

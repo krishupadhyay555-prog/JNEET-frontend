@@ -56,9 +56,11 @@ describe('Exam mode', () => {
     expect((await a.patch('/api/auth/me/target-exam').send({ targetExam: 'NEET_2027' })).status).toBe(200)
     await a.patch('/api/user/exam-mode').send({ examMode: 'JEE' })
     expect((await a.patch('/api/auth/me/target-exam').send({ targetExam: 'NEET_2027' })).status).toBe(400)
-    const ok = await a.patch('/api/auth/me/target-exam').send({ targetExam: 'JEE_ADV_2027' })
+    const ok = await a.patch('/api/auth/me/target-exam').send({ targetExam: 'JEE_MAIN_2027_S2' })
     expect(ok.status).toBe(200)
-    expect(ok.body.student.targetExam).toBe('JEE_ADV_2027')
+    expect(ok.body.student.targetExam).toBe('JEE_MAIN_2027_S2')
+    // JEE Advanced is out of scope (JEE Main only)
+    expect((await a.patch('/api/auth/me/target-exam').send({ targetExam: 'JEE_ADV_2027' })).status).toBe(400)
   })
 
   it('keeps each exam\'s chats and test history separate (and loses nothing on switching back)', async () => {

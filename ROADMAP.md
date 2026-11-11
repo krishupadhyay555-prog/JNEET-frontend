@@ -2,7 +2,7 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **8 Nov 2026**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
+> Last updated: **11 Nov 2026**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
 **Target:** a 10/10 product for NEET UG + JEE Main students — "iske bina prep nahi karunga".
@@ -35,10 +35,18 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
 | #2 | Turnstile captcha, **email logo**, seed script skips empty files | ✅ Merged 11 Nov — live (logo inside email confirmed on Gmail) |
 | #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ✅ Merged 11 Nov |
+| #4 | Roadmap live-status update | ⏳ Open — docs only (also included in #5) |
+| #5 | **Debug sweep**: critical login bypass fix, search crash, test paper fixes, chat layout/lag, accuracy labels, JEE Main dates, security updates | ⏳ **Open — NOT live** |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
+| 11 Nov 2026 | **CRITICAL: anyone could log in to any verified account** | `/verify-email` logged the caller in when the email was already verified, without checking the code | Fixed in PR #5 (now 409 "already verified, please log in", no session) + regression test |
+| 11 Nov 2026 | Notes / chat search crashed (500) on `?q=a&q=b` | Query param arrived as an array | Only plain strings used, capped at 100 chars (PR #5) |
+| 11 Nov 2026 | Same question could appear twice in one test; full mock mixed all subjects | `$sample` can repeat; bank has 208 same-text copies; whole paper shuffled together | Unique by id + text; full mock in NTA sections Physics → Chemistry → Biology/Maths (PR #5) |
+| 11 Nov 2026 | Chat logo cut off at the top; header/input hidden on phones; lag while answering | Fixed-height centred empty state; `100vh` + `scrollIntoView` scrolled the page; re-render per token | `min-h-full`, `100dvh`, scroll only the list, one render per frame (PR #5) |
+| 11 Nov 2026 | WMS/Analytics showed "4% accuracy" for 6 right of 20 answered | Skipped questions counted as wrong in "accuracy" | Ring renamed "Score"; true accuracy (correct ÷ answered) shown (PR #5) |
+| 11 Nov 2026 | Known, not fixed yet | `zod` 3 memory-exhaustion advisory (needs zod 4 migration; risk limited by the 256 KB body cap + array limits); `react-router` 6 advisories (open-redirect via user-supplied paths / SSR — the app passes no user paths, no SSR); fixing both needs major upgrades | Plan a zod 4 + React Router 7 upgrade after launch |
 | 11 Nov 2026 | Round "J" avatar still shown next to sender in Gmail | That avatar is Gmail's sender picture, not the email body; the in-email logo works | Free fix: Google Account on `no-reply@jneetai.com` (via free forwarding) with the logo as profile photo. Paid fix later: BIMI + CMC (~$650–990/yr) |
 | 11 Nov 2026 | Email logo still not showing | PR #2 still open (not merged) | Same fix: merge PR #2 |
 | 8 Nov 2026 | Email logo not showing | Code was in PR #2, which was never merged | Merge PR #2. **Rule:** every reply that ships code ends with "Live after you merge PR #N", and every session starts by listing open PRs |
@@ -75,7 +83,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | A6 | [ ] **Hindi medium support** | NTA offers Hindi papers; large Hindi-medium share, esp. NEET; few good AI tools for them | AI translation + check, ~1 week |
 | A7 | [ ] **Low-end Android + low data** (PWA install, data-saver mode) | ₹8–10k phones and slow internet are common | ₹0, 2–3 days |
 | A8 | [ ] **Feedback + support channel** | Students know where to report; trust + free bug-testing | ₹0, 1 day |
-| A9 | [ ] **Small pending items** | JEE dates are placeholders; `AdminDemo.jsx` keep/delete; Schedule route is an empty stub; `RevisionQueue.js` model is an empty file; PR #2 not merged | ₹0, 1–2 days |
+| A9 | [ ] **Small pending items** | ~~JEE dates are placeholders~~ (JEE Main 2027 S1 confirmed 22 Jan, done 11 Nov); NEET 2027 date not announced yet; `AdminDemo.jsx` keep/delete; Schedule route is an empty stub; `RevisionQueue.js` model is an empty file; PR #2 not merged | ₹0, 1–2 days |
 | A10 | [ ] **DPDP (India data law) check** | Parent consent exists; verify students can download/delete their own data | ₹0, 1 day |
 
 ---
@@ -214,12 +222,12 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
 
 ### D-l. Founder feedback, 4 Nov 2026 (UI polish batch)
 - [ ] **D63 Notes search bar** — better search (fuzzy match, chapter/subject filters, highlight matches).
-- [ ] **D64 Remove JEE Advanced countdown** from `config/targetExams.js` (out of scope: JEE Main only; it also wrongly says "NTA" — Advanced is run by IITs). Advanced could be a later paid add-on, not now.
+- [x] **D64 Remove JEE Advanced countdown** *(done 11 Nov, PR #5 — saved Advanced targets now ask the student to pick again)* from `config/targetExams.js` (out of scope: JEE Main only; it also wrongly says "NTA" — Advanced is run by IITs). Advanced could be a later paid add-on, not now.
 - [ ] **D65 Motivation page** redesign.
 - [ ] **D66 Floating "Ask mentor" bar** — stays fixed at the bottom while scrolling in chat.
-- [ ] **D67 Chat layout** — fix top being cut off, lag, premium feel.
+- [ ] **D67 Chat layout** — fix top being cut off, lag, premium feel. *(cut-off, hidden header/input and streaming lag fixed 11 Nov in PR #5; "premium feel" polish still open)*
 - [ ] **D68 Fun / Mentor switch in chat** (toggle in the chat header) — test deeply.
-- [ ] **D69 Wording** — "That is what makes it stick" → clearer "That is how you remember it" (Hinglish-friendly).
+- [x] **D69 Wording** *(done 11 Nov, PR #5: "Writing it yourself is how you remember it.")* — "That is what makes it stick" → clearer "That is how you remember it" (Hinglish-friendly).
 - [ ] **D70 Voice in 3D simulations** — narration via browser voice (₹0) / Sarvam for Pro.
 - [ ] **D71 Animations, themes, design polish on every page** (incl. Privacy, Terms, Legal, Settings).
 - [ ] **D72 Playable demo of Memory Card Match + game samples** before full build.

@@ -64,46 +64,62 @@ function shuffleOptions(q) {
   };
 }
 
-async function pickForDifficulty(baseFilter, difficulty, count, excludeIds) {
+const normText = (t) => String(t ?? "").toLowerCase().replace(/\s+/g, " ").trim();
+
+// Random sample of `count` questions with NO repeats inside one paper.
+// $sample can return the same document twice, and the bank holds a few
+// questions with identical text under different ids — both are filtered
+// out here. Recently-seen questions (`excludeIds`) are avoided first and
+// only used as a fallback when the pool is too small.
+async function sampleUnique(filter, count, excludeIds = []) {
   if (count <= 0) return [];
-  const filter = { ...baseFilter, difficulty };
+  const picked = [];
+  const ids = new Set();
+  const texts = new Set();
 
-  let picked = await Question.aggregate([
-    { $match: { ...filter, _id: { $nin: excludeIds } } },
-    { $sample: { size: count } },
-  ]);
+  const add = (questions) => {
+    for (const q of questions) {
+      const id = String(q._id);
+      const text = normText(q.questionText);
+      if (ids.has(id) || texts.has(text)) continue;
+      ids.add(id);
+      texts.add(text);
+      picked.push(q);
+      if (picked.length >= count) break;
+    }
+  };
 
-  if (picked.length < count) {
-    const pickedIds = picked.map((q) => q._id);
-    const more = await Question.aggregate([
-      { $match: { ...filter, _id: { $nin: pickedIds } } },
-      { $sample: { size: count - picked.length } },
-    ]);
-    picked = picked.concat(more);
+  for (const avoid of [excludeIds, []]) {
+    for (let round = 0; round < 3 && picked.length < count; round++) {
+      const more = await Question.aggregate([
+        { $match: { ...filter, _id: { $nin: [...avoid, ...picked.map((q) => q._id)] } } },
+        { $sample: { size: count - picked.length } },
+      ]);
+      if (more.length === 0) break;
+      add(more);
+    }
+    if (picked.length >= count) break;
   }
-
   return picked;
 }
 
-async function pickRandomForSubject(examMode, subject, count, excludeIds) {
-  if (count <= 0) return [];
-  const filter = { examMode, subject };
+function pickForDifficulty(baseFilter, difficulty, count, excludeIds) {
+  return sampleUnique({ ...baseFilter, difficulty }, count, excludeIds);
+}
 
-  let picked = await Question.aggregate([
-    { $match: { ...filter, _id: { $nin: excludeIds } } },
-    { $sample: { size: count } },
-  ]);
+function pickRandomForSubject(examMode, subject, count, excludeIds) {
+  return sampleUnique({ examMode, subject }, count, excludeIds);
+}
 
-  if (picked.length < count) {
-    const pickedIds = picked.map((q) => q._id);
-    const more = await Question.aggregate([
-      { $match: { ...filter, _id: { $nin: pickedIds } } },
-      { $sample: { size: count - picked.length } },
-    ]);
-    picked = picked.concat(more);
-  }
-
-  return picked;
+// Drops repeats (same id or same text) across several picks.
+function dedupe(questions) {
+  const seen = new Set();
+  return questions.filter((q) => {
+    const keys = [String(q._id), normText(q.questionText)];
+    if (keys.some((k) => seen.has(k))) return false;
+    keys.forEach((k) => seen.add(k));
+    return true;
+  });
 }
 
 export const startTest = async (req, res, next) => {
@@ -138,7 +154,7 @@ export const startTest = async (req, res, next) => {
       pickForDifficulty(baseFilter, "tough",    tough,    excludeIds),
     ]);
 
-    const combined = shuffleArray([...easyQ, ...moderateQ, ...toughQ]);
+    const combined = shuffleArray(dedupe([...easyQ, ...moderateQ, ...toughQ]));
 
     if (combined.length === 0) {
       return res.status(404).json({
@@ -207,13 +223,16 @@ export const startFullTest = async (req, res, next) => {
       });
     }
 
+    // Like the real NTA paper: one section per subject, in the official
+    // order (Physics → Chemistry → Biology/Mathematics), shuffled inside
+    // each section — not all three subjects mixed together.
     let allPicked = [];
     for (const s of config.subjects) {
       const picked = await pickRandomForSubject(examMode, s.subject, s.count, []);
-      allPicked = allPicked.concat(picked);
+      allPicked = allPicked.concat(shuffleArray(picked));
     }
 
-    const shuffled = shuffleArray(allPicked).map(shuffleOptions);
+    const shuffled = dedupe(allPicked).map(shuffleOptions);
 
     const attempt = await TestAttempt.create({
       userId: req.user.id,

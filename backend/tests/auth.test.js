@@ -90,6 +90,16 @@ describe("Verify email", () => {
     expect((await c.get("/api/auth/me")).status).toBe(200);
   });
 
+  it("SECURITY: never signs anyone in to an already-verified account", async () => {
+    const { body } = await signedInClient();           // verified account exists
+    const attacker = client();
+    const res = await attacker.post("/api/auth/verify-email").send({ email: body.email, otp: "123456" });
+    expect(res.status).toBe(409);
+    expect(res.body.alreadyVerified).toBe(true);
+    expect(res.headers["set-cookie"]).toBeUndefined();
+    expect((await attacker.get("/api/auth/me")).status).toBe(401);
+  });
+
   it("locks the code after 5 wrong attempts", async () => {
     const c = client();
     const body = registerBody();

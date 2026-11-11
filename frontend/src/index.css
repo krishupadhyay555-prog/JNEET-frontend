@@ -337,7 +337,12 @@ input:-webkit-autofill:focus {
   animation: scaleIn 0.2s ease-out forwards;
 }
 
+/* Chat fills exactly the visible screen. 100vh is taller than a phone's
+   screen while the address bar shows (header / message box got hidden);
+   100dvh is the real visible height, 100vh stays as the fallback. */
 .chat-shell {
+  height: 100vh;
+  height: 100dvh;
   background:
     radial-gradient(circle at 50% -10%, rgba(176, 106, 74, 0.10), transparent 36%),
     radial-gradient(circle at 100% 20%, rgba(176, 106, 74, 0.05), transparent 30%),
