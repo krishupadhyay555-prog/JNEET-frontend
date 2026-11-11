@@ -30,7 +30,7 @@
 
 Code only goes live after its PR is **merged into `main`**. Until then the founder will not see it, even if it is "done" here.
 
-| PR | What | Status (8 Nov 2026) |
+| PR | What | Status (11 Nov 2026) |
 |---|---|---|
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
 | #2 | Turnstile captcha, **email logo**, seed script skips empty files | ⏳ **Open — NOT live** |
@@ -39,6 +39,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
+| 11 Nov 2026 | Email logo still not showing | PR #2 still open (not merged) | Same fix: merge PR #2 |
 | 8 Nov 2026 | Email logo not showing | Code was in PR #2, which was never merged | Merge PR #2. **Rule:** every reply that ships code ends with "Live after you merge PR #N", and every session starts by listing open PRs |
 | Oct 2026 | OTP emails not arriving | Brevo IP blocking + unauthenticated domain + Gmail sender | Domain authenticated, sender verified, IP blocking off |
 | Oct 2026 | Seed script would crash | Six empty `*-batch2.json` files | Script skips empty files (PR #2) |
@@ -267,6 +268,8 @@ Estimated total: **~10–12 weeks**. Most items cost ₹0/month; only the handwr
 - AI quotas: Free 5/day · Pro 30/day · Elite 50/day + 10 deep/month.
 
 ## 9. Open decisions (founder)
+
+- [ ] **JEE Advanced (proposed 11 Nov 2026, awaiting founder OK).** Proposal: plans = NEET UG · JEE Main · JEE Main + Advanced combo (no Advanced-only plan, since Advanced needs Main first). Same teaching method for all (mentor, write-by-hand, WMS, games, 3D); only content level, question types (multi-correct, paragraph, matrix-match, integer, partial marking) and AI depth change. Every question tagged `main`/`advanced`; plan checked on the server. Durations: 1 month + 3 months (+ "till exam" pass later). Suggested prices (to validate): NEET UG / JEE Main ₹199/mo or ₹499/3 mo; Main + Advanced ₹299/mo or ₹749/3 mo. Launch timing: Advanced content Feb–Mar 2027. If approved, change §0 "JEE Main only" rule accordingly.
 
 - [ ] Confirm priority order in §6.
 - [ ] Final prices (B4).
