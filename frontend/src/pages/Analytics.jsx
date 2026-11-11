@@ -191,9 +191,12 @@ export default function Analytics() {
     const totalQuestions = attempts.reduce(
       (sum, a) => sum + Math.max(0, (a.totalQuestions || 0) - (a.unattemptedCount || 0)), 0
     );
-    const avgAccuracy = Math.round(
-      attempts.reduce((sum, a) => sum + (a.score || 0), 0) / attempts.length
-    );
+    // Accuracy = correct out of the questions actually answered (skipped
+    // questions are not "wrong"). The old value averaged each attempt's
+    // score over ALL questions and showed e.g. 4% for 6 right out of 20 answered.
+    const correctTotal = attempts.reduce((sum, a) => sum + (a.correctCount || 0), 0);
+    const answeredTotal = attempts.reduce((sum, a) => sum + (a.correctCount || 0) + (a.wrongCount || 0), 0);
+    const avgAccuracy = answeredTotal > 0 ? Math.round((correctTotal / answeredTotal) * 100) : 0;
     const streak = computeStreak(attempts);
 
     const bySubjectCount = {};
@@ -284,7 +287,7 @@ export default function Analytics() {
               />
               <StatCard
                 icon={<TrendingUp size={15} className="text-emerald-600" />}
-                label="Average accuracy"
+                label="Accuracy (answered)"
                 value={`${stats.avgAccuracy}%`}
               />
               <StatCard

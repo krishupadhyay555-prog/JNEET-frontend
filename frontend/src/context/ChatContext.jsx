@@ -78,6 +78,7 @@ export function ChatProvider({ children }) {
   const messagesRef = useRef([]);
   // Latest partial answer of the stream in flight (so "Stop" keeps what was written)
   const partialRef = useRef(null);
+  const streamFrameRef = useRef(0);
   useEffect(() => { messagesRef.current = messages; }, [messages]);
   const latestLoadRef = useRef(0);
   const activeSessionRef = useRef(null);
@@ -447,7 +448,16 @@ export function ChatProvider({ children }) {
         onToken: (_token, accumulated) => {
           partialRef.current = { text: accumulated, finalize };
           if (!belongsToActiveSession()) return;
-          setStreamingText(accumulated);
+          // Re-render at most once per frame, not once per token: long answers
+          // re-parse Markdown on every update, which made the chat lag on phones.
+          if (!streamFrameRef.current) {
+            streamFrameRef.current = requestAnimationFrame(() => {
+              streamFrameRef.current = 0;
+              // partialRef is cleared when the answer finishes / fails / stops,
+              // so a late frame can never bring back old text.
+              if (partialRef.current && belongsToActiveSession()) setStreamingText(partialRef.current.text);
+            });
+          }
         },
 
         onDone: finalize,

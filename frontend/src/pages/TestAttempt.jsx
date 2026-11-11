@@ -35,6 +35,7 @@ export default function TestAttempt() {
   const navigate = useNavigate();
 
   const [attempt, setAttempt] = useState(null);
+  const [showPalette, setShowPalette] = useState(false);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -188,15 +189,35 @@ export default function TestAttempt() {
 
       <div className="max-w-2xl mx-auto px-5 py-6 space-y-5">
         <div className="glass-panel rounded-2xl p-3">
-          <p className="text-[11px] text-gray-600 mb-2.5 px-1">
-            {answeredCount} of {questions.length} answered
-          </p>
-          <QuestionPalette
-            questions={questions}
-            currentIndex={currentIndex}
-            answers={answers}
-            onJump={setCurrentIndex}
-          />
+          {/* A full mock has 75–180 questions: on a phone the whole grid pushed the
+              question off the screen. Big papers start with the grid folded. */}
+          <div className="flex items-center justify-between gap-2 px-1">
+            <p className="text-[11px] text-gray-600">
+              {answeredCount} of {questions.length} answered
+              {currentQuestion?.subject && attempt.mode === "test" && (
+                <span className="ml-1.5 text-fg-primary font-medium">· {currentQuestion.subject}</span>
+              )}
+            </p>
+            {questions.length > 30 && (
+              <button
+                onClick={() => setShowPalette((v) => !v)}
+                className="text-[11px] font-semibold text-violet-500 hover:text-violet-400 px-2 py-1 rounded-lg hover:bg-bg-hover"
+                aria-expanded={showPalette}
+              >
+                {showPalette ? "Hide questions" : "All questions"}
+              </button>
+            )}
+          </div>
+          {(showPalette || questions.length <= 30) && (
+            <div className="mt-2.5">
+              <QuestionPalette
+                questions={questions}
+                currentIndex={currentIndex}
+                answers={answers}
+                onJump={(i) => { setCurrentIndex(i); if (questions.length > 30) setShowPalette(false); }}
+              />
+            </div>
+          )}
         </div>
 
         <div key={currentQuestion.questionId} className="animate-fade-up">

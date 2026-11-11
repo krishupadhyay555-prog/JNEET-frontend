@@ -171,6 +171,10 @@ export default function Register() {
       const status = err.response?.status;
       setOtp("");
       if (err.isNetworkError || err.isTimeout) setErrors({ otp: "Can't reach the server. Try again in a moment." });
+      else if (status === 409 && err.response?.data?.alreadyVerified) {
+        toast.success("Your email is already verified. Please log in.");
+        navigate("/login", { replace: true });
+      }
       else if (status === 400 || status === 429 || status === 423) setErrors({ otp: err.response?.data?.error || "That code is incorrect or expired." });
       else setErrors({ otp: "Something went wrong on our side. Please try again." });
     } finally {

@@ -82,9 +82,25 @@ export default function AskAI() {
     loadInitialData();
   }, [loadInitialData]);
 
+  // Scroll the MESSAGE LIST, never the page. scrollIntoView() also scrolls
+  // every parent (including the window), which on phones pushed the chat
+  // header off the top of the screen.
+  const scrollListToBottom = useCallback((smooth = true) => {
+    const el = messagesRef.current;
+    if (el) el.scrollTo({ top: el.scrollHeight, behavior: smooth ? "smooth" : "auto" });
+  }, []);
+
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages.length, isStreaming]);
+    scrollListToBottom(true);
+  }, [messages.length, isStreaming, scrollListToBottom]);
+
+  // While an answer streams in, keep following it — unless the student
+  // has scrolled up to read something.
+  useEffect(() => {
+    if (!isStreaming) return;
+    const el = messagesRef.current;
+    if (el && el.scrollHeight - el.scrollTop - el.clientHeight < 160) scrollListToBottom(false);
+  }, [streamingText, isStreaming, scrollListToBottom]);
 
   useEffect(() => {
     const el = messagesRef.current;
@@ -96,9 +112,7 @@ export default function AskAI() {
     return () => el.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToBottom = () => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  const scrollToBottom = () => scrollListToBottom(true);
 
   // A prompt that couldn't be sent comes back into the box (nothing to retype).
   // Derived during render (not in an effect) keyed on the failure's nonce.
@@ -137,7 +151,8 @@ export default function AskAI() {
   }, [setBackendError, loadInitialData]);
 
   return (
-    <div className="flex h-screen bg-bg-base text-fg-primary overflow-hidden chat-shell">
+    // Height comes from .chat-shell (100dvh = what is really visible on a phone).
+    <div className="flex bg-bg-base text-fg-primary overflow-hidden chat-shell">
 
       <Sidebar pinned={pinned} onTogglePin={togglePinned} mobileOpen={mobileOpen} onMobileClose={() => setMobileOpen(false)} />
 

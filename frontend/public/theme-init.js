@@ -12,5 +12,5 @@
       var student = JSON.parse(localStorage.getItem("jneet.student.v1") || "null");
       root.setAttribute("data-accent", student && student.examMode === "JEE" ? "jee" : "neet");
     }
-  } catch (e) { document.documentElement.classList.add("light"); }
+  } catch { document.documentElement.classList.add("light"); }
 })();

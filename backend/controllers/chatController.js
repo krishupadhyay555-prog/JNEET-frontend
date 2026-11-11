@@ -92,7 +92,7 @@ export const getSessions = async (req, res, next) => {
 
 export const searchChats = async (req, res, next) => {
   try {
-    const q = (req.query.q || "").trim();
+    const q = typeof req.query.q === "string" ? req.query.q.trim().slice(0, 100) : "";
 
     if (!q) {
       return res.json({ success: true, results: [] });

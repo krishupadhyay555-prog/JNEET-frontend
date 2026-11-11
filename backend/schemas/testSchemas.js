@@ -25,11 +25,12 @@ export const submitTestSchema = z.object({
   answers: z
     .array(
       z.object({
-        questionId:    z.string().min(1),
+        questionId:    z.string().min(1).max(64),
         selectedIndex: z.number().int().min(0).max(3).nullable(),
       })
     )
-    .min(1, "No answers submitted."),
+    .min(1, "No answers submitted.")
+    .max(300, "Too many answers."),
 });
 
 // NEW: single-question instant-answer (revision mode only) —

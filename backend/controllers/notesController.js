@@ -27,11 +27,12 @@ function buildPreview(content, maxLen = 90) {
 // ── GET /notes?q=searchTerm ──────────────────────────────────
 export const getNotes = async (req, res, next) => {
   try {
-    const { q } = req.query;
+    // ?q=a&q=b arrives as an array — use only a plain string, capped in length.
+    const q = typeof req.query.q === "string" ? req.query.q.trim().slice(0, 100) : "";
     const filter = { userId: req.user.id };
 
-    if (q && q.trim()) {
-      const safe = escapeRegex(q.trim());
+    if (q) {
+      const safe = escapeRegex(q);
       filter.$or = [
         { content: { $regex: safe, $options: "i" } },
         { tag:     { $regex: safe, $options: "i" } },

@@ -6,6 +6,7 @@
 // ============================================================
 
 import { env } from "../config/env.js";
+import { getTargetExamOption } from "../config/targetExams.js";
 
 // True when the AI mentor must stay locked for this user: an under-18
 // whose parent hasn't approved yet (or has withdrawn approval).
@@ -18,13 +19,16 @@ export function isAiLocked(user) {
 
 export function toStudent(user) {
   const c = user.consent ?? {};
+  // A target that no longer exists (e.g. a removed JEE Advanced date) is
+  // reported as "not chosen", so the app asks the student to pick again.
+  const targetValid = !!(user.targetExam && getTargetExamOption(user.targetExam, user.examMode));
   return {
     _id:        user._id,
     name:       user.name,
     email:      user.email,
     examMode:   user.examMode,
-    targetExam: user.targetExam ?? null,
-    targetExamPromptDismissed: !!user.targetExamPromptDismissed,
+    targetExam: targetValid ? user.targetExam : null,
+    targetExamPromptDismissed: targetValid || (!user.targetExam && !!user.targetExamPromptDismissed),
     plan:       user.plan ?? "free",
     persona:    user.persona ?? "mentor",
     hasDateOfBirth: !!user.dateOfBirth,

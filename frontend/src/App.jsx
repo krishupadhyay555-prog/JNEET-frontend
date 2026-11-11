@@ -176,7 +176,7 @@ export default function App() {
         <>
           <AccentSync />
           <Toaster position="top-center" toastOptions={TOAST_CONFIG} />
-          <BrowserRouter>
+          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <ChatScope>
             <RouteTracker />
             <PageTransition>

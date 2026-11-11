@@ -65,4 +65,12 @@ describe('Notes', () => {
     // another student is unaffected
     expect((await b.post('/api/notes').send({ content: 'fine' })).status).toBe(201)
   })
+
+  it('search ignores a repeated ?q= parameter instead of crashing', async () => {
+    await a.post('/api/notes').send({ content: 'Kinetic energy formula' })
+    const res = await a.get('/api/notes?q=kin&q=x')
+    expect(res.status).toBe(200)
+    const chat = await a.get('/api/chat/search?q=a&q=b')
+    expect(chat.status).toBe(200)
+  })
 })

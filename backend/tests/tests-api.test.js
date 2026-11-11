@@ -128,6 +128,30 @@ describe('Tests API', () => {
     expect(res.body.error).toMatch(/Not enough questions/)
   })
 
+  it('never puts the same question twice in one paper (same text, different id)', async () => {
+    await Question.insertMany([q(1), q(2)]) // exact text copies of existing questions 1 and 2
+    const res = await a.post('/api/test/start').send({ subject: 'Physics', chapter: 'Laws of Motion', easy: 7 })
+    expect(res.status).toBe(200)
+    const texts = res.body.questions.map((x) => x.questionText)
+    expect(new Set(texts).size).toBe(texts.length)
+    expect(texts).toHaveLength(5)
+  })
+
+  it('builds a full mock in NTA sections: Physics, then Chemistry, then Biology', async () => {
+    const mk = (subject, n) => Array.from({ length: n }, (_, i) => q(`${subject}-${i}`, { subject, chapter: `${subject} ch` }))
+    await Question.deleteMany({})
+    await Question.insertMany([...mk('Physics', 46), ...mk('Chemistry', 46), ...mk('Biology', 91)])
+    const res = await a.post('/api/test/start-full')
+    expect(res.status).toBe(200)
+    const attempt = await TestAttempt.findById(res.body.attemptId).lean()
+    const subjects = attempt.questions.map((x) => x.subject)
+    expect(subjects).toHaveLength(180)
+    expect(subjects.slice(0, 45).every((s) => s === 'Physics')).toBe(true)
+    expect(subjects.slice(45, 90).every((s) => s === 'Chemistry')).toBe(true)
+    expect(subjects.slice(90).every((s) => s === 'Biology')).toBe(true)
+    expect(new Set(attempt.questions.map((x) => String(x.questionId))).size).toBe(180)
+  })
+
   it('keeps attempts private to their owner', async () => {
     const start = await a.post('/api/test/start').send({ subject: 'Physics', chapter: 'Laws of Motion', easy: 2 })
     const id = start.body.attemptId

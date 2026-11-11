@@ -464,10 +464,15 @@ export const verifyEmail = async (req, res, next) => {
       });
     }
 
+    // SECURITY: an already-verified account must NEVER be logged in from
+    // here — that would let anyone sign in to any verified account by
+    // sending its email with a random 6-digit code. Ask them to log in.
     if (user.isEmailVerified) {
-      clearOtp(user, OTP_FIELDS.verify);
-      await user.save({ validateBeforeSave: false });
-      return sendAuthResponse(user, 200, res, "Email already verified. You're now logged in.");
+      return res.status(409).json({
+        success: false,
+        alreadyVerified: true,
+        error: "This email is already verified. Please log in.",
+      });
     }
 
     const check = await checkOtp(user, "verify", otp);

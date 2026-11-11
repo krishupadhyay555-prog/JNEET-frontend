@@ -29,8 +29,11 @@ export function EmptyChat({ examMode, onPromptSelect }) {
   const prompts = QUICK_PROMPTS[examMode] ?? QUICK_PROMPTS.NEET;
 
   return (
-    <div className="flex flex-col items-center justify-center h-full
-      text-center gap-6 pb-20 px-4 animate-fade-up">
+    // min-h-full (not h-full): when the prompts are taller than the
+    // screen, a fixed-height centred box pushed the logo above the top
+    // edge where it could not be scrolled to. Now it grows instead.
+    <div className="flex flex-col items-center justify-center min-h-full
+      text-center gap-6 py-4 px-4 animate-fade-up">
 
       {/* Icon — app's own JN logo, not a generic AI-sparkle */}
       <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-glow-violet">
@@ -75,7 +78,7 @@ export function EmptyChat({ examMode, onPromptSelect }) {
 
       <p className="text-[11px] text-gray-600 max-w-sm leading-relaxed">
         ✍️ Keep a notebook and pen ready — I'll often ask you to write the key steps by hand.
-        That is what makes it stick.
+        Writing it yourself is how you remember it.
       </p>
     </div>
   );

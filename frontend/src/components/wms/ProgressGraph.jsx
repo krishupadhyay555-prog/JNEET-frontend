@@ -27,6 +27,12 @@ export function ProgressGraph({ overall, window: win = null }) {
     );
   }
 
+  // The ring is the SCORE (correct out of every question, skipped included —
+  // what weak/strong is based on). "Accuracy" is the usual exam meaning:
+  // correct out of the questions actually answered.
+  const answered = correct + wrong;
+  const answeredAccuracy = answered > 0 ? Math.round((correct / answered) * 100) : null;
+
   const r = 54;
   const circumference = 2 * Math.PI * r;
   const offset = circumference * (1 - accuracyPct / 100);
@@ -55,7 +61,7 @@ export function ProgressGraph({ overall, window: win = null }) {
           </svg>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <span className="text-2xl font-bold text-fg-primary tabular-nums">{accuracyPct}%</span>
-            <span className="text-[10px] text-gray-600 uppercase tracking-wider font-medium">Accuracy</span>
+            <span className="text-[10px] text-gray-600 uppercase tracking-wider font-medium">Score</span>
           </div>
         </div>
 
@@ -85,6 +91,11 @@ export function ProgressGraph({ overall, window: win = null }) {
       </div>
 
       <p className="text-[10px] text-gray-600 text-center mt-4 pt-4 border-t border-bg-border">
+        {answeredAccuracy !== null && (
+          <span className="block mb-1 text-[11px] text-fg-primary font-medium">
+            Accuracy on answered questions: {answeredAccuracy}% ({correct}/{answered})
+          </span>
+        )}
         Based on {total} question{total === 1 ? "" : "s"} from your last {win?.attempts ?? "few"} test / revision attempt{win?.attempts === 1 ? "" : "s"}
       </p>
     </div>

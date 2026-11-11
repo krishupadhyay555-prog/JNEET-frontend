@@ -40,7 +40,7 @@ export function WeaknessCard({ entry, rank = null }) {
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-fg-primary truncate">{chapter}</p>
         <p className="text-[11px] text-gray-600">
-          {subject} · {total} question{total === 1 ? "" : "s"} attempted
+          {subject} · {total} question{total === 1 ? "" : "s"}
         </p>
       </div>
 
