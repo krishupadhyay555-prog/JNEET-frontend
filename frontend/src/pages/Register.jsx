@@ -7,11 +7,13 @@
 //          driven by the server's `resendAfter`.
 // ============================================================
 
-import { useState, useMemo }              from "react";
+import { useRef, useState, useMemo }      from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import toast                              from "react-hot-toast";
 import { useAuth }        from "../context/AuthContext.jsx";
 import { authApi }        from "../api/authApi.js";
+import { Captcha }        from "../components/security/Captcha.jsx";
+import { withCaptcha, CAPTCHA_ERROR } from "../utils/turnstile.js";
 import { FormField }      from "../components/auth/FormField.jsx";
 import { OtpInput }       from "../components/auth/OtpInput.jsx";
 import { PasswordStrength } from "../components/auth/PasswordStrength.jsx";
@@ -89,6 +91,7 @@ export default function Register() {
     arrived ? { tone: "info", text: "Please verify your email to continue. Enter the code we sent, or request a new one below." } : null
   );
   const [resending, setResending] = useState(false);
+  const captchaRef = useRef(null);
   const [cooldown,  startCooldown] = useCountdown(arrived ? 0 : 0);
 
   const age     = useMemo(() => ageFromDob(form.dateOfBirth), [form.dateOfBirth]);
@@ -108,7 +111,7 @@ export default function Register() {
 
     setLoading(true); setErrors({}); setFormErr("");
     try {
-      const res = await authApi.register({
+      const res = await authApi.register(await withCaptcha(captchaRef, {
         name: form.name.trim(),
         email: form.email.trim().toLowerCase(),
         password: form.password,
@@ -116,7 +119,7 @@ export default function Register() {
         dateOfBirth: form.dateOfBirth,
         acceptTerms: true,
         ...(isMinor ? { parentEmail: form.parentEmail.trim().toLowerCase() } : {}),
-      });
+      }));
 
       const { emailSent, resendAfter } = res.data;
       setOtp("");
@@ -138,7 +141,9 @@ export default function Register() {
   const handleRegisterError = (err) => {
     const status = err.response?.status;
     const fields = err.response?.data?.fieldErrors ?? [];
-    if (err.isNetworkError || err.isTimeout) {
+    if (err.isCaptchaError) {
+      setFormErr(CAPTCHA_ERROR);
+    } else if (err.isNetworkError || err.isTimeout) {
       setFormErr("Can't reach the server. Check your connection and try again.");
     } else if (fields.length) {
       setErrors(Object.fromEntries(fields.map(({ field, message }) => [field, message])));
@@ -177,13 +182,15 @@ export default function Register() {
     if (cooldown > 0 || resending) return;
     setResending(true); setErrors({});
     try {
-      const res = await authApi.resendVerification({ email: form.email.trim().toLowerCase() });
+      const res = await authApi.resendVerification(await withCaptcha(captchaRef, { email: form.email.trim().toLowerCase() }));
       setNotice({ tone: "success", text: "A new code is on its way. Check your inbox and Spam folder." });
       startCooldown(res.data?.resendAfter ?? 60);
       setOtp("");
     } catch (err) {
       const s = err.response?.status;
-      if (s === 429) {
+      if (err.isCaptchaError || err.response?.data?.code === "CAPTCHA_FAILED") {
+        setErrors({ otp: err.isCaptchaError ? CAPTCHA_ERROR : (err.response.data.error || CAPTCHA_ERROR) });
+      } else if (s === 429) {
         setErrors({ otp: err.response?.data?.error || "Please wait a moment before requesting another code." });
         startCooldown(err.response?.data?.retryAfter ?? 60);
       } else if (s === 502 || s === 503) {
@@ -207,6 +214,7 @@ export default function Register() {
         {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
 
         <form onSubmit={(e) => { e.preventDefault(); verify(otp); }} noValidate className="space-y-4">
+          <Captcha ref={captchaRef} />
           <OtpInput value={otp} onChange={setOtp} onComplete={verify} disabled={loading} error={errors.otp} />
 
           <SubmitButton loading={loading} loadingText="Verifying…" disabled={otp.length !== 6}>
@@ -245,6 +253,7 @@ export default function Register() {
       {formErr ? <Notice tone="error">{formErr}</Notice> : null}
 
       <form onSubmit={submitDetails} noValidate className="space-y-4">
+        <Captcha ref={captchaRef} />
         <FormField label="Full name" name="name" value={form.name} onChange={handleChange}
           error={errors.name} placeholder="Your name" autoComplete="name" disabled={loading} />
 

@@ -6,10 +6,12 @@
 //  Unverified accounts are sent to the code screen on /register.
 // ============================================================
 
-import { useState }          from "react";
+import { useRef, useState }  from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth }           from "../context/AuthContext.jsx";
 import { authApi }           from "../api/authApi.js";
+import { Captcha }           from "../components/security/Captcha.jsx";
+import { withCaptcha, CAPTCHA_ERROR } from "../utils/turnstile.js";
 import { FormField }         from "../components/auth/FormField.jsx";
 import { OtpInput }          from "../components/auth/OtpInput.jsx";
 import { AuthShell, SubmitButton, Notice } from "../components/auth/AuthShell.jsx";
@@ -35,6 +37,8 @@ export default function Login() {
 
   const email = form.email.trim().toLowerCase();
 
+  const captchaRef = useRef(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((p) => ({ ...p, [name]: value }));
@@ -52,6 +56,8 @@ export default function Login() {
   const handleCommonError = (err, field) => {
     const status = err.response?.status;
     const data   = err.response?.data ?? {};
+    if (err.isCaptchaError) { setErrors({ [field]: CAPTCHA_ERROR }); return true; }
+    if (data.code === "CAPTCHA_FAILED") { setErrors({ [field]: data.error || CAPTCHA_ERROR }); return true; }
     if (err.isNetworkError || err.isTimeout) { setErrors({ [field]: "Can't reach the server. Check your connection and try again." }); return true; }
     if (status === 403 && data.requiresVerification) { goVerify(data.email); return true; }
     if (status === 403) { setErrors({ [field]: data.error || "This account is deactivated. Please contact support." }); return true; }
@@ -74,7 +80,7 @@ export default function Login() {
 
     setLoading(true); setErrors({});
     try {
-      const res = await authApi.login({ email, password: form.password });
+      const res = await authApi.login(await withCaptcha(captchaRef, { email, password: form.password }));
       login(res.data.student);
       navigate("/dashboard", { replace: true });
     } catch (err) {
@@ -96,7 +102,7 @@ export default function Login() {
 
     setLoading(true); setErrors({});
     try {
-      const res = await authApi.requestLoginCode({ email });
+      const res = await authApi.requestLoginCode(await withCaptcha(captchaRef, { email }));
       setNotice({ tone: "success", text: "If this email has an account, a 6-digit code is on its way. Check Spam too." });
       startCooldown(res.data?.resendAfter ?? 60);
       setOtp("");
@@ -144,6 +150,7 @@ export default function Login() {
       >
         {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
         <form onSubmit={(e) => { e.preventDefault(); verifyCode(otp); }} noValidate className="space-y-4">
+          <Captcha ref={captchaRef} />
           <OtpInput value={otp} onChange={setOtp} onComplete={verifyCode} disabled={loading} error={errors.otp} idPrefix="login-otp" />
           <SubmitButton loading={loading} loadingText="Checking…" disabled={otp.length !== 6}>Log in</SubmitButton>
           <button type="button" onClick={sendCode} disabled={loading || cooldown > 0}
@@ -165,6 +172,7 @@ export default function Login() {
       <AuthShell title="Log in with a code" subtitle="We'll email you a 6-digit code — no password needed"
         footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}>
         <form onSubmit={sendCode} noValidate className="space-y-4">
+          <Captcha ref={captchaRef} />
           <FormField label="Email" name="email" type="email" value={form.email} onChange={handleChange}
             error={errors.email} placeholder="you@example.com" autoComplete="email" disabled={loading}
             autoCapitalize="none" spellCheck={false} inputMode="email" />
@@ -184,6 +192,7 @@ export default function Login() {
       footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}>
       {formErr ? <Notice tone="error">{formErr}</Notice> : null}
       <form onSubmit={submitPassword} noValidate className="space-y-4">
+        <Captcha ref={captchaRef} />
         <FormField label="Email" name="email" type="email" value={form.email} onChange={handleChange}
           error={errors.email} placeholder="you@example.com" autoComplete="username" disabled={loading}
           autoCapitalize="none" spellCheck={false} inputMode="email" />

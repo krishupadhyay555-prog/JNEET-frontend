@@ -64,6 +64,9 @@ const envSchema = z.object({
   EMAIL_FROM:    z.string().optional(),
   EMAIL_FROM_NAME: z.string().default("JNEET+ AI"),
 
+  // ── Bot protection (Cloudflare Turnstile). Unset = captcha is off. ──
+  TURNSTILE_SECRET_KEY: z.string().optional(),
+
   // ── AI provider (OpenAI Responses API) ────────────────────────
   OPENAI_API_KEY:  z.string().optional(),
   OPENAI_BASE_URL: z.string().default("https://api.openai.com/v1"),

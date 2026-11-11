@@ -28,6 +28,12 @@ Keep existing `MONGO_URI`, `JWT_SECRET`, `COOKIE_SECRET`. Remove `GEMINI_API_KEY
 2. Vercel → frontend env `VITE_API_BASE_URL=https://api.jneetai.com/api` → redeploy.
 3. Then set `COOKIE_SAMESITE=lax` on Render.
 
+## D2. Captcha (Cloudflare Turnstile, free)
+1. https://dash.cloudflare.com → Turnstile → Add widget → hostnames: `jneetai.com`, `www.jneetai.com`, your `*.vercel.app` URL → mode **Managed** → copy **Site key** and **Secret key**.
+2. Vercel → frontend → Environment Variables → `VITE_TURNSTILE_SITE_KEY` = site key → redeploy.
+3. Render → `TURNSTILE_SECRET_KEY` = secret key (leave unset to keep the captcha off).
+4. Works on register, login, forgot-password, login-by-code and every resend; each request uses a fresh token. If Cloudflare is down the app lets students through.
+
 ## E. OpenAI models
 1. Check exact model IDs your account can use (OpenAI dashboard → Models, or `GET /v1/models`).
 2. If they differ from `gpt-6-luna` / `gpt-6.1-sol`, set `AI_MODEL_FREE`, `AI_MODEL_FALLBACK`, etc. on Render.
