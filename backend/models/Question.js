@@ -52,6 +52,15 @@ const questionSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    // "main" = NEET UG / JEE Main level (served in tests).
+    // "advanced" = JEE Advanced level — stored in the bank but NOT
+    // served until the Advanced pack launches (see testController
+    // SERVABLE filter). Missing field counts as "main".
+    level: {
+      type: String,
+      enum: ["main", "advanced"],
+      default: "main",
+    },
     // Optional — set when the question has a diagram/figure,
     // uploaded via POST /api/upload/image (Cloudinary).
     imageUrl: {
