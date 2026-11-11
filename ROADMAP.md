@@ -35,12 +35,13 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
 | #2 | Turnstile captcha, **email logo**, seed script skips empty files | ✅ Merged 11 Nov — live (logo inside email confirmed on Gmail) |
 | #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ✅ Merged 11 Nov |
-| #4 | Roadmap live-status update | ⏳ Open — docs only (also included in #5) |
+| #4 | Roadmap live-status update | ✅ Merged 11 Nov |
 | #5 | **Debug sweep**: critical login bypass fix, search crash, test paper fixes, chat layout/lag, accuracy labels, JEE Main dates, security updates | ⏳ **Open — NOT live** |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
+| 11 Nov 2026 | PR #5 showed "Checks failed", then "merge conflicts" | CI: GitHub's runner could not reach Ubuntu's servers while installing the test browser (not our code; re-run passed). Conflict: PR #4 changed the same ROADMAP lines and was merged separately | Re-ran CI; merged `main` into the branch. **Rule:** never put the same file change in two open PRs |
 | 11 Nov 2026 | **CRITICAL: anyone could log in to any verified account** | `/verify-email` logged the caller in when the email was already verified, without checking the code | Fixed in PR #5 (now 409 "already verified, please log in", no session) + regression test |
 | 11 Nov 2026 | Notes / chat search crashed (500) on `?q=a&q=b` | Query param arrived as an array | Only plain strings used, capped at 100 chars (PR #5) |
 | 11 Nov 2026 | Same question could appear twice in one test; full mock mixed all subjects | `$sample` can repeat; bank has 208 same-text copies; whole paper shuffled together | Unique by id + text; full mock in NTA sections Physics → Chemistry → Biology/Maths (PR #5) |
