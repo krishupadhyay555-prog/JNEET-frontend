@@ -1,0 +1,626 @@
+[
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which of the following is NOT found in a prokaryotic cell?",
+    "options": [
+      "Mitochondria",
+      "Plasma membrane",
+      "Ribosomes (70S)",
+      "Nucleoid"
+    ],
+    "correctIndex": 0,
+    "explanation": "Prokaryotes lack membrane-bound organelles such as mitochondria. They do have 70S ribosomes, a plasma membrane and a nucleoid (naked DNA region)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Crossing over between homologous chromosomes takes place during which sub-stage of meiosis I?",
+    "options": [
+      "Pachytene",
+      "Zygotene",
+      "Diplotene",
+      "Leptotene"
+    ],
+    "correctIndex": 0,
+    "explanation": "Synapsis occurs in zygotene, but the exchange of segments between non-sister chromatids (crossing over, aided by recombinase) occurs in pachytene. Chiasmata become visible in diplotene."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In enzyme kinetics, which statement about a competitive inhibitor (and enzymes in general) is correct?",
+    "options": [
+      "A competitive inhibitor decreases Vmax but not Km",
+      "All enzymes are made only of protein with no cofactors",
+      "Enzymes raise the activation energy of a reaction",
+      "A competitive inhibitor increases the apparent Km without changing Vmax"
+    ],
+    "correctIndex": 3,
+    "explanation": "A competitive inhibitor competes with the substrate for the active site; adding more substrate can overcome it, so Vmax is unchanged while the apparent Km rises. Enzymes lower activation energy, and many need cofactors."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In the Calvin cycle, how many molecules of ATP and NADPH are needed to fix 6 molecules of CO₂ (one glucose)?",
+    "options": [
+      "3 ATP and 2 NADPH",
+      "6 ATP and 6 NADPH",
+      "12 ATP and 18 NADPH",
+      "18 ATP and 12 NADPH"
+    ],
+    "correctIndex": 3,
+    "explanation": "Each CO₂ fixed needs 3 ATP and 2 NADPH. For 6 CO₂ (one glucose): 18 ATP and 12 NADPH."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Kranz anatomy, with chloroplast-rich bundle sheath cells around vascular bundles, is characteristic of",
+    "options": [
+      "all gymnosperms",
+      "C₃ plants such as wheat",
+      "C₄ plants such as maize",
+      "CAM plants such as pineapple only"
+    ],
+    "correctIndex": 2,
+    "explanation": "C₄ plants (maize, sugarcane, sorghum) show Kranz anatomy: large bundle sheath cells with many chloroplasts, where the Calvin cycle runs after CO₂ is concentrated by the C₄ pathway in mesophyll cells."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The respiratory quotient (RQ) when tripalmitin (a fat) is used as the respiratory substrate is about",
+    "options": [
+      "0",
+      "1.0",
+      "0.7",
+      "1.3"
+    ],
+    "correctIndex": 2,
+    "explanation": "2(C₅₁H₉₈O₆) + 145 O₂ → 102 CO₂ + 98 H₂O. RQ = 102/145 ≈ 0.7. Carbohydrates give RQ = 1, and organic acids give RQ > 1."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which plant hormone is mainly responsible for closing stomata during water stress?",
+    "options": [
+      "Auxin",
+      "Cytokinin",
+      "Abscisic acid",
+      "Gibberellin"
+    ],
+    "correctIndex": 2,
+    "explanation": "Abscisic acid (ABA), the stress hormone, causes stomatal closure during drought and increases tolerance to stress."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In angiosperms, the endosperm is formed by fusion of",
+    "options": [
+      "the egg with one polar nucleus",
+      "two male gametes with the egg",
+      "the synergid with a male gamete",
+      "one male gamete with the two polar nuclei (triple fusion)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Double fertilisation: one male gamete fuses with the egg (syngamy → zygote), and the other fuses with the two polar nuclei (triple fusion) to form the triploid primary endosperm nucleus."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In a dihybrid test cross of AaBb × aabb (genes unlinked), the proportion of offspring that are aabb is",
+    "options": [
+      "1/16",
+      "9/16",
+      "1/4",
+      "1/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "AaBb produces four gamete types AB, Ab, aB, ab in equal proportion (1/4 each); aabb gives only ab. So aabb offspring = 1/4. The test-cross ratio is 1 : 1 : 1 : 1."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A colour-blind man marries a woman with normal vision whose father was colour blind. The probability that their son is colour blind is",
+    "options": [
+      "1",
+      "1/2",
+      "1/4",
+      "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "The woman is a carrier (XᶜX). Sons get their X from the mother, so half of the sons get Xᶜ and are colour blind: probability 1/2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A DNA molecule has 20% adenine. The percentage of cytosine in it is",
+    "options": [
+      "30%",
+      "60%",
+      "20%",
+      "40%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chargaff's rule: A = T = 20% each, so A + T = 40% and G + C = 60%. Since G = C, cytosine = 30%."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In the lac operon of E. coli, lactose acts as an inducer by",
+    "options": [
+      "binding to the repressor and making it inactive",
+      "binding directly to the promoter",
+      "acting as the RNA polymerase",
+      "coding for β-galactosidase"
+    ],
+    "correctIndex": 0,
+    "explanation": "Allolactose (from lactose) binds the repressor protein made by the i gene, changes its shape, and prevents it from binding the operator. RNA polymerase can then transcribe z, y and a genes."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Industrial melanism in the peppered moth (Biston betularia) in England is an example of",
+    "options": [
+      "Lamarckian inheritance",
+      "natural selection",
+      "genetic drift",
+      "mutation pressure only"
+    ],
+    "correctIndex": 1,
+    "explanation": "After industrialisation, tree trunks became darkened by soot; dark moths were less visible to predators and survived more. This change in frequency driven by differential survival is natural selection."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which cells are directly infected and destroyed by HIV, leading to immunodeficiency?",
+    "options": [
+      "Red blood cells",
+      "Neutrophils",
+      "Helper T lymphocytes",
+      "B lymphocytes"
+    ],
+    "correctIndex": 2,
+    "explanation": "HIV infects macrophages (which act as a virus factory) and helper T cells (CD4⁺ T_H cells). The progressive decline of helper T cells causes AIDS."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The infective stage of Plasmodium that enters the human body through the bite of a female Anopheles mosquito is",
+    "options": [
+      "trophozoite",
+      "gametocyte",
+      "sporozoite",
+      "merozoite"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sporozoites, present in the mosquito's salivary glands, are injected into human blood and first multiply in liver cells."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In the ECG of a normal human, the QRS complex represents",
+    "options": [
+      "repolarisation of the ventricles",
+      "depolarisation of the atria",
+      "depolarisation of the ventricles",
+      "closure of the semilunar valves"
+    ],
+    "correctIndex": 2,
+    "explanation": "P wave = atrial depolarisation; QRS complex = ventricular depolarisation (start of ventricular systole); T wave = ventricular repolarisation."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Vital capacity of the human lungs is equal to",
+    "options": [
+      "TV + RV",
+      "TV + ERV",
+      "IRV + TV + ERV",
+      "IRV + ERV + RV"
+    ],
+    "correctIndex": 2,
+    "explanation": "Vital capacity is the maximum air a person can breathe out after a forced inspiration: inspiratory reserve volume + tidal volume + expiratory reserve volume."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and Their Elimination",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The hormone that acts on the distal tubule and collecting duct to increase water reabsorption is",
+    "options": [
+      "ADH (vasopressin)",
+      "Renin",
+      "Aldosterone",
+      "ANF (atrial natriuretic factor)"
+    ],
+    "correctIndex": 0,
+    "explanation": "ADH from the posterior pituitary increases the water permeability of the DCT and collecting duct, so more water is reabsorbed and urine becomes concentrated."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "During the resting state of a neuron, the axonal membrane is",
+    "options": [
+      "equally permeable to all ions",
+      "impermeable to K⁺",
+      "more permeable to K⁺ than to Na⁺",
+      "more permeable to Na⁺ than to K⁺"
+    ],
+    "correctIndex": 2,
+    "explanation": "At rest the axonal membrane is comparatively more permeable to K⁺ and nearly impermeable to Na⁺. With the Na⁺/K⁺ pump (3 Na⁺ out, 2 K⁺ in), this keeps the inside negative (resting potential)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which hormone is secreted by the zona glomerulosa of the adrenal cortex?",
+    "options": [
+      "Androgens only",
+      "Adrenaline",
+      "Cortisol",
+      "Aldosterone"
+    ],
+    "correctIndex": 3,
+    "explanation": "Zona glomerulosa → mineralocorticoids (mainly aldosterone); zona fasciculata → glucocorticoids (cortisol); zona reticularis → small amounts of androgens. Adrenaline comes from the adrenal medulla."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In a normal human menstrual cycle, ovulation is triggered mainly by",
+    "options": [
+      "a rise in progesterone on day 5",
+      "a fall in oestrogen at mid-cycle",
+      "a fall in FSH on day 1",
+      "an LH surge around day 14"
+    ],
+    "correctIndex": 3,
+    "explanation": "Both LH and FSH peak in the middle of the cycle; the rapid LH surge induces rupture of the Graafian follicle and release of the ovum (ovulation) around day 14."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which of the following contraceptive methods acts by preventing sperm from reaching the uterine cavity and also protects against STIs?",
+    "options": [
+      "Oral contraceptive pills",
+      "Copper-T (IUD)",
+      "Condoms",
+      "Vasectomy"
+    ],
+    "correctIndex": 2,
+    "explanation": "Condoms are barrier methods that stop semen from entering the female tract and also protect against sexually transmitted infections. IUDs, pills and vasectomy do not protect against STIs."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The restriction enzyme EcoRI recognises the palindromic sequence",
+    "options": [
+      "5′-GAATTC-3′",
+      "5′-GTTAAC-3′",
+      "5′-GGATCC-3′",
+      "5′-AAGCTT-3′"
+    ],
+    "correctIndex": 0,
+    "explanation": "EcoRI (from E. coli RY13) cuts between G and A in 5′-GAATTC-3′, leaving sticky ends. GGATCC is BamHI, AAGCTT is HindIII and GTTAAC is HpaI."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In a grassland, which pyramid can never be inverted?",
+    "options": [
+      "Pyramid of numbers",
+      "Pyramid of energy",
+      "Both numbers and biomass",
+      "Pyramid of biomass"
+    ],
+    "correctIndex": 1,
+    "explanation": "Energy flow is unidirectional and some energy is always lost as heat at each trophic level (about 10% law), so the pyramid of energy is always upright."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The \"evil quartet\" refers to the four major causes of",
+    "options": [
+      "global warming",
+      "soil erosion",
+      "ozone depletion",
+      "loss of biodiversity"
+    ],
+    "correctIndex": 3,
+    "explanation": "The four major causes of biodiversity loss are habitat loss and fragmentation, over-exploitation, alien species invasions and co-extinctions — together called the evil quartet."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which is the correct hierarchy of taxonomic categories in ascending order?",
+    "options": [
+      "Species → Family → Genus → Order → Class → Phylum",
+      "Species → Genus → Family → Order → Class → Phylum",
+      "Species → Genus → Order → Family → Class → Phylum",
+      "Genus → Species → Family → Class → Order → Phylum"
+    ],
+    "correctIndex": 1,
+    "explanation": "Taxonomic hierarchy from lowest to highest: species, genus, family, order, class, phylum (division in plants), kingdom."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In which plant group is the main plant body a haploid gametophyte, with the sporophyte dependent on it?",
+    "options": [
+      "Gymnosperms",
+      "Angiosperms",
+      "Bryophytes",
+      "Pteridophytes"
+    ],
+    "correctIndex": 2,
+    "explanation": "In bryophytes (mosses, liverworts) the dominant, independent phase is the haploid gametophyte; the diploid sporophyte stays attached to and depends on it."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which phylum shows a water vascular system, radial symmetry in adults and a bilateral larva?",
+    "options": [
+      "Cnidaria",
+      "Mollusca",
+      "Annelida",
+      "Echinodermata"
+    ],
+    "correctIndex": 3,
+    "explanation": "Echinoderms (e.g. starfish) have a water vascular system with tube feet, pentamerous radial symmetry in adults and bilaterally symmetric larvae."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The floral formula ⊕ ⚥ K₍₅₎ C₍₅₎ A₅ G₍₂₎ (ovary superior) is characteristic of the family",
+    "options": [
+      "Solanaceae",
+      "Brassicaceae",
+      "Liliaceae",
+      "Fabaceae"
+    ],
+    "correctIndex": 0,
+    "explanation": "Solanaceae (e.g. brinjal, tomato) has actinomorphic bisexual flowers, 5 united sepals, 5 united petals, 5 epipetalous stamens and a bicarpellary syncarpous superior ovary."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Transport in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The main force responsible for the ascent of sap in tall trees is",
+    "options": [
+      "active pumping by xylem cells",
+      "capillarity alone",
+      "root pressure",
+      "transpiration pull with cohesion of water"
+    ],
+    "correctIndex": 3,
+    "explanation": "The cohesion–tension–transpiration pull theory: water lost by transpiration creates tension that pulls the continuous, cohesive water column up through the dead xylem vessels."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Mineral Nutrition",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The enzyme nitrogenase, which fixes atmospheric nitrogen in root nodules, requires",
+    "options": [
+      "high oxygen concentration",
+      "only free-living bacteria",
+      "anaerobic conditions maintained by leghaemoglobin",
+      "light energy directly"
+    ],
+    "correctIndex": 2,
+    "explanation": "Nitrogenase is a Mo–Fe protein that is inactivated by oxygen. Leghaemoglobin (pink pigment) in nodules binds O₂ and keeps the site nearly anaerobic."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Digestion and Absorption",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which enzyme is secreted in an inactive form and activated by enterokinase?",
+    "options": [
+      "Pepsinogen",
+      "Lipase",
+      "Salivary amylase",
+      "Trypsinogen"
+    ],
+    "correctIndex": 3,
+    "explanation": "Enterokinase from the intestinal mucosa converts trypsinogen to active trypsin, which then activates other pancreatic zymogens. Pepsinogen is activated by HCl."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "During muscle contraction, which band of the sarcomere does NOT change in length?",
+    "options": [
+      "H zone",
+      "Sarcomere length",
+      "A band",
+      "I band"
+    ],
+    "correctIndex": 2,
+    "explanation": "In the sliding filament theory, the thin filaments slide over the thick filaments. The A band (length of myosin filaments) remains constant, while the I band and H zone shorten."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which microbe is used for the commercial production of citric acid?",
+    "options": [
+      "Clostridium butylicum",
+      "Aspergillus niger",
+      "Lactobacillus",
+      "Acetobacter aceti"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aspergillus niger (a fungus) produces citric acid; Acetobacter aceti produces acetic acid; Clostridium butylicum produces butyric acid; Lactobacillus produces lactic acid."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In the production of human insulin by Eli Lilly using rDNA technology,",
+    "options": [
+      "chains A and B were produced separately and joined by disulphide bonds",
+      "insulin was extracted from pig pancreas",
+      "the proinsulin with the C peptide was produced and used directly",
+      "a single gene for mature insulin was expressed in yeast"
+    ],
+    "correctIndex": 0,
+    "explanation": "Eli Lilly prepared DNA sequences for the A and B chains, expressed them separately in E. coli, then extracted the chains and joined them by disulphide bridges to form human insulin."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Environmental Issues",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Biomagnification of DDT in an aquatic food chain means that",
+    "options": [
+      "its concentration increases at successive trophic levels",
+      "it is broken down quickly by decomposers",
+      "it reduces only the oxygen content of water",
+      "its concentration is highest in producers"
+    ],
+    "correctIndex": 0,
+    "explanation": "DDT is not metabolised or excreted easily, so it accumulates and its concentration rises at each higher trophic level (e.g. from water to fish-eating birds), disturbing calcium metabolism in birds."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which feature distinguishes a monocot root from a dicot root?",
+    "options": [
+      "presence of root hairs",
+      "a large, well-developed pith and more than six xylem bundles",
+      "presence of a casparian strip in the endodermis",
+      "exarch xylem"
+    ],
+    "correctIndex": 1,
+    "explanation": "Monocot roots are polyarch (usually more than six xylem bundles) with a large pith. Dicot roots have 2–4 xylem bundles and a small or no pith. Exarch xylem, casparian strips and root hairs occur in both."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Strategies for Enhancement in Food Production",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Single cell protein (SCP) can be obtained from",
+    "options": [
+      "Rhizobium only",
+      "Spirulina",
+      "Pea plants",
+      "Silkworm"
+    ],
+    "correctIndex": 1,
+    "explanation": "Spirulina (a cyanobacterium) and Methylophilus methylotrophus are grown on low-cost materials to produce protein-rich biomass called single cell protein."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In cockroach, the excretory structures are",
+    "options": [
+      "Malpighian tubules",
+      "flame cells",
+      "nephridia",
+      "green glands"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cockroaches excrete mainly uric acid through Malpighian tubules located at the junction of midgut and hindgut. Nephridia occur in earthworm, flame cells in flatworms, and green glands in prawn."
+  }
+]

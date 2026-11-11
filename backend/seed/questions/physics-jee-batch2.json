@@ -1,0 +1,450 @@
+[
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A ball is thrown horizontally at 20 m/s from the top of a 45 m high tower. Taking g = 10 m/s², its speed just before hitting the ground is",
+    "options": [
+      "10√13 m/s",
+      "30 m/s",
+      "50 m/s",
+      "20√2 m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "Time of fall: 45 = ½·10·t² gives t = 3 s, so the vertical velocity is 30 m/s. Horizontal velocity stays 20 m/s. Speed = √(20² + 30²) = √1300 = 10√13 m/s ≈ 36 m/s."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A uniform rod of length L is hinged at one end and released from rest in the horizontal position. Its angular acceleration just after release is",
+    "options": [
+      "3g/(2L)",
+      "g/(2L)",
+      "2g/(3L)",
+      "g/L"
+    ],
+    "correctIndex": 0,
+    "explanation": "Torque about the hinge = Mg(L/2). Moment of inertia about the end = ML²/3. α = τ/I = (MgL/2)/(ML²/3) = 3g/(2L)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "At a small height h above the Earth's surface, g has the same value as at a depth d below the surface. Then (h ≪ R)",
+    "options": [
+      "d = h",
+      "d = h/2",
+      "d = 4h",
+      "d = 2h"
+    ],
+    "correctIndex": 3,
+    "explanation": "For small h, g_h ≈ g(1 − 2h/R). At depth d, g_d = g(1 − d/R). Equating gives d/R = 2h/R, i.e. d = 2h."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Two identical springs of constant k each are attached to a mass m, first in series and then in parallel. The ratio of the time periods T_series : T_parallel is",
+    "options": [
+      "4 : 1",
+      "√2 : 1",
+      "1 : 2",
+      "2 : 1"
+    ],
+    "correctIndex": 3,
+    "explanation": "Series: k_eff = k/2; parallel: k_eff = 2k. T ∝ 1/√k_eff, so T_s/T_p = √(2k/(k/2)) = √4 = 2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Two moles of an ideal monatomic gas are heated at constant pressure from 300 K to 400 K. Taking R = 8.31 J mol⁻¹ K⁻¹, the heat supplied is about",
+    "options": [
+      "5.82 kJ",
+      "2.49 kJ",
+      "4.16 kJ",
+      "1.66 kJ"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a monatomic gas C_p = (5/2)R. Q = nC_pΔT = 2 × 2.5 × 8.31 × 100 ≈ 4155 J ≈ 4.16 kJ. (2.49 kJ would be nC_vΔT, the change in internal energy.)"
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A 2 μF capacitor charged to 100 V is connected across an uncharged 3 μF capacitor. The energy lost in the redistribution of charge is",
+    "options": [
+      "12 mJ",
+      "10 mJ",
+      "6 mJ",
+      "4 mJ"
+    ],
+    "correctIndex": 2,
+    "explanation": "Energy lost = ½·[C₁C₂/(C₁ + C₂)]·V² = ½ × (2×3/5) μF × (100 V)² = ½ × 1.2×10⁻⁶ × 10⁴ = 6×10⁻³ J = 6 mJ."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In a meter bridge, the null point is at 40 cm from the left end when an unknown resistance X is in the left gap and 30 Ω is in the right gap. Then X is",
+    "options": [
+      "30 Ω",
+      "12 Ω",
+      "20 Ω",
+      "45 Ω"
+    ],
+    "correctIndex": 2,
+    "explanation": "At balance X/R = l/(100 − l). So X = 30 × 40/60 = 20 Ω."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A wire bent into a semicircle of radius R carries current I (the straight leads are radial). The magnetic field at the centre is",
+    "options": [
+      "μ₀I/(4πR)",
+      "μ₀I/(2R)",
+      "μ₀I/(πR)",
+      "μ₀I/(4R)"
+    ],
+    "correctIndex": 3,
+    "explanation": "A full circular loop gives μ₀I/(2R) at the centre; a semicircle gives half of it, μ₀I/(4R). Radial leads pass through the centre's line and add nothing."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A 1 m long metal rod rotates at 20 rad/s about one end, in a plane perpendicular to a uniform magnetic field of 0.5 T. The emf between its ends is",
+    "options": [
+      "10 V",
+      "20 V",
+      "5 V",
+      "2.5 V"
+    ],
+    "correctIndex": 2,
+    "explanation": "emf = ½BωL² = ½ × 0.5 × 20 × 1² = 5 V."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A series LCR circuit has L = (1/π) H and C = (1/π) μF. Its resonance frequency is",
+    "options": [
+      "250 Hz",
+      "500 Hz",
+      "50 Hz",
+      "1000 Hz"
+    ],
+    "correctIndex": 1,
+    "explanation": "f₀ = 1/(2π√(LC)). LC = (1/π)(10⁻⁶/π) = 10⁻⁶/π², so √(LC) = 10⁻³/π and f₀ = 1/(2π × 10⁻³/π) = 1/(2×10⁻³) = 500 Hz."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "An equiconvex glass lens (μ = 1.5) has focal length 20 cm in air. When it is immersed in water (μ = 4/3), its focal length becomes",
+    "options": [
+      "80 cm",
+      "60 cm",
+      "40 cm",
+      "26.7 cm"
+    ],
+    "correctIndex": 0,
+    "explanation": "1/f ∝ (μ_lens/μ_medium − 1). In air: 0.5; in water: 1.5/(4/3) − 1 = 0.125. So f_water = 20 × 0.5/0.125 = 80 cm."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In Young's double-slit experiment the fringe width in air is 1.2 mm. If the whole apparatus is immersed in water (μ = 4/3), the fringe width becomes",
+    "options": [
+      "0.9 mm",
+      "1.6 mm",
+      "1.2 mm",
+      "0.8 mm"
+    ],
+    "correctIndex": 0,
+    "explanation": "β = λD/d and the wavelength in water is λ/μ. So β_water = 1.2/(4/3) = 0.9 mm."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Light of wavelength 248 nm falls on a metal of work function 2.0 eV. Taking hc = 1240 eV nm, the stopping potential is",
+    "options": [
+      "1.5 V",
+      "3.0 V",
+      "2.0 V",
+      "5.0 V"
+    ],
+    "correctIndex": 1,
+    "explanation": "Photon energy = 1240/248 = 5.0 eV. K_max = 5.0 − 2.0 = 3.0 eV, so the stopping potential is 3.0 V."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A radioactive sample has a half-life of 2 hours. The time after which its activity falls to 1/16 of the initial value is",
+    "options": [
+      "16 h",
+      "32 h",
+      "8 h",
+      "4 h"
+    ],
+    "correctIndex": 2,
+    "explanation": "1/16 = (1/2)⁴, i.e. four half-lives. Time = 4 × 2 h = 8 h."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Both inputs A and B are fed to a NAND gate, and its output is fed to both inputs of a second NAND gate. The combination is equivalent to a single",
+    "options": [
+      "NAND gate",
+      "OR gate",
+      "AND gate",
+      "NOR gate"
+    ],
+    "correctIndex": 2,
+    "explanation": "First output = (AB)′. A NAND with both inputs tied together is a NOT gate, so the final output = ((AB)′)′ = AB, i.e. it behaves as an AND gate."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Units and Measurement",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The quantity 1/√(μ₀ε₀) has the dimensions of",
+    "options": [
+      "momentum",
+      "acceleration",
+      "velocity",
+      "force"
+    ],
+    "correctIndex": 2,
+    "explanation": "1/√(μ₀ε₀) = c, the speed of light in vacuum, so its dimensions are [L T⁻¹], those of velocity."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Kinetic Theory",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The rms speed of oxygen molecules (M = 32 g mol⁻¹) at 27 °C is about (R = 8.31 J mol⁻¹ K⁻¹)",
+    "options": [
+      "395 m/s",
+      "242 m/s",
+      "483 m/s",
+      "1.37 km/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "v_rms = √(3RT/M) = √(3 × 8.31 × 300 / 0.032) ≈ √(2.34×10⁵) ≈ 483 m/s."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Two small spherical rain drops of the same liquid have radii in the ratio 1 : 2. The ratio of their terminal velocities in air is",
+    "options": [
+      "1 : 4",
+      "2 : 1",
+      "1 : 2",
+      "1 : 8"
+    ],
+    "correctIndex": 0,
+    "explanation": "Terminal velocity v_t = 2r²(ρ − σ)g/(9η) ∝ r². Ratio = 1² : 2² = 1 : 4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A body of mass 2 kg moves along x under a force F = (6x − 3x²) N. If it is at rest at x = 0, its speed at x = 2 m is",
+    "options": [
+      "4 m/s",
+      "2√2 m/s",
+      "2 m/s",
+      "√2 m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "Work done W = ∫₀² (6x − 3x²) dx = [3x² − x³]₀² = 12 − 8 = 4 J. ½(2)v² = 4 gives v = 2 m/s."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A 5 kg block on a rough horizontal floor (μ = 0.4) is pulled by a force of 25 N at 37° above the horizontal (sin 37° = 0.6, g = 10 m/s²). Its acceleration is",
+    "options": [
+      "1.6 m/s²",
+      "0.8 m/s²",
+      "2.0 m/s²",
+      "1.2 m/s²"
+    ],
+    "correctIndex": 3,
+    "explanation": "Normal force N = 50 − 25(0.6) = 35 N, so friction = 0.4 × 35 = 14 N. Horizontal pull = 25(0.8) = 20 N. Net force = 6 N, a = 6/5 = 1.2 m/s²."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A 2 kg ball moving at 6 m/s collides head-on elastically with a stationary 1 kg ball. The velocity of the 1 kg ball after collision is",
+    "options": [
+      "8 m/s",
+      "12 m/s",
+      "6 m/s",
+      "4 m/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "For a 1-D elastic collision with m₂ at rest: v₂ = 2m₁u/(m₁ + m₂) = 2 × 2 × 6/3 = 8 m/s."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A pump lifts 600 kg of water to a height of 10 m in 1 minute (g = 10 m/s²). Its minimum power is",
+    "options": [
+      "1 kW",
+      "6 kW",
+      "100 W",
+      "10 kW"
+    ],
+    "correctIndex": 0,
+    "explanation": "P = mgh/t = 600 × 10 × 10/60 = 1000 W = 1 kW."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The moment of inertia of a uniform disc (mass M, radius R) about a tangent lying in its own plane is",
+    "options": [
+      "3MR²/4",
+      "5MR²/4",
+      "MR²/4",
+      "3MR²/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "About a diameter I = MR²/4. A tangent in the plane is parallel to a diameter at distance R: I = MR²/4 + MR² = 5MR²/4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "For a uniformly charged solid (non-conducting) sphere of radius R, the electric field at r = R/2 compared with that at the surface is",
+    "options": [
+      "twice",
+      "one-fourth",
+      "one-half",
+      "the same"
+    ],
+    "correctIndex": 2,
+    "explanation": "Inside a uniformly charged solid sphere, E = kQr/R³ ∝ r. At r = R/2 the field is half the surface value."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In a cyclotron, the frequency of revolution of a charged particle of mass m and charge q in a field B is",
+    "options": [
+      "qBv/(2πm)",
+      "qB/m, increasing with speed",
+      "qB/(2πm), independent of speed",
+      "2πm/(qB), decreasing with speed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Radius r = mv/(qB) grows with speed, but the period T = 2πr/v = 2πm/(qB) does not depend on v. So f = qB/(2πm)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "An inductor of 0.2 H in series with a 10 Ω resistor is connected to a battery. The time constant and the fraction of maximum current reached after one time constant are",
+    "options": [
+      "20 ms, about 37%",
+      "2 ms, about 37%",
+      "20 ms, about 63%",
+      "50 ms, about 63%"
+    ],
+    "correctIndex": 2,
+    "explanation": "τ = L/R = 0.2/10 = 0.02 s = 20 ms. i = i₀(1 − e⁻¹) ≈ 0.63 i₀ at t = τ."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Unpolarised light of intensity I₀ passes through two polarisers whose axes are at 60° to each other. The transmitted intensity is",
+    "options": [
+      "I₀/4",
+      "3I₀/8",
+      "I₀/8",
+      "I₀/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "The first polariser transmits I₀/2. By Malus's law the second transmits (I₀/2)cos²60° = (I₀/2)(1/4) = I₀/8."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The mass defect of a nucleus is 0.03 u. Its binding energy is about (1 u = 931.5 MeV)",
+    "options": [
+      "27.9 MeV",
+      "279 MeV",
+      "2.79 MeV",
+      "9.3 MeV"
+    ],
+    "correctIndex": 0,
+    "explanation": "B.E. = Δm × 931.5 MeV = 0.03 × 931.5 ≈ 27.9 MeV."
+  }
+]

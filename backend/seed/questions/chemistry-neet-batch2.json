@@ -1,0 +1,370 @@
+[
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The number of moles of electrons needed to deposit 27 g of aluminium from molten Al₂O₃ is (Al = 27)",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Al³⁺ + 3e⁻ → Al. 27 g Al is 1 mol, which needs 3 mol of electrons (3 F)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The molarity of a solution made by dissolving 4 g of NaOH in enough water to make 250 mL of solution is",
+    "options": [
+      "0.4 M",
+      "1.6 M",
+      "0.04 M",
+      "0.1 M"
+    ],
+    "correctIndex": 0,
+    "explanation": "Moles of NaOH = 4/40 = 0.1 mol. Molarity = 0.1/0.250 L = 0.4 M."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which set of quantum numbers is NOT possible for an electron?",
+    "options": [
+      "n = 3, l = 2, m = −2, s = −½",
+      "n = 2, l = 1, m = 0, s = +½",
+      "n = 4, l = 0, m = 0, s = −½",
+      "n = 3, l = 3, m = 0, s = +½"
+    ],
+    "correctIndex": 3,
+    "explanation": "l can take values 0 to n − 1. For n = 3, l can be at most 2, so l = 3 is not allowed."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The molecule that has a zero dipole moment is",
+    "options": [
+      "NF₃",
+      "H₂O",
+      "NH₃",
+      "BF₃"
+    ],
+    "correctIndex": 3,
+    "explanation": "BF₃ is trigonal planar and symmetric, so its three B−F bond dipoles cancel. NH₃, NF₃ and H₂O are pyramidal or bent and have a net dipole moment."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The correct order of bond angle is",
+    "options": [
+      "H₂O < CH₄ < NH₃",
+      "CH₄ < NH₃ < H₂O",
+      "H₂O < NH₃ < CH₄",
+      "NH₃ < H₂O < CH₄"
+    ],
+    "correctIndex": 2,
+    "explanation": "All three are sp³ hybridised. Lone pairs compress bond angles: CH₄ (0 lone pairs) 109.5°, NH₃ (1 lone pair) 107°, H₂O (2 lone pairs) 104.5°."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "For a process to be spontaneous at all temperatures, the signs of ΔH and ΔS must be",
+    "options": [
+      "ΔH positive, ΔS negative",
+      "ΔH positive, ΔS positive",
+      "ΔH negative, ΔS positive",
+      "ΔH negative, ΔS negative"
+    ],
+    "correctIndex": 2,
+    "explanation": "ΔG = ΔH − TΔS. With ΔH < 0 and ΔS > 0, both terms make ΔG negative at every temperature."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), Kp and Kc are related by",
+    "options": [
+      "Kp = Kc(RT)⁻¹",
+      "Kp = Kc",
+      "Kp = Kc(RT)⁻²",
+      "Kp = Kc(RT)²"
+    ],
+    "correctIndex": 2,
+    "explanation": "Kp = Kc(RT)^Δn, where Δn = moles of gaseous products − reactants = 2 − 4 = −2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The pH of a 10⁻⁸ M HCl solution at 25 °C is closest to",
+    "options": [
+      "7.00",
+      "8.00",
+      "6.00",
+      "6.98"
+    ],
+    "correctIndex": 3,
+    "explanation": "Water's own H⁺ (≈10⁻⁷ M) cannot be ignored. Total [H⁺] ≈ 1.05 × 10⁻⁷ M, so pH ≈ 6.98, slightly acidic — not 8."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The oxidation state of sulphur in H₂S₂O₈ (peroxodisulphuric acid) is",
+    "options": [
+      "+7",
+      "+8",
+      "+6",
+      "+5"
+    ],
+    "correctIndex": 2,
+    "explanation": "H₂S₂O₈ contains one peroxide (−O−O−) linkage. Two O atoms are −1 and six are −2: 2(+1) + 2x + 2(−1) + 6(−2) = 0 gives x = +6. (Taking all O as −2 wrongly gives +7.)"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "For a first-order reaction, the time taken for 99.9% completion is about how many times its half-life?",
+    "options": [
+      "100",
+      "10",
+      "2",
+      "5"
+    ],
+    "correctIndex": 1,
+    "explanation": "t = (2.303/k) log(100/0.1) = (2.303/k) × 3 and t½ = 0.693/k. Ratio = 6.909/0.693 ≈ 10."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which of the following is the strongest acid?",
+    "options": [
+      "HClO₄",
+      "HClO",
+      "HClO₂",
+      "HClO₃"
+    ],
+    "correctIndex": 0,
+    "explanation": "Acidity of chlorine oxoacids rises with the oxidation state of Cl (+1, +3, +5, +7). In ClO₄⁻ the negative charge is delocalised over four oxygens, making HClO₄ the strongest."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The lanthanoid contraction is mainly responsible for",
+    "options": [
+      "the inert-pair effect in p-block elements",
+      "similar atomic radii of Zr and Hf",
+      "the colour of transition-metal ions",
+      "the high reactivity of alkali metals"
+    ],
+    "correctIndex": 1,
+    "explanation": "Poor shielding by 4f electrons reduces the size of 5d elements, so Hf (after the lanthanoids) has nearly the same radius as Zr and the two show very similar chemistry."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The IUPAC name of K₃[Fe(CN)₆] is",
+    "options": [
+      "potassium hexacyanidoiron(III)",
+      "tripotassium hexacyanoiron(II)",
+      "potassium hexacyanidoferrate(III)",
+      "potassium hexacyanidoferrate(II)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fe has oxidation state x − 6 = −3, so x = +3. In an anionic complex the metal name ends in -ate (ferrate), giving potassium hexacyanidoferrate(III)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The most stable carbocation among the following is",
+    "options": [
+      "CH₂=CH−CH₂⁺",
+      "(CH₃)₃C⁺",
+      "(C₆H₅)₃C⁺",
+      "C₆H₅CH₂⁺"
+    ],
+    "correctIndex": 2,
+    "explanation": "The triphenylmethyl cation spreads the positive charge over three benzene rings by resonance, making it far more stable than benzyl, allyl or tert-butyl cations."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Haloalkanes and Haloarenes",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which compound reacts fastest by the SN2 mechanism?",
+    "options": [
+      "(CH₃)₂CHBr",
+      "(CH₃)₃CBr",
+      "CH₃Br",
+      "CH₃CH₂Br"
+    ],
+    "correctIndex": 2,
+    "explanation": "SN2 involves back-side attack, so it is fastest for the least hindered substrate: methyl > 1° > 2° > 3°. CH₃Br reacts fastest."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The correct order of basic strength in aqueous solution is",
+    "options": [
+      "NH₃ > CH₃NH₂ > (CH₃)₂NH > (CH₃)₃N",
+      "CH₃NH₂ > (CH₃)₂NH > (CH₃)₃N > NH₃",
+      "(CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > NH₃",
+      "(CH₃)₃N > (CH₃)₂NH > CH₃NH₂ > NH₃"
+    ],
+    "correctIndex": 2,
+    "explanation": "In water, basicity depends on the +I effect, solvation (hydrogen bonding) of the ammonium ion and steric hindrance together. For methylamines the order is 2° > 1° > 3° > NH₃."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which vitamin deficiency causes scurvy, and is the vitamin water-soluble or fat-soluble?",
+    "options": [
+      "Vitamin B₁, water-soluble",
+      "Vitamin A, fat-soluble",
+      "Vitamin D, fat-soluble",
+      "Vitamin C, water-soluble"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scurvy (bleeding gums) is caused by a deficiency of vitamin C (ascorbic acid), which is water-soluble and must be supplied regularly in the diet."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The total number of orbitals in the shell with principal quantum number n = 4 is",
+    "options": [
+      "16",
+      "4",
+      "32",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "Number of orbitals in a shell = n² = 16 (one 4s, three 4p, five 4d, seven 4f)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which aqueous solution has the highest boiling point (assume complete dissociation)?",
+    "options": [
+      "0.1 m MgSO₄",
+      "0.1 m NaCl",
+      "0.1 m glucose",
+      "0.1 m Al₂(SO₄)₃"
+    ],
+    "correctIndex": 3,
+    "explanation": "ΔTb ∝ i × m. i values: Al₂(SO₄)₃ = 5, NaCl = 2, MgSO₄ = 2, glucose = 1. So 0.1 m Al₂(SO₄)₃ boils highest."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In acidic medium, one mole of K₂Cr₂O₇ accepts how many moles of electrons?",
+    "options": [
+      "6",
+      "5",
+      "2",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O. Each Cr goes from +6 to +3, so 2 × 3 = 6 electrons per mole."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which compound is aromatic?",
+    "options": [
+      "Cyclobutadiene",
+      "Cyclopentadienyl anion",
+      "Cyclooctatetraene (tub form)",
+      "Cyclopentadiene"
+    ],
+    "correctIndex": 1,
+    "explanation": "The cyclopentadienyl anion is planar, cyclic and fully conjugated with 6 π electrons (4n + 2, n = 1). Cyclobutadiene (4π) is antiaromatic; cyclopentadiene has an sp³ carbon; tub-shaped COT is non-planar and non-aromatic."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The enthalpy of neutralisation of a strong acid by a strong base is about −57.1 kJ mol⁻¹. For a weak acid such as acetic acid with NaOH, it is",
+    "options": [
+      "more negative than −57.1 kJ mol⁻¹",
+      "positive",
+      "less negative than −57.1 kJ mol⁻¹",
+      "exactly −57.1 kJ mol⁻¹"
+    ],
+    "correctIndex": 2,
+    "explanation": "Part of the heat released is used to ionise the weak acid (an endothermic step), so the measured enthalpy of neutralisation is numerically smaller, e.g. about −55.2 kJ mol⁻¹."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The number of atoms in 4.4 g of CO₂ is (N_A = 6.022 × 10²³ mol⁻¹)",
+    "options": [
+      "1.204 × 10²³",
+      "1.806 × 10²³",
+      "6.022 × 10²³",
+      "6.022 × 10²²"
+    ],
+    "correctIndex": 1,
+    "explanation": "4.4 g CO₂ = 0.1 mol of molecules. Each molecule has 3 atoms, so atoms = 0.3 × 6.022 × 10²³ = 1.806 × 10²³."
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Units and Measurement",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In a vernier calliper, 10 vernier scale divisions coincide with 9 main scale divisions, and 1 main scale division is 1 mm. Its least count is",
+    "options": [
+      "0.1 mm",
+      "0.9 mm",
+      "0.01 mm",
+      "0.5 mm"
+    ],
+    "correctIndex": 0,
+    "explanation": "1 VSD = 9/10 MSD = 0.9 mm. Least count = 1 MSD − 1 VSD = 1 − 0.9 = 0.1 mm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A car moving at 72 km/h stops in 40 m with uniform braking. With the same braking, the stopping distance at 144 km/h is",
+    "options": [
+      "160 m",
+      "120 m",
+      "320 m",
+      "80 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stopping distance s = v²/(2a) ∝ v². Doubling the speed makes it 4 times: 4 × 40 = 160 m."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A 60 kg person stands on a weighing scale in a lift that is accelerating downward at 2 m/s² (g = 10 m/s²). The scale reads",
+    "options": [
+      "600 N",
+      "720 N",
+      "120 N",
+      "480 N"
+    ],
+    "correctIndex": 3,
+    "explanation": "For downward acceleration, N = m(g − a) = 60 × (10 − 2) = 480 N."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A 2 kg ball moving at 3 m/s collides with a stationary 1 kg ball and they stick together. The loss of kinetic energy is",
+    "options": [
+      "4.5 J",
+      "9 J",
+      "6 J",
+      "3 J"
+    ],
+    "correctIndex": 3,
+    "explanation": "Momentum: 2 × 3 = 3v gives v = 2 m/s. KE before = ½·2·9 = 9 J; after = ½·3·4 = 6 J. Loss = 3 J."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "For a ring rolling without slipping, the fraction of its total kinetic energy that is rotational is",
+    "options": [
+      "2/7",
+      "1/3",
+      "1/2",
+      "2/5"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a ring I = MR², so rotational KE = ½MR²(v/R)² = ½Mv², equal to translational KE. Rotational fraction = ½Mv²/(Mv²) = 1/2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A planet has twice the mass of the Earth and half its radius. If the escape speed from the Earth is vₑ, the escape speed from the planet is",
+    "options": [
+      "4vₑ",
+      "vₑ",
+      "2vₑ",
+      "√2 vₑ"
+    ],
+    "correctIndex": 2,
+    "explanation": "vₑ = √(2GM/R) ∝ √(M/R). For the planet M/R is 2/(1/2) = 4 times larger, so the escape speed is √4 = 2 times vₑ."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A wire is replaced by another wire of the same material, twice the length and twice the radius. Under the same load, the extension of the new wire is",
+    "options": [
+      "one-fourth the original",
+      "twice the original",
+      "half the original",
+      "the same"
+    ],
+    "correctIndex": 2,
+    "explanation": "ΔL = FL/(AY) ∝ L/r². New extension ∝ 2L/(4r²) = ½ of the original."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A bulb rated 60 W, 220 V is connected to a 110 V supply. Assuming constant resistance, the power consumed is",
+    "options": [
+      "60 W",
+      "30 W",
+      "7.5 W",
+      "15 W"
+    ],
+    "correctIndex": 3,
+    "explanation": "R = V²/P is fixed. P' = P(V'/V)² = 60 × (110/220)² = 60/4 = 15 W."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A proton moves at 2 × 10⁶ m/s at 30° to a uniform magnetic field of 0.5 T. The magnetic force on it is (e = 1.6 × 10⁻¹⁹ C)",
+    "options": [
+      "4 × 10⁻¹⁴ N",
+      "8 × 10⁻¹⁴ N",
+      "1.6 × 10⁻¹³ N",
+      "1.39 × 10⁻¹³ N"
+    ],
+    "correctIndex": 1,
+    "explanation": "F = qvB sin θ = 1.6×10⁻¹⁹ × 2×10⁶ × 0.5 × sin 30° = 1.6×10⁻¹³ × 0.5 = 8×10⁻¹⁴ N."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "An ideal step-down transformer converts 220 V to 11 V. If the primary has 1000 turns, the secondary has",
+    "options": [
+      "50 turns",
+      "2000 turns",
+      "20 turns",
+      "500 turns"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ns/Np = Vs/Vp = 11/220 = 1/20. Ns = 1000/20 = 50 turns."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A person uses spectacles of power −2.5 D. The lens and its focal length are",
+    "options": [
+      "concave, 40 cm",
+      "convex, 40 cm",
+      "concave, 25 cm",
+      "convex, 2.5 cm"
+    ],
+    "correctIndex": 0,
+    "explanation": "f = 1/P = 1/(−2.5) m = −0.4 m = −40 cm. A negative focal length means a concave (diverging) lens, used to correct myopia."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "An electron is accelerated from rest through 100 V. Its de Broglie wavelength is about",
+    "options": [
+      "0.39 Å",
+      "1.23 Å",
+      "0.123 Å",
+      "12.3 Å"
+    ],
+    "correctIndex": 1,
+    "explanation": "For an electron, λ = 12.27/√V Å = 12.27/10 ≈ 1.23 Å."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In the Bohr model of hydrogen, the ratio of the radius of the third orbit to that of the first orbit is",
+    "options": [
+      "1 : 9",
+      "27 : 1",
+      "9 : 1",
+      "3 : 1"
+    ],
+    "correctIndex": 2,
+    "explanation": "rₙ ∝ n². r₃/r₁ = 3²/1² = 9."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermal Properties of Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The heat needed to convert 10 g of ice at 0 °C into water at 100 °C is (L_f = 80 cal g⁻¹, c_water = 1 cal g⁻¹ °C⁻¹)",
+    "options": [
+      "6200 cal",
+      "800 cal",
+      "1800 cal",
+      "1000 cal"
+    ],
+    "correctIndex": 2,
+    "explanation": "Melting: 10 × 80 = 800 cal. Heating water from 0 to 100 °C: 10 × 1 × 100 = 1000 cal. Total = 1800 cal."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A Carnot engine works between 500 K and 300 K. If it absorbs 1000 J per cycle from the hot reservoir, the work done per cycle is",
+    "options": [
+      "1000 J",
+      "600 J",
+      "400 J",
+      "250 J"
+    ],
+    "correctIndex": 2,
+    "explanation": "η = 1 − T₂/T₁ = 1 − 300/500 = 0.4. W = ηQ₁ = 0.4 × 1000 = 400 J."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "An open pipe and a closed pipe have the same length. The ratio of the fundamental frequency of the open pipe to that of the closed pipe is",
+    "options": [
+      "1 : 2",
+      "4 : 1",
+      "2 : 1",
+      "1 : 1"
+    ],
+    "correctIndex": 2,
+    "explanation": "Open pipe: f = v/(2L). Closed pipe: f = v/(4L). Ratio = (v/2L)/(v/4L) = 2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Arrange in increasing order of wavelength: X-rays, microwaves, ultraviolet, infrared.",
+    "options": [
+      "microwaves < IR < UV < X-rays",
+      "X-rays < IR < UV < microwaves",
+      "X-rays < UV < IR < microwaves",
+      "UV < X-rays < IR < microwaves"
+    ],
+    "correctIndex": 2,
+    "explanation": "In the EM spectrum wavelength increases as: γ-rays < X-rays < UV < visible < IR < microwaves < radio waves."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A parallel-plate capacitor is charged and then disconnected from the battery. A dielectric slab (K = 4) is inserted to fill the gap. The energy stored becomes",
+    "options": [
+      "half of its initial value",
+      "unchanged",
+      "4 times the initial value",
+      "one-fourth of its initial value"
+    ],
+    "correctIndex": 3,
+    "explanation": "Disconnected → charge Q stays constant. C becomes KC, and U = Q²/(2C) becomes U/K = U/4."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The time period of a satellite orbiting close to the Earth's surface is about 84 min. A satellite at an orbital radius four times the Earth's radius has a period of about",
+    "options": [
+      "1344 min",
+      "672 min",
+      "168 min",
+      "336 min"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kepler's third law: T ∝ r^(3/2). T = 84 × 4^(3/2) = 84 × 8 = 672 min."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In a common-emitter transistor, the base current is 40 μA and the current gain β = 100. The collector current is",
+    "options": [
+      "40 mA",
+      "0.4 mA",
+      "4 mA",
+      "4.04 mA"
+    ],
+    "correctIndex": 2,
+    "explanation": "I_C = βI_B = 100 × 40 μA = 4000 μA = 4 mA. (The emitter current would be 4.04 mA.)"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinetic Theory",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "At what temperature will the rms speed of hydrogen molecules be double its value at 27 °C?",
+    "options": [
+      "927 °C",
+      "1200 °C",
+      "327 °C",
+      "54 °C"
+    ],
+    "correctIndex": 0,
+    "explanation": "v_rms ∝ √T. Doubling needs T = 4 × 300 K = 1200 K = 927 °C."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In Young's double-slit experiment, the slit separation is halved and the screen distance is doubled. The fringe width becomes",
+    "options": [
+      "2 times",
+      "the same",
+      "one-fourth",
+      "4 times"
+    ],
+    "correctIndex": 3,
+    "explanation": "β = λD/d. With D doubled and d halved, β becomes 2/(1/2) = 4 times."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A wire of resistance 16 Ω is bent into a circle. The effective resistance between two diametrically opposite points is",
+    "options": [
+      "8 Ω",
+      "4 Ω",
+      "2 Ω",
+      "16 Ω"
+    ],
+    "correctIndex": 1,
+    "explanation": "Each semicircle has 8 Ω and the two halves are in parallel: 8 × 8/16 = 4 Ω."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The magnetic flux through a coil changes as Φ = (5t² + 2t) mWb. The induced emf at t = 2 s is",
+    "options": [
+      "12 mV",
+      "24 mV",
+      "20 mV",
+      "22 mV"
+    ],
+    "correctIndex": 3,
+    "explanation": "|ε| = dΦ/dt = (10t + 2) mV. At t = 2 s, ε = 22 mV."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "An ideal gas expands isothermally from volume V to 2V and then is compressed adiabatically back to volume V. Its final temperature is",
+    "options": [
+      "lower than the initial temperature",
+      "equal to the initial temperature",
+      "absolute zero",
+      "higher than the initial temperature"
+    ],
+    "correctIndex": 3,
+    "explanation": "The isothermal step keeps T unchanged. Adiabatic compression does work on the gas with no heat loss, so its internal energy and temperature rise above the initial value."
+  }
+]
