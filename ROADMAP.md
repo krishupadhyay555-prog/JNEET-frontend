@@ -30,15 +30,16 @@
 
 Code only goes live after its PR is **merged into `main`**. Until then the founder will not see it, even if it is "done" here.
 
-| PR | What | Status (11 Nov 2026) |
+| PR | What | Status (11 Nov 2026, evening) |
 |---|---|---|
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
-| #2 | Turnstile captcha, **email logo**, seed script skips empty files | ⏳ **Open — NOT live** |
-| #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ⏳ **Open — NOT live** |
+| #2 | Turnstile captcha, **email logo**, seed script skips empty files | ✅ Merged 11 Nov — live (logo inside email confirmed on Gmail) |
+| #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ✅ Merged 11 Nov |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
+| 11 Nov 2026 | Round "J" avatar still shown next to sender in Gmail | That avatar is Gmail's sender picture, not the email body; the in-email logo works | Free fix: Google Account on `no-reply@jneetai.com` (via free forwarding) with the logo as profile photo. Paid fix later: BIMI + CMC (~$650–990/yr) |
 | 11 Nov 2026 | Email logo still not showing | PR #2 still open (not merged) | Same fix: merge PR #2 |
 | 8 Nov 2026 | Email logo not showing | Code was in PR #2, which was never merged | Merge PR #2. **Rule:** every reply that ships code ends with "Live after you merge PR #N", and every session starts by listing open PRs |
 | Oct 2026 | OTP emails not arriving | Brevo IP blocking + unauthenticated domain + Gmail sender | Domain authenticated, sender verified, IP blocking off |
