@@ -1,0 +1,754 @@
+[
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to VSEPR theory, the shape of the SF₄ molecule is ____.",
+  "answers": [
+   "see-saw",
+   "see saw",
+   "seesaw"
+  ],
+  "explanation": "S has 4 bond pairs + 1 lone pair (5 electron pairs, trigonal bipyramidal); the lone pair sits equatorial, giving a see-saw shape.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to VSEPR theory, the shape of the XeF₂ molecule is ____.",
+  "answers": [
+   "linear"
+  ],
+  "explanation": "Xe has 2 bond pairs + 3 lone pairs; the 3 lone pairs take equatorial positions, so F–Xe–F is linear.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to molecular orbital theory, the bond order of O₂ is ____.",
+  "answers": [
+   "2",
+   "two"
+  ],
+  "explanation": "O₂: bonding electrons 10, antibonding 6 → bond order (10 − 6)/2 = 2.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to molecular orbital theory, the bond order of N₂ is ____.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "N₂: bonding electrons 10, antibonding 4 → bond order (10 − 4)/2 = 3.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The hybridisation of each carbon atom in ethyne (C₂H₂) is ____.",
+  "answers": [
+   "sp"
+  ],
+  "explanation": "Each carbon forms one σ bond to H and a triple bond to C (one σ + two π): sp hybridisation, linear.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "The H–O–H bond angle in water is about ____ degrees.",
+  "answers": [
+   "104.5"
+  ],
+  "explanation": "Two lone pairs on oxygen squeeze the tetrahedral angle (109.5°) down to about 104.5°.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Among NH₃, H₂O, CO₂ and SO₂, the molecule with zero dipole moment is ____.",
+  "answers": [
+   "CO2",
+   "carbon dioxide"
+  ],
+  "explanation": "CO₂ is linear (O=C=O); the two bond dipoles cancel, so the net dipole moment is zero.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "O₂ is ____ because it has two unpaired electrons in its π* molecular orbitals.",
+  "answers": [
+   "paramagnetic"
+  ],
+  "explanation": "MO theory explains O₂'s paramagnetism (two unpaired electrons in π*2px and π*2py), which valence bond theory cannot.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The hybridisation of phosphorus in PCl₅ is ____.",
+  "answers": [
+   "sp3d"
+  ],
+  "explanation": "P uses one 3s, three 3p and one 3d orbital: sp³d, trigonal bipyramidal.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The maximum number of electrons in a subshell with azimuthal quantum number l is ____.",
+  "answers": [
+   "2(2l+1)",
+   "4l+2"
+  ],
+  "explanation": "A subshell has (2l + 1) orbitals, each holding 2 electrons: 2(2l + 1).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The number of orbitals in the shell with n = 3 is ____.",
+  "answers": [
+   "9",
+   "nine"
+  ],
+  "explanation": "Number of orbitals in a shell = n² = 9 (one 3s, three 3p, five 3d).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The de Broglie wavelength of a particle is λ = h / ____.",
+  "answers": [
+   "mv",
+   "p",
+   "momentum"
+  ],
+  "explanation": "λ = h/p = h/(mv): the wavelength is inversely proportional to momentum.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The energy of the electron in the nth orbit of the hydrogen atom is Eₙ = −____/n² eV.",
+  "answers": [
+   "13.6"
+  ],
+  "explanation": "Bohr model: Eₙ = −13.6/n² eV for hydrogen (−2.18 × 10⁻¹⁸ J / n²).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to the ____ principle, no two electrons in an atom can have the same set of all four quantum numbers.",
+  "answers": [
+   "Pauli exclusion",
+   "Pauli's exclusion",
+   "Pauli"
+  ],
+  "explanation": "Pauli exclusion principle: an orbital can hold at most two electrons, and they must have opposite spins.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The Balmer series of the hydrogen spectrum lies in the ____ region.",
+  "answers": [
+   "visible"
+  ],
+  "explanation": "Lyman: UV; Balmer (n₂ → 2): visible; Paschen, Brackett, Pfund: infrared.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The magnetic quantum number of an electron in a p orbital can take ____ values.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "For l = 1, mₗ = −1, 0, +1: three values (three p orbitals).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "Chromium (Z = 24) has ____ unpaired electrons in its ground state.",
+  "answers": [
+   "6",
+   "six"
+  ],
+  "explanation": "Cr: [Ar] 3d⁵ 4s¹ — the half-filled d subshell is extra stable, giving 6 unpaired electrons.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Torque is the rate of change of ____.",
+  "answers": [
+   "angular momentum"
+  ],
+  "explanation": "τ = dL/dt, just as force is the rate of change of linear momentum.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The moment of inertia of a thin ring of mass M and radius R about its own axis (perpendicular to its plane, through the centre) is ____.",
+  "answers": [
+   "MR2",
+   "MR^2",
+   "M R2"
+  ],
+  "explanation": "All the mass of a ring is at distance R from the axis, so I = MR².",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The moment of inertia of a uniform disc of mass M and radius R about its own axis is ____.",
+  "answers": [
+   "MR2/2",
+   "MR^2/2",
+   "1/2 MR2",
+   "(1/2)MR2",
+   "1/2MR^2",
+   "0.5MR2",
+   "0.5 MR^2"
+  ],
+  "explanation": "For a disc, I = ½MR² about the axis through its centre perpendicular to its plane.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "If no external torque acts on a system, its ____ remains constant.",
+  "answers": [
+   "angular momentum"
+  ],
+  "explanation": "τ = dL/dt = 0 ⇒ L is conserved (a spinning skater pulls in her arms: I decreases, ω increases).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The SI unit of moment of inertia is ____.",
+  "answers": [
+   "kg m2",
+   "kg m^2",
+   "kg·m²",
+   "kgm2"
+  ],
+  "explanation": "I = Σ m r², so its unit is kg·m².",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "For a body rolling without slipping, the speed of its centre of mass is v = ____ (in terms of radius R and angular speed ω).",
+  "answers": [
+   "Rω",
+   "ωR",
+   "R omega",
+   "omega R"
+  ],
+  "explanation": "Rolling without slipping means the contact point is at rest: v = Rω.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Parallel axis theorem: I = I_cm + ____, where d is the distance between the two parallel axes.",
+  "answers": [
+   "Md2",
+   "Md^2",
+   "M d^2",
+   "Md²"
+  ],
+  "explanation": "The axis through the centre of mass gives the smallest I; shifting by d adds Md².",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The centre of mass of a uniform rod of length L lies at a distance ____ from either end.",
+  "answers": [
+   "L/2"
+  ],
+  "explanation": "For a uniform rod the mass is spread evenly, so the centre of mass is at the middle.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The SI unit of resistivity is ____.",
+  "answers": [
+   "ohm m",
+   "Ω m",
+   "ohm metre",
+   "ohm-metre",
+   "ohm meter",
+   "ohm-meter"
+  ],
+  "explanation": "R = ρL/A ⇒ ρ = RA/L, so the unit is Ω·m.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Kirchhoff's junction rule is based on the conservation of ____.",
+  "answers": [
+   "charge",
+   "electric charge"
+  ],
+  "explanation": "Charge does not pile up at a junction, so current in = current out.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Kirchhoff's loop rule is based on the conservation of ____.",
+  "answers": [
+   "energy"
+  ],
+  "explanation": "The sum of potential changes around any closed loop is zero because energy is conserved.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The drift speed of electrons is v_d = I / (n e ____), where A is the cross-sectional area.",
+  "answers": [
+   "A",
+   "area"
+  ],
+  "explanation": "I = n e A v_d, so v_d = I/(neA).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Resistors of 6 Ω and 3 Ω connected in parallel have an equivalent resistance of ____ Ω.",
+  "answers": [
+   "2",
+   "two"
+  ],
+  "explanation": "1/R = 1/6 + 1/3 = 1/2 ⇒ R = 2 Ω.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "A wire is stretched to double its length (volume remains the same). Its resistance becomes ____ times the original.",
+  "answers": [
+   "4",
+   "four"
+  ],
+  "explanation": "Length ×2 and area ×½ (volume constant), so R = ρL/A becomes 2 × 2 = 4 times.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "A Wheatstone bridge with arms P, Q, R, S is balanced when P/Q = ____.",
+  "answers": [
+   "R/S"
+  ],
+  "explanation": "At balance no current flows through the galvanometer, which needs P/Q = R/S.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The power dissipated in a resistor R carrying a current I is ____.",
+  "answers": [
+   "I2R",
+   "I^2R",
+   "I^2 R",
+   "I²R"
+  ],
+  "explanation": "P = VI = I²R = V²/R.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The dimensional formula of force is ____.",
+  "answers": [
+   "MLT-2",
+   "MLT^-2",
+   "[MLT^-2]",
+   "[MLT-2]",
+   "M L T^-2",
+   "MLT⁻²"
+  ],
+  "explanation": "F = ma: [M][LT⁻²] = [MLT⁻²].",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The SI base unit of luminous intensity is the ____.",
+  "answers": [
+   "candela",
+   "cd"
+  ],
+  "explanation": "The seven SI base units: metre, kilogram, second, ampere, kelvin, mole and candela.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The number of significant figures in 0.00450 is ____.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "Leading zeros don't count; the trailing zero after the decimal does: 4, 5, 0 → 3 significant figures.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "A light year is a unit of ____.",
+  "answers": [
+   "distance",
+   "length"
+  ],
+  "explanation": "A light year is the distance light travels in one year (≈ 9.46 × 10¹⁵ m).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Planck's constant has the same dimensions as angular ____.",
+  "answers": [
+   "momentum"
+  ],
+  "explanation": "E = hν ⇒ [h] = [ML²T⁻¹], the same as angular momentum (mvr).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The number of significant figures in 2.0300 is ____.",
+  "answers": [
+   "5",
+   "five"
+  ],
+  "explanation": "Zeros between digits and trailing zeros after the decimal point are significant: 2, 0, 3, 0, 0.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The value of i²⁰²⁶ is ____.",
+  "answers": [
+   "-1"
+  ],
+  "explanation": "2026 = 4 × 506 + 2, so i²⁰²⁶ = i² = −1.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The modulus of the complex number 3 + 4i is ____.",
+  "answers": [
+   "5",
+   "five"
+  ],
+  "explanation": "|3 + 4i| = √(3² + 4²) = √25 = 5.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "If α and β are the roots of x² − 5x + 6 = 0, then α + β = ____.",
+  "answers": [
+   "5",
+   "five"
+  ],
+  "explanation": "Sum of roots = −b/a = 5 (the roots are 2 and 3).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The roots of ax² + bx + c = 0 (real coefficients) are real and equal when b² − 4ac = ____.",
+  "answers": [
+   "0",
+   "zero"
+  ],
+  "explanation": "Discriminant D = 0 ⇒ equal real roots; D > 0 ⇒ distinct real; D < 0 ⇒ non-real conjugate roots.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The conjugate of the complex number 2 − 3i is ____.",
+  "answers": [
+   "2+3i",
+   "2 + 3i"
+  ],
+  "explanation": "The conjugate of a + ib is a − ib, so 2 − 3i → 2 + 3i.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "If ω is a non-real cube root of unity, then 1 + ω + ω² = ____.",
+  "answers": [
+   "0",
+   "zero"
+  ],
+  "explanation": "ω³ = 1 and ω ≠ 1 ⇒ (ω − 1)(ω² + ω + 1) = 0 ⇒ 1 + ω + ω² = 0.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The principal argument of the complex number i is ____.",
+  "answers": [
+   "π/2",
+   "pi/2",
+   "90°",
+   "90 degrees"
+  ],
+  "explanation": "i lies on the positive imaginary axis, so arg(i) = π/2.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The sum of the first n natural numbers is ____.",
+  "answers": [
+   "n(n+1)/2"
+  ],
+  "explanation": "1 + 2 + … + n = n(n + 1)/2.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The nth term of an AP with first term a and common difference d is ____.",
+  "answers": [
+   "a+(n-1)d",
+   "a+(n−1)d"
+  ],
+  "explanation": "Each term adds d: aₙ = a + (n − 1)d.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The sum of an infinite GP with first term a and common ratio r (|r| < 1) is ____.",
+  "answers": [
+   "a/(1-r)",
+   "a/(1−r)"
+  ],
+  "explanation": "Sₙ = a(1 − rⁿ)/(1 − r) and rⁿ → 0 as n → ∞, so S∞ = a/(1 − r).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The arithmetic mean of 4 and 16 is ____.",
+  "answers": [
+   "10",
+   "ten"
+  ],
+  "explanation": "AM = (4 + 16)/2 = 10 (their GM is √64 = 8).",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "For two positive numbers, AM ≥ GM ≥ ____.",
+  "answers": [
+   "HM",
+   "harmonic mean"
+  ],
+  "explanation": "AM ≥ GM ≥ HM, with equality only when the two numbers are equal.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "1 + 2 + 3 + … + 100 = ____.",
+  "answers": [
+   "5050"
+  ],
+  "explanation": "n(n + 1)/2 = 100 × 101 / 2 = 5050.",
+  "level": "main"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The 10th term of the GP 2, 4, 8, … is ____.",
+  "answers": [
+   "1024"
+  ],
+  "explanation": "aₙ = a rⁿ⁻¹ = 2 × 2⁹ = 1024.",
+  "level": "main"
+ }
+]

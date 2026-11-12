@@ -28,6 +28,9 @@ import { StreamingBubble }   from "../components/chat/StreamingBubble.jsx";
 import { ChatInput }         from "../components/chat/ChatInput.jsx";
 import { EmptyChat }         from "../components/chat/EmptyChat.jsx";
 import { AiNotice }          from "../components/chat/AiNotice.jsx";
+import { RecapBanner }       from "../components/chat/RecapBanner.jsx";
+import { QuickChips }        from "../components/chat/QuickChips.jsx";
+import { useRecap }          from "../hooks/useRecap.js";
 import { BackendErrorBanner } from "../components/ui/BackendErrorBanner.jsx";
 import { ChatSkeletons }     from "../components/ui/SkeletonLoader.jsx";
 import { ProfileMenu }       from "../components/ProfileMenu.jsx";
@@ -74,6 +77,11 @@ export default function AskAI() {
     });
   }, []);
   const [showScrollBtn, setShowScrollBtn] = useState(false);
+
+  // "Pichli baar ka recap" — shown every time the chat opens; hiding it
+  // lasts only for this visit.
+  const { recap, start: startRecap, starting: recapStarting } = useRecap(examMode);
+  const [recapHidden, setRecapHidden] = useState(false);
 
   const bottomRef   = useRef(null);
   const messagesRef = useRef(null);
@@ -146,6 +154,10 @@ export default function AskAI() {
     sendMessage(text);
   }, [prompt, isStreaming, blocked, sendMessage]);
 
+  const lastMsg = messages[messages.length - 1];
+  const showChips = !backendError && !isMsgLoading && !isStreaming && !blocked
+    && lastMsg?.role === "ai" && !lastMsg.guarded && (lastMsg.content?.length ?? 0) > 80;
+
   const handleRetry = useCallback(() => {
     setBackendError(null);
     loadInitialData();
@@ -195,6 +207,15 @@ export default function AskAI() {
           <ProfileMenu />
         </div>
 
+        {!backendError && !recapHidden && (
+          <RecapBanner
+            recap={recap}
+            starting={recapStarting}
+            onStart={startRecap}
+            onDismiss={() => setRecapHidden(true)}
+          />
+        )}
+
         <div
           ref={messagesRef}
           className="flex-1 overflow-y-auto px-3 sm:px-4 py-6 space-y-5 chat-scroll"
@@ -224,6 +245,10 @@ export default function AskAI() {
               onFeedback={setFeedback}
             />
           ))}
+
+          {showChips && (
+            <QuickChips onPick={(q) => { if (!blocked && !isStreaming) sendMessage(q); }} />
+          )}
 
           {isStreaming && (
             <StreamingBubble text={streamingText} />

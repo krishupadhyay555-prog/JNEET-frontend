@@ -25,6 +25,23 @@ import toast from "react-hot-toast";
 
 const OPTION_LETTERS = ["A", "B", "C", "D"];
 
+// "____" in a fill-in-the-blank question becomes a visible blank line.
+function BlankText({ text }) {
+  const parts = String(text).split("____");
+  return (
+    <>
+      {parts.map((p, i) => (
+        <span key={i}>
+          {p}
+          {i < parts.length - 1 && (
+            <span aria-label="blank" className="inline-block min-w-[64px] mx-1 border-b-2 border-violet-500 align-baseline">&nbsp;</span>
+          )}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export default function RevisionSession() {
   const { attemptId } = useParams();
   const navigate = useNavigate();
@@ -34,6 +51,8 @@ export default function RevisionSession() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const [localAnswers, setLocalAnswers] = useState({});
+  // Fill-in-the-blank: what the student typed (per question).
+  const [typed, setTyped] = useState({});
   const [feedback, setFeedback] = useState({});
   const [answering, setAnswering] = useState(false);
   const [finishing, setFinishing] = useState(false);
@@ -61,12 +80,16 @@ export default function RevisionSession() {
         // Resuming after a refresh: answers already saved on the server come back,
         // and we continue from the first question not answered yet.
         const restored = {};
+        const restoredText = {};
         let firstOpen = -1;
         a.questions.forEach((q, i) => {
-          if (q.selectedIndex !== null && q.selectedIndex !== undefined) restored[q.questionId] = q.selectedIndex;
-          else if (firstOpen === -1) firstOpen = i;
+          if (q.selectedIndex !== null && q.selectedIndex !== undefined) {
+            restored[q.questionId] = q.selectedIndex;
+            if (q.type === "fill_blank" && q.textAnswer) restoredText[q.questionId] = q.textAnswer;
+          } else if (firstOpen === -1) firstOpen = i;
         });
         setLocalAnswers(restored);
+        setTyped(restoredText);
         setCurrentIndex(firstOpen === -1 ? a.questions.length - 1 : firstOpen);
         setAttempt(a);
       } catch {
@@ -83,22 +106,28 @@ export default function RevisionSession() {
   // A restored answer has no explanation on screen yet — re-submitting the SAME
   // choice is idempotent on the server and returns the feedback for it.
   const currentQid = attempt?.questions?.[currentIndex]?.questionId;
+  const currentIsBlank = attempt?.questions?.[currentIndex]?.type === "fill_blank";
   const restoredChoice = currentQid !== undefined ? localAnswers[currentQid] : undefined;
+  const restoredText = currentQid !== undefined ? typed[currentQid] : undefined;
   const needsFeedback = currentQid !== undefined && restoredChoice !== undefined && !feedback[currentQid];
   useEffect(() => {
     if (!needsFeedback) return undefined;
     let cancelled = false;
-    testApi.answerQuestion(attemptId, { questionId: currentQid, selectedIndex: restoredChoice })
+    const body = currentIsBlank
+      ? { questionId: currentQid, textAnswer: restoredText ?? null }
+      : { questionId: currentQid, selectedIndex: restoredChoice };
+    testApi.answerQuestion(attemptId, body)
       .then((res) => {
         if (cancelled) return;
         setFeedback((prev) => ({ ...prev, [currentQid]: {
           isCorrect: res.data.isCorrect, correctIndex: res.data.correctIndex,
-          explanation: res.data.explanation, skipped: restoredChoice === null,
+          correctAnswer: res.data.correctAnswer, explanation: res.data.explanation,
+          skipped: currentIsBlank ? !restoredText : restoredChoice === null,
         } }));
       })
       .catch(() => { /* feedback is a nicety; the answer itself is already saved */ });
     return () => { cancelled = true; };
-  }, [needsFeedback, attemptId, currentQid, restoredChoice]);
+  }, [needsFeedback, attemptId, currentQid, restoredChoice, restoredText, currentIsBlank]);
 
   if (loading) {
     return (
@@ -133,6 +162,33 @@ export default function RevisionSession() {
           correctIndex: res.data.correctIndex,
           explanation: res.data.explanation,
           skipped: selectedIndex === null,
+        },
+      }));
+    } catch (err) {
+      toast.error(err.response?.data?.error || "Could not check this answer.");
+    } finally {
+      setAnswering(false);
+    }
+  };
+
+  // Fill-in-the-blank: the server checks the typed answer.
+  const recordBlank = async (text) => {
+    if (answering || currentFeedback) return;
+    const value = typeof text === "string" ? text.trim() : "";
+    setAnswering(true);
+    try {
+      const res = await testApi.answerQuestion(attemptId, {
+        questionId: currentQuestion.questionId,
+        textAnswer: value || null,
+      });
+      setLocalAnswers((prev) => ({ ...prev, [currentQuestion.questionId]: res.data.selectedIndex }));
+      setFeedback((prev) => ({
+        ...prev,
+        [currentQuestion.questionId]: {
+          isCorrect: res.data.isCorrect,
+          correctAnswer: res.data.correctAnswer,
+          explanation: res.data.explanation,
+          skipped: !value,
         },
       }));
     } catch (err) {
@@ -218,8 +274,13 @@ export default function RevisionSession() {
 
       <div className="max-w-2xl mx-auto px-5 py-6 space-y-5">
         <div key={currentQuestion.questionId} className="animate-fade-up space-y-4">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-violet-500">
+            {currentQuestion.type === "fill_blank" ? "Fill in the blank" : "MCQ"}
+          </span>
           <p className="text-sm leading-relaxed text-fg-primary font-medium">
-            {currentQuestion.questionText}
+            {currentQuestion.type === "fill_blank"
+              ? <BlankText text={currentQuestion.questionText} />
+              : currentQuestion.questionText}
           </p>
 
           {currentQuestion.imageUrl && (
@@ -230,6 +291,38 @@ export default function RevisionSession() {
             />
           )}
 
+          {currentQuestion.type === "fill_blank" ? (
+            <form
+              onSubmit={(e) => { e.preventDefault(); recordBlank(typed[currentQuestion.questionId] ?? ""); }}
+              className="flex gap-2"
+            >
+              <label htmlFor="blank-answer" className="sr-only">Your answer</label>
+              <input
+                id="blank-answer"
+                value={typed[currentQuestion.questionId] ?? ""}
+                onChange={(e) => setTyped((p) => ({ ...p, [currentQuestion.questionId]: e.target.value }))}
+                disabled={!!currentFeedback || answering}
+                maxLength={200}
+                autoComplete="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                placeholder="Apna jawab likho…"
+                className={`flex-1 min-w-0 rounded-xl border px-4 py-3 text-sm bg-bg-surface text-fg-primary outline-none transition
+                  ${currentFeedback
+                    ? (currentFeedback.isCorrect ? "border-emerald-600/60 bg-emerald-600/10" : currentFeedback.skipped ? "border-bg-border" : "border-red-500/60 bg-red-500/10")
+                    : "border-bg-border focus:border-violet-500"}`}
+              />
+              {!currentFeedback && (
+                <button
+                  type="submit"
+                  disabled={answering || !(typed[currentQuestion.questionId] ?? "").trim()}
+                  className="rounded-xl bg-violet-600 hover:bg-violet-500 disabled:opacity-40 text-white text-xs font-semibold px-4 transition"
+                >
+                  {answering ? "Checking…" : "Check"}
+                </button>
+              )}
+            </form>
+          ) : (
           <div className="space-y-2">
             {currentQuestion.options.map((opt, idx) => {
               const selected = localAnswers[currentQuestion.questionId] === idx;
@@ -271,10 +364,11 @@ export default function RevisionSession() {
               );
             })}
           </div>
+          )}
 
           {!currentFeedback && (
             <button
-              onClick={() => recordAnswer(null)}
+              onClick={() => (currentQuestion.type === "fill_blank" ? recordBlank(null) : recordAnswer(null))}
               disabled={answering}
               className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-fg-primary
                 transition disabled:opacity-50 px-3 py-2 rounded-lg hover:bg-bg-hover"
@@ -299,6 +393,11 @@ export default function RevisionSession() {
                     ? "Correct!"
                     : "Not quite."}
               </p>
+              {currentQuestion.type === "fill_blank" && currentFeedback.correctAnswer && (
+                <p className="text-sm text-fg-primary">
+                  Answer: <span className="font-semibold text-emerald-600">{currentFeedback.correctAnswer}</span>
+                </p>
+              )}
               {currentFeedback.explanation && (
                 <div className="bg-bg-panel border border-bg-border rounded-xl p-3.5">
                   <p className="text-xs text-gray-600 leading-relaxed">

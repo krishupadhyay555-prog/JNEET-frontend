@@ -6,7 +6,8 @@
 //    to approve" state instead of a generic error.
 //  - onDone(fullText, usage, policy): usage = { remaining, limit, resetsAt } | null;
 //    policy = { level, strikes, category, pausedUntil, locked, lock } | null
-//    (set when the message broke the chat rules — see backend services/ai/policy.js)
+//    (set when the message broke the chat rules — see backend services/ai/policy.js;
+//    { refused: true } when the mentor politely declined without a strike)
 // ============================================================
 
 import api from "./axiosInstance.js";
@@ -82,7 +83,7 @@ export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { rep
             onToken?.(data.token, fullText);
           }
           if (data.done) {
-            onDone?.(data.fullText ?? fullText, data.usage ?? null, data.policy ?? null);
+            onDone?.(data.fullText ?? fullText, data.usage ?? null, data.policy ?? (data.refused ? { refused: true } : null));
             return;
           }
         }

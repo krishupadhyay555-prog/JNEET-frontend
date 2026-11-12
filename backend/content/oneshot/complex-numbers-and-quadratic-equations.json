@@ -1,0 +1,105 @@
+{
+ "slug": "complex-numbers-and-quadratic-equations",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Complex Numbers and Quadratic Equations"
+ },
+ "title": "Complex Numbers and Quadratic Equations",
+ "readMinutes": 13,
+ "summary": [
+  "i ek naya number hai jiska square −1 hai. Har complex number z = a + ib ek point (a, b) hai Argand plane mein — real part x-axis, imaginary part y-axis.",
+  "Do tareeke se dekho: cartesian (a + ib) jodne-ghatane ke liye aur polar (r, θ) guna-bhaag ke liye — polar mein multiply karna = modulus guna, argument jodo.",
+  "Quadratic ax² + bx + c = 0 ki poori kahani discriminant D = b² − 4ac aur roots ke relation (α + β = −b/a, αβ = c/a) mein hai.",
+  "JEE mein sabse zyada: i ki powers, modulus-argument, conjugate ke properties, aur roots ke symmetric expressions (α² + β², 1/α + 1/β …)."
+ ],
+ "formulas": [
+  {
+   "name": "Powers of i",
+   "formula": "i¹ = i, i² = −1, i³ = −i, i⁴ = 1 (har 4 par repeat)",
+   "when": "iⁿ: n ko 4 se divide karo, remainder dekho."
+  },
+  {
+   "name": "Modulus and conjugate",
+   "formula": "|z| = √(a² + b²),   z̄ = a − ib,   z · z̄ = |z|²",
+   "when": "Division ya modulus wale sawal."
+  },
+  {
+   "name": "Polar form",
+   "formula": "z = r (cosθ + i sinθ) = r e^{iθ},   arg(z₁z₂) = arg z₁ + arg z₂",
+   "when": "Guna-bhaag aur powers.",
+   "mistake": "Principal argument (−π, π] mein hota hai; quadrant dekh kar θ lo."
+  },
+  {
+   "name": "Triangle inequality",
+   "formula": "|z₁ + z₂| ≤ |z₁| + |z₂|",
+   "when": "Maximum/minimum |z| wale sawal."
+  },
+  {
+   "name": "Quadratic formula",
+   "formula": "x = [−b ± √(b² − 4ac)] / 2a,   D = b² − 4ac",
+   "when": "Roots nikalna, nature dekhna.",
+   "mistake": "Real coefficients mein D < 0 ⇒ roots conjugate pair."
+  },
+  {
+   "name": "Roots and coefficients",
+   "formula": "α + β = −b/a,   αβ = c/a",
+   "when": "Symmetric expressions.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Equation from roots",
+   "formula": "x² − (α + β) x + αβ = 0",
+   "when": "Diye gaye roots se equation banana."
+  },
+  {
+   "name": "Cube roots of unity",
+   "formula": "1, ω, ω²;   ω = (−1 + i√3)/2,   1 + ω + ω² = 0,   ω³ = 1",
+   "when": "Simplification wale sawal."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Division in one line",
+   "problem": "(1 + i)/(1 − i) aur (1 + i)⁸?",
+   "solution": "(1 + i)/(1 − i) = (1 + i)²/(1² + 1²) = 2i/2 = i. (1 + i)² = 2i ⇒ (1 + i)⁸ = (2i)⁴ = 16."
+  },
+  {
+   "title": "Symmetric expression",
+   "problem": "α, β roots hain x² − 3x + 1 = 0 ke. α² + β²?",
+   "solution": "α + β = 3, αβ = 1 ⇒ α² + β² = (α + β)² − 2αβ = 9 − 2 = 7."
+  },
+  {
+   "title": "Equal roots",
+   "problem": "x² + kx + 9 = 0 ke roots barabar hon to k?",
+   "solution": "D = 0 ⇒ k² − 36 = 0 ⇒ k = ±6."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Argand plane",
+   "explain": "z = a + ib point (a, b) hai. |z| origin se doori, arg z positive x-axis se angle. |z − z₁| = r ek circle hai jiska centre z₁ hai."
+  },
+  {
+   "title": "Conjugate ke properties",
+   "explain": "(z₁ + z₂)‾ = z̄₁ + z̄₂, (z₁z₂)‾ = z̄₁ z̄₂, z real ⇔ z = z̄, z purely imaginary ⇔ z + z̄ = 0."
+  },
+  {
+   "title": "Nature of roots",
+   "explain": "D > 0: do alag real roots; D = 0: equal real roots; D < 0: non-real conjugate roots. Agar a, b, c rational aur D perfect square, to roots rational."
+  },
+  {
+   "title": "Common root",
+   "explain": "Do quadratics a₁x² + b₁x + c₁ = 0 aur a₂x² + b₂x + c₂ = 0 ka ek common root ho to (c₁a₂ − c₂a₁)² = (b₁c₂ − b₂c₁)(a₁b₂ − a₂b₁)."
+  },
+  {
+   "title": "Sign of a quadratic",
+   "explain": "a > 0 aur D < 0 ⇒ ax² + bx + c har real x ke liye positive. Graph upward parabola jo x-axis ko chhoota hi nahi."
+  }
+ ],
+ "ratta": [
+  "iⁿ cycle: i, −1, −i, 1.",
+  "ω = (−1 + i√3)/2, ω² = (−1 − i√3)/2.",
+  "α + β = −b/a, αβ = c/a."
+ ],
+ "verifiedOn": "2026-11-12"
+}

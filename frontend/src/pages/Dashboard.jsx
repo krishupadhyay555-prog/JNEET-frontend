@@ -1,8 +1,7 @@
 // ============================================================
-//  JNEET+ AI — pages/Dashboard.jsx  (v7 — Analytics unlocked)
-//  CHANGED: Analytics feature-card now available: true, navigates
-//  to the new /analytics page — no longer a "Soon" placeholder.
-//  Everything else UNCHANGED from v6.
+//  JNEET+ AI — pages/Dashboard.jsx  (v8 — Aaj ka plan + OneShot)
+//  v8: "Aaj ka plan" card (last-chat recap, today's OneShot, Revision)
+//      and a OneShot feature tile.
 // ============================================================
 
 import { useState, useEffect } from "react";
@@ -16,10 +15,13 @@ import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
 import { getTargetExam } from "../config/targetExams.js";
 import { testApi } from "../api/testApi.js";
 import { notesApi } from "../api/notesApi.js";
+import { oneshotApi } from "../api/learnApi.js";
+import { useRecap } from "../hooks/useRecap.js";
+import { TodayPlan } from "../components/dashboard/TodayPlan.jsx";
 import toast from "react-hot-toast";
 import {
   RefreshCw, ClipboardList, BarChart3, TrendingUp, StickyNote,
-  ChevronRight, MessageCircle,
+  ChevronRight, MessageCircle, BookOpen,
 } from "lucide-react";
 
 function formatRelative(dateStr) {
@@ -82,6 +84,8 @@ export default function Dashboard() {
   const [lastTestAt, setLastTestAt]         = useState(undefined);
   const [lastRevisionAt, setLastRevisionAt] = useState(undefined);
   const [notesCount, setNotesCount]         = useState(undefined);
+  const [oneshots, setOneshots]             = useState([]);
+  const { recap, start: startRecap, starting: recapStarting } = useRecap(examMode);
 
   useEffect(() => {
     let cancelled = false;
@@ -111,6 +115,11 @@ export default function Dashboard() {
       .catch(() => {
         if (!cancelled) setNotesCount(null);
       });
+
+    setOneshots([]);
+    oneshotApi.list()
+      .then((res) => { if (!cancelled) setOneshots(res.data.chapters ?? []); })
+      .catch(() => { if (!cancelled) setOneshots([]); });
 
     return () => { cancelled = true; };
   }, [examMode]);
@@ -161,7 +170,19 @@ export default function Dashboard() {
       ? `${notesCount} note${notesCount === 1 ? "" : "s"} saved`
       : "No notes yet";
 
+  const oneshotDesc = oneshots.length
+    ? `${oneshots.length} chapter${oneshots.length === 1 ? "" : "s"} — summary, formulas, examples`
+    : "Chapter summary, formulas & solved examples";
+
   const features = [
+    {
+      icon: <BookOpen size={20} className="text-amber-600" />,
+      iconBg: "bg-amber-500/10",
+      title: "OneShot",
+      desc: oneshotDesc,
+      available: true,
+      onClick: () => navigate("/oneshot"),
+    },
     {
       icon: <RefreshCw size={20} className="text-teal-500" />,
       iconBg: "bg-teal-500/10",
@@ -305,6 +326,18 @@ export default function Dashboard() {
             onChangeTarget={() => setTargetModalOpen(true)}
           />
         </div>
+
+        <TodayPlan
+          recap={recap}
+          recapStarting={recapStarting}
+          onStartRecap={startRecap}
+          oneshots={oneshots}
+          onOpenOneShot={(slug) => navigate(`/oneshot/${slug}`)}
+          revisionSub={lastRevisionAt
+            ? `Last revision: ${formatRelative(lastRevisionAt)} · ek chapter aur karo`
+            : "Ek chapter chuno — MCQs + fill in the blanks"}
+          onOpenRevision={() => navigate("/revision")}
+        />
 
         <p className="text-[10px] text-gray-700 uppercase tracking-widest mb-3 font-medium">
           Features

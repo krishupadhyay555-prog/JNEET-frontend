@@ -49,7 +49,7 @@ export function loadSeedQuestions(dir = QUESTIONS_DIR) {
     const raw = fs.readFileSync(path.join(dir, file), "utf-8");
     if (!raw.trim()) continue;
     const questions = JSON.parse(raw);
-    for (const q of questions) all.push({ ...q, level: q.level || "main", __file: file });
+    for (const q of questions) all.push({ ...q, level: q.level || "main", type: q.type || "mcq", __file: file });
   }
   return all;
 }

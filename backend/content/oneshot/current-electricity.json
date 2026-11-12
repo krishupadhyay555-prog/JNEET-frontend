@@ -1,0 +1,118 @@
+{
+ "slug": "current-electricity",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Current Electricity",
+  "JEE": "Current Electricity"
+ },
+ "title": "Current Electricity",
+ "readMinutes": 13,
+ "summary": [
+  "Current = charge ka flow. Wire mein electrons ka asli 'drift' bahut dheema hota hai (mm/s), lekin electric field poore circuit mein turant set ho jaati hai — isliye bulb switch dabate hi jalta hai.",
+  "Resistance material (resistivity ρ), length aur area par depend karta hai: R = ρL/A. Metals garam hone par zyada resist karte hain; semiconductors kam.",
+  "Har circuit sawal do niyamon se solve hota hai: Kirchhoff junction rule (charge conservation) aur loop rule (energy conservation). Series/parallel unhi ka shortcut hai.",
+  "Real cell ki internal resistance hoti hai, isliye current chalte waqt terminal voltage emf se kam hota hai. Bridges (Wheatstone, meter bridge) balance point se resistance naapte hain."
+ ],
+ "formulas": [
+  {
+   "name": "Current and drift speed",
+   "formula": "I = dq/dt = n e A v_d",
+   "when": "Wire mein current ko electrons ki speed se jodna.",
+   "unit": "A (ampere)"
+  },
+  {
+   "name": "Ohm's law and resistance",
+   "formula": "V = I R,   R = ρ L / A",
+   "when": "Kisi bhi ohmic conductor par.",
+   "unit": "Ω",
+   "mistake": "Wire stretch karo (volume same) to R ∝ L² — sirf L nahi."
+  },
+  {
+   "name": "Resistivity and temperature",
+   "formula": "ρ_T = ρ₀ [1 + α (T − T₀)]",
+   "when": "Metal ka resistance temperature ke saath.",
+   "mistake": "Semiconductor ke liye α negative hota hai."
+  },
+  {
+   "name": "Series and parallel",
+   "formula": "Series: R = R₁ + R₂ + …   Parallel: 1/R = 1/R₁ + 1/R₂ + …",
+   "when": "Resistors ka combination.",
+   "mistake": "Parallel ka equivalent hamesha sabse chhote resistor se bhi chhota."
+  },
+  {
+   "name": "Real cell",
+   "formula": "V = E − I r   (discharging),   I = E / (R + r)",
+   "when": "Internal resistance wale sawal.",
+   "mistake": "Charging mein V = E + Ir."
+  },
+  {
+   "name": "Cells in series and parallel",
+   "formula": "Series: E = E₁ + E₂, r = r₁ + r₂.   Parallel: E = (E₁r₂ + E₂r₁)/(r₁ + r₂), r = r₁r₂/(r₁ + r₂)",
+   "when": "Do cells ka equivalent.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Electric power",
+   "formula": "P = V I = I² R = V² / R",
+   "when": "Heating, bulb, rating wale sawal.",
+   "mistake": "Series mein same I ⇒ zyada R zyada garam; parallel mein same V ⇒ kam R zyada garam."
+  },
+  {
+   "name": "Kirchhoff's rules",
+   "formula": "Junction: ΣI = 0.   Loop: ΣΔV = 0",
+   "when": "Koi bhi complex circuit.",
+   "mistake": "Loop mein sign convention pehle tay karo aur usi par tike raho."
+  },
+  {
+   "name": "Wheatstone and meter bridge",
+   "formula": "Balance: P/Q = R/S.   Meter bridge: R/S = l / (100 − l)",
+   "when": "Unknown resistance naapna.",
+   "tag": "PYQ favourite"
+  }
+ ],
+ "examples": [
+  {
+   "title": "Electrons kitne dheeme?",
+   "problem": "Copper wire: A = 1.0 × 10⁻⁷ m², I = 1.5 A, n = 8.5 × 10²⁸ m⁻³. Drift speed?",
+   "solution": "v_d = I/(neA) = 1.5 / (8.5 × 10²⁸ × 1.6 × 10⁻¹⁹ × 1.0 × 10⁻⁷) ≈ 1.1 × 10⁻³ m/s — sirf 1.1 mm per second!"
+  },
+  {
+   "title": "Cell ka terminal voltage",
+   "problem": "E = 12 V, r = 0.4 Ω ka cell 5.6 Ω resistor se juda hai. Current aur terminal voltage?",
+   "solution": "I = E/(R + r) = 12/6 = 2 A. V = E − Ir = 12 − 2 × 0.4 = 11.2 V."
+  },
+  {
+   "title": "Meter bridge",
+   "problem": "Right gap mein S = 30 Ω; balance point left end se 40 cm par. Left gap ka R?",
+   "solution": "R/S = l/(100 − l) = 40/60 ⇒ R = 30 × 40/60 = 20 Ω."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Drift vs thermal motion",
+   "explain": "Electrons bina field ke bhi tez (random) bhaagte hain, par net flow zero. Field lagne par chhota sa average drift banta hai — wahi current hai."
+  },
+  {
+   "title": "Ohmic aur non-ohmic",
+   "explain": "Metal wire (constant temperature) V-I graph seedhi line. Diode, garam hota filament non-ohmic — wahan R = V/I har point par alag."
+  },
+  {
+   "title": "Temperature ka asar",
+   "explain": "Metal: temperature badhe ⇒ atoms zyada vibrate ⇒ collisions zyada ⇒ ρ badhta hai. Semiconductor: zyada charge carriers free ⇒ ρ ghatta hai."
+  },
+  {
+   "title": "Internal resistance",
+   "explain": "Cell ke andar bhi current ko rukawat milti hai (r). Isliye short circuit current E/r se zyada nahi ho sakta."
+  },
+  {
+   "title": "Bridges",
+   "explain": "Wheatstone balance par galvanometer mein current zero, isliye uski resistance answer par asar nahi daalti. Meter bridge mein balance point beech ke paas ho to error kam."
+  }
+ ],
+ "ratta": [
+  "Colour code 0–9: Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White — \"BB ROY of Great Britain had a Very Good Wife\".",
+  "Tolerance: gold 5%, silver 10%, koi band nahi 20%.",
+  "Resistivity: silver < copper < aluminium (silver sabse kam)."
+ ],
+ "verifiedOn": "2026-11-12"
+}

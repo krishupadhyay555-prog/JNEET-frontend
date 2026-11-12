@@ -30,6 +30,8 @@ import userRoutes    from "./routes/userRoutes.js";
 import wmsRoutes     from "./routes/wmsRoutes.js";
 import testRoutes    from "./routes/testRoutes.js";
 import notesRoutes   from "./routes/notesRoutes.js";
+import oneshotRoutes from "./routes/oneshotRoutes.js";
+import recapRoutes   from "./routes/recapRoutes.js";
 import consentRoutes from "./routes/consentRoutes.js";
 
 const app = express();
@@ -90,6 +92,8 @@ app.use("/api/wms",     protect, userLimiter, wmsRoutes);
 app.use("/api/test/start-full", protect, heavyLimiter); // expensive: generating a full paper
 app.use("/api/test",    protect, userLimiter, testRoutes);
 app.use("/api/notes",   protect, userLimiter, notesRoutes);
+app.use("/api/oneshot", protect, userLimiter, oneshotRoutes);
+app.use("/api/recap",   protect, userLimiter, recapRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ success: false, error: "Not found." });

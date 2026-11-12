@@ -1,0 +1,100 @@
+{
+ "slug": "chemical-bonding",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Chemical Bonding and Molecular Structure",
+  "JEE": "Chemical Bonding and Molecular Structure"
+ },
+ "title": "Chemical Bonding and Molecular Structure",
+ "readMinutes": 16,
+ "summary": [
+  "Atom bond isliye banate hain kyunki bond banne par energy kam hoti hai aur zyadatar atom stable (octet) configuration paa lete hain. Ionic bond = electron dena-lena; covalent bond = electron share karna.",
+  "Shape ka raaz VSEPR hai: central atom ke electron pairs ek doosre se door rehna chahte hain, aur lone pair, bond pair se zyada jagah leta hai (lp-lp > lp-bp > bp-bp).",
+  "Hybridisation shape ko orbitals ki bhasha mein samjhata hai (sp linear, sp² trigonal, sp³ tetrahedral, sp³d TBP, sp³d² octahedral).",
+  "Molecular orbital theory bond order aur magnetism batati hai — O₂ ka paramagnetism sirf MOT se samajh aata hai. Bond order zyada ⇒ bond chhota aur mazboot."
+ ],
+ "formulas": [
+  {
+   "name": "Formal charge",
+   "formula": "FC = V − L − ½ B",
+   "when": "Best Lewis structure chunna (V = valence e⁻, L = lone e⁻, B = bonding e⁻).",
+   "mistake": "Lowest formal charges wala structure zyada stable."
+  },
+  {
+   "name": "Bond order (MOT)",
+   "formula": "BO = (N_b − N_a) / 2",
+   "when": "Bond length, strength, existence compare karna.",
+   "mistake": "BO = 0 ⇒ molecule exist nahi karta (He₂).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Hybridisation shortcut",
+   "formula": "H = ½ [V + M − c + a]",
+   "when": "Central atom ki hybridisation jaldi nikalna (V = valence e⁻, M = monovalent atoms, c = cation charge, a = anion charge).",
+   "mistake": "H = 2, 3, 4, 5, 6 ⇒ sp, sp², sp³, sp³d, sp³d²."
+  },
+  {
+   "name": "Dipole moment",
+   "formula": "μ = q × d",
+   "when": "Polarity compare karna.",
+   "unit": "debye (1 D = 3.336 × 10⁻³⁰ C·m)",
+   "mistake": "Symmetric molecule (CO₂, BF₃, CH₄) mein bond dipoles cancel ⇒ μ = 0."
+  },
+  {
+   "name": "Percentage ionic character",
+   "formula": "% ionic = (μ_observed / μ_ionic) × 100",
+   "when": "Bond kitna ionic hai."
+  },
+  {
+   "name": "VSEPR shapes (ratta)",
+   "formula": "AB₂ linear · AB₃ trigonal planar · AB₄ tetrahedral · AB₃E pyramidal · AB₂E₂ bent · AB₅ TBP · AB₄E see-saw · AB₃E₂ T-shape · AB₂E₃ linear · AB₆ octahedral · AB₅E square pyramidal · AB₄E₂ square planar",
+   "when": "Shape wale MCQ.",
+   "tag": "Ratta"
+  }
+ ],
+ "examples": [
+  {
+   "title": "O₂ family ka bond order",
+   "problem": "O₂⁺, O₂, O₂⁻, O₂²⁻ ko bond order aur bond length ke order mein lagao.",
+   "solution": "Bond order: O₂⁺ 2.5 > O₂ 2 > O₂⁻ 1.5 > O₂²⁻ 1. Bond length ulta: O₂⁺ sabse chhota, O₂²⁻ sabse lamba. O₂²⁻ diamagnetic hai, baaki teen paramagnetic."
+  },
+  {
+   "title": "Hybridisation shortcut",
+   "problem": "I₃⁻ aur ClF₃ ki hybridisation aur shape?",
+   "solution": "I₃⁻: H = ½(7 + 2 + 1) = 5 ⇒ sp³d; 2 bond pair + 3 lone pair ⇒ linear. ClF₃: H = ½(7 + 3) = 5 ⇒ sp³d; 3 bp + 2 lp ⇒ T-shaped."
+  },
+  {
+   "title": "Ozone ka formal charge",
+   "problem": "O₃ (O=O–O) ke har oxygen ka formal charge?",
+   "solution": "Central O: 6 − 2 − ½(6) = +1. Double-bonded O: 6 − 4 − ½(4) = 0. Single-bonded O: 6 − 6 − ½(2) = −1."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Lone pair ka asar",
+   "explain": "CH₄ 109.5°, NH₃ ~107°, H₂O ~104.5° — har extra lone pair angle ko aur dabata hai."
+  },
+  {
+   "title": "Fajans' rule",
+   "explain": "Chhota, zyada charge wala cation aur bada anion ⇒ zyada covalent character. Isliye LiCl, NaCl se zyada covalent hai."
+  },
+  {
+   "title": "Hydrogen bonding",
+   "explain": "Intermolecular H-bond boiling point badhata hai (H₂O liquid hai). o-nitrophenol mein intramolecular H-bond ⇒ wo p-nitrophenol se zyada volatile hai."
+  },
+  {
+   "title": "MOT filling order",
+   "explain": "B₂, C₂, N₂ tak π2p orbitals σ2p se pehle bhare jaate hain; O₂, F₂ mein σ2p pehle. B₂ paramagnetic, C₂ diamagnetic — PYQ mein aata hai."
+  },
+  {
+   "title": "Resonance",
+   "explain": "Jab ek Lewis structure kaafi nahi (O₃, CO₃²⁻), asli molecule saare structures ka hybrid hota hai; saare bond lengths barabar ho jaate hain."
+  }
+ ],
+ "ratta": [
+  "Shapes: BeCl₂ linear · BF₃ trigonal planar · CH₄ tetrahedral · NH₃ pyramidal · H₂O bent · PCl₅ TBP · SF₄ see-saw · ClF₃ T-shape · XeF₂ linear · SF₆ octahedral · BrF₅ square pyramidal · XeF₄ square planar.",
+  "Repulsion: lp-lp > lp-bp > bp-bp.",
+  "μ = 0: CO₂, BF₃, CH₄, CCl₄, PCl₅, SF₆, XeF₄."
+ ],
+ "verifiedOn": "2026-11-12"
+}

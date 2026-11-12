@@ -23,10 +23,16 @@ const attemptQuestionSchema = new mongoose.Schema(
     questionId:    { type: mongoose.Schema.Types.ObjectId, ref: "Question", required: true },
     subject:       { type: String, required: true },
     chapter:       { type: String, required: true },
+    // "fill_blank": options is empty, correctIndex is 0 and the server
+    // records selectedIndex 0 (correct) / 1 (wrong) / null (skipped), so
+    // scoring, WMS and analytics treat both kinds the same way.
+    type:          { type: String, enum: ["mcq", "fill_blank"], default: "mcq" },
     questionText:  { type: String, required: true },
-    options:       { type: [String], required: true },
+    options:       { type: [String], default: [] },
     correctIndex:  { type: Number, required: true },
     selectedIndex: { type: Number, default: null },
+    answers:       { type: [String], default: undefined },
+    textAnswer:    { type: String, default: null },
     imageUrl:      { type: String, default: null },
     explanation:   { type: String, default: "" },
   },

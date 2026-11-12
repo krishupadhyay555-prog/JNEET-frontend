@@ -50,6 +50,8 @@ const TestAttempt     = lazyPage(() => import("./pages/TestAttempt.jsx"));
 const TestResult      = lazyPage(() => import("./pages/TestResult.jsx"));
 const Revision        = lazyPage(() => import("./pages/Revision.jsx"));
 const RevisionSession = lazyPage(() => import("./pages/RevisionSession.jsx"));
+const OneShot         = lazyPage(() => import("./pages/OneShot.jsx"));
+const OneShotChapter  = lazyPage(() => import("./pages/OneShotChapter.jsx"));
 const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
 const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
 const ParentUnlock    = lazyPage(() => import("./pages/ParentUnlock.jsx"));
@@ -202,6 +204,8 @@ export default function App() {
               <Route path="/tests"     element={<ProtectedRoute><Tests /></ProtectedRoute>} />
               <Route path="/revision"  element={<ProtectedRoute><Revision /></ProtectedRoute>} />
               <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
+              <Route path="/oneshot"   element={<ProtectedRoute><OneShot /></ProtectedRoute>} />
+              <Route path="/oneshot/:slug" element={<ProtectedRoute><OneShotChapter /></ProtectedRoute>} />
               <Route
                 path="/test/attempt/:attemptId"
                 element={<ProtectedRoute><TestAttempt /></ProtectedRoute>}

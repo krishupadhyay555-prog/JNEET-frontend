@@ -1,0 +1,85 @@
+{
+ "slug": "cell-cycle-and-cell-division",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Cell Cycle and Cell Division"
+ },
+ "title": "Cell Cycle and Cell Division",
+ "readMinutes": 12,
+ "summary": [
+  "Cell cycle = ek cell ka bada hona, DNA copy karna aur do mein batna. Interphase (G1 → S → G2) poore cycle ka 95% se zyada time leta hai; asli division (M phase) chhota hota hai.",
+  "S phase mein DNA double hota hai (2C → 4C), lekin chromosome number same rehta hai, kyunki har chromosome mein ab do sister chromatids hain.",
+  "Mitosis (equational division): 2n → 2n, do identical cells — growth, repair. Meiosis (reductional division): 2n → n, chaar cells — gametes, aur crossing over se variation.",
+  "Exam ka core: mitosis ke stages ke markers, prophase I ke 5 sub-stages, aur har stage par chromosome number + DNA content."
+ ],
+ "formulas": [
+  {
+   "name": "Mitosis output",
+   "formula": "1 cell (2n) → 2 cells (2n)",
+   "when": "Somatic cells, growth, repair."
+  },
+  {
+   "name": "Meiosis output",
+   "formula": "1 cell (2n) → 4 cells (n)",
+   "when": "Gamete formation."
+  },
+  {
+   "name": "DNA content",
+   "formula": "G1: 2C → S ke baad / G2: 4C → meiosis I ke baad: 2C → meiosis II ke baad: C",
+   "when": "Kisi bhi stage ka DNA nikalna.",
+   "mistake": "Chromosome number sirf meiosis I mein aadha hota hai, S phase mein nahi badalta.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cells and divisions",
+   "formula": "k rounds ke baad cells = 2ᵏ;   N cells banane ke liye mitotic divisions = N − 1",
+   "when": "Ginti wale sawal.",
+   "mistake": "128 cells ke liye 7 generations lagti hain, par divisions 127."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Har stage ki ginti",
+   "problem": "Ek cell mein 2n = 16, G1 mein DNA = 2C. G2, meiosis I ke baad aur meiosis II ke baad?",
+   "solution": "G2: 16 chromosomes, 4C. Meiosis I ke baad (har cell): 8 chromosomes (har ek mein 2 chromatids), 2C. Meiosis II ke baad: 8 chromosomes, C."
+  },
+  {
+   "title": "128 cells",
+   "problem": "Ek cell se 128 cells banane ke liye kitni mitotic divisions?",
+   "solution": "2⁷ = 128 ⇒ 7 generations. Divisions = 128 − 1 = 127 (1 + 2 + 4 + … + 64)."
+  },
+  {
+   "title": "Stage pehchano",
+   "problem": "(a) Chromosomes equator par, spindle fibres kinetochores se jude. (b) Sister chromatids poles ki taraf ja rahe hain.",
+   "solution": "(a) Metaphase. (b) Anaphase — centromere split hokar chromatids alag hote hain."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Interphase",
+   "explain": "G1: cell metabolically active, badhta hai. S: DNA replication; animal cells mein centriole bhi duplicate. G2: proteins ban-te hain, mitosis ki taiyari. Divide na karne wale cells G0 (quiescent) mein chale jaate hain."
+  },
+  {
+   "title": "Mitosis ke stages",
+   "explain": "Prophase: chromatin condense, spindle shuru. Metaphase: chromosomes metaphase plate par — morphology study ke liye best. Anaphase: centromere split, chromatids poles ki taraf. Telophase: nuclear envelope wapas, chromosomes decondense."
+  },
+  {
+   "title": "Cytokinesis",
+   "explain": "Animal cell: membrane mein furrow ban-ta hai jo andar ki taraf gehra hota hai. Plant cell: rigid wall ki wajah se beech mein cell plate ban-ti hai jo bahar ki taraf badhti hai."
+  },
+  {
+   "title": "Prophase I",
+   "explain": "Leptotene (chromosomes dikhne lagte hain) → Zygotene (synapsis, synaptonemal complex) → Pachytene (crossing over) → Diplotene (chiasmata dikhte hain) → Diakinesis (chiasmata terminalise)."
+  },
+  {
+   "title": "Significance",
+   "explain": "Mitosis: growth, repair, genetic stability. Meiosis: har generation mein chromosome number constant rakhta hai aur variation laata hai — evolution ka raw material."
+  }
+ ],
+ "ratta": [
+  "Prophase I mnemonic: \"Lazy Zebra Plays Dirty Dance\" = Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis.",
+  "Human cell in culture ~24 h per cycle; yeast ~90 min.",
+  "Interphase > 95% of the cell cycle."
+ ],
+ "verifiedOn": "2026-11-12"
+}

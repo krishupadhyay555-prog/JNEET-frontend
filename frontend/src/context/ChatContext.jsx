@@ -379,7 +379,7 @@ export function ChatProvider({ children }) {
       if (stillActive) {
         setIsStreaming(false);
         setStreamingText("");
-        setMessages((prev) => [...prev, { _id: tempAiId, key: `a-${tempKey}`, role: "ai", content: fullText, saved: false, feedback: null }]);
+        setMessages((prev) => [...prev, { _id: tempAiId, key: `a-${tempKey}`, role: "ai", content: fullText, saved: false, feedback: null, guarded: !!policy }]);
       }
 
       try {

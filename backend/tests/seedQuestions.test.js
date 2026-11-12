@@ -2,8 +2,11 @@
 // duplicate or self-contradicting question can't slip back in.
 import { describe, it, expect } from "vitest";
 import { loadSeedQuestions } from "../seed/seedQuestions.js";
+import { isBlankCorrect } from "../services/blankAnswer.js";
 
-const questions = loadSeedQuestions();
+const all = loadSeedQuestions();
+const questions = all.filter((q) => q.type === "mcq");
+const blanks = all.filter((q) => q.type === "fill_blank");
 
 const SUBJECTS = {
   NEET: ["Physics", "Chemistry", "Biology"],
@@ -53,6 +56,44 @@ describe("seed question bank", () => {
   it("no explanation contradicts its own answer key", () => {
     const bad = questions.filter((q) => META.test(q.explanation));
     expect(bad.map((q) => q.questionText.slice(0, 60))).toEqual([]);
+  });
+
+  it("every question is an MCQ or a fill-in-the-blank", () => {
+    expect(all.filter((q) => !["mcq", "fill_blank"].includes(q.type))).toEqual([]);
+  });
+
+  it("fill-in-the-blanks: one blank, accepted answers, an explanation, and no options", () => {
+    expect(blanks.length).toBeGreaterThan(100);
+    const bad = blanks.filter((q) =>
+      !SUBJECTS[q.examMode]?.includes(q.subject) ||
+      !["easy", "moderate", "tough"].includes(q.difficulty) ||
+      (q.questionText.match(/____/g) ?? []).length !== 1 ||
+      !Array.isArray(q.answers) || !q.answers.length || q.answers.some((a) => typeof a !== "string" || !a.trim()) ||
+      q.options !== undefined || q.correctIndex !== undefined ||
+      !q.explanation?.trim() || META.test(q.explanation)
+    );
+    expect(bad.map((q) => q.questionText.slice(0, 60))).toEqual([]);
+  });
+
+  it("every accepted answer of a blank is itself marked correct (no typo in the key)", () => {
+    const bad = blanks.filter((q) => q.answers.some((a) => !isBlankCorrect(a, q.answers)));
+    expect(bad.map((q) => q.questionText.slice(0, 60))).toEqual([]);
+  });
+
+  it("fill-in-the-blanks only use chapters that already exist for that exam (so Revision can list them)", () => {
+    const chapters = new Set(questions.map((q) => `${q.examMode}|${q.subject}|${q.chapter}`));
+    const bad = blanks.filter((q) => !chapters.has(`${q.examMode}|${q.subject}|${q.chapter}`));
+    expect(bad.map((q) => `${q.examMode} ${q.chapter}`)).toEqual([]);
+  });
+
+  it("no duplicate fill-in-the-blank within the same exam", () => {
+    const seen = new Set(); const dups = [];
+    for (const q of blanks) {
+      const k = `${q.examMode}|${norm(q.questionText)}`;
+      if (seen.has(k)) dups.push(q.questionText.slice(0, 60));
+      seen.add(k);
+    }
+    expect(dups).toEqual([]);
   });
 
   it("JEE Advanced questions are JEE-only", () => {
