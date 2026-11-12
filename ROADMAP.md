@@ -250,6 +250,7 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
 ### D-m. Founder decisions and new work, 12 Nov 2026
 - [ ] **D73 Safety v2** — PR #10 (see §0). Tick when merged + checked live.
 - [ ] **D74 Mockups first** — premium, calm, study-focused, not cartoon, no Sparkles: Chat, Dashboard, Revision, OneShot. Founder picks, then build.
+  - 12 Nov 2026: 6 phone mockups shared — Chat in 2 looks (A "Calm Paper" light / B "Night Focus" dark), Pichli baar ka recap, Dashboard, Revision (fill-in-the-blank + MCQ), OneShot: https://claude.ai/artifact/CWcKodXKcUdDWea4eR7JcV — waiting for founder's pick.
 - [ ] **D75 Revision = MCQ + fill-in-the-blanks** (instant feedback; separate from Mock Tests and from OneShot). Needs a new `fill_blank` question type + verified content.
 - [ ] **D76 OneShot (separate feature)** — per chapter, pre-written and verified (₹0 per student, never generated live): brief summary + all important formulas + important examples + short-but-detailed explanation of the important topics. Own words only (no NCERT text).
 - [ ] **D77 "Pichli baar ka recap"** — every time the student opens the chat, a short line: "Pichli baar: <topics> — 5–10 sawaal se revise karo?". On click, the AI maps the last chat's topics to our chapter list (choice from the list only) and serves 5–10 **verified questions from the bank** for those chapters; if no chapter matches, no recap (never AI-invented questions). Strictly tested.
