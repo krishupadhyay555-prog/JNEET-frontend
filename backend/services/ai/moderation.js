@@ -18,15 +18,15 @@ import { env } from "../../config/env.js";
 
 const EXPLICIT_EN = [
   "porn\\w*", "pr0n", "xxx", "nsfw", "hentai", "onlyfans",
-  "nudes?", "naked\\s+(?:girls?|boys?|women|woman|men|man|pics?|photos?|videos?|body|bodies)",
+  "nudes", "nude\\s+(?:pics?|photos?|videos?|selfies?|images?|girls?|boys?|women|woman|men|man)", "naked\\s+(?:girls?|boys?|women|woman|men|man|pics?|photos?|videos?|body|bodies)",
   "sexting", "sexy\\s+(?:pics?|photos?|videos?|stor(?:y|ies)|girls?|boys?)",
-  "erotic\\w*", "horny", "blow\\s?jobs?", "hand\\s?jobs?", "boobs?", "tits", "titties", "pussy",
-  "dick\\s?pics?", "cock", "orgasm\\w*", "masturbat\\w*", "fap+ing", "bdsm", "fetish\\w*", "incest",
+  "erotic\\w*", "horny", "blow\\s?jobs?", "hand\\s?jobs?", "boobs?", "titties", "pussy",
+  "dick\\s?pics?", "cock\\s?(?:pics?|sucker|ring)", "orgasm\\w*", "masturbat\\w*", "fap+ing", "bdsm", "fetish\\w*",
   "sex\\s+(?:chat|stor(?:y|ies)|videos?|scenes?|toys?|tape)",
   "(?:have|having|do|doing|wanna|want\\s+to)\\s+sex",
   "sleep\\s+with\\s+me", "dirty\\s+talk",
   "send\\s+(?:me\\s+)?(?:nudes?|pics)",
-  "chudai", "chudwa\\w*", "lund", "lauda", "bhosd\\w*", "bhosad\\w*", "choot", "randi",
+  "chudai", "chudwa\\w*", "lund(?!\\s+universit)", "lauda", "bhosd\\w*", "bhosad\\w*", "choot", "randi",
   "gaand\\s?(?:marw|mara)\\w*", "sex\\s+karo", "sex\\s+karna\\s+hai",
 ];
 const EXPLICIT_RE = new RegExp(`(?<![a-z0-9])(?:${EXPLICIT_EN.join("|")})(?![a-z0-9])`, "i");
@@ -36,7 +36,10 @@ const ROLEPLAY_RE = /(?:role\s?play|story|stories|chat|baat|talk)[^.\n]{0,40}\b(
 
 const DEVANAGARI_RE = /(चुदाई|चूदाई|लंड|लौड़ा|भोसड़|रंडी|पॉर्न|पोर्न|नंगी|सेक्स\s*(चैट|स्टोरी|वीडियो))/;
 
-const ADULT_TAG_RE = /(?<![a-z0-9])(?:18\s?\+|adult\s+content|adults?\s+only)(?![a-z0-9])/i;
+// "18+" only as a content tag — never inside arithmetic ("show that 18 + 4√2 …",
+// "x² + 18 + 2x"): a digit, bracket, root or single-letter variable after the
+// plus sign means it is maths.
+const ADULT_TAG_RE = /(?<![a-z0-9])(?:18\s?\+(?!\s*(?:[0-9(√π]|[a-z](?![a-z])))|adult\s+content(?!\s+of)|adults?\s+only)(?![a-z0-9])/i;
 
 // Light de-obfuscation: "p0rn", "s3xting", "n.u.d.e.s", "porrrn".
 export function normalizeForModeration(text) {
