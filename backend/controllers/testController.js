@@ -64,6 +64,11 @@ function shuffleOptions(q) {
   };
 }
 
+// Only Main-level questions are served. JEE Advanced questions sit in
+// the bank (level: "advanced") until the Advanced pack launches.
+// $ne also matches older documents that have no level field.
+export const SERVABLE = { level: { $ne: "advanced" } };
+
 const normText = (t) => String(t ?? "").toLowerCase().replace(/\s+/g, " ").trim();
 
 // Random sample of `count` questions with NO repeats inside one paper.
@@ -92,7 +97,7 @@ async function sampleUnique(filter, count, excludeIds = []) {
   for (const avoid of [excludeIds, []]) {
     for (let round = 0; round < 3 && picked.length < count; round++) {
       const more = await Question.aggregate([
-        { $match: { ...filter, _id: { $nin: [...avoid, ...picked.map((q) => q._id)] } } },
+        { $match: { ...filter, ...SERVABLE, _id: { $nin: [...avoid, ...picked.map((q) => q._id)] } } },
         { $sample: { size: count - picked.length } },
       ]);
       if (more.length === 0) break;
@@ -211,7 +216,7 @@ export const startFullTest = async (req, res, next) => {
 
     const shortfalls = [];
     for (const s of config.subjects) {
-      const available = await Question.countDocuments({ examMode, subject: s.subject });
+      const available = await Question.countDocuments({ examMode, subject: s.subject, ...SERVABLE });
       if (available < s.count) {
         shortfalls.push(`${s.subject} (need ${s.count}, have ${available})`);
       }
@@ -422,7 +427,7 @@ export const getAvailableChapters = async (req, res, next) => {
       });
     }
 
-    const match = { examMode };
+    const match = { examMode, ...SERVABLE };
     if (subject) match.subject = subject;
 
     const rows = await Question.aggregate([

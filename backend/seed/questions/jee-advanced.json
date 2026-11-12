@@ -1,0 +1,754 @@
+[
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "lim (n→∞) Σ (r = 1 to n) r²/(n³ + n r²) equals",
+    "options": [
+      "1 − π/4",
+      "1 − π/2",
+      "π/4",
+      "π/4 − 1/2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Write the term as (1/n)·(r/n)²/(1 + (r/n)²). As n → ∞ the sum becomes ∫₀¹ x²/(1 + x²) dx = ∫₀¹ [1 − 1/(1 + x²)] dx = 1 − π/4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The value of ∫₀^π x/(1 + sin x) dx is",
+    "options": [
+      "π",
+      "2π",
+      "π²/4",
+      "π/2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Let I be the integral. Using x → π − x, I = ∫₀^π (π − x)/(1 + sin x) dx, so 2I = π∫₀^π dx/(1 + sin x). An antiderivative of 1/(1 + sin x) is tan x − sec x = (sin x − 1)/cos x (continuous on [0, π]), so ∫₀^π dx/(1 + sin x) = [0 − (−1)] − [0 − 1] = 2. Hence 2I = 2π and I = π."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The number of non-negative integer solutions of x₁ + x₂ + x₃ = 10 with each xᵢ ≤ 4 is",
+    "options": [
+      "3",
+      "10",
+      "15",
+      "6"
+    ],
+    "correctIndex": 3,
+    "explanation": "Count solutions without the upper limit: C(12,2) = 66. Subtract those with some xᵢ ≥ 5: put yᵢ = xᵢ − 5, giving C(7,2) = 21 for each of 3 variables (63). Two variables ≥ 5 would need sum ≥ 10 with the third 0: C(2,2) = 1 for each of 3 pairs (add back 3). Total = 66 − 63 + 3 = 6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "Three fair dice are thrown. The probability that the sum of the numbers shown is 10 is",
+    "options": [
+      "1/6",
+      "5/36",
+      "1/9",
+      "1/8"
+    ],
+    "correctIndex": 3,
+    "explanation": "The number of ordered triples (a,b,c) with 1 ≤ a,b,c ≤ 6 and a + b + c = 10 is 27. Probability = 27/216 = 1/8."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The number of complex numbers z satisfying z⁵ = z̄ (conjugate of z) is",
+    "options": [
+      "10",
+      "5",
+      "7",
+      "6"
+    ],
+    "correctIndex": 2,
+    "explanation": "Taking moduli, |z|⁵ = |z|, so |z| = 0 or 1. z = 0 is one solution. If |z| = 1 then z̄ = 1/z, so z⁶ = 1, giving 6 more. Total = 7."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The value of ∫₀¹ ln(1 + x)/(1 + x²) dx is",
+    "options": [
+      "π ln 2",
+      "(π/4) ln 2",
+      "(π/8) ln 2",
+      "(π/2) ln 2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Put x = tan θ: I = ∫₀^(π/4) ln(1 + tan θ) dθ. Using θ → π/4 − θ, 1 + tan(π/4 − θ) = 2/(1 + tan θ), so I = ∫₀^(π/4) [ln 2 − ln(1 + tan θ)] dθ = (π/4) ln 2 − I. Hence I = (π/8) ln 2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The sum Σ (k = 1 to ∞) k²/3ᵏ equals",
+    "options": [
+      "2",
+      "9/8",
+      "3/2",
+      "3/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Use Σ k² xᵏ = x(1 + x)/(1 − x)³ for |x| < 1. With x = 1/3: (1/3)(4/3)/(2/3)³ = (4/9)/(8/27) = 3/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The area of the region bounded by y = |x² − 4| and y = 5 is",
+    "options": [
+      "32/3",
+      "28/3",
+      "52/3",
+      "44/3"
+    ],
+    "correctIndex": 3,
+    "explanation": "The curves meet where |x² − 4| = 5, i.e. x = ±3. Area = ∫₋₃³ (5 − |x² − 4|) dx = 2[∫₀² (5 − (4 − x²)) dx + ∫₂³ (5 − (x² − 4)) dx] = 2[(2 + 8/3) + (9 − 19/3)] = 2[14/3 + 8/3] = 44/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The number of integer values of k for which x³ − 3x + k = 0 has three distinct real roots is",
+    "options": [
+      "2",
+      "5",
+      "3",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "f(x) = x³ − 3x + k has a local maximum f(−1) = k + 2 and a local minimum f(1) = k − 2. Three distinct real roots need k + 2 > 0 and k − 2 < 0, i.e. −2 < k < 2. Integers: −1, 0, 1, so 3 values."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The tangent to y = x³ at the point (1, 1) meets the curve again at",
+    "options": [
+      "(−3, −27)",
+      "(−2, −8)",
+      "(−1, −1)",
+      "(2, 8)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tangent at (1,1): y = 3x − 2. Solving x³ = 3x − 2 gives x³ − 3x + 2 = (x − 1)²(x + 2) = 0. The other point is x = −2, y = −8."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The number of 2 × 2 matrices with every entry 0 or 1 that are singular (determinant 0) is",
+    "options": [
+      "10",
+      "12",
+      "6",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "There are 16 such matrices. det = ad − bc ≠ 0 needs exactly one of ad, bc to be 1: ad = 1, bc = 0 gives 3 cases; ad = 0, bc = 1 gives 3 cases. Non-singular = 6, so singular = 16 − 6 = 10."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "lim (x→0) (sin x − x)/(x tan² x) equals",
+    "options": [
+      "−1/6",
+      "1/6",
+      "−1/3",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "sin x − x ≈ −x³/6 and x tan² x ≈ x³. The limit is −1/6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A block of mass m slides on the smooth inclined face (45°) of a wedge of mass M = m, which rests on a smooth horizontal floor. The acceleration of the wedge is",
+    "options": [
+      "g/4",
+      "g/3",
+      "g/√2",
+      "g/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "For a smooth block on a free smooth wedge, A = mg sinθ cosθ/(M + m sin²θ). With M = m and θ = 45°: A = g(1/2)/(1 + 1/2) = g/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A uniform solid disc rolls without slipping down a rough incline of angle 30°. The minimum coefficient of static friction required is",
+    "options": [
+      "1/3",
+      "2/(3√3)",
+      "1/(3√3)",
+      "1/√3"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a disc a = (2/3)g sinθ and friction f = (1/3)mg sinθ. Need f ≤ μ mg cosθ, so μ_min = (1/3) tanθ = (1/3)(1/√3) = 1/(3√3) ≈ 0.19."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The minimum energy needed to shift a satellite of mass m from a circular orbit of radius 2R to one of radius 3R around a planet of mass M is",
+    "options": [
+      "GMm/(2R)",
+      "GMm/(6R)",
+      "GMm/(12R)",
+      "GMm/(4R)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Orbital energy E = −GMm/(2r). ΔE = −GMm/(6R) − (−GMm/(4R)) = GMm(1/4 − 1/6)/R = GMm/(12R)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "One mole of an ideal monatomic gas goes through the cycle (P₀,V₀) → (2P₀,V₀) → (2P₀,2V₀) → (P₀,2V₀) → (P₀,V₀). The efficiency of the cycle is",
+    "options": [
+      "1/6",
+      "1/4",
+      "2/13",
+      "3/13"
+    ],
+    "correctIndex": 2,
+    "explanation": "Net work = area of the rectangle = P₀V₀. Heat is absorbed in the first two steps: isochoric Q = (3/2)(2P₀V₀ − P₀V₀) = 1.5P₀V₀; isobaric Q = (5/2)(4P₀V₀ − 2P₀V₀) = 5P₀V₀. Q_in = 6.5P₀V₀, so η = 1/6.5 = 2/13 ≈ 15.4%."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A capacitor charges through a resistor from a battery (time constant τ = RC). The time taken for the charge to reach three-fourths of its final value is",
+    "options": [
+      "τ ln (4/3)",
+      "τ ln 2",
+      "τ ln 4",
+      "3τ/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "q = q₀(1 − e^(−t/τ)). Setting q = 3q₀/4 gives e^(−t/τ) = 1/4, so t = τ ln 4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A charged particle enters a uniform magnetic field with its velocity at 60° to the field. The ratio of the pitch of its helical path to the radius of the helix is",
+    "options": [
+      "2π/√3",
+      "√3π",
+      "2π√3",
+      "π/√3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Radius r = mv sin60°/(qB) = √3mv/(2qB). Pitch p = v cos60° × 2πm/(qB) = πmv/(qB). p/r = π/(√3/2) = 2π/√3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A parallel beam of light falls on a glass sphere (μ = 1.5) of radius R. The beam converges at a point beyond the far surface of the sphere at a distance",
+    "options": [
+      "3R/2",
+      "2R",
+      "R/2",
+      "R"
+    ],
+    "correctIndex": 2,
+    "explanation": "First surface: 1.5/v − 1/∞ = 0.5/R gives v = 3R from the front surface, i.e. R beyond the back surface. Second surface (object virtual, u = +R): 1/v − 1.5/R = (1 − 1.5)/(−R), so 1/v = 2/R and v = R/2 beyond the far surface."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A U-tube with horizontal base of length L contains liquid and is rotated with angular speed ω about a vertical axis passing through one of its arms. The difference in liquid levels in the two arms is",
+    "options": [
+      "ω²L/(2g)",
+      "ωL²/(2g)",
+      "ω²L²/g",
+      "ω²L²/(2g)"
+    ],
+    "correctIndex": 3,
+    "explanation": "In the rotating frame the free surface follows y = ω²x²/(2g) measured from the axis. The arm on the axis is at x = 0 and the other at x = L, so Δh = ω²L²/(2g)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A block of mass m hangs from a light string that passes over a pulley (a uniform disc of mass m and radius r, free to rotate) and is tied to a vertical spring of constant k. The string does not slip. The period of small oscillations is",
+    "options": [
+      "2π√(2m/k)",
+      "2π√(m/(2k))",
+      "2π√(m/k)",
+      "2π√(3m/(2k))"
+    ],
+    "correctIndex": 3,
+    "explanation": "Energy method: KE = ½mv² + ½(½mr²)(v/r)² = ½(3m/2)v². Effective mass = 3m/2, so T = 2π√(3m/(2k))."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A source and an observer move towards each other, each with speed v/10, where v is the speed of sound in still air. If the source frequency is f, the observed frequency is",
+    "options": [
+      "9f/11",
+      "10f/9",
+      "11f/9",
+      "6f/5"
+    ],
+    "correctIndex": 2,
+    "explanation": "f′ = f(v + v_o)/(v − v_s) = f(v + v/10)/(v − v/10) = f(11/10)/(9/10) = 11f/9."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A parallel-plate capacitor of capacitance C₀ (plate gap d) has a dielectric slab of constant K = 4 and thickness d/2 placed inside it, parallel to the plates. The new capacitance is",
+    "options": [
+      "8C₀/5",
+      "4C₀",
+      "2C₀",
+      "5C₀/8"
+    ],
+    "correctIndex": 0,
+    "explanation": "C = ε₀A/[(d − t) + t/K] = ε₀A/[d/2 + d/8] = ε₀A/(5d/8) = (8/5)C₀."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "For N₂O₄(g) ⇌ 2NO₂(g), Kp = 4 atm at a certain temperature. The degree of dissociation of N₂O₄ at a total pressure of 1 atm is",
+    "options": [
+      "0.50",
+      "1/√2 ≈ 0.71",
+      "0.25",
+      "0.89"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kp = 4α²P/(1 − α²). With P = 1 atm: 4 = 4α²/(1 − α²), so α² = 1 − α², α² = 1/2 and α = 1/√2 ≈ 0.71."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The emf of the concentration cell Ag | Ag⁺(0.001 M) || Ag⁺(0.1 M) | Ag at 298 K is",
+    "options": [
+      "0.236 V",
+      "0.059 V",
+      "0.0295 V",
+      "0.118 V"
+    ],
+    "correctIndex": 3,
+    "explanation": "E = (0.0591/1) log([Ag⁺]cathode/[Ag⁺]anode) = 0.0591 × log(100) = 0.0591 × 2 = 0.118 V."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The entropy change when 2 mol of an ideal gas expands reversibly and isothermally from 10 L to 100 L is about",
+    "options": [
+      "−38.3 J K⁻¹",
+      "38.3 J K⁻¹",
+      "19.1 J K⁻¹",
+      "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔS = nR ln(V₂/V₁) = 2 × 8.314 × ln 10 = 2 × 8.314 × 2.303 ≈ 38.3 J K⁻¹."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A decomposes by two parallel first-order paths: A → B (k₁) and A → C (k₂), with k₁ = 2k₂. The percentage of B in the products is",
+    "options": [
+      "75%",
+      "66.7%",
+      "33.3%",
+      "50%"
+    ],
+    "correctIndex": 1,
+    "explanation": "For parallel first-order reactions, [B]/[C] = k₁/k₂ = 2 at all times. So B = 2/3 of the products ≈ 66.7%."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The number of geometrical isomers of the octahedral complex [Co(NH₃)₃Cl₃] is",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "An octahedral MA₃B₃ complex has two geometrical isomers: facial (fac) and meridional (mer). Neither is optically active."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The total number of monochlorinated products (including stereoisomers) formed by free-radical chlorination of 2-methylbutane is",
+    "options": [
+      "8",
+      "5",
+      "4",
+      "6"
+    ],
+    "correctIndex": 3,
+    "explanation": "Four constitutional isomers form: 1-chloro-2-methylbutane (chiral, 2), 2-chloro-2-methylbutane (achiral, 1), 2-chloro-3-methylbutane (chiral, 2) and 1-chloro-3-methylbutane (achiral, 1). Total = 6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "Benzenediazonium chloride reacts with phenol in mildly alkaline medium. The product is",
+    "options": [
+      "p-hydroxyazobenzene (orange dye)",
+      "salicylic acid",
+      "phenyl ether",
+      "chlorobenzene"
+    ],
+    "correctIndex": 0,
+    "explanation": "This is an azo coupling. The phenoxide ion is attacked at the para position by the diazonium electrophile, giving p-hydroxyazobenzene, an orange dye."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "Among H₂O, H₂S, H₂Se and H₂Te, the strongest acid in water is",
+    "options": [
+      "H₂O",
+      "H₂S",
+      "H₂Se",
+      "H₂Te"
+    ],
+    "correctIndex": 3,
+    "explanation": "Down group 16 the H−E bond becomes longer and weaker, so H⁺ is released more easily. H₂Te is the strongest acid of the four."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "In a sample of hydrogen atoms, electrons are excited to n = 6. The maximum number of different spectral lines emitted as they return to the ground state is",
+    "options": [
+      "5",
+      "15",
+      "21",
+      "6"
+    ],
+    "correctIndex": 1,
+    "explanation": "Maximum lines = n(n − 1)/2 = 6 × 5/2 = 15."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A mixture of ethanal and propanal is treated with dilute NaOH. The number of different aldol (β-hydroxy carbonyl) products, ignoring stereoisomers, is",
+    "options": [
+      "6",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 3,
+    "explanation": "Both aldehydes have α-hydrogens, so each can act as nucleophile (enolate) and as electrophile. Self-aldols: 2; cross-aldols: 2. Total = 4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "Which of the following has the maximum number of lone pairs on the central atom?",
+    "options": [
+      "IF₅",
+      "ClF₃",
+      "SF₄",
+      "XeF₂"
+    ],
+    "correctIndex": 3,
+    "explanation": "Lone pairs on the central atom: XeF₂ = 3, ClF₃ = 2, SF₄ = 1, IF₅ = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A 0.1 molal aqueous solution of a weak monobasic acid HA freezes at −0.2046 °C (Kf = 1.86 K kg mol⁻¹). The degree of dissociation of HA is",
+    "options": [
+      "10%",
+      "1%",
+      "20%",
+      "5%"
+    ],
+    "correctIndex": 0,
+    "explanation": "i = ΔTf/(Kf·m) = 0.2046/(1.86 × 0.1) = 1.10. For HA ⇌ H⁺ + A⁻, i = 1 + α, so α = 0.10 = 10%."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A conducting sphere of radius R carries charge +Q and is surrounded by a concentric thin shell of radius 2R carrying −Q. The potential of the inner sphere is (k = 1/4πε₀)",
+    "options": [
+      "kQ/(2R)",
+      "3kQ/(2R)",
+      "kQ/R",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Potentials add: inner sphere contributes kQ/R at its own surface, and the shell contributes k(−Q)/(2R) everywhere inside it. V = kQ/R − kQ/(2R) = kQ/(2R)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "Photons emitted in the n = 2 → n = 1 transition of He⁺ fall on a metal of work function 4.8 eV. The stopping potential is",
+    "options": [
+      "36 V",
+      "5.4 V",
+      "10.2 V",
+      "40.8 V"
+    ],
+    "correctIndex": 0,
+    "explanation": "For He⁺ (Z = 2), E = 13.6 × 4 × (1 − 1/4) = 40.8 eV. K_max = 40.8 − 4.8 = 36 eV, so the stopping potential is 36 V."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "Two wires of the same material, with radii in the ratio 1 : 2, are joined end to end and kept under the same tension. The ratio of wave speeds in the thinner and thicker wires is",
+    "options": [
+      "1 : 2",
+      "1 : 4",
+      "√2 : 1",
+      "2 : 1"
+    ],
+    "correctIndex": 3,
+    "explanation": "v = √(T/μ) and μ = ρπr², so v ∝ 1/r. v_thin/v_thick = 2/1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A uniform chain of length L lies on a smooth table with one-third of its length hanging over the edge. It is released from rest. Its speed when the last link leaves the table is",
+    "options": [
+      "(1/3)√(gL)",
+      "√(2gL/3)",
+      "√(gL)",
+      "(2/3)√(2gL)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Take the table top as reference. Initially the hanging third (mass m/3) has its centre at L/6 below: U₁ = −mgL/18. Finally the whole chain hangs with centre at L/2: U₂ = −mgL/2. Loss = 4mgL/9 = ½mv², so v = √(8gL/9) = (2/3)√(2gL)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The degree of unsaturation (double-bond equivalent) of a compound with molecular formula C₅H₈O is",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explanation": "DBE = (2C + 2 − H)/2 (oxygen is ignored) = (10 + 2 − 8)/2 = 2. Possible structures include cyclopentanone or a pent-3-en-2-one."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrogen",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The molarity of a \"20 volume\" hydrogen peroxide solution is about",
+    "options": [
+      "20 M",
+      "3.58 M",
+      "1.79 M",
+      "0.89 M"
+    ],
+    "correctIndex": 2,
+    "explanation": "20 volume means 1 L of solution gives 20 L of O₂ at STP. 2H₂O₂ → 2H₂O + O₂, so 22.4 L O₂ comes from 2 mol H₂O₂ (i.e. 11.2 L from 1 mol). Molarity = 20/11.2 ≈ 1.79 M."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The spin-only magnetic moment of [Fe(H₂O)₆]²⁺ is about",
+    "options": [
+      "5.92 BM",
+      "2.83 BM",
+      "4.90 BM",
+      "0 BM"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fe²⁺ is 3d⁶ and H₂O is a weak-field ligand, so the complex is high spin with 4 unpaired electrons. μ = √(4 × 6) = √24 ≈ 4.90 BM."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "A zero-order reaction has a half-life of 20 min when the initial concentration is 0.4 M. The time needed for the concentration to fall from 0.4 M to 0.1 M is",
+    "options": [
+      "20 min",
+      "40 min",
+      "60 min",
+      "30 min"
+    ],
+    "correctIndex": 3,
+    "explanation": "For zero order, t½ = [A]₀/(2k), so k = 0.4/(2 × 20) = 0.01 M min⁻¹. Time = Δ[A]/k = 0.3/0.01 = 30 min."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The number of real solutions of eˣ = x² is",
+    "options": [
+      "0",
+      "3",
+      "1",
+      "2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Let f(x) = eˣ − x². For x > 0, f′(x) = eˣ − 2x > 0 (since eˣ ≥ ex > 2x), and f(0) = 1 > 0, so there is no positive root. For x < 0, f is continuous with f(−1) < 0 < f(0) and f is increasing there, giving exactly one root. Total = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The value of ∫₀^∞ x e^(−x²) dx is",
+    "options": [
+      "2",
+      "1/2",
+      "1",
+      "√π/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "Put u = x², du = 2x dx: ∫₀^∞ x e^(−x²) dx = ½∫₀^∞ e^(−u) du = ½."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "Two distinct numbers are chosen at random from 1, 2, …, 20. The probability that their sum is even is",
+    "options": [
+      "9/19",
+      "9/20",
+      "1/2",
+      "10/19"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sum is even when both are odd or both are even: C(10,2) + C(10,2) = 45 + 45 = 90 out of C(20,2) = 190. Probability = 90/190 = 9/19."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "advanced",
+    "questionText": "The maximum value of sin x + cos x + sin x cos x is",
+    "options": [
+      "√2 + 1/2",
+      "2",
+      "3/2",
+      "1 + √2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Let t = sin x + cos x ∈ [−√2, √2]; then sin x cos x = (t² − 1)/2. The expression is t + (t² − 1)/2, increasing for t > −1, so its maximum is at t = √2: √2 + (2 − 1)/2 = √2 + 1/2."
+  }
+]

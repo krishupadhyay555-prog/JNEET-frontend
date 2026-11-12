@@ -1,0 +1,402 @@
+[
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The volume of 0.1 M KMnO₄ needed to oxidise 25 mL of 0.2 M FeSO₄ completely in acidic medium is",
+    "options": [
+      "10 mL",
+      "25 mL",
+      "50 mL",
+      "5 mL"
+    ],
+    "correctIndex": 0,
+    "explanation": "In acid, MnO₄⁻ → Mn²⁺ (n-factor 5) and Fe²⁺ → Fe³⁺ (n-factor 1). Equivalents are equal: 5 × 0.1 × V = 1 × 0.2 × 25, so V = 10 mL."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Atomic Structure",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The number of radial nodes in a 4d orbital is",
+    "options": [
+      "1",
+      "0",
+      "3",
+      "2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Radial nodes = n − l − 1. For 4d, n = 4 and l = 2, so radial nodes = 4 − 2 − 1 = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "For a reaction at 300 K, ΔG° = −11.5 kJ mol⁻¹. Its equilibrium constant is closest to (R = 8.314 J mol⁻¹ K⁻¹)",
+    "options": [
+      "1000",
+      "4.6",
+      "10",
+      "100"
+    ],
+    "correctIndex": 3,
+    "explanation": "ΔG° = −RT ln K, so ln K = 11500/(8.314 × 300) ≈ 4.61 and K = e^4.61 ≈ 100."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The pH of a 0.01 M aqueous solution of CH₃COONa at 25 °C (Ka of CH₃COOH = 1×10⁻⁵) is",
+    "options": [
+      "10.0",
+      "9.0",
+      "8.5",
+      "7.5"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a salt of a weak acid and strong base, pH = 7 + ½(pKa + log C) = 7 + ½(5 + log 0.01) = 7 + ½(5 − 2) = 8.5."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The rate of a reaction doubles when the temperature rises from 300 K to 310 K. Its activation energy is about",
+    "options": [
+      "5.4 kJ mol⁻¹",
+      "26.8 kJ mol⁻¹",
+      "53.6 kJ mol⁻¹",
+      "107 kJ mol⁻¹"
+    ],
+    "correctIndex": 2,
+    "explanation": "ln(k₂/k₁) = (Ea/R)(1/T₁ − 1/T₂). ln 2 = (Ea/8.314)(1/300 − 1/310) = (Ea/8.314)(1.075×10⁻⁴). So Ea ≈ 8.314 × 0.693/1.075×10⁻⁴ ≈ 5.36×10⁴ J mol⁻¹ = 53.6 kJ mol⁻¹."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Redox Reactions and Electrochemistry",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "For the Daniell cell (E°(Cu²⁺/Cu) = +0.34 V, E°(Zn²⁺/Zn) = −0.76 V), ΔG° of the cell reaction is about (F = 96500 C mol⁻¹)",
+    "options": [
+      "−81 kJ mol⁻¹",
+      "+212 kJ mol⁻¹",
+      "−212 kJ mol⁻¹",
+      "−106 kJ mol⁻¹"
+    ],
+    "correctIndex": 2,
+    "explanation": "E°cell = 0.34 − (−0.76) = 1.10 V and n = 2. ΔG° = −nFE° = −2 × 96500 × 1.10 = −212300 J ≈ −212 kJ mol⁻¹."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Solutions",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The depression in freezing point of a 0.01 molal aqueous solution of K₄[Fe(CN)₆], assuming complete dissociation (Kf = 1.86 K kg mol⁻¹), is",
+    "options": [
+      "0.074 K",
+      "0.0186 K",
+      "0.186 K",
+      "0.093 K"
+    ],
+    "correctIndex": 3,
+    "explanation": "K₄[Fe(CN)₆] → 4K⁺ + [Fe(CN)₆]⁴⁻ gives i = 5. ΔTf = i·Kf·m = 5 × 1.86 × 0.01 = 0.093 K."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry Basic Principles",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The total number of stereoisomers of 2,3-dibromobutane is",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "2"
+    ],
+    "correctIndex": 0,
+    "explanation": "There are two identical stereocentres. The (R,R) and (S,S) forms are enantiomers, while (R,S) has a plane of symmetry and is a meso compound. Total = 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which of the following is the most acidic?",
+    "options": [
+      "p-nitrophenol",
+      "phenol",
+      "p-cresol",
+      "ethanol"
+    ],
+    "correctIndex": 0,
+    "explanation": "The −NO₂ group at the para position stabilises the phenoxide ion by −I and −R effects, increasing acidity. p-Cresol (−CH₃, +I) is less acidic than phenol, and ethanol is much weaker."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Among pentan-2-one, pentan-3-one, pentanal and benzophenone, which gives a positive iodoform test?",
+    "options": [
+      "Benzophenone",
+      "Pentan-2-one",
+      "Pentanal",
+      "Pentan-3-one"
+    ],
+    "correctIndex": 1,
+    "explanation": "The iodoform test needs a CH₃CO− group (or CH₃CH(OH)−). Pentan-2-one (CH₃COCH₂CH₂CH₃) has it; pentan-3-one, pentanal and benzophenone do not."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Amines",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "In the Hinsberg test, a secondary amine reacts with benzenesulphonyl chloride to give a product that is",
+    "options": [
+      "a gas with a foul smell",
+      "no reaction at all",
+      "insoluble in aqueous KOH",
+      "soluble in aqueous KOH"
+    ],
+    "correctIndex": 2,
+    "explanation": "A secondary amine forms an N,N-disubstituted sulphonamide. It has no acidic N−H hydrogen, so it does not dissolve in alkali. (Primary amines give an alkali-soluble product; tertiary amines do not react.)"
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The hybridisation of Xe and the shape of XeF₄ are",
+    "options": [
+      "sp³d², octahedral",
+      "sp³, tetrahedral",
+      "sp³d², square planar",
+      "sp³d, see-saw"
+    ],
+    "correctIndex": 2,
+    "explanation": "Xe in XeF₄ has 4 bond pairs and 2 lone pairs (6 electron pairs), so hybridisation is sp³d². The two lone pairs occupy opposite (trans) positions, giving a square planar shape."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "d- and f-Block Elements",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The spin-only magnetic moment of Mn²⁺ (Z = 25) is about",
+    "options": [
+      "3.87 BM",
+      "4.90 BM",
+      "5.92 BM",
+      "1.73 BM"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mn²⁺ is 3d⁵ with 5 unpaired electrons. μ = √(n(n+2)) = √35 ≈ 5.92 BM."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The number of chiral carbon atoms in the open-chain form of D-glucose is",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explanation": "Open-chain glucose is CHO−(CHOH)₄−CH₂OH. C-2, C-3, C-4 and C-5 each carry four different groups, so there are 4 chiral carbons (C-1 is CHO and C-6 is CH₂OH)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Classification of Elements and Periodicity",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The correct order of first ionisation enthalpy is",
+    "options": [
+      "B < C < O < N",
+      "O < N < C < B",
+      "B < C < N < O",
+      "C < B < O < N"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ionisation enthalpy generally increases across period 2, but N (half-filled 2p³) is higher than O (2p⁴, paired electron repulsion). B (2p¹) is lowest. So B < C < O < N."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The number of moles of O₂ needed to completely burn 1 mol of propane (C₃H₈) is",
+    "options": [
+      "4",
+      "7/2",
+      "5",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explanation": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. Carbon needs 3 mol O₂ and hydrogen needs 2 mol O₂, total 5 mol."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Hydrocarbons",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Ozonolysis of 2-methylbut-2-ene followed by Zn/H₂O gives",
+    "options": [
+      "two molecules of propanone",
+      "propanal and ethanal",
+      "butanone and methanal",
+      "propanone and ethanal"
+    ],
+    "correctIndex": 3,
+    "explanation": "2-Methylbut-2-ene is (CH₃)₂C=CHCH₃. Cleaving the double bond gives (CH₃)₂C=O (propanone) and CH₃CHO (ethanal)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Coordination Compounds",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The hybridisation, shape and magnetic nature of [Ni(CN)₄]²⁻ are",
+    "options": [
+      "sp³, square planar, diamagnetic",
+      "dsp², tetrahedral, paramagnetic",
+      "dsp², square planar, diamagnetic",
+      "sp³, tetrahedral, paramagnetic"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ni²⁺ is 3d⁸. CN⁻ is a strong-field ligand, so the 3d electrons pair up, freeing one 3d orbital: dsp² hybridisation, square planar, no unpaired electrons (diamagnetic)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "A buffer contains 0.1 M CH₃COOH and 0.2 M CH₃COONa (pKa = 4.74). Its pH is about",
+    "options": [
+      "5.34",
+      "4.74",
+      "4.44",
+      "5.04"
+    ],
+    "correctIndex": 3,
+    "explanation": "Henderson equation: pH = pKa + log([salt]/[acid]) = 4.74 + log 2 = 4.74 + 0.30 = 5.04."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The correct order of acid strength is",
+    "options": [
+      "ClCH₂COOH > FCH₂COOH > BrCH₂COOH > CH₃COOH",
+      "BrCH₂COOH > ClCH₂COOH > FCH₂COOH > CH₃COOH",
+      "CH₃COOH > BrCH₂COOH > ClCH₂COOH > FCH₂COOH",
+      "FCH₂COOH > ClCH₂COOH > BrCH₂COOH > CH₃COOH"
+    ],
+    "correctIndex": 3,
+    "explanation": "Electron-withdrawing halogens stabilise the carboxylate ion by the −I effect, which is strongest for F. Acetic acid has an electron-donating CH₃ group and is weakest."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The numbers of σ and π bonds in acrylonitrile, CH₂=CH−C≡N, are",
+    "options": [
+      "6 σ and 2 π",
+      "5 σ and 3 π",
+      "6 σ and 3 π",
+      "9 σ and 0 π"
+    ],
+    "correctIndex": 2,
+    "explanation": "σ bonds: 3 C−H + C=C (1) + C−C (1) + C≡N (1) = 6. π bonds: one in C=C and two in C≡N = 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Polymers",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Nylon-6,6 is obtained by condensation polymerisation of",
+    "options": [
+      "hexamethylenediamine and adipic acid",
+      "phenol and formaldehyde",
+      "caprolactam alone",
+      "ethylene glycol and terephthalic acid"
+    ],
+    "correctIndex": 0,
+    "explanation": "Nylon-6,6 forms from H₂N(CH₂)₆NH₂ and HOOC(CH₂)₄COOH (each has 6 carbon atoms) with loss of water. Caprolactam gives nylon-6; glycol + terephthalic acid gives terylene; phenol + HCHO gives bakelite."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "p-Block Elements",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The shape of ClF₃ is",
+    "options": [
+      "trigonal planar",
+      "T-shaped",
+      "see-saw",
+      "trigonal pyramidal"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cl has 3 bond pairs and 2 lone pairs (sp³d). The lone pairs occupy equatorial positions, leaving a T-shaped molecule."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "The half-life of a reaction is found to be independent of the initial concentration. The order of the reaction is",
+    "options": [
+      "2",
+      "0",
+      "½",
+      "1"
+    ],
+    "correctIndex": 3,
+    "explanation": "For a first-order reaction t½ = 0.693/k, which does not depend on [A]₀. For zero order t½ ∝ [A]₀ and for second order t½ ∝ 1/[A]₀."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "difficulty": "tough",
+    "level": "main",
+    "questionText": "Which reagent reduces ethanoic acid directly to ethanol?",
+    "options": [
+      "H₂/Pd–BaSO₄",
+      "LiAlH₄",
+      "NaBH₄",
+      "Zn–Hg/HCl"
+    ],
+    "correctIndex": 1,
+    "explanation": "LiAlH₄ is strong enough to reduce carboxylic acids to primary alcohols. NaBH₄ does not normally reduce acids; Rosenmund's catalyst reduces acid chlorides to aldehydes; Clemmensen reduction converts C=O to CH₂."
+  }
+]

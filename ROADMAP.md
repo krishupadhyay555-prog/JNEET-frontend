@@ -2,7 +2,7 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **11 Nov 2026**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
+> Last updated: **11 Nov 2026 (night)**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
 **Target:** a 10/10 product for NEET UG + JEE Main students — "iske bina prep nahi karunga".
@@ -30,17 +30,19 @@
 
 Code only goes live after its PR is **merged into `main`**. Until then the founder will not see it, even if it is "done" here.
 
-| PR | What | Status (11 Nov 2026, evening) |
+| PR | What | Status (11 Nov 2026, night) |
 |---|---|---|
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
 | #2 | Turnstile captcha, **email logo**, seed script skips empty files | ✅ Merged 11 Nov — live (logo inside email confirmed on Gmail) |
 | #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ✅ Merged 11 Nov |
 | #4 | Roadmap live-status update | ✅ Merged 11 Nov |
-| #5 | **Debug sweep**: critical login bypass fix, search crash, test paper fixes, chat layout/lag, accuracy labels, JEE Main dates, security updates | ⏳ **Open — NOT live** |
+| #5 | **Debug sweep**: critical login bypass fix, search crash, test paper fixes, chat layout/lag, accuracy labels, JEE Main dates, security updates | ✅ Merged 11 Nov — live |
+| #6 | **Question bank cleanup + new tough questions**: 1,184 wrong answer keys fixed, 2,883 broken/duplicate questions removed, chapter names unified, 216 new verified questions (incl. 47 JEE Advanced, stored but not served), `seedQuestions.js --prune` | ⏳ **Open — NOT live.** After merge the founder must run the seed (see §1 L-seed) |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
+| 11 Nov 2026 | Many answer keys wrong; explanations said "option index 2… discarded"; 2,000+ repeated questions; same chapter under 2–3 names | Generated questions were saved without checking that the key matched the worked answer; near-identical rewrites were all kept | PR #6: every flagged question solved again (sympy/brute force for numericals); keys fixed or question deleted; near-duplicates removed; new test `seedQuestions.test.js` blocks bad shape, duplicate options, duplicate text and self-contradicting explanations. **Rule:** a question enters the bank only after its answer is computed/verified, and the bank test must pass |
 | 11 Nov 2026 | PR #5 showed "Checks failed", then "merge conflicts" | CI: GitHub's runner could not reach Ubuntu's servers while installing the test browser (not our code; re-run passed). Conflict: PR #4 changed the same ROADMAP lines and was merged separately | Re-ran CI; merged `main` into the branch. **Rule:** never put the same file change in two open PRs |
 | 11 Nov 2026 | **CRITICAL: anyone could log in to any verified account** | `/verify-email` logged the caller in when the email was already verified, without checking the code | Fixed in PR #5 (now 409 "already verified, please log in", no session) + regression test |
 | 11 Nov 2026 | Notes / chat search crashed (500) on `?q=a&q=b` | Query param arrived as an array | Only plain strings used, capped at 100 chars (PR #5) |
@@ -58,7 +60,8 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 
 ## 1. Launch checklist (still pending)
 
-- [ ] **L1** Merge PR #2 (captcha + email logo + seed script skips empty files) — *open, not merged as of 1 Nov*.
+- [x] **L1** Merge PR #2 (captcha + email logo + seed script skips empty files) — merged 11 Nov 2026.
+- [ ] **L-seed** After PR #6 is merged: in the `backend` folder run `node seed/seedQuestions.js --prune` (adds/updates all questions and only *lists* old wrong/duplicate ones), check the count, then `node seed/seedQuestions.js --prune --yes` to delete them from the live database. Old test results are not affected.
 - [ ] **L2** Cloudflare Turnstile: site key → Vercel `VITE_TURNSTILE_SITE_KEY` (redeploy); secret → Render `TURNSTILE_SECRET_KEY`. Test login / register / forgot-password.
 - [ ] **L3** OpenAI key + $10 credit on Render (`OPENAI_API_KEY`), confirm model IDs (`gpt-6-luna`, `gpt-6.1-sol`), run `node scripts/ai-eval.mjs` and read the 6 answers. *AI chat does not work without this.*
 - [ ] **L4** `api.jneetai.com` custom domain on Render + DNS at Hostinger (need nameserver screenshot) → Vercel `VITE_API_BASE_URL=https://api.jneetai.com/api` → Render `COOKIE_SAMESITE=lax`.
@@ -78,7 +81,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 |---|---|---|---|
 | A1 | [ ] **Product analytics** (PostHog-type) | Can't measure D7/D30, feature use or drop-off today | Free tier, 1 day |
 | A2 | [ ] **"Report this question" button + admin review panel** | Wrong questions caught fast; foundation of trust | ₹0, 2–3 days |
-| A3 | [ ] **Question bank cleanup** | 13,986 of 15,635 tagged "tough" but tags unreliable (sampled "tough" was a one-formula question); **208 duplicates**; **0 diagram questions** | ₹0, 3–4 days |
+| A3 | [x] **Question bank cleanup** — done 11 Nov 2026 (PR #6): 1,184 keys fixed, 2,883 removed, chapters unified. Difficulty tags still need re-calibration (follow-up) | 13,986 of 15,635 tagged "tough" but tags unreliable (sampled "tough" was a one-formula question); **208 duplicates**; **0 diagram questions** | ₹0, 3–4 days |
 | A4 | [ ] **Onboarding diagnostic test** (15–20 min) | Fills WMS on day 1 + personal plan; today a new student sees an empty dashboard | ₹0, 2–3 days |
 | A5 | [ ] **SEO public pages** (formula sheets, PYQ solutions) | Site is fully behind login → invisible on Google; free traffic | ₹0, 4–5 days |
 | A6 | [ ] **Hindi medium support** | NTA offers Hindi papers; large Hindi-medium share, esp. NEET; few good AI tools for them | AI translation + check, ~1 week |
@@ -183,7 +186,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 - [ ] **D36 Difficulty recalibrated from real accuracy.**
 
 ### D-h. Question bank growth (target ~35,000–40,000 total)
-- [ ] **D37 Original tough multi-concept questions written by Claude** — ~5,000–8,000 over 3–4 weeks; numericals verified by running code. ₹0 API.
+- [ ] **D37 Original tough multi-concept questions written by Claude** — ~5,000–8,000 over 3–4 weeks; numericals verified by running code. ₹0 API. *Progress: first 216 added 11 Nov 2026 (PR #6) — NEET 87, JEE Main 82, JEE Advanced 47.*
 - [ ] **D38 JEE Main PYQs 2019–2026** — ~12,000–14,000 from NTA papers + final answer keys; own solutions.
 - [ ] **D39 NEET PYQs 2013–2026** — ~3,000. Never copy coaching sites' solutions.
 - [ ] **D40 Diagram questions** (SVG figures) — physics needs them.
@@ -274,7 +277,7 @@ Estimated total: **~10–12 weeks**. Most items cost ₹0/month; only the handwr
 
 ## 8. Known facts
 
-- Question bank: **15,635** (NEET Bio 2,941 · NEET Chem 2,412 · NEET Phy 2,501 · JEE Phy 2,624 · JEE Chem 2,378 · JEE Maths 2,779), 196 chapters, 0 images, 208 duplicates, difficulty tags unreliable. Six `*-batch2.json` seed files are empty (seed fix in PR #2).
+- Question bank (after PR #6): **12,968** = NEET 6,877 (Bio 2,923 · Chem 2,046 · Phy 1,908) + JEE Main 6,044 (Phy 1,997 · Chem 2,070 · Maths 1,977) + JEE Advanced 47 (stored, not served; `level: "advanced"`). Was 15,635 before cleanup. 0 images; difficulty tags still unreliable (≈88% "tough"). New questions go in `*-batch2.json` / `jee-advanced.json`.
 - AI quotas: Free 5/day · Pro 30/day · Elite 50/day + 10 deep/month.
 
 ## 9. Open decisions (founder)

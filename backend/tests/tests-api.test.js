@@ -51,6 +51,17 @@ describe('Tests API', () => {
     expect(res.body.chapters[0]).toMatchObject({ subject: 'Physics', chapter: 'Laws of Motion', easy: 5, total: 5 })
   })
 
+  it('never serves JEE Advanced-level questions (level: advanced) yet', async () => {
+    await Question.insertMany([11, 12, 13, 14, 15].map((n) => q(n, { level: 'advanced', questionText: `Advanced ${n}?` })))
+    const list = await a.get('/api/test/chapters')
+    expect(list.body.chapters[0]).toMatchObject({ chapter: 'Laws of Motion', total: 5 })
+    for (let i = 0; i < 3; i++) {
+      const res = await a.post('/api/test/start').send({ subject: 'Physics', chapter: 'Laws of Motion', easy: 5 })
+      expect(res.status).toBe(200)
+      expect(res.body.questions.map((x) => x.questionText).join(' ')).not.toMatch(/Advanced/)
+    }
+  })
+
   it('rejects a subject that is not in the student\'s syllabus', async () => {
     const res = await a.post('/api/test/start').send({ subject: 'Mathematics', chapter: 'Limits', easy: 3 })
     expect(res.status).toBe(400)

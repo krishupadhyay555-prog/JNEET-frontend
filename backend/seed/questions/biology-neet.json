@@ -1058,7 +1058,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "In C4 plants, the first stable product of CO2 fixation is a 4-carbon compound formed in the mesophyll cells with the help of the enzyme:",
     "options": [
@@ -1074,7 +1074,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "The light-independent reactions of photosynthesis (Calvin cycle) occur in the:",
     "options": [
@@ -1090,7 +1090,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "Photorespiration is a wasteful process that occurs when RuBisCO acts as an oxygenase instead of a carboxylase, and is more prevalent in:",
     "options": [
@@ -1106,7 +1106,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "The Z-scheme of photosynthesis describes the electron transport pathway between:",
     "options": [
@@ -1122,7 +1122,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "CAM (Crassulacean Acid Metabolism) plants open their stomata primarily during the:",
     "options": [
@@ -1138,7 +1138,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "moderate",
     "questionText": "The primary pigment involved in the light reactions of photosynthesis is:",
     "options": [
@@ -1154,7 +1154,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "moderate",
     "questionText": "The splitting of water molecules during photosynthesis (photolysis) occurs in association with:",
     "options": [
@@ -1170,7 +1170,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "easy",
     "questionText": "The overall raw materials required for photosynthesis are:",
     "options": [
@@ -1634,7 +1634,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "The functional and structural unit of the kidney responsible for urine formation is the:",
     "options": [
@@ -1650,7 +1650,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "Reabsorption of glucose, amino acids, and most water occurs primarily in which part of the nephron?",
     "options": [
@@ -1666,7 +1666,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "The hormone that regulates water reabsorption in the collecting duct, increasing its permeability to water, is:",
     "options": [
@@ -1682,7 +1682,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "moderate",
     "questionText": "Humans are classified as which type of nitrogenous waste excreters, based on the primary excretory product?",
     "options": [
@@ -1698,7 +1698,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "easy",
     "questionText": "Urine is temporarily stored in the:",
     "options": [
@@ -3538,22 +3538,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Biomolecules",
-    "difficulty": "moderate",
-    "questionText": "Which bond directly links two amino acids together in a protein molecule?",
-    "options": [
-      "Glycosidic bond",
-      "Peptide bond",
-      "Phosphodiester bond",
-      "Hydrogen bond"
-    ],
-    "correctIndex": 1,
-    "explanation": "A peptide bond forms between the carboxyl group of one amino acid and the amino group of another, with elimination of a water molecule.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Cell Cycle and Cell Division",
     "difficulty": "tough",
     "questionText": "A diploid cell with 20 chromosomes undergoes meiosis. How many chromosomes and DNA molecules are present in each daughter cell immediately after completion of meiosis II?",
@@ -3698,7 +3682,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "Which segment of the nephron is primarily responsible for establishing the medullary osmotic gradient through its counter-current mechanism?",
     "options": [
@@ -4114,7 +4098,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "moderate",
     "questionText": "Which process moves substances from the blood in the glomerular capillaries into Bowman's capsule during urine formation?",
     "options": [
@@ -4578,7 +4562,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A hormone increases water permeability of the distal nephron and collecting ducts, causing more water to be reabsorbed. Which hormone is responsible?",
     "options": [
@@ -4594,7 +4578,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "If the afferent arteriole entering a glomerulus becomes substantially constricted, what is the most direct effect on glomerular filtration?",
     "options": [
@@ -5938,7 +5922,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A person becomes dehydrated and plasma osmolarity rises. Which response helps conserve water by producing a smaller volume of concentrated urine?",
     "options": [
@@ -5954,7 +5938,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A nephron segment actively transports sodium chloride but has very low permeability to water. Which nephron region best matches this description?",
     "options": [
@@ -7202,7 +7186,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A person has a genetic defect that impairs reabsorption of glucose in the proximal convoluted tubule despite normal blood glucose levels. Which term best describes glucose appearing in the urine under these conditions?",
     "options": [
@@ -7468,7 +7452,7 @@
       "Non-vascular tissue combined with a dominant sporophyte"
     ],
     "correctIndex": 0,
-    "explanation": "Standard plant groups with vascular tissue, such as pteridophytes and seed plants, have a dominant sporophyte. A dominant gametophyte combined with vascular tissue does not correspond to any standard classified group, making this combination inconsistent with typical classification.",
+    "explanation": "Standard plant groups with vascular tissue, such as pteridophytes and seed plants, have a dominant sporophyte. A dominant gametophyte combined with vascular tissue does not correspond to any standard classified group.",
     "imageUrl": null
   },
   {
@@ -7938,7 +7922,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A person produces a large volume of dilute urine after drinking excessive water. Which hormonal change and nephron response most directly contribute to this condition?",
     "options": [
@@ -8354,7 +8338,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Digestion and Absorption",
+    "chapter": "Digestion and Absorption",
     "difficulty": "tough",
     "questionText": "A person has a severe deficiency of bile reaching the small intestine. Which digestive process would be most directly impaired?",
     "options": [
@@ -8370,7 +8354,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Digestion and Absorption",
+    "chapter": "Digestion and Absorption",
     "difficulty": "tough",
     "questionText": "Which combination correctly describes the products formed after complete digestion of the three major classes of food molecules?",
     "options": [
@@ -8386,7 +8370,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Breathing and Exchange of Gases",
+    "chapter": "Breathing and Exchange of Gases",
     "difficulty": "tough",
     "questionText": "A person rapidly ascends to a high altitude where atmospheric oxygen pressure is lower. Which immediate respiratory adjustment helps maintain oxygen uptake?",
     "options": [
@@ -8402,7 +8386,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Breathing and Exchange of Gases",
+    "chapter": "Breathing and Exchange of Gases",
     "difficulty": "tough",
     "questionText": "Most carbon dioxide produced by metabolically active tissues is transported to the lungs primarily in the form of:",
     "options": [
@@ -8418,7 +8402,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Body Fluids and Circulation",
+    "chapter": "Body Fluids and Circulation",
     "difficulty": "tough",
     "questionText": "If the atrioventricular valves fail to close properly during ventricular systole, which abnormal event is most likely?",
     "options": [
@@ -8434,7 +8418,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Body Fluids and Circulation",
+    "chapter": "Body Fluids and Circulation",
     "difficulty": "tough",
     "questionText": "A blood vessel carries oxygenated blood from the lungs toward the heart. Which vessel is being described?",
     "options": [
@@ -8450,7 +8434,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "During formation of urine, which process moves substances such as glucose and amino acids from the nephron filtrate back into the blood under normal conditions?",
     "options": [
@@ -8466,7 +8450,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A hormone increases water reabsorption in the distal parts of the nephron and collecting ducts. Which hormone is responsible for this effect?",
     "options": [
@@ -8482,7 +8466,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Neural Control and Coordination",
+    "chapter": "Neural Control and Coordination",
     "difficulty": "tough",
     "questionText": "A neuron receives a stimulus strong enough to reach threshold at its axon hillock. Which sequence best describes the subsequent propagation of the action potential along the axon?",
     "options": [
@@ -8498,7 +8482,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Neural Control and Coordination",
+    "chapter": "Neural Control and Coordination",
     "difficulty": "tough",
     "questionText": "A reflex action is completed rapidly without requiring conscious processing before the response. Which structure primarily integrates the immediate reflex response in a typical spinal reflex?",
     "options": [
@@ -8514,7 +8498,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Chemical Coordination and Integration",
+    "chapter": "Chemical Coordination and Integration",
     "difficulty": "tough",
     "questionText": "A hormone is secreted by the adrenal cortex and promotes sodium reabsorption while increasing potassium excretion in the kidneys. Which hormone is it?",
     "options": [
@@ -8530,7 +8514,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology: Chemical Coordination and Integration",
+    "chapter": "Chemical Coordination and Integration",
     "difficulty": "tough",
     "questionText": "A person has reduced secretion of thyroxine despite adequate iodine intake. Which regulatory change would normally be expected due to reduced negative feedback?",
     "options": [
@@ -9508,22 +9492,6 @@
     "subject": "Biology",
     "chapter": "Molecular Basis of Inheritance",
     "difficulty": "tough",
-    "questionText": "A mutation changes a codon in an mRNA from UAU to UAA. What is the most likely consequence during translation?",
-    "options": [
-      "Premature termination of translation",
-      "Insertion of an additional amino acid",
-      "Replacement of the codon by a promoter",
-      "Duplication of the entire mRNA molecule"
-    ],
-    "correctIndex": 0,
-    "explanation": "UAU codes for tyrosine, whereas UAA is a stop codon. The mutation therefore converts a sense codon into a termination signal and can cause premature termination of translation.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "tough",
     "questionText": "A DNA molecule replicates semiconservatively. After two rounds of replication in a medium containing only normal nitrogen, starting from DNA whose both strands were labelled with heavy nitrogen, what fraction of DNA molecules will contain one heavy and one light strand?",
     "options": [
       "1/2",
@@ -9810,22 +9778,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Animal Kingdom",
-    "difficulty": "tough",
-    "questionText": "An animal has a water vascular system, tube feet and adult radial symmetry despite having bilateral symmetry during development. Which phylum does it most likely belong to?",
-    "options": [
-      "Echinodermata",
-      "Arthropoda",
-      "Annelida",
-      "Mollusca"
-    ],
-    "correctIndex": 0,
-    "explanation": "Echinoderms possess a water vascular system and tube feet, and adults typically show radial symmetry while their larvae are bilaterally symmetrical.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Biological Classification",
     "difficulty": "tough",
     "questionText": "An organism lacks a membrane-bound nucleus and membrane-bound organelles but possesses a cell wall and 70S ribosomes. Which kingdom is the most appropriate classification under the five-kingdom system?",
@@ -9890,7 +9842,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Body Fluids and Circulation",
     "difficulty": "tough",
     "questionText": "During a sudden fall in arterial blood pressure, which response would help restore blood pressure through the autonomic nervous system?",
     "options": [
@@ -9906,7 +9858,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A hormone increases the reabsorption of sodium ions in the distal nephron, thereby promoting water retention and increasing extracellular fluid volume. Which hormone best fits this role?",
     "options": [
@@ -10187,8 +10139,8 @@
       "50 kJ",
       "5 kJ"
     ],
-    "correctIndex": 2,
-    "explanation": "Primary consumers receive approximately 10% of producer energy, giving 5,000 kJ. Secondary consumers receive about 10% of that, so the available energy is 500 kJ; however, because the question defines producer to secondary consumer as two transfers, the correct value is 500 kJ.",
+    "correctIndex": 1,
+    "explanation": "Producer energy = 50,000 kJ. Primary consumers receive about 10% = 5,000 kJ, and secondary consumers receive about 10% of that = 500 kJ.",
     "imageUrl": null
   },
   {
@@ -10354,7 +10306,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "After drinking a large quantity of water, a healthy person produces a high volume of dilute urine. Which combination most directly explains this response?",
     "options": [
@@ -10413,22 +10365,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Epithelial tissue consists of closely packed cells with little intercellular matrix and is supported by a basement membrane. It commonly forms protective coverings and linings.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Animal Kingdom",
-    "difficulty": "moderate",
-    "questionText": "An animal is diploblastic, radially symmetrical and possesses specialised stinging cells used for prey capture and defence. Which phylum is most appropriate?",
-    "options": [
-      "Porifera",
-      "Cnidaria",
-      "Annelida",
-      "Arthropoda"
-    ],
-    "correctIndex": 1,
-    "explanation": "Cnidarians are diploblastic, generally radially symmetrical and possess cnidocytes or cnidoblasts containing stinging structures. These cells are characteristic of the phylum.",
     "imageUrl": null
   },
   {
@@ -10770,7 +10706,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Digestion and Absorption",
     "difficulty": "tough",
     "questionText": "A person has reduced secretion of hydrochloric acid in the stomach. Which digestive consequence would be expected most directly because of this change?",
     "options": [
@@ -10818,7 +10754,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A hormone increases water reabsorption in the distal tubules and collecting ducts of a nephron. If secretion of this hormone is markedly reduced, which urine change is most likely?",
     "options": [
@@ -11195,8 +11131,8 @@
       "10 units",
       "1 unit"
     ],
-    "correctIndex": 3,
-    "explanation": "Energy transfer is approximately 10% at each trophic transfer. From producers to primary consumers gives 1,000 units, then 100 units to secondary consumers and 10 units to tertiary consumers. Wait: this makes 10 units, so the correct option should be index 2.",
+    "correctIndex": 2,
+    "explanation": "Energy transfer is approximately 10% at each trophic transfer. From producers to primary consumers gives 1,000 units, then 100 units to secondary consumers and 10 units to tertiary consumers. Wait: this makes 10 units, so the correct option is.",
     "imageUrl": null
   },
   {
@@ -11538,22 +11474,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Digestion and Absorption",
-    "difficulty": "tough",
-    "questionText": "A fatty meal enters the duodenum and stimulates a hormone that promotes pancreatic enzyme secretion and contraction of the gallbladder. Which hormone is primarily involved?",
-    "options": [
-      "Cholecystokinin",
-      "Secretin",
-      "Gastrin",
-      "Insulin"
-    ],
-    "correctIndex": 0,
-    "explanation": "Cholecystokinin is released in response to fats and partially digested proteins and stimulates pancreatic enzyme secretion and gallbladder contraction.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Breathing and Exchange of Gases",
     "difficulty": "tough",
     "questionText": "A disease substantially reduces the functional surface area of the alveoli while the respiratory membrane remains otherwise intact. What is the most direct consequence?",
@@ -11860,22 +11780,6 @@
     "subject": "Biology",
     "chapter": "Principles of Inheritance and Variation",
     "difficulty": "tough",
-    "questionText": "A man with blood group A has genotype Iᴬi and a woman with blood group B has genotype Iᴮi. What is the probability that their child will have blood group O?",
-    "options": [
-      "1/4",
-      "1/2",
-      "3/4",
-      "1"
-    ],
-    "correctIndex": 0,
-    "explanation": "The cross Iᴬi × Iᴮi gives IᴬIᴮ, Iᴬi, Iᴮi and ii in equal proportions. Blood group O corresponds to genotype ii, giving a probability of 1/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
     "questionText": "Two phenotypically normal parents have an affected son and an affected daughter for a rare inherited disorder. The disorder occurs equally in males and females. Which inheritance pattern best fits these observations?",
     "options": [
       "Autosomal recessive",
@@ -12148,22 +12052,6 @@
     "subject": "Biology",
     "chapter": "Organisms and Populations",
     "difficulty": "tough",
-    "questionText": "A population grows rapidly when resources are abundant but growth progressively slows as population size approaches the environmental carrying capacity. Which model best describes this pattern?",
-    "options": [
-      "Logistic growth",
-      "Unlimited exponential growth",
-      "Linear growth",
-      "Zero growth from the beginning"
-    ],
-    "correctIndex": 0,
-    "explanation": "Logistic growth incorporates environmental resistance and carrying capacity. Growth is initially rapid but slows as the population approaches its carrying capacity.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Organisms and Populations",
-    "difficulty": "tough",
     "questionText": "Two closely related species occupy the same habitat and depend on the same limiting resource. If one species consistently eliminates the other from that resource, which principle best explains the outcome?",
     "options": [
       "Competitive exclusion principle",
@@ -12317,22 +12205,6 @@
     ],
     "correctIndex": 0,
     "explanation": "In coelomates, the true body cavity is completely lined by mesoderm. Acoelomates lack a body cavity, while pseudocoelomates have a cavity not completely lined by mesoderm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Animal Kingdom",
-    "difficulty": "tough",
-    "questionText": "An adult marine animal possesses a water vascular system and tube feet and shows radial symmetry, while its larva is bilaterally symmetrical. Which phylum does it belong to?",
-    "options": [
-      "Echinodermata",
-      "Arthropoda",
-      "Annelida",
-      "Mollusca"
-    ],
-    "correctIndex": 0,
-    "explanation": "Echinoderms possess a water vascular system and tube feet. Their adults generally show radial symmetry, whereas their larvae are bilaterally symmetrical.",
     "imageUrl": null
   },
   {
@@ -12994,7 +12866,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A person has markedly reduced secretion of antidiuretic hormone. Assuming normal water intake and normal glomerular filtration, which urine pattern is expected?",
     "options": [
@@ -13181,22 +13053,6 @@
     ],
     "correctIndex": 1,
     "explanation": "In the taxonomic hierarchy, genus is contained within family. Therefore, organisms belonging to the same genus necessarily belong to the same family.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Structural Organisation in Animals",
-    "difficulty": "moderate",
-    "questionText": "A tissue forms a continuous protective covering over a body surface and consists of cells packed closely together with very little intercellular material. Which tissue is most likely involved?",
-    "options": [
-      "Epithelial tissue",
-      "Connective tissue",
-      "Muscular tissue",
-      "Neural tissue"
-    ],
-    "correctIndex": 0,
-    "explanation": "Epithelial tissue consists of closely packed cells with minimal intercellular spaces and commonly forms protective coverings and linings.",
     "imageUrl": null
   },
   {
@@ -13490,7 +13346,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A substance is freely filtered at the glomerulus and then completely reabsorbed from the filtrate under normal conditions. If its plasma concentration rises within the kidney's reabsorptive capacity, what would initially happen to its urinary excretion?",
     "options": [
@@ -14068,22 +13924,6 @@
     "subject": "Biology",
     "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
-    "questionText": "A substance is freely filtered at the glomerulus and is completely reabsorbed when its filtered load remains below its transport maximum. What should be expected in the urine under these conditions?",
-    "options": [
-      "Essentially no amount of the substance",
-      "An amount equal to the filtered load",
-      "An amount greater than the filtered load",
-      "Only the amount secreted by the collecting duct"
-    ],
-    "correctIndex": 0,
-    "explanation": "If the filtered load remains below the transport maximum and the substance is completely reabsorbed, essentially none remains in the tubular fluid for urinary excretion.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Excretory Products and Their Elimination",
-    "difficulty": "tough",
     "questionText": "A dehydrated person has increased plasma osmolarity. Which hormonal response most directly helps reduce water loss through the kidneys?",
     "options": [
       "Increased secretion of antidiuretic hormone",
@@ -14308,38 +14148,6 @@
     "subject": "Biology",
     "chapter": "Principles of Inheritance and Variation",
     "difficulty": "tough",
-    "questionText": "A plant with genotype AaBb is crossed with aabb, and the two genes assort independently. What proportion of offspring is expected to express both dominant phenotypes?",
-    "options": [
-      "1/4",
-      "1/2",
-      "3/4",
-      "1/16"
-    ],
-    "correctIndex": 0,
-    "explanation": "AaBb produces four types of gametes in equal proportions. In the test cross, only AaBb offspring express both dominant phenotypes, giving a probability of 1/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
-    "questionText": "A man with genotype Iᴬi and a woman with genotype Iᴮi have a child. What is the probability that the child will have blood group O?",
-    "options": [
-      "1/4",
-      "1/2",
-      "3/4",
-      "1"
-    ],
-    "correctIndex": 0,
-    "explanation": "The cross Iᴬi × Iᴮi produces IᴬIᴮ, Iᴬi, Iᴮi and ii in equal proportions. Since ii gives blood group O, the probability is 1/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
     "questionText": "Two phenotypically normal parents produce affected sons and daughters for a rare disorder. The trait occurs similarly in both sexes. Which inheritance pattern most plausibly explains this observation?",
     "options": [
       "Autosomal recessive",
@@ -14388,38 +14196,6 @@
     "subject": "Biology",
     "chapter": "Molecular Basis of Inheritance",
     "difficulty": "tough",
-    "questionText": "A point mutation changes an mRNA codon from UAU to UAA. What is the most likely consequence for translation?",
-    "options": [
-      "Premature termination of translation",
-      "Insertion of an additional amino acid",
-      "Duplication of the entire polypeptide",
-      "Conversion of mRNA into a chromosome"
-    ],
-    "correctIndex": 0,
-    "explanation": "UAU codes for tyrosine, whereas UAA is a stop codon. The mutation therefore can terminate translation prematurely.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "tough",
-    "questionText": "DNA containing heavy nitrogen in both strands is transferred to a medium containing only light nitrogen. After two rounds of semiconservative replication, what fraction of DNA molecules will contain one heavy and one light strand?",
-    "options": [
-      "1/2",
-      "1/4",
-      "3/4",
-      "1"
-    ],
-    "correctIndex": 0,
-    "explanation": "After the first replication, all molecules are hybrid. In the second replication, each hybrid produces one hybrid molecule and one fully light molecule, so half remain hybrid.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "tough",
     "questionText": "A mutation substantially reduces RNA polymerase binding to the promoter of a structural gene. Which immediate molecular effect is most likely?",
     "options": [
       "Reduced transcription of the structural gene",
@@ -14429,22 +14205,6 @@
     ],
     "correctIndex": 0,
     "explanation": "The promoter is required for initiation of transcription by RNA polymerase. Reduced polymerase binding therefore decreases transcription of the associated gene.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Evolution",
-    "difficulty": "tough",
-    "questionText": "A population is in Hardy-Weinberg equilibrium with allele frequencies p = 0.7 and q = 0.3. What is the expected frequency of heterozygous individuals?",
-    "options": [
-      "0.42",
-      "0.49",
-      "0.09",
-      "0.70"
-    ],
-    "correctIndex": 0,
-    "explanation": "The expected heterozygote frequency is 2pq. Thus 2 × 0.7 × 0.3 = 0.42.",
     "imageUrl": null
   },
   {
@@ -14605,22 +14365,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Recombinant DNA technology permits production of human insulin using genetically engineered microorganisms. This avoids reliance on extracting insulin from animal pancreatic tissue.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Organisms and Populations",
-    "difficulty": "tough",
-    "questionText": "A population grows rapidly when resources are abundant but its growth rate decreases as population size approaches the carrying capacity of its habitat. Which model best describes this population?",
-    "options": [
-      "Logistic growth",
-      "Unlimited exponential growth",
-      "Constant linear growth",
-      "Zero growth from the beginning"
-    ],
-    "correctIndex": 0,
-    "explanation": "Logistic growth incorporates environmental resistance and carrying capacity. Growth is rapid at first but slows as population size approaches the carrying capacity.",
     "imageUrl": null
   },
   {
@@ -14836,22 +14580,6 @@
     "subject": "Biology",
     "chapter": "Plant Kingdom",
     "difficulty": "tough",
-    "questionText": "A plant group has a dominant gametophyte generation, lacks true vascular tissues and requires water for fertilisation. Which group best fits these features?",
-    "options": [
-      "Bryophytes",
-      "Pteridophytes",
-      "Gymnosperms",
-      "Angiosperms"
-    ],
-    "correctIndex": 0,
-    "explanation": "Bryophytes lack true vascular tissues and have a dominant gametophyte generation. Water is required for fertilisation because the male gametes need to reach the archegonium.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Plant Kingdom",
-    "difficulty": "tough",
     "questionText": "A vascular plant has a dominant sporophyte, reproduces through spores rather than seeds and requires water for fertilisation. Which group is most consistent with these characteristics?",
     "options": [
       "Pteridophytes",
@@ -14946,7 +14674,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Body Fluids and Circulation",
     "difficulty": "tough",
     "questionText": "A sudden fall in arterial pressure activates a cardiovascular reflex. Which combination of changes would most directly increase blood pressure?",
     "options": [
@@ -14962,7 +14690,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A hormone increases sodium reabsorption in the distal nephron and thereby promotes water retention. Which hormone is responsible for this action?",
     "options": [
@@ -14978,7 +14706,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Body Fluids and Circulation",
     "difficulty": "easy",
     "questionText": "Which organ pumps blood through the circulatory system by rhythmic muscular contractions?",
     "options": [
@@ -15149,22 +14877,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Combined oral contraceptive pills suppress ovulation and produce hormonal changes that make cervical mucus less favourable for sperm passage. Vasectomy and tubectomy are permanent surgical methods, while a copper IUD acts primarily through local effects on sperm and fertilisation.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Reproductive Health",
-    "difficulty": "tough",
-    "questionText": "A couple undergoes an assisted reproductive procedure in which fertilisation is achieved outside the body and the resulting early embryo is subsequently transferred into the female reproductive tract. Which technique is being described?",
-    "options": [
-      "In vitro fertilisation followed by embryo transfer",
-      "Vasectomy followed by artificial insemination",
-      "Tubectomy followed by embryo implantation",
-      "Periodic abstinence followed by natural fertilisation"
-    ],
-    "correctIndex": 0,
-    "explanation": "In vitro fertilisation involves fertilisation outside the body, followed by transfer of the resulting embryo into the female reproductive tract. This is commonly abbreviated as IVF-ET.",
     "imageUrl": null
   },
   {
@@ -15554,7 +15266,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "After consuming a large quantity of water, a healthy individual produces a large volume of dilute urine. Which hormonal change most directly contributes to this response?",
     "options": [
@@ -15667,22 +15379,6 @@
     "examMode": "NEET",
     "subject": "Biology",
     "chapter": "The Living World",
-    "difficulty": "easy",
-    "questionText": "Which taxonomic category is immediately higher than genus in the standard hierarchy?",
-    "options": [
-      "Species",
-      "Family",
-      "Order",
-      "Class"
-    ],
-    "correctIndex": 1,
-    "explanation": "The hierarchy proceeds from species to genus and then family. Therefore, family is the taxonomic category immediately above genus.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "The Living World",
     "difficulty": "tough",
     "questionText": "A researcher observes an organism that possesses a definite cell structure, performs metabolism, maintains internal organisation and can reproduce under suitable conditions. Which combination most appropriately supports its recognition as a living organism according to NCERT criteria?",
     "options": [
@@ -15692,7 +15388,7 @@
       "Movement and response to external stimuli alone"
     ],
     "correctIndex": 1,
-    "explanation": "NCERT considers cellular organisation and metabolism fundamental characteristics of living organisms, while reproduction is an important characteristic but is not universal to every individual organism. The combination in option B best captures the defining biological features.",
+    "explanation": "NCERT considers cellular organisation and metabolism fundamental characteristics of living organisms, while reproduction is an important characteristic but is not universal to every individual organism.",
     "imageUrl": null
   },
   {
@@ -15773,22 +15469,6 @@
     ],
     "correctIndex": 1,
     "explanation": "In the diplontic pattern, the sporophyte is the dominant diploid phase while the gametophytic phase is highly reduced. Seed plants show this pattern.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Plant Kingdom",
-    "difficulty": "tough",
-    "questionText": "A plant group has vascular tissues but still requires water for transfer of male gametes to the archegonium and produces seeds that are not enclosed within fruits. Which group combines both of these characteristics?",
-    "options": [
-      "Bryophytes",
-      "Pteridophytes",
-      "Gymnosperms",
-      "Angiosperms"
-    ],
-    "correctIndex": 2,
-    "explanation": "Gymnosperms possess vascular tissues and produce naked seeds, but male gametes are delivered through pollen tubes rather than requiring external water for fertilisation. Therefore the stated water requirement is inconsistent with gymnosperms, making the combination impossible among the options.",
     "imageUrl": null
   },
   {
@@ -16772,22 +16452,6 @@
     "subject": "Biology",
     "chapter": "Organisms and Populations",
     "difficulty": "tough",
-    "questionText": "A population grows rapidly when resources are abundant but its growth rate slows as the population approaches the environment's carrying capacity. Which model best represents this pattern?",
-    "options": [
-      "Exponential growth only",
-      "Logistic growth",
-      "Zero population growth from the beginning",
-      "Linear growth independent of resources"
-    ],
-    "correctIndex": 1,
-    "explanation": "Logistic growth incorporates environmental resistance and carrying capacity. Growth is initially rapid but slows as population size approaches the carrying capacity.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Organisms and Populations",
-    "difficulty": "tough",
     "questionText": "Two species occupy the same habitat and require the same limiting resource. If one species consistently excludes the other under stable conditions, which ecological principle is most directly illustrated?",
     "options": [
       "Competitive exclusion",
@@ -17620,22 +17284,6 @@
     "subject": "Biology",
     "chapter": "Principles of Inheritance and Variation",
     "difficulty": "tough",
-    "questionText": "A heterozygous tall pea plant is crossed with a dwarf plant. If tallness is completely dominant, what proportion of the offspring is expected to be tall?",
-    "options": [
-      "25%",
-      "50%",
-      "75%",
-      "100%"
-    ],
-    "correctIndex": 1,
-    "explanation": "The cross Tt × tt produces Tt and tt offspring in equal proportions, so 50% are expected to be tall.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
     "questionText": "In a dihybrid cross between two individuals heterozygous for two independently assorting genes, what phenotypic ratio is expected when both traits show complete dominance?",
     "options": [
       "1:1",
@@ -17748,22 +17396,6 @@
     "subject": "Biology",
     "chapter": "Molecular Basis of Inheritance",
     "difficulty": "tough",
-    "questionText": "If the template DNA strand contains the sequence 3′-TAC GGA CTT-5′, which mRNA sequence would be produced during transcription?",
-    "options": [
-      "5′-AUG CCU GAA-3′",
-      "5′-UAC GGA CUU-3′",
-      "3′-AUG CCU GAA-5′",
-      "5′-ATG CCT GAA-3′"
-    ],
-    "correctIndex": 0,
-    "explanation": "The mRNA is complementary and antiparallel to the template strand, giving 5′-AUG CCU GAA-3′.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "tough",
     "questionText": "A bacterial operon is normally switched off when a regulatory protein binds to a specific DNA region and prevents transcription. Which regulatory region is involved in this direct blockage of RNA polymerase movement?",
     "options": [
       "Operator",
@@ -17773,22 +17405,6 @@
     ],
     "correctIndex": 0,
     "explanation": "In the lac operon, the repressor binds the operator region, preventing RNA polymerase from transcribing the structural genes.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "moderate",
-    "questionText": "Which enzyme joins the Okazaki fragments formed on the lagging strand during DNA replication?",
-    "options": [
-      "DNA ligase",
-      "Helicase",
-      "Primase",
-      "RNA polymerase"
-    ],
-    "correctIndex": 0,
-    "explanation": "DNA ligase joins adjacent DNA fragments by forming phosphodiester bonds in the sugar-phosphate backbone.",
     "imageUrl": null
   },
   {
@@ -18244,22 +17860,6 @@
     "subject": "Biology",
     "chapter": "Biodiversity and Conservation",
     "difficulty": "tough",
-    "questionText": "A conservation programme protects an endangered species within its natural habitat and preserves the ecological interactions surrounding it. Which conservation strategy is being used?",
-    "options": [
-      "In situ conservation",
-      "Ex situ conservation",
-      "Artificial selection",
-      "Genetic engineering only"
-    ],
-    "correctIndex": 0,
-    "explanation": "In situ conservation protects organisms within their natural habitats, allowing ecological interactions and evolutionary processes to continue.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Biodiversity and Conservation",
-    "difficulty": "tough",
     "questionText": "A species is conserved outside its natural habitat in a zoological park, while another population is preserved as seeds in a seed bank. What do these approaches have in common?",
     "options": [
       "Both are forms of ex situ conservation",
@@ -18498,7 +18098,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A substance is freely filtered at the glomerulus and then selectively reabsorbed almost completely in the proximal tubule under normal conditions. Which interpretation is most appropriate?",
     "options": [
@@ -18514,7 +18114,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "When blood osmolarity increases, osmoreceptors stimulate increased secretion of a hormone that enhances water reabsorption in the kidney. Which hormone is involved?",
     "options": [
@@ -18530,7 +18130,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "moderate",
     "questionText": "Which nitrogenous waste is the principal excretory product in adult humans?",
     "options": [
@@ -18685,22 +18285,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Adrenaline, secreted by the adrenal medulla, prepares the body for rapid fight-or-flight responses.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Anatomy of Flowering Plants",
-    "difficulty": "tough",
-    "questionText": "A transverse section of a plant organ shows vascular bundles arranged in a ring, with distinct cortex and pith. Which organ is most likely represented?",
-    "options": [
-      "Dicot stem",
-      "Monocot root",
-      "Dicot leaf",
-      "Monocot leaf"
-    ],
-    "correctIndex": 0,
-    "explanation": "A typical dicot stem has vascular bundles arranged in a ring with a distinct cortex and central pith.",
     "imageUrl": null
   },
   {
@@ -19218,7 +18802,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A person produces a large volume of dilute urine despite normal water intake. Reduced secretion of which hormone most directly explains this condition?",
     "options": [
@@ -19565,22 +19149,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Excess nutrient input, particularly nitrates and phosphates, promotes algal growth and can initiate eutrophication. Decomposition of the increased biomass subsequently consumes dissolved oxygen.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
-    "questionText": "In a test cross, an individual showing a dominant phenotype produces approximately equal numbers of dominant and recessive offspring. Which genotype most likely belongs to the unknown parent?",
-    "options": [
-      "AA",
-      "Aa",
-      "aa",
-      "Aaaa"
-    ],
-    "correctIndex": 1,
-    "explanation": "Crossing Aa with aa produces approximately a 1:1 ratio of Aa and aa offspring. A homozygous dominant parent crossed with aa would produce only dominant offspring.",
     "imageUrl": null
   },
   {
@@ -20066,22 +19634,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
-    "questionText": "A diploid organism has genotype AaBb, with the two genes located on the same chromosome pair. If crossing over between the loci is absent, which gametes can be produced by an individual having the arrangement AB/ab?",
-    "options": [
-      "AB and ab only",
-      "Ab and aB only",
-      "AB, Ab, aB and ab in equal proportions",
-      "A, a, B and b only"
-    ],
-    "correctIndex": 0,
-    "explanation": "Without crossing over between the two loci, parental chromosome combinations are retained. An AB/ab individual therefore produces AB and ab gametes.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Molecular Basis of Inheritance",
     "difficulty": "tough",
     "questionText": "A mutation changes a codon that originally specified an amino acid into a stop codon. If the resulting mRNA is translated normally, what is the most direct consequence?",
@@ -20418,22 +19970,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and Their Elimination",
-    "difficulty": "tough",
-    "questionText": "A person becomes severely dehydrated. Which hormonal response helps conserve water by increasing water reabsorption in the kidney's collecting ducts?",
-    "options": [
-      "Increased secretion of antidiuretic hormone",
-      "Decreased secretion of antidiuretic hormone",
-      "Increased secretion of insulin",
-      "Decreased secretion of thyroxine"
-    ],
-    "correctIndex": 0,
-    "explanation": "Dehydration raises plasma osmolarity and stimulates ADH release. ADH increases water reabsorption in the distal nephron and collecting ducts, reducing urine volume.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Neural Control and Coordination",
     "difficulty": "tough",
     "questionText": "A neuron is exposed to a stimulus strong enough to reach threshold. Sodium channels open rapidly and the membrane potential becomes less negative. Which event follows most directly?",
@@ -20594,7 +20130,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Structural Organisation in Plants",
+    "chapter": "Anatomy of Flowering Plants",
     "difficulty": "moderate",
     "questionText": "A plant tissue contains living cells arranged in a way that provides flexible mechanical support to young growing parts. Which tissue is most appropriate?",
     "options": [
@@ -20610,7 +20146,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Body Fluids and Circulation",
     "difficulty": "easy",
     "questionText": "Which blood cells are primarily responsible for transporting oxygen from the lungs to body tissues?",
     "options": [
@@ -22802,7 +22338,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A hormone increases the permeability of collecting ducts to water, causing more water to move back into the blood when the renal medullary interstitium is hyperosmotic. Which hormone is responsible?",
     "options": [
@@ -22818,7 +22354,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A substance is present in the filtrate but almost all of it is selectively reabsorbed before urine formation is completed. Which nephron process accounts for this reduction in urinary loss?",
     "options": [
@@ -23085,22 +22621,6 @@
     ],
     "correctIndex": 0,
     "explanation": "A binomial scientific name contains the genus name followed by the specific epithet, forming the species name.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Cell: The Unit of Life",
-    "difficulty": "tough",
-    "questionText": "A cell contains abundant rough endoplasmic reticulum, a prominent Golgi apparatus and numerous secretory vesicles. If the Golgi apparatus is experimentally inactivated while protein synthesis continues normally, which cellular process would be most directly disrupted?",
-    "options": [
-      "Replication of nuclear DNA",
-      "Modification and sorting of proteins destined for secretion",
-      "Synthesis of ATP by oxidative phosphorylation",
-      "Translation of proteins on ribosomes"
-    ],
-    "correctIndex": 1,
-    "explanation": "The Golgi apparatus modifies, sorts and packages proteins synthesized in the endoplasmic reticulum. Its inactivation would therefore directly impair processing and routing of secretory proteins.",
     "imageUrl": null
   },
   {
@@ -23410,22 +22930,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Organisms and Populations",
-    "difficulty": "tough",
-    "questionText": "A population initially grows rapidly when resources are abundant, but its growth rate decreases as population density approaches the carrying capacity of the environment. Which model best represents this pattern?",
-    "options": [
-      "Exponential growth only",
-      "Logistic growth",
-      "Constant zero growth",
-      "Unrestricted geometric decline"
-    ],
-    "correctIndex": 1,
-    "explanation": "Logistic growth incorporates environmental resistance and carrying capacity. Growth is rapid at lower densities but slows as the population approaches the carrying capacity.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Ecosystem",
     "difficulty": "tough",
     "questionText": "A grassland ecosystem receives a fixed amount of solar energy, but only a fraction becomes chemical energy stored in producers. If energy transfer between trophic levels is inefficient, which conclusion is most appropriate?",
@@ -23484,7 +22988,7 @@
       "Two germ layers with a pseudocoelom"
     ],
     "correctIndex": 0,
-    "explanation": "A true coelom is a body cavity completely lined by mesoderm, and a triploblastic animal has ectoderm, mesoderm and endoderm. The stated combination therefore matches the first option.",
+    "explanation": "A true coelom is a body cavity completely lined by mesoderm, and a triploblastic animal has ectoderm, mesoderm and endoderm.",
     "imageUrl": null
   },
   {
@@ -23778,7 +23282,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Biotechnology: Applications",
+    "chapter": "Biotechnology and its Applications",
     "difficulty": "tough",
     "questionText": "A genetically modified crop is engineered to produce a protein toxic to a specific insect pest but harmless to humans when consumed in the intended crop context. Which biotechnology application does this illustrate?",
     "options": [
@@ -23853,22 +23357,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Biomagnification is the progressive increase in concentration of certain persistent, non-biodegradable pollutants at successive trophic levels. Top consumers may therefore accumulate the highest concentrations.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Evolution",
-    "difficulty": "tough",
-    "questionText": "The forelimbs of humans, bats and whales have different functions but share the same basic skeletal plan. What evolutionary interpretation is most appropriate?",
-    "options": [
-      "They are homologous structures indicating common ancestry",
-      "They are analogous structures produced by identical developmental pathways",
-      "They prove that all species have identical adaptations",
-      "They have no evolutionary significance"
-    ],
-    "correctIndex": 0,
-    "explanation": "Homologous structures share a common basic structural plan because of common ancestry, although they may perform different functions. Vertebrate forelimbs provide a classic example.",
     "imageUrl": null
   },
   {
@@ -28274,22 +27762,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Reproductive Health",
-    "difficulty": "tough",
-    "questionText": "A couple undergoes an assisted reproductive procedure in which fertilisation is carried out outside the body and the resulting embryo is later transferred into the female reproductive tract. Which procedure is being described?",
-    "options": [
-      "In vitro fertilisation followed by embryo transfer",
-      "Vasectomy",
-      "Tubectomy",
-      "Periodic abstinence"
-    ],
-    "correctIndex": 0,
-    "explanation": "In vitro fertilisation involves fertilisation outside the body, followed by transfer of the resulting embryo into the female reproductive tract. This is an assisted reproductive technology.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Principles of Inheritance and Variation",
     "difficulty": "tough",
     "questionText": "A heterozygous tall pea plant is crossed with a dwarf plant. If tallness is completely dominant, what proportion of the offspring is expected to be heterozygous?",
@@ -28333,22 +27805,6 @@
     ],
     "correctIndex": 0,
     "explanation": "mRNA is complementary to the DNA template and is synthesised 5' to 3'. Thus 3'-TAC GGA CTT-5' gives 5'-AUG CCU GAA-3'.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "tough",
-    "questionText": "During DNA replication, one newly synthesised strand is formed continuously while the other is assembled as short fragments that are later joined. Which enzyme directly joins these short DNA fragments?",
-    "options": [
-      "DNA ligase",
-      "RNA polymerase",
-      "Helicase",
-      "Restriction endonuclease"
-    ],
-    "correctIndex": 0,
-    "explanation": "The discontinuously synthesised lagging strand contains Okazaki fragments. DNA ligase joins these fragments by sealing breaks in the sugar-phosphate backbone.",
     "imageUrl": null
   },
   {
@@ -28434,7 +27890,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Biotechnology: Applications",
+    "chapter": "Biotechnology and its Applications",
     "difficulty": "tough",
     "questionText": "A diabetic patient receives recombinant human insulin produced using genetically engineered microorganisms. What major advantage does recombinant production provide?",
     "options": [
@@ -28573,38 +28029,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Long-term exposure to air pollutants can damage respiratory tissues and increase the risk of respiratory disorders. Particulate matter is particularly important in respiratory health.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Animal Kingdom",
-    "difficulty": "tough",
-    "questionText": "An animal possesses jointed appendages, a segmented body and a chitinous exoskeleton. Which phylum is most consistent with these features?",
-    "options": [
-      "Arthropoda",
-      "Annelida",
-      "Mollusca",
-      "Echinodermata"
-    ],
-    "correctIndex": 0,
-    "explanation": "Arthropods possess a segmented body, paired jointed appendages and a chitinous exoskeleton. These features distinguish them from the other listed phyla.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Animal Kingdom",
-    "difficulty": "tough",
-    "questionText": "An adult marine animal possesses radial symmetry, a water vascular system and tube feet, whereas its larva is bilaterally symmetrical. Which phylum does it belong to?",
-    "options": [
-      "Echinodermata",
-      "Chordata",
-      "Arthropoda",
-      "Cnidaria"
-    ],
-    "correctIndex": 0,
-    "explanation": "Adult echinoderms exhibit radial symmetry and possess a characteristic water vascular system with tube feet. Their larvae are bilaterally symmetrical.",
     "imageUrl": null
   },
   {
@@ -29531,8 +28955,8 @@
       "130",
       "140"
     ],
-    "correctIndex": 0,
-    "explanation": "Final population = 100 + births 20 − deaths 10 + immigration 15 − emigration 5 = 120? Therefore the correct value is 120, corresponding to the second option.",
+    "correctIndex": 1,
+    "explanation": "Final population = 100 + births 20 − deaths 10 + immigration 15 − emigration 5 = 120? Therefore the correct value is 120.",
     "imageUrl": null
   },
   {
@@ -29922,22 +29346,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Plant Kingdom",
-    "difficulty": "tough",
-    "questionText": "A plant group has vascular tissues and a dominant sporophyte but reproduces through spores rather than seeds. Which group is most consistent with these characteristics?",
-    "options": [
-      "Pteridophytes",
-      "Bryophytes",
-      "Gymnosperms",
-      "Angiosperms"
-    ],
-    "correctIndex": 0,
-    "explanation": "Pteridophytes are vascular plants with a dominant sporophyte generation but reproduce by spores rather than seeds.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Biological Classification",
     "difficulty": "tough",
     "questionText": "An organism is prokaryotic and may possess a cell wall containing peptidoglycan. It lacks membrane-bound organelles but can perform diverse nutritional modes. Which kingdom contains such organisms?",
@@ -30018,7 +29426,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Body Fluids and Circulation",
     "difficulty": "easy",
     "questionText": "Which component of blood is primarily responsible for clot formation?",
     "options": [
@@ -31346,22 +30754,6 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "The Living World",
-    "difficulty": "moderate",
-    "questionText": "A scientist identifies an organism and assigns it a scientific name using two words, the first representing the genus and the second representing the specific epithet. Which naming system is being used?",
-    "options": [
-      "Binomial nomenclature",
-      "Trinomial nomenclature",
-      "Numerical taxonomy",
-      "Polyphyletic classification"
-    ],
-    "correctIndex": 0,
-    "explanation": "Binomial nomenclature gives each species a two-part scientific name consisting of the genus name followed by the specific epithet.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
     "chapter": "Biological Classification",
     "difficulty": "moderate",
     "questionText": "An organism has a cell wall made of chitin and obtains nutrients by absorption rather than ingestion. Which kingdom is most appropriate?",
@@ -32436,22 +31828,6 @@
     "subject": "Biology",
     "chapter": "Human Reproduction",
     "difficulty": "tough",
-    "questionText": "A female reproductive cycle proceeds normally through ovulation, after which the ruptured follicle transforms into a temporary endocrine structure that secretes progesterone. Which structure is this?",
-    "options": [
-      "Corpus luteum",
-      "Primary follicle",
-      "Graafian follicle before ovulation",
-      "Endometrium"
-    ],
-    "correctIndex": 0,
-    "explanation": "After ovulation, the ruptured follicle transforms into the corpus luteum, which secretes progesterone and supports the uterine endometrium.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Human Reproduction",
-    "difficulty": "tough",
     "questionText": "An embryo becomes attached to the uterine wall after the blastocyst reaches the uterus. Which process is being described?",
     "options": [
       "Implantation",
@@ -33284,22 +32660,6 @@
     "subject": "Biology",
     "chapter": "Human Reproduction",
     "difficulty": "tough",
-    "questionText": "After ovulation, the ruptured ovarian follicle becomes a temporary endocrine structure. Which hormone secreted by this structure is particularly important for maintaining the uterine endometrium?",
-    "options": [
-      "Progesterone",
-      "FSH",
-      "Oxytocin",
-      "Melatonin"
-    ],
-    "correctIndex": 0,
-    "explanation": "The corpus luteum secretes progesterone during the luteal phase. Progesterone maintains the endometrium in a condition suitable for implantation and early pregnancy.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Human Reproduction",
-    "difficulty": "tough",
     "questionText": "A sperm cell reaches the secondary oocyte and penetrates the zona pellucida, but fertilisation does not proceed because membrane fusion fails. Which event has specifically not occurred?",
     "options": [
       "Fusion of sperm and oocyte plasma membranes",
@@ -33570,7 +32930,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Biotechnology: Applications",
+    "chapter": "Biotechnology and its Applications",
     "difficulty": "tough",
     "questionText": "A crop is genetically modified to express a protein obtained from Bacillus thuringiensis that kills susceptible insect larvae. Which application of biotechnology is represented?",
     "options": [
@@ -33586,7 +32946,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Biotechnology: Applications",
+    "chapter": "Biotechnology and its Applications",
     "difficulty": "tough",
     "questionText": "A recombinant microorganism is engineered to produce human insulin on a large scale. Which fundamental biotechnology principle makes this possible?",
     "options": [
@@ -33741,22 +33101,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Arthropods characteristically possess a segmented body, jointed appendages and a chitinous exoskeleton. These features distinguish them from the other listed phyla.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Animal Kingdom",
-    "difficulty": "tough",
-    "questionText": "An adult marine animal has radial symmetry, tube feet and a water vascular system, whereas its larva is bilaterally symmetrical. Which phylum does it belong to?",
-    "options": [
-      "Echinodermata",
-      "Chordata",
-      "Arthropoda",
-      "Cnidaria"
-    ],
-    "correctIndex": 0,
-    "explanation": "Echinoderms possess a characteristic water vascular system and tube feet, with radial symmetry in adults. Their larvae are bilaterally symmetrical.",
     "imageUrl": null
   },
   {
@@ -34290,7 +33634,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A plant species continues fixing carbon dioxide efficiently when leaf temperature and light intensity are high, conditions under which a typical C3 plant shows substantial photorespiration. Which feature would best explain this?",
     "options": [
@@ -34306,7 +33650,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "If the activity of photosystem II is completely blocked in a chloroplast, which immediate consequence is most directly expected?",
     "options": [
@@ -34500,22 +33844,6 @@
     "subject": "Biology",
     "chapter": "Plant Kingdom",
     "difficulty": "tough",
-    "questionText": "A plant group has a dominant gametophyte generation, requires water for fertilisation and possesses multicellular sex organs. Which group is most consistent with these features?",
-    "options": [
-      "Bryophytes",
-      "Gymnosperms",
-      "Angiosperms",
-      "Pteridophytes"
-    ],
-    "correctIndex": 0,
-    "explanation": "Bryophytes have a dominant, independent gametophyte and depend on water for fertilisation. They possess multicellular jacketed sex organs.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Plant Kingdom",
-    "difficulty": "tough",
     "questionText": "A vascular plant produces spores but does not produce seeds. Its sporophyte is the dominant generation and the gametophyte is relatively small but independent. Which group is indicated?",
     "options": [
       "Bryophytes",
@@ -34637,22 +33965,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Blood group A is characterised by A antigen on red blood cells and anti-B antibodies in plasma. This follows the ABO blood group system described in NCERT.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Body Fluids and Circulation",
-    "difficulty": "tough",
-    "questionText": "If the atrioventricular valves fail to close properly during ventricular systole, which immediate consequence is most likely?",
-    "options": [
-      "Backflow of blood from ventricles into atria",
-      "Backflow of blood from arteries into ventricles",
-      "Complete stoppage of ventricular filling during diastole",
-      "Prevention of blood entry into the ventricles"
-    ],
-    "correctIndex": 0,
-    "explanation": "During ventricular systole, atrioventricular valves normally prevent blood from returning to the atria. Failure of closure permits regurgitation into the atria.",
     "imageUrl": null
   },
   {
@@ -34893,22 +34205,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The cross Tt × tt produces Tt and tt offspring in equal proportions. Therefore, the expected phenotype ratio is 1 tall : 1 dwarf.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
-    "questionText": "A dihybrid individual produces four types of gametes in approximately equal proportions when the two genes assort independently. Which genotype could produce this gametic pattern?",
-    "options": [
-      "AABB",
-      "AaBB",
-      "AABb",
-      "AaBb"
-    ],
-    "correctIndex": 3,
-    "explanation": "An AaBb individual can independently segregate A/a and B/b, producing AB, Ab, aB and ab gametes in equal expected proportions under independent assortment.",
     "imageUrl": null
   },
   {
@@ -35213,22 +34509,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Decomposition involves processes such as fragmentation, leaching and microbial catabolism, followed by humification and mineralisation. These processes recycle nutrients from detritus.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Biodiversity and Conservation",
-    "difficulty": "tough",
-    "questionText": "A species is naturally restricted to a particular geographical region and is not found elsewhere. Which term best describes this distribution pattern?",
-    "options": [
-      "Endemic",
-      "Cosmopolitan",
-      "Exotic",
-      "Invasive by definition"
-    ],
-    "correctIndex": 0,
-    "explanation": "A species restricted to a particular geographical region is called endemic to that region. Endemism is important in identifying areas of high conservation significance.",
     "imageUrl": null
   },
   {
@@ -36244,22 +35524,6 @@
     "subject": "Biology",
     "chapter": "Biodiversity and Conservation",
     "difficulty": "tough",
-    "questionText": "A species is naturally restricted to a particular geographic region and is not found naturally elsewhere. Which term best describes this distribution pattern?",
-    "options": [
-      "Cosmopolitan",
-      "Endemic",
-      "Migratory",
-      "Artificial"
-    ],
-    "correctIndex": 1,
-    "explanation": "An endemic species is naturally restricted to a specific geographical region and is absent from other regions in its natural state.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Biodiversity and Conservation",
-    "difficulty": "tough",
     "questionText": "A large continuous forest is divided by roads into several isolated patches. Even if the total forested area remains substantial, which biological consequence is particularly likely?",
     "options": [
       "Increased habitat connectivity and gene flow in every species",
@@ -36269,22 +35533,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Fragmentation breaks continuous habitat into isolated patches, often reducing connectivity and increasing isolation, which can adversely affect populations and gene flow.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Environmental Issues",
-    "difficulty": "tough",
-    "questionText": "A persistent pollutant enters a lake in very low concentration but becomes progressively more concentrated in organisms at higher trophic levels. Which phenomenon is responsible?",
-    "options": [
-      "Biomagnification",
-      "Eutrophication",
-      "Primary succession",
-      "Nitrification"
-    ],
-    "correctIndex": 0,
-    "explanation": "Biomagnification is the progressive increase in concentration of certain persistent, non-biodegradable pollutants along successive trophic levels.",
     "imageUrl": null
   },
   {
@@ -36418,7 +35666,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A nephron continues glomerular filtration normally, but selective tubular reabsorption is severely reduced. Which overall consequence is most likely?",
     "options": [
@@ -36434,7 +35682,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A person becomes dehydrated and plasma osmolarity rises. Which hormonal response would most directly promote conservation of water by the kidneys?",
     "options": [
@@ -37156,22 +36404,6 @@
     "subject": "Biology",
     "chapter": "Principles of Inheritance and Variation",
     "difficulty": "tough",
-    "questionText": "Two heterozygous parents for a complete dominant autosomal trait have a child who does not express the trait. What must be the child's genotype?",
-    "options": [
-      "AA",
-      "Aa",
-      "aa",
-      "It cannot be determined"
-    ],
-    "correctIndex": 2,
-    "explanation": "For a completely dominant trait, only the homozygous recessive genotype aa lacks the dominant phenotype. Therefore an unaffected child must be aa.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
     "questionText": "A man with an X-linked recessive disorder has children with a woman who is homozygous normal for the relevant gene. Which inheritance pattern is expected for their daughters?",
     "options": [
       "All daughters are affected",
@@ -37533,22 +36765,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Sulphur dioxide and nitrogen oxides can form acidic compounds in the atmosphere that return to the surface as acid precipitation, damaging ecosystems.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Plant Kingdom",
-    "difficulty": "moderate",
-    "questionText": "A plant group possesses vascular tissues, a dominant sporophyte, and reproduces by spores rather than seeds. Which group best fits these characteristics?",
-    "options": [
-      "Pteridophytes",
-      "Bryophytes",
-      "Gymnosperms",
-      "Angiosperms"
-    ],
-    "correctIndex": 0,
-    "explanation": "Pteridophytes are vascular plants with a dominant sporophyte and reproduce through spores rather than seeds.",
     "imageUrl": null
   },
   {
@@ -38178,7 +37394,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A chloroplast is illuminated in the presence of carbon dioxide, but a chemical specifically blocks the regeneration of RuBP. Which immediate consequence would be expected for continued carbon fixation?",
     "options": [
@@ -38194,7 +37410,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A chloroplast preparation shows that light-driven ATP formation continues even when NADP+ reduction is prevented, provided the relevant photosystem can repeatedly receive excited electrons. Which process best explains this observation?",
     "options": [
@@ -38210,7 +37426,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A leaf contains two types of chloroplast-containing cells arranged so that initial CO2 fixation occurs in one cell type and the Calvin cycle occurs mainly in another. Which anatomical adaptation is being described?",
     "options": [
@@ -39170,7 +38386,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A chloroplast is illuminated under conditions in which only photosystem I remains functional. Which immediate photochemical activity can still occur?",
     "options": [
@@ -39186,7 +38402,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A plant receives abundant light and water but has very limited carbon dioxide availability. Which immediate limitation would most directly reduce the rate of carbon fixation?",
     "options": [
@@ -39277,22 +38493,6 @@
     ],
     "correctIndex": 0,
     "explanation": "A compound leaf is distinguished from a branch by the absence of axillary buds at the base of individual leaflets. The entire leaf arises from a single axillary bud.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Morphology of Flowering Plants",
-    "difficulty": "tough",
-    "questionText": "A floral structure has stamens attached to petals rather than directly to the receptacle. Which term describes this condition?",
-    "options": [
-      "Epipetalous",
-      "Epiphyllous",
-      "Polyandrous",
-      "Syngenesious"
-    ],
-    "correctIndex": 0,
-    "explanation": "Stamens attached to petals are described as epipetalous. This condition is commonly seen in members of Solanaceae.",
     "imageUrl": null
   },
   {
@@ -40482,7 +39682,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A leaf is illuminated strongly but receives almost no carbon dioxide. Which prediction is most appropriate if other essential conditions remain adequate?",
     "options": [
@@ -40498,7 +39698,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A plant is exposed to light of a wavelength poorly absorbed by chlorophyll pigments. Which immediate effect is most likely compared with illumination by strongly absorbed wavelengths?",
     "options": [
@@ -41090,7 +40290,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Excretory Products and their Elimination",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A person produces a large volume of dilute urine because water reabsorption in the collecting ducts is greatly reduced. Which hormonal change best explains this condition?",
     "options": [
@@ -41981,54 +41181,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Independent assortment allows either allele at each locus to enter a gamete, producing AB, Ab, aB, and ab in approximately equal proportions for an AaBb individual.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
-    "questionText": "A tall pea plant of unknown genotype is crossed with a dwarf plant. Half the offspring are tall and half are dwarf. Which genotype must the tall parent possess?",
-    "options": [
-      "TT",
-      "Tt",
-      "tt",
-      "T only without a second allele"
-    ],
-    "correctIndex": 1,
-    "explanation": "The dwarf parent is tt. A 1:1 tall:dwarf ratio requires the other parent to be heterozygous Tt, producing Tt and tt offspring equally.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
-    "questionText": "A genetic trait appears in every generation, affects males and females similarly, and an affected individual usually has an affected parent. Which inheritance pattern is most consistent with these observations?",
-    "options": [
-      "Autosomal dominant",
-      "Autosomal recessive with complete penetrance in every generation",
-      "Y-linked recessive",
-      "Mitochondrial only"
-    ],
-    "correctIndex": 0,
-    "explanation": "An autosomal dominant trait commonly appears in successive generations, affects both sexes, and affected individuals generally have an affected parent.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "tough",
-    "questionText": "A DNA molecule contains 30% adenine. Assuming normal double-stranded DNA with complementary base pairing, what percentage of the bases is cytosine?",
-    "options": [
-      "20%",
-      "30%",
-      "40%",
-      "70%"
-    ],
-    "correctIndex": 0,
-    "explanation": "If adenine is 30%, thymine is also 30%. The remaining 40% consists of guanine and cytosine equally, so cytosine is 20%.",
     "imageUrl": null
   },
   {
@@ -42962,7 +42114,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A chloroplast is illuminated and protons accumulate inside the thylakoid lumen, producing a proton gradient across the thylakoid membrane. Which event directly uses this gradient to synthesise ATP?",
     "options": [
@@ -42978,7 +42130,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A C4 plant initially fixes atmospheric CO2 into a four-carbon compound using an enzyme that has high affinity for CO2 and lacks oxygenase activity. Which enzyme performs this initial fixation?",
     "options": [
@@ -43522,7 +42674,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A plant is supplied with adequate water and carbon dioxide but receives light intensity too low to drive substantial photochemical activity. Which outcome is most likely if the other factors remain unchanged?",
     "options": [
@@ -43538,7 +42690,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A plant species shows negligible photorespiration under high temperature and intense light compared with a typical C3 plant. Which feature most directly accounts for this advantage?",
     "options": [
@@ -43554,7 +42706,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "moderate",
     "questionText": "If the splitting of water at photosystem II is blocked, which immediate source of electrons for the photosynthetic electron transport chain is lost?",
     "options": [
@@ -43757,22 +42909,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Linked genes tend to be inherited together, but crossing over between their loci can generate recombinant combinations. Thus some recombinant offspring indicate meiotic recombination.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Principles of Inheritance and Variation",
-    "difficulty": "tough",
-    "questionText": "A carrier woman for an X-linked recessive disorder marries a phenotypically normal man who does not carry the allele on his X chromosome. What fraction of their sons is expected to inherit the disorder?",
-    "options": [
-      "0%",
-      "25%",
-      "50%",
-      "100%"
-    ],
-    "correctIndex": 2,
-    "explanation": "A carrier mother has a 50% chance of transmitting the affected X chromosome to each son. Sons receive their Y chromosome from the father, so an affected X from the mother produces the disorder.",
     "imageUrl": null
   },
   {
@@ -44013,22 +43149,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Recombinant DNA technology can introduce a human gene into a suitable host such as a bacterium, where the inserted gene can be expressed to produce the desired protein.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Organisms and Populations",
-    "difficulty": "tough",
-    "questionText": "A population initially grows rapidly when resources are abundant but its growth rate slows as the population approaches the environmental carrying capacity. Which model best represents this pattern?",
-    "options": [
-      "Exponential growth throughout",
-      "Logistic growth",
-      "Constant zero growth",
-      "Negative growth from the beginning"
-    ],
-    "correctIndex": 1,
-    "explanation": "Logistic growth begins rapidly when resources are abundant but slows as environmental resistance increases near the carrying capacity.",
     "imageUrl": null
   },
   {
@@ -44514,7 +43634,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Excretory Products and Their Elimination",
     "difficulty": "tough",
     "questionText": "A patient has reduced secretion of aldosterone. Which renal effect is most likely under otherwise normal conditions?",
     "options": [
@@ -44530,7 +43650,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Human Physiology",
+    "chapter": "Chemical Coordination and Integration",
     "difficulty": "moderate",
     "questionText": "A student eats a carbohydrate-rich meal and experiences an increase in blood glucose concentration. Which hormone normally helps restore blood glucose toward its normal level?",
     "options": [
@@ -44612,22 +43732,6 @@
     "subject": "Biology",
     "chapter": "Cell Cycle and Cell Division",
     "difficulty": "tough",
-    "questionText": "A diploid cell with 2n = 16 enters meiosis. At the end of meiosis I, each daughter cell contains how many chromosomes and chromatids, respectively?",
-    "options": [
-      "16 chromosomes and 16 chromatids",
-      "8 chromosomes and 8 chromatids",
-      "8 chromosomes and 16 chromatids",
-      "16 chromosomes and 32 chromatids"
-    ],
-    "correctIndex": 2,
-    "explanation": "Meiosis I separates homologous chromosomes, reducing the chromosome number from 16 to 8. Each chromosome still consists of two sister chromatids, giving 16 chromatids per daughter cell.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Cell Cycle and Cell Division",
-    "difficulty": "tough",
     "questionText": "A chromosome pair undergoes crossing over between non-sister chromatids during meiotic prophase I. If the exchanged segments contain different alleles, what is the immediate genetic consequence?",
     "options": [
       "Formation of recombinant chromatids",
@@ -44642,7 +43746,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A C3 plant and a C4 plant are exposed to high temperature and intense light under otherwise adequate conditions. The C4 plant maintains a higher photosynthetic efficiency. Which combination best explains this difference?",
     "options": [
@@ -44658,7 +43762,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "If the reaction-centre chlorophyll of photosystem I is unable to transfer excited electrons to its primary acceptor, which process would be directly affected first?",
     "options": [
@@ -45698,7 +44802,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Ecology",
+    "chapter": "Ecosystem",
     "difficulty": "easy",
     "questionText": "An ecosystem contains organisms that produce their own food using inorganic substances and an external energy source. What ecological role do these organisms primarily perform?",
     "options": [
@@ -45794,7 +44898,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A C4 plant is exposed to high temperature and strong light while water and mineral supply remain adequate. Compared with a C3 plant under the same conditions, why can the C4 plant maintain a higher net photosynthetic rate?",
     "options": [
@@ -45810,7 +44914,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A chemical specifically blocks photolysis of water at photosystem II while photosystem I remains structurally intact. Which combination is most directly affected?",
     "options": [
@@ -45826,7 +44930,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Photosynthesis in Higher Plants",
+    "chapter": "Photosynthesis in Plants",
     "difficulty": "tough",
     "questionText": "A leaf is supplied with abundant carbon dioxide, but light intensity is progressively reduced until photosynthetic carbon fixation falls sharply. Which conclusion is most appropriate?",
     "options": [
@@ -46013,22 +45117,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Intrauterine insemination places prepared semen directly into the uterus, bypassing barriers that prevent sperm from reaching the uterus normally.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Reproductive Health",
-    "difficulty": "tough",
-    "questionText": "A contraceptive method prevents sperm from entering the female reproductive tract and also reduces the risk of transmission of several sexually transmitted infections. Which method fits both criteria?",
-    "options": [
-      "Condom",
-      "Oral contraceptive pill",
-      "Copper-releasing intrauterine device",
-      "Vasectomy"
-    ],
-    "correctIndex": 0,
-    "explanation": "Condoms act as physical barriers preventing sperm entry and also reduce transmission of several sexually transmitted infections.",
     "imageUrl": null
   },
   {
@@ -47042,7 +46130,7 @@
   {
     "examMode": "NEET",
     "subject": "Biology",
-    "chapter": "Ecology",
+    "chapter": "Ecosystem",
     "difficulty": "easy",
     "questionText": "In an ecosystem, organisms that synthesise organic food from inorganic materials form which trophic category?",
     "options": [
