@@ -1,0 +1,100 @@
+# ------------------------------------------------------------------
+#  Seed questions into the LIVE database — run from phone or laptop.
+#
+#  GitHub app / website → Actions → "Seed questions (live database)"
+#  → Run workflow → pick a mode → Run.
+#
+#  Needs one repository secret: MONGO_URI (same value as on Render).
+#  Settings → Secrets and variables → Actions → New repository secret.
+#  The secret is never printed in the logs.
+# ------------------------------------------------------------------
+name: Seed questions (live database)
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Kya karna hai?"
+        type: choice
+        default: "safe - add/update + list old (deletes nothing)"
+        options:
+          - "safe - add/update + list old (deletes nothing)"
+          - "delete - add/update + DELETE old questions"
+      confirm:
+        description: "Delete mode ke liye yahan DELETE likhein (safe mode mein khaali chhodein)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seed-questions
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    name: Seed questions
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - name: Install backend packages
+        run: npm ci --omit=dev --no-audit --no-fund
+
+      - name: Check settings
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+          MODE: ${{ inputs.mode }}
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          if [ -z "$MONGO_URI" ]; then
+            echo "::error::MONGO_URI secret nahi mila. GitHub → Settings → Secrets and variables → Actions → New repository secret → Name: MONGO_URI, value: Render wala MONGO_URI."
+            exit 1
+          fi
+          if [[ "$MODE" == delete* ]] && [ "$CONFIRM" != "DELETE" ]; then
+            echo "::error::Delete mode chuna hai lekin confirm box mein DELETE nahi likha. Kuch nahi badla."
+            exit 1
+          fi
+
+      - name: Seed
+        env:
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          if [[ "$MODE" == delete* ]]; then
+            node seed/seedQuestions.js --prune --yes | tee seed-output.txt
+          else
+            node seed/seedQuestions.js --prune | tee seed-output.txt
+          fi
+
+      - name: Summary
+        if: always()
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          {
+            echo "## Seed questions — ${MODE}"
+            echo
+            if [ -f seed-output.txt ]; then
+              echo '```'
+              grep -E "Questions in the database but not|Deleted|Dry run|Done\.|\.json:" seed-output.txt || true
+              echo '```'
+            else
+              echo "Seed did not run. Check the red step above."
+              echo
+              echo "If the error says it could not connect: MongoDB Atlas → Network Access must allow 0.0.0.0/0 (GitHub has no fixed IP)."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

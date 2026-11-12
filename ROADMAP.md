@@ -30,14 +30,17 @@
 
 Code only goes live after its PR is **merged into `main`**. Until then the founder will not see it, even if it is "done" here.
 
-| PR | What | Status (11 Nov 2026, night) |
+Founder works from the phone when away: merge PRs in the GitHub app, deploys are automatic, the seed runs from the Actions button. Phone guide: https://claude.ai/artifact/3A46t2ULQudE1bkyjg9ttb
+
+| PR | What | Status (12 Nov 2026) |
 |---|---|---|
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
 | #2 | Turnstile captcha, **email logo**, seed script skips empty files | ✅ Merged 11 Nov — live (logo inside email confirmed on Gmail) |
 | #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ✅ Merged 11 Nov |
 | #4 | Roadmap live-status update | ✅ Merged 11 Nov |
 | #5 | **Debug sweep**: critical login bypass fix, search crash, test paper fixes, chat layout/lag, accuracy labels, JEE Main dates, security updates | ✅ Merged 11 Nov — live |
-| #6 | **Question bank cleanup + new tough questions**: 1,184 wrong answer keys fixed, 2,883 broken/duplicate questions removed, chapter names unified, 216 new verified questions (incl. 47 JEE Advanced, stored but not served), `seedQuestions.js --prune` | ⏳ **Open — NOT live.** After merge the founder must run the seed (see §1 L-seed) |
+| #6 | **Question bank cleanup + new tough questions**: 1,184 wrong answer keys fixed, 2,883 broken/duplicate questions removed, chapter names unified, 216 new verified questions (incl. 47 JEE Advanced, stored but not served), `seedQuestions.js --prune` | ✅ Merged 12 Nov (squash). Render deploy + seed still pending (see §1 L-seed) |
+| #7 | **Phone ops**: GitHub Actions button "Seed questions (live database)" so the seed runs from the phone (Render free plan has no Shell) | ⏳ **Open — NOT live.** After merge: add `MONGO_URI` repo secret, then run the button (§1 L-seed) |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
@@ -61,7 +64,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 ## 1. Launch checklist (still pending)
 
 - [x] **L1** Merge PR #2 (captcha + email logo + seed script skips empty files) — merged 11 Nov 2026.
-- [ ] **L-seed** After PR #6 is merged: in the `backend` folder run `node seed/seedQuestions.js --prune` (adds/updates all questions and only *lists* old wrong/duplicate ones), check the count, then `node seed/seedQuestions.js --prune --yes` to delete them from the live database. Old test results are not affected.
+- [ ] **L-seed** Order matters: (1) Render → backend → Events shows the PR #6 commit **Live** (old code would serve the JEE Advanced questions); (2) merge PR #7; (3) GitHub → Settings → Secrets and variables → Actions → secret `MONGO_URI` = Render's value; (4) Atlas → Network Access allows `0.0.0.0/0`; (5) GitHub app → Actions → **Seed questions (live database)** → Run workflow → `safe` (adds/updates, only lists old ones, expect ~2,883); (6) run again with `delete` + type `DELETE`; summary should end "Questions now in the database: 12968". Laptop alternative: `node seed/seedQuestions.js --prune` then `--prune --yes` in `backend`. Old test results are not affected.
 - [ ] **L2** Cloudflare Turnstile: site key → Vercel `VITE_TURNSTILE_SITE_KEY` (redeploy); secret → Render `TURNSTILE_SECRET_KEY`. Test login / register / forgot-password.
 - [ ] **L3** OpenAI key + $10 credit on Render (`OPENAI_API_KEY`), confirm model IDs (`gpt-6-luna`, `gpt-6.1-sol`), run `node scripts/ai-eval.mjs` and read the 6 answers. *AI chat does not work without this.*
 - [ ] **L4** `api.jneetai.com` custom domain on Render + DNS at Hostinger (need nameserver screenshot) → Vercel `VITE_API_BASE_URL=https://api.jneetai.com/api` → Render `COOKIE_SAMESITE=lax`.
