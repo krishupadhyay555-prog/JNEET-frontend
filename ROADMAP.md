@@ -30,18 +30,22 @@
 
 Code only goes live after its PR is **merged into `main`**. Until then the founder will not see it, even if it is "done" here.
 
-| PR | What | Status (11 Nov 2026, night) |
+| PR | What | Status (12 Nov 2026) |
 |---|---|---|
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
 | #2 | Turnstile captcha, **email logo**, seed script skips empty files | ✅ Merged 11 Nov — live (logo inside email confirmed on Gmail) |
 | #3 | `ROADMAP.md` + `CLAUDE.md` (this memory file) | ✅ Merged 11 Nov |
 | #4 | Roadmap live-status update | ✅ Merged 11 Nov |
 | #5 | **Debug sweep**: critical login bypass fix, search crash, test paper fixes, chat layout/lag, accuracy labels, JEE Main dates, security updates | ✅ Merged 11 Nov — live |
-| #6 | **Question bank cleanup + new tough questions**: 1,184 wrong answer keys fixed, 2,883 broken/duplicate questions removed, chapter names unified, 216 new verified questions (incl. 47 JEE Advanced, stored but not served), `seedQuestions.js --prune` | ⏳ **Open — NOT live.** After merge the founder must run the seed (see §1 L-seed) |
+| #6 | **Question bank cleanup + new tough questions**: 1,184 wrong answer keys fixed, 2,883 broken/duplicate questions removed, chapter names unified, 216 new verified questions (incl. 47 JEE Advanced, stored but not served), `seedQuestions.js --prune` | ✅ Merged 12 Nov — live (Render deploy `4cd38ac`). Seed run 12 Nov from the laptop: 3,471 old copies deleted, live database = **12,968** |
+| #7 | Phone-ops seed button (GitHub Actions) | ❌ Closed, not merged — founder prefers running commands from the laptop |
+| #8 | Roadmap: seed done, UptimeRobot, laptop setup | ⏳ Open — NOT live |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
+| 12 Nov 2026 | Seed `--prune` listed 3,471 old questions, not the expected 2,883 | Seed matches on exam + subject + chapter + text, so every question whose chapter was renamed (e.g. "Mechanical Properties of Solids" → "…of Solids and Fluids") got a new copy and the old copy became "stale" | Expected. **Rule:** before `--prune --yes`, check `Questions now in the database` − stale = number of questions in the JSON files; run `--yes` right after the dry run so students never see both copies |
+| 12 Nov 2026 | Founder's laptop had only old copies (`C:\backend`, `C:\frontend`, `C:\Projects\JNEET_AI*`, June–Aug) | Code was never cloned with git | Fresh clone at `C:\Projects\JNEET-frontend` (git, `main`); `backend\.env` holds only `MONGO_URI` copied from Render. **Rule:** always run commands from `C:\Projects\JNEET-frontend`, after `git pull origin main` |
 | 11 Nov 2026 | Many answer keys wrong; explanations said "option index 2… discarded"; 2,000+ repeated questions; same chapter under 2–3 names | Generated questions were saved without checking that the key matched the worked answer; near-identical rewrites were all kept | PR #6: every flagged question solved again (sympy/brute force for numericals); keys fixed or question deleted; near-duplicates removed; new test `seedQuestions.test.js` blocks bad shape, duplicate options, duplicate text and self-contradicting explanations. **Rule:** a question enters the bank only after its answer is computed/verified, and the bank test must pass |
 | 11 Nov 2026 | PR #5 showed "Checks failed", then "merge conflicts" | CI: GitHub's runner could not reach Ubuntu's servers while installing the test browser (not our code; re-run passed). Conflict: PR #4 changed the same ROADMAP lines and was merged separately | Re-ran CI; merged `main` into the branch. **Rule:** never put the same file change in two open PRs |
 | 11 Nov 2026 | **CRITICAL: anyone could log in to any verified account** | `/verify-email` logged the caller in when the email was already verified, without checking the code | Fixed in PR #5 (now 409 "already verified, please log in", no session) + regression test |
@@ -61,13 +65,15 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 ## 1. Launch checklist (still pending)
 
 - [x] **L1** Merge PR #2 (captcha + email logo + seed script skips empty files) — merged 11 Nov 2026.
-- [ ] **L-seed** After PR #6 is merged: in the `backend` folder run `node seed/seedQuestions.js --prune` (adds/updates all questions and only *lists* old wrong/duplicate ones), check the count, then `node seed/seedQuestions.js --prune --yes` to delete them from the live database. Old test results are not affected.
+- [x] **L-seed** Seed after PR #6 — done 12 Nov 2026 from the laptop (`C:\Projects\JNEET-frontend\backend`): `node seed/seedQuestions.js --prune` (3,471 stale listed, 16,439 total) then `--prune --yes` (3,471 deleted, **12,968** left).
 - [ ] **L2** Cloudflare Turnstile: site key → Vercel `VITE_TURNSTILE_SITE_KEY` (redeploy); secret → Render `TURNSTILE_SECRET_KEY`. Test login / register / forgot-password.
 - [ ] **L3** OpenAI key + $10 credit on Render (`OPENAI_API_KEY`), confirm model IDs (`gpt-6-luna`, `gpt-6.1-sol`), run `node scripts/ai-eval.mjs` and read the 6 answers. *AI chat does not work without this.*
 - [ ] **L4** `api.jneetai.com` custom domain on Render + DNS at Hostinger (need nameserver screenshot) → Vercel `VITE_API_BASE_URL=https://api.jneetai.com/api` → Render `COOKIE_SAMESITE=lax`.
+  - 12 Nov 2026: Render part done — `https://api.jneetai.com/health` answers over HTTPS (UptimeRobot "Up"). Still to do: Vercel `VITE_API_BASE_URL` + redeploy, then Render `COOKIE_SAMESITE=lax`.
 - [ ] **L5** Render: `EMAIL_FROM=no-reply@jneetai.com`; `FRONTEND_URL` order `https://jneetai.com,https://www.jneetai.com,https://jneet-frontend.vercel.app` (first entry drives email links + logo).
 - [ ] **L6** Legal details in `frontend/src/legal/content.js` → `BUSINESS`.
 - [ ] **L7** Atlas Flex (backups), Render Starter ($7, no spin-down), UptimeRobot, Sentry.
+  - [x] UptimeRobot — done 12 Nov 2026: "JNEET backend" (`https://api.jneetai.com/health`) + "JNEET website" (`https://jneetai.com`), 5-min checks, email + phone push. The 5-min pings also keep the free Render backend awake (one service ≈ 720–744 of the 750 free hours/month — keep no other free Render service).
 - [ ] **L8** Production 10-minute smoke test.
 - [ ] **L9** Before paid plans: Vercel Hobby is **non-commercial only** → move to Vercel Pro ($20/mo) or Cloudflare Pages (free, commercial allowed).
 - [x] Brevo domain authenticated, sender verified, OTP arriving (Oct 2026).
@@ -277,7 +283,7 @@ Estimated total: **~10–12 weeks**. Most items cost ₹0/month; only the handwr
 
 ## 8. Known facts
 
-- Question bank (after PR #6): **12,968** = NEET 6,877 (Bio 2,923 · Chem 2,046 · Phy 1,908) + JEE Main 6,044 (Phy 1,997 · Chem 2,070 · Maths 1,977) + JEE Advanced 47 (stored, not served; `level: "advanced"`). Was 15,635 before cleanup. 0 images; difficulty tags still unreliable (≈88% "tough"). New questions go in `*-batch2.json` / `jee-advanced.json`.
+- Question bank (after PR #6): **12,968** = NEET 6,877 (Bio 2,923 · Chem 2,046 · Phy 1,908) + JEE Main 6,044 (Phy 1,997 · Chem 2,070 · Maths 1,977) + JEE Advanced 47 (stored, not served; `level: "advanced"`). Was 15,635 before cleanup. Live database seeded and pruned 12 Nov 2026 (12,968). 0 images; difficulty tags still unreliable (≈88% "tough"). New questions go in `*-batch2.json` / `jee-advanced.json`.
 - AI quotas: Free 5/day · Pro 30/day · Elite 50/day + 10 deep/month.
 
 ## 9. Open decisions (founder)
