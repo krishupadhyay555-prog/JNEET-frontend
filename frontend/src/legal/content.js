@@ -23,8 +23,8 @@ export const BUSINESS = {
   grievanceOfficer: { name: "Krish Upadhyay", email: "official.krishupadhyay@gmail.com" },
 };
 
-export const LEGAL_VERSION = "2026-10-18";
-export const LEGAL_UPDATED = "18 October 2026";
+export const LEGAL_VERSION = "2026-11-12";
+export const LEGAL_UPDATED = "12 November 2026";
 
 const B = BUSINESS;
 
@@ -57,7 +57,8 @@ export const LEGAL = {
         ul: [
           "To run the app: sign-in, the AI mentor, tests, revision, notes and progress tracking.",
           "To keep accounts and the service secure (for example, limiting repeated login attempts and blocking abuse).",
-          "To send service emails: verification codes, login codes, password-reset codes and parental-approval emails. We do not send marketing email unless you separately agree to it.",
+          "To send service emails: verification codes, login codes, password-reset codes, parental-approval emails and, for students under 18, a notice to the approving parent or guardian if the AI chat is locked under our chat rules (see section 6). We do not send marketing email unless you separately agree to it.",
+          "To keep the AI chat safe: messages are checked automatically for 18+ content and abusive language (and for signs of distress, which always get a caring reply). When a rule is broken we store only the kind of rule and the time — never the message itself.",
           "To apply daily AI limits fairly and to control our costs.",
           "To meet legal obligations.",
         ],
@@ -88,6 +89,7 @@ export const LEGAL = {
         p: [
           "JNEET+ AI is for students aged 13 and above. If we learn that a child under 13 has an account, we will delete it.",
           "If you are under 18, you must give a parent or guardian's email address when you sign up. After you verify your own email, we email your parent or guardian a link to review and approve the AI mentor. Until they approve, the AI mentor stays locked for your account; mock tests, revision and notes still work. They can withdraw approval at any time using the link in their confirmation email, which turns the AI mentor off again.",
+          "Chat rules: 18+ content and abusive language are not allowed. Breaking them leads to two warnings, then a 1-hour pause, a 24-hour pause and finally a lock of the AI chat; remarks are shown to the student in Analytics. If the chat of a student under 18 is locked, we send ONE email to the parent or guardian who approved the account, with a link to unlock it — it says only that the chat rules were broken, never what was written. The student can ask for this link again at most once a day. Students 18 and older unlock the chat themselves after 24 hours by accepting the rules again; we never email the parents of adult students. Messages showing distress are never counted as a rule break.",
           "We do not track children's behaviour for advertising, and we do not show them advertisements.",
           "Email-link approval is a practical safeguard, not a legal identity check. If you are a parent or guardian and something looks wrong, write to us and we will act on it.",
         ],
@@ -173,10 +175,13 @@ export const LEGAL = {
           "break the law or use the app to harm, harass or deceive anyone;",
           "try to get around limits, share or sell access, create multiple accounts to get extra free questions, or use bots or scripts;",
           "probe, attack, overload or reverse-engineer the service, or try to access other users' data;",
-          "ask the AI for content that is unsafe, hateful, sexual, or that helps cheat in an actual exam;",
+          "ask the AI for content that is unsafe, hateful, sexual, or that helps cheat in an actual exam, or use abusive language in the chat;",
           "copy or resell our questions, explanations or other content in bulk.",
         ],
-        p2: ["We may limit, suspend or close accounts that break these rules."],
+        p2: [
+          "Chat rules are enforced step by step: two warnings, then a 1-hour pause, a 24-hour pause and a lock of the AI chat (for students under 18 the approving parent or guardian is emailed to unlock it — see the Privacy Policy, section 6). Mock tests, revision and notes keep working during a pause or lock.",
+          "We may limit, suspend or close accounts that break these rules.",
+        ],
       },
       {
         h: "5. Your content",

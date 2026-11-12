@@ -52,6 +52,7 @@ const Revision        = lazyPage(() => import("./pages/Revision.jsx"));
 const RevisionSession = lazyPage(() => import("./pages/RevisionSession.jsx"));
 const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
 const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
+const ParentUnlock    = lazyPage(() => import("./pages/ParentUnlock.jsx"));
 const Landing         = lazyPage(() => import("./pages/Landing.jsx"));
 
 // Soft page-to-page transition (keyed on the path so every navigation animates).
@@ -190,6 +191,7 @@ export default function App() {
               <Route path="/refund"          element={<Legal doc="refund" />}  />
               <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
               <Route path="/parent-consent/:token"        element={<ParentConsent />} />
+              <Route path="/parent-unlock/:token"         element={<ParentUnlock />} />
 
               <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
               <Route path="/ask"       element={<ProtectedRoute><AskAI /></ProtectedRoute>} />

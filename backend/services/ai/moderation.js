@@ -1,6 +1,8 @@
 // ============================================================
 //  JNEET+ AI — services/ai/moderation.js
-//  18+ / adult-content detection for student messages.
+//  18+ / adult-content and abusive-language detection for student
+//  messages. The decision of what to DO with a flag (strike, polite
+//  refusal, distress care) lives in services/ai/safety.js.
 //
 //  Two layers:
 //    1. A deterministic pattern list (English, Hinglish, Hindi). It is
@@ -63,11 +65,38 @@ export function detectAdultContent(text) {
     (ADULT_TAG_RE.test(t) && /(?:send|show|share|give|chat|video|photo|pic|story|content)/.test(t));
 }
 
+// ── Abusive / vulgar language (gaali) ─────────────────────────────
+// Sexual slurs and direct insults. Matching here alone NEVER gives a
+// strike: it only sends the message to the context judge (safety.js),
+// which decides whether it is really abuse. Without the judge the
+// student just gets a polite "padhai pe focus" reply.
+const ABUSE_EN = [
+  "madar\\s?chod\\w*", "mader\\s?chod\\w*", "maa\\s?(?:ki|ke)\\s?(?:chut|choot)\\w*",
+  "b[ae]h[ae]?n\\s?chod\\w*", "bhen\\s?chod\\w*", "chutiy\\w*", "gandu\\w*",
+  "la[uw]d[ae]\\s?(?:ka|ke|lag)\\w*", "lawde\\w*", "bhadw\\w*", "harami\\w*", "kamin[ae]\\w*",
+  "motherfuck\\w*", "fuck\\s*(?:you|u|off|this|that)", "fuck\\w*", "bitch\\w*", "whores?", "slut\\w*", "bastards?",
+];
+const ABUSE_RE = new RegExp(`(?<![a-z0-9])(?:${ABUSE_EN.join("|")})(?![a-z0-9])`, "i");
+const ABUSE_DEVANAGARI_RE = /(मादरचोद|मादर\s*चोद|बहनचोद|बहन\s*चोद|भेनचोद|चूतिया|चुतिया|गांडू|गान्डू|हरामी|भड़वा|कुतिया)/;
+
+export function detectAbuse(text) {
+  if (typeof text !== "string" || !text.trim()) return false;
+  return ABUSE_RE.test(normalizeForModeration(text)) || ABUSE_DEVANAGARI_RE.test(text);
+}
+
+// ── Provider moderation (OpenAI omni-moderation, free, multilingual) ──
 const PROVIDER_TIMEOUT_MS = 1500;
 const PROVIDER_SEXUAL_THRESHOLD = 0.85;
+const PROVIDER_ABUSE_THRESHOLD = 0.85;
+const PROVIDER_SELF_HARM_THRESHOLD = 0.5;
 
-export async function moderateWithProvider(text, { fetchImpl = globalThis.fetch } = {}) {
-  if (!env.OPENAI_API_KEY || typeof fetchImpl !== "function") return false;
+const num = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
+
+// One call, every category we use. Returns null when the provider is
+// off, slow or failing (fail open — a hiccup must never block a student).
+//   { sexual, minors, abuse, selfHarm }  (booleans, thresholds applied)
+export async function moderateProviderAll(text, { fetchImpl = globalThis.fetch } = {}) {
+  if (!env.OPENAI_API_KEY || typeof fetchImpl !== "function") return null;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), PROVIDER_TIMEOUT_MS);
   try {
@@ -77,19 +106,34 @@ export async function moderateWithProvider(text, { fetchImpl = globalThis.fetch 
       body: JSON.stringify({ model: "omni-moderation-latest", input: String(text).slice(0, 2000) }),
       signal: controller.signal,
     });
-    if (!res.ok) return false;
+    if (!res.ok) return null;
     const r = (await res.json())?.results?.[0];
-    if (!r) return false;
-    if (r.categories?.["sexual/minors"]) return true;
-    return Boolean(r.categories?.sexual) && Number(r.category_scores?.sexual) >= PROVIDER_SEXUAL_THRESHOLD;
+    if (!r) return null;
+    const c = r.categories ?? {};
+    const sc = r.category_scores ?? {};
+    return {
+      sexual: Boolean(c.sexual) && num(sc.sexual) >= PROVIDER_SEXUAL_THRESHOLD,
+      minors: Boolean(c["sexual/minors"]),
+      abuse:
+        ["harassment/threatening", "hate/threatening", "hate"].some((k) => c[k] && num(sc[k]) >= PROVIDER_ABUSE_THRESHOLD) ||
+        (Boolean(c.harassment) && num(sc.harassment) >= 0.95),
+      selfHarm:
+        ["self-harm/intent", "self-harm"].some((k) => c[k] || num(sc[k]) >= PROVIDER_SELF_HARM_THRESHOLD),
+    };
   } catch {
-    return false; // fail open
+    return null; // fail open
   } finally {
     clearTimeout(timer);
   }
 }
 
-// What askAI calls: patterns first (instant, free), provider second.
+// Kept for older callers/tests: true only for a high-confidence sexual result.
+export async function moderateWithProvider(text, opts = {}) {
+  const r = await moderateProviderAll(text, opts);
+  return Boolean(r && (r.minors || r.sexual));
+}
+
+// Patterns first (instant, free), provider second.
 export async function isAdultRequest(text) {
   if (detectAdultContent(text)) return true;
   if (env.NODE_ENV === "test" || !env.AI_MODERATION_PROVIDER) return false;

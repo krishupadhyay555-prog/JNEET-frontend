@@ -136,7 +136,8 @@ export default function AskAI() {
     return () => clearTimeout(t);
   }, [pausedUntil, setAiNotice]);
 
-  const blocked = paused || aiNotice?.code === "PARENT_CONSENT_REQUIRED" || (usage?.limit != null && usage.remaining === 0);
+  const locked = aiNotice?.code === "CHAT_LOCKED";
+  const blocked = paused || locked || aiNotice?.code === "PARENT_CONSENT_REQUIRED" || (usage?.limit != null && usage.remaining === 0);
 
   const handleSend = useCallback(() => {
     if (!prompt.trim() || isStreaming || blocked) return;
@@ -242,7 +243,12 @@ export default function AskAI() {
 
         {!backendError && notice && (
           <div className="px-3 sm:px-4 shrink-0">
-            <AiNotice notice={notice} onDismiss={aiNotice && !paused ? () => setAiNotice(null) : undefined} />
+            <AiNotice
+              notice={notice}
+              onDismiss={aiNotice && !paused && !locked ? () => setAiNotice(null) : undefined}
+              onUnlocked={() => setAiNotice(null)}
+              onLockUpdate={(lock) => setAiNotice({ code: "CHAT_LOCKED", lock })}
+            />
           </div>
         )}
 

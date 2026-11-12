@@ -115,15 +115,22 @@ function TrendChart({ attempts }) {
 }
 
 const NOTICE_LABEL = {
-  warning:            "Warning 1 — 18+ content request (not allowed)",
-  final_warning:      "Final warning — 18+ content request",
-  paused:             "AI chat paused for 1 hour — 18+ policy",
+  warning:            "Warning 1",
+  final_warning:      "Final warning",
+  paused:             "AI chat paused for 1 hour",
+  paused_24h:         "Remark: AI chat paused for 24 hours after a repeat",
+  locked:             "Remark: AI chat locked after repeated breaks",
+  unlock_requested:   "Unlock link sent to parent/guardian",
+  unlocked:           "AI chat unlocked (rules accepted again)",
+  unlocked_by_parent: "AI chat unlocked by parent/guardian",
   repeat_after_pause: "Remark: repeated 18+ requests after warnings and a pause",
 };
+const CATEGORY_LABEL = { adult: "18+ content", abuse: "abusive language" };
+const SERIOUS = new Set(["paused_24h", "locked", "repeat_after_pause"]);
 
 function AccountNotices({ policy }) {
   if (!policy || !policy.events?.length) return null;
-  const serious = policy.events.some((e) => e.kind === "repeat_after_pause");
+  const serious = policy.events.some((e) => SERIOUS.has(e.kind));
   return (
     <div className={`rounded-2xl border p-4 ${serious ? "border-red-500/30 bg-red-500/5" : "border-amber-500/30 bg-amber-500/5"}`}>
       <div className="flex items-center gap-2 mb-2">
@@ -131,13 +138,17 @@ function AccountNotices({ policy }) {
         <p className="text-xs font-semibold text-fg-primary">Account notices</p>
       </div>
       <p className="text-[11px] text-gray-600 leading-relaxed mb-2.5">
-        JNEET+ is for NEET UG / JEE Mains preparation only. 18+ content is not allowed; repeated
-        attempts pause the AI chat and are noted here. A clean month clears the count.
+        JNEET+ is for NEET UG / JEE Main preparation only. 18+ content and abusive language are not
+        allowed: 2 warnings, then a 1-hour pause, a 24-hour pause, and finally a lock. Remarks stay
+        here. A clean month clears the warning count. Your messages are never stored for this.
       </p>
       <ul className="space-y-1">
         {policy.events.map((e, i) => (
           <li key={`${e.at}-${i}`} className="flex items-center justify-between gap-3 text-[11px]">
-            <span className="text-fg-primary">{NOTICE_LABEL[e.kind] ?? "Policy notice"}</span>
+            <span className="text-fg-primary">
+              {NOTICE_LABEL[e.kind] ?? "Policy notice"}
+              {CATEGORY_LABEL[e.category] ? <span className="text-gray-600"> — {CATEGORY_LABEL[e.category]}</span> : null}
+            </span>
             <span className="text-gray-600 shrink-0 tabular-nums">{formatShortDate(e.at)}</span>
           </li>
         ))}

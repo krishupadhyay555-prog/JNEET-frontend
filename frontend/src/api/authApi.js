@@ -33,4 +33,7 @@ export const consentApi = {
   approve:         (token, data) => api.post(`/consent/parent/${encodeURIComponent(token)}/approve`, data),
   describeRevoke:  (token)       => api.get(`/consent/parent/revoke/${encodeURIComponent(token)}`),
   revoke:          (token, data) => api.post(`/consent/parent/revoke/${encodeURIComponent(token)}`, data),
+  // parent unlocks a locked AI chat (link from the safety email)
+  describeUnlock:  (token)       => api.get(`/consent/unlock/${encodeURIComponent(token)}`),
+  unlock:          (token, data) => api.post(`/consent/unlock/${encodeURIComponent(token)}`, data),
 };

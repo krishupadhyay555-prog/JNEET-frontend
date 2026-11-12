@@ -97,7 +97,7 @@ describe("provider moderation (fails open)", () => {
 });
 
 describe("policy levels", () => {
-  it("escalates warning → final → paused", () => {
-    expect([1, 2, 3, 4, 9].map(levelFor)).toEqual(["warning", "final_warning", "paused", "paused", "paused"]);
+  it("escalates warning → final → 1 h pause → 24 h pause → lock", () => {
+    expect([1, 2, 3, 4, 5, 9].map(levelFor)).toEqual(["warning", "final_warning", "paused", "paused_24h", "locked", "locked"]);
   });
 });

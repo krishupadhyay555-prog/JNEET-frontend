@@ -99,16 +99,30 @@ const userSchema = new mongoose.Schema(
     dateOfBirth: { type: Date, default: null },
     consent:     { type: consentSchema, default: () => ({}) },
 
-    // 18+ policy record (category + time only, never message text).
+    // Chat-rules record (18+ content / abusive language): category + time
+    // only, never the message text. See services/ai/policy.js.
     policy: {
       strikes:     { type: Number, default: 0 },
       flagsTotal:  { type: Number, default: 0 },
       lastFlagAt:  { type: Date,   default: null },
       pausedUntil: { type: Date,   default: null },
+      locked:      { type: Boolean, default: false },
+      lockedAt:    { type: Date,   default: null },
+      // Parent unlock link (under-18 only) — hashed, single use, 7 days.
+      unlockTokenHash:      { type: String, default: null, select: false },
+      unlockTokenExpiresAt: { type: Date,   default: null },
+      parentEmailedAt:      { type: Date,   default: null },
       events: {
         type: [new mongoose.Schema(
           { at: { type: Date, required: true },
-            kind: { type: String, enum: ["warning", "final_warning", "paused", "repeat_after_pause"], required: true } },
+            kind: {
+              type: String,
+              enum: ["warning", "final_warning", "paused", "paused_24h", "locked",
+                     "unlock_requested", "unlocked", "unlocked_by_parent",
+                     "repeat_after_pause"], // last one: older records only
+              required: true,
+            },
+            category: { type: String, enum: ["adult", "abuse", null], default: null } },
           { _id: false }
         )],
         default: [],
@@ -173,6 +187,7 @@ userSchema.index(
 // Parent-consent link lookups
 userSchema.index({ "consent.parentTokenHash": 1 }, { sparse: true });
 userSchema.index({ "consent.parentRevokeTokenHash": 1 }, { sparse: true });
+userSchema.index({ "policy.unlockTokenHash": 1 }, { sparse: true });
 
 userSchema.pre("save", async function () {
   if (!this.isModified("password")) return;

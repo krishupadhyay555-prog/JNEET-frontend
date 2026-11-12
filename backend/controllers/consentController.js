@@ -10,6 +10,8 @@
 //      GET  /api/consent/status
 //      POST /api/consent/resend                   email parent again
 //      PATCH /api/consent/parent-email            fix a wrong address
+//      GET  /api/consent/unlock/:token            describe chat-unlock link
+//      POST /api/consent/unlock/:token            parent unlocks the AI chat
 // ============================================================
 
 import User from "../models/User.js";
@@ -22,6 +24,7 @@ import {
   parentEmailIsSelf,
   PARENT_RESEND_COOLDOWN_MS,
 } from "../services/consentService.js";
+import { describeParentUnlock, approveParentUnlock } from "../services/ai/policy.js";
 import { toStudent } from "../utils/studentPayload.js";
 
 // ── Public: parent side ──────────────────────────────────────────
@@ -128,5 +131,22 @@ export const updateParentEmail = async (req, res, next) => {
     if (!result.sent) return res.status(502).json({ success: false, error: result.error });
 
     return res.json({ success: true, message: "Parent email updated and approval link sent.", student: toStudent(user) });
+  } catch (err) { next(err); }
+};
+
+// ── Parent unlocks a locked AI chat (link from the safety email) ──
+export const getUnlockLink = async (req, res, next) => {
+  try {
+    const info = await describeParentUnlock(req.params.token);
+    const status = info.state === "invalid" ? 404 : 200;
+    return res.status(status).json({ success: info.state !== "invalid", ...info });
+  } catch (err) { next(err); }
+};
+
+export const approveUnlock = async (req, res, next) => {
+  try {
+    const result = await approveParentUnlock(req.params.token);
+    if (!result.ok) return res.status(result.status).json({ success: false, error: result.error });
+    return res.json({ success: true, studentName: result.studentName, alreadyUnlocked: Boolean(result.alreadyUnlocked) });
   } catch (err) { next(err); }
 };
