@@ -42,7 +42,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #7 | Phone-ops seed button (GitHub Actions) | ❌ Closed, not merged — founder prefers running commands from the laptop |
 | #8 | Roadmap: seed done, UptimeRobot, laptop setup | ⏳ Open — NOT live |
 | #9 | Safety hotfix (18+ filter flagged maths / biology words) | ❌ Closed — folded into #10 so the same files are not in two open PRs |
-| #10 | **Safety v2**: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ⏳ Open — NOT live |
+| #10 | **Safety v2 + fill-in-the-blanks + OneShot + recap + Aaj ka plan + quick chips + new light/dark theme** (needs L-seed-2 after merge). Safety: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ⏳ Open — NOT live |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
@@ -70,6 +70,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 
 - [x] **L1** Merge PR #2 (captcha + email logo + seed script skips empty files) — merged 11 Nov 2026.
 - [x] **L-seed** Seed after PR #6 — done 12 Nov 2026 from the laptop (`C:\Projects\JNEET-frontend\backend`): `node seed/seedQuestions.js --prune` (3,471 stale listed, 16,439 total) then `--prune --yes` (3,471 deleted, **12,968** left).
+- [ ] **L-seed-2** Seed after PR #10 (127 fill-in-the-blanks): same laptop folder → `git pull origin main` → `node seed/seedQuestions.js --prune` (expect total **13,095**, stale 0) → `--prune --yes`.
 - [ ] **L2** Cloudflare Turnstile: site key → Vercel `VITE_TURNSTILE_SITE_KEY` (redeploy); secret → Render `TURNSTILE_SECRET_KEY`. Test login / register / forgot-password.
 - [ ] **L3** OpenAI key + $10 credit on Render (`OPENAI_API_KEY`), confirm model IDs (`gpt-6-luna`, `gpt-6.1-sol`), run `node scripts/ai-eval.mjs` and read the 6 answers. *AI chat does not work without this.*
 - [ ] **L4** `api.jneetai.com` custom domain on Render + DNS at Hostinger (need nameserver screenshot) → Vercel `VITE_API_BASE_URL=https://api.jneetai.com/api` → Render `COOKIE_SAMESITE=lax`.
@@ -249,12 +250,17 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
 
 ### D-m. Founder decisions and new work, 12 Nov 2026
 - [ ] **D73 Safety v2** — PR #10 (see §0). Tick when merged + checked live.
-- [ ] **D74 Mockups first** — premium, calm, study-focused, not cartoon, no Sparkles: Chat, Dashboard, Revision, OneShot. Founder picks, then build.
-  - 12 Nov 2026: 6 phone mockups shared — Chat in 2 looks (A "Calm Paper" light / B "Night Focus" dark), Pichli baar ka recap, Dashboard, Revision (fill-in-the-blank + MCQ), OneShot: https://claude.ai/artifact/CWcKodXKcUdDWea4eR7JcV — waiting for founder's pick.
+- [x] **D74 Mockups first** — premium, calm, study-focused, not cartoon, no Sparkles: Chat, Dashboard, Revision, OneShot. Founder picks, then build.
+  - 12 Nov 2026: 6 phone mockups shared — Chat in 2 looks (A "Calm Paper" light / B "Night Focus" dark), Pichli baar ka recap, Dashboard, Revision (fill-in-the-blank + MCQ), OneShot: https://claude.ai/artifact/CWcKodXKcUdDWea4eR7JcV.
+  - 12 Nov 2026: founder approved ("Design achha hai", both light and dark; "OneShot perfect"). Built in PR #10: light = warm paper #F6F5F2, dark = slate #0F1217, NEET teal / JEE indigo accents kept.
 - [ ] **D75 Revision = MCQ + fill-in-the-blanks** (instant feedback; separate from Mock Tests and from OneShot). Needs a new `fill_blank` question type + verified content.
+  - 12 Nov 2026: built in PR #10 — `fill_blank` type, strict server-side matcher, 127 verified blanks (74 NEET / 53 JEE, 11 chapters). Tick after merge + seed (L-seed-2). More blanks come with D80.
 - [ ] **D76 OneShot (separate feature)** — per chapter, pre-written and verified (₹0 per student, never generated live): brief summary + all important formulas + important examples + short-but-detailed explanation of the important topics. Own words only (no NCERT text).
+  - 12 Nov 2026: built in PR #10 — `/oneshot` pages + 6 chapters (Rotational Motion, Current Electricity, Chemical Bonding, Breathing, Cell Cycle, Complex Numbers). Tick after merge; more chapters to be added.
 - [ ] **D77 "Pichli baar ka recap"** — every time the student opens the chat, a short line: "Pichli baar: <topics> — 5–10 sawaal se revise karo?". On click, the AI maps the last chat's topics to our chapter list (choice from the list only) and serves 5–10 **verified questions from the bank** for those chapters; if no chapter matches, no recap (never AI-invented questions). Strictly tested.
+  - 12 Nov 2026: built in PR #10 (strip in chat, dismiss per visit, 5 bank questions, + "Aaj ka plan" card on Dashboard). Tick after merge + live check (needs L3 OpenAI key for the AI chapter mapping; without it a careful keyword match is used).
 - [ ] **D78 Smart Chat v2** — topic memory ("adhoora topic, wapas chalein?"), rolling summary, 1,000+ messages per chat (load older on scroll, render only visible), quick chips under answers, "Concept vs 📌 Ratta" labels, "✓ Verified" badge when the answer matches the bank.
+  - 12 Nov 2026: quick chips under the latest answer done in PR #10. Rest still to do.
 - [ ] **D79 Numerical (integer) answers** — JEE Main has numerical questions in every subject; the test engine only knows single-correct MCQ today. Later: multi-correct / matrix / paragraph for Advanced.
 - [ ] **D80 Question intake (hybrid)** — founder pastes plain-text questions (any source except coaching books); Claude converts, solves, checks numbers with code, de-duplicates against the bank, fixes or drops, and reports counts.
 - [ ] **D81 PYQs** — official NTA papers + official final answer keys only; our own verified solutions; label "NEET UG 2024 · NTA"; dropped/bonus marked; never coaching solutions.
