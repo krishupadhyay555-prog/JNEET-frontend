@@ -2,7 +2,8 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **11 Nov 2026 (night)**. Work status: **ON HOLD** — nothing below gets built until the founder says "go" and confirms the order.
+> Last updated: **12 Nov 2026**. Work status: **ACTIVE (founder said "go" 12 Nov)** — order: Safety v2 → mockups → Revision (MCQ + fill-in-the-blanks) · OneShot · "Pichli baar ka recap" → then new questions. Everything else waits for the founder's OK (see §5 D-m).
+> Founder gave Claude project-lead permission (12 Nov): Claude runs commands, tests, local seeds and opens PRs; the founder merges PRs, runs live-database commands from the laptop and handles every password/key — Claude never sees or asks for them.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
 **Target:** a 10/10 product for NEET UG + JEE Main students — "iske bina prep nahi karunga".
@@ -14,8 +15,8 @@
 
 - Never share `.env` / keys in chat or commit them; keys go only into Render / Vercel dashboards.
 - No Sparkles icon anywhere.
-- NEET UG and JEE Main have **equal priority** (NEET UG only, not PG; JEE Main only, not Advanced). 90–95% on-exam content; rare beyond-exam extras are labelled.
-- 18+ content strictly banned: warning → final warning → 1-hour chat pause → remark in Analytics. Distress messages are never blocked.
+- NEET UG and JEE Main have **equal priority** (NEET UG only, not PG). **JEE Advanced only inside a "JEE Main + Advanced" combo** (decided 12 Nov 2026 — never an Advanced-only plan); Advanced questions stay unserved (`level: "advanced"`) until the combo, its content and its question types are ready. 90–95% on-exam content; rare beyond-exam extras are labelled.
+- Chat rules (18+ content **and** abusive language, any language) strictly banned: warning → final warning → 1-hour pause → 24-hour pause + Analytics remark → lock. Unlock: 18+ student after 24 h by accepting the rules; under-18 only via ONE email to the approving parent (resend max once/24 h). A strike needs the context judge to agree; unclear cases get a polite refusal with no strike. Distress messages are never blocked, counted or locked. Message text is never stored. (Safety v2, PR #10.)
 - The founder runs the seed script himself.
 - Don't bring up the notes-vault app idea or Instagram/Reddit ads unless he does.
 - **No payment UI inside the TWA/Play Store app** — payments on the web only. Paid plans are **non-refundable**.
@@ -40,7 +41,8 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #6 | **Question bank cleanup + new tough questions**: 1,184 wrong answer keys fixed, 2,883 broken/duplicate questions removed, chapter names unified, 216 new verified questions (incl. 47 JEE Advanced, stored but not served), `seedQuestions.js --prune` | ✅ Merged 12 Nov — live (Render deploy `4cd38ac`). Seed run 12 Nov from the laptop: 3,471 old copies deleted, live database = **12,968** |
 | #7 | Phone-ops seed button (GitHub Actions) | ❌ Closed, not merged — founder prefers running commands from the laptop |
 | #8 | Roadmap: seed done, UptimeRobot, laptop setup | ⏳ Open — NOT live |
-| #9 | **Safety hotfix**: 18+ filter flagged maths ("show that 18 + 4√2") and biology words (cock & hen, nude mice, tits) | ⏳ Open — NOT live |
+| #9 | Safety hotfix (18+ filter flagged maths / biology words) | ❌ Closed — folded into #10 so the same files are not in two open PRs |
+| #10 | **Safety v2**: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ⏳ Open — NOT live |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
@@ -106,6 +108,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 - [ ] **B2 AI memory.** Chat always knows the student's WMS weak topics and past mistakes ("Pichli baar torque mein sign galat kiya tha"). ~₹0.
 - [ ] **B3 Free tier = value first.** 7-day Pro reverse trial, then back to Free.
 - [ ] **B4 Pricing.** Monthly + **exam-season pass** (JEE Jan/Apr, NEET May) + **parent payment link** (paid on the web, never in-app). Suggested Pro ₹149–199/mo or season pass ₹499–799 (to validate).
+  - 12 Nov 2026 (founder): plan names stay **Free / Pro / Elite** ("Advanced plan" would clash with JEE Advanced). Durations **1 month + 4 months** (founder prefers 4 over 3: Jan–Apr). Open point: a fixed Jan–Apr pass ends *before* NEET (May) and JEE Advanced (May/June) — proposal: the 4-month pass never ends before the student's exam date. Main + Advanced combo = Elite level only; optional **"Advanced Crash" (~45 days, sold after JEE Main results)**.
 - [ ] **B5 Board-exam balance for Class 12.** Light "board mode" option while staying JEE/NEET-focused.
 
 ---
@@ -244,6 +247,18 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
 - [ ] **D71 Animations, themes, design polish on every page** (incl. Privacy, Terms, Legal, Settings).
 - [ ] **D72 Playable demo of Memory Card Match + game samples** before full build.
 
+### D-m. Founder decisions and new work, 12 Nov 2026
+- [ ] **D73 Safety v2** — PR #10 (see §0). Tick when merged + checked live.
+- [ ] **D74 Mockups first** — premium, calm, study-focused, not cartoon, no Sparkles: Chat, Dashboard, Revision, OneShot. Founder picks, then build.
+- [ ] **D75 Revision = MCQ + fill-in-the-blanks** (instant feedback; separate from Mock Tests and from OneShot). Needs a new `fill_blank` question type + verified content.
+- [ ] **D76 OneShot (separate feature)** — per chapter, pre-written and verified (₹0 per student, never generated live): brief summary + all important formulas + important examples + short-but-detailed explanation of the important topics. Own words only (no NCERT text).
+- [ ] **D77 "Pichli baar ka recap"** — every time the student opens the chat, a short line: "Pichli baar: <topics> — 5–10 sawaal se revise karo?". On click, the AI maps the last chat's topics to our chapter list (choice from the list only) and serves 5–10 **verified questions from the bank** for those chapters; if no chapter matches, no recap (never AI-invented questions). Strictly tested.
+- [ ] **D78 Smart Chat v2** — topic memory ("adhoora topic, wapas chalein?"), rolling summary, 1,000+ messages per chat (load older on scroll, render only visible), quick chips under answers, "Concept vs 📌 Ratta" labels, "✓ Verified" badge when the answer matches the bank.
+- [ ] **D79 Numerical (integer) answers** — JEE Main has numerical questions in every subject; the test engine only knows single-correct MCQ today. Later: multi-correct / matrix / paragraph for Advanced.
+- [ ] **D80 Question intake (hybrid)** — founder pastes plain-text questions (any source except coaching books); Claude converts, solves, checks numbers with code, de-duplicates against the bank, fixes or drops, and reports counts.
+- [ ] **D81 PYQs** — official NTA papers + official final answer keys only; our own verified solutions; label "NEET UG 2024 · NTA"; dropped/bonus marked; never coaching solutions.
+- [ ] **D82 DPDP lawyer check before 13 May 2027** — parent emails (safety lock), any parent progress report (D23), email-link consent.
+
 ### D-k. Later / platform
 - [ ] **D60 Razorpay + Pro/Elite (Batch 6)** — 2% + GST per payment; ₹199 KYC.
 - [ ] **D61 Google login.**
@@ -252,6 +267,8 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
 ---
 
 ## 6. Priority order (founder to confirm)
+
+**12 Nov 2026 founder order (current):** 1 Safety v2 (D73) · 2 Mockups (D74) · 3 Revision MCQ + fill-in-the-blanks (D75) · 4 OneShot (D76) · 5 Pichli baar ka recap (D77) · then new questions (D80). The list below is the older proposal.
 
 **Top 10:** 1 Analytics (A1) · 2 Question bank cleanup + report button (A3, A2) · 3 Diagnostic test (A4) · 4 Daily Dose + streak (D1, D2) · 5 Mistake Notebook + spaced repetition (D7) · 6 Handwritten solution checker (C1) · 7 AI memory (B2) · 8 3D simulations + Memory Card Match and other games (D41, D44+) · 9 All India Live Mock (C9) · 10 SEO pages + Hindi medium (A5, A6).
 
@@ -290,7 +307,7 @@ Estimated total: **~10–12 weeks**. Most items cost ₹0/month; only the handwr
 
 ## 9. Open decisions (founder)
 
-- [ ] **JEE Advanced (proposed 11 Nov 2026, awaiting founder OK).** Proposal: plans = NEET UG · JEE Main · JEE Main + Advanced combo (no Advanced-only plan, since Advanced needs Main first). Same teaching method for all (mentor, write-by-hand, WMS, games, 3D); only content level, question types (multi-correct, paragraph, matrix-match, integer, partial marking) and AI depth change. Every question tagged `main`/`advanced`; plan checked on the server. Durations: 1 month + 3 months (+ "till exam" pass later). Suggested prices (to validate): NEET UG / JEE Main ₹199/mo or ₹499/3 mo; Main + Advanced ₹299/mo or ₹749/3 mo. Launch timing: Advanced content Feb–Mar 2027. If approved, change §0 "JEE Main only" rule accordingly.
+- [x] **JEE Advanced — decided 12 Nov 2026:** only inside a Main + Advanced combo (Elite level), 1 or 4 months; content + question types first (see §0, B4, D79). Original proposal kept for reference: **JEE Advanced (proposed 11 Nov 2026).** Proposal: plans = NEET UG · JEE Main · JEE Main + Advanced combo (no Advanced-only plan, since Advanced needs Main first). Same teaching method for all (mentor, write-by-hand, WMS, games, 3D); only content level, question types (multi-correct, paragraph, matrix-match, integer, partial marking) and AI depth change. Every question tagged `main`/`advanced`; plan checked on the server. Durations: 1 month + 3 months (+ "till exam" pass later). Suggested prices (to validate): NEET UG / JEE Main ₹199/mo or ₹499/3 mo; Main + Advanced ₹299/mo or ₹749/3 mo. Launch timing: Advanced content Feb–Mar 2027. If approved, change §0 "JEE Main only" rule accordingly.
 
 - [ ] Confirm priority order in §6.
 - [ ] Final prices (B4).
