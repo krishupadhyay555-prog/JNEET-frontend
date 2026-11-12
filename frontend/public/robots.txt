@@ -9,3 +9,4 @@ Disallow: /api/
 Disallow: /dashboard
 Disallow: /ask
 Disallow: /parent-consent/
+Disallow: /parent-unlock/

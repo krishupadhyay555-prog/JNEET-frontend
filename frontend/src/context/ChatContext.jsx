@@ -124,7 +124,8 @@ export function ChatProvider({ children }) {
         .then((r) => {
           const d = r.data?.daily;
           if (d) setUsage({ remaining: d.remaining, limit: d.limit, resetsAt: d.resetsAt });
-          if (r.data?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: r.data.pausedUntil });
+          if (r.data?.chatLock) setAiNotice({ code: "CHAT_LOCKED", lock: r.data.chatLock });
+          else if (r.data?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: r.data.pausedUntil });
           else if (r.data?.aiLocked) setAiNotice((n) => n ?? { code: "PARENT_CONSENT_REQUIRED", message: "Your parent or guardian needs to approve your account before you can use the AI mentor." });
         })
         .catch(() => { /* usage is a nicety; the chat works without it */ });
@@ -370,14 +371,15 @@ export function ChatProvider({ children }) {
     // Shared by a normal finish and by "Stop" (which keeps the partial answer).
     const finalize = async (fullText, newUsage, policy = null) => {
       partialRef.current = null;
-      if (policy?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: policy.pausedUntil });
+      if (policy?.locked) setAiNotice({ code: "CHAT_LOCKED", lock: policy.lock ?? null });
+      else if (policy?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: policy.pausedUntil });
       const stillActive = belongsToActiveSession();
       if (newUsage) setUsage(newUsage);
 
       if (stillActive) {
         setIsStreaming(false);
         setStreamingText("");
-        setMessages((prev) => [...prev, { _id: tempAiId, key: `a-${tempKey}`, role: "ai", content: fullText, saved: false, feedback: null }]);
+        setMessages((prev) => [...prev, { _id: tempAiId, key: `a-${tempKey}`, role: "ai", content: fullText, saved: false, feedback: null, guarded: !!policy }]);
       }
 
       try {
@@ -482,6 +484,8 @@ export function ChatProvider({ children }) {
             setAiNotice({ code: info.code, message: errMsg, resetsAt: info.resetsAt ?? null, limit: info.limit ?? null });
           } else if (info.code === "CHAT_PAUSED") {
             setAiNotice({ code: info.code, message: errMsg, resumesAt: info.resumesAt ?? null });
+          } else if (info.code === "CHAT_LOCKED") {
+            setAiNotice({ code: info.code, message: errMsg, lock: info.lock ?? null });
           } else if (["PARENT_CONSENT_REQUIRED", "AI_BUSY", "AI_NOT_CONFIGURED"].includes(info.code)) {
             setAiNotice({ code: info.code, message: errMsg });
           } else {

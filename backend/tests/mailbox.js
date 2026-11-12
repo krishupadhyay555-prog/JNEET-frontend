@@ -1,8 +1,8 @@
 // Captures the OTPs / links our (mocked) email service "sends", so tests
 // can complete the real verify-email → login flows.
-export const mailbox = { verify: new Map(), reset: new Map(), login: new Map(), parent: new Map() };
+export const mailbox = { verify: new Map(), reset: new Map(), login: new Map(), parent: new Map(), safetyLock: [] };
 export function clearMailbox() {
-  for (const m of Object.values(mailbox)) m.clear();
+  for (const m of Object.values(mailbox)) (Array.isArray(m) ? m.splice(0) : m.clear());
 }
 export const mailMock = async (importOriginal) => {
   const actual = await importOriginal();
@@ -14,5 +14,6 @@ export const mailMock = async (importOriginal) => {
     sendLoginOtp: async (to, otp) => { mailbox.login.set(to, otp); return { ok: true }; },
     sendParentConsentRequest: async (to, { approveUrl }) => { mailbox.parent.set(to, approveUrl); return { ok: true }; },
     sendParentConsentConfirmation: async () => ({ ok: true }),
+    sendParentSafetyLock: async (to, { approveUrl }) => { mailbox.safetyLock.push({ to, approveUrl }); return { ok: true }; },
   };
 };

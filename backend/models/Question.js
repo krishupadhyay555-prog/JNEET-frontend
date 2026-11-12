@@ -29,6 +29,14 @@ const questionSchema = new mongoose.Schema(
       enum: ["easy", "moderate", "tough"],
       required: true,
     },
+    // "mcq" = 4 options, one correct (tests + revision).
+    // "fill_blank" = typed answer, checked against `answers`
+    // (Revision only — never served in mock tests; see SERVABLE).
+    type: {
+      type: String,
+      enum: ["mcq", "fill_blank"],
+      default: "mcq",
+    },
     questionText: {
       type: String,
       required: true,
@@ -36,17 +44,31 @@ const questionSchema = new mongoose.Schema(
     },
     options: {
       type: [String],
-      required: true,
+      default: undefined,
       validate: {
-        validator: (v) => v.length === 4,
-        message: "A question must have exactly 4 options.",
+        validator: function (v) {
+          return this.type === "fill_blank" ? !v || v.length === 0 : Array.isArray(v) && v.length === 4;
+        },
+        message: "An MCQ must have exactly 4 options (a fill-in-the-blank has none).",
       },
     },
     correctIndex: {
       type: Number,
-      required: true,
+      required: function () { return this.type !== "fill_blank"; },
       min: 0,
       max: 3,
+    },
+    // Accepted answers for a fill-in-the-blank (first one is shown as
+    // "the" answer). Checked by services/blankAnswer.js.
+    answers: {
+      type: [String],
+      default: undefined,
+      validate: {
+        validator: function (v) {
+          return this.type === "fill_blank" ? Array.isArray(v) && v.length > 0 && v.every((a) => String(a).trim()) : !v || v.length === 0;
+        },
+        message: "A fill-in-the-blank needs at least one accepted answer.",
+      },
     },
     explanation: {
       type: String,

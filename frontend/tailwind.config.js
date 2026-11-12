@@ -30,6 +30,13 @@ export default {
           primary:   "rgb(var(--fg-primary) / <alpha-value>)",
           secondary: "rgb(var(--fg-secondary) / <alpha-value>)",
         },
+        // Readable "tone" text that flips with the theme (dark-on-light,
+        // light-on-dark): warn = amber (ratta / common mistakes),
+        // ok = teal (solutions / verified).
+        tone: {
+          warn: "rgb(var(--tone-warn) / <alpha-value>)",
+          ok:   "rgb(var(--tone-ok) / <alpha-value>)",
+        },
         // 🔄 FIX: violet is now ALSO CSS-variable-driven, same
         // pattern as bg/fg above. This used to be static hex —
         // meaning every bg-violet-600 / text-violet-400 / etc

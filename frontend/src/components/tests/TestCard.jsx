@@ -8,13 +8,15 @@ import { useState } from "react";
 import { ChevronDown, Play } from "lucide-react";
 
 export function TestCard({ chapterInfo, onStart, starting }) {
-  const { chapter, easy, moderate, tough, total } = chapterInfo;
+  const { chapter, easy, moderate, tough, total, blanks = 0 } = chapterInfo;
   const [open, setOpen] = useState(false);
   const [mix, setMix] = useState({
     easy: Math.min(easy, 5),
     moderate: Math.min(moderate, 5),
     tough: Math.min(tough, 5),
+    blanks: Math.min(blanks, 3),
   });
+  const count = mix.easy + mix.moderate + mix.tough + mix.blanks;
 
   const clamp = (val, max) => Math.max(0, Math.min(val, max));
 
@@ -31,7 +33,7 @@ export function TestCard({ chapterInfo, onStart, starting }) {
         <div>
           <p className="text-sm font-medium text-fg-primary">{chapter}</p>
           <p className="text-[11px] text-gray-600 mt-0.5">
-            {total} question{total === 1 ? "" : "s"} available
+            {total} MCQ{total === 1 ? "" : "s"}{blanks ? ` · ${blanks} fill in the blank${blanks === 1 ? "" : "s"}` : ""}
           </p>
         </div>
         <ChevronDown
@@ -46,6 +48,7 @@ export function TestCard({ chapterInfo, onStart, starting }) {
             { key: "easy",     label: "Easy",     max: easy },
             { key: "moderate", label: "Moderate", max: moderate },
             { key: "tough",    label: "Tough",    max: tough },
+            ...(blanks ? [{ key: "blanks", label: "Fill in the blanks", max: blanks }] : []),
           ].map((d) => (
             <div key={d.key} className="flex items-center justify-between">
               <span className="text-xs text-gray-600">
@@ -75,13 +78,13 @@ export function TestCard({ chapterInfo, onStart, starting }) {
 
           <button
             onClick={handleStart}
-            disabled={starting || (mix.easy + mix.moderate + mix.tough === 0)}
+            disabled={starting || count === 0}
             className="w-full flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500
               disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-semibold py-2.5 rounded-xl
               transition-all duration-150 active:scale-[0.98]"
           >
             <Play size={13} />
-            {starting ? "Starting..." : `Start Test (${mix.easy + mix.moderate + mix.tough} questions)`}
+            {starting ? "Starting..." : `Start Revision (${count} question${count === 1 ? "" : "s"})`}
           </button>
         </div>
       )}

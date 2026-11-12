@@ -19,6 +19,7 @@
 
 import Question    from "../models/Question.js";
 import TestAttempt from "../models/TestAttempt.js";
+import { isBlankCorrect } from "../services/blankAnswer.js";
 
 const SUBJECTS_BY_EXAM = {
   NEET: ["Physics", "Chemistry", "Biology"],
@@ -64,10 +65,12 @@ function shuffleOptions(q) {
   };
 }
 
-// Only Main-level questions are served. JEE Advanced questions sit in
-// the bank (level: "advanced") until the Advanced pack launches.
-// $ne also matches older documents that have no level field.
-export const SERVABLE = { level: { $ne: "advanced" } };
+// Only Main-level MCQs are served by default. JEE Advanced questions sit
+// in the bank (level: "advanced") until the Advanced pack launches, and
+// fill-in-the-blanks are Revision-only (a caller that wants them passes
+// type: "fill_blank" in its own filter, which overrides this one).
+// $ne also matches older documents that have no level / type field.
+export const SERVABLE = { level: { $ne: "advanced" }, type: { $ne: "fill_blank" } };
 
 const normText = (t) => String(t ?? "").toLowerCase().replace(/\s+/g, " ").trim();
 
@@ -97,7 +100,7 @@ async function sampleUnique(filter, count, excludeIds = []) {
   for (const avoid of [excludeIds, []]) {
     for (let round = 0; round < 3 && picked.length < count; round++) {
       const more = await Question.aggregate([
-        { $match: { ...filter, ...SERVABLE, _id: { $nin: [...avoid, ...picked.map((q) => q._id)] } } },
+        { $match: { ...SERVABLE, ...filter, _id: { $nin: [...avoid, ...picked.map((q) => q._id)] } } },
         { $sample: { size: count - picked.length } },
       ]);
       if (more.length === 0) break;
@@ -127,9 +130,62 @@ function dedupe(questions) {
   });
 }
 
+// One question as stored inside an attempt (a snapshot — later edits
+// to the bank never change an attempt the student already has).
+function snapshot(q) {
+  if (q.type === "fill_blank") {
+    return {
+      questionId: q._id, subject: q.subject, chapter: q.chapter, type: "fill_blank",
+      questionText: q.questionText, options: [], correctIndex: 0, selectedIndex: null,
+      answers: q.answers, textAnswer: null, imageUrl: q.imageUrl || null, explanation: q.explanation || "",
+    };
+  }
+  const s = shuffleOptions(q);
+  return {
+    questionId: s._id, subject: s.subject, chapter: s.chapter, type: "mcq",
+    questionText: s.questionText, options: s.options, correctIndex: s.correctIndex, selectedIndex: null,
+    imageUrl: s.imageUrl || null, explanation: s.explanation || "",
+  };
+}
+
+// What the student may see of an unanswered question: never the answer.
+export function publicQuestion(q) {
+  return {
+    questionId: q.questionId,
+    type: q.type ?? "mcq",
+    subject: q.subject,
+    chapter: q.chapter,
+    questionText: q.questionText,
+    options: q.options ?? [],
+    imageUrl: q.imageUrl ?? null,
+  };
+}
+
+// Shared by chapter Revision and the chat "Pichli baar ka recap".
+export async function createRevisionAttempt({ userId, examMode, subject, chapter, difficultyMix, questions }) {
+  const snaps = questions.map(snapshot);
+  return TestAttempt.create({
+    userId, examMode, subject, chapter,
+    mode: "revision",
+    difficultyMix: difficultyMix ?? { easy: 0, moderate: 0, tough: 0 },
+    questions: snaps,
+    totalQuestions: snaps.length,
+    status: "in-progress",
+  });
+}
+
+export function revisionStartResponse(attempt) {
+  return {
+    success: true,
+    attemptId: attempt._id,
+    totalQuestions: attempt.totalQuestions,
+    questions: attempt.questions.map(publicQuestion),
+  };
+}
+
 export const startTest = async (req, res, next) => {
   try {
-    const { subject, chapter, easy = 0, moderate = 0, tough = 0 } = req.body;
+    const { subject, chapter, easy = 0, moderate = 0, tough = 0, blanks = 0 } = req.body;
     const examMode = req.user.examMode;
 
     const validSubjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
@@ -153,13 +209,14 @@ export const startTest = async (req, res, next) => {
       ? lastAttempt.questions.map((q) => q.questionId)
       : [];
 
-    const [easyQ, moderateQ, toughQ] = await Promise.all([
+    const [easyQ, moderateQ, toughQ, blankQ] = await Promise.all([
       pickForDifficulty(baseFilter, "easy",     easy,     excludeIds),
       pickForDifficulty(baseFilter, "moderate", moderate, excludeIds),
       pickForDifficulty(baseFilter, "tough",    tough,    excludeIds),
+      sampleUnique({ ...baseFilter, type: "fill_blank" }, blanks, excludeIds),
     ]);
 
-    const combined = shuffleArray(dedupe([...easyQ, ...moderateQ, ...toughQ]));
+    const combined = shuffleArray(dedupe([...easyQ, ...moderateQ, ...toughQ, ...blankQ]));
 
     if (combined.length === 0) {
       return res.status(404).json({
@@ -168,41 +225,13 @@ export const startTest = async (req, res, next) => {
       });
     }
 
-    const shuffled = combined.map(shuffleOptions);
-
-    const attempt = await TestAttempt.create({
-      userId: req.user.id,
-      examMode,
-      subject,
-      chapter,
-      mode: "revision",
+    const attempt = await createRevisionAttempt({
+      userId: req.user.id, examMode, subject, chapter,
       difficultyMix: { easy, moderate, tough },
-      questions: shuffled.map((q) => ({
-        questionId:    q._id,
-        subject:       q.subject,
-        chapter:       q.chapter,
-        questionText:  q.questionText,
-        options:       q.options,
-        correctIndex:  q.correctIndex,
-        selectedIndex: null,
-        imageUrl:      q.imageUrl || null,
-        explanation:   q.explanation || "",
-      })),
-      totalQuestions: shuffled.length,
-      status: "in-progress",
+      questions: combined,
     });
 
-    return res.json({
-      success: true,
-      attemptId: attempt._id,
-      totalQuestions: attempt.totalQuestions,
-      questions: attempt.questions.map((q) => ({
-        questionId: q.questionId,
-        questionText: q.questionText,
-        options: q.options,
-        imageUrl: q.imageUrl,
-      })),
-    });
+    return res.json(revisionStartResponse(attempt));
 
   } catch (err) {
     next(err);
@@ -287,7 +316,7 @@ export const startFullTest = async (req, res, next) => {
 export const answerQuestion = async (req, res, next) => {
   try {
     const { attemptId } = req.params;
-    const { questionId, selectedIndex } = req.body;
+    const { questionId, selectedIndex = null, textAnswer = null } = req.body;
 
     const attempt = await TestAttempt.findOne({ _id: attemptId, userId: req.user.id });
     if (!attempt) {
@@ -312,11 +341,30 @@ export const answerQuestion = async (req, res, next) => {
       return res.status(404).json({ success: false, error: "Question not found in this attempt." });
     }
 
+    if (question.type === "fill_blank") {
+      const typed = typeof textAnswer === "string" ? textAnswer.trim() : "";
+      const isCorrect = typed ? isBlankCorrect(typed, question.answers) : false;
+      question.textAnswer = typed || null;
+      question.selectedIndex = typed ? (isCorrect ? 0 : 1) : null;
+      await attempt.save();
+      return res.json({
+        success: true,
+        type: "fill_blank",
+        isCorrect,
+        selectedIndex: question.selectedIndex,
+        correctIndex: 0,
+        correctAnswer: question.answers?.[0] ?? "",
+        acceptedAnswers: question.answers ?? [],
+        explanation: question.explanation || "",
+      });
+    }
+
     question.selectedIndex = selectedIndex;
     await attempt.save();
 
     return res.json({
       success: true,
+      type: "mcq",
       isCorrect: selectedIndex !== null && selectedIndex === question.correctIndex,
       correctIndex: question.correctIndex,
       explanation: question.explanation || "",
@@ -348,7 +396,10 @@ export const submitTest = async (req, res, next) => {
 
     attempt.questions.forEach((q) => {
       const key = q.questionId.toString();
-      const selected = answerMap.has(key) ? answerMap.get(key) : null;
+      // Fill-in-the-blank: the server already recorded 0 / 1 / null in /answer.
+      const selected = q.type === "fill_blank"
+        ? q.selectedIndex
+        : (answerMap.has(key) ? answerMap.get(key) : null);
       q.selectedIndex = selected;
 
       if (selected === null || selected === undefined) {
@@ -395,13 +446,9 @@ export const getAttempt = async (req, res, next) => {
         attempt: {
           ...attempt,
           questions: attempt.questions.map((q) => ({
-            questionId:    q.questionId,
-            subject:       q.subject,
-            chapter:       q.chapter,
-            questionText:  q.questionText,
-            options:       q.options,
+            ...publicQuestion(q),
             selectedIndex: q.selectedIndex,
-            imageUrl:      q.imageUrl,
+            textAnswer:    q.textAnswer ?? null,
           })),
         },
       });
@@ -440,6 +487,11 @@ export const getAvailableChapters = async (req, res, next) => {
       },
     ]);
 
+    const blankRows = await Question.aggregate([
+      { $match: { ...match, type: "fill_blank" } },
+      { $group: { _id: { subject: "$subject", chapter: "$chapter" }, count: { $sum: 1 } } },
+    ]);
+
     const chapterMap = {};
     for (const row of rows) {
       const key = `${row._id.subject}::${row._id.chapter}`;
@@ -453,6 +505,12 @@ export const getAvailableChapters = async (req, res, next) => {
       chapterMap[key][row._id.difficulty] = row.count;
       chapterMap[key].total += row.count;
     }
+
+    for (const row of blankRows) {
+      const key = `${row._id.subject}::${row._id.chapter}`;
+      if (chapterMap[key]) chapterMap[key].blanks = row.count;
+    }
+    for (const c of Object.values(chapterMap)) c.blanks = c.blanks ?? 0;
 
     return res.json({ success: true, chapters: Object.values(chapterMap) });
 

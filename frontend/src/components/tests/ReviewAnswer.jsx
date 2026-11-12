@@ -10,7 +10,8 @@
 import { Check, X } from "lucide-react";
 
 export function ReviewAnswer({ question, index, mode = "revision" }) {
-  const { questionText, options, correctIndex, selectedIndex, explanation, imageUrl } = question;
+  const { questionText, options = [], correctIndex, selectedIndex, explanation, imageUrl, type, answers, textAnswer } = question;
+  const isBlank = type === "fill_blank";
   const wasCorrect = selectedIndex === correctIndex;
   const wasSkipped = selectedIndex === null || selectedIndex === undefined;
 
@@ -53,6 +54,18 @@ export function ReviewAnswer({ question, index, mode = "revision" }) {
 
       <p className="text-sm text-fg-primary leading-relaxed mb-3">{questionText}</p>
 
+      {isBlank ? (
+        <div className="space-y-1.5 mb-3 text-sm">
+          {!wasSkipped && (
+            <p className={`px-4 py-2.5 rounded-xl border ${wasCorrect ? "bg-emerald-500/10 border-emerald-500/40" : "bg-red-500/10 border-red-500/40"} text-fg-primary`}>
+              <span className="text-[11px] text-gray-600 mr-2">Your answer</span>{textAnswer}
+            </p>
+          )}
+          <p className="px-4 py-2.5 rounded-xl border bg-emerald-500/10 border-emerald-500/40 text-fg-primary">
+            <span className="text-[11px] text-gray-600 mr-2">Answer</span>{answers?.[0]}
+          </p>
+        </div>
+      ) : (
       <div className="space-y-2 mb-3">
         {options.map((opt, i) => (
           <div
@@ -64,6 +77,7 @@ export function ReviewAnswer({ question, index, mode = "revision" }) {
           </div>
         ))}
       </div>
+      )}
 
       {/* Explanation only for revision mode — test mode stays exam-realistic */}
       {mode === "revision" && explanation && (

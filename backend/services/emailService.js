@@ -202,6 +202,26 @@ export async function sendParentConsentRequest(parentEmail, { studentName, appro
   return sendEmail({ to: parentEmail, subject: `Approval needed: ${student} signed up for JNEET+ AI`, html, text });
 }
 
+// Chat locked after repeated rule breaks (under-18 only). One email per
+// lock; the student can ask for it again at most once every 24 hours.
+// It says WHAT kind of rule was broken in general terms — never the
+// student's messages.
+export async function sendParentSafetyLock(parentEmail, { studentName, approveUrl }) {
+  const student = firstName(studentName);
+  const html = layout({
+    preheader: `${student}'s AI study chat on JNEET+ AI has been locked`,
+    heading: "AI study chat locked",
+    bodyHtml: `<p>We are writing because you approved <strong>${escapeHtml(student)}</strong>'s use of the AI study mentor on <strong>JNEET+ AI</strong>.</p>
+      <p>The AI chat on this account has been <strong>locked</strong> after repeated breaks of our chat rules (18+ content or abusive language are not allowed), even after two warnings and two pauses. We never share the messages themselves.</p>
+      <p>Mock tests, revision and notes still work. If you are comfortable for the AI chat to be used again, you can unlock it here:</p>
+      ${button(approveUrl, "Review and unlock")}
+      <p>The link is valid for <strong>7 days</strong>. If you do nothing, the chat stays locked.</p>`,
+    footerHtml: "If you don't recognise this student, ignore this email. If something looks wrong, reply to this email.",
+  });
+  const text = `You approved ${student}'s use of the AI study mentor on JNEET+ AI.\n\nThe AI chat on this account has been locked after repeated breaks of our chat rules (18+ content or abusive language), even after two warnings and two pauses. We never share the messages themselves.\n\nMock tests, revision and notes still work. To unlock the AI chat: ${approveUrl}\n\nThe link is valid for 7 days. If you do nothing, the chat stays locked.\n\n— Team JNEET+ AI`;
+  return sendEmail({ to: parentEmail, subject: `${student}'s AI study chat on JNEET+ AI is locked`, html, text });
+}
+
 export async function sendParentConsentConfirmation(parentEmail, { studentName, revokeUrl }) {
   const student = firstName(studentName);
   const html = layout({

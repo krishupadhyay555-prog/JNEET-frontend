@@ -58,6 +58,22 @@ const chatSessionSchema = new mongoose.Schema(
       type:    [messageSchema],
       default: [],
     },
+    // "Pichli baar ka recap": which chapters this chat was about, worked
+    // out once and re-used until the student writes more (services/recap.js).
+    recap: {
+      type: new mongoose.Schema(
+        {
+          userMessages: { type: Number, default: 0 },
+          chapters: {
+            type: [new mongoose.Schema({ subject: String, chapter: String }, { _id: false })],
+            default: [],
+          },
+          computedAt: { type: Date, default: null },
+        },
+        { _id: false }
+      ),
+      default: undefined,
+    },
   },
   { _id: true, timestamps: true }
 );

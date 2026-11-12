@@ -1,0 +1,126 @@
+{
+ "slug": "rotational-motion",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "System of Particles and Rotational Motion",
+  "JEE": "System of Particles and Rotational Motion"
+ },
+ "title": "System of Particles & Rotational Motion",
+ "readMinutes": 14,
+ "summary": [
+  "Rotation, translation ki copy hai: F ↔ τ, m ↔ I, v ↔ ω, a ↔ α, p ↔ L. Linear motion ka har formula likho aur uska rotational jodidaar bana lo — aadha chapter wahin ho jaata hai.",
+  "Centre of mass (CM) wo point hai jo aise chalta hai jaise poora mass wahin ho aur saari external force wahin lag rahi ho. Internal forces CM ki motion kabhi nahi badalti.",
+  "Torque batata hai ki force kitna ghumayegi; moment of inertia (I) batata hai ki ghumana kitna mushkil hai — ye mass ke saath-saath is par bhi depend karta hai ki mass axis se kitna door hai.",
+  "Exam ke teen core: (1) standard MI + parallel/perpendicular axis theorem, (2) angular momentum conservation, (3) rolling motion — energy aur incline par acceleration."
+ ],
+ "formulas": [
+  {
+   "name": "Centre of mass",
+   "formula": "x_cm = Σmᵢxᵢ / Σmᵢ",
+   "when": "Point masses ya alag-alag tukdon ka CM.",
+   "mistake": "Saare x ek hi origin se naapo."
+  },
+  {
+   "name": "Torque",
+   "formula": "τ = r × F,  |τ| = r F sinθ",
+   "when": "Force axis se door lage to ghumane wala asar.",
+   "unit": "N·m",
+   "mistake": "r = axis se force ki line tak ki perpendicular doori, rod ki poori length nahi."
+  },
+  {
+   "name": "Newton's 2nd law (rotation)",
+   "formula": "τ = I α",
+   "when": "Fixed axis ke about angular acceleration.",
+   "mistake": "τ aur I dono SAME axis ke about lo."
+  },
+  {
+   "name": "Angular momentum",
+   "formula": "L = r × p = I ω,   τ_ext = dL/dt",
+   "when": "τ_ext = 0 ho to L conserve hota hai.",
+   "unit": "kg·m²/s"
+  },
+  {
+   "name": "Moment of inertia",
+   "formula": "I = Σ m r²  = M k²",
+   "when": "Kisi bhi axis ke about; k = radius of gyration.",
+   "unit": "kg·m²"
+  },
+  {
+   "name": "Standard MI (ratta)",
+   "formula": "Ring (axis) MR² · Disc (axis) ½MR² · Solid sphere (diameter) ⅖MR² · Hollow sphere ⅔MR² · Rod (centre, ⊥) ML²/12 · Rod (end, ⊥) ML²/3",
+   "when": "Seedha use hote hain — inhe yaad karo.",
+   "tag": "Ratta"
+  },
+  {
+   "name": "Parallel axis theorem",
+   "formula": "I = I_cm + M d²",
+   "when": "CM wali axis se parallel shift.",
+   "mistake": "Sirf us axis se shift karo jo CM se guzarti hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Perpendicular axis theorem",
+   "formula": "I_z = I_x + I_y",
+   "when": "Sirf flat (laminar) bodies: ring, disc, plate.",
+   "mistake": "3D body (sphere, cylinder) par mat lagao."
+  },
+  {
+   "name": "Rotational KE, work, power",
+   "formula": "KE = ½ I ω²,   W = τ θ,   P = τ ω",
+   "when": "Energy method wale sawal."
+  },
+  {
+   "name": "Rolling without slipping",
+   "formula": "v = R ω,   KE = ½ m v² (1 + k²/R²),   a = g sinθ / (1 + k²/R²)",
+   "when": "Incline par rolling, race wale sawal.",
+   "mistake": "Pure rolling mein friction koi kaam nahi karta.",
+   "tag": "PYQ favourite"
+  }
+ ],
+ "examples": [
+  {
+   "title": "Darwaza aur torque",
+   "problem": "10 N ki force darwaze par hinge se 0.5 m door, perpendicular lagti hai. Torque? Wahi force 0.1 m par lage to?",
+   "solution": "τ = rF = 0.5 × 10 = 5 N·m. 0.1 m par τ = 1 N·m — 5 guna kam. Isliye handle hinge se door lagaya jaata hai."
+  },
+  {
+   "title": "Skater ka spin",
+   "problem": "Skater ka I = 4 kg·m², ω = 2 rad/s. Haath andar karke I = 1 kg·m². Naya ω aur KE?",
+   "solution": "L conserve: 4 × 2 = 1 × ω' ⇒ ω' = 8 rad/s. KE pehle ½·4·2² = 8 J, baad mein ½·1·8² = 32 J. Extra energy skater ki muscles ke kaam se aati hai."
+  },
+  {
+   "title": "Incline race",
+   "problem": "Ring, disc aur solid sphere ek hi height se incline par bina slip ke rolling karte hain. Pehle kaun pahunchega?",
+   "solution": "a = g sinθ / (1 + k²/R²). k²/R²: ring 1, disc ½, sphere ⅖ ⇒ a = ½, ⅔, 5/7 (× g sinθ). Solid sphere sabse tez, ring sabse slow — mass aur radius se farak nahi padta."
+  }
+ ],
+ "topics": [
+  {
+   "title": "CM ki motion",
+   "explain": "M a_cm = F_ext. Projectile hawa mein phat jaaye to bhi tukdon ka CM usi parabola par chalta rehta hai, kyunki explosion internal force hai."
+  },
+  {
+   "title": "Equilibrium",
+   "explain": "Rigid body equilibrium ke liye do shartein: ΣF = 0 (translation) aur Στ = 0 (rotation, kisi bhi point ke about)."
+  },
+  {
+   "title": "Moment of inertia ka matlab",
+   "explain": "Same mass, axis se door ho to I zyada. Isliye ring ka I (MR²) disc (½MR²) se zyada hota hai — ring ka saara mass rim par hai."
+  },
+  {
+   "title": "Angular momentum conservation",
+   "explain": "Bahar se torque nahi ⇒ Iω constant. Skater, diver aur ghoomti kursi par baitha student haath phailaye to dheema, sametey to tez."
+  },
+  {
+   "title": "Rolling motion",
+   "explain": "Pure rolling mein contact point ek pal ke liye ruka hota hai (v = Rω). Total KE = translational + rotational; jitna zyada k²/R², utni zyada energy rotation mein, utna slow translation."
+  }
+ ],
+ "ratta": [
+  "Standard MI list (upar formula card).",
+  "k²/R²: ring 1 · disc ½ · solid sphere ⅖ · hollow sphere ⅔.",
+  "Incline race: solid sphere > disc > hollow sphere > ring.",
+  "Unit: torque N·m (joule mat likho), L kg·m²/s."
+ ],
+ "verifiedOn": "2026-11-12"
+}

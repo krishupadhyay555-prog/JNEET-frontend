@@ -120,8 +120,8 @@ export default function Settings() {
         >
           <div className="grid grid-cols-2 gap-3">
             {[
-              { value: "dark",  label: "Dark",  swatch: "bg-gradient-to-br from-[#2b2925] to-[#1a1917]" },
-              { value: "light", label: "Light", swatch: "bg-gradient-to-br from-white to-[#EDE6F3]" },
+              { value: "dark",  label: "Dark",  swatch: "bg-gradient-to-br from-[#171C23] to-[#0F1217]" },
+              { value: "light", label: "Light", swatch: "bg-gradient-to-br from-white to-[#E7E4DE]" },
             ].map((opt) => {
               const active = mode === opt.value;
               return (

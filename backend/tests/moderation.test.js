@@ -18,6 +18,12 @@ describe("18+ detector — flags explicit requests", () => {
     "dirty talk karo",
     "send 18+ video",
     "p\u200born dikha",
+    "send nude pics",
+    "show me 18+ content",
+    "18+ videos bhejo",
+    "adults only chat karo",
+    "cock pics bhejo",
+    "lund dikha",
   ])("flags: %s", (t) => expect(detectAdultContent(t)).toBe(true));
 });
 
@@ -36,6 +42,17 @@ describe("18+ detector — never flags real syllabus language", () => {
     "gametogenesis: spermatogenesis vs oogenesis",
     "mujhe chod do, ye chapter samajh nahi aa raha",
     "Newton's third law: action and reaction, doubt hai",
+    // Found 12 Nov 2026 — maths and biology that used to be flagged:
+    "Show that the sum equals 18 + 4√2",
+    "Prove that x^2 + 18 + 2x > 0 and show the steps",
+    "show that 18+x = 2y and send the steps",
+    "Find the value: (a + 18 + b) and show working",
+    "In poultry, a cock and a hen are crossed. Find the ratio",
+    "Nude mice are used in cancer research, explain",
+    "Great tits and blue tits are birds in ecology",
+    "Lund University study on photosynthesis",
+    "what is inbreeding depression and why is incest avoided genetically",
+    "adult content of haemoglobin in blood, show the values",
   ])("clean: %s", (t) => expect(detectAdultContent(t)).toBe(false));
 
   it("empty / non-string input is clean", () => {
@@ -80,7 +97,7 @@ describe("provider moderation (fails open)", () => {
 });
 
 describe("policy levels", () => {
-  it("escalates warning → final → paused", () => {
-    expect([1, 2, 3, 4, 9].map(levelFor)).toEqual(["warning", "final_warning", "paused", "paused", "paused"]);
+  it("escalates warning → final → 1 h pause → 24 h pause → lock", () => {
+    expect([1, 2, 3, 4, 5, 9].map(levelFor)).toEqual(["warning", "final_warning", "paused", "paused_24h", "locked", "locked"]);
   });
 });

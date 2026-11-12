@@ -1,0 +1,1047 @@
+[
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The volume of air inspired or expired during a normal respiration is called the ____ volume.",
+  "answers": [
+   "tidal",
+   "tidal volume",
+   "TV"
+  ],
+  "explanation": "Tidal volume is about 500 mL; a healthy person breathes in/out about 6000–8000 mL of air per minute.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Vital capacity = ERV + TV + ____.",
+  "answers": [
+   "IRV",
+   "inspiratory reserve volume"
+  ],
+  "explanation": "Vital capacity is the maximum air a person can breathe out after a forced inspiration: ERV + TV + IRV.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The volume of air remaining in the lungs even after a forcible expiration is called the ____ volume.",
+  "answers": [
+   "residual",
+   "residual volume",
+   "RV"
+  ],
+  "explanation": "Residual volume (about 1100–1200 mL) can never be breathed out.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "About 97 per cent of O₂ is transported by RBCs; the remaining ____ per cent is carried in a dissolved state through plasma.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "97% of oxygen travels bound to haemoglobin in RBCs; only about 3% is dissolved in plasma.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The enzyme ____, present in RBCs, speeds up the formation of carbonic acid from CO₂ and water.",
+  "answers": [
+   "carbonic anhydrase"
+  ],
+  "explanation": "Carbonic anhydrase (very high in RBCs) catalyses CO₂ + H₂O ⇌ H₂CO₃ ⇌ HCO₃⁻ + H⁺.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The floor of the air-tight thoracic chamber is formed by the ____.",
+  "answers": [
+   "diaphragm"
+  ],
+  "explanation": "The thoracic chamber is formed dorsally by the vertebral column, ventrally by the sternum, laterally by the ribs and on the lower side by the dome-shaped diaphragm.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The respiratory rhythm centre is present in the ____ region of the brain.",
+  "answers": [
+   "medulla",
+   "medulla oblongata"
+  ],
+  "explanation": "The respiratory rhythm centre lies in the medulla; the pneumotaxic centre in the pons can moderate it.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The ____ centre in the pons region of the brain can moderate the functions of the respiratory rhythm centre.",
+  "answers": [
+   "pneumotaxic"
+  ],
+  "explanation": "Neural signals from the pneumotaxic centre can reduce the duration of inspiration and thereby alter the respiratory rate.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Breathing and Exchange of Gases",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "The partial pressure of O₂ in the alveoli is about ____ mm Hg.",
+  "answers": [
+   "104"
+  ],
+  "explanation": "NCERT values: alveoli pO₂ 104 and pCO₂ 40 mm Hg; deoxygenated blood pO₂ 40 and pCO₂ 45 mm Hg.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "In the cell cycle, DNA replication takes place during the ____ phase of interphase.",
+  "answers": [
+   "S",
+   "S phase",
+   "synthesis",
+   "synthesis phase"
+  ],
+  "explanation": "Interphase = G1 → S → G2; the amount of DNA per cell doubles in the S (synthesis) phase.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Crossing over between non-sister chromatids takes place during the ____ stage of prophase I.",
+  "answers": [
+   "pachytene"
+  ],
+  "explanation": "Prophase I: leptotene → zygotene → pachytene (crossing over, recombination nodules) → diplotene → diakinesis.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The synaptonemal complex is formed during the ____ stage of prophase I.",
+  "answers": [
+   "zygotene"
+  ],
+  "explanation": "Homologous chromosomes pair (synapsis) in zygotene, forming the synaptonemal complex.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Chiasmata become visible during the ____ stage of prophase I.",
+  "answers": [
+   "diplotene"
+  ],
+  "explanation": "In diplotene the synaptonemal complex dissolves and the homologues stay joined at the X-shaped chiasmata.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Terminalisation of chiasmata takes place during ____.",
+  "answers": [
+   "diakinesis"
+  ],
+  "explanation": "Diakinesis is the last stage of prophase I: chiasmata terminalise and the nuclear envelope breaks down.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "In plant cells, cytokinesis takes place by the formation of a ____ that starts in the centre and grows outwards.",
+  "answers": [
+   "cell plate"
+  ],
+  "explanation": "Plant cells have a rigid wall, so a cell plate forms in the centre and grows towards the lateral walls.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "A typical proliferating human cell in culture completes one cell cycle in about ____ hours.",
+  "answers": [
+   "24"
+  ],
+  "explanation": "A human cell in culture divides about once every 24 hours; yeast takes only about 90 minutes.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Cells that do not divide further exit G1 and enter an inactive stage called ____.",
+  "answers": [
+   "G0",
+   "G zero",
+   "quiescent stage",
+   "quiescent"
+  ],
+  "explanation": "Cells in G0 (quiescent stage) stay metabolically active but do not proliferate unless called on to do so.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Cell Cycle and Cell Division",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The stage of mitosis best suited to study the morphology of chromosomes is ____.",
+  "answers": [
+   "metaphase"
+  ],
+  "explanation": "At metaphase chromosomes are most condensed and lie at the metaphase plate, so their shape is easiest to study.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "In DNA, adenine pairs with thymine through ____ hydrogen bonds.",
+  "answers": [
+   "2",
+   "two"
+  ],
+  "explanation": "A=T has two hydrogen bonds; G≡C has three.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The enzyme that joins Okazaki fragments on the lagging strand is DNA ____.",
+  "answers": [
+   "ligase"
+  ],
+  "explanation": "Discontinuous fragments made on the lagging strand are joined by DNA ligase.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The lac operon of E. coli is switched on in the presence of the inducer, ____.",
+  "answers": [
+   "lactose",
+   "allolactose"
+  ],
+  "explanation": "Lactose (allolactose) binds the repressor and inactivates it, so RNA polymerase can transcribe the operon.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The process of copying genetic information from one strand of DNA into RNA is called ____.",
+  "answers": [
+   "transcription"
+  ],
+  "explanation": "DNA → RNA is transcription; RNA → protein is translation.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The codon ____ codes for methionine and also acts as the initiator codon.",
+  "answers": [
+   "AUG"
+  ],
+  "explanation": "AUG has dual function: it codes for methionine and is the start codon.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The genetic code has a total of ____ codons.",
+  "answers": [
+   "64",
+   "sixty four"
+  ],
+  "explanation": "With 4 bases read in triplets, 4³ = 64 codons are possible.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Out of 64 codons, ____ are stop codons that do not code for any amino acid.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "UAA, UAG and UGA are the stop (nonsense) codons; 61 codons code for amino acids.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "According to the Human Genome Project, the human genome contains about ____ million nucleotide bases.",
+  "answers": [
+   "3164.7"
+  ],
+  "explanation": "The human genome has 3164.7 million bases; an average gene has about 3000 bases.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Molecular Basis of Inheritance",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The technique of DNA fingerprinting was initially developed by ____.",
+  "answers": [
+   "Alec Jeffreys",
+   "Jeffreys"
+  ],
+  "explanation": "Alec Jeffreys used satellite DNA (VNTRs) as probes to develop DNA fingerprinting.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The ____ node is called the pacemaker of the heart.",
+  "answers": [
+   "SA",
+   "SAN",
+   "sino-atrial",
+   "sinoatrial",
+   "sino atrial"
+  ],
+  "explanation": "The sino-atrial node generates the maximum number of action potentials (70–75 per minute) and sets the rhythm.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The stroke volume of a healthy person is about ____ mL.",
+  "answers": [
+   "70"
+  ],
+  "explanation": "Each ventricle pumps out about 70 mL of blood per beat; cardiac output = stroke volume × heart rate ≈ 5000 mL/min.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "The cardiac output of a healthy person is about ____ litres per minute.",
+  "answers": [
+   "5",
+   "5 L",
+   "5 litres",
+   "5 liters",
+   "5000 mL"
+  ],
+  "explanation": "Cardiac output ≈ 70 mL × 72 beats/min ≈ 5000 mL, i.e. about 5 L per minute.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The P-wave of an ECG represents the electrical excitation (depolarisation) of the ____.",
+  "answers": [
+   "atria",
+   "atrium"
+  ],
+  "explanation": "P-wave = atrial depolarisation; QRS = ventricular depolarisation; T-wave = ventricular repolarisation.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The ____-wave of an ECG represents the return of the ventricles from the excited to the normal state.",
+  "answers": [
+   "T",
+   "T wave"
+  ],
+  "explanation": "The T-wave marks ventricular repolarisation; its end marks the end of systole.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "People with blood group ____ are called universal donors.",
+  "answers": [
+   "O",
+   "O group",
+   "group O"
+  ],
+  "explanation": "Group O has no A or B antigens on RBCs, so it can be given to persons of other groups; AB is the universal recipient.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The normal systolic blood pressure of a healthy human is about ____ mm Hg.",
+  "answers": [
+   "120"
+  ],
+  "explanation": "Normal BP is 120/80 mm Hg: 120 systolic (pumping) and 80 diastolic (resting).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Biology",
+  "chapter": "Body Fluids and Circulation",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The valve between the left atrium and the left ventricle is the ____ valve.",
+  "answers": [
+   "bicuspid",
+   "mitral",
+   "bicuspid or mitral"
+  ],
+  "explanation": "Left: bicuspid (mitral) valve; right: tricuspid valve.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to VSEPR theory, the shape of the SF₄ molecule is ____.",
+  "answers": [
+   "see-saw",
+   "see saw",
+   "seesaw"
+  ],
+  "explanation": "S has 4 bond pairs + 1 lone pair (5 electron pairs, trigonal bipyramidal); the lone pair sits equatorial, giving a see-saw shape.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to VSEPR theory, the shape of the XeF₂ molecule is ____.",
+  "answers": [
+   "linear"
+  ],
+  "explanation": "Xe has 2 bond pairs + 3 lone pairs; the 3 lone pairs take equatorial positions, so F–Xe–F is linear.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to molecular orbital theory, the bond order of O₂ is ____.",
+  "answers": [
+   "2",
+   "two"
+  ],
+  "explanation": "O₂: bonding electrons 10, antibonding 6 → bond order (10 − 6)/2 = 2.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to molecular orbital theory, the bond order of N₂ is ____.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "N₂: bonding electrons 10, antibonding 4 → bond order (10 − 4)/2 = 3.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The hybridisation of each carbon atom in ethyne (C₂H₂) is ____.",
+  "answers": [
+   "sp"
+  ],
+  "explanation": "Each carbon forms one σ bond to H and a triple bond to C (one σ + two π): sp hybridisation, linear.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "The H–O–H bond angle in water is about ____ degrees.",
+  "answers": [
+   "104.5"
+  ],
+  "explanation": "Two lone pairs on oxygen squeeze the tetrahedral angle (109.5°) down to about 104.5°.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Among NH₃, H₂O, CO₂ and SO₂, the molecule with zero dipole moment is ____.",
+  "answers": [
+   "CO2",
+   "carbon dioxide"
+  ],
+  "explanation": "CO₂ is linear (O=C=O); the two bond dipoles cancel, so the net dipole moment is zero.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "O₂ is ____ because it has two unpaired electrons in its π* molecular orbitals.",
+  "answers": [
+   "paramagnetic"
+  ],
+  "explanation": "MO theory explains O₂'s paramagnetism (two unpaired electrons in π*2px and π*2py), which valence bond theory cannot.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The hybridisation of phosphorus in PCl₅ is ____.",
+  "answers": [
+   "sp3d"
+  ],
+  "explanation": "P uses one 3s, three 3p and one 3d orbital: sp³d, trigonal bipyramidal.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The maximum number of electrons in a subshell with azimuthal quantum number l is ____.",
+  "answers": [
+   "2(2l+1)",
+   "4l+2"
+  ],
+  "explanation": "A subshell has (2l + 1) orbitals, each holding 2 electrons: 2(2l + 1).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The number of orbitals in the shell with n = 3 is ____.",
+  "answers": [
+   "9",
+   "nine"
+  ],
+  "explanation": "Number of orbitals in a shell = n² = 9 (one 3s, three 3p, five 3d).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The de Broglie wavelength of a particle is λ = h / ____.",
+  "answers": [
+   "mv",
+   "p",
+   "momentum"
+  ],
+  "explanation": "λ = h/p = h/(mv): the wavelength is inversely proportional to momentum.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The energy of the electron in the nth orbit of the hydrogen atom is Eₙ = −____/n² eV.",
+  "answers": [
+   "13.6"
+  ],
+  "explanation": "Bohr model: Eₙ = −13.6/n² eV for hydrogen (−2.18 × 10⁻¹⁸ J / n²).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "According to the ____ principle, no two electrons in an atom can have the same set of all four quantum numbers.",
+  "answers": [
+   "Pauli exclusion",
+   "Pauli's exclusion",
+   "Pauli"
+  ],
+  "explanation": "Pauli exclusion principle: an orbital can hold at most two electrons, and they must have opposite spins.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The Balmer series of the hydrogen spectrum lies in the ____ region.",
+  "answers": [
+   "visible"
+  ],
+  "explanation": "Lyman: UV; Balmer (n₂ → 2): visible; Paschen, Brackett, Pfund: infrared.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The magnetic quantum number of an electron in a p orbital can take ____ values.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "For l = 1, mₗ = −1, 0, +1: three values (three p orbitals).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "Chromium (Z = 24) has ____ unpaired electrons in its ground state.",
+  "answers": [
+   "6",
+   "six"
+  ],
+  "explanation": "Cr: [Ar] 3d⁵ 4s¹ — the half-filled d subshell is extra stable, giving 6 unpaired electrons.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Torque is the rate of change of ____.",
+  "answers": [
+   "angular momentum"
+  ],
+  "explanation": "τ = dL/dt, just as force is the rate of change of linear momentum.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The moment of inertia of a thin ring of mass M and radius R about its own axis (perpendicular to its plane, through the centre) is ____.",
+  "answers": [
+   "MR2",
+   "MR^2",
+   "M R2"
+  ],
+  "explanation": "All the mass of a ring is at distance R from the axis, so I = MR².",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The moment of inertia of a uniform disc of mass M and radius R about its own axis is ____.",
+  "answers": [
+   "MR2/2",
+   "MR^2/2",
+   "1/2 MR2",
+   "(1/2)MR2",
+   "1/2MR^2",
+   "0.5MR2",
+   "0.5 MR^2"
+  ],
+  "explanation": "For a disc, I = ½MR² about the axis through its centre perpendicular to its plane.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "If no external torque acts on a system, its ____ remains constant.",
+  "answers": [
+   "angular momentum"
+  ],
+  "explanation": "τ = dL/dt = 0 ⇒ L is conserved (a spinning skater pulls in her arms: I decreases, ω increases).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The SI unit of moment of inertia is ____.",
+  "answers": [
+   "kg m2",
+   "kg m^2",
+   "kg·m²",
+   "kgm2"
+  ],
+  "explanation": "I = Σ m r², so its unit is kg·m².",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "For a body rolling without slipping, the speed of its centre of mass is v = ____ (in terms of radius R and angular speed ω).",
+  "answers": [
+   "Rω",
+   "ωR",
+   "R omega",
+   "omega R"
+  ],
+  "explanation": "Rolling without slipping means the contact point is at rest: v = Rω.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Parallel axis theorem: I = I_cm + ____, where d is the distance between the two parallel axes.",
+  "answers": [
+   "Md2",
+   "Md^2",
+   "M d^2",
+   "Md²"
+  ],
+  "explanation": "The axis through the centre of mass gives the smallest I; shifting by d adds Md².",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The centre of mass of a uniform rod of length L lies at a distance ____ from either end.",
+  "answers": [
+   "L/2"
+  ],
+  "explanation": "For a uniform rod the mass is spread evenly, so the centre of mass is at the middle.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The SI unit of resistivity is ____.",
+  "answers": [
+   "ohm m",
+   "Ω m",
+   "ohm metre",
+   "ohm-metre",
+   "ohm meter",
+   "ohm-meter"
+  ],
+  "explanation": "R = ρL/A ⇒ ρ = RA/L, so the unit is Ω·m.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Kirchhoff's junction rule is based on the conservation of ____.",
+  "answers": [
+   "charge",
+   "electric charge"
+  ],
+  "explanation": "Charge does not pile up at a junction, so current in = current out.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Kirchhoff's loop rule is based on the conservation of ____.",
+  "answers": [
+   "energy"
+  ],
+  "explanation": "The sum of potential changes around any closed loop is zero because energy is conserved.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The drift speed of electrons is v_d = I / (n e ____), where A is the cross-sectional area.",
+  "answers": [
+   "A",
+   "area"
+  ],
+  "explanation": "I = n e A v_d, so v_d = I/(neA).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Resistors of 6 Ω and 3 Ω connected in parallel have an equivalent resistance of ____ Ω.",
+  "answers": [
+   "2",
+   "two"
+  ],
+  "explanation": "1/R = 1/6 + 1/3 = 1/2 ⇒ R = 2 Ω.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "moderate",
+  "questionText": "A wire is stretched to double its length (volume remains the same). Its resistance becomes ____ times the original.",
+  "answers": [
+   "4",
+   "four"
+  ],
+  "explanation": "Length ×2 and area ×½ (volume constant), so R = ρL/A becomes 2 × 2 = 4 times.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "A Wheatstone bridge with arms P, Q, R, S is balanced when P/Q = ____.",
+  "answers": [
+   "R/S"
+  ],
+  "explanation": "At balance no current flows through the galvanometer, which needs P/Q = R/S.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The power dissipated in a resistor R carrying a current I is ____.",
+  "answers": [
+   "I2R",
+   "I^2R",
+   "I^2 R",
+   "I²R"
+  ],
+  "explanation": "P = VI = I²R = V²/R.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The dimensional formula of force is ____.",
+  "answers": [
+   "MLT-2",
+   "MLT^-2",
+   "[MLT^-2]",
+   "[MLT-2]",
+   "M L T^-2",
+   "MLT⁻²"
+  ],
+  "explanation": "F = ma: [M][LT⁻²] = [MLT⁻²].",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The SI base unit of luminous intensity is the ____.",
+  "answers": [
+   "candela",
+   "cd"
+  ],
+  "explanation": "The seven SI base units: metre, kilogram, second, ampere, kelvin, mole and candela.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The number of significant figures in 0.00450 is ____.",
+  "answers": [
+   "3",
+   "three"
+  ],
+  "explanation": "Leading zeros don't count; the trailing zero after the decimal does: 4, 5, 0 → 3 significant figures.",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "A light year is a unit of ____.",
+  "answers": [
+   "distance",
+   "length"
+  ],
+  "explanation": "A light year is the distance light travels in one year (≈ 9.46 × 10¹⁵ m).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "Planck's constant has the same dimensions as angular ____.",
+  "answers": [
+   "momentum"
+  ],
+  "explanation": "E = hν ⇒ [h] = [ML²T⁻¹], the same as angular momentum (mvr).",
+  "level": "main"
+ },
+ {
+  "examMode": "NEET",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "type": "fill_blank",
+  "difficulty": "easy",
+  "questionText": "The number of significant figures in 2.0300 is ____.",
+  "answers": [
+   "5",
+   "five"
+  ],
+  "explanation": "Zeros between digits and trailing zeros after the decimal point are significant: 2, 0, 3, 0, 0.",
+  "level": "main"
+ }
+]

@@ -73,6 +73,7 @@ export default function Revision() {
         easy: mix.easy,
         moderate: mix.moderate,
         tough: mix.tough,
+        blanks: mix.blanks ?? 0,
       });
       navigate(`/revision/attempt/${res.data.attemptId}`);
     } catch (err) {
@@ -99,7 +100,7 @@ export default function Revision() {
         <div>
           <h1 className="text-lg font-bold mb-1">Chapter-wise Revision</h1>
           <p className="text-xs text-gray-600">
-            Pick a chapter, get instant feedback on every question — no waiting until the end.
+            Pick a chapter — MCQs and fill in the blanks, with instant feedback on every question.
           </p>
         </div>
 

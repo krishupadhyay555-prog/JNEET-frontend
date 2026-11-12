@@ -5,7 +5,9 @@
 //    so the UI can show a proper "daily limit reached" / "ask your parent
 //    to approve" state instead of a generic error.
 //  - onDone(fullText, usage, policy): usage = { remaining, limit, resetsAt } | null;
-//    policy = { level, strikes, pausedUntil } | null (set when the message broke the 18+ policy)
+//    policy = { level, strikes, category, pausedUntil, locked, lock } | null
+//    (set when the message broke the chat rules — see backend services/ai/policy.js;
+//    { refused: true } when the mentor politely declined without a strike)
 // ============================================================
 
 import api from "./axiosInstance.js";
@@ -14,6 +16,8 @@ export const aiApi = {
   ping:  () => api.get("/ai/ping"),
   usage: () => api.get("/ai/usage"),
   policy: () => api.get("/ai/policy"),
+  // Locked chat: 18+ student unlocks after 24 h; under-18 re-sends the parent link.
+  requestUnlock: () => api.post("/ai/policy/unlock", { acknowledge: true }),
 };
 
 export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { replaceFromMessageId = null } = {}) {
@@ -43,6 +47,7 @@ export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { rep
           resetsAt: data.resetsAt ?? null,
           plan: data.plan ?? null,
           resumesAt: data.resumesAt ?? null,
+          lock: data.lock ?? null,
         });
         return;
       }
@@ -78,7 +83,7 @@ export function streamAsk(prompt, sessionId, { onToken, onDone, onError }, { rep
             onToken?.(data.token, fullText);
           }
           if (data.done) {
-            onDone?.(data.fullText ?? fullText, data.usage ?? null, data.policy ?? null);
+            onDone?.(data.fullText ?? fullText, data.usage ?? null, data.policy ?? (data.refused ? { refused: true } : null));
             return;
           }
         }

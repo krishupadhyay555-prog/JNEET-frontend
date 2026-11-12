@@ -13,6 +13,7 @@ import { emailSchema } from "../schemas/common.js";
 import {
   getApproveLink, approve, getRevokeLink, revoke,
   getStatus, resendToParent, updateParentEmail,
+  getUnlockLink, approveUnlock,
 } from "../controllers/consentController.js";
 
 const router = Router();
@@ -25,12 +26,18 @@ const revokeSchema = z.object({
   confirm: z.literal(true, { errorMap: () => ({ message: "Please confirm" }) }),
 });
 const parentEmailSchema = z.object({ parentEmail: emailSchema });
+const unlockSchema = z.object({
+  isAdult: z.literal(true, { errorMap: () => ({ message: "Please confirm you are a parent or legal guardian aged 18 or above" }) }),
+  agree:   z.literal(true, { errorMap: () => ({ message: "Please confirm you want to unlock the AI chat" }) }),
+});
 
 // Public (parent)
 router.get( "/parent/revoke/:token", consentLimiter, getRevokeLink);
 router.post("/parent/revoke/:token", consentLimiter, validate(revokeSchema), revoke);
 router.get( "/parent/:token",         consentLimiter, getApproveLink);
 router.post("/parent/:token/approve", consentLimiter, validate(approveSchema), approve);
+router.get( "/unlock/:token",         consentLimiter, getUnlockLink);
+router.post("/unlock/:token",         consentLimiter, validate(unlockSchema), approveUnlock);
 
 // Student
 router.get(  "/status",       protect, getStatus);

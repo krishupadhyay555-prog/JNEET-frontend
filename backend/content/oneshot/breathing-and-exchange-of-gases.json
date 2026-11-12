@@ -1,0 +1,100 @@
+{
+ "slug": "breathing-and-exchange-of-gases",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Breathing and Exchange of Gases"
+ },
+ "title": "Breathing and Exchange of Gases",
+ "readMinutes": 12,
+ "summary": [
+  "Breathing do kaam hai: hawa andar-bahar (ventilation) aur gases ka exchange. Inspiration active hai — diaphragm aur external intercostal muscles contract hote hain, thorax ka volume badhta hai, pressure ghatta hai, hawa andar aati hai. Normal expiration passive hai.",
+  "Exchange sirf diffusion se hota hai, partial pressure ke gradient ke saath. CO₂ ka gradient chhota hai par wo O₂ se 20–25 guna zyada soluble hai, isliye aaram se diffuse hoti hai.",
+  "Transport: O₂ ~97% haemoglobin par (oxyhaemoglobin), ~3% plasma mein. CO₂ ~20–25% carbamino-haemoglobin, ~70% bicarbonate (carbonic anhydrase ki madad se), ~7% dissolved.",
+  "Control: medulla ka respiratory rhythm centre rhythm banata hai, pons ka pneumotaxic centre use moderate karta hai; chemosensitive area CO₂ aur H⁺ badhne par rate badhata hai."
+ ],
+ "formulas": [
+  {
+   "name": "Inspiratory capacity",
+   "formula": "IC = TV + IRV",
+   "when": "Normal expiration ke baad kitni hawa andar le sakte ho."
+  },
+  {
+   "name": "Expiratory capacity",
+   "formula": "EC = TV + ERV",
+   "when": "Normal inspiration ke baad kitni bahar nikal sakte ho."
+  },
+  {
+   "name": "Functional residual capacity",
+   "formula": "FRC = ERV + RV",
+   "when": "Normal expiration ke baad lungs mein bachi hawa."
+  },
+  {
+   "name": "Vital capacity",
+   "formula": "VC = ERV + TV + IRV",
+   "when": "Forced inspiration ke baad maximum kitni bahar.",
+   "mistake": "RV kabhi VC mein nahi aata.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Total lung capacity",
+   "formula": "TLC = VC + RV",
+   "when": "Forced inspiration ke baad lungs mein total hawa."
+  },
+  {
+   "name": "Pulmonary ventilation",
+   "formula": "Minute volume ≈ TV × breathing rate ≈ 500 mL × 12–16 = 6000–8000 mL/min",
+   "when": "Per minute kitni hawa.",
+   "unit": "mL/min"
+  },
+  {
+   "name": "Gas delivery (NCERT)",
+   "formula": "100 mL oxygenated blood ⇒ ~5 mL O₂ tissues ko;  100 mL deoxygenated blood ⇒ ~4 mL CO₂ alveoli ko",
+   "when": "Normal physiological condition ke sawal."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Volumes se capacities",
+   "problem": "TV = 500, IRV = 3000, ERV = 1100, RV = 1200 (mL). VC, TLC, FRC, IC?",
+   "solution": "VC = 1100 + 500 + 3000 = 4600 mL. TLC = 4600 + 1200 = 5800 mL. FRC = 1100 + 1200 = 2300 mL. IC = 500 + 3000 = 3500 mL."
+  },
+  {
+   "title": "O₂ alveoli mein judti, tissues mein chhootti kyun?",
+   "problem": "Same haemoglobin do jagah ulta kaam kaise karta hai?",
+   "solution": "Alveoli: pO₂ zyada, pCO₂ kam, H⁺ kam, temperature kam ⇒ oxyhaemoglobin banta hai. Tissues: pO₂ kam, pCO₂ zyada, H⁺ zyada, temperature zyada ⇒ O₂ chhoot jaati hai (curve right shift)."
+  },
+  {
+   "title": "CO₂ chhote gradient par bhi tez kyun?",
+   "problem": "pCO₂ gradient sirf 45 → 40 mm Hg hai, phir bhi CO₂ exchange tez kyun?",
+   "solution": "CO₂ ki solubility O₂ se 20–25 guna zyada hai, isliye per unit partial pressure difference zyada CO₂ diffuse hoti hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Mechanism of breathing",
+   "explain": "Inspiration: diaphragm + external intercostals contract ⇒ volume ↑ ⇒ intra-pulmonary pressure ↓ ⇒ hawa andar. Expiration: muscles relax ⇒ volume ↓ ⇒ hawa bahar. Zor se saans ke liye abdominal muscles bhi madad karte hain."
+  },
+  {
+   "title": "Diffusion membrane",
+   "explain": "Alveolar wall, capillary wall aur unke beech basement substance — kul motai 1 mm se bhi bahut kam, isliye diffusion tez."
+  },
+  {
+   "title": "Oxygen dissociation curve",
+   "explain": "Haemoglobin saturation vs pO₂ ka graph sigmoid (S-shaped) hota hai. pCO₂, H⁺ aur temperature badhne par curve right shift — O₂ aasani se chhoot-ti hai."
+  },
+  {
+   "title": "CO₂ transport",
+   "explain": "RBC mein carbonic anhydrase: CO₂ + H₂O ⇌ H₂CO₃ ⇌ HCO₃⁻ + H⁺. Tissues mein ye aage ki taraf, alveoli mein peeche ki taraf chalta hai."
+  },
+  {
+   "title": "Disorders",
+   "explain": "Asthma: bronchi/bronchioles mein inflammation, saans mein seeti. Emphysema: alveolar walls damage, surface area kam — main cause smoking. Occupational disorders: dust/silica se lungs ka fibrosis."
+  }
+ ],
+ "ratta": [
+  "Volumes: TV ≈ 500 · IRV 2500–3000 · ERV 1000–1100 · RV 1100–1200 (mL).",
+  "pO₂ / pCO₂ (mm Hg): atmosphere 159 / 0.3 · alveoli 104 / 40 · deoxygenated blood 40 / 45 · oxygenated blood 95 / 40 · tissues 40 / 45.",
+  "Healthy human 12–16 breaths per minute."
+ ],
+ "verifiedOn": "2026-11-12"
+}

@@ -57,3 +57,14 @@ export const heavyLimiter = rateLimit({
   keyGenerator: (req) => (req.user?.id ? `heavy:${req.user.id}` : `heavy-ip:${ipBucket(req.ip)}`),
   handler: limited("You're starting tests too quickly. Please wait a moment."),
 });
+
+// Chat-unlock requests: 6 / hour / user (the real limits — 24 h wait,
+// one parent email per 24 h — are enforced in services/ai/policy.js).
+export const unlockLimiter = rateLimit({
+  windowMs: 60 * 60_000,
+  limit: 6,
+  standardHeaders: "draft-7",
+  legacyHeaders: false,
+  keyGenerator: (req) => (req.user?.id ? `unlock:${req.user.id}` : `unlock-ip:${ipBucket(req.ip)}`),
+  handler: limited("Too many unlock requests. Please try again later."),
+});
