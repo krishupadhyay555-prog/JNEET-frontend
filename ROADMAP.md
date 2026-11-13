@@ -2,7 +2,7 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **12 Nov 2026**. Work status: **ACTIVE (founder said "go" 12 Nov)** — order: Safety v2 → mockups → Revision (MCQ + fill-in-the-blanks) · OneShot · "Pichli baar ka recap" → then new questions. Everything else waits for the founder's OK (see §5 D-m).
+> Last updated: **13 Nov 2026**. Work status: **ACTIVE** — 13 Nov founder order: **JEE OneShots first, as fast as possible** (JEE Main Session 1 is in late January 2027), every chapter complete and verified → then new questions. Everything else waits for the founder's OK (see §5 D-m).
 > Founder gave Claude project-lead permission (12 Nov): Claude runs commands, tests, local seeds and opens PRs; the founder merges PRs, runs live-database commands from the laptop and handles every password/key — Claude never sees or asks for them.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
@@ -31,7 +31,7 @@
 
 Code only goes live after its PR is **merged into `main`**. Until then the founder will not see it, even if it is "done" here.
 
-| PR | What | Status (12 Nov 2026) |
+| PR | What | Status (13 Nov 2026) |
 |---|---|---|
 | #1 | Launch prep: offline notes, JEE, timed mocks, 18+ policy, WMS | ✅ Merged / live |
 | #2 | Turnstile captcha, **email logo**, seed script skips empty files | ✅ Merged 11 Nov — live (logo inside email confirmed on Gmail) |
@@ -40,13 +40,15 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #5 | **Debug sweep**: critical login bypass fix, search crash, test paper fixes, chat layout/lag, accuracy labels, JEE Main dates, security updates | ✅ Merged 11 Nov — live |
 | #6 | **Question bank cleanup + new tough questions**: 1,184 wrong answer keys fixed, 2,883 broken/duplicate questions removed, chapter names unified, 216 new verified questions (incl. 47 JEE Advanced, stored but not served), `seedQuestions.js --prune` | ✅ Merged 12 Nov — live (Render deploy `4cd38ac`). Seed run 12 Nov from the laptop: 3,471 old copies deleted, live database = **12,968** |
 | #7 | Phone-ops seed button (GitHub Actions) | ❌ Closed, not merged — founder prefers running commands from the laptop |
-| #8 | Roadmap: seed done, UptimeRobot, laptop setup | ⏳ Open — NOT live |
+| #8 | Roadmap: seed done, UptimeRobot, laptop setup | ✅ Merged 12 Nov |
 | #9 | Safety hotfix (18+ filter flagged maths / biology words) | ❌ Closed — folded into #10 so the same files are not in two open PRs |
-| #10 | **Safety v2 + fill-in-the-blanks + OneShot + recap + Aaj ka plan + quick chips + new light/dark theme** (needs L-seed-2 after merge). Safety: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ⏳ Open — NOT live |
+| #10 | **Safety v2 + fill-in-the-blanks + OneShot + recap + Aaj ka plan + quick chips + new light/dark theme** (needs L-seed-2 after merge). Safety: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ✅ Merged 12 Nov — live after Render/Vercel deploy. L-seed-2 (127 blanks) still to be run from the laptop |
+| #11 | **JEE OneShot batch 1**: 8 new chapters (Electrostatics, Dual Nature, Atoms, Nuclei, Chemical Thermodynamics, Equilibrium, Matrices & Determinants, Definite Integrals) + proper superscript/subscript display | ⏳ Open — NOT live |
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
+| 13 Nov 2026 | **Question bank still serves topics NTA removed** (found while writing OneShots): 92 of 117 Nuclei questions are radioactivity / half-life; whole chapters Hydrogen, s-Block, States of Matter, Surface Chemistry, Polymers, Chemistry in Everyday Life, Metallurgy, Mathematical Reasoning, Linear Programming are still in the JEE bank | Bank was built from older (pre-2024) syllabus lists | **Not changed yet — founder to decide (D83).** OneShots follow the current NTA syllabus only and say so on the page. **Rule:** every new chapter/question is checked against the current NTA syllabus first |
 | 12 Nov 2026 | **18+ filter could warn/pause a student for a maths or biology question** | `18+` tag matched "18 + 4√2" when the message also said "show"; standalone words with study meanings (cock, nude, tits, incest, Lund) were in the explicit list | PR #9: `18+` only as a tag (not before a number/variable), study words removed or narrowed, 16 new test cases. **Rule:** every new pattern needs a "must stay clean" test from the syllabus (Biology, Maths, Physics) before it ships |
 | 12 Nov 2026 | Seed `--prune` listed 3,471 old questions, not the expected 2,883 | Seed matches on exam + subject + chapter + text, so every question whose chapter was renamed (e.g. "Mechanical Properties of Solids" → "…of Solids and Fluids") got a new copy and the old copy became "stale" | Expected. **Rule:** before `--prune --yes`, check `Questions now in the database` − stale = number of questions in the JSON files; run `--yes` right after the dry run so students never see both copies |
 | 12 Nov 2026 | Founder's laptop had only old copies (`C:\backend`, `C:\frontend`, `C:\Projects\JNEET_AI*`, June–Aug) | Code was never cloned with git | Fresh clone at `C:\Projects\JNEET-frontend` (git, `main`); `backend\.env` holds only `MONGO_URI` copied from Render. **Rule:** always run commands from `C:\Projects\JNEET-frontend`, after `git pull origin main` |
@@ -257,6 +259,15 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
   - 12 Nov 2026: built in PR #10 — `fill_blank` type, strict server-side matcher, 127 verified blanks (74 NEET / 53 JEE, 11 chapters). Tick after merge + seed (L-seed-2). More blanks come with D80.
 - [ ] **D76 OneShot (separate feature)** — per chapter, pre-written and verified (₹0 per student, never generated live): brief summary + all important formulas + important examples + short-but-detailed explanation of the important topics. Own words only (no NCERT text).
   - 12 Nov 2026: built in PR #10 — `/oneshot` pages + 6 chapters (Rotational Motion, Current Electricity, Chemical Bonding, Breathing, Cell Cycle, Complex Numbers). Tick after merge; more chapters to be added.
+  - 13 Nov 2026: **JEE push started.** New standard per chapter: every NTA syllabus point covered (checked by script), 11–28 formula cards, 7–10 solved examples whose numbers are recomputed by Python/sympy, key topics, ratta list. Generator + checks in the repo: `tools/oneshot/` (run `python3 tools/oneshot/build_all.py`; `lib.py build()` refuses to write a chapter if any number or syllabus point fails).
+    - [ ] Batch 1 (PR #11): Electrostatics, Dual Nature, Atoms, Nuclei, Chemical Thermodynamics, Equilibrium, Matrices & Determinants, Definite Integrals.
+    - [ ] Batch 2: Kinematics, Laws of Motion, Work Energy Power, Moving Charges & Magnetism, EMI, AC, Ray Optics, Wave Optics.
+    - [ ] Batch 3: Thermodynamics (Phy), KTG, Gravitation, Oscillations, Waves, Semiconductors, Units & Measurement, Solids & Fluids, Thermal Properties, Magnetism & Matter, EM Waves.
+    - [ ] Batch 4 (Chemistry): Some Basic Concepts, Atomic Structure, Redox & Electrochemistry, Chemical Kinetics, Solutions, Classification & Periodicity, p-Block, d- & f-Block, Coordination Compounds.
+    - [ ] Batch 5 (Organic): GOC (Basic Principles), Hydrocarbons, Haloalkanes & Haloarenes, Alcohols/Phenols/Ethers, Aldehydes/Ketones/Acids, Amines, Biomolecules, Practical Chemistry.
+    - [ ] Batch 6 (Maths): Sets/Relations/Functions, Quadratic + Complex (upgrade), P&C, Binomial, Sequences & Series, Limits/Continuity/Differentiability, Differentiation, Application of Derivatives, Indefinite Integrals, Application of Integrals, Differential Equations.
+    - [ ] Batch 7 (Maths): Straight Lines, Circles, Conic Sections, 3D Geometry, Vector Algebra, Statistics, Probability, Trigonometric Functions, Inverse Trig.
+    - [ ] Upgrade the first 4 shorter pages (Rotational Motion, Current Electricity, Chemical Bonding, Complex Numbers) to the new standard.
 - [ ] **D77 "Pichli baar ka recap"** — every time the student opens the chat, a short line: "Pichli baar: <topics> — 5–10 sawaal se revise karo?". On click, the AI maps the last chat's topics to our chapter list (choice from the list only) and serves 5–10 **verified questions from the bank** for those chapters; if no chapter matches, no recap (never AI-invented questions). Strictly tested.
   - 12 Nov 2026: built in PR #10 (strip in chat, dismiss per visit, 5 bank questions, + "Aaj ka plan" card on Dashboard). Tick after merge + live check (needs L3 OpenAI key for the AI chapter mapping; without it a careful keyword match is used).
 - [ ] **D78 Smart Chat v2** — topic memory ("adhoora topic, wapas chalein?"), rolling summary, 1,000+ messages per chat (load older on scroll, render only visible), quick chips under answers, "Concept vs 📌 Ratta" labels, "✓ Verified" badge when the answer matches the bank.
@@ -265,6 +276,7 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
 - [ ] **D80 Question intake (hybrid)** — founder pastes plain-text questions (any source except coaching books); Claude converts, solves, checks numbers with code, de-duplicates against the bank, fixes or drops, and reports counts.
 - [ ] **D81 PYQs** — official NTA papers + official final answer keys only; our own verified solutions; label "NEET UG 2024 · NTA"; dropped/bonus marked; never coaching solutions.
 - [ ] **D82 DPDP lawyer check before 13 May 2027** — parent emails (safety lock), any parent progress report (D23), email-link consent.
+- [ ] **D83 Out-of-syllabus questions in the bank** (see issue log 13 Nov) — options: (a) hide them from JEE/NEET tests with a `syllabus: "old"` flag (reversible), (b) delete with `--prune`. Founder to choose.
 
 ### D-k. Later / platform
 - [ ] **D60 Razorpay + Pro/Elite (Batch 6)** — 2% + GST per payment; ₹199 KYC.

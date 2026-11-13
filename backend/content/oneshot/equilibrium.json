@@ -1,0 +1,241 @@
+{
+ "slug": "equilibrium",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Equilibrium",
+  "JEE": "Equilibrium"
+ },
+ "title": "Equilibrium",
+ "readMinutes": 24,
+ "summary": [
+  "Equilibrium dynamic hota hai: forward aur backward reaction dono chal rahi hoti hain, bas barabar speed se — isliye concentrations constant dikhte hain. Band system mein hi equilibrium banta hai.",
+  "Har reaction ka ek equilibrium constant hai (Kc, Kp) jo sirf temperature par depend karta hai. K bada ⇒ products zyada; Q ko K se compare karke pata chalta hai reaction kis taraf chalegi.",
+  "Le Chatelier: equilibrium ko chhedo (concentration, pressure, temperature badlo) to system us badlaav ko kam karne ki taraf khisakta hai. Catalyst sirf jaldi pahunchaata hai, equilibrium nahi badalta.",
+  "Ionic equilibrium: strong electrolytes poore ionise, weak thode. Weak acid/base ki ionisation Ka/Kb se, paani ki Kw se. pH = −log[H⁺].",
+  "Teen bade application: buffer (pH ko stable rakhna — Henderson equation), salt hydrolysis (salt ka pH), aur solubility product Ksp (kam ghulne wale salt kitna ghulenge, kab precipitate banega)."
+ ],
+ "formulas": [
+  {
+   "name": "Law of chemical equilibrium",
+   "formula": "aA + bB ⇌ cC + dD:   Kc = [C]^c[D]^d / ([A]^a[B]^b)",
+   "when": "Kisi bhi reversible reaction ka K likhna.",
+   "mistake": "Pure solids aur pure liquids (aur dilute solution mein solvent) K mein nahi aate."
+  },
+  {
+   "name": "Kp and Kc",
+   "formula": "Kp = Kc (RT)^{Δn_g}   (R = 0.0821 L·atm/(K·mol), p atm mein)",
+   "when": "Gaseous equilibrium mein badalna.",
+   "mistake": "Δn_g = gaseous products ke moles − reactants ke moles; Δn_g = 0 ⇒ Kp = Kc.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Manipulating K",
+   "formula": "Ulti reaction: K' = 1/K.   Reaction × n: K' = Kⁿ.   Do reactions jodo: K = K₁ × K₂",
+   "when": "Di hui reactions se nayi ka K."
+  },
+  {
+   "name": "Reaction quotient",
+   "formula": "Q (same expression, kisi bhi pal ke concentrations):  Q < K → forward,  Q > K → backward,  Q = K → equilibrium",
+   "when": "Reaction kis taraf chalegi."
+  },
+  {
+   "name": "Degree of dissociation (example PCl₅)",
+   "formula": "PCl₅ ⇌ PCl₃ + Cl₂:   Kp = α² P / (1 − α²)",
+   "when": "Dissociation wale gas sawal; α = ditna hissa toota.",
+   "mistake": "Total moles = 1 + α (1 mol PCl₅ se shuru)."
+  },
+  {
+   "name": "ΔG and K",
+   "formula": "ΔG° = −RT ln K;   ΔG = ΔG° + RT ln Q;   equilibrium par ΔG = 0",
+   "when": "K ka thermodynamic matlab.",
+   "mistake": "ΔG° < 0 ⇒ K > 1."
+  },
+  {
+   "name": "Temperature dependence (van 't Hoff)",
+   "formula": "log(K₂/K₁) = (ΔH°/2.303R) (1/T₁ − 1/T₂)",
+   "when": "Temperature badalne par K.",
+   "mistake": "Endothermic: T badhe → K badhe. Exothermic: T badhe → K ghate."
+  },
+  {
+   "name": "Le Chatelier — quick table",
+   "formula": "Reactant badhao → forward.  Pressure badhao → kam gas moles wali side.  T badhao → endothermic side.  Catalyst → koi shift nahi.  Inert gas (V const) → koi shift nahi;  (p const) → zyada moles wali side",
+   "when": "Shift predict karna.",
+   "mistake": "Sirf temperature K ko badalta hai; baaki sab sirf position badalte hain.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Henry's law",
+   "formula": "p = K_H x   (gas ka partial pressure ∝ solution mein uska mole fraction)",
+   "when": "Gas ka liquid mein ghulna (soda, scuba diving).",
+   "mistake": "Temperature badhe to gas ki solubility ghatti hai."
+  },
+  {
+   "name": "Ionic product of water",
+   "formula": "Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ (298 K);   pH + pOH = 14;   pH = −log[H⁺]",
+   "when": "Har aqueous pH sawal.",
+   "mistake": "Kw temperature ke saath badhta hai — garam paani ka neutral pH 7 se kam hota hai (phir bhi neutral)."
+  },
+  {
+   "name": "Weak acid (Ostwald dilution law)",
+   "formula": "α = √(Ka/C);   [H⁺] = √(Ka C);   pH = ½(pKa − log C)",
+   "when": "Weak acid ka pH aur α.",
+   "mistake": "Tabhi valid jab α < 5% ho (1 − α ≈ 1).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Weak base",
+   "formula": "[OH⁻] = √(Kb C);   pOH = ½(pKb − log C)",
+   "when": "NH₃ jaise weak base ka pH."
+  },
+  {
+   "name": "Conjugate pair",
+   "formula": "Ka × Kb = Kw;   pKa + pKb = 14",
+   "when": "Acid ke conjugate base ka Kb (ya ulta).",
+   "mistake": "Strong acid ka conjugate base bahut weak hota hai."
+  },
+  {
+   "name": "Polyprotic acids",
+   "formula": "H₂A: Ka₁ ≫ Ka₂;   pH lagbhag sirf Ka₁ se;  [A²⁻] ≈ Ka₂",
+   "when": "H₂S, H₂CO₃, H₃PO₄ jaise acids.",
+   "mistake": "Doosra proton nikalna mushkil (negative ion se)."
+  },
+  {
+   "name": "Common ion effect",
+   "formula": "Weak acid HA + uska salt (A⁻, conc C'):  α ≈ Ka / C'",
+   "when": "Common ion ionisation ko dabata hai.",
+   "mistake": "Common ion se weak electrolyte ka α ghatta hai."
+  },
+  {
+   "name": "Salt hydrolysis",
+   "formula": "SA + SB: pH = 7.   WA + SB (CH₃COONa): pH = 7 + ½pKa + ½log C.   SA + WB (NH₄Cl): pH = 7 − ½pKb − ½log C.   WA + WB: pH = 7 + ½(pKa − pKb)  (C se independent)",
+   "when": "Salt ke solution ka pH.",
+   "mistake": "Kh = Kw/Ka (ya Kw/Kb); h = √(Kh/C).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Buffer (Henderson–Hasselbalch)",
+   "formula": "Acidic: pH = pKa + log([salt]/[acid]).   Basic: pOH = pKb + log([salt]/[base])",
+   "when": "Buffer ka pH.",
+   "mistake": "[salt] = [acid] ⇒ pH = pKa (best buffer capacity).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Solubility product",
+   "formula": "AₓB_y: Ksp = (xs)^x (ys)^y.   AB: s²,  AB₂/A₂B: 4s³,  AB₃/A₃B: 27s⁴,  A₂B₃: 108s⁵",
+   "when": "Solubility s (mol/L) aur Ksp ka relation.",
+   "mistake": "Alag type ke salts ki solubility sirf Ksp dekh kar compare mat karo — s nikaal ke karo."
+  },
+  {
+   "name": "Precipitation and common ion",
+   "formula": "Ionic product Q_sp > Ksp ⇒ precipitate.   AB in C M common ion: s ≈ Ksp / C",
+   "when": "Precipitate banega ya nahi; common ion mein solubility.",
+   "mistake": "Mixing ke baad naye (dilute) concentrations lo."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Kc se Kp",
+   "problem": "N₂ + 3H₂ ⇌ 2NH₃, 500 K par Kc = 6.0 × 10⁻² (mol/L)⁻². Kp?",
+   "solution": "Δn_g = 2 − 4 = −2. Kp = Kc(RT)⁻² = 0.06/(0.0821 × 500)² ≈ 3.6 × 10⁻⁵ atm⁻²."
+  },
+  {
+   "title": "Equilibrium concentration",
+   "problem": "A + B ⇌ C + D, Kc = 4. Shuru mein [A] = [B] = 1 M. Equilibrium par [C]?",
+   "solution": "x²/(1 − x)² = 4 ⇒ x/(1 − x) = 2 ⇒ x = 2/3 ≈ 0.67 M."
+  },
+  {
+   "title": "Weak acid ka pH",
+   "problem": "0.1 M CH₃COOH, Ka = 1.8 × 10⁻⁵. [H⁺], pH aur % ionisation?",
+   "solution": "[H⁺] = √(1.8 × 10⁻⁵ × 0.1) = 1.34 × 10⁻³ M. pH = 2.87. α = 1.34% (< 5%, approximation theek)."
+  },
+  {
+   "title": "Strong base ka pH",
+   "problem": "0.01 M NaOH ka pH?",
+   "solution": "[OH⁻] = 10⁻² ⇒ pOH = 2 ⇒ pH = 14 − 2 = 12."
+  },
+  {
+   "title": "Buffer ka pH",
+   "problem": "0.1 M CH₃COOH + 0.2 M CH₃COONa, pKa = 4.74. pH?",
+   "solution": "pH = 4.74 + log(0.2/0.1) = 4.74 + 0.30 = 5.04."
+  },
+  {
+   "title": "Ksp aur common ion",
+   "problem": "AgCl ka Ksp = 1.8 × 10⁻¹⁰. Paani mein solubility? 0.1 M NaCl mein?",
+   "solution": "Paani: s = √Ksp = 1.34 × 10⁻⁵ M. 0.1 M Cl⁻ mein: s = Ksp/0.1 = 1.8 × 10⁻⁹ M — ~7500 guna kam (common ion effect)."
+  },
+  {
+   "title": "Solubility se Ksp (AB₂)",
+   "problem": "CaF₂ ki solubility 2 × 10⁻⁴ mol/L. Ksp?",
+   "solution": "CaF₂ → Ca²⁺ (s) + 2F⁻ (2s). Ksp = s(2s)² = 4s³ = 4 × (2 × 10⁻⁴)³ = 3.2 × 10⁻¹¹."
+  },
+  {
+   "title": "Salt ka pH",
+   "problem": "0.1 M CH₃COONa (pKa of CH₃COOH = 4.74). pH?",
+   "solution": "WA + SB salt: pH = 7 + ½(4.74) + ½ log 0.1 = 7 + 2.37 − 0.5 = 8.87 (basic)."
+  },
+  {
+   "title": "Bahut dilute strong acid",
+   "problem": "10⁻⁸ M HCl ka pH? (8 nahi!)",
+   "solution": "Paani ka H⁺ bhi gino: [H⁺] = x, [OH⁻] = x − 10⁻⁸, x(x − 10⁻⁸) = 10⁻¹⁴ ⇒ x ≈ 1.05 × 10⁻⁷ M ⇒ pH ≈ 6.98 — thoda acidic, 7 se kam."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Dynamic equilibrium",
+   "explain": "Band bottle mein paani: evaporation aur condensation dono chalte rehte hain, rate barabar ⇒ vapour pressure constant. Chemical equilibrium bhi aisa hi — dono taraf se pahuncha ja sakta hai."
+  },
+  {
+   "title": "Physical equilibria",
+   "explain": "Solid ⇌ liquid (barf-paani, 0°C, 1 atm par), liquid ⇌ vapour (band bartan mein vapour pressure), solid ⇌ vapour (camphor, iodine — sublimation), gas ⇌ solution (soda mein CO₂ — Henry's law). Har ek ki pehchaan: koi ek property constant ho jaati hai, aur ye fixed T par hi hota hai."
+  },
+  {
+   "title": "K ka matlab",
+   "explain": "K > 10³: lagbhag poori forward. K < 10⁻³: bahut kam forward. Beech mein: dono kaafi. K sirf temperature se badalta hai, concentration ya catalyst se nahi. K ki units Δn par depend karti hain."
+  },
+  {
+   "title": "Le Chatelier ke classic examples",
+   "explain": "Haber process (N₂ + 3H₂ ⇌ 2NH₃, exothermic): high pressure aur NH₃ hataate rehna forward le jaate hain; low T se yield zyada lekin speed kam — isliye ~700 K aur Fe catalyst. N₂O₄ ⇌ 2NO₂ (endothermic): garam karo to bhoora rang badhta hai."
+  },
+  {
+   "title": "Strong vs weak electrolytes",
+   "explain": "Strong (NaCl, HCl, NaOH): paani mein lagbhag 100% ions. Weak (CH₃COOH, NH₃): thoda sa ionise, baaki molecule. Dilution par weak electrolyte ka α badhta hai (Ostwald)."
+  },
+  {
+   "title": "Acid–base ke teen concepts",
+   "explain": "Arrhenius: paani mein H⁺ de = acid, OH⁻ de = base (sirf aqueous). Brønsted–Lowry: proton donor = acid, acceptor = base; conjugate pairs (HCl/Cl⁻, NH₄⁺/NH₃). Lewis: electron pair acceptor = acid (BF₃, AlCl₃, H⁺, metal ions), donor = base (NH₃, H₂O, OH⁻)."
+  },
+  {
+   "title": "Acid strength ka trend",
+   "explain": "Ka bada (pKa chhota) = strong acid. Same group mein neeche jaate bond kamzor ⇒ HF < HCl < HBr < HI. Same period mein electronegativity badhe ⇒ CH₄ < NH₃ < H₂O < HF acidity."
+  },
+  {
+   "title": "pH scale",
+   "explain": "pH 7 neutral (25°C), < 7 acidic, > 7 basic. pH 1 ka farak = [H⁺] mein 10 guna. Do strong acids mix: moles jodo, total volume se divide."
+  },
+  {
+   "title": "Buffer kaise kaam karta hai",
+   "explain": "Acidic buffer (CH₃COOH + CH₃COONa): daala gaya H⁺ CH₃COO⁻ se jud jaata hai, OH⁻ CH₃COOH se neutralise. Basic buffer: NH₃ + NH₄Cl. Blood ka buffer H₂CO₃/HCO₃⁻ (pH ≈ 7.4)."
+  },
+  {
+   "title": "Salt hydrolysis ka logic",
+   "explain": "Weak acid ka anion (CH₃COO⁻) paani se H⁺ leke OH⁻ chhodta hai ⇒ basic. Weak base ka cation (NH₄⁺) H⁺ deta hai ⇒ acidic. Strong ke ions hydrolyse nahi hote (NaCl neutral)."
+  },
+  {
+   "title": "Ksp ke uses",
+   "explain": "Precipitate banega jab Q_sp > Ksp. Selective precipitation: jiska Ksp chhota pehle girega. Common ion solubility ghataata hai; jo ions complex bana lein (AgCl + NH₃) wo solubility badha dete hain."
+  }
+ ],
+ "ratta": [
+  "Kp = Kc(RT)^{Δn_g};  ulti reaction 1/K;  ×n → Kⁿ;  jodo → multiply.",
+  "Q < K forward, Q > K backward.",
+  "Sirf T se K badalta hai; catalyst K nahi badalta.",
+  "Kw = 10⁻¹⁴ (25°C);  pH + pOH = 14;  pKa + pKb = 14.",
+  "Weak acid: [H⁺] = √(KaC),  α = √(Ka/C).",
+  "Buffer: pH = pKa + log(salt/acid).",
+  "Hydrolysis: WA+SB pH = 7 + ½pKa + ½logC;  SA+WB pH = 7 − ½pKb − ½logC;  WA+WB pH = 7 + ½(pKa − pKb).",
+  "Ksp: AB s²,  AB₂ 4s³,  AB₃ 27s⁴,  A₂B₃ 108s⁵.",
+  "10⁻⁸ M HCl ka pH ≈ 6.98 (paani ka H⁺ jodo).",
+  "Lewis acid = e⁻ pair acceptor (BF₃, AlCl₃);  Lewis base = donor (NH₃)."
+ ],
+ "verifiedOn": "2026-11-13"
+}

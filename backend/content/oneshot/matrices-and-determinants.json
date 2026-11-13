@@ -1,0 +1,212 @@
+{
+ "slug": "matrices-and-determinants",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Matrices and Determinants"
+ },
+ "title": "Matrices and Determinants",
+ "readMinutes": 20,
+ "summary": [
+  "Matrix = numbers ki rectangular table (m × n). Do matrices tabhi multiply hote hain jab pehle ke columns = doosre ke rows; aur AB aksar BA ke barabar nahi hota — order matter karta hai.",
+  "Determinant sirf square matrix ka ek number hai. Ye batata hai matrix 'ulta' ho sakta hai ya nahi: |A| ≠ 0 ⇒ inverse exist karta hai (non-singular).",
+  "Inverse adjoint se: A⁻¹ = adj A / |A|. adj A ke determinant, adj of adj, |kA| — in sab ke power wale formulas JEE ke favourite hain.",
+  "Linear equations AX = B: |A| ≠ 0 to unique solution X = A⁻¹B. |A| = 0 to ya to koi solution nahi ya infinite — (adj A)B (ya Cramer ke D₁, D₂, D₃) se check karo.",
+  "Determinant se triangle ka area aur collinearity bhi nikalti hai."
+ ],
+ "formulas": [
+  {
+   "name": "Types of matrices",
+   "formula": "Square, diagonal, scalar, identity I, zero O, upper/lower triangular, symmetric (Aᵀ = A), skew-symmetric (Aᵀ = −A, diagonal sab 0)",
+   "when": "Definitions aur pehchaan.",
+   "mistake": "Skew-symmetric ki diagonal entries hamesha zero."
+  },
+  {
+   "name": "Special square matrices",
+   "formula": "Orthogonal: AAᵀ = I.  Idempotent: A² = A.  Involutory: A² = I.  Nilpotent: Aᵏ = O (kisi k ke liye)",
+   "when": "Property-based sawal."
+  },
+  {
+   "name": "Matrix multiplication",
+   "formula": "(m × n)(n × p) = (m × p);   (AB)ᵢⱼ = Σₖ aᵢₖ bₖⱼ",
+   "when": "Do matrices ka product.",
+   "mistake": "AB = O hone par bhi A ya B zero ho, zaroori nahi; AB = AC se B = C nahi nikalta."
+  },
+  {
+   "name": "Transpose rules",
+   "formula": "(Aᵀ)ᵀ = A,  (A + B)ᵀ = Aᵀ + Bᵀ,  (kA)ᵀ = kAᵀ,  (AB)ᵀ = BᵀAᵀ",
+   "when": "Transpose wale simplification.",
+   "mistake": "(AB)ᵀ mein order ulta hota hai."
+  },
+  {
+   "name": "Symmetric + skew-symmetric split",
+   "formula": "A = ½(A + Aᵀ) + ½(A − Aᵀ)",
+   "when": "Kisi bhi square matrix ko todna (unique tareeka).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Determinant of order 2 and 3",
+   "formula": "|a b; c d| = ad − bc.   3 × 3: kisi bhi row/column ke along expand: |A| = a₁₁C₁₁ + a₁₂C₁₂ + a₁₃C₁₃",
+   "when": "Determinant nikaalna.",
+   "mistake": "Jis row/column mein zyada zero ho, usi ke along expand karo."
+  },
+  {
+   "name": "Minor and cofactor",
+   "formula": "Mᵢⱼ = row i, column j hata ke bacha determinant;   Cᵢⱼ = (−1)^{i+j} Mᵢⱼ",
+   "when": "Expansion aur adjoint ke liye.",
+   "mistake": "Sign pattern: + − + / − + − / + − +."
+  },
+  {
+   "name": "Properties of determinants",
+   "formula": "|Aᵀ| = |A|;  do rows swap → sign ulta;  do rows same/proportional → 0;  ek row × k → |A| × k;  Rᵢ → Rᵢ + kRⱼ → koi badlaav nahi;  triangular → diagonal ka product",
+   "when": "Bina poora expand kiye determinant simplify karna.",
+   "mistake": "Kisi ek row ki entries ko kisi doosri row ke cofactors se multiply karke jodo → 0."
+  },
+  {
+   "name": "Determinant of products and scalars",
+   "formula": "|AB| = |A||B|;   |kA| = kⁿ |A|  (n = order);   |Aⁿ| = |A|ⁿ;   skew-symmetric odd order: |A| = 0",
+   "when": "Powers wale sawal.",
+   "mistake": "|kA| mein k ki power = order, sirf k nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Adjoint",
+   "formula": "adj A = (cofactor matrix)ᵀ;   A (adj A) = (adj A) A = |A| I",
+   "when": "Inverse ka raasta.",
+   "mistake": "2 × 2: adj [a b; c d] = [d −b; −c a]."
+  },
+  {
+   "name": "Adjoint properties",
+   "formula": "|adj A| = |A|^{n−1};   adj(adj A) = |A|^{n−2} A;   |adj(adj A)| = |A|^{(n−1)²};   adj(AB) = (adj B)(adj A);   adj(Aᵀ) = (adj A)ᵀ",
+   "when": "Power-tower wale sawal.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inverse",
+   "formula": "A⁻¹ = adj A / |A|  (|A| ≠ 0);   (AB)⁻¹ = B⁻¹A⁻¹;   (Aᵀ)⁻¹ = (A⁻¹)ᵀ;   |A⁻¹| = 1/|A|",
+   "when": "Inverse nikaalna.",
+   "mistake": "|A| = 0 (singular) ⇒ inverse exist hi nahi karta."
+  },
+  {
+   "name": "Area of triangle and collinearity",
+   "formula": "Area = ½ |det [x₁ y₁ 1; x₂ y₂ 1; x₃ y₃ 1]|;   collinear ⇔ det = 0",
+   "when": "Teen points se area / ek line par hain ya nahi.",
+   "mistake": "Area hamesha positive — modulus lo."
+  },
+  {
+   "name": "System AX = B (non-homogeneous)",
+   "formula": "|A| ≠ 0: unique, X = A⁻¹B.   |A| = 0 aur (adj A)B ≠ O: koi solution nahi.   |A| = 0 aur (adj A)B = O: infinite ya koi nahi (aage check karo)",
+   "when": "Consistency test.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cramer's rule",
+   "formula": "x = D₁/D, y = D₂/D, z = D₃/D  (D ≠ 0).   D = 0, koi Dᵢ ≠ 0: no solution.   D = 0 aur D₁ = D₂ = D₃ = 0: infinite ya none",
+   "when": "2–3 variables ke equations.",
+   "mistake": "Dᵢ = D mein i-th column ko B se badal ke."
+  },
+  {
+   "name": "Homogeneous system AX = O",
+   "formula": "Hamesha consistent (x = y = z = 0).   Non-trivial solution ⇔ |A| = 0",
+   "when": "'Non-zero solution ke liye k?' wale sawal.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Characteristic equation (2 × 2)",
+   "formula": "A² − (tr A) A + |A| I = O   (Cayley–Hamilton)",
+   "when": "Aⁿ ya A⁻¹ jaldi nikaalna.",
+   "mistake": "tr A = diagonal ka sum."
+  },
+  {
+   "name": "Trace",
+   "formula": "tr(A + B) = tr A + tr B,   tr(kA) = k tr A,   tr(AB) = tr(BA)",
+   "when": "Trace wale quick sawal."
+  }
+ ],
+ "examples": [
+  {
+   "title": "3 × 3 determinant",
+   "problem": "|1 2 3; 0 4 5; 1 0 6| = ?",
+   "solution": "Row 1 ke along: 1(24 − 0) − 2(0 − 5) + 3(0 − 4) = 24 + 10 − 12 = 22."
+  },
+  {
+   "title": "2 × 2 inverse",
+   "problem": "A = [2 3; 1 4]. A⁻¹?",
+   "solution": "|A| = 8 − 3 = 5. adj A = [4 −3; −1 2]. A⁻¹ = (1/5)[4 −3; −1 2]. Check: A·A⁻¹ = I."
+  },
+  {
+   "title": "Power wale determinants",
+   "problem": "A 3 × 3 matrix hai, |A| = 4. |adj A|, |adj(adj A)| aur |2A|?",
+   "solution": "|adj A| = |A|² = 16.  |adj(adj A)| = |A|^{(3−1)²} = 4⁴ = 256.  |2A| = 2³ × 4 = 32."
+  },
+  {
+   "title": "Triangle ka area",
+   "problem": "(1, 2), (4, 6), (7, 2) se bane triangle ka area?",
+   "solution": "½|1(6 − 2) − 2(4 − 7) + 1(8 − 42)| = ½|4 + 6 − 34| = ½ × 24 = 12."
+  },
+  {
+   "title": "Teen equations solve karo",
+   "problem": "x + y + z = 6,  x − y + z = 2,  2x + y − z = 1.",
+   "solution": "D = |1 1 1; 1 −1 1; 2 1 −1| = 6 ≠ 0 ⇒ unique solution. Cramer / A⁻¹B se: x = 1, y = 2, z = 3. (Pehli − doosri se 2y = 4 ⇒ y = 2 bhi turant.)"
+  },
+  {
+   "title": "Infinite solutions ke liye k",
+   "problem": "x + y + z = 1,  x + 2y + 3z = 2,  x + 3y + kz = 3. Kis k par infinitely many solutions?",
+   "solution": "D = |1 1 1; 1 2 3; 1 3 k| = k − 5. Unique ke liye k ≠ 5. k = 5 par: (eq2 − eq1) aur (eq3 − eq2) dono y + 2z = 1 dete hain ⇒ consistent ⇒ infinitely many. Answer k = 5."
+  },
+  {
+   "title": "Non-trivial solution",
+   "problem": "kx + y + z = 0,  x + ky + z = 0,  x + y + kz = 0 — non-trivial solution kab?",
+   "solution": "|A| = (k + 2)(k − 1)² = 0 ⇒ k = 1 ya k = −2."
+  },
+  {
+   "title": "Cayley–Hamilton se inverse",
+   "problem": "A = [1 2; 3 4]. A⁻¹ ko A ke terms mein likho.",
+   "solution": "tr A = 5, |A| = −2 ⇒ A² − 5A − 2I = O. A⁻¹ se multiply: A − 5I − 2A⁻¹ = O ⇒ A⁻¹ = (A − 5I)/2 = [−2 1; 3/2 −1/2]."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Matrix ka order aur equality",
+   "explain": "Order m × n = m rows, n columns. Do matrices barabar tabhi jab order same aur har entry same. Addition sirf same order mein."
+  },
+  {
+   "title": "Multiplication ke gun",
+   "explain": "Associative (AB)C = A(BC), distributive A(B + C) = AB + AC, lekin commutative nahi (AB ≠ BA aam taur par). I identity: AI = IA = A. Isliye (A + B)² = A² + AB + BA + B², A² + 2AB + B² tabhi jab AB = BA."
+  },
+  {
+   "title": "Symmetric aur skew-symmetric",
+   "explain": "AAᵀ aur A + Aᵀ hamesha symmetric; A − Aᵀ skew-symmetric. Do symmetric ka product symmetric tabhi jab wo commute karein. Skew-symmetric ki diagonal zero, aur odd order mein determinant zero."
+  },
+  {
+   "title": "Determinant evaluate karne ki strategy",
+   "explain": "Pehle properties lagao: common factor bahar nikaalo, Rᵢ → Rᵢ − Rⱼ se zero banao, phir zero wali row/column ke along expand karo. Do rows proportional dikhen to turant 0."
+  },
+  {
+   "title": "Adjoint aur inverse",
+   "explain": "Cofactors nikaalo, transpose karo = adj A. Phir |A| se divide. Check hamesha karo: A × A⁻¹ = I. Singular matrix (|A| = 0) ka inverse nahi hota."
+  },
+  {
+   "title": "Consistency ka poora flow",
+   "explain": "Step 1: |A| nikaalo. ≠ 0 ⇒ unique. Step 2: = 0 ⇒ (adj A)B nikaalo. ≠ O ⇒ inconsistent (no solution). = O ⇒ equations ko compare/eliminate karke dekho: aapas mein consistent to infinite, warna none."
+  },
+  {
+   "title": "Homogeneous system",
+   "explain": "x = y = z = 0 hamesha ek solution (trivial). Agar |A| = 0 to infinite non-trivial bhi. 'k ki values jinke liye non-zero solution' = |A| = 0 solve karo."
+  },
+  {
+   "title": "Determinant ka geometric matlab",
+   "explain": "2D mein |det| = do vectors se bane parallelogram ka area; teen points ke liye ½|det| = triangle area. Area 0 ⇒ teeno points ek line par."
+  }
+ ],
+ "ratta": [
+  "|kA| = kⁿ|A|;  |adj A| = |A|^{n−1};  |adj adj A| = |A|^{(n−1)²};  adj adj A = |A|^{n−2} A.",
+  "A·adj A = |A| I;  A⁻¹ = adj A/|A|.",
+  "(AB)ᵀ = BᵀAᵀ;  (AB)⁻¹ = B⁻¹A⁻¹;  adj(AB) = adj B · adj A.",
+  "Skew-symmetric odd order: |A| = 0, diagonal 0.",
+  "Homogeneous non-trivial ⇔ |A| = 0.",
+  "D ≠ 0 unique;  D = 0 & koi Dᵢ ≠ 0 → no solution.",
+  "2 × 2: A² − (tr A)A + |A|I = O.",
+  "Area = ½|det| (1 wala column);  det = 0 ⇒ collinear."
+ ],
+ "verifiedOn": "2026-11-13"
+}
