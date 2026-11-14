@@ -235,3 +235,42 @@ export async function sendParentConsentConfirmation(parentEmail, { studentName, 
   const text = `You approved ${student}'s use of JNEET+ AI, including the AI study mentor.\n\nTo withdraw approval at any time: ${revokeUrl}\n\n— Team JNEET+ AI`;
   return sendEmail({ to: parentEmail, subject: "Approval recorded — JNEET+ AI", html, text });
 }
+
+// ── Payment receipt (B4) ────────────────────────────────────────
+// Founder alert for anything in payments that needs a human look.
+// No-op (ok: false) when ADMIN_ALERT_EMAIL is not set.
+export async function sendAdminAlert(subject, lines) {
+  if (!env.ADMIN_ALERT_EMAIL) return { ok: false, skipped: true };
+  const body = (Array.isArray(lines) ? lines : [String(lines)]).map((l) => String(l));
+  const html = layout({
+    preheader: subject,
+    heading: subject,
+    bodyHtml: body.map((l) => `<p style="margin:6px 0;">${escapeHtml(l)}</p>`).join(""),
+    footerHtml: "Automatic alert from the JNEET+ AI payment system.",
+  });
+  return sendEmail({ to: env.ADMIN_ALERT_EMAIL, subject: `[JNEET+ payments] ${subject}`, html, text: body.join("\n") });
+}
+
+export async function sendPaymentReceipt(toEmail, { studentName, planName, amount, paymentId, orderId, paidAt, validTill }) {
+  const name = firstName(studentName);
+  const rupees = `₹${(Number(amount) / 100).toLocaleString("en-IN", { maximumFractionDigits: 2 })}`;
+  const fmt = (d) => (d ? new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Kolkata" }) : "—");
+  const row = (k, v) => `<tr><td style="padding:6px 0;color:#7a7590;">${escapeHtml(k)}</td><td style="padding:6px 0;text-align:right;font-weight:600;">${escapeHtml(v)}</td></tr>`;
+  const html = layout({
+    preheader: `${planName} is active till ${fmt(validTill)}`,
+    heading: "Payment received — plan active",
+    bodyHtml: `<p>Thank you! ${escapeHtml(name)}'s <strong>${escapeHtml(planName)}</strong> plan is now active.</p>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:14px 0;border-top:1px solid #ece6f5;border-bottom:1px solid #ece6f5;font-size:14px;">
+        ${row("Plan", planName)}
+        ${row("Amount paid", `${rupees} (incl. taxes)`)}
+        ${row("Paid on", fmt(paidAt))}
+        ${row("Valid till", fmt(validTill))}
+        ${row("Payment ID", paymentId || "—")}
+        ${row("Order ID", orderId)}
+      </table>
+      <p>This is a prepaid pass: it does not renew automatically. Paid plans are non-refundable, except for our own errors (double charge, wrong amount, plan not activated) — see ${escapeHtml(env.APP_URL)}/refund.</p>`,
+    footerHtml: "Keep this email as your payment receipt. Questions? Just reply with your Payment ID.",
+  });
+  const text = `Payment received — ${name}'s ${planName} plan is active.\n\nAmount: ${rupees} (incl. taxes)\nPaid on: ${fmt(paidAt)}\nValid till: ${fmt(validTill)}\nPayment ID: ${paymentId || "-"}\nOrder ID: ${orderId}\n\nPrepaid pass, no auto-renewal. Non-refundable except for our own errors: ${env.APP_URL}/refund\n\n— Team JNEET+ AI`;
+  return sendEmail({ to: toEmail, subject: `Payment received — ${planName} active till ${fmt(validTill)}`, html, text });
+}

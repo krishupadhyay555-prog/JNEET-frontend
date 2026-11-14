@@ -1,11 +1,14 @@
 // ============================================================
 //  JNEET+ AI — pages/Landing.jsx
 //  Public home page for logged-out visitors (logged-in students are
-//  redirected to the app). Free plan is live; Pro/Elite are "coming soon"
-//  and carry no price or payment button.
+//  redirected to the app). Pro/Elite show their prices once payments are
+//  switched on (B4); buying happens after signup on /plans (web only).
 // ============================================================
 
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { paymentApi } from "../api/paymentApi.js";
+import { rupees } from "../utils/razorpay.js";
 import { BrainCircuit, ClipboardCheck, RefreshCcw, TrendingUp, ShieldCheck, Check } from "lucide-react";
 import { LEGAL } from "../legal/content.js";
 
@@ -17,6 +20,12 @@ const FEATURES = [
 ];
 
 export default function Landing() {
+  const [catalog, setCatalog] = useState(null);
+  useEffect(() => {
+    let cancelled = false;
+    paymentApi.plans().then((r) => { if (!cancelled) setCatalog(r.data); }).catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
   return (
     <div className="min-h-screen bg-[#FDFBFC] text-[#2D2A32]">
       <header className="max-w-5xl mx-auto px-5 py-4 flex items-center justify-between">
@@ -67,13 +76,33 @@ export default function Landing() {
                 ))}
               </ul>
             </div>
-            {["Pro", "Elite"].map((n) => (
-              <div key={n} className="bg-white/60 border border-[#EDE6F3] rounded-2xl p-5">
-                <p className="font-semibold">{n}</p>
-                <p className="text-sm font-medium text-[#8B8594] mt-2">Coming soon</p>
-                <p className="mt-3 text-sm text-[#8B8594] leading-relaxed">More daily doubts and deeper solving. We'll announce it here first.</p>
-              </div>
-            ))}
+            {["pro", "elite"].map((tier) => {
+              const name = tier === "pro" ? "Pro" : "Elite";
+              const m1 = catalog?.plans.find((p) => p.tier === tier && p.duration === "1m");
+              const m4 = catalog?.plans.find((p) => p.tier === tier && p.duration === "4m");
+              if (!catalog?.enabled || !m1) {
+                return (
+                  <div key={tier} className="bg-white/60 border border-[#EDE6F3] rounded-2xl p-5">
+                    <p className="font-semibold">{name}</p>
+                    <p className="text-sm font-medium text-[#8B8594] mt-2">Coming soon</p>
+                    <p className="mt-3 text-sm text-[#8B8594] leading-relaxed">More daily doubts and deeper solving. We'll announce it here first.</p>
+                  </div>
+                );
+              }
+              return (
+                <div key={tier} className="bg-white border border-[#EDE6F3] rounded-2xl p-5">
+                  <p className="font-semibold">{name}</p>
+                  <p className="text-2xl font-bold mt-1">{rupees(m1.amount)}<span className="text-sm font-medium text-[#6B6572]"> / month</span></p>
+                  {m4 && <p className="text-xs text-[#6B6572]">or {rupees(m4.amount)} for 4 months</p>}
+                  <ul className="mt-3 space-y-1.5 text-sm text-[#6B6572]">
+                    {(catalog.features[tier] ?? []).map((t) => (
+                      <li key={t} className="flex gap-2"><Check size={15} className="text-emerald-500 mt-0.5 shrink-0" />{t}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 text-[11px] text-[#8B8594]">Prepaid pass · no auto-renewal · start free, upgrade after signup</p>
+                </div>
+              );
+            })}
           </div>
         </section>
 

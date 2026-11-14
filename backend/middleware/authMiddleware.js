@@ -11,6 +11,7 @@
 //  don't each re-query the user.
 // ============================================================
 
+import { effectivePlan } from "../utils/plan.js";
 import jwt  from "jsonwebtoken";
 import User from "../models/User.js";
 import { env } from "../config/env.js";
@@ -76,7 +77,7 @@ export const protect = async (req, res, next) => {
       name:     user.name,
       email:    user.email,
       examMode: user.examMode,
-      plan:     user.plan ?? "free",
+      plan:     effectivePlan(user),   // expired pass → "free" automatically
       persona:  user.persona ?? "mentor",
       aiLocked: isAiLocked(user),
       chatPausedUntil: user.policy?.pausedUntil ?? null,

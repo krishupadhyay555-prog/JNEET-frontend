@@ -33,6 +33,7 @@ import notesRoutes   from "./routes/notesRoutes.js";
 import oneshotRoutes from "./routes/oneshotRoutes.js";
 import recapRoutes   from "./routes/recapRoutes.js";
 import consentRoutes from "./routes/consentRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
 
 const app = express();
 
@@ -63,13 +64,16 @@ app.use(
     },
     credentials: true,
     methods:     ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Accept"],
+    allowedHeaders: ["Content-Type", "Accept", "X-App-Shell"],
     exposedHeaders: ["X-Request-Id", "Retry-After"],
     maxAge: 600,
   })
 );
 
-app.use(express.json({ limit: "256kb" }));
+// The Razorpay webhook needs the exact raw bytes to check its signature,
+// so the JSON parser skips that one path (paymentRoutes reads it raw).
+const jsonParser = express.json({ limit: "256kb" });
+app.use((req, res, next) => (req.path === "/api/payments/webhook" ? next() : jsonParser(req, res, next)));
 app.use(cookieParser(env.COOKIE_SECRET));
 app.use(sanitizeMiddleware);
 
@@ -94,6 +98,7 @@ app.use("/api/test",    protect, userLimiter, testRoutes);
 app.use("/api/notes",   protect, userLimiter, notesRoutes);
 app.use("/api/oneshot", protect, userLimiter, oneshotRoutes);
 app.use("/api/recap",   protect, userLimiter, recapRoutes);
+app.use("/api/payments", paymentRoutes);  // web-only checkout; own auth/limiters inside
 
 app.use((req, res) => {
   res.status(404).json({ success: false, error: "Not found." });

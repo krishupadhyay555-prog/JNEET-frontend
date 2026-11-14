@@ -8,6 +8,7 @@
 // ============================================================
 
 import axios from "axios";
+import { isAppShell } from "../utils/appShell.js";
 
 // In development, Vite proxy routes /api → http://localhost:5000
 // In production, set VITE_API_BASE_URL to your backend origin
@@ -26,8 +27,13 @@ const api = axios.create({
 });
 
 // ── Request interceptor ──────────────────────────────────────
+// Inside the Play Store app (TWA) every request says so, and the server
+// refuses to start a payment from it (ROADMAP §0: no payment UI in the app).
 api.interceptors.request.use(
-  (config) => config,
+  (config) => {
+    if (isAppShell()) config.headers["X-App-Shell"] = "twa";
+    return config;
+  },
   (error) => Promise.reject(error)
 );
 

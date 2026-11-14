@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Link }     from "react-router-dom";
 import toast        from "react-hot-toast";
 import { consentApi } from "../../api/authApi.js";
+import { isAppShell } from "../../utils/appShell.js";
 import { aiApi }      from "../../api/aiApi.js";
 import { Clock, ShieldCheck, CloudOff, PauseCircle, Lock, X } from "lucide-react";
 
@@ -29,7 +30,7 @@ export function AiNotice({ notice, onDismiss, onUnlocked, onLockUpdate }) {
     try {
       const r = await aiApi.requestUnlock();
       if (r.data?.unlocked) {
-        toast.success("AI chat unlocked. Padhai pe focus — all the best!");
+        toast.success("AI chat unlocked. Stay focused on your studies — all the best!");
         onUnlocked?.();
       } else if (r.data?.sentToParent) {
         toast.success("We emailed your parent/guardian the approval link.");
@@ -62,14 +63,17 @@ export function AiNotice({ notice, onDismiss, onUnlocked, onLockUpdate }) {
 
   if (notice.code === "DAILY_LIMIT") {
     icon = <Clock size={16} />;
-    title = "You've used today's free doubts";
+    title = "You've used today's doubts";
     body = notice.limit
-      ? `All ${notice.limit} free AI doubts for today are done. They reset at midnight (IST).`
-      : "Today's free AI doubts are done. They reset at midnight (IST).";
+      ? `All ${notice.limit} AI doubts for today are done. They reset at midnight (IST).`
+      : "Today's AI doubts are done. They reset at midnight (IST).";
     actions = (
       <>
         <Link to="/tests" className="underline underline-offset-2 hover:opacity-80">Take a mock test</Link>
         <Link to="/revision" className="underline underline-offset-2 hover:opacity-80">Revise your weak topics</Link>
+        {!isAppShell() && (
+          <Link to="/plans" className="underline underline-offset-2 hover:opacity-80 font-semibold">More doubts every day with Pro</Link>
+        )}
       </>
     );
   } else if (notice.code === "PARENT_CONSENT_REQUIRED") {

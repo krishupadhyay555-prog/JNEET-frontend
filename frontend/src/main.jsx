@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
+import { detectAppShell } from "./utils/appShell.js";
+
+detectAppShell(); // before the first render: hides every payment UI inside the Play Store app
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
