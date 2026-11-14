@@ -17,6 +17,7 @@
 //  Everything else in this file — UNCHANGED from v2.
 // ============================================================
 
+import { env } from "../config/env.js";
 import Question    from "../models/Question.js";
 import TestAttempt from "../models/TestAttempt.js";
 import { isBlankCorrect } from "../services/blankAnswer.js";
@@ -461,6 +462,31 @@ export const getAttempt = async (req, res, next) => {
   }
 };
 
+// The chapter list only changes when the question bank is re-seeded, but
+// building it scans the whole bank (two aggregations, ~300 ms). Load test
+// 14 Nov 2026: this one route was 30× slower than every other page, so the
+// result is kept in memory for 10 minutes per exam + subject.
+const CHAPTER_CACHE_MS = env.NODE_ENV === "test" ? 0 : 10 * 60 * 1000;
+const chapterCache = new Map();
+async function chapterCounts(match) {
+  const key = JSON.stringify(match);
+  const hit = chapterCache.get(key);
+  if (hit && Date.now() - hit.at < CHAPTER_CACHE_MS) return hit.value;
+  const [rows, blankRows] = await Promise.all([
+    Question.aggregate([
+      { $match: match },
+      { $group: { _id: { subject: "$subject", chapter: "$chapter", difficulty: "$difficulty" }, count: { $sum: 1 } } },
+    ]),
+    Question.aggregate([
+      { $match: { ...match, type: "fill_blank" } },
+      { $group: { _id: { subject: "$subject", chapter: "$chapter" }, count: { $sum: 1 } } },
+    ]),
+  ]);
+  const value = { rows, blankRows };
+  if (CHAPTER_CACHE_MS) chapterCache.set(key, { at: Date.now(), value });
+  return value;
+}
+
 export const getAvailableChapters = async (req, res, next) => {
   try {
     const { subject } = req.query;
@@ -477,20 +503,7 @@ export const getAvailableChapters = async (req, res, next) => {
     const match = { examMode, ...SERVABLE };
     if (subject) match.subject = subject;
 
-    const rows = await Question.aggregate([
-      { $match: match },
-      {
-        $group: {
-          _id: { subject: "$subject", chapter: "$chapter", difficulty: "$difficulty" },
-          count: { $sum: 1 },
-        },
-      },
-    ]);
-
-    const blankRows = await Question.aggregate([
-      { $match: { ...match, type: "fill_blank" } },
-      { $group: { _id: { subject: "$subject", chapter: "$chapter" }, count: { $sum: 1 } } },
-    ]);
+    const { rows, blankRows } = await chapterCounts(match);
 
     const chapterMap = {};
     for (const row of rows) {
