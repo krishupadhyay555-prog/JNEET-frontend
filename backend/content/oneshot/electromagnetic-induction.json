@@ -1,0 +1,196 @@
+{
+ "slug": "electromagnetic-induction",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-14",
+ "chapters": {
+  "NEET": "Electromagnetic Induction",
+  "JEE": "Electromagnetic Induction"
+ },
+ "title": "Electromagnetic Induction",
+ "readMinutes": 18,
+ "summary": [
+  "Jab bhi kisi coil se guzarne wala magnetic flux Φ = B·A badalta hai, coil mein emf induce hota hai (Faraday). Flux teen tarah badal sakta hai: B badle, area badle (rod khiske), ya angle badle (coil ghoome — generator).",
+  "Induced current ki direction hamesha aisi hoti hai ki woh flux ke BADLAAV ka virodh kare (Lenz's law) — yeh energy conservation ka seedha nateeja hai. Isliye formula mein minus sign: ε = −N dΦ/dt.",
+  "Coil apne hi current ke badlaav ka virodh karti hai — self inductance L (ε = −L dI/dt), aur paas wali coil mein emf jagaati hai — mutual inductance M. Inductor energy ½LI² magnetic field mein store karta hai.",
+  "Metal ke tukde mein badalta flux gol-gol currents (eddy currents) banata hai — braking, induction furnace mein kaam ke, transformer core mein nuksaan (isliye laminated core)."
+ ],
+ "formulas": [
+  {
+   "name": "Magnetic flux",
+   "formula": "Φ = B·A = BA cosθ;   N turns: NΦ (flux linkage);   unit weber (T·m²)",
+   "when": "Coil se kitna field guzar raha hai.",
+   "mistake": "θ B aur area ke NORMAL ke beech, coil ke plane ke beech nahi."
+  },
+  {
+   "name": "Faraday's law",
+   "formula": "ε = −N dΦ/dt;   average ε = −N ΔΦ/Δt",
+   "when": "Badalte flux se emf.",
+   "mistake": "Flux zyada hona emf nahi deta — flux ka BADALNA deta hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Lenz's law",
+   "formula": "Induced current flux ke badlaav ka virodh karta hai (minus sign)",
+   "when": "Direction nikalna.",
+   "mistake": "Current flux ka virodh nahi, flux ke CHANGE ka virodh karta hai — flux badh raha ho to ulta field, ghat raha ho to same direction."
+  },
+  {
+   "name": "Charge through the coil",
+   "formula": "Q = N ΔΦ / R",
+   "when": "Kitna charge baha (time ka sawal nahi).",
+   "mistake": "Yeh kitni tezi se flux badla, us par depend nahi karta."
+  },
+  {
+   "name": "Motional emf (rod)",
+   "formula": "ε = Blv  (B, l, v teeno perpendicular);   general: ε = (v × B)·l",
+   "when": "Rod rails par khisak rahi hai.",
+   "mistake": "Teeno perpendicular na hon to sirf perpendicular components lo."
+  },
+  {
+   "name": "Rod on rails with resistance",
+   "formula": "I = Blv/R;   magnetic drag F = B²l²v/R;   power = F v = B²l²v²/R",
+   "when": "Constant speed ke liye kitna force.",
+   "note": "Drag force velocity ke proportional — isliye terminal velocity aati hai."
+  },
+  {
+   "name": "Rotating rod",
+   "formula": "ε = ½Bωl²  (ek end par ghoomti rod)",
+   "when": "Pankhe ki blade, ghoomti rod/disc.",
+   "note": "Do ends ke beech emf; beech mein pivot ho to dono halves ka emf cancel."
+  },
+  {
+   "name": "AC generator emf",
+   "formula": "ε = NBAω sinωt;   peak ε₀ = NBAω",
+   "when": "Coil uniform B mein ghoom rahi hai.",
+   "mistake": "ω = 2πf radian/sec mein; rpm ko pehle convert karo."
+  },
+  {
+   "name": "Self inductance",
+   "formula": "NΦ = LI;   ε = −L dI/dt;   unit henry",
+   "when": "Coil apne current ka virodh.",
+   "mistake": "L coil ki geometry se aata hai, current par depend nahi karta."
+  },
+  {
+   "name": "Inductance of a solenoid",
+   "formula": "L = μ₀μ_r N²A / l = μ₀μ_r n² A l",
+   "when": "Solenoid ka L.",
+   "note": "N² — turns double to L chaar guna."
+  },
+  {
+   "name": "Mutual inductance",
+   "formula": "N₂Φ₂ = M I₁;   ε₂ = −M dI₁/dt;   co-axial solenoids: M = μ₀ n₁ N₂ A;   M ≤ √(L₁L₂)",
+   "when": "Do paas ki coils.",
+   "note": "M dono coils ke liye same hota hai (M₁₂ = M₂₁)."
+  },
+  {
+   "name": "Energy stored in an inductor",
+   "formula": "U = ½LI²;   energy density u = B²/2μ₀",
+   "when": "Inductor mein energy.",
+   "mistake": "Current ka square — voltage se seedha mat nikalo."
+  },
+  {
+   "name": "LR circuit (growth and decay)",
+   "formula": "Growth: I = (E/R)(1 − e^{−t/τ});  decay: I = I₀e^{−t/τ};  τ = L/R",
+   "when": "Switch on/off ke baad current.",
+   "mistake": "t = τ par current final ka 63% hota hai, 50% nahi."
+  },
+  {
+   "name": "Inductors in series/parallel (no coupling)",
+   "formula": "Series: L = L₁ + L₂;   parallel: 1/L = 1/L₁ + 1/L₂",
+   "when": "Inductor combination.",
+   "mistake": "Resistors jaisa hi, capacitors jaisa nahi."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Faraday: average emf",
+   "problem": "100 turns ki coil se per-turn flux 0.02 Wb se 0.005 Wb tak 0.1 s mein ghatta hai. Emf?",
+   "solution": "ε = NΔΦ/Δt = 100 × 0.015/0.1 = 15 V. Flux ghat raha hai ⇒ induced current wahi direction ka field banayega (Lenz)."
+  },
+  {
+   "title": "Rails par rod",
+   "problem": "0.5 m rod 4 m/s se B = 0.3 T mein khisakti hai, circuit R = 2 Ω. Emf, current, drag force, power?",
+   "solution": "ε = Blv = 0.3 × 0.5 × 4 = 0.6 V. I = 0.3 A. F = BIl = 0.045 N. P = Fv = 0.18 W = I²R ✓."
+  },
+  {
+   "title": "Ghoomti rod",
+   "problem": "1 m rod ek end par 20 rad/s se B = 0.5 T (axis ke parallel) mein ghoom rahi hai. Emf?",
+   "solution": "ε = ½Bωl² = ½ × 0.5 × 20 × 1 = 5 V."
+  },
+  {
+   "title": "Solenoid ka L",
+   "problem": "500 turns, lambai 0.5 m, area 10⁻³ m² (hawa core). L?",
+   "solution": "L = μ₀N²A/l = 4π × 10⁻⁷ × 2.5 × 10⁵ × 10⁻³ / 0.5 = 6.3 × 10⁻⁴ H."
+  },
+  {
+   "title": "Self-induced emf aur energy",
+   "problem": "L = 0.2 H mein current 5 A se 0 tak 0.01 s mein. Emf? 5 A par energy?",
+   "solution": "ε = L ΔI/Δt = 0.2 × 5/0.01 = 100 V (isliye switch par spark). U = ½LI² = ½ × 0.2 × 25 = 2.5 J."
+  },
+  {
+   "title": "Mutual induction",
+   "problem": "M = 0.05 H; primary ka current 40 A/s se badal raha hai. Secondary mein emf?",
+   "solution": "ε = M dI/dt = 0.05 × 40 = 2 V."
+  },
+  {
+   "title": "Generator ka peak emf",
+   "problem": "100 turns, area 0.01 m², B = 0.5 T, coil 50 rev/s se ghoomti hai. Peak emf?",
+   "solution": "ω = 2π × 50 = 100π rad/s. ε₀ = NBAω = 100 × 0.5 × 0.01 × 314.16 ≈ 157 V."
+  },
+  {
+   "title": "Kitna charge baha",
+   "problem": "10 turns, R = 5 Ω coil se per-turn flux 0.02 Wb poora hata diya. Kitna charge baha?",
+   "solution": "Q = NΔΦ/R = 10 × 0.02/5 = 0.04 C — chaahe jaldi hatao ya dheere."
+  },
+  {
+   "title": "LR circuit",
+   "problem": "L = 2 H, R = 4 Ω, battery 12 V. Time constant, final current, aur t = τ par current?",
+   "solution": "τ = L/R = 0.5 s. I₀ = 12/4 = 3 A. t = τ par I = 3(1 − 1/e) ≈ 1.9 A (63%)."
+  },
+  {
+   "title": "Do solenoids ka M",
+   "problem": "Lamba solenoid 1000 turns/m; uske andar 100 turns ki chhoti coil, area 2 × 10⁻⁴ m². M?",
+   "solution": "M = μ₀ n₁ N₂ A = 4π × 10⁻⁷ × 1000 × 100 × 2 × 10⁻⁴ ≈ 2.5 × 10⁻⁵ H."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Faraday aur Henry ke experiments",
+   "explain": "(1) Magnet ko coil ke paas laao/hatao — galvanometer hilta hai; magnet ruka to zero. (2) Paas wali coil mein current on/off karo — doosri coil mein current. (3) Coil ko field mein ghumao. Teeno mein ek hi baat: flux badla to emf."
+  },
+  {
+   "title": "Lenz's law aur energy",
+   "explain": "Magnet ka north coil ki taraf laao to coil ka saamne wala face north ban jaata hai aur magnet ko dhakelta hai — paas laane mein kaam lagta hai, wahi kaam electrical energy banta hai. Agar current madad karta to free energy milti — impossible."
+  },
+  {
+   "title": "Motional emf ki soch",
+   "explain": "Rod ke electrons par qvB force lagta hai jo unhe ek end par dhakel deta hai — rod ek battery ban jaati hai. Circuit band ho to current, aur current par BIl drag force jo motion ka virodh karta hai."
+  },
+  {
+   "title": "Eddy currents",
+   "explain": "Badalte flux se metal plate/core mein gol-gol currents. Fayde: electromagnetic brake (trains), induction furnace, induction cooktop, galvanometer ki damping, speedometer. Nuksaan: heating aur energy loss — isliye transformer aur motor ke core laminated (patli insulated sheets) hote hain."
+  },
+  {
+   "title": "Self induction",
+   "explain": "Coil electrical inertia jaisi hai: current badhne ya ghatne nahi deti. Switch kholne par current achanak girta hai ⇒ bada emf ⇒ spark. Choke coil AC mein bina energy waste kiye current kam karti hai."
+  },
+  {
+   "title": "Mutual induction",
+   "explain": "Ek coil ka badalta current doosri coil mein emf. M coils ki doori, orientation aur core par depend karta hai; paas aur same axis = zyada M. Transformer, wireless charger isi par chalte hain."
+  },
+  {
+   "title": "AC generator",
+   "explain": "Coil uniform B mein ghoomti hai, Φ = NBA cosωt ⇒ ε = NBAω sinωt. Slip rings + brushes se AC bahar aata hai. Mechanical energy (turbine) → electrical energy."
+  }
+ ],
+ "ratta": [
+  "ε = −N dΦ/dt;  Φ = BA cosθ.",
+  "Rod: ε = Blv;  rotating rod: ½Bωl².",
+  "Q = NΔΦ/R (time independent).",
+  "L_solenoid = μ₀N²A/l;  U = ½LI².",
+  "τ = L/R;  63% at t = τ.",
+  "Generator ε₀ = NBAω.",
+  "Eddy currents kam karne ke liye laminated core.",
+  "M ≤ √(L₁L₂)."
+ ]
+}

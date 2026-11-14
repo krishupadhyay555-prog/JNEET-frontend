@@ -1,0 +1,208 @@
+{
+ "slug": "ray-optics-and-optical-instruments",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-14",
+ "chapters": {
+  "NEET": "Ray Optics and Optical Instruments",
+  "JEE": "Ray Optics and Optical Instruments"
+ },
+ "title": "Ray Optics and Optical Instruments",
+ "readMinutes": 24,
+ "summary": [
+  "Ray optics mein light seedhi rekha (ray) mein chalti hai. Reflection mein angle of incidence = angle of reflection; refraction mein Snell's law n₁ sin i = n₂ sin r. Ghane (zyada n) medium mein light dheemi aur normal ki taraf mudti hai.",
+  "Mirror aur lens ke saare sawal ek sign convention (Cartesian: optical centre/pole origin, light ki direction +ve) aur do formulas se hal hote hain: mirror 1/v + 1/u = 1/f, lens 1/v − 1/u = 1/f. Magnification se image ka size aur real/virtual pata chalta hai.",
+  "Ghane se halke medium mein critical angle se zyada par light poori wapas laut aati hai — total internal reflection (optical fibre, heera ki chamak, mirage). Prism light ko modta (deviation) hai aur white light ko colours mein todta hai (dispersion).",
+  "Lens ki power P = 1/f (dioptre, f metre mein); paas rakhe lenses ki power seedhi judti hai. Microscope chhoti paas ki cheez ko bada dikhata hai, telescope door ki cheez ka angle badhaata hai — dono do lenses (objective + eyepiece) se."
+ ],
+ "formulas": [
+  {
+   "name": "Mirror formula and magnification",
+   "formula": "1/v + 1/u = 1/f;   f = R/2;   m = −v/u = h_i/h_o",
+   "when": "Concave/convex mirror.",
+   "tag": "PYQ favourite",
+   "note": "Sign convention: u hamesha negative (object saamne). Concave f negative, convex f positive."
+  },
+  {
+   "name": "Snell's law and refractive index",
+   "formula": "n₁ sin i = n₂ sin r;   n = c/v;   ₁n₂ = n₂/n₁ = v₁/v₂ = λ₁/λ₂",
+   "when": "Do media ke beech refraction.",
+   "mistake": "Frequency medium badalne par NAHI badalti — speed aur wavelength badalte hain."
+  },
+  {
+   "name": "Apparent depth (normal view)",
+   "formula": "apparent depth = real depth / n;   shift = t(1 − 1/n)",
+   "when": "Paani ke andar cheez upar dikhti hai.",
+   "note": "Upar se (halke medium se) dekhne par divide; andar se bahar dekhne par multiply."
+  },
+  {
+   "name": "Critical angle and TIR",
+   "formula": "sin C = 1/n  (n = denser/rarer);   TIR jab light dense → rare aur i > C",
+   "when": "Optical fibre, prism, heera.",
+   "mistake": "TIR sirf ghane se halke medium jaate waqt hota hai — ulta kabhi nahi."
+  },
+  {
+   "name": "Refraction at a spherical surface",
+   "formula": "n₂/v − n₁/u = (n₂ − n₁)/R",
+   "when": "Glass sphere, curved surface, bubble.",
+   "note": "R ka sign: centre light ke aage (refracted side) ho to +ve."
+  },
+  {
+   "name": "Thin lens formula and magnification",
+   "formula": "1/v − 1/u = 1/f;   m = v/u",
+   "when": "Convex/concave lens.",
+   "mistake": "Lens ka minus sign mirror se alag hai — mirror formula yahan mat lagao."
+  },
+  {
+   "name": "Lens maker's formula",
+   "formula": "1/f = (n_lens/n_medium − 1)(1/R₁ − 1/R₂)",
+   "when": "Lens ka f banaavat se; medium badalne par.",
+   "note": "Lens ko apne se ghane medium mein daalo to convex lens diverging ban jaata hai."
+  },
+  {
+   "name": "Power of a lens and combination",
+   "formula": "P = 1/f (f metre mein, unit dioptre D);   contact mein P = P₁ + P₂, 1/F = 1/f₁ + 1/f₂;   distance d par 1/F = 1/f₁ + 1/f₂ − d/(f₁f₂)",
+   "when": "Spectacles, lens jodna.",
+   "note": "f cm mein ho to P = 100/f."
+  },
+  {
+   "name": "Prism (angle A)",
+   "formula": "r₁ + r₂ = A;   δ = i + e − A;   minimum deviation: i = e, r = A/2, n = sin[(A + δ_m)/2] / sin(A/2)",
+   "when": "Prism se deviation, n nikalna.",
+   "tag": "PYQ favourite",
+   "note": "Min deviation par ray prism ke andar base ke parallel hoti hai — r = A/2 yaad rakho."
+  },
+  {
+   "name": "Thin prism",
+   "formula": "δ = (n − 1)A",
+   "when": "Chhota angle wala prism (A < 10°).",
+   "mistake": "Bade angle wale prism par yeh formula mat lagao."
+  },
+  {
+   "name": "Dispersion",
+   "formula": "Angular dispersion = (n_v − n_r)A;   dispersive power ω = (n_v − n_r)/(n − 1)",
+   "when": "White light ke colours.",
+   "note": "Violet sabse zyada mudta hai, red sabse kam — kyunki n_violet > n_red."
+  },
+  {
+   "name": "Simple microscope (magnifying glass)",
+   "formula": "Image near point par: m = 1 + D/f;   infinity par: m = D/f   (D = 25 cm)",
+   "when": "Lens se padhna, ghadi saaz.",
+   "note": "Chhota f = zyada magnification."
+  },
+  {
+   "name": "Compound microscope",
+   "formula": "m = m_o × m_e;   infinity par (normal adjustment): m ≈ (L/f_o)(D/f_e);   near point par: (L/f_o)(1 + D/f_e)",
+   "when": "Microscope ka magnifying power.",
+   "note": "Objective aur eyepiece DONO ka f chhota hona chahiye."
+  },
+  {
+   "name": "Astronomical telescope",
+   "formula": "Normal adjustment: m = f_o/f_e, length = f_o + f_e;   near point par: m = (f_o/f_e)(1 + f_e/D)",
+   "when": "Refracting telescope.",
+   "note": "Objective ka f BADA (zyada light, zyada m), eyepiece ka chhota."
+  },
+  {
+   "name": "Mirror/lens image rules",
+   "formula": "Convex mirror aur concave lens: hamesha virtual, seedhi, chhoti image.  Real image hamesha ulti (m negative)",
+   "when": "Jaldi image type batana.",
+   "mistake": "Virtual image screen par nahi aati — aankh se dikhti hai."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Concave mirror",
+   "problem": "f = 15 cm ka concave mirror, object 20 cm door. Image kahan aur kaisi?",
+   "solution": "1/v = 1/f − 1/u = −1/15 + 1/20 = −1/60 ⇒ v = −60 cm (mirror ke saamne, real). m = −v/u = −3 ⇒ 3 guna badi, ulti."
+  },
+  {
+   "title": "Convex lens",
+   "problem": "f = 20 cm convex lens, object 30 cm door. Image?",
+   "solution": "1/v = 1/f + 1/u = 1/20 − 1/30 = 1/60 ⇒ v = +60 cm (doosri taraf, real). m = v/u = −2 (2 guna, ulti)."
+  },
+  {
+   "title": "Lens maker: hawa aur paani",
+   "problem": "Biconvex lens, |R₁| = |R₂| = 20 cm, n = 1.5. Hawa mein f? Paani (n = 4/3) mein f?",
+   "solution": "Hawa: 1/f = 0.5 × (1/20 + 1/20) ⇒ f = 20 cm. Paani: 1/f = (1.5/1.333 − 1)(1/10) = 0.125 × 0.1 ⇒ f = 80 cm (chaar guna lamba)."
+  },
+  {
+   "title": "Critical angle",
+   "problem": "Glass (n = 1.5) ka hawa ke saath critical angle?",
+   "solution": "sin C = 1/1.5 ⇒ C ≈ 41.8°. Isse bade angle par light glass ke andar hi laut aayegi."
+  },
+  {
+   "title": "Tank ki gehraai",
+   "problem": "2 m gehra paani (n = 4/3) upar se dekhne par kitna gehra dikhega?",
+   "solution": "Apparent depth = 2/(4/3) = 1.5 m. Talaa 0.5 m upar utha dikhta hai."
+  },
+  {
+   "title": "Prism se n",
+   "problem": "Equilateral prism (A = 60°) ka minimum deviation 30°. n?",
+   "solution": "n = sin[(60 + 30)/2]/sin 30° = sin45°/0.5 = √2 ≈ 1.414."
+  },
+  {
+   "title": "Lenses ka combination",
+   "problem": "f₁ = +20 cm aur f₂ = −40 cm contact mein. Total power aur f?",
+   "solution": "P = 100/20 + 100/(−40) = 5 − 2.5 = 2.5 D. F = 100/2.5 = 40 cm (converging)."
+  },
+  {
+   "title": "Compound microscope",
+   "problem": "f_o = 1 cm, f_e = 5 cm, tube length L = 20 cm, normal adjustment (D = 25 cm). Magnifying power?",
+   "solution": "m ≈ (L/f_o)(D/f_e) = 20 × 5 = 100."
+  },
+  {
+   "title": "Telescope",
+   "problem": "f_o = 100 cm, f_e = 5 cm, normal adjustment. Magnifying power aur tube length?",
+   "solution": "m = f_o/f_e = 20. Length = f_o + f_e = 105 cm."
+  },
+  {
+   "title": "Curved surface par refraction",
+   "problem": "Hawa mein point object glass (n = 1.5) ki convex surface (R = 10 cm) se 30 cm door hai. Image kahan?",
+   "solution": "n₂/v − n₁/u = (n₂ − n₁)/R ⇒ 1.5/v + 1/30 = 0.5/10 ⇒ 1.5/v = 1/60 ⇒ v = 90 cm (glass ke andar, real)."
+  },
+  {
+   "title": "Thin prism",
+   "problem": "A = 4°, n = 1.5 ka patla prism kitna deviation dega?",
+   "solution": "δ = (n − 1)A = 0.5 × 4 = 2°."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Reflection by spherical mirrors",
+   "explain": "Concave mirror (converging) — real/virtual dono images; object F ke andar ho to virtual, seedhi, badi (shaving mirror). Convex mirror (diverging) — hamesha chhoti virtual image, wide view (gaadi ka side mirror). Parallel rays focus F se guzarti hain; f = R/2."
+  },
+  {
+   "title": "Refraction at plane surface",
+   "explain": "Light ghane medium mein normal ki taraf mudti hai. Paani mein pencil tuti dikhti hai, swimming pool kam gehra dikhta hai, taare timtimaate hain (atmosphere ka badalta n)."
+  },
+  {
+   "title": "Total internal reflection ke applications",
+   "explain": "Optical fibre (light core ke andar baar-baar TIR se chalti hai — internet, endoscopy), heera ki chamak (C ≈ 24°), mirage (garam sadak par hawa ki layers), totally reflecting prism (periscope, binocular)."
+  },
+  {
+   "title": "Lenses: image formation",
+   "explain": "Convex lens: object 2F se door — chhoti real; 2F par — same size; F aur 2F ke beech — badi real; F ke andar — virtual seedhi badi (magnifier). Concave lens hamesha chhoti virtual image."
+  },
+  {
+   "title": "Refraction through a prism",
+   "explain": "Deviation i ke saath pehle ghatta hai, min (δ_m) par i = e, phir badhta hai. Min deviation se n naapte hain. Rainbow aur prism ka spectrum dispersion se — VIBGYOR, violet sabse zyada mudta hai."
+  },
+  {
+   "title": "Optical instruments",
+   "explain": "Simple microscope ek convex lens. Compound microscope: chhota f_o objective real badi image banata hai, eyepiece use aur bada karta hai. Refracting telescope: bada f_o objective. Reflecting telescope (concave mirror objective, Newtonian/Cassegrain): chromatic aberration nahi, bada aperture sasta, image zyada bright."
+  },
+  {
+   "title": "Human eye ki baat (connected)",
+   "explain": "Near point D = 25 cm, far point anant. Myopia (paas ka dikhe): concave lens. Hypermetropia (door ka dikhe): convex lens. Presbyopia: bifocal. Astigmatism: cylindrical lens."
+  }
+ ],
+ "ratta": [
+  "Mirror 1/v + 1/u = 1/f;  lens 1/v − 1/u = 1/f.",
+  "m_mirror = −v/u;  m_lens = v/u.",
+  "sin C = 1/n;  glass C ≈ 42°, paani ≈ 49°, heera ≈ 24°.",
+  "n = sin[(A + δ_m)/2]/sin(A/2);  thin prism δ = (n − 1)A.",
+  "P = 1/f (m);  contact P = P₁ + P₂.",
+  "Microscope m ≈ (L/f_o)(D/f_e);  telescope m = f_o/f_e, L = f_o + f_e.",
+  "Apparent depth = real/n.",
+  "Frequency nahi badalti; v aur λ badalte hain."
+ ]
+}

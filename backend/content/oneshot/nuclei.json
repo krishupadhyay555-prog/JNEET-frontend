@@ -23,8 +23,8 @@
    "name": "Nuclear radius",
    "formula": "R = R₀ A^{1/3},   R₀ ≈ 1.2 fm (1 fm = 10⁻¹⁵ m)",
    "when": "Nucleus ka size.",
-   "mistake": "R ∝ A^{1/3}, volume ∝ A.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "R ∝ A^{1/3}, volume ∝ A."
   },
   {
    "name": "Nuclear density",
@@ -36,19 +36,19 @@
    "name": "Atomic mass unit",
    "formula": "1 u = 1/12 × (¹²C atom ka mass) = 1.66 × 10⁻²⁷ kg ≡ 931.5 MeV/c²",
    "when": "Mass ko energy mein badalna.",
-   "mistake": "1 u × c² = 931.5 MeV seedha use karo."
+   "note": "1 u × c² = 931.5 MeV seedha use karo."
   },
   {
    "name": "Mass–energy relation",
    "formula": "E = m c²",
    "when": "Mass ka energy mein badalna (aur ulta).",
-   "mistake": "c = 3 × 10⁸ m/s; mass kg mein."
+   "note": "c = 3 × 10⁸ m/s; mass kg mein."
   },
   {
    "name": "Mass defect",
    "formula": "Δm = [Z m_p + (A − Z) m_n] − M_nucleus   (atomic masses ho to m_p ki jagah m_H lo)",
    "when": "Nucleus banne mein kitna mass 'gaya'.",
-   "mistake": "Atomic mass mein electrons bhi hote hain — dono taraf same rakho."
+   "note": "Atomic mass mein electrons bhi hote hain — dono taraf same rakho."
   },
   {
    "name": "Binding energy",
@@ -67,19 +67,19 @@
    "name": "Q-value of a reaction",
    "formula": "Q = (Σ m_reactants − Σ m_products) c² = Σ BE_products − Σ BE_reactants",
    "when": "Reaction mein energy nikli ya lagi.",
-   "mistake": "Q > 0 exothermic (energy release), Q < 0 endothermic."
+   "note": "Q > 0 exothermic (energy release), Q < 0 endothermic."
   },
   {
    "name": "Nuclear fission",
    "formula": "²³⁵U + n → ¹⁴¹Ba + ⁹²Kr + 3n + ≈ 200 MeV",
    "when": "Bhaari nucleus ka toot-na.",
-   "mistake": "Ek fission mein ~200 MeV, yaani ~0.9 MeV per nucleon."
+   "note": "Ek fission mein ~200 MeV, yaani ~0.9 MeV per nucleon."
   },
   {
    "name": "Nuclear fusion",
    "formula": "Sun: 4 ¹H → ⁴He + 2e⁺ + 2ν + 26.7 MeV;   ²H + ²H → ³He + n + 3.27 MeV",
    "when": "Halke nuclei ka judna.",
-   "mistake": "Bahut zyada temperature (~10⁷ K) chahiye taaki Coulomb repulsion paar ho."
+   "note": "Bahut zyada temperature (~10⁷ K) chahiye taaki Coulomb repulsion paar ho."
   }
  ],
  "examples": [

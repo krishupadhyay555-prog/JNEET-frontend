@@ -12,6 +12,11 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "back
 VERIFIED_ON = "2026-11-13"
 
 
+MISTAKE_RE = re.compile(
+    r"(mat |nahi|galat|bhool|na kar|confuse|ulta|dhyan|mistake|wrong|not |don't|never|sirf|tabhi|"
+    r"check|alag|na lo|na maano|ka nahi|mein nahi|zaroori|chhoot|miss|bina|pehle)", re.I)
+
+
 def F(name, formula, when, mistake=None, unit=None, tag=None):
     d = {"name": name, "formula": formula, "when": when}
     if unit: d["unit"] = unit
@@ -86,11 +91,17 @@ def build(doc, syllabus):
     if len(doc["formulas"]) < 8: errors.append("too few formulas for a full OneShot")
     if len(doc["examples"]) < 5: errors.append("too few examples")
     if len(doc["topics"]) < 6: errors.append("too few topics")
+    # 4. "Galti" label only for a real mistake. A plain fact goes to "note"
+    #    (shown as "Yaad rakho") — 14 Nov 2026 live-check polish.
+    for f in doc["formulas"]:
+        m = f.get("mistake", "")
+        if m and not MISTAKE_RE.search(m):
+            f["note"] = f.pop("mistake")
     if errors:
         raise SystemExit(f"\n✗ {doc['slug']}:\n  " + "\n  ".join(errors))
     out = dict(doc)
     out["examples"] = [dict(x) for x in doc["examples"]]
-    out["verifiedOn"] = VERIFIED_ON
+    out["verifiedOn"] = doc.get("verifiedOn", VERIFIED_ON)
     with open(os.path.join(OUT, doc["slug"] + ".json"), "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=1)
         fh.write("\n")

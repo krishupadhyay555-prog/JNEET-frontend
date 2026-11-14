@@ -25,8 +25,8 @@
    "name": "Kp and Kc",
    "formula": "Kp = Kc (RT)^{Δn_g}   (R = 0.0821 L·atm/(K·mol), p atm mein)",
    "when": "Gaseous equilibrium mein badalna.",
-   "mistake": "Δn_g = gaseous products ke moles − reactants ke moles; Δn_g = 0 ⇒ Kp = Kc.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "Δn_g = gaseous products ke moles − reactants ke moles; Δn_g = 0 ⇒ Kp = Kc."
   },
   {
    "name": "Manipulating K",
@@ -42,19 +42,19 @@
    "name": "Degree of dissociation (example PCl₅)",
    "formula": "PCl₅ ⇌ PCl₃ + Cl₂:   Kp = α² P / (1 − α²)",
    "when": "Dissociation wale gas sawal; α = ditna hissa toota.",
-   "mistake": "Total moles = 1 + α (1 mol PCl₅ se shuru)."
+   "note": "Total moles = 1 + α (1 mol PCl₅ se shuru)."
   },
   {
    "name": "ΔG and K",
    "formula": "ΔG° = −RT ln K;   ΔG = ΔG° + RT ln Q;   equilibrium par ΔG = 0",
    "when": "K ka thermodynamic matlab.",
-   "mistake": "ΔG° < 0 ⇒ K > 1."
+   "note": "ΔG° < 0 ⇒ K > 1."
   },
   {
    "name": "Temperature dependence (van 't Hoff)",
    "formula": "log(K₂/K₁) = (ΔH°/2.303R) (1/T₁ − 1/T₂)",
    "when": "Temperature badalne par K.",
-   "mistake": "Endothermic: T badhe → K badhe. Exothermic: T badhe → K ghate."
+   "note": "Endothermic: T badhe → K badhe. Exothermic: T badhe → K ghate."
   },
   {
    "name": "Le Chatelier — quick table",
@@ -67,13 +67,13 @@
    "name": "Henry's law",
    "formula": "p = K_H x   (gas ka partial pressure ∝ solution mein uska mole fraction)",
    "when": "Gas ka liquid mein ghulna (soda, scuba diving).",
-   "mistake": "Temperature badhe to gas ki solubility ghatti hai."
+   "note": "Temperature badhe to gas ki solubility ghatti hai."
   },
   {
    "name": "Ionic product of water",
    "formula": "Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ (298 K);   pH + pOH = 14;   pH = −log[H⁺]",
    "when": "Har aqueous pH sawal.",
-   "mistake": "Kw temperature ke saath badhta hai — garam paani ka neutral pH 7 se kam hota hai (phir bhi neutral)."
+   "note": "Kw temperature ke saath badhta hai — garam paani ka neutral pH 7 se kam hota hai (phir bhi neutral)."
   },
   {
    "name": "Weak acid (Ostwald dilution law)",
@@ -91,33 +91,33 @@
    "name": "Conjugate pair",
    "formula": "Ka × Kb = Kw;   pKa + pKb = 14",
    "when": "Acid ke conjugate base ka Kb (ya ulta).",
-   "mistake": "Strong acid ka conjugate base bahut weak hota hai."
+   "note": "Strong acid ka conjugate base bahut weak hota hai."
   },
   {
    "name": "Polyprotic acids",
    "formula": "H₂A: Ka₁ ≫ Ka₂;   pH lagbhag sirf Ka₁ se;  [A²⁻] ≈ Ka₂",
    "when": "H₂S, H₂CO₃, H₃PO₄ jaise acids.",
-   "mistake": "Doosra proton nikalna mushkil (negative ion se)."
+   "note": "Doosra proton nikalna mushkil (negative ion se)."
   },
   {
    "name": "Common ion effect",
    "formula": "Weak acid HA + uska salt (A⁻, conc C'):  α ≈ Ka / C'",
    "when": "Common ion ionisation ko dabata hai.",
-   "mistake": "Common ion se weak electrolyte ka α ghatta hai."
+   "note": "Common ion se weak electrolyte ka α ghatta hai."
   },
   {
    "name": "Salt hydrolysis",
    "formula": "SA + SB: pH = 7.   WA + SB (CH₃COONa): pH = 7 + ½pKa + ½log C.   SA + WB (NH₄Cl): pH = 7 − ½pKb − ½log C.   WA + WB: pH = 7 + ½(pKa − pKb)  (C se independent)",
    "when": "Salt ke solution ka pH.",
-   "mistake": "Kh = Kw/Ka (ya Kw/Kb); h = √(Kh/C).",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "Kh = Kw/Ka (ya Kw/Kb); h = √(Kh/C)."
   },
   {
    "name": "Buffer (Henderson–Hasselbalch)",
    "formula": "Acidic: pH = pKa + log([salt]/[acid]).   Basic: pOH = pKb + log([salt]/[base])",
    "when": "Buffer ka pH.",
-   "mistake": "[salt] = [acid] ⇒ pH = pKa (best buffer capacity).",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "[salt] = [acid] ⇒ pH = pKa (best buffer capacity)."
   },
   {
    "name": "Solubility product",
@@ -129,7 +129,7 @@
    "name": "Precipitation and common ion",
    "formula": "Ionic product Q_sp > Ksp ⇒ precipitate.   AB in C M common ion: s ≈ Ksp / C",
    "when": "Precipitate banega ya nahi; common ion mein solubility.",
-   "mistake": "Mixing ke baad naye (dilute) concentrations lo."
+   "note": "Mixing ke baad naye (dilute) concentrations lo."
   }
  ],
  "examples": [

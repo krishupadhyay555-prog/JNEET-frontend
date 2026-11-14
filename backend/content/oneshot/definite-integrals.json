@@ -35,14 +35,14 @@
    "name": "Splitting the interval",
    "formula": "∫ₐᵇ f = ∫_a^c f + ∫_c^b f",
    "when": "|x|, [x], max/min, piecewise functions.",
-   "mistake": "Break-points (jahaan andar ka sign/value badle) par hi todo."
+   "note": "Break-points (jahaan andar ka sign/value badle) par hi todo."
   },
   {
    "name": "King's property",
    "formula": "∫ₐᵇ f(x) dx = ∫ₐᵇ f(a + b − x) dx;   ∫₀ᵃ f(x) dx = ∫₀ᵃ f(a − x) dx",
    "when": "Jab x → (a + b − x) karne se expression 'pair' ban jaaye — I + I = 2I.",
    "unit": "PYQ favourite",
-   "mistake": "Original aur naya integral JODO, phir 2 se divide."
+   "note": "Original aur naya integral JODO, phir 2 se divide."
   },
   {
    "name": "Even and odd functions",
@@ -78,7 +78,7 @@
    "name": "Limit as a sum",
    "formula": "lim_{n→∞} (1/n) Σ_{r=1}^{n} f(r/n) = ∫₀¹ f(x) dx;   general: ∫ₐᵇ f = lim h Σ f(a + rh),  h = (b − a)/n",
    "when": "Lambi summation ki limit.",
-   "mistake": "r/n → x, 1/n → dx. Agar r 0 se n tak ya 1 se 2n tak ho to limits badal jaati hain (2n tak → 0 se 2)."
+   "note": "r/n → x, 1/n → dx. Agar r 0 se n tak ya 1 se 2n tak ho to limits badal jaati hain (2n tak → 0 se 2)."
   },
   {
    "name": "Substitution in definite integrals",
@@ -90,13 +90,13 @@
    "name": "Integration by parts (definite)",
    "formula": "∫ₐᵇ u v′ dx = [u v]ₐᵇ − ∫ₐᵇ u′ v dx",
    "when": "Product wale integrals (x eˣ, x sin x, log x).",
-   "mistake": "ILATE se u chuno."
+   "note": "ILATE se u chuno."
   },
   {
    "name": "Greatest integer and fractional part",
    "formula": "∫₀ⁿ [x] dx = 0 + 1 + … + (n − 1) = n(n − 1)/2;   ∫₀ⁿ {x} dx = n/2",
    "when": "[x] aur {x} wale integrals.",
-   "mistake": "Har integer par todo."
+   "note": "Har integer par todo."
   },
   {
    "name": "Bounds (estimation)",

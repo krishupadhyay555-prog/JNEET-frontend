@@ -27,13 +27,13 @@
    "name": "Coulomb's law in a medium",
    "formula": "F_medium = F_vacuum / K   (K = dielectric constant = ε/ε₀)",
    "when": "Charges kisi medium (paani, oil) mein ho.",
-   "mistake": "K hamesha ≥ 1, isliye medium mein force kam hoti hai."
+   "note": "K hamesha ≥ 1, isliye medium mein force kam hoti hai."
   },
   {
    "name": "Quantisation and conservation",
    "formula": "q = n e,   e = 1.6 × 10⁻¹⁹ C,   n integer",
    "when": "Kitne electrons gaye/aaye; charge e ka integer multiple hi hoga.",
-   "mistake": "1 C ke liye 6.25 × 10¹⁸ electrons."
+   "note": "1 C ke liye 6.25 × 10¹⁸ electrons."
   },
   {
    "name": "Superposition",
@@ -68,26 +68,26 @@
    "name": "Dipole field (r ≫ a)",
    "formula": "Axial: E = 2kp/r³ (p ki direction).   Equatorial: E = kp/r³ (p ke ulta).   General: E = (kp/r³)√(1 + 3cos²θ)",
    "when": "Dipole se door field.",
-   "mistake": "Dipole field 1/r³ se girta hai, point charge 1/r² se."
+   "note": "Dipole field 1/r³ se girta hai, point charge 1/r² se."
   },
   {
    "name": "Dipole in uniform field",
    "formula": "τ = p × E,  |τ| = pE sinθ;   net force F = 0",
    "when": "Uniform field mein dipole sirf ghoomta hai.",
-   "mistake": "Non-uniform field mein net force bhi lagta hai."
+   "note": "Non-uniform field mein net force bhi lagta hai."
   },
   {
    "name": "Dipole potential energy",
    "formula": "U = −p·E = −pE cosθ;   W(θ₁→θ₂) = pE (cosθ₁ − cosθ₂)",
    "when": "Dipole ko ghumane ka kaam, stable/unstable position.",
-   "mistake": "θ = 0 stable (U = −pE), θ = 180° unstable (U = +pE). 0 se 180° tak kaam = 2pE."
+   "note": "θ = 0 stable (U = −pE), θ = 180° unstable (U = +pE). 0 se 180° tak kaam = 2pE."
   },
   {
    "name": "Electric flux",
    "formula": "Φ = ∮ E·dA = E A cosθ  (uniform field, flat surface)",
    "when": "Surface se kitni field lines guzarti hain.",
    "unit": "N·m²/C",
-   "mistake": "θ = field aur area vector (normal) ke beech ka angle."
+   "note": "θ = field aur area vector (normal) ke beech ka angle."
   },
   {
    "name": "Gauss's law",
@@ -125,7 +125,7 @@
    "formula": "V = kq/r;   V_A − V_B = −∫_B^A E·dr;   E = −dV/dr  (E_x = −∂V/∂x)",
    "when": "Field se potential ya potential se field.",
    "unit": "V (volt)",
-   "mistake": "V scalar hai: kai charges ka V seedha jodo (sign ke saath)."
+   "note": "V scalar hai: kai charges ka V seedha jodo (sign ke saath)."
   },
   {
    "name": "Dipole potential",
@@ -143,7 +143,7 @@
    "name": "Work and energy in a field",
    "formula": "W_ext = q ΔV;   charge V volt se accelerate: K = qV  (1 eV = 1.6 × 10⁻¹⁹ J)",
    "when": "Charge ko ek point se doosre le jaana / accelerate karna.",
-   "mistake": "Equipotential par kaam zero."
+   "note": "Equipotential par kaam zero."
   },
   {
    "name": "Capacitance",
@@ -155,8 +155,8 @@
    "name": "Capacitor with dielectric",
    "formula": "Bhara hua: C = Kε₀A/d.   t moti slab: C = ε₀A / (d − t + t/K).   Metal slab: C = ε₀A / (d − t)",
    "when": "Plates ke beech dielectric/metal.",
-   "mistake": "Metal slab = K → ∞ wala case.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "Metal slab = K → ∞ wala case."
   },
   {
    "name": "Combination of capacitors",
@@ -180,7 +180,7 @@
    "name": "Charge sharing between capacitors",
    "formula": "Common V = (C₁V₁ + C₂V₂)/(C₁ + C₂);   heat loss = C₁C₂(V₁ − V₂)² / [2(C₁ + C₂)]",
    "when": "Charged capacitor ko doosre se jodna.",
-   "mistake": "Energy hamesha ghatti hai (heat/radiation), charge conserve rehta hai."
+   "note": "Energy hamesha ghatti hai (heat/radiation), charge conserve rehta hai."
   },
   {
    "name": "Induced charge on dielectric and plate force",

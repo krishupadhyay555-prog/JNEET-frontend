@@ -1,0 +1,212 @@
+{
+ "slug": "work-energy-and-power",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-14",
+ "chapters": {
+  "NEET": "Work, Energy and Power",
+  "JEE": "Work, Energy and Power"
+ },
+ "title": "Work, Energy and Power",
+ "readMinutes": 20,
+ "summary": [
+  "Kaam (work) tab hota hai jab force ke direction mein displacement ho: W = F·s = Fs cosθ. Force perpendicular ho (circular motion mein centripetal, normal force) to kaam zero. Kaam negative bhi ho sakta hai (friction).",
+  "Work–energy theorem sabse bada shortcut hai: SAARE forces ka kaam = KE ka badlaav. Isse force ke time-dependence mein jaaye bina speed nikal jaati hai.",
+  "Conservative force (gravity, spring, electric) ka kaam path par depend nahi karta aur iske liye potential energy U define hoti hai: F = −dU/dx. Sirf conservative forces kaam karein to mechanical energy (KE + PE) constant rehti hai. Friction non-conservative hai — energy heat ban jaati hai.",
+  "Power = kaam karne ki rate, P = dW/dt = F·v. Collision mein momentum hamesha conserve (agar external force nahi), lekin KE sirf elastic collision mein; coefficient of restitution e batata hai takkar kitni elastic thi."
+ ],
+ "formulas": [
+  {
+   "name": "Work by a constant force",
+   "formula": "W = F·s = Fs cosθ = F_x s_x + F_y s_y + F_z s_z",
+   "when": "Constant force, seedha displacement.",
+   "mistake": "θ force aur DISPLACEMENT ke beech ka angle hai, force aur surface ke beech ka nahi."
+  },
+  {
+   "name": "Work by a variable force",
+   "formula": "W = ∫F dx = F–x graph ke neeche ka area",
+   "when": "Force position ke saath badle (spring, F = kx²).",
+   "note": "Graph mein x-axis ke neeche ka area negative kaam hai."
+  },
+  {
+   "name": "Kinetic energy",
+   "formula": "K = ½mv² = p²/2m",
+   "when": "Speed ya momentum se energy.",
+   "mistake": "Same momentum par halki body ki KE zyada hoti hai — ulta mat socho."
+  },
+  {
+   "name": "Work–energy theorem",
+   "formula": "W_all forces = ΔK = K_f − K_i",
+   "when": "Friction, air resistance, variable force ke saath speed.",
+   "mistake": "SAARE forces ka kaam jodo (gravity, friction, normal, applied), sirf ek ka nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gravitational potential energy (near earth)",
+   "formula": "U = mgh  (h reference level se)",
+   "when": "Height badalne par energy.",
+   "mistake": "Reference level kahin bhi lo, ΔU same aata hai — absolute U ka matlab nahi."
+  },
+  {
+   "name": "Spring potential energy",
+   "formula": "F = −kx;   U = ½kx²;   x₁ se x₂ tak spring ka kaam = ½k(x₁² − x₂²)",
+   "when": "Spring compress/stretch.",
+   "mistake": "x natural length se naapo, poori lambai nahi."
+  },
+  {
+   "name": "Force from potential energy",
+   "formula": "F = −dU/dx;   equilibrium: dU/dx = 0;   stable: d²U/dx² > 0, unstable: < 0",
+   "when": "U(x) graph/function diya ho.",
+   "mistake": "Minus sign bhool jaate hain: force U ghatne ki direction mein lagta hai."
+  },
+  {
+   "name": "Conservation of mechanical energy",
+   "formula": "K_i + U_i = K_f + U_f  (sirf conservative forces kaam karein)",
+   "when": "Pendulum, roller coaster, spring–block.",
+   "mistake": "Friction ho to yeh seedha nahi lagta — W_friction ko jodo."
+  },
+  {
+   "name": "Power",
+   "formula": "P_avg = W/t;   P = dW/dt = F·v = Fv cosθ;   1 hp = 746 W",
+   "when": "Motor, engine, pump.",
+   "mistake": "kWh energy ki unit hai, power ki nahi (1 kWh = 3.6 × 10⁶ J)."
+  },
+  {
+   "name": "Vertical circle (string)",
+   "formula": "Bottom par min speed √(5gl);  top par min √(gl);  T_bottom − T_top = 6mg",
+   "when": "String se bandhi ball ka poora chakkar.",
+   "mistake": "Rod (string nahi) ho to top par min speed 0 aur bottom par √(4gl).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Elastic collision in 1-D",
+   "formula": "v₁ = [(m₁ − m₂)u₁ + 2m₂u₂]/(m₁ + m₂);   v₂ = [(m₂ − m₁)u₂ + 2m₁u₁]/(m₁ + m₂)",
+   "when": "Momentum + KE dono conserve.",
+   "mistake": "Equal masses mein velocities exchange ho jaati hain — formula lagaane ki zaroorat nahi."
+  },
+  {
+   "name": "Perfectly inelastic collision",
+   "formula": "v = (m₁u₁ + m₂u₂)/(m₁ + m₂);   KE loss = m₁m₂(u₁ − u₂)² / [2(m₁ + m₂)]",
+   "when": "Takkar ke baad chipak jaayein.",
+   "mistake": "KE conserve maan lena galat — momentum hi conserve hai."
+  },
+  {
+   "name": "Coefficient of restitution",
+   "formula": "e = (separation speed)/(approach speed) = (v₂ − v₁)/(u₁ − u₂);   e = 1 elastic, e = 0 perfectly inelastic",
+   "when": "Partial elastic collision, bouncing ball.",
+   "mistake": "Velocities ke sign dhyan se — approach aur separation dono positive lo."
+  },
+  {
+   "name": "Bouncing ball",
+   "formula": "Rebound height h₁ = e²h;   nth rebound hₙ = e²ⁿh",
+   "when": "Ball giraake uchhalna.",
+   "mistake": "Speed e guna hoti hai, height e² guna — dono mix mat karo."
+  },
+  {
+   "name": "Collision in 2-D",
+   "formula": "Har direction mein alag: Σp_x conserve, Σp_y conserve.  Equal masses, elastic, ek rest par ⇒ baad mein 90° par alag",
+   "when": "Oblique takkar.",
+   "mistake": "Speed ko seedha jodna galat — vector (components) mein jodo."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Dot product se kaam",
+   "problem": "F = (3î + 4ĵ) N, displacement s = (2î + ĵ) m. Kaam?",
+   "solution": "W = F·s = 3 × 2 + 4 × 1 = 10 J."
+  },
+  {
+   "title": "Variable force",
+   "problem": "F = 3x² N (x metre mein). x = 0 se 2 m tak kaam?",
+   "solution": "W = ∫₀² 3x² dx = [x³]₀² = 8 J."
+  },
+  {
+   "title": "Spring se block",
+   "problem": "k = 200 N/m wala spring 0.1 m compress karke 0.5 kg block chhoda (smooth floor). Spring energy aur block ki speed?",
+   "solution": "U = ½kx² = ½ × 200 × 0.01 = 1 J. ½mv² = 1 ⇒ v = √(2/0.5) = 2 m/s."
+  },
+  {
+   "title": "Motor ki power",
+   "problem": "Motor 100 kg ko 2 m/s ki constant speed se upar uthata hai (g = 10). Power?",
+   "solution": "Constant speed ⇒ F = mg = 1000 N. P = Fv = 1000 × 2 = 2000 W (≈ 2.7 hp)."
+  },
+  {
+   "title": "Vertical circle",
+   "problem": "1 m lambi string se bandhi 0.5 kg ball ko vertical circle poora karna hai (g = 10). Bottom aur top par min speed, aur tension ka fark?",
+   "solution": "Bottom: √(5gl) = √50 ≈ 7.07 m/s. Top: √(gl) = √10 ≈ 3.16 m/s. T_bottom − T_top = 6mg = 30 N."
+  },
+  {
+   "title": "Elastic takkar",
+   "problem": "2 kg block 3 m/s se rest par rakhe 1 kg block se elastic takkar karta hai. Dono ki final velocity?",
+   "solution": "v₁ = (2 − 1)/(3) × 3 = 1 m/s,  v₂ = 2 × 2/3 × 3 = 4 m/s (aage). Check: p = 2 + 4 = 6 ✓, KE = 1 + 8 = 9 J ✓."
+  },
+  {
+   "title": "Chipakne wali takkar",
+   "problem": "2 kg block 3 m/s se rest par rakhe 1 kg se takrakar chipak jaata hai. Common velocity aur KE loss?",
+   "solution": "v = 6/3 = 2 m/s. KE pehle 9 J, baad mein ½ × 3 × 4 = 6 J ⇒ loss = 3 J (heat/sound)."
+  },
+  {
+   "title": "Uchhalti ball",
+   "problem": "Ball 5 m se giri, e = 0.6. Pehli rebound height?",
+   "solution": "h₁ = e²h = 0.36 × 5 = 1.8 m."
+  },
+  {
+   "title": "Friction se rukna",
+   "problem": "2 kg block 10 m/s se rough floor (μ_k = 0.25) par phisalta hai. Kitni door jaake rukega?",
+   "solution": "Work–energy: μmg·s = ½mv² ⇒ s = v²/(2μg) = 100/5 = 20 m. (Mass cancel.)"
+  },
+  {
+   "title": "2-D chipakne wali takkar",
+   "problem": "2 kg body 3 m/s se east aur 3 kg body 2 m/s se north mein takrakar chipak jaati hain. Final velocity?",
+   "solution": "p_x = 6, p_y = 6 kg·m/s ⇒ v = √(36 + 36)/5 ≈ 1.7 m/s, direction east se 45° north ki taraf."
+  },
+  {
+   "title": "Air resistance ka kaam",
+   "problem": "2 kg patthar 5 m upar se gira aur zameen par 8 m/s se pahuncha (g = 10). Air resistance ne kitna kaam kiya?",
+   "solution": "W_gravity = mgh = 100 J. ΔK = ½ × 2 × 64 = 64 J. W_air = 64 − 100 = −36 J (negative — energy cheeni)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Kaam kab zero, positive, negative",
+   "explain": "θ < 90° positive (force motion mein madad), θ = 90° zero (normal force, centripetal force, coolie sir par bojh lekar horizontal chale to gravity ka kaam), θ > 90° negative (friction, upar phenki ball par gravity)."
+  },
+  {
+   "title": "Kinetic aur potential energy",
+   "explain": "KE motion ki energy, hamesha ≥ 0. PE position/configuration ki energy (height, spring ka khinchav) — sirf conservative force ke liye define hoti hai. Unit joule; 1 eV = 1.6 × 10⁻¹⁹ J."
+  },
+  {
+   "title": "Work–energy theorem",
+   "explain": "Net kaam = ΔKE. Yeh Newton ke doosre niyam ka integral roop hai. Variable force, curved path, friction — sab mein speed nikalne ka sabse fast tarika."
+  },
+  {
+   "title": "Conservative vs non-conservative forces",
+   "explain": "Conservative: kaam path-independent, closed loop mein kaam zero, PE define hoti hai (gravity, spring, electrostatic). Non-conservative: kaam path par depend, energy heat mein jaati hai (friction, air drag, viscous force)."
+  },
+  {
+   "title": "Potential energy of a spring",
+   "explain": "Spring ko x khinchne mein kaam ½kx² lagta hai jo PE ban kar store hota hai. Spring force restoring hai (F = −kx). Do springs: series mein 1/k = 1/k₁ + 1/k₂, parallel mein k = k₁ + k₂."
+  },
+  {
+   "title": "Motion in a vertical circle",
+   "explain": "Upar jaate hue speed ghatti hai (KE → PE). String slack na ho iske liye top par T ≥ 0 ⇒ v_top ≥ √(gl), aur energy se v_bottom ≥ √(5gl). Horizontal position par tension = mv²/l."
+  },
+  {
+   "title": "Collisions: elastic aur inelastic",
+   "explain": "Har collision mein (external force na ho to) momentum conserve. Elastic mein KE bhi conserve (e = 1) — atomic/ideal billiard. Inelastic mein KE ka kuch hissa heat/sound/deformation. Perfectly inelastic mein bodies chipak jaati hain aur max KE loss hota hai."
+  },
+  {
+   "title": "Collisions in two dimensions",
+   "explain": "x aur y momentum alag-alag conserve karo. Equal masses ka elastic oblique collision (ek rest par) — dono 90° par alag hote hain (billiards). Head-on (1-D) mein sab ek line par."
+  }
+ ],
+ "ratta": [
+  "W = Fs cosθ;  W_net = ΔK.",
+  "F = −dU/dx;  spring U = ½kx².",
+  "P = F·v;  1 hp = 746 W;  1 kWh = 3.6 × 10⁶ J.",
+  "Vertical circle (string): √(5gl) bottom, √(gl) top, ΔT = 6mg.",
+  "Equal mass elastic 1-D: velocities exchange.",
+  "Perfectly inelastic: max KE loss, e = 0.",
+  "Bounce: h₁ = e²h.",
+  "K = p²/2m."
+ ]
+}
