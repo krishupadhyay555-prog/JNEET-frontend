@@ -33,6 +33,7 @@ export function toStudent(user) {
     plan:       effectivePlan(user),
     planExpiresAt: effectivePlan(user) === "free" ? null : (user.planExpiresAt ?? null),
     persona:    user.persona ?? "mentor",
+    studyLanguage: user.studyLanguage ?? "auto",
     hasDateOfBirth: !!user.dateOfBirth,
     consent: {
       ageGroup:     c.ageGroup ?? null,

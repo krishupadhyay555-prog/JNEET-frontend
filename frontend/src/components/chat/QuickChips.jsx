@@ -2,14 +2,14 @@
 //  JNEET+ AI — components/chat/QuickChips.jsx
 //  One-tap follow-ups under the mentor's latest answer. Each chip just
 //  sends a normal message — the mentor already has the chat history,
-//  so "isko" always means the answer right above.
+//  so "that" always means the answer right above.
 // ============================================================
 
 const CHIPS = [
-  { label: "Aur simple",                prompt: "Isko aur simple tarike se, ek example ke saath samjhao." },
-  { label: "Trick do",                  prompt: "Isko yaad rakhne ki koi short trick ya mnemonic do." },
-  { label: "Exam mein kaise aata hai",  prompt: "Ye topic exam mein kaise poocha jata hai? Common question types aur galtiyan batao." },
-  { label: "Mujhse sawal pucho",        prompt: "Isi topic par mujhse 3 sawaal poochho, ek-ek karke. Answer mere reply ke baad batana." },
+  { label: "Simpler",            prompt: "Explain that more simply, with one example." },
+  { label: "Give me a trick",    prompt: "Give me a short trick or mnemonic to remember this." },
+  { label: "How it comes in the exam", prompt: "How is this topic asked in the exam? Tell me the common question types and mistakes." },
+  { label: "Quiz me",            prompt: "Ask me 3 questions on this topic, one at a time. Tell me the answer only after I reply." },
 ];
 
 export function QuickChips({ onPick, disabled }) {

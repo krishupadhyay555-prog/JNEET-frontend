@@ -27,13 +27,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGoBack } from "../hooks/useGoBack.js";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle, Bot, ShieldCheck, KeyRound, Gem } from "lucide-react";
+import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle, Bot, ShieldCheck, KeyRound, Gem, Languages } from "lucide-react";
 import { PlanSettings } from "../components/settings/PlanSettings.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import toast from "react-hot-toast";
 import { AiPersonaSettings } from "../components/settings/AiPersonaSettings.jsx";
+import { StudyLanguageSettings } from "../components/settings/StudyLanguageSettings.jsx";
 import { ParentConsentSettings } from "../components/settings/ParentConsentSettings.jsx";
 import { ChangePasswordSettings } from "../components/settings/ChangePasswordSettings.jsx";
 
@@ -181,6 +182,14 @@ export default function Settings() {
           subtitle="Same careful teaching either way — only the tone changes."
         >
           <AiPersonaSettings />
+        </SectionCard>
+
+        <SectionCard
+          icon={<Languages size={14} className="text-violet-400" />}
+          title="Study language"
+          subtitle="The app stays in English. This changes the AI mentor's replies and OneShot pages."
+        >
+          <StudyLanguageSettings />
         </SectionCard>
 
         {user?.consent?.ageGroup === "minor" && (

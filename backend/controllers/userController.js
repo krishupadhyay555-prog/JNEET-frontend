@@ -196,7 +196,10 @@ export const updateExamMode = async (req, res, next) => {
 
 export const updatePreferences = async (req, res, next) => {
   try {
-    await User.updateOne({ _id: req.user.id }, { $set: { persona: req.body.persona } });
+    const set = {};
+    if (req.body.persona) set.persona = req.body.persona;
+    if (req.body.studyLanguage) set.studyLanguage = req.body.studyLanguage;
+    await User.updateOne({ _id: req.user.id }, { $set: set });
     const user = await User.findById(req.user.id).lean();
 
     if (!user || !user.isActive) {

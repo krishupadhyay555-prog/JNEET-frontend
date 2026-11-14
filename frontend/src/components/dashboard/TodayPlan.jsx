@@ -1,6 +1,6 @@
 // ============================================================
 //  JNEET+ AI — components/dashboard/TodayPlan.jsx
-//  "Aaj ka plan": up to three small, honest steps for today —
+//  "Today's plan": up to three small, honest steps for today —
 //    1. Recap of the last chat (only when the server found one)
 //    2. One OneShot chapter to read (rotates daily)
 //    3. A Revision set (or "continue" when they did one recently)
@@ -52,9 +52,9 @@ export function TodayPlan({ recap, recapStarting, onStartRecap, oneshots, onOpen
         key="recap"
         icon={<History size={17} className="text-violet-500" />}
         iconBg="bg-violet-600/10"
-        title={`Pichli baar: ${recapChapterText(recap)}`}
-        sub={`${recap.questions ?? 5} sawaal se yaad pakka karo`}
-        cta="Shuru"
+        title={`Last time: ${recapChapterText(recap)}`}
+        sub={`Lock it in with ${recap.questions ?? 5} quick questions`}
+        cta="Start"
         busy={recapStarting}
         onClick={onStartRecap}
       />
@@ -69,7 +69,7 @@ export function TodayPlan({ recap, recapStarting, onStartRecap, oneshots, onOpen
         iconBg="bg-amber-500/10"
         title={`OneShot: ${oneshot.chapter}`}
         sub={`${oneshot.subject} · ${oneshot.readMinutes} min read · ${oneshot.formulaCount} formulas`}
-        cta="Padho"
+        cta="Read"
         onClick={() => onOpenOneShot(oneshot.slug)}
       />
     );
@@ -82,7 +82,7 @@ export function TodayPlan({ recap, recapStarting, onStartRecap, oneshots, onOpen
       iconBg="bg-teal-500/10"
       title="Revision set"
       sub={revisionSub}
-      cta="Chalo"
+      cta="Go"
       onClick={onOpenRevision}
     />
   );
@@ -90,7 +90,7 @@ export function TodayPlan({ recap, recapStarting, onStartRecap, oneshots, onOpen
   return (
     <section className="bg-bg-card border border-bg-border rounded-2xl p-2 mb-6" aria-labelledby="today-plan">
       <div className="flex items-center justify-between px-3 pt-2.5 pb-1">
-        <p id="today-plan" className="text-[10px] text-gray-700 font-medium uppercase tracking-widest">Aaj ka plan</p>
+        <p id="today-plan" className="text-[10px] text-gray-700 font-medium uppercase tracking-widest">Today's plan</p>
         <p className="text-[10px] text-gray-600">{rows.length} step{rows.length === 1 ? "" : "s"}</p>
       </div>
       <div className="divide-y divide-bg-border/70">{rows}</div>

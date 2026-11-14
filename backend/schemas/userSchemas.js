@@ -42,10 +42,12 @@ export const dateOfBirthSchema = z.object({
 
 export const preferencesSchema = z.object({
   persona: z.enum(["mentor", "fun"], {
-    required_error: "Choose a teaching style",
     invalid_type_error: "Invalid teaching style",
-  }),
-});
+  }).optional(),
+  studyLanguage: z.enum(["auto", "english", "hinglish"], {
+    invalid_type_error: "Invalid study language",
+  }).optional(),
+}).strict().refine((v) => v.persona || v.studyLanguage, { message: "Nothing to update" });
 
 export const examModeSchema = z.object({
   examMode: z.enum(["NEET", "JEE"], {

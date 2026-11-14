@@ -196,6 +196,7 @@ export const askAI = async (req, res, next) => {
         userId: user.id,
         plan: user.plan,
         persona: user.persona,
+        studyLanguage: user.studyLanguage,
         examMode: user.examMode,
         prompt,
         history,

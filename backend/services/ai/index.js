@@ -58,13 +58,13 @@ export function classifyAiError(err) {
 // Resolves to { fullText, usage, status, model, effort, usedFallback }.
 // Rejects with the provider error (already logged) if nothing could be produced.
 export async function streamAnswer({
-  userId, plan, persona, examMode, prompt, history = [], signal, onToken, deep = false,
+  userId, plan, persona, studyLanguage, examMode, prompt, history = [], signal, onToken, deep = false,
   distress: distressFlag,
 }) {
   const route = resolveRoute(plan, { deep });
   // The safety screen may already know (any language); patterns as a backup.
   const distress = Boolean(distressFlag) || detectDistress(prompt);
-  const instructions = buildSystemPrompt({ examMode, persona, distress });
+  const instructions = buildSystemPrompt({ examMode, persona, distress, studyLanguage });
   const input = [...history, { role: "user", content: prompt }];
 
   const attempts = [{ ...route, kind: "primary" }, { ...route, kind: "retry" }];

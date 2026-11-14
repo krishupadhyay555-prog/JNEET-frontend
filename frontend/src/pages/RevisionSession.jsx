@@ -306,7 +306,7 @@ export default function RevisionSession() {
                 autoComplete="off"
                 autoCapitalize="off"
                 spellCheck={false}
-                placeholder="Apna jawab likho…"
+                placeholder="Type your answer…"
                 className={`flex-1 min-w-0 rounded-xl border px-4 py-3 text-sm bg-bg-surface text-fg-primary outline-none transition
                   ${currentFeedback
                     ? (currentFeedback.isCorrect ? "border-emerald-600/60 bg-emerald-600/10" : currentFeedback.skipped ? "border-bg-border" : "border-red-500/60 bg-red-500/10")
