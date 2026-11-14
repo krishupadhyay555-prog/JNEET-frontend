@@ -39,6 +39,11 @@ function FormulaCard({ f }) {
           <strong className="text-tone-warn">Galti:</strong> <MathText>{f.mistake}</MathText>
         </p>
       )}
+      {f.note && (
+        <p className="text-[12.5px] leading-relaxed text-fg-secondary mt-1">
+          <strong className="text-violet-500">Yaad rakho:</strong> <MathText>{f.note}</MathText>
+        </p>
+      )}
       {f.tag && f.unit && <p className="text-[11px] text-gray-600 mt-1">Unit: {f.unit}</p>}
     </article>
   );

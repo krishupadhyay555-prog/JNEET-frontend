@@ -1,0 +1,214 @@
+{
+ "slug": "laws-of-motion",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-14",
+ "chapters": {
+  "NEET": "Laws of Motion",
+  "JEE": "Laws of Motion"
+ },
+ "title": "Laws of Motion",
+ "readMinutes": 20,
+ "summary": [
+  "Force motion ko BADALTA hai, chalaata nahi. Koi net force nahi to body apni state (rest ya uniform velocity) mein rehti hai — yeh inertia hai (Newton ka pehla niyam). Mass inertia ka naap hai.",
+  "Doosra niyam: net force = momentum badalne ki rate, F = dp/dt = ma (constant mass). Thode time ka bada force impulse deta hai: J = FΔt = Δp. Teesra niyam: har action ka barabar aur ulta reaction — dono alag bodies par lagte hain, isliye cancel nahi hote.",
+  "Har sawal ka ek hi tarika: body alag karo → free-body diagram (FBD) banao → har direction mein ΣF = ma likho → constraint (string, contact) jodo. Isi se pulley, lift, incline, connected blocks sab hal hote hain.",
+  "Friction motion ka VIRODH karta hai (relative sliding ka). Static friction zaroorat ke hisaab se 0 se μ_s N tak badalta hai; sliding shuru hote hi kinetic friction μ_k N (thoda kam). Rolling friction sabse kam.",
+  "Circular motion mein centre ki taraf net force chahiye (centripetal, mv²/r) — yeh koi naya force nahi; friction, tension, normal ya gravity hi yeh kaam karte hain. Level road par friction, banked road par normal ka component."
+ ],
+ "formulas": [
+  {
+   "name": "Newton's second law",
+   "formula": "F_net = dp/dt = ma  (constant mass);   F_net = 0 ⇒ v constant",
+   "when": "Har dynamics sawal ki shuruaat.",
+   "mistake": "F_net likho, sirf applied force nahi — friction, weight, normal sab jodo."
+  },
+  {
+   "name": "Momentum and impulse",
+   "formula": "p = mv;   J = ∫F dt = F_avg Δt = Δp",
+   "when": "Takkar, catch, bat–ball, bounce.",
+   "mistake": "Bounce mein Δp = m(v + u) hota hai (direction ulti), m(v − u) nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Conservation of linear momentum",
+   "formula": "F_ext = 0 ⇒ m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂",
+   "when": "Gun–bullet recoil, explosion, collision, rocket.",
+   "mistake": "Sirf us direction mein lagao jahan external force zero ho."
+  },
+  {
+   "name": "Recoil of gun",
+   "formula": "V_gun = m_b v_b / M_gun   (ulti direction)",
+   "when": "Goli chalne par bandook ka peeche dhakka.",
+   "mistake": "Velocity ka sign ulta, magnitude chhota — energy bandook ki kam hoti hai."
+  },
+  {
+   "name": "Apparent weight in a lift",
+   "formula": "Upar accelerate: N = m(g + a);   neeche accelerate: N = m(g − a);   free fall: N = 0",
+   "when": "Lift, weighing machine.",
+   "mistake": "Lift ki velocity se nahi, ACCELERATION se apparent weight badalta hai."
+  },
+  {
+   "name": "Atwood machine",
+   "formula": "a = (m₁ − m₂)g / (m₁ + m₂);   T = 2m₁m₂g / (m₁ + m₂)",
+   "when": "Ek pulley par do latke blocks (halki string, smooth pulley).",
+   "mistake": "T kabhi m₁g ke barabar nahi (heavy block neeche accelerate karta hai)."
+  },
+  {
+   "name": "Connected blocks (push/pull)",
+   "formula": "a = F/(m₁ + m₂ + …);   contact force / tension = (joint ke us paar ke saare masses — jinhe ye force kheench/dhakel raha hai) × a",
+   "when": "Smooth surface par saath chalte blocks.",
+   "mistake": "Contact force us mass se nikalo jise woh dhakel raha hai, poore system se nahi."
+  },
+  {
+   "name": "Equilibrium of concurrent forces",
+   "formula": "ΣF_x = 0, ΣF_y = 0;   Lami: F₁/sinα = F₂/sinβ = F₃/sinγ",
+   "when": "Latki cheez, strings, balance.",
+   "note": "Lami mein har force ke saamne wala (baaki do ke beech ka) angle lo."
+  },
+  {
+   "name": "Static friction",
+   "formula": "0 ≤ f_s ≤ μ_s N;   limiting f = μ_s N",
+   "when": "Body abhi slide nahi kar rahi.",
+   "mistake": "Static friction hamesha μ_s N nahi hota — jitna applied force, utna hi (limit tak)."
+  },
+  {
+   "name": "Kinetic friction",
+   "formula": "f_k = μ_k N  (μ_k < μ_s), direction relative sliding ke ulta",
+   "when": "Body slide kar rahi hai.",
+   "mistake": "N hamesha mg nahi — incline par mg cosθ, upar khinchne par mg − F sinθ."
+  },
+  {
+   "name": "Angle of repose / friction",
+   "formula": "tanθ_repose = μ_s;   angle of friction: tanλ = μ_s",
+   "when": "Incline par body bas slide hone wali ho.",
+   "mistake": "Ye μ_s se aata hai, μ_k se nahi."
+  },
+  {
+   "name": "Block on rough incline",
+   "formula": "Neeche slide: a = g(sinθ − μ cosθ);   upar dhakelo: a = −g(sinθ + μ cosθ)",
+   "when": "Incline wale sawal.",
+   "note": "Upar jaate waqt friction bhi neeche lagta hai — dono ka sum."
+  },
+  {
+   "name": "Centripetal force",
+   "formula": "F_c = mv²/r = mω²r  (centre ki taraf)",
+   "when": "Kisi bhi circular motion mein.",
+   "mistake": "FBD mein 'centripetal force' alag force mat banao — yeh net inward force hai."
+  },
+  {
+   "name": "Vehicle on level road",
+   "formula": "v_max = √(μ_s r g)",
+   "when": "Mod par skid na ho.",
+   "note": "Mass cancel ho jaata hai — truck aur cycle ke liye same v_max."
+  },
+  {
+   "name": "Banked road",
+   "formula": "Bina friction: tanθ = v²/(rg).   Friction ke saath: v_max = √[rg(μ + tanθ)/(1 − μ tanθ)]",
+   "when": "Highway mod, race track.",
+   "tag": "PYQ favourite",
+   "note": "Ideal speed par friction ki zaroorat zero hoti hai; usse tez/dheere par direction badalti hai."
+  },
+  {
+   "name": "Pseudo force",
+   "formula": "Accelerating frame (a) mein har body par −ma lagao",
+   "when": "Lift ya accelerating car ke andar se sawal.",
+   "mistake": "Ground frame se hal kar rahe ho to pseudo force mat lagao."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Atwood machine",
+   "problem": "5 kg aur 3 kg ek smooth pulley se light string dwara latke hain (g = 10). Acceleration aur tension?",
+   "solution": "a = (5 − 3) × 10/8 = 2.5 m/s².  T = 2 × 5 × 3 × 10/8 = 37.5 N (30 N aur 50 N ke beech — sahi)."
+  },
+  {
+   "title": "Friction: chalega ya nahi",
+   "problem": "10 kg block, μ_s = 0.5, μ_k = 0.4 (g = 10). (a) 40 N lagao (b) 60 N lagao — friction aur acceleration?",
+   "solution": "Limiting friction = 0.5 × 100 = 50 N. (a) 40 < 50 ⇒ block nahi hilega, friction = 40 N (applied ke barabar). (b) 60 > 50 ⇒ slide; kinetic friction 40 N, a = (60 − 40)/10 = 2 m/s²."
+  },
+  {
+   "title": "Rough incline",
+   "problem": "30° incline par block slide kar raha hai, μ_k = 0.2 (g = 10). Acceleration?",
+   "solution": "a = g(sin30° − μ cos30°) = 10(0.5 − 0.2 × 0.866) = 3.27 m/s²."
+  },
+  {
+   "title": "Bat se impulse",
+   "problem": "0.15 kg ball 20 m/s se aati hai, bat se 30 m/s se ulti laut jaati hai. Contact 0.01 s. Impulse aur average force?",
+   "solution": "Δp = m(v + u) = 0.15 × 50 = 7.5 N·s. F = Δp/Δt = 7.5/0.01 = 750 N."
+  },
+  {
+   "title": "Bandook ka recoil",
+   "problem": "4 kg ki bandook se 20 g goli 400 m/s se nikalti hai. Bandook ki recoil speed?",
+   "solution": "0 = m_b v_b + M V ⇒ V = 0.02 × 400/4 = 2 m/s (goli ke ulta)."
+  },
+  {
+   "title": "Banked road ka angle",
+   "problem": "100 m radius ka mod 20 m/s ke liye bina friction design karna hai (g = 10). Banking angle?",
+   "solution": "tanθ = v²/(rg) = 400/1000 = 0.4 ⇒ θ ≈ 21.8°."
+  },
+  {
+   "title": "Level road par max speed",
+   "problem": "50 m radius ka flat mod, μ_s = 0.4. Bina skid max speed?",
+   "solution": "v = √(μrg) = √(0.4 × 50 × 10) = √200 ≈ 14.14 m/s (≈ 51 km/h)."
+  },
+  {
+   "title": "Lift mein weight",
+   "problem": "60 kg aadmi lift mein. Lift 2 m/s² se (a) upar accelerate (b) neeche accelerate. Machine kya padhegi (N mein)?",
+   "solution": "(a) N = m(g + a) = 60 × 12 = 720 N.  (b) N = 60 × 8 = 480 N.  Free fall mein 0."
+  },
+  {
+   "title": "Do strings se latka weight",
+   "problem": "100 N ka weight do strings se latka hai jo horizontal se 30° aur 60° banati hain. Dono tensions?",
+   "solution": "Horizontal: T₁ cos30° = T₂ cos60° ⇒ T₂ = √3 T₁. Vertical: T₁ sin30° + T₂ sin60° = 100 ⇒ T₁(0.5 + 1.5) = 100 ⇒ T₁ = 50 N, T₂ = 86.6 N. (Jo string zyada vertical, usme zyada tension.)"
+  },
+  {
+   "title": "Do blocks ko dhakelna",
+   "problem": "Smooth floor par 2 kg aur 3 kg blocks saath rakhe; 2 kg wale ko 20 N se dhakela. Contact force?",
+   "solution": "a = 20/5 = 4 m/s². 3 kg ko sirf contact force dhakelta hai ⇒ N = 3 × 4 = 12 N."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Force and inertia",
+   "explain": "Force woh hai jo state of motion badalne ki koshish kare. Inertia = state na badalne ki aadat; zyada mass = zyada inertia. Bus achanak chale to hum peeche girte hain (inertia of rest), ruke to aage (inertia of motion)."
+  },
+  {
+   "title": "Newton's first law",
+   "explain": "Net force zero ho to body rest par rahegi ya same velocity se seedhi chalti rahegi. Yeh law inertial frame define karta hai. 'Body chal rahi hai to force lag raha hoga' — galat soch hai."
+  },
+  {
+   "title": "Newton's second law and impulse",
+   "explain": "Momentum p = mv. F = dp/dt. Chhota time = bada force; isliye catch karte waqt haath peeche khinchte hain (time badhao, force ghatao), aur gadde par girna kam chot deta hai."
+  },
+  {
+   "title": "Newton's third law",
+   "explain": "Action–reaction pair hamesha barabar, ulte, ek hi type ke (dono contact ya dono gravity) aur ALAG bodies par. Table par rakhi kitaab: weight aur normal force pair nahi hain (dono kitaab par hain)."
+  },
+  {
+   "title": "Conservation of momentum ke applications",
+   "explain": "Gun recoil, rocket (gas peeche, rocket aage), explosion (pehle total p zero to baad mein bhi zero), boat se kood kar boat ka peeche jaana. Internal forces kitne bhi bade hon, total momentum nahi badalte."
+  },
+  {
+   "title": "Laws of friction",
+   "explain": "(1) Friction normal reaction ke proportional. (2) Contact area par (lagbhag) depend nahi karta. (3) μ_k < μ_s. (4) Friction surfaces ki nature par depend karta hai. Friction motion ka virodh nahi, RELATIVE sliding ka virodh karta hai — chalne aur gaadi ko aage badhaane mein friction hi madad karta hai."
+  },
+  {
+   "title": "Rolling friction",
+   "explain": "Pahiya ludhakne par contact point ruka rehta hai, isliye sliding friction nahi lagta; deformation se chhota rolling friction lagta hai. Isliye ball bearings aur pahiye kaam aasaan karte hain. Lubricants friction aur ghiswat dono kam karte hain."
+  },
+  {
+   "title": "Circular motion: kaun sa force centripetal?",
+   "explain": "Gol ghumaata patthar: string ka tension. Level road par car: static friction. Banked road: normal force ka horizontal component (+ friction). Satellite: gravity. Vertical circle mein top par mg + T = mv²/r."
+  }
+ ],
+ "ratta": [
+  "F = dp/dt;  J = FΔt = Δp.",
+  "Lift: up a ⇒ m(g + a), down a ⇒ m(g − a), free fall ⇒ 0.",
+  "Atwood: a = (m₁ − m₂)g/(m₁ + m₂),  T = 2m₁m₂g/(m₁ + m₂).",
+  "f_s ≤ μ_s N;  f_k = μ_k N;  tanθ_repose = μ_s.",
+  "Incline: a = g(sinθ − μ cosθ) neeche.",
+  "Level road v_max = √(μrg);  banking tanθ = v²/rg.",
+  "Action–reaction alag bodies par — kabhi cancel nahi.",
+  "Rolling < kinetic < static (limiting) friction."
+ ]
+}

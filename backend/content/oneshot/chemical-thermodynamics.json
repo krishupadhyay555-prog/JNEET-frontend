@@ -26,14 +26,14 @@
    "formula": "w = −p_ext ΔV;   free expansion (p_ext = 0): w = 0",
    "when": "Constant bahari pressure ke against phailna.",
    "unit": "J",
-   "mistake": "1 L·atm = 101.3 J."
+   "note": "1 L·atm = 101.3 J."
   },
   {
    "name": "Reversible isothermal work (ideal gas)",
    "formula": "w_rev = −2.303 nRT log(V₂/V₁) = −2.303 nRT log(p₁/p₂)",
    "when": "Reversible, constant T.",
-   "mistake": "Ideal gas isothermal: ΔU = 0 ⇒ q = −w.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "Ideal gas isothermal: ΔU = 0 ⇒ q = −w."
   },
   {
    "name": "Enthalpy",
@@ -57,7 +57,7 @@
    "name": "Adiabatic process",
    "formula": "q = 0 ⇒ ΔU = w;   reversible ideal gas: TV^{γ−1} = constant,  pV^γ = constant",
    "when": "Bina heat exchange ke expansion/compression.",
-   "mistake": "Reversible adiabatic expansion mein gas thandi hoti hai (kaam apni internal energy se karti hai). Ideal gas ka free expansion: ΔT = 0."
+   "note": "Reversible adiabatic expansion mein gas thandi hoti hai (kaam apni internal energy se karti hai). Ideal gas ka free expansion: ΔT = 0."
   },
   {
    "name": "Hess's law",
@@ -81,7 +81,7 @@
    "name": "Types of enthalpy",
    "formula": "Combustion (1 mol + O₂), atomisation (1 mol → gaseous atoms), sublimation = fusion + vaporisation, ionisation, hydration (gaseous ion → aq), solution = lattice + hydration, neutralisation (strong acid + strong base ≈ −57.1 kJ/mol)",
    "when": "Definition wale sawal.",
-   "mistake": "Weak acid/base ke saath neutralisation kam exothermic (ionisation mein energy lagti hai)."
+   "note": "Weak acid/base ke saath neutralisation kam exothermic (ionisation mein energy lagti hai)."
   },
   {
    "name": "Entropy change",
@@ -93,28 +93,28 @@
    "name": "Total entropy criterion",
    "formula": "ΔS_total = ΔS_sys + ΔS_surr > 0 (spontaneous);   ΔS_surr = −ΔH_sys / T",
    "when": "Spontaneity ka asli criterion (isolated/universe).",
-   "mistake": "Equilibrium par ΔS_total = 0."
+   "note": "Equilibrium par ΔS_total = 0."
   },
   {
    "name": "Gibbs energy",
    "formula": "G = H − TS;   ΔG = ΔH − TΔS;   ΔG = −T ΔS_total",
    "when": "Constant T, p par spontaneity.",
    "unit": "kJ/mol",
-   "mistake": "ΔG < 0 spontaneous, = 0 equilibrium, > 0 non-spontaneous.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "ΔG < 0 spontaneous, = 0 equilibrium, > 0 non-spontaneous."
   },
   {
    "name": "Sign table (ΔH, ΔS)",
    "formula": "(−, +): hamesha spontaneous.  (+, −): kabhi nahi.  (−, −): low T par.  (+, +): high T par.   Switch temperature T = ΔH/ΔS",
    "when": "Kis temperature par reaction chalegi.",
-   "mistake": "ΔS ko J se kJ mein badal kar hi ΔH ke saath jodo."
+   "note": "ΔS ko J se kJ mein badal kar hi ΔH ke saath jodo."
   },
   {
    "name": "ΔG° and equilibrium constant",
    "formula": "ΔG° = −RT ln K = −2.303 RT log K;   ΔG = ΔG° + RT ln Q",
    "when": "K nikalna ya ΔG° nikalna.",
-   "mistake": "R = 8.314 J/(K·mol) — ΔG° ko J mein rakho.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "R = 8.314 J/(K·mol) — ΔG° ko J mein rakho."
   },
   {
    "name": "Gibbs energy and useful work",

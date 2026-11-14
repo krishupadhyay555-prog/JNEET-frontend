@@ -25,7 +25,7 @@
    "name": "Photon momentum",
    "formula": "p = h/λ = E/c",
    "when": "Photon ka momentum, radiation pressure.",
-   "mistake": "Photon ka rest mass zero, phir bhi momentum hota hai."
+   "note": "Photon ka rest mass zero, phir bhi momentum hota hai."
   },
   {
    "name": "Number of photons",
@@ -43,8 +43,8 @@
    "name": "Einstein's photoelectric equation",
    "formula": "K_max = ½mv²_max = hν − φ = h(ν − ν₀)",
    "when": "Nikle electron ki maximum KE.",
-   "mistake": "Ye MAXIMUM KE hai; kai electrons ki KE isse kam hoti hai.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "Ye MAXIMUM KE hai; kai electrons ki KE isse kam hoti hai."
   },
   {
    "name": "Stopping potential",
@@ -62,13 +62,13 @@
    "name": "Radiation force on a surface",
    "formula": "Poori tarah absorb: F = P/c.   Poori tarah reflect (normal incidence): F = 2P/c",
    "when": "Light se lagne wala force/pressure.",
-   "mistake": "Pressure = intensity/c (absorb), 2I/c (reflect)."
+   "note": "Pressure = intensity/c (absorb), 2I/c (reflect)."
   },
   {
    "name": "de Broglie wavelength",
    "formula": "λ = h/p = h/(mv) = h/√(2mK)",
    "when": "Kisi bhi moving particle ki wavelength.",
-   "mistake": "K non-relativistic maana gaya hai."
+   "note": "K non-relativistic maana gaya hai."
   },
   {
    "name": "Charged particle through potential V",

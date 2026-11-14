@@ -1,0 +1,223 @@
+{
+ "slug": "moving-charges-and-magnetism",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-14",
+ "chapters": {
+  "NEET": "Moving Charges and Magnetism",
+  "JEE": "Moving Charges and Magnetism"
+ },
+ "title": "Moving Charges and Magnetism",
+ "readMinutes": 22,
+ "summary": [
+  "Chalta charge (current) apne aas-paas magnetic field B banata hai (Oersted). Ek current element ka field Biot–Savart law deta hai; symmetric cases (lambi wire, solenoid, toroid) mein Ampere's circuital law se jaldi nikalta hai.",
+  "Magnetic field chalte charge par force lagata hai: F = q(v × B). Yeh force hamesha velocity ke perpendicular hai, isliye speed nahi badalti, kaam zero — sirf direction mudti hai (circle ya helix). E aur B dono hon to Lorentz force F = q(E + v × B).",
+  "Current wali wire par F = I(L × B). Do parallel wires: same direction current — attract, ulta — repel; isi se ampere ki definition aati hai.",
+  "Current loop ek magnetic dipole hai (m = NIA); uniform field mein net force zero par torque τ = m × B lagta hai. Yahi moving coil galvanometer ka principle hai, jise shunt (chhota R parallel) se ammeter aur bada R series mein lagaakar voltmeter banate hain."
+ ],
+ "formulas": [
+  {
+   "name": "Biot–Savart law",
+   "formula": "dB = (μ₀/4π) I dl × r̂ / r² = (μ₀/4π) I dl sinθ / r²",
+   "when": "Kisi bhi shape ki wire ka field (chhote tukdon ko jodkar).",
+   "note": "r element se point ki taraf hai; θ dl aur r ke beech — dl ki direction current wali."
+  },
+  {
+   "name": "Field at centre of circular loop",
+   "formula": "B = μ₀NI / 2R;   arc (angle φ radian): B = μ₀Iφ / 4πR",
+   "when": "Gol coil ya arc ka centre.",
+   "mistake": "Arc mein φ radian mein daalo, degree mein nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Field on axis of circular loop",
+   "formula": "B = μ₀NIR² / [2(R² + x²)^{3/2}];   x ≫ R: B ≈ μ₀m / 2πx³",
+   "when": "Coil ke axis par kisi point par.",
+   "mistake": "x = 0 rakhne par centre wala formula aana chahiye — check kar lo."
+  },
+  {
+   "name": "Straight wire",
+   "formula": "Finite: B = (μ₀I/4πd)(sinφ₁ + sinφ₂);   infinite: B = μ₀I / 2πd;   semi-infinite end ke saamne: μ₀I/4πd",
+   "when": "Seedhi wire se d doori par.",
+   "mistake": "Angles perpendicular se naapne hain (wire ke saath nahi)."
+  },
+  {
+   "name": "Ampere's circuital law",
+   "formula": "∮B·dl = μ₀ I_enclosed",
+   "when": "Symmetry wale cases: lambi wire, solenoid, toroid, thick wire.",
+   "mistake": "Loop ke bahar ka current I_enclosed mein mat gino."
+  },
+  {
+   "name": "Thick (solid) wire, radius R",
+   "formula": "Andar (r < R): B = μ₀Ir / 2πR²;   bahar: B = μ₀I / 2πr",
+   "when": "Uniform current wali moti wire.",
+   "note": "Andar field r ke saath BADHTA hai, surface par max."
+  },
+  {
+   "name": "Solenoid and toroid",
+   "formula": "Lamba solenoid andar: B = μ₀nI (n = turns per metre), end par μ₀nI/2;   toroid: B = μ₀NI / 2πr",
+   "when": "Coil ke andar uniform field.",
+   "mistake": "n turns per METRE hai, total turns nahi."
+  },
+  {
+   "name": "Force on moving charge (Lorentz)",
+   "formula": "F = q(v × B);   |F| = qvB sinθ;   E bhi ho: F = q(E + v × B)",
+   "when": "Charge magnetic/electric field mein.",
+   "note": "Electron (negative) par direction ulti — Fleming/right-hand ke baad flip karo."
+  },
+  {
+   "name": "Circular path in uniform B",
+   "formula": "r = mv/qB = p/qB = √(2mK)/qB;   T = 2πm/qB;   f = qB/2πm",
+   "when": "v ⊥ B.",
+   "mistake": "Time period speed par depend NAHI karta (cyclotron isi par chalta hai).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Helical path",
+   "formula": "v at angle θ to B: radius = mv sinθ / qB;   pitch = 2πm v cosθ / qB",
+   "when": "Velocity B se tircha.",
+   "mistake": "Pitch mein cosθ, radius mein sinθ — ulta mat karo."
+  },
+  {
+   "name": "Velocity selector",
+   "formula": "E aur B perpendicular: undeflected tab jab v = E/B",
+   "when": "Crossed fields.",
+   "mistake": "Sirf us speed ke liye; mass/charge kuch bhi ho."
+  },
+  {
+   "name": "Force on current-carrying wire",
+   "formula": "F = I(L × B);   |F| = BIL sinθ;   koi bhi closed loop uniform B mein: F_net = 0",
+   "when": "Wire magnetic field mein.",
+   "note": "Curved wire ka force uske seedhe end-to-end tukde jitna hota hai."
+  },
+  {
+   "name": "Force between parallel wires",
+   "formula": "F/L = μ₀I₁I₂ / 2πd;   same direction attract, opposite repel",
+   "when": "Do lambi parallel wires.",
+   "mistake": "Electric charges ka ulta: yahan 'like' currents attract karte hain."
+  },
+  {
+   "name": "Magnetic dipole moment and torque",
+   "formula": "m = NIA (direction right-hand se);   τ = m × B, |τ| = NIAB sinθ;   U = −m·B",
+   "when": "Current loop field mein.",
+   "mistake": "θ loop ke PLANE se nahi, normal (m) se naapo."
+  },
+  {
+   "name": "Moving coil galvanometer",
+   "formula": "NIAB = kφ ⇒ φ = (NAB/k) I;   current sensitivity φ/I = NAB/k;   voltage sensitivity φ/V = NAB/(kR_G)",
+   "when": "Galvanometer ki working.",
+   "mistake": "Turns badhane se current sensitivity badhti hai, voltage sensitivity zaroori nahi (R bhi badhta hai)."
+  },
+  {
+   "name": "Galvanometer → ammeter / voltmeter",
+   "formula": "Ammeter: shunt S = I_g G / (I − I_g) parallel mein.   Voltmeter: R = V/I_g − G series mein",
+   "when": "Range badalna.",
+   "mistake": "Ammeter ka resistance bahut kam, voltmeter ka bahut zyada — ulta jodne par meter jal sakta hai."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Electron par force aur radius",
+   "problem": "Electron 2 × 10⁶ m/s se B = 0.5 T ke perpendicular chal raha hai. Force aur circle ka radius? (m_e = 9.11 × 10⁻³¹ kg)",
+   "solution": "F = qvB = 1.6 × 10⁻¹⁹ × 2 × 10⁶ × 0.5 = 1.6 × 10⁻¹³ N. r = mv/qB = 9.11 × 10⁻³¹ × 2 × 10⁶ / (1.6 × 10⁻¹⁹ × 0.5) = 2.28 × 10⁻⁵ m."
+  },
+  {
+   "title": "Cyclotron frequency",
+   "problem": "Proton B = 1 T mein ghoom raha hai. Frequency? (m_p = 1.67 × 10⁻²⁷ kg)",
+   "solution": "f = qB/2πm = 1.6 × 10⁻¹⁹ / (2π × 1.67 × 10⁻²⁷) ≈ 1.52 × 10⁷ Hz — speed par depend nahi."
+  },
+  {
+   "title": "Coil ke centre par field",
+   "problem": "10 turns, radius 10 cm, current 2 A. Centre par B?",
+   "solution": "B = μ₀NI/2R = 4π × 10⁻⁷ × 10 × 2 / 0.2 = 1.26 × 10⁻⁴ T."
+  },
+  {
+   "title": "Lambi wire",
+   "problem": "Lambi seedhi wire mein 10 A. 5 cm door B?",
+   "solution": "B = μ₀I/2πd = 2 × 10⁻⁷ × 10/0.05 = 4.0 × 10⁻⁵ T."
+  },
+  {
+   "title": "Solenoid",
+   "problem": "Solenoid mein 1000 turns per metre, current 2 A. Andar B?",
+   "solution": "B = μ₀nI = 4π × 10⁻⁷ × 1000 × 2 = 2.51 × 10⁻³ T."
+  },
+  {
+   "title": "Parallel wires ka force",
+   "problem": "Do lambi parallel wires 10 cm door, currents 5 A aur 10 A same direction. Force per metre?",
+   "solution": "F/L = μ₀I₁I₂/2πd = 2 × 10⁻⁷ × 50/0.1 = 1.0 × 10⁻⁴ N/m, attraction."
+  },
+  {
+   "title": "Coil par torque",
+   "problem": "50 turns, area 0.02 m², current 1 A, B = 0.2 T; coil ka normal B se 30° par. Magnetic moment aur torque?",
+   "solution": "m = NIA = 1 A·m². τ = mB sin30° = 1 × 0.2 × 0.5 = 0.1 N·m."
+  },
+  {
+   "title": "Galvanometer ko ammeter aur voltmeter",
+   "problem": "G = 50 Ω, full-scale I_g = 5 mA. (a) 0–5 A ammeter (b) 0–10 V voltmeter?",
+   "solution": "(a) S = I_g G/(I − I_g) = 0.005 × 50/4.995 ≈ 0.05 Ω parallel mein. (b) R = V/I_g − G = 2000 − 50 = 1950 Ω series mein."
+  },
+  {
+   "title": "Velocity selector",
+   "problem": "E = 10⁴ V/m aur B = 0.02 T crossed hain. Kis speed ke charges seedhe nikal jaayenge?",
+   "solution": "v = E/B = 10⁴/0.02 = 5.0 × 10⁵ m/s."
+  },
+  {
+   "title": "Wire par force",
+   "problem": "0.5 m wire mein 3 A, B = 0.4 T ke perpendicular. Force?",
+   "solution": "F = BIL = 0.4 × 3 × 0.5 = 0.6 N."
+  },
+  {
+   "title": "Helix ki pitch",
+   "problem": "Electron 2 × 10⁶ m/s se B = 0.01 T ke saath 60° angle par ghusta hai. Pitch?",
+   "solution": "Pitch = 2πm v cos60° / qB = 2π × 9.11 × 10⁻³¹ × 10⁶ / (1.6 × 10⁻¹⁹ × 0.01) ≈ 3.6 × 10⁻³ m."
+  },
+  {
+   "title": "Axis par field",
+   "problem": "1 turn, R = 10 cm, I = 1 A. Axis par centre se 10 cm door B?",
+   "solution": "B = μ₀IR²/[2(R² + x²)^{3/2}] = 4π × 10⁻⁷ × 0.01 / [2 × (0.02)^{3/2}] ≈ 2.2 × 10⁻⁶ T (centre ke 6.3 × 10⁻⁶ T ka lagbhag 35%)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Oersted ka experiment",
+   "explain": "Current wali wire ke paas compass ki needle mud jaati hai — matlab current magnetic field banata hai. Current ulta karo to needle ulti mudti hai. Field lines wire ke chaaron taraf gol (concentric) hoti hain."
+  },
+  {
+   "title": "Direction ke rules",
+   "explain": "Right-hand thumb rule: angootha current ki direction, ungliyan B ki direction (lambi wire). Loop/solenoid mein ungliyan current ke saath mudao, angootha B (north) dikhata hai. Force ke liye F = q(v × B) ka cross product ya Fleming's left-hand rule."
+  },
+  {
+   "title": "Biot–Savart ke applications",
+   "explain": "Circular loop ke centre aur axis par field, arc ka field, finite wire. Field current ke proportional aur doori ke square ke ulta (element ke liye)."
+  },
+  {
+   "title": "Ampere's law ke applications",
+   "explain": "Infinite wire (B ∝ 1/r), solid wire ke andar (B ∝ r), solenoid (andar uniform μ₀nI, bahar ≈ 0), toroid (andar μ₀NI/2πr, bahar zero). Amperian loop aisa chuno jahan B constant aur dl ke parallel ho."
+  },
+  {
+   "title": "Charge ki motion E aur B mein",
+   "explain": "Sirf B: circle (v ⊥ B), helix (tircha), seedha (v ∥ B, force zero). Magnetic force kaam nahi karta ⇒ KE constant. E aur B crossed: velocity selector. Cyclotron: f = qB/2πm se charges ko baar-baar accelerate karta hai."
+  },
+  {
+   "title": "Definition of ampere",
+   "explain": "Do anant lambi parallel wires 1 m door hon aur har mein itna current ho ki unke beech 2 × 10⁻⁷ N per metre force lage — woh current 1 ampere. (2019 se SI mein ampere elementary charge e se define hota hai, lekin yeh relation sach hai.)"
+  },
+  {
+   "title": "Current loop as a magnetic dipole",
+   "explain": "Loop ek chhote bar magnet jaisa behave karta hai: m = NIA, ek face north ek south. Door se iska field dipole jaisa (1/r³). Uniform field mein net force zero, torque m × B — loop m ko B ke saath align karna chahta hai."
+  },
+  {
+   "title": "Moving coil galvanometer",
+   "explain": "Coil radial magnetic field mein (concave poles + soft iron core) ⇒ har position par sinθ = 1, deflection current ke proportional (linear scale). Spring ka restoring torque kφ. Sensitivity badhaane ke liye N, B, A badhao ya k ghatao."
+  }
+ ],
+ "ratta": [
+  "μ₀/4π = 10⁻⁷ T·m/A;  μ₀/2π = 2 × 10⁻⁷.",
+  "Loop centre μ₀NI/2R;  wire μ₀I/2πd;  solenoid μ₀nI.",
+  "r = mv/qB;  T = 2πm/qB (speed independent).",
+  "v = E/B (velocity selector).",
+  "F/L = μ₀I₁I₂/2πd — same direction attract.",
+  "m = NIA;  τ = mB sinθ;  U = −mB cosθ.",
+  "Shunt S = I_g G/(I − I_g);  series R = V/I_g − G.",
+  "Magnetic force kabhi kaam nahi karta."
+ ]
+}

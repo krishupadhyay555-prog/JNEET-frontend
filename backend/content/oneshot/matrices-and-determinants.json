@@ -18,7 +18,7 @@
    "name": "Types of matrices",
    "formula": "Square, diagonal, scalar, identity I, zero O, upper/lower triangular, symmetric (Aᵀ = A), skew-symmetric (Aᵀ = −A, diagonal sab 0)",
    "when": "Definitions aur pehchaan.",
-   "mistake": "Skew-symmetric ki diagonal entries hamesha zero."
+   "note": "Skew-symmetric ki diagonal entries hamesha zero."
   },
   {
    "name": "Special square matrices",
@@ -47,19 +47,19 @@
    "name": "Determinant of order 2 and 3",
    "formula": "|a b; c d| = ad − bc.   3 × 3: kisi bhi row/column ke along expand: |A| = a₁₁C₁₁ + a₁₂C₁₂ + a₁₃C₁₃",
    "when": "Determinant nikaalna.",
-   "mistake": "Jis row/column mein zyada zero ho, usi ke along expand karo."
+   "note": "Jis row/column mein zyada zero ho, usi ke along expand karo."
   },
   {
    "name": "Minor and cofactor",
    "formula": "Mᵢⱼ = row i, column j hata ke bacha determinant;   Cᵢⱼ = (−1)^{i+j} Mᵢⱼ",
    "when": "Expansion aur adjoint ke liye.",
-   "mistake": "Sign pattern: + − + / − + − / + − +."
+   "note": "Sign pattern: + − + / − + − / + − +."
   },
   {
    "name": "Properties of determinants",
    "formula": "|Aᵀ| = |A|;  do rows swap → sign ulta;  do rows same/proportional → 0;  ek row × k → |A| × k;  Rᵢ → Rᵢ + kRⱼ → koi badlaav nahi;  triangular → diagonal ka product",
    "when": "Bina poora expand kiye determinant simplify karna.",
-   "mistake": "Kisi ek row ki entries ko kisi doosri row ke cofactors se multiply karke jodo → 0."
+   "note": "Kisi ek row ki entries ko kisi doosri row ke cofactors se multiply karke jodo → 0."
   },
   {
    "name": "Determinant of products and scalars",
@@ -72,7 +72,7 @@
    "name": "Adjoint",
    "formula": "adj A = (cofactor matrix)ᵀ;   A (adj A) = (adj A) A = |A| I",
    "when": "Inverse ka raasta.",
-   "mistake": "2 × 2: adj [a b; c d] = [d −b; −c a]."
+   "note": "2 × 2: adj [a b; c d] = [d −b; −c a]."
   },
   {
    "name": "Adjoint properties",
@@ -90,7 +90,7 @@
    "name": "Area of triangle and collinearity",
    "formula": "Area = ½ |det [x₁ y₁ 1; x₂ y₂ 1; x₃ y₃ 1]|;   collinear ⇔ det = 0",
    "when": "Teen points se area / ek line par hain ya nahi.",
-   "mistake": "Area hamesha positive — modulus lo."
+   "note": "Area hamesha positive — modulus lo."
   },
   {
    "name": "System AX = B (non-homogeneous)",
@@ -102,7 +102,7 @@
    "name": "Cramer's rule",
    "formula": "x = D₁/D, y = D₂/D, z = D₃/D  (D ≠ 0).   D = 0, koi Dᵢ ≠ 0: no solution.   D = 0 aur D₁ = D₂ = D₃ = 0: infinite ya none",
    "when": "2–3 variables ke equations.",
-   "mistake": "Dᵢ = D mein i-th column ko B se badal ke."
+   "note": "Dᵢ = D mein i-th column ko B se badal ke."
   },
   {
    "name": "Homogeneous system AX = O",
@@ -114,7 +114,7 @@
    "name": "Characteristic equation (2 × 2)",
    "formula": "A² − (tr A) A + |A| I = O   (Cayley–Hamilton)",
    "when": "Aⁿ ya A⁻¹ jaldi nikaalna.",
-   "mistake": "tr A = diagonal ka sum."
+   "note": "tr A = diagonal ka sum."
   },
   {
    "name": "Trace",

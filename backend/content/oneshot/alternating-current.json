@@ -1,0 +1,185 @@
+{
+ "slug": "alternating-current",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-14",
+ "chapters": {
+  "NEET": "Alternating Current",
+  "JEE": "Alternating Current"
+ },
+ "title": "Alternating Current",
+ "readMinutes": 18,
+ "summary": [
+  "AC mein voltage aur current sinusoidal badalte hain: v = V₀ sinωt. Ghar ki supply 220 V, 50 Hz — yeh 220 V RMS value hai, peak ≈ 311 V. Ek cycle ka average zero hota hai, isliye heating ke liye RMS use karte hain.",
+  "Resistor mein V aur I same phase mein. Inductor current ko 90° peeche rakhta hai (X_L = ωL, frequency badhe to rokna badhe), capacitor 90° aage (X_C = 1/ωC, DC ko poora rokta hai).",
+  "Series LCR mein total rukawat impedance Z = √(R² + (X_L − X_C)²). Jab X_L = X_C, Z = R minimum aur current maximum — resonance (ω₀ = 1/√LC). Radio tuning isi par hoti hai.",
+  "Power sirf resistor khaata hai: P = V_rms I_rms cosφ. Pure L ya C mein average power zero (wattless current). Transformer voltage badal ke bijli door tak kam loss mein bhejta hai."
+ ],
+ "formulas": [
+  {
+   "name": "Instantaneous AC",
+   "formula": "v = V₀ sin ωt;   i = I₀ sin(ωt ± φ);   ω = 2πf",
+   "when": "AC ka equation padhna.",
+   "mistake": "ω ko f mat samjho — 314 rad/s matlab 50 Hz."
+  },
+  {
+   "name": "RMS and average values",
+   "formula": "V_rms = V₀/√2 ≈ 0.707V₀;   I_rms = I₀/√2;   half-cycle average = 2V₀/π ≈ 0.637V₀;   full cycle average = 0",
+   "when": "Meter reading, heating.",
+   "mistake": "AC voltmeter/ammeter RMS padhte hain; 220 V supply ka peak 311 V hai, 220 nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inductive reactance",
+   "formula": "X_L = ωL = 2πfL;   current V se 90° peeche",
+   "when": "Pure inductor.",
+   "mistake": "DC (f = 0) par X_L = 0 — inductor DC ko nahi rokta."
+  },
+  {
+   "name": "Capacitive reactance",
+   "formula": "X_C = 1/(ωC) = 1/(2πfC);   current V se 90° aage",
+   "when": "Pure capacitor.",
+   "note": "DC par X_C = ∞ — capacitor DC ko poora rok deta hai."
+  },
+  {
+   "name": "Series LCR impedance",
+   "formula": "Z = √(R² + (X_L − X_C)²);   I_rms = V_rms/Z",
+   "when": "R, L, C series mein.",
+   "mistake": "Voltages seedhe nahi judte: V = √(V_R² + (V_L − V_C)²); V_L aur V_C alag-alag supply se bade ho sakte hain."
+  },
+  {
+   "name": "Phase angle",
+   "formula": "tanφ = (X_L − X_C)/R;   X_L > X_C: current peeche (inductive), X_L < X_C: aage (capacitive)",
+   "when": "Phase difference.",
+   "mistake": "φ voltage aur CURRENT ke beech hai, do voltages ke beech nahi."
+  },
+  {
+   "name": "Resonance",
+   "formula": "X_L = X_C ⇒ ω₀ = 1/√(LC), f₀ = 1/(2π√(LC));   Z = R, current max, φ = 0",
+   "when": "Tuning, max current.",
+   "mistake": "Resonance R par depend nahi karta; R sirf peak ki height/sharpness badalta hai."
+  },
+  {
+   "name": "Quality factor and bandwidth",
+   "formula": "Q = ω₀L/R = (1/R)√(L/C);   bandwidth Δω = R/L = ω₀/Q",
+   "when": "Resonance kitni sharp.",
+   "note": "Q zyada = sharp peak = kam R."
+  },
+  {
+   "name": "Power in AC",
+   "formula": "P_avg = V_rms I_rms cosφ = I_rms² R;   power factor cosφ = R/Z",
+   "when": "Asli kharch hone wali power.",
+   "mistake": "V_rms × I_rms 'apparent power' hai, asli power nahi (cosφ chhoot gaya)."
+  },
+  {
+   "name": "Wattless current",
+   "formula": "Power deta component: I_rms cosφ;   wattless component: I_rms sinφ",
+   "when": "Pure L/C ya power factor ka sawal.",
+   "note": "Pure L ya C mein current behta hai par average power zero."
+  },
+  {
+   "name": "LC oscillations",
+   "formula": "ω = 1/√(LC);   energy C ke electric field aur L ke magnetic field ke beech aati-jaati;   q = q₀ cosωt",
+   "when": "Bina R ka LC circuit.",
+   "note": "Resistance ho to oscillations dheere-dheere khatam (damped)."
+  },
+  {
+   "name": "Transformer",
+   "formula": "V_s/V_p = N_s/N_p = I_p/I_s  (ideal);   efficiency η = P_out/P_in",
+   "when": "Step-up/step-down.",
+   "mistake": "Transformer sirf AC par chalta hai; DC par sirf heating hogi."
+  },
+  {
+   "name": "AC generator",
+   "formula": "ε = NBAω sinωt;   ε₀ = NBAω",
+   "when": "AC banana.",
+   "note": "Coil ka plane B ke parallel ho tab emf max hota hai (flux zero par, badlaav sabse tez)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "RMS aur frequency",
+   "problem": "v = 311 sin(314t) volt. RMS voltage aur frequency?",
+   "solution": "V_rms = 311/√2 ≈ 220 V. f = 314/2π ≈ 50 Hz — yahi ghar ki supply hai."
+  },
+  {
+   "title": "Reactances 50 Hz par",
+   "problem": "L = 0.1 H aur C = 100 μF ka 50 Hz par reactance?",
+   "solution": "X_L = 2π × 50 × 0.1 = 31.4 Ω. X_C = 1/(2π × 50 × 10⁻⁴) = 31.8 Ω."
+  },
+  {
+   "title": "Series LCR poora",
+   "problem": "R = 30 Ω, X_L = 80 Ω, X_C = 40 Ω, V_rms = 200 V. Z, current, power factor, power, phase?",
+   "solution": "Z = √(900 + 1600) = 50 Ω. I = 200/50 = 4 A. cosφ = 30/50 = 0.6. P = 200 × 4 × 0.6 = 480 W (= I²R = 16 × 30 ✓). tanφ = 40/30 ⇒ φ ≈ 53.1°, current peeche (inductive)."
+  },
+  {
+   "title": "Resonance",
+   "problem": "L = 0.5 H, C = 8 μF, R = 10 Ω. Resonant ω, f aur Q?",
+   "solution": "ω₀ = 1/√(0.5 × 8 × 10⁻⁶) = 1/(2 × 10⁻³) = 500 rad/s. f₀ = 500/2π ≈ 79.6 Hz. Q = ω₀L/R = 250/10 = 25."
+  },
+  {
+   "title": "Step-up transformer",
+   "problem": "N_p = 200, N_s = 4000, V_p = 220 V. V_s? Secondary mein 0.5 A ho to primary current (ideal)?",
+   "solution": "V_s = 220 × 4000/200 = 4400 V. I_p = I_s × V_s/V_p = 0.5 × 20 = 10 A."
+  },
+  {
+   "title": "Wattless current",
+   "problem": "I_rms = 5 A, current voltage se 60° peeche. Wattless component aur power factor?",
+   "solution": "Wattless = I sinφ = 5 × 0.866 = 4.33 A. Power factor = cos60° = 0.5."
+  },
+  {
+   "title": "Bulb ke saath choke",
+   "problem": "100 V, 50 W ka bulb 200 V, 50 Hz supply par chalana hai, series mein inductor lagaakar. L kitna?",
+   "solution": "Bulb: I = 50/100 = 0.5 A, R = 100/0.5 = 200 Ω. Z = 200/0.5 = 400 Ω. X_L = √(400² − 200²) ≈ 346.4 Ω. L = X_L/(2π × 50) ≈ 1.1 H. (Resistor lagaate to usme bhi 50 W jalta — choke mein lagbhag zero.)"
+  },
+  {
+   "title": "LC circuit ki frequency",
+   "problem": "L = 10 mH, C = 1 μF. Oscillation frequency?",
+   "solution": "f = 1/(2π√(10⁻² × 10⁻⁶)) = 1/(2π × 10⁻⁴) ≈ 1592 Hz."
+  },
+  {
+   "title": "Transformer efficiency",
+   "problem": "Upar wala transformer 90% efficient ho aur output 4400 V × 0.5 A ho. Input power?",
+   "solution": "P_out = 2200 W. P_in = 2200/0.9 ≈ 2444 W. Baaki ~244 W heat mein (copper, eddy, hysteresis losses)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Peak aur RMS kyun",
+   "explain": "RMS value woh DC value hai jo resistor mein utni hi heat de. Sine wave ka RMS = peak/√2. Meters RMS dikhaate hain; insulation aur capacitor rating peak ke liye chahiye."
+  },
+  {
+   "title": "Phasors",
+   "explain": "AC quantities ko ghoomte arrows (phasors) se dikhaate hain jo ω se ghoomte hain. R mein V aur I ek line mein; L mein V, I se 90° aage; C mein V, I se 90° peeche. LCR mein V_L aur V_C ulte, isliye ek doosre ko kaatte hain."
+  },
+  {
+   "title": "Reactance aur impedance",
+   "explain": "Reactance (X_L, X_C) bhi ohm mein hai lekin energy kharch nahi karta — sirf store karke wapas deta hai. Impedance Z poori rukawat hai (R + reactance, vector ki tarah judte hain)."
+  },
+  {
+   "title": "Resonance ke facts",
+   "explain": "Resonance par V_L = V_C (ek doosre ko cancel), circuit pure resistive, current max, power max. f < f₀ par circuit capacitive, f > f₀ par inductive. Radio/TV tuning mein C badalkar f₀ station ki frequency par laate hain."
+  },
+  {
+   "title": "Power in AC circuits",
+   "explain": "Average power = V_rms I_rms cosφ. Pure R: cosφ = 1. Pure L/C: cosφ = 0 (wattless). Factories mein low power factor = zyada current = zyada line loss, isliye capacitors lagaakar power factor sudhaarte hain."
+  },
+  {
+   "title": "Transformer ki working aur losses",
+   "explain": "Primary ka AC core mein badalta flux banata hai, jo secondary mein emf jagaata hai (mutual induction). Losses: copper (I²R, moti wire), eddy current (laminated core), hysteresis (soft iron), flux leakage. Bijli high voltage par bhejte hain taaki current kam ho aur I²R loss kam."
+  },
+  {
+   "title": "AC generator",
+   "explain": "Coil ghoomne se flux NBA cosωt badalta hai ⇒ emf NBAω sinωt. Slip rings se AC milta hai. India mein f = 50 Hz."
+  }
+ ],
+ "ratta": [
+  "V_rms = V₀/√2;  220 V ⇒ peak 311 V;  half-cycle average 2V₀/π.",
+  "X_L = ωL (I peeche),  X_C = 1/ωC (I aage).",
+  "Z = √(R² + (X_L − X_C)²);  tanφ = (X_L − X_C)/R.",
+  "f₀ = 1/(2π√LC);  Q = ω₀L/R.",
+  "P = V_rms I_rms cosφ;  cosφ = R/Z.",
+  "Wattless: I sinφ.",
+  "V_s/V_p = N_s/N_p = I_p/I_s.",
+  "Transformer losses: copper, eddy, hysteresis, leakage."
+ ]
+}

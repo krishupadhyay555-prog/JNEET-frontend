@@ -1,0 +1,180 @@
+{
+ "slug": "wave-optics",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-14",
+ "chapters": {
+  "NEET": "Wave Optics",
+  "JEE": "Wave Optics"
+ },
+ "title": "Wave Optics",
+ "readMinutes": 18,
+ "summary": [
+  "Wave optics light ko wave maan kar woh baatein samjhaata hai jo ray optics nahi kar sakta: interference, diffraction aur polarisation. Huygens ke anusaar wavefront ka har point ek naya source hai; inke secondary wavelets milkar agla wavefront banate hain — isi se reflection aur refraction ke niyam bhi nikalte hain.",
+  "Do coherent sources (same frequency, constant phase difference) ki waves milein to kahin bright (constructive) aur kahin dark (destructive) fringes — interference. Young's double slit mein fringe width β = λD/d.",
+  "Ek hi slit se bhi light thoda mudti hai aur pattern banta hai — diffraction. Central bright fringe sabse chaudi aur chamakdaar (width 2λD/a); pehla dark fringe a sinθ = λ par.",
+  "Light transverse wave hai, isliye polarise ho sakti hai. Polaroid sirf ek direction ka vibration jaane deta hai; do polaroids ke beech Malus' law I = I₀cos²θ. Reflection se bhi polarisation hota hai — Brewster angle par reflected light poori polarised."
+ ],
+ "formulas": [
+  {
+   "name": "Path difference and phase difference",
+   "formula": "Δφ = (2π/λ) Δx",
+   "when": "Interference mein point par condition.",
+   "note": "λ us medium ki wavelength lo jisme path hai (λ/n)."
+  },
+  {
+   "name": "Resultant intensity of two waves",
+   "formula": "I = I₁ + I₂ + 2√(I₁I₂) cosφ;   equal: I = 4I₀ cos²(φ/2)",
+   "when": "Do coherent waves ka jod.",
+   "mistake": "Incoherent sources mein sirf I₁ + I₂ — cos wala term nahi."
+  },
+  {
+   "name": "Maxima and minima intensities",
+   "formula": "I_max = (√I₁ + √I₂)²;   I_min = (√I₁ − √I₂)²;   I ∝ (amplitude)²",
+   "when": "Intensity ratio ke sawal.",
+   "mistake": "Amplitude ratio diya ho to pehle square karo — intensity ratio nahi hai."
+  },
+  {
+   "name": "Constructive and destructive conditions",
+   "formula": "Bright: Δx = nλ (φ = 2nπ);   dark: Δx = (2n − 1)λ/2",
+   "when": "Kis point par bright/dark.",
+   "mistake": "Dark ke liye (2n − 1)λ/2 hai, nλ/2 nahi."
+  },
+  {
+   "name": "YDSE fringe width and positions",
+   "formula": "β = λD/d;   nth bright: y = nλD/d;   nth dark: y = (2n − 1)λD/2d;   angular width = λ/d",
+   "when": "Young's double slit.",
+   "mistake": "D aur d mix mat karo: D screen ki doori (badi), d slits ki doori (chhoti).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "YDSE in a medium",
+   "formula": "β' = β/n",
+   "when": "Poora setup paani/liquid mein.",
+   "mistake": "Fringe width ghatti hai, badhti nahi."
+  },
+  {
+   "name": "Thin film in front of one slit",
+   "formula": "Fringe shift = (n − 1)t D/d;   fringes shifted = (n − 1)t/λ",
+   "when": "Ek slit ke aage glass sheet.",
+   "mistake": "Pattern us slit ki taraf khisakta hai jahan sheet lagi hai; fringe width nahi badalti."
+  },
+  {
+   "name": "Single-slit diffraction",
+   "formula": "Minima: a sinθ = nλ;   central max angular width = 2λ/a;   linear width = 2λD/a",
+   "when": "Ek slit se diffraction.",
+   "mistake": "YDSE ka ulta: yahan a sinθ = nλ DARK deta hai, bright nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Huygens: refraction",
+   "formula": "sin i / sin r = v₁/v₂ = n₂/n₁;   λ₂ = λ₁ v₂/v₁;   f same",
+   "when": "Wavefront se Snell's law.",
+   "mistake": "Medium badalne par frequency kabhi nahi badalti."
+  },
+  {
+   "name": "Brewster's law",
+   "formula": "tan θ_B = n;   θ_B + r = 90° (reflected ⊥ refracted)",
+   "when": "Reflection se polarisation.",
+   "mistake": "Brewster par reflected light poori polarised, refracted sirf partly."
+  },
+  {
+   "name": "Malus' law",
+   "formula": "I = I₀ cos²θ;   unpolarised light polaroid se: I₀/2",
+   "when": "Polaroids ke beech intensity.",
+   "mistake": "Pehle polaroid par unpolarised light aadhi hoti hai — cos² baad mein lagao."
+  },
+  {
+   "name": "Coherent sources",
+   "formula": "Same frequency + constant phase difference;   YDSE/Lloyd's mirror/biprism ek hi source se do banate hain",
+   "when": "Sustained interference ki shart.",
+   "mistake": "Do alag bulb kabhi coherent nahi hote — pattern turant badal jaata hai."
+  }
+ ],
+ "examples": [
+  {
+   "title": "YDSE ke numbers",
+   "problem": "λ = 600 nm, d = 0.5 mm, D = 1 m. Fringe width, teesra bright aur teesra dark?",
+   "solution": "β = λD/d = 600 × 10⁻⁹ × 1 / 0.5 × 10⁻³ = 1.2 mm. 3rd bright = 3β = 3.6 mm. 3rd dark = 2.5β = 3 mm."
+  },
+  {
+   "title": "Setup paani mein",
+   "problem": "Upar wala setup paani (n = 4/3) mein daal diya. Naya fringe width?",
+   "solution": "β' = β/n = 1.2 × 3/4 = 0.9 mm."
+  },
+  {
+   "title": "Intensity ratio",
+   "problem": "Do coherent sources ki intensities I aur 4I. I_max : I_min?",
+   "solution": "Amplitudes 1 : 2. I_max = (1 + 2)² = 9I, I_min = (2 − 1)² = I ⇒ ratio = 9 : 1."
+  },
+  {
+   "title": "Path difference se intensity",
+   "problem": "Do barabar sources (I₀ each), λ = 600 nm, kisi point par path difference 150 nm. Intensity?",
+   "solution": "φ = 2π × 150/600 = π/2. I = 4I₀ cos²(π/4) = 2I₀ (max ka aadha)."
+  },
+  {
+   "title": "Single slit",
+   "problem": "a = 0.2 mm, λ = 500 nm, screen D = 2 m. Pehle minimum ka angle aur central max ki width?",
+   "solution": "sinθ ≈ θ = λ/a = 2.5 × 10⁻³ rad. Width = 2λD/a = 2 × 500 × 10⁻⁹ × 2 / 0.2 × 10⁻³ = 10 mm."
+  },
+  {
+   "title": "Brewster angle",
+   "problem": "n = √3 wali glass ka Brewster angle aur us waqt refraction angle?",
+   "solution": "tanθ_B = √3 ⇒ θ_B = 60°. r = 90° − 60° = 30°."
+  },
+  {
+   "title": "Do polaroids",
+   "problem": "Unpolarised light I₀ do polaroids se guzarti hai jinke axes ke beech 60°. Final intensity?",
+   "solution": "Pehle ke baad I₀/2. Doosre ke baad (I₀/2)cos²60° = (I₀/2)(1/4) = 0.125I₀ (12.5%)."
+  },
+  {
+   "title": "Glass sheet se fringe shift",
+   "problem": "YDSE mein ek slit ke aage 6 μm moti glass sheet (n = 1.5), λ = 600 nm. Kitne fringes khiskenge?",
+   "solution": "N = (n − 1)t/λ = 0.5 × 6 × 10⁻⁶ / 600 × 10⁻⁹ = 5 fringes, sheet wali slit ki taraf."
+  },
+  {
+   "title": "Glass mein light",
+   "problem": "600 nm (hawa) light glass (n = 1.5) mein jaati hai. Speed, wavelength, frequency?",
+   "solution": "v = c/n = 2.0 × 10⁸ m/s. λ = 600/1.5 = 400 nm. f = c/λ_air = 5.0 × 10¹⁴ Hz — dono media mein same."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Wavefront and Huygens' principle",
+   "explain": "Wavefront = same phase wale points ki surface (point source se spherical, door se plane). Huygens: wavefront ka har point secondary wavelet chhodta hai; un sabko chhoone wali surface naya wavefront. Ray hamesha wavefront ke perpendicular."
+  },
+  {
+   "title": "Huygens se reflection aur refraction",
+   "explain": "Plane wavefront surface par tircha pahunche to har point par wavelet banta hai. Same medium mein wavelets same speed se ⇒ i = r (reflection). Doosre medium mein speed v₂ ⇒ sin i/sin r = v₁/v₂ (Snell's law). Isse pata chala ki ghane medium mein light dheemi hai (Newton ki corpuscular theory ulta kehti thi)."
+  },
+  {
+   "title": "Coherent sources and sustained interference",
+   "explain": "Stable pattern ke liye sources coherent hon (same f, constant phase), amplitudes lagbhag barabar, slits patli aur paas. Do alag bulb coherent nahi — unka phase har 10⁻⁸ s mein random badalta hai."
+  },
+  {
+   "title": "Young's double slit experiment",
+   "explain": "Ek source ki light do patli slits se do coherent sources banati hai. Screen par barabar chaudai ke bright-dark fringes; centre bright. White light se centre white aur baaki coloured fringes. Energy nashat nahi hoti — sirf redistribute hoti hai."
+  },
+  {
+   "title": "Diffraction due to a single slit",
+   "explain": "Slit ka har hissa wavelet bhejta hai; θ par jab slit ke do aadhe hisson ka path difference λ/2 ho, sab cancel ⇒ a sinθ = λ par pehla dark. Central max baaki sabse do guna chauda. Slit patli karo to pattern failta hai."
+  },
+  {
+   "title": "Interference vs diffraction",
+   "explain": "Interference: do (ya zyada) alag wavefronts, sab fringes barabar chaudi aur lagbhag barabar bright. Diffraction: ek hi wavefront ke hisse, central fringe chaudi aur sabse bright, baaki dheere-dheere fade."
+  },
+  {
+   "title": "Polarisation and its uses",
+   "explain": "Light transverse hai — vibrations ek plane mein seemit kiye ja sakte hain. Polaroid, reflection (Brewster), scattering (aasmaan ki light partly polarised) se polarisation. Uses: sunglasses (glare kam), 3D movie glasses, LCD screens, stress analysis, camera filters."
+  }
+ ],
+ "ratta": [
+  "β = λD/d;  bright nλD/d, dark (2n − 1)λD/2d.",
+  "I = 4I₀cos²(φ/2);  I_max/I_min = [(√I₁ + √I₂)/(√I₁ − √I₂)]².",
+  "Medium mein β' = β/n.",
+  "Film shift: N = (n − 1)t/λ.",
+  "Single slit dark: a sinθ = nλ;  central width 2λD/a.",
+  "Brewster tanθ_B = n;  θ_B + r = 90°.",
+  "Malus I = I₀cos²θ;  unpolarised → I₀/2.",
+  "Ghane medium mein jaane par: f same, v aur λ dono n guna ghat-te hain."
+ ]
+}

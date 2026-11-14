@@ -24,13 +24,13 @@
    "name": "Impact parameter",
    "formula": "b = k Z e² cot(θ/2) / K   (alpha, KE = K);   b = 0 ⇒ θ = 180° (seedha wapas)",
    "when": "Scattering angle aur impact parameter ka relation.",
-   "mistake": "Chhota b ⇒ bada θ."
+   "note": "Chhota b ⇒ bada θ."
   },
   {
    "name": "Rutherford scattering",
    "formula": "N(θ) ∝ 1 / sin⁴(θ/2)",
    "when": "Kis angle par kitne alpha particles mudte hain.",
-   "mistake": "Bahut kam particles bade angle par mudte hain."
+   "note": "Bahut kam particles bade angle par mudte hain."
   },
   {
    "name": "Bohr's quantisation",
@@ -41,27 +41,27 @@
    "name": "Radius of nth orbit",
    "formula": "rₙ = 0.529 n²/Z Å   (a₀ = 0.529 Å = 5.29 × 10⁻¹¹ m)",
    "when": "Orbit ka size.",
-   "mistake": "r ∝ n²: n = 2 par 4 guna, n = 3 par 9 guna.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "r ∝ n²: n = 2 par 4 guna, n = 3 par 9 guna."
   },
   {
    "name": "Speed in nth orbit",
    "formula": "vₙ = 2.18 × 10⁶ Z/n m/s  (= cZ/(137n))",
    "when": "Electron ki speed.",
-   "mistake": "v ∝ 1/n: upar ke orbit mein dheema."
+   "note": "v ∝ 1/n: upar ke orbit mein dheema."
   },
   {
    "name": "Energy of nth orbit",
    "formula": "Eₙ = −13.6 Z²/n² eV",
    "when": "Kisi orbit ki total energy.",
-   "mistake": "Negative = bound. n = ∞ par E = 0.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "Negative = bound. n = ∞ par E = 0."
   },
   {
    "name": "KE, PE and total energy",
    "formula": "KE = −E = +13.6Z²/n² eV,   PE = 2E = −27.2Z²/n² eV",
    "when": "Energy ke hisse.",
-   "mistake": "Sab mein PE = −2 KE."
+   "note": "Sab mein PE = −2 KE."
   },
   {
    "name": "Time period, frequency, current",
@@ -72,7 +72,7 @@
    "name": "Photon in a transition",
    "formula": "hν = E_{n₂} − E_{n₁};   1/λ = R Z² (1/n₁² − 1/n₂²),   R = 1.097 × 10⁷ m⁻¹",
    "when": "Spectral line ki wavelength.",
-   "mistake": "n₂ > n₁ hamesha; R wala formula hydrogen-like atoms ke liye hi."
+   "note": "n₂ > n₁ hamesha; R wala formula hydrogen-like atoms ke liye hi."
   },
   {
    "name": "Spectral series of hydrogen",
@@ -84,19 +84,19 @@
    "name": "Series limits",
    "formula": "Shortest λ (series limit): n₂ = ∞ ⇒ 1/λ = RZ²/n₁².  Longest λ: n₂ = n₁ + 1",
    "when": "Kisi series ki sabse chhoti/badi wavelength.",
-   "mistake": "Lyman limit = 1/R ≈ 91.2 nm."
+   "note": "Lyman limit = 1/R ≈ 91.2 nm."
   },
   {
    "name": "Number of spectral lines",
    "formula": "n se neeche aane par total lines = n(n − 1)/2",
    "when": "Kitni alag lines dikhengi.",
-   "mistake": "Ek hi atom ek baar mein max (n − 1) lines deta hai."
+   "note": "Ek hi atom ek baar mein max (n − 1) lines deta hai."
   },
   {
    "name": "Ionisation and excitation energy",
    "formula": "Ionisation (ground se): 13.6 Z² eV.  H ki first excitation (1 → 2): 10.2 eV,  1 → 3: 12.09 eV",
    "when": "Electron nikaalna / upar bhejna.",
-   "mistake": "Ionisation potential volt mein (13.6 V), energy eV mein."
+   "note": "Ionisation potential volt mein (13.6 V), energy eV mein."
   },
   {
    "name": "de Broglie view of Bohr orbit",
