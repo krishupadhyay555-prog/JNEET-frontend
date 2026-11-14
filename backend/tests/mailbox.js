@@ -16,6 +16,6 @@ export const mailMock = async (importOriginal) => {
     sendParentConsentConfirmation: async () => ({ ok: true }),
     sendParentSafetyLock: async (to, { approveUrl }) => { mailbox.safetyLock.push({ to, approveUrl }); return { ok: true }; },
     sendPaymentReceipt: async (to, info) => { mailbox.receipts.push({ to, ...info }); return { ok: true }; },
-    sendAdminAlert: async (subject, lines) => { mailbox.alerts.push({ subject, lines }); return { ok: true }; },
+    sendAdminAlert: async (subject, lines, opts = {}) => { mailbox.alerts.push({ subject, lines, area: opts.area || "payments" }); return { ok: true }; },
   };
 };

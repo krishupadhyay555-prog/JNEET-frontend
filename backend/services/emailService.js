@@ -239,16 +239,16 @@ export async function sendParentConsentConfirmation(parentEmail, { studentName, 
 // ── Payment receipt (B4) ────────────────────────────────────────
 // Founder alert for anything in payments that needs a human look.
 // No-op (ok: false) when ADMIN_ALERT_EMAIL is not set.
-export async function sendAdminAlert(subject, lines) {
+export async function sendAdminAlert(subject, lines, { area = "payments" } = {}) {
   if (!env.ADMIN_ALERT_EMAIL) return { ok: false, skipped: true };
   const body = (Array.isArray(lines) ? lines : [String(lines)]).map((l) => String(l));
   const html = layout({
     preheader: subject,
     heading: subject,
     bodyHtml: body.map((l) => `<p style="margin:6px 0;">${escapeHtml(l)}</p>`).join(""),
-    footerHtml: "Automatic alert from the JNEET+ AI payment system.",
+    footerHtml: `Automatic alert from the JNEET+ AI ${area === "payments" ? "payment system" : "question bank"}.`,
   });
-  return sendEmail({ to: env.ADMIN_ALERT_EMAIL, subject: `[JNEET+ payments] ${subject}`, html, text: body.join("\n") });
+  return sendEmail({ to: env.ADMIN_ALERT_EMAIL, subject: `[JNEET+ ${area}] ${subject}`, html, text: body.join("\n") });
 }
 
 export async function sendPaymentReceipt(toEmail, { studentName, planName, amount, paymentId, orderId, paidAt, validTill }) {

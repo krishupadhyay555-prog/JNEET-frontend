@@ -8,8 +8,9 @@
 // ============================================================
 
 import { Check, X } from "lucide-react";
+import { ReportQuestion } from "./ReportQuestion.jsx";
 
-export function ReviewAnswer({ question, index, mode = "revision" }) {
+export function ReviewAnswer({ question, index, mode = "revision", attemptId }) {
   const { questionText, options = [], correctIndex, selectedIndex, explanation, imageUrl, type, answers, textAnswer } = question;
   const isBlank = type === "fill_blank";
   const wasCorrect = selectedIndex === correctIndex;
@@ -86,6 +87,7 @@ export function ReviewAnswer({ question, index, mode = "revision" }) {
           <p className="text-xs text-fg-primary leading-relaxed">{explanation}</p>
         </div>
       )}
+      <ReportQuestion attemptId={attemptId} questionId={question.questionId} />
     </div>
   );
 }

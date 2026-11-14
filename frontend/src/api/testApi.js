@@ -13,3 +13,8 @@ export const testApi = {
   getAttempt:     (attemptId) => api.get(`/test/${attemptId}`),
   getHistory:     () => api.get("/test/history"),
 };
+export const reportApi = {
+  report:      (data) => api.post("/test/report", data),
+  list:        (status = "open") => api.get("/admin/reports", { params: { status } }),
+  setStatus:   (questionId, status) => api.patch(`/admin/reports/${questionId}`, { status }),
+};
