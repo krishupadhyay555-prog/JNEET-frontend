@@ -70,6 +70,13 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 3b. Small founder items from the 11–14 Nov chat (re-read 14 Nov): (i) accent — mockup used indigo, app keeps NEET teal / JEE indigo; founder to say if NEET should also be indigo; (ii) delete the old `phone-ops` branch on GitHub (website → Branches); (iii) keep a backup copy of the Play Store signing key folder (`C:\CProjectsJNEET_AIplaystore-signing-key`) on a pen drive / Drive — never delete it; old folders `C:\backend`, `C:\frontend`, `C:\Projects\JNEET_AI*` can be removed later; (iv) after these features the founder sends question batches in the D80 plain-text format (no coaching-book content); (v) screenshots cost the chat image limit — prefer text output files.
 4. Month-end launch plan + honest earnings estimate were given to the founder on 13 Nov (launch ~1 Dec, beta 50–100 students first, free Sunday live mock as the hook, "JEE Jan Crash Pass" ₹299–499).
 
+### Capacity & scaling plan (load test 14 Nov 2026)
+- **Measured** (local, backend pinned to 1 CPU core, 500 test accounts, realistic mix of 8 student GET routes, zero errors): before the fix ~200 req/s; `/api/test/chapters` scanned the whole bank on every call (~300 ms) → now cached 10 min (PR #15) → **~900 req/s, p99 ≈ 50 ms at 20 parallel connections, ≈ 310 ms at 150**. An active student makes roughly 1 request per 15–30 s, so one CPU core ≈ several thousand students online at the same time; AI answers are limited by OpenAI and the daily AI budget, not by our server.
+- **Real bottlenecks today (free tiers):** Atlas M0 (~100 ops/sec, 512 MB, no backups) · Render free (0.1 CPU, sleeps) · Brevo free (300 emails/day — signup OTP + login code + password reset; ~150–250 signups/day max) · Vercel Hobby (non-commercial).
+- **Before launch (must):** Render Starter → Standard (1 CPU, 2 GB) · Atlas Flex ($8–30, 500 ops/sec cap, 5 GB) · Brevo Starter (no daily cap) · Vercel Pro or Cloudflare Pages (L9).
+- **~10k active students:** Atlas M10 (dedicated, backups) · Render Pro (2 CPU) or 2× Standard behind Render's load balancer — then move rate limits to a shared store (Redis/Key Value or Mongo), because the limiter is in memory per instance · OpenAI usage tier rises with spend.
+- **~1 lakh:** M20/M30 + read-heavy caching, 3–4 instances, CDN for static/OneShot JSON, queue for emails. Code changes needed then: shared rate-limit store, per-user (not per-IP) API limit for carrier NAT, background jobs run on one instance only.
+
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
 |---|---|---|---|
