@@ -2,7 +2,7 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **13 Nov 2026**. Work status: **ACTIVE** — 13 Nov founder order: **JEE OneShots first, as fast as possible** (JEE Main Session 1 is in late January 2027), every chapter complete and verified → then new questions. Everything else waits for the founder's OK (see §5 D-m).
+> Last updated: **14 Nov 2026**. Work status: **ACTIVE** — 13 Nov founder order: **JEE OneShots first, as fast as possible** (JEE Main Session 1 is in late January 2027), every chapter complete and verified → then new questions. Everything else waits for the founder's OK (see §5 D-m).
 > Founder gave Claude project-lead permission (12 Nov): Claude runs commands, tests, local seeds and opens PRs; the founder merges PRs, runs live-database commands from the laptop and handles every password/key — Claude never sees or asks for them.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
@@ -42,8 +42,23 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #7 | Phone-ops seed button (GitHub Actions) | ❌ Closed, not merged — founder prefers running commands from the laptop |
 | #8 | Roadmap: seed done, UptimeRobot, laptop setup | ✅ Merged 12 Nov |
 | #9 | Safety hotfix (18+ filter flagged maths / biology words) | ❌ Closed — folded into #10 so the same files are not in two open PRs |
-| #10 | **Safety v2 + fill-in-the-blanks + OneShot + recap + Aaj ka plan + quick chips + new light/dark theme** (needs L-seed-2 after merge). Safety: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ✅ Merged 12 Nov — live after Render/Vercel deploy. L-seed-2 (127 blanks) still to be run from the laptop |
-| #11 | **JEE OneShot batch 1**: 8 new chapters (Electrostatics, Dual Nature, Atoms, Nuclei, Chemical Thermodynamics, Equilibrium, Matrices & Determinants, Definite Integrals) + proper superscript/subscript display | ⏳ Open — NOT live |
+| #10 | **Safety v2 + fill-in-the-blanks + OneShot + recap + Aaj ka plan + quick chips + new light/dark theme** (needs L-seed-2 after merge). Safety: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ✅ Merged 12 Nov — live. L-seed-2 done 14 Nov (database = **13,095**, 0 stale) |
+| #11 | **JEE OneShot batch 1**: 8 new chapters (Electrostatics, Dual Nature, Atoms, Nuclei, Chemical Thermodynamics, Equilibrium, Matrices & Determinants, Definite Integrals) + proper superscript/subscript display | ✅ Merged 14 Nov — live (checked in the browser 14 Nov) |
+
+### Live check 14 Nov 2026 (Claude, built-in browser in the founder's Claude desktop app, logged in by the founder as a student)
+- Backend `api.jneetai.com/health` → ok; `/api/oneshot` → 401 without login (new code is deployed on Render). Vercel production = `9303da6`.
+- Dashboard: "Aaj ka plan" shows the OneShot suggestion + Revision; OneShot tile shows "11 chapters" in NEET mode (Maths pages correctly hidden in NEET mode).
+- OneShot list (11 in NEET mode) and Electrostatics page open; superscripts/subscripts render.
+- Revision chapter list shows fill-in-the-blank counts (e.g. Rotational Motion 71 MCQs · 8 blanks) — blanks are live.
+- Ask AI page opens (5 of 5 doubts). AI answers NOT tested — needs L3 (OpenAI key on Render).
+- Small polish found: some OneShot cards put a plain fact under the "Galti" label (e.g. "1 C ke liye 6.25 × 10¹⁸ electrons") — relabel in the next OneShot batch.
+- **How Claude checks the live site:** founder keeps the Claude desktop app open on the laptop; Claude uses its built-in browser (separate from Chrome, no personal logins). The founder logs in himself — Claude never types passwords.
+
+### Next session starts here (14 Nov 2026)
+1. List open PRs (CLAUDE.md step 4).
+2. Waiting on founder: L3 OpenAI key on Render, L2/L5/L6/L9, decision on D83 (hide vs delete out-of-syllabus questions; Claude recommends hide), confirm JEE Main 2027 S1 date (app says 22 Jan; some sites say 20 Jan per the 24 Oct bulletin).
+3. Claude's next build order: (a) **B4 payments** — Razorpay web checkout for Free/Pro/Elite + webhook + plan quotas (no payment UI in the TWA app); (b) OneShot batch 2 (Kinematics, Laws of Motion, Work Energy Power, Moving Charges, EMI, AC, Ray Optics, Wave Optics) with `tools/oneshot/`; (c) D83 once decided; (d) A2 report-question button, A4 diagnostic test.
+4. Month-end launch plan + honest earnings estimate were given to the founder on 13 Nov (launch ~1 Dec, beta 50–100 students first, free Sunday live mock as the hook, "JEE Jan Crash Pass" ₹299–499).
 
 ### Issue log (so it never repeats)
 | Date | Issue | Root cause | Fix / rule |
@@ -72,7 +87,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 
 - [x] **L1** Merge PR #2 (captcha + email logo + seed script skips empty files) — merged 11 Nov 2026.
 - [x] **L-seed** Seed after PR #6 — done 12 Nov 2026 from the laptop (`C:\Projects\JNEET-frontend\backend`): `node seed/seedQuestions.js --prune` (3,471 stale listed, 16,439 total) then `--prune --yes` (3,471 deleted, **12,968** left).
-- [ ] **L-seed-2** Seed after PR #10 (127 fill-in-the-blanks): same laptop folder → `git pull origin main` → `node seed/seedQuestions.js --prune` (expect total **13,095**, stale 0) → `--prune --yes`.
+- [x] **L-seed-2** (done 14 Nov 2026 from the laptop: 13,095 / 13,095 seeded, 0 stale — every file count matched the repo) Seed after PR #10 (127 fill-in-the-blanks): same laptop folder → `git pull origin main` → `node seed/seedQuestions.js --prune` (expect total **13,095**, stale 0) → `--prune --yes`.
 - [ ] **L2** Cloudflare Turnstile: site key → Vercel `VITE_TURNSTILE_SITE_KEY` (redeploy); secret → Render `TURNSTILE_SECRET_KEY`. Test login / register / forgot-password.
 - [ ] **L3** OpenAI key + $10 credit on Render (`OPENAI_API_KEY`), confirm model IDs (`gpt-6-luna`, `gpt-6.1-sol`), run `node scripts/ai-eval.mjs` and read the 6 answers. *AI chat does not work without this.*
 - [ ] **L4** `api.jneetai.com` custom domain on Render + DNS at Hostinger (need nameserver screenshot) → Vercel `VITE_API_BASE_URL=https://api.jneetai.com/api` → Render `COOKIE_SAMESITE=lax`.
