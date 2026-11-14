@@ -1,0 +1,3627 @@
+[
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which statement about taxonomic categories is correct?",
+    "options": [
+      "Order is placed below family",
+      "Genus is a group of related species; a family is a group of related genera",
+      "A species can belong to more than one genus",
+      "Class comes between genus and family"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hierarchy: species < genus < family < order < class < phylum/division < kingdom."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which of these is a defining feature of all living organisms, with no exception?",
+    "options": [
+      "Growth",
+      "Reproduction",
+      "Increase in mass",
+      "Metabolism"
+    ],
+    "correctIndex": 3,
+    "explanation": "Growth and reproduction are not defining (non-living things also grow by accumulation; mules and worker bees don't reproduce). Metabolism, cellular organisation and consciousness are defining features."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which feature is common to all members of the kingdom Monera?",
+    "options": [
+      "Presence of a cell wall made of cellulose",
+      "Photosynthetic nutrition",
+      "Multicellular body",
+      "Prokaryotic cell organisation"
+    ],
+    "correctIndex": 3,
+    "explanation": "Monera (bacteria) are prokaryotes; nutrition varies and the wall (when present) is made of peptidoglycan, not cellulose."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which statement about viroids is correct?",
+    "options": [
+      "They are DNA viruses with a lipid envelope",
+      "They are free RNA without a protein coat and cause potato spindle tuber disease",
+      "They were discovered by Ivanowsky",
+      "They contain only protein"
+    ],
+    "correctIndex": 1,
+    "explanation": "T.O. Diener (1971) found viroids: small, free RNA, smaller than viruses."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which pair of organism and cell-wall feature is correctly matched?",
+    "options": [
+      "Mycoplasma — no cell wall, smallest living cells",
+      "Euglena — has a cellulose cell wall",
+      "Archaebacteria — peptidoglycan wall",
+      "Diatoms — cell wall of chitin"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mycoplasma lack a cell wall. Euglena has a protein-rich pellicle; diatom walls are siliceous; archaebacterial walls are not peptidoglycan."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Sac fungi, whose sexual spores are formed endogenously in asci, belong to",
+    "options": [
+      "Basidiomycetes",
+      "Phycomycetes",
+      "Ascomycetes",
+      "Deuteromycetes"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ascospores form inside asci (e.g. Penicillium, Neurospora, yeast)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Lichens are a symbiotic association between",
+    "options": [
+      "bacteria and fungi",
+      "algae and higher plants",
+      "algae and fungi",
+      "fungi and roots of higher plants"
+    ],
+    "correctIndex": 2,
+    "explanation": "The algal partner (phycobiont) makes food; the fungal partner (mycobiont) gives shelter and absorbs water. Mycorrhiza is fungus + root."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In bryophytes, the main plant body is",
+    "options": [
+      "a haploid gametophyte",
+      "a diploid sporophyte",
+      "a triploid endosperm",
+      "always a free-living sporophyte"
+    ],
+    "correctIndex": 0,
+    "explanation": "In mosses and liverworts the dominant plant is the gametophyte; the sporophyte is attached to and depends on it."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which pair of algae and stored food is correctly matched?",
+    "options": [
+      "Brown algae — starch",
+      "Red algae — floridean starch",
+      "Green algae — mannitol",
+      "Red algae — laminarin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Green: starch; brown: laminarin/mannitol; red: floridean starch."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In gymnosperms, the ovules are",
+    "options": [
+      "enclosed in an ovary",
+      "absent",
+      "naked, not enclosed in an ovary",
+      "formed on the gametophyte"
+    ],
+    "correctIndex": 2,
+    "explanation": "Gymno = naked; there is no ovary wall, so no fruit is formed."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Heterospory (two kinds of spores) is seen in",
+    "options": [
+      "Funaria and Marchantia",
+      "Selaginella and Salvinia",
+      "Spirogyra and Chlamydomonas",
+      "Equisetum and Dryopteris"
+    ],
+    "correctIndex": 1,
+    "explanation": "Selaginella and Salvinia produce microspores and megaspores — a step towards the seed habit."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which group shows a pseudocoelom?",
+    "options": [
+      "Platyhelminthes",
+      "Annelida",
+      "Arthropoda",
+      "Aschelminthes (roundworms)"
+    ],
+    "correctIndex": 3,
+    "explanation": "The body cavity is not lined by mesoderm; flatworms are acoelomate, annelids and arthropods are coelomate."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Metameric segmentation is first seen in",
+    "options": [
+      "Platyhelminthes",
+      "Aschelminthes",
+      "Mollusca",
+      "Annelida"
+    ],
+    "correctIndex": 3,
+    "explanation": "Earthworms show true metamerism."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which feature is shared by all chordates at some stage of life?",
+    "options": [
+      "Notochord, dorsal hollow nerve cord and pharyngeal gill slits",
+      "Vertebral column",
+      "Four-chambered heart",
+      "Paired fins"
+    ],
+    "correctIndex": 0,
+    "explanation": "These three, plus a post-anal tail, define chordates; the vertebral column is only in vertebrates."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which pair of animal and excretory structure is correct?",
+    "options": [
+      "Planaria — flame cells",
+      "Cockroach — nephridia",
+      "Earthworm — Malpighian tubules",
+      "Ascaris — green glands"
+    ],
+    "correctIndex": 0,
+    "explanation": "Flame cells: flatworms; nephridia: annelids; Malpighian tubules: insects; green glands: prawn."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water vascular system and radial symmetry in adults are characteristic of",
+    "options": [
+      "Cnidaria",
+      "Ctenophora",
+      "Mollusca",
+      "Echinodermata"
+    ],
+    "correctIndex": 3,
+    "explanation": "Echinoderm adults are radially symmetrical; larvae are bilateral."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which statement about mammals is correct?",
+    "options": [
+      "All mammals are viviparous",
+      "They have a three-chambered heart",
+      "They are poikilothermous",
+      "They have mammary glands, external ears (pinna) and hair on the skin"
+    ],
+    "correctIndex": 3,
+    "explanation": "Platypus lays eggs (oviparous); mammals have a four-chambered heart and are homoiothermous."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the family Fabaceae, the flower shows",
+    "options": [
+      "twisted aestivation and an inferior ovary",
+      "valvate aestivation and an epiphyllous androecium",
+      "vexillary aestivation and a monocarpellary superior ovary",
+      "a bicarpellary syncarpous ovary with axile placentation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fabaceae (pea family): papilionaceous corolla with vexillary aestivation, diadelphous stamens, monocarpellary ovary with marginal placentation."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The edible part of the coconut is",
+    "options": [
+      "the mesocarp",
+      "the endosperm",
+      "the thalamus",
+      "the pericarp"
+    ],
+    "correctIndex": 1,
+    "explanation": "Coconut is a drupe; its white kernel and the 'water' are endosperm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which example of placentation is correct?",
+    "options": [
+      "Marginal — tomato; axile — pea",
+      "Marginal — pea; axile — tomato; free central — Dianthus",
+      "Basal — pea; parietal — lemon",
+      "Free central — mustard; marginal — sunflower"
+    ],
+    "correctIndex": 1,
+    "explanation": "Parietal: mustard, Argemone; basal: sunflower, marigold."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Pneumatophores, which help in respiration, are found in",
+    "options": [
+      "Monstera",
+      "Banyan",
+      "Rhizophora (mangroves)",
+      "Sweet potato"
+    ],
+    "correctIndex": 2,
+    "explanation": "Roots grow up out of the swampy soil to get oxygen."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A transverse section shows scattered vascular bundles with bundle sheath, no secondary growth, and no distinct ground tissue zones. It is",
+    "options": [
+      "a dicot stem",
+      "a dicot root",
+      "a monocot root",
+      "a monocot stem"
+    ],
+    "correctIndex": 3,
+    "explanation": "Scattered, closed bundles surrounded by sclerenchymatous sheath are typical of monocot stems (e.g. maize)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Casparian strips are found in the",
+    "options": [
+      "endodermis of roots",
+      "epidermis of leaves",
+      "pericycle of stems",
+      "phloem parenchyma"
+    ],
+    "correctIndex": 0,
+    "explanation": "Suberin bands on the radial and tangential walls of endodermal cells block apoplastic water flow."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the dorsiventral (dicot) leaf, the palisade parenchyma lies",
+    "options": [
+      "towards the upper (adaxial) epidermis",
+      "towards the lower epidermis",
+      "around the vascular bundle only",
+      "absent; only spongy cells occur"
+    ],
+    "correctIndex": 0,
+    "explanation": "Isobilateral (monocot) leaves lack this differentiation."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which tissue is matched with its location correctly?",
+    "options": [
+      "Squamous epithelium — lining of the stomach",
+      "Cuboidal epithelium — walls of blood vessels",
+      "Ciliated epithelium — inner lining of bronchioles and fallopian tubes",
+      "Columnar epithelium — air sacs of lungs"
+    ],
+    "correctIndex": 2,
+    "explanation": "Squamous: blood vessel walls and alveoli; cuboidal: ducts of glands, PCT; columnar: stomach and intestine lining."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which junction helps to stop substances from leaking across a tissue?",
+    "options": [
+      "Gap junction",
+      "Adhering junction",
+      "Synapse",
+      "Tight junction"
+    ],
+    "correctIndex": 3,
+    "explanation": "Gap junctions connect cytoplasm of cells; adhering junctions hold cells together."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Tendons and ligaments are examples of",
+    "options": [
+      "dense regular connective tissue",
+      "loose connective tissue",
+      "adipose tissue",
+      "specialised connective tissue (cartilage)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Collagen fibres in parallel bundles; tendons join muscle to bone, ligaments bone to bone."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which organelle is NOT bounded by a membrane?",
+    "options": [
+      "Ribosome",
+      "Lysosome",
+      "Mitochondrion",
+      "Golgi apparatus"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ribosomes, centrioles and the cytoskeleton lack membranes."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The 70S ribosome of prokaryotes is made of",
+    "options": [
+      "50S and 30S subunits",
+      "60S and 40S subunits",
+      "50S and 20S subunits",
+      "40S and 30S subunits"
+    ],
+    "correctIndex": 0,
+    "explanation": "80S (eukaryotes) = 60S + 40S; S units are not additive."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Centrioles and basal bodies have a microtubule arrangement of",
+    "options": [
+      "9 + 2",
+      "9 + 0 (nine peripheral triplets)",
+      "9 + 1",
+      "8 + 2"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cilia and flagella axonemes are 9 + 2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which organelle is the site of synthesis of lipids and steroid hormones?",
+    "options": [
+      "Smooth endoplasmic reticulum",
+      "Rough endoplasmic reticulum",
+      "Lysosome",
+      "Nucleolus"
+    ],
+    "correctIndex": 0,
+    "explanation": "SER makes lipids; RER (with ribosomes) makes proteins."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which statement about enzymes and enzyme inhibition is correct?",
+    "options": [
+      "All enzymes are made of RNA",
+      "Competitive inhibitors resemble the substrate and bind to the active site",
+      "Enzymes raise the activation energy",
+      "A non-competitive inhibitor must resemble the substrate"
+    ],
+    "correctIndex": 1,
+    "explanation": "Malonate inhibits succinic dehydrogenase competitively. Enzymes lower activation energy; most are proteins (ribozymes are RNA)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which of these is NOT a polymer?",
+    "options": [
+      "Lecithin",
+      "Cellulose",
+      "Insulin",
+      "DNA"
+    ],
+    "correctIndex": 0,
+    "explanation": "Lecithin is a phospholipid; lipids are not strictly macromolecular polymers. The others are polymers."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The most abundant protein in animals and the most abundant protein in the biosphere are, respectively,",
+    "options": [
+      "collagen and RuBisCO",
+      "RuBisCO and collagen",
+      "haemoglobin and keratin",
+      "insulin and RuBisCO"
+    ],
+    "correctIndex": 0,
+    "explanation": "NCERT: collagen in animal world; RuBisCO in the whole biosphere."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Crossing over occurs during which stage of meiosis?",
+    "options": [
+      "Zygotene of prophase I",
+      "Pachytene of prophase I",
+      "Diplotene of prophase I",
+      "Metaphase II"
+    ],
+    "correctIndex": 1,
+    "explanation": "Recombination nodules appear and crossing over occurs at pachytene; chiasmata become visible at diplotene."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A cell has 20 pg of DNA in G₁. The DNA content after S phase and in each daughter cell after mitosis are",
+    "options": [
+      "20 pg and 10 pg",
+      "40 pg and 40 pg",
+      "40 pg and 20 pg",
+      "20 pg and 20 pg"
+    ],
+    "correctIndex": 2,
+    "explanation": "DNA doubles in S phase (2C → 4C) and is halved between the two daughter cells."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "During which phase does the cell's chromosome number stay the same while DNA content doubles?",
+    "options": [
+      "Anaphase",
+      "S phase",
+      "Telophase",
+      "Cytokinesis"
+    ],
+    "correctIndex": 1,
+    "explanation": "Replication makes sister chromatids; chromosome number does not change."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The terminalisation of chiasmata takes place in",
+    "options": [
+      "pachytene",
+      "leptotene",
+      "zygotene",
+      "diakinesis"
+    ],
+    "correctIndex": 3,
+    "explanation": "Diakinesis is the last stage of prophase I."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the C₄ pathway, the first stable product of CO₂ fixation and the primary acceptor are, respectively,",
+    "options": [
+      "3-phosphoglyceric acid and RuBP",
+      "oxaloacetic acid and phosphoenol pyruvate",
+      "malic acid and pyruvate",
+      "oxaloacetic acid and RuBP"
+    ],
+    "correctIndex": 1,
+    "explanation": "PEP carboxylase in mesophyll cells fixes CO₂ into OAA (4-C)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Kranz anatomy is characteristic of",
+    "options": [
+      "C₄ plants such as maize and sugarcane",
+      "C₃ plants such as wheat",
+      "CAM plants only",
+      "all monocots"
+    ],
+    "correctIndex": 0,
+    "explanation": "Large bundle-sheath cells around the veins carry out the Calvin cycle."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "To make one molecule of glucose, the Calvin cycle requires",
+    "options": [
+      "12 ATP and 18 NADPH",
+      "6 ATP and 6 NADPH",
+      "18 ATP and 12 NADPH",
+      "36 ATP and 12 NADPH"
+    ],
+    "correctIndex": 2,
+    "explanation": "Six turns of the cycle: each turn uses 3 ATP and 2 NADPH."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In cyclic photophosphorylation,",
+    "options": [
+      "only PS I is involved and only ATP is formed",
+      "both PS I and PS II work and NADPH is formed",
+      "oxygen is released",
+      "water is split"
+    ],
+    "correctIndex": 0,
+    "explanation": "Electrons return to PS I; no NADPH and no O₂ are produced."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Photorespiration does NOT occur in C₄ plants mainly because",
+    "options": [
+      "they lack RuBisCO",
+      "they grow only at night",
+      "CO₂ concentration around RuBisCO in bundle-sheath cells is kept high",
+      "their stomata are always closed"
+    ],
+    "correctIndex": 2,
+    "explanation": "High CO₂ makes RuBisCO act as a carboxylase, not an oxygenase."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The net gain of ATP from one glucose in glycolysis is",
+    "options": [
+      "4 ATP",
+      "36 ATP",
+      "8 ATP and no NADH",
+      "2 ATP (with 2 NADH)"
+    ],
+    "correctIndex": 3,
+    "explanation": "4 ATP are made, 2 are used; 2 NADH are also produced."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The respiratory quotient (RQ) of tripalmitin (a fat) is about",
+    "options": [
+      "0.7",
+      "1.0",
+      "4.0",
+      "infinity"
+    ],
+    "correctIndex": 0,
+    "explanation": "2C₅₁H₉₈O₆ + 145O₂ → 102CO₂ + 98H₂O; RQ = 102/145 ≈ 0.7. Carbohydrates: 1.0; anaerobic: infinite."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the Krebs cycle, substrate-level phosphorylation (forming GTP) occurs when",
+    "options": [
+      "citric acid is converted to α-ketoglutaric acid",
+      "malic acid is converted to oxaloacetic acid",
+      "acetyl-CoA joins oxaloacetic acid",
+      "succinyl-CoA is converted to succinic acid"
+    ],
+    "correctIndex": 3,
+    "explanation": "NCERT: the conversion of succinyl-CoA to succinic acid is accompanied by synthesis of one GTP."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the electron transport chain, the final electron acceptor is",
+    "options": [
+      "oxygen",
+      "NAD⁺",
+      "cytochrome c",
+      "FAD"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cytochrome c oxidase (complex IV) passes electrons to O₂, forming water."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The 'foolish seedling' (bakanae) disease of rice led to the discovery of",
+    "options": [
+      "auxins",
+      "cytokinins",
+      "abscisic acid",
+      "gibberellins"
+    ],
+    "correctIndex": 3,
+    "explanation": "E. Kurosawa found the fungus Gibberella fujikuroi secretes the substance responsible."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which plant growth regulator is a gas and promotes fruit ripening?",
+    "options": [
+      "Abscisic acid",
+      "Gibberellin",
+      "Ethylene",
+      "Cytokinin"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ethylene also promotes senescence and abscission."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which hormone is called the stress hormone and causes stomatal closure?",
+    "options": [
+      "Auxin",
+      "Abscisic acid",
+      "Gibberellin",
+      "Ethylene"
+    ],
+    "correctIndex": 1,
+    "explanation": "ABA increases tolerance to stress and induces seed dormancy."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Apical dominance is caused by",
+    "options": [
+      "cytokinin from the root",
+      "ethylene from leaves",
+      "gibberellin from seeds",
+      "auxin from the shoot apex"
+    ],
+    "correctIndex": 3,
+    "explanation": "Removing the tip (decapitation) lets lateral buds grow, as in tea plantations and hedges."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "About what percentage of CO₂ is carried by blood as bicarbonate?",
+    "options": [
+      "20–25%",
+      "7%",
+      "97%",
+      "70%"
+    ],
+    "correctIndex": 3,
+    "explanation": "≈70% as bicarbonate, 20–25% as carbamino-haemoglobin, ≈7% dissolved in plasma."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Vital capacity equals",
+    "options": [
+      "TV + RV",
+      "ERV + RV",
+      "IRV + TV + ERV + RV",
+      "IRV + TV + ERV"
+    ],
+    "correctIndex": 3,
+    "explanation": "Adding RV gives total lung capacity."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The oxygen dissociation curve shifts to the right when",
+    "options": [
+      "pCO₂ falls and pH rises",
+      "pCO₂ rises, H⁺ rises and temperature rises",
+      "temperature falls",
+      "pO₂ rises in the alveoli"
+    ],
+    "correctIndex": 1,
+    "explanation": "Conditions in tissues favour O₂ release (Bohr effect)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a normal ECG, the QRS complex represents",
+    "options": [
+      "depolarisation of the atria",
+      "repolarisation of the ventricles",
+      "repolarisation of the atria",
+      "depolarisation of the ventricles"
+    ],
+    "correctIndex": 3,
+    "explanation": "P wave: atrial depolarisation; T wave: ventricular repolarisation."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The pacemaker of the human heart is the",
+    "options": [
+      "sino-atrial node",
+      "atrio-ventricular node",
+      "bundle of His",
+      "Purkinje fibres"
+    ],
+    "correctIndex": 0,
+    "explanation": "The SAN generates about 70–75 action potentials per minute."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Erythroblastosis foetalis can occur when",
+    "options": [
+      "an Rh-positive mother carries an Rh-negative foetus",
+      "both parents are Rh-negative",
+      "an Rh-negative mother carries an Rh-positive foetus (usually in a second pregnancy)",
+      "the mother has blood group O"
+    ],
+    "correctIndex": 2,
+    "explanation": "Anti-Rh antibodies made after the first delivery can cross the placenta and destroy foetal RBCs."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The duration of one cardiac cycle at 72 beats per minute is about",
+    "options": [
+      "0.5 s",
+      "1.2 s",
+      "0.08 s",
+      "0.8 s"
+    ],
+    "correctIndex": 3,
+    "explanation": "60/72 ≈ 0.8 s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and Their Elimination",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which part of the nephron is impermeable to water?",
+    "options": [
+      "Descending limb of Henle's loop",
+      "Proximal convoluted tubule",
+      "Collecting duct in the presence of ADH",
+      "Ascending limb of Henle's loop"
+    ],
+    "correctIndex": 3,
+    "explanation": "The ascending limb pumps out salts but not water, helping set up the medullary gradient."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and Their Elimination",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The counter-current mechanism in the kidney is maintained by",
+    "options": [
+      "Henle's loop and vasa recta",
+      "the glomerulus and Bowman's capsule",
+      "the PCT and DCT",
+      "the ureter and urethra"
+    ],
+    "correctIndex": 0,
+    "explanation": "It keeps an increasing osmolarity (300 to 1200 mOsm/L) towards the inner medulla."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and Their Elimination",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The glomerular filtration rate in a healthy adult is about",
+    "options": [
+      "1.5 L/min",
+      "12.5 mL/min",
+      "125 mL/min (180 L/day)",
+      "1250 mL/min"
+    ],
+    "correctIndex": 2,
+    "explanation": "Of about 180 L filtered each day, about 1.5 L leaves as urine."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and Their Elimination",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Ammonotelic, ureotelic and uricotelic animals are, respectively, examples of",
+    "options": [
+      "birds, mammals, fishes",
+      "mammals, birds, fishes",
+      "insects, fishes, mammals",
+      "bony fishes, mammals, birds"
+    ],
+    "correctIndex": 3,
+    "explanation": "Aquatic animals excrete ammonia; mammals urea; birds, reptiles and insects uric acid."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "During muscle contraction, which band shortens?",
+    "options": [
+      "A band",
+      "The A band together with the I band",
+      "I band (and the H zone)",
+      "Only the Z line"
+    ],
+    "correctIndex": 2,
+    "explanation": "Thin filaments slide over thick ones; the A band (length of thick filaments) stays the same."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Calcium ions start muscle contraction by binding to",
+    "options": [
+      "myosin heads directly",
+      "the Z line",
+      "ATP",
+      "troponin, which moves tropomyosin off the actin binding sites"
+    ],
+    "correctIndex": 3,
+    "explanation": "This uncovers active sites on actin for myosin cross-bridges."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The joint between atlas and axis vertebrae is a",
+    "options": [
+      "ball and socket joint",
+      "hinge joint",
+      "pivot joint",
+      "saddle joint"
+    ],
+    "correctIndex": 2,
+    "explanation": "Saddle joint: carpal and metacarpal of the thumb; hinge: knee; ball and socket: shoulder."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "During the resting state of a neuron,",
+    "options": [
+      "the inside is positive",
+      "the outside of the axon membrane is positive relative to the inside",
+      "Na⁺ concentration is higher inside",
+      "the membrane is freely permeable to Na⁺"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Na⁺/K⁺ pump (3 Na⁺ out, 2 K⁺ in) and leaky K⁺ channels give a resting potential of about −70 mV inside."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Nerve impulses pass fastest in",
+    "options": [
+      "myelinated fibres, by saltatory conduction between nodes of Ranvier",
+      "non-myelinated fibres",
+      "fibres with no nodes",
+      "dendrites only"
+    ],
+    "correctIndex": 0,
+    "explanation": "The impulse jumps from node to node."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which hormone pair is antagonistic in regulating blood glucose?",
+    "options": [
+      "Oxytocin and vasopressin",
+      "Insulin and glucagon",
+      "Thyroxine and calcitonin",
+      "FSH and LH"
+    ],
+    "correctIndex": 1,
+    "explanation": "Insulin lowers glucose (hypoglycaemic); glucagon raises it (hyperglycaemic)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Parathyroid hormone",
+    "options": [
+      "raises blood calcium levels",
+      "lowers blood calcium levels",
+      "lowers blood glucose",
+      "controls the sleep–wake cycle"
+    ],
+    "correctIndex": 0,
+    "explanation": "PTH is hypercalcaemic; thyrocalcitonin lowers calcium."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which hormone acts through an intracellular (nuclear) receptor?",
+    "options": [
+      "Insulin",
+      "Glucagon",
+      "Adrenaline",
+      "Cortisol"
+    ],
+    "correctIndex": 3,
+    "explanation": "Steroid and iodothyronine hormones enter cells; protein hormones act through membrane receptors and second messengers."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a typical angiosperm embryo sac, the number of cells and nuclei are",
+    "options": [
+      "8 cells and 8 nuclei",
+      "7 cells and 8 nuclei",
+      "7 cells and 7 nuclei",
+      "8 cells and 7 nuclei"
+    ],
+    "correctIndex": 1,
+    "explanation": "Egg apparatus (3) + antipodals (3) + central cell with 2 polar nuclei."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The ploidy of the nucellus, endosperm and embryo in angiosperms is, respectively,",
+    "options": [
+      "n, 3n and 2n",
+      "2n, 2n and 3n",
+      "2n, 3n and 2n",
+      "n, 2n and 2n"
+    ],
+    "correctIndex": 2,
+    "explanation": "Nucellus is maternal tissue (2n); endosperm from triple fusion (3n); embryo from zygote (2n)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Geitonogamy is",
+    "options": [
+      "transfer of pollen within the same flower",
+      "transfer of pollen to the stigma of another flower on the same plant",
+      "transfer of pollen to a flower of a different plant",
+      "fertilisation without pollination"
+    ],
+    "correctIndex": 1,
+    "explanation": "It is functionally cross-pollination but genetically like self-pollination."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A fruit that develops without fertilisation is called",
+    "options": [
+      "a false fruit",
+      "apomictic",
+      "polyembryonic",
+      "parthenocarpic"
+    ],
+    "correctIndex": 3,
+    "explanation": "Banana is an example; it can be induced by growth hormones."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which cells of the testis secrete androgens?",
+    "options": [
+      "Sertoli cells",
+      "Leydig (interstitial) cells",
+      "Spermatogonia",
+      "Spermatids"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sertoli cells nourish developing sperm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Ovulation in a 28-day menstrual cycle occurs around the 14th day due to",
+    "options": [
+      "a fall in FSH",
+      "a rise in progesterone",
+      "an LH surge",
+      "a fall in oestrogen"
+    ],
+    "correctIndex": 2,
+    "explanation": "High oestrogen triggers the mid-cycle LH (and FSH) surge that ruptures the Graafian follicle."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Implantation of the human blastocyst normally occurs in the",
+    "options": [
+      "ampulla of the fallopian tube",
+      "endometrium of the uterus",
+      "cervix",
+      "isthmus of the fallopian tube"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fertilisation occurs at the ampullary–isthmic junction; the blastocyst implants in the uterine wall."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "One primary oocyte forms how many functional ova at the end of oogenesis?",
+    "options": [
+      "Four",
+      "Two",
+      "Eight",
+      "One"
+    ],
+    "correctIndex": 3,
+    "explanation": "The divisions are unequal; polar bodies degenerate."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Copper-releasing IUDs prevent conception mainly by",
+    "options": [
+      "blocking ovulation completely",
+      "suppressing sperm motility and fertilising capacity",
+      "killing the zygote by heat",
+      "changing the pH of the vagina to alkaline"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cu-T and Multiload 375 release Cu ions."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which method allows the embryo to be transferred into the fallopian tube when it has up to 8 blastomeres?",
+    "options": [
+      "IUT",
+      "GIFT",
+      "ZIFT",
+      "ICSI"
+    ],
+    "correctIndex": 2,
+    "explanation": "ZIFT: zygote/early embryo (up to 8 cells) into the fallopian tube; IUT: embryo with more than 8 cells into the uterus."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a dihybrid cross, the F₂ phenotypic ratio 9 : 3 : 3 : 1 shows",
+    "options": [
+      "independent assortment of the two genes",
+      "complete linkage",
+      "incomplete dominance",
+      "codominance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two genes on different chromosomes assort independently."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A test cross of a plant with the dominant phenotype gives 1 : 1 offspring. The plant was",
+    "options": [
+      "homozygous dominant",
+      "heterozygous",
+      "homozygous recessive",
+      "polyploid"
+    ],
+    "correctIndex": 1,
+    "explanation": "Crossing with the homozygous recessive gives all dominant if the plant is homozygous, 1 : 1 if heterozygous."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A man of blood group A and a woman of blood group B have a child of blood group O. The genotypes of the parents are",
+    "options": [
+      "IᴬIᴬ and IᴮIᴮ",
+      "IᴬI° and IᴮI°",
+      "IᴬIᴮ and I°I°",
+      "IᴬIᴬ and IᴮI°"
+    ],
+    "correctIndex": 1,
+    "explanation": "An O child (I°I°) needs one I° from each parent."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In snapdragon, a cross between red (RR) and white (rr) flowered plants gives pink F₁. The F₂ phenotypic ratio is",
+    "options": [
+      "3 red : 1 white",
+      "9 : 3 : 3 : 1",
+      "1 red : 2 pink : 1 white",
+      "1 red : 1 white"
+    ],
+    "correctIndex": 2,
+    "explanation": "Incomplete dominance: genotypic and phenotypic ratios are the same."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which disorder is caused by trisomy of chromosome 21?",
+    "options": [
+      "Down's syndrome",
+      "Turner's syndrome",
+      "Klinefelter's syndrome",
+      "Phenylketonuria"
+    ],
+    "correctIndex": 0,
+    "explanation": "Turner's: 45, X0; Klinefelter's: 47, XXY; PKU is an autosomal recessive Mendelian disorder."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Sex of the offspring in birds is decided by",
+    "options": [
+      "the male, which is ZW",
+      "the male, which is XY",
+      "the temperature of incubation",
+      "the female, which is ZW (heterogametic)"
+    ],
+    "correctIndex": 3,
+    "explanation": "In birds the male is ZZ and the female ZW."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If a double-stranded DNA has 20% cytosine, the percentage of adenine is",
+    "options": [
+      "20%",
+      "40%",
+      "30%",
+      "60%"
+    ],
+    "correctIndex": 2,
+    "explanation": "C = G = 20% → A + T = 60% → A = 30% (Chargaff's rule)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In E. coli, the lac operon is switched ON when",
+    "options": [
+      "glucose binds the operator",
+      "lactose (allolactose) binds the repressor and inactivates it",
+      "the repressor binds the operator",
+      "the i gene is deleted only"
+    ],
+    "correctIndex": 1,
+    "explanation": "The inducer prevents the repressor from binding the operator, so RNA polymerase transcribes z, y and a genes."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "During DNA replication, the lagging strand is synthesised",
+    "options": [
+      "discontinuously as Okazaki fragments joined by DNA ligase",
+      "continuously in the 3′→5′ direction",
+      "only by RNA polymerase",
+      "without any primer"
+    ],
+    "correctIndex": 0,
+    "explanation": "DNA polymerase works only 5′→3′, so one strand is made in pieces."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which statement about the genetic code is correct?",
+    "options": [
+      "It is overlapping",
+      "Each amino acid has exactly one codon",
+      "AUG codes for tryptophan",
+      "It is degenerate, unambiguous and nearly universal"
+    ],
+    "correctIndex": 3,
+    "explanation": "AUG codes methionine (and is the start codon); UAA, UAG, UGA are stop codons."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In eukaryotes, the removal of introns and joining of exons is called",
+    "options": [
+      "capping",
+      "tailing",
+      "splicing",
+      "translation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Capping adds methyl-guanosine at the 5′ end; tailing adds poly-A at the 3′ end."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "VNTRs used in DNA fingerprinting belong to",
+    "options": [
+      "exons of structural genes",
+      "satellite (repetitive) DNA",
+      "mRNA",
+      "ribosomal proteins"
+    ],
+    "correctIndex": 1,
+    "explanation": "Variable number tandem repeats differ greatly between individuals."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The wings of a butterfly and of a bird are",
+    "options": [
+      "analogous organs showing convergent evolution",
+      "homologous organs showing divergent evolution",
+      "vestigial organs",
+      "atavistic organs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Same function, different origin."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Industrial melanism in peppered moths in England is an example of",
+    "options": [
+      "mutation pressure alone",
+      "genetic drift",
+      "Lamarckism",
+      "natural selection"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dark moths survived better on soot-covered trees, so their frequency rose."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which factor does NOT disturb Hardy–Weinberg equilibrium?",
+    "options": [
+      "Gene flow",
+      "Genetic drift",
+      "Natural selection",
+      "Random mating"
+    ],
+    "correctIndex": 3,
+    "explanation": "Gene migration, drift, mutation, recombination and selection change allele frequencies."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If the frequency of the recessive allele in a population in Hardy–Weinberg equilibrium is 0.3, the frequency of heterozygotes is",
+    "options": [
+      "0.09",
+      "0.49",
+      "0.42",
+      "0.21"
+    ],
+    "correctIndex": 2,
+    "explanation": "q = 0.3, p = 0.7; 2pq = 2 × 0.7 × 0.3 = 0.42."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The infective stage of Plasmodium that enters the human body through the bite of a female Anopheles is the",
+    "options": [
+      "merozoite",
+      "gametocyte",
+      "sporozoite",
+      "trophozoite"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sporozoites go to the liver, then RBCs; gametocytes are picked up by the mosquito."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which disease is caused by a bacterium?",
+    "options": [
+      "Malaria",
+      "Common cold",
+      "Typhoid",
+      "Ringworm"
+    ],
+    "correctIndex": 2,
+    "explanation": "Typhoid: Salmonella typhi; malaria: Plasmodium (protozoan); common cold: rhinovirus; ringworm: fungi."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "HIV mainly attacks",
+    "options": [
+      "B-lymphocytes",
+      "RBCs",
+      "helper T-lymphocytes",
+      "platelets"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fall in helper T-cells weakens immunity, leading to opportunistic infections (AIDS)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Antibodies are produced by",
+    "options": [
+      "T-lymphocytes",
+      "neutrophils",
+      "RBCs",
+      "B-lymphocytes (plasma cells)"
+    ],
+    "correctIndex": 3,
+    "explanation": "B-cells make antibodies (humoral immunity); T-cells give cell-mediated immunity."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Colostrum gives the newborn passive immunity mainly through the antibody",
+    "options": [
+      "IgE",
+      "IgG only through the placenta",
+      "IgM",
+      "IgA"
+    ],
+    "correctIndex": 3,
+    "explanation": "Colostrum is rich in IgA."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The bacterium that converts milk into curd is",
+    "options": [
+      "Saccharomyces",
+      "Rhizobium",
+      "Streptococcus pneumoniae",
+      "Lactobacillus (lactic acid bacteria)"
+    ],
+    "correctIndex": 3,
+    "explanation": "LAB also increase vitamin B₁₂ in curd."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Statins, used to lower blood cholesterol, are obtained from the yeast",
+    "options": [
+      "Trichoderma polysporum",
+      "Streptococcus",
+      "Aspergillus niger",
+      "Monascus purpureus"
+    ],
+    "correctIndex": 3,
+    "explanation": "Statins inhibit an enzyme of cholesterol synthesis; Trichoderma gives cyclosporin A."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a sewage treatment plant, flocs are",
+    "options": [
+      "undigested organic matter",
+      "only protozoa",
+      "clumps of algae",
+      "masses of bacteria associated with fungal filaments"
+    ],
+    "correctIndex": 3,
+    "explanation": "Flocs digest organic matter and reduce the BOD during secondary treatment."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "EcoRI cuts DNA between",
+    "options": [
+      "A and T in GAATTC",
+      "C and G in GGATCC",
+      "G and A in the sequence 5′-GAATTC-3′",
+      "any two bases at random"
+    ],
+    "correctIndex": 2,
+    "explanation": "It leaves sticky ends."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In pBR322, insertional inactivation of the tetracycline resistance gene means recombinant colonies will",
+    "options": [
+      "grow on ampicillin but not on tetracycline",
+      "grow on tetracycline but not on ampicillin",
+      "grow on both antibiotics",
+      "not grow on either antibiotic"
+    ],
+    "correctIndex": 0,
+    "explanation": "The foreign DNA in tetʳ destroys tetracycline resistance; ampʳ still works."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In gel electrophoresis, DNA fragments move towards the",
+    "options": [
+      "cathode, larger fragments moving farther",
+      "anode, larger fragments moving farther",
+      "cathode, smaller fragments moving farther",
+      "anode, smaller fragments moving farther"
+    ],
+    "correctIndex": 3,
+    "explanation": "DNA is negatively charged; agarose acts as a sieve."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The thermostable DNA polymerase used in PCR is obtained from",
+    "options": [
+      "Escherichia coli",
+      "Agrobacterium tumefaciens",
+      "Thermus aquaticus",
+      "Bacillus thuringiensis"
+    ],
+    "correctIndex": 2,
+    "explanation": "Taq polymerase works at high temperatures used in PCR cycles."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The cry genes used to make Bt cotton come from",
+    "options": [
+      "Agrobacterium tumefaciens",
+      "Meloidogyne incognita",
+      "Bacillus thuringiensis",
+      "Thermus aquaticus"
+    ],
+    "correctIndex": 2,
+    "explanation": "Bt toxin protein is activated in the alkaline gut of insects and kills them."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "RNA interference was used to protect tobacco plants against",
+    "options": [
+      "the cotton bollworm",
+      "the nematode Meloidogyne incognita",
+      "the fungus Puccinia",
+      "tobacco mosaic virus"
+    ],
+    "correctIndex": 1,
+    "explanation": "dsRNA silences a specific mRNA of the nematode."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Genetically engineered human insulin (Humulin) is made by producing",
+    "options": [
+      "pro-insulin with the C-peptide in yeast only",
+      "insulin from pig pancreas",
+      "A and B chains separately and joining them with disulphide bonds",
+      "only the B chain"
+    ],
+    "correctIndex": 2,
+    "explanation": "Eli Lilly (1983) made the two chains in E. coli and linked them."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The first clinical gene therapy (1990) was given to a 4-year-old girl with deficiency of",
+    "options": [
+      "insulin",
+      "adenosine deaminase (ADA)",
+      "growth hormone",
+      "factor VIII"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lymphocytes with a functional ADA gene were returned to the patient."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The logistic growth equation dN/dt = rN[(K − N)/K] describes",
+    "options": [
+      "growth that slows down as the population approaches the carrying capacity",
+      "unlimited exponential growth",
+      "a population that never changes",
+      "growth independent of resources"
+    ],
+    "correctIndex": 0,
+    "explanation": "Verhulst–Pearl logistic growth gives a sigmoid curve."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An interaction in which one species benefits and the other is neither harmed nor benefited is",
+    "options": [
+      "commensalism",
+      "amensalism",
+      "mutualism",
+      "parasitism"
+    ],
+    "correctIndex": 0,
+    "explanation": "Example: orchid growing on a mango branch; barnacles on a whale."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which population interaction is correctly paired?",
+    "options": [
+      "Cuscuta on hedge plants — commensalism",
+      "Lichen — mutualism",
+      "Cattle egret and grazing cattle — parasitism",
+      "Orchid on mango — predation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cuscuta is a parasite; cattle egret–cattle and orchid–mango are commensalism."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The 10% law of energy transfer between trophic levels was given by",
+    "options": [
+      "Odum",
+      "Gause",
+      "Lindeman",
+      "Tilman"
+    ],
+    "correctIndex": 2,
+    "explanation": "Only about 10% of energy passes to the next trophic level."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which ecological pyramid is always upright?",
+    "options": [
+      "Pyramid of energy",
+      "Pyramid of numbers",
+      "Pyramid of biomass",
+      "Pyramid of biomass in the sea"
+    ],
+    "correctIndex": 0,
+    "explanation": "Energy is lost at each level, so it can never be inverted."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Net primary productivity equals",
+    "options": [
+      "gross primary productivity plus respiration",
+      "secondary productivity",
+      "gross primary productivity minus respiration losses",
+      "total biomass of consumers"
+    ],
+    "correctIndex": 2,
+    "explanation": "NPP = GPP − R; it is the biomass available to consumers."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which pair is an example of ex situ conservation?",
+    "options": [
+      "Seed banks and zoological parks",
+      "National parks and sacred groves",
+      "Biosphere reserves and wildlife sanctuaries",
+      "Biodiversity hotspots and Ramsar sites"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ex situ = off-site; in situ protects species in their natural habitat."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "According to Alexander von Humboldt, on a log–log scale species richness and area show",
+    "options": [
+      "an exponential curve",
+      "no relationship",
+      "a bell-shaped curve",
+      "a straight-line relationship"
+    ],
+    "correctIndex": 3,
+    "explanation": "log S = log C + Z log A; Z is usually 0.1–0.2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The 'evil quartet' of causes of biodiversity loss includes habitat loss, over-exploitation, alien species invasion and",
+    "options": [
+      "afforestation",
+      "sacred groves",
+      "seed banks",
+      "co-extinctions"
+    ],
+    "correctIndex": 3,
+    "explanation": "When a host goes extinct, its unique parasites go with it."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The 'transforming principle' was discovered (1928) using Streptococcus pneumoniae and mice by",
+    "options": [
+      "Hershey and Chase",
+      "Meselson and Stahl",
+      "Avery, MacLeod and McCarty",
+      "Frederick Griffith"
+    ],
+    "correctIndex": 3,
+    "explanation": "Heat-killed S strain transformed live R strain into virulent bacteria."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The biochemical nature of the transforming principle was shown to be DNA by",
+    "options": [
+      "Griffith",
+      "Watson and Crick",
+      "Jacob and Monod",
+      "Avery, MacLeod and McCarty"
+    ],
+    "correctIndex": 3,
+    "explanation": "Protein- and RNA-digesting enzymes did not stop transformation; DNase did."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Unequivocal proof that DNA is the genetic material came from bacteriophage experiments with radioactive ³²P and ³⁵S by",
+    "options": [
+      "Meselson and Stahl",
+      "Hershey and Chase",
+      "Griffith",
+      "Taylor"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hershey and Chase (1952): only ³²P-labelled DNA entered the bacteria."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Semi-conservative replication of DNA was proved in E. coli using ¹⁵N by",
+    "options": [
+      "Hershey and Chase",
+      "Watson and Crick",
+      "Kornberg",
+      "Meselson and Stahl"
+    ],
+    "correctIndex": 3,
+    "explanation": "Meselson and Stahl (1958) used CsCl density gradient centrifugation."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Semi-conservative replication of chromosomes was shown in Vicia faba using radioactive thymidine by",
+    "options": [
+      "Meselson and Stahl",
+      "Griffith",
+      "Taylor and colleagues",
+      "Beadle and Tatum"
+    ],
+    "correctIndex": 2,
+    "explanation": "Taylor (1958) in faba beans."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The double-helix model of DNA (1953) was proposed by Watson and Crick using the X-ray diffraction data of",
+    "options": [
+      "Erwin Chargaff",
+      "Maurice Wilkins and Rosalind Franklin",
+      "Friedrich Meischer",
+      "Linus Pauling"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chargaff's base ratios were also used."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "DNA was first identified (as 'nuclein') in 1869 by",
+    "options": [
+      "Gregor Mendel",
+      "Erwin Chargaff",
+      "Friedrich Meischer",
+      "Rosalind Franklin"
+    ],
+    "correctIndex": 2,
+    "explanation": "Meischer isolated an acidic substance from the nucleus."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The lac operon model of gene regulation was given by",
+    "options": [
+      "Beadle and Tatum",
+      "Watson and Crick",
+      "Nirenberg and Khorana",
+      "Jacob and Monod"
+    ],
+    "correctIndex": 3,
+    "explanation": "Francois Jacob and Jacques Monod first described a transcriptionally regulated system."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The suggestion that the genetic code must be a triplet came from the physicist",
+    "options": [
+      "Har Gobind Khorana",
+      "George Gamow",
+      "Marshall Nirenberg",
+      "Severo Ochoa"
+    ],
+    "correctIndex": 1,
+    "explanation": "Gamow argued 4 bases must code 20 amino acids, so codons need at least 3 bases."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The chemical method to synthesise RNA molecules with defined combinations of bases, which helped decipher the code, was developed by",
+    "options": [
+      "Marshall Nirenberg",
+      "George Gamow",
+      "Severo Ochoa",
+      "Har Gobind Khorana"
+    ],
+    "correctIndex": 3,
+    "explanation": "Nirenberg's cell-free system and Ochoa's enzyme (polynucleotide phosphorylase) also helped."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The technique of DNA fingerprinting was initially developed by",
+    "options": [
+      "Kary Mullis",
+      "Stanley Cohen",
+      "Herbert Boyer",
+      "Alec Jeffreys"
+    ],
+    "correctIndex": 3,
+    "explanation": "Jeffreys used VNTR probes."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Mendel's work was independently rediscovered in 1900 by",
+    "options": [
+      "Sutton and Boveri",
+      "Morgan and Sturtevant",
+      "Bateson and Punnett",
+      "de Vries, Correns and von Tschermak"
+    ],
+    "correctIndex": 3,
+    "explanation": "Their rediscovery started modern genetics."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The chromosomal theory of inheritance was proposed by",
+    "options": [
+      "Morgan",
+      "Sutton and Boveri",
+      "Mendel",
+      "Bateson"
+    ],
+    "correctIndex": 1,
+    "explanation": "They linked chromosome movement in meiosis to Mendel's factors."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Linkage and recombination were demonstrated experimentally using Drosophila by",
+    "options": [
+      "Gregor Mendel",
+      "Hugo de Vries",
+      "Henking",
+      "Thomas Hunt Morgan"
+    ],
+    "correctIndex": 3,
+    "explanation": "Morgan coined the term linkage."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Recombination frequency was first used to map the positions of genes on a chromosome by",
+    "options": [
+      "T.H. Morgan",
+      "Alfred Sturtevant",
+      "Sutton",
+      "Henking"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sturtevant, Morgan's student."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A structure called the 'X body' was first seen in insect spermatogenesis (1891) by",
+    "options": [
+      "Morgan",
+      "Mendel",
+      "Sutton",
+      "Henking"
+    ],
+    "correctIndex": 3,
+    "explanation": "It was later named the X chromosome."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The mutation theory of evolution, based on work with evening primrose (Oenothera), was given by",
+    "options": [
+      "Charles Darwin",
+      "Hugo de Vries",
+      "Jean-Baptiste Lamarck",
+      "Ernst Mayr"
+    ],
+    "correctIndex": 1,
+    "explanation": "He called large sudden variations 'saltation'."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Who reached conclusions on natural selection similar to Darwin's while working in the Malay Archipelago?",
+    "options": [
+      "Hugo de Vries",
+      "Alfred Wallace",
+      "Lamarck",
+      "Oparin"
+    ],
+    "correctIndex": 1,
+    "explanation": "Wallace and Darwin presented their ideas together."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The idea that evolution occurs by use and disuse of organs (e.g. the giraffe's neck) was given by",
+    "options": [
+      "Darwin",
+      "Lamarck",
+      "de Vries",
+      "Wallace"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inheritance of acquired characters is now not accepted."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The experiment showing that amino acids can form from CH₄, H₂, NH₃ and water vapour under electric discharge (1953) was done by",
+    "options": [
+      "Louis Pasteur",
+      "S.L. Miller",
+      "Oparin",
+      "Haldane"
+    ],
+    "correctIndex": 1,
+    "explanation": "It supported the chemical origin of life proposed by Oparin and Haldane."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The view that life comes only from pre-existing life was demonstrated with sterilised flasks by",
+    "options": [
+      "S.L. Miller",
+      "Oparin",
+      "Darwin",
+      "Louis Pasteur"
+    ],
+    "correctIndex": 3,
+    "explanation": "Life did not arise in pre-sterilised flasks with killed yeast."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The statement 'Omnis cellula-e cellula' (new cells arise from pre-existing cells) was given by",
+    "options": [
+      "Schleiden",
+      "Schwann",
+      "Robert Brown",
+      "Rudolf Virchow"
+    ],
+    "correctIndex": 3,
+    "explanation": "Virchow (1855) modified the cell theory of Schleiden and Schwann."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The nucleus was first described (1831) by",
+    "options": [
+      "Camillo Golgi",
+      "Robert Brown",
+      "George Palade",
+      "Anton von Leeuwenhoek"
+    ],
+    "correctIndex": 1,
+    "explanation": "Brown observed it in orchid cells."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The Golgi apparatus was first observed (1898) by",
+    "options": [
+      "George Palade",
+      "Camillo Golgi",
+      "Robert Brown",
+      "Rudolf Virchow"
+    ],
+    "correctIndex": 1,
+    "explanation": "He saw densely stained reticular structures near the nucleus."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Ribosomes were first observed under the electron microscope as dense particles (1953) by",
+    "options": [
+      "Camillo Golgi",
+      "Robert Brown",
+      "Singer",
+      "George Palade"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ribosomes are made of RNA and proteins."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The five-kingdom classification was proposed (1969) by",
+    "options": [
+      "R.H. Whittaker",
+      "Linnaeus",
+      "Ernst Mayr",
+      "Aristotle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Monera, Protista, Fungi, Plantae and Animalia."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The term 'contagium vivum fluidum' (infectious living fluid) for viruses was given by",
+    "options": [
+      "D.J. Ivanowsky",
+      "W.M. Stanley",
+      "M.W. Beijerinck",
+      "T.O. Diener"
+    ],
+    "correctIndex": 2,
+    "explanation": "Beijerinck (1898) found extracts of infected tobacco remained infectious after filtering."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biological Classification",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Viruses were shown to be crystallisable and mostly made of proteins (1935) by",
+    "options": [
+      "W.M. Stanley",
+      "Beijerinck",
+      "Ivanowsky",
+      "Pasteur"
+    ],
+    "correctIndex": 0,
+    "explanation": "Crystals of tobacco mosaic virus."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The biologist called 'the Darwin of the 20th century', who proposed the biological species concept, is",
+    "options": [
+      "R.H. Whittaker",
+      "Carolus Linnaeus",
+      "Ernst Mayr",
+      "Hugo de Vries"
+    ],
+    "correctIndex": 2,
+    "explanation": "NCERT mentions Mayr in The Living World."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Auxin was first isolated from the coleoptile tips of oat seedlings by",
+    "options": [
+      "E. Kurosawa",
+      "Skoog and Miller",
+      "H.H. Cousins",
+      "F.W. Went"
+    ],
+    "correctIndex": 3,
+    "explanation": "Earlier, Charles and Francis Darwin had observed phototropism in canary grass coleoptiles."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Kinetin, the first cytokinin, was identified from autoclaved herring sperm DNA by",
+    "options": [
+      "Skoog and Miller",
+      "F.W. Went",
+      "Kurosawa",
+      "Cousins"
+    ],
+    "correctIndex": 0,
+    "explanation": "They also showed the auxin–cytokinin ratio controls shoot and root formation in culture."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Growth and Development",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The ripening effect of gases from ripened oranges on bananas (ethylene) was first noted by",
+    "options": [
+      "F.W. Went",
+      "Skoog",
+      "Kurosawa",
+      "H.H. Cousins"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cousins (1910)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Using a bell jar with a candle and a mouse, the role of plants in restoring air was shown (1770) by",
+    "options": [
+      "Jan Ingenhousz",
+      "Julius von Sachs",
+      "T.W. Engelmann",
+      "Joseph Priestley"
+    ],
+    "correctIndex": 3,
+    "explanation": "Priestley's 'mint plant' experiment."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "That sunlight is essential for plants to purify air was shown by",
+    "options": [
+      "Joseph Priestley",
+      "Julius von Sachs",
+      "Cornelius van Niel",
+      "Jan Ingenhousz"
+    ],
+    "correctIndex": 3,
+    "explanation": "He used an aquatic plant in bright light and darkness."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The first action spectrum of photosynthesis was described using Cladophora and aerobic bacteria by",
+    "options": [
+      "Julius von Sachs",
+      "T.W. Engelmann",
+      "Melvin Calvin",
+      "Hatch and Slack"
+    ],
+    "correctIndex": 1,
+    "explanation": "Bacteria gathered mainly in blue and red light regions."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Using purple and green bacteria, it was shown that the O₂ evolved by green plants comes from water, not CO₂, by",
+    "options": [
+      "Cornelius van Niel",
+      "Jan Ingenhousz",
+      "Melvin Calvin",
+      "Joseph Priestley"
+    ],
+    "correctIndex": 0,
+    "explanation": "Generalised equation: 2H₂A + CO₂ → 2A + CH₂O + H₂O."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The path of carbon in the dark reactions was traced using radioactive ¹⁴C by",
+    "options": [
+      "Hatch and Slack",
+      "Melvin Calvin",
+      "Blackman",
+      "van Niel"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hence the Calvin cycle (C₃ cycle)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Who is known as the Father of Ecology in India?",
+    "options": [
+      "Salim Ali",
+      "M.S. Swaminathan",
+      "Birbal Sahni",
+      "Ramdeo Misra"
+    ],
+    "correctIndex": 3,
+    "explanation": "NCERT notes his contribution to ecology research in India."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The principle that two closely related species competing for the same resources cannot coexist indefinitely was given by",
+    "options": [
+      "Gause",
+      "MacArthur",
+      "Connell",
+      "Tilman"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gause's competitive exclusion principle."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The 'rivet popper hypothesis' to explain the importance of species in an ecosystem was given by",
+    "options": [
+      "David Tilman",
+      "Robert May",
+      "Alexander von Humboldt",
+      "Paul Ehrlich"
+    ],
+    "correctIndex": 3,
+    "explanation": "Losing species is like losing rivets from an aeroplane wing."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Long-term experiments showing that plots with more species have less year-to-year variation in biomass were done by",
+    "options": [
+      "David Tilman",
+      "Paul Ehrlich",
+      "Robert May",
+      "Gause"
+    ],
+    "correctIndex": 0,
+    "explanation": "Increased diversity contributes to higher productivity and stability."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Penicillin was discovered by Alexander Fleming; its full potential as an antibiotic was established by",
+    "options": [
+      "Ernest Chain and Howard Florey",
+      "Louis Pasteur",
+      "Edward Jenner",
+      "Herbert Boyer"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fleming, Chain and Florey shared the 1945 Nobel Prize."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The first recombinant DNA was constructed (1972) by linking an antibiotic resistance gene to a plasmid of Salmonella typhimurium by",
+    "options": [
+      "Watson and Crick",
+      "Alec Jeffreys",
+      "Kary Mullis",
+      "Stanley Cohen and Herbert Boyer"
+    ],
+    "correctIndex": 3,
+    "explanation": "This marked the birth of genetic engineering."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which is an example of a stem modified into a tendril?",
+    "options": [
+      "Pea",
+      "Onion",
+      "Ginger",
+      "Cucumber (cucurbits)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Stem tendrils in cucurbits and grapevine; leaf tendrils in pea."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which plant has a phylloclade (flattened green stem)?",
+    "options": [
+      "Bougainvillea",
+      "Citrus",
+      "Opuntia",
+      "Potato"
+    ],
+    "correctIndex": 2,
+    "explanation": "Bougainvillea and Citrus have thorns; potato has a tuber."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Morphology of Flowering Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which plant has an underground stem that stores food as a tuber?",
+    "options": [
+      "Potato",
+      "Sweet potato",
+      "Carrot",
+      "Turnip"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sweet potato, carrot and turnip are modified roots."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which of these is a C₄ plant?",
+    "options": [
+      "Wheat",
+      "Sugarcane",
+      "Rice",
+      "Potato"
+    ],
+    "correctIndex": 1,
+    "explanation": "Maize, sugarcane and sorghum are common C₄ plants."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which is an example of water pollination (hydrophily)?",
+    "options": [
+      "Maize",
+      "Vallisneria",
+      "Salvia",
+      "Sunflower"
+    ],
+    "correctIndex": 1,
+    "explanation": "Vallisneria and Hydrilla are water-pollinated; maize is wind-pollinated."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Sexual Reproduction in Flowering Plants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which plant shows apomixis (seeds without fertilisation)?",
+    "options": [
+      "Pea",
+      "Mustard",
+      "Wheat",
+      "Some grasses and members of Asteraceae"
+    ],
+    "correctIndex": 3,
+    "explanation": "NCERT: apomixis occurs in a few species of Asteraceae and grasses."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Bioluminescence is well marked in",
+    "options": [
+      "sponges",
+      "flatworms",
+      "roundworms",
+      "ctenophores (comb jellies)"
+    ],
+    "correctIndex": 3,
+    "explanation": "NCERT: bioluminescence (emission of light) is well marked in ctenophores such as Pleurobrachia."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Animal Kingdom",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which of these is a jawless vertebrate (cyclostome)?",
+    "options": [
+      "Scoliodon",
+      "Labeo",
+      "Petromyzon (lamprey)",
+      "Hippocampus"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cyclostomes have a sucking, circular mouth without jaws."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which pair is an example of homologous organs?",
+    "options": [
+      "Forelimbs of whale, bat and cheetah",
+      "Wings of butterfly and bird",
+      "Eye of octopus and mammal",
+      "Flippers of penguin and dolphin"
+    ],
+    "correctIndex": 0,
+    "explanation": "Same basic structure, different functions — divergent evolution."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Australian marsupials evolving from a common ancestor into many forms is an example of",
+    "options": [
+      "convergent evolution only",
+      "genetic drift",
+      "adaptive radiation",
+      "industrial melanism"
+    ],
+    "correctIndex": 2,
+    "explanation": "Darwin's finches are another example."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which is an example of brood parasitism?",
+    "options": [
+      "Orchid on a mango tree",
+      "Clownfish and sea anemone",
+      "Lichen on a rock",
+      "Cuckoo laying eggs in a crow's nest"
+    ],
+    "correctIndex": 3,
+    "explanation": "The host bird raises the parasite's young."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which microbe is used commercially to produce citric acid?",
+    "options": [
+      "Acetobacter aceti",
+      "Aspergillus niger",
+      "Clostridium butylicum",
+      "Lactobacillus"
+    ],
+    "correctIndex": 1,
+    "explanation": "Acetobacter → acetic acid; Clostridium → butyric acid; Lactobacillus → lactic acid."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which organism is used as a biofertiliser in paddy fields?",
+    "options": [
+      "Trichoderma",
+      "Baculovirus",
+      "Cyanobacteria such as Anabaena and Nostoc",
+      "Methanobacterium"
+    ],
+    "correctIndex": 2,
+    "explanation": "They fix atmospheric nitrogen."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which bacterium produces biogas (methane) from cellulosic material?",
+    "options": [
+      "Rhizobium",
+      "Azotobacter",
+      "Bacillus thuringiensis",
+      "Methanobacterium"
+    ],
+    "correctIndex": 3,
+    "explanation": "Methanogens live in anaerobic sludge and in the rumen of cattle."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which disease is caused by a helminth?",
+    "options": [
+      "Amoebiasis",
+      "Pneumonia",
+      "Chikungunya",
+      "Ascariasis"
+    ],
+    "correctIndex": 3,
+    "explanation": "Ascaris (roundworm) causes ascariasis."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The vector of dengue and chikungunya is",
+    "options": [
+      "Anopheles mosquito",
+      "Aedes mosquito",
+      "Culex mosquito",
+      "Housefly"
+    ],
+    "correctIndex": 1,
+    "explanation": "Culex transmits filariasis; Anopheles transmits malaria."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which transgenic animals are being developed to test the safety of vaccines before use on humans?",
+    "options": [
+      "Cows",
+      "Mice",
+      "Sheep",
+      "Pigs"
+    ],
+    "correctIndex": 1,
+    "explanation": "NCERT: transgenic mice are used for vaccine safety testing (e.g. polio vaccine)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which is an example of a recent extinction mentioned by NCERT?",
+    "options": [
+      "Lion",
+      "Royal Bengal tiger",
+      "Indian rhinoceros",
+      "Steller's sea cow"
+    ],
+    "correctIndex": 3,
+    "explanation": "Dodo (Mauritius), quagga (Africa), thylacine (Australia) and Steller's sea cow (Russia) are listed."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which is an example of an alien species that caused decline of native species?",
+    "options": [
+      "Tiger in Sundarbans",
+      "Peacock in India",
+      "Kangaroo in Australia",
+      "Nile perch in Lake Victoria"
+    ],
+    "correctIndex": 3,
+    "explanation": "Nile perch led to the extinction of over 200 cichlid fish species."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which alga is used to make agar?",
+    "options": [
+      "Chlorella",
+      "Spirogyra",
+      "Fucus",
+      "Gelidium and Gracilaria"
+    ],
+    "correctIndex": 3,
+    "explanation": "Agar from red algae is used in culture media."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Plant Kingdom",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which of these is a liverwort?",
+    "options": [
+      "Funaria",
+      "Marchantia",
+      "Sphagnum",
+      "Equisetum"
+    ],
+    "correctIndex": 1,
+    "explanation": "Funaria and Sphagnum are mosses; Equisetum is a pteridophyte."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which is a surgical method of contraception in males?",
+    "options": [
+      "Tubectomy",
+      "Lactational amenorrhoea",
+      "Vasectomy",
+      "Copper-T"
+    ],
+    "correctIndex": 2,
+    "explanation": "Part of the vas deferens is cut and tied."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The smallest cells, with no cell wall, are ____ (about 0.3 μm).",
+    "answers": [
+      "Mycoplasma",
+      "mycoplasmas",
+      "PPLO"
+    ],
+    "explanation": "NCERT: Mycoplasma are the smallest living cells.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell: The Unit of Life",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The 'suicidal bags' of the cell are ____.",
+    "answers": [
+      "lysosomes",
+      "lysosome"
+    ],
+    "explanation": "They contain hydrolytic enzymes active at acidic pH.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biomolecules",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The bond joining two amino acids in a protein is a ____ bond.",
+    "answers": [
+      "peptide"
+    ],
+    "explanation": "Formed by dehydration between –COOH and –NH₂.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Cell Cycle and Cell Division",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The stage of mitosis in which chromosomes line up at the equator is ____.",
+    "answers": [
+      "metaphase"
+    ],
+    "explanation": "Spindle fibres attach to kinetochores.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Photosynthesis in Plants",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The enzyme that fixes CO₂ in the Calvin cycle is ____.",
+    "answers": [
+      "RuBisCO",
+      "rubisco",
+      "RuBP carboxylase-oxygenase",
+      "ribulose bisphosphate carboxylase-oxygenase"
+    ],
+    "explanation": "RuBisCO is the most abundant enzyme on Earth.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Respiration in Plants",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The Krebs cycle takes place in the ____ of the mitochondrion.",
+    "answers": [
+      "matrix"
+    ],
+    "explanation": "Glycolysis occurs in the cytoplasm; the Krebs cycle and link reaction in the matrix.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Breathing and Exchange of Gases",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The volume of air that remains in the lungs even after forcible expiration is the ____ volume.",
+    "answers": [
+      "residual"
+    ],
+    "explanation": "RV is about 1100–1200 mL.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The blood group called the universal donor is ____.",
+    "answers": [
+      "O",
+      "O negative",
+      "O-"
+    ],
+    "explanation": "Group O has no A or B antigens on the RBC surface.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Excretory Products and Their Elimination",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The functional unit of the kidney is the ____.",
+    "answers": [
+      "nephron"
+    ],
+    "explanation": "Each kidney has about one million nephrons.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The functional contractile unit of a skeletal muscle fibre is the ____.",
+    "answers": [
+      "sarcomere"
+    ],
+    "explanation": "The part between two Z lines.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The gap between two neurons where impulses pass is called a ____.",
+    "answers": [
+      "synapse"
+    ],
+    "explanation": "It can be electrical or chemical.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "Diabetes insipidus is caused by deficiency of the hormone ____.",
+    "answers": [
+      "ADH",
+      "vasopressin",
+      "antidiuretic hormone"
+    ],
+    "explanation": "Without ADH, large amounts of dilute urine are lost.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The hormone detected in pregnancy tests is ____.",
+    "answers": [
+      "hCG",
+      "human chorionic gonadotropin"
+    ],
+    "explanation": "Secreted by the placenta.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Reproductive Health",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "Amniocentesis tests for genetic disorders by examining cells in the ____ fluid.",
+    "answers": [
+      "amniotic"
+    ],
+    "explanation": "Its misuse for sex determination is banned in India.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Principles of Inheritance and Variation",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The number of chromosomes in a person with Turner's syndrome is ____.",
+    "answers": [
+      "45"
+    ],
+    "explanation": "Karyotype 45, X0.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Molecular Basis of Inheritance",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The enzyme that joins Okazaki fragments is DNA ____.",
+    "answers": [
+      "ligase"
+    ],
+    "explanation": "It seals the nicks between fragments.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Evolution",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "Life is believed to have appeared on Earth about ____ billion years ago.",
+    "answers": [
+      "4",
+      "four",
+      "4.0"
+    ],
+    "explanation": "NCERT: life appeared about 500 million years after Earth formed, about 4 billion years ago.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Health and Disease",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The causal organism of amoebiasis is Entamoeba ____.",
+    "answers": [
+      "histolytica"
+    ],
+    "explanation": "Spread by houseflies contaminating food and water.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Microbes in Human Welfare",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The yeast used in making bread and brewing is Saccharomyces ____.",
+    "answers": [
+      "cerevisiae"
+    ],
+    "explanation": "It ferments sugars to CO₂ and ethanol.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology: Principles and Processes",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "Restriction enzymes recognise specific base sequences called ____ sequences that read the same on both strands.",
+    "answers": [
+      "palindromic",
+      "palindrome"
+    ],
+    "explanation": "E.g. 5′-GAATTC-3′ / 3′-CTTAAG-5′.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biotechnology and its Applications",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The first transgenic cow, whose milk contained human alpha-lactalbumin, was named ____.",
+    "answers": [
+      "Rosie"
+    ],
+    "explanation": "Produced in 1997.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Organisms and Populations",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The maximum population size that an environment can support is called its ____ capacity.",
+    "answers": [
+      "carrying"
+    ],
+    "explanation": "Symbol K in the logistic equation.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Ecosystem",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The rate of biomass production per unit area over a time period is called ____.",
+    "answers": [
+      "productivity"
+    ],
+    "explanation": "Expressed as g m⁻² yr⁻¹ or kcal m⁻² yr⁻¹.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Biodiversity and Conservation",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "Regions with very high species richness and endemism under threat are called biodiversity ____.",
+    "answers": [
+      "hotspots",
+      "hotspot"
+    ],
+    "explanation": "Three hotspots — Western Ghats and Sri Lanka, Indo-Burma and Himalaya — cover India's richest regions (NCERT).",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "The Living World",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The scientific name Mangifera indica is written according to",
+    "options": [
+      "trinomial system of Whittaker",
+      "the five-kingdom system",
+      "Darwin's rules",
+      "binomial nomenclature given by Linnaeus"
+    ],
+    "correctIndex": 3,
+    "explanation": "Genus name first (capital), species epithet second (small), printed in italics."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Anatomy of Flowering Plants",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which tissue in plants conducts food?",
+    "options": [
+      "Xylem",
+      "Sclerenchyma",
+      "Phloem",
+      "Collenchyma"
+    ],
+    "correctIndex": 2,
+    "explanation": "Phloem has sieve tubes, companion cells, phloem parenchyma and fibres."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Structural Organisation in Animals",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which muscle is involuntary and striated?",
+    "options": [
+      "Skeletal muscle",
+      "Smooth muscle",
+      "Muscles of the iris only",
+      "Cardiac muscle"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cardiac muscle has striations but works without conscious control."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Body Fluids and Circulation",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which blood cells are the most numerous?",
+    "options": [
+      "Leucocytes",
+      "Erythrocytes (RBCs)",
+      "Platelets",
+      "Lymphocytes"
+    ],
+    "correctIndex": 1,
+    "explanation": "About 5–5.5 million per mm³."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Human Reproduction",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Spermatogenesis starts at puberty due to an increase in the secretion of",
+    "options": [
+      "GnRH from the hypothalamus",
+      "oxytocin",
+      "prolactin",
+      "relaxin"
+    ],
+    "correctIndex": 0,
+    "explanation": "GnRH stimulates LH and FSH from the anterior pituitary."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Locomotion and Movement",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Gout is caused by",
+    "options": [
+      "accumulation of uric acid crystals in joints",
+      "low calcium in bones",
+      "autoimmune attack on muscles",
+      "lack of vitamin D"
+    ],
+    "correctIndex": 0,
+    "explanation": "Osteoporosis: reduced bone mass; myasthenia gravis: autoimmune disorder."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Neural Control and Coordination",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The part of the brain that controls respiration and cardiovascular reflexes is the",
+    "options": [
+      "cerebellum",
+      "hypothalamus",
+      "cerebrum",
+      "medulla oblongata"
+    ],
+    "correctIndex": 3,
+    "explanation": "Medulla contains centres for breathing, heart rate and gastric secretions."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Biology",
+    "chapter": "Chemical Coordination and Integration",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The hormone melatonin is secreted by the",
+    "options": [
+      "pituitary",
+      "pineal gland",
+      "thymus",
+      "adrenal medulla"
+    ],
+    "correctIndex": 1,
+    "explanation": "It regulates the 24-hour rhythm of the body."
+  }
+]

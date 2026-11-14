@@ -1172,22 +1172,6 @@
     "subject": "Chemistry",
     "chapter": "Chemical Kinetics",
     "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 20 minutes. Approximately what fraction of the original reactant remains after 60 minutes?",
-    "options": [
-      "1/2",
-      "1/3",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Sixty minutes corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
     "questionText": "For a reaction with rate law rate = k[A]^2[B], doubling both [A] and [B] changes the rate by a factor of:",
     "options": [
       "4",
@@ -1675,7 +1659,7 @@
       "75%",
       "80%"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Moles of CO2 = 1.68/22.4 = 0.075 mol, equal to moles of CaCO3. Mass of CaCO3 = 0.075 × 100 = 7.5 g, so purity = 75%.",
     "imageUrl": null
   },
@@ -1828,22 +1812,6 @@
     "subject": "Chemistry",
     "chapter": "Equilibrium",
     "difficulty": "tough",
-    "questionText": "A buffer contains equal concentrations of a weak acid HA and its sodium salt NaA. If Ka of HA is 1.0 × 10−5, the pH of the buffer is:",
-    "options": [
-      "4",
-      "5",
-      "6",
-      "9"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using Henderson-Hasselbalch equation, pH = pKa + log([A−]/[HA]). Since the concentrations are equal, pH = pKa = 5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
     "questionText": "The solubility product of AgCl is 1.0 × 10−10. Its molar solubility in pure water is approximately:",
     "options": [
       "1.0 × 10−10 M",
@@ -1915,7 +1883,7 @@
       "40 min",
       "60 min"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "87.5% completion leaves 12.5% = 1/8 of the reactant, corresponding to three half-lives. Since t1/2 = 0.693/0.0693 = 10 min, the required time is 30 min.",
     "imageUrl": null
   },
@@ -2948,22 +2916,6 @@
     "subject": "Chemistry",
     "chapter": "Coordination Compounds",
     "difficulty": "tough",
-    "questionText": "Which complex can show cis-trans geometrical isomerism?",
-    "options": [
-      "[Co(NH3)6]3+",
-      "[Pt(NH3)2Cl2]",
-      "[Ag(NH3)2]+",
-      "[Ni(CO)4]"
-    ],
-    "correctIndex": 1,
-    "explanation": "[Pt(NH3)2Cl2] is square planar and its two NH3 ligands can be adjacent or opposite, producing cis and trans isomers.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Coordination Compounds",
-    "difficulty": "tough",
     "questionText": "Which ligand is bidentate?",
     "options": [
       "NH3",
@@ -2989,22 +2941,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The allylic carbocation has a conjugated π system, allowing the positive charge to delocalise between terminal carbon atoms. This resonance stabilization is stronger than simple alkyl hyperconjugation.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Organic Chemistry Basic Principles",
-    "difficulty": "tough",
-    "questionText": "Which compound can show geometrical isomerism?",
-    "options": [
-      "CH2=CH2",
-      "CH2=CHCH3",
-      "CH3CH=CHCH3",
-      "CH3CH2CH3"
-    ],
-    "correctIndex": 2,
-    "explanation": "In but-2-ene, each carbon of the double bond has two different substituents, allowing distinct cis and trans arrangements.",
     "imageUrl": null
   },
   {
@@ -3252,22 +3188,6 @@
     "subject": "Chemistry",
     "chapter": "Thermodynamics",
     "difficulty": "tough",
-    "questionText": "For a reaction at 298 K, ΔH° = −40 kJ mol−1 and ΔS° = −100 J K−1 mol−1. What is the approximate value of ΔG°?",
-    "options": [
-      "−69.8 kJ mol−1",
-      "−10.2 kJ mol−1",
-      "−40.0 kJ mol−1",
-      "−69.8 J mol−1"
-    ],
-    "correctIndex": 1,
-    "explanation": "ΔG° = ΔH° − TΔS° = −40 − 298(−0.100) = −10.2 kJ mol−1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
     "questionText": "For an ideal gas undergoing isothermal expansion against a constant external pressure, which statement is correct?",
     "options": [
       "ΔU = 0 and q = −w",
@@ -3373,22 +3293,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The overall order is the sum of the powers of concentration terms in the experimentally determined rate law: 2 + 1 = 3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "A first-order reaction has a rate constant of 0.231 min−1. Its half-life is approximately:",
-    "options": [
-      "1.5 min",
-      "3.0 min",
-      "4.0 min",
-      "6.0 min"
-    ],
-    "correctIndex": 1,
-    "explanation": "For a first-order reaction, t1/2 = 0.693/k = 0.693/0.231 = 3.0 min.",
     "imageUrl": null
   },
   {
@@ -3693,22 +3597,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Propanal is an aldehyde and reduces Tollens' reagent to metallic silver. It lacks the CH3CO− or CH3CH(OH)− group required for the iodoform test.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
-    "difficulty": "tough",
-    "questionText": "Which compound undergoes aldol condensation because it contains at least one α-hydrogen?",
-    "options": [
-      "Benzaldehyde",
-      "Formaldehyde",
-      "Ethanal",
-      "Benzoic acid"
-    ],
-    "correctIndex": 2,
-    "explanation": "Ethanal contains α-hydrogens on the carbon adjacent to the carbonyl group and therefore undergoes base-catalysed aldol condensation. Benzaldehyde and formaldehyde lack α-hydrogens.",
     "imageUrl": null
   },
   {
@@ -5059,22 +4947,6 @@
     "examMode": "NEET",
     "subject": "Chemistry",
     "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 15 minutes. What fraction of the original reactant remains after 45 minutes?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "45 minutes corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
     "difficulty": "moderate",
     "questionText": "For a zero-order reaction, which quantity varies linearly with time?",
     "options": [
@@ -5261,22 +5133,6 @@
     ],
     "correctIndex": 0,
     "explanation": "[Co(en)3]3+ has a chiral arrangement of three bidentate ligands and exists as non-superimposable mirror-image forms.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Organic Chemistry Basic Principles",
-    "difficulty": "tough",
-    "questionText": "Which carbocation is most stable?",
-    "options": [
-      "CH3+",
-      "CH3CH2+",
-      "(CH3)2CH+",
-      "(CH3)3C+"
-    ],
-    "correctIndex": 3,
-    "explanation": "Tertiary carbocations are stabilised by the +I effect and hyperconjugation from three alkyl groups. Hence (CH3)3C+ is the most stable among the given species.",
     "imageUrl": null
   },
   {
@@ -5522,22 +5378,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
-    "questionText": "A 5.00 g mixture of CaCO3 and MgCO3 is heated completely and produces 1.12 L of CO2 at STP. What is the mass percentage of CaCO3 in the original mixture? (Molar masses: CaCO3 = 100 g mol−1, MgCO3 = 84 g mol−1)",
-    "options": [
-      "20%",
-      "40%",
-      "60%",
-      "80%"
-    ],
-    "correctIndex": 2,
-    "explanation": "Let x g be CaCO3. Then (x/100) + ((5−x)/84) = 1.12/22.4 = 0.05. Solving gives x = 3.00 g, so CaCO3 = (3/5) × 100 = 60%.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Atomic Structure",
     "difficulty": "tough",
     "questionText": "An electron in a hydrogen atom is excited from n = 2 to n = 5. How many different spectral emission lines can be produced when the electron eventually returns to the ground state, assuming all allowed downward transitions occur?",
@@ -5565,22 +5405,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Equal de Broglie wavelengths mean equal momenta because λ = h/p. At the same momentum, kinetic energy p²/(2m) is inversely proportional to mass, so the much lighter electron has greater kinetic energy.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Bonding and Molecular Structure",
-    "difficulty": "tough",
-    "questionText": "Which species has the highest bond order among O2, O2+, O2− and O2^2−?",
-    "options": [
-      "O2",
-      "O2+",
-      "O2−",
-      "O2^2−"
-    ],
-    "correctIndex": 1,
-    "explanation": "Removing an electron from the antibonding π* orbital of O2 increases bond order from 2 to 2.5 in O2+. Addition of electrons to π* decreases bond order, making O2+ the highest.",
     "imageUrl": null
   },
   {
@@ -6372,22 +6196,6 @@
     "subject": "Chemistry",
     "chapter": "Redox Reactions and Electrochemistry",
     "difficulty": "tough",
-    "questionText": "For the cell Zn|Zn2+(1.0 M)||Cu2+(0.010 M)|Cu, E°cell = 1.10 V at 298 K. What is the approximate cell potential?",
-    "options": [
-      "1.041 V",
-      "1.070 V",
-      "1.100 V",
-      "1.159 V"
-    ],
-    "correctIndex": 0,
-    "explanation": "Q = [Zn2+]/[Cu2+] = 100. Hence E = 1.10 − (0.0591/2)log100 = 1.10 − 0.0591 = 1.041 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Redox Reactions and Electrochemistry",
-    "difficulty": "tough",
     "questionText": "A current of 2.0 A is passed through CuSO4 solution for 9650 s. What mass of copper is deposited? Take Cu = 63.5 g mol^-1 and F = 96500 C mol^-1.",
     "options": [
       "3.175 g",
@@ -6445,22 +6253,6 @@
     ],
     "correctIndex": 1,
     "explanation": "For a second-order reaction, t1/2 = 1/(k[A]0). Therefore t1/2 = 1/(0.50×0.20) = 10 s.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Classification of Elements and Periodicity",
-    "difficulty": "tough",
-    "questionText": "Which order correctly represents increasing first ionisation enthalpy among B, C, N and O?",
-    "options": [
-      "B < C < O < N",
-      "B < O < C < N",
-      "C < B < O < N",
-      "B < C < N < O"
-    ],
-    "correctIndex": 0,
-    "explanation": "Ionisation enthalpy generally increases across the period, but O has lower ionisation enthalpy than N because N has a stable half-filled 2p3 configuration. Thus B < C < O < N.",
     "imageUrl": null
   },
   {
@@ -7332,15 +7124,15 @@
     "subject": "Chemistry",
     "chapter": "Some Basic Concepts of Chemistry",
     "difficulty": "tough",
-    "questionText": "A 12.0 g mixture of Na2CO3 and NaHCO3 is heated strongly until decomposition is complete. The residue weighs 9.16 g. What is the mass percentage of NaHCO3 in the original mixture? (Na2CO3 = 106 g mol−1, NaHCO3 = 84 g mol−1)",
+    "questionText": "A 12.0 g mixture of Na2CO3 and NaHCO3 is heated strongly until decomposition is complete. The residue weighs 8.90 g. What is the mass percentage of NaHCO3 in the original mixture? (Na2CO3 = 106 g mol−1, NaHCO3 = 84 g mol−1)",
     "options": [
-      "20%",
-      "30%",
-      "40%",
-      "50%"
+      "50%",
+      "60%",
+      "70%",
+      "80%"
     ],
     "correctIndex": 2,
-    "explanation": "Only NaHCO3 loses mass on heating: 2NaHCO3 → Na2CO3 + CO2 + H2O, so its residue-to-original mass ratio is 106/168 = 0.631. If x is the mass of NaHCO3, 12 − 9.16 = x(1 − 0.631).",
+    "explanation": "Only NaHCO3 loses mass: 2NaHCO3 → Na2CO3 + CO2 + H2O, so 168 g NaHCO3 loses 62 g. Loss = 12.0 − 8.90 = 3.10 g, so NaHCO3 = 3.10 × 168/62 = 8.40 g = 70% of the mixture.",
     "imageUrl": null
   },
   {
@@ -7956,22 +7748,6 @@
     "subject": "Chemistry",
     "chapter": "Some Basic Concepts of Chemistry",
     "difficulty": "tough",
-    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is heated completely. The solid residue weighs 5.20 g. What is the mass percentage of CaCO3 in the original mixture? (CaCO3 = 100 g mol−1, MgCO3 = 84 g mol−1)",
-    "options": [
-      "40%",
-      "50%",
-      "60%",
-      "70%"
-    ],
-    "correctIndex": 2,
-    "explanation": "If x g is CaCO3, the residue is 0.56x + 0.476(10−x) = 5.20, giving x = 6.0 g. Hence CaCO3 is 60% by mass.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
     "questionText": "A sample contains 4.6 g sodium and 3.2 g oxygen. If these elements combine completely to form Na2O, which statement is correct? (Na = 23, O = 16)",
     "options": [
       "Sodium is limiting and 1.55 g O remains",
@@ -8077,22 +7853,6 @@
     ],
     "correctIndex": 3,
     "explanation": "The bond order decreases as electrons are added to antibonding orbitals. N2, N2+ and N2− have bond orders 3, 2.5 and 2.5, while N2^2− has bond order 2, giving it the longest bond.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction, ΔH = −40 kJ mol−1 and ΔS = −100 J K−1 mol−1. The value of ΔG at 300 K is:",
-    "options": [
-      "−70 kJ mol−1",
-      "−10 kJ mol−1",
-      "+10 kJ mol−1",
-      "+70 kJ mol−1"
-    ],
-    "correctIndex": 1,
-    "explanation": "ΔG = ΔH − TΔS = −40 − 300(−0.100) = −40 + 30 = −10 kJ mol−1.",
     "imageUrl": null
   },
   {
@@ -9133,22 +8893,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For Zn + Cu2+ → Zn2+ + Cu, Q = [Zn2+]/[Cu2+] = 0.10. Thus E = E° − (0.0591/2)log(0.10) = 1.10 + 0.02955 ≈ 1.13 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 20 min. What percentage of the reactant remains after 60 min?",
-    "options": [
-      "6.25%",
-      "12.5%",
-      "25%",
-      "50%"
-    ],
-    "correctIndex": 1,
-    "explanation": "Sixty minutes corresponds to three half-lives. The remaining fraction is (1/2)³ = 1/8 = 12.5%.",
     "imageUrl": null
   },
   {
@@ -10221,22 +9965,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Concentrated sulfuric acid facilitates formation of the nitronium ion, NO2+, from nitric acid. NO2+ is the electrophile responsible for nitration of benzene.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Alcohols, Phenols and Ethers",
-    "difficulty": "moderate",
-    "questionText": "Which alcohol reacts fastest with Lucas reagent at room temperature?",
-    "options": [
-      "Methanol",
-      "Ethanol",
-      "Propan-2-ol",
-      "2-methylpropan-2-ol"
-    ],
-    "correctIndex": 3,
-    "explanation": "Lucas reagent reaction involves formation of a carbocation under the usual classification conditions. The tertiary alcohol 2-methylpropan-2-ol forms the most stable carbocation and reacts fastest.",
     "imageUrl": null
   },
   {
@@ -11715,22 +11443,6 @@
     "examMode": "NEET",
     "subject": "Chemistry",
     "chapter": "Chemical Bonding and Molecular Structure",
-    "difficulty": "tough",
-    "questionText": "Which species is expected to have the highest bond order among the following?",
-    "options": [
-      "O2",
-      "O2+",
-      "O2−",
-      "O2^2−"
-    ],
-    "correctIndex": 1,
-    "explanation": "Removing an electron from antibonding orbitals increases bond order. Bond orders are O2 = 2, O2+ = 2.5, O2− = 1.5 and O2^2− = 1, so O2+ is highest.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Bonding and Molecular Structure",
     "difficulty": "moderate",
     "questionText": "The hybridisation of the central atom in XeF4 is:",
     "options": [
@@ -12466,22 +12178,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Redox Reactions and Electrochemistry",
-    "difficulty": "tough",
-    "questionText": "A current of 2.00 A is passed through aqueous CuSO4 for 965 s using inert electrodes. What mass of copper is deposited at the cathode? (Cu = 63.5, F = 96500 C mol−1.)",
-    "options": [
-      "0.3175 g",
-      "0.635 g",
-      "1.27 g",
-      "2.54 g"
-    ],
-    "correctIndex": 1,
-    "explanation": "Charge passed is Q = It = 2 × 965 = 1930 C. Moles of Cu deposited = Q/(2F) = 1930/(193000) = 0.010 mol, so mass = 0.010 × 63.5 = 0.635 g.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Chemical Kinetics",
     "difficulty": "tough",
     "questionText": "For a second-order reaction, the concentration of reactant decreases from 0.50 M to 0.25 M in 10 s. What is the rate constant?",
@@ -12843,8 +12539,8 @@
       "C4H10",
       "C5H12"
     ],
-    "correctIndex": 1,
-    "explanation": "Each mole of hydrocarbon gives 0.80/0.20 = 4 mol CO2, so it contains 4 carbon atoms. It gives 0.60/0.20 = 3 mol H2O, corresponding to 6 H atoms; hence C4H6 would result in 3 H2O, not 3? For 0.20 mol C4H6, water formed is 0.60 mol, so the formula is C4H6.",
+    "correctIndex": 0,
+    "explanation": "Per mole of hydrocarbon: 0.80/0.20 = 4 mol CO2 (4 C atoms) and 0.60/0.20 = 3 mol H2O (6 H atoms). Hence the formula is C4H6.",
     "imageUrl": null
   },
   {
@@ -12909,22 +12605,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Lone pair repulsions compress bond angles. The bond angles are approximately 109.5° in CH4, 107° in NH3 and 104.5° in H2O, making H2O the smallest.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction, ΔH = −40 kJ mol−1 and ΔS = −100 J K−1 mol−1. At which temperature does ΔG become zero?",
-    "options": [
-      "200 K",
-      "300 K",
-      "400 K",
-      "500 K"
-    ],
-    "correctIndex": 2,
-    "explanation": "At equilibrium ΔG = ΔH − TΔS = 0. Therefore T = ΔH/ΔS = (−40000)/(−100) = 400 K.",
     "imageUrl": null
   },
   {
@@ -14107,7 +13787,7 @@
       "1.5 mol",
       "2.0 mol"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "2NaHCO3 -> Na2CO3 + CO2 + H2O. Thus 1 mol NaHCO3 produces 0.5 mol CO2 and 0.5 mol H2O, totaling 1.0 mol gaseous products.",
     "imageUrl": null
   },
@@ -14525,22 +14205,6 @@
     ],
     "correctIndex": 2,
     "explanation": "At 298 K, log K = nE°/0.0591. Thus log K ≈ 2×0.59/0.0591 ≈ 20, giving K ≈ 10^20.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "For a first-order reaction, the rate constant is 0.231 min−1. What is its approximate half-life?",
-    "options": [
-      "1.5 min",
-      "3.0 min",
-      "4.5 min",
-      "6.0 min"
-    ],
-    "correctIndex": 1,
-    "explanation": "For a first-order reaction, t1/2 = 0.693/k. Hence t1/2 = 0.693/0.231 = 3.0 min.",
     "imageUrl": null
   },
   {
@@ -15570,22 +15234,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
-    "questionText": "A 4.6 g sample of sodium reacts completely with excess water. What volume of H2 gas is produced at STP? (Na = 23 g mol−1; molar volume at STP = 22.4 L mol−1)",
-    "options": [
-      "1.12 L",
-      "2.24 L",
-      "4.48 L",
-      "0.56 L"
-    ],
-    "correctIndex": 1,
-    "explanation": "2Na + 2H2O → 2NaOH + H2. Thus 4.6 g Na = 0.20 mol Na, producing 0.10 mol H2; volume = 0.10 × 22.4 = 2.24 L.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Atomic Structure",
     "difficulty": "tough",
     "questionText": "An electron in a hydrogen atom undergoes a transition from n = 4 to n = 2. Compared with a transition from n = 3 to n = 2, the emitted radiation has:",
@@ -16011,7 +15659,7 @@
       "30.0 kJ mol−1",
       "35.0 kJ mol−1"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Here Δng = 3 − 1 = 2. Using ΔH = ΔU + ΔngRT, ΔU = 30 − 2(8.314)(300)/1000 = 25.01 kJ mol−1, approximately 25.0 kJ mol−1.",
     "imageUrl": null
   },
@@ -16605,22 +16253,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The highest principal quantum number is n = 3, placing the element in period 3. Seven valence electrons identify group 17.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "p-Block Elements",
-    "difficulty": "tough",
-    "questionText": "Which oxide is most acidic among the following?",
-    "options": [
-      "Na2O",
-      "MgO",
-      "Al2O3",
-      "Cl2O7"
-    ],
-    "correctIndex": 3,
-    "explanation": "Across a period, oxide character changes from basic to acidic as metallic character decreases. Cl2O7 is a strongly acidic oxide of chlorine in its highest oxidation state.",
     "imageUrl": null
   },
   {
@@ -17346,22 +16978,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Hydrocarbons",
-    "difficulty": "tough",
-    "questionText": "Benzene reacts with CH3Cl in the presence of anhydrous AlCl3. Which type of reaction occurs?",
-    "options": [
-      "Nucleophilic substitution",
-      "Electrophilic aromatic substitution",
-      "Free-radical addition",
-      "Nucleophilic addition"
-    ],
-    "correctIndex": 1,
-    "explanation": "AlCl3 activates CH3Cl to generate an electrophilic methyl species, which attacks the benzene ring. The reaction is Friedel–Crafts alkylation, an electrophilic aromatic substitution.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Haloalkanes and Haloarenes",
     "difficulty": "tough",
     "questionText": "Which compound reacts most rapidly by an SN1 mechanism under comparable conditions?",
@@ -17478,10 +17094,10 @@
     "difficulty": "tough",
     "questionText": "A 10.0 g mixture contains Na2CO3 and NaHCO3. On strong heating, the residue weighs 8.45 g. What is the percentage by mass of NaHCO3 in the original mixture? (Molar masses: Na2CO3 = 106, NaHCO3 = 84 g mol−1.)",
     "options": [
-      "25.0%",
-      "37.5%",
-      "50.0%",
-      "62.5%"
+      "21.0%",
+      "42.0%",
+      "58.0%",
+      "84.0%"
     ],
     "correctIndex": 1,
     "explanation": "Only NaHCO3 loses mass: 2NaHCO3 → Na2CO3 + CO2 + H2O, so 168 g NaHCO3 loses 62 g. For 10.0 g mixture, loss = 1.55 g, hence NaHCO3 = 1.55 × 168/62 = 4.20 g, or 42.0%.",
@@ -17501,22 +17117,6 @@
     ],
     "correctIndex": 0,
     "explanation": "E_n = −13.6/n² eV. Thus ΔE = E5 − E2 = −13.6/25 + 13.6/4 = 2.856 eV, which is the energy absorbed.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction, ΔH = −50 kJ mol−1 and ΔS = −100 J K−1 mol−1. At 300 K, what is the value of ΔG?",
-    "options": [
-      "−80 kJ mol−1",
-      "−20 kJ mol−1",
-      "+20 kJ mol−1",
-      "+80 kJ mol−1"
-    ],
-    "correctIndex": 1,
-    "explanation": "ΔG = ΔH − TΔS = −50 − 300(−0.100) = −50 + 30 = −20 kJ mol−1. Hence the reaction is spontaneous at 300 K.",
     "imageUrl": null
   },
   {
@@ -18237,22 +17837,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Alcoholic KOH favours elimination of HX from a haloalkane, producing an alkene. Aqueous KOH generally favours substitution instead.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
-    "difficulty": "tough",
-    "questionText": "Which compound gives a positive iodoform test but does not give Tollens' test?",
-    "options": [
-      "Ethanal",
-      "Propanone",
-      "Methanal",
-      "Benzaldehyde"
-    ],
-    "correctIndex": 1,
-    "explanation": "Propanone contains the CH3CO- group and therefore gives the iodoform test, but it is a ketone and does not reduce Tollens' reagent under the standard test conditions.",
     "imageUrl": null
   },
   {
@@ -20157,22 +19741,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Leading zeros are not significant, while the zero between 4 and 5 and the terminal zero after the decimal are significant. Thus 0.00450 contains three significant figures.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
-    "questionText": "A 5.00 g mixture of CaCO3 and MgCO3 is heated strongly until the carbonates decompose completely. The residue weighs 2.56 g. What is the approximate percentage by mass of CaCO3 in the original mixture? (Ca = 40, Mg = 24, C = 12, O = 16)",
-    "options": [
-      "25%",
-      "40%",
-      "60%",
-      "75%"
-    ],
-    "correctIndex": 2,
-    "explanation": "If x g is CaCO3, oxygen-plus-carbon dioxide loss gives 44/100 x for CaCO3 and 44/84(5-x) for MgCO3. Solving 5 - [0.44x + (44/84)(5-x)] = 2.56 gives x ≈ 3.0 g, hence CaCO3 ≈ 60%.",
     "imageUrl": null
   },
   {
@@ -22706,22 +22274,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Haloalkanes and Haloarenes",
-    "difficulty": "tough",
-    "questionText": "What is the major product when 2-bromopropane is heated with alcoholic KOH?",
-    "options": [
-      "Propan-1-ol",
-      "Propan-2-ol",
-      "Propene",
-      "Propane"
-    ],
-    "correctIndex": 2,
-    "explanation": "Alcoholic KOH favours beta-elimination of HBr from 2-bromopropane. The resulting alkene is propene.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Alcohols, Phenols and Ethers",
     "difficulty": "tough",
     "questionText": "Which compound gives a violet colour with neutral ferric chloride solution?",
@@ -22749,22 +22301,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The -OH group strongly activates the benzene ring toward electrophilic substitution and directs substitution to ortho and para positions. With bromine water, phenol gives 2,4,6-tribromophenol as a white precipitate.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
-    "difficulty": "tough",
-    "questionText": "Which compound can undergo aldol condensation because it contains alpha-hydrogen atoms?",
-    "options": [
-      "Benzaldehyde",
-      "Ethanal",
-      "Formaldehyde",
-      "Benzoic acid"
-    ],
-    "correctIndex": 1,
-    "explanation": "Ethanal contains alpha-hydrogen atoms and can form an enolate ion, allowing aldol condensation. Benzaldehyde and formaldehyde lack alpha-hydrogen atoms.",
     "imageUrl": null
   },
   {
@@ -22925,22 +22461,6 @@
     ],
     "correctIndex": 2,
     "explanation": "At pH 2, [H+] = 10^-2 M, while at pH 4, [H+] = 10^-4 M. Therefore the hydrogen-ion concentration decreases by a factor of 100.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "moderate",
-    "questionText": "A first-order reaction has a half-life of 10 minutes. What fraction of the original reactant remains after 30 minutes?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Thirty minutes corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
     "imageUrl": null
   },
   {
@@ -23165,22 +22685,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Cu2+ + 2e− → Cu, so 0.50 mol electrons deposits 0.25 mol Cu. Mass deposited = 0.25 × 63.5 = 15.875 g ≈ 15.88 g.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 30 minutes. What percentage of the reactant remains after 90 minutes?",
-    "options": [
-      "6.25%",
-      "12.5%",
-      "25%",
-      "50%"
-    ],
-    "correctIndex": 1,
-    "explanation": "Ninety minutes corresponds to three half-lives. The fraction remaining is (1/2)^3 = 1/8, which equals 12.5%.",
     "imageUrl": null
   },
   {
@@ -25362,22 +24866,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 40 minutes. What fraction of the original reactant remains after 120 minutes?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "120 minutes corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Classification of Elements and Periodicity",
     "difficulty": "tough",
     "questionText": "Which pair demonstrates the diagonal relationship between elements of the second and third periods?",
@@ -26274,22 +25762,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "For the equilibrium PCl5(g) ⇌ PCl3(g) + Cl2(g), 1.0 mol PCl5 is placed in a 1 L vessel and 40% dissociates. What is Kc?",
-    "options": [
-      "0.167",
-      "0.267",
-      "0.400",
-      "0.667"
-    ],
-    "correctIndex": 1,
-    "explanation": "At equilibrium, [PCl5] = 0.60 M and [PCl3] = [Cl2] = 0.40 M. Therefore Kc = (0.40 × 0.40)/0.60 = 0.267.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Redox Reactions and Electrochemistry",
     "difficulty": "tough",
     "questionText": "A current of 2 A is passed through molten NaCl for 9650 s. Approximately how many grams of sodium are deposited at the cathode? (Na = 23, 1 F = 96500 C mol−1.)",
@@ -26509,22 +25981,6 @@
     ],
     "correctIndex": 3,
     "explanation": "Benzyl chloride forms a resonance-stabilised benzyl carbocation during SN1 ionisation. This makes its SN1 reaction particularly favourable.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Alcohols, Phenols and Ethers",
-    "difficulty": "tough",
-    "questionText": "Phenol is treated with bromine water at room temperature. Which product is expected predominantly?",
-    "options": [
-      "Bromobenzene",
-      "2,4,6-Tribromophenol",
-      "Benzene-1,4-dibromide",
-      "Cyclohexanol"
-    ],
-    "correctIndex": 1,
-    "explanation": "The −OH group strongly activates the aromatic ring and directs substitution to ortho and para positions. Bromine water therefore gives 2,4,6-tribromophenol as the characteristic product.",
     "imageUrl": null
   },
   {
@@ -27204,22 +26660,6 @@
     "subject": "Chemistry",
     "chapter": "d- and f-Block Elements",
     "difficulty": "tough",
-    "questionText": "Which oxidation state is particularly stable for manganese in permanganate ion, MnO4−?",
-    "options": [
-      "+2",
-      "+4",
-      "+6",
-      "+7"
-    ],
-    "correctIndex": 3,
-    "explanation": "Let the oxidation state of Mn be x: x + 4(−2) = −1, giving x = +7. Thus manganese is in the +7 oxidation state in MnO4−.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "d- and f-Block Elements",
-    "difficulty": "tough",
     "questionText": "Why are Zn, Cd and Hg generally not regarded as typical transition elements?",
     "options": [
       "They have very large atomic sizes",
@@ -27565,22 +27005,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Heat absorbed gives q = +100 J, while work done by the system gives w = −40 J. Thus ΔU = q + w = 100 − 40 = +60 J.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "For H2(g) + I2(g) ⇌ 2HI(g), the equilibrium concentrations are [H2] = 0.25 M, [I2] = 0.25 M and [HI] = 1.00 M. What is Kc?",
-    "options": [
-      "4",
-      "8",
-      "16",
-      "32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Kc = [HI]^2/([H2][I2]) = (1.00)^2/(0.25×0.25) = 1/0.0625 = 16.",
     "imageUrl": null
   },
   {
@@ -28387,22 +27811,6 @@
     "examMode": "NEET",
     "subject": "Chemistry",
     "chapter": "Atomic Structure",
-    "difficulty": "tough",
-    "questionText": "An electron in a hydrogen atom moves from n = 4 to n = 2. Compared with a transition from n = 3 to n = 2, the emitted photon has",
-    "options": [
-      "lower energy and longer wavelength",
-      "higher energy and shorter wavelength",
-      "higher energy and longer wavelength",
-      "the same energy and wavelength"
-    ],
-    "correctIndex": 1,
-    "explanation": "The energy gap between n = 4 and n = 2 is larger than that between n = 3 and n = 2. Since E = hc/λ, the larger energy photon has the shorter wavelength.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Atomic Structure",
     "difficulty": "moderate",
     "questionText": "Which set of quantum numbers can describe an electron in a 4d orbital?",
     "options": [
@@ -28445,22 +27853,6 @@
     ],
     "correctIndex": 1,
     "explanation": "In BeCl2, the Be atom has two electron domains and no lone pair, giving a linear arrangement with a bond angle of 180°.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction, ΔH = −60 kJ mol−1 and ΔS = −100 J K−1 mol−1. At 400 K, what is ΔG?",
-    "options": [
-      "−100 kJ mol−1",
-      "−60 kJ mol−1",
-      "−20 kJ mol−1",
-      "+20 kJ mol−1"
-    ],
-    "correctIndex": 2,
-    "explanation": "ΔS = −0.100 kJ K−1 mol−1. Therefore ΔG = ΔH − TΔS = −60 − 400(−0.100) = −20 kJ mol−1.",
     "imageUrl": null
   },
   {
@@ -30594,22 +29986,6 @@
   {
     "examMode": "NEET",
     "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
-    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is heated strongly to completion. The solid residue weighs 5.6 g. What is the approximate percentage by mass of CaCO3 in the original mixture? (Ca = 40, Mg = 24, C = 12, O = 16)",
-    "options": [
-      "25%",
-      "40%",
-      "60%",
-      "75%"
-    ],
-    "correctIndex": 2,
-    "explanation": "Let x g be CaCO3 and (10−x) g be MgCO3. Their mass losses on decomposition are 44/100 x and 44/84(10−x), respectively. Total loss = 4.4 g, giving 0.44x + 0.5238(10−x) = 4.4, hence x ≈ 6.0 g, or about 60%.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
     "chapter": "Atomic Structure",
     "difficulty": "tough",
     "questionText": "In a hydrogen atom, an electron falls from n = 5 to n = 2. Which statement correctly describes the emitted radiation?",
@@ -30925,22 +30301,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The solubility of group 2 hydroxides generally increases from Mg(OH)2 to Ba(OH)2 because the decrease in lattice enthalpy down the group becomes more significant relative to hydration effects.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Chemistry",
-    "chapter": "Organic Chemistry Basic Principles",
-    "difficulty": "tough",
-    "questionText": "Which carbocation is most strongly stabilized by resonance among the following?",
-    "options": [
-      "CH3+",
-      "CH3CH2+",
-      "C6H5CH2+",
-      "(CH3)3C+"
-    ],
-    "correctIndex": 2,
-    "explanation": "The benzyl carbocation is resonance-stabilized because its positive charge can be delocalized into the aromatic ring. This provides greater stabilization than simple alkyl hyperconjugation alone.",
     "imageUrl": null
   },
   {
@@ -31947,7 +31307,7 @@
       "88%",
       "92%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "CaCO3 → CaO + CO2, so 100 g CaCO3 produces 44 g CO2. Therefore, CaCO3 present = 1.76 × 100/44 = 4.00 g, giving 4.00/5.00 × 100 = 80%.",
     "imageUrl": null
   },
