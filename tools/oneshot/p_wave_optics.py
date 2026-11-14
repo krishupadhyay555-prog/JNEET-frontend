@@ -81,7 +81,7 @@ T("Polarisation and its uses", "Light transverse hai — vibrations ek plane mei
 "Single slit dark: a sinθ = nλ;  central width 2λD/a.",
 "Brewster tanθ_B = n;  θ_B + r = 90°.",
 "Malus I = I₀cos²θ;  unpolarised → I₀/2.",
-"Medium badle: f same, v aur λ ghatte hain.",
+"Ghane medium mein jaane par: f same, v aur λ dono n guna ghat-te hain.",
 ],
 }
 

@@ -55,7 +55,7 @@
   },
   {
    "name": "Connected blocks (push/pull)",
-   "formula": "a = F/(m₁ + m₂ + …);   contact/tension = (peeche wale mass) × a",
+   "formula": "a = F/(m₁ + m₂ + …);   contact force / tension = (joint ke us paar ke saare masses — jinhe ye force kheench/dhakel raha hai) × a",
    "when": "Smooth surface par saath chalte blocks.",
    "mistake": "Contact force us mass se nikalo jise woh dhakel raha hai, poore system se nahi."
   },
