@@ -3874,22 +3874,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction at 300 K, ΔH = −25 kJ mol−1 and ΔS = −50 J K−1 mol−1. What is ΔG?",
-    "options": [
-      "−40 kJ mol−1",
-      "−25 kJ mol−1",
-      "−10 kJ mol−1",
-      "−15 kJ mol−1"
-    ],
-    "correctIndex": 2,
-    "explanation": "ΔG = ΔH − TΔS = −25 − 300(−0.050) = −25 + 15 = −10 kJ mol−1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Equilibrium",
     "difficulty": "tough",
     "questionText": "For the equilibrium N2(g) + 3H2(g) ⇌ 2NH3(g), Kc = 0.50. If at equilibrium [N2] = 1 M and [H2] = 2 M, what is [NH3]?",
@@ -3933,22 +3917,6 @@
     ],
     "correctIndex": 2,
     "explanation": "ΔG° = −nFE° = −2×96500×1.10 J mol−1 = −212.30 kJ mol−1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 20 min. What percentage of the original reactant remains after 60 min?",
-    "options": [
-      "50%",
-      "25%",
-      "12.5%",
-      "6.25%"
-    ],
-    "correctIndex": 2,
-    "explanation": "Sixty minutes correspond to three half-lives. The remaining fraction is (1/2)^3 = 1/8, or 12.5%.",
     "imageUrl": null
   },
   {
@@ -4388,22 +4356,6 @@
     "subject": "Chemistry",
     "chapter": "Polymers",
     "difficulty": "tough",
-    "questionText": "Which polymer is produced by condensation polymerisation of hexamethylenediamine with adipic acid?",
-    "options": [
-      "Teflon",
-      "Nylon-6,6",
-      "Bakelite",
-      "PVC"
-    ],
-    "correctIndex": 1,
-    "explanation": "Hexamethylenediamine and adipic acid undergo condensation polymerisation with elimination of water to form the polyamide Nylon-6,6.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Polymers",
-    "difficulty": "tough",
     "questionText": "Which monomer undergoes addition polymerisation to form PVC?",
     "options": [
       "CH2=CH2",
@@ -4541,22 +4493,6 @@
     ],
     "correctIndex": 1,
     "explanation": "For one mole, P=a correction gives P=a term as P=a/(V-b) relation: P=RT/(V-b)-a/V². Initially RT=(P+a/V²)(V-b). At V/2, P'=2RT/(V-2b)-4a/V², giving 2(P+a/V²)(V-b)/(V-2b)-4a/V².",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction at 298 K, ΔH° = -40 kJ mol−1 and ΔS° = -100 J K−1 mol−1. Assuming these values remain constant, the temperature at which ΔG° becomes zero is:",
-    "options": [
-      "200 K",
-      "300 K",
-      "400 K",
-      "500 K"
-    ],
-    "correctIndex": 2,
-    "explanation": "At equilibrium, ΔG°=ΔH°−TΔS°=0. Therefore T=ΔH°/ΔS°=(-40000)/(-100)=400 K.",
     "imageUrl": null
   },
   {
@@ -5218,22 +5154,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "One mole of an ideal gas expands reversibly and isothermally at 300 K from 2 L to 8 L. Taking R=8.314 J mol−1 K−1, the work done by the gas is approximately:",
-    "options": [
-      "−3.46 kJ",
-      "0",
-      "3.46 kJ",
-      "6.92 kJ"
-    ],
-    "correctIndex": 2,
-    "explanation": "For reversible isothermal expansion, w by gas = nRT ln(V2/V1). Thus w=1×8.314×300×ln4≈3.46 kJ.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Chemical Kinetics",
     "difficulty": "tough",
     "questionText": "The rate constant of a reaction doubles when temperature increases from 300 K to 310 K. The approximate activation energy is: (R=8.314 J mol−1 K−1, ln2=0.693)",
@@ -5398,13 +5318,13 @@
     "difficulty": "tough",
     "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is completely decomposed by heating, producing 2.464 L of CO2 at STP. If molar masses of CaCO3 and MgCO3 are 100 and 84 g mol−1 respectively, the mass percentage of CaCO3 in the mixture is:",
     "options": [
-      "40%",
-      "50%",
-      "60%",
-      "70%"
+      "37.5%",
+      "47.5%",
+      "52.5%",
+      "71.3%"
     ],
-    "correctIndex": 2,
-    "explanation": "CO2 = 2.464/22.4 = 0.110 mol. If x mol CaCO3 and y mol MgCO3, x+y=0.110 and 100x+84y=10. Solving gives x=0.07125 mol, so CaCO3 mass=7.125 g and percentage=71.25%, which is closest to 70%.",
+    "correctIndex": 1,
+    "explanation": "CO2 = 2.464/22.4 = 0.110 mol. Let x mol CaCO3 and (0.110 − x) mol MgCO3: 100x + 84(0.110 − x) = 10.0, so 16x = 0.76 and x = 0.0475 mol. Mass of CaCO3 = 4.75 g, i.e. 47.5%.",
     "imageUrl": null
   },
   {
@@ -5650,22 +5570,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Organic Chemistry Basic Principles",
-    "difficulty": "tough",
-    "questionText": "Which carbocation is most strongly stabilised by resonance?",
-    "options": [
-      "CH3CH2+",
-      "(CH3)3C+",
-      "C6H5CH2+",
-      "CH2=CHCH2+"
-    ],
-    "correctIndex": 2,
-    "explanation": "The benzyl carbocation is resonance-stabilised by delocalisation of positive charge into the aromatic ring. Although allyl carbocation is also resonance-stabilised, the benzyl ion has greater overall stabilisation.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Hydrocarbons",
     "difficulty": "tough",
     "questionText": "Benzene is treated with CH3COCl in the presence of anhydrous AlCl3. The principal product is:",
@@ -5741,22 +5645,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Diazotisation converts aniline into the diazonium salt. CuCN replaces the diazonium group by CN through the Sandmeyer reaction, producing benzonitrile.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Polymers",
-    "difficulty": "tough",
-    "questionText": "Which polymer is a condensation polymer formed from hexamethylenediamine and adipic acid?",
-    "options": [
-      "Nylon-6,6",
-      "Teflon",
-      "PVC",
-      "Natural rubber"
-    ],
-    "correctIndex": 0,
-    "explanation": "Hexamethylenediamine and adipic acid undergo condensation with elimination of water to form the polyamide Nylon-6,6.",
     "imageUrl": null
   },
   {
@@ -6242,22 +6130,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Polymers",
-    "difficulty": "tough",
-    "questionText": "Which polymer is formed by addition polymerisation of tetrafluoroethene?",
-    "options": [
-      "PVC",
-      "Teflon",
-      "Nylon-6",
-      "Bakelite"
-    ],
-    "correctIndex": 1,
-    "explanation": "Tetrafluoroethene, CF2=CF2, undergoes addition polymerisation to form polytetrafluoroethene, commonly called Teflon.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Chemistry in Everyday Life",
     "difficulty": "moderate",
     "questionText": "Which class of drugs is primarily used to relieve pain without necessarily producing loss of consciousness?",
@@ -6333,22 +6205,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Q=It=3×965=2895 C=0.03 mol electrons. Ag+ requires one electron, so 0.03 mol Ag deposits. Mass=0.03×108=3.24 g, so the correct option is 3.24 g.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "For a first-order reaction, the half-life is 15 min. The fraction of reactant remaining after 45 min is:",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "45 min corresponds to three half-lives. Therefore the remaining fraction is (1/2)^3=1/8.",
     "imageUrl": null
   },
   {
@@ -6605,22 +6461,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For an electron initially at n = 5, all possible transitions among the five levels can occur. The number of distinct lines is n(n−1)/2 = 5×4/2 = 10.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "States of Matter",
-    "difficulty": "tough",
-    "questionText": "A gas occupies 4.0 L at 300 K and 2.0 atm. It is compressed to 2.0 L and heated to 450 K. Assuming ideal behaviour, what is its final pressure?",
-    "options": [
-      "3 atm",
-      "4 atm",
-      "6 atm",
-      "8 atm"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using P1V1/T1 = P2V2/T2, P2 = (2×4×450)/(300×2) = 6 atm.",
     "imageUrl": null
   },
   {
@@ -7757,22 +7597,6 @@
     ],
     "correctIndex": 0,
     "explanation": "At total initial pressure 1 atm, pN2O4 = (1−α)/(1+α) and pNO2 = 2α/(1+α). Thus Kp = pNO2²/pN2O4 = 4α²/(1−α²), giving the stated equation.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Surface Chemistry",
-    "difficulty": "tough",
-    "questionText": "For a Freundlich adsorption isotherm, x/m = kP^(1/n). If increasing pressure from 1 atm to 16 atm increases x/m by a factor of 4, what is the value of n?",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "8"
-    ],
-    "correctIndex": 0,
-    "explanation": "The ratio is 4 = 16^(1/n) = (2^4)^(1/n). Therefore 2^(4/n) = 2², giving n = 2.",
     "imageUrl": null
   },
   {
@@ -9060,7 +8884,7 @@
     "subject": "Chemistry",
     "chapter": "General Principles of Metallurgy",
     "difficulty": "tough",
-    "questionText": "An ore contains Fe2O3 and inert impurities. If 160 kg of the ore gives 112 kg of iron on complete reduction, what is the percentage by mass of Fe2O3 in the ore? (Fe = 56, O = 16)",
+    "questionText": "An ore contains Fe2O3 and inert impurities. If 200 kg of the ore gives 112 kg of iron on complete reduction, what is the percentage by mass of Fe2O3 in the ore? (Fe = 56, O = 16)",
     "options": [
       "70%",
       "75%",
@@ -9068,7 +8892,7 @@
       "90%"
     ],
     "correctIndex": 2,
-    "explanation": "Fe2O3 contains 112 g Fe per 160 g Fe2O3, so the iron fraction in pure Fe2O3 is 70%. To obtain 112 kg Fe, the ore must contain 112/0.70 = 160 kg Fe2O3, meaning the ore is 100% Fe2O3.",
+    "explanation": "160 g Fe2O3 contains 112 g Fe. So 112 kg Fe comes from 160 kg Fe2O3. Percentage of Fe2O3 in the ore = 160/200 × 100 = 80%.",
     "imageUrl": null
   },
   {
@@ -9947,7 +9771,7 @@
       "50.0%",
       "66.4%"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "Only NaHCO3 loses mass, with 84 g giving 53 g Na2CO3, so the loss is 31/84 g per gram. Hence mass of NaHCO3 = 0.62×84/31 = 1.68 g, giving 1.68/4.00×100 = 42.0%.",
     "imageUrl": null
   },
@@ -10750,22 +10574,6 @@
     "correctIndex": 1,
     "explanation": "For reversible isothermal expansion, W = nRT ln(V2/V1) = 1×8.314×300×ln4 ≈ 3.46 kJ. This is the magnitude of work done by the gas.",
     "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction at 298 K, ΔH° = −40.0 kJ mol−1 and ΔS° = −100 J mol−1 K−1. At what temperature does ΔG° become zero, assuming ΔH° and ΔS° remain constant?",
-    "options": [
-      "200 K",
-      "298 K",
-      "400 K",
-      "500 K"
-    ],
-    "correctIndex": 2,
-    "explanation": "At equilibrium, ΔG° = ΔH° − TΔS° = 0. Therefore T = ΔH°/ΔS° = (−40000)/(−100) = 400 K.",
-    "imageUrl": null,
-    "subject": "Chemistry"
   },
   {
     "examMode": "JEE",
@@ -12525,22 +12333,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Kc = [NO2]²/[N2O4] = 0.25. Hence x²/1 = 0.25, giving x = 0.50 M.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "For PCl5(g) ⇌ PCl3(g) + Cl2(g), 1.0 mol of PCl5 is placed in a 1.0 L vessel. At equilibrium, 40% of PCl5 has dissociated. What is the value of Kc?",
-    "options": [
-      "0.160",
-      "0.267",
-      "0.400",
-      "0.667"
-    ],
-    "correctIndex": 1,
-    "explanation": "At equilibrium, [PCl5] = 0.6 M and [PCl3] = [Cl2] = 0.4 M. Therefore Kc = (0.4 × 0.4)/0.6 = 0.267 approximately.",
     "imageUrl": null
   },
   {
@@ -14418,22 +14210,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Organic Chemistry Basic Principles",
-    "difficulty": "tough",
-    "questionText": "Which compound is expected to have the most acidic hydrogen among the following?",
-    "options": [
-      "Ethane",
-      "Ethene",
-      "Ethyne",
-      "Benzene"
-    ],
-    "correctIndex": 2,
-    "explanation": "The conjugate base of ethyne has the negative charge on an sp-hybridised carbon, which has greater s-character and stabilises the charge better than sp2 or sp3 carbon. Hence ethyne is the most acidic.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Hydrocarbons",
     "difficulty": "tough",
     "questionText": "An alkene on ozonolysis gives ethanal and propanone as the carbonyl products. Which alkene is consistent with this observation?",
@@ -14964,7 +14740,7 @@
     "subject": "Chemistry",
     "chapter": "Some Basic Concepts of Chemistry",
     "difficulty": "tough",
-    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 on complete heating gives 2.24 L CO2 at STP. If the molar masses of CaCO3 and MgCO3 are 100 and 84 g mol−1 respectively, what is the mass percentage of CaCO3?",
+    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 on complete heating gives 2.45 L CO2 at STP. If the molar masses of CaCO3 and MgCO3 are 100 and 84 g mol−1 respectively, what is the approximate mass percentage of CaCO3?",
     "options": [
       "40%",
       "50%",
@@ -14972,7 +14748,7 @@
       "70%"
     ],
     "correctIndex": 1,
-    "explanation": "CO2 formed = 2.24/22.4 = 0.10 mol. If x mol is CaCO3, then MgCO3 = 0.10 − x and 100x + 84(0.10 − x) = 10. Thus 16x = 1.6, x = 0.10 mol, giving 10 g CaCO3 or 100%.",
+    "explanation": "CO2 = 2.45/22.4 = 0.1094 mol. With x mol CaCO3: 100x + 84(0.1094 − x) = 10.0, so 16x = 0.812 and x ≈ 0.0508 mol, i.e. about 5.08 g CaCO3 ≈ 50%.",
     "imageUrl": null
   },
   {
@@ -15117,22 +14893,6 @@
     ],
     "correctIndex": 1,
     "explanation": "At equilibrium, PCl5 = 0.8 M and PCl3 = Cl2 = 0.2 M. Hence Kc = (0.2×0.2)/0.8 = 0.05.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "A buffer contains equal concentrations of a weak acid HA and its conjugate base A−. If Ka of HA is 1.0 × 10−5, what is the approximate pH of the buffer?",
-    "options": [
-      "4",
-      "5",
-      "7",
-      "9"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using Henderson-Hasselbalch, pH = pKa + log([A−]/[HA]). Since concentrations are equal, pH = pKa = 5.",
     "imageUrl": null
   },
   {
@@ -15762,22 +15522,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "States of Matter",
-    "difficulty": "tough",
-    "questionText": "A gas occupies 2.0 L at 300 K and 1.0 atm. It is compressed to 1.0 L while simultaneously heated to 450 K. What is its final pressure, assuming ideal behaviour?",
-    "options": [
-      "0.75 atm",
-      "1.5 atm",
-      "3.0 atm",
-      "4.5 atm"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using P1V1/T1 = P2V2/T2, P2 = (1.0 × 2.0 × 450)/(300 × 1.0) = 3.0 atm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Thermodynamics",
     "difficulty": "tough",
     "questionText": "For a reaction at 300 K, ΔH° = −50 kJ mol−1 and ΔS° = −120 J mol−1 K−1. What is the approximate value of ΔG° at this temperature?",
@@ -16338,22 +16082,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Haloalkanes and Haloarenes",
-    "difficulty": "tough",
-    "questionText": "Which substrate would undergo SN2 substitution most rapidly under comparable conditions?",
-    "options": [
-      "CH3Br",
-      "CH3CH2Br",
-      "(CH3)2CHBr",
-      "(CH3)3CBr"
-    ],
-    "correctIndex": 0,
-    "explanation": "SN2 reactions require backside attack, so steric hindrance strongly reduces the rate. Methyl bromide has the least steric hindrance and therefore undergoes SN2 most readily.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Alcohols, Phenols and Ethers",
     "difficulty": "tough",
     "questionText": "An ether is heated with excess HI and ultimately gives two alkyl iodides. Which bond-cleavage principle is responsible for this transformation?",
@@ -16882,22 +16610,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Hydrocarbons",
-    "difficulty": "tough",
-    "questionText": "Benzene reacts with CH3Cl in the presence of anhydrous AlCl3. Which transformation occurs?",
-    "options": [
-      "Nitration",
-      "Friedel-Crafts alkylation",
-      "Friedel-Crafts acylation",
-      "Sulphonation"
-    ],
-    "correctIndex": 1,
-    "explanation": "CH3Cl and anhydrous AlCl3 generate an electrophilic methylating species that substitutes a hydrogen on benzene. The reaction is Friedel-Crafts alkylation and gives toluene.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Haloalkanes and Haloarenes",
     "difficulty": "tough",
     "questionText": "Which reagent most effectively converts an alkyl bromide into the corresponding alkene through β-elimination?",
@@ -17117,22 +16829,6 @@
     ],
     "correctIndex": 2,
     "explanation": "At equilibrium ΔG° = ΔH° - TΔS° = 0, so T = ΔH°/ΔS° = 92000/198 ≈ 465 K. Therefore the correct temperature is 465 K.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "For the equilibrium N2O4(g) ⇌ 2NO2(g), 1.00 mol of N2O4 is placed in a 1.00 L vessel. At equilibrium, 40% of N2O4 has dissociated. What is the value of Kc?",
-    "options": [
-      "0.267",
-      "0.533",
-      "1.067",
-      "1.600"
-    ],
-    "correctIndex": 2,
-    "explanation": "At equilibrium, [N2O4] = 0.60 M and [NO2] = 0.80 M. Hence Kc = (0.80)^2/0.60 = 1.067.",
     "imageUrl": null
   },
   {
@@ -18436,22 +18132,6 @@
     "subject": "Chemistry",
     "chapter": "Amines",
     "difficulty": "tough",
-    "questionText": "Aniline reacts with bromine water at room temperature. Which product is expected predominantly?",
-    "options": [
-      "Bromobenzene",
-      "p-Bromoaniline only",
-      "2,4,6-Tribromoaniline",
-      "No reaction"
-    ],
-    "correctIndex": 2,
-    "explanation": "The amino group strongly activates the aromatic ring and directs electrophilic substitution to ortho and para positions. Bromine water therefore gives rapid polysubstitution, producing 2,4,6-tribromoaniline.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Amines",
-    "difficulty": "tough",
     "questionText": "A primary aromatic amine is converted into a diazonium salt and then treated with HBF4 followed by heating. Which product is expected?",
     "options": [
       "Fluorobenzene",
@@ -18683,7 +18363,7 @@
       "23.80 mmHg",
       "24.28 mmHg"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "For a nonvolatile solute, Raoult's law gives P = Xsolvent P° = (1 − 0.020) × 23.8 = 0.98 × 23.8 = 23.324 mmHg. Thus the correct option is 23.32 mmHg.",
     "imageUrl": null
   },
@@ -18861,22 +18541,6 @@
     ],
     "correctIndex": 1,
     "explanation": "An ideal antacid should neutralise excess acid effectively without causing excessive alkalinity or systemic disturbances. Therefore moderate neutralising capacity with minimal systemic alkalosis is preferred.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
-    "questionText": "A 5.00 g mixture of CaCO3 and MgCO3 is heated completely. The solid residue has mass 2.64 g. Assuming complete decomposition, what is the mass percentage of CaCO3 in the original mixture? (Ca = 40, Mg = 24, C = 12, O = 16)",
-    "options": [
-      "36%",
-      "48%",
-      "60%",
-      "72%"
-    ],
-    "correctIndex": 2,
-    "explanation": "Let masses of CaCO3 and MgCO3 be x and 5-x. On heating, residues are CaO and MgO. Thus 56x/100 + 40(5-x)/84 = 2.64, giving x = 3.00 g; hence CaCO3 = 3/5 × 100 = 60%.",
     "imageUrl": null
   },
   {
@@ -20006,12 +19670,12 @@
     "difficulty": "tough",
     "questionText": "A 2.00 g mixture of Na2CO3 and NaHCO3 is heated strongly until constant mass. The residue weighs 1.38 g. What was the percentage by mass of NaHCO3 in the original mixture? (Na2CO3 = 106, NaHCO3 = 84, CO2 = 44)",
     "options": [
-      "50.0%",
-      "57.1%",
-      "60.0%",
-      "71.4%"
+      "42.0%",
+      "63.0%",
+      "84.0%",
+      "91.0%"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Only NaHCO3 loses mass: 2NaHCO3 → Na2CO3 + CO2 + H2O, so 168 g NaHCO3 loses 62 g. Mass loss = 2.00 − 1.38 = 0.62 g, hence NaHCO3 = 0.62×168/62 = 1.68 g; percentage = 1.68/2.00×100 = 84.0%.",
     "imageUrl": null
   },
@@ -20205,22 +19869,6 @@
     ],
     "correctIndex": 3,
     "explanation": "A disaccharide hydrolyzing to glucose and fructose can be a reducing disaccharide when one anomeric carbon remains free. Sucrose is the familiar glucose-fructose disaccharide but is non-reducing because both anomeric carbons participate in the glycosidic bond.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Polymers",
-    "difficulty": "moderate",
-    "questionText": "Which polymer is formed by condensation polymerization involving hexamethylenediamine and adipic acid?",
-    "options": [
-      "Teflon",
-      "Nylon-6,6",
-      "Buna-S",
-      "PVC"
-    ],
-    "correctIndex": 1,
-    "explanation": "Hexamethylenediamine and adipic acid undergo condensation with elimination of water to form the polyamide Nylon-6,6.",
     "imageUrl": null
   },
   {
@@ -20555,7 +20203,7 @@
       "Li2+",
       "Be3+"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "For a hydrogen-like species, ionization energy from n = 2 is 13.6Z²/4 = 3.4Z² eV. Thus 3.4Z² = 54.4 gives Z² = 16 and Z = 4, corresponding to Be3+.",
     "imageUrl": null
   },
@@ -20829,22 +20477,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Most group 1 carbonates are soluble, whereas MgCO3 is sparingly soluble in water. Hence MgCO3 has the lowest solubility among the listed compounds.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Organic Chemistry Basic Principles",
-    "difficulty": "tough",
-    "questionText": "Which carbocation is most stabilized by resonance?",
-    "options": [
-      "CH3CH2+",
-      "(CH3)3C+",
-      "C6H5CH2+",
-      "CH2=CHCH2+"
-    ],
-    "correctIndex": 2,
-    "explanation": "The benzyl carbocation is stabilized by extensive resonance delocalization of the positive charge into the aromatic ring. Although allylic cations are also resonance-stabilized, the benzyl cation has greater delocalization over the ring system.",
     "imageUrl": null
   },
   {
@@ -21261,22 +20893,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Alcoholic KOH combined with heating favors β-elimination by providing a strong base under conditions that promote removal of a β-hydrogen. Aqueous conditions generally favor substitution more strongly.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Alcohols, Phenols and Ethers",
-    "difficulty": "tough",
-    "questionText": "When phenol is treated with bromine water at room temperature, the principal product is",
-    "options": [
-      "Bromobenzene",
-      "2-bromophenol only",
-      "2,4,6-tribromophenol",
-      "Benzene hexabromide"
-    ],
-    "correctIndex": 2,
-    "explanation": "The -OH group strongly activates the aromatic ring and directs electrophilic substitution to the ortho and para positions. With bromine water, phenol undergoes rapid multiple substitution to give 2,4,6-tribromophenol.",
     "imageUrl": null
   },
   {
@@ -22856,11 +22472,11 @@
     "options": [
       "1.3 × 10^12",
       "2.6 × 10^13",
-      "1.3 × 10^27",
+      "1.2 × 10^27",
       "2.6 × 10^27"
     ],
     "correctIndex": 2,
-    "explanation": "At equilibrium, log K = nE°/0.0591 = (2 × 0.80)/0.0591 ≈ 27.08.",
+    "explanation": "log K = nE°/0.0591 = (2 × 0.80)/0.0591 ≈ 27.08, so K = 10^27.08 ≈ 1.2 × 10^27.",
     "imageUrl": null
   },
   {
@@ -23085,22 +22701,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Analgesics are drugs that reduce or relieve pain, while generally not causing loss of consciousness at therapeutic doses.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
-    "questionText": "A 2.00 g mixture of CaCO3 and MgCO3 is heated completely. The residue has a mass of 0.960 g. What is the mass percentage of CaCO3 in the original mixture? (Ca = 40, Mg = 24, C = 12, O = 16)",
-    "options": [
-      "40%",
-      "50%",
-      "60%",
-      "70%"
-    ],
-    "correctIndex": 2,
-    "explanation": "Let the masses of CaCO3 and MgCO3 be x and 2-x g. Their residue fractions are 56/100 and 40/84, respectively. Solving 0.56x + (40/84)(2-x) = 0.960 gives x = 1.20 g, so CaCO3 = 60%.",
     "imageUrl": null
   },
   {
@@ -23586,22 +23186,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Some Basic Concepts of Chemistry",
-    "difficulty": "tough",
-    "questionText": "A 10.0 g mixture of CaCO3 and MgCO3 is heated strongly until complete decomposition. The residue has a mass of 5.28 g. What is the mass percentage of CaCO3 in the original mixture? (Ca=40, Mg=24, C=12, O=16)",
-    "options": [
-      "40%",
-      "50%",
-      "60%",
-      "70%"
-    ],
-    "correctIndex": 2,
-    "explanation": "Let the masses of CaCO3 and MgCO3 be x and 10-x g. CO2 loss is 4.72 g, so 0.44x+(44/84)(10-x)=4.72, giving x=6.00 g. Hence CaCO3 percentage = 60%.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Atomic Structure",
     "difficulty": "tough",
     "questionText": "In a hydrogen atom, an electron undergoes a transition from n=6 to n=2. How many distinct spectral lines can be emitted if all intermediate transitions are possible during the de-excitation?",
@@ -23645,22 +23229,6 @@
     ],
     "correctIndex": 1,
     "explanation": "For a van der Waals gas, the Boyle temperature is T_B=a/(Rb). Thus T_B=1.35/(0.082×0.031)=531 K approximately.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction, ΔH°=−80 kJ mol−1 and ΔS°=−160 J mol−1 K−1. Assuming temperature-independent values, at what temperature does ΔG° become zero?",
-    "options": [
-      "250 K",
-      "400 K",
-      "500 K",
-      "800 K"
-    ],
-    "correctIndex": 2,
-    "explanation": "At equilibrium under standard conditions, ΔG°=0=ΔH°−TΔS°. Therefore T=ΔH°/ΔS°=(−80000)/(−160)=500 K.",
     "imageUrl": null
   },
   {
@@ -23997,22 +23565,6 @@
     ],
     "correctIndex": 0,
     "explanation": "ΔG° = ΔH°−TΔS° = 25−400(0.080) = 25−32 = −7 kJ mol−1. A negative ΔG° means the reaction is thermodynamically spontaneous under standard conditions.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "For H2(g) + I2(g) ⇌ 2HI(g), Kc = 64. Initially 1.0 mol each of H2 and I2 are placed in a 1 L vessel and no HI is present. What is the equilibrium concentration of HI?",
-    "options": [
-      "0.80 M",
-      "1.20 M",
-      "1.60 M",
-      "1.80 M"
-    ],
-    "correctIndex": 2,
-    "explanation": "Let x mol L−1 of H2 and I2 react: Kc = (2x)²/(1−x)² = 64, so 2x/(1−x)=8, giving x=0.80. Therefore [HI] = 2x = 1.60 M.",
     "imageUrl": null
   },
   {
@@ -24395,7 +23947,7 @@
       "25.0%",
       "50.0%"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "kt = 2.31 × 10^-3 × 600 = 1.386. Since ln([A]0/[A]) = kt, [A]/[A]0 = e^-1.386 ≈ 0.25, so 25% remains.",
     "imageUrl": null
   },
@@ -25012,22 +24564,6 @@
     "subject": "Chemistry",
     "chapter": "Chemical Kinetics",
     "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 30 min. What fraction of the original reactant remains after 90 min?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Ninety minutes corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
     "questionText": "The rate constant of a reaction increases from 2.0×10−3 s−1 at 300 K to 8.0×10−3 s−1 at 330 K. What is the approximate activation energy? Take R = 8.314 J mol−1 K−1.",
     "options": [
       "28.5 kJ mol−1",
@@ -25458,22 +24994,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Chemical Kinetics",
-    "difficulty": "tough",
-    "questionText": "A first-order reaction has a half-life of 15 min. What percentage of the original reactant remains after 45 min?",
-    "options": [
-      "6.25%",
-      "12.5%",
-      "25%",
-      "50%"
-    ],
-    "correctIndex": 1,
-    "explanation": "Forty-five minutes corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8, or 12.5%.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Solutions",
     "difficulty": "tough",
     "questionText": "A non-electrolyte solute is dissolved in water such that the mole fraction of water is 0.92. If vapour pressure of pure water is 25 mmHg, the vapour pressure of the solution is",
@@ -25709,22 +25229,6 @@
     ],
     "correctIndex": 2,
     "explanation": "At constant pressure, q = nCpΔT = 2×29×(500−300) = 11600 J = 11.60 kJ.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "For the weak acid HA, Ka = 4.0 × 10^-6 and the initial concentration is 0.25 M. The approximate equilibrium concentration of H+ is",
-    "options": [
-      "1.0 × 10^-2 M",
-      "1.0 × 10^-3 M",
-      "1.0 × 10^-4 M",
-      "4.0 × 10^-6 M"
-    ],
-    "correctIndex": 1,
-    "explanation": "For a weak acid, [H+] ≈ √(KaC) = √(4.0×10^-6×0.25) = √(1.0×10^-6) = 1.0×10^-3 M.",
     "imageUrl": null
   },
   {
@@ -27028,22 +26532,6 @@
     "subject": "Chemistry",
     "chapter": "Solutions",
     "difficulty": "tough",
-    "questionText": "A solution contains 0.50 mol of glucose dissolved in 4.50 mol of water. What is the mole fraction of glucose?",
-    "options": [
-      "0.050",
-      "0.100",
-      "0.111",
-      "0.500"
-    ],
-    "correctIndex": 1,
-    "explanation": "Total moles = 0.50 + 4.50 = 5.00 mol. Therefore xglucose = 0.50/5.00 = 0.100.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Solutions",
-    "difficulty": "tough",
     "questionText": "A non-electrolyte solute of molar mass 60 g mol-1 is dissolved in 500 g water. The solution shows a boiling-point elevation of 0.52 K. If Kb for water is 0.52 K kg mol-1, what mass of solute was dissolved?",
     "options": [
       "20 g",
@@ -28002,22 +27490,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Alcohols, Phenols and Ethers",
-    "difficulty": "tough",
-    "questionText": "When anisole is heated with excess HI under vigorous conditions, which products are obtained after complete cleavage?",
-    "options": [
-      "Phenol and methyl iodide",
-      "Iodobenzene and methanol",
-      "Benzene and methyl iodide",
-      "Phenol and iodobenzene"
-    ],
-    "correctIndex": 0,
-    "explanation": "Cleavage occurs at the alkyl–O bond because the aryl C−O bond does not undergo normal SN2 cleavage. Therefore anisole gives phenol and CH3I.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Aldehydes, Ketones and Carboxylic Acids",
     "difficulty": "tough",
     "questionText": "Which compound gives a positive Tollens test as well as a positive iodoform test?",
@@ -28541,22 +28013,6 @@
     ],
     "correctIndex": 2,
     "explanation": "In sucrose, the anomeric carbon of glucose and the anomeric carbon of fructose are both involved in the glycosidic bond. Consequently no free anomeric carbon remains and sucrose is non-reducing.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Polymers",
-    "difficulty": "moderate",
-    "questionText": "Which polymer is formed by condensation polymerization of hexamethylenediamine with adipic acid?",
-    "options": [
-      "Nylon-6,6",
-      "Teflon",
-      "PVC",
-      "Buna-S"
-    ],
-    "correctIndex": 0,
-    "explanation": "Hexamethylenediamine and adipic acid undergo condensation with elimination of water to produce the polyamide Nylon-6,6.",
     "imageUrl": null
   },
   {
@@ -29581,22 +29037,6 @@
     ],
     "correctIndex": 0,
     "explanation": "At fixed temperature and equal volume, pressure is proportional to the number of moles. Since n(He):n(O2) = 3:2, their separate pressures are also in the ratio 3:2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "For a reaction at 300 K, ΔH = −40 kJ mol−1 and ΔS = −100 J K−1 mol−1. At what temperature does ΔG become zero, assuming ΔH and ΔS remain constant?",
-    "options": [
-      "200 K",
-      "300 K",
-      "400 K",
-      "500 K"
-    ],
-    "correctIndex": 2,
-    "explanation": "At equilibrium, ΔG = ΔH − TΔS = 0, so T = ΔH/ΔS = (−40000)/(−100) = 400 K.",
     "imageUrl": null
   },
   {
@@ -31138,22 +30578,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Polymers",
-    "difficulty": "tough",
-    "questionText": "Which polymer is obtained by condensation polymerization of hexamethylenediamine and adipic acid?",
-    "options": [
-      "Nylon-6",
-      "Nylon-6,6",
-      "Teflon",
-      "PVC"
-    ],
-    "correctIndex": 1,
-    "explanation": "Hexamethylenediamine and adipic acid undergo condensation with elimination of water to produce the polyamide Nylon-6,6.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "Some Basic Concepts of Chemistry",
     "difficulty": "tough",
     "questionText": "A compound contains carbon, hydrogen and oxygen in the mass ratio 6:1:8. If its molar mass is 180 g mol-1, what is its molecular formula?",
@@ -31261,22 +30685,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For reversible isothermal expansion, w by gas = nRT ln(V2/V1) = (1)(8.314)(300)(2.303) approximately 5.74 kJ. Therefore the work done by the gas is +5.74 kJ.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Equilibrium",
-    "difficulty": "tough",
-    "questionText": "For N2O4(g) ⇌ 2NO2(g), 1.00 mol N2O4 is placed in a 1.00 L vessel and 20% dissociates at equilibrium. What is Kc?",
-    "options": [
-      "0.025",
-      "0.050",
-      "0.100",
-      "0.200"
-    ],
-    "correctIndex": 3,
-    "explanation": "At equilibrium, [N2O4] = 0.80 M and [NO2] = 0.40 M. Therefore Kc = (0.40)^2/0.80 = 0.20.",
     "imageUrl": null
   },
   {
@@ -31826,22 +31234,6 @@
   {
     "examMode": "JEE",
     "subject": "Chemistry",
-    "chapter": "Classification of Elements and Periodicity",
-    "difficulty": "tough",
-    "questionText": "Which sequence gives the increasing first ionization enthalpy of B, C, O and N?",
-    "options": [
-      "B < C < O < N",
-      "B < O < C < N",
-      "C < B < O < N",
-      "B < C < N < O"
-    ],
-    "correctIndex": 0,
-    "explanation": "Ionization enthalpy generally increases across the period, but O has a lower value than N because O has paired 2p electrons while N has the more stable half-filled 2p3 configuration.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
     "chapter": "General Principles of Metallurgy",
     "difficulty": "tough",
     "questionText": "For the reaction MO + C → M + CO, ΔG°f(MO) = −320 kJ mol−1 and ΔG°f(CO) = −275 kJ mol−1 at a given temperature. What is ΔG° for the reduction?",
@@ -32109,22 +31501,6 @@
     ],
     "correctIndex": 2,
     "explanation": "At the boundary, ΔG°=ΔH°−TΔS°=0. Therefore T=ΔH°/ΔS°=(−90000)/(−150)=600 K.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Chemistry",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "One mole of an ideal gas expands reversibly and isothermally at 300 K from 2 L to 16 L. Taking R=8.314 J mol−1 K−1 and ln 8=2.079, what is the magnitude of work done by the gas?",
-    "options": [
-      "2.60 kJ",
-      "5.19 kJ",
-      "7.48 kJ",
-      "10.38 kJ"
-    ],
-    "correctIndex": 1,
-    "explanation": "For reversible isothermal expansion, W=nRT ln(V2/V1). Thus W=1×8.314×300×ln8=5189 J≈5.19 kJ.",
     "imageUrl": null
   },
   {

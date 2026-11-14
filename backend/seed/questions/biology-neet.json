@@ -9476,22 +9476,6 @@
     "subject": "Biology",
     "chapter": "Molecular Basis of Inheritance",
     "difficulty": "tough",
-    "questionText": "A DNA template strand contains the sequence 3′-TAC GGA CTT-5′. What is the corresponding mRNA sequence produced during transcription?",
-    "options": [
-      "5′-AUG CCU GAA-3′",
-      "5′-UAC GGA CUU-3′",
-      "3′-AUG CCU GAA-5′",
-      "5′-ATG CCT GAA-3′"
-    ],
-    "correctIndex": 0,
-    "explanation": "mRNA is synthesised complementary to the DNA template and in the 5′→3′ direction. Thus 3′-TAC GGA CTT-5′ gives 5′-AUG CCU GAA-3′.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Molecular Basis of Inheritance",
-    "difficulty": "tough",
     "questionText": "A DNA molecule replicates semiconservatively. After two rounds of replication in a medium containing only normal nitrogen, starting from DNA whose both strands were labelled with heavy nitrogen, what fraction of DNA molecules will contain one heavy and one light strand?",
     "options": [
       "1/2",
@@ -22989,22 +22973,6 @@
     ],
     "correctIndex": 0,
     "explanation": "A true coelom is a body cavity completely lined by mesoderm, and a triploblastic animal has ectoderm, mesoderm and endoderm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Biology",
-    "chapter": "Plant Kingdom",
-    "difficulty": "tough",
-    "questionText": "A plant group shows a dominant gametophyte generation, with the sporophyte remaining attached to and nutritionally dependent on the gametophyte. Which group best fits this description?",
-    "options": [
-      "Bryophytes",
-      "Gymnosperms",
-      "Angiosperms",
-      "Pteridophytes"
-    ],
-    "correctIndex": 0,
-    "explanation": "Bryophytes have a dominant, independent gametophyte, while the sporophyte remains attached to it and depends on it for nutrition. This distinguishes them from vascular plant groups.",
     "imageUrl": null
   },
   {

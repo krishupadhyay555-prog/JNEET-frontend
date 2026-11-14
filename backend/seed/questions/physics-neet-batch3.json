@@ -1,0 +1,2945 @@
+[
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Units and Measurement",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A screw gauge has pitch 0.5 mm and 50 circular-scale divisions. With the jaws closed, the zero of the circular scale is 3 divisions BELOW the reference line (positive zero error). Measuring a wire, the main scale reads 4.0 mm and the circular scale reads 27 divisions. The corrected diameter is",
+    "options": [
+      "4.30 mm",
+      "4.27 mm",
+      "6.40 mm",
+      "4.24 mm"
+    ],
+    "correctIndex": 3,
+    "explanation": "LC = 0.5/50 = 0.01 mm. Observed = 4.0 + 27×0.01 = 4.27 mm. Positive zero error = +3×0.01 = 0.03 mm is subtracted: 4.24 mm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Units and Measurement",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The momentum of a body is measured with an error of 2% and its mass with an error of 1%. The maximum percentage error in its kinetic energy calculated from K = p²/2m is",
+    "options": [
+      "3%",
+      "4%",
+      "1%",
+      "5%"
+    ],
+    "correctIndex": 3,
+    "explanation": "ΔK/K = 2(Δp/p) + Δm/m = 2(2%) + 1% = 5%."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A balloon is rising vertically with a constant speed of 10 m/s. When it is 40 m above the ground, a stone is released from it. Taking g = 10 m/s², the time taken by the stone to reach the ground is",
+    "options": [
+      "2 s",
+      "2√2 s",
+      "5 s",
+      "4 s"
+    ],
+    "correctIndex": 3,
+    "explanation": "The stone starts with 10 m/s upward. Taking up as positive: −40 = 10t − 5t² → t² − 2t − 8 = 0 → t = 4 s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A ball is thrown horizontally at 20 m/s from the top of a tower 45 m high. Taking g = 10 m/s², the speed of the ball just before it hits the ground is",
+    "options": [
+      "30 m/s",
+      "50 m/s",
+      "36.1 m/s",
+      "20 m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "Time of fall = √(2×45/10) = 3 s, vertical speed = 30 m/s. Speed = √(20² + 30²) = √1300 ≈ 36.1 m/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For a projectile, the horizontal range is 4√3 times its maximum height. The angle of projection with the horizontal is",
+    "options": [
+      "30°",
+      "60°",
+      "45°",
+      "15°"
+    ],
+    "correctIndex": 0,
+    "explanation": "R/H = (u² sin2θ/g)/(u² sin²θ/2g) = 4/tanθ. So 4/tanθ = 4√3 → tanθ = 1/√3 → θ = 30°."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A river 200 m wide flows at 3 m/s. A boat can move at 5 m/s relative to water. If the boat must reach the point directly opposite on the other bank, the time taken is",
+    "options": [
+      "40 s",
+      "25 s",
+      "50 s",
+      "66.7 s"
+    ],
+    "correctIndex": 2,
+    "explanation": "To go straight across, the boat heads upstream so that the resultant velocity is √(5² − 3²) = 4 m/s across the river. Time = 200/4 = 50 s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A car moving at speed v stops in a distance s under a constant braking force. If its speed is increased by 50% and the same braking force acts, the stopping distance becomes",
+    "options": [
+      "2.25 s",
+      "1.5 s",
+      "3 s",
+      "1.25 s"
+    ],
+    "correctIndex": 0,
+    "explanation": "s = v²/2a. With 1.5v, s' = (1.5)² s = 2.25 s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A 4 kg block on a smooth incline of 30° is connected by a light string over a smooth pulley at the top to a hanging 6 kg block. Taking g = 10 m/s², the tension in the string is",
+    "options": [
+      "60 N",
+      "24 N",
+      "40 N",
+      "36 N"
+    ],
+    "correctIndex": 3,
+    "explanation": "a = (m₂g − m₁g sin30°)/(m₁ + m₂) = (60 − 20)/10 = 4 m/s². For the hanging block: T = m₂(g − a) = 6 × 6 = 36 N."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A 2 kg block rests on an 8 kg plank lying on a smooth floor. The coefficient of static friction between the block and the plank is 0.3. The maximum horizontal force that can be applied to the PLANK so that the block and plank move together is (g = 10 m/s²)",
+    "options": [
+      "6 N",
+      "30 N",
+      "24 N",
+      "7.5 N"
+    ],
+    "correctIndex": 1,
+    "explanation": "The block can be accelerated only by friction: a_max = μg = 3 m/s². For both together: F = (2 + 8) × 3 = 30 N."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A 60 kg man stands on a weighing machine inside a lift that is accelerating upward at 2 m/s². Taking g = 10 m/s², the machine reads",
+    "options": [
+      "48 kg",
+      "72 kg",
+      "60 kg",
+      "62 kg"
+    ],
+    "correctIndex": 1,
+    "explanation": "Normal force N = m(g + a) = 60 × 12 = 720 N, which the machine shows as 720/10 = 72 kg."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A road is banked at 45° on a curve of radius 40 m. The speed at which a car can take the curve without relying on friction is (g = 10 m/s²)",
+    "options": [
+      "10 m/s",
+      "20 m/s",
+      "20√2 m/s",
+      "40 m/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "v = √(rg tanθ) = √(40 × 10 × 1) = 20 m/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A uniform chain of mass 4 kg and length 2 m lies on a smooth table with one-fourth of its length hanging over the edge. The work needed to pull the hanging part back onto the table is (g = 10 m/s²)",
+    "options": [
+      "5 J",
+      "10 J",
+      "2.5 J",
+      "1.25 J"
+    ],
+    "correctIndex": 2,
+    "explanation": "Hanging mass = 1 kg, its centre of mass is (0.5 m)/2 = 0.25 m below the edge. W = mgh = 1 × 10 × 0.25 = 2.5 J (formula MgL/2n² = 4×10×2/32)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A 20 g bullet moving at 400 m/s gets embedded in a 3.98 kg wooden block suspended by a string. To what height does the block rise? (g = 10 m/s²)",
+    "options": [
+      "0.4 m",
+      "8 m",
+      "0.2 m",
+      "0.1 m"
+    ],
+    "correctIndex": 2,
+    "explanation": "Momentum: 0.02 × 400 = 4 × V → V = 2 m/s. Height h = V²/2g = 4/20 = 0.2 m."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A pump lifts 1000 litres of water to a height of 20 m in 5 minutes. Neglecting losses, its power is (g = 10 m/s², density of water 1000 kg/m³)",
+    "options": [
+      "4000 W",
+      "66.7 W (approx.)",
+      "667 W (approx.)",
+      "200 W"
+    ],
+    "correctIndex": 2,
+    "explanation": "P = mgh/t = 1000 × 10 × 20/300 ≈ 667 W."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The kinetic energy of a body is increased by 300%. The percentage increase in its momentum is",
+    "options": [
+      "300%",
+      "50%",
+      "200%",
+      "100%"
+    ],
+    "correctIndex": 3,
+    "explanation": "p = √(2mK). K becomes 4K, so p becomes 2p — an increase of 100%."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A constant torque of 20 N m acts on a wheel of moment of inertia 4 kg m², initially at rest. The angle turned through in the first 5 s and the angular speed at 5 s are",
+    "options": [
+      "125 rad and 25 rad/s",
+      "62.5 rad and 12.5 rad/s",
+      "62.5 rad and 25 rad/s",
+      "25 rad and 5 rad/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "α = τ/I = 5 rad/s². θ = ½αt² = ½ × 5 × 25 = 62.5 rad; ω = αt = 25 rad/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A horizontal disc of mass 100 kg rotates freely about its vertical axis with angular speed ω. A 25 kg child standing at the rim walks to the centre. The new angular speed is",
+    "options": [
+      "1.25ω",
+      "2ω",
+      "1.5ω",
+      "0.75ω"
+    ],
+    "correctIndex": 2,
+    "explanation": "I₁ = MR²/2 + mR² = 50R² + 25R² = 75R²; I₂ = 50R². ω₂ = ω × 75/50 = 1.5ω."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Four identical thin rods, each of mass m and length L, form a square. The moment of inertia about an axis through the centre of the square perpendicular to its plane is",
+    "options": [
+      "4mL²/3",
+      "mL²/3",
+      "2mL²/3",
+      "mL²"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each rod: I = mL²/12 + m(L/2)² = mL²/3. For four rods: 4mL²/3."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A uniform ladder rests against a smooth vertical wall, making 60° with the rough floor. The minimum coefficient of friction at the floor that keeps the ladder from slipping is",
+    "options": [
+      "√3/2",
+      "1/√3",
+      "1/(2√3)",
+      "1/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Torque about the bottom: N_wall L sin60° = mg (L/2) cos60° → N_wall = mg/(2 tan60°). Friction = N_wall ≤ μmg → μ ≥ 1/(2√3)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The moment of inertia of a thin ring of mass M and radius R about a tangent in its own plane is",
+    "options": [
+      "MR²/2",
+      "3MR²/2",
+      "2MR²",
+      "5MR²/4"
+    ],
+    "correctIndex": 1,
+    "explanation": "About a diameter: MR²/2. Parallel axis to the tangent: MR²/2 + MR² = 3MR²/2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The acceleration due to gravity at a height R/2 above the Earth's surface equals that at a depth d below the surface (R = Earth's radius). Then d is",
+    "options": [
+      "5R/9",
+      "R/2",
+      "4R/9",
+      "R/4"
+    ],
+    "correctIndex": 0,
+    "explanation": "At height R/2: g' = g/(1.5)² = 4g/9. At depth d: g(1 − d/R). So 1 − d/R = 4/9 → d = 5R/9."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A geostationary satellite has period 24 h at an orbital radius of about 42,000 km. A satellite at an orbital radius of 10,500 km has a period of",
+    "options": [
+      "6 h",
+      "12 h",
+      "3 h",
+      "1.5 h"
+    ],
+    "correctIndex": 2,
+    "explanation": "T ∝ r^(3/2). r is one-fourth, so T = 24/8 = 3 h."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A planet has twice the mass of the Earth and twice its radius. The escape speed from it compared with the Earth's escape speed of 11.2 km/s is",
+    "options": [
+      "22.4 km/s",
+      "11.2 km/s",
+      "5.6 km/s",
+      "15.8 km/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "vₑ = √(2GM/R). M and R both double, so vₑ is unchanged."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A steel wire (Y = 2 × 10¹¹ N/m²) is under a stress of 2 × 10⁸ N/m². The elastic energy stored per unit volume is",
+    "options": [
+      "1 × 10⁵ J/m³",
+      "2 × 10⁵ J/m³",
+      "1 × 10⁻³ J/m³",
+      "4 × 10⁵ J/m³"
+    ],
+    "correctIndex": 0,
+    "explanation": "u = stress²/2Y = (4 × 10¹⁶)/(4 × 10¹¹) = 1 × 10⁵ J/m³."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Eight identical rain drops, each falling with terminal speed 2 cm/s, merge into one drop. The terminal speed of the big drop is",
+    "options": [
+      "16 cm/s",
+      "4 cm/s",
+      "8 cm/s",
+      "2 cm/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "Volume ×8 → radius ×2. Terminal speed ∝ r², so it becomes 4 × 2 = 8 cm/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water stands 20 m high in a tank. A small hole is made 5 m below the water surface. The water strikes the ground at a horizontal distance of",
+    "options": [
+      "10 m",
+      "10√3 m ≈ 17.3 m",
+      "20 m",
+      "5√3 m ≈ 8.7 m"
+    ],
+    "correctIndex": 1,
+    "explanation": "Efflux speed v = √(2gh) with h = 5 m; fall height = 15 m. Range = 2√[h(H − h)] = 2√(5 × 15) = 10√3 m."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The work done in blowing a soap bubble of radius 1 cm (surface tension 0.03 N/m) is",
+    "options": [
+      "3.77 × 10⁻⁵ J",
+      "1.51 × 10⁻⁴ J",
+      "9.42 × 10⁻⁶ J",
+      "7.54 × 10⁻⁵ J"
+    ],
+    "correctIndex": 3,
+    "explanation": "A soap bubble has two surfaces: W = T × 2 × 4πr² = 8π × 10⁻⁴ × 0.03 ≈ 7.54 × 10⁻⁵ J."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water (surface tension 0.07 N/m, angle of contact 0°) rises in a capillary tube of radius 0.5 mm to a height of (g = 10 m/s²)",
+    "options": [
+      "1.4 cm",
+      "5.6 cm",
+      "2.8 cm",
+      "0.28 cm"
+    ],
+    "correctIndex": 2,
+    "explanation": "h = 2T/(rρg) = 2 × 0.07/(5 × 10⁻⁴ × 1000 × 10) = 0.028 m = 2.8 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermal Properties of Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "20 g of steam at 100 °C is passed into 100 g of ice at 0 °C. Latent heat of steam = 540 cal/g, of ice = 80 cal/g, specific heat of water = 1 cal/g°C. The final temperature is",
+    "options": [
+      "40 °C",
+      "0 °C",
+      "60 °C",
+      "20 °C"
+    ],
+    "correctIndex": 0,
+    "explanation": "Steam giving heat down to 0 °C: 20(540 + 100) = 12800 cal. Melting ice needs 8000 cal. Remaining 4800 cal warms 120 g water: ΔT = 4800/120 = 40 °C."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermal Properties of Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A pendulum clock with a steel rod (α = 1.2 × 10⁻⁵ /°C) keeps correct time at 20 °C. At 40 °C, it will",
+    "options": [
+      "gain about 10.4 s per day",
+      "lose about 20.7 s per day",
+      "keep correct time",
+      "lose about 10.4 s per day"
+    ],
+    "correctIndex": 3,
+    "explanation": "T ∝ √L, so ΔT/T = ½αΔθ. Time lost per day = ½ × 1.2 × 10⁻⁵ × 20 × 86400 ≈ 10.4 s (longer rod, slower clock)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermal Properties of Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two slabs of equal thickness and area are joined face to face. Conductivity of the first is twice that of the second. The outer faces are at 100 °C (first slab) and 0 °C. The temperature of the junction is",
+    "options": [
+      "50 °C",
+      "33.3 °C (approx.)",
+      "66.7 °C (approx.)",
+      "75 °C"
+    ],
+    "correctIndex": 2,
+    "explanation": "Equal heat current: 2K(100 − T) = K(T − 0) → 3T = 200 → T ≈ 66.7 °C."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermal Properties of Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Steel rails 10 m long are laid at 20 °C. If the temperature can rise to 70 °C, the gap needed between rails is (α = 1.2 × 10⁻⁵ /°C)",
+    "options": [
+      "6 mm",
+      "12 mm",
+      "0.6 mm",
+      "3 mm"
+    ],
+    "correctIndex": 0,
+    "explanation": "ΔL = LαΔT = 10 × 1.2 × 10⁻⁵ × 50 = 6 × 10⁻³ m = 6 mm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An ideal gas is taken through a cycle: from A (P₀, V₀) it is heated at constant volume to B (2P₀, V₀), then expanded at constant pressure to C (2P₀, 2V₀), and finally brought back to A along a straight line on the P–V diagram. The net work done by the gas in the cycle is",
+    "options": [
+      "P₀V₀",
+      "2P₀V₀",
+      "P₀V₀/2",
+      "3P₀V₀/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Net work = area enclosed by the triangle ABC on the P–V diagram = ½ × (2V₀ − V₀) × (2P₀ − P₀) = P₀V₀/2 (clockwise, so positive)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A monoatomic ideal gas at 300 K is compressed adiabatically to one-eighth of its volume. Its final temperature is",
+    "options": [
+      "2400 K",
+      "1200 K",
+      "600 K",
+      "300 K"
+    ],
+    "correctIndex": 1,
+    "explanation": "TV^(γ−1) = constant with γ − 1 = 2/3: T₂ = 300 × 8^(2/3) = 300 × 4 = 1200 K."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "When a diatomic ideal gas is heated at constant pressure, the fraction of the supplied heat that is converted into work is",
+    "options": [
+      "5/7",
+      "2/5",
+      "3/5",
+      "2/7"
+    ],
+    "correctIndex": 3,
+    "explanation": "W/Q = nRΔT/(nCₚΔT) = R/(7R/2) = 2/7."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinetic Theory",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "At what temperature will the rms speed of oxygen molecules equal the rms speed of hydrogen molecules at 300 K?",
+    "options": [
+      "2400 K",
+      "1200 K",
+      "4800 K",
+      "300 K"
+    ],
+    "correctIndex": 2,
+    "explanation": "v_rms ∝ √(T/M): T/32 = 300/2 → T = 4800 K."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinetic Theory",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The pressure of an ideal gas is doubled and its absolute temperature is halved. Its mean free path becomes",
+    "options": [
+      "one-fourth",
+      "four times",
+      "unchanged",
+      "half"
+    ],
+    "correctIndex": 0,
+    "explanation": "λ ∝ T/P (λ = kT/√2πd²P). T/2 and 2P → λ/4."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A spring of force constant k is cut into two pieces whose lengths are in the ratio 1 : 2. A mass m attached to the shorter piece oscillates with period (T = 2π√(m/k))",
+    "options": [
+      "T√3",
+      "T/√(3/2)",
+      "T/√3",
+      "T/3"
+    ],
+    "correctIndex": 2,
+    "explanation": "k ∝ 1/length; the shorter piece is 1/3 of the length, so k' = 3k and T' = T/√3."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A particle in SHM has amplitude 10 cm and period π s. Its speed when the displacement is 6 cm is",
+    "options": [
+      "8 cm/s",
+      "16 cm/s",
+      "20 cm/s",
+      "12 cm/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "ω = 2π/T = 2 rad/s. v = ω√(A² − x²) = 2√(100 − 36) = 16 cm/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A simple pendulum has period T in a stationary lift. If the lift accelerates upward at g, the period becomes",
+    "options": [
+      "T√2",
+      "T/2",
+      "T/√2",
+      "T"
+    ],
+    "correctIndex": 2,
+    "explanation": "g_eff = 2g, T ∝ 1/√g → T/√2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A pipe 50 cm long is closed at one end. Speed of sound is 340 m/s. How many natural frequencies of this pipe lie below 1000 Hz?",
+    "options": [
+      "5",
+      "2",
+      "3",
+      "6"
+    ],
+    "correctIndex": 2,
+    "explanation": "f₁ = v/4L = 340/2 = 170 Hz; only odd harmonics: 170, 510, 850, 1190… Three lie below 1000 Hz."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Tuning fork A (256 Hz) gives 4 beats per second with fork B. When A is loaded with a little wax, the beats increase to 6 per second. The frequency of B is",
+    "options": [
+      "260 Hz",
+      "252 Hz",
+      "250 Hz",
+      "262 Hz"
+    ],
+    "correctIndex": 1,
+    "explanation": "B is 252 or 260 Hz. Wax lowers A's frequency; beats increase only if B is lower than A, so B = 252 Hz."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The equation of a wave is y = 0.02 sin(100πt − 2πx) in SI units. Its speed is",
+    "options": [
+      "100 m/s",
+      "25 m/s",
+      "50 m/s",
+      "200 m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "v = ω/k = 100π/2π = 50 m/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An electric dipole of moment 4 × 10⁻⁹ C m is aligned with a uniform field of 5 × 10⁴ N/C. The work needed to rotate it through 60° is",
+    "options": [
+      "2 × 10⁻⁴ J",
+      "1.73 × 10⁻⁴ J",
+      "0.5 × 10⁻⁴ J",
+      "1 × 10⁻⁴ J"
+    ],
+    "correctIndex": 3,
+    "explanation": "W = pE(1 − cos60°) = 4 × 10⁻⁹ × 5 × 10⁴ × 0.5 = 1 × 10⁻⁴ J."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A 2 μF capacitor charged to 100 V is connected across an identical uncharged capacitor. The energy lost as heat is",
+    "options": [
+      "5 mJ",
+      "10 mJ",
+      "2.5 mJ",
+      "0 mJ"
+    ],
+    "correctIndex": 0,
+    "explanation": "Initial energy = ½ × 2 × 10⁻⁶ × 10⁴ = 10 mJ. Final V = 50 V, energy = 2 × ½ × 2 × 10⁻⁶ × 2500 = 5 mJ. Loss = 5 mJ."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A dielectric slab of constant 4 and thickness half the plate separation is inserted in a parallel-plate capacitor of capacitance C₀. The new capacitance is",
+    "options": [
+      "2C₀",
+      "2.5C₀",
+      "1.25C₀",
+      "1.6C₀"
+    ],
+    "correctIndex": 3,
+    "explanation": "C = ε₀A/(d − t + t/K) = ε₀A/(d/2 + d/8) = 8C₀/5 = 1.6C₀."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Four charges of +2 μC each sit at the corners of a square whose centre is 1 m from each corner. The electric potential and field at the centre are (1/4πε₀ = 9 × 10⁹)",
+    "options": [
+      "7.2 × 10⁴ V and 7.2 × 10⁴ N/C",
+      "zero and zero",
+      "7.2 × 10⁴ V and zero",
+      "1.8 × 10⁴ V and zero"
+    ],
+    "correctIndex": 2,
+    "explanation": "Potential adds as scalars: 4 × 9 × 10⁹ × 2 × 10⁻⁶/1 = 7.2 × 10⁴ V. Fields cancel in opposite pairs, so E = 0."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two point charges repel with force F. If each charge is doubled and the distance between them is also doubled, the force becomes",
+    "options": [
+      "4F",
+      "F/4",
+      "2F",
+      "F"
+    ],
+    "correctIndex": 3,
+    "explanation": "F ∝ q₁q₂/r²: (2 × 2)/2² = 1."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a Wheatstone bridge the four arms are P = 10 Ω, Q = 20 Ω, R = 15 Ω and S = 40 Ω (balance needs P/Q = R/S). What resistance must be connected in parallel with S to balance the bridge?",
+    "options": [
+      "30 Ω",
+      "120 Ω",
+      "10 Ω",
+      "60 Ω"
+    ],
+    "correctIndex": 1,
+    "explanation": "Balance needs S' = QR/P = 20 × 15/10 = 30 Ω. 40X/(40 + X) = 30 → 10X = 1200 → X = 120 Ω."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Ten cells, each of emf 1.5 V and internal resistance 0.5 Ω, are joined in series, but one cell is connected the wrong way round. With an external resistance of 7 Ω, the current is",
+    "options": [
+      "1.25 A",
+      "1 A",
+      "1.5 A",
+      "0.75 A"
+    ],
+    "correctIndex": 1,
+    "explanation": "Net emf = (9 − 1) × 1.5 = 12 V (the reversed cell cancels one good cell). Total r = 10 × 0.5 = 5 Ω. I = 12/12 = 1 A."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A copper wire of cross-section 2.5 mm² carries 1.5 A. Free-electron density is 8.5 × 10²⁸ per m³. The drift speed is about",
+    "options": [
+      "4.41 × 10⁻⁴ m/s",
+      "4.41 × 10⁻⁵ m/s",
+      "4.41 × 10⁻⁶ m/s",
+      "3 × 10⁸ m/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "v_d = I/(neA) = 1.5/(8.5 × 10²⁸ × 1.6 × 10⁻¹⁹ × 2.5 × 10⁻⁶) ≈ 4.41 × 10⁻⁵ m/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A wire is stretched so that its radius becomes half while its volume stays the same. Its resistance becomes",
+    "options": [
+      "4 times",
+      "8 times",
+      "16 times",
+      "2 times"
+    ],
+    "correctIndex": 2,
+    "explanation": "Area → 1/4, length → 4 times. R ∝ L/A → 4 × 4 = 16 times."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A wire forms a single circular loop carrying current I. The same wire is rewound into a circular coil of two turns carrying the same current. The field at the centre becomes",
+    "options": [
+      "2 times",
+      "4 times",
+      "half",
+      "unchanged"
+    ],
+    "correctIndex": 1,
+    "explanation": "Radius halves and turns double: B = μ₀NI/2R → 2/(1/2) = 4 times."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An electron accelerated through 200 V enters a magnetic field of 1 × 10⁻³ T perpendicular to its velocity. The radius of its path is about (mₑ = 9.1 × 10⁻³¹ kg, e = 1.6 × 10⁻¹⁹ C)",
+    "options": [
+      "4.8 cm",
+      "2.4 cm",
+      "6.7 cm",
+      "47.7 cm"
+    ],
+    "correctIndex": 0,
+    "explanation": "r = √(2mV/e)/B = √(2 × 9.1 × 10⁻³¹ × 200/1.6 × 10⁻¹⁹)/10⁻³ ≈ 0.0477 m ≈ 4.8 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A galvanometer of resistance 50 Ω gives full-scale deflection at 2 mA. To convert it into a voltmeter of range 0–10 V, we must connect",
+    "options": [
+      "4950 Ω in series",
+      "5000 Ω in series",
+      "4950 Ω in parallel",
+      "0.1 Ω in parallel"
+    ],
+    "correctIndex": 0,
+    "explanation": "R = V/I_g − G = 10/0.002 − 50 = 4950 Ω, in series."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two long parallel wires 10 cm apart carry 5 A each in the same direction. The force per metre between them is (μ₀ = 4π × 10⁻⁷ T m/A)",
+    "options": [
+      "5 × 10⁻⁵ N, repulsive",
+      "1 × 10⁻⁴ N, attractive",
+      "5 × 10⁻⁵ N, attractive",
+      "2.5 × 10⁻⁵ N, attractive"
+    ],
+    "correctIndex": 2,
+    "explanation": "F/L = μ₀I₁I₂/2πd = 2 × 10⁻⁷ × 25/0.1 = 5 × 10⁻⁵ N/m; like currents attract."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A 0.4 m rod slides at 5 m/s on frictionless rails in a field of 0.5 T perpendicular to the rails. The circuit resistance is 2 Ω. The force needed to keep it moving at constant speed is",
+    "options": [
+      "0.2 N",
+      "0.5 N",
+      "1 N",
+      "0.1 N"
+    ],
+    "correctIndex": 3,
+    "explanation": "ε = Blv = 1 V, I = 0.5 A. F = BIl = 0.5 × 0.5 × 0.4 = 0.1 N."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The current in a 50 mH coil falls from 5 A to 0 in 0.1 s. The average induced emf is",
+    "options": [
+      "25 V",
+      "0.25 V",
+      "2.5 V",
+      "250 V"
+    ],
+    "correctIndex": 2,
+    "explanation": "ε = L ΔI/Δt = 0.05 × 5/0.1 = 2.5 V."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A series LCR circuit has L = 0.1 H, C = 10 μF and R = 10 Ω across a 100 V (rms) variable-frequency source. At resonance, the rms voltage across the inductor is",
+    "options": [
+      "100 V",
+      "10 V",
+      "500 V",
+      "1000 V"
+    ],
+    "correctIndex": 3,
+    "explanation": "ω₀ = 1/√(LC) = 1000 rad/s. I = V/R = 10 A. V_L = I ω₀L = 10 × 100 = 1000 V."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A step-down transformer converts 2200 V to 220 V and delivers 4.4 kW. If its efficiency is 80%, the current in the primary is",
+    "options": [
+      "2 A",
+      "20 A",
+      "2.5 A",
+      "25 A"
+    ],
+    "correctIndex": 2,
+    "explanation": "Input = 4400/0.8 = 5500 W. I_p = 5500/2200 = 2.5 A."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a plane electromagnetic wave in vacuum, the peak electric field is 48 V/m. The peak magnetic field is",
+    "options": [
+      "1.6 × 10⁻⁸ T",
+      "4.8 × 10⁻⁷ T",
+      "1.6 × 10⁻⁷ T",
+      "1.44 × 10¹⁰ T"
+    ],
+    "correctIndex": 2,
+    "explanation": "B₀ = E₀/c = 48/(3 × 10⁸) = 1.6 × 10⁻⁷ T."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A glass lens (n = 1.5) has focal length 20 cm in air. Its focal length when immersed in a liquid of refractive index 1.25 is",
+    "options": [
+      "50 cm",
+      "25 cm",
+      "16 cm",
+      "100 cm"
+    ],
+    "correctIndex": 0,
+    "explanation": "f ∝ 1/(n_rel − 1): f' = 20 × 0.5/(1.5/1.25 − 1) = 10/0.2 = 50 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An equilateral glass prism gives a minimum deviation of 30°. The refractive index of the glass is",
+    "options": [
+      "√3",
+      "√2",
+      "1.5",
+      "2/√3"
+    ],
+    "correctIndex": 1,
+    "explanation": "n = sin[(A + δ)/2]/sin(A/2) = sin45°/sin30° = √2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An object is 20 cm in front of a concave mirror of focal length 15 cm. The image is",
+    "options": [
+      "virtual, erect, 3 times larger, at 60 cm",
+      "real, inverted, 3 times larger, at 60 cm",
+      "real, inverted, same size, at 30 cm",
+      "real, inverted, 0.75 times, at 8.6 cm"
+    ],
+    "correctIndex": 1,
+    "explanation": "1/v = 1/f − 1/u = −1/15 + 1/20 = −1/60 → v = −60 cm (real). m = −v/u = −3 (inverted, 3× larger)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A coin lies at the bottom of a beaker filled with water (n = 4/3) to a depth of 12 cm. Seen from above, it appears raised by",
+    "options": [
+      "9 cm",
+      "3 cm",
+      "4 cm",
+      "1 cm"
+    ],
+    "correctIndex": 1,
+    "explanation": "Apparent depth = 12/(4/3) = 9 cm, so it appears raised by 3 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two thin lenses of powers +5 D and −3 D are placed in contact. The focal length of the combination is",
+    "options": [
+      "+12.5 cm",
+      "−50 cm",
+      "+50 cm",
+      "+20 cm"
+    ],
+    "correctIndex": 2,
+    "explanation": "P = +2 D → f = 1/2 m = +50 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Young's experiment with light of 600 nm, slit separation 0.5 mm and screen distance 1 m, the fringe width when the whole set-up is immersed in water (n = 4/3) is",
+    "options": [
+      "1.2 mm",
+      "1.6 mm",
+      "0.6 mm",
+      "0.9 mm"
+    ],
+    "correctIndex": 3,
+    "explanation": "In air β = λD/d = 1.2 mm. In water λ → λ/n, so β = 1.2/(4/3) = 0.9 mm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Light of wavelength 500 nm falls on a slit 0.2 mm wide. On a screen 2 m away, the width of the central maximum is",
+    "options": [
+      "5 mm",
+      "2.5 mm",
+      "20 mm",
+      "10 mm"
+    ],
+    "correctIndex": 3,
+    "explanation": "Width = 2λD/a = 2 × 500 × 10⁻⁹ × 2/(0.2 × 10⁻³) = 0.01 m = 10 mm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Light of wavelength 310 nm falls on a metal of work function 2 eV. The stopping potential is (hc = 1240 eV nm)",
+    "options": [
+      "4 V",
+      "6 V",
+      "1 V",
+      "2 V"
+    ],
+    "correctIndex": 3,
+    "explanation": "E = 1240/310 = 4 eV. K_max = 4 − 2 = 2 eV → V₀ = 2 V."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The de Broglie wavelength of an electron accelerated through 150 V is about",
+    "options": [
+      "0.1 nm",
+      "1 nm",
+      "0.01 nm",
+      "0.15 nm"
+    ],
+    "correctIndex": 0,
+    "explanation": "λ = 1.227/√V nm = 1.227/12.25 ≈ 0.1 nm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The ratio of the longest wavelength of the Lyman series to the longest wavelength of the Balmer series of hydrogen is",
+    "options": [
+      "27/5",
+      "4/9",
+      "5/36",
+      "5/27"
+    ],
+    "correctIndex": 3,
+    "explanation": "1/λ_L = R(3/4), 1/λ_B = R(5/36). λ_L/λ_B = (5/36)/(3/4) = 5/27."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Electrons in a sample of hydrogen are in the n = 5 state. The maximum number of different spectral lines they can emit while returning to the ground state is",
+    "options": [
+      "10",
+      "4",
+      "5",
+      "15"
+    ],
+    "correctIndex": 0,
+    "explanation": "n(n − 1)/2 = 5 × 4/2 = 10."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Using m(¹H) = 1.007825 u, mₙ = 1.008665 u and m(⁴He) = 4.002603 u (1 u = 931.5 MeV), the binding energy per nucleon of ⁴He is about",
+    "options": [
+      "7.07 MeV",
+      "28.30 MeV",
+      "14.15 MeV",
+      "3.54 MeV"
+    ],
+    "correctIndex": 0,
+    "explanation": "Δm = 2(1.007825) + 2(1.008665) − 4.002603 = 0.030377 u → BE = 28.30 MeV; per nucleon = 7.07 MeV."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A 6 V Zener diode is connected with a series resistance of 500 Ω to a 12 V supply. A load of 2 kΩ is across the Zener. The current through the Zener is",
+    "options": [
+      "12 mA",
+      "9 mA",
+      "3 mA",
+      "6 mA"
+    ],
+    "correctIndex": 1,
+    "explanation": "I(series) = (12 − 6)/500 = 12 mA. I(load) = 6/2000 = 3 mA. I_Z = 12 − 3 = 9 mA."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A particle moves with constant speed along a circle. Which statement is correct?",
+    "options": [
+      "Its acceleration is zero",
+      "Its velocity and acceleration both change in direction",
+      "Its velocity is constant",
+      "Its acceleration is along the velocity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Uniform circular motion: speed is constant but the direction of velocity keeps changing; the centripetal acceleration also keeps turning towards the centre."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which is an example of projectile motion (neglecting air resistance)?",
+    "options": [
+      "A ball thrown at an angle in a cricket field",
+      "A satellite orbiting the Earth",
+      "A car on a circular track",
+      "A stone tied to a string whirled in a circle"
+    ],
+    "correctIndex": 0,
+    "explanation": "A projectile moves only under gravity after launch, like a thrown ball. Orbits and circular motion need a central force."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "At the highest point of a projectile's path (no air resistance), which statement is true?",
+    "options": [
+      "Velocity and acceleration are both zero",
+      "Velocity is zero, acceleration is g",
+      "Velocity is horizontal and acceleration is g downward",
+      "Acceleration is zero, velocity is horizontal"
+    ],
+    "correctIndex": 2,
+    "explanation": "Only the vertical component of velocity becomes zero; the horizontal component remains. Acceleration is always g downward."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A person in a bus is thrown forward when the bus stops suddenly. This is explained by",
+    "options": [
+      "inertia of rest",
+      "Newton's third law",
+      "inertia of motion",
+      "conservation of energy"
+    ],
+    "correctIndex": 2,
+    "explanation": "The body tends to continue its state of motion (first law) when the bus stops."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A rocket moves forward by pushing exhaust gases backward. The principle behind this is",
+    "options": [
+      "Bernoulli's principle",
+      "Pascal's law",
+      "conservation of linear momentum / Newton's third law",
+      "conservation of angular momentum"
+    ],
+    "correctIndex": 2,
+    "explanation": "Gases pushed backward exert an equal and opposite force on the rocket; total momentum stays constant."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Why does a cricketer move his hands backward while catching a fast ball?",
+    "options": [
+      "To reduce the momentum change",
+      "To increase the time of impact and reduce the force",
+      "To increase the force",
+      "To decrease the time of impact"
+    ],
+    "correctIndex": 1,
+    "explanation": "F = Δp/Δt. The momentum change is fixed; a longer time means a smaller force on the hands."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a perfectly inelastic collision between two bodies,",
+    "options": [
+      "both momentum and kinetic energy are conserved",
+      "kinetic energy is conserved but momentum is not",
+      "neither is conserved",
+      "momentum is conserved but kinetic energy is not"
+    ],
+    "correctIndex": 3,
+    "explanation": "Momentum is always conserved without external force; in an inelastic collision some kinetic energy turns into heat, sound, deformation."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The work done by a conservative force on a body moving around a closed path is",
+    "options": [
+      "always positive",
+      "always negative",
+      "equal to the change in kinetic energy only if friction acts",
+      "zero"
+    ],
+    "correctIndex": 3,
+    "explanation": "For a conservative force, work depends only on end points; on a closed path start and end coincide, so W = 0."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An ice skater pulls her arms in during a spin. Her angular speed",
+    "options": [
+      "increases because angular momentum is conserved",
+      "decreases because moment of inertia decreases",
+      "stays the same",
+      "increases because torque acts on her"
+    ],
+    "correctIndex": 0,
+    "explanation": "No external torque, so Iω is constant; smaller I gives larger ω."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The centre of mass of a body",
+    "options": [
+      "always lies inside the body",
+      "always lies at its geometric centre",
+      "may lie outside the body (e.g. a ring)",
+      "moves only when external torque acts"
+    ],
+    "correctIndex": 2,
+    "explanation": "For a ring or a boomerang the centre of mass lies in empty space."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The weight of a body is maximum at",
+    "options": [
+      "the poles",
+      "the equator",
+      "the centre of the Earth",
+      "a height equal to the Earth's radius"
+    ],
+    "correctIndex": 0,
+    "explanation": "At the poles there is no centrifugal reduction and the radius is smallest, so g is largest."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An astronaut in an orbiting satellite feels weightless because",
+    "options": [
+      "both the astronaut and the satellite are in free fall with the same acceleration",
+      "gravity is zero at that height",
+      "the satellite shields gravity",
+      "the centrifugal force exceeds gravity"
+    ],
+    "correctIndex": 0,
+    "explanation": "Gravity is still about 90% of its surface value at low orbits; everything falls together, so no normal force is felt."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Hydraulic lifts and hydraulic brakes work on",
+    "options": [
+      "Pascal's law",
+      "Bernoulli's principle",
+      "Archimedes' principle",
+      "Hooke's law"
+    ],
+    "correctIndex": 0,
+    "explanation": "Pressure applied to an enclosed fluid is transmitted equally in all directions."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An aeroplane wing gets lift mainly because",
+    "options": [
+      "air is denser above the wing",
+      "the wing is lighter than air",
+      "air moves faster over the upper surface, so pressure there is lower",
+      "the engine pushes the wing upward"
+    ],
+    "correctIndex": 2,
+    "explanation": "By Bernoulli's principle, higher speed over the curved top means lower pressure, giving a net upward force."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Steel is said to be more elastic than rubber because",
+    "options": [
+      "it stretches more for the same force",
+      "it is denser",
+      "it has a larger Young's modulus",
+      "it has a smaller Young's modulus"
+    ],
+    "correctIndex": 2,
+    "explanation": "Elasticity in physics means resistance to deformation; steel has a much larger Young's modulus."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermal Properties of Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water is used in car radiators mainly because",
+    "options": [
+      "it has a low specific heat capacity",
+      "it has a high specific heat capacity",
+      "it is a good conductor of electricity",
+      "it has a low boiling point"
+    ],
+    "correctIndex": 1,
+    "explanation": "High specific heat lets water absorb a lot of heat with a small temperature rise."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermal Properties of Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water is densest at about",
+    "options": [
+      "0 °C",
+      "100 °C",
+      "−4 °C",
+      "4 °C"
+    ],
+    "correctIndex": 3,
+    "explanation": "Anomalous expansion: water contracts from 0 to 4 °C and expands above it, so density is maximum near 4 °C."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In an adiabatic process,",
+    "options": [
+      "no heat is exchanged with the surroundings",
+      "temperature stays constant",
+      "pressure stays constant",
+      "volume stays constant"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adiabatic means Q = 0; any work done changes the internal energy (and temperature)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which statement is consistent with the second law of thermodynamics?",
+    "options": [
+      "No engine working between two temperatures can be 100% efficient",
+      "Energy can be created in a cycle",
+      "Heat flows on its own from cold to hot bodies",
+      "All heat can be converted into work in a cycle"
+    ],
+    "correctIndex": 0,
+    "explanation": "Kelvin–Planck statement: some heat must always be rejected to a sink."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinetic Theory",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "According to kinetic theory, the pressure of a gas arises from",
+    "options": [
+      "attraction between molecules",
+      "the weight of the gas",
+      "molecules colliding with the walls of the container",
+      "molecules colliding with each other only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Each wall collision transfers momentum; the rate of momentum transfer per unit area is the pressure."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which of these is an example of SHM (for small amplitude)?",
+    "options": [
+      "A ball bouncing on the floor",
+      "A simple pendulum swinging through a small angle",
+      "The Earth going round the Sun",
+      "A car moving round a circular track"
+    ],
+    "correctIndex": 1,
+    "explanation": "Small-angle pendulum: restoring force ∝ −displacement, which is the condition for SHM. A bouncing ball is periodic but not SHM."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Sound cannot travel through vacuum because it",
+    "options": [
+      "is a transverse wave",
+      "travels too slowly",
+      "is an electromagnetic wave",
+      "is a mechanical wave needing a medium"
+    ],
+    "correctIndex": 3,
+    "explanation": "Sound needs particles of a medium to pass on the vibration."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Inside a charged hollow conducting sphere,",
+    "options": [
+      "field and potential are both zero",
+      "field is maximum at the centre",
+      "potential is zero but field is not",
+      "the electric field is zero and the potential equals that on the surface"
+    ],
+    "correctIndex": 3,
+    "explanation": "All charge resides on the outer surface; E = 0 inside and V is constant (= kQ/R)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Electric field lines",
+    "options": [
+      "form closed loops around charges",
+      "start from negative charges",
+      "never intersect each other",
+      "are always parallel"
+    ],
+    "correctIndex": 2,
+    "explanation": "At an intersection the field would have two directions, which is impossible. Electrostatic lines start on + and end on − charges."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "When the temperature of a metal conductor rises, its resistance",
+    "options": [
+      "decreases",
+      "stays constant",
+      "increases because electrons collide more often with ions",
+      "becomes zero"
+    ],
+    "correctIndex": 2,
+    "explanation": "Relaxation time falls as the lattice vibrates more, so resistivity rises."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Magnetism and Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Diamagnetic substances",
+    "options": [
+      "are strongly attracted by a magnet",
+      "have large positive susceptibility",
+      "become permanent magnets",
+      "are weakly repelled by a magnet"
+    ],
+    "correctIndex": 3,
+    "explanation": "Diamagnets (e.g. bismuth, copper, water) have small negative susceptibility and move from stronger to weaker field regions."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Magnetism and Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Above its Curie temperature, a ferromagnetic material becomes",
+    "options": [
+      "diamagnetic",
+      "more strongly ferromagnetic",
+      "paramagnetic",
+      "superconducting"
+    ],
+    "correctIndex": 2,
+    "explanation": "Thermal agitation destroys domain alignment, so it behaves as a paramagnet."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Lenz's law is a consequence of the law of conservation of",
+    "options": [
+      "charge",
+      "momentum",
+      "mass",
+      "energy"
+    ],
+    "correctIndex": 3,
+    "explanation": "The induced current opposes the change that causes it; otherwise energy would be created from nothing."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The self-inductance of a long solenoid of fixed length and area, when the number of turns is doubled,",
+    "options": [
+      "doubles",
+      "halves",
+      "stays the same",
+      "becomes four times"
+    ],
+    "correctIndex": 3,
+    "explanation": "L = μ₀N²A/l, so L ∝ N²."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a pure inductor connected to an AC source, the average power consumed over a cycle is",
+    "options": [
+      "maximum",
+      "zero",
+      "V_rms × I_rms",
+      "half of V_rms × I_rms"
+    ],
+    "correctIndex": 1,
+    "explanation": "Current lags voltage by 90°, so the power factor cos90° = 0."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which electromagnetic waves are used in RADAR and microwave ovens?",
+    "options": [
+      "X-rays",
+      "Ultraviolet rays",
+      "Microwaves",
+      "Gamma rays"
+    ],
+    "correctIndex": 2,
+    "explanation": "Microwaves have short wavelength suitable for RADAR and they excite water molecules in food."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Which radiation is used to kill bacteria in water purifiers?",
+    "options": [
+      "Infrared",
+      "Ultraviolet",
+      "Radio waves",
+      "Microwaves"
+    ],
+    "correctIndex": 1,
+    "explanation": "UV rays damage microbial DNA."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The correct order of increasing wavelength is",
+    "options": [
+      "microwaves < visible < X-rays < γ-rays",
+      "γ-rays < X-rays < visible < microwaves",
+      "X-rays < γ-rays < visible < microwaves",
+      "visible < X-rays < γ-rays < microwaves"
+    ],
+    "correctIndex": 1,
+    "explanation": "In the EM spectrum, γ-rays have the shortest wavelength and radio/microwaves the longest."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The sparkling of a diamond is mainly due to",
+    "options": [
+      "dispersion only",
+      "interference",
+      "polarisation",
+      "total internal reflection (very small critical angle)"
+    ],
+    "correctIndex": 3,
+    "explanation": "Diamond's high refractive index (≈2.42) gives a critical angle of about 24°, so light reflects many times inside."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Optical fibres transmit light by",
+    "options": [
+      "refraction only",
+      "diffraction",
+      "repeated total internal reflection",
+      "scattering"
+    ],
+    "correctIndex": 2,
+    "explanation": "The core has higher refractive index than the cladding; light hitting the boundary above the critical angle is totally reflected."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "According to Huygens' principle, every point on a wavefront",
+    "options": [
+      "absorbs the wave",
+      "acts as a source of secondary wavelets",
+      "moves with the speed of light in vacuum always",
+      "reflects the wave backward"
+    ],
+    "correctIndex": 1,
+    "explanation": "The new wavefront is the forward envelope of the secondary wavelets."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Polarisation of light proves that light is",
+    "options": [
+      "a longitudinal wave",
+      "a transverse wave",
+      "made of particles only",
+      "a mechanical wave"
+    ],
+    "correctIndex": 1,
+    "explanation": "Only transverse waves can be polarised."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the photoelectric effect, the maximum kinetic energy of the emitted electrons depends on",
+    "options": [
+      "the intensity of the incident light",
+      "the frequency of the incident light",
+      "the time of exposure",
+      "the area of the metal plate"
+    ],
+    "correctIndex": 1,
+    "explanation": "K_max = hν − φ; intensity changes only the number of electrons (current)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Rutherford's α-scattering experiment, most α-particles passed straight through the gold foil. This showed that",
+    "options": [
+      "most of the atom is empty space",
+      "the nucleus is negatively charged",
+      "electrons are in fixed orbits",
+      "the atom is a uniform sphere of positive charge"
+    ],
+    "correctIndex": 0,
+    "explanation": "Only a few were deflected strongly, showing a tiny, dense, positive nucleus with mostly empty space around it."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The energy of the Sun is produced mainly by",
+    "options": [
+      "nuclear fusion of hydrogen into helium",
+      "nuclear fission of uranium",
+      "burning of hydrogen gas",
+      "radioactive decay"
+    ],
+    "correctIndex": 0,
+    "explanation": "In the core, hydrogen nuclei fuse into helium releasing energy (proton–proton cycle)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The binding energy per nucleon is highest for nuclei with mass number around",
+    "options": [
+      "4 (helium)",
+      "238 (uranium)",
+      "1 (hydrogen)",
+      "56 (iron region)"
+    ],
+    "correctIndex": 3,
+    "explanation": "BE/A peaks near A ≈ 56 (about 8.8 MeV), so fission of heavy nuclei and fusion of light nuclei both release energy."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In an n-type semiconductor,",
+    "options": [
+      "holes are the majority carriers",
+      "electrons are the majority carriers and it remains electrically neutral",
+      "it is negatively charged",
+      "there are no holes at all"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pentavalent donors add free electrons, but the crystal as a whole stays neutral; holes are minority carriers."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A p-n junction diode is used as a rectifier because it",
+    "options": [
+      "conducts mainly in one direction",
+      "amplifies the signal",
+      "stores charge",
+      "conducts equally in both directions"
+    ],
+    "correctIndex": 0,
+    "explanation": "It allows current in forward bias and blocks it in reverse bias, converting AC to pulsating DC."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The value of the universal gravitational constant G was first measured in the laboratory by",
+    "options": [
+      "Isaac Newton",
+      "Henry Cavendish",
+      "Johannes Kepler",
+      "Galileo Galilei"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cavendish (1798) used a torsion balance to measure G."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The laws describing planetary motion (elliptical orbits, equal areas, T² ∝ a³) were given by",
+    "options": [
+      "Tycho Brahe",
+      "Isaac Newton",
+      "Nicolaus Copernicus",
+      "Johannes Kepler"
+    ],
+    "correctIndex": 3,
+    "explanation": "Kepler formulated them using Tycho Brahe's observations."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In 1820 it was discovered that a current-carrying wire deflects a nearby compass needle. This was observed by",
+    "options": [
+      "Michael Faraday",
+      "Hans Christian Oersted",
+      "André-Marie Ampère",
+      "James Clerk Maxwell"
+    ],
+    "correctIndex": 1,
+    "explanation": "Oersted's observation linked electricity and magnetism."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Electromagnetic induction was discovered through experiments by",
+    "options": [
+      "Michael Faraday and Joseph Henry",
+      "Oersted and Ampère",
+      "Coulomb and Gauss",
+      "Hertz and Marconi"
+    ],
+    "correctIndex": 0,
+    "explanation": "Faraday (England) and Henry (USA) independently showed that a changing magnetic flux induces an emf (1830s)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The idea of displacement current was introduced by",
+    "options": [
+      "James Clerk Maxwell",
+      "Heinrich Hertz",
+      "Michael Faraday",
+      "J.C. Bose"
+    ],
+    "correctIndex": 0,
+    "explanation": "Maxwell added displacement current to Ampère's law and predicted EM waves."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Electromagnetic waves were first produced and detected in the laboratory (1887) by",
+    "options": [
+      "Heinrich Hertz",
+      "J.C. Bose",
+      "G. Marconi",
+      "J.C. Maxwell"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hertz demonstrated EM waves experimentally, confirming Maxwell's theory."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Waves",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The Indian physicist who produced electromagnetic waves of wavelength 5 mm to 25 mm in the 1890s was",
+    "options": [
+      "Jagadish Chandra Bose",
+      "C.V. Raman",
+      "S.N. Bose",
+      "Meghnad Saha"
+    ],
+    "correctIndex": 0,
+    "explanation": "J.C. Bose worked on millimetre waves, as NCERT mentions."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The wave theory of light, with the idea of secondary wavelets, was put forward by",
+    "options": [
+      "Isaac Newton",
+      "Thomas Young",
+      "Christiaan Huygens",
+      "Augustin Fresnel"
+    ],
+    "correctIndex": 2,
+    "explanation": "Huygens proposed the wave theory in 1678."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The double-slit experiment that showed interference of light (1801) was performed by",
+    "options": [
+      "Christiaan Huygens",
+      "Isaac Newton",
+      "Albert Einstein",
+      "Thomas Young"
+    ],
+    "correctIndex": 3,
+    "explanation": "Young's experiment gave strong support to the wave nature of light."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The photoelectric effect was explained using the photon (quantum) idea by",
+    "options": [
+      "Max Planck (1900)",
+      "Heinrich Hertz (1887)",
+      "Albert Einstein (1905)",
+      "Louis de Broglie (1924)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Einstein's photoelectric equation earned him the 1921 Nobel Prize."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The idea that moving particles have a wavelength λ = h/p was proposed by",
+    "options": [
+      "Erwin Schrödinger",
+      "Werner Heisenberg",
+      "Louis de Broglie",
+      "Niels Bohr"
+    ],
+    "correctIndex": 2,
+    "explanation": "de Broglie proposed matter waves in 1924."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The α-particle scattering experiment on gold foil, analysed by Rutherford, was performed by",
+    "options": [
+      "Davisson and Germer",
+      "Hallwachs and Lenard",
+      "Thomson and Millikan",
+      "Geiger and Marsden"
+    ],
+    "correctIndex": 3,
+    "explanation": "Geiger and Marsden did the experiment in 1911 at Rutherford's suggestion."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Atoms",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The model in which electrons revolve in fixed orbits with quantised angular momentum mvr = nh/2π was proposed by",
+    "options": [
+      "Niels Bohr",
+      "Ernest Rutherford",
+      "J.J. Thomson",
+      "Arnold Sommerfeld"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bohr's model (1913) explained the hydrogen spectrum."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Nuclei",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The neutron was discovered in 1932 by",
+    "options": [
+      "Ernest Rutherford",
+      "James Chadwick",
+      "Enrico Fermi",
+      "Henri Becquerel"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chadwick identified neutral particles emitted when beryllium was bombarded with α-particles."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The force between two point charges varying as 1/r² was established experimentally by",
+    "options": [
+      "Carl Friedrich Gauss",
+      "Michael Faraday",
+      "Charles-Augustin de Coulomb",
+      "Benjamin Franklin"
+    ],
+    "correctIndex": 2,
+    "explanation": "Coulomb used a torsion balance (1785)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The rules for current at a junction and for voltages around a loop were given by",
+    "options": [
+      "Georg Ohm",
+      "Charles Wheatstone",
+      "Alessandro Volta",
+      "Gustav Kirchhoff"
+    ],
+    "correctIndex": 3,
+    "explanation": "Kirchhoff's junction rule (charge conservation) and loop rule (energy conservation)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The idea of inertia — that a body keeps moving unless a force acts — was first developed from inclined-plane experiments by",
+    "options": [
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Aristotle",
+      "Johannes Kepler"
+    ],
+    "correctIndex": 1,
+    "explanation": "Galileo's inclined-plane experiments led to the law of inertia, later stated by Newton."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Units and Measurement",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The SI unit of luminous intensity is the ____.",
+    "answers": [
+      "candela",
+      "cd"
+    ],
+    "explanation": "The seven SI base units include the candela for luminous intensity.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The area under a velocity–time graph gives the ____ of the body.",
+    "answers": [
+      "displacement"
+    ],
+    "explanation": "∫v dt = displacement.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The product of force and the time for which it acts is called ____.",
+    "answers": [
+      "impulse"
+    ],
+    "explanation": "Impulse = FΔt = change in momentum.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "One kilowatt hour is equal to ____ joules.",
+    "answers": [
+      "3.6 × 10^6",
+      "3.6×10^6",
+      "3600000",
+      "3.6e6"
+    ],
+    "explanation": "1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The escape speed from the Earth's surface is about ____ km/s.",
+    "answers": [
+      "11.2"
+    ],
+    "explanation": "vₑ = √(2gR) ≈ 11.2 km/s.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The ratio of lateral strain to longitudinal strain is called ____ ratio.",
+    "answers": [
+      "Poisson's",
+      "Poisson",
+      "Poissons"
+    ],
+    "explanation": "Poisson's ratio σ = lateral strain/longitudinal strain.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "A process in which the temperature of the system stays constant is called an ____ process.",
+    "answers": [
+      "isothermal"
+    ],
+    "explanation": "Isothermal: T constant, so ΔU = 0 for an ideal gas.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The SI unit of electric dipole moment is ____.",
+    "answers": [
+      "C m",
+      "coulomb metre",
+      "Cm",
+      "coulomb-metre"
+    ],
+    "explanation": "p = q × 2a, so the unit is coulomb metre.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "The reciprocal of resistivity is called ____.",
+    "answers": [
+      "conductivity",
+      "electrical conductivity"
+    ],
+    "explanation": "σ = 1/ρ, unit S/m.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "In an AC circuit, the ratio of true power to apparent power is called the power ____.",
+    "answers": [
+      "factor"
+    ],
+    "explanation": "Power factor = cosφ = R/Z.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "type": "fill_blank",
+    "difficulty": "easy",
+    "questionText": "Pure silicon doped with a trivalent impurity such as boron becomes a ____-type semiconductor.",
+    "answers": [
+      "p",
+      "p type",
+      "p-type"
+    ],
+    "explanation": "Trivalent acceptors create holes, the majority carriers in p-type material.",
+    "level": "main"
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A ball is thrown vertically upward. Neglecting air resistance, which statement is correct?",
+    "options": [
+      "Its acceleration is zero at the top",
+      "Its acceleration changes direction at the top",
+      "It takes longer to come down than to go up",
+      "Time of ascent equals time of descent and it returns with the same speed"
+    ],
+    "correctIndex": 3,
+    "explanation": "With only gravity acting, motion is symmetric; acceleration is g downward throughout."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For a body in uniformly accelerated motion starting from rest, the distances covered in successive equal time intervals are in the ratio",
+    "options": [
+      "1 : 2 : 3 : 4 …",
+      "1 : 3 : 5 : 7 …",
+      "1 : 4 : 9 : 16 …",
+      "1 : 1 : 1 : 1 …"
+    ],
+    "correctIndex": 1,
+    "explanation": "Galileo's law of odd numbers: sₙ ∝ (2n − 1)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A block rests on a rough inclined plane without sliding. As the angle of the incline is slowly increased (block still at rest), the friction force on it",
+    "options": [
+      "decreases",
+      "stays the same",
+      "increases",
+      "becomes zero"
+    ],
+    "correctIndex": 2,
+    "explanation": "Static friction balances mg sin θ, which grows with θ until it reaches μₛmg cos θ."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A horse pulls a cart forward. The cart moves forward because",
+    "options": [
+      "the horse pulls harder on the cart than the cart pulls on the horse",
+      "action and reaction act on the same body and cancel",
+      "the ground's forward friction on the horse exceeds the backward forces on the horse–cart system",
+      "Newton's third law does not apply here"
+    ],
+    "correctIndex": 2,
+    "explanation": "Action–reaction pairs act on different bodies; external friction from the ground accelerates the system."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A body moves in a vertical circle on a string. Which quantity remains constant (neglecting air resistance)?",
+    "options": [
+      "Speed",
+      "Kinetic energy",
+      "Tension in the string",
+      "Total mechanical energy"
+    ],
+    "correctIndex": 3,
+    "explanation": "Tension does no work (perpendicular to velocity); gravity is conservative, so total energy is conserved."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Work, Energy and Power",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two bodies of masses m and 4m have equal kinetic energies. The ratio of their momenta (m : 4m) is",
+    "options": [
+      "1 : 4",
+      "4 : 1",
+      "2 : 1",
+      "1 : 2"
+    ],
+    "correctIndex": 3,
+    "explanation": "p = √(2mK): ratio √m : √(4m) = 1 : 2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If no external force acts on a system of particles, then",
+    "options": [
+      "every particle moves with constant velocity",
+      "the velocity of its centre of mass stays constant",
+      "the centre of mass must be at rest",
+      "the total kinetic energy must be constant"
+    ],
+    "correctIndex": 1,
+    "explanation": "Internal forces cancel in pairs, so total momentum (M v_cm) is conserved; kinetic energy can still change."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "System of Particles and Rotational Motion",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The radius of gyration of a uniform disc about its central axis perpendicular to its plane is",
+    "options": [
+      "R/√2",
+      "R/2",
+      "R",
+      "√(2/5) R"
+    ],
+    "correctIndex": 0,
+    "explanation": "I = MR²/2 = Mk² → k = R/√2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If the radius of the Earth's orbit around the Sun were doubled, the length of a year would become",
+    "options": [
+      "2 times",
+      "4 times",
+      "half",
+      "2√2 times"
+    ],
+    "correctIndex": 3,
+    "explanation": "Kepler's third law: T ∝ r^(3/2)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Gravitation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The gravitational potential energy of a satellite in a circular orbit is U. Its kinetic energy and total energy are",
+    "options": [
+      "U/2 and −U/2",
+      "−U and 0",
+      "−U/2 and U/2",
+      "U and 2U"
+    ],
+    "correctIndex": 2,
+    "explanation": "K = GMm/2r = −U/2; E = K + U = U/2 (negative, since U < 0)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A wire is stretched within the elastic limit. If its length and radius are both doubled, Young's modulus",
+    "options": [
+      "becomes four times",
+      "becomes half",
+      "remains the same",
+      "doubles"
+    ],
+    "correctIndex": 2,
+    "explanation": "Young's modulus is a property of the material, not of dimensions."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Mechanical Properties of Solids and Fluids",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water flows steadily through a horizontal pipe of varying cross-section. Where the pipe is narrower,",
+    "options": [
+      "speed is higher and pressure is lower",
+      "speed is lower and pressure is higher",
+      "speed and pressure are both higher",
+      "speed and pressure are both lower"
+    ],
+    "correctIndex": 0,
+    "explanation": "Continuity: Av = constant. Bernoulli: higher speed → lower pressure."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For an ideal gas in a cyclic process, which is always true?",
+    "options": [
+      "The net work done is zero",
+      "The net heat absorbed is zero",
+      "The temperature stays constant throughout",
+      "The net change in internal energy is zero"
+    ],
+    "correctIndex": 3,
+    "explanation": "U is a state function; Q and W depend on the path."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Thermodynamics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In an isothermal expansion of an ideal gas,",
+    "options": [
+      "the internal energy increases",
+      "all the heat absorbed is converted into work",
+      "no heat is exchanged",
+      "the temperature rises"
+    ],
+    "correctIndex": 1,
+    "explanation": "ΔU = 0 at constant T for an ideal gas, so Q = W."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Kinetic Theory",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "At the same temperature, the average kinetic energy per molecule of H₂ and O₂ (treating translational motion only) is",
+    "options": [
+      "16 times larger for H₂",
+      "4 times larger for H₂",
+      "larger for O₂",
+      "the same"
+    ],
+    "correctIndex": 3,
+    "explanation": "Average translational KE = (3/2)kT, independent of mass."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In SHM, the phase difference between displacement and acceleration is",
+    "options": [
+      "π/2",
+      "0",
+      "π/4",
+      "π"
+    ],
+    "correctIndex": 3,
+    "explanation": "a = −ω²x: acceleration is always opposite to displacement."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Oscillations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In SHM, kinetic energy equals potential energy at a displacement of",
+    "options": [
+      "A/2",
+      "A",
+      "A/√2",
+      "A/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "½k(A² − x²) = ½kx² → x = A/√2."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Waves",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a stationary wave on a string, the distance between two consecutive nodes is",
+    "options": [
+      "λ",
+      "λ/4",
+      "λ/2",
+      "2λ"
+    ],
+    "correctIndex": 2,
+    "explanation": "Nodes (and antinodes) are spaced λ/2 apart; a node and the next antinode are λ/4 apart."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A parallel-plate capacitor is charged and then disconnected from the battery. A dielectric slab is inserted. Which statement is correct?",
+    "options": [
+      "Voltage stays the same and charge increases",
+      "Charge stays the same and the energy stored decreases",
+      "Energy stored increases",
+      "Capacitance decreases"
+    ],
+    "correctIndex": 1,
+    "explanation": "Isolated: Q constant, C increases by K, V = Q/C falls, U = Q²/2C falls."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The work done in moving a charge between two points on an equipotential surface is",
+    "options": [
+      "maximum",
+      "equal to q times the field",
+      "positive",
+      "zero"
+    ],
+    "correctIndex": 3,
+    "explanation": "W = qΔV and ΔV = 0 on an equipotential surface."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two bulbs rated 100 W and 60 W (both for 220 V) are connected in series across 220 V. Which glows brighter?",
+    "options": [
+      "The 60 W bulb",
+      "The 100 W bulb",
+      "Both equally",
+      "Neither glows"
+    ],
+    "correctIndex": 0,
+    "explanation": "The 60 W bulb has higher resistance (R = V²/P); in series the same current flows, so P = I²R is larger for it."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "When identical cells are joined in parallel, the combination gives",
+    "options": [
+      "higher emf and higher internal resistance",
+      "the same emf but lower internal resistance",
+      "higher emf and the same internal resistance",
+      "lower emf and lower internal resistance"
+    ],
+    "correctIndex": 1,
+    "explanation": "n cells in parallel: emf E, internal resistance r/n."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The magnetic force on a charged particle moving in a magnetic field",
+    "options": [
+      "always increases its kinetic energy",
+      "acts along its velocity",
+      "does no work, so its speed stays constant",
+      "is independent of its charge"
+    ],
+    "correctIndex": 2,
+    "explanation": "F = qv × B is perpendicular to v."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Moving Charges and Magnetism",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The time period of a charged particle moving in a circle in a uniform magnetic field",
+    "options": [
+      "is independent of its speed",
+      "is proportional to its speed",
+      "is inversely proportional to its speed",
+      "depends on the radius only"
+    ],
+    "correctIndex": 0,
+    "explanation": "T = 2πm/qB."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Electromagnetic Induction",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A bar magnet falls through a vertical copper tube. Compared with free fall, it",
+    "options": [
+      "falls faster",
+      "falls at exactly g",
+      "falls more slowly because induced currents oppose its motion",
+      "stops completely in the tube"
+    ],
+    "correctIndex": 2,
+    "explanation": "Lenz's law: induced currents in the tube produce a field that opposes the falling magnet."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Alternating Current",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "At resonance in a series LCR circuit,",
+    "options": [
+      "the impedance equals R and current is maximum",
+      "the impedance is maximum",
+      "the current is zero",
+      "the power factor is zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "X_L = X_C, so Z = R and cos φ = 1."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "When light passes from air into glass,",
+    "options": [
+      "its frequency decreases",
+      "its speed increases",
+      "its wavelength increases",
+      "its frequency stays the same while speed and wavelength decrease"
+    ],
+    "correctIndex": 3,
+    "explanation": "Frequency is set by the source; v = c/n and λ = λ₀/n."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Wave Optics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Young's double-slit experiment, if the slit separation is doubled and the screen distance is halved, the fringe width becomes",
+    "options": [
+      "four times",
+      "the same",
+      "half",
+      "one-fourth"
+    ],
+    "correctIndex": 3,
+    "explanation": "β = λD/d: (1/2)/2 = 1/4."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If the intensity of incident light (above threshold frequency) is doubled, then in the photoelectric effect",
+    "options": [
+      "the stopping potential doubles",
+      "the maximum kinetic energy doubles",
+      "the photocurrent doubles but the stopping potential stays the same",
+      "the work function halves"
+    ],
+    "correctIndex": 2,
+    "explanation": "Intensity changes the number of photons, not their energy."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Semiconductor Electronics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a reverse-biased p-n junction,",
+    "options": [
+      "the depletion layer narrows",
+      "a large current flows",
+      "the barrier potential decreases",
+      "the depletion layer widens and only a tiny current flows"
+    ],
+    "correctIndex": 3,
+    "explanation": "Reverse bias adds to the barrier; only minority carriers give a small current."
+  }
+]

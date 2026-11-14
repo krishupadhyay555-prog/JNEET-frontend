@@ -338,22 +338,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Complex Numbers and Quadratic Equations",
-    "difficulty": "easy",
-    "questionText": "The value of i² is:",
-    "options": [
-      "1",
-      "−1",
-      "i",
-      "−i"
-    ],
-    "correctIndex": 1,
-    "explanation": "By definition, i²=−1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Matrices and Determinants",
     "difficulty": "tough",
     "questionText": "If A=[[1,2],[3,4]], find |A|.",
@@ -3924,22 +3908,6 @@
     "subject": "Mathematics",
     "chapter": "Sets, Relations and Functions",
     "difficulty": "tough",
-    "questionText": "Let f:R→R be defined by f(x)=x^2−2x+2. The number of real solutions of f(f(x))=2 is",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "4"
-    ],
-    "correctIndex": 2,
-    "explanation": "Put y=f(x). Then f(y)=2 gives y^2−2y=0, so y=0 or 2. Since f(x)=(x−1)^2+1≥1, y=0 is impossible. Thus f(x)=2 gives (x−1)^2=1, so x=0,2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
     "questionText": "Let f(x)=x/(1+|x|) for x∈R. If f(a)=1/3, then a is",
     "options": [
       "1/2",
@@ -4754,22 +4722,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "Evaluate lim(x→0) [sin(3x)-3sin(x)]/x^3.",
-    "options": [
-      "-4",
-      "-3",
-      "0",
-      "4"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using sin x=x-x^3/6+O(x^5), the numerator is (3x-27x^3/6)-3(x-x^3/6)+O(x^5)=-4x^3+O(x^5). Hence the limit is -4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differentiation",
     "difficulty": "moderate",
     "questionText": "If y = x^x for x>0, then y' at x=1 is",
@@ -4845,54 +4797,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Write x^2/(1+x^2)^2 = 1/(1+x^2) - 1/(1+x^2)^2. Since ∫dx/(1+x^2)^2 = x/[2(1+x^2)] + (1/2)tan^-1x, the result simplifies to (1/2)tan^-1x - x/[2(1+x^2)] + C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ from 0 to π/2 of ln(sin x) dx.",
-    "options": [
-      "-π ln 2",
-      "-π ln 2/2",
-      "0",
-      "π ln 2/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Let I=∫ln(sin x)dx. By x→π/2-x, I also equals ∫ln(cos x)dx. Adding gives 2I=∫ln[(sin x)(cos x)]dx=∫[ln(sin2x)-ln2]dx=-πln2, hence I=-πln2/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ from 0 to 1 of dx/(1+x^2).",
-    "options": [
-      "π/6",
-      "π/4",
-      "π/3",
-      "π/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "The antiderivative is tan^-1x. Therefore the value is tan^-1(1)-tan^-1(0)=π/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Application of Integrals",
-    "difficulty": "tough",
-    "questionText": "The area enclosed between y=x and y=x^2 is",
-    "options": [
-      "1/3",
-      "1/6",
-      "1/2",
-      "2/3"
-    ],
-    "correctIndex": 1,
-    "explanation": "The curves intersect at x=0 and x=1. Hence the area is ∫0^1(x-x^2)dx = 1/2-1/3=1/6.",
     "imageUrl": null
   },
   {
@@ -4978,22 +4882,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "The eccentricity of the ellipse x^2/25 + y^2/9 = 1 is",
-    "options": [
-      "3/5",
-      "4/5",
-      "5/4",
-      "2/5"
-    ],
-    "correctIndex": 1,
-    "explanation": "Here a=5 and b=3, so c=√(a^2-b^2)=4. Therefore e=c/a=4/5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Three Dimensional Geometry",
     "difficulty": "tough",
     "questionText": "The angle between the lines with direction ratios (1,2,2) and (2,-1,2) is",
@@ -5003,7 +4891,7 @@
       "cos^-1(2/9)",
       "π/2"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "The dot product is 2-2+4=4, while the magnitudes are 3 and 3. Thus cosθ=4/9, so θ=cos^-1(4/9).",
     "imageUrl": null
   },
@@ -5092,22 +4980,6 @@
     "subject": "Mathematics",
     "chapter": "Inverse Trigonometric Functions",
     "difficulty": "tough",
-    "questionText": "Evaluate tan^-1(1/2) + tan^-1(1/3).",
-    "options": [
-      "π/4",
-      "tan^-1(5/6)",
-      "tan^-1(1/2)",
-      "π/6"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using tan(A+B)=(1/2+1/3)/(1-1/6)=1. Since both angles are positive and their sum lies below π/2, the result is π/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
     "questionText": "The principal value of sin^-1(3/5)+cos^-1(4/5) is",
     "options": [
       "0",
@@ -5117,22 +4989,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Since sin^-1(3/5)=cos^-1(4/5) for positive acute angles, their sum is twice that angle, and sin^-1(3/5)+cos^-1(3/5)=π/2. Hence the given expression equals π/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Mathematical Reasoning",
-    "difficulty": "moderate",
-    "questionText": "The negation of the statement: 'For every real number x, x^2+1>0' is",
-    "options": [
-      "For every real x, x^2+1≤0",
-      "There exists a real x such that x^2+1≤0",
-      "There exists a real x such that x^2+1>0",
-      "For every real x, x^2+1<0"
-    ],
-    "correctIndex": 1,
-    "explanation": "The negation of 'for every x, P(x)' is 'there exists x for which not P(x)'. Thus the negation is that some real x satisfies x^2+1≤0.",
     "imageUrl": null
   },
   {
@@ -5250,22 +5106,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "For f(x)=|x^2-5x+6|, the total number of points where f is not differentiable is",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "3"
-    ],
-    "correctIndex": 2,
-    "explanation": "The polynomial factors as (x-2)(x-3), with two simple zeros. Absolute value creates a corner at each simple zero, so f is not differentiable at exactly x=2 and x=3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differentiation",
     "difficulty": "tough",
     "questionText": "If y=(sin x)^(cos x) for 0<x<π, then dy/dx at x=π/2 is",
@@ -5348,22 +5188,6 @@
     "subject": "Mathematics",
     "chapter": "Definite Integrals",
     "difficulty": "tough",
-    "questionText": "Evaluate ∫ from 0 to π/2 of x sin x dx.",
-    "options": [
-      "1",
-      "π/2",
-      "π/2-1",
-      "π/2+1"
-    ],
-    "correctIndex": 0,
-    "explanation": "Integration by parts gives ∫x sin x dx=-x cos x+sin x. Evaluating from 0 to π/2 gives 1, so the correct option is 1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
     "questionText": "Evaluate ∫ from 0 to π of x sin x dx.",
     "options": [
       "π",
@@ -5421,22 +5245,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Completing squares gives (x-3)^2+(y+4)^2=16, so the radius is 4. Therefore the correct option is 4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "The eccentricity of the hyperbola x^2/16-y^2/9=1 is",
-    "options": [
-      "3/4",
-      "4/3",
-      "5/4",
-      "5/3"
-    ],
-    "correctIndex": 2,
-    "explanation": "Here a=4 and b=3, so c=√(a^2+b^2)=5. Hence eccentricity e=c/a=5/4.",
     "imageUrl": null
   },
   {
@@ -5602,22 +5410,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Mathematical Reasoning",
-    "difficulty": "moderate",
-    "questionText": "The negation of the statement 'There exists a real number x such that x^2-5x+6<0' is",
-    "options": [
-      "For every real x, x^2-5x+6≥0",
-      "For every real x, x^2-5x+6>0",
-      "There exists a real x such that x^2-5x+6≥0",
-      "There exists a real x such that x^2-5x+6>0"
-    ],
-    "correctIndex": 0,
-    "explanation": "The negation of 'there exists x such that P(x)' is 'for every x, not P(x)'. Therefore the negation is x^2-5x+6≥0 for every real x.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Linear Programming",
     "difficulty": "tough",
     "questionText": "Maximize Z=5x+4y subject to x+y≤6, 2x+y≤8, x≥0 and y≥0. The maximum value of Z is",
@@ -5645,22 +5437,6 @@
     ],
     "correctIndex": 0,
     "explanation": "For x≥0, f(x)=x/(1+x), while for x<0, f(x)=x/(1-x). The function is strictly increasing and approaches -1 and 1 only as x tends to minus or plus infinity, so its range is (-1,1), which is the domain of f^{-1}.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Matrices and Determinants",
-    "difficulty": "tough",
-    "questionText": "Let A be a 2×2 matrix satisfying A^2-3A+2I=0 and det(A)=2. If A is not equal to I or 2I, then tr(A) is",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 2,
-    "explanation": "By Cayley-Hamilton for a 2×2 matrix, A^2-(tr A)A+(det A)I=0. Comparing with A^2-3A+2I=0 gives tr(A)=3.",
     "imageUrl": null
   },
   {
@@ -5842,22 +5618,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Trigonometric Functions and Equations",
-    "difficulty": "tough",
-    "questionText": "The number of solutions of 2sin^2x-3sin x+1=0 in [0,2π] is",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correctIndex": 1,
-    "explanation": "Factoring gives (2sinx-1)(sinx-1)=0. Sinx=1/2 has two solutions in [0,2π], while sinx=1 has one, giving a total of 3 solutions.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Mathematical Reasoning",
     "difficulty": "moderate",
     "questionText": "The negation of the statement 'For every real number x, x^2-3x+2≥0' is",
@@ -6034,22 +5794,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "The value of ∫ from 0 to π/2 of ln(sin x) dx is:",
-    "options": [
-      "-π ln 2",
-      "-π ln 2/2",
-      "0",
-      "π ln 2/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Let I = ∫0^(π/2) ln(sin x)dx. Using x → π/2 - x gives I = ∫ln(cos x)dx, so 2I = ∫ln(sin x cos x)dx = ∫ln[(sin2x)/2]dx. This evaluates to I = -(π/2)ln2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Application of Integrals",
     "difficulty": "tough",
     "questionText": "The area enclosed between the curves y = x^2 and y = 2x is:",
@@ -6210,22 +5954,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f: R → R be defined by f(x) = x^2 - 2x + 3 and let g(x) = |x - 1|. The number of real solutions of f(g(x)) = 4 is:",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "4"
-    ],
-    "correctIndex": 2,
-    "explanation": "Since g(x)=|x-1|=t≥0, f(g(x))=t^2-2t+3=4 gives t^2-2t-1=0, so t=1+√2. Thus |x-1|=1+√2 gives two real x-values.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Matrices and Determinants",
     "difficulty": "tough",
     "questionText": "Let A be a 2 × 2 matrix satisfying A^2 - 5A + 6I = O. If det(A) = 6 and A is not equal to 2I, then tr(A) is:",
@@ -6322,22 +6050,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "For the parabola y^2 = 8x, the length of its latus rectum is:",
-    "options": [
-      "2",
-      "4",
-      "8",
-      "16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Comparing y^2=4ax with y^2=8x gives a=2. The latus rectum has length 4a=8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Three Dimensional Geometry",
     "difficulty": "tough",
     "questionText": "The distance of the point (1,2,-1) from the plane 2x - y + 2z + 5 = 0 is:",
@@ -6365,22 +6077,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Since |a+b|^2=|a|^2+|b|^2+2a·b, we get 25=9+16+2a·b. Hence a·b=0.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of five observations is 12. If one observation 8 is replaced by 18, the new mean is:",
-    "options": [
-      "12",
-      "13",
-      "14",
-      "15"
-    ],
-    "correctIndex": 2,
-    "explanation": "The original sum is 5×12=60. Replacing 8 by 18 increases the sum to 70.",
     "imageUrl": null
   },
   {
@@ -6477,22 +6173,6 @@
     ],
     "correctIndex": 1,
     "explanation": "LEVEL has five letters, with L repeated twice and E repeated twice. Therefore the number of arrangements is 5!/(2!2!) = 30.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Binomial Theorem",
-    "difficulty": "tough",
-    "questionText": "The constant term in the expansion of (x^2 + 1/x)^6 is:",
-    "options": [
-      "15",
-      "20",
-      "30",
-      "40"
-    ],
-    "correctIndex": 0,
-    "explanation": "The general term contains x^(12-3r). For a constant term, 12-3r=0, giving r=4. Its coefficient is C(6,4)=15.",
     "imageUrl": null
   },
   {
@@ -6899,22 +6579,6 @@
     "examMode": "JEE",
     "subject": "Mathematics",
     "chapter": "Sets, Relations and Functions",
-    "difficulty": "easy",
-    "questionText": "If A = {1,2,3} and B = {3,4}, then A ∩ B is",
-    "options": [
-      "{1,2}",
-      "{3}",
-      "{4}",
-      "{1,2,3,4}"
-    ],
-    "correctIndex": 1,
-    "explanation": "The intersection contains elements common to both sets. Only 3 occurs in both A and B, so A ∩ B = {3}.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
     "difficulty": "tough",
     "questionText": "Let A = {1,2,3,4} and B = {a,b,c}. The number of onto functions f:A→B for which f(1) ≠ f(2) is",
     "options": [
@@ -7058,22 +6722,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^1 x/(1+x²) dx.",
-    "options": [
-      "ln 2",
-      "(1/2)ln 2",
-      "2ln 2",
-      "1/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Put u=1+x², so du=2x dx. The integral becomes (1/2)∫_1^2 du/u=(1/2)ln2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Application of Integrals",
     "difficulty": "tough",
     "questionText": "The area enclosed between y=x and y=x² is",
@@ -7117,22 +6765,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Completing squares gives (x−3)²+(y+2)²=4. Hence the radius is 2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "For the parabola y²=12x, the length of its latus rectum is",
-    "options": [
-      "3",
-      "6",
-      "9",
-      "12"
-    ],
-    "correctIndex": 3,
-    "explanation": "Comparing y²=12x with y²=4ax gives a=3. The latus rectum has length 4a=12.",
     "imageUrl": null
   },
   {
@@ -7314,22 +6946,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^(π/2) sin x/(sin x+cos x) dx.",
-    "options": [
-      "π/8",
-      "π/4",
-      "π/2",
-      "π"
-    ],
-    "correctIndex": 1,
-    "explanation": "Let I be the integral. Replacing x by π/2−x gives I=∫_0^(π/2) cos x/(sin x+cos x)dx. Adding the two expressions gives 2I=π/2, hence I=π/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Three Dimensional Geometry",
     "difficulty": "tough",
     "questionText": "The distance of the point (1,2,−1) from the plane 2x−y+2z−3=0 is",
@@ -7357,22 +6973,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Let t=tan x. Then t+1/t=2, so t²−2t+1=0, giving (t−1)²=0. Hence tan x=1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "moderate",
-    "questionText": "The principal value of sin^−1(sin(5π/6)) is",
-    "options": [
-      "−π/6",
-      "π/6",
-      "5π/6",
-      "π"
-    ],
-    "correctIndex": 1,
-    "explanation": "sin(5π/6)=1/2. The principal range of sin^−1 is [−π/2,π/2], so sin^−1(1/2)=π/6.",
     "imageUrl": null
   },
   {
@@ -7890,22 +7490,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Matrices and Determinants",
-    "difficulty": "tough",
-    "questionText": "If A is a 3×3 matrix with det(A)=2, then det(3A⁻¹) is:",
-    "options": [
-      "3/2",
-      "9/2",
-      "27/2",
-      "54"
-    ],
-    "correctIndex": 2,
-    "explanation": "For a 3×3 matrix, det(3A⁻¹)=3³det(A⁻¹)=27/det(A)=27/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Binomial Theorem",
     "difficulty": "moderate",
     "questionText": "The constant term in the expansion of (2x²−1/x)⁶ is:",
@@ -7940,22 +7524,6 @@
     "subject": "Mathematics",
     "chapter": "Limits, Continuity and Differentiability",
     "difficulty": "tough",
-    "questionText": "Evaluate lim(x→0) [sin x−x cos x]/x³.",
-    "options": [
-      "1/2",
-      "1/3",
-      "1/4",
-      "2/3"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using expansions, sin x−x cos x=(x−x³/6)−(x−x³/2)+O(x⁵)=x³/3+O(x⁵). Hence the limit is 1/3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
     "questionText": "For f(x)=|x²−1|, the number of points in R at which f is not differentiable is:",
     "options": [
       "0",
@@ -7965,70 +7533,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The expression changes sign at x=−1 and x=1. At each point the absolute-value cusp causes unequal one-sided derivatives, so f is not differentiable at exactly two points.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Application of Derivatives",
-    "difficulty": "tough",
-    "questionText": "The maximum value of x²(1−x) for 0≤x≤1 is:",
-    "options": [
-      "2/27",
-      "4/27",
-      "8/27",
-      "1/4"
-    ],
-    "correctIndex": 1,
-    "explanation": "Let f=x²(1−x). Then f'=2x−3x²=x(2−3x), so the interior maximum occurs at x=2/3. Thus f(2/3)=4/9×1/3=4/27.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/[x²+4x+8].",
-    "options": [
-      "tan⁻¹(x+2)+C",
-      "(1/2)tan⁻¹((x+2)/2)+C",
-      "2tan⁻¹((x+2)/2)+C",
-      "(1/4)tan⁻¹(x+2)+C"
-    ],
-    "correctIndex": 1,
-    "explanation": "x²+4x+8=(x+2)²+4. Therefore the integral is (1/2)tan⁻¹((x+2)/2)+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ x/(1+x²)² dx.",
-    "options": [
-      "−1/[2(1+x²)]+C",
-      "1/[2(1+x²)]+C",
-      "−1/(1+x²)+C",
-      "ln(1+x²)+C"
-    ],
-    "correctIndex": 0,
-    "explanation": "Put u=1+x², so du=2x dx. The integral becomes (1/2)∫u⁻²du=−1/(2u)+C=−1/[2(1+x²)]+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫₀^(π/2) x sin x dx.",
-    "options": [
-      "1",
-      "π/2−1",
-      "π/2",
-      "π/2+1"
-    ],
-    "correctIndex": 0,
-    "explanation": "Integration by parts gives ∫x sin x dx=−x cos x+sin x. Evaluating from 0 to π/2 gives 1.",
     "imageUrl": null
   },
   {
@@ -8226,22 +7730,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "The value of tan⁻¹(1/2)+tan⁻¹(1/3) is:",
-    "options": [
-      "tan⁻¹(1/5)",
-      "tan⁻¹(5/6)",
-      "π/4",
-      "tan⁻¹(6/5)"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using tan(A+B)=(1/2+1/3)/(1−1/6)=(5/6)/(5/6)=1. Both angles are positive and their sum is less than π/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Mathematical Reasoning",
     "difficulty": "tough",
     "questionText": "The negation of the statement: For every real number x, x²+1>0, is:",
@@ -8253,22 +7741,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The negation of ∀x P(x) is ∃x not P(x). Therefore the negation is: there exists a real x such that x²+1≤0.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Complex Numbers and Quadratic Equations",
-    "difficulty": "tough",
-    "questionText": "If z is a complex number satisfying |z − 2| = |z + 2| and |z − 1| = √5, then the possible values of |z| are:",
-    "options": [
-      "1",
-      "2",
-      "√5",
-      "3"
-    ],
-    "correctIndex": 1,
-    "explanation": "The first condition gives Re(z)=0, so write z=iy. Then |z−1|² = 1+y² = 5, giving y²=4. Hence |z|=2.",
     "imageUrl": null
   },
   {
@@ -8338,22 +7810,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "For f(x) = |x² − 4|, the number of points at which f is not differentiable is:",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "4"
-    ],
-    "correctIndex": 2,
-    "explanation": "The expression inside the modulus changes sign at x=−2 and x=2. At each such point the graph has a corner, so f is not differentiable at exactly two points.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Application of Derivatives",
     "difficulty": "tough",
     "questionText": "For f(x) = x³ − 6x² + 9x + 1, the interval on which f is strictly decreasing is:",
@@ -8365,22 +7821,6 @@
     ],
     "correctIndex": 1,
     "explanation": "f'(x)=3x²−12x+9=3(x−1)(x−3). The derivative is negative between the critical points 1 and 3, so f decreases on (1,3).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ x/(x² + 4) dx.",
-    "options": [
-      "ln(x²+4)+C",
-      "1/2 ln(x²+4)+C",
-      "2 ln(x²+4)+C",
-      "1/(x²+4)+C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Put u=x²+4, so du=2x dx. Therefore the integral is (1/2)∫du/u = (1/2)ln(x²+4)+C.",
     "imageUrl": null
   },
   {
@@ -8621,22 +8061,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Using cos 2θ=(1−tan²θ)/(1+tan²θ), substituting tanθ=2 gives (1−4)/(1+4)=−3/5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Mathematical Reasoning",
-    "difficulty": "moderate",
-    "questionText": "The negation of the statement All prime numbers greater than 2 are odd is:",
-    "options": [
-      "All prime numbers greater than 2 are even",
-      "No prime number greater than 2 is odd",
-      "There exists a prime number greater than 2 that is not odd",
-      "There exists no prime number greater than 2"
-    ],
-    "correctIndex": 2,
-    "explanation": "The negation of a universal statement of the form all elements have property P is that there exists at least one element without property P.",
     "imageUrl": null
   },
   {
@@ -9042,22 +8466,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Binomial Theorem",
-    "difficulty": "tough",
-    "questionText": "If the coefficient of x^3 in (1+x)^n is 120, then n is:",
-    "options": [
-      "8",
-      "9",
-      "10",
-      "12"
-    ],
-    "correctIndex": 2,
-    "explanation": "The coefficient is C(n,3)=120. Since C(10,3)=10×9×8/6=120, n=10.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Sequences and Series",
     "difficulty": "tough",
     "questionText": "If the sum of the first n terms of a sequence is S_n=2n²+3n, then the 20th term is:",
@@ -9330,38 +8738,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Circles",
-    "difficulty": "tough",
-    "questionText": "The tangent to the circle x²+y²=25 at the point (3,4) is:",
-    "options": [
-      "3x+4y=25",
-      "4x+3y=25",
-      "3x−4y=25",
-      "4x−3y=25"
-    ],
-    "correctIndex": 0,
-    "explanation": "For x²+y²=a², the tangent at (x1,y1) is xx1+yy1=a². Thus 3x+4y=25.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "For the parabola y²=12x, the focus is:",
-    "options": [
-      "(3,0)",
-      "(0,3)",
-      "(6,0)",
-      "(0,6)"
-    ],
-    "correctIndex": 0,
-    "explanation": "Comparing y²=4ax with y²=12x gives a=3. The focus is therefore (3,0).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Conic Sections",
     "difficulty": "tough",
     "questionText": "The eccentricity of the hyperbola x²/16−y²/9=1 is:",
@@ -9501,22 +8877,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Each principal value tan−1(1) is π/4. Therefore their sum is π/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Mathematical Reasoning",
-    "difficulty": "moderate",
-    "questionText": "The negation of the statement There exists a real number x such that x²+1=0 is:",
-    "options": [
-      "There exists a real x such that x²+1≠0",
-      "For every real x, x²+1≠0",
-      "For every real x, x²+1=0",
-      "There exists no complex x satisfying x²+1=0"
-    ],
-    "correctIndex": 1,
-    "explanation": "The negation of an existential statement is a universal statement with the predicate negated. Hence the negation is: for every real x, x²+1≠0.",
     "imageUrl": null
   },
   {
@@ -9698,22 +9058,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Differential Equations",
-    "difficulty": "tough",
-    "questionText": "The general solution of dy/dx = (1+y²)/(1+x²) is:",
-    "options": [
-      "tan⁻¹y=tan⁻¹x+C",
-      "tan⁻¹y=x+C",
-      "y=tan(x+C)",
-      "y=x+C"
-    ],
-    "correctIndex": 0,
-    "explanation": "Separating variables gives dy/(1+y²)=dx/(1+x²). Integrating yields tan⁻¹y=tan⁻¹x+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Circles",
     "difficulty": "tough",
     "questionText": "The equation of the circle with centre (2,−1) and radius 5 is:",
@@ -9842,22 +9186,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Linear Programming",
-    "difficulty": "tough",
-    "questionText": "For x≥0, y≥0, x+y≤6 and 2x+y≤8, the maximum value of 3x+2y is:",
-    "options": [
-      "12",
-      "14",
-      "16",
-      "18"
-    ],
-    "correctIndex": 1,
-    "explanation": "The relevant vertices are (0,0), (4,0), (2,4) and (0,6). The objective values are 0, 12, 14 and 12 respectively, so the maximum is 14.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Complex Numbers and Quadratic Equations",
     "difficulty": "tough",
     "questionText": "If the roots of x^2 − 2x + 5 = 0 are α and β, then α^4 + β^4 is equal to:",
@@ -9908,22 +9236,6 @@
     "subject": "Mathematics",
     "chapter": "Sequences and Series",
     "difficulty": "tough",
-    "questionText": "If the first three terms of a geometric progression are positive and their sum is 21 while their product is 216, then the middle term is:",
-    "options": [
-      "4",
-      "6",
-      "8",
-      "12"
-    ],
-    "correctIndex": 1,
-    "explanation": "Let the terms be a/r, a, ar. Their product is a³ = 216, so a = 6. Hence the middle term is 6.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sequences and Series",
-    "difficulty": "tough",
     "questionText": "The sum of the infinite series 1/2 + 1/6 + 1/12 + 1/20 + ... is:",
     "options": [
       "1",
@@ -9949,22 +9261,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The expression inside the modulus vanishes at x = ±2. At each of these points the sign changes and the left and right derivatives differ, while f is differentiable at x = 0.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Differentiation",
-    "difficulty": "tough",
-    "questionText": "If y = sin^−1[(2x)/(1+x²)] for 0 < x < 1, then dy/dx is:",
-    "options": [
-      "1/(1+x²)",
-      "2/(1+x²)",
-      "2/(1−x²)",
-      "1/(1−x²)"
-    ],
-    "correctIndex": 1,
-    "explanation": "For 0 < x < 1, (2x)/(1+x²) = sin(2 tan^−1 x), so y = 2 tan^−1 x. Hence dy/dx = 2/(1+x²).",
     "imageUrl": null
   },
   {
@@ -10162,22 +9458,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Binomial Theorem",
-    "difficulty": "moderate",
-    "questionText": "The coefficient of x² in (1+x)^5 is:",
-    "options": [
-      "5",
-      "10",
-      "15",
-      "20"
-    ],
-    "correctIndex": 1,
-    "explanation": "The coefficient of x² is C(5,2) = 10.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Statistics",
     "difficulty": "easy",
     "questionText": "The arithmetic mean of 6, 8 and 10 is:",
@@ -10285,22 +9565,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The coefficient of x^3 is C(8,3) = 8·7·6/(3·2·1) = 56. Therefore the correct option is 56.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "Evaluate lim(x→0) [sin(3x) − 3sin x]/x^3.",
-    "options": [
-      "−4",
-      "−3",
-      "−2",
-      "0"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using sin x = x−x^3/6+O(x^5), sin3x−3sinx = (3x−27x^3/6)−(3x−3x^3/6) = −4x^3. Hence the limit is −4.",
     "imageUrl": null
   },
   {
@@ -10582,13 +9846,13 @@
     "difficulty": "tough",
     "questionText": "The coefficient of x^5 in the expansion of (1 + x)^8(1 − x)^5 is",
     "options": [
-      "−28",
-      "−14",
-      "14",
-      "28"
+      "−25",
+      "−5",
+      "25",
+      "30"
     ],
-    "correctIndex": 1,
-    "explanation": "Since (1+x)^8(1−x)^5=(1+x)^3(1−x^2)^5, the x^5 coefficient comes from x^3 in (1+x)^3 multiplied by the x^2 term of (1−x^2)^5, giving −5.",
+    "correctIndex": 2,
+    "explanation": "(1+x)^8(1−x)^5 = (1+x)^3(1−x^2)^5. x^5 comes from x·x^4 → 3 × C(5,2) = 30 and from x^3·x^2 → 1 × (−5) = −5. Total = 25.",
     "imageUrl": null
   },
   {
@@ -10653,22 +9917,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The expression inside the modulus is (x−1)(x−3), which has simple zeros at x=1 and x=3. At each simple zero the sign changes, producing a corner in the absolute-value function. Hence there are 2 nondifferentiable points.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "The integral ∫ x/(1+x^2)^2 dx is equal to",
-    "options": [
-      "−1/[2(1+x^2)] + C",
-      "1/[2(1+x^2)] + C",
-      "ln(1+x^2) + C",
-      "−ln(1+x^2) + C"
-    ],
-    "correctIndex": 0,
-    "explanation": "Put u=1+x^2, so du=2x dx. The integral becomes (1/2)∫u^−2du = −1/(2u)+C = −1/[2(1+x^2)]+C.",
     "imageUrl": null
   },
   {
@@ -11138,22 +10386,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Application of Integrals",
-    "difficulty": "tough",
-    "questionText": "The area enclosed between y=x^2 and y=2x for 0≤x≤2 is",
-    "options": [
-      "2/3",
-      "4/3",
-      "8/3",
-      "16/3"
-    ],
-    "correctIndex": 1,
-    "explanation": "On [0,2], 2x≥x^2. Therefore area = ∫0^2(2x−x^2)dx = [x^2−x^3/3]0^2 = 4−8/3 = 4/3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differential Equations",
     "difficulty": "tough",
     "questionText": "The solution of dy/dx = y/x with y(1)=3 is",
@@ -11277,22 +10509,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Rearranging gives y=−(2/3)x+2, so the slope is −2/3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f: R → R be defined by f(x) = x^2 - 2x + 3. If g(x) = f(|x|), then the number of real solutions of g(x) = 3 is:",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 2,
-    "explanation": "g(x) = |x|^2 - 2|x| + 3. Setting g(x) = 3 gives |x|(|x| - 2) = 0, so |x| = 0 or 2. Hence x = 0, 2, −2, giving 3 distinct solutions.",
     "imageUrl": null
   },
   {
@@ -11506,22 +10722,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Circles",
-    "difficulty": "tough",
-    "questionText": "The equation x² + y² − 6x + 8y + 9 = 0 represents a circle whose radius is:",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correctIndex": 2,
-    "explanation": "Completing squares gives (x−3)²+(y+4)²=16, so the radius is 4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Three Dimensional Geometry",
     "difficulty": "tough",
     "questionText": "The angle between the vectors (1, 2, 2) and (2, 1, 2) is:",
@@ -11613,22 +10813,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The feasible vertices are (0,0), (2,0), and (0,4). The objective x+y takes values 0,2 and 4 respectively, so the maximum is 4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Complex Numbers and Quadratic Equations",
-    "difficulty": "tough",
-    "questionText": "If z is a complex number satisfying |z − 1| = |z + i| and z lies on the circle |z| = √2, then the sum of all possible values of Re(z) is:",
-    "options": [
-      "−2",
-      "−1",
-      "0",
-      "1"
-    ],
-    "correctIndex": 2,
-    "explanation": "Writing z = x + iy, the first condition gives (x−1)^2+y^2 = x^2+(y+1)^2, hence y = −x. With x^2+y^2 = 2, we get 2x^2 = 2, so x = ±1; their sum is 0.",
     "imageUrl": null
   },
   {
@@ -11906,22 +11090,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Linear Programming",
-    "difficulty": "moderate",
-    "questionText": "For x≥0, y≥0 and 2x+y≤6, the maximum value of x+y is:",
-    "options": [
-      "3",
-      "4",
-      "6",
-      "8"
-    ],
-    "correctIndex": 2,
-    "explanation": "The feasible vertices are (0,0), (3,0), and (0,6). The values of x+y are 0, 3 and 6, so the maximum is 6.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Sets, Relations and Functions",
     "difficulty": "tough",
     "questionText": "Let f: R → R be defined by f(x) = x^2 - 2x and g(x) = |x - 1|. The number of real solutions of f(x) = g(x) is",
@@ -11972,22 +11140,6 @@
     "subject": "Mathematics",
     "chapter": "Permutations and Combinations",
     "difficulty": "tough",
-    "questionText": "How many 5-digit numbers can be formed using the digits 1, 2, 3, 4, 5, 6 without repetition and divisible by 5?",
-    "options": [
-      "60",
-      "120",
-      "180",
-      "240"
-    ],
-    "correctIndex": 1,
-    "explanation": "A number divisible by 5 must end in 5, fixing the last digit. The remaining four positions are filled by 4 distinct digits chosen and arranged from the other five digits: 5P4 = 5×4×3×2 = 120.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Permutations and Combinations",
-    "difficulty": "tough",
     "questionText": "From 8 distinct students, a committee of 4 is formed and one of the selected students is designated as captain. How many different outcomes are possible?",
     "options": [
       "112",
@@ -12018,22 +11170,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Sequences and Series",
-    "difficulty": "tough",
-    "questionText": "If a, b, c are consecutive positive terms of a geometric progression and a+b+c=14, while abc=64, then b is",
-    "options": [
-      "2",
-      "4",
-      "6",
-      "8"
-    ],
-    "correctIndex": 1,
-    "explanation": "For three consecutive GP terms, b²=ac, so abc=b³. Since abc=64, b=4 because b is positive. The sum condition is also satisfied by suitable neighboring terms.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Limits, Continuity and Differentiability",
     "difficulty": "tough",
     "questionText": "For f(x)=|x²−4|, at which points is f not differentiable?",
@@ -12059,7 +11195,7 @@
       "|a|<3",
       "|a|<4"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For x³−3x+a, the local maximum occurs at x=−1 and equals a+2, while the local minimum occurs at x=1 and equals a−2. Three distinct real roots require a+2>0 and a−2<0, hence |a|<2.",
     "imageUrl": null
   },
@@ -12109,22 +11245,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The original sum is 5×12=60. Replacing 8 by 18 increases the sum by 10, so the new sum is 70 and the new mean is 70/5=14.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "Evaluate tan⁻¹(1/2) + tan⁻¹(1/3).",
-    "options": [
-      "π/6",
-      "π/4",
-      "π/3",
-      "π/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using tan(A+B)=(1/2+1/3)/(1−1/6)=1, and both angles are positive with sum less than π/2. Hence the sum is π/4.",
     "imageUrl": null
   },
   {
@@ -12500,22 +11620,6 @@
     "subject": "Mathematics",
     "chapter": "Matrices and Determinants",
     "difficulty": "tough",
-    "questionText": "Let A be a 3 x 3 matrix satisfying A^2 - 3A + 2I = 0. If det(A)=2, then tr(A) can be",
-    "options": [
-      "2",
-      "4",
-      "5",
-      "6"
-    ],
-    "correctIndex": 1,
-    "explanation": "The polynomial gives (A-I)(A-2I)=0, so the eigenvalues are among 1 and 2. Since det(A)=2, the eigenvalues are 1,1,2 in some order, giving tr(A)=4, not 5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Matrices and Determinants",
-    "difficulty": "tough",
     "questionText": "For the matrix A = [[1,1,1],[1,2,3],[1,3,6]], the value of det(A) is",
     "options": [
       "0",
@@ -12658,22 +11762,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Three Dimensional Geometry",
-    "difficulty": "tough",
-    "questionText": "The shortest distance between the skew lines r=(1,0,0)+lambda(1,1,0) and r=(0,1,1)+mu(1,0,1) is",
-    "options": [
-      "1/sqrt(3)",
-      "1/sqrt(2)",
-      "sqrt(2)",
-      "sqrt(3)"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using d=|((b-a)·(d1×d2))|/|d1×d2|, the direction cross product has magnitude sqrt(3), while the scalar triple product has magnitude 1. Hence d=1/sqrt(3).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Vector Algebra",
     "difficulty": "tough",
     "questionText": "If vectors a and b satisfy |a|=2, |b|=3 and |a+b|=sqrt(19), then the angle between them is",
@@ -12685,22 +11773,6 @@
     ],
     "correctIndex": 2,
     "explanation": "|a+b|^2=|a|^2+|b|^2+2|a||b|cos theta gives 19=4+9+12cos theta. Thus cos theta=1/2 and theta=60 degrees.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "If the mean of 5 observations is 12 and each observation is increased by 3, the new mean is",
-    "options": [
-      "12",
-      "13",
-      "15",
-      "18"
-    ],
-    "correctIndex": 2,
-    "explanation": "Adding the same constant 3 to every observation increases the mean by 3. Hence the new mean is 12+3=15.",
     "imageUrl": null
   },
   {
@@ -12850,22 +11922,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/(x^2+4x+8).",
-    "options": [
-      "tan^-1((x+2)/2)+C",
-      "1/2 tan^-1((x+2)/2)+C",
-      "2 tan^-1((x+2)/2)+C",
-      "1/4 tan^-1((x+2)/2)+C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Since x^2+4x+8=(x+2)^2+4, the integral is ∫dx/[(x+2)^2+2^2]=(1/2)tan^-1((x+2)/2)+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Definite Integrals",
     "difficulty": "tough",
     "questionText": "Evaluate ∫ from 0 to pi/2 of x cos x dx.",
@@ -12989,22 +12045,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Since f(1)=-2, the equation x^3-3x=-2 becomes x^3-3x+2=0=(x-1)^2(x+2). Thus the distinct real solutions are x=1 and x=-2, giving 2 values.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sequences and Series",
-    "difficulty": "tough",
-    "questionText": "If the sum of the first n terms of a sequence is S_n=2n^2+3n, then the 20th term is",
-    "options": [
-      "79",
-      "81",
-      "83",
-      "85"
-    ],
-    "correctIndex": 1,
-    "explanation": "The nth term is a_n=S_n-S*{n-1}=2n^2+3n-[2(n-1)^2+3(n-1)]=4n+1. Hence a_20=81.",
     "imageUrl": null
   },
   {
@@ -13307,24 +12347,8 @@
       "(x+2)^2+(y−3)^2=25",
       "(x−5)^2+(y−1)^2=25"
     ],
-    "correctIndex": 0,
-    "explanation": "The squared radius is (5−2)^2+(1+3)^2=9+16=25. Therefore the equation is (x−2)^2+(y+3)^2=25.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Three Dimensional Geometry",
-    "difficulty": "tough",
-    "questionText": "The distance between the points (1,−2,3) and (4,2,−1) is",
-    "options": [
-      "√29",
-      "√41",
-      "√50",
-      "7"
-    ],
     "correctIndex": 1,
-    "explanation": "Distance = √[(4−1)^2+(2+2)^2+(−1−3)^2] = √(9+16+16)=√41.",
+    "explanation": "The squared radius is (5−2)^2+(1+3)^2=9+16=25. Therefore the equation is (x−2)^2+(y+3)^2=25.",
     "imageUrl": null
   },
   {
@@ -13405,22 +12429,6 @@
     ],
     "correctIndex": 2,
     "explanation": "At the vertices, the objective values are 0, 18, 16 and 8 respectively. Thus the maximum is 18 at (6,0).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f:R→R be defined by f(x)=x^2−2x+3. The number of real numbers y for which the equation f(x)=y has exactly one real solution is",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "Infinitely many"
-    ],
-    "correctIndex": 1,
-    "explanation": "Completing the square gives f(x)=(x−1)^2+2. The equation f(x)=y has exactly one real solution only when y=2, so there is exactly 1 such value.",
     "imageUrl": null
   },
   {
@@ -13618,22 +12626,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Three Dimensional Geometry",
-    "difficulty": "tough",
-    "questionText": "The distance between the points (1,2,−1) and (4,6,−1) is",
-    "options": [
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
-    "correctIndex": 1,
-    "explanation": "Distance=√[(4−1)^2+(6−2)^2+(−1+1)^2]=√(9+16)=5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Probability",
     "difficulty": "tough",
     "questionText": "A box contains 5 red and 4 blue balls. Two balls are drawn without replacement. Given that at least one ball is red, the probability that both are red is",
@@ -13730,22 +12722,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Sequences and Series",
-    "difficulty": "tough",
-    "questionText": "If the first term of a positive geometric progression is 2 and the sum of its first four terms is 30, find its common ratio.",
-    "options": [
-      "2",
-      "3/2",
-      "1/2",
-      "5/2"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using 2(1+r+r^2+r^3)=30 gives 1+r+r^2+r^3=15. At r=2 this sum is 15, and positivity makes the relevant ratio r=2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differentiation",
     "difficulty": "tough",
     "questionText": "If y = x^x for x>0, find the value of dy/dx at x=e.",
@@ -13789,22 +12765,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Using |a×b|^2=|a|^2|b|^2-(a·b)^2 gives 36-9=27. Hence |a×b|=3sqrt(3).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "Evaluate tan^(-1)(1/2)+tan^(-1)(1/3).",
-    "options": [
-      "pi/6",
-      "pi/4",
-      "pi/3",
-      "pi/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using tan(A+B)=(1/2+1/3)/(1-1/6)=1, and both angles lie in the first quadrant, A+B=pi/4.",
     "imageUrl": null
   },
   {
@@ -13906,22 +12866,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^(π/2) x sin x dx.",
-    "options": [
-      "π/2",
-      "1",
-      "π/2 − 1",
-      "π/2 + 1"
-    ],
-    "correctIndex": 1,
-    "explanation": "Integration by parts gives ∫x sin x dx = −x cos x + sin x. At π/2 this is 1, while at 0 it is 0.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Straight Lines",
     "difficulty": "tough",
     "questionText": "The line passing through (2, 3) and perpendicular to 2x − 3y + 5 = 0 has equation:",
@@ -13965,22 +12909,6 @@
     ],
     "correctIndex": 1,
     "explanation": "A linear transformation 2x+3 changes the mean in the same way. Thus the new mean is 2(15)+3=33.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Trigonometric Functions and Equations",
-    "difficulty": "tough",
-    "questionText": "The number of solutions of 2cos²x − 3cos x + 1 = 0 in [0, 2π] is:",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correctIndex": 2,
-    "explanation": "(2cos x − 1)(cos x − 1) = 0. cos x = 1/2 gives x = π/3, 5π/3; cos x = 1 gives x = 0 and x = 2π (both in the closed interval). Total = 4 solutions.",
     "imageUrl": null
   },
   {
@@ -14146,22 +13074,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f:R→R be defined by f(x)=x²−2x+3. The number of real solutions of f(f(x))=3 is",
-    "options": [
-      "0",
-      "1",
-      "2",
-      "4"
-    ],
-    "correctIndex": 2,
-    "explanation": "Since f(x)=(x−1)²+2≥2, the equation f(f(x))=3 gives f(x)=1 or 3, but f(x)=1 is impossible. Thus f(x)=3, giving x²−2x=0 and hence x=0,2, so there are 2 solutions.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Complex Numbers and Quadratic Equations",
     "difficulty": "tough",
     "questionText": "If the roots of x²−px+q=0 are α and β and α²+β²=14 while αβ=3, then p² is",
@@ -14173,22 +13085,6 @@
     ],
     "correctIndex": 1,
     "explanation": "α²+β²=(α+β)²−2αβ=p²−6=14. Hence p²=20.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Matrices and Determinants",
-    "difficulty": "tough",
-    "questionText": "Let A be a square matrix satisfying A²−5A+6I=0. If A is invertible, then A⁻¹ is",
-    "options": [
-      "(5I−A)/6",
-      "(A−5I)/6",
-      "(5A−I)/6",
-      "(A+5I)/6"
-    ],
-    "correctIndex": 0,
-    "explanation": "Multiplying A²−5A+6I=0 by A⁻¹ gives A−5I+6A⁻¹=0. Therefore A⁻¹=(5I−A)/6.",
     "imageUrl": null
   },
   {
@@ -14242,22 +13138,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "Evaluate lim(x→0) [tan x−sin x]/x^3.",
-    "options": [
-      "1/6",
-      "1/3",
-      "1/2",
-      "1"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using tan x=x+x³/3+O(x⁵) and sin x=x−x³/6+O(x⁵), the numerator is x³(1/3+1/6)+O(x⁵)=x³/2+O(x⁵). Thus the limit is 1/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Indefinite Integrals",
     "difficulty": "tough",
     "questionText": "Evaluate ∫ dx/[x(x²−1)].",
@@ -14306,22 +13186,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Three Dimensional Geometry",
-    "difficulty": "tough",
-    "questionText": "The distance between the points (1,−2,3) and (5,1,15) is",
-    "options": [
-      "10",
-      "12",
-      "13",
-      "15"
-    ],
-    "correctIndex": 2,
-    "explanation": "The distance is √[(5−1)²+(1+2)²+(15−3)²]=√(16+9+144)=√169=13.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Vector Algebra",
     "difficulty": "tough",
     "questionText": "If |a|=2, |b|=3 and |a−b|=√19, then the angle between a and b is",
@@ -14333,22 +13197,6 @@
     ],
     "correctIndex": 3,
     "explanation": "|a−b|²=|a|²+|b|²−2|a||b|cosθ. Thus 19=4+9−12cosθ.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "Five observations have mean 14. If one observation equal to 10 is replaced by 20, the new mean is",
-    "options": [
-      "15",
-      "16",
-      "17",
-      "18"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 5×14=70. Replacing 10 by 20 increases the sum to 80, so the new mean is 80/5=16.",
     "imageUrl": null
   },
   {
@@ -14370,22 +13218,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Linear Programming",
-    "difficulty": "moderate",
-    "questionText": "For x≥0, y≥0 and x+y≤8, the maximum value of 3x+2y is",
-    "options": [
-      "16",
-      "20",
-      "24",
-      "28"
-    ],
-    "correctIndex": 2,
-    "explanation": "The vertices are (0,0), (8,0), and (0,8). The objective values are 0, 24 and 16 respectively, so the maximum is 24.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Sets, Relations and Functions",
     "difficulty": "tough",
     "questionText": "Let A={1,2,3,4} and define a relation R on A by aRb if and only if a divides b. Which of the following correctly describes R?",
@@ -14397,22 +13229,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Every element divides itself, so R is reflexive. Divisibility is transitive and antisymmetric, but 2 divides 4 while 4 does not divide 2, so it is not symmetric.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Matrices and Determinants",
-    "difficulty": "tough",
-    "questionText": "Let A be a 2×2 matrix satisfying A²−5A+6I=0. If A is invertible, which expression equals A⁻¹?",
-    "options": [
-      "(5I−A)/6",
-      "(A−5I)/6",
-      "(6I−A)/5",
-      "(A+5I)/6"
-    ],
-    "correctIndex": 0,
-    "explanation": "From A²−5A+6I=0, rearrange to A(5I−A)=6I. Since A is invertible, A⁻¹=(5I−A)/6.",
     "imageUrl": null
   },
   {
@@ -14477,22 +13293,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Put u=1+x³, so du=3x²dx. Hence the integral is (1/3)∫du/u=(1/3)ln(1+x³)+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/(x²−4x+13).",
-    "options": [
-      "tan^−1((x−2)/3)+C",
-      "(1/3)tan^−1((x−2)/3)+C",
-      "3tan^−1((x−2)/3)+C",
-      "(1/2)tan^−1((x−2)/3)+C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Complete the square: x²−4x+13=(x−2)²+9. Therefore the integral is (1/3)tan^−1((x−2)/3)+C.",
     "imageUrl": null
   },
   {
@@ -15131,7 +13931,7 @@
       "λ>0",
       "λ<0"
     ],
-    "correctIndex": 0,
+    "correctIndex": 2,
     "explanation": "The discriminant is 4(λ+1)^2−4(λ^2+1)=8λ. For two distinct real roots we need 8λ>0, hence λ>0.",
     "imageUrl": null
   },
@@ -15229,22 +14029,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The antiderivative is tan⁻¹x. Thus the integral equals tan⁻¹1−tan⁻¹0=π/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Circles",
-    "difficulty": "tough",
-    "questionText": "The radius of the circle x^2+y^2−6x+8y−11=0 is",
-    "options": [
-      "3",
-      "4",
-      "5",
-      "6"
-    ],
-    "correctIndex": 3,
-    "explanation": "Completing squares gives (x−3)^2+(y+4)^2=36, so the radius is 6. Thus the correct option is 6.",
     "imageUrl": null
   },
   {
@@ -15458,22 +14242,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Sequences and Series",
-    "difficulty": "tough",
-    "questionText": "If three positive numbers are in geometric progression, their sum is 26 and their product is 216, then the middle term is",
-    "options": [
-      "4",
-      "5",
-      "6",
-      "8"
-    ],
-    "correctIndex": 2,
-    "explanation": "For three GP terms a,b,c, ac=b^2. Their product is abc=b^3=216, so b=6. The sum condition is then consistent with the GP ratio obtained from a+c=20.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differentiation",
     "difficulty": "tough",
     "questionText": "If y=e^(x^2)sin x, then the value of y'' at x=0 is",
@@ -15565,38 +14333,6 @@
     ],
     "correctIndex": 0,
     "explanation": "The given line has slope 3/4, so a perpendicular line has slope -4/3. Through (2,3), 3(y-3)=-4(x-2), giving 4x+3y-17=0.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Circles",
-    "difficulty": "tough",
-    "questionText": "The equation of the circle having diameter with endpoints (1,2) and (5,6) is",
-    "options": [
-      "x^2+y^2-6x-8y+17=0",
-      "x^2+y^2-6x-8y+13=0",
-      "x^2+y^2+6x+8y-17=0",
-      "x^2+y^2-4x-6y+9=0"
-    ],
-    "correctIndex": 0,
-    "explanation": "For endpoints A and B, the circle satisfies (x-1)(x-5)+(y-2)(y-6)=0. Expanding gives x^2+y^2-6x-8y+17=0.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "The value of tan^-1(1/2)+tan^-1(1/4) is",
-    "options": [
-      "tan^-1(3/10)",
-      "tan^-1(6/7)",
-      "tan^-1(7/6)",
-      "pi/4"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using tan(A+B)=(1/2+1/4)/(1-1/8)=(3/4)/(7/8)=6/7. Both angles are positive and their sum is less than pi/2, so the result is tan^-1(6/7).",
     "imageUrl": null
   },
   {
@@ -16434,22 +15170,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^1 ln(1+x)/x dx.",
-    "options": [
-      "π²/12",
-      "π²/6",
-      "ln 2",
-      "1"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using ln(1+x)=x-x²/2+x³/3-⋯ on [0,1], division by x and termwise integration gives 1-1/4+1/9-1/16+⋯=π²/12. Hence the value is π²/12.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Circles",
     "difficulty": "tough",
     "questionText": "The circle passing through (0,0), (2,0) and (0,4) has radius",
@@ -16818,22 +15538,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^1 x/(1+x^2) dx.",
-    "options": [
-      "ln 2",
-      "(1/2)ln 2",
-      "2ln 2",
-      "1/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Put u=1+x^2, du=2x dx. The integral becomes (1/2)∫_1^2 du/u=(1/2)ln2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differential Equations",
     "difficulty": "tough",
     "questionText": "Solve dy/dx=y/x for x>0, given y(1)=3.",
@@ -17133,38 +15837,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Using partial fractions, 1/(x²−9)=1/6[1/(x−3)−1/(x+3)]. Therefore the integral is (1/6)ln|(x−3)/(x+3)|+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^1 x²/(1+x³) dx.",
-    "options": [
-      "(1/3)ln 2",
-      "(1/2)ln 2",
-      "ln 2",
-      "2ln 2"
-    ],
-    "correctIndex": 0,
-    "explanation": "Put u=1+x³, so du=3x²dx. The integral becomes (1/3)∫_1^2 du/u = (1/3)ln 2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of 6 observations is 14. If one observation 9 is replaced by 21, the new mean is:",
-    "options": [
-      "15",
-      "16",
-      "17",
-      "18"
-    ],
-    "correctIndex": 1,
-    "explanation": "Original total = 6×14=84. Replacing 9 by 21 increases the total by 12, giving 96. Therefore the new mean is 96/6=16.",
     "imageUrl": null
   },
   {
@@ -17554,22 +16226,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "Evaluate sin⁻¹(3/5)+cos⁻¹(3/5).",
-    "options": [
-      "0",
-      "π/4",
-      "π/2",
-      "π"
-    ],
-    "correctIndex": 2,
-    "explanation": "For x∈[−1,1], sin⁻¹x+cos⁻¹x=π/2. Therefore the value is π/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Mathematical Reasoning",
     "difficulty": "moderate",
     "questionText": "If p is the statement 'n is divisible by 6' and q is the statement 'n is divisible by 3', then p is a",
@@ -17814,13 +16470,13 @@
     "difficulty": "tough",
     "questionText": "If z is a complex number satisfying |z−1|=2|z+1|, then the locus of z is",
     "options": [
+      "3x^2+3y^2+10x+3=0",
+      "3x^2+3y^2−10x+3=0",
       "x^2+y^2+10x+3=0",
-      "x^2+y^2+10x−3=0",
-      "x^2+y^2−10x−3=0",
-      "x^2+y^2−10x+3=0"
+      "3x^2+3y^2+10x−3=0"
     ],
-    "correctIndex": 1,
-    "explanation": "Writing z=x+iy, (x−1)^2+y^2=4[(x+1)^2+y^2]. Simplification gives x^2+y^2+10x+3=0, so the correct option is the first one.",
+    "correctIndex": 0,
+    "explanation": "With z = x + iy: (x−1)^2 + y^2 = 4[(x+1)^2 + y^2], i.e. x^2 − 2x + 1 + y^2 = 4x^2 + 8x + 4 + 4y^2. Hence 3x^2 + 3y^2 + 10x + 3 = 0 (a circle).",
     "imageUrl": null
   },
   {
@@ -17869,38 +16525,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Since S_n=n(n+1)/2 and S_(n+1)=(n+1)(n+2)/2, the term equals 4/[n(n+1)^2(n+2)], which telescopes after partial fractions. The sum for n=1 to 5 is 5/21.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "Evaluate lim(x→0) [e^x−1−x−x^2/2]/x^3.",
-    "options": [
-      "1/6",
-      "1/3",
-      "1/2",
-      "1"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using e^x=1+x+x^2/2+x^3/6+O(x^4), the numerator is x^3/6+O(x^4). Hence the limit is 1/6.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Application of Derivatives",
-    "difficulty": "tough",
-    "questionText": "The equation x^3−6x^2+9x+1=0 has how many distinct real roots?",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "0"
-    ],
-    "correctIndex": 0,
-    "explanation": "For f(x)=x^3−6x^2+9x+1, f'(x)=3(x−1)(x−3). We have f(1)=5 and f(3)=1, both positive, while f(x)→−∞ as x→−∞ and f(x)→∞ as x→∞, so there is only one real root; therefore the correct option is 1.",
     "imageUrl": null
   },
   {
@@ -18061,22 +16685,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The relevant vertices are (0,0), (0,6), (2,4), and (4,0). The corresponding Z values are 0,24,26,20.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f:R→R be defined by f(x)=x^2-4x+7. The number of real solutions of f(f(x))=7 is:",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 1,
-    "explanation": "Since f(t)=(t-2)^2+3, f(f(x))=7 gives f(x)=0 or 4. The equation f(x)=0 has no real solution, while f(x)=4 gives (x-2)^2=1, so x=1,3; hence there are 2 solutions.",
     "imageUrl": null
   },
   {
@@ -18402,22 +17010,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of 6 observations is 15. If one observation 11 is replaced by 23, the new mean is",
-    "options": [
-      "16",
-      "17",
-      "18",
-      "19"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 6×15=90. Replacing 11 by 23 increases the sum by 12, giving 102; the new mean is 102/6=17.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Probability",
     "difficulty": "tough",
     "questionText": "Two fair dice are thrown. Given that the sum is 7, the probability that at least one die shows 3 is",
@@ -18429,22 +17021,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Given sum 7, the six equally likely outcomes are (1,6),(2,5),(3,4),(4,3),(5,2),(6,1). Two contain a 3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "Evaluate tan⁻¹(2)+tan⁻¹(3).",
-    "options": [
-      "π/4",
-      "π/2",
-      "3π/4",
-      "π"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using tan⁻¹a+tan⁻¹b=π+tan⁻¹((a+b)/(1−ab)) when a,b>0 and ab>1, the argument is 5/(−5)=−1. Thus the sum is π−π/4=3π/4.",
     "imageUrl": null
   },
   {
@@ -18770,22 +17346,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "Evaluate lim(x→0) [(1+x)^(1/x)-e]/x.",
-    "options": [
-      "−e/2",
-      "e/2",
-      "e",
-      "−e"
-    ],
-    "correctIndex": 1,
-    "explanation": "ln[(1+x)^(1/x)]=1-x/2+x^2/3+O(x^3). Hence (1+x)^(1/x)=e(1-x/2+O(x^2)), so the limit is -e/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Sets, Relations and Functions",
     "difficulty": "tough",
     "questionText": "Let f:R→R be defined by f(x)=x^2−2x+3. The range of f∘f is of the form [a,∞). Find a.",
@@ -18973,22 +17533,6 @@
     ],
     "correctIndex": 2,
     "explanation": "f(x)=6x−x^2 is a downward-opening quadratic. Its vertex is at x=3, where f(3)=18−9=9, giving the maximum 9.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^1 ln(1+x) dx.",
-    "options": [
-      "ln 2",
-      "2ln 2−1",
-      "1−ln 2",
-      "2−ln 2"
-    ],
-    "correctIndex": 1,
-    "explanation": "An antiderivative is (1+x)ln(1+x)−(1+x). Evaluating from 0 to 1 gives 2ln2−1.",
     "imageUrl": null
   },
   {
@@ -19202,22 +17746,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Sequences and Series",
-    "difficulty": "tough",
-    "questionText": "If the sum of the first n terms of an arithmetic progression is S_n=3n²+2n, then the 20th term is",
-    "options": [
-      "113",
-      "119",
-      "121",
-      "125"
-    ],
-    "correctIndex": 1,
-    "explanation": "The nth term is a_n=S_n-S_{n-1}. Thus a_n=3n²+2n-[3(n-1)²+2(n-1)]=6n-1. Therefore a_20=120-1=119.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Indefinite Integrals",
     "difficulty": "tough",
     "questionText": "Evaluate ∫(2x+3)/(x²+3x+2) dx.",
@@ -19282,22 +17810,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "For x∈[-1,1], the value of cos(sin⁻¹x) is",
-    "options": [
-      "√(1-x²)",
-      "1-x²",
-      "±√(1-x²)",
-      "x"
-    ],
-    "correctIndex": 0,
-    "explanation": "Let θ=sin⁻¹x, so θ∈[-π/2,π/2] and cosθ≥0. Therefore cos(sin⁻¹x)=√(1-sin²θ)=√(1-x²).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Matrices and Determinants",
     "difficulty": "tough",
     "questionText": "If A is a 2×2 matrix with det(A)=−3, then det(2A) is",
@@ -19325,22 +17837,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Put u=x²+4, so du=2x dx. The integral becomes (1/2)∫u⁻²du=−1/(2u)+C=−1/[2(x²+4)]+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f:R→R be defined by f(x)=x^2-4x+5. The number of real solutions of f(f(x))=5 is",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 1,
-    "explanation": "Put y=f(x). Then y^2-4y+5=5 gives y(y-4)=0, so f(x)=0 or 4. The equation f(x)=0 has no real root, while f(x)=4 gives x^2-4x+1=0, yielding two real roots; hence the number is 2.",
     "imageUrl": null
   },
   {
@@ -19453,22 +17949,6 @@
     ],
     "correctIndex": 1,
     "explanation": "f(x)=x−x² has derivative 1−2x, which vanishes at x=1/2. Since f''(x)=−2<0, this gives the maximum value f(1/2)=1/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/(x²−4).",
-    "options": [
-      "(1/4)ln|(x−2)/(x+2)|+C",
-      "(1/2)ln|(x−2)/(x+2)|+C",
-      "ln|x²−4|+C",
-      "(1/4)ln|(x+2)/(x−2)|+C"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using partial fractions, 1/(x²−4)=1/4[1/(x−2)−1/(x+2)]. Hence the integral is (1/4)ln|(x−2)/(x+2)|+C.",
     "imageUrl": null
   },
   {
@@ -19682,22 +18162,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Differential Equations",
-    "difficulty": "tough",
-    "questionText": "The solution of dy/dx + y/x = x^2, x>0, satisfying y(1)=2, is",
-    "options": [
-      "y=x^3+1/x",
-      "y=x^3/4+7/(4x)",
-      "y=x^3/4+7x",
-      "y=x^2+1/x"
-    ],
-    "correctIndex": 1,
-    "explanation": "The integrating factor is x, so d(xy)/dx=x^3. Hence xy=x^4/4+C. Using y(1)=2 gives C=7/4, so y=x^3/4+7/(4x).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Three Dimensional Geometry",
     "difficulty": "tough",
     "questionText": "The distance between the point (1,-2,3) and the plane 2x-y+2z-6=0 is",
@@ -19739,7 +18203,7 @@
       "tan^(-1)(1/3)",
       "pi/6"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Using tan(A-B)=(1/2-1/3)/(1+1/6)=(1/6)/(7/6)=1/7. Since both angles are acute and A>B, the result is tan^(-1)(1/7).",
     "imageUrl": null
   },
@@ -20247,7 +18711,7 @@
     "questionText": "The integral of dx/(x^2-6x+13) is",
     "options": [
       "tan^-1(x-3)+C",
-      "(1/2)tan^-1(x-3)+C",
+      "(1/2)tan^-1((x-3)/2)+C",
       "2tan^-1(x-3)+C",
       "tan^-1((x-3)/2)+C"
     ],
@@ -20269,22 +18733,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Write x^2/(x^2+1)=1-1/(x^2+1). Therefore the integral is x-tan^-1x+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "The value of integral from 0 to pi of x sin^2 x dx is",
-    "options": [
-      "pi^2/4",
-      "pi^2/2",
-      "pi^2/3",
-      "pi^2/8"
-    ],
-    "correctIndex": 0,
-    "explanation": "Since sin^2x=(1-cos2x)/2, the integral is pi^2/4-(1/2)∫0^pi x cos2x dx. Integration by parts shows the latter integral is 0, giving pi^2/4.",
     "imageUrl": null
   },
   {
@@ -20349,22 +18797,6 @@
     ],
     "correctIndex": 2,
     "explanation": "|a+b|^2=|a|^2+|b|^2+2a·b. Thus 19=4+9+2a·b, giving a·b=3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of 8 observations is 12. If one observation 20 is replaced by 12, the new mean is",
-    "options": [
-      "10",
-      "11",
-      "12",
-      "13"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 8(12)=96. Replacing 20 by 12 reduces the sum by 8, giving 88; the new mean is 88/8=11.",
     "imageUrl": null
   },
   {
@@ -20445,22 +18877,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Use 1/[x(1+x^2)]=1/x−x/(1+x^2). Integrating gives ln x−(1/2)ln(1+x^2)+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "For the parabola y^2=8x, the length of the chord passing through the focus and perpendicular to the axis is",
-    "options": [
-      "4",
-      "6",
-      "8",
-      "10"
-    ],
-    "correctIndex": 2,
-    "explanation": "For y^2=4ax, 4a=8 gives a=2. The chord through the focus perpendicular to the axis is the latus rectum, whose length is 4a=8.",
     "imageUrl": null
   },
   {
@@ -20557,22 +18973,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For mutually perpendicular vectors, |a+b+c|^2=|a|^2+|b|^2+|c|^2=1+4+9=14. Hence the magnitude is √14.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of 6 observations is 14. If one observation 18 is replaced by 30, the new mean is",
-    "options": [
-      "15",
-      "16",
-      "17",
-      "18"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 6×14=84. Replacing 18 by 30 increases the sum by 12.",
     "imageUrl": null
   },
   {
@@ -21044,22 +19444,6 @@
     "subject": "Mathematics",
     "chapter": "Differentiation",
     "difficulty": "tough",
-    "questionText": "If y=(x²+1)^x, then dy/dx at x=1 is",
-    "options": [
-      "1+ln 2",
-      "2(1+ln 2)",
-      "2+ln 2",
-      "4+2ln 2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Logarithmic differentiation gives y'=(x²+1)^x[ln(x²+1)+2x²/(x²+1)]. At x=1, this becomes 2(ln2+1).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Differentiation",
-    "difficulty": "tough",
     "questionText": "If x=sin t and y=cos t, then d²y/dx² at t=π/4 is",
     "options": [
       "−2√2",
@@ -21234,38 +19618,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/(x²+6x+13).",
-    "options": [
-      "tan⁻¹((x+3)/2)+C",
-      "(1/2)tan⁻¹((x+3)/2)+C",
-      "2tan⁻¹((x+3)/2)+C",
-      "(1/4)tan⁻¹((x+3)/2)+C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Since x²+6x+13=(x+3)²+4, the integral is ∫dx/[(x+3)²+2²]=(1/2)tan⁻¹((x+3)/2)+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ x/(x²+1)² dx.",
-    "options": [
-      "-1/[2(x²+1)]+C",
-      "1/[2(x²+1)]+C",
-      "-1/(x²+1)+C",
-      "1/(x²+1)+C"
-    ],
-    "correctIndex": 0,
-    "explanation": "Put u=x²+1, so du=2x dx. The integral becomes (1/2)∫u⁻²du=-1/(2u)+C=-1/[2(x²+1)]+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Definite Integrals",
     "difficulty": "tough",
     "questionText": "If I=∫_0^(π/2) sin^5x dx, then I is",
@@ -21293,38 +19645,6 @@
     ],
     "correctIndex": 0,
     "explanation": "For x²+y²=r², the tangent at (x₁,y₁) is xx₁+yy₁=r². Therefore at (3,4), the tangent is 3x+4y=25.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "For the parabola y²=16x, the length of its latus rectum is",
-    "options": [
-      "4",
-      "8",
-      "12",
-      "16"
-    ],
-    "correctIndex": 3,
-    "explanation": "Comparing y²=4ax gives a=4. The length of the latus rectum is 4a=16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Conic Sections",
-    "difficulty": "tough",
-    "questionText": "The eccentricity of the ellipse x²/36+y²/20=1 is",
-    "options": [
-      "1/3",
-      "2/3",
-      "√5/3",
-      "√5/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Here a²=36 and b²=20, so c²=a²-b²=16 and c=4. Hence e=c/a=4/6=2/3.",
     "imageUrl": null
   },
   {
@@ -21565,22 +19885,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Comparing y^2=4ax gives a=4. Therefore the focus is (4,0).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Three Dimensional Geometry",
-    "difficulty": "tough",
-    "questionText": "The distance between the points (2,−1,3) and (−2,2,−1) is",
-    "options": [
-      "√29",
-      "√34",
-      "√41",
-      "√45"
-    ],
-    "correctIndex": 2,
-    "explanation": "The squared distance is (−4)^2+3^2+(−4)^2=16+9+16=41. Hence the distance is √41.",
     "imageUrl": null
   },
   {
@@ -21981,22 +20285,6 @@
     ],
     "correctIndex": 0,
     "explanation": "tan x+cot x=(sin^2x+cos^2x)/(sin x cos x)=1/(sin x cos x)=2/sin2x. Thus 2/sin2x=4, giving sin2x=1/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "The value of tan^-1(1/2)+tan^-1(1/5) is",
-    "options": [
-      "tan^-1(7/9)",
-      "tan^-1(7/8)",
-      "tan^-1(9/7)",
-      "π/4"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using tan(A+B)=(1/2+1/5)/(1−1/10)=7/9. Since both angles are positive and their sum is less than π/2, the result is tan^-1(7/9).",
     "imageUrl": null
   },
   {
@@ -22722,22 +21010,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫_0^(π/2) sin^5x dx.",
-    "options": [
-      "4/5",
-      "8/15",
-      "16/15",
-      "2/3"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using the reduction formula, ∫_0^(π/2)sin^5x dx=(4/5)(2/3)∫_0^(π/2)sin x dx=8/15.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Application of Integrals",
     "difficulty": "tough",
     "questionText": "The area bounded by y²=4x and x=4 is",
@@ -22898,22 +21170,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "moderate",
-    "questionText": "For x∈[−1,1], the value of cos^−1x+cos^−1(−x) is",
-    "options": [
-      "0",
-      "π/2",
-      "π",
-      "2π"
-    ],
-    "correctIndex": 2,
-    "explanation": "For x∈[−1,1], cos^−1(−x)=π−cos^−1x. Therefore their sum is π.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Mathematical Reasoning",
     "difficulty": "moderate",
     "questionText": "If p denotes the statement 'n is divisible by 6' and q denotes 'n is divisible by 3', then the logically correct implication is",
@@ -23010,22 +21266,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ x/(1+x^2) dx.",
-    "options": [
-      "ln(1+x^2)+C",
-      "(1/2)ln(1+x^2)+C",
-      "2ln(1+x^2)+C",
-      "tan^−1x+C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Put u=1+x^2, so du=2x dx. Therefore the integral is (1/2)ln(1+x^2)+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differential Equations",
     "difficulty": "tough",
     "questionText": "The general solution of dy/dx=−2y is",
@@ -23074,22 +21314,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Probability",
-    "difficulty": "tough",
-    "questionText": "A card is drawn from a standard deck and is known to be a face card. The probability that it is a king is",
-    "options": [
-      "1/4",
-      "1/3",
-      "1/2",
-      "2/3"
-    ],
-    "correctIndex": 1,
-    "explanation": "There are 12 face cards and 4 kings among them. Hence the conditional probability is 4/12=1/3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Trigonometric Functions and Equations",
     "difficulty": "tough",
     "questionText": "If tan x=1 for x∈[0,2π], then the sum of all possible values of x is",
@@ -23101,22 +21325,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The solutions are x=π/4 and 5π/4. Their sum is 6π/4=3π/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Linear Programming",
-    "difficulty": "moderate",
-    "questionText": "For x,y≥0 and x+y≤5, the maximum value of x+2y is",
-    "options": [
-      "5",
-      "8",
-      "10",
-      "12"
-    ],
-    "correctIndex": 2,
-    "explanation": "The maximum occurs at the vertex (0,5), where Z=0+2(5)=10.",
     "imageUrl": null
   },
   {
@@ -23522,22 +21730,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ from 0 to 1 of [ln(1+x)]/(1+x) dx.",
-    "options": [
-      "(ln 2)^2/2",
-      "ln 2",
-      "(ln 2)^2",
-      "1/2"
-    ],
-    "correctIndex": 0,
-    "explanation": "Set u=ln(1+x), so du=dx/(1+x). The limits become 0 and ln 2, giving ∫u du=(ln 2)^2/2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Application of Integrals",
     "difficulty": "tough",
     "questionText": "The area enclosed by y=|x−1|, y=0, x=0 and x=3 is",
@@ -23746,22 +21938,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Vector Algebra",
-    "difficulty": "tough",
-    "questionText": "If vectors a and b satisfy |a|=3, |b|=4 and |a+b|=5, then |a-b| equals",
-    "options": [
-      "3",
-      "4",
-      "5",
-      "7"
-    ],
-    "correctIndex": 2,
-    "explanation": "From |a+b|²=|a|²+|b|²+2a·b, we get 25=9+16+2a·b, so a·b=0. Hence |a-b|²=9+16=25 and |a-b|=5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Statistics",
     "difficulty": "tough",
     "questionText": "Five observations have mean 12 and variance 8. If each observation is multiplied by 2 and then increased by 3, what is the new variance?",
@@ -23837,22 +22013,6 @@
     ],
     "correctIndex": 3,
     "explanation": "The coefficient is Σ[k=0 to 3] C(3,k)(-1)^k C(8,5-k)=56-3(70)+3(56)-28=14. Hence the coefficient is 14.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Complex Numbers and Quadratic Equations",
-    "difficulty": "tough",
-    "questionText": "If the roots of x²-2(a+1)x+a²+1=0 are real and distinct, then the range of real a is",
-    "options": [
-      "a>0",
-      "a<-1",
-      "a>-1",
-      "a≠0"
-    ],
-    "correctIndex": 1,
-    "explanation": "The discriminant is 4(a+1)²-4(a²+1)=8a. Distinct real roots require a>0, so the correct range is a>0.",
     "imageUrl": null
   },
   {
@@ -23997,22 +22157,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The second plane has the same normal after division by 2: 2x-3y+6z+5/2=0. Their distance is |(-4)-5/2|/√(4+9+36)=(13/2)/7=13/14.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of 8 observations is 15. If one observation 12 is replaced by 28, the new mean is",
-    "options": [
-      "16",
-      "17",
-      "18",
-      "19"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 8×15=120. Replacing 12 by 28 increases the sum by 16, giving 136; hence the new mean is 136/8=17.",
     "imageUrl": null
   },
   {
@@ -24418,22 +22562,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Permutations and Combinations",
-    "difficulty": "tough",
-    "questionText": "How many 6-digit numbers can be formed using the digits 0,1,2,3,4,5 without repetition such that the number is divisible by 5 and the digit 2 occurs to the left of digit 3?",
-    "options": [
-      "72",
-      "84",
-      "96",
-      "108"
-    ],
-    "correctIndex": 3,
-    "explanation": "Last digit 0: arrange 1,2,3,4,5 in the first five places with 2 before 3: 5!/2 = 60. Last digit 5: arrange 0,1,2,3,4 with 0 not first: 5! − 4! = 96, and half of these have 2 before 3: 48. Total = 60 + 48 = 108.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Binomial Theorem",
     "difficulty": "tough",
     "questionText": "The coefficient of x^6 in (1+x)^10(1−x)^8 is",
@@ -24690,22 +22818,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Probability",
-    "difficulty": "tough",
-    "questionText": "A card is drawn from a standard deck. Given that the card is a face card, the probability that it is a king is",
-    "options": [
-      "1/4",
-      "1/3",
-      "1/2",
-      "2/3"
-    ],
-    "correctIndex": 1,
-    "explanation": "There are 12 face cards and 4 kings among them. Hence the conditional probability is 4/12=1/3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Trigonometric Functions and Equations",
     "difficulty": "tough",
     "questionText": "If tan θ=2 and θ lies in the third quadrant, then sin θ+cos θ is",
@@ -24946,22 +23058,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "The value of tan⁻¹(2)+tan⁻¹(3) is",
-    "options": [
-      "π/4",
-      "π/2",
-      "3π/4",
-      "π"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using tan(A+B)=(2+3)/(1−6)=−1. Since both principal angles are positive and their sum lies between π/2 and π, the angle with tangent −1 is 3π/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Mathematical Reasoning",
     "difficulty": "moderate",
     "questionText": "The contrapositive of the statement p→q is",
@@ -25037,22 +23133,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Since d/dx[ln(sec x+tan x)]=sec x, at x=π/4 the derivative is √2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ x^2/(x^2+1) dx.",
-    "options": [
-      "x−tan⁻¹x+C",
-      "x+tan⁻¹x+C",
-      "tan⁻¹x−x+C",
-      "x^2−tan⁻¹x+C"
-    ],
-    "correctIndex": 0,
-    "explanation": "Since x^2/(x^2+1)=1−1/(x^2+1), integration gives x−tan⁻¹x+C.",
     "imageUrl": null
   },
   {
@@ -25373,22 +23453,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Since a_n=S_n-S_(n-1), we get a_n=2n²+3n-[2(n-1)²+3(n-1)]=4n+1. Therefore a_15=61.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Application of Integrals",
-    "difficulty": "tough",
-    "questionText": "The area enclosed between y=|x| and y=x² is",
-    "options": [
-      "1/3",
-      "1/2",
-      "2/3",
-      "1"
-    ],
-    "correctIndex": 0,
-    "explanation": "The curves intersect at x=-1,0,1. By symmetry, the area is 2∫₀¹(x-x²)dx=2(1/2-1/3)=1/3.",
     "imageUrl": null
   },
   {
@@ -25810,22 +23874,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Differential Equations",
-    "difficulty": "tough",
-    "questionText": "For the differential equation dy/dx=(x+y)/(x−y), using y=vx, the resulting differential equation for v is",
-    "options": [
-      "x dv/dx=(1−v)/(1+v²)",
-      "x dv/dx=(1+v²)/(1−v)",
-      "x dv/dx=(1+v)/(1−v²)",
-      "x dv/dx=(1−v²)/(1+v)"
-    ],
-    "correctIndex": 1,
-    "explanation": "With y=vx, dy/dx=v+x dv/dx and (x+y)/(x−y)=(1+v)/(1−v). Rearranging gives x dv/dx=(1+v²)/(1−v).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Three Dimensional Geometry",
     "difficulty": "tough",
     "questionText": "The angle between the planes 2x−y+2z=0 and 4x−2y+z=0 is",
@@ -25853,22 +23901,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Sums at least 8 have 15 outcomes: 8 has 5, 9 has 4, 10 has 3, 11 has 2 and 12 has 1. Therefore the conditional probability is 3/15=1/5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Trigonometric Functions and Equations",
-    "difficulty": "tough",
-    "questionText": "If tan x=3/4 and x lies in the third quadrant, then sin x+cos x equals",
-    "options": [
-      "7/5",
-      "−7/5",
-      "1/5",
-      "−1/5"
-    ],
-    "correctIndex": 1,
-    "explanation": "In the third quadrant both sine and cosine are negative. With tan x=3/4, the reference triangle gives |sin x|=3/5 and |cos x|=4/5, so their sum is −7/5.",
     "imageUrl": null
   },
   {
@@ -27282,22 +25314,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Limits, Continuity and Differentiability",
-    "difficulty": "tough",
-    "questionText": "For f(x)=|x^2−5x+6|, the number of points in [0,5] at which f is not differentiable is",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 1,
-    "explanation": "The expression inside the modulus factors as (x−2)(x−3), with simple zeros at x=2 and x=3. Since its derivative is nonzero at both zeros, f has corners at exactly two points.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Differential Equations",
     "difficulty": "tough",
     "questionText": "The solution of dy/dx+y=e^(−x), satisfying y(0)=2, is",
@@ -27411,22 +25427,6 @@
     "examMode": "JEE",
     "subject": "Mathematics",
     "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of 8 observations is 15. If one observation 11 is replaced by 27, the new mean is",
-    "options": [
-      "16",
-      "17",
-      "18",
-      "19"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 8×15=120. Replacing 11 by 27 increases the sum by 16, giving 136; hence the new mean is 136/8=17.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
     "difficulty": "tough",
     "questionText": "If the variance of a data set is 16, then the variance of the data obtained by multiplying every observation by 3 and subtracting 5 is",
     "options": [
@@ -27533,38 +25533,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The point (5,0) lies outside the circle because its distance from the centre is 5>3. Therefore exactly two real tangents can be drawn.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/(x²−6x+13).",
-    "options": [
-      "tan⁻¹(x−3)+C",
-      "(1/2)tan⁻¹((x−3)/2)+C",
-      "2tan⁻¹((x−3)/2)+C",
-      "(1/2)tan⁻¹(x−3)+C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Completing the square gives x²−6x+13=(x−3)²+4. Therefore the integral equals (1/2)tan⁻¹((x−3)/2)+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫₀¹ x²/(1+x³) dx.",
-    "options": [
-      "(1/3)ln2",
-      "(1/2)ln2",
-      "ln2",
-      "2ln2"
-    ],
-    "correctIndex": 0,
-    "explanation": "Set u=1+x³, so du=3x²dx. The integral becomes (1/3)∫₁²du/u=(1/3)ln2.",
     "imageUrl": null
   },
   {
@@ -27725,22 +25693,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The negation of ∃x P(x) is ∀x not P(x). Hence the negation states that for every real x, x²−x−6 is not zero.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f:R→R be defined by f(x)=x²-4x+5. The number of real solutions of f(f(x))=5 is",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 1,
-    "explanation": "Since f(t)=5 gives t²-4t=0, we get t=0 or 4. Now f(x)=0 has no real solution, while f(x)=4 gives (x-2)²=3, yielding two real values. Hence the answer is 2.",
     "imageUrl": null
   },
   {
@@ -28994,22 +26946,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Inverse Trigonometric Functions",
-    "difficulty": "tough",
-    "questionText": "If x is in [-1,1], simplify sin(cos^-1 x).",
-    "options": [
-      "sqrt(1-x^2)",
-      "1-x^2",
-      "sqrt(1+x^2)",
-      "x"
-    ],
-    "correctIndex": 0,
-    "explanation": "Let theta=cos^-1x, so theta lies in [0,pi]. Hence sin theta is nonnegative and equals sqrt(1-cos^2theta)=sqrt(1-x^2).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Sets, Relations and Functions",
     "difficulty": "tough",
     "questionText": "Let f:R→R be given by f(x)=x/(1+|x|). The number of real solutions of f(x)=1/3 is",
@@ -29101,38 +27037,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Here a=5 and b²=16. The latus rectum length is 2b²/a=32/5.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of 8 observations is 15. If one observation 9 is replaced by 25, the new mean is",
-    "options": [
-      "16",
-      "17",
-      "18",
-      "19"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 8×15=120. Replacing 9 by 25 increases the sum by 16, giving 136; hence the new mean is 136/8=17.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Sets, Relations and Functions",
-    "difficulty": "tough",
-    "questionText": "Let f:R→R be defined by f(x)=x²+2x−3. The number of real solutions of f(f(x))=0 is",
-    "options": [
-      "2",
-      "3",
-      "4",
-      "5"
-    ],
-    "correctIndex": 0,
-    "explanation": "First f(t)=0 gives t=1 or −3. Solving f(x)=1 gives x=−1±√5, while f(x)=−3 gives (x+1)²=−1 and no real roots. Hence there are 2 real solutions.",
     "imageUrl": null
   },
   {
@@ -29298,22 +27202,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Definite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫₀¹ dx/(1+x²).",
-    "options": [
-      "π/6",
-      "π/4",
-      "π/3",
-      "π/2"
-    ],
-    "correctIndex": 1,
-    "explanation": "An antiderivative is tan⁻¹x. Therefore the integral is tan⁻¹1−tan⁻¹0=π/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Application of Integrals",
     "difficulty": "tough",
     "questionText": "The area enclosed between y=x² and y=4x is",
@@ -29357,22 +27245,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The integrating factor is e^(2x), giving d/dx(ye^(2x))=4e^(3x). Hence y=(4/3)e^x+Ce^(−2x). From y(0)=1, C=−1/3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Straight Lines",
-    "difficulty": "tough",
-    "questionText": "The equation of the line passing through (2,3) and perpendicular to 4x−3y+7=0 is",
-    "options": [
-      "3x+4y−18=0",
-      "4x−3y+1=0",
-      "3x−4y+6=0",
-      "4x+3y−17=0"
-    ],
-    "correctIndex": 0,
-    "explanation": "The given line has slope 4/3, so the perpendicular slope is −3/4. Through (2,3), 4(y−3)=−3(x−2), giving 3x+4y−18=0.",
     "imageUrl": null
   },
   {
@@ -30434,22 +28306,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Statistics",
-    "difficulty": "moderate",
-    "questionText": "The mean of six observations is 14. If the observation 9 is replaced by 21, the new mean is",
-    "options": [
-      "15",
-      "16",
-      "17",
-      "18"
-    ],
-    "correctIndex": 1,
-    "explanation": "The original sum is 6×14=84. Replacing 9 by 21 increases the sum by 12, giving 96; hence the new mean is 96/6=16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Complex Numbers and Quadratic Equations",
     "difficulty": "tough",
     "questionText": "Let z be a complex number satisfying |z|=2 and Re(z)=1/2. If z₁ and z₂ are the two possible values of z, then |z₁-1|²+|z₂-1|² equals",
@@ -30866,22 +28722,6 @@
   {
     "examMode": "JEE",
     "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/[x(1+ln x)(2+ln x)].",
-    "options": [
-      "ln|(1+ln x)/(2+ln x)|+C",
-      "ln|(2+ln x)/(1+ln x)|+C",
-      "ln|1+ln x|+C",
-      "ln|2+ln x|+C"
-    ],
-    "correctIndex": 0,
-    "explanation": "Put t=ln x, so dt=dx/x. Then 1/[(t+1)(t+2)]=1/(t+1)−1/(t+2). Integration gives ln|t+1|−ln|t+2|+C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
     "chapter": "Straight Lines",
     "difficulty": "tough",
     "questionText": "The distance between the parallel lines 3x−4y+7=0 and 3x−4y−18=0 is",
@@ -31021,22 +28861,6 @@
     ],
     "correctIndex": 0,
     "explanation": "For f(x)=x^a(1-x), logarithmic differentiation gives f'/f = a/x - 1/(1-x). Setting this to zero gives a(1-x)=x, hence x=a/(a+1), which is the maximum point.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Mathematics",
-    "chapter": "Indefinite Integrals",
-    "difficulty": "tough",
-    "questionText": "Evaluate ∫ dx/[x^2 + 4x + 13].",
-    "options": [
-      "tan^(-1)((x+2)/3) + C",
-      "(1/3)tan^(-1)((x+2)/3) + C",
-      "(1/3)tan^(-1)((x+4)/3) + C",
-      "(1/9)tan^(-1)((x+2)/3) + C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Complete the square: x^2+4x+13=(x+2)^2+9. Therefore the integral is (1/3)tan^(-1)((x+2)/3)+C.",
     "imageUrl": null
   },
   {

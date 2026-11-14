@@ -3236,22 +3236,6 @@
     "subject": "Physics",
     "chapter": "Laws of Motion",
     "difficulty": "tough",
-    "questionText": "A 4 kg block rests on a rough horizontal surface with coefficient of static friction 0.5. A horizontal force F is applied to it. Taking g = 10 m/s^2, the minimum value of F required to start motion is:",
-    "options": [
-      "10 N",
-      "15 N",
-      "20 N",
-      "25 N"
-    ],
-    "correctIndex": 2,
-    "explanation": "The maximum static friction is μsN = 0.5×4×10 = 20 N. Therefore the applied force must reach 20 N to initiate motion.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
     "questionText": "A 5 kg block on a smooth horizontal surface is connected by a light string over a frictionless pulley to a hanging 3 kg block. Taking g = 10 m/s^2, the tension in the string is:",
     "options": [
       "18.75 N",
@@ -3940,22 +3924,6 @@
     "subject": "Physics",
     "chapter": "Nuclei",
     "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 5 days. What fraction of the original nuclei remains after 15 days?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Fifteen days correspond to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
     "questionText": "A nucleus has a mass defect of 0.02 u. Taking 1 u = 931.5 MeV/c^2, its binding energy is approximately:",
     "options": [
       "9.315 MeV",
@@ -4356,22 +4324,6 @@
     "subject": "Physics",
     "chapter": "Current Electricity",
     "difficulty": "tough",
-    "questionText": "A wire has resistance R. It is stretched uniformly so that its length becomes twice the original length, while its volume remains constant. Its new resistance is:",
-    "options": [
-      "R/2",
-      "R",
-      "2R",
-      "4R"
-    ],
-    "correctIndex": 3,
-    "explanation": "Constant volume gives A' = A/2 when L' = 2L. Since R = ρL/A, R' = ρ(2L)/(A/2) = 4R.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
     "questionText": "A 12 V battery with internal resistance 1 Ω is connected to a 5 Ω external resistor. The power dissipated in the external resistor is:",
     "options": [
       "12 W",
@@ -4429,22 +4381,6 @@
     ],
     "correctIndex": 3,
     "explanation": "The torque is τ = MB sinθ. It is maximum when sinθ = 1, which occurs at θ = 90°.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A conducting loop of resistance 2 Ω experiences a change in magnetic flux from 0.5 Wb to 0.1 Wb in 0.2 s. The magnitude of the average induced current is:",
-    "options": [
-      "0.5 A",
-      "1 A",
-      "2 A",
-      "4 A"
-    ],
-    "correctIndex": 1,
-    "explanation": "Average induced emf = |ΔΦ|/Δt = 0.4/0.2 = 2 V. Hence current = E/R = 2/2 = 1 A.",
     "imageUrl": null
   },
   {
@@ -4541,22 +4477,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For lenses in contact, 1/F = 1/f1 + 1/f2 = 1/20 − 1/40 = 1/40. Therefore F = 40 cm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Wave Optics",
-    "difficulty": "tough",
-    "questionText": "In Young's double-slit experiment, the path difference at a point on the screen is 3λ/2. The point corresponds to:",
-    "options": [
-      "A bright fringe",
-      "A dark fringe",
-      "The central maximum",
-      "A point of zero intensity only when slit intensities differ"
-    ],
-    "correctIndex": 1,
-    "explanation": "Destructive interference occurs for path difference (2n+1)λ/2. Since 3λ/2 corresponds to n = 1, the point is a dark fringe.",
     "imageUrl": null
   },
   {
@@ -4731,7 +4651,7 @@
       "g/2",
       "2g/3"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "Taking the hanging mass downward as positive, the net driving force is 2mg - F = mg. The total mass is 3m, so a = mg/(3m) = g/3. Thus the acceleration magnitude is g/3.",
     "imageUrl": null
   },
@@ -5195,7 +5115,7 @@
       "0.80%",
       "1.00%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For g ∝ L T⁻², maximum fractional uncertainty is Δg/g = ΔL/L + 2ΔT/T = 0.002/1.000 + 2(0.004/2.000) = 0.006, or 0.60%.",
     "imageUrl": null
   },
@@ -5522,22 +5442,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
-    "questionText": "A wire of resistance R is stretched uniformly until its length becomes twice its original value, with volume remaining constant. What is its new resistance?",
-    "options": [
-      "R/2",
-      "R",
-      "2R",
-      "4R"
-    ],
-    "correctIndex": 3,
-    "explanation": "Resistance is R=ρL/A. Doubling length while preserving volume halves the area, so R' = ρ(2L)/(A/2)=4R.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Moving Charges and Magnetism",
     "difficulty": "tough",
     "questionText": "A charged particle enters a uniform magnetic field perpendicular to the field with speed v and follows a circular path of radius r. If both its speed and charge magnitude are doubled while the magnetic field remains unchanged, what happens to the radius?",
@@ -5677,22 +5581,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Einstein's equation gives eVs = hν − φ. Therefore the increase in photon energy equals e(Vs2−Vs1)=e(5−2)=3 eV.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 6 hours. What fraction of the original nuclei remains after 24 hours?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty-four hours correspond to four half-lives. The remaining fraction is (1/2)^4 = 1/16.",
     "imageUrl": null
   },
   {
@@ -6123,7 +6011,7 @@
       "11%",
       "12%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For Q proportional to x^2 y^(-1) z^3, the maximum percentage uncertainty is 2(2%) + 3% + 3(1%) = 10%.",
     "imageUrl": null
   },
@@ -6253,22 +6141,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For circular motion, v = √(GM/r), so v is proportional to r^(-1/2). Reducing the speed by a factor of 2 requires increasing the radius by a factor of 4, giving r=4R.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A wire of length 1 m and cross-sectional area 2 mm^2 is stretched by a force of 400 N. If Young's modulus of the material is 2×10^11 Pa, what is the extension?",
-    "options": [
-      "0.5 mm",
-      "1 mm",
-      "2 mm",
-      "4 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using ΔL = FL/(YA), ΔL = 400×1/[2×10^11×2×10^-6] m = 10^-3 m = 1 mm.",
     "imageUrl": null
   },
   {
@@ -6717,22 +6589,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Since r_n is proportional to n^2, r4/r2 = 4^2/2^2 = 4. Thus the radius becomes four times larger.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 5 hours. What fraction of the original nuclei remains after 20 hours?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty hours correspond to four half-lives. The remaining fraction is (1/2)^4=1/16.",
     "imageUrl": null
   },
   {
@@ -8004,22 +7860,6 @@
     "subject": "Physics",
     "chapter": "Oscillations",
     "difficulty": "tough",
-    "questionText": "A particle executes SHM with amplitude 10 cm and angular frequency 20 rad/s. At what displacement from the mean position is its speed equal to half its maximum speed?",
-    "options": [
-      "5 cm",
-      "5√2 cm",
-      "5√3 cm",
-      "10√3/2 cm"
-    ],
-    "correctIndex": 2,
-    "explanation": "For SHM, v² = ω²(A²-x²) and v_max = ωA. Setting v = Aω/2 gives x² = 3A²/4, so |x| = √3A/2 = 5√3 cm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Oscillations",
-    "difficulty": "tough",
     "questionText": "A spring-mass oscillator has spring constant k and mass m. If the mass is increased by 44% while the spring constant remains unchanged, approximately by what percentage does its time period increase?",
     "options": [
       "10%",
@@ -8365,22 +8205,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The resistor voltage is 5 - 0.7 = 4.3 V. Therefore I = 4.3/2000 = 2.15 mA.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Semiconductor Electronics",
-    "difficulty": "tough",
-    "questionText": "A transistor has collector current 4.8 mA and emitter current 5 mA. What is its common-base current gain α?",
-    "options": [
-      "0.80",
-      "0.90",
-      "0.96",
-      "0.98"
-    ],
-    "correctIndex": 2,
-    "explanation": "Common-base current gain is α = I_C/I_E = 4.8/5 = 0.96.",
     "imageUrl": null
   },
   {
@@ -8836,22 +8660,6 @@
     "subject": "Physics",
     "chapter": "Wave Optics",
     "difficulty": "tough",
-    "questionText": "In Young's double-slit experiment, the wavelength is 500 nm, slit separation is 1 mm and screen distance is 2 m. What is the fringe width?",
-    "options": [
-      "0.5 mm",
-      "1.0 mm",
-      "1.5 mm",
-      "2.0 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "The fringe width is β = λD/d = (500×10⁻⁹×2)/(10⁻³) = 10⁻³ m = 1 mm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Wave Optics",
-    "difficulty": "tough",
     "questionText": "In Young's double-slit experiment, two coherent waves reaching a point have intensities I and 4I and a phase difference of 60°. What is the resultant intensity at that point?",
     "options": [
       "3I",
@@ -9252,22 +9060,6 @@
     "subject": "Physics",
     "chapter": "Electromagnetic Induction",
     "difficulty": "tough",
-    "questionText": "A conducting loop of resistance 5 Ω experiences a uniform change in magnetic flux from 0.8 Wb to 0.3 Wb in 0.25 s. What is the magnitude of the average induced current?",
-    "options": [
-      "0.2 A",
-      "0.4 A",
-      "0.5 A",
-      "1.0 A"
-    ],
-    "correctIndex": 1,
-    "explanation": "The average induced emf is |ΔΦ|/Δt = 0.5/0.25 = 2 V. Hence the average current is I = 2/5 = 0.4 A.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
     "questionText": "A conducting rod of length 0.5 m moves at 8 m/s perpendicular to both its length and a uniform magnetic field of 0.5 T. What is the motional emf induced across its ends?",
     "options": [
       "1 V",
@@ -9645,38 +9437,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Average induced emf is N|ΔΦ|/Δt = 200(4×10^-3)/0.2 = 4 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Electromagnetic Waves",
-    "difficulty": "moderate",
-    "questionText": "An electromagnetic wave has frequency 6 × 10^14 Hz in vacuum. What is its wavelength? Take c = 3 × 10^8 m/s.",
-    "options": [
-      "2 × 10^-7 m",
-      "5 × 10^-7 m",
-      "8 × 10^-7 m",
-      "1 × 10^-6 m"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using c = fλ, λ = 3×10^8/(6×10^14) = 5×10^-7 m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Ray Optics and Optical Instruments",
-    "difficulty": "tough",
-    "questionText": "A convex lens of focal length 20 cm forms a real image at 60 cm from the lens. At what distance is the object placed?",
-    "options": [
-      "20 cm",
-      "30 cm",
-      "40 cm",
-      "60 cm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using 1/f = 1/v - 1/u with f = 20 cm and v = 60 cm, 1/u = 1/60 - 1/20 = -1/30. Thus the object is 30 cm from the lens.",
     "imageUrl": null
   },
   {
@@ -10082,22 +9842,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Oscillations",
-    "difficulty": "tough",
-    "questionText": "A particle executes SHM with amplitude 5 cm and angular frequency 4 rad/s. Its maximum acceleration is:",
-    "options": [
-      "0.2 m/s^2",
-      "0.4 m/s^2",
-      "0.8 m/s^2",
-      "1.6 m/s^2"
-    ],
-    "correctIndex": 2,
-    "explanation": "Maximum acceleration in SHM is ω^2A. With ω=4 rad/s and A=0.05 m, a_max=16×0.05=0.8 m/s^2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Waves",
     "difficulty": "tough",
     "questionText": "A wave is represented by y = 0.02 sin(20πt − 4πx), where x and y are in metres and t is in seconds. Its wave speed is:",
@@ -10347,7 +10091,7 @@
       "3%",
       "4%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For multiplication, fractional uncertainties add: ΔA/A=Δl/l+Δb/b=0.2/20+0.1/10=0.02, or 2%.",
     "imageUrl": null
   },
@@ -10459,7 +10203,7 @@
       "240 Hz",
       "480 Hz"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For a stretched string f=(1/2L)√(T/μ). Quadrupling T multiplies frequency by 2, while doubling L divides it by 2, so the net frequency remains 120 Hz.",
     "imageUrl": null
   },
@@ -11730,22 +11474,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 10 days. The fraction of the original nuclei remaining after 30 days is",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Thirty days correspond to three half-lives. The remaining fraction is (1/2)^3=1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "A silicon diode is forward biased in a simple circuit. If the applied voltage is increased while the diode remains in its conducting region, the diode current generally",
@@ -12523,7 +12251,7 @@
       "9%",
       "10%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "For maximum fractional uncertainty, percentage uncertainties add with powers: ΔQ/Q = 2(2%) + 3(1%) + 3% = 10%. Thus the maximum percentage uncertainty is 10%.",
     "imageUrl": null
   },
@@ -12541,22 +12269,6 @@
     ],
     "correctIndex": 3,
     "explanation": "For a uniform disc, I=MR²/2=(4)(0.25)/2=0.5 kg·m². Hence K=(1/2)Iω²=(1/2)(0.5)(64)=16 J, so the correct value is 16 J.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A wire of length 2 m and cross-sectional area 1 mm² is stretched by a force of 100 N. If Young's modulus of the material is 2×10^11 Pa, the extension produced is",
-    "options": [
-      "0.5 mm",
-      "1 mm",
-      "2 mm",
-      "5 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using ΔL=FL/(AY), with F=100 N, L=2 m, A=10^−6 m² and Y=2×10^11 Pa, we get ΔL=200/(2×10^5)=10^−3 m=1 mm.",
     "imageUrl": null
   },
   {
@@ -12733,22 +12445,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The resistor receives 5−0.7=4.3 V. Therefore the current is I=4.3/1000=4.3 mA.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Kinematics",
-    "difficulty": "tough",
-    "questionText": "A projectile is launched with speed 20 m/s at an angle 30° above the horizontal. Taking g=10 m/s², its horizontal range is",
-    "options": [
-      "10√3 m",
-      "20√3 m",
-      "30√3 m",
-      "40 m"
-    ],
-    "correctIndex": 1,
-    "explanation": "The range is R=u² sin2θ/g. Thus R=400 sin60°/10=40(√3/2)=20√3 m.",
     "imageUrl": null
   },
   {
@@ -13563,7 +13259,7 @@
       "11%",
       "13%"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "For products and powers, fractional uncertainties add with the absolute powers: ΔQ/Q = 2(1%) + 3(2%) + 3% = 11%. Therefore the maximum percentage uncertainty is 11%.",
     "imageUrl": null
   },
@@ -14093,22 +13789,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Since r_n is proportional to n², r₅/r₂=25/4. Therefore r₅=25r/4.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 8 hours. What fraction of the initial sample remains after 24 hours?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty-four hours correspond to three half-lives. The remaining fraction is (1/2)^3=1/8.",
     "imageUrl": null
   },
   {
@@ -15106,22 +14786,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Wave Optics",
-    "difficulty": "tough",
-    "questionText": "In Young's double-slit experiment, two coherent waves reaching a point have intensities I and 4I. Their phase difference is π/3. What is the resultant intensity at that point?",
-    "options": [
-      "3I",
-      "5I",
-      "7I",
-      "9I"
-    ],
-    "correctIndex": 2,
-    "explanation": "Resultant intensity is I_R=I₁+I₂+2√(I₁I₂)cosφ. Therefore I_R=I+4I+4I(1/2)=7I.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Dual Nature of Radiation and Matter",
     "difficulty": "tough",
     "questionText": "An electron is accelerated through a potential difference V and has de Broglie wavelength λ. If the accelerating potential is increased to 4V, what is its new de Broglie wavelength, assuming non-relativistic motion?",
@@ -15227,7 +14891,7 @@
       "4a^3/(27b^2)",
       "8a^3/(27b^2)"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "Equilibrium requires dU/dx = 2ax-3bx^2=0, giving x=2a/(3b). Substitution gives U = a(4a^2/9b^2)-b(8a^3/27b^3)=4a^3/27b^2.",
     "imageUrl": null
   },
@@ -15293,22 +14957,6 @@
     ],
     "correctIndex": 0,
     "explanation": "The free thermal strain would be αΔT, but fixed ends force the total strain to zero. Hence the induced mechanical strain has magnitude αΔT and stress is YαΔT.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "One mole of a monatomic ideal gas undergoes a reversible adiabatic expansion in which its volume becomes 8 times the initial volume. If its initial temperature is T, the final temperature is:",
-    "options": [
-      "T/2",
-      "T/4",
-      "T/8",
-      "T/16"
-    ],
-    "correctIndex": 1,
-    "explanation": "For a monatomic gas γ=5/3 and TV^(γ-1)=constant. Thus T_f/T=(V_i/V_f)^(2/3)=(1/8)^(2/3)=1/4.",
     "imageUrl": null
   },
   {
@@ -15794,22 +15442,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A coil of 200 turns experiences a change in magnetic flux through each turn from 5×10^−3 Wb to 1×10^−3 Wb in 0.02 s. The magnitude of the average induced emf is",
-    "options": [
-      "20 V",
-      "30 V",
-      "40 V",
-      "50 V"
-    ],
-    "correctIndex": 2,
-    "explanation": "By Faraday's law, ε=N|ΔΦ|/Δt=200(4×10^−3)/0.02=40 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Alternating Current",
     "difficulty": "tough",
     "questionText": "In a series AC circuit, the rms voltage across the resistor is 30 V and the rms voltage across the inductor is 40 V. If the resistor and inductor are connected in series, the applied rms voltage is",
@@ -15949,22 +15581,6 @@
     ],
     "correctIndex": 0,
     "explanation": "For the block, the normal force is N=mg cosθ/(1+(m/M)sin²θ). The horizontal force on the wedge is N sinθ, so its acceleration is N sinθ/M = mg sinθ cosθ/(M+m sin²θ).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A block of mass m is on a rough horizontal surface with coefficient of friction μ. A force F is applied at angle θ above the horizontal. For a given F, the minimum value of F required to start the block moving is:",
-    "options": [
-      "μmg/(cosθ+μsinθ)",
-      "μmg/(cosθ-μsinθ)",
-      "μmg(cosθ+μsinθ)",
-      "mg/(cosθ+μsinθ)"
-    ],
-    "correctIndex": 0,
-    "explanation": "At impending motion, N=mg-F sinθ and F cosθ=μN. Therefore F(cosθ+μsinθ)=μmg, giving F=μmg/(cosθ+μsinθ).",
     "imageUrl": null
   },
   {
@@ -16667,7 +16283,7 @@
       "2v/3",
       "v/2"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Since v_rms∝√(T/M), the new speed relative to the old one is √[(9T/4M)/(T/M)]=3/2. Hence the new speed is 3v/2.",
     "imageUrl": null
   },
@@ -17154,22 +16770,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 10 days. What fraction of the initial nuclei remains after 30 days?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Thirty days correspond to three half-lives. The remaining fraction is (1/2)^3=1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "moderate",
     "questionText": "In a p-n junction diode under forward bias, the width of the depletion region and the junction barrier potential respectively:",
@@ -17195,7 +16795,7 @@
       "8%",
       "10%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "For powers and products, fractional uncertainties add with the absolute powers: ΔX/X=2(2%)+3%+3(1%)=10%.",
     "imageUrl": null
   },
@@ -17245,22 +16845,6 @@
     ],
     "correctIndex": 3,
     "explanation": "Work done from 0 to 2 is ∫0^2(8−2x)dx=16−4=12 J. Initial kinetic energy is 4 J.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Work, Energy and Power",
-    "difficulty": "tough",
-    "questionText": "A block is projected up a rough incline of angle 30° with initial speed 10 m/s. If the coefficient of kinetic friction is 1/√3 and g=10 m/s^2, the distance travelled before coming to rest is",
-    "options": [
-      "2.5 m",
-      "5 m",
-      "7.5 m",
-      "10 m"
-    ],
-    "correctIndex": 1,
-    "explanation": "The retarding acceleration is g sin30°+μg cos30°=5+5=10 m/s^2. Using v^2=u^2−2as with v=0 gives s=100/20=5 m.",
     "imageUrl": null
   },
   {
@@ -17421,22 +17005,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Each half has resistance 5 Ω. Two equal 5 Ω resistors in parallel have equivalent resistance 5/2=2.5 Ω.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
-    "questionText": "A cell of emf 10 V and internal resistance 2 Ω is connected to an external resistance R. If the current in the circuit is 2 A, the value of R is",
-    "options": [
-      "2 Ω",
-      "3 Ω",
-      "4 Ω",
-      "5 Ω"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using E=I(R+r), 10=2(R+2). Hence R+2=5 and R=3 Ω.",
     "imageUrl": null
   },
   {
@@ -19746,22 +19314,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 8 hours. The fraction of the original nuclei remaining after 40 hours is",
-    "options": [
-      "1/16",
-      "1/32",
-      "1/64",
-      "1/128"
-    ],
-    "correctIndex": 1,
-    "explanation": "Forty hours correspond to 40/8 = 5 half-lives. The remaining fraction is (1/2)^5 = 1/32.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Units and Measurement",
     "difficulty": "tough",
     "questionText": "The time period of a simple pendulum is written as T = 2π√(l/g). If the measured percentage uncertainties in l and g are 2% and 4%, respectively, and the measured value of T is 2.00 s, what is the maximum percentage uncertainty in the calculated value of T?",
@@ -20306,22 +19858,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 8 hours. What fraction of the original nuclei remains undecayed after 40 hours?",
-    "options": [
-      "1/16",
-      "1/32",
-      "1/64",
-      "1/128"
-    ],
-    "correctIndex": 1,
-    "explanation": "Forty hours correspond to five half-lives. The remaining fraction is (1/2)^5=1/32.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "moderate",
     "questionText": "A p-n junction diode is forward biased. As the forward bias is increased within normal operation, the depletion-region width and junction barrier potential respectively:",
@@ -20660,22 +20196,6 @@
     "subject": "Physics",
     "chapter": "Nuclei",
     "difficulty": "tough",
-    "questionText": "A radioactive nucleus has a half-life of 8 days. What fraction of the original nuclei remains undecayed after 24 days?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty-four days correspond to three half-lives. The remaining fraction is (1/2)^3=1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
     "questionText": "A nucleus undergoes alpha decay. Its mass number and atomic number change respectively by",
     "options": [
       "−4 and −2",
@@ -20715,7 +20235,7 @@
       "4%",
       "5%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "Since g is proportional to l/T^2, the maximum percentage uncertainty is 1% + 2(1%) = 3%.",
     "imageUrl": null
   },
@@ -20827,7 +20347,7 @@
       "3v^2/(2g)",
       "v^2/g"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For a solid disc, I=MR^2/2, so its initial kinetic energy is (1/2)Mv^2+(1/2)(MR^2/2)(v^2/R^2)=3Mv^2/4. Equating this to Mgh gives h=3v^2/(4g).",
     "imageUrl": null
   },
@@ -21463,12 +20983,12 @@
     "questionText": "A particle moves along the x-axis with velocity v=(3t^2-12t+9) m/s and starts from x=0 at t=0. What is the maximum value of x during 0<=t<=5 s?",
     "options": [
       "4 m",
-      "8 m",
       "12 m",
-      "16 m"
+      "16 m",
+      "20 m"
     ],
-    "correctIndex": 0,
-    "explanation": "Since v=3(t-1)(t-3), the particle has stationary points at t=1 and 3 s. Integrating gives x=t^3-6t^2+9t.",
+    "correctIndex": 3,
+    "explanation": "x = t^3 − 6t^2 + 9t (x = 0 at t = 0). v = 3(t−1)(t−3): x(1) = 4 m (local max), x(3) = 0, and x(5) = 125 − 150 + 45 = 20 m. The largest value in 0 ≤ t ≤ 5 s is 20 m, at t = 5 s.",
     "imageUrl": null
   },
   {
@@ -21757,38 +21277,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For a Bohr orbit, total energy E=-K, so the kinetic energy is K=-E=0.85 eV.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive isotope has a half-life of 8 days. What fraction of the original sample remains after 32 days?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Thirty-two days corresponds to four half-lives. The remaining fraction is (1/2)^4=1/16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Semiconductor Electronics",
-    "difficulty": "tough",
-    "questionText": "A silicon diode is modeled as having a constant forward voltage drop of 0.7 V. It is connected in series with a 1 kΩ resistor across a 5.7 V source. What current flows through the circuit?",
-    "options": [
-      "2 mA",
-      "5 mA",
-      "7 mA",
-      "10 mA"
-    ],
-    "correctIndex": 1,
-    "explanation": "The resistor voltage is 5.7-0.7=5.0 V. Hence the current is 5.0/1000=5 mA.",
     "imageUrl": null
   },
   {
@@ -22466,22 +21954,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive isotope has a half-life of 6 hours. What fraction of the original sample remains undecayed after 18 hours?",
-    "options": [
-      "1/3",
-      "1/6",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Eighteen hours corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "A silicon diode is connected in forward bias with a 6.7 V source through a 1.5 kΩ resistor. Taking the forward voltage drop of the silicon diode as 0.7 V, what is the current in the circuit?",
@@ -22891,7 +22363,7 @@
       "-3RT",
       "-4RT"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "The isochoric step does zero work. During the isobaric step at pressure 3RT/V, the volume changes from V to 3V, so W2 = 6RT. Since Wcycle = W2 + W3 = 2RT, W3 = -4RT.",
     "imageUrl": null
   },
@@ -23586,22 +23058,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
-    "questionText": "A wire of resistance R is stretched uniformly to three times its original length while its volume remains constant. Its new resistance is",
-    "options": [
-      "3R",
-      "6R",
-      "9R",
-      "R/3"
-    ],
-    "correctIndex": 2,
-    "explanation": "Constant volume gives A′=A/3. Therefore R′=ρ(3L)/(A/3)=9ρL/A=9R.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Moving Charges and Magnetism",
     "difficulty": "tough",
     "questionText": "A charged particle moves in a uniform magnetic field with velocity perpendicular to the field. Which quantity remains unchanged during its motion?",
@@ -24043,7 +23499,7 @@
       "x = 3 m",
       "x = 4 m"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "The speed is maximum where kinetic energy is maximum, equivalently where potential energy is minimum. Since dU/dx = -F, the extremum occurs when F = 0: 12 - 4x = 0, giving x = 3 m.",
     "imageUrl": null
   },
@@ -25538,22 +24994,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A coil of 200 turns and area 5 × 10^-3 m^2 is placed perpendicular to a magnetic field. The field decreases uniformly from 0.8 T to 0.2 T in 0.03 s. What is the magnitude of the average induced emf?",
-    "options": [
-      "10 V",
-      "20 V",
-      "30 V",
-      "40 V"
-    ],
-    "correctIndex": 1,
-    "explanation": "The magnitude of average emf is N A |ΔB|/Δt = 200×5×10^-3×0.6/0.03 = 20 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Ray Optics and Optical Instruments",
     "difficulty": "tough",
     "questionText": "A concave mirror has focal length 20 cm. An object is placed 60 cm in front of the mirror. Using the Cartesian sign convention, what is the image distance?",
@@ -26395,7 +25835,7 @@
       "MR²ω²",
       "2MR²ω²"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "For a uniform disc about its central axis, I=MR²/2. Therefore K=(1/2)Iω²=MR²ω²/4.",
     "imageUrl": null
   },
@@ -26941,22 +26381,6 @@
     ],
     "correctIndex": 0,
     "explanation": "The phase difference is 2π(3λ/2)/λ = 3π, equivalent to π modulo 2π. Equal-amplitude waves therefore interfere destructively and the resultant intensity is zero.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Dual Nature of Radiation and Matter",
-    "difficulty": "tough",
-    "questionText": "Light of wavelength 400 nm falls on a metal surface having work function 2.0 eV. Taking hc = 1240 eV·nm, what is the maximum kinetic energy of the emitted photoelectrons?",
-    "options": [
-      "0.5 eV",
-      "1.1 eV",
-      "2.0 eV",
-      "3.1 eV"
-    ],
-    "correctIndex": 1,
-    "explanation": "The photon energy is hc/λ = 1240/400 = 3.1 eV. Therefore K_max = 3.1 − 2.0 = 1.1 eV.",
     "imageUrl": null
   },
   {
@@ -27874,22 +27298,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Ray Optics and Optical Instruments",
-    "difficulty": "tough",
-    "questionText": "A convex lens of focal length 20 cm has an object placed 30 cm in front of it. Using the Cartesian sign convention, what are the image distance and magnification?",
-    "options": [
-      "60 cm, −2",
-      "60 cm, +2",
-      "12 cm, −0.4",
-      "20 cm, −1"
-    ],
-    "correctIndex": 0,
-    "explanation": "Using 1/f = 1/v − 1/u with f = 20 cm and u = −30 cm gives v = 60 cm. The magnification m = v/u = −2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Units and Measurement",
     "difficulty": "tough",
     "questionText": "The measured quantities A, B and C have percentage uncertainties 2%, 1% and 3%, respectively. If Q = A^3 B^2 / C^2, the maximum percentage uncertainty in Q is",
@@ -27899,7 +27307,7 @@
       "12%",
       "14%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "The maximum fractional uncertainty is 3(2%) + 2(1%) + 2(3%) = 6% + 2% + 6% = 14%. Therefore the maximum percentage uncertainty is 14%.",
     "imageUrl": null
   },
@@ -28157,22 +27565,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For an electromagnetic wave in vacuum, E0 = cB0. Therefore B0 = 900/(3 x 10^8) = 3 x 10^-6 T.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Dual Nature of Radiation and Matter",
-    "difficulty": "moderate",
-    "questionText": "Light of photon energy 6 eV falls on a metal whose work function is 2 eV. The maximum kinetic energy of the emitted photoelectrons is",
-    "options": [
-      "2 eV",
-      "4 eV",
-      "6 eV",
-      "8 eV"
-    ],
-    "correctIndex": 1,
-    "explanation": "Einstein's photoelectric equation gives Kmax = E - phi = 6 - 2 = 4 eV. Therefore the maximum kinetic energy is 4 eV.",
     "imageUrl": null
   },
   {
@@ -28459,7 +27851,7 @@
       "v/4",
       "2v"
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "explanation": "Orbital speed varies as 1/√r. Comparing r = 4R with r = R gives v_orbit = v/√4 = v/2.",
     "imageUrl": null
   },
@@ -28555,7 +27947,7 @@
       "T/8",
       "T/16"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "For an adiabatic process, TV^(γ−1) is constant. Hence T_f/T = (V_i/V_f)^(1/3) = (1/8)^(1/3) = 1/2, so the final temperature is T/2.",
     "imageUrl": null
   },
@@ -28603,7 +27995,7 @@
       "d/2",
       "2d/3"
     ],
-    "correctIndex": 0,
+    "correctIndex": 1,
     "explanation": "At the zero-field point, q/x^2 = 4q/(d−x)^2. Hence d−x = 2x, giving x = d/3.",
     "imageUrl": null
   },
@@ -28925,22 +28317,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The radius is r=mv/(qB), while kinetic energy is proportional to v^2. Quadrupling kinetic energy doubles v, so the radius also becomes twice its original value.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A coil of 100 turns and area 2×10^-2 m^2 is placed with its plane perpendicular to a magnetic field. The field changes uniformly from 0.1 T to 0.6 T in 0.5 s. What is the magnitude of the average induced emf?",
-    "options": [
-      "1 V",
-      "2 V",
-      "3 V",
-      "4 V"
-    ],
-    "correctIndex": 1,
-    "explanation": "The flux change per turn is AΔB=2×10^-2×0.5=10^-2 Wb. Therefore average emf=NΔΦ/Δt=100×10^-2/0.5=2 V.",
     "imageUrl": null
   },
   {
@@ -29362,22 +28738,6 @@
   {
     "examMode": "JEE",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive isotope has a half-life of 5 days. What fraction of the original sample remains undecayed after 20 days?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty days correspond to four half-lives. Thus the remaining fraction is (1/2)^4 = 1/16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "JEE",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "For an ideal p-n junction diode, what happens to the depletion-layer width and potential barrier when the diode is forward biased?",
@@ -29723,7 +29083,7 @@
       "3ΔL",
       "6ΔL"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "Extension is proportional to FL/A. For the second wire, the factor relative to the first is [(F/3)(3L)/(A/2)]/(FL/A) = 2. Therefore the extension is 2ΔL.",
     "imageUrl": null
   },
@@ -31355,7 +30715,7 @@
       "sin⁻¹μ",
       "cos⁻¹μ"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "The acceleration is a=[F(cosθ+μsinθ)−μmg]/m. The θ-dependent term is maximized when tanθ=μ, so the maximizing angle is tan⁻¹μ.",
     "imageUrl": null
   },

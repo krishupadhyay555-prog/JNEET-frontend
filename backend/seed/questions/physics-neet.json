@@ -3044,22 +3044,6 @@
     "subject": "Physics",
     "chapter": "Nuclei",
     "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 10 days. What fraction of the original sample remains after 30 days?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "30 days = 3 half-lives, so remaining fraction = (1/2)³ = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
     "questionText": "The binding energy per nucleon is maximum for elements with mass number around:",
     "options": [
       "10",
@@ -3570,22 +3554,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 10 days. The fraction of the original nuclei remaining after 30 days is",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Thirty days correspond to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "A p-n junction diode is forward biased. As the applied forward voltage is increased, the current through the diode generally",
@@ -3956,22 +3924,6 @@
     "subject": "Physics",
     "chapter": "Current Electricity",
     "difficulty": "tough",
-    "questionText": "A battery has emf 12 V and internal resistance 2 Ω. It is connected to an external resistance of 4 Ω. What current flows through the circuit?",
-    "options": [
-      "1 A",
-      "2 A",
-      "3 A",
-      "6 A"
-    ],
-    "correctIndex": 1,
-    "explanation": "The total resistance is R+r=4+2=6 Ω. Hence current I=E/(R+r)=12/6=2 A.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
     "questionText": "A wire of resistance R is stretched uniformly until its length becomes twice its original value, while its volume remains constant. What is its new resistance?",
     "options": [
       "R/2",
@@ -4221,22 +4173,6 @@
     ],
     "correctIndex": 3,
     "explanation": "The Bohr energy magnitude varies as 1/n². Thus |E1|/|E2|=1/(1/4)=4, giving the ratio 4:1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 6 hours. What fraction of the original nuclei remains after 24 hours?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty-four hours correspond to four half-lives. The remaining fraction is (1/2)^4=1/16.",
     "imageUrl": null
   },
   {
@@ -4868,38 +4804,6 @@
     "subject": "Physics",
     "chapter": "Laws of Motion",
     "difficulty": "tough",
-    "questionText": "A 5 kg block rests on a rough horizontal surface with coefficient of static friction 0.4. A horizontal force of 15 N is applied to it. Taking g = 10 m/s², what is the acceleration of the block?",
-    "options": [
-      "0 m/s²",
-      "1 m/s²",
-      "2 m/s²",
-      "3 m/s²"
-    ],
-    "correctIndex": 0,
-    "explanation": "Maximum static friction is μ_smg = 0.4 × 5 × 10 = 20 N. Since the applied force is only 15 N, static friction balances it and acceleration is zero.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 4 kg block on a rough horizontal surface is pulled by a horizontal force of 30 N. If the coefficient of kinetic friction is 0.25 and g = 10 m/s², what is its acceleration?",
-    "options": [
-      "2.5 m/s²",
-      "5 m/s²",
-      "7.5 m/s²",
-      "10 m/s²"
-    ],
-    "correctIndex": 1,
-    "explanation": "Kinetic friction = μmg = 0.25 × 4 × 10 = 10 N. Net force = 30 - 10 = 20 N, so acceleration = 20/4 = 5 m/s².",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
     "questionText": "Two blocks of masses 3 kg and 2 kg are connected by a light string on a frictionless horizontal surface. A 20 N force is applied to the 3 kg block. What is the tension in the string?",
     "options": [
       "6 N",
@@ -5332,22 +5236,6 @@
     "subject": "Physics",
     "chapter": "Current Electricity",
     "difficulty": "tough",
-    "questionText": "A wire has resistance R. It is stretched uniformly so that its length becomes twice its original length, with volume remaining constant. What is its new resistance?",
-    "options": [
-      "R/2",
-      "R",
-      "2R",
-      "4R"
-    ],
-    "correctIndex": 3,
-    "explanation": "Constant volume means the area becomes half when length doubles. Since R = ρL/A, the resistance changes by factor 2/(1/2) = 4, giving 4R.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
     "questionText": "A cell of emf 12 V and internal resistance 1 Ω is connected to an external resistance of 5 Ω. What is the terminal voltage of the cell?",
     "options": [
       "8 V",
@@ -5499,7 +5387,7 @@
       "40 cm on the opposite side",
       "60 cm on the opposite side"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "Using 1/f = 1/v - 1/u with f = 20 cm and u = -30 cm gives 1/v = 1/20 - 1/30 = 1/60. Thus v = +60 cm.",
     "imageUrl": null
   },
@@ -5572,22 +5460,6 @@
     "subject": "Physics",
     "chapter": "Dual Nature of Radiation and Matter",
     "difficulty": "tough",
-    "questionText": "An electron is accelerated through a potential difference of 150 V. If its de Broglie wavelength at 150 V is λ, what will be its wavelength when accelerated through 600 V?",
-    "options": [
-      "λ/4",
-      "λ/2",
-      "2λ",
-      "4λ"
-    ],
-    "correctIndex": 1,
-    "explanation": "For an electron accelerated through potential V, de Broglie wavelength varies as 1/√V. Increasing voltage from 150 V to 600 V, a factor of four, reduces wavelength by a factor of two.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Dual Nature of Radiation and Matter",
-    "difficulty": "tough",
     "questionText": "Light of frequency 8 × 10^14 Hz falls on a metal whose threshold frequency is 5 × 10^14 Hz. If h = 6.6 × 10^-34 J s, what is the maximum kinetic energy of emitted electrons?",
     "options": [
       "9.9 × 10^-20 J",
@@ -5629,22 +5501,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The energy difference for 3→2 is smaller than for 2→1. Since λ = hc/ΔE, the photon from 3→2 has the longer wavelength.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 5 days. What fraction of the original nuclei remains after 20 days?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 3,
-    "explanation": "Twenty days correspond to four half-lives. Remaining fraction = (1/2)^4 = 1/16.",
     "imageUrl": null
   },
   {
@@ -5771,7 +5627,7 @@
       "(M+m)ω/M",
       "Mω/(M+2m)"
     ],
-    "correctIndex": 1,
+    "correctIndex": 3,
     "explanation": "Angular momentum is conserved. Initially L = (1/2)MR²ω, while finally I = (1/2)MR² + mR² = R²(M/2 + m). Hence ω' = Mω/(M + 2m).",
     "imageUrl": null
   },
@@ -5787,7 +5643,7 @@
       "ve/√3",
       "ve/√6"
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "explanation": "The orbital radius is 2R, so v = √(GM/2R). Since ve = √(2GM/R), their ratio is v/ve = 1/2, giving v = ve/2.",
     "imageUrl": null
   },
@@ -5981,22 +5837,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Fringe width β = λD/d = (600 × 10⁻⁹ × 2)/(1.5 × 10⁻³) = 8 × 10⁻⁴ m = 0.8 mm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 5 days. What fraction of the original nuclei remains undecayed after 15 days?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Fifteen days correspond to three half-lives. The remaining fraction is (1/2)³ = 1/8.",
     "imageUrl": null
   },
   {
@@ -6244,22 +6084,6 @@
     "subject": "Physics",
     "chapter": "Mechanical Properties of Solids and Fluids",
     "difficulty": "tough",
-    "questionText": "A wire of length 2 m and cross-sectional area 2 mm^2 is stretched by a force of 100 N. If Young's modulus is 2 × 10^11 N/m^2, what is the extension of the wire?",
-    "options": [
-      "0.25 mm",
-      "0.5 mm",
-      "1.0 mm",
-      "2.0 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using ΔL = FL/(AY), ΔL = (100×2)/[(2×10^-6)(2×10^11)] = 5×10^-4 m = 0.5 mm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
     "questionText": "Water flows through a horizontal pipe whose cross-sectional area changes from 4 cm^2 to 2 cm^2. If the speed in the wider part is 3 m/s, what is the speed in the narrower part?",
     "options": [
       "1.5 m/s",
@@ -6269,22 +6093,6 @@
     ],
     "correctIndex": 2,
     "explanation": "From continuity, A1v1 = A2v2. Hence v2 = (4/2)×3 = 6 m/s.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Thermal Properties of Matter",
-    "difficulty": "tough",
-    "questionText": "A metal rod of length 2 m has coefficient of linear expansion 1.5 × 10^-5 K^-1. If its temperature rises by 200 K, what is the increase in length?",
-    "options": [
-      "3 mm",
-      "6 mm",
-      "9 mm",
-      "12 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Linear expansion is ΔL = αLΔT = 1.5×10^-5×2×200 = 6×10^-3 m = 6 mm.",
     "imageUrl": null
   },
   {
@@ -6450,22 +6258,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A coil of 200 turns experiences a change in magnetic flux through each turn from 4 × 10^-3 Wb to 1 × 10^-3 Wb in 0.2 s. What is the magnitude of the average induced emf?",
-    "options": [
-      "1 V",
-      "2 V",
-      "3 V",
-      "4 V"
-    ],
-    "correctIndex": 2,
-    "explanation": "By Faraday's law, E = N|ΔΦ|/Δt = 200×(3×10^-3)/0.2 = 3 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Alternating Current",
     "difficulty": "tough",
     "questionText": "An AC voltage has a peak value of 200 V. What is its rms value?",
@@ -6493,22 +6285,6 @@
     ],
     "correctIndex": 3,
     "explanation": "In the electromagnetic spectrum, wavelength decreases from radio waves through microwaves and visible light to gamma rays. Therefore gamma rays have the shortest wavelength among the given options.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Ray Optics and Optical Instruments",
-    "difficulty": "tough",
-    "questionText": "A convex lens of focal length 20 cm forms a real image at 60 cm from the lens. What is the magnitude of the object distance?",
-    "options": [
-      "15 cm",
-      "20 cm",
-      "30 cm",
-      "40 cm"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using 1/f = 1/v + 1/u in magnitudes, 1/20 = 1/60 + 1/u. Hence 1/u = 1/30 and u = 30 cm.",
     "imageUrl": null
   },
   {
@@ -6850,22 +6626,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Electrostatics",
-    "difficulty": "tough",
-    "questionText": "A capacitor of capacitance 6 μF is charged to 100 V and then disconnected from the battery. A dielectric completely fills the space between its plates, increasing the capacitance to 18 μF. The new potential difference is:",
-    "options": [
-      "25 V",
-      "33.3 V",
-      "50 V",
-      "66.7 V"
-    ],
-    "correctIndex": 1,
-    "explanation": "After disconnection, charge remains constant, so C1V1 = C2V2. Thus V2 = (6 × 100)/18 = 33.3 V approximately.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Current Electricity",
     "difficulty": "tough",
     "questionText": "A battery of emf 12 V and internal resistance 2 Ω is connected to a 4 Ω external resistor. The current in the circuit is:",
@@ -6877,22 +6637,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The total resistance is 4 + 2 = 6 Ω. Hence the current is I = E/(R + r) = 12/6 = 2 A.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
-    "questionText": "A wire of resistance R is stretched uniformly until its length becomes three times its original length. Assuming its volume remains constant, its new resistance is:",
-    "options": [
-      "R/3",
-      "R",
-      "3R",
-      "9R"
-    ],
-    "correctIndex": 3,
-    "explanation": "Constant volume means the cross-sectional area becomes A/3. Since R = ρL/A, the new resistance is ρ(3L)/(A/3) = 9R.",
     "imageUrl": null
   },
   {
@@ -7005,22 +6749,6 @@
     ],
     "correctIndex": 1,
     "explanation": "For sinusoidal current, I_rms = I0/√2. Hence I_rms = 5/√2 A.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Ray Optics and Optical Instruments",
-    "difficulty": "tough",
-    "questionText": "A concave mirror has focal length 20 cm. An object is placed 40 cm in front of it. The image formed is:",
-    "options": [
-      "Virtual and magnified",
-      "Real and same size",
-      "Real and half the size",
-      "Virtual and same size"
-    ],
-    "correctIndex": 1,
-    "explanation": "The object is at twice the focal length, i.e. at the centre of curvature. A concave mirror then forms a real, inverted image of the same size.",
     "imageUrl": null
   },
   {
@@ -7330,22 +7058,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A wire of length 2 m and cross-sectional area 1 mm² is stretched by a force of 100 N. If Young's modulus of the material is 2 × 10^11 N/m², the extension produced is:",
-    "options": [
-      "0.5 mm",
-      "1 mm",
-      "2 mm",
-      "5 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Extension ΔL = FL/(AY) = 100×2/[10^-6×2×10^11] = 10^-3 m = 1 mm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Thermal Properties of Matter",
     "difficulty": "tough",
     "questionText": "A metal rod has length 1 m at 20°C. Its coefficient of linear expansion is 2 × 10^-5 K^-1. The increase in length when its temperature rises to 120°C is:",
@@ -7581,22 +7293,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The initial kinetic energy is (1/2)(2)(3^2) = 9 J. The opposing force does work 5s before stopping, so 5s = 9 and s = 1.8 m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Work, Energy and Power",
-    "difficulty": "tough",
-    "questionText": "A 1 kg body is dropped from a height of 20 m. Taking g = 10 m/s^2 and neglecting air resistance, what is its kinetic energy just before reaching the ground?",
-    "options": [
-      "100 J",
-      "150 J",
-      "200 J",
-      "400 J"
-    ],
-    "correctIndex": 2,
-    "explanation": "The loss of gravitational potential energy becomes kinetic energy: K = mgh = 1 × 10 × 20 = 200 J.",
     "imageUrl": null
   },
   {
@@ -8059,7 +7755,7 @@
       "4/3 s",
       "3 s"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "T = 2π√(m/k). Therefore T'/T = √(4/9) = 2/3, giving T' = 4/3 s.",
     "imageUrl": null
   },
@@ -8157,22 +7853,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Torque is τ = MB sinθ = 2×0.5×sin60° = √3/2 ≈ 0.866 N m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A 200-turn coil experiences a change in magnetic flux through each turn from 5 × 10^-3 Wb to 1 × 10^-3 Wb in 0.02 s. The magnitude of induced emf is:",
-    "options": [
-      "20 V",
-      "30 V",
-      "40 V",
-      "50 V"
-    ],
-    "correctIndex": 2,
-    "explanation": "Induced emf is N|ΔΦ|/Δt = 200×4×10^-3/0.02 = 40 V.",
     "imageUrl": null
   },
   {
@@ -8747,7 +8427,7 @@
       "8%",
       "10%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "For X = A²B/C³, the maximum percentage error is 2(2%) + 3% + 3(1%) = 10%. Hence the maximum error is 10%.",
     "imageUrl": null
   },
@@ -8780,7 +8460,7 @@
       "6 m/s"
     ],
     "correctIndex": 2,
-    "explanation": "Friction is 0.2 × 5 × 10 = 10 N, so net force is 20 N and acceleration is 4 m/s². Using v² = 2as = 2 × 4 × 4 = 32, we get v = √32 m/s, which is approximately 5.66 m/s; therefore the exact listed value is not represented by 4 m/s.",
+    "explanation": "Friction = 0.2 × 5 × 10 = 10 N, so net force = 20 N and a = 4 m/s². v² = 2as = 2 × 4 × 4 = 32, so v = √32 m/s ≈ 5.66 m/s.",
     "imageUrl": null
   },
   {
@@ -9490,22 +9170,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 6 hours. The fraction of the original nuclei remaining after 24 hours is",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty-four hours corresponds to four half-lives. Remaining fraction is (1/2)^4 = 1/16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "moderate",
     "questionText": "In a p-n junction diode under forward bias, the depletion-layer width and potential barrier respectively",
@@ -9682,22 +9346,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A coil of 100 turns experiences a change in magnetic flux through each turn from 5 × 10⁻³ Wb to 1 × 10⁻³ Wb in 0.2 s. What is the magnitude of the average induced emf?",
-    "options": [
-      "1 V",
-      "2 V",
-      "3 V",
-      "4 V"
-    ],
-    "correctIndex": 1,
-    "explanation": "The flux change per turn is 4×10⁻³ Wb. By Faraday's law, E = N|ΔΦ|/Δt = 100×4×10⁻³/0.2 = 2 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Electromagnetic Waves",
     "difficulty": "easy",
     "questionText": "Which property is common to all electromagnetic waves travelling in vacuum?",
@@ -9723,7 +9371,7 @@
       "It is 5/72 of 13.6 eV",
       "It is 13.6 eV"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "The photon energy is 13.6(1/2² − 1/3²) = 13.6(5/36) = 5(13.6)/36 eV. Thus it is 5/36 of 13.6 eV.",
     "imageUrl": null
   },
@@ -10276,22 +9924,6 @@
     "subject": "Physics",
     "chapter": "Nuclei",
     "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 6 hours. What fraction of the original sample remains undecayed after 18 hours?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Eighteen hours corresponds to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
     "questionText": "A radioactive sample initially contains N0 nuclei. After two half-lives, the number of undecayed nuclei is:",
     "options": [
       "N0/2",
@@ -10605,38 +10237,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Since V = πr²h, the maximum percentage uncertainty is 2(0.1/10 × 100) + (0.2/20 × 100) = 2% + 1% = 3%.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 10 kg block is pulled on a horizontal surface by a horizontal force of 50 N. If the coefficient of kinetic friction is 0.3 and g = 10 m/s², what is the acceleration of the block?",
-    "options": [
-      "1 m/s²",
-      "2 m/s²",
-      "3 m/s²",
-      "5 m/s²"
-    ],
-    "correctIndex": 1,
-    "explanation": "Kinetic friction is μmg = 0.3 × 10 × 10 = 30 N. The net force is 20 N, so a = 20/10 = 2 m/s².",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Work, Energy and Power",
-    "difficulty": "tough",
-    "questionText": "A 1 kg body is projected vertically upward with speed 20 m/s. Taking g = 10 m/s², what is the maximum height reached above the point of projection?",
-    "options": [
-      "10 m",
-      "20 m",
-      "30 m",
-      "40 m"
-    ],
-    "correctIndex": 1,
-    "explanation": "At maximum height, v = 0. Using v² = u² - 2gh gives h = 20²/(2 × 10) = 20 m.",
     "imageUrl": null
   },
   {
@@ -11003,7 +10603,7 @@
       "8%",
       "10%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "The maximum percentage uncertainty is 2(2%) + 3% + 3(1%) = 10%.",
     "imageUrl": null
   },
@@ -11021,22 +10621,6 @@
     ],
     "correctIndex": 0,
     "explanation": "The displacement is the area under the velocity-time relation: s = 8(6) - (2)(6^2)/2 = 48 - 36 = 12 m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 4 kg block on a rough horizontal surface is pulled by a horizontal force of 20 N. If the coefficient of kinetic friction is 0.25 and g = 10 m/s^2, what is its acceleration?",
-    "options": [
-      "1 m/s^2",
-      "2.5 m/s^2",
-      "3 m/s^2",
-      "5 m/s^2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Normal force is 40 N, so friction is 0.25(40) = 10 N. Net force is 20 - 10 = 10 N.",
     "imageUrl": null
   },
   {
@@ -11165,22 +10749,6 @@
     ],
     "correctIndex": 2,
     "explanation": "From continuity, A1v1 = A2v2. Therefore v2 = (8/2)(3) = 12 m/s.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Thermal Properties of Matter",
-    "difficulty": "tough",
-    "questionText": "A metal cube has volume 500 cm^3. Its coefficient of linear expansion is 2 x 10^-5 K^-1. What is the approximate increase in volume for a temperature rise of 100 K?",
-    "options": [
-      "1 cm^3",
-      "2 cm^3",
-      "3 cm^3",
-      "4 cm^3"
-    ],
-    "correctIndex": 2,
-    "explanation": "The volume expansion coefficient is approximately 3α = 6 x 10^-5 K^-1. Thus ΔV = 500(6 x 10^-5)(100) = 3 cm^3.",
     "imageUrl": null
   },
   {
@@ -11549,22 +11117,6 @@
     ],
     "correctIndex": 3,
     "explanation": "Bohr's quantization condition gives L = nℏ. For n = 3, the angular momentum is 3ℏ.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 4 hours. What fraction of the initial nuclei remains after 12 hours?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twelve hours correspond to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
     "imageUrl": null
   },
   {
@@ -11970,22 +11522,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 4 kg block is placed on a rough horizontal surface with coefficient of kinetic friction 0.25. A horizontal force of 20 N is applied to it. Taking g = 10 m/s^2, the acceleration of the block is",
-    "options": [
-      "1.5 m/s^2",
-      "2.5 m/s^2",
-      "3.5 m/s^2",
-      "5 m/s^2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Kinetic friction is μmg = 0.25×4×10 = 10 N. Net force is 20 - 10 = 10 N, so a = 10/4 = 2.5 m/s^2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Work, Energy and Power",
     "difficulty": "tough",
     "questionText": "A 2 kg body moving at 6 m/s is brought to rest by a constant opposing force over a distance of 9 m. The magnitude of the force is",
@@ -12379,24 +11915,8 @@
       "3%",
       "4%"
     ],
-    "correctIndex": 2,
-    "explanation": "For A = lb, maximum fractional error is ΔA/A = Δl/l + Δb/b = 0.2/20 + 0.1/10 = 0.01 + 0.01 = 0.02, or 2%.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 5 kg block rests on a rough horizontal surface with coefficient of friction 0.4. A horizontal force of 30 N is applied to it. Taking g = 10 m/s², what is the acceleration of the block?",
-    "options": [
-      "0 m/s²",
-      "2 m/s²",
-      "4 m/s²",
-      "6 m/s²"
-    ],
     "correctIndex": 1,
-    "explanation": "Maximum friction = μmg = 0.4 × 5 × 10 = 20 N. Net force = 30 − 20 = 10 N, so acceleration = 10/5 = 2 m/s².",
+    "explanation": "For A = lb, maximum fractional error is ΔA/A = Δl/l + Δb/b = 0.2/20 + 0.1/10 = 0.01 + 0.01 = 0.02, or 2%.",
     "imageUrl": null
   },
   {
@@ -12635,7 +12155,7 @@
       "11%",
       "12%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For Q = A^2B/C^3, maximum percentage uncertainty = 2(2%) + 3% + 3(1%) = 10%.",
     "imageUrl": null
   },
@@ -12765,22 +12285,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Magnetic potential energy is U = −MB cosθ. The change from θ = 0 to π is MB − (−MB) = 2MB, which equals the required slow work.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A coil of 100 turns experiences a uniform change in magnetic flux per turn from 5 × 10^-3 Wb to 1 × 10^-3 Wb in 0.02 s. What is the magnitude of the induced emf?",
-    "options": [
-      "10 V",
-      "20 V",
-      "30 V",
-      "40 V"
-    ],
-    "correctIndex": 1,
-    "explanation": "By Faraday's law, ε = N|ΔΦ|/Δt = 100 × 4 × 10^-3/0.02 = 20 V.",
     "imageUrl": null
   },
   {
@@ -13170,22 +12674,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Electrostatics",
-    "difficulty": "tough",
-    "questionText": "A point charge produces an electric field of 900 N/C at a distance of 2 m. The field at a distance of 6 m from the same charge is:",
-    "options": [
-      "50 N/C",
-      "100 N/C",
-      "300 N/C",
-      "450 N/C"
-    ],
-    "correctIndex": 1,
-    "explanation": "Electric field varies as 1/r². Therefore E₂ = 900(2/6)² = 900/9 = 100 N/C.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Current Electricity",
     "difficulty": "tough",
     "questionText": "A 12 V battery with internal resistance 1 Ω is connected to an external resistor of 5 Ω. The power dissipated in the external resistor is:",
@@ -13394,22 +12882,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample initially contains 8 × 10^20 nuclei and has a half-life of 5 days. The number of undecayed nuclei after 15 days is:",
-    "options": [
-      "1 × 10^20",
-      "2 × 10^20",
-      "4 × 10^20",
-      "6 × 10^20"
-    ],
-    "correctIndex": 0,
-    "explanation": "Fifteen days correspond to three half-lives. Thus N = N₀(1/2)^3 = 8×10^20/8 = 1×10^20 nuclei.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "A transistor has current gain β = 49. If the emitter current is 5 mA, the collector current is approximately:",
@@ -13533,22 +13005,6 @@
     ],
     "correctIndex": 0,
     "explanation": "Orbital speed varies as r^−1/2, so v' = v/2. The period varies as r^(3/2), hence T' = 4^(3/2)T = 8T.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Thermal Properties of Matter",
-    "difficulty": "tough",
-    "questionText": "A metal rod of length 1 m has coefficient of linear expansion 2 × 10^−5 K^−1. If its temperature is increased by 150 K, the increase in its length is:",
-    "options": [
-      "1.5 mm",
-      "2 mm",
-      "3 mm",
-      "4.5 mm"
-    ],
-    "correctIndex": 2,
-    "explanation": "Linear expansion is ΔL = αLΔT = (2 × 10^−5)(1)(150) = 3 × 10^−3 m = 3 mm.",
     "imageUrl": null
   },
   {
@@ -14050,22 +13506,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "moderate",
-    "questionText": "A radioactive substance has a half-life of 5 hours. What fraction of the initial sample remains undecayed after 20 hours?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty hours correspond to four half-lives. The remaining fraction is (1/2)^4 = 1/16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Current Electricity",
     "difficulty": "easy",
     "questionText": "A resistor of resistance 10 Ω is connected across a 20 V battery. The current through the resistor is:",
@@ -14171,7 +13611,7 @@
       "3R",
       "4R"
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "explanation": "At height h, g' = g[R/(R+h)]². Setting g' = g/4 gives R/(R+h) = 1/2, so h = R.",
     "imageUrl": null
   },
@@ -15060,22 +14500,6 @@
     "subject": "Physics",
     "chapter": "Nuclei",
     "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 8 hours. What fraction of the original nuclei remains after 24 hours?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty-four hours correspond to three half-lives. The remaining fraction is (1/2)^3 = 1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
     "questionText": "A radioactive sample has a half-life of 5 days. After 15 days, what percentage of the original nuclei remains undecayed?",
     "options": [
       "6.25%",
@@ -15405,22 +14829,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Using energy, u^2 = v_e^2/4 = GM/(2R).u^2/2 - GM/R = -GM/r, giving GM/(4R) - GM/R = -GM/r, hence r = 4R/3 and h = R/3.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A liquid flows through a horizontal pipe whose cross-sectional area decreases from 8 cm^2 to 2 cm^2. If the speed in the wider section is 1.5 m/s, the speed in the narrower section is",
-    "options": [
-      "3 m/s",
-      "4.5 m/s",
-      "6 m/s",
-      "12 m/s"
-    ],
-    "correctIndex": 2,
-    "explanation": "From continuity, A_1v_1 = A_2v_2. Therefore v_2 = (8/2)×1.5 = 6 m/s.",
     "imageUrl": null
   },
   {
@@ -16171,7 +15579,7 @@
       "4%",
       "8%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "Since L is proportional to T², the fractional uncertainty in L is twice that in T. Thus ΔL/L = 2(0.02/2.00) = 0.02, giving a 2% uncertainty.",
     "imageUrl": null
   },
@@ -16443,7 +15851,7 @@
       "5%",
       "6%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "Since V = πr²h, the maximum percentage uncertainty is 2(1%) + 2% = 4%.",
     "imageUrl": null
   },
@@ -16477,22 +15885,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The retarding acceleration is g(sin30° + μcos30°) = 10(1/2 + 1/2) = 10 m/s². Using v² = u² − 2as gives 0 = 100 − 20s, so s = 5 m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "System of Particles and Rotational Motion",
-    "difficulty": "tough",
-    "questionText": "A uniform disc of mass 4 kg and radius 0.5 m rolls without slipping with speed 5 m/s. What is its total kinetic energy?",
-    "options": [
-      "50 J",
-      "75 J",
-      "100 J",
-      "125 J"
-    ],
-    "correctIndex": 1,
-    "explanation": "For a solid disc, I = MR²/2 and v = ωR. Thus total kinetic energy = 1/2Mv² + 1/2Iω² = 1/2Mv² + 1/4Mv² = 3Mv²/4 = 3(4)(25)/4 = 75 J. Therefore the correct option is 75 J.",
     "imageUrl": null
   },
   {
@@ -16658,22 +16050,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Dual Nature of Radiation and Matter",
-    "difficulty": "tough",
-    "questionText": "Light of wavelength 400 nm falls on a metal whose work function is 2 eV. Taking hc = 1240 eV nm, what is the maximum kinetic energy of the emitted photoelectrons?",
-    "options": [
-      "0.5 eV",
-      "1.1 eV",
-      "2.0 eV",
-      "3.1 eV"
-    ],
-    "correctIndex": 1,
-    "explanation": "Photon energy is 1240/400 = 3.1 eV. Therefore Kmax = 3.1 − 2.0 = 1.1 eV.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Atoms",
     "difficulty": "tough",
     "questionText": "In the Bohr model of hydrogen, an electron in the fourth orbit has speed v. What is its speed in the second orbit?",
@@ -16685,22 +16061,6 @@
     ],
     "correctIndex": 2,
     "explanation": "For hydrogen in the Bohr model, electron speed varies inversely with principal quantum number: v_n ∝ 1/n. Thus v2/v4 = 4/2 = 2, so the speed is 2v.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Semiconductor Electronics",
-    "difficulty": "easy",
-    "questionText": "A transistor has current gain β = 80. If the base current is 25 μA, what is the collector current in the active region?",
-    "options": [
-      "0.5 mA",
-      "1 mA",
-      "2 mA",
-      "2.5 mA"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using Ic = βIb, Ic = 80 × 25 μA = 2000 μA = 2 mA.",
     "imageUrl": null
   },
   {
@@ -16733,22 +16093,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The vertical fall time satisfies 45 = 1/2×10t², giving t = 3 s. Hence horizontal distance is 20×3 = 60 m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 3 kg block is placed on a smooth horizontal table and connected to a hanging 2 kg mass by a light inextensible string over a frictionless pulley. Taking g = 10 m/s², the tension in the string is:",
-    "options": [
-      "8 N",
-      "10 N",
-      "12 N",
-      "16 N"
-    ],
-    "correctIndex": 2,
-    "explanation": "The system acceleration is a = 2g/(3+2) = 4 m/s². For the 3 kg block, T = 3a = 12 N.",
     "imageUrl": null
   },
   {
@@ -17277,22 +16621,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The resistor has 4−0.7 = 3.3 V across it. Therefore I = 3.3/660 = 5 mA.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Kinematics",
-    "difficulty": "moderate",
-    "questionText": "A car moving at 10 m/s accelerates uniformly at 2 m/s² for 5 s. Its final speed is:",
-    "options": [
-      "15 m/s",
-      "20 m/s",
-      "25 m/s",
-      "30 m/s"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using v = u + at, v = 10 + 2×5 = 20 m/s.",
     "imageUrl": null
   },
   {
@@ -17858,22 +17186,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A wire of length 2 m and cross-sectional area 2 mm² is stretched by a force of 100 N. If Young's modulus of the material is 2 × 10^11 N/m², the extension produced is:",
-    "options": [
-      "0.25 mm",
-      "0.5 mm",
-      "1 mm",
-      "2 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using ΔL = FL/(AY), ΔL = (100 × 2)/[(2 × 10^-6)(2 × 10^11)] = 5 × 10^-4 m = 0.5 mm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Thermodynamics",
     "difficulty": "tough",
     "questionText": "An ideal gas expands isobarically at a pressure of 2 × 10^5 Pa from volume 2 × 10^-3 m³ to 5 × 10^-3 m³. The work done by the gas is:",
@@ -18157,22 +17469,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Orbital speed varies as v ∝ 1/√r. Therefore v_R/v_4R = √(4R/R) = 2, giving the ratio 2:1.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A wire of length 1.5 m and cross-sectional area 2 mm² is stretched by a force of 120 N. If Young's modulus is 1.8 × 10^11 N/m², the extension of the wire is:",
-    "options": [
-      "0.25 mm",
-      "0.5 mm",
-      "0.75 mm",
-      "1.0 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Using ΔL = FL/(AY), ΔL = (120 × 1.5)/[(2×10^-6)(1.8×10^11)] = 5×10^-4 m = 0.5 mm.",
     "imageUrl": null
   },
   {
@@ -18788,22 +18084,6 @@
     "subject": "Physics",
     "chapter": "Laws of Motion",
     "difficulty": "tough",
-    "questionText": "A 5 kg block on a rough horizontal surface is pulled by a horizontal force of 25 N. If the coefficient of kinetic friction is 0.2 and g = 10 m/s², the acceleration of the block is:",
-    "options": [
-      "1 m/s²",
-      "2 m/s²",
-      "3 m/s²",
-      "5 m/s²"
-    ],
-    "correctIndex": 2,
-    "explanation": "Friction is μmg = 0.2×5×10 = 10 N. Thus net force is 25−10 = 15 N and acceleration is 15/5 = 3 m/s².",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
     "questionText": "Two blocks of masses 4 kg and 6 kg are in contact on a smooth horizontal surface. A horizontal force of 30 N is applied to the 4 kg block. The contact force between the blocks is:",
     "options": [
       "12 N",
@@ -19266,22 +18546,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive isotope has a half-life of 8 days. The fraction of the original nuclei remaining after 32 days is:",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Thirty-two days correspond to four half-lives. Hence the remaining fraction is (1/2)^4 = 1/16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "A transistor has emitter current 6 mA and collector current 5.7 mA. Its base current is:",
@@ -19394,22 +18658,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Thermal Properties of Matter",
-    "difficulty": "tough",
-    "questionText": "A metal rod of length 2 m has coefficient of linear expansion 2 × 10^-5 K^-1. If its temperature is increased by 150 K, what increase in length occurs?",
-    "options": [
-      "3 mm",
-      "4 mm",
-      "5 mm",
-      "6 mm"
-    ],
-    "correctIndex": 3,
-    "explanation": "Using ΔL = αLΔT, ΔL = 2 × 10^-5 × 2 × 150 = 6 × 10^-3 m = 6 mm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Thermodynamics",
     "difficulty": "tough",
     "questionText": "An ideal gas expands isothermally from volume V to 4V at absolute temperature T. If the gas contains n moles, what is the work done by the gas?",
@@ -19501,22 +18749,6 @@
     ],
     "correctIndex": 3,
     "explanation": "By Faraday's law, ε = N|ΔΦ|/Δt = 50 × 6 × 10^-3/0.01 = 30 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Alternating Current",
-    "difficulty": "tough",
-    "questionText": "A series LCR circuit is at resonance and has resistance 25 Ω. If the rms current is 4 A, what is the rms voltage of the source?",
-    "options": [
-      "50 V",
-      "75 V",
-      "100 V",
-      "125 V"
-    ],
-    "correctIndex": 2,
-    "explanation": "At resonance, the impedance equals the resistance. Therefore Vrms = IrmsR = 4 × 25 = 100 V.",
     "imageUrl": null
   },
   {
@@ -20372,22 +19604,6 @@
     "subject": "Physics",
     "chapter": "Laws of Motion",
     "difficulty": "tough",
-    "questionText": "A 4 kg block is on a rough horizontal surface with coefficient of kinetic friction 0.2. A horizontal force of 16 N acts on it. Taking g = 10 m/s^2, the acceleration of the block is",
-    "options": [
-      "1 m/s^2",
-      "2 m/s^2",
-      "3 m/s^2",
-      "4 m/s^2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Friction = μmg = 0.2×4×10 = 8 N. Hence net force is 16 - 8 = 8 N and acceleration is 8/4 = 2 m/s^2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
     "questionText": "A 2 kg block is connected to a 3 kg block by a light string on a frictionless horizontal surface. A force of 25 N is applied to the 3 kg block. The tension in the string is",
     "options": [
       "8 N",
@@ -20477,22 +19693,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Bernoulli's equation gives P_1-P_2 = 1/2ρ(v_2^2-v_1^2) = 500(49-9) = 20000 Pa = 20 kPa.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Thermal Properties of Matter",
-    "difficulty": "tough",
-    "questionText": "A metal rod of length 1.5 m has coefficient of linear expansion 2×10^-5 K^-1. Its temperature is raised by 100 K. The increase in length is",
-    "options": [
-      "1 mm",
-      "2 mm",
-      "3 mm",
-      "4 mm"
-    ],
-    "correctIndex": 2,
-    "explanation": "ΔL = αLΔT = 2×10^-5×1.5×100 m = 3×10^-3 m = 3 mm.",
     "imageUrl": null
   },
   {
@@ -21108,22 +20308,6 @@
     "subject": "Physics",
     "chapter": "Kinematics",
     "difficulty": "tough",
-    "questionText": "A particle starts from rest at x = 0 and moves along the x-axis with acceleration a = 4x, where x is in metres and a in m/s^2. Its speed when it reaches x = 3 m is",
-    "options": [
-      "3 m/s",
-      "4 m/s",
-      "6 m/s",
-      "8 m/s"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using a = v dv/dx, v dv = 4x dx. Integrating from 0 to 3 m gives v^2/2 = 18, so v = 6 m/s.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Kinematics",
-    "difficulty": "tough",
     "questionText": "A particle moves on a straight line with velocity v = 6t - 3t^2 m/s, where t is in seconds. The total distance travelled from t = 0 to t = 3 s is",
     "options": [
       "7 m",
@@ -21261,22 +20445,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The orbit radius is 2R. Orbital speed is sqrt(GM/2R), while ve = sqrt(2GM/R). Hence v = ve/(2sqrt(2)).",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A wire of length 2 m and cross-sectional area 1 mm^2 is stretched by a force of 100 N. If Young's modulus is 2 × 10^11 N/m^2, the extension produced is",
-    "options": [
-      "0.5 mm",
-      "1 mm",
-      "2 mm",
-      "5 mm"
-    ],
-    "correctIndex": 1,
-    "explanation": "Extension ΔL = FL/(AY) = 100×2/(10^-6×2×10^11) = 10^-3 m = 1 mm.",
     "imageUrl": null
   },
   {
@@ -21517,22 +20685,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Average emf = |ΔΦ|/Δt = 0.06/0.03 = 2 V. Therefore induced current I = E/R = 2/3 A, which is approximately 0.67 A.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Alternating Current",
-    "difficulty": "tough",
-    "questionText": "A series LCR circuit has resistance 30 Ω, inductive reactance 40 Ω and capacitive reactance 10 Ω. Its impedance is",
-    "options": [
-      "30 Ω",
-      "40 Ω",
-      "30sqrt(2) Ω",
-      "50 Ω"
-    ],
-    "correctIndex": 2,
-    "explanation": "Net reactance is XL - XC = 30 Ω. Therefore Z = sqrt(R^2 + X^2) = sqrt(900 + 900) = 30sqrt(2) Ω.",
     "imageUrl": null
   },
   {
@@ -22002,22 +21154,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive substance has a half-life of 5 hours. What fraction of its initial number of nuclei remains after 20 hours?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty hours corresponds to four half-lives. The remaining fraction is (1/2)^4 = 1/16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "A silicon diode with a forward voltage drop of 0.7 V is connected in series with a 1 kΩ resistor to a 6.7 V supply. Assuming the diode current is determined by the resistor, what is the current through the circuit?",
@@ -22363,7 +21499,7 @@
       "200 Bq",
       "100 Bq"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "Twenty-four hours correspond to three half-lives. Therefore A = 6400/(2^3) = 800 Bq.",
     "imageUrl": null
   },
@@ -22706,22 +21842,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Work, Energy and Power",
-    "difficulty": "moderate",
-    "questionText": "A 2 kg body initially at rest is lifted vertically through 5 m in 2 s at constant speed. Taking g = 10 m/s², the average power supplied by the lifting force is:",
-    "options": [
-      "25 W",
-      "50 W",
-      "75 W",
-      "100 W"
-    ],
-    "correctIndex": 1,
-    "explanation": "The work done against gravity is mgh = 2×10×5 = 100 J. Average power = W/t = 100/2 = 50 W, so the correct option is 50 W.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "System of Particles and Rotational Motion",
     "difficulty": "tough",
     "questionText": "A solid sphere and a solid cylinder, each of the same mass and radius, roll without slipping down the same incline from rest. Which reaches the bottom with greater speed?",
@@ -23051,7 +22171,7 @@
       "10%",
       "11%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 3,
     "explanation": "For Q = A^2B/C^3, maximum percentage uncertainty = 2(2%) + 1% + 3(2%) = 11%.",
     "imageUrl": null
   },
@@ -24034,22 +23154,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 4 hours. What fraction of the original sample remains after 12 hours?",
-    "options": [
-      "1/2",
-      "1/4",
-      "1/8",
-      "1/16"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twelve hours corresponds to three half-lives. Remaining fraction is (1/2)^3=1/8.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "A silicon p-n junction diode is forward biased. Which change primarily causes its depletion-layer width to decrease?",
@@ -24109,22 +23213,6 @@
     ],
     "correctIndex": 2,
     "explanation": "The increase in length is ΔL = αLΔT = 1.5×10^-5×2×200 = 0.006 m. Therefore the final length is 2.006 m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Kinetic Theory",
-    "difficulty": "tough",
-    "questionText": "Two ideal gases are at the same temperature. Their molar masses are 4 g/mol and 16 g/mol. What is the ratio of their rms speeds, v4/v16?",
-    "options": [
-      "1:4",
-      "1:2",
-      "2:1",
-      "4:1"
-    ],
-    "correctIndex": 2,
-    "explanation": "At the same temperature, rms speed is proportional to 1/√M. Thus v4/v16 = √(16/4) = 2, giving the ratio 2:1.",
     "imageUrl": null
   },
   {
@@ -25346,22 +24434,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Dual Nature of Radiation and Matter",
-    "difficulty": "tough",
-    "questionText": "An electron is accelerated through a potential difference of 150 V. If its de Broglie wavelength is λ, what will be its wavelength when accelerated through 600 V?",
-    "options": [
-      "λ/4",
-      "λ/2",
-      "2λ",
-      "4λ"
-    ],
-    "correctIndex": 1,
-    "explanation": "For an electron accelerated through potential V, λ = h/√(2meV), so λ ∝ 1/√V. Increasing the potential from 150 V to 600 V, a factor of 4, reduces the wavelength by a factor of 2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Semiconductor Electronics",
     "difficulty": "tough",
     "questionText": "In a forward-biased p-n junction diode, which combination correctly describes the changes in the depletion-layer width and potential barrier?",
@@ -25501,22 +24573,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Extension ΔL=FL/(YA), and cross-sectional area is proportional to r². Reducing radius to r/2 makes area one-fourth, so the extension becomes four times.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A liquid flows through a horizontal pipe. At one section its speed is 2 m/s and pressure is 2×10^5 Pa. At another section the speed is 6 m/s. Taking the liquid density as 1000 kg/m³, the pressure at the second section is:",
-    "options": [
-      "1.84×10^5 Pa",
-      "2.00×10^5 Pa",
-      "2.16×10^5 Pa",
-      "2.80×10^5 Pa"
-    ],
-    "correctIndex": 0,
-    "explanation": "Bernoulli's equation gives P₂=P₁+1/2ρ(v₁²−v₂²)=2×10^5+500(4−36)=1.84×10^5 Pa.",
     "imageUrl": null
   },
   {
@@ -25938,38 +24994,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Electrostatics",
-    "difficulty": "tough",
-    "questionText": "Two capacitors of capacitances 2 μF and 4 μF are connected in series across a 12 V battery. The charge on each capacitor is:",
-    "options": [
-      "8 μC",
-      "16 μC",
-      "24 μC",
-      "48 μC"
-    ],
-    "correctIndex": 1,
-    "explanation": "The series equivalent capacitance is C_eq=(2×4)/(2+4)=4/3 μF. Therefore Q=C_eqV=(4/3)×12=16 μC, so the correct option is 16 μC.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 4 kg block is pulled on a rough horizontal surface by a horizontal force of 30 N. The coefficient of kinetic friction is 0.25 and g = 10 m/s^2. What is the acceleration of the block?",
-    "options": [
-      "2.5 m/s^2",
-      "4 m/s^2",
-      "5 m/s^2",
-      "7.5 m/s^2"
-    ],
-    "correctIndex": 2,
-    "explanation": "Friction = μmg = 0.25 × 4 × 10 = 10 N. The net force is 20 N, so a = 20/4 = 5 m/s^2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Mechanical Properties of Solids and Fluids",
     "difficulty": "tough",
     "questionText": "A liquid flows steadily through a horizontal pipe whose cross-sectional area changes from 4 cm^2 to 1 cm^2. Its speed in the wider section is 2 m/s and its density is 1000 kg/m^3. What is the pressure difference P1 − P2 between the wider and narrower sections?",
@@ -26324,22 +25348,6 @@
     "subject": "Physics",
     "chapter": "Thermodynamics",
     "difficulty": "tough",
-    "questionText": "A gas absorbs 700 J of heat while doing 250 J of work on its surroundings. What is the increase in its internal energy?",
-    "options": [
-      "250 J",
-      "350 J",
-      "450 J",
-      "950 J"
-    ],
-    "correctIndex": 2,
-    "explanation": "From the first law, Q = ΔU + W. Hence ΔU = 700 - 250 = 450 J.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
     "questionText": "An ideal gas expands adiabatically so that its volume becomes twice its initial volume. If γ = 5/3 and the initial temperature is T, what is the final temperature?",
     "options": [
       "T/2",
@@ -26397,22 +25405,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The wave speed is v = fλ = 500 × 0.6 = 300 m/s. In 2 ms, the distance travelled is 300 × 0.002 = 0.6 m.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Electrostatics",
-    "difficulty": "tough",
-    "questionText": "Two capacitors of 6 μF and 3 μF are connected in series across a 12 V battery. What charge is stored on each capacitor?",
-    "options": [
-      "12 μC",
-      "24 μC",
-      "36 μC",
-      "48 μC"
-    ],
-    "correctIndex": 1,
-    "explanation": "The series equivalent capacitance is (6 × 3)/(6 + 3) = 2 μF. Therefore the common charge is Q = C_eqV = 2 × 12 = 24 μC.",
     "imageUrl": null
   },
   {
@@ -26523,7 +25515,7 @@
       "10%",
       "12%"
     ],
-    "correctIndex": 2,
+    "correctIndex": 1,
     "explanation": "For rho=m/(lbh), maximum fractional uncertainty is the sum of the individual fractional uncertainties: 2%+1%+2%+3%=8%.",
     "imageUrl": null
   },
@@ -26818,22 +25810,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Electromagnetic Induction",
-    "difficulty": "tough",
-    "questionText": "A coil of 100 turns experiences a change in magnetic flux through each turn of 3×10^-3 Wb in 0.15 s. What is the magnitude of the induced emf?",
-    "options": [
-      "0.5 V",
-      "2 V",
-      "3 V",
-      "20 V"
-    ],
-    "correctIndex": 1,
-    "explanation": "Faraday's law gives E = NΔΦ/Δt = 100×3×10^-3/0.15 = 2 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Alternating Current",
     "difficulty": "tough",
     "questionText": "An AC circuit contains a resistor of resistance 6 Ω and an inductor with reactance 8 Ω in series. If the applied rms voltage is 100 V, what is the rms current?",
@@ -26893,22 +25869,6 @@
     ],
     "correctIndex": 1,
     "explanation": "The photon energy is 13.6(1/2² − 1/5²) = 13.6(1/4 − 1/25) = 13.6×21/100 = 2.856 eV, approximately 2.86 eV.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 8 hours. What fraction of the original nuclei remains undecayed after 32 hours?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Thirty-two hours corresponds to four half-lives. The remaining fraction is (1/2)^4 = 1/16.",
     "imageUrl": null
   },
   {
@@ -27051,7 +26011,7 @@
       "ML^2omega^2/6",
       "ML^2omega^2/3"
     ],
-    "correctIndex": 1,
+    "correctIndex": 0,
     "explanation": "For a rod about its centre, I = ML^2/12. Therefore K = (1/2)Iomega^2 = ML^2omega^2/24.",
     "imageUrl": null
   },
@@ -27154,22 +26114,6 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Thermodynamics",
-    "difficulty": "tough",
-    "questionText": "An ideal gas expands isobarically at pressure 2 × 10^5 Pa from volume 2 × 10^-3 m^3 to 5 × 10^-3 m^3. The work done by the gas is",
-    "options": [
-      "300 J",
-      "400 J",
-      "600 J",
-      "1000 J"
-    ],
-    "correctIndex": 2,
-    "explanation": "At constant pressure, W = PΔV = 2×10^5 × 3×10^-3 = 600 J.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Kinetic Theory",
     "difficulty": "tough",
     "questionText": "The temperature of an ideal gas is increased from 300 K to 1200 K. The ratio of final rms speed to initial rms speed is",
@@ -27261,22 +26205,6 @@
     ],
     "correctIndex": 0,
     "explanation": "With the battery connected, voltage remains constant. Doubling separation halves capacitance, and U = (1/2)CV^2, so the stored energy becomes half.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Current Electricity",
-    "difficulty": "tough",
-    "questionText": "A wire of resistance 10 Ω is stretched uniformly so that its length becomes twice its original length, while its volume remains constant. Its new resistance is",
-    "options": [
-      "5 Ω",
-      "10 Ω",
-      "20 Ω",
-      "40 Ω"
-    ],
-    "correctIndex": 3,
-    "explanation": "Constant volume means area becomes half when length doubles. Since R = ρL/A, resistance increases by a factor of 4, giving 40 Ω.",
     "imageUrl": null
   },
   {
@@ -27906,33 +26834,17 @@
   {
     "examMode": "NEET",
     "subject": "Physics",
-    "chapter": "Nuclei",
-    "difficulty": "tough",
-    "questionText": "A radioactive sample has a half-life of 6 hours. What fraction of its initial nuclei remains after 24 hours?",
-    "options": [
-      "1/4",
-      "1/8",
-      "1/16",
-      "1/32"
-    ],
-    "correctIndex": 2,
-    "explanation": "Twenty-four hours correspond to four half-lives. Therefore the remaining fraction is (1/2)^4 = 1/16.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
     "chapter": "Units and Measurement",
     "difficulty": "tough",
     "questionText": "A quantity X is given by X = A^2 B/(C sqrt(D)). The dimensions of A, B, C and D are respectively MLT^-2, LT^-1, ML^-2 and L^2T^-2. The dimensions of X are:",
     "options": [
-      "M^1/2 L^5/2 T^-1",
-      "M^1/2 L^3/2 T^-1",
+      "M L^4 T^-4",
       "M L^3 T^-2",
-      "M^3/2 L^2 T^-3"
+      "M^2 L^3 T^-5",
+      "M L^2 T^-3"
     ],
     "correctIndex": 0,
-    "explanation": "[X] = (MLT^-2)^2(LT^-1)/[(ML^-2)(LT^-1)] = M L^3 T^-2. Since sqrt(D) = LT^-1, the final result is M L^3 T^-2.",
+    "explanation": "A^2 B = (MLT^-2)^2 (LT^-1) = M^2 L^3 T^-5. C√D = (ML^-2)(LT^-1) = M L^-1 T^-1. So X = M^2 L^3 T^-5 / (M L^-1 T^-1) = M L^4 T^-4.",
     "imageUrl": null
   },
   {
@@ -28119,11 +27031,11 @@
     "questionText": "The quantities a, b and c have percentage uncertainties 2%, 1% and 3%, respectively. If Q = a²b/c³, the maximum percentage uncertainty in Q is:",
     "options": [
       "10%",
-      "11%",
       "12%",
-      "13%"
+      "14%",
+      "16%"
     ],
-    "correctIndex": 1,
+    "correctIndex": 2,
     "explanation": "For Q = a²b/c³, maximum fractional uncertainty is 2(2%) + 1% + 3(3%) = 14%.",
     "imageUrl": null
   },
@@ -28173,38 +27085,6 @@
     ],
     "correctIndex": 1,
     "explanation": "For a circular orbit, v = √(GM/r). Thus increasing the radius from r to 4r reduces the speed by a factor of 2.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
-    "questionText": "A wire of length 2 m and cross-sectional area 1 mm² is stretched by a force of 100 N. If Young's modulus is 2 × 10¹¹ N/m², the extension produced is:",
-    "options": [
-      "0.1 mm",
-      "0.5 mm",
-      "1 mm",
-      "2 mm"
-    ],
-    "correctIndex": 2,
-    "explanation": "Using ΔL = FL/(AY), ΔL = 100 × 2/(10⁻⁶ × 2 × 10¹¹) = 10⁻³ m = 1 mm.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Thermal Properties of Matter",
-    "difficulty": "moderate",
-    "questionText": "A metal rod of length 2 m has coefficient of linear expansion 1.5 × 10⁻⁵ K⁻¹. If its temperature rises by 100 K, the increase in length is:",
-    "options": [
-      "1 mm",
-      "2 mm",
-      "3 mm",
-      "4 mm"
-    ],
-    "correctIndex": 2,
-    "explanation": "The expansion is ΔL = αLΔT = 1.5 × 10⁻⁵ × 2 × 100 = 3 × 10⁻³ m = 3 mm.",
     "imageUrl": null
   },
   {
@@ -28404,22 +27284,6 @@
     "subject": "Physics",
     "chapter": "Mechanical Properties of Solids and Fluids",
     "difficulty": "tough",
-    "questionText": "A wire of length 1 m and cross-sectional area 2 mm² is stretched by 1 mm under a force of 400 N. Its Young's modulus is:",
-    "options": [
-      "1×10^10 Pa",
-      "2×10^10 Pa",
-      "2×10^11 Pa",
-      "4×10^11 Pa"
-    ],
-    "correctIndex": 2,
-    "explanation": "Stress=400/(2×10^-6)=2×10^8 Pa, while strain=10^-3/1=10^-3. Hence Y=2×10^8/10^-3=2×10^11 Pa.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Mechanical Properties of Solids and Fluids",
-    "difficulty": "tough",
     "questionText": "Water flows through a pipe of cross-sectional area 6 cm² at 3 m/s and enters a section of area 2 cm². The pressure difference between the wider and narrower sections, P1−P2, is 16 kPa. Taking water density as 1000 kg/m³, the speed in the narrower section is:",
     "options": [
       "6 m/s",
@@ -28525,22 +27389,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Terminal voltage is V=E−Ir=12−2×2=8 V. Therefore the correct option is 8 V.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Moving Charges and Magnetism",
-    "difficulty": "tough",
-    "questionText": "A straight conductor of length 0.5 m carries a current of 4 A perpendicular to a magnetic field of 0.3 T. The magnetic force on the conductor is:",
-    "options": [
-      "0.3 N",
-      "0.6 N",
-      "1.2 N",
-      "2.4 N"
-    ],
-    "correctIndex": 1,
-    "explanation": "For a conductor perpendicular to the field, F=BIL=0.3×4×0.5=0.6 N.",
     "imageUrl": null
   },
   {
@@ -28829,22 +27677,6 @@
     ],
     "correctIndex": 1,
     "explanation": "Magnetic potential energy is U = −MB cosθ. The change from 60° to 90° is 0 − (−MB/2) = MB/2, which equals the required slow external work.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Alternating Current",
-    "difficulty": "tough",
-    "questionText": "A series LCR circuit is at resonance. If its resistance is 40 Ω and the rms current is 2.5 A, the rms voltage of the source is:",
-    "options": [
-      "50 V",
-      "80 V",
-      "100 V",
-      "120 V"
-    ],
-    "correctIndex": 2,
-    "explanation": "At resonance, the impedance of the series LCR circuit equals R. Therefore V_rms = I_rmsR = 2.5 × 40 = 100 V.",
     "imageUrl": null
   },
   {
@@ -29229,22 +28061,6 @@
     ],
     "correctIndex": 2,
     "explanation": "Since ρ is proportional to m r^-2 l^-1, the maximum percentage uncertainty is 2% + 2(1.5%) + 3% = 8%.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Laws of Motion",
-    "difficulty": "tough",
-    "questionText": "A 2 kg block is on a rough horizontal surface with coefficient of friction 0.2. A horizontal force of 8 N acts on it. Taking g = 10 m/s^2, what is its acceleration?",
-    "options": [
-      "1 m/s^2",
-      "2 m/s^2",
-      "3 m/s^2",
-      "4 m/s^2"
-    ],
-    "correctIndex": 1,
-    "explanation": "Friction = μmg = 0.2 × 2 × 10 = 4 N. The net force is 8 - 4 = 4 N, so acceleration is 4/2 = 2 m/s^2.",
     "imageUrl": null
   },
   {
@@ -30045,22 +28861,6 @@
     ],
     "correctIndex": 0,
     "explanation": "For an electromagnetic wave in vacuum, E₀ = cB₀. Hence B₀ = 150/(3×10^8) = 5×10^−7 T.",
-    "imageUrl": null
-  },
-  {
-    "examMode": "NEET",
-    "subject": "Physics",
-    "chapter": "Dual Nature of Radiation and Matter",
-    "difficulty": "tough",
-    "questionText": "An electron is accelerated through a potential difference V and has de Broglie wavelength λ. If the accelerating potential is increased to 9V, its new de Broglie wavelength is:",
-    "options": [
-      "λ/9",
-      "λ/3",
-      "3λ",
-      "9λ"
-    ],
-    "correctIndex": 1,
-    "explanation": "For an electron accelerated through potential V, λ is proportional to 1/√V. Increasing the potential to 9V therefore reduces the wavelength to λ/3.",
     "imageUrl": null
   },
   {
