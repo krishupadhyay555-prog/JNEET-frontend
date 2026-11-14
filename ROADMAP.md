@@ -57,7 +57,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 - **How Claude checks the live site:** founder keeps the Claude desktop app open on the laptop; Claude uses its built-in browser (separate from Chrome, no personal logins). The founder logs in himself — Claude never types passwords.
 
 ### Next session starts here (updated 14 Nov 2026, after PR #13)
-0. **PR #14 (OneShot batch 2)** open → merge (no seed needed; Render redeploy is enough) → Claude checks 19 OneShots in JEE mode live.
+0. **PR #14 (OneShot batch 2)** open → merge (no seed needed; Render redeploy is enough) → Claude checks the 20 OneShots in JEE mode live (19 in NEET mode).
 0. **PR #13 (B4 payments)** open → founder merges → L9 (Vercel Pro / Cloudflare) → L10 Razorpay keys (test mode first) → Claude checks /plans live in the built-in browser and a test-mode payment end to end.
 1. List open PRs (CLAUDE.md step 4).
 2. Waiting on founder: L3 OpenAI key on Render, L2/L5/L6/L9, decision on D83 (hide vs delete out-of-syllabus questions; Claude recommends hide), confirm JEE Main 2027 S1 date (app says 22 Jan; some sites say 20 Jan per the 24 Oct bulletin).
