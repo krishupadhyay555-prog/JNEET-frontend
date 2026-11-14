@@ -144,6 +144,7 @@ const userSchema = new mongoose.Schema(
     // instant (null + paid plan = a manual grant with no end date).
     // Use utils/plan.js effectivePlan() — never read `plan` directly.
     planExpiresAt: { type: Date, default: null },
+    payLockUntil:  { type: Date, default: null, select: false }, // a few seconds while an order is created
 
     lastLogin: { type: Date, default: null },
     isActive:  { type: Boolean, default: true },

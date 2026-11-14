@@ -108,7 +108,7 @@ export const parentVerify = async (req, res, next) => {
 
 export const webhook = async (req, res, next) => {
   try {
-    const status = await handleWebhook(req.body, req.get("x-razorpay-signature"));
+    const status = await handleWebhook(req.body, req.get("x-razorpay-signature"), req.get("x-razorpay-event-id"));
     return res.status(status).json({ ok: status === 200 });
   } catch (err) { return next(err); }
 };

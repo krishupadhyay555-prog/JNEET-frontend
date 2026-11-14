@@ -15,21 +15,61 @@
 //                             is confusing); if it still arrives (race),
 //                             it is converted by value the same way.
 //    - Never more than 400 days ahead in total.
+//  Safety nets (14 Nov hardening):
+//    - One open order per student: a double-click / second tab gets
+//      the SAME Razorpay order back (a Razorpay order can be paid only
+//      once), and a per-user lock stops two orders racing.
+//    - Three independent ways a captured payment turns the plan on:
+//      checkout callback, webhook, and reconcilePayments() (every 5 min
+//      it asks Razorpay about any unfinished order) — money taken =
+//      plan given, even if the tab closed and the webhook was lost.
+//    - Webhook repeats are ignored by event id; refunds are recorded and
+//      a full refund takes the paid days back.
+//    - Anything odd (possible duplicate purchase, refund, amount
+//      mismatch) sets Payment.flag and emails the founder.
 // ============================================================
 
 import jwt from "jsonwebtoken";
 import Payment from "../../models/Payment.js";
+import WebhookEvent from "../../models/WebhookEvent.js";
 import User from "../../models/User.js";
 import { env } from "../../config/env.js";
 import { getPlan, paymentsEnabled, TIER_RANK, dailyValue, publicCatalog } from "../../config/plans.js";
 import { effectivePlan, planStatus } from "../../utils/plan.js";
 import * as rzp from "./razorpay.js";
-import { sendPaymentReceipt } from "../emailService.js";
+import { sendPaymentReceipt, sendAdminAlert } from "../emailService.js";
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 const MAX_AHEAD_DAYS = 400;
 const CLAIM_TTL_MS = 2 * 60 * 1000;
 const PARENT_LINK_DAYS = 7;
+const REUSE_ORDER_MS = 15 * 60 * 1000;   // same plan within 15 min → same order
+const ORDER_LOCK_MS = 15 * 1000;         // per-user lock while an order is created
+const DUPLICATE_WINDOW_MS = 30 * 60 * 1000;
+const RECONCILE_MIN_AGE_MS = 3 * 60 * 1000;
+const RECONCILE_MAX_AGE_MS = 3 * DAY_MS;
+
+function ev(type, source, note = "") {
+  return { at: new Date(), type, source, note: String(note).slice(0, 200) };
+}
+
+function alertFounder(subject, lines) {
+  sendAdminAlert(subject, lines).catch((err) => console.warn("[pay] alert email failed:", err.message));
+}
+
+function orderResponse(doc, plan, preview) {
+  return {
+    keyId: env.RAZORPAY_KEY_ID,
+    orderId: doc.orderId,
+    amount: doc.amount,
+    currency: "INR",
+    planId: plan.id,
+    tier: plan.tier,
+    months: plan.months,
+    newEnd: preview.end,
+    newTier: preview.tier,
+  };
+}
 
 export class BillingError extends Error {
   constructor(status, code, message) {
@@ -84,6 +124,23 @@ export async function startOrder(user, planId, { payer }) {
   }
 
   const userId = String(user._id);
+
+  // Double-click / second tab: hand back the order that is already open
+  // for this plan, so there is only ever one thing to pay.
+  const open = await Payment.findOne({
+    userId: user._id, planId: plan.id, payer, status: "created", appliedAt: null,
+    supersededAt: null, createdAt: { $gt: new Date(now.getTime() - REUSE_ORDER_MS) },
+  }).sort({ createdAt: -1 }).lean();
+  if (open && open.amount === plan.amount) return { ...orderResponse(open, plan, preview), reused: true };
+
+  // Per-user lock: two requests at the same instant can't both create orders.
+  const locked = await User.findOneAndUpdate(
+    { _id: user._id, $or: [{ payLockUntil: null }, { payLockUntil: { $lt: now } }] },
+    { $set: { payLockUntil: new Date(now.getTime() + ORDER_LOCK_MS) } },
+    { projection: { _id: 1 } }
+  );
+  if (!locked) throw new BillingError(409, "ORDER_IN_PROGRESS", "A payment is already being started. Please wait a few seconds.");
+
   let order;
   try {
     order = await rzp.createOrder({
@@ -92,29 +149,29 @@ export async function startOrder(user, planId, { payer }) {
       notes: { userId, planId: plan.id, payer },
     });
   } catch (err) {
+    await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
     console.error("[pay] create order failed:", err.message);
     throw new BillingError(502, "GATEWAY_ERROR", "Couldn't start the payment right now. Please try again in a minute.");
   }
-  if (order?.amount !== plan.amount || !order?.id) {
+  if (order?.amount !== plan.amount || order?.currency !== "INR" || !order?.id) {
+    await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
     throw new BillingError(502, "GATEWAY_ERROR", "Couldn't start the payment right now. Please try again in a minute.");
   }
 
-  await Payment.create({
+  const doc = await Payment.create({
     userId: user._id, payer, planId: plan.id, tier: plan.tier, days: plan.days,
     amount: plan.amount, currency: "INR", orderId: order.id,
+    events: [ev("order_created", payer)],
   });
+  // Any other open order of this student is now "superseded": if it is
+  // still paid later (old tab), the money is honoured but flagged.
+  await Payment.updateMany(
+    { userId: user._id, status: "created", appliedAt: null, supersededAt: null, _id: { $ne: doc._id } },
+    { $set: { supersededAt: now }, $push: { events: ev("superseded", "system", `by ${order.id}`) } }
+  );
+  await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
 
-  return {
-    keyId: env.RAZORPAY_KEY_ID,
-    orderId: order.id,
-    amount: plan.amount,
-    currency: "INR",
-    planId: plan.id,
-    tier: plan.tier,
-    months: plan.months,
-    newEnd: preview.end,
-    newTier: preview.tier,
-  };
+  return orderResponse(doc, plan, preview);
 }
 
 // ── Confirmation from the browser (Razorpay checkout handler) ────
@@ -133,6 +190,7 @@ export async function confirmCheckout({ orderId, paymentId, signature, userId })
     p = await rzp.fetchPayment(paymentId);
     if (p.order_id !== orderId || p.amount !== doc.amount || p.currency !== "INR") {
       console.error(`[pay] mismatch on ${orderId}: order/amount differs`);
+      await flagPayment(doc._id, "mismatch", "checkout", `payment ${paymentId} does not match`);
       throw new BillingError(400, "MISMATCH", "This payment does not match the order.");
     }
     if (p.status === "authorized") {
@@ -158,10 +216,24 @@ export async function confirmCheckout({ orderId, paymentId, signature, userId })
 // ── Webhook (Razorpay → us) ───────────────────────────────────────
 // Returns an HTTP status: 200 = handled/ignored, 400 = bad signature,
 // 500 = try again later (Razorpay retries non-2xx).
-export async function handleWebhook(rawBody, signature) {
+export async function handleWebhook(rawBody, signature, eventId = null) {
   if (!rzp.verifyWebhookSignature(rawBody, signature)) return 400;
   let evt;
   try { evt = JSON.parse(rawBody.toString("utf8")); } catch { return 400; }
+
+  const id = typeof eventId === "string" && /^[\w-]{6,80}$/.test(eventId) ? eventId : null;
+  if (id && (await WebhookEvent.exists({ eventId: id }))) return 200; // repeat delivery
+
+  const status = await processWebhookEvent(evt);
+  if (status === 200 && id) {
+    await WebhookEvent.create({ eventId: id, event: evt.event ?? null, orderId: evt?.payload?.payment?.entity?.order_id ?? null })
+      .catch((err) => { if (err?.code !== 11000) throw err; });
+  }
+  return status;
+}
+
+async function processWebhookEvent(evt) {
+  if (evt?.event === "refund.processed" || evt?.event === "refund.created") return handleRefund(evt);
 
   const entity = evt?.payload?.payment?.entity;
   if (!entity?.order_id) return 200;
@@ -176,6 +248,7 @@ export async function handleWebhook(rawBody, signature) {
   if (entity.status !== "captured") return 200;
   if (entity.amount !== doc.amount || entity.currency !== "INR") {
     console.error(`[pay] webhook amount mismatch on ${doc.orderId}`);
+    await flagPayment(doc._id, "mismatch", "webhook", `payment ${entity.id} amount/currency differs`);
     return 200;
   }
   try {
@@ -192,7 +265,8 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
   const now = new Date();
   const claimed = await Payment.findOneAndUpdate(
     { _id: paymentDocId, appliedAt: null, $or: [{ claimedAt: null }, { claimedAt: { $lt: new Date(now - CLAIM_TTL_MS) } }] },
-    { $set: { claimedAt: now, status: "paid", paymentId, method: method ?? null, payerEmail: email ?? null, source } },
+    { $set: { claimedAt: now, status: "paid", paymentId, method: method ?? null, payerEmail: email ?? null, source },
+      $push: { events: ev("captured", source, paymentId) } },
     { returnDocument: "after" }
   );
   if (!claimed) return Payment.findById(paymentDocId); // already applied, or being applied right now
@@ -214,12 +288,112 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
 
   const done = await Payment.findOneAndUpdate(
     { _id: claimed._id },
-    { $set: { appliedAt: new Date(), planBefore: before, planAfter: period.tier, periodEnd: period.end } },
+    { $set: { appliedAt: new Date(), planBefore: before, planAfter: period.tier, periodEnd: period.end },
+      $push: { events: ev("plan_applied", source, `${before} → ${period.tier} till ${period.end.toISOString()}`) } },
     { returnDocument: "after" }
   );
   console.log(`[pay] applied ${done.orderId} (${done.planId}) via ${source}`);
   sendReceipt(done).catch(() => {});
+  await checkForDuplicate(done);
   return done;
+}
+
+// Money is never refused once captured — but a second purchase within
+// 30 minutes, or a paid "old tab" order, is flagged for the founder,
+// who can refund it from the Razorpay dashboard (refund webhook below
+// then takes the days back automatically).
+async function checkForDuplicate(doc) {
+  const recent = await Payment.countDocuments({
+    userId: doc.userId, _id: { $ne: doc._id }, appliedAt: { $gt: new Date(doc.appliedAt.getTime() - DUPLICATE_WINDOW_MS) },
+  });
+  const flag = doc.supersededAt ? "superseded_paid" : recent > 0 ? "possible_duplicate" : null;
+  if (!flag) return;
+  await Payment.updateOne({ _id: doc._id }, { $set: { flag }, $push: { events: ev("flagged", "system", flag) } });
+  alertFounder(flag === "possible_duplicate" ? "Possible duplicate purchase" : "Old (superseded) order was paid", [
+    `Order ${doc.orderId} · payment ${doc.paymentId} · ₹${doc.amount / 100} · plan ${doc.planId}.`,
+    flag === "possible_duplicate"
+      ? "The same student had another payment activated in the last 30 minutes."
+      : "The student had already opened a different plan when this older order was paid.",
+    "The plan days were added (money is never ignored). If the student did not mean to buy twice, refund this payment from the Razorpay dashboard — the extra days are removed automatically.",
+  ]);
+}
+
+async function flagPayment(docId, flag, source, note) {
+  const doc = await Payment.findOneAndUpdate({ _id: docId }, { $set: { flag }, $push: { events: ev("flagged", source, `${flag}: ${note}`) } }, { returnDocument: "after" });
+  if (doc) alertFounder(`Payment ${flag}`, [`Order ${doc.orderId} · plan ${doc.planId} · ₹${doc.amount / 100}.`, note, "The plan was NOT activated for this payment. Check it in the Razorpay dashboard."]);
+}
+
+// ── Refunds (only the founder can refund, from the Razorpay dashboard) ──
+async function handleRefund(evt) {
+  const refund = evt?.payload?.refund?.entity;
+  if (!refund?.payment_id) return 200;
+  const doc = await Payment.findOne({ paymentId: refund.payment_id });
+  if (!doc) return 200;
+  if (doc.status === "refunded") return 200;
+  const full = Number(refund.amount) >= doc.amount;
+
+  if (!full || !doc.appliedAt) {
+    await Payment.updateOne({ _id: doc._id }, { $set: { flag: "refund" }, $push: { events: ev("refund", "webhook", `${refund.id} ₹${refund.amount / 100}${full ? "" : " (partial)"}`) } });
+    alertFounder("Refund recorded", [`Order ${doc.orderId}: refund ${refund.id} of ₹${refund.amount / 100}.`, full ? "Plan had not been activated." : "Partial refund — the plan was left as it is."]);
+    return 200;
+  }
+
+  // Full refund of an activated pass: take back exactly the value it added.
+  const now = new Date();
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const user = await User.findById(doc.userId).select("plan planExpiresAt").lean();
+    if (!user) break;
+    const current = effectivePlan(user, now);
+    if (current === "free" || !user.planExpiresAt) break;
+    const daysBack = (doc.amount / dailyValue(current));
+    const newEnd = new Date(new Date(user.planExpiresAt).getTime() - daysBack * DAY_MS);
+    const set = newEnd <= now ? { plan: "free", planExpiresAt: null } : { planExpiresAt: newEnd };
+    const upd = await User.updateOne({ _id: user._id, plan: user.plan, planExpiresAt: user.planExpiresAt }, { $set: set });
+    if (upd.modifiedCount === 1) break;
+  }
+  await Payment.updateOne({ _id: doc._id }, { $set: { status: "refunded", flag: "refund" }, $push: { events: ev("refunded", "webhook", `${refund.id}; paid days removed`) } });
+  alertFounder("Refund processed — paid days removed", [`Order ${doc.orderId} · ₹${doc.amount / 100} refunded (${refund.id}).`]);
+  return 200;
+}
+
+// ── Reconciliation: the third safety net ──────────────────────────
+// Asks Razorpay about every order that is not finished yet (3 min – 3
+// days old). A captured payment turns the plan on; an authorized one is
+// captured first. Runs every 5 minutes on the server.
+export async function reconcilePayments({ now = new Date() } = {}) {
+  if (!paymentsEnabled()) return { checked: 0, applied: 0 };
+  const docs = await Payment.find({
+    appliedAt: null, status: { $in: ["created", "paid"] },
+    createdAt: { $lt: new Date(now.getTime() - RECONCILE_MIN_AGE_MS), $gt: new Date(now.getTime() - RECONCILE_MAX_AGE_MS) },
+  }).limit(50).lean();
+
+  let applied = 0;
+  for (const doc of docs) {
+    try {
+      const list = await rzp.fetchOrderPayments(doc.orderId);
+      const items = Array.isArray(list?.items) ? list.items : [];
+      let p = items.find((x) => x.status === "captured" && x.amount === doc.amount && x.currency === "INR");
+      if (!p) {
+        const auth = items.find((x) => x.status === "authorized" && x.amount === doc.amount && x.currency === "INR");
+        if (auth) p = await rzp.capturePayment(auth.id, doc.amount).catch(() => null);
+      }
+      if (p?.status === "captured" && p.order_id === doc.orderId) {
+        const done = await applyPaid(doc._id, { paymentId: p.id, method: p.method, email: p.email, source: "reconcile" });
+        if (done?.appliedAt) applied += 1;
+      }
+    } catch (err) {
+      console.warn(`[pay] reconcile ${doc.orderId} skipped:`, err.message);
+    }
+  }
+  if (applied) console.log(`[pay] reconcile: activated ${applied} payment(s) the callback/webhook missed`);
+  return { checked: docs.length, applied };
+}
+
+export function startPaymentReconcileJob() {
+  if (env.NODE_ENV === "test") return null;
+  const t = setInterval(() => { reconcilePayments().catch((e) => console.warn("[pay] reconcile failed:", e.message)); }, 5 * 60 * 1000);
+  t.unref?.();
+  return t;
 }
 
 async function sendReceipt(doc) {

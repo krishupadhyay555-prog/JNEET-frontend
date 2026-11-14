@@ -30,7 +30,7 @@ export function AiNotice({ notice, onDismiss, onUnlocked, onLockUpdate }) {
     try {
       const r = await aiApi.requestUnlock();
       if (r.data?.unlocked) {
-        toast.success("AI chat unlocked. Padhai pe focus — all the best!");
+        toast.success("AI chat unlocked. Stay focused on your studies — all the best!");
         onUnlocked?.();
       } else if (r.data?.sentToParent) {
         toast.success("We emailed your parent/guardian the approval link.");

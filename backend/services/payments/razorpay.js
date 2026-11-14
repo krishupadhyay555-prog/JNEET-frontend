@@ -5,6 +5,7 @@
 //    fetchPayment    GET  /v1/payments/:id
 //    capturePayment  POST /v1/payments/:id/capture  (only if the
 //                    dashboard is not set to auto-capture)
+//    fetchOrderPayments GET /v1/orders/:id/payments (reconciliation)
 //    verifyCheckoutSignature  HMAC_SHA256(order_id|payment_id, key_secret)
 //    verifyWebhookSignature   HMAC_SHA256(raw body, webhook secret)
 //  Both comparisons are constant-time. Errors never include the keys.
@@ -54,6 +55,10 @@ export function createOrder({ amount, receipt, notes }) {
 
 export function fetchPayment(paymentId) {
   return call("GET", `/payments/${encodeURIComponent(paymentId)}`);
+}
+
+export function fetchOrderPayments(orderId) {
+  return call("GET", `/orders/${encodeURIComponent(orderId)}/payments`);
 }
 
 export function capturePayment(paymentId, amount) {

@@ -26,7 +26,7 @@ const TIER_META = {
 const RANK = { free: 0, pro: 1, elite: 2 };
 
 function errorText(err, fallback) {
-  if (err?.isNetworkError || err?.isTimeout) return "Internet slow hai ya band hai. Connection check karke dobara try karo.";
+  if (err?.isNetworkError || err?.isTimeout) return "Your internet seems slow or offline. Check the connection and try again.";
   return err?.response?.data?.error || fallback;
 }
 
@@ -77,7 +77,7 @@ export default function Plans() {
     let cancelled = false;
     Promise.all([paymentApi.plans(), paymentApi.mine()])
       .then(([p, m]) => { if (!cancelled) { setCatalog(p.data); setMe(m.data); } })
-      .catch((err) => { if (!cancelled) setError(errorText(err, "Plans load nahi ho paye. Dobara try karo.")); });
+      .catch((err) => { if (!cancelled) setError(errorText(err, "Couldn't load the plans. Please try again.")); });
     return () => { cancelled = true; };
   }, []);
 
@@ -97,7 +97,7 @@ export default function Plans() {
     setBusy(plan.id);
     try {
       const ok = await loadCheckout();
-      if (!ok) { toast.error("Payment page load nahi hua. Internet check karke dobara try karo."); return; }
+      if (!ok) { toast.error("The payment window didn't open. Check your internet and try again."); return; }
       const { data: order } = await paymentApi.order(plan.id);
       const paid = await openCheckout(order);
       if (!paid) return; // closed the window — nothing charged
@@ -110,11 +110,11 @@ export default function Plans() {
       } catch (err) {
         const m = await waitForPlan(before.plan, before.expiresAt);
         if (m) setSuccess(m);
-        else toast.error(errorText(err, "Payment mil gaya hai, confirm ho raha hai. 5 minute mein plan apne aap on ho jayega — receipt email bhi aayega."), { duration: 9000 });
+        else toast.error(errorText(err, "Payment received — we're confirming it. Your plan will turn on by itself within 5 minutes, and a receipt will be emailed."), { duration: 9000 });
       }
       await refreshUser().catch(() => {});
     } catch (err) {
-      toast.error(errorText(err, "Payment start nahi ho paya. Thodi der baad try karo."), { duration: 6000 });
+      toast.error(errorText(err, "Couldn't start the payment. Please try again in a moment."), { duration: 6000 });
     } finally {
       setBusy(null);
       setConfirming(false);
@@ -127,18 +127,18 @@ export default function Plans() {
       const { data } = await paymentApi.parentLink();
       setLink(data);
     } catch (err) {
-      toast.error(errorText(err, "Link nahi ban paya. Dobara try karo."));
+      toast.error(errorText(err, "Couldn't create the link. Please try again."));
     } finally {
       setLinkBusy(false);
     }
   };
 
   const shareLink = async () => {
-    const text = "JNEET+ AI plan ke liye payment link (7 din valid):";
+    const text = "JNEET+ AI plan payment link (valid for 7 days):";
     if (navigator.share) {
       try { await navigator.share({ title: "JNEET+ AI plan", text, url: link.url }); return; } catch { /* cancelled */ }
     }
-    try { await navigator.clipboard.writeText(link.url); toast.success("Link copy ho gaya"); } catch { toast.error("Copy nahi hua — link ko select karke copy karo."); }
+    try { await navigator.clipboard.writeText(link.url); toast.success("Link copied"); } catch { toast.error("Couldn't copy — please select the link and copy it."); }
   };
 
   const plansFor = (tier) => catalog?.plans.find((p) => p.tier === tier && p.duration === duration);
@@ -162,10 +162,10 @@ export default function Plans() {
         ) : success ? (
           <div className="glass-panel rounded-2xl p-6 text-center animate-fade-up">
             <div className="mx-auto mb-3 w-12 h-12 rounded-full bg-emerald-500/15 text-emerald-600 flex items-center justify-center"><Check size={24} /></div>
-            <h1 className="text-lg font-bold mb-1">{TIER_META[success.plan]?.name} active ho gaya!</h1>
+            <h1 className="text-lg font-bold mb-1">{TIER_META[success.plan]?.name} is active!</h1>
             <p className="text-xs text-gray-600 leading-relaxed">
-              Valid till <strong>{istDate(success.expiresAt)}</strong>. Receipt aapke email par bhej di hai.
-              Ab aapko roz zyada AI doubts milenge — chalo padhai shuru karein.
+              Valid till <strong>{istDate(success.expiresAt)}</strong>. Your receipt has been emailed.
+              You now get more AI doubts every day — let's get studying.
             </p>
             <div className="flex gap-2 justify-center mt-5">
               <Link to="/ask" className="text-xs font-semibold px-4 py-2 rounded-xl bg-violet-600 text-white hover:bg-violet-700 transition">Ask AI</Link>
@@ -175,18 +175,25 @@ export default function Plans() {
         ) : (
           <>
             <div>
-              <h1 className="text-lg font-bold mb-1">Apna plan chuno</h1>
+              <h1 className="text-lg font-bold mb-1">Choose your plan</h1>
               <p className="text-xs text-gray-600 leading-relaxed">
-                Prepaid pass — ek baar pay karo, utne din chalega. Auto-renew nahi hota, card save nahi hota.
+                Prepaid pass — pay once, use it for the full period. No auto-renewal, and no card is saved.
               </p>
             </div>
 
             <CurrentPlanBanner me={me} />
 
-            {!catalog.enabled && (
-              <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-xs text-amber-700 dark:text-amber-300 flex gap-2">
+            {catalog.enabled && catalog.mode === "test" && (
+              <div className="rounded-2xl border border-sky-500/30 bg-sky-500/10 px-4 py-3 text-xs text-fg-primary flex gap-2">
                 <Info size={14} className="shrink-0 mt-0.5" />
-                <span>Paid plans jald khulenge. Tab tak Free plan poora use karo — prices neeche dekh sakte ho.</span>
+                <span><strong>Test mode</strong> — payments here are practice payments; no real money is charged.</span>
+              </div>
+            )}
+
+            {!catalog.enabled && (
+              <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-xs text-tone-warn flex gap-2">
+                <Info size={14} className="shrink-0 mt-0.5" />
+                <span>Paid plans open soon. Until then, enjoy everything in the Free plan — prices are shown below.</span>
               </div>
             )}
 
@@ -234,7 +241,7 @@ export default function Plans() {
                           disabled={!catalog.enabled || Boolean(busy) || lowerThanCurrent}
                           className="mt-4 w-full text-xs font-semibold py-2.5 rounded-xl bg-violet-600 text-white hover:bg-violet-700 disabled:opacity-50 disabled:cursor-not-allowed transition flex items-center justify-center gap-2"
                         >
-                          {busy === plan.id ? <><Spinner size={13} /> {confirming ? "Confirm ho raha hai…" : "Opening…"}</>
+                          {busy === plan.id ? <><Spinner size={13} /> {confirming ? "Confirming…" : "Opening…"}</>
                             : lowerThanCurrent ? `${TIER_META[me.plan].name} already active`
                             : isCurrent ? `Extend ${meta.name} · ${rupees(plan.amount)}`
                             : `Get ${meta.name} · ${rupees(plan.amount)}`}
@@ -250,7 +257,7 @@ export default function Plans() {
 
             {me.plan === "pro" && (
               <p className="text-[11px] text-gray-600 text-center">
-                Pro se Elite par jaoge to bache hue Pro din value ke hisaab se Elite din mein badal jayenge — kuch waste nahi hoga.
+                Moving from Pro to Elite? Your unused Pro days are converted into Elite days by value — nothing is wasted.
               </p>
             )}
 
@@ -258,21 +265,21 @@ export default function Plans() {
             <div className="glass-panel rounded-2xl p-4">
               <div className="flex items-center gap-2 mb-1">
                 <ShieldCheck size={15} className="text-violet-500" />
-                <p className="text-sm font-semibold">{me.canPayDirectly ? "Parent se pay karwana hai?" : "Parent / guardian payment karenge"}</p>
+                <p className="text-sm font-semibold">{me.canPayDirectly ? "Want a parent to pay?" : "Your parent or guardian pays"}</p>
               </div>
               <p className="text-[11px] text-gray-600 leading-relaxed mb-3">
                 {me.canPayDirectly
-                  ? "Ek link banao aur WhatsApp par bhej do. Link 7 din chalega; payment hote hi plan aapke account par on ho jayega."
-                  : "18 saal se kam umar mein payment khud nahi kar sakte. Ye link apne parent/guardian ko bhejo — woh apne phone se UPI/card se pay kar denge, aur plan aapke account par on ho jayega. Link 7 din chalega."}
+                  ? "Create a link and send it on WhatsApp. It works for 7 days; the plan turns on in your account as soon as the payment is done."
+                  : "Students under 18 can't pay by themselves. Send this link to your parent or guardian — they can pay by UPI or card on their phone, and the plan turns on in your account. The link is valid for 7 days."}
               </p>
               {link ? (
                 <div className="space-y-2">
                   <div className="text-[11px] break-all rounded-xl bg-bg-panel border border-bg-border px-3 py-2 select-all">{link.url}</div>
                   <div className="flex gap-2">
                     <button onClick={shareLink} className="flex-1 text-xs font-semibold py-2 rounded-xl bg-violet-600 text-white hover:bg-violet-700 transition flex items-center justify-center gap-1.5"><Share2 size={13} /> Share</button>
-                    <a href={`https://wa.me/?text=${encodeURIComponent(`JNEET+ AI plan ke liye payment link (7 din valid): ${link.url}`)}`} target="_blank" rel="noopener noreferrer"
+                    <a href={`https://wa.me/?text=${encodeURIComponent(`JNEET+ AI plan payment link (valid for 7 days): ${link.url}`)}`} target="_blank" rel="noopener noreferrer"
                       className="flex-1 text-xs font-semibold py-2 rounded-xl border border-bg-border hover:bg-bg-hover transition flex items-center justify-center gap-1.5">WhatsApp</a>
-                    <button onClick={async () => { try { await navigator.clipboard.writeText(link.url); toast.success("Link copy ho gaya"); } catch { toast.error("Copy nahi hua"); } }}
+                    <button onClick={async () => { try { await navigator.clipboard.writeText(link.url); toast.success("Link copied"); } catch { toast.error("Couldn't copy"); } }}
                       aria-label="Copy link" className="px-3 text-xs rounded-xl border border-bg-border hover:bg-bg-hover transition"><Copy size={13} /></button>
                   </div>
                   <p className="text-[10px] text-gray-600">Valid till {istDate(link.expiresAt)}.</p>
@@ -280,7 +287,7 @@ export default function Plans() {
               ) : (
                 <button onClick={makeLink} disabled={linkBusy || !catalog.enabled}
                   className="text-xs font-semibold px-4 py-2 rounded-xl border border-violet-600/40 text-violet-600 hover:bg-violet-600/10 disabled:opacity-50 transition flex items-center gap-2">
-                  {linkBusy ? <Spinner size={12} /> : <Share2 size={13} />} Parent ke liye payment link banao
+                  {linkBusy ? <Spinner size={12} /> : <Share2 size={13} />} Create a payment link for a parent
                 </button>
               )}
             </div>
@@ -300,8 +307,8 @@ export default function Plans() {
             )}
 
             <p className="text-[10px] text-gray-600 text-center leading-relaxed">
-              Prices INR mein, taxes included. Payment Razorpay se hota hai — hum card/UPI details kabhi nahi dekhte.
-              Paid plans non-refundable hain (sirf hamari galti par refund: double charge, galat amount, plan on na hona).{" "}
+              Prices in INR, taxes included. Payments are handled by Razorpay — we never see card or UPI details.
+              Paid plans are non-refundable, except for our own errors (double charge, wrong amount, plan not activated).{" "}
               Pay karke aap <Link to="/terms" className="underline">Terms</Link> aur <Link to="/refund" className="underline">Refund Policy</Link> se agree karte ho.
             </p>
           </>

@@ -9,6 +9,9 @@
 //               can arrive at the same moment and the days are still
 //               added exactly once)
 //    appliedAt: set once the days were added — the idempotency mark
+//    events:    append-only audit trail (who/what changed the record)
+//    flag:      needs a human look (possible duplicate purchase, refund,
+//               amount mismatch) — the founder also gets an alert email
 //  Records are kept when an account is deleted (tax/payment law).
 // ============================================================
 
@@ -26,10 +29,16 @@ const paymentSchema = new mongoose.Schema(
 
     orderId:   { type: String, required: true, unique: true },
     paymentId: { type: String, default: null },
-    status:    { type: String, enum: ["created", "paid", "failed"], default: "created" },
+    status:    { type: String, enum: ["created", "paid", "failed", "refunded"], default: "created" },
     method:    { type: String, default: null },        // upi / card / netbanking …
     payerEmail:{ type: String, default: null },        // from Razorpay, for the receipt
-    source:    { type: String, enum: ["checkout", "webhook", null], default: null },
+    source:    { type: String, enum: ["checkout", "webhook", "reconcile", null], default: null },
+    supersededAt: { type: Date, default: null },       // student opened a different plan afterwards
+    flag:      { type: String, enum: ["possible_duplicate", "superseded_paid", "refund", "mismatch", null], default: null },
+    events: {
+      type: [{ _id: false, at: Date, type: { type: String }, source: String, note: String }],
+      default: [],
+    },
 
     claimedAt: { type: Date, default: null },
     appliedAt: { type: Date, default: null },
@@ -44,5 +53,6 @@ const paymentSchema = new mongoose.Schema(
 
 paymentSchema.index({ paymentId: 1 }, { unique: true, partialFilterExpression: { paymentId: { $type: "string" } } });
 paymentSchema.index({ userId: 1, createdAt: -1 });
+paymentSchema.index({ status: 1, appliedAt: 1, createdAt: 1 }); // reconciliation sweep
 
 export default mongoose.model("Payment", paymentSchema);

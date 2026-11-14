@@ -16,7 +16,8 @@ import Payment from "../models/Payment.js";
 import AiDaily from "../models/AiDaily.js";
 import { mailbox, clearMailbox } from "./mailbox.js";
 import { connectTestDb, disconnectTestDb, signedInClient, client } from "./helpers.js";
-import { computeNewPeriod } from "../services/payments/billing.js";
+import { computeNewPeriod, reconcilePayments } from "../services/payments/billing.js";
+import WebhookEvent from "../models/WebhookEvent.js";
 import { effectivePlan, canPayDirectly } from "../utils/plan.js";
 import { env } from "../config/env.js";
 
@@ -48,7 +49,11 @@ function stubRazorpay() {
       rz.orders.set(id, o);
       return Response.json(o);
     }
-    let m = /^\/payments\/([^/]+)$/.exec(path);
+    let m = /^\/orders\/([^/]+)\/payments$/.exec(path);
+    if (init.method === "GET" && m) {
+      return Response.json({ items: [...rz.payments.values()].filter((p) => p.order_id === m[1]) });
+    }
+    m = /^\/payments\/([^/]+)$/.exec(path);
     if (init.method === "GET" && m) {
       const p = rz.payments.get(m[1]);
       return p ? Response.json(p) : Response.json({ error: { description: "nf" } }, { status: 404 });
@@ -86,7 +91,7 @@ const sendWebhook = (c, raw, secret = "fake_webhook_secret_for_tests") =>
 beforeAll(connectTestDb);
 afterAll(disconnectTestDb);
 beforeEach(async () => {
-  await Promise.all([User.deleteMany({}), Payment.deleteMany({}), AiDaily.deleteMany({})]);
+  await Promise.all([User.deleteMany({}), Payment.deleteMany({}), AiDaily.deleteMany({}), WebhookEvent.deleteMany({})]);
   clearMailbox(); stubRazorpay();
 });
 afterEach(() => { globalThis.fetch = realFetch; });
@@ -321,5 +326,152 @@ describe("plan expiry and limits", () => {
     const far = await c.post("/api/payments/order").send({ planId: "elite_4m" });
     expect(far.status).toBe(409);
     expect(far.body.code).toBe("TOO_FAR_AHEAD");
+  });
+});
+
+// ── 14 Nov hardening: double charge, lost callbacks, repeats, refunds ──
+const sendWebhookWithId = (c, raw, id) =>
+  c.post("/api/payments/webhook").set("Content-Type", "application/json")
+    .set("X-Razorpay-Signature", hmac("fake_webhook_secret_for_tests", raw))
+    .set("X-Razorpay-Event-Id", id).send(raw);
+
+describe("hardening: one order, one charge", () => {
+  it("a double click or second tab gets the SAME order (one Razorpay order created)", async () => {
+    const { c } = await signedInClient();
+    const [a, b] = await Promise.all([
+      c.post("/api/payments/order").send({ planId: "pro_1m" }),
+      c.post("/api/payments/order").send({ planId: "pro_1m" }),
+    ]);
+    const ok = [a, b].filter((r) => r.status === 201);
+    const busy = [a, b].filter((r) => r.status === 409);
+    // Either both got the same order, or one was told to wait — never two orders.
+    expect(rz.orders.size).toBe(1);
+    expect(new Set(ok.map((r) => r.body.orderId)).size).toBe(1);
+    expect(ok.length + busy.length).toBe(2);
+    const again = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    expect(again.body.orderId).toBe(ok[0].body.orderId);
+    expect(again.body.reused).toBe(true);
+    expect(rz.orders.size).toBe(1);
+  });
+
+  it("an old tab's order paid after a new plan was opened is honoured but flagged for the founder", async () => {
+    const { c } = await signedInClient();
+    const first = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    const second = await c.post("/api/payments/order").send({ planId: "elite_1m" });
+    expect(second.body.orderId).not.toBe(first.body.orderId);
+    const old = await Payment.findOne({ orderId: first.body.orderId }).lean();
+    expect(old.supersededAt).not.toBeNull();
+
+    const ver = await c.post("/api/payments/verify").send(payOrder(first.body.orderId));
+    expect(ver.body.applied).toBe(true);                 // money never ignored
+    const doc = await Payment.findOne({ orderId: first.body.orderId }).lean();
+    expect(doc.flag).toBe("superseded_paid");
+    expect(mailbox.alerts.some((a) => /superseded/i.test(a.subject))).toBe(true);
+  });
+
+  it("two separate purchases within 30 minutes are both honoured and flagged as a possible duplicate", async () => {
+    const { c } = await signedInClient();
+    const o1 = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    await c.post("/api/payments/verify").send(payOrder(o1.body.orderId));
+    const o2 = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    expect(o2.body.orderId).not.toBe(o1.body.orderId);   // first one is finished, so a new order
+    await c.post("/api/payments/verify").send(payOrder(o2.body.orderId));
+    const d2 = await Payment.findOne({ orderId: o2.body.orderId }).lean();
+    expect(d2.flag).toBe("possible_duplicate");
+    expect(mailbox.alerts.some((a) => /duplicate/i.test(a.subject))).toBe(true);
+    const u = await User.findOne({}).lean();
+    expect((new Date(u.planExpiresAt) - Date.now()) / DAY).toBeGreaterThan(59.9); // both months given
+  });
+
+  it("each order keeps an audit trail", async () => {
+    const { c } = await signedInClient();
+    const o = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    await c.post("/api/payments/verify").send(payOrder(o.body.orderId));
+    const d = await Payment.findOne({ orderId: o.body.orderId }).lean();
+    expect(d.events.map((e) => e.type)).toEqual(["order_created", "captured", "plan_applied"]);
+  });
+});
+
+describe("hardening: money taken = plan given", () => {
+  it("reconciliation activates a captured payment when BOTH the callback and the webhook were lost", async () => {
+    const { c } = await signedInClient();
+    const o = await c.post("/api/payments/order").send({ planId: "elite_4m" });
+    payOrder(o.body.orderId);                          // paid at Razorpay; tab closed; no webhook
+    expect((await User.findOne({}).lean()).plan ?? "free").not.toBe("elite");
+
+    // Too early: the sweep leaves very fresh orders to the normal flow.
+    expect((await reconcilePayments()).applied).toBe(0);
+    const later = new Date(Date.now() + 4 * 60 * 1000);
+    const r = await reconcilePayments({ now: later });
+    expect(r.applied).toBe(1);
+    const u = await User.findOne({}).lean();
+    expect(u.plan).toBe("elite");
+    const d = await Payment.findOne({ orderId: o.body.orderId }).lean();
+    expect(d.source).toBe("reconcile");
+    expect((await reconcilePayments({ now: later })).applied).toBe(0);   // never twice
+  });
+
+  it("reconciliation captures an authorized payment, then activates it", async () => {
+    const { c } = await signedInClient();
+    rz.captureMode = "manual";
+    const o = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    payOrder(o.body.orderId);
+    const r = await reconcilePayments({ now: new Date(Date.now() + 4 * 60 * 1000) });
+    expect(r.applied).toBe(1);
+    expect(rz.calls.some((x) => /capture$/.test(x))).toBe(true);
+  });
+
+  it("an unpaid order is left alone by reconciliation", async () => {
+    const { c } = await signedInClient();
+    await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    const r = await reconcilePayments({ now: new Date(Date.now() + 4 * 60 * 1000) });
+    expect(r).toEqual({ checked: 1, applied: 0 });
+    expect((await User.findOne({}).lean()).plan ?? "free").toBe("free");
+  });
+});
+
+describe("hardening: webhook repeats and refunds", () => {
+  it("the same webhook event id is processed only once", async () => {
+    const { c } = await signedInClient();
+    const o = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    const paid = payOrder(o.body.orderId);
+    const raw = webhookBody("payment.captured", paid.paymentId);
+    expect((await sendWebhookWithId(client(), raw, "evt_TEST000001")).status).toBe(200);
+    expect((await sendWebhookWithId(client(), raw, "evt_TEST000001")).status).toBe(200);
+    expect(await WebhookEvent.countDocuments({ eventId: "evt_TEST000001" })).toBe(1);
+    const d = await Payment.findOne({ orderId: o.body.orderId }).lean();
+    expect(d.events.filter((e) => e.type === "plan_applied")).toHaveLength(1);
+  });
+
+  it("a full refund (done by the founder in Razorpay) takes the paid days back", async () => {
+    const { c } = await signedInClient();
+    const o = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    const paid = payOrder(o.body.orderId);
+    await c.post("/api/payments/verify").send(paid);
+    expect((await User.findOne({}).lean()).plan).toBe("pro");
+
+    const raw = JSON.stringify({ event: "refund.processed", payload: { refund: { entity: { id: "rfnd_T1", payment_id: paid.paymentId, amount: 19900 } } } });
+    expect((await sendWebhook(client(), raw)).status).toBe(200);
+    const u = await User.findOne({}).lean();
+    expect(effectivePlan(u)).toBe("free");
+    const d = await Payment.findOne({ orderId: o.body.orderId }).lean();
+    expect(d.status).toBe("refunded");
+    expect(mailbox.alerts.some((a) => /refund/i.test(a.subject))).toBe(true);
+    expect((await sendWebhook(client(), raw)).status).toBe(200);           // repeat is harmless
+  });
+
+  it("a forged refund webhook changes nothing", async () => {
+    const { c } = await signedInClient();
+    const o = await c.post("/api/payments/order").send({ planId: "pro_1m" });
+    const paid = payOrder(o.body.orderId);
+    await c.post("/api/payments/verify").send(paid);
+    const raw = JSON.stringify({ event: "refund.processed", payload: { refund: { entity: { id: "rfnd_X", payment_id: paid.paymentId, amount: 19900 } } } });
+    expect((await sendWebhook(client(), raw, "wrong_secret")).status).toBe(400);
+    expect((await User.findOne({}).lean()).plan).toBe("pro");
+  });
+
+  it("the catalog says test mode with rzp_test_ keys", async () => {
+    const res = await client().get("/api/payments/plans");
+    expect(res.body.mode).toBe("test");
   });
 });

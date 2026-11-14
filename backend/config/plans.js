@@ -75,9 +75,16 @@ export function paymentsEnabled() {
   return Boolean(env.RAZORPAY_KEY_ID && env.RAZORPAY_KEY_SECRET);
 }
 
+// "test" with rzp_test_ keys (no real money), "live" with rzp_live_ keys.
+export function paymentsMode() {
+  if (!paymentsEnabled()) return "off";
+  return String(env.RAZORPAY_KEY_ID).startsWith("rzp_live_") ? "live" : "test";
+}
+
 export function publicCatalog() {
   return {
     enabled: paymentsEnabled(),
+    mode: paymentsMode(),
     currency: "INR",
     features: tierFeatures(),
     plans: planCatalog().map(({ id, tier, duration, months, days, amount }) => ({

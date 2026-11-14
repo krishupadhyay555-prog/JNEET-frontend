@@ -27,7 +27,7 @@ export function PlanSettings() {
     return () => { cancelled = true; };
   }, []);
 
-  if (error) return <p className="text-xs text-gray-600">Plan details load nahi hue. Thodi der baad dekho.</p>;
+  if (error) return <p className="text-xs text-gray-600">Couldn't load your plan details. Please try again later.</p>;
   if (!me) return <Spinner size={16} />;
 
   const last = me.history?.[0];

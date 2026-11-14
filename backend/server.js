@@ -11,12 +11,14 @@ import { env } from "./config/env.js";
 import connectDB from "./config/db.js";
 import app from "./app.js";
 import { startAccountPurgeJob } from "./services/accountPurge.js";
+import { startPaymentReconcileJob } from "./services/payments/billing.js";
 
 const PORT = parseInt(env.PORT, 10) || 5000;
 
 (async () => {
   await connectDB();
   startAccountPurgeJob();
+  startPaymentReconcileJob();
 
   const server = app.listen(PORT, () => {
     console.log(`✅ Server running in ${env.NODE_ENV} mode on port ${PORT}`);
