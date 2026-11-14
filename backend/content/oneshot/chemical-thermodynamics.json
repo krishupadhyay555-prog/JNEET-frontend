@@ -1,0 +1,230 @@
+{
+ "slug": "chemical-thermodynamics",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Thermodynamics",
+  "JEE": "Thermodynamics"
+ },
+ "title": "Chemical Thermodynamics",
+ "readMinutes": 20,
+ "summary": [
+  "System = jo hum study kar rahe hain, surroundings = baaki sab. Open system energy aur matter dono exchange karta hai, closed sirf energy, isolated kuch nahi. State functions (U, H, S, G, p, V, T) sirf shuruaat aur ant par depend karte hain; heat aur work path functions hain.",
+  "First law energy conservation hai: ΔU = q + w (chemistry sign convention: system PAR kiya gaya kaam aur system KO di gayi heat positive). Constant volume par heat = ΔU, constant pressure par heat = ΔH.",
+  "Enthalpy additive hai: Hess's law se kisi bhi reaction ka ΔH doosri reactions jod-ghata ke nikal sakte hain. Formation, combustion, bond, atomisation, phase change — sab enthalpies isi logic se judti hain.",
+  "Second law: koi bhi spontaneous process universe ki entropy badhata hai (ΔS_total > 0). System ke liye ek hi number kaafi hai — Gibbs energy: constant T, p par ΔG < 0 matlab spontaneous.",
+  "ΔG° = −RT ln K: standard Gibbs energy aur equilibrium constant ek doosre se jude hain. ΔG° negative ⇒ K > 1 (products favoured)."
+ ],
+ "formulas": [
+  {
+   "name": "First law",
+   "formula": "ΔU = q + w",
+   "when": "Har energy hisaab ka base.",
+   "mistake": "Chemistry: system par kaam (+w), system dwara kaam (−w). Physics books mein ulta convention hota hai."
+  },
+  {
+   "name": "Work of expansion (irreversible)",
+   "formula": "w = −p_ext ΔV;   free expansion (p_ext = 0): w = 0",
+   "when": "Constant bahari pressure ke against phailna.",
+   "unit": "J",
+   "mistake": "1 L·atm = 101.3 J."
+  },
+  {
+   "name": "Reversible isothermal work (ideal gas)",
+   "formula": "w_rev = −2.303 nRT log(V₂/V₁) = −2.303 nRT log(p₁/p₂)",
+   "when": "Reversible, constant T.",
+   "mistake": "Ideal gas isothermal: ΔU = 0 ⇒ q = −w.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Enthalpy",
+   "formula": "H = U + pV;   ΔH = ΔU + Δn_g RT",
+   "when": "ΔH aur ΔU mein badalna.",
+   "mistake": "Δn_g = gaseous products ke moles − gaseous reactants ke moles; solids/liquids mat gino.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Heat at constant V and p",
+   "formula": "q_V = ΔU,   q_p = ΔH",
+   "when": "Bomb calorimeter (V const) ΔU deta hai; coffee-cup (p const) ΔH."
+  },
+  {
+   "name": "Heat capacity",
+   "formula": "q = C ΔT = n C_m ΔT;   C_p − C_V = R (ideal gas, molar);   monoatomic: C_V = 3R/2, C_p = 5R/2",
+   "when": "Garam karne mein kitni heat.",
+   "mistake": "Specific heat (per gram) aur molar heat capacity (per mole) alag hain."
+  },
+  {
+   "name": "Adiabatic process",
+   "formula": "q = 0 ⇒ ΔU = w;   reversible ideal gas: TV^{γ−1} = constant,  pV^γ = constant",
+   "when": "Bina heat exchange ke expansion/compression.",
+   "mistake": "Reversible adiabatic expansion mein gas thandi hoti hai (kaam apni internal energy se karti hai). Ideal gas ka free expansion: ΔT = 0."
+  },
+  {
+   "name": "Hess's law",
+   "formula": "ΔH (overall) = ΔH₁ + ΔH₂ + …   (reaction ulti → ΔH ka sign ulta;  ×n → ΔH × n)",
+   "when": "Seedhe naap na sakne wali reaction ka ΔH.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "From enthalpies of formation",
+   "formula": "Δ_rH° = Σ Δ_fH°(products) − Σ Δ_fH°(reactants);   element ki standard state ka Δ_fH° = 0",
+   "when": "Table se reaction enthalpy.",
+   "mistake": "Coefficient se multiply karna mat bhoolo."
+  },
+  {
+   "name": "From bond enthalpies",
+   "formula": "Δ_rH = Σ BE(reactants, bonds toote) − Σ BE(products, bonds bane)",
+   "when": "Gaseous reactions ka approximate ΔH.",
+   "mistake": "Yahan reactants − products (formation wale ka ulta)."
+  },
+  {
+   "name": "Types of enthalpy",
+   "formula": "Combustion (1 mol + O₂), atomisation (1 mol → gaseous atoms), sublimation = fusion + vaporisation, ionisation, hydration (gaseous ion → aq), solution = lattice + hydration, neutralisation (strong acid + strong base ≈ −57.1 kJ/mol)",
+   "when": "Definition wale sawal.",
+   "mistake": "Weak acid/base ke saath neutralisation kam exothermic (ionisation mein energy lagti hai)."
+  },
+  {
+   "name": "Entropy change",
+   "formula": "ΔS = q_rev / T;   phase change: ΔS = ΔH_trans / T_trans;   ideal gas isothermal: ΔS = 2.303 nR log(V₂/V₁)",
+   "when": "Disorder ka naap.",
+   "unit": "J/(K·mol)"
+  },
+  {
+   "name": "Total entropy criterion",
+   "formula": "ΔS_total = ΔS_sys + ΔS_surr > 0 (spontaneous);   ΔS_surr = −ΔH_sys / T",
+   "when": "Spontaneity ka asli criterion (isolated/universe).",
+   "mistake": "Equilibrium par ΔS_total = 0."
+  },
+  {
+   "name": "Gibbs energy",
+   "formula": "G = H − TS;   ΔG = ΔH − TΔS;   ΔG = −T ΔS_total",
+   "when": "Constant T, p par spontaneity.",
+   "unit": "kJ/mol",
+   "mistake": "ΔG < 0 spontaneous, = 0 equilibrium, > 0 non-spontaneous.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Sign table (ΔH, ΔS)",
+   "formula": "(−, +): hamesha spontaneous.  (+, −): kabhi nahi.  (−, −): low T par.  (+, +): high T par.   Switch temperature T = ΔH/ΔS",
+   "when": "Kis temperature par reaction chalegi.",
+   "mistake": "ΔS ko J se kJ mein badal kar hi ΔH ke saath jodo."
+  },
+  {
+   "name": "ΔG° and equilibrium constant",
+   "formula": "ΔG° = −RT ln K = −2.303 RT log K;   ΔG = ΔG° + RT ln Q",
+   "when": "K nikalna ya ΔG° nikalna.",
+   "mistake": "R = 8.314 J/(K·mol) — ΔG° ko J mein rakho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gibbs energy and useful work",
+   "formula": "ΔG = w_max (non-expansion);   cell: ΔG° = −nFE°",
+   "when": "Electrochemistry se link."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Bahari pressure ke against kaam",
+   "problem": "Gas 1 atm constant bahari pressure ke against 2 L se 10 L phailti hai. Work?",
+   "solution": "w = −p_ext ΔV = −1 × 8 = −8 L·atm = −8 × 101.3 J ≈ −810 J. Negative: system ne kaam kiya."
+  },
+  {
+   "title": "Reversible isothermal expansion",
+   "problem": "1 mol ideal gas 300 K par reversibly 10 L se 20 L. w, q, ΔU?",
+   "solution": "w = −2.303 × 1 × 8.314 × 300 × log 2 = −1729 J ≈ −1.73 kJ. Isothermal ⇒ ΔU = 0, q = +1.73 kJ."
+  },
+  {
+   "title": "ΔH se ΔU",
+   "problem": "N₂(g) + 3H₂(g) → 2NH₃(g), ΔH = −92.4 kJ at 298 K. ΔU?",
+   "solution": "Δn_g = 2 − 4 = −2. ΔU = ΔH − Δn_g RT = −92.4 − (−2)(8.314 × 298/1000) = −87.4 kJ."
+  },
+  {
+   "title": "Hess's law: CO ka formation",
+   "problem": "C + O₂ → CO₂, ΔH = −393.5 kJ;  CO + ½O₂ → CO₂, ΔH = −283.0 kJ. C + ½O₂ → CO ka ΔH?",
+   "solution": "Pehli reaction − doosri: ΔH = −393.5 − (−283.0) = −110.5 kJ/mol."
+  },
+  {
+   "title": "Formation enthalpies se combustion",
+   "problem": "Δ_fH°: CH₄ −74.8, CO₂ −393.5, H₂O(l) −285.8 kJ/mol. CH₄ + 2O₂ → CO₂ + 2H₂O(l) ka Δ_cH°?",
+   "solution": "Δ_cH° = [−393.5 + 2(−285.8)] − [−74.8 + 0] = −890.3 kJ/mol."
+  },
+  {
+   "title": "Bond enthalpy se ΔH",
+   "problem": "H–H 436, Cl–Cl 242, H–Cl 431 kJ/mol. H₂ + Cl₂ → 2HCl ka ΔH?",
+   "solution": "ΔH = (436 + 242) − 2 × 431 = −184 kJ."
+  },
+  {
+   "title": "Paani ke ubalne ki entropy",
+   "problem": "Δ_vapH = 40.7 kJ/mol at 373 K. Δ_vapS?",
+   "solution": "ΔS = ΔH/T = 40700/373 ≈ 109.1 J/(K·mol)."
+  },
+  {
+   "title": "Kis temperature par spontaneous?",
+   "problem": "CaCO₃ → CaO + CO₂: ΔH = +179 kJ/mol, ΔS = +160 J/(K·mol). Kab spontaneous?",
+   "solution": "(+, +) ⇒ high T par. T = ΔH/ΔS = 179000/160 ≈ 1119 K se upar."
+  },
+  {
+   "title": "ΔG° se K",
+   "problem": "298 K par ΔG° = −11.41 kJ/mol. K?",
+   "solution": "log K = −ΔG°/(2.303RT) = 11410/(2.303 × 8.314 × 298) ≈ 2 ⇒ K ≈ 100."
+  }
+ ],
+ "topics": [
+  {
+   "title": "System, surroundings aur boundary",
+   "explain": "Open (khula ubalta kettle): matter + energy exchange. Closed (band bartan): sirf energy. Isolated (ideal thermos): kuch nahi. Universe = system + surroundings."
+  },
+  {
+   "title": "Extensive vs intensive properties",
+   "explain": "Extensive amount par depend karti hain: mass, volume, U, H, S, G, heat capacity. Intensive nahi: T, p, density, molar quantities, specific heat. Do extensive ka ratio intensive hota hai (density = m/V)."
+  },
+  {
+   "title": "State functions vs path functions",
+   "explain": "State function: sirf initial aur final state se (U, H, S, G, p, V, T) — cycle mein change zero. Path function: raaste par depend (q, w). Lekin q + w = ΔU state function hai."
+  },
+  {
+   "title": "Processes",
+   "explain": "Isothermal (T const), isobaric (p const), isochoric (V const), adiabatic (q = 0), cyclic (wapas shuruaat par: ΔU = 0). Reversible: har kadam par equilibrium, infinitely slow; irreversible: asli, tez processes."
+  },
+  {
+   "title": "Internal energy aur enthalpy ka farak",
+   "explain": "U = molecules ki saari energy. H = U + pV, constant pressure par di gayi heat. Solids/liquids ke liye ΔH ≈ ΔU; gases mein Δn_g RT ka farak."
+  },
+  {
+   "title": "Calorimetry",
+   "explain": "Bomb calorimeter (sealed, constant V) ΔU naapta hai — combustion ke liye. Coffee-cup calorimeter (khula, constant p) ΔH naapta hai."
+  },
+  {
+   "title": "Standard state aur formation",
+   "explain": "Standard state: 1 bar, diya hua T (aksar 298 K), sabse stable form (C graphite, O₂ gas, Br₂ liquid). Element ki standard state ka Δ_fH° = 0. Diamond, O₃ ka Δ_fH° zero nahi."
+  },
+  {
+   "title": "Lattice aur hydration enthalpy",
+   "explain": "Ionic solid ka ghulna = lattice todna (+, endothermic) + ions ka hydration (−, exothermic). Δ_solH = lattice + hydration. Hydration zyada ho to ghulna exothermic."
+  },
+  {
+   "title": "Spontaneity ka matlab",
+   "explain": "Spontaneous = bina bahari madad ke apne aap ho sakta hai (tezi se ho, zaroori nahi — jaise diamond → graphite). Sirf ΔH se faisla nahi hota (barf ka pighalna endothermic hai phir bhi 0°C se upar spontaneous); entropy bhi dekhni padti hai."
+  },
+  {
+   "title": "Entropy ka feel",
+   "explain": "Gas > liquid > solid. Temperature badhe, moles of gas badhein, ghulna, phailna — sab entropy badhate hain. Third law: perfect crystal ki 0 K par entropy zero."
+  },
+  {
+   "title": "ΔG, K aur Q",
+   "explain": "ΔG° < 0 ⇒ K > 1; ΔG° > 0 ⇒ K < 1. Reaction kisi bhi pal ΔG = ΔG° + RT ln Q se aage/peeche jaati hai; equilibrium par ΔG = 0 aur Q = K."
+  }
+ ],
+ "ratta": [
+  "ΔU = q + w (chemistry convention).  q_V = ΔU,  q_p = ΔH.",
+  "ΔH = ΔU + Δn_g RT (sirf gases gino).",
+  "w_rev,iso = −2.303 nRT log(V₂/V₁);  1 L·atm = 101.3 J.",
+  "Δ_rH = ΣΔ_fH(P) − ΣΔ_fH(R);  bond enthalpy se: ΣBE(R) − ΣBE(P).",
+  "Strong acid + strong base neutralisation ≈ −57.1 kJ/mol.",
+  "ΔG = ΔH − TΔS;  T_switch = ΔH/ΔS.",
+  "ΔG° = −2.303 RT log K;  ΔG° = −nFE°.",
+  "R = 8.314 J/(K·mol) = 0.0821 L·atm/(K·mol).",
+  "Extensive: m, V, U, H, S, G.  Intensive: T, p, ρ, molar values."
+ ],
+ "verifiedOn": "2026-11-13"
+}

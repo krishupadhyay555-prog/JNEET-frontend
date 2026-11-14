@@ -1,0 +1,298 @@
+{
+ "slug": "electrostatics",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Electrostatics",
+  "JEE": "Electrostatics"
+ },
+ "title": "Electrostatics",
+ "readMinutes": 25,
+ "summary": [
+  "Charge ke teen gun: quantised (q = ne), conserved (na banta na mitta) aur additive (seedha jod lo, sign ke saath). Do charges ke beech force Coulomb's law se aati hai — 1/r² wali, aur line joining ke along.",
+  "Electric field E = force per unit positive test charge. Kai charges ho to har ek ka field vector ki tarah jodo (superposition). Lagatar faile charge (rod, ring, sheet) ke liye chhote tukde dq lekar integrate karo.",
+  "Gauss's law: band surface se nikla total flux = andar ka charge / ε₀. Jahaan symmetry ho (line, sheet, sphere) wahaan ye field nikaalne ka sabse tez tareeka hai.",
+  "Potential V ek scalar hai (sirf jodna, direction nahi) aur E = −dV/dr. Field hamesha potential ghatne ki taraf hota hai. Equipotential surfaces field lines ke perpendicular hoti hain.",
+  "Conductor ke andar electrostatic field zero hota hai, saara extra charge surface par rehta hai, aur poora conductor ek hi potential par hota hai.",
+  "Capacitor charge aur energy store karta hai: C = Q/V. Parallel plate C = Kε₀A/d. Series mein Q same, parallel mein V same — resistors ka bilkul ulta pattern. Dielectric daalne par kya badalta hai, ye battery juddi hai ya nahi us par depend karta hai."
+ ],
+ "formulas": [
+  {
+   "name": "Coulomb's law",
+   "formula": "F = k q₁q₂ / r²,   k = 1/(4πε₀) ≈ 9 × 10⁹ N·m²/C²,   ε₀ = 8.85 × 10⁻¹² C²/(N·m²)",
+   "when": "Do point charges ke beech force (vacuum/hawa).",
+   "unit": "N",
+   "mistake": "q ko sign ke saath daalo sirf direction samajhne ke liye; magnitude ke liye |q| lo."
+  },
+  {
+   "name": "Coulomb's law in a medium",
+   "formula": "F_medium = F_vacuum / K   (K = dielectric constant = ε/ε₀)",
+   "when": "Charges kisi medium (paani, oil) mein ho.",
+   "mistake": "K hamesha ≥ 1, isliye medium mein force kam hoti hai."
+  },
+  {
+   "name": "Quantisation and conservation",
+   "formula": "q = n e,   e = 1.6 × 10⁻¹⁹ C,   n integer",
+   "when": "Kitne electrons gaye/aaye; charge e ka integer multiple hi hoga.",
+   "mistake": "1 C ke liye 6.25 × 10¹⁸ electrons."
+  },
+  {
+   "name": "Superposition",
+   "formula": "F_net = F₁ + F₂ + …   (vector sum),   E_net = Σ Eᵢ",
+   "when": "Teen ya zyada charges; har pair ka force alag nikaalo, phir vector jodo."
+  },
+  {
+   "name": "Field of a point charge",
+   "formula": "E = F/q₀ = k q / r²   (q se door, agar q positive)",
+   "when": "Kisi point par field.",
+   "unit": "N/C = V/m"
+  },
+  {
+   "name": "Continuous charge distribution",
+   "formula": "dq = λ dl,  σ dA,  ρ dV;    E = ∫ k dq / r²  (direction ka dhyan rakh ke)",
+   "when": "Rod, ring, disc jaise lagatar charge.",
+   "mistake": "Symmetry se cancel hone wale components pehle hata do."
+  },
+  {
+   "name": "Ring of charge on its axis",
+   "formula": "E = k Q x / (x² + R²)^{3/2};   centre par E = 0;   E_max at x = R/√2",
+   "when": "Ring ke axis par kisi point par field.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Electric dipole moment",
+   "formula": "p = q × (2a),   direction −q se +q ki taraf",
+   "when": "Do barabar-ulte charges, beech ki doori 2a.",
+   "unit": "C·m"
+  },
+  {
+   "name": "Dipole field (r ≫ a)",
+   "formula": "Axial: E = 2kp/r³ (p ki direction).   Equatorial: E = kp/r³ (p ke ulta).   General: E = (kp/r³)√(1 + 3cos²θ)",
+   "when": "Dipole se door field.",
+   "mistake": "Dipole field 1/r³ se girta hai, point charge 1/r² se."
+  },
+  {
+   "name": "Dipole in uniform field",
+   "formula": "τ = p × E,  |τ| = pE sinθ;   net force F = 0",
+   "when": "Uniform field mein dipole sirf ghoomta hai.",
+   "mistake": "Non-uniform field mein net force bhi lagta hai."
+  },
+  {
+   "name": "Dipole potential energy",
+   "formula": "U = −p·E = −pE cosθ;   W(θ₁→θ₂) = pE (cosθ₁ − cosθ₂)",
+   "when": "Dipole ko ghumane ka kaam, stable/unstable position.",
+   "mistake": "θ = 0 stable (U = −pE), θ = 180° unstable (U = +pE). 0 se 180° tak kaam = 2pE."
+  },
+  {
+   "name": "Electric flux",
+   "formula": "Φ = ∮ E·dA = E A cosθ  (uniform field, flat surface)",
+   "when": "Surface se kitni field lines guzarti hain.",
+   "unit": "N·m²/C",
+   "mistake": "θ = field aur area vector (normal) ke beech ka angle."
+  },
+  {
+   "name": "Gauss's law",
+   "formula": "Φ_closed = q_enclosed / ε₀",
+   "when": "Band surface; sirf andar ke charge se flux.",
+   "mistake": "Bahar ke charges flux nahi badalte, lekin surface par E zaroor badalte hain.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Infinite line charge",
+   "formula": "E = λ / (2πε₀ r) = 2kλ / r",
+   "when": "Lambi seedhi wire (Gauss: cylinder).",
+   "mistake": "1/r — 1/r² nahi."
+  },
+  {
+   "name": "Infinite plane sheet",
+   "formula": "E = σ / (2ε₀)  (r se independent).   Do ulte charged plates ke beech: E = σ/ε₀, bahar 0",
+   "when": "Bade flat sheet ke paas field.",
+   "mistake": "Conductor surface ke just bahar E = σ/ε₀ hota hai, σ/2ε₀ nahi."
+  },
+  {
+   "name": "Thin spherical shell (charge Q)",
+   "formula": "r > R: E = kQ/r²,  V = kQ/r.   r = R: E = kQ/R².   r < R: E = 0,  V = kQ/R (constant)",
+   "when": "Shell ya conducting sphere.",
+   "mistake": "Andar E zero hai, V zero nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Uniformly charged solid sphere (non-conducting)",
+   "formula": "r < R: E = kQr/R³ (r ke saath badhta hai);   r ≥ R: E = kQ/r²",
+   "when": "Insulating solid sphere — JEE mein Gauss ki practice ke liye aata hai."
+  },
+  {
+   "name": "Potential and field",
+   "formula": "V = kq/r;   V_A − V_B = −∫_B^A E·dr;   E = −dV/dr  (E_x = −∂V/∂x)",
+   "when": "Field se potential ya potential se field.",
+   "unit": "V (volt)",
+   "mistake": "V scalar hai: kai charges ka V seedha jodo (sign ke saath)."
+  },
+  {
+   "name": "Dipole potential",
+   "formula": "V = k p cosθ / r²;   equatorial line par V = 0",
+   "when": "Dipole se door potential.",
+   "mistake": "Equatorial par V = 0 hai lekin E zero nahi."
+  },
+  {
+   "name": "Potential energy of charges",
+   "formula": "Do charges: U = k q₁q₂ / r.   System: U = Σ (har pair) k qᵢqⱼ / rᵢⱼ",
+   "when": "System banane ka kaam.",
+   "mistake": "Har pair sirf ek baar gino (3 charges = 3 pairs)."
+  },
+  {
+   "name": "Work and energy in a field",
+   "formula": "W_ext = q ΔV;   charge V volt se accelerate: K = qV  (1 eV = 1.6 × 10⁻¹⁹ J)",
+   "when": "Charge ko ek point se doosre le jaana / accelerate karna.",
+   "mistake": "Equipotential par kaam zero."
+  },
+  {
+   "name": "Capacitance",
+   "formula": "C = Q/V.   Parallel plate: C = ε₀A/d.   Isolated sphere: C = 4πε₀R",
+   "when": "Capacitor ki capacity.",
+   "unit": "F (farad)"
+  },
+  {
+   "name": "Capacitor with dielectric",
+   "formula": "Bhara hua: C = Kε₀A/d.   t moti slab: C = ε₀A / (d − t + t/K).   Metal slab: C = ε₀A / (d − t)",
+   "when": "Plates ke beech dielectric/metal.",
+   "mistake": "Metal slab = K → ∞ wala case.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Combination of capacitors",
+   "formula": "Series: 1/C = 1/C₁ + 1/C₂ + …  (sab par Q same).   Parallel: C = C₁ + C₂ + …  (sab par V same)",
+   "when": "Capacitor network.",
+   "mistake": "Resistors ka ulta: series capacitor ka equivalent sabse chhote se bhi chhota."
+  },
+  {
+   "name": "Energy stored",
+   "formula": "U = ½CV² = Q²/(2C) = ½QV;   energy density u = ½ ε₀ E²  (medium mein ½ε₀KE²)",
+   "when": "Capacitor ki energy.",
+   "unit": "J,  J/m³"
+  },
+  {
+   "name": "Dielectric inserted — battery ON vs OFF",
+   "formula": "Battery ON: V same, C→KC, Q→KQ, U→KU.   Battery OFF: Q same, C→KC, V→V/K, E→E/K, U→U/K",
+   "when": "Dielectric daalne ke baad kya badla.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Charge sharing between capacitors",
+   "formula": "Common V = (C₁V₁ + C₂V₂)/(C₁ + C₂);   heat loss = C₁C₂(V₁ − V₂)² / [2(C₁ + C₂)]",
+   "when": "Charged capacitor ko doosre se jodna.",
+   "mistake": "Energy hamesha ghatti hai (heat/radiation), charge conserve rehta hai."
+  },
+  {
+   "name": "Induced charge on dielectric and plate force",
+   "formula": "Q_induced = Q(1 − 1/K);   attraction between plates F = Q²/(2ε₀A)",
+   "when": "Dielectric ki surface par charge; plates ka khinchav.",
+   "mistake": "Force mein ½ aata hai (ek plate apne hi field se force nahi leti)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Do charges ke beech force",
+   "problem": "q₁ = +2 μC aur q₂ = −3 μC hawa mein 30 cm door hain. Force kitna aur kaisa?",
+   "solution": "F = kq₁q₂/r² = 9 × 10⁹ × 2 × 10⁻⁶ × 3 × 10⁻⁶ / (0.3)² = 0.6 N. Charges ulte hain, isliye attraction."
+  },
+  {
+   "title": "Field kahaan zero?",
+   "problem": "+4q charge x = 0 par aur +q charge x = 30 cm par hai. Unke beech kahaan E = 0 hoga?",
+   "solution": "Same sign ke charges ke beech, chhote charge ke paas null point hota hai. Point 4q se x door: k(4q)/x² = kq/(30 − x)² ⇒ x/(30 − x) = 2 ⇒ x = 20 cm (yaani q se 10 cm). Ulte sign ke charges hon to null point bahar, chhote charge ki taraf hota hai."
+  },
+  {
+   "title": "Dipole par torque aur kaam",
+   "problem": "±2 μC charges 2 cm door hain; dipole E = 5 × 10⁵ N/C se 30° par hai. Torque? Dipole ko 0° se 180° ghumane ka kaam?",
+   "solution": "p = q(2a) = 2 × 10⁻⁶ × 0.02 = 4.0 × 10⁻⁸ C·m. τ = pE sin30° = 4.0 × 10⁻⁸ × 5 × 10⁵ × 0.5 = 0.01 N·m. W = pE(cos0° − cos180°) = 2pE = 0.04 J."
+  },
+  {
+   "title": "Cube ke centre par charge",
+   "problem": "q = 1.77 μC ek cube ke centre par hai. Poore cube aur ek face se flux?",
+   "solution": "Total Φ = q/ε₀ = 1.77 × 10⁻⁶ / 8.85 × 10⁻¹² ≈ 2.0 × 10⁵ N·m²/C. Symmetry se 6 barabar faces: ek face = q/(6ε₀) ≈ 3.3 × 10⁴ N·m²/C. (Charge cube ke corner par ho to poore cube se flux q/(8ε₀) hota hai; us corner ko chhoone wale 3 faces se flux zero, kyunki field unke parallel hai.)"
+  },
+  {
+   "title": "Shell: andar E zero, V nahi",
+   "problem": "R = 10 cm ke thin shell par Q = 1 nC. Centre par E aur V? 20 cm door V?",
+   "solution": "Andar E = 0. Andar V = surface wala = kQ/R = 9 × 10⁹ × 10⁻⁹ / 0.1 = 90 V. r = 0.2 m par V = kQ/r = 45 V."
+  },
+  {
+   "title": "Capacitor network",
+   "problem": "3 μF aur 6 μF series mein hain; ye jodi 4 μF ke parallel mein hai. 12 V battery se jodo. C_eq, total charge, energy?",
+   "solution": "Series: 3×6/(3+6) = 2 μF. Parallel: 2 + 4 = 6 μF. Q = CV = 6 × 12 = 72 μC. U = ½CV² = ½ × 6 × 10⁻⁶ × 144 = 432 μJ."
+  },
+  {
+   "title": "Battery hata ke dielectric",
+   "problem": "10 pF capacitor 100 V tak charge karke battery hata di. Ab K = 5 dielectric poori jagah bhar diya. Naya V aur energy?",
+   "solution": "Battery OFF ⇒ Q same = CV = 1 nC. C → 50 pF, V → 100/5 = 20 V. U pehle = ½CV² = 50 nJ, ab = U/K = 10 nJ. Energy ghati — slab andar khinchta hai (external agent ko negative kaam karna padta hai)."
+  },
+  {
+   "title": "Charge sharing mein energy loss",
+   "problem": "2 μF capacitor 100 V par charged hai; use uncharged 3 μF se jod diya. Common V aur heat loss?",
+   "solution": "V = C₁V₁/(C₁ + C₂) = 200/5 = 40 V. Pehle U = ½ × 2 × 10⁻⁶ × 100² = 10 mJ; baad mein ½ × 5 × 10⁻⁶ × 40² = 4 mJ. Loss = 6 mJ — formula C₁C₂ΔV²/[2(C₁+C₂)] = 6 × 10⁻¹² × 10⁴ / 10⁻⁵ se bhi yahi."
+  },
+  {
+   "title": "Electron ko 100 V se accelerate",
+   "problem": "Rest se electron 100 V potential difference se guzarta hai. KE aur speed?",
+   "solution": "K = eV = 100 eV = 1.6 × 10⁻¹⁷ J. v = √(2K/m) = √(2 × 1.6 × 10⁻¹⁷ / 9.11 × 10⁻³¹) ≈ 5.9 × 10⁶ m/s."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Charge aur charging by induction",
+   "explain": "Charge quantised, conserved aur additive hai. Induction mein charged rod paas laate hain, door wale side ko earth karte hain, earth hatate hain, phir rod — conductor par ulta charge reh jaata hai. Rod ka apna charge kam nahi hota."
+  },
+  {
+   "title": "Electric field lines ke niyam",
+   "explain": "Positive se nikalti hain, negative mein khatam. Kabhi ek doosre ko kaat-ti nahi (ek point par do direction nahi ho sakti). Ghani lines = strong field. Band loop nahi banati (electrostatics mein). Conductor surface par perpendicular milti hain."
+  },
+  {
+   "title": "Dipole: uniform vs non-uniform field",
+   "explain": "Uniform field mein dono charges par barabar-ulti force ⇒ net force 0, sirf torque (ghoomega, align hoga). Non-uniform field mein torque ke saath net force bhi — dipole strong field ki taraf khinchta hai (jaise kaagaz ke tukde comb ki taraf)."
+  },
+  {
+   "title": "Gauss's law kab aur kaise",
+   "explain": "Tabhi kaam ka hai jab symmetry ho: line charge → coaxial cylinder, sheet → pillbox, sphere → concentric sphere. Gaussian surface aisi chuno jahaan E har jagah same ho aur surface ke perpendicular (ya parallel). Flux sirf andar ke charge se, field sab charges se."
+  },
+  {
+   "title": "Conductors in electrostatics",
+   "explain": "Andar E = 0; extra charge sirf bahar ki surface par; surface par E perpendicular aur magnitude σ/ε₀; poora conductor equipotential. Nukeeli jagah σ zyada (isliye lightning conductor nukeela hota hai). Khokhle conductor ke andar (cavity mein charge na ho to) field zero — electrostatic shielding."
+  },
+  {
+   "title": "Potential, potential difference aur energy",
+   "explain": "V = kaam per unit charge (infinity se laane mein). Do points ka ΔV path par depend nahi karta (conservative field). Positive charge high V se low V ki taraf jaata hai; electron ulta. Field = potential ki dhalaan (−dV/dr)."
+  },
+  {
+   "title": "Equipotential surfaces",
+   "explain": "Jis surface par har jagah V same. Field lines inke perpendicular. In par charge le jaane mein kaam zero. Point charge: concentric spheres; uniform field: parallel planes (field ke perpendicular). Do equipotentials kabhi kaat-ti nahi."
+  },
+  {
+   "title": "Dielectrics aur polarisation",
+   "explain": "Dielectric = insulator jo field mein polarise hota hai. Polar molecules (H₂O) ke permanent dipoles align hote hain; non-polar (O₂) mein field se dipole induce hota hai. Andar ka field ghat kar E₀/K ho jaata hai, isliye capacitance K guna."
+  },
+  {
+   "title": "Capacitor ka kaam",
+   "explain": "Do conductors ke beech charge +Q/−Q. C sirf geometry aur medium par depend karta hai, Q ya V par nahi. Energy plates ke beech ki field mein store hoti hai (u = ½ε₀E²)."
+  },
+  {
+   "title": "Series vs parallel ka logic",
+   "explain": "Series mein har capacitor par same Q (beech ki plates par induced charge), V bant-ta hai — chhote C par zyada V. Parallel mein same V, Q bant-ta hai — bade C par zyada Q."
+  },
+  {
+   "title": "Dielectric: battery juddi ya nahi",
+   "explain": "Juddi ho (V fixed): C, Q, U sab K guna. Hati ho (Q fixed): V, E, U sab K guna kam. Poochhe 'energy kya hui' — battery ON mein battery ne extra kaam kiya, OFF mein energy ghati aur slab andar khincha."
+  }
+ ],
+ "ratta": [
+  "k = 9 × 10⁹ N·m²/C²,  ε₀ = 8.85 × 10⁻¹² C²/(N·m²),  e = 1.6 × 10⁻¹⁹ C,  1 eV = 1.6 × 10⁻¹⁹ J.",
+  "Field: point 1/r², dipole 1/r³, line 1/r, sheet r se independent.",
+  "Potential: point 1/r, dipole 1/r².",
+  "Shell: andar E = 0, V = kQ/R (constant).  Solid sphere andar E ∝ r.",
+  "Dipole: τ = pE sinθ,  U = −pE cosθ,  0 → 180° kaam = 2pE.",
+  "Cube centre: ek face q/6ε₀;  cube corner par charge: poora cube q/8ε₀.",
+  "Capacitors: series → 1/C jodo (Q same);  parallel → C jodo (V same).",
+  "Battery ON: V same → Q, U K guna.  Battery OFF: Q same → V, U K guna kam.",
+  "Ring axis par E_max at x = R/√2.",
+  "Conductor: andar E = 0, surface par E = σ/ε₀ (perpendicular), poora equipotential."
+ ],
+ "verifiedOn": "2026-11-13"
+}

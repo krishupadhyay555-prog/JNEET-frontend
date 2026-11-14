@@ -11,6 +11,7 @@ import { useGoBack } from "../hooks/useGoBack.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { oneshotApi } from "../api/learnApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
+import { MathText } from "../components/learn/MathText.jsx";
 
 const TABS = [
   { id: "summary",  label: "Summary" },
@@ -31,11 +32,11 @@ function FormulaCard({ f }) {
           <span className="shrink-0 text-[11px] text-gray-600">{f.unit}</span>
         ) : null}
       </div>
-      <p className="font-mono text-[13.5px] leading-relaxed my-2.5 bg-bg-panel rounded-xl px-3 py-2 break-words">{f.formula}</p>
-      <p className="text-[12.5px] leading-relaxed text-fg-secondary"><strong className="text-fg-primary">Kab:</strong> {f.when}</p>
+      <p className="text-[14.5px] font-medium leading-relaxed my-2.5 bg-bg-panel rounded-xl px-3 py-2.5 break-words"><MathText>{f.formula}</MathText></p>
+      <p className="text-[12.5px] leading-relaxed text-fg-secondary"><strong className="text-fg-primary">Kab:</strong> <MathText>{f.when}</MathText></p>
       {f.mistake && (
         <p className="text-[12.5px] leading-relaxed text-fg-secondary mt-1">
-          <strong className="text-tone-warn">Galti:</strong> {f.mistake}
+          <strong className="text-tone-warn">Galti:</strong> <MathText>{f.mistake}</MathText>
         </p>
       )}
       {f.tag && f.unit && <p className="text-[11px] text-gray-600 mt-1">Unit: {f.unit}</p>}
@@ -108,7 +109,7 @@ export default function OneShotChapter() {
         ) : tab === "summary" ? (
           <div className="space-y-3 animate-fade-up">
             {doc.summary.map((p, i) => (
-              <p key={i} className="text-[14px] leading-relaxed text-fg-primary">{p}</p>
+              <p key={i} className="text-[14px] leading-relaxed text-fg-primary"><MathText>{p}</MathText></p>
             ))}
           </div>
         ) : tab === "formulas" ? (
@@ -121,9 +122,9 @@ export default function OneShotChapter() {
               <article key={x.title} className="bg-bg-card border border-bg-border rounded-2xl p-4">
                 <p className="text-[11px] font-semibold text-violet-500 mb-1">Example {i + 1}</p>
                 <h3 className="text-sm font-bold mb-1.5">{x.title}</h3>
-                <p className="text-[13.5px] leading-relaxed">{x.problem}</p>
+                <p className="text-[13.5px] leading-relaxed"><MathText>{x.problem}</MathText></p>
                 <div className="mt-2.5 rounded-xl bg-emerald-500/10 px-3 py-2.5 text-[13px] leading-relaxed">
-                  <strong className="text-tone-ok">Solution: </strong>{x.solution}
+                  <strong className="text-tone-ok">Solution: </strong><MathText>{x.solution}</MathText>
                 </div>
               </article>
             ))}
@@ -133,7 +134,7 @@ export default function OneShotChapter() {
             {doc.topics.map((t) => (
               <article key={t.title} className="bg-bg-card border border-bg-border rounded-2xl p-4">
                 <h3 className="text-sm font-bold mb-1">{t.title}</h3>
-                <p className="text-[13.5px] leading-relaxed text-fg-secondary">{t.explain}</p>
+                <p className="text-[13.5px] leading-relaxed text-fg-secondary"><MathText>{t.explain}</MathText></p>
               </article>
             ))}
           </div>
@@ -143,7 +144,7 @@ export default function OneShotChapter() {
               <Pin size={15} /> Ratta zone — ye bas yaad karna hai
             </p>
             <ul className="space-y-2 text-[13.5px] leading-relaxed list-disc pl-5">
-              {doc.ratta.map((r) => <li key={r}>{r}</li>)}
+              {doc.ratta.map((r) => <li key={r}><MathText>{r}</MathText></li>)}
             </ul>
           </div>
         )}

@@ -1,0 +1,182 @@
+{
+ "slug": "dual-nature-of-radiation-and-matter",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Dual Nature of Radiation and Matter",
+  "JEE": "Dual Nature of Radiation and Matter"
+ },
+ "title": "Dual Nature of Radiation and Matter",
+ "readMinutes": 15,
+ "summary": [
+  "Light kabhi wave ki tarah behave karti hai (interference, diffraction) aur kabhi particle (photon) ki tarah. Photoelectric effect ne dikhaya ki light energy packets mein aati hai: har photon ki energy E = hν.",
+  "Metal se electron nikalne ke liye kam se kam work function φ jitni energy chahiye. Ek photon ek electron ko energy deta hai: bachi hui energy electron ki max KE banti hai — K_max = hν − φ (Einstein).",
+  "Frequency threshold ν₀ se kam ho to kitni bhi tez light ho, electron nahi niklega. Intensity badhane se sirf electrons ki GINTI (current) badhti hai, unki max KE nahi.",
+  "Ulta bhi sach hai: chalte hue particles (electron, proton) bhi wave ki tarah behave karte hain — de Broglie wavelength λ = h/p. Electron diffraction (Davisson–Germer) ne isse prove kiya."
+ ],
+ "formulas": [
+  {
+   "name": "Photon energy",
+   "formula": "E = hν = hc/λ;   E (eV) ≈ 1240 / λ (nm)",
+   "when": "Photon ki energy; eV mein jaldi calculation.",
+   "unit": "J ya eV",
+   "mistake": "λ ko nm mein daalo tabhi 1240 wala shortcut chalega."
+  },
+  {
+   "name": "Photon momentum",
+   "formula": "p = h/λ = E/c",
+   "when": "Photon ka momentum, radiation pressure.",
+   "mistake": "Photon ka rest mass zero, phir bhi momentum hota hai."
+  },
+  {
+   "name": "Number of photons",
+   "formula": "N (per second) = P / (hν) = P λ / (hc)",
+   "when": "Source ki power se photons per second.",
+   "unit": "s⁻¹"
+  },
+  {
+   "name": "Work function and threshold",
+   "formula": "φ = hν₀ = hc/λ₀",
+   "when": "Metal ki threshold frequency / wavelength.",
+   "mistake": "ν > ν₀ (ya λ < λ₀) tabhi emission."
+  },
+  {
+   "name": "Einstein's photoelectric equation",
+   "formula": "K_max = ½mv²_max = hν − φ = h(ν − ν₀)",
+   "when": "Nikle electron ki maximum KE.",
+   "mistake": "Ye MAXIMUM KE hai; kai electrons ki KE isse kam hoti hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Stopping potential",
+   "formula": "eV₀ = K_max ⇒ V₀ = (h/e)ν − φ/e",
+   "when": "Photocurrent zero karne wala reverse voltage.",
+   "mistake": "V₀ intensity par depend nahi karta, sirf ν aur metal par."
+  },
+  {
+   "name": "V₀ vs ν graph",
+   "formula": "Seedhi line: slope = h/e (har metal ke liye same),  x-intercept = ν₀,  y-intercept = −φ/e",
+   "when": "Graph wale sawal, h nikalna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Radiation force on a surface",
+   "formula": "Poori tarah absorb: F = P/c.   Poori tarah reflect (normal incidence): F = 2P/c",
+   "when": "Light se lagne wala force/pressure.",
+   "mistake": "Pressure = intensity/c (absorb), 2I/c (reflect)."
+  },
+  {
+   "name": "de Broglie wavelength",
+   "formula": "λ = h/p = h/(mv) = h/√(2mK)",
+   "when": "Kisi bhi moving particle ki wavelength.",
+   "mistake": "K non-relativistic maana gaya hai."
+  },
+  {
+   "name": "Charged particle through potential V",
+   "formula": "λ = h/√(2mqV);   electron: λ ≈ 1.227/√V nm = 12.27/√V Å",
+   "when": "Accelerated electron/proton/alpha.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Thermal particles",
+   "formula": "λ = h/√(3mk_BT)   (K = (3/2)k_BT)",
+   "when": "Gas molecules / thermal neutrons temperature T par."
+  },
+  {
+   "name": "Ratios to remember",
+   "formula": "Same K: λ ∝ 1/√m.   Same V: λ ∝ 1/√(mq).   Same speed: λ ∝ 1/m.   Same p: λ same",
+   "when": "Do particles ki wavelength compare karna."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Green photon ki energy",
+   "problem": "λ = 500 nm wale photon ki energy eV mein?",
+   "solution": "E = 1240/500 = 2.48 eV (≈ 4.0 × 10⁻¹⁹ J)."
+  },
+  {
+   "title": "Photoelectric: K_max aur V₀",
+   "problem": "φ = 2.0 eV wale metal par λ = 400 nm ki light. K_max aur stopping potential?",
+   "solution": "hν = 1240/400 = 3.1 eV. K_max = 3.1 − 2.0 = 1.1 eV. V₀ = K_max/e = 1.1 V."
+  },
+  {
+   "title": "Threshold wavelength",
+   "problem": "Kisi metal ka φ = 2.48 eV. Threshold wavelength?",
+   "solution": "λ₀ = 1240/φ = 1240/2.48 = 500 nm. Isse lambi wavelength (laal light) se emission nahi hoga."
+  },
+  {
+   "title": "Kitne photons per second?",
+   "problem": "2 W ka source λ = 662 nm emit karta hai. Photons per second? (h = 6.63 × 10⁻³⁴ J·s)",
+   "solution": "Ek photon = hc/λ = 6.63 × 10⁻³⁴ × 3 × 10⁸ / 662 × 10⁻⁹ = 3.0 × 10⁻¹⁹ J. N = 2/3.0 × 10⁻¹⁹ ≈ 6.7 × 10¹⁸ per second."
+  },
+  {
+   "title": "Graph se h aur ν₀",
+   "problem": "Ek metal par ν = 6.0 × 10¹⁴ Hz se V₀ = 0.50 V aur ν = 8.0 × 10¹⁴ Hz se V₀ = 1.33 V. h aur threshold frequency?",
+   "solution": "Slope h/e = (1.33 − 0.50)/(2.0 × 10¹⁴) ⇒ h = 1.6 × 10⁻¹⁹ × 0.83 / 2.0 × 10¹⁴ = 6.64 × 10⁻³⁴ J·s. ν₀: V₀ = 0 wala point ⇒ ν₀ = 6.0 × 10¹⁴ − 0.50/(slope) = 4.8 × 10¹⁴ Hz."
+  },
+  {
+   "title": "Electron ki de Broglie wavelength",
+   "problem": "Electron rest se 100 V par accelerate hota hai. λ?",
+   "solution": "λ = 1.227/√100 nm = 0.123 nm — X-ray jitni, isliye crystal se electron diffraction hota hai."
+  },
+  {
+   "title": "Proton vs alpha, same V",
+   "problem": "Proton aur alpha particle same potential V se accelerate. λ_p : λ_α?",
+   "solution": "λ ∝ 1/√(mq). m_α = 4m_p, q_α = 2e ⇒ λ_p/λ_α = √(4 × 2) = 2√2 ≈ 2.83."
+  },
+  {
+   "title": "Cricket ball ki wavelength",
+   "problem": "0.1 kg ki ball 10 m/s se. de Broglie λ?",
+   "solution": "λ = h/(mv) = 6.63 × 10⁻³⁴ / 1 = 6.6 × 10⁻³⁴ m — itni chhoti ki koi slit/atom isse diffract nahi kar sakta. Isliye bade objects mein wave nature dikhta nahi."
+  },
+  {
+   "title": "Light ka dhakka",
+   "problem": "3 W ki light ek perfectly reflecting mirror par seedhi (normal) padti hai. Force?",
+   "solution": "F = 2P/c = 2 × 3 / 3 × 10⁸ = 2.0 × 10⁻⁸ N. Absorb karne wali surface par isse aadha."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Hertz aur Lenard ke observations",
+   "explain": "Hertz ne dekha ki UV light padne par spark gap mein spark aasani se banta hai. Lenard ne dikhaya ki UV light metal plate se negatively charged particles (electrons) nikaalti hai aur circuit mein current chalta hai — yahi photoelectric effect hai."
+  },
+  {
+   "title": "Photoelectric effect ke 4 niyam",
+   "explain": "(1) Har metal ki threshold frequency ν₀; usse kam par emission zero, intensity kitni bhi ho. (2) Emission turant hota hai (~10⁻⁹ s), koi delay nahi. (3) K_max frequency ke saath linearly badhta hai, intensity se independent. (4) Photocurrent (saturation current) intensity ke proportional hai."
+  },
+  {
+   "title": "Wave theory kyun fail hui",
+   "explain": "Wave theory kehti thi ki tez (zyada intensity) light zyada energy degi aur kam frequency par bhi kuch der baad electron nikal aayega. Experiment mein na threshold samjha, na turant emission. Photon model (ek photon → ek electron) ne teeno baatein samjha di."
+  },
+  {
+   "title": "Photon ke gun",
+   "explain": "Energy hν, momentum h/λ, speed c, rest mass zero, charge zero. Intensity badhne ka matlab zyada photons, har photon ki energy wahi. Photon-electron collision mein energy aur momentum dono conserve."
+  },
+  {
+   "title": "Graphs (current vs voltage)",
+   "explain": "Same frequency, alag intensity: saturation current alag, stopping potential SAME. Same intensity, alag frequency: zyada ν par stopping potential zyada (zyada negative), saturation current lagbhag same. K_max vs ν: seedhi line, slope h, x-intercept ν₀."
+  },
+  {
+   "title": "de Broglie hypothesis",
+   "explain": "Agar light (wave) particle ki tarah behave kar sakti hai to particle bhi wave ki tarah. λ = h/p. Bade objects ki λ bahut chhoti, isliye sirf electron jaise halke particles mein wave nature dikhta hai."
+  },
+  {
+   "title": "Davisson–Germer experiment",
+   "explain": "Nickel crystal par 54 V ke electrons maare; 50° par strong peak mila — electron diffraction. Naapi gayi λ ≈ 0.165 nm, de Broglie formula ke 0.167 nm se match. Matter waves ka pehla proof. Experiment ki details ab syllabus mein nahi — sirf conclusion yaad rakho."
+  },
+  {
+   "title": "Wave–particle duality",
+   "explain": "Radiation aur matter dono dual hain. Ek hi experiment mein ek hi roop dikhta hai: interference/diffraction mein wave, photoelectric/Compton mein particle."
+  }
+ ],
+ "ratta": [
+  "hc = 1240 eV·nm  ⇒  E(eV) = 1240/λ(nm).",
+  "h = 6.63 × 10⁻³⁴ J·s,  h/e = 4.14 × 10⁻¹⁵ V·s.",
+  "K_max = hν − φ = eV₀.  Intensity → current; frequency → K_max.",
+  "V₀–ν graph slope = h/e (har metal same); intercept = ν₀.",
+  "Electron: λ = 12.27/√V Å.  λ = h/√(2mK) = h/√(2mqV).",
+  "Same V: λ_p : λ_α = 2√2 : 1.",
+  "Radiation force: absorb P/c,  reflect 2P/c.",
+  "Davisson–Germer: 54 V, 50°, Ni crystal, λ ≈ 0.165 nm."
+ ],
+ "verifiedOn": "2026-11-13"
+}

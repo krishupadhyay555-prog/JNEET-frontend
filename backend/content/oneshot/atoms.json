@@ -1,0 +1,189 @@
+{
+ "slug": "atoms",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Atoms",
+  "JEE": "Atoms"
+ },
+ "title": "Atoms",
+ "readMinutes": 14,
+ "summary": [
+  "Rutherford ke alpha-scattering experiment se pata chala ki atom ka saara positive charge aur lagbhag saara mass ek bahut chhote nucleus (~10⁻¹⁵ m) mein hai; baaki atom zyaadatar khaali hai.",
+  "Rutherford model ki problem: ghoomta electron radiation karke nucleus mein gir jaana chahiye, aur spectrum continuous hona chahiye. Asal mein atom stable hai aur spectrum lines wala hai.",
+  "Bohr ne kaha: electron sirf kuch khaas orbits mein ghoom sakta hai jahaan L = nh/2π; un orbits mein wo radiate nahi karta. Ek orbit se doosre mein koodne par hi photon nikalta/absorb hota hai: hν = E_upper − E_lower.",
+  "Hydrogen-like atom (H, He⁺, Li²⁺) ke liye: r ∝ n²/Z, v ∝ Z/n, E ∝ −Z²/n². Inhi se poora hydrogen spectrum (Lyman, Balmer, Paschen…) nikal aata hai."
+ ],
+ "formulas": [
+  {
+   "name": "Distance of closest approach",
+   "formula": "r₀ = k (2e)(Ze) / K   (alpha ki KE = K, head-on)",
+   "when": "Alpha particle nucleus ke kitna paas aa sakta hai — nucleus ke size ki upper limit.",
+   "mistake": "Alpha ka charge 2e hai, e nahi."
+  },
+  {
+   "name": "Impact parameter",
+   "formula": "b = k Z e² cot(θ/2) / K   (alpha, KE = K);   b = 0 ⇒ θ = 180° (seedha wapas)",
+   "when": "Scattering angle aur impact parameter ka relation.",
+   "mistake": "Chhota b ⇒ bada θ."
+  },
+  {
+   "name": "Rutherford scattering",
+   "formula": "N(θ) ∝ 1 / sin⁴(θ/2)",
+   "when": "Kis angle par kitne alpha particles mudte hain.",
+   "mistake": "Bahut kam particles bade angle par mudte hain."
+  },
+  {
+   "name": "Bohr's quantisation",
+   "formula": "L = m v r = n h / 2π   (n = 1, 2, 3…)",
+   "when": "Allowed orbits ki shart."
+  },
+  {
+   "name": "Radius of nth orbit",
+   "formula": "rₙ = 0.529 n²/Z Å   (a₀ = 0.529 Å = 5.29 × 10⁻¹¹ m)",
+   "when": "Orbit ka size.",
+   "mistake": "r ∝ n²: n = 2 par 4 guna, n = 3 par 9 guna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Speed in nth orbit",
+   "formula": "vₙ = 2.18 × 10⁶ Z/n m/s  (= cZ/(137n))",
+   "when": "Electron ki speed.",
+   "mistake": "v ∝ 1/n: upar ke orbit mein dheema."
+  },
+  {
+   "name": "Energy of nth orbit",
+   "formula": "Eₙ = −13.6 Z²/n² eV",
+   "when": "Kisi orbit ki total energy.",
+   "mistake": "Negative = bound. n = ∞ par E = 0.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "KE, PE and total energy",
+   "formula": "KE = −E = +13.6Z²/n² eV,   PE = 2E = −27.2Z²/n² eV",
+   "when": "Energy ke hisse.",
+   "mistake": "Sab mein PE = −2 KE."
+  },
+  {
+   "name": "Time period, frequency, current",
+   "formula": "T ∝ n³/Z²,   f ∝ Z²/n³,   current I = ef ∝ Z²/n³",
+   "when": "Orbit mein electron ka chakkar."
+  },
+  {
+   "name": "Photon in a transition",
+   "formula": "hν = E_{n₂} − E_{n₁};   1/λ = R Z² (1/n₁² − 1/n₂²),   R = 1.097 × 10⁷ m⁻¹",
+   "when": "Spectral line ki wavelength.",
+   "mistake": "n₂ > n₁ hamesha; R wala formula hydrogen-like atoms ke liye hi."
+  },
+  {
+   "name": "Spectral series of hydrogen",
+   "formula": "Lyman n₁ = 1 (UV) · Balmer n₁ = 2 (visible) · Paschen n₁ = 3 (IR) · Brackett 4 (IR) · Pfund 5 (IR)",
+   "when": "Line kaun si series mein.",
+   "tag": "Ratta"
+  },
+  {
+   "name": "Series limits",
+   "formula": "Shortest λ (series limit): n₂ = ∞ ⇒ 1/λ = RZ²/n₁².  Longest λ: n₂ = n₁ + 1",
+   "when": "Kisi series ki sabse chhoti/badi wavelength.",
+   "mistake": "Lyman limit = 1/R ≈ 91.2 nm."
+  },
+  {
+   "name": "Number of spectral lines",
+   "formula": "n se neeche aane par total lines = n(n − 1)/2",
+   "when": "Kitni alag lines dikhengi.",
+   "mistake": "Ek hi atom ek baar mein max (n − 1) lines deta hai."
+  },
+  {
+   "name": "Ionisation and excitation energy",
+   "formula": "Ionisation (ground se): 13.6 Z² eV.  H ki first excitation (1 → 2): 10.2 eV,  1 → 3: 12.09 eV",
+   "when": "Electron nikaalna / upar bhejna.",
+   "mistake": "Ionisation potential volt mein (13.6 V), energy eV mein."
+  },
+  {
+   "name": "de Broglie view of Bohr orbit",
+   "formula": "2π rₙ = n λ",
+   "when": "Bohr ki shart ka wave wala matlab: orbit mein poori waves fit hon."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Alpha kitna paas aayega?",
+   "problem": "7.7 MeV ka alpha particle gold (Z = 79) nucleus ki taraf seedha aata hai. Closest approach?",
+   "solution": "r₀ = k(2e)(79e)/K. K = 7.7 × 10⁶ × 1.6 × 10⁻¹⁹ J. r₀ = 9 × 10⁹ × 158 × 1.6 × 10⁻¹⁹ / 7.7 × 10⁶ ≈ 3.0 × 10⁻¹⁴ m (≈ 30 fm). Nucleus isse bhi chhota hai."
+  },
+  {
+   "title": "Hydrogen n = 2",
+   "problem": "H atom ka electron n = 2 mein hai. Energy, radius, KE, PE?",
+   "solution": "E = −13.6/4 = −3.4 eV. r = 0.529 × 4 = 2.116 Å. KE = +3.4 eV, PE = 2E = −6.8 eV."
+  },
+  {
+   "title": "Balmer ki pehli line (Hα)",
+   "problem": "Hydrogen mein n = 3 → 2. Wavelength?",
+   "solution": "1/λ = R(1/4 − 1/9) = 5R/36 ⇒ λ = 36/(5 × 1.097 × 10⁷) m ≈ 656 nm — laal rang."
+  },
+  {
+   "title": "Lyman series limit",
+   "problem": "Lyman series ki sabse chhoti wavelength?",
+   "solution": "n₂ = ∞, n₁ = 1 ⇒ 1/λ = R ⇒ λ = 1/R ≈ 91.2 nm (UV)."
+  },
+  {
+   "title": "Kitni lines?",
+   "problem": "Hydrogen atoms ka ek sample n = 5 tak excite kiya gaya. Emission mein kitni alag lines?",
+   "solution": "n(n − 1)/2 = 5 × 4/2 = 10 lines."
+  },
+  {
+   "title": "He⁺ ki ionisation energy",
+   "problem": "He⁺ (Z = 2) ground state se electron nikaalne ki energy?",
+   "solution": "13.6 Z² = 13.6 × 4 = 54.4 eV."
+  },
+  {
+   "title": "Transition 3 → 1",
+   "problem": "Hydrogen mein n = 3 se n = 1. Photon energy aur wavelength?",
+   "solution": "ΔE = 13.6(1 − 1/9) = 12.09 eV. λ = 1240/12.09 ≈ 102.6 nm (Lyman, UV)."
+  },
+  {
+   "title": "Lyman vs Balmer pehli line",
+   "problem": "Lyman ki pehli line aur Balmer ki pehli line ki wavelengths ka ratio λ_L/λ_B?",
+   "solution": "1/λ_L = R(1 − 1/4) = 3R/4;  1/λ_B = 5R/36. λ_L/λ_B = (5/36)/(3/4) = 5/27 ≈ 0.185."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Alpha-particle scattering (Geiger–Marsden)",
+   "explain": "Patli gold foil par alpha particles maare. Zyaadatar seedhe nikal gaye (atom khaali hai); kuch bade angle par mude; bahut kam (lagbhag 8000 mein se 1) 90° se zyada mude, kuch seedhe wapas bhi aaye — matlab chhota, bhaari, positive nucleus. Gold isliye ki bahut patla (pitkar) banta hai."
+  },
+  {
+   "title": "Rutherford model aur uski kamiyaan",
+   "explain": "Nucleus beech mein, electrons ghoomte hain (planetary model). Kamiyaan: accelerating charge radiation karega to electron spiral karke gir jaayega (atom unstable), aur spectrum continuous hona chahiye — jo nahi hota."
+  },
+  {
+   "title": "Bohr ke teen postulates",
+   "explain": "(1) Electron kuch stationary orbits mein bina radiation ke ghoomta hai. (2) Wo orbits jinmein L = nh/2π. (3) Orbit badalne par photon: hν = E_i − E_f. Bohr model sirf ek-electron wale atoms (H, He⁺, Li²⁺) par sahi kaam karta hai."
+  },
+  {
+   "title": "Energy level diagram",
+   "explain": "Levels upar jaate-jaate paas aate jaate hain (E ∝ −1/n²). Ground state n = 1 (−13.6 eV), first excited n = 2 (−3.4 eV), n = 3 (−1.51 eV), … n = ∞ (0 eV)."
+  },
+  {
+   "title": "Hydrogen spectrum",
+   "explain": "Emission spectrum = upar se neeche koodne par bright lines; absorption = neeche se upar, dark lines. Lyman UV mein, Balmer visible mein (Hα laal 656 nm), Paschen aur aage IR mein."
+  },
+  {
+   "title": "Bohr model ki limitations",
+   "explain": "Multi-electron atoms ka spectrum nahi samjha sakta, lines ki intensity nahi bata sakta, aur fine structure nahi samjhaata. Ye semi-classical model hai."
+  },
+  {
+   "title": "Scaling with Z aur n",
+   "explain": "r ∝ n²/Z, v ∝ Z/n, E ∝ Z²/n², T ∝ n³/Z², f ∝ Z²/n³. Ratio wale sawal inhi se ek line mein."
+  }
+ ],
+ "ratta": [
+  "Eₙ = −13.6 Z²/n² eV;  rₙ = 0.529 n²/Z Å;  vₙ = 2.18 × 10⁶ Z/n m/s.",
+  "KE = −E,  PE = 2E.",
+  "R = 1.097 × 10⁷ m⁻¹;  Lyman limit 91.2 nm;  Hα 656 nm.",
+  "Series: Lyman 1 (UV), Balmer 2 (visible), Paschen 3, Brackett 4, Pfund 5 (IR).",
+  "Lines = n(n − 1)/2.",
+  "H: ionisation 13.6 eV, first excitation 10.2 eV.  He⁺: 54.4 eV.",
+  "Closest approach r₀ = k(2e)(Ze)/K;  N(θ) ∝ 1/sin⁴(θ/2)."
+ ],
+ "verifiedOn": "2026-11-13"
+}
