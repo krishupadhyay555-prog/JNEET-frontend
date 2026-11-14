@@ -33,7 +33,7 @@ export default function OneShot() {
     let cancelled = false;
     oneshotApi.list()
       .then((r) => { if (!cancelled) setLoaded({ key: examMode, chapters: r.data.chapters ?? [], error: "" }); })
-      .catch(() => { if (!cancelled) setLoaded({ key: examMode, chapters: [], error: "OneShot load nahi ho paya. Internet check karke dobara kholo." }); });
+      .catch(() => { if (!cancelled) setLoaded({ key: examMode, chapters: [], error: "Couldn't load OneShot. Check your internet and open it again." }); });
     return () => { cancelled = true; };
   }, [examMode]);
 
@@ -53,10 +53,10 @@ export default function OneShot() {
 
       <div className="max-w-2xl mx-auto px-5 py-7 space-y-5">
         <div>
-          <h1 className="text-lg font-bold mb-1">Poora chapter, ek baar mein</h1>
+          <h1 className="text-lg font-bold mb-1">A whole chapter in one go</h1>
           <p className="text-xs text-gray-600 leading-relaxed">
-            Short summary, saare important formulas (kab use karein + common galti), solved examples aur key topics —
-            exam se pehle fast revision ke liye. Har page verified hai.
+            A short summary, every important formula (when to use it + the common mistake), solved examples and key topics —
+            for fast revision before the exam. Every page is checked.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function OneShot() {
         ) : state.error ? (
           <p className="text-xs text-red-500 text-center pt-8">{state.error}</p>
         ) : shown.length === 0 ? (
-          <p className="text-xs text-gray-600 text-center pt-8">{subject} ke OneShot jald aa rahe hain.</p>
+          <p className="text-xs text-gray-600 text-center pt-8">{subject} OneShots are coming soon.</p>
         ) : (
           <ul className="space-y-2">
             {shown.map((c) => (
@@ -106,7 +106,7 @@ export default function OneShot() {
         )}
 
         {!state.loading && !state.error && (
-          <p className="text-[11px] text-gray-600 text-center">Aur chapters har hafte jud rahe hain.</p>
+          <p className="text-[11px] text-gray-600 text-center">New chapters are added every week.</p>
         )}
       </div>
     </div>

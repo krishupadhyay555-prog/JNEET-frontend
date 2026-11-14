@@ -58,6 +58,7 @@ const ParentUnlock    = lazyPage(() => import("./pages/ParentUnlock.jsx"));
 const Landing         = lazyPage(() => import("./pages/Landing.jsx"));
 const Plans           = lazyPage(() => import("./pages/Plans.jsx"));
 const ParentPay       = lazyPage(() => import("./pages/ParentPay.jsx"));
+const AdminDashboard  = lazyPage(() => import("./pages/AdminDashboard.jsx"));
 
 // Soft page-to-page transition (keyed on the path so every navigation animates).
 function PageTransition({ children }) {
@@ -209,6 +210,7 @@ export default function App() {
               <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
               <Route path="/oneshot"   element={<ProtectedRoute><OneShot /></ProtectedRoute>} />
               <Route path="/plans"     element={<ProtectedRoute><Plans /></ProtectedRoute>} />
+              <Route path="/admin"     element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
               <Route path="/oneshot/:slug" element={<ProtectedRoute><OneShotChapter /></ProtectedRoute>} />
               <Route
                 path="/test/attempt/:attemptId"

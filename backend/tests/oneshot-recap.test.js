@@ -97,6 +97,77 @@ describe("OneShot API", () => {
   });
 });
 
+describe("OneShot languages (English default, Hinglish option)", () => {
+  const dir = path.join(import.meta.dirname, "..", "content", "oneshot");
+  const files = fs.readdirSync(dir);
+  const both = files.filter((f) => f.endsWith(".hinglish.json")).map((f) => f.replace(".hinglish.json", ""))
+    .filter((slug) => files.includes(`${slug}.json`) && JSON.parse(fs.readFileSync(path.join(dir, `${slug}.json`), "utf-8")).chapters.NEET);
+  const hinglishOnly = files.filter((f) => f.endsWith(".hinglish.json")).map((f) => f.replace(".hinglish.json", ""))
+    .filter((slug) => !files.includes(`${slug}.json`) && JSON.parse(fs.readFileSync(path.join(dir, `${slug}.hinglish.json`), "utf-8")).chapters.NEET);
+
+  it("English and Hinglish versions of a chapter describe the same chapter", () => {
+    for (const f of files.filter((x) => x.endsWith(".hinglish.json"))) {
+      const slug = f.replace(".hinglish.json", "");
+      if (!files.includes(`${slug}.json`)) continue;
+      const hi = JSON.parse(fs.readFileSync(path.join(dir, f), "utf-8"));
+      const en = JSON.parse(fs.readFileSync(path.join(dir, `${slug}.json`), "utf-8"));
+      expect(en.chapters).toEqual(hi.chapters);
+      expect(en.subject).toBe(hi.subject);
+      expect(en.formulas.length).toBe(hi.formulas.length);
+      expect(en.examples.length).toBe(hi.examples.length);
+    }
+  });
+
+  it("serves English by default, Hinglish when chosen, and says when it falls back", async () => {
+    if (both.length) {
+      const slug = both[0];
+      const en = await a.get(`/api/oneshot/${slug}`);
+      expect(en.body.oneshot.lang).toBe("english");
+      expect(en.body.oneshot.fallback).toBe(false);
+      expect(en.body.oneshot.languages).toEqual(["english", "hinglish"]);
+      const hi = await a.get(`/api/oneshot/${slug}?lang=hinglish`);
+      expect(hi.body.oneshot.lang).toBe("hinglish");
+
+      const pref = await a.patch("/api/user/preferences").send({ studyLanguage: "hinglish" });
+      expect(pref.status).toBe(200);
+      expect(pref.body.student.studyLanguage).toBe("hinglish");
+      expect((await a.get(`/api/oneshot/${slug}`)).body.oneshot.lang).toBe("hinglish");
+      expect((await a.get(`/api/oneshot/${slug}?lang=english`)).body.oneshot.lang).toBe("english");
+      await a.patch("/api/user/preferences").send({ studyLanguage: "auto" });
+    }
+    if (hinglishOnly.length) {
+      const r = await a.get(`/api/oneshot/${hinglishOnly[0]}`);
+      expect(r.body.oneshot.lang).toBe("hinglish");
+      expect(r.body.oneshot.fallback).toBe(true);
+    }
+    expect(both.length + hinglishOnly.length).toBeGreaterThan(0);
+  });
+
+  it("rejects a bad study language and keeps persona updates working", async () => {
+    expect((await a.patch("/api/user/preferences").send({ studyLanguage: "klingon" })).status).toBe(400);
+    expect((await a.patch("/api/user/preferences").send({})).status).toBe(400);
+    const r = await a.patch("/api/user/preferences").send({ persona: "fun" });
+    expect(r.status).toBe(200);
+    expect(r.body.student.persona).toBe("fun");
+    expect(r.body.student.studyLanguage).toBe("auto");
+  });
+});
+
+describe("AI language rules", () => {
+  it("defaults to English when unclear, follows the student's language, and honours Hinglish", async () => {
+    const { buildSystemPrompt } = await import("../services/ai/persona.js");
+    const auto = buildSystemPrompt({ examMode: "NEET" });
+    expect(auto).toMatch(/Bengali, Gujarati, Marathi/);
+    expect(auto).toMatch(/unclear[^\n]*reply in English\./);
+    expect(auto).not.toMatch(/__DEFAULT_LANG__/);
+    const hi = buildSystemPrompt({ examMode: "JEE", studyLanguage: "hinglish" });
+    expect(hi).toMatch(/student chose Hinglish/);
+    expect(hi).toMatch(/reply in Hinglish \(Hindi in Roman script/);
+    const en = buildSystemPrompt({ examMode: "JEE", studyLanguage: "english" });
+    expect(en).toMatch(/student chose English/);
+  });
+});
+
 // ── Recap ────────────────────────────────────────────────────────
 const old = (ms = RECENT_MS + 60_000) => new Date(Date.now() - ms);
 async function makeChat(sessions) {

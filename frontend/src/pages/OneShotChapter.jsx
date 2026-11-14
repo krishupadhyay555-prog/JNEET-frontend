@@ -18,7 +18,7 @@ const TABS = [
   { id: "formulas", label: "Formulas" },
   { id: "examples", label: "Examples" },
   { id: "topics",   label: "Key topics" },
-  { id: "ratta",    label: "Ratta" },
+  { id: "ratta",    label: "Ratta (Must memorise)" },
 ];
 
 function FormulaCard({ f }) {
@@ -33,15 +33,15 @@ function FormulaCard({ f }) {
         ) : null}
       </div>
       <p className="text-[14.5px] font-medium leading-relaxed my-2.5 bg-bg-panel rounded-xl px-3 py-2.5 break-words"><MathText>{f.formula}</MathText></p>
-      <p className="text-[12.5px] leading-relaxed text-fg-secondary"><strong className="text-fg-primary">Kab:</strong> <MathText>{f.when}</MathText></p>
+      <p className="text-[12.5px] leading-relaxed text-fg-secondary"><strong className="text-fg-primary">When to use:</strong> <MathText>{f.when}</MathText></p>
       {f.mistake && (
         <p className="text-[12.5px] leading-relaxed text-fg-secondary mt-1">
-          <strong className="text-tone-warn">Galti:</strong> <MathText>{f.mistake}</MathText>
+          <strong className="text-tone-warn">Common mistake:</strong> <MathText>{f.mistake}</MathText>
         </p>
       )}
       {f.note && (
         <p className="text-[12.5px] leading-relaxed text-fg-secondary mt-1">
-          <strong className="text-violet-500">Yaad rakho:</strong> <MathText>{f.note}</MathText>
+          <strong className="text-violet-500">Remember:</strong> <MathText>{f.note}</MathText>
         </p>
       )}
       {f.tag && f.unit && <p className="text-[11px] text-gray-600 mt-1">Unit: {f.unit}</p>}
@@ -54,7 +54,8 @@ export default function OneShotChapter() {
   const navigate = useNavigate();
   const goBack = useGoBack("/oneshot");
   const { examMode } = useAuth();
-  const key = `${examMode}:${slug}`;
+  const [lang, setLang] = useState(null);            // null = saved study language
+  const key = `${examMode}:${slug}:${lang ?? "saved"}`;
   const [loaded, setLoaded] = useState({ key: null, doc: null, error: "" });
   const state = loaded.key === key
     ? { loading: false, doc: loaded.doc, error: loaded.error }
@@ -63,14 +64,14 @@ export default function OneShotChapter() {
 
   useEffect(() => {
     let cancelled = false;
-    oneshotApi.get(slug)
+    oneshotApi.get(slug, lang ?? undefined)
       .then((r) => { if (!cancelled) setLoaded({ key, doc: r.data.oneshot, error: "" }); })
       .catch((err) => {
         if (cancelled) return;
-        setLoaded({ key, doc: null, error: err.response?.status === 404 ? "Ye OneShot aapke exam ke liye abhi available nahi hai." : "Load nahi ho paya. Dobara try karo." });
+        setLoaded({ key, doc: null, error: err.response?.status === 404 ? "This OneShot isn't available for your exam yet." : "Couldn't load this page. Please try again." });
       });
     return () => { cancelled = true; };
-  }, [slug, key]);
+  }, [slug, key, lang]);
 
   const { loading, doc, error } = state;
 
@@ -107,6 +108,33 @@ export default function OneShotChapter() {
       </header>
 
       <main className="flex-1 max-w-2xl w-full mx-auto px-4 py-5 space-y-3">
+        {doc && !loading && (doc.languages?.length > 1 || doc.fallback) && (
+          <div className="flex flex-wrap items-center gap-2 text-[12px]">
+            {doc.languages?.length > 1 && (
+              <div role="radiogroup" aria-label="Page language" className="inline-flex rounded-xl border border-bg-border bg-bg-card p-0.5">
+                {doc.languages.map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    role="radio"
+                    aria-checked={doc.lang === l}
+                    onClick={() => setLang(l)}
+                    className={`px-3 py-1 rounded-lg transition ${doc.lang === l ? "bg-violet-600 text-white font-semibold" : "text-gray-600 hover:text-fg-primary"}`}
+                  >
+                    {l === "english" ? "English" : "Hinglish"}
+                  </button>
+                ))}
+              </div>
+            )}
+            {doc.fallback && (
+              <p className="text-gray-600">
+                {doc.lang === "hinglish"
+                  ? "The English version of this chapter is on its way — showing Hinglish for now."
+                  : "The Hinglish version of this chapter is on its way — showing English for now."}
+              </p>
+            )}
+          </div>
+        )}
         {loading ? (
           <div className="flex justify-center py-16"><Spinner size={20} /></div>
         ) : error ? (
@@ -146,7 +174,7 @@ export default function OneShotChapter() {
         ) : (
           <div className="rounded-2xl bg-amber-500/10 border border-amber-500/30 p-4 animate-fade-up">
             <p className="flex items-center gap-2 text-sm font-bold text-tone-warn mb-2">
-              <Pin size={15} /> Ratta zone — ye bas yaad karna hai
+              <Pin size={15} /> Ratta zone — must memorise
             </p>
             <ul className="space-y-2 text-[13.5px] leading-relaxed list-disc pl-5">
               {doc.ratta.map((r) => <li key={r}><MathText>{r}</MathText></li>)}
@@ -156,7 +184,7 @@ export default function OneShotChapter() {
 
         {doc && !loading && (
           <p className="flex items-center gap-1.5 text-[11px] text-gray-600 pt-2">
-            <AlertTriangle size={11} /> Galti dikhe to Mentor ko batao — hum turant theek karenge. Verified: {doc.verifiedOn}
+            <AlertTriangle size={11} /> Spotted a mistake? Tell the AI Mentor — we fix it fast. Checked on: {doc.verifiedOn}
           </p>
         )}
       </main>
@@ -170,8 +198,8 @@ export default function OneShotChapter() {
               className="flex-1 flex items-center justify-center gap-1.5 rounded-xl border border-bg-border bg-bg-card text-sm font-semibold min-h-[48px] hover:bg-bg-hover transition"
             >
               <MessageCircle size={15} className="shrink-0" />
-              <span className="whitespace-nowrap sm:hidden">Doubt poochho</span>
-              <span className="whitespace-nowrap hidden sm:inline">Mentor se poochho</span>
+              <span className="whitespace-nowrap sm:hidden">Ask a doubt</span>
+              <span className="whitespace-nowrap hidden sm:inline">Ask the AI Mentor</span>
             </button>
             <button
               type="button"
@@ -179,8 +207,8 @@ export default function OneShotChapter() {
               className="flex-[1.4] flex items-center justify-center gap-1.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold min-h-[48px] transition"
             >
               <ListChecks size={15} className="shrink-0" />
-              <span className="whitespace-nowrap sm:hidden">Revision karo</span>
-              <span className="whitespace-nowrap hidden sm:inline">Is chapter ki Revision</span>
+              <span className="whitespace-nowrap sm:hidden">Revise</span>
+              <span className="whitespace-nowrap hidden sm:inline">Revise this chapter</span>
             </button>
           </div>
         </footer>

@@ -156,6 +156,6 @@ export async function screenMessage(prompt, deps = {}) {
 }
 
 export const REFUSE_MESSAGE =
-  "Is tarah ki baat mein main help nahi kar sakta — JNEET+ sirf padhai ke liye hai, aur yahan respectful language hi chalti hai. 🙏\n\nKoi chapter, concept ya question ka doubt hai? Abhi poochho, main yahin hoon. 📚";
+  "I can't help with that — JNEET+ is only for studies, and we keep the language respectful here. 🙏\n\nHave a doubt about a chapter, concept or question? Ask me now — I'm right here. 📚";
 
 export const _test = { parseJudge, JUDGE_INSTRUCTIONS };

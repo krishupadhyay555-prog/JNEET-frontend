@@ -135,6 +135,17 @@ const userSchema = new mongoose.Schema(
       enum:    ["mentor", "fun"],
       default: "mentor",
     },
+    // Study language (14 Nov 2026): the app itself is always English.
+    //   auto     — AI replies in whatever language the student writes
+    //              (English when unclear); OneShot pages in English.
+    //   english  — AI and OneShot in English.
+    //   hinglish — AI in Hinglish (Roman script) unless the student writes
+    //              in another language; OneShot pages in Hinglish.
+    studyLanguage: {
+      type:    String,
+      enum:    ["auto", "english", "hinglish"],
+      default: "auto",
+    },
     plan: {
       type:    String,
       enum:    ["free", "pro", "elite"],

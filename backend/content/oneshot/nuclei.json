@@ -8,157 +8,157 @@
  "title": "Nuclei",
  "readMinutes": 12,
  "summary": [
-  "Nucleus protons (Z) aur neutrons (N) se bana hai; A = Z + N mass number. Iska size A^{1/3} ke saath badhta hai, isliye har nucleus ki density lagbhag same (~2.3 × 10¹⁷ kg/m³) hoti hai.",
-  "Nucleus ka mass uske protons + neutrons ke alag-alag mass se KAM hota hai. Ye kami (mass defect) E = mc² se binding energy ban jaati hai — nucleus ko todne ke liye itni energy chahiye.",
-  "Binding energy per nucleon (BE/A) stability ka naap hai. Ye A ≈ 56 (iron) ke paas sabse zyada (~8.8 MeV) hai. Isliye bhaari nucleus tootne (fission) aur halke nuclei judne (fusion) — dono mein energy nikalti hai.",
-  "Nuclear force bahut strong, short-range (~2–3 fm), charge-independent aur attractive hai (bahut paas jaane par repulsive)."
+  "A nucleus is made of protons (Z) and neutrons (N); A = Z + N is the mass number. Its size grows as A^{1/3}, so every nucleus has almost the same density (~2.3 × 10¹⁷ kg/m³).",
+  "A nucleus weighs LESS than its separate protons and neutrons. This missing mass (mass defect) becomes binding energy through E = mc² — the energy needed to break the nucleus apart.",
+  "Binding energy per nucleon (BE/A) measures stability. It is highest (~8.8 MeV) near A ≈ 56 (iron). That is why splitting a heavy nucleus (fission) and joining light nuclei (fusion) both release energy.",
+  "The nuclear force is very strong, short-range (~2–3 fm), charge-independent and attractive (repulsive only at very short distances)."
  ],
  "formulas": [
   {
    "name": "Notation and composition",
    "formula": "ᴬ_Z X:  Z = protons,  N = A − Z = neutrons",
-   "when": "Kisi nucleus mein kya-kya hai."
+   "when": "What a nucleus contains."
   },
   {
    "name": "Nuclear radius",
    "formula": "R = R₀ A^{1/3},   R₀ ≈ 1.2 fm (1 fm = 10⁻¹⁵ m)",
-   "when": "Nucleus ka size.",
-   "tag": "PYQ favourite",
-   "note": "R ∝ A^{1/3}, volume ∝ A."
+   "when": "Size of a nucleus.",
+   "mistake": "R ∝ A^{1/3}, but volume ∝ A — don't mix them up.",
+   "tag": "PYQ favourite"
   },
   {
    "name": "Nuclear density",
-   "formula": "ρ = 3 m_u / (4π R₀³) ≈ 2.3 × 10¹⁷ kg/m³  (A se independent)",
-   "when": "Density wale sawal.",
-   "mistake": "Har nucleus ki density same — A badhne se nahi badalti."
+   "formula": "ρ = 3 m_u / (4π R₀³) ≈ 2.3 × 10¹⁷ kg/m³  (independent of A)",
+   "when": "Density questions.",
+   "note": "Every nucleus has the same density — it does not change with A."
   },
   {
    "name": "Atomic mass unit",
-   "formula": "1 u = 1/12 × (¹²C atom ka mass) = 1.66 × 10⁻²⁷ kg ≡ 931.5 MeV/c²",
-   "when": "Mass ko energy mein badalna.",
-   "note": "1 u × c² = 931.5 MeV seedha use karo."
+   "formula": "1 u = 1/12 × (mass of a ¹²C atom) = 1.66 × 10⁻²⁷ kg ≡ 931.5 MeV/c²",
+   "when": "Converting mass into energy.",
+   "note": "Use 1 u × c² = 931.5 MeV directly."
   },
   {
    "name": "Mass–energy relation",
    "formula": "E = m c²",
-   "when": "Mass ka energy mein badalna (aur ulta).",
-   "note": "c = 3 × 10⁸ m/s; mass kg mein."
+   "when": "Mass turning into energy (and back).",
+   "mistake": "c = 3 × 10⁸ m/s and mass in kg — don't use grams."
   },
   {
    "name": "Mass defect",
-   "formula": "Δm = [Z m_p + (A − Z) m_n] − M_nucleus   (atomic masses ho to m_p ki jagah m_H lo)",
-   "when": "Nucleus banne mein kitna mass 'gaya'.",
-   "note": "Atomic mass mein electrons bhi hote hain — dono taraf same rakho."
+   "formula": "Δm = [Z m_p + (A − Z) m_n] − M_nucleus   (with atomic masses, use m_H instead of m_p)",
+   "when": "How much mass 'disappears' when a nucleus forms.",
+   "note": "Atomic masses include electrons — keep the same convention on both sides."
   },
   {
    "name": "Binding energy",
    "formula": "BE = Δm c² = Δm (u) × 931.5 MeV",
-   "when": "Nucleus ko poori tarah todne ki energy.",
+   "when": "Energy needed to break the nucleus completely.",
    "unit": "MeV",
    "tag": "PYQ favourite"
   },
   {
    "name": "Binding energy per nucleon",
    "formula": "BE/A;   peak ≈ 8.8 MeV near A ≈ 56;   ≈ 8 MeV for 30 < A < 170",
-   "when": "Kaun sa nucleus zyada stable.",
-   "mistake": "Zyada BE/A = zyada stable (total BE nahi)."
+   "when": "Which nucleus is more stable.",
+   "mistake": "Higher BE/A = more stable — not the higher total BE."
   },
   {
    "name": "Q-value of a reaction",
    "formula": "Q = (Σ m_reactants − Σ m_products) c² = Σ BE_products − Σ BE_reactants",
-   "when": "Reaction mein energy nikli ya lagi.",
-   "note": "Q > 0 exothermic (energy release), Q < 0 endothermic."
+   "when": "Is energy released or absorbed?",
+   "note": "Q > 0: exothermic (energy released). Q < 0: endothermic."
   },
   {
    "name": "Nuclear fission",
    "formula": "²³⁵U + n → ¹⁴¹Ba + ⁹²Kr + 3n + ≈ 200 MeV",
-   "when": "Bhaari nucleus ka toot-na.",
-   "note": "Ek fission mein ~200 MeV, yaani ~0.9 MeV per nucleon."
+   "when": "A heavy nucleus splitting.",
+   "note": "About 200 MeV per fission, i.e. ~0.9 MeV per nucleon."
   },
   {
    "name": "Nuclear fusion",
    "formula": "Sun: 4 ¹H → ⁴He + 2e⁺ + 2ν + 26.7 MeV;   ²H + ²H → ³He + n + 3.27 MeV",
-   "when": "Halke nuclei ka judna.",
-   "note": "Bahut zyada temperature (~10⁷ K) chahiye taaki Coulomb repulsion paar ho."
+   "when": "Light nuclei joining.",
+   "note": "Needs a very high temperature (~10⁷ K) to overcome Coulomb repulsion."
   }
  ],
  "examples": [
   {
-   "title": "Nucleus ka size",
-   "problem": "²⁷Al ka radius? ¹²⁵Te ka radius kitna guna?",
-   "solution": "R = 1.2 × 27^{1/3} = 1.2 × 3 = 3.6 fm. Te: (125/27)^{1/3} = 5/3 guna ⇒ 6 fm."
+   "title": "Size of a nucleus",
+   "problem": "Radius of ²⁷Al? How many times larger is ¹²⁵Te?",
+   "solution": "R = 1.2 × 27^{1/3} = 1.2 × 3 = 3.6 fm. Te: (125/27)^{1/3} = 5/3 times ⇒ 6 fm."
   },
   {
    "title": "Nuclear density",
-   "problem": "Nuclear matter ki density nikaalo (m_u = 1.66 × 10⁻²⁷ kg, R₀ = 1.2 fm).",
-   "solution": "ρ = A m_u / (4/3 π R₀³ A) = 3 m_u/(4πR₀³) ≈ 2.3 × 10¹⁷ kg/m³ — paani se ~10¹⁴ guna zyada, aur A par depend nahi."
+   "problem": "Find the density of nuclear matter (m_u = 1.66 × 10⁻²⁷ kg, R₀ = 1.2 fm).",
+   "solution": "ρ = A m_u / (4/3 π R₀³ A) = 3 m_u/(4πR₀³) ≈ 2.3 × 10¹⁷ kg/m³ — about 10¹⁴ times denser than water, and independent of A."
   },
   {
-   "title": "Helium-4 ki binding energy",
-   "problem": "m(¹H) = 1.007825 u, m_n = 1.008665 u, m(⁴He atom) = 4.002603 u. BE aur BE/A?",
-   "solution": "Δm = 2(1.007825) + 2(1.008665) − 4.002603 = 0.030377 u. BE = 0.030377 × 931.5 ≈ 28.3 MeV. BE/A ≈ 7.07 MeV — He-4 bahut stable hai."
+   "title": "Binding energy of helium-4",
+   "problem": "m(¹H) = 1.007825 u, m_n = 1.008665 u, m(⁴He atom) = 4.002603 u. Find BE and BE/A.",
+   "solution": "Δm = 2(1.007825) + 2(1.008665) − 4.002603 = 0.030377 u. BE = 0.030377 × 931.5 ≈ 28.3 MeV. BE/A ≈ 7.07 MeV — He-4 is very stable."
   },
   {
-   "title": "1 g mass ki energy",
-   "problem": "1 g mass poora energy mein badal jaaye to?",
-   "solution": "E = mc² = 10⁻³ × (3 × 10⁸)² = 9.0 × 10¹³ J — ek bade sheher ki kai dino ki bijli."
+   "title": "Energy in 1 g of mass",
+   "problem": "If 1 g of mass were fully converted into energy?",
+   "solution": "E = mc² = 10⁻³ × (3 × 10⁸)² = 9.0 × 10¹³ J — enough electricity for a large city for days."
   },
   {
-   "title": "1 kg U-235 ka fission",
-   "problem": "Har fission 200 MeV de. 1 kg ²³⁵U se kitni energy?",
+   "title": "Fission of 1 kg of U-235",
+   "problem": "Each fission gives 200 MeV. Energy from 1 kg of ²³⁵U?",
    "solution": "Nuclei = (1000/235) × 6.022 × 10²³ ≈ 2.56 × 10²⁴. E = 2.56 × 10²⁴ × 200 × 1.6 × 10⁻¹³ J ≈ 8.2 × 10¹³ J."
   },
   {
-   "title": "D–D fusion ka Q-value",
-   "problem": "²H = 2.014102 u, ³He = 3.016029 u, n = 1.008665 u. ²H + ²H → ³He + n ka Q?",
-   "solution": "Δm = 2(2.014102) − (3.016029 + 1.008665) = 0.00351 u. Q = 0.00351 × 931.5 ≈ 3.27 MeV (energy nikli)."
+   "title": "Q-value of D–D fusion",
+   "problem": "²H = 2.014102 u, ³He = 3.016029 u, n = 1.008665 u. Find Q for ²H + ²H → ³He + n.",
+   "solution": "Δm = 2(2.014102) − (3.016029 + 1.008665) = 0.00351 u. Q = 0.00351 × 931.5 ≈ 3.27 MeV (energy released)."
   },
   {
-   "title": "BE/A se fission energy",
-   "problem": "A = 240 (BE/A = 7.6 MeV) wala nucleus do A = 120 (BE/A = 8.5 MeV) nuclei mein toot-ta hai. Energy?",
+   "title": "Fission energy from BE/A",
+   "problem": "A nucleus with A = 240 (BE/A = 7.6 MeV) splits into two nuclei with A = 120 (BE/A = 8.5 MeV). Energy released?",
    "solution": "Q = BE_products − BE_reactant = 240 × 8.5 − 240 × 7.6 = 240 × 0.9 = 216 MeV."
   }
  ],
  "topics": [
   {
-   "title": "Nucleus ki banawat",
-   "explain": "Protons + neutrons = nucleons. Same Z, alag A wale atoms (jaise ¹H, ²H, ³H) chemically same hote hain. Nucleus ka size ~fm (10⁻¹⁵ m), atom ka ~Å (10⁻¹⁰ m) — atom nucleus se ~10⁵ guna bada."
+   "title": "What a nucleus is made of",
+   "explain": "Protons + neutrons = nucleons. Atoms with the same Z but different A (¹H, ²H, ³H) behave the same chemically. A nucleus is ~fm (10⁻¹⁵ m) across, an atom ~Å (10⁻¹⁰ m) — the atom is ~10⁵ times bigger."
   },
   {
-   "title": "Atomic masses aur mass spectrometer",
-   "explain": "Atomic masses u mein naapi jaati hain (¹²C = exactly 12 u). Ye masses whole numbers nahi hote — yahi chhota farak mass defect ka raaz hai."
+   "title": "Atomic masses",
+   "explain": "Atomic masses are measured in u (¹²C = exactly 12 u). They are not whole numbers — that small difference is the key to mass defect."
   },
   {
-   "title": "Mass defect se binding energy",
-   "explain": "Nucleons ko jodne par kuch mass energy ban kar nikal jaata hai. Wahi energy wapas do to nucleus toot-ta hai. Isliye BE = Δm c²."
+   "title": "From mass defect to binding energy",
+   "explain": "When nucleons join, a little mass is released as energy. Supply that energy back and the nucleus breaks apart. Hence BE = Δm c²."
   },
   {
-   "title": "BE/A curve",
-   "explain": "A chhota: BE/A tezi se badhta hai (He-4 ek peak). A ≈ 56 (Fe) par maximum ~8.8 MeV. A bada: dheere ghat-ta hai (U ~7.6 MeV). Curve ka matlab: beech ke nuclei sabse stable; bhaari ke liye fission, halke ke liye fusion energy deta hai."
+   "title": "The BE/A curve",
+   "explain": "Small A: BE/A rises quickly (He-4 is a local peak). Maximum ~8.8 MeV at A ≈ 56 (Fe). Large A: falls slowly (U ~7.6 MeV). Meaning: middle nuclei are the most stable; heavy nuclei release energy by fission, light ones by fusion."
   },
   {
-   "title": "Nuclear force ke gun",
-   "explain": "Sabse strong force (Coulomb se ~100 guna), bahut short range (~2–3 fm), p-p, n-n, p-n mein barabar (charge-independent), saturate hoti hai (har nucleon sirf paas wale padosiyon se judta hai) — isliye BE/A lagbhag constant hai."
+   "title": "Properties of the nuclear force",
+   "explain": "The strongest force (~100 times Coulomb), very short range (~2–3 fm), the same for p-p, n-n and p-n (charge-independent), and saturating (each nucleon bonds only with its neighbours) — which is why BE/A is roughly constant."
   },
   {
-   "title": "Fission aur chain reaction",
-   "explain": "Slow neutron ²³⁵U ko todta hai, 2–3 naye neutrons nikalte hain jo aur fission karte hain. Controlled chain reaction = nuclear reactor (moderator neutrons dheeme karta hai, control rods (Cd/B) neutrons sokhte hain). Uncontrolled = atom bomb."
+   "title": "Fission and the chain reaction",
+   "explain": "A slow neutron splits ²³⁵U, releasing 2–3 new neutrons that cause more fissions. Controlled chain reaction = nuclear reactor (the moderator slows neutrons; control rods of Cd/B absorb them). Uncontrolled = atom bomb."
   },
   {
-   "title": "Fusion aur taare",
-   "explain": "Halke nuclei judkar bhaari nucleus — per unit mass fission se zyada energy. Positive nuclei ko paas laane ke liye bahut garmi chahiye (thermonuclear). Sooraj ki energy hydrogen ke helium mein fusion se aati hai."
+   "title": "Fusion and the stars",
+   "explain": "Light nuclei join into a heavier one — more energy per unit mass than fission. Bringing positive nuclei close needs enormous heat (thermonuclear). The Sun shines by fusing hydrogen into helium."
   },
   {
    "title": "Syllabus note",
-   "explain": "Radioactivity (alpha, beta, gamma ke gun aur decay law, half-life) aur isotopes/isobars/isotones ki definitions JEE Main aur NEET dono ke current (2024 se revised) syllabus se hata di gayi hain. Is chapter ka focus: size, density, mass defect, binding energy, BE/A curve, fission, fusion."
+   "explain": "Radioactivity (properties of alpha, beta, gamma, the decay law, half-life) and the definitions of isotopes/isobars/isotones have been removed from the current (revised in 2024) JEE Main and NEET syllabus. This chapter focuses on size, density, mass defect, binding energy, the BE/A curve, fission and fusion."
   }
  ],
  "ratta": [
-  "R = 1.2 A^{1/3} fm;  ρ ≈ 2.3 × 10¹⁷ kg/m³ (sabka same).",
+  "R = 1.2 A^{1/3} fm;  ρ ≈ 2.3 × 10¹⁷ kg/m³ (same for all).",
   "1 u = 1.66 × 10⁻²⁷ kg = 931.5 MeV/c².",
-  "BE = Δm × 931.5 MeV;  zyada BE/A = zyada stable.",
+  "BE = Δm × 931.5 MeV;  higher BE/A = more stable.",
   "BE/A max ≈ 8.8 MeV at A ≈ 56 (Fe).",
-  "Fission ≈ 200 MeV per ²³⁵U;  sun fusion 26.7 MeV per He-4.",
+  "Fission ≈ 200 MeV per ²³⁵U;  solar fusion 26.7 MeV per He-4.",
   "Q = BE(products) − BE(reactants).",
   "Nuclear force: strong, short-range, charge-independent, saturating."
  ],

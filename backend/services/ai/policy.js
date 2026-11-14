@@ -47,31 +47,33 @@ export function levelFor(strikes) {
 
 const WHAT = {
   adult: "18+ / adult content",
-  abuse: "gaali / abusive language",
+  abuse: "abusive language",
 };
 
+const capFirst = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+
 function ladder(minor) {
-  return `**Aage ka niyam:** 2nd baar → final warning · 3rd → 1 ghanta chat band · 4th → 24 ghante band + Analytics mein remark · 5th → chat lock${minor ? " aur parent/guardian ko email" : ""}.`;
+  return `**What happens next:** 2nd time → final warning · 3rd → AI chat paused for 1 hour · 4th → paused for 24 hours + a remark in Analytics · 5th → chat locked${minor ? " and your parent/guardian is emailed" : ""}.`;
 }
 
 export function policyMessage(level, { category = "adult", minor = false } = {}) {
   const what = WHAT[category] ?? WHAT.adult;
-  const keep = "Tests, Revision aur Notes chalte rahenge.";
+  const keep = "Tests, Revision and Notes keep working.";
   if (level === "warning") {
-    return `I can't help with that. ${what} JNEET+ pe strictly allowed nahi hai — ye jagah sirf NEET UG / JEE Main ki padhai ke liye hai.\n\n**Warning 1 of 2.** ${ladder(minor)}\n\nKisi chapter ya concept ka doubt hai? Abhi poochho — main yahin hoon. 📚`;
+    return `I can't help with that. ${capFirst(what)} is strictly not allowed on JNEET+ — this space is only for NEET UG / JEE Main preparation.\n\n**Warning 1 of 2.** ${ladder(minor)}\n\nHave a doubt about a chapter or concept? Ask me now — I'm right here. 📚`;
   }
   if (level === "final_warning") {
-    return `I can't help with that. ${what} hamari policy ke khilaaf hai — ye aapki **final warning (2 of 2)** hai.\n\nAgli baar AI chat **1 ghante ke liye band** ho jayegi. Uske baad bhi hua to 24 ghante band + Analytics remark, aur phir **chat lock**${minor ? " — saath mein aapke parent/guardian ko email jayega" : ""}.\n\n${keep} Chalo, padhai pe wapas — koi doubt bhejo.`;
+    return `I can't help with that. ${capFirst(what)} is against our policy — this is your **final warning (2 of 2)**.\n\nNext time, AI chat will be **paused for 1 hour**. After that: paused for 24 hours + an Analytics remark, and then the **chat is locked**${minor ? " — and your parent/guardian will be emailed" : ""}.\n\n${keep} Let's get back to studying — send me a doubt.`;
   }
   if (level === "paused") {
-    return `I can't help with that. Warnings ke baad bhi ${what} — isliye AI chat **1 ghante ke liye band** hai.\n\nAgli baar 24 ghante band + Analytics mein remark lagega, aur uske baad chat lock${minor ? " + parent/guardian ko email" : ""}. ${keep}`;
+    return `I can't help with that. Even after the warnings, ${what} continued — so AI chat is **paused for 1 hour**.\n\nNext time it will be paused for 24 hours with a remark in Analytics, and after that the chat is locked${minor ? " + your parent/guardian is emailed" : ""}. ${keep}`;
   }
   if (level === "paused_24h") {
-    return `I can't help with that. Ye phir hua, isliye AI chat **24 ghante ke liye band** hai aur aapke Analytics mein ek **remark** jud gaya hai.\n\n**Agli baar chat lock ho jayegi**${minor ? " aur aapke parent/guardian ko email jayega" : ""}. ${keep}`;
+    return `I can't help with that. This happened again, so AI chat is **paused for 24 hours** and a **remark** has been added to your Analytics.\n\n**Next time the chat will be locked**${minor ? " and your parent/guardian will be emailed" : ""}. ${keep}`;
   }
   return minor
-    ? `I can't help with that. Baar-baar policy todne ki wajah se AI chat **lock** ho gayi hai, aur Analytics mein remark jud gaya hai.\n\nAapke parent/guardian ko ek email bheja gaya hai — unki approval ke baad chat khul jayegi. ${keep}`
-    : `I can't help with that. Baar-baar policy todne ki wajah se AI chat **lock** ho gayi hai, aur Analytics mein remark jud gaya hai.\n\n24 ghante baad aap chat screen se rules dobara accept karke **unlock request** kar sakte ho. ${keep}`;
+    ? `I can't help with that. Because the policy was broken repeatedly, AI chat is now **locked** and a remark has been added to your Analytics.\n\nAn email has been sent to your parent/guardian — the chat opens again once they approve. ${keep}`
+    : `I can't help with that. Because the policy was broken repeatedly, AI chat is now **locked** and a remark has been added to your Analytics.\n\nAfter 24 hours you can accept the rules again from the chat screen and **request an unlock**. ${keep}`;
 }
 
 // ── helpers ─────────────────────────────────────────────────────
@@ -208,12 +210,12 @@ export async function requestUnlock(userId, now = new Date()) {
     if (lastMail && now.getTime() - lastMail < PARENT_RESEND_COOLDOWN_MS) {
       return {
         ok: false, status: 429, code: "PARENT_ALREADY_EMAILED",
-        error: "Aapke parent/guardian ko approval link pehle hi bheja ja chuka hai. Unse email check karne ko kaho.",
+        error: "The approval link has already been sent to your parent/guardian. Please ask them to check their email.",
         lock: state,
       };
     }
     const sent = await emailParentUnlock(userId, { studentName: user.name, parentEmail: user.consent.parentEmail }, now);
-    if (!sent) return { ok: false, status: 503, code: "EMAIL_FAILED", error: "Email abhi nahi ja paya. Thodi der baad dobara try karo." };
+    if (!sent) return { ok: false, status: 503, code: "EMAIL_FAILED", error: "Couldn't send the email right now. Please try again in a little while." };
     await User.updateOne({ _id: userId }, { $push: { "policy.events": { $each: [{ at: now, kind: "unlock_requested" }], $slice: -MAX_EVENTS } } });
     return { ok: true, unlocked: false, sentToParent: true, lock: await getLockState(userId) };
   }
@@ -221,7 +223,7 @@ export async function requestUnlock(userId, now = new Date()) {
   if (now.getTime() < new Date(state.unlockAvailableAt).getTime()) {
     return {
       ok: false, status: 409, code: "UNLOCK_NOT_YET",
-      error: "Lock ke 24 ghante baad hi unlock ho sakta hai.",
+      error: "You can unlock only 24 hours after the lock.",
       lock: state,
     };
   }

@@ -4,6 +4,10 @@
 
 /* ── Google Fonts fallback (already loaded in index.html) ── */
 :root {
+  /* Admin charts (validated with the dataviz checker: light + dark). */
+  --chart-neet: #11A090;
+  --chart-jee:  #7477F2;
+  --chart-rev:  #C27C0E;
   --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
@@ -60,6 +64,9 @@
 }
 
 html.light {
+  --chart-neet: #0D9488;
+  --chart-jee:  #4F46E5;
+  --chart-rev:  #B45309;
   color-scheme: light;
 
   /* Nov 2026 refresh (approved mockup): warm paper + white cards. */

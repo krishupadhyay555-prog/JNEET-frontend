@@ -334,8 +334,8 @@ export default function Dashboard() {
           oneshots={oneshots}
           onOpenOneShot={(slug) => navigate(`/oneshot/${slug}`)}
           revisionSub={lastRevisionAt
-            ? `Last revision: ${formatRelative(lastRevisionAt)} · ek chapter aur karo`
-            : "Ek chapter chuno — MCQs + fill in the blanks"}
+            ? `Last revision: ${formatRelative(lastRevisionAt)} · do one more chapter`
+            : "Pick a chapter — MCQs + fill in the blanks"}
           onOpenRevision={() => navigate("/revision")}
         />
 

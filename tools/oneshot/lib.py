@@ -5,6 +5,11 @@ Every chapter file builds DOC with F/X/T and declares:
   SYLLABUS : list of (NTA syllabus point, [keywords that MUST appear in the page])
 Every worked example passes `checks`: (computed_by_python, text_that_must_appear_in_solution).
 `build()` refuses to write a chapter if any check fails.
+
+Languages (14 Nov 2026): DOC is the Hinglish page → <slug>.hinglish.json.
+An optional DOC_EN (same structure, English text, same computed numbers and
+checks) → <slug>.json, the default page. build(DOC, SYLLABUS, DOC_EN,
+SYLLABUS_EN) runs every check on BOTH versions.
 """
 import json, math, os, re
 
@@ -17,10 +22,11 @@ MISTAKE_RE = re.compile(
     r"check|alag|na lo|na maano|ka nahi|mein nahi|zaroori|chhoot|miss|bina|pehle)", re.I)
 
 
-def F(name, formula, when, mistake=None, unit=None, tag=None):
+def F(name, formula, when, mistake=None, unit=None, tag=None, note=None):
     d = {"name": name, "formula": formula, "when": when}
     if unit: d["unit"] = unit
     if mistake: d["mistake"] = mistake
+    if note: d["note"] = note
     if tag: d["tag"] = tag
     return d
 
@@ -70,7 +76,17 @@ def _text(doc):
     return "\n".join(parts)
 
 
-def build(doc, syllabus):
+def build(doc, syllabus, doc_en=None, syllabus_en=None):
+    _check_and_write(doc, syllabus, doc["slug"] + ".hinglish.json", "hinglish")
+    if doc_en is not None:
+        assert doc_en["slug"] == doc["slug"] and doc_en["chapters"] == doc["chapters"] and doc_en["subject"] == doc["subject"], \
+            "English and Hinglish versions must describe the same chapter"
+        assert len(doc_en["formulas"]) == len(doc["formulas"]) and len(doc_en["examples"]) == len(doc["examples"]), \
+            "English version must have the same formulas and examples"
+        _check_and_write(doc_en, syllabus_en or syllabus, doc["slug"] + ".json", "english")
+
+
+def _check_and_write(doc, syllabus, filename, lang):
     errors = []
     # 1. every example check
     for x in doc["examples"]:
@@ -98,13 +114,13 @@ def build(doc, syllabus):
         if m and not MISTAKE_RE.search(m):
             f["note"] = f.pop("mistake")
     if errors:
-        raise SystemExit(f"\n✗ {doc['slug']}:\n  " + "\n  ".join(errors))
+        raise SystemExit(f"\n✗ {doc['slug']} ({lang}):\n  " + "\n  ".join(errors))
     out = dict(doc)
     out["examples"] = [dict(x) for x in doc["examples"]]
     out["verifiedOn"] = doc.get("verifiedOn", VERIFIED_ON)
-    with open(os.path.join(OUT, doc["slug"] + ".json"), "w", encoding="utf-8") as fh:
+    with open(os.path.join(OUT, filename), "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=1)
         fh.write("\n")
     n_checks = sum(len(getattr(x, "checks", [])) for x in doc["examples"])
-    print(f"✓ {doc['slug']}: {len(doc['formulas'])} formulas, {len(doc['examples'])} examples "
+    print(f"✓ {doc['slug']} [{lang}]: {len(doc['formulas'])} formulas, {len(doc['examples'])} examples "
           f"({n_checks} numeric checks), {len(doc['topics'])} topics, {len(syllabus)} syllabus points covered")

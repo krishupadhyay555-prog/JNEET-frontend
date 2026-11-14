@@ -16,7 +16,7 @@ export function BackendErrorBanner({ message, onRetry }) {
 
       <div>
         <h3 className="text-base font-semibold text-white mb-1">
-          Server se connect nahi ho raha
+          Can't reach the server
         </h3>
         <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
           {message || "Backend unreachable. Make sure the server is running on port 5000."}

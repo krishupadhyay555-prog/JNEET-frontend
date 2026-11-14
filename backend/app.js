@@ -34,6 +34,8 @@ import oneshotRoutes from "./routes/oneshotRoutes.js";
 import recapRoutes   from "./routes/recapRoutes.js";
 import consentRoutes from "./routes/consentRoutes.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
+import adminRoutes   from "./routes/adminRoutes.js";
+import { requireAdmin } from "./middleware/admin.js";
 
 const app = express();
 
@@ -98,6 +100,7 @@ app.use("/api/test",    protect, userLimiter, testRoutes);
 app.use("/api/notes",   protect, userLimiter, notesRoutes);
 app.use("/api/oneshot", protect, userLimiter, oneshotRoutes);
 app.use("/api/recap",   protect, userLimiter, recapRoutes);
+app.use("/api/admin",   protect, userLimiter, requireAdmin, adminRoutes); // founder only (ADMIN_EMAILS)
 app.use("/api/payments", paymentRoutes);  // web-only checkout; own auth/limiters inside
 
 app.use((req, res) => {
