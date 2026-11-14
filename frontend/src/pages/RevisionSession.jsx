@@ -17,6 +17,7 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { ReportQuestion } from "../components/tests/ReportQuestion.jsx";
 import { ArrowLeft, Check, X as XIcon, SkipForward, ChevronRight } from "lucide-react";
 import { testApi } from "../api/testApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
@@ -407,6 +408,7 @@ export default function RevisionSession() {
               )}
             </div>
           )}
+          <ReportQuestion key={`r-${currentQuestion.questionId}`} attemptId={attemptId} questionId={currentQuestion.questionId} />
         </div>
 
         <div className="flex items-center gap-2 pt-2">

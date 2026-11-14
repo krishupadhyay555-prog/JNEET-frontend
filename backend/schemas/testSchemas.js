@@ -46,3 +46,14 @@ export const answerQuestionSchema = z.object({
   selectedIndex: z.number().int().min(0).max(3).nullable().optional().default(null),
   textAnswer:    z.string().max(200, "Answer is too long.").nullable().optional(),
 });
+// Student reports a question (result review / Revision).
+export const reportQuestionSchema = z.object({
+  attemptId:  z.string().regex(/^[a-f\d]{24}$/i, "Invalid attempt."),
+  questionId: z.string().regex(/^[a-f\d]{24}$/i, "Invalid question."),
+  reason:     z.enum(["wrong_answer", "wrong_question", "typo", "out_of_syllabus", "other"], { required_error: "Pick a reason." }),
+  note:       z.string().trim().max(500, "Keep the note under 500 characters.").optional().default(""),
+}).strict();
+
+export const updateReportSchema = z.object({
+  status: z.enum(["open", "fixed", "dismissed"]),
+}).strict();

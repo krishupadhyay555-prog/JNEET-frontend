@@ -101,7 +101,7 @@ export default function TestResult() {
         </p>
 
         {attempt.questions.map((q, i) => (
-          <ReviewAnswer key={q.questionId} question={q} index={i} mode={attempt.mode} />
+          <ReviewAnswer key={q.questionId} question={q} index={i} mode={attempt.mode} attemptId={attemptId} />
         ))}
       </div>
     </div>
