@@ -8,6 +8,7 @@
 import { env } from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
 import { effectivePlan } from "./plan.js";
+import { isAdminEmail } from "../middleware/admin.js";
 
 // True when the AI mentor must stay locked for this user: an under-18
 // whose parent hasn't approved yet (or has withdrawn approval).
@@ -34,6 +35,7 @@ export function toStudent(user) {
     planExpiresAt: effectivePlan(user) === "free" ? null : (user.planExpiresAt ?? null),
     persona:    user.persona ?? "mentor",
     studyLanguage: user.studyLanguage ?? "auto",
+    ...(isAdminEmail(user.email) ? { isAdmin: true } : {}),
     hasDateOfBirth: !!user.dateOfBirth,
     consent: {
       ageGroup:     c.ageGroup ?? null,

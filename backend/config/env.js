@@ -107,6 +107,9 @@ const envSchema = z.object({
   // Founder's inbox for payment alerts (possible duplicate purchase,
   // refund, amount mismatch, a payment that could not be activated).
   ADMIN_ALERT_EMAIL: z.string().email().optional(),
+  // Founder-only admin dashboard: comma-separated login emails allowed to
+  // open /admin. Empty = nobody (the route answers 404 to everyone).
+  ADMIN_EMAILS: z.string().optional(),
 
   // Guard: the AI is locked for under-18 users until a parent approves.
   // Set to "false" only for local testing.
@@ -133,6 +136,7 @@ const toInt = (v) => Number.parseInt(v, 10);
 
 export const env = {
   ...data,
+  ADMIN_EMAIL_SET: new Set(String(data.ADMIN_EMAILS || "").split(",").map((e) => e.trim().toLowerCase()).filter(Boolean)),
   RE_NEET_ACTIVE: data.RE_NEET_ACTIVE === "true",
   ENABLE_AI_CHAT_TITLES: data.ENABLE_AI_CHAT_TITLES === "true",
   REQUIRE_PARENT_CONSENT_FOR_AI: data.REQUIRE_PARENT_CONSENT_FOR_AI === "true",
