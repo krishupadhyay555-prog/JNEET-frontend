@@ -7,6 +7,7 @@
 
 import { env } from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
+import { effectivePlan } from "./plan.js";
 
 // True when the AI mentor must stay locked for this user: an under-18
 // whose parent hasn't approved yet (or has withdrawn approval).
@@ -29,7 +30,8 @@ export function toStudent(user) {
     examMode:   user.examMode,
     targetExam: targetValid ? user.targetExam : null,
     targetExamPromptDismissed: targetValid || (!user.targetExam && !!user.targetExamPromptDismissed),
-    plan:       user.plan ?? "free",
+    plan:       effectivePlan(user),
+    planExpiresAt: effectivePlan(user) === "free" ? null : (user.planExpiresAt ?? null),
     persona:    user.persona ?? "mentor",
     hasDateOfBirth: !!user.dateOfBirth,
     consent: {

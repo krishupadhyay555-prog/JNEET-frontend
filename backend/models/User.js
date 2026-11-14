@@ -10,6 +10,7 @@
 //      parental-approval state for users under 18.
 //    - persona: "mentor" (default) | "fun" AI explanation style.
 //    - plan: "free" | "pro" | "elite" — drives AI quotas.
+//    - planExpiresAt: end of the prepaid pass (B4 payments).
 //    - deletedAt: set when an account is anonymised (hard-delete job).
 //  Everything else (OTP fields, lockout, TTL cleanup of unverified
 //  accounts, password hashing) is UNCHANGED.
@@ -139,6 +140,10 @@ const userSchema = new mongoose.Schema(
       enum:    ["free", "pro", "elite"],
       default: "free",
     },
+    // Paid plans are prepaid passes: the plan counts only until this
+    // instant (null + paid plan = a manual grant with no end date).
+    // Use utils/plan.js effectivePlan() — never read `plan` directly.
+    planExpiresAt: { type: Date, default: null },
 
     lastLogin: { type: Date, default: null },
     isActive:  { type: Boolean, default: true },

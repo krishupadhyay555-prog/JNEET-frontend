@@ -20,7 +20,8 @@
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
-import { User, Settings, LogOut, ChevronDown } from "lucide-react";
+import { User, Settings, LogOut, ChevronDown, Gem } from "lucide-react";
+import { isAppShell } from "../utils/appShell.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import toast from "react-hot-toast";
 
@@ -150,6 +151,17 @@ export function ProfileMenu() {
             >
               <Settings size={15} className="text-gray-600" />
               Settings
+            </button>
+            <button
+              onClick={() => goTo("/plans")}
+              className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-gray-400
+                hover:text-fg-primary hover:bg-bg-hover transition-colors duration-150"
+            >
+              <Gem size={15} className="text-gray-600" />
+              {isAppShell() ? "Your plan" : "Plans"}
+              <span className="ml-auto text-[10px] font-semibold uppercase tracking-wide text-violet-500">
+                {user?.plan && user.plan !== "free" ? user.plan : "free"}
+              </span>
             </button>
           </div>
 

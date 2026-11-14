@@ -56,6 +56,8 @@ const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
 const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
 const ParentUnlock    = lazyPage(() => import("./pages/ParentUnlock.jsx"));
 const Landing         = lazyPage(() => import("./pages/Landing.jsx"));
+const Plans           = lazyPage(() => import("./pages/Plans.jsx"));
+const ParentPay       = lazyPage(() => import("./pages/ParentPay.jsx"));
 
 // Soft page-to-page transition (keyed on the path so every navigation animates).
 function PageTransition({ children }) {
@@ -194,6 +196,7 @@ export default function App() {
               <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
               <Route path="/parent-consent/:token"        element={<ParentConsent />} />
               <Route path="/parent-unlock/:token"         element={<ParentUnlock />} />
+              <Route path="/pay/:token"                   element={<ParentPay />} />
 
               <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
               <Route path="/ask"       element={<ProtectedRoute><AskAI /></ProtectedRoute>} />
@@ -205,6 +208,7 @@ export default function App() {
               <Route path="/revision"  element={<ProtectedRoute><Revision /></ProtectedRoute>} />
               <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
               <Route path="/oneshot"   element={<ProtectedRoute><OneShot /></ProtectedRoute>} />
+              <Route path="/plans"     element={<ProtectedRoute><Plans /></ProtectedRoute>} />
               <Route path="/oneshot/:slug" element={<ProtectedRoute><OneShotChapter /></ProtectedRoute>} />
               <Route
                 path="/test/attempt/:attemptId"

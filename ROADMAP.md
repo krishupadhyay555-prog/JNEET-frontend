@@ -2,7 +2,7 @@
 
 > **Permanent memory file.** Every session (human or AI) reads this first.
 > Update the boxes the moment something is done (`[ ]` → `[x]`), add the date, and never delete an item — strike it (`~~like this~~`) with a reason if it is dropped.
-> Last updated: **14 Nov 2026**. Work status: **ACTIVE** — 13 Nov founder order: **JEE OneShots first, as fast as possible** (JEE Main Session 1 is in late January 2027), every chapter complete and verified → then new questions. Everything else waits for the founder's OK (see §5 D-m).
+> Last updated: **14 Nov 2026** (B4 payments PR opened). Work status: **ACTIVE** — 13 Nov founder order: **JEE OneShots first, as fast as possible** (JEE Main Session 1 is in late January 2027), every chapter complete and verified → then new questions. Everything else waits for the founder's OK (see §5 D-m).
 > Founder gave Claude project-lead permission (12 Nov): Claude runs commands, tests, local seeds and opens PRs; the founder merges PRs, runs live-database commands from the laptop and handles every password/key — Claude never sees or asks for them.
 
 **Motto:** *Roz thoda, sahi tareeke se, bina pressure — samjho, yaad rakho, khud karo.*
@@ -43,6 +43,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #8 | Roadmap: seed done, UptimeRobot, laptop setup | ✅ Merged 12 Nov |
 | #9 | Safety hotfix (18+ filter flagged maths / biology words) | ❌ Closed — folded into #10 so the same files are not in two open PRs |
 | #10 | **Safety v2 + fill-in-the-blanks + OneShot + recap + Aaj ka plan + quick chips + new light/dark theme** (needs L-seed-2 after merge). Safety: 3-layer check in any language (patterns + OpenAI moderation + context judge), 5-step ladder with lock, unlock (adult 24 h / parent email for under-18), abuse covered, distress in any language, legal text updated. Includes the #9 fix | ✅ Merged 12 Nov — live. L-seed-2 done 14 Nov (database = **13,095**, 0 stale) |
+| #13 | **B4 payments (web only)**: Razorpay checkout for Pro/Elite (1 or 4 months, prepaid, no auto-renew), webhook, plan end dates (expired pass → Free automatically), Pro→Elite day conversion, parent payment link for under-18s, receipt email, `/plans` page, Settings "Plan & billing", nothing shown inside the TWA app (+ server refuses orders from it), CSP for Razorpay, Terms/Privacy/Refund text updated (v2026-11-14). Off until L10 keys are set | 🟡 Open — needs merge + L10 |
 | #11 | **JEE OneShot batch 1**: 8 new chapters (Electrostatics, Dual Nature, Atoms, Nuclei, Chemical Thermodynamics, Equilibrium, Matrices & Determinants, Definite Integrals) + proper superscript/subscript display | ✅ Merged 14 Nov — live (checked in the browser 14 Nov) |
 
 ### Live check 14 Nov 2026 (Claude, built-in browser in the founder's Claude desktop app, logged in by the founder as a student)
@@ -54,10 +55,11 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 - Small polish found: some OneShot cards put a plain fact under the "Galti" label (e.g. "1 C ke liye 6.25 × 10¹⁸ electrons") — relabel in the next OneShot batch.
 - **How Claude checks the live site:** founder keeps the Claude desktop app open on the laptop; Claude uses its built-in browser (separate from Chrome, no personal logins). The founder logs in himself — Claude never types passwords.
 
-### Next session starts here (14 Nov 2026)
+### Next session starts here (updated 14 Nov 2026, after PR #13)
+0. **PR #13 (B4 payments)** open → founder merges → L9 (Vercel Pro / Cloudflare) → L10 Razorpay keys (test mode first) → Claude checks /plans live in the built-in browser and a test-mode payment end to end.
 1. List open PRs (CLAUDE.md step 4).
 2. Waiting on founder: L3 OpenAI key on Render, L2/L5/L6/L9, decision on D83 (hide vs delete out-of-syllabus questions; Claude recommends hide), confirm JEE Main 2027 S1 date (app says 22 Jan; some sites say 20 Jan per the 24 Oct bulletin).
-3. Claude's next build order: (a) **B4 payments** — Razorpay web checkout for Free/Pro/Elite + webhook + plan quotas (no payment UI in the TWA app); (b) OneShot batch 2 (Kinematics, Laws of Motion, Work Energy Power, Moving Charges, EMI, AC, Ray Optics, Wave Optics) with `tools/oneshot/`; (c) D83 once decided; (d) A2 report-question button, A4 diagnostic test.
+3. Claude's next build order: (a) ~~**B4 payments**~~ (PR #13) — Razorpay web checkout for Free/Pro/Elite + webhook + plan quotas (no payment UI in the TWA app); (b) OneShot batch 2 (Kinematics, Laws of Motion, Work Energy Power, Moving Charges, EMI, AC, Ray Optics, Wave Optics) with `tools/oneshot/`; (c) D83 once decided; (d) A2 report-question button, A4 diagnostic test.
 4. Month-end launch plan + honest earnings estimate were given to the founder on 13 Nov (launch ~1 Dec, beta 50–100 students first, free Sunday live mock as the hook, "JEE Jan Crash Pass" ₹299–499).
 
 ### Issue log (so it never repeats)
@@ -97,6 +99,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 - [ ] **L7** Atlas Flex (backups), Render Starter ($7, no spin-down), UptimeRobot, Sentry.
   - [x] UptimeRobot — done 12 Nov 2026: "JNEET backend" (`https://api.jneetai.com/health`) + "JNEET website" (`https://jneetai.com`), 5-min checks, email + phone push. The 5-min pings also keep the free Render backend awake (one service ≈ 720–744 of the 750 free hours/month — keep no other free Render service).
 - [ ] **L8** Production 10-minute smoke test.
+- [ ] **L10** Payments go-live (after PR #13 merge; do **L9** first — Vercel Hobby is non-commercial): Razorpay account + KYC → Dashboard **Test mode** first → Settings → API Keys → Render `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` → Webhooks → URL `https://api.jneetai.com/api/payments/webhook`, events `payment.captured`, `order.paid`, `payment.failed`, a secret → Render `RAZORPAY_WEBHOOK_SECRET` → test-mode purchase on jneetai.com/plans → then swap to **Live** keys + a live webhook. Optional prices (whole rupees): `PRICE_PRO_1M` (199), `PRICE_PRO_4M` (699), `PRICE_ELITE_1M` (349), `PRICE_ELITE_4M` (1199). Without the keys the site says "Paid plans jald khulenge".
 - [ ] **L9** Before paid plans: Vercel Hobby is **non-commercial only** → move to Vercel Pro ($20/mo) or Cloudflare Pages (free, commercial allowed).
 - [x] Brevo domain authenticated, sender verified, OTP arriving (Oct 2026).
 - [x] Turnstile code (invisible, fresh token per request, fails open, rate limits unchanged) and email logo — in PR #2.
@@ -125,7 +128,7 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 - [ ] **B1 "Toughest" → "right tough".** Difficulty set from real student accuracy (<40% correct = tough); weaker students climb a ladder (moderate → tough) so they don't quit. Default mix for ready students 70–80% tough; student can ask for easy/moderate.
 - [ ] **B2 AI memory.** Chat always knows the student's WMS weak topics and past mistakes ("Pichli baar torque mein sign galat kiya tha"). ~₹0.
 - [ ] **B3 Free tier = value first.** 7-day Pro reverse trial, then back to Free.
-- [ ] **B4 Pricing.** Monthly + **exam-season pass** (JEE Jan/Apr, NEET May) + **parent payment link** (paid on the web, never in-app). Suggested Pro ₹149–199/mo or season pass ₹499–799 (to validate).
+- [ ] **B4 Pricing.** *(14 Nov 2026: payments built in PR #13 — Free/Pro/Elite, 1 m = 30 days / 4 m = 120 days, placeholder prices ₹199/₹699 Pro, ₹349/₹1,199 Elite changeable from Render; parent payment link done. Still open: final prices, "4-month pass never ends before the exam date" idea, exam-season pass naming, expiry reminder email.)* Monthly + **exam-season pass** (JEE Jan/Apr, NEET May) + **parent payment link** (paid on the web, never in-app). Suggested Pro ₹149–199/mo or season pass ₹499–799 (to validate).
   - 12 Nov 2026 (founder): plan names stay **Free / Pro / Elite** ("Advanced plan" would clash with JEE Advanced). Durations **1 month + 4 months** (founder prefers 4 over 3: Jan–Apr). Open point: a fixed Jan–Apr pass ends *before* NEET (May) and JEE Advanced (May/June) — proposal: the 4-month pass never ends before the student's exam date. Main + Advanced combo = Elite level only; optional **"Advanced Crash" (~45 days, sold after JEE Main results)**.
 - [ ] **B5 Board-exam balance for Class 12.** Light "board mode" option while staying JEE/NEET-focused.
 
@@ -294,7 +297,7 @@ Game engine (score, lives, timer, XP, leaderboard) 3–4 days; each simple game 
 - [ ] **D83 Out-of-syllabus questions in the bank** (see issue log 13 Nov) — options: (a) hide them from JEE/NEET tests with a `syllabus: "old"` flag (reversible), (b) delete with `--prune`. Founder to choose.
 
 ### D-k. Later / platform
-- [ ] **D60 Razorpay + Pro/Elite (Batch 6)** — 2% + GST per payment; ₹199 KYC.
+- [ ] **D60 Razorpay + Pro/Elite (Batch 6)** — built in PR #13 (14 Nov 2026); tick after merge + L10 test payment. — 2% + GST per payment; ₹199 KYC.
 - [ ] **D61 Google login.**
 - [ ] **D62 Play Store TWA** (no payment UI inside).
 

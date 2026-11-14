@@ -93,6 +93,18 @@ const envSchema = z.object({
   // Used only to convert USD token cost into rupees in the usage ledger
   AI_USD_INR: z.string().default("96"),
 
+  // ── Payments (Razorpay, web only). Unset keys = payments are off and
+  //    the Plans page says "coming soon". Keys live only on Render. ──
+  RAZORPAY_KEY_ID:         z.string().optional(),
+  RAZORPAY_KEY_SECRET:     z.string().optional(),
+  RAZORPAY_WEBHOOK_SECRET: z.string().optional(),
+  RAZORPAY_API_URL:        z.string().default("https://api.razorpay.com/v1"),
+  // Prices in whole rupees (optional; defaults in config/plans.js)
+  PRICE_PRO_1M:   z.string().optional(),
+  PRICE_PRO_4M:   z.string().optional(),
+  PRICE_ELITE_1M: z.string().optional(),
+  PRICE_ELITE_4M: z.string().optional(),
+
   // Guard: the AI is locked for under-18 users until a parent approves.
   // Set to "false" only for local testing.
   REQUIRE_PARENT_CONSENT_FOR_AI: z.enum(["true", "false"]).default("true"),
@@ -145,5 +157,8 @@ if (env.NODE_ENV !== "test") {
   if (!env.OPENAI_API_KEY) {
     const level = env.NODE_ENV === "production" ? "error" : "warn";
     console[level]("[env] OPENAI_API_KEY not set — the AI mentor will answer 'not configured' until it is set.");
+  }
+  if (env.RAZORPAY_KEY_ID && env.RAZORPAY_KEY_SECRET && !env.RAZORPAY_WEBHOOK_SECRET) {
+    console.warn("[env] RAZORPAY_WEBHOOK_SECRET not set — payments still work from the checkout, but a student who closes the tab mid-payment will only get the plan once the webhook is configured.");
   }
 }

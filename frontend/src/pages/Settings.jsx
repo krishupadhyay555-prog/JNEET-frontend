@@ -27,7 +27,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGoBack } from "../hooks/useGoBack.js";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle, Bot, ShieldCheck, KeyRound } from "lucide-react";
+import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle, Bot, ShieldCheck, KeyRound, Gem } from "lucide-react";
+import { PlanSettings } from "../components/settings/PlanSettings.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
@@ -190,6 +191,13 @@ export default function Settings() {
             <ParentConsentSettings />
           </SectionCard>
         )}
+
+        <SectionCard
+          icon={<Gem size={14} className="text-violet-400" />}
+          title="Plan & billing"
+        >
+          <PlanSettings />
+        </SectionCard>
 
         <SectionCard
           icon={<KeyRound size={14} className="text-violet-400" />}

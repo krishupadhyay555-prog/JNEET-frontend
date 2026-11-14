@@ -23,8 +23,8 @@ export const BUSINESS = {
   grievanceOfficer: { name: "Krish Upadhyay", email: "official.krishupadhyay@gmail.com" },
 };
 
-export const LEGAL_VERSION = "2026-11-12";
-export const LEGAL_UPDATED = "12 November 2026";
+export const LEGAL_VERSION = "2026-11-14";
+export const LEGAL_UPDATED = "14 November 2026";
 
 const B = BUSINESS;
 
@@ -80,7 +80,7 @@ export const LEGAL = {
           "MongoDB Atlas — database where account, chat and study data are stored.",
           "Brevo — delivers our emails (it receives your email address and the message, such as a code).",
           "Vercel and Render — host the website and the server.",
-          "Razorpay — will process payments if and when paid plans launch. We will not see your card, UPI or bank details.",
+          "Razorpay — processes payments for paid plans (it receives the payer's contact details and payment information). We never see your card, UPI or bank details; we keep only the payment reference, amount, plan and date.",
         ],
         p2: ["Some of these providers store or process data outside India. We choose providers that use industry-standard safeguards. We may also disclose information if the law requires it."],
       },
@@ -104,7 +104,7 @@ export const LEGAL = {
           "Your account data and chats stay while your account is active.",
           "If you delete your account, it is switched off immediately and permanently erased after 30 days, including chats, notes, test history and AI usage records. (The 30 days let us restore an account that was deleted by mistake.)",
           "Sign-ups that are never verified are removed automatically after 48 hours.",
-          "Payment and tax records, once paid plans exist, are kept for as long as the law requires.",
+          "Payment and tax records (payment reference, amount, plan, date — never card or UPI details) are kept for as long as the law requires, even if the account is deleted.",
           "Server logs are kept for a short period for security and debugging.",
         ],
       },
@@ -165,7 +165,10 @@ export const LEGAL = {
       {
         h: "3. Plans and limits",
         p: [
-          "The free plan includes a daily limit on AI questions (currently 5 per day, resetting at midnight India time). Limits can change. Paid plans are not on sale yet; when they are, their price, benefits and renewal terms will be shown clearly before you pay, and our Refund Policy applies.",
+          "The free plan includes a daily limit on AI questions (currently 5 per day, resetting at midnight India time). Limits can change.",
+          "Paid plans (Pro and Elite) are sold only on our website, as prepaid passes for 1 or 4 months. The price (in Indian rupees, including taxes), the benefits and the end date are shown before you pay. Passes do not renew automatically. Buying again adds days to your current pass; moving from Pro to Elite converts your unused Pro days into Elite days by value.",
+          "Users under 18 cannot buy a plan themselves: a parent or legal guardian pays using a link the student shares. By paying, the payer confirms they are 18 or older and agree to these Terms and our Refund Policy.",
+          "Paid plans are non-refundable, as explained in our Refund Policy.",
         ],
       },
       {
@@ -218,16 +221,16 @@ export const LEGAL = {
     path: "/refund",
     file: "refund-policy.html",
     title: "Refund & Cancellation Policy",
-    intro: `${B.product} is free to use at launch. This page explains how payments, refunds and cancellation will work once paid plans are available. No payment is taken until a paid plan is clearly shown to you at checkout.`,
+    intro: `${B.product} has a free plan and paid plans (Pro and Elite). This page explains how payments, refunds and cancellation work. No payment is taken until the plan, price and end date are clearly shown to you at checkout.`,
     sections: [
       {
         h: "1. Free plan",
         p: ["The free plan costs nothing and has no refund because nothing is charged."],
       },
       {
-        h: "2. Paid plans (when available)",
+        h: "2. Paid plans",
         ul: [
-          "Paid plans are sold as prepaid passes for a fixed period. They do not renew automatically unless the checkout page clearly says so and you agreed to it.",
+          "Paid plans are sold on our website only, as prepaid passes for 1 month (30 days) or 4 months (120 days). They do not renew automatically, and no card or UPI mandate is saved.",
           "Prices are shown in Indian rupees, inclusive of applicable taxes, before you pay.",
           "Payments are processed by Razorpay. We never see your card, UPI or bank details.",
         ],
@@ -243,7 +246,7 @@ export const LEGAL = {
       },
       {
         h: "4. Cancelling",
-        p: ["If a plan is set to renew, you can turn renewal off any time before the renewal date and keep access until the paid period ends."],
+        p: ["There is nothing to cancel: passes never renew on their own. Your plan simply returns to Free when the pass ends, and you keep access until then."],
       },
       {
         h: "5. How to ask",
