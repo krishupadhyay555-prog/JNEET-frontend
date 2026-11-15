@@ -1,0 +1,148 @@
+{
+ "slug": "chemical-kinetics",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Chemical Kinetics",
+  "JEE": "Chemical Kinetics"
+ },
+ "title": "Chemical Kinetics",
+ "readMinutes": 13,
+ "summary": [
+  "Chemical kinetics is about how fast reactions go. Rate = change in concentration per unit time, divided by the stoichiometric coefficient so that it is the same for every species.",
+  "The rate law (rate = k[A]ˣ[B]ʸ) is found by experiment. The order (x + y) can be 0, fractional or whole; molecularity applies only to elementary steps and is always a whole number.",
+  "Integrated rate laws: zero order [A] = [A]₀ − kt (t½ ∝ [A]₀); first order ln([A]₀/[A]) = kt (t½ = 0.693/k, independent of concentration).",
+  "Rates rise sharply with temperature (Arrhenius: k = Ae^(−Ea/RT)) because more molecules have energy above Ea. Catalysts lower Ea without changing ΔH or equilibrium."
+ ],
+ "formulas": [
+  {
+   "name": "Rate of reaction",
+   "formula": "for aA + bB → cC + dD:  rate = −(1/a)d[A]/dt = −(1/b)d[B]/dt = (1/c)d[C]/dt",
+   "when": "Relating rates of different species.",
+   "tag": "PYQ favourite",
+   "note": "Divide by the coefficient — the rate of disappearance of A is a × rate."
+  },
+  {
+   "name": "Rate law",
+   "formula": "rate = k[A]ˣ[B]ʸ;  order = x + y",
+   "when": "Effect of concentration on rate.",
+   "mistake": "x and y come from experiment, not from the balanced equation."
+  },
+  {
+   "name": "Units of k",
+   "formula": "(mol L⁻¹)¹⁻ⁿ s⁻¹:  zero order mol L⁻¹ s⁻¹;  first s⁻¹;  second L mol⁻¹ s⁻¹",
+   "when": "Identifying order from units."
+  },
+  {
+   "name": "Zero-order reaction",
+   "formula": "[A] = [A]₀ − kt;  t½ = [A]₀/2k",
+   "when": "Reactions on saturated catalyst surfaces, photochemical reactions.",
+   "note": "t½ increases with initial concentration for zero order."
+  },
+  {
+   "name": "First-order reaction",
+   "formula": "k = (2.303/t) log([A]₀/[A]);  t½ = 0.693/k",
+   "when": "Most decompositions, radioactive-type kinetics.",
+   "mistake": "t½ of a first-order reaction does not depend on initial concentration.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "First-order shortcuts",
+   "formula": "t₇₅% = 2 t½;  t₈₇.₅% = 3 t½;  t₉₉.₉% ≈ 10 t½;  t₉₉% = 2 t₉₀%",
+   "when": "Quick timing questions."
+  },
+  {
+   "name": "Pseudo-first-order",
+   "formula": "a second-order reaction with one reactant in large excess behaves as first order",
+   "when": "Acid hydrolysis of esters, inversion of cane sugar."
+  },
+  {
+   "name": "Arrhenius equation",
+   "formula": "k = A e^(−Ea/RT);  log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂)",
+   "when": "Effect of temperature, finding Ea.",
+   "note": "Use kelvin, and R = 8.314 J mol⁻¹ K⁻¹ with Ea in joules."
+  },
+  {
+   "name": "Temperature coefficient",
+   "formula": "k(T + 10)/k(T) ≈ 2–3",
+   "when": "Rough rule of thumb."
+  },
+  {
+   "name": "Collision theory",
+   "formula": "rate = Z_AB e^(−Ea/RT) × P  (P = steric/orientation factor)",
+   "when": "Why only some collisions react."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Relating rates",
+   "problem": "2N₂O₅ → 4NO₂ + O₂. NO₂ forms at 2.8 × 10⁻³ mol L⁻¹ s⁻¹. Rate of disappearance of N₂O₅?",
+   "solution": "−d[N₂O₅]/dt = (2/4) × 2.8 × 10⁻³ = 1.4 × 10⁻³ mol L⁻¹ s⁻¹."
+  },
+  {
+   "title": "Rate constant from half-life",
+   "problem": "First-order t½ = 30 min. k?",
+   "solution": "k = 0.693/30 ≈ 0.0231 min⁻¹."
+  },
+  {
+   "title": "Time for 90% completion",
+   "problem": "Same reaction: time for 90% completion?",
+   "solution": "t = (2.303/k) log 10 = 2.303/0.0231 ≈ 99.7 min."
+  },
+  {
+   "title": "Order from data",
+   "problem": "Doubling [A] makes the rate four times. Order in A?",
+   "solution": "2ⁿ = 4 → n = 2."
+  },
+  {
+   "title": "Activation energy",
+   "problem": "Rate doubles from 300 K to 310 K. Ea?",
+   "solution": "log 2 = (Ea/2.303R)(10/(300 × 310)) → Ea ≈ 53.6 kJ/mol."
+  },
+  {
+   "title": "99.9% completion",
+   "problem": "How many half-lives for 99.9% completion of a first-order reaction?",
+   "solution": "t₉₉.₉/t½ = (2.303 × 3)/0.693 ≈ 10 ≈ 10."
+  },
+  {
+   "title": "Zero-order half-life",
+   "problem": "Zero order, [A]₀ = 0.5 M, k = 0.01 mol L⁻¹ s⁻¹. t½?",
+   "solution": "t½ = [A]₀/2k = 0.5/0.02 = 25 s."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Average and instantaneous rate",
+   "explain": "Average rate = Δ[R]/Δt over an interval; instantaneous rate = slope of the concentration–time curve at a point. Rate usually decreases as reactants are used up."
+  },
+  {
+   "title": "Factors affecting rate",
+   "explain": "Concentration (or pressure), temperature, catalyst, surface area of solids, and light for photochemical reactions."
+  },
+  {
+   "title": "Order vs molecularity",
+   "explain": "Order is experimental, can be zero or fractional, and refers to the overall reaction. Molecularity is theoretical, a whole number (1, 2, rarely 3) and defined only for elementary steps. For complex reactions the slowest step decides the rate law."
+  },
+  {
+   "title": "Graphs to identify order",
+   "explain": "Zero order: [A] vs t is a straight line (slope −k). First order: ln[A] (or log[A]) vs t is a straight line (slope −k or −k/2.303). Rate vs [A] is flat for zero order and a straight line through the origin for first order."
+  },
+  {
+   "title": "Activation energy and catalysts",
+   "explain": "Only colliding molecules with energy ≥ Ea and the right orientation react. A catalyst provides a new path with lower Ea, speeds up forward and backward reactions equally, is not used up, and does not change ΔH, ΔG or K."
+  },
+  {
+   "title": "Effect of temperature (Maxwell distribution)",
+   "explain": "Raising T shifts the energy distribution so the fraction of molecules above Ea (the area beyond Ea) roughly doubles for every 10 K. ln k vs 1/T is a straight line with slope −Ea/R and intercept ln A."
+  }
+ ],
+ "ratta": [
+  "Rate = −(1/a)d[A]/dt;  order is experimental.",
+  "Units of k: (mol L⁻¹)¹⁻ⁿ s⁻¹.",
+  "Zero: t½ = [A]₀/2k;  first: t½ = 0.693/k (no [A]₀).",
+  "k = (2.303/t) log([A]₀/[A]).",
+  "t₉₉.₉ ≈ 10 t½;  t₇₅ = 2t½.",
+  "k = Ae^(−Ea/RT);  slope of ln k vs 1/T = −Ea/R.",
+  "Catalyst lowers Ea; no change in ΔH or K."
+ ],
+ "verifiedOn": "2026-11-13"
+}

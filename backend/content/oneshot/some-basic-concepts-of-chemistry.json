@@ -1,0 +1,173 @@
+{
+ "slug": "some-basic-concepts-of-chemistry",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Some Basic Concepts of Chemistry",
+  "JEE": "Some Basic Concepts of Chemistry"
+ },
+ "title": "Some Basic Concepts of Chemistry",
+ "readMinutes": 12,
+ "summary": [
+  "Chemistry counts particles in moles: 1 mol = 6.022 × 10²³ particles (Avogadro's number), and its mass in grams equals the molar mass.",
+  "Laws of chemical combination (conservation of mass, definite proportions, multiple proportions, Gay-Lussac's law, Avogadro's law) led to Dalton's atomic theory.",
+  "A balanced equation is a recipe in moles. The reactant that runs out first is the limiting reagent and decides how much product forms.",
+  "Concentration can be expressed as mass %, mole fraction, molarity (mol/L, changes with temperature) or molality (mol/kg of solvent, temperature-independent)."
+ ],
+ "formulas": [
+  {
+   "name": "Mole concept",
+   "formula": "n = mass/M = N/Nₐ = V(gas at STP)/22.4 L",
+   "when": "Converting between mass, particles and gas volume.",
+   "mistake": "22.4 L is only for a gas at STP (273 K, 1 atm) — never for liquids or solids.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Avogadro's number",
+   "formula": "Nₐ = 6.022 × 10²³ mol⁻¹",
+   "when": "Counting atoms, molecules or ions."
+  },
+  {
+   "name": "Atomic mass unit",
+   "formula": "1 amu (u) = 1/12 × mass of one ¹²C atom = 1.66 × 10⁻²⁴ g",
+   "when": "Atomic and molecular masses."
+  },
+  {
+   "name": "Average atomic mass",
+   "formula": "A = Σ(isotopic mass × fractional abundance)",
+   "when": "Elements with isotopes, e.g. chlorine 35.5."
+  },
+  {
+   "name": "Percentage composition",
+   "formula": "% of element = (mass of element in 1 mol / molar mass) × 100",
+   "when": "Composition of a compound."
+  },
+  {
+   "name": "Empirical and molecular formula",
+   "formula": "molecular formula = n × empirical formula;  n = molar mass / empirical formula mass",
+   "when": "Finding formulas from % composition.",
+   "note": "Convert % to moles, divide by the smallest, then round to whole numbers (multiply if you get .5 or .33)."
+  },
+  {
+   "name": "Limiting reagent",
+   "formula": "compare (moles available ÷ coefficient) for each reactant — the smallest is limiting",
+   "when": "Product amount when reactants are not in the exact ratio.",
+   "mistake": "Don't compare masses — compare moles divided by stoichiometric coefficients.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Mass percent",
+   "formula": "w/w % = (mass of solute / mass of solution) × 100",
+   "when": "Concentration by mass."
+  },
+  {
+   "name": "Mole fraction",
+   "formula": "x_A = n_A / (n_A + n_B);  x_A + x_B = 1",
+   "when": "Gas mixtures, Raoult's law."
+  },
+  {
+   "name": "Molarity",
+   "formula": "M = moles of solute / volume of solution (L)",
+   "when": "Titrations, dilutions.",
+   "note": "Molarity changes with temperature because volume does."
+  },
+  {
+   "name": "Molality",
+   "formula": "m = moles of solute / mass of solvent (kg)",
+   "when": "Colligative properties.",
+   "mistake": "Use the mass of SOLVENT, not of solution."
+  },
+  {
+   "name": "Dilution and mixing",
+   "formula": "M₁V₁ = M₂V₂;  mixing: M = (M₁V₁ + M₂V₂)/(V₁ + V₂)",
+   "when": "Preparing solutions."
+  },
+  {
+   "name": "Molarity from mass % and density",
+   "formula": "M = (10 × d × w%)/M_solute   (d in g/mL)",
+   "when": "Commercial acids."
+  },
+  {
+   "name": "Neutralisation (acid–base)",
+   "formula": "n₁ × M₁ × V₁ (acid, n = basicity) = n₂ × M₂ × V₂ (base, n = acidity)",
+   "when": "Titration volumes."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Counting atoms",
+   "problem": "How many atoms are present in 4.4 g of CO₂?",
+   "solution": "n = 4.4/44 = 0.1 mol; each molecule has 3 atoms → 0.3 × 6.022 × 10²³ ≈ 1.81 × 10²³ atoms."
+  },
+  {
+   "title": "Limiting reagent",
+   "problem": "10 g of H₂ reacts with 64 g of O₂. Mass of water formed?",
+   "solution": "H₂ = 5 mol, O₂ = 2 mol. 2H₂ + O₂ → 2H₂O: O₂ needs 4 mol H₂, so O₂ is limiting → 4 mol H₂O = 72 g (1 mol H₂ left)."
+  },
+  {
+   "title": "Molarity",
+   "problem": "0.5 mol of NaCl is dissolved to make 250 mL of solution. Molarity?",
+   "solution": "M = 0.5/0.250 = 2 M."
+  },
+  {
+   "title": "Molality from mass %",
+   "problem": "A solution is 20% NaOH by mass. Molality?",
+   "solution": "100 g solution: 20 g NaOH = 0.5 mol in 80 g water. m = 0.5/0.080 = 6.25 m."
+  },
+  {
+   "title": "Mole fraction",
+   "problem": "46 g of ethanol is mixed with 54 g of water. Mole fraction of ethanol?",
+   "solution": "Ethanol 1 mol, water 3 mol → x = 1/4 = 0.25."
+  },
+  {
+   "title": "Percentage of carbon in glucose",
+   "problem": "% of C in C₆H₁₂O₆?",
+   "solution": "72/180 × 100 = 40%."
+  },
+  {
+   "title": "Titration volume",
+   "problem": "Volume of 0.1 M H₂SO₄ to neutralise 50 mL of 0.2 M NaOH?",
+   "solution": "2 × 0.1 × V = 1 × 0.2 × 50 → V = 50 mL."
+  },
+  {
+   "title": "Molarity of commercial acid",
+   "problem": "H₂SO₄ is 49% by mass with density 1.5 g/mL. Molarity?",
+   "solution": "M = 10 × 1.5 × 49/98 = 7.5 M."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Matter and its classification",
+   "explain": "Matter is a pure substance (element or compound) or a mixture (homogeneous like air or salt solution; heterogeneous like sand in water). Compounds have fixed composition; mixtures don't."
+  },
+  {
+   "title": "Laws of chemical combination",
+   "explain": "Conservation of mass (Lavoisier); definite proportions (Proust) — a compound always has the same elements in the same mass ratio; multiple proportions (Dalton) — masses of one element combining with a fixed mass of another are in small whole-number ratios (e.g. CO and CO₂); Gay-Lussac — gases combine in simple volume ratios; Avogadro — equal volumes of gases at the same T and P contain equal numbers of molecules."
+  },
+  {
+   "title": "Dalton's atomic theory",
+   "explain": "Matter is made of indivisible atoms; atoms of one element are identical; compounds form by atoms combining in fixed ratios; reactions rearrange atoms. Later work showed atoms are divisible and isotopes exist."
+  },
+  {
+   "title": "Measurement and significant figures",
+   "explain": "Use SI units. Keep answers to the right number of significant figures: × ÷ → fewest significant figures; + − → fewest decimal places. Scientific notation (N × 10ⁿ) makes this clear."
+  },
+  {
+   "title": "Stoichiometry in practice",
+   "explain": "Balance the equation first. Convert everything to moles, use the mole ratio from the equation, then convert back to mass or volume. Percentage yield = (actual/theoretical) × 100."
+  },
+  {
+   "title": "Choosing a concentration unit",
+   "explain": "Molarity is easy to use in the lab but changes with temperature; molality and mole fraction don't, so they are used for colligative properties. ppm = (mass of solute/mass of solution) × 10⁶ for very dilute solutions."
+  }
+ ],
+ "ratta": [
+  "1 mol = 6.022 × 10²³;  22.4 L at STP (gases only).",
+  "1 u = 1.66 × 10⁻²⁴ g.",
+  "Limiting reagent: smallest moles ÷ coefficient.",
+  "M = mol/L;  m = mol/kg solvent;  x_A + x_B = 1.",
+  "M₁V₁ = M₂V₂;  M = 10dw/M_solute.",
+  "Molality and mole fraction don't change with T.",
+  "Laws: Lavoisier, Proust, Dalton, Gay-Lussac, Avogadro."
+ ],
+ "verifiedOn": "2026-11-13"
+}

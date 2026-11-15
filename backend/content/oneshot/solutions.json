@@ -1,0 +1,148 @@
+{
+ "slug": "solutions",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Solutions",
+  "JEE": "Solutions"
+ },
+ "title": "Solutions",
+ "readMinutes": 13,
+ "summary": [
+  "A solution is a homogeneous mixture. Its concentration can be written as mass %, ppm, mole fraction, molarity or molality.",
+  "Gases dissolve more at higher pressure (Henry's law) and usually less at higher temperature. For volatile liquids, Raoult's law says each component's vapour pressure = its mole fraction × its pure vapour pressure.",
+  "Ideal solutions obey Raoult's law exactly; real ones show positive deviation (weaker A–B attractions) or negative deviation (stronger A–B attractions) and may form azeotropes.",
+  "Colligative properties depend only on the number of solute particles: relative lowering of vapour pressure, boiling-point elevation, freezing-point depression and osmotic pressure. The van't Hoff factor i corrects for dissociation or association."
+ ],
+ "formulas": [
+  {
+   "name": "Henry's law",
+   "formula": "p = K_H x  (partial pressure ∝ mole fraction of gas in solution)",
+   "when": "Solubility of gases.",
+   "note": "A larger K_H means LOWER solubility at the same pressure."
+  },
+  {
+   "name": "Raoult's law (volatile components)",
+   "formula": "p_A = x_A p°_A;  p_total = x_A p°_A + x_B p°_B",
+   "when": "Vapour pressure of liquid mixtures.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vapour composition",
+   "formula": "y_A = p_A/p_total",
+   "when": "Mole fraction of a component in the vapour.",
+   "note": "The vapour is richer in the MORE volatile component."
+  },
+  {
+   "name": "Relative lowering of vapour pressure",
+   "formula": "(p° − p)/p° = x_solute = i × n₂/(n₁ + n₂)",
+   "when": "Non-volatile solute in a solvent."
+  },
+  {
+   "name": "Boiling-point elevation",
+   "formula": "ΔT_b = i K_b m",
+   "when": "Higher boiling point of solutions.",
+   "mistake": "m is molality (per kg solvent), not molarity."
+  },
+  {
+   "name": "Freezing-point depression",
+   "formula": "ΔT_f = i K_f m;  water K_f = 1.86, K_b = 0.52 K kg mol⁻¹",
+   "when": "Antifreeze, molar mass by cryoscopy.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Osmotic pressure",
+   "formula": "π = i C R T  (C in mol/L, R = 0.0821 L atm mol⁻¹ K⁻¹)",
+   "when": "Osmosis, molar mass of polymers and proteins.",
+   "note": "Use molarity and kelvin here."
+  },
+  {
+   "name": "Molar mass from colligative data",
+   "formula": "M₂ = (K_b × w₂ × 1000)/(ΔT_b × w₁)  (similarly with K_f);  M₂ = w₂RT/(πV)",
+   "when": "Finding the molar mass of a solute."
+  },
+  {
+   "name": "van't Hoff factor",
+   "formula": "i = observed colligative property / normal value = normal molar mass / observed molar mass",
+   "when": "Electrolytes and associating solutes."
+  },
+  {
+   "name": "i from dissociation or association",
+   "formula": "dissociation into n ions: i = 1 + (n − 1)α;  association into n-mers: i = 1 − (1 − 1/n)α",
+   "when": "Degree of dissociation/association.",
+   "note": "For dimerisation, i = 1 − α/2."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Ideal mixture",
+   "problem": "Benzene (p° = 75 torr) and toluene (p° = 22 torr), x = 0.5 each. Total vapour pressure and mole fraction of benzene in the vapour?",
+   "solution": "p = 37.5 + 11 = 48.5 torr; y(benzene) = 37.5/48.5 ≈ 0.77."
+  },
+  {
+   "title": "Lowering of vapour pressure",
+   "problem": "Pure water p° = 23.8 mm Hg. Solute mole fraction 0.02 (non-volatile, non-electrolyte). Lowering?",
+   "solution": "Δp = x₂ p° = 0.02 × 23.8 ≈ 0.476 mm Hg."
+  },
+  {
+   "title": "Boiling point of salt water",
+   "problem": "0.2 m NaCl (i = 2), K_b = 0.52. Elevation?",
+   "solution": "ΔT_b = 2 × 0.52 × 0.2 = 0.208 K."
+  },
+  {
+   "title": "Partly dissociated electrolyte",
+   "problem": "0.01 m K₂SO₄ is 75% dissociated. ΔT_f (K_f = 1.86)?",
+   "solution": "i = 1 + 2(0.75) = 2.5; ΔT_f = 2.5 × 1.86 × 0.01 = 0.0465 K."
+  },
+  {
+   "title": "Osmotic pressure",
+   "problem": "0.1 M glucose at 300 K?",
+   "solution": "π = CRT = 0.1 × 0.0821 × 300 ≈ 2.46 atm."
+  },
+  {
+   "title": "Molar mass from osmotic pressure",
+   "problem": "1.8 g of a solute in 250 mL of solution gives π = 0.738 atm at 300 K. Molar mass?",
+   "solution": "M = wRT/(πV) = 1.8 × 0.0821 × 300/(0.738 × 0.25) ≈ 240 g/mol."
+  },
+  {
+   "title": "Association of acetic acid",
+   "problem": "Acetic acid (M = 60) shows an apparent molar mass of 100 in benzene. Degree of association?",
+   "solution": "i = 60/100 = 0.6 = 1 − α/2 → α = 0.8 (80%)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of solutions",
+   "explain": "Solvent and solute can be any phase: gas in liquid (soda), solid in liquid (sugar), liquid in liquid (alcohol in water), solid in solid (alloys), gas in solid (H₂ in palladium)."
+  },
+  {
+   "title": "Solubility of solids and gases",
+   "explain": "Solids: 'like dissolves like'; solubility usually rises with temperature if dissolution is endothermic. Gases: solubility rises with pressure (Henry's law) and falls with temperature — fish need cold water, and divers get the bends when dissolved N₂ bubbles out."
+  },
+  {
+   "title": "Ideal and non-ideal solutions",
+   "explain": "Ideal (benzene + toluene): ΔmixH = 0, ΔmixV = 0. Positive deviation (ethanol + acetone, CS₂ + acetone): weaker A–B forces, ΔmixH > 0, ΔmixV > 0, minimum-boiling azeotrope. Negative deviation (chloroform + acetone, HNO₃ + water): stronger A–B forces, ΔmixH < 0, ΔmixV < 0, maximum-boiling azeotrope."
+  },
+  {
+   "title": "Azeotropes",
+   "explain": "Constant-boiling mixtures that cannot be separated by simple distillation, e.g. 95% ethanol–water (minimum boiling) and 68% HNO₃–water (maximum boiling)."
+  },
+  {
+   "title": "Osmosis and reverse osmosis",
+   "explain": "Solvent moves through a semipermeable membrane from dilute to concentrated solution. Isotonic solutions have the same π (0.9% NaCl is isotonic with blood); RBCs swell in hypotonic and shrink in hypertonic solutions. Applying pressure greater than π reverses the flow — used to desalinate sea water."
+  },
+  {
+   "title": "Abnormal molar masses",
+   "explain": "Electrolytes dissociate (i > 1) and give lower apparent molar mass; solutes like acetic acid in benzene associate (i < 1) and give higher apparent molar mass."
+  }
+ ],
+ "ratta": [
+  "Henry: p = K_H x (higher K_H → less soluble).",
+  "Raoult: p_A = x_A p°_A;  vapour richer in volatile one.",
+  "Δp/p° = x₂;  ΔT_b = iK_b m;  ΔT_f = iK_f m;  π = iCRT.",
+  "Water: K_b 0.52, K_f 1.86.",
+  "i = 1 + (n − 1)α;  dimer: i = 1 − α/2.",
+  "+ve deviation → min-boiling azeotrope;  −ve → max-boiling.",
+  "0.9% NaCl isotonic with blood."
+ ],
+ "verifiedOn": "2026-11-13"
+}

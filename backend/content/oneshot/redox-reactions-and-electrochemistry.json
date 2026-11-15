@@ -1,0 +1,181 @@
+{
+ "slug": "redox-reactions-and-electrochemistry",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Redox Reactions and Electrochemistry",
+  "JEE": "Redox Reactions and Electrochemistry"
+ },
+ "title": "Redox Reactions and Electrochemistry",
+ "readMinutes": 15,
+ "summary": [
+  "Oxidation is loss of electrons (oxidation number rises); reduction is gain of electrons (oxidation number falls). They always happen together — a redox reaction.",
+  "A galvanic cell turns a spontaneous redox reaction into electricity: oxidation at the anode, reduction at the cathode. Its emf E°cell = E°cathode − E°anode, and ΔG° = −nFE°cell.",
+  "The Nernst equation gives cell or electrode potential at any concentration; at equilibrium Ecell = 0, which links E° to the equilibrium constant.",
+  "Electrolytic cells use electricity to drive reactions (Faraday's laws). Conductance of solutions (κ, Λm) and Kohlrausch's law connect electrochemistry to ion mobility and degree of dissociation."
+ ],
+ "formulas": [
+  {
+   "name": "Oxidation number rules",
+   "formula": "free element 0;  F −1;  O −2 (peroxide −1, OF₂ +2);  H +1 (metal hydride −1);  sum = charge of species",
+   "when": "Finding oxidation states.",
+   "mistake": "Peroxides (H₂O₂, Na₂O₂) have O at −1 — don't use −2 there."
+  },
+  {
+   "name": "Balancing redox (ion–electron method)",
+   "formula": "split into half-reactions → balance atoms other than O, H → O with H₂O → H with H⁺ (OH⁻ in base) → charge with e⁻ → add",
+   "when": "Balancing any redox equation."
+  },
+  {
+   "name": "Standard cell emf",
+   "formula": "E°cell = E°cathode − E°anode (reduction potentials)",
+   "when": "Daniell cell and other cells.",
+   "mistake": "Use reduction potentials for both — don't flip signs and then subtract again.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gibbs energy and emf",
+   "formula": "ΔG° = −n F E°cell;  ΔG = −nFEcell",
+   "when": "Spontaneity of a cell reaction.",
+   "note": "Positive E°cell ⇒ negative ΔG° ⇒ spontaneous."
+  },
+  {
+   "name": "Nernst equation",
+   "formula": "E = E° − (0.0591/n) log Q  at 298 K",
+   "when": "Cell emf at non-standard concentrations.",
+   "tag": "PYQ favourite",
+   "note": "Q uses product/reactant concentrations; pure solids and liquids are left out."
+  },
+  {
+   "name": "E° and equilibrium constant",
+   "formula": "log K = n E°cell / 0.0591;  ΔG° = −2.303 RT log K",
+   "when": "How far a cell reaction goes."
+  },
+  {
+   "name": "Hydrogen electrode",
+   "formula": "E = −0.0591 × pH  (p(H₂) = 1 bar, 298 K)",
+   "when": "pH from electrode potential."
+  },
+  {
+   "name": "Faraday's first law",
+   "formula": "m = Z I t = (M/nF) × I t",
+   "when": "Mass deposited in electrolysis.",
+   "note": "1 F = 96500 C = charge of 1 mol of electrons."
+  },
+  {
+   "name": "Faraday's second law",
+   "formula": "m₁/m₂ = E₁/E₂ (equivalent masses) for the same charge",
+   "when": "Cells in series."
+  },
+  {
+   "name": "Conductivity and molar conductivity",
+   "formula": "κ = 1/ρ = G × (l/A);  Λm = κ × 1000 / C  (κ in S cm⁻¹, C in mol L⁻¹, Λm in S cm² mol⁻¹)",
+   "when": "From measured conductance to Λm."
+  },
+  {
+   "name": "Variation with concentration",
+   "formula": "strong electrolyte: Λm = Λ°m − A√C;  weak electrolyte: Λm rises steeply on dilution",
+   "when": "Reading Λm vs √C graphs."
+  },
+  {
+   "name": "Kohlrausch's law",
+   "formula": "Λ°m = ν₊λ°₊ + ν₋λ°₋;  Λ°(CH₃COOH) = Λ°(HCl) + Λ°(CH₃COONa) − Λ°(NaCl)",
+   "when": "Limiting molar conductivity of weak electrolytes."
+  },
+  {
+   "name": "Degree of dissociation",
+   "formula": "α = Λm/Λ°m;  Kₐ = Cα²/(1 − α)",
+   "when": "Weak electrolytes from conductance data."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Oxidation number",
+   "problem": "Oxidation number of Cr in K₂Cr₂O₇?",
+   "solution": "2(+1) + 2x + 7(−2) = 0 → x = +6."
+  },
+  {
+   "title": "Daniell cell",
+   "problem": "E°(Cu²⁺/Cu) = +0.34 V, E°(Zn²⁺/Zn) = −0.76 V. E°cell?",
+   "solution": "E° = 0.34 − (−0.76) = 1.1 V."
+  },
+  {
+   "title": "Nernst equation",
+   "problem": "Zn | Zn²⁺(0.1 M) || Cu²⁺(0.001 M) | Cu, E° = 1.10 V. Ecell at 298 K?",
+   "solution": "E = 1.10 − (0.0591/2) log(0.1/0.001) = 1.10 − 0.0591 ≈ 1.041 V."
+  },
+  {
+   "title": "ΔG° of the Daniell cell",
+   "problem": "n = 2, E° = 1.10 V. ΔG°?",
+   "solution": "ΔG° = −2 × 96500 × 1.10 J = −212.3 kJ/mol."
+  },
+  {
+   "title": "Equilibrium constant",
+   "problem": "log K for the Daniell cell (n = 2, E° = 1.10 V)?",
+   "solution": "log K = 2 × 1.10/0.0591 ≈ 37.2 → K ≈ 10³⁷ (reaction goes to completion)."
+  },
+  {
+   "title": "Electrolysis of CuSO₄",
+   "problem": "2 A is passed for 1 hour through CuSO₄. Mass of copper deposited (Cu = 63.5)?",
+   "solution": "Q = 7200 C; m = (63.5/2 × 96500) × 7200 ≈ 2.37 g."
+  },
+  {
+   "title": "Molar conductivity",
+   "problem": "κ of 0.2 M KCl = 0.0248 S cm⁻¹. Λm?",
+   "solution": "Λm = 0.0248 × 1000/0.2 = 124 S cm² mol⁻¹."
+  },
+  {
+   "title": "Degree of dissociation of acetic acid",
+   "problem": "Λ°(HCl) = 426.2, Λ°(CH₃COONa) = 91.0, Λ°(NaCl) = 126.4 S cm² mol⁻¹. For dilute acetic acid Λm = 39.1. α?",
+   "solution": "Λ° = 426.2 + 91.0 − 126.4 = 390.8. α = 39.1/390.8 ≈ 0.1."
+  },
+  {
+   "title": "Hydrogen electrode at pH 3",
+   "problem": "Potential of a hydrogen electrode in a solution of pH 3?",
+   "solution": "E = −0.0591 × 3 ≈ −0.177 V."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of redox reactions",
+   "explain": "Combination, decomposition, displacement (metal and non-metal) and disproportionation, where one element is both oxidised and reduced: 3Cl₂ + 6OH⁻ → 5Cl⁻ + ClO₃⁻ + 3H₂O; 2H₂O₂ → 2H₂O + O₂."
+  },
+  {
+   "title": "Redox titrations",
+   "explain": "KMnO₄ in acid (MnO₄⁻ → Mn²⁺, 5e⁻) is a self-indicator; K₂Cr₂O₇ (Cr₂O₇²⁻ → 2Cr³⁺, 6e⁻) needs an indicator. n-factor = electrons exchanged per formula unit."
+  },
+  {
+   "title": "Electrochemical series",
+   "explain": "Metals with more negative E° are stronger reducing agents and displace metals below them (Zn displaces Cu). F₂ is the strongest oxidising agent, Li the strongest reducing agent in water."
+  },
+  {
+   "title": "Galvanic cell anatomy",
+   "explain": "Anode: oxidation, negative terminal. Cathode: reduction, positive terminal. The salt bridge (KCl/KNO₃ in agar) completes the circuit and keeps the solutions neutral. Electrons flow anode → cathode through the wire."
+  },
+  {
+   "title": "Products of electrolysis",
+   "explain": "At the cathode the species with higher reduction potential is reduced; at the anode the one easiest to oxidise. Aqueous NaCl gives H₂ at the cathode and Cl₂ at the anode (overpotential). Molten NaCl gives Na and Cl₂. Inert (Pt) vs active (Cu) electrodes change the anode reaction."
+  },
+  {
+   "title": "Batteries",
+   "explain": "Primary (not rechargeable): dry cell (Zn anode, MnO₂ cathode), mercury cell (constant 1.35 V). Secondary (rechargeable): lead storage battery (Pb anode, PbO₂ cathode, H₂SO₄), Ni–Cd. Fuel cells (H₂–O₂) convert fuel energy directly with high efficiency."
+  },
+  {
+   "title": "Corrosion",
+   "explain": "Rusting is electrochemical: iron is oxidised at anodic spots, oxygen reduced at cathodic spots, forming Fe₂O₃·xH₂O. Prevent it by painting, galvanising (zinc coating — sacrificial protection) or connecting to a more active metal."
+  },
+  {
+   "title": "Conductance basics",
+   "explain": "Metallic conduction is by electrons and falls with temperature; electrolytic conduction is by ions and rises with temperature. Cell constant = l/A, found using KCl of known conductivity."
+  }
+ ],
+ "ratta": [
+  "OIL RIG: oxidation is loss, reduction is gain of e⁻.",
+  "E°cell = E°cathode − E°anode;  ΔG° = −nFE°.",
+  "E = E° − (0.0591/n) log Q;  log K = nE°/0.0591.",
+  "m = MIt/(nF);  1 F = 96500 C.",
+  "Λm = 1000κ/C;  α = Λm/Λ°m.",
+  "Kohlrausch: Λ°(weak) from strong electrolytes.",
+  "Anode: oxidation (− in galvanic, + in electrolytic)."
+ ],
+ "verifiedOn": "2026-11-13"
+}
