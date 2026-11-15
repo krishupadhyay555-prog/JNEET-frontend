@@ -274,3 +274,18 @@ export async function sendPaymentReceipt(toEmail, { studentName, planName, amoun
   const text = `Payment received — ${name}'s ${planName} plan is active.\n\nAmount: ${rupees} (incl. taxes)\nPaid on: ${fmt(paidAt)}\nValid till: ${fmt(validTill)}\nPayment ID: ${paymentId || "-"}\nOrder ID: ${orderId}\n\nPrepaid pass, no auto-renewal. Non-refundable except for our own errors: ${env.APP_URL}/refund\n\n— Team JNEET+ AI`;
   return sendEmail({ to: toEmail, subject: `Payment received — ${planName} active till ${fmt(validTill)}`, html, text });
 }
+
+// ── Contact form acknowledgement ────────────────────────────────
+export async function sendSupportAck(toEmail, { name, ref, topic, grievance = false }) {
+  const html = layout({
+    preheader: `We got your message (${ref}).`,
+    heading: "We got your message",
+    bodyHtml: `<p>Hi ${escapeHtml(firstName(name))},</p>
+      <p>Thanks for writing to JNEET+ AI. Your reference number is <b>${escapeHtml(ref)}</b> (topic: ${escapeHtml(topic)}).</p>
+      <p>${grievance ? "Your complaint has been sent to our Grievance Officer. We acknowledge complaints promptly and aim to resolve them within one month." : "We reply within 2 working days, from our support address."}</p>
+      <p style="font-size:13px;color:#7a7590;">Please keep the reference number in your reply. Never share your password or one-time codes with anyone — we will never ask for them.</p>`,
+    footerHtml: "You are receiving this because this address was entered on our Contact page.",
+  });
+  return sendEmail({ to: toEmail, subject: `We got your message — ${ref}`, html,
+    text: `Hi ${firstName(name)}, thanks for writing to JNEET+ AI. Your reference number is ${ref} (${topic}). We reply within 2 working days.` });
+}

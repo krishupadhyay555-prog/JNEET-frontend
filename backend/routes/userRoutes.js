@@ -11,6 +11,8 @@ import { protect } from "../middleware/authMiddleware.js";
 import { validate } from "../middleware/validate.js";
 import { authLimiter } from "../limiters/authLimiter.js";
 import { otpIpLimiter } from "../limiters/otpLimiter.js";
+import { heavyLimiter } from "../limiters/generalLimiter.js";
+import { exportMyData } from "../controllers/exportController.js";
 import {
   updateProfileSchema,
   changePasswordSchema,
@@ -32,6 +34,7 @@ const router = Router();
 
 router.use(protect);
 
+router.get(   "/export",        heavyLimiter, exportMyData); // "Download my data" (DPDP)
 router.patch( "/profile",       validate(updateProfileSchema),  updateProfile);
 router.patch( "/password",      authLimiter, validate(changePasswordSchema), changePassword);
 router.delete("/account",       authLimiter, validate(deleteAccountSchema),  deleteAccount);

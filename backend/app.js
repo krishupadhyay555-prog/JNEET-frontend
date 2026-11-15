@@ -35,6 +35,8 @@ import recapRoutes   from "./routes/recapRoutes.js";
 import consentRoutes from "./routes/consentRoutes.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 import adminRoutes   from "./routes/adminRoutes.js";
+import supportRoutes from "./routes/supportRoutes.js";
+import { getPublicStats } from "./controllers/publicController.js";
 import { requireAdmin } from "./middleware/admin.js";
 
 const app = express();
@@ -102,6 +104,8 @@ app.use("/api/oneshot", protect, userLimiter, oneshotRoutes);
 app.use("/api/recap",   protect, userLimiter, recapRoutes);
 app.use("/api/admin",   protect, userLimiter, requireAdmin, adminRoutes); // founder only (ADMIN_EMAILS)
 app.use("/api/payments", paymentRoutes);  // web-only checkout; own auth/limiters inside
+app.use("/api/support", supportRoutes);     // public Contact form (captcha + own limiter)
+app.get("/api/public/stats", getPublicStats); // public numbers for the home / About pages
 
 app.use((req, res) => {
   res.status(404).json({ success: false, error: "Not found." });
