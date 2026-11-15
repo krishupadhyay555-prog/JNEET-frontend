@@ -31,7 +31,7 @@ F("Processing of hnRNA", "splicing (introns removed, exons joined);  capping (me
 F("Genetic code", "triplet (64 codons, 61 code for amino acids);  start AUG (methionine);  stop UAA, UAG, UGA;  unambiguous, degenerate, universal (some exceptions), commaless", "Properties of the code.", None, tag="PYQ favourite"),
 F("Translation", "ribosome (small subunit binds mRNA); tRNA (adapter, clover-leaf; anticodon) carries amino acids (charging/aminoacylation);  peptide bond formed by 23S rRNA (ribozyme) in bacteria;  UTRs at both ends", "Protein synthesis."),
 F("Lac operon", "i (repressor gene) — p (promoter) — o (operator) — z (β-galactosidase), y (permease), a (transacetylase);  lactose (inducer) inactivates repressor → genes transcribed", "Inducible gene regulation (Jacob and Monod).", "Negative regulation: the repressor turns the operon off."),
-F("Human Genome Project facts", "3164.7 million bp;  ~20,000–25,000 genes;  average gene 3000 bases (dystrophin largest, 2.4 million bases);  less than 2% codes for proteins;  chromosome 1 most genes (2968), Y fewest (231);  SNPs ~1.4 million locations", "HGP results."),
+F("Human Genome Project facts", "3164.7 million bp;  about 30,000 genes (far fewer than the earlier estimates of 80,000–1,40,000);  average gene 3000 bases (dystrophin largest, 2.4 million bases);  less than 2% codes for proteins;  chromosome 1 most genes (2968), Y fewest (231);  SNPs ~1.4 million locations", "HGP results."),
 F("DNA fingerprinting", "uses VNTRs (minisatellites, repetitive DNA) — Southern blotting with labelled VNTR probe (Alec Jeffreys);  applications: forensics, paternity, population diversity", "Identifying individuals."),
 ],
 "examples": [

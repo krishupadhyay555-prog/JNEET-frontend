@@ -56,8 +56,8 @@
   },
   {
    "name": "Mass percent",
-   "formula": "w/w % = (mass of solute / mass of solution) × 100",
-   "when": "Concentration by mass."
+   "formula": "w/w % = (mass of solute / mass of solution) × 100;   ppm = (mass of solute / mass of solution) × 10⁶",
+   "when": "Concentration by mass; ppm for very dilute solutions (pollutants in water, air)."
   },
   {
    "name": "Mole fraction",

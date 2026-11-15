@@ -28,7 +28,7 @@ F("Average atomic mass", "A = Σ(isotopic mass × fractional abundance)", "Eleme
 F("Percentage composition", "% of element = (mass of element in 1 mol / molar mass) × 100", "Composition of a compound."),
 F("Empirical and molecular formula", "molecular formula = n × empirical formula;  n = molar mass / empirical formula mass", "Finding formulas from % composition.", "Convert % to moles, divide by the smallest, then round to whole numbers (multiply if you get .5 or .33)."),
 F("Limiting reagent", "compare (moles available ÷ coefficient) for each reactant — the smallest is limiting", "Product amount when reactants are not in the exact ratio.", "Don't compare masses — compare moles divided by stoichiometric coefficients.", tag="PYQ favourite"),
-F("Mass percent", "w/w % = (mass of solute / mass of solution) × 100", "Concentration by mass."),
+F("Mass percent", "w/w % = (mass of solute / mass of solution) × 100;   ppm = (mass of solute / mass of solution) × 10⁶", "Concentration by mass; ppm for very dilute solutions (pollutants in water, air)."),
 F("Mole fraction", "x_A = n_A / (n_A + n_B);  x_A + x_B = 1", "Gas mixtures, Raoult's law."),
 F("Molarity", "M = moles of solute / volume of solution (L)", "Titrations, dilutions.", "Molarity changes with temperature because volume does."),
 F("Molality", "m = moles of solute / mass of solvent (kg)", "Colligative properties.", "Use the mass of SOLVENT, not of solution."),

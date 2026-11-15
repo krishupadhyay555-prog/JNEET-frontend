@@ -129,6 +129,10 @@
    "explain": "Biuret test (violet) for proteins; Molisch's test (violet ring) for all carbohydrates; iodine test (blue) for starch; Fehling's and Benedict's for reducing sugars."
   },
   {
+   "title": "Physical chemistry experiments (JEE)",
+   "explain": "Enthalpy of solution of CuSO₄ and enthalpy of neutralisation of a strong acid with a strong base (≈ −57 kJ/mol) are measured in a calorimeter from q = mcΔT. Lyophilic sols (starch, egg albumin, gum) form simply by warming with water; lyophobic sols (Fe(OH)₃, As₂S₃) need special methods such as hydrolysis or double decomposition. The rate of reaction of iodide ions with H₂O₂ is followed at room temperature (the iodine liberated turns starch blue)."
+  },
+  {
    "title": "Tests for fats and oils",
    "explain": "Fats leave a translucent spot on paper; the acrolein test (pungent smell on heating with KHSO₄) shows glycerol."
   }
