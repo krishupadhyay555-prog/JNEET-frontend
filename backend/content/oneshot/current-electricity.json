@@ -1,0 +1,209 @@
+{
+ "slug": "current-electricity",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Current Electricity",
+  "JEE": "Current Electricity"
+ },
+ "title": "Current Electricity",
+ "readMinutes": 20,
+ "summary": [
+  "Current is the rate of flow of charge, I = dq/dt. Electrons in a conductor move randomly; an applied field gives them a small average drift velocity (~10⁻⁴ m/s) — I = neAv_d. A bulb lights at once because the field spreads through the wire at nearly the speed of light.",
+  "Ohm's law V = IR (at constant temperature). Resistance depends on material (ρ), length and area: R = ρl/A. Resistance of metals rises with temperature; that of semiconductors falls.",
+  "A real cell has emf E and internal resistance r: terminal voltage V = E − Ir (discharging). Resistances add in series and their reciprocals add in parallel. Power P = VI = I²R = V²/R; maximum power is delivered when the load R = r.",
+  "Kirchhoff's two rules (junction: ΣI = 0 — charge conservation; loop: ΣV = 0 — energy conservation) solve any circuit. A Wheatstone bridge balances when P/Q = R/S; the meter bridge uses this to measure an unknown resistance."
+ ],
+ "formulas": [
+  {
+   "name": "Electric current",
+   "formula": "I = dq/dt;   average I = Δq/Δt;   1 A = 1 C/s",
+   "when": "Definition of current.",
+   "note": "Current is a scalar — although it has a direction, it doesn't add like a vector."
+  },
+  {
+   "name": "Drift velocity and mobility",
+   "formula": "I = neAv_d;   v_d = eEτ/m;   mobility μ = v_d/E = eτ/m",
+   "when": "Average speed of electrons.",
+   "tag": "PYQ favourite",
+   "note": "v_d is tiny (~mm/s); the thermal speed of electrons (~10⁵ m/s) is a different thing."
+  },
+  {
+   "name": "Current density and microscopic Ohm's law",
+   "formula": "J = I/A = nev_d;   J = σE;   σ = 1/ρ = ne²τ/m",
+   "when": "Local relation between field and current.",
+   "note": "J is a vector, I a scalar."
+  },
+  {
+   "name": "Ohm's law and resistance",
+   "formula": "V = IR;   R = ρl/A;   unit ohm (Ω)",
+   "when": "Resistance of a conductor (ρ = resistivity).",
+   "note": "Ohm's law doesn't hold for all devices — diodes and thermistors are non-ohmic."
+  },
+  {
+   "name": "Stretching a wire",
+   "formula": "Same volume: l → nl ⇒ R → n²R;   radius → r/n ⇒ R → n⁴R",
+   "when": "Stretched-wire problems.",
+   "mistake": "Doubling the length also halves the area — so 4 times, not 2 times.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Temperature dependence",
+   "formula": "ρ_T = ρ₀[1 + α(T − T₀)];   R_T = R₀[1 + α(T − T₀)]",
+   "when": "Resistance on heating.",
+   "note": "α is positive for metals, negative for semiconductors, very small for alloys (manganin, constantan)."
+  },
+  {
+   "name": "Colour code",
+   "formula": "B B R O Y G B V G W = 0–9 (Black Brown Red Orange Yellow Green Blue Violet Grey White);  first two bands digits, third multiplier (10ⁿ), fourth tolerance (gold 5%, silver 10%, none 20%)",
+   "when": "Reading a carbon resistor.",
+   "tag": "Ratta"
+  },
+  {
+   "name": "Series and parallel resistors",
+   "formula": "Series: R = R₁ + R₂ + … (same I);   parallel: 1/R = 1/R₁ + 1/R₂ + … (same V)",
+   "when": "Simplifying networks.",
+   "note": "The parallel equivalent is smaller than the smallest resistor."
+  },
+  {
+   "name": "EMF, internal resistance, terminal voltage",
+   "formula": "I = E/(R + r);   discharging V = E − Ir;   charging V = E + Ir;   open circuit V = E",
+   "when": "Real cell.",
+   "note": "Terminal voltage exceeds the emf only while charging."
+  },
+  {
+   "name": "Cells in series and parallel",
+   "formula": "n in series: E_eq = nE, r_eq = nr;   m in parallel (identical): E_eq = E, r_eq = r/m;   mixed: I = nE/(R + nr/m)",
+   "when": "Combining cells.",
+   "mistake": "A cell connected the wrong way reduces the emf, but its r still adds."
+  },
+  {
+   "name": "Electric power and energy",
+   "formula": "P = VI = I²R = V²/R;   energy = Pt;   1 kWh = 3.6 × 10⁶ J",
+   "when": "Bulbs, heaters, electricity bills.",
+   "note": "In series (same I) the larger R glows more; in parallel (same V) the smaller R glows more."
+  },
+  {
+   "name": "Maximum power transfer",
+   "formula": "At R = r: P_max = E²/4r (efficiency 50%)",
+   "when": "Maximum power to a load.",
+   "note": "At maximum power the efficiency is only 50%."
+  },
+  {
+   "name": "Kirchhoff's rules",
+   "formula": "Junction: ΣI_in = ΣI_out (charge conservation);   loop: ΣΔV = 0 (energy conservation)",
+   "when": "Complex circuits.",
+   "note": "In a loop, going through a battery from − to + counts +E; through a resistor along the current counts −IR."
+  },
+  {
+   "name": "Wheatstone bridge",
+   "formula": "Balanced: P/Q = R/S ⇒ no current in the galvanometer",
+   "when": "Bridge circuits.",
+   "tag": "PYQ favourite",
+   "note": "At balance remove the galvanometer branch — the circuit becomes simple."
+  },
+  {
+   "name": "Meter bridge",
+   "formula": "X/R = l/(100 − l)   (l in cm, on the side of unknown X)",
+   "when": "Measuring an unknown resistance.",
+   "note": "Errors are smallest with the balance point near the middle (end correction)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Drift velocity",
+   "problem": "A copper wire of area 1 mm² carries 1.5 A, n = 8.5 × 10²⁸ m⁻³. v_d?",
+   "solution": "v_d = I/(neA) = 1.5/(8.5 × 10²⁸ × 1.6 × 10⁻¹⁹ × 10⁻⁶) ≈ 1.1 × 10⁻⁴ m/s — very slow."
+  },
+  {
+   "title": "Stretched wire",
+   "problem": "A 10 Ω wire is stretched to double its length (same volume). New R?",
+   "solution": "R → n²R = 4 × 10 = 40 Ω."
+  },
+  {
+   "title": "R with temperature",
+   "problem": "10 Ω at 20 °C, α = 0.004 /°C. R at 70 °C?",
+   "solution": "R = 10[1 + 0.004 × 50] = 12 Ω."
+  },
+  {
+   "title": "Network",
+   "problem": "2, 3 and 6 Ω in parallel, then 4 Ω in series; 10 V battery. Total R and current?",
+   "solution": "1/R = 1/2 + 1/3 + 1/6 = 1 ⇒ 1 Ω. Total = 5 Ω. I = 10/5 = 2 A."
+  },
+  {
+   "title": "Real cell",
+   "problem": "E = 12 V, r = 0.5 Ω, R = 5.5 Ω. Current and terminal voltage?",
+   "solution": "I = 12/6 = 2 A. V = 12 − 2 × 0.5 = 11 V."
+  },
+  {
+   "title": "Maximum power",
+   "problem": "E = 12 V, r = 2 Ω. Maximum power to the load?",
+   "solution": "At R = r = 2 Ω, P = E²/4r = 144/8 = 18 W."
+  },
+  {
+   "title": "Cells in series",
+   "problem": "4 cells (1.5 V, 0.5 Ω each) in series with R = 4 Ω. Current?",
+   "solution": "I = nE/(R + nr) = 6/(4 + 2) = 1 A."
+  },
+  {
+   "title": "Kirchhoff: two batteries",
+   "problem": "A 6 V cell (branch resistance 2 Ω) and a 3 V cell (branch 1 Ω) in parallel both feed a 2 Ω load. Load and branch currents?",
+   "solution": "Top-node voltage V: (6 − V)/2 + (3 − V)/1 = V/2 ⇒ V = 3 V. Load = 1.5 A; 6 V branch = 1.5 A; 3 V branch = 0 A (the 3 V cell is neither charging nor discharging)."
+  },
+  {
+   "title": "Meter bridge",
+   "problem": "30 Ω in the right gap; balance at 40 cm from the left end. Unknown X?",
+   "solution": "X/30 = 40/60 ⇒ X = 20 Ω."
+  },
+  {
+   "title": "Bulb at half voltage",
+   "problem": "A 100 W, 220 V bulb runs on 110 V. R and power?",
+   "solution": "R = V²/P = 484 Ω. P = 110²/484 = 25 W (one quarter)."
+  },
+  {
+   "title": "Colour code",
+   "problem": "Bands brown, black, red, gold. Resistance?",
+   "solution": "1, 0, × 10² ⇒ 1000 Ω = 1 kΩ, ± 5%."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Electric current and drift",
+   "explain": "Free electrons in a wire move randomly at ~10⁵ m/s with zero net flow. An applied field gives them a drift. The relaxation time τ is the average time between collisions; it falls as temperature rises, so ρ of a metal increases."
+  },
+  {
+   "title": "Ohmic and non-ohmic devices",
+   "explain": "Ohmic: V–I graph a straight line through the origin (metals at constant T). Non-ohmic: diodes (one direction), thermistors, GaAs (negative resistance region), electrolytes."
+  },
+  {
+   "title": "Comparing resistivities",
+   "explain": "Metals ~10⁻⁸ Ω·m, semiconductors in between, insulators above ~10¹⁴ Ω·m. Nichrome for heater elements (high ρ, high melting point); manganin/constantan for standard resistors (very small α); copper for connecting wires (low ρ)."
+  },
+  {
+   "title": "Cells: emf and terminal voltage",
+   "explain": "Emf is the energy a cell gives per unit charge, not a potential difference across a resistor. Drawing current causes a voltage drop across the internal resistance. An old battery has a larger r."
+  },
+  {
+   "title": "Solving with Kirchhoff's rules",
+   "explain": "Assume a current in each branch (a wrong direction just gives a negative answer). Apply the junction rule at independent junctions and the loop rule around independent loops, then solve. In symmetric circuits join or split points at equal potential to simplify."
+  },
+  {
+   "title": "Wheatstone bridge and meter bridge",
+   "explain": "At balance both ends of the galvanometer are at the same potential. In a meter bridge a jockey slides along a 1 m uniform wire (manganin/constantan) to find balance. Sensitivity is highest when all four resistances are nearly equal."
+  },
+  {
+   "title": "Heating effect",
+   "explain": "Joule heating H = I²Rt. A fuse wire has a low melting point and high resistance — it melts at large current and breaks the circuit. Power is transmitted at high voltage so that I²R loss is small."
+  }
+ ],
+ "ratta": [
+  "I = neAv_d;  v_d ~10⁻⁴ m/s;  μ = v_d/E.",
+  "R = ρl/A;  stretched n times ⇒ n²R.",
+  "R_T = R₀(1 + αΔT);  metal α > 0, semiconductor α < 0.",
+  "Colour: BB ROY Great Britain Very Good Wife (0–9); gold 5%, silver 10%.",
+  "V = E − Ir;  P_max = E²/4r at R = r.",
+  "Series cells nE, nr;  parallel E, r/m.",
+  "Wheatstone P/Q = R/S;  meter bridge X/R = l/(100 − l).",
+  "1 kWh = 3.6 × 10⁶ J."
+ ]
+}
