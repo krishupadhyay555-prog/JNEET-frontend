@@ -51,7 +51,8 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #11 | **JEE OneShot batch 1**: 8 new chapters (Electrostatics, Dual Nature, Atoms, Nuclei, Chemical Thermodynamics, Equilibrium, Matrices & Determinants, Definite Integrals) + proper superscript/subscript display | ✅ Merged 14 Nov — live (checked in the browser 14 Nov) |
 | #16 | **4.5× faster under load** (chapter-list cache) + Node 22 pin + capacity plan + question prompt v2 | ✅ Merged 15 Nov |
 | #17 | **Question bank audit + batch 3**: 68 wrong keys re-solved and fixed, 332 duplicates removed, 1001 new verified questions (533 tough; numericals computed in code, maths checked with sympy, current NTA chapters only). Bank 13,095 → 13,764 | ✅ Merged 15 Nov — **founder must run the seed with `--prune` (see L-seed-3)** |
-| #18 | **A2 "Report this question"** on result review + Revision; founder panel on /admin (grouped, reasons, notes, Fixed/Dismiss); email alert at 3 reports | ⏳ Open |
+| #18 | **A2 "Report this question"** on result review + Revision; founder panel on /admin (grouped, reasons, notes, Fixed/Dismiss); email alert at 3 reports | ✅ Merged 15 Nov |
+| #19 | **Launch trust pack**: new public design (home, About, Pricing, Contact, legal pages with TOC), Delivery Policy, Contact form + founder inbox, Download my data, public stats, OpenAI disclosure ("generated with OpenAI's GPT models", no logo/partnership claim) | ⏳ Open — founder fills `BUSINESS.address` + `phone` (Razorpay asks for them) |
 
 ### Live check 14 Nov 2026 (Claude, built-in browser in the founder's Claude desktop app, logged in by the founder as a student)
 - Backend `api.jneetai.com/health` → ok; `/api/oneshot` → 401 without login (new code is deployed on Render). Vercel production = `9303da6`.
@@ -61,6 +62,9 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 - Ask AI page opens (5 of 5 doubts). AI answers NOT tested — needs L3 (OpenAI key on Render).
 - Small polish found: some OneShot cards put a plain fact under the "Galti" label (e.g. "1 C ke liye 6.25 × 10¹⁸ electrons") — fixed in PR #14: plain facts now show as "Yaad rakho" (lib.py moves them automatically).
 - **How Claude checks the live site:** founder keeps the Claude desktop app open on the laptop; Claude uses its built-in browser (separate from Chrome, no personal logins). The founder logs in himself — Claude never types passwords.
+
+### LAUNCH TARGET: 25 Nov 2026 (founder decision, 15 Nov)
+Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈1 day), L2/L5, address + phone for Contact page. Claude: PR #19 trust pack → D83 → D79 numerical answers + D9 NTA exam screen → A4 diagnostic → A1 analytics → per-user rate limit → L8 smoke test on 24 Nov.
 
 ### Next session starts here (updated 15 Nov 2026, after PR #17)
 000. **L-seed-3 (founder, laptop, after #17):** in `C:\Projects\JNEET-frontend\backend` run `git pull`, then `node seed/seedQuestions.js --prune` (dry run, ≈332 old copies listed), then `node seed/seedQuestions.js --prune --yes`. (15 Nov: the founder typed `ode` instead of `node` — PowerShell's red text was only "command not found", nothing changed.) After #18 merges no seed is needed.
@@ -137,9 +141,9 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | A5 | [ ] **SEO public pages** (formula sheets, PYQ solutions) | Site is fully behind login → invisible on Google; free traffic | ₹0, 4–5 days |
 | A6 | [ ] **Hindi medium support** | NTA offers Hindi papers; large Hindi-medium share, esp. NEET; few good AI tools for them | AI translation + check, ~1 week |
 | A7 | [ ] **Low-end Android + low data** (PWA install, data-saver mode) | ₹8–10k phones and slow internet are common | ₹0, 2–3 days |
-| A8 | [ ] **Feedback + support channel** | Students know where to report; trust + free bug-testing | ₹0, 1 day |
+| A8 | [x] **Feedback + support channel** — done 15 Nov 2026 (PR #19): public Contact page + form (reference number, ack email, founder inbox on /admin), report-question button (PR #18) | Students know where to report; trust + free bug-testing | ₹0, 1 day |
 | A9 | [ ] **Small pending items** | ~~JEE dates are placeholders~~ (JEE Main 2027 S1 confirmed 22 Jan, done 11 Nov); NEET 2027 date not announced yet; `AdminDemo.jsx` keep/delete; Schedule route is an empty stub; `RevisionQueue.js` model is an empty file; PR #2 not merged | ₹0, 1–2 days |
-| A10 | [ ] **DPDP (India data law) check** | Parent consent exists; verify students can download/delete their own data | ₹0, 1 day |
+| A10 | [x] **DPDP (India data law) check** — 15 Nov 2026 (PR #19): Settings → Download my data (one JSON file), delete account already existed; purge now also erases reports and support messages. Lawyer review still D82 | Parent consent exists; verify students can download/delete their own data | ₹0, 1 day |
 
 ---
 

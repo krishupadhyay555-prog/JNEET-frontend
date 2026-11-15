@@ -53,6 +53,9 @@ const RevisionSession = lazyPage(() => import("./pages/RevisionSession.jsx"));
 const OneShot         = lazyPage(() => import("./pages/OneShot.jsx"));
 const OneShotChapter  = lazyPage(() => import("./pages/OneShotChapter.jsx"));
 const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
+const About           = lazyPage(() => import("./pages/About.jsx"));
+const Pricing         = lazyPage(() => import("./pages/Pricing.jsx"));
+const Contact         = lazyPage(() => import("./pages/Contact.jsx"));
 const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
 const ParentUnlock    = lazyPage(() => import("./pages/ParentUnlock.jsx"));
 const Landing         = lazyPage(() => import("./pages/Landing.jsx"));
@@ -194,6 +197,10 @@ export default function App() {
               <Route path="/privacy"         element={<Legal doc="privacy" />} />
               <Route path="/terms"           element={<Legal doc="terms" />}   />
               <Route path="/refund"          element={<Legal doc="refund" />}  />
+              <Route path="/delivery"        element={<Legal doc="delivery" />} />
+              <Route path="/about"           element={<About />}   />
+              <Route path="/pricing"         element={<Pricing />} />
+              <Route path="/contact"         element={<Contact />} />
               <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
               <Route path="/parent-consent/:token"        element={<ParentConsent />} />
               <Route path="/parent-unlock/:token"         element={<ParentUnlock />} />

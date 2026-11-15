@@ -27,7 +27,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGoBack } from "../hooks/useGoBack.js";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle, Bot, ShieldCheck, KeyRound, Gem, Languages } from "lucide-react";
+import { ArrowLeft, Palette, LogOut, Check, Trash2, AlertTriangle, Bot, ShieldCheck, KeyRound, Gem, Languages, FileDown } from "lucide-react";
 import { PlanSettings } from "../components/settings/PlanSettings.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useTheme } from "../context/ThemeContext.jsx";
@@ -37,6 +37,7 @@ import { AiPersonaSettings } from "../components/settings/AiPersonaSettings.jsx"
 import { StudyLanguageSettings } from "../components/settings/StudyLanguageSettings.jsx";
 import { ParentConsentSettings } from "../components/settings/ParentConsentSettings.jsx";
 import { ChangePasswordSettings } from "../components/settings/ChangePasswordSettings.jsx";
+import { DataPrivacySettings } from "../components/settings/DataPrivacySettings.jsx";
 
 function SectionCard({ icon, title, subtitle, children }) {
   return (
@@ -216,6 +217,10 @@ export default function Settings() {
           <ChangePasswordSettings />
         </SectionCard>
 
+        <SectionCard icon={<FileDown size={14} className="text-violet-400" />} title="Your data" subtitle="Download a copy of everything we hold about you.">
+          <DataPrivacySettings />
+        </SectionCard>
+
         {/* Danger zone */}
         <SectionCard icon={<LogOut size={14} className="text-red-400" />} title="Account">
           <button
@@ -291,6 +296,8 @@ export default function Settings() {
           <Link to="/privacy" className="hover:text-fg-primary hover:underline">Privacy</Link>
           <Link to="/terms" className="hover:text-fg-primary hover:underline">Terms</Link>
           <Link to="/refund" className="hover:text-fg-primary hover:underline">Refunds</Link>
+          <Link to="/about" className="hover:text-fg-primary hover:underline">About</Link>
+          <Link to="/contact" className="hover:text-fg-primary hover:underline">Contact</Link>
         </p>
 
       </div>

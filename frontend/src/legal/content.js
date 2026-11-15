@@ -18,13 +18,16 @@ export const BUSINESS = {
   operator: "Krish Upadhyay",
   // Postal address for legal notices. Set to a string to publish it, or leave null.
   address: null,
+  // Phone shown on the Contact page (Razorpay asks for one). Set a string like "+91 98xxxxxx10", or leave null.
+  phone: null,
+  phoneHours: "Mon–Sat, 10 am – 6 pm IST",
   supportEmail: "official.krishupadhyay@gmail.com",
   // IT Rules / DPDP Act: name and contact of the person who handles complaints.
   grievanceOfficer: { name: "Krish Upadhyay", email: "official.krishupadhyay@gmail.com" },
 };
 
 export const LEGAL_VERSION = "2026-11-14";
-export const LEGAL_UPDATED = "14 November 2026";
+export const LEGAL_UPDATED = "15 November 2026";
 
 const B = BUSINESS;
 
@@ -33,6 +36,7 @@ export const LEGAL = {
     path: "/privacy",
     file: "privacy.html",
     title: "Privacy Policy",
+    short: "Privacy",
     intro: `${B.product} ("we", "us", "the app") is an AI study platform for NEET and JEE students in India. This policy explains what we collect, why, who we share it with, and the choices you and your parent or guardian have. We have tried to write it in plain language.`,
     sections: [
       {
@@ -49,6 +53,7 @@ export const LEGAL = {
           "Chat content: the questions you ask the AI mentor and its answers, saved so you can revisit them.",
           "Study activity: test answers, scores, revision progress and notes you write, used to show your progress and weak topics.",
           "AI usage records: how many AI questions you used, the model used, token counts and cost. These records do not contain the text of your questions.",
+          "Messages you send us: your name, email, topic and message from the Contact page, and questions you report (with what the question showed), used only to reply and to fix problems.",
           "Technical data: IP address, browser/device type and request logs, used for security, abuse prevention and fixing problems.",
         ],
       },
@@ -118,6 +123,7 @@ export const LEGAL = {
         ul: [
           "tell you what personal data we hold and how it is used;",
           "correct inaccurate data (you can edit your name in Profile);",
+          "get a copy of your data (Settings → Download my data gives you one file with everything we hold);",
           "erase your data (use Settings → Delete account, or email us);",
           "withdraw consent (a parent can withdraw AI approval at any time);",
           "resolve a complaint — see section 12.",
@@ -142,6 +148,7 @@ export const LEGAL = {
     path: "/terms",
     file: "terms.html",
     title: "Terms of Service",
+    short: "Terms",
     intro: `These terms are an agreement between you and ${B.operator}, who runs ${B.product}. By creating an account or using the app you agree to them and to our Privacy Policy.`,
     sections: [
       {
@@ -221,6 +228,7 @@ export const LEGAL = {
     path: "/refund",
     file: "refund-policy.html",
     title: "Refund & Cancellation Policy",
+    short: "Refunds & cancellation",
     intro: `${B.product} has a free plan and paid plans (Pro and Elite). This page explains how payments, refunds and cancellation work. No payment is taken until the plan, price and end date are clearly shown to you at checkout.`,
     sections: [
       {
@@ -251,6 +259,36 @@ export const LEGAL = {
       {
         h: "5. How to ask",
         p: [`Email ${B.supportEmail} from your registered address with the payment reference. We reply within 2 working days.`],
+      },
+    ],
+  },
+
+  delivery: {
+    path: "/delivery",
+    file: "delivery-policy.html",
+    title: "Delivery Policy",
+    short: "Delivery (shipping)",
+    intro: `${B.product} is an online service. Nothing is shipped physically. This page explains how and when you get access after you sign up or buy a plan.`,
+    sections: [
+      {
+        h: "1. What you receive",
+        p: ["Access to the JNEET+ AI website (AI mentor, mock tests, revision, OneShot notes and progress tracking) on your account. There are no physical goods, so there is no shipping, shipping charge or delivery address."],
+      },
+      {
+        h: "2. When you get access",
+        ul: [
+          "Free plan: immediately after you verify your email.",
+          "Paid plans (Pro / Elite): automatically, as soon as Razorpay confirms the payment — usually within a few seconds. Your plan, its end date and a receipt email confirm it.",
+          "If your plan is not active within 30 minutes of a successful payment, contact us with the payment ID. Our system also re-checks payments automatically every few minutes. If we cannot activate it, you get a full refund (see the Refund & Cancellation Policy).",
+        ],
+      },
+      {
+        h: "3. Where it works",
+        p: ["On any modern web browser on phone, tablet or computer, at jneetai.com, in India. You need an internet connection; some notes also work offline once opened."],
+      },
+      {
+        h: "4. Contact",
+        p: [`${B.supportEmail}${B.phone ? ` · ${B.phone}` : ""}`],
       },
     ],
   },

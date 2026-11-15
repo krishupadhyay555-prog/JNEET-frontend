@@ -5,6 +5,8 @@
 //    GET   /api/admin/stats                    live dashboard numbers (read-only)
 //    GET   /api/admin/reports?status=open      questions reported by students
 //    PATCH /api/admin/reports/:questionId      mark them fixed / dismissed / open
+//    GET   /api/admin/support?status=open      Contact-form inbox
+//    PATCH /api/admin/support/:id              open / close a message
 // ============================================================
 
 import { Router } from "express";
@@ -12,6 +14,8 @@ import { buildAdminStats } from "../services/adminStats.js";
 import { validate } from "../middleware/validate.js";
 import { updateReportSchema } from "../schemas/testSchemas.js";
 import { listReports, updateReports } from "../controllers/reportController.js";
+import { listMessages, updateMessage } from "../controllers/supportController.js";
+import { updateSupportSchema } from "../schemas/supportSchemas.js";
 
 const router = Router();
 
@@ -23,5 +27,7 @@ router.get("/stats", async (req, res, next) => {
 
 router.get("/reports", listReports);
 router.patch("/reports/:questionId", validate(updateReportSchema), updateReports);
+router.get("/support", listMessages);
+router.patch("/support/:id", validate(updateSupportSchema), updateMessage);
 
 export default router;

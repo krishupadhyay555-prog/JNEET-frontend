@@ -15,6 +15,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { useGoBack } from "../hooks/useGoBack.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { ReportedQuestions } from "../components/admin/ReportedQuestions.jsx";
+import { SupportInbox } from "../components/admin/SupportInbox.jsx";
 
 const nf = new Intl.NumberFormat("en-IN");
 const inr = (v) => `₹${nf.format(Math.round(v ?? 0))}`;
@@ -264,6 +265,8 @@ export default function AdminDashboard() {
                 ]} />
               </Section>
             </div>
+
+            <SupportInbox />
 
             <ReportedQuestions />
 

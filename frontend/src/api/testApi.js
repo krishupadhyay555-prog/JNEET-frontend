@@ -18,3 +18,8 @@ export const reportApi = {
   list:        (status = "open") => api.get("/admin/reports", { params: { status } }),
   setStatus:   (questionId, status) => api.patch(`/admin/reports/${questionId}`, { status }),
 };
+
+export const supportAdminApi = {
+  list:      (status = "open") => api.get("/admin/support", { params: { status } }),
+  setStatus: (id, status) => api.patch(`/admin/support/${id}`, { status }),
+};

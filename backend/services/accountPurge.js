@@ -14,6 +14,8 @@ import Note      from "../models/Note.js";
 import TestAttempt from "../models/TestAttempt.js";
 import AiUsage   from "../models/AiUsage.js";
 import AiDaily   from "../models/AiDaily.js";
+import QuestionReport from "../models/QuestionReport.js";
+import SupportMessage from "../models/SupportMessage.js";
 
 export const GRACE_DAYS = 30;
 const SIX_HOURS = 6 * 60 * 60 * 1000;
@@ -29,6 +31,8 @@ export async function purgeDeletedAccounts(now = new Date()) {
       TestAttempt.deleteMany({ userId: _id }),
       AiUsage.deleteMany({ userId: _id }),
       AiDaily.deleteMany({ userId: _id }),
+      QuestionReport.deleteMany({ userId: _id }),
+      SupportMessage.deleteMany({ userId: _id }),
     ]);
     await User.deleteOne({ _id });
     purged += 1;
