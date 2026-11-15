@@ -1,0 +1,161 @@
+{
+ "slug": "organic-chemistry-basic-principles",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Organic Chemistry Basic Principles",
+  "JEE": "Organic Chemistry Basic Principles"
+ },
+ "title": "Organic Chemistry: Some Basic Principles and Techniques",
+ "readMinutes": 15,
+ "summary": [
+  "Carbon forms four bonds (tetravalency), long chains (catenation) and multiple bonds. Hybridisation (sp³, sp², sp) decides shape and bond angles.",
+  "Electron displacement effects — inductive (σ bonds), resonance/mesomeric (π systems), hyperconjugation and electromeric effect — explain the stability of carbocations, carbanions and free radicals and the strength of acids and bases.",
+  "Reactions happen when nucleophiles (electron-rich) attack electrophiles (electron-poor). Bonds break homolytically (free radicals) or heterolytically (ions).",
+  "Purification (crystallisation, distillation, chromatography), qualitative tests (Lassaigne's test) and quantitative estimation (Dumas, Kjeldahl, Carius, Liebig) are the practical side of the chapter."
+ ],
+ "formulas": [
+  {
+   "name": "Hybridisation from bonds",
+   "formula": "4 σ → sp³ (109.5°);  3 σ + 1 π → sp² (120°);  2 σ + 2 π → sp (180°)",
+   "when": "Shape and bond angle at a carbon.",
+   "mistake": "Count σ bonds (and lone pairs) around the atom, not the total number of bonds."
+  },
+  {
+   "name": "Degree of unsaturation (DBE)",
+   "formula": "DBE = C − H/2 − X/2 + N/2 + 1",
+   "when": "Rings + π bonds from a molecular formula.",
+   "note": "Ignore O and S; treat halogens like H."
+  },
+  {
+   "name": "Inductive effect",
+   "formula": "−I: NO₂ > CN > F > Cl > Br > I > OH;  +I: (CH₃)₃C > (CH₃)₂CH > CH₃CH₂ > CH₃",
+   "when": "Acid strength, carbocation stability.",
+   "note": "The inductive effect fades quickly with distance (beyond ~3 carbons it is negligible)."
+  },
+  {
+   "name": "Resonance (mesomeric) effect",
+   "formula": "+R: −OH, −OR, −NH₂, −X (donate lone pair);  −R: −NO₂, −CHO, −COOH, −CN (withdraw π electrons)",
+   "when": "Stability of conjugated species, directing effects."
+  },
+  {
+   "name": "Carbocation stability",
+   "formula": "benzylic ≈ allylic > 3° > 2° > 1° > CH₃⁺",
+   "when": "Predicting rearrangements and SN1/E1 rates.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Free radical stability",
+   "formula": "benzylic > allylic > 3° > 2° > 1° > CH₃•",
+   "when": "Halogenation, peroxide effect."
+  },
+  {
+   "name": "Carbanion stability",
+   "formula": "CH₃⁻ > 1° > 2° > 3° (opposite of carbocations); stabilised by −I/−R groups and sp character",
+   "when": "Acidic C–H, carbanion reactions."
+  },
+  {
+   "name": "Hyperconjugation",
+   "formula": "more α-hydrogens → more hyperconjugation → greater stability",
+   "when": "Carbocations and alkenes.",
+   "note": "It explains why 3° carbocations and more substituted alkenes are more stable."
+  },
+  {
+   "name": "Kjeldahl's method",
+   "formula": "% N = (1.4 × N_acid × V_acid used)/mass of compound",
+   "when": "Nitrogen estimation.",
+   "mistake": "Not for nitro, azo compounds or N in a ring (pyridine)."
+  },
+  {
+   "name": "Dumas method",
+   "formula": "% N = (28 × V_N₂ at STP)/(22400 × mass) × 100",
+   "when": "Nitrogen estimation for all compounds."
+  },
+  {
+   "name": "Carius method",
+   "formula": "% X = (atomic mass of X × mass of AgX)/(molar mass of AgX × mass of compound) × 100;  % S via BaSO₄",
+   "when": "Halogen and sulphur estimation."
+  },
+  {
+   "name": "Liebig's method (C and H)",
+   "formula": "% C = (12/44) × (mass CO₂/mass compound) × 100;  % H = (2/18) × (mass H₂O/mass compound) × 100",
+   "when": "Carbon and hydrogen estimation."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Kjeldahl",
+   "problem": "0.5 g of a compound gives NH₃ that neutralises 10 mL of 1 M H₂SO₄. % N?",
+   "solution": "10 mL of 1 M H₂SO₄ neutralises 0.02 mol NH₃ = 0.28 g N. % N = 56%."
+  },
+  {
+   "title": "Carius",
+   "problem": "0.20 g of a compound gives 0.287 g AgCl. % Cl?",
+   "solution": "Cl = 0.287 × 35.5/143.5 = 0.071 g → 35.5%."
+  },
+  {
+   "title": "Liebig",
+   "problem": "0.30 g of a compound gives 0.44 g CO₂. % C?",
+   "solution": "C = 0.44 × 12/44 = 0.12 g → 40%."
+  },
+  {
+   "title": "Degree of unsaturation",
+   "problem": "DBE of benzene, C₆H₆?",
+   "solution": "DBE = 6 − 6/2 + 1 = 4 (one ring + three C=C)."
+  },
+  {
+   "title": "Most stable carbocation",
+   "problem": "Order: CH₃⁺, (CH₃)₃C⁺, C₆H₅CH₂⁺, (CH₃)₂CH⁺.",
+   "solution": "C₆H₅CH₂⁺ (resonance) > (CH₃)₃C⁺ > (CH₃)₂CH⁺ > CH₃⁺ (hyperconjugation and +I)."
+  },
+  {
+   "title": "Acid strength",
+   "problem": "Order: CH₃COOH, ClCH₂COOH, Cl₂CHCOOH, FCH₂COOH.",
+   "solution": "Cl₂CHCOOH > FCH₂COOH > ClCH₂COOH > CH₃COOH — more and stronger −I groups stabilise the carboxylate ion."
+  },
+  {
+   "title": "Lassaigne's test",
+   "problem": "A sodium fusion extract gives a blood-red colour with FeCl₃. Which elements are present?",
+   "solution": "Both N and S: they form NaSCN, which gives blood-red [Fe(SCN)]²⁺. N alone gives Prussian blue; S alone gives violet with sodium nitroprusside."
+  }
+ ],
+ "topics": [
+  {
+   "title": "IUPAC nomenclature",
+   "explain": "Find the longest chain containing the principal functional group, number it to give that group the lowest locant, name substituents alphabetically. Priority of suffixes: –COOH > –SO₃H > –COOR > –COCl > –CONH₂ > –CN > –CHO > >C=O > –OH > –NH₂ > C=C > C≡C."
+  },
+  {
+   "title": "Isomerism",
+   "explain": "Structural: chain, position, functional group, metamerism, tautomerism (keto–enol). Stereoisomerism: geometrical (cis/trans across C=C or in rings) and optical (chiral carbon, non-superimposable mirror images)."
+  },
+  {
+   "title": "Bond fission and reactive intermediates",
+   "explain": "Homolytic fission gives free radicals (in light/peroxides); heterolytic fission gives carbocations and carbanions. Carbocations are planar (sp²), carbanions pyramidal (sp³), free radicals planar."
+  },
+  {
+   "title": "Nucleophiles and electrophiles",
+   "explain": "Nucleophiles: OH⁻, CN⁻, NH₃, H₂O, ROH (lone pairs or negative charge). Electrophiles: H⁺, NO₂⁺, carbocations, BF₃, AlCl₃ (electron-deficient). Reactions: substitution, addition, elimination, rearrangement."
+  },
+  {
+   "title": "Electromeric effect",
+   "explain": "A temporary, complete shift of π electrons to one atom when a reagent approaches — operates only in the presence of the reagent (unlike the permanent inductive and resonance effects)."
+  },
+  {
+   "title": "Purification methods",
+   "explain": "Crystallisation (solubility difference), sublimation (camphor, naphthalene), simple distillation (large bp difference), fractional distillation (close bp), distillation under reduced pressure (decomposes at bp), steam distillation (steam-volatile, immiscible — aniline), differential extraction, and chromatography (adsorption or partition; Rf = distance by compound/distance by solvent)."
+  },
+  {
+   "title": "Qualitative analysis",
+   "explain": "Sodium fusion (Lassaigne) converts N, S, X to NaCN, Na₂S, NaX. N: Prussian blue with FeSO₄ + FeCl₃. S: black PbS with lead acetate, violet with nitroprusside. Halogens: AgNO₃ after boiling with HNO₃ (white AgCl soluble in NH₃, pale-yellow AgBr, yellow AgI)."
+  }
+ ],
+ "ratta": [
+  "sp³ 109.5°, sp² 120°, sp 180°.",
+  "DBE = C − H/2 − X/2 + N/2 + 1.",
+  "Carbocation: benzyl ≈ allyl > 3° > 2° > 1° > methyl.",
+  "Carbanion: methyl > 1° > 2° > 3°.",
+  "−I: NO₂ > CN > F > Cl > Br > I;  +I: tert-butyl > isopropyl > ethyl > methyl.",
+  "Kjeldahl % N = 1.4 NV/w (not for nitro/azo/ring N).",
+  "N + S → blood red;  N → Prussian blue."
+ ],
+ "verifiedOn": "2026-11-13"
+}
