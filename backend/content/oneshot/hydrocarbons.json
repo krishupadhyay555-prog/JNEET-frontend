@@ -1,0 +1,165 @@
+{
+ "slug": "hydrocarbons",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Hydrocarbons",
+  "JEE": "Hydrocarbons"
+ },
+ "title": "Hydrocarbons",
+ "readMinutes": 15,
+ "summary": [
+  "Alkanes (CₙH₂ₙ₊₂, sp³) are fairly unreactive and undergo free-radical substitution. Their conformations (staggered vs eclipsed ethane) differ in energy.",
+  "Alkenes (CₙH₂ₙ, C=C) and alkynes (CₙH₂ₙ₋₂, C≡C) undergo electrophilic addition. HX adds by Markovnikov's rule, except HBr with peroxide (anti-Markovnikov). Alkenes show geometrical isomerism.",
+  "Terminal alkynes are weakly acidic (sp carbon) and form acetylides. Ozonolysis tells where the double bond was.",
+  "Benzene is aromatic (planar, cyclic, 6 π electrons — Hückel 4n + 2). It prefers electrophilic substitution, and substituents direct incoming groups to ortho/para or meta positions."
+ ],
+ "formulas": [
+  {
+   "name": "Wurtz reaction",
+   "formula": "2R–X + 2Na → R–R + 2NaX (dry ether)",
+   "when": "Making symmetrical higher alkanes.",
+   "note": "Gives mixtures with two different alkyl halides; can't make methane."
+  },
+  {
+   "name": "Kolbe's electrolysis",
+   "formula": "2RCOONa + 2H₂O → R–R + 2CO₂ + 2NaOH + H₂ (electrolysis)",
+   "when": "Alkanes with an even number of carbons."
+  },
+  {
+   "name": "Decarboxylation",
+   "formula": "RCOONa + NaOH (CaO) → R–H + Na₂CO₃",
+   "when": "Alkane with one carbon less."
+  },
+  {
+   "name": "Free-radical halogenation",
+   "formula": "CH₄ + Cl₂ (hν) → CH₃Cl + HCl (initiation, propagation, termination)",
+   "when": "Halogenation of alkanes.",
+   "note": "Reactivity of halogens: F₂ > Cl₂ > Br₂ > I₂; 3° H is replaced fastest."
+  },
+  {
+   "name": "Markovnikov addition",
+   "formula": "CH₃CH=CH₂ + HBr → CH₃CHBrCH₃",
+   "when": "Adding HX to unsymmetrical alkenes.",
+   "tag": "PYQ favourite",
+   "note": "H goes to the carbon that already has more H (more stable carbocation forms)."
+  },
+  {
+   "name": "Peroxide (Kharasch) effect",
+   "formula": "CH₃CH=CH₂ + HBr (peroxide) → CH₃CH₂CH₂Br",
+   "when": "Anti-Markovnikov addition.",
+   "mistake": "Works only with HBr — not with HCl or HI."
+  },
+  {
+   "name": "Ozonolysis",
+   "formula": "R₂C=CR′₂ + O₃ then Zn/H₂O → R₂C=O + O=CR′₂",
+   "when": "Locating the double bond.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Hydrogenation of alkynes",
+   "formula": "Lindlar's catalyst (Pd/CaCO₃, quinoline) → cis-alkene;  Na in liquid NH₃ → trans-alkene",
+   "when": "Controlled reduction."
+  },
+  {
+   "name": "Hydration of alkynes",
+   "formula": "HC≡CH + H₂O (HgSO₄, dil. H₂SO₄) → CH₃CHO;  other alkynes → ketones",
+   "when": "Making aldehydes/ketones from alkynes."
+  },
+  {
+   "name": "Acidity of hydrocarbons",
+   "formula": "HC≡CH > CH₂=CH₂ > CH₃–CH₃ (s-character 50% > 33% > 25%)",
+   "when": "Why terminal alkynes react with Na, NaNH₂ and ammoniacal AgNO₃."
+  },
+  {
+   "name": "Aromaticity (Hückel rule)",
+   "formula": "planar + cyclic + fully conjugated + (4n + 2) π electrons",
+   "when": "Identifying aromatic compounds.",
+   "note": "Cyclopentadienyl anion (6π) is aromatic; the cation (4π) is not."
+  },
+  {
+   "name": "Electrophilic substitution of benzene",
+   "formula": "nitration (HNO₃/H₂SO₄, NO₂⁺);  halogenation (X₂/FeX₃);  sulphonation (fuming H₂SO₄);  Friedel–Crafts alkylation (RX/AlCl₃) and acylation (RCOCl/AlCl₃)",
+   "when": "Reactions of benzene."
+  },
+  {
+   "name": "Directive influence",
+   "formula": "o/p-directing activating: –OH, –NH₂, –OR, –CH₃;  o/p-directing deactivating: halogens;  m-directing deactivating: –NO₂, –CN, –CHO, –COOH, –SO₃H",
+   "when": "Predicting where the next group goes.",
+   "tag": "PYQ favourite",
+   "note": "Halogens are the odd case: deactivating (−I) yet ortho/para-directing (+R)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Ozonolysis product",
+   "problem": "But-2-ene is ozonolysed (Zn/H₂O). Products?",
+   "solution": "CH₃CH=CHCH₃ splits at the double bond → 2 CH₃CHO (ethanal)."
+  },
+  {
+   "title": "Markovnikov vs peroxide",
+   "problem": "Propene + HBr, with and without benzoyl peroxide?",
+   "solution": "Without peroxide: 2-bromopropane (Markovnikov, via 2° carbocation). With peroxide: 1-bromopropane (free-radical, anti-Markovnikov)."
+  },
+  {
+   "title": "cis or trans",
+   "problem": "But-2-yne is reduced with H₂/Lindlar's catalyst and separately with Na/liq. NH₃. Products?",
+   "solution": "Lindlar → cis-but-2-ene (syn addition). Na/NH₃ → trans-but-2-ene."
+  },
+  {
+   "title": "Is it aromatic?",
+   "problem": "Which are aromatic: benzene, cyclooctatetraene, cyclopentadienyl anion, cyclobutadiene?",
+   "solution": "Benzene (6π) and cyclopentadienyl anion (6π) obey 4n + 2. Cyclooctatetraene (8π, non-planar) and cyclobutadiene (4π, antiaromatic) are not."
+  },
+  {
+   "title": "Nitration of toluene",
+   "problem": "Main products of nitrating toluene?",
+   "solution": "–CH₃ is activating and o/p-directing → o-nitrotoluene and p-nitrotoluene (p major due to less crowding)."
+  },
+  {
+   "title": "Friedel–Crafts acylation",
+   "problem": "Benzene + CH₃COCl with anhydrous AlCl₃?",
+   "solution": "Acetophenone (C₆H₅COCH₃). The acylium ion CH₃C≡O⁺ is the electrophile; unlike alkylation there is no rearrangement and no polysubstitution."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Conformations of ethane",
+   "explain": "Rotation about the C–C single bond gives staggered (most stable, minimum torsional strain) and eclipsed (least stable) conformations; the energy difference is only ~12.5 kJ/mol, so they interconvert rapidly. Shown with Newman and sawhorse projections."
+  },
+  {
+   "title": "Geometrical isomerism",
+   "explain": "Restricted rotation about C=C allows cis and trans isomers when each double-bonded carbon has two different groups. cis-But-2-ene has a higher boiling point (polar); trans has a higher melting point (packs better)."
+  },
+  {
+   "title": "Preparation of alkenes",
+   "explain": "Dehydration of alcohols (conc. H₂SO₄, heat), dehydrohalogenation of alkyl halides (alcoholic KOH — Saytzeff product, the more substituted alkene, is major), and partial reduction of alkynes."
+  },
+  {
+   "title": "Reactions of alkenes",
+   "explain": "Addition of H₂, X₂ (Br₂ water decolourises — test for unsaturation), HX, H₂O (acid-catalysed); oxidation with cold dilute alkaline KMnO₄ (Baeyer's reagent, diol; purple colour lost); ozonolysis; polymerisation (polythene)."
+  },
+  {
+   "title": "Alkynes",
+   "explain": "Prepared from calcium carbide (CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂) or by double dehydrohalogenation. Terminal alkynes give white precipitates with ammoniacal AgNO₃ — a test distinguishing them from alkenes. Ethyne polymerises to benzene in a red-hot iron tube."
+  },
+  {
+   "title": "Benzene structure",
+   "explain": "Kekulé structures are resonance forms; all C–C bonds are equal (139 pm, between single and double). Benzene resists addition because it would lose aromatic stabilisation."
+  },
+  {
+   "title": "Carcinogenicity and toxicity",
+   "explain": "Many polynuclear aromatic hydrocarbons (from incomplete combustion of coal, tobacco) are carcinogenic, e.g. 1,2-benzanthracene."
+  }
+ ],
+ "ratta": [
+  "Wurtz: 2RX + 2Na → R–R;  Kolbe: even carbons.",
+  "Markovnikov: H to carbon with more H;  peroxide effect only with HBr.",
+  "Ozonolysis tells position of C=C.",
+  "Lindlar → cis;  Na/NH₃ → trans.",
+  "Acidity: ethyne > ethene > ethane.",
+  "Hückel: 4n + 2 π electrons, planar, cyclic.",
+  "o/p: –OH, –NH₂, –CH₃, –X;  m: –NO₂, –CN, –CHO, –COOH.",
+  "Saytzeff: more substituted alkene major."
+ ],
+ "verifiedOn": "2026-11-13"
+}

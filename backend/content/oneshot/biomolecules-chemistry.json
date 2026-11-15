@@ -1,0 +1,155 @@
+{
+ "slug": "biomolecules-chemistry",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Biomolecules",
+  "JEE": "Biomolecules"
+ },
+ "title": "Biomolecules (Chemistry)",
+ "readMinutes": 13,
+ "summary": [
+  "Carbohydrates are polyhydroxy aldehydes or ketones: monosaccharides (glucose, fructose), disaccharides (sucrose, maltose, lactose) and polysaccharides (starch, cellulose, glycogen).",
+  "Glucose exists mainly in a six-membered ring (pyranose) form with α and β anomers. Sugars with a free aldehyde or ketone group are reducing sugars; sucrose is non-reducing.",
+  "Proteins are polymers of α-amino acids joined by peptide bonds. Their structure has four levels (primary to quaternary); denaturation destroys the higher levels but not the primary structure.",
+  "Nucleic acids (DNA, RNA) are polymers of nucleotides — sugar + base + phosphate. Vitamins and hormones are small molecules with big biological roles."
+ ],
+ "formulas": [
+  {
+   "name": "Glucose structure evidence",
+   "formula": "HI → n-hexane (straight chain);  acetylation → pentaacetate (5 –OH);  HCN → cyanohydrin and NH₂OH → oxime (C=O);  Br₂ water → gluconic acid (–CHO);  HNO₃ → saccharic acid (–CHO and 1° –OH)",
+   "when": "Open-chain structure of glucose.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Evidence against open chain",
+   "formula": "no Schiff's test and no reaction with NaHSO₃;  pentaacetate does not react with NH₂OH;  two anomers (α, β)",
+   "when": "Why glucose has a ring structure."
+  },
+  {
+   "name": "Anomers and mutarotation",
+   "formula": "α-D-glucose (+111°) ⇌ open chain ⇌ β-D-glucose (+19°);  equilibrium +52.5°",
+   "when": "Change of specific rotation in solution.",
+   "mistake": "Anomers differ only at C1; they are not mirror images."
+  },
+  {
+   "name": "Disaccharides and their links",
+   "formula": "sucrose = α-glucose (C1) + β-fructose (C2), non-reducing;  maltose = α-glucose C1–C4, reducing;  lactose = β-galactose C1–C4 glucose, reducing",
+   "when": "Glycosidic linkages.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Invert sugar",
+   "formula": "sucrose (+66.5°) + H₂O → glucose (+52.5°) + fructose (−92.4°) → mixture is laevorotatory",
+   "when": "Why hydrolysed sucrose is called invert sugar."
+  },
+  {
+   "name": "Polysaccharides",
+   "formula": "starch = amylose (15–20%, unbranched, α-1,4) + amylopectin (80–85%, branched, α-1,6 at branches);  cellulose = β-1,4 glucose;  glycogen = highly branched, like amylopectin",
+   "when": "Structure of storage and structural carbohydrates."
+  },
+  {
+   "name": "Peptide bond",
+   "formula": "–CO–NH–, formed by condensation of –COOH of one amino acid and –NH₂ of the next; n amino acids → n − 1 peptide bonds",
+   "when": "Counting peptide bonds."
+  },
+  {
+   "name": "Zwitterion",
+   "formula": "H₃N⁺–CHR–COO⁻; at the isoelectric point the net charge is zero",
+   "when": "Why amino acids have high melting points and are water-soluble."
+  },
+  {
+   "name": "Levels of protein structure",
+   "formula": "primary (sequence) → secondary (α-helix, β-pleated sheet; H-bonds) → tertiary (overall folding: H-bonds, disulphide, ionic, van der Waals) → quaternary (subunits)",
+   "when": "Describing protein structure."
+  },
+  {
+   "name": "Nucleotide",
+   "formula": "nucleoside (base + pentose sugar) + phosphate;  nucleotides joined by 3′–5′ phosphodiester bonds",
+   "when": "Structure of nucleic acids."
+  },
+  {
+   "name": "Bases",
+   "formula": "DNA: A, G, C, T;  RNA: A, G, C, U;  purines A, G;  pyrimidines C, T, U;  pairs A=T (2 H-bonds), G≡C (3 H-bonds)",
+   "when": "Base pairing."
+  },
+  {
+   "name": "Vitamins and deficiencies",
+   "formula": "fat-soluble A, D, E, K;  water-soluble B group and C.  A → night blindness;  B₁ → beri-beri;  B₁₂ → pernicious anaemia;  C → scurvy;  D → rickets;  K → delayed blood clotting",
+   "when": "Matching vitamins to diseases.",
+   "tag": "PYQ favourite",
+   "note": "B₁₂ is water-soluble but can be stored in the liver."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Peptide bonds",
+   "problem": "How many peptide bonds are in a hexapeptide?",
+   "solution": "n − 1 = 6 − 1 = 5."
+  },
+  {
+   "title": "Number of tripeptides",
+   "problem": "How many different tripeptides can be made from glycine, alanine and valine if each may be used more than once?",
+   "solution": "3 choices for each of 3 positions: 3 × 3 × 3 = 27."
+  },
+  {
+   "title": "Reducing sugar?",
+   "problem": "Which are reducing: glucose, fructose, sucrose, maltose, lactose?",
+   "solution": "All except sucrose. In sucrose both anomeric carbons (C1 of glucose and C2 of fructose) are used in the glycosidic bond, so there is no free hemiacetal group."
+  },
+  {
+   "title": "Denaturation",
+   "problem": "What happens when an egg is boiled?",
+   "solution": "Heat denatures albumin: the secondary and tertiary structures unfold and the globular protein coagulates. The primary structure (amino acid sequence) is unchanged."
+  },
+  {
+   "title": "Essential amino acids",
+   "problem": "Name the difference between essential and non-essential amino acids.",
+   "solution": "Essential ones (valine, leucine, isoleucine, lysine, threonine, methionine, phenylalanine, tryptophan, histidine, arginine) must come from food; non-essential ones (glycine, alanine, glutamic acid) are made in the body."
+  },
+  {
+   "title": "DNA vs RNA",
+   "problem": "Give three differences between DNA and RNA.",
+   "solution": "DNA has deoxyribose, thymine and a double helix; RNA has ribose, uracil and is usually single-stranded. DNA carries genetic information; RNA (m, t, r) helps make proteins."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Classification of carbohydrates",
+   "explain": "Reducing vs non-reducing; aldoses vs ketoses; monosaccharides (cannot be hydrolysed), oligosaccharides (2–10 units) and polysaccharides. D/L refers to the configuration at the last chiral carbon relative to glyceraldehyde, not the direction of rotation."
+  },
+  {
+   "title": "Fructose",
+   "explain": "A ketohexose, laevorotatory; it forms a five-membered (furanose) ring. It reduces Tollens' and Fehling's reagents because in alkaline medium it isomerises to an aldose."
+  },
+  {
+   "title": "Amino acids",
+   "explain": "α-Amino acids have –NH₂ and –COOH on the same carbon. Acidic (aspartic, glutamic), basic (lysine, arginine) and neutral types. All except glycine are optically active and mostly have the L-configuration."
+  },
+  {
+   "title": "Fibrous and globular proteins",
+   "explain": "Fibrous proteins (keratin, myosin) are long, thread-like and insoluble; globular proteins (insulin, albumin) are spherical and water-soluble."
+  },
+  {
+   "title": "Enzymes",
+   "explain": "Biological catalysts, mostly globular proteins, highly specific; they lower activation energy. Example: maltase converts maltose to glucose."
+  },
+  {
+   "title": "Hormones",
+   "explain": "Chemical messengers from endocrine glands: steroid (oestrogen, testosterone), polypeptide (insulin, glucagon) and amino-acid derivatives (thyroxine, adrenaline). Insulin lowers and glucagon raises blood glucose."
+  },
+  {
+   "title": "Biological functions of nucleic acids",
+   "explain": "DNA replicates itself and carries heredity; transcription makes mRNA, and translation on ribosomes (with tRNA carrying amino acids) makes proteins."
+  }
+ ],
+ "ratta": [
+  "Sucrose: non-reducing; invert sugar is laevorotatory.",
+  "Maltose α-1,4;  lactose β-1,4;  cellulose β-1,4;  amylopectin α-1,6 branches.",
+  "Glucose pentaacetate: 5 –OH;  HI → n-hexane.",
+  "n amino acids → n − 1 peptide bonds.",
+  "A=T (2 H-bonds), G≡C (3);  RNA has U.",
+  "A, D, E, K fat-soluble;  B, C water-soluble.",
+  "C → scurvy;  D → rickets;  B₁ → beri-beri;  A → night blindness."
+ ],
+ "verifiedOn": "2026-11-13"
+}

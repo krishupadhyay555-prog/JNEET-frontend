@@ -1,0 +1,162 @@
+{
+ "slug": "alcohols-phenols-and-ethers",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Alcohols, Phenols and Ethers",
+  "JEE": "Alcohols, Phenols and Ethers"
+ },
+ "title": "Alcohols, Phenols and Ethers",
+ "readMinutes": 15,
+ "summary": [
+  "Alcohols (R–OH) and phenols (Ar–OH) have an –OH group; ethers (R–O–R′) have oxygen between two carbons. Hydrogen bonding gives alcohols and phenols high boiling points and some water solubility.",
+  "Phenols are much more acidic than alcohols because the phenoxide ion is resonance-stabilised; electron-withdrawing groups (–NO₂) at ortho/para make phenol even more acidic.",
+  "Alcohols react by breaking O–H (acidity, esterification) or C–O (substitution, dehydration). The Lucas test distinguishes primary, secondary and tertiary alcohols.",
+  "The –OH group strongly activates the benzene ring of phenol towards electrophilic substitution (bromine water gives 2,4,6-tribromophenol). Named reactions: Kolbe, Reimer–Tiemann, Williamson synthesis."
+ ],
+ "formulas": [
+  {
+   "name": "Alcohols from alkenes",
+   "formula": "acid-catalysed hydration (Markovnikov);  hydroboration–oxidation (B₂H₆ then H₂O₂/OH⁻) gives anti-Markovnikov alcohols",
+   "when": "Preparation of alcohols."
+  },
+  {
+   "name": "Alcohols from carbonyls",
+   "formula": "RCHO + H₂/Ni or NaBH₄/LiAlH₄ → 1° alcohol;  R₂CO → 2° alcohol;  RCOOH + LiAlH₄ → 1° alcohol",
+   "when": "Reduction routes."
+  },
+  {
+   "name": "Grignard route",
+   "formula": "HCHO + RMgX → 1° alcohol;  other aldehydes → 2°;  ketones → 3° (after hydrolysis)",
+   "when": "Building alcohols with new C–C bonds.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Acidity order",
+   "formula": "p-nitrophenol > phenol > water > ethanol (1° > 2° > 3° alcohol)",
+   "when": "Comparing acid strengths.",
+   "note": "Electron-donating groups (–CH₃) decrease phenol's acidity; electron-withdrawing groups (–NO₂) increase it."
+  },
+  {
+   "name": "Lucas test",
+   "formula": "conc. HCl + anhydrous ZnCl₂:  3° turbidity immediately;  2° within ~5 min;  1° only on heating",
+   "when": "Distinguishing 1°, 2°, 3° alcohols.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Dehydration of alcohols",
+   "formula": "conc. H₂SO₄ heat: ethanol → ethene (443 K) or diethyl ether (413 K);  ease 3° > 2° > 1°",
+   "when": "Alkenes and ethers from alcohols.",
+   "note": "Temperature decides the product: higher gives the alkene, lower gives the ether."
+  },
+  {
+   "name": "Oxidation of alcohols",
+   "formula": "1° → aldehyde (PCC) → acid (KMnO₄);  2° → ketone;  3° resist oxidation;  Cu at 573 K: 1° → aldehyde, 2° → ketone, 3° → alkene",
+   "when": "Identifying the alcohol type from products."
+  },
+  {
+   "name": "Phenol preparation",
+   "formula": "cumene process (cumene → cumene hydroperoxide → phenol + acetone);  from diazonium salts (warm water);  from chlorobenzene (Dow's process)",
+   "when": "Making phenol."
+  },
+  {
+   "name": "Kolbe's reaction",
+   "formula": "sodium phenoxide + CO₂ (4–7 atm, 400 K), then H⁺ → salicylic acid",
+   "when": "Carboxylation of phenol."
+  },
+  {
+   "name": "Reimer–Tiemann reaction",
+   "formula": "phenol + CHCl₃ + aq. NaOH, then H⁺ → salicylaldehyde",
+   "when": "Introducing –CHO at the ortho position.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Bromination of phenol",
+   "formula": "bromine water → 2,4,6-tribromophenol (white ppt);  Br₂ in CS₂ (low temperature) → o- and p-bromophenol",
+   "when": "Effect of solvent on halogenation."
+  },
+  {
+   "name": "Williamson synthesis",
+   "formula": "R–X + R′ONa → R–O–R′ + NaX",
+   "when": "Making ethers.",
+   "note": "Use a 1° alkyl halide — with 3° halides elimination (alkene) dominates."
+  },
+  {
+   "name": "Cleavage of ethers by HI",
+   "formula": "R–O–CH₃ + HI → R–OH + CH₃I (I⁻ attacks the less hindered carbon);  anisole + HI → phenol + CH₃I",
+   "when": "Products of ether cleavage.",
+   "mistake": "The aryl–O bond never breaks: anisole gives phenol, not iodobenzene."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Grignard synthesis",
+   "problem": "Which carbonyl compound and Grignard reagent give 2-methylpropan-2-ol?",
+   "solution": "Acetone + CH₃MgBr, then hydrolysis → (CH₃)₃COH (a ketone gives a 3° alcohol)."
+  },
+  {
+   "title": "Acidity",
+   "problem": "Arrange: ethanol, phenol, p-nitrophenol, p-cresol.",
+   "solution": "p-Nitrophenol > phenol > p-cresol > ethanol (–NO₂ stabilises phenoxide; –CH₃ destabilises it; ethoxide has no resonance)."
+  },
+  {
+   "title": "Lucas test",
+   "problem": "Three alcohols give turbidity: one at once, one after 5 minutes, one only on heating. Identify their types.",
+   "solution": "Immediate: tertiary (2-methylpropan-2-ol); about 5 min: secondary (butan-2-ol); on heating: primary (butan-1-ol)."
+  },
+  {
+   "title": "Steam volatility",
+   "problem": "Why is o-nitrophenol steam volatile but p-nitrophenol not?",
+   "solution": "o-Nitrophenol has intramolecular hydrogen bonding, so its molecules don't associate. p-Nitrophenol forms intermolecular H-bonds, which raise its boiling point."
+  },
+  {
+   "title": "Ether cleavage",
+   "problem": "Products of anisole + HI?",
+   "solution": "Phenol + methyl iodide. The O–aryl bond has partial double-bond character, so I⁻ attacks the methyl carbon."
+  },
+  {
+   "title": "Williamson choice",
+   "problem": "To make tert-butyl methyl ether, which pair: (CH₃)₃CBr + CH₃ONa or CH₃Br + (CH₃)₃CONa?",
+   "solution": "CH₃Br + (CH₃)₃CONa. A 3° halide with a strong base would undergo elimination to isobutylene."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Classification and structure",
+   "explain": "Alcohols: monohydric, dihydric, trihydric; primary, secondary, tertiary; allylic and benzylic. In alcohols O is sp³ with the C–O–H angle slightly less than tetrahedral; in phenols the C–O bond is shorter (partial double-bond character)."
+  },
+  {
+   "title": "Physical properties",
+   "explain": "Boiling points of alcohols are much higher than those of hydrocarbons and ethers of similar mass (hydrogen bonding); they fall with branching. Lower alcohols mix with water; solubility falls as the alkyl part grows."
+  },
+  {
+   "title": "Reactions of the O–H bond",
+   "explain": "Alcohols react with active metals (Na) to give H₂ and alkoxides, and with acids, anhydrides or acid chlorides to form esters (esterification). Phenol also reacts with NaOH (alcohols don't), showing its acidic nature is stronger."
+  },
+  {
+   "title": "Electrophilic substitution of phenol",
+   "explain": "–OH activates the ring at ortho/para. Nitration with dilute HNO₃ gives o- and p-nitrophenol; concentrated HNO₃ gives picric acid (2,4,6-trinitrophenol). Sulphonation with conc. H₂SO₄ gives o-phenolsulphonic acid at low temperature and the p-isomer at higher temperature. Oxidation with chromic acid gives benzoquinone."
+  },
+  {
+   "title": "Mechanism of dehydration",
+   "explain": "Protonation of –OH, loss of water to form a carbocation (slow step), then loss of H⁺ to form the alkene. Because a carbocation forms, the ease is tertiary > secondary > primary and rearrangements can occur."
+  },
+  {
+   "title": "Commercially important alcohols",
+   "explain": "Methanol (wood spirit) is poisonous: it causes blindness and death. Ethanol is made by fermentation of sugars (invertase, zymase); denatured alcohol is made unfit to drink with CuSO₄ and pyridine."
+  },
+  {
+   "title": "Ethers",
+   "explain": "Prepared by Williamson synthesis or dehydration of alcohols. Less polar, with lower boiling points than isomeric alcohols. –OR activates the ring in anisole (o/p-directing) for halogenation, nitration and Friedel–Crafts reactions."
+  }
+ ],
+ "ratta": [
+  "Acidity: p-nitrophenol > phenol > water > ethanol.",
+  "Lucas: 3° immediate, 2° ~5 min, 1° on heating.",
+  "HCHO → 1°, RCHO → 2°, ketone → 3° (Grignard).",
+  "Ethanol + H₂SO₄: 443 K ethene, 413 K ether.",
+  "Kolbe → salicylic acid;  Reimer–Tiemann → salicylaldehyde.",
+  "Br₂ water + phenol → 2,4,6-tribromophenol (white).",
+  "Williamson: 1° halide + alkoxide;  anisole + HI → phenol + CH₃I."
+ ],
+ "verifiedOn": "2026-11-13"
+}

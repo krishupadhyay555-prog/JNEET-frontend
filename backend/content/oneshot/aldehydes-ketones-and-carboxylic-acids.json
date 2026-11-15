@@ -1,0 +1,167 @@
+{
+ "slug": "aldehydes-ketones-and-carboxylic-acids",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Aldehydes, Ketones and Carboxylic Acids",
+  "JEE": "Aldehydes, Ketones and Carboxylic Acids"
+ },
+ "title": "Aldehydes, Ketones and Carboxylic Acids",
+ "readMinutes": 16,
+ "summary": [
+  "The carbonyl group (>C=O) is planar (sp²) and polar: the carbon is electrophilic, so aldehydes and ketones undergo nucleophilic addition. Aldehydes are more reactive than ketones (less steric hindrance, fewer +I alkyl groups).",
+  "Aldehydes are easily oxidised, so they reduce Tollens', Fehling's and Benedict's reagents; ketones generally don't. These tests distinguish the two.",
+  "α-Hydrogens are acidic, which gives aldol condensation (with α-H) and the Cannizzaro reaction (without α-H). Methyl ketones give the iodoform test.",
+  "Carboxylic acids are stronger acids than phenols and alcohols (resonance-stabilised carboxylate). Electron-withdrawing groups increase acidity. Their derivatives are acid chlorides, anhydrides, esters and amides."
+ ],
+ "formulas": [
+  {
+   "name": "Preparation from alcohols",
+   "formula": "1° alcohol + PCC (or CrO₃) → aldehyde;  2° alcohol + K₂Cr₂O₇/H⁺ → ketone",
+   "when": "Making carbonyl compounds."
+  },
+  {
+   "name": "Rosenmund reduction",
+   "formula": "RCOCl + H₂ (Pd/BaSO₄) → RCHO",
+   "when": "Aldehydes from acid chlorides.",
+   "mistake": "BaSO₄ poisons the catalyst so the aldehyde is not reduced further."
+  },
+  {
+   "name": "Stephen reaction",
+   "formula": "RCN + SnCl₂/HCl → RCH=NH → (H₃O⁺) RCHO",
+   "when": "Aldehydes from nitriles."
+  },
+  {
+   "name": "Etard reaction and Gattermann–Koch",
+   "formula": "toluene + CrO₂Cl₂ → benzaldehyde;  benzene + CO + HCl (AlCl₃/CuCl) → benzaldehyde",
+   "when": "Making aromatic aldehydes."
+  },
+  {
+   "name": "Nucleophilic addition",
+   "formula": "HCN → cyanohydrin;  NaHSO₃ → bisulphite adduct;  ROH (dry HCl) → hemiacetal → acetal;  RMgX → alcohol",
+   "when": "Reactions of the C=O group.",
+   "tag": "PYQ favourite",
+   "note": "Reactivity: HCHO > CH₃CHO > CH₃COCH₃ (sterics and +I effect)."
+  },
+  {
+   "name": "Ammonia derivatives (addition–elimination)",
+   "formula": ">C=O + H₂N–Z → >C=N–Z + H₂O  (Z = OH oxime, NH₂ hydrazone, NHC₆H₅ phenylhydrazone, NHCONH₂ semicarbazone)",
+   "when": "Derivatives for identification.",
+   "note": "2,4-DNP gives an orange/yellow precipitate with all aldehydes and ketones."
+  },
+  {
+   "name": "Clemmensen and Wolff–Kishner",
+   "formula": "Zn–Hg/conc. HCl  or  NH₂NH₂ then KOH/ethylene glycol:  >C=O → >CH₂",
+   "when": "Reducing carbonyl to alkane.",
+   "note": "Clemmensen is acidic; Wolff–Kishner is basic — choose based on what else is in the molecule."
+  },
+  {
+   "name": "Aldol condensation",
+   "formula": "2CH₃CHO (dil. NaOH) → CH₃CH(OH)CH₂CHO → (heat) CH₃CH=CHCHO",
+   "when": "Carbonyl compounds with α-hydrogen.",
+   "tag": "PYQ favourite",
+   "note": "Needs at least one α-H."
+  },
+  {
+   "name": "Cannizzaro reaction",
+   "formula": "2HCHO + conc. NaOH → CH₃OH + HCOONa",
+   "when": "Aldehydes without α-hydrogen (HCHO, C₆H₅CHO).",
+   "note": "One molecule is oxidised and one reduced (disproportionation)."
+  },
+  {
+   "name": "Haloform (iodoform) reaction",
+   "formula": "CH₃CO–R + 3I₂ + 4NaOH → CHI₃ (yellow) + RCOONa + 3NaI + 3H₂O",
+   "when": "Test for CH₃CO– and CH₃CH(OH)– groups.",
+   "note": "Ethanol and acetaldehyde give it; methanol and propanal do not."
+  },
+  {
+   "name": "Acidity of carboxylic acids",
+   "formula": "F₃CCOOH > Cl₃CCOOH > Cl₂CHCOOH > ClCH₂COOH > HCOOH > C₆H₅COOH > CH₃COOH",
+   "when": "Comparing acid strengths.",
+   "note": "pKa falls (acid gets stronger) as −I groups increase or move closer to –COOH."
+  },
+  {
+   "name": "Hell–Volhard–Zelinsky (HVZ)",
+   "formula": "RCH₂COOH + X₂ (red P) → RCHXCOOH",
+   "when": "α-Halogenation of acids with α-H."
+  },
+  {
+   "name": "Decarboxylation and Kolbe electrolysis",
+   "formula": "RCOONa + NaOH/CaO → RH;  electrolysis of RCOONa → R–R",
+   "when": "Removing –COOH."
+  },
+  {
+   "name": "Reactivity of acid derivatives",
+   "formula": "acid chloride > anhydride > ester > amide",
+   "when": "Nucleophilic acyl substitution."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Tollens' test",
+   "problem": "How do you distinguish propanal from propanone?",
+   "solution": "Propanal (aldehyde) gives a silver mirror with Tollens' reagent and a red precipitate (Cu₂O) with Fehling's solution; propanone does not."
+  },
+  {
+   "title": "Iodoform test",
+   "problem": "Which give the iodoform test: ethanol, methanol, propan-2-ol, pentan-3-one?",
+   "solution": "Ethanol and propan-2-ol (they oxidise to CH₃CO– compounds). Methanol and pentan-3-one have no CH₃CO– or CH₃CH(OH)– group."
+  },
+  {
+   "title": "Aldol or Cannizzaro?",
+   "problem": "Benzaldehyde with conc. NaOH; ethanal with dil. NaOH.",
+   "solution": "Benzaldehyde has no α-H → Cannizzaro: benzyl alcohol + sodium benzoate. Ethanal has α-H → aldol (3-hydroxybutanal), which dehydrates to but-2-enal on heating."
+  },
+  {
+   "title": "Cross aldol",
+   "problem": "Benzaldehyde + acetone in dil. NaOH?",
+   "solution": "Claisen–Schmidt condensation: acetone (has α-H) forms the enolate, which attacks benzaldehyde → C₆H₅CH=CHCOCH₃ (benzalacetone)."
+  },
+  {
+   "title": "Acid strength",
+   "problem": "Arrange: CH₃COOH, ClCH₂COOH, FCH₂COOH, CH₃CH₂COOH.",
+   "solution": "FCH₂COOH > ClCH₂COOH > CH₃COOH > CH₃CH₂COOH. F has the strongest −I effect; the extra CH₂ (+I) weakens propanoic acid."
+  },
+  {
+   "title": "Reduction choice",
+   "problem": "Convert acetophenone to ethylbenzene.",
+   "solution": "Clemmensen reduction (Zn–Hg/HCl) or Wolff–Kishner (NH₂NH₂, KOH, ethylene glycol): C₆H₅COCH₃ → C₆H₅CH₂CH₃."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Structure and physical properties",
+   "explain": "The C=O bond is polar, so aldehydes and ketones have higher boiling points than hydrocarbons and ethers of similar mass, but lower than alcohols (no H-bonding between their own molecules). Lower members are water soluble. Carboxylic acids have even higher boiling points: they form hydrogen-bonded dimers."
+  },
+  {
+   "title": "Oxidation tests",
+   "explain": "Tollens' reagent (ammoniacal AgNO₃) → silver mirror; Fehling's solution (Cu²⁺ tartrate complex) → red Cu₂O; strong oxidants oxidise ketones only with C–C cleavage. Aromatic aldehydes do not give Fehling's test."
+  },
+  {
+   "title": "Preparation of carboxylic acids",
+   "explain": "Oxidation of 1° alcohols and aldehydes, side-chain oxidation of alkylbenzenes (KMnO₄ → benzoic acid), hydrolysis of nitriles and amides, and Grignard reagent + CO₂ followed by hydrolysis."
+  },
+  {
+   "title": "Reactions of carboxylic acids",
+   "explain": "With metals and alkalis (salts), NaHCO₃ (CO₂ effervescence — distinguishes acids from phenols), PCl₅ or SOCl₂ (acid chlorides), alcohols with acid (esterification), NH₃ then heat (amides), LiAlH₄ (1° alcohols). The –COOH group is meta-directing in electrophilic substitution of benzoic acid."
+  },
+  {
+   "title": "Uses",
+   "explain": "Formalin (40% HCHO) preserves biological specimens; acetone is a common solvent; acetic acid (vinegar, ~6–8%); benzoic acid salts are food preservatives; esters give fruits their smell."
+  },
+  {
+   "title": "Mechanism of nucleophilic addition",
+   "explain": "The nucleophile attacks the electrophilic carbonyl carbon from above or below the plane, the carbon changes from sp² to sp³, and the tetrahedral alkoxide intermediate picks up H⁺ to give the product."
+  }
+ ],
+ "ratta": [
+  "HCHO > CH₃CHO > ketones (nucleophilic addition).",
+  "Tollens' & Fehling's: aldehyde yes, ketone no.",
+  "α-H → aldol;  no α-H → Cannizzaro.",
+  "Iodoform: CH₃CO– or CH₃CH(OH)–; yellow CHI₃.",
+  "Rosenmund (Pd/BaSO₄), Stephen (SnCl₂/HCl), Etard (CrO₂Cl₂).",
+  "Clemmensen (Zn–Hg/HCl), Wolff–Kishner (NH₂NH₂/KOH).",
+  "HVZ: α-halogenation with X₂/red P.",
+  "Acid chloride > anhydride > ester > amide."
+ ],
+ "verifiedOn": "2026-11-13"
+}
