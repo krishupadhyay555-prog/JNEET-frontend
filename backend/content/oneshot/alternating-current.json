@@ -1,0 +1,185 @@
+{
+ "slug": "alternating-current",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Alternating Current",
+  "JEE": "Alternating Current"
+ },
+ "title": "Alternating Current",
+ "readMinutes": 18,
+ "summary": [
+  "In AC, voltage and current vary sinusoidally: v = V₀ sin ωt. Household supply is 220 V, 50 Hz — 220 V is the RMS value; the peak is about 311 V. The average over a full cycle is zero, so RMS values are used for heating.",
+  "In a resistor V and I are in phase. An inductor makes the current lag by 90° (X_L = ωL, opposition grows with frequency); a capacitor makes it lead by 90° (X_C = 1/ωC, blocks DC completely).",
+  "In a series LCR circuit the total opposition is the impedance Z = √(R² + (X_L − X_C)²). When X_L = X_C, Z = R is minimum and current is maximum — resonance (ω₀ = 1/√LC). Radio tuning works on this.",
+  "Only the resistor consumes power: P = V_rms I_rms cos φ. In pure L or C the average power is zero (wattless current). Transformers change voltage so that power can be sent far with low loss."
+ ],
+ "formulas": [
+  {
+   "name": "Instantaneous AC",
+   "formula": "v = V₀ sin ωt;   i = I₀ sin(ωt ± φ);   ω = 2πf",
+   "when": "Reading an AC equation.",
+   "mistake": "Don't confuse ω with f — 314 rad/s means 50 Hz."
+  },
+  {
+   "name": "RMS and average values",
+   "formula": "V_rms = V₀/√2 ≈ 0.707V₀;   I_rms = I₀/√2;   half-cycle average = 2V₀/π ≈ 0.637V₀;   full-cycle average = 0",
+   "when": "Meter readings, heating.",
+   "mistake": "AC meters read RMS; the peak of 220 V supply is 311 V, not 220 V.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inductive reactance",
+   "formula": "X_L = ωL = 2πfL;   current lags V by 90°",
+   "when": "Pure inductor.",
+   "mistake": "For DC (f = 0), X_L = 0 — an inductor does not block DC."
+  },
+  {
+   "name": "Capacitive reactance",
+   "formula": "X_C = 1/(ωC) = 1/(2πfC);   current leads V by 90°",
+   "when": "Pure capacitor.",
+   "note": "For DC, X_C = ∞ — a capacitor blocks DC completely."
+  },
+  {
+   "name": "Series LCR impedance",
+   "formula": "Z = √(R² + (X_L − X_C)²);   I_rms = V_rms/Z",
+   "when": "R, L, C in series.",
+   "mistake": "Voltages don't add directly: V = √(V_R² + (V_L − V_C)²); V_L and V_C can each exceed the supply voltage."
+  },
+  {
+   "name": "Phase angle",
+   "formula": "tan φ = (X_L − X_C)/R;   X_L > X_C: current lags (inductive);  X_L < X_C: current leads (capacitive)",
+   "when": "Phase difference.",
+   "mistake": "φ is between voltage and CURRENT, not between two voltages."
+  },
+  {
+   "name": "Resonance",
+   "formula": "X_L = X_C ⇒ ω₀ = 1/√(LC), f₀ = 1/(2π√(LC));   Z = R, current maximum, φ = 0",
+   "when": "Tuning, maximum current.",
+   "mistake": "Resonant frequency does not depend on R; R only changes the height and sharpness of the peak."
+  },
+  {
+   "name": "Quality factor and bandwidth",
+   "formula": "Q = ω₀L/R = (1/R)√(L/C);   bandwidth Δω = R/L = ω₀/Q",
+   "when": "How sharp the resonance is.",
+   "note": "Higher Q = sharper peak = smaller R."
+  },
+  {
+   "name": "Power in AC",
+   "formula": "P_avg = V_rms I_rms cos φ = I_rms² R;   power factor cos φ = R/Z",
+   "when": "Real power consumed.",
+   "mistake": "V_rms × I_rms is the apparent power, not the real power (cos φ is missing)."
+  },
+  {
+   "name": "Wattless current",
+   "formula": "power component: I_rms cos φ;   wattless component: I_rms sin φ",
+   "when": "Pure L/C or power-factor questions.",
+   "note": "In pure L or C current flows but average power is zero."
+  },
+  {
+   "name": "LC oscillations",
+   "formula": "ω = 1/√(LC);   energy moves between the electric field of C and the magnetic field of L;   q = q₀ cos ωt",
+   "when": "LC circuit without resistance.",
+   "note": "With resistance, the oscillations die out (damped)."
+  },
+  {
+   "name": "Transformer",
+   "formula": "V_s/V_p = N_s/N_p = I_p/I_s  (ideal);   efficiency η = P_out/P_in",
+   "when": "Step-up/step-down.",
+   "note": "A transformer works only on AC; on DC it would just heat up."
+  },
+  {
+   "name": "AC generator",
+   "formula": "ε = NBAω sin ωt;   ε₀ = NBAω",
+   "when": "Producing AC.",
+   "note": "emf is maximum when the plane of the coil is parallel to B (flux zero, changing fastest)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "RMS value and frequency",
+   "problem": "v = 311 sin(314t) volt. RMS voltage and frequency?",
+   "solution": "V_rms = 311/√2 ≈ 220 V. f = 314/2π ≈ 50 Hz — this is household supply."
+  },
+  {
+   "title": "Reactances at 50 Hz",
+   "problem": "Reactances of L = 0.1 H and C = 100 μF at 50 Hz?",
+   "solution": "X_L = 2π × 50 × 0.1 = 31.4 Ω. X_C = 1/(2π × 50 × 10⁻⁴) = 31.8 Ω."
+  },
+  {
+   "title": "Complete series LCR",
+   "problem": "R = 30 Ω, X_L = 80 Ω, X_C = 40 Ω, V_rms = 200 V. Find Z, current, power factor, power and phase.",
+   "solution": "Z = √(900 + 1600) = 50 Ω. I = 200/50 = 4 A. cos φ = 30/50 = 0.6. P = 200 × 4 × 0.6 = 480 W (= I²R = 16 × 30 ✓). tan φ = 40/30 ⇒ φ ≈ 53.1°, current lags (inductive)."
+  },
+  {
+   "title": "Resonance",
+   "problem": "L = 0.5 H, C = 8 μF, R = 10 Ω. Resonant ω, f and Q?",
+   "solution": "ω₀ = 1/√(0.5 × 8 × 10⁻⁶) = 1/(2 × 10⁻³) = 500 rad/s. f₀ = 500/2π ≈ 79.6 Hz. Q = ω₀L/R = 250/10 = 25."
+  },
+  {
+   "title": "Step-up transformer",
+   "problem": "N_p = 200, N_s = 4000, V_p = 220 V. Find V_s. If the secondary current is 0.5 A, what is the primary current (ideal)?",
+   "solution": "V_s = 220 × 4000/200 = 4400 V. I_p = I_s × V_s/V_p = 0.5 × 20 = 10 A."
+  },
+  {
+   "title": "Wattless current",
+   "problem": "I_rms = 5 A and the current lags the voltage by 60°. Wattless component and power factor?",
+   "solution": "Wattless = I sin φ = 5 × 0.866 = 4.33 A. Power factor = cos 60° = 0.5."
+  },
+  {
+   "title": "Choke with a bulb",
+   "problem": "A 100 V, 50 W bulb must run on a 200 V, 50 Hz supply using a series inductor. Find L.",
+   "solution": "Bulb: I = 50/100 = 0.5 A, R = 100/0.5 = 200 Ω. Z = 200/0.5 = 400 Ω. X_L = √(400² − 200²) ≈ 346.4 Ω. L = X_L/(2π × 50) ≈ 1.1 H. (A series resistor would also waste 50 W; the choke wastes almost nothing.)"
+  },
+  {
+   "title": "Frequency of an LC circuit",
+   "problem": "L = 10 mH, C = 1 μF. Oscillation frequency?",
+   "solution": "f = 1/(2π√(10⁻² × 10⁻⁶)) = 1/(2π × 10⁻⁴) ≈ 1592 Hz."
+  },
+  {
+   "title": "Transformer efficiency",
+   "problem": "The transformer above is 90% efficient with output 4400 V × 0.5 A. Input power?",
+   "solution": "P_out = 2200 W. P_in = 2200/0.9 ≈ 2444 W. The remaining ~244 W is lost as heat (copper, eddy-current and hysteresis losses)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Why RMS",
+   "explain": "The RMS value is the DC value that produces the same heat in a resistor. For a sine wave RMS = peak/√2. Meters show RMS; insulation and capacitor ratings must allow for the peak."
+  },
+  {
+   "title": "Phasors",
+   "explain": "AC quantities are drawn as rotating arrows (phasors) turning at ω. In R, V and I are along the same line; in L, V leads I by 90°; in C, V lags I by 90°. In LCR, V_L and V_C are opposite, so they partly cancel."
+  },
+  {
+   "title": "Reactance and impedance",
+   "explain": "Reactance (X_L, X_C) is measured in ohm but consumes no energy — it stores and returns it. Impedance Z is the total opposition (R and reactance added like vectors)."
+  },
+  {
+   "title": "Facts at resonance",
+   "explain": "At resonance V_L = V_C (they cancel), the circuit is purely resistive, current and power are maximum. Below f₀ the circuit is capacitive; above f₀ it is inductive. In radio and TV tuning, C is varied to bring f₀ to the station's frequency."
+  },
+  {
+   "title": "Power in AC circuits",
+   "explain": "Average power = V_rms I_rms cos φ. Pure R: cos φ = 1. Pure L or C: cos φ = 0 (wattless). Low power factor in factories means larger current and larger line loss, so capacitors are added to improve the power factor."
+  },
+  {
+   "title": "Transformer working and losses",
+   "explain": "AC in the primary sets up a changing flux in the core, which induces emf in the secondary (mutual induction). Losses: copper (I²R — use thick wire), eddy currents (laminated core), hysteresis (soft iron core), flux leakage. Power is transmitted at high voltage so that current and I²R loss are small."
+  },
+  {
+   "title": "AC generator",
+   "explain": "A rotating coil has flux NBA cos ωt, so emf = NBAω sin ωt. Slip rings deliver AC. In India f = 50 Hz."
+  }
+ ],
+ "ratta": [
+  "V_rms = V₀/√2;  220 V ⇒ peak 311 V;  half-cycle average 2V₀/π.",
+  "X_L = ωL (I lags),  X_C = 1/ωC (I leads).",
+  "Z = √(R² + (X_L − X_C)²);  tan φ = (X_L − X_C)/R.",
+  "f₀ = 1/(2π√LC);  Q = ω₀L/R.",
+  "P = V_rms I_rms cos φ;  cos φ = R/Z.",
+  "Wattless: I sin φ.",
+  "V_s/V_p = N_s/N_p = I_p/I_s.",
+  "Transformer losses: copper, eddy, hysteresis, leakage."
+ ]
+}

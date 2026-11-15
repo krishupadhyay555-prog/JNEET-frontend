@@ -1,0 +1,196 @@
+{
+ "slug": "electromagnetic-induction",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Electromagnetic Induction",
+  "JEE": "Electromagnetic Induction"
+ },
+ "title": "Electromagnetic Induction",
+ "readMinutes": 18,
+ "summary": [
+  "Whenever the magnetic flux Φ = B·A through a coil changes, an emf is induced in it (Faraday). Flux can change in three ways: B changes, area changes (a sliding rod), or angle changes (a rotating coil — generator).",
+  "The induced current always flows so as to oppose the CHANGE in flux (Lenz's law) — a direct consequence of energy conservation. Hence the minus sign: ε = −N dΦ/dt.",
+  "A coil opposes changes in its own current — self inductance L (ε = −L dI/dt) — and induces emf in a nearby coil — mutual inductance M. An inductor stores energy ½LI² in its magnetic field.",
+  "Changing flux in a piece of metal sets up circulating eddy currents — useful in braking and induction furnaces, wasteful in transformer cores (hence laminated cores)."
+ ],
+ "formulas": [
+  {
+   "name": "Magnetic flux",
+   "formula": "Φ = B·A = BA cos θ;   N turns: NΦ (flux linkage);   unit weber (T·m²)",
+   "when": "How much field passes through a coil.",
+   "mistake": "θ is between B and the NORMAL to the area, not the plane of the coil."
+  },
+  {
+   "name": "Faraday's law",
+   "formula": "ε = −N dΦ/dt;   average ε = −N ΔΦ/Δt",
+   "when": "emf from changing flux.",
+   "tag": "PYQ favourite",
+   "note": "Large flux doesn't give emf — CHANGING flux does."
+  },
+  {
+   "name": "Lenz's law",
+   "formula": "The induced current opposes the change in flux (minus sign)",
+   "when": "Finding direction.",
+   "mistake": "It opposes the CHANGE in flux, not the flux — if flux increases the induced field is opposite; if flux decreases it is in the same direction."
+  },
+  {
+   "name": "Charge through the coil",
+   "formula": "Q = N ΔΦ / R",
+   "when": "Total charge that flows (no time needed).",
+   "note": "It doesn't depend on how fast the flux changed."
+  },
+  {
+   "name": "Motional emf (rod)",
+   "formula": "ε = Blv  (B, l, v mutually perpendicular);   general: ε = (v × B)·l",
+   "when": "Rod sliding on rails.",
+   "note": "If they aren't perpendicular, use only the perpendicular components."
+  },
+  {
+   "name": "Rod on rails with resistance",
+   "formula": "I = Blv/R;   magnetic drag F = B²l²v/R;   power = F v = B²l²v²/R",
+   "when": "Force needed for constant speed.",
+   "note": "Drag is proportional to velocity — that's why a terminal velocity appears."
+  },
+  {
+   "name": "Rotating rod",
+   "formula": "ε = ½Bωl²  (rod rotating about one end)",
+   "when": "Fan blades, rotating rods/discs.",
+   "note": "This is between the two ends; with a central pivot the two halves' emfs cancel."
+  },
+  {
+   "name": "AC generator emf",
+   "formula": "ε = NBAω sin ωt;   peak ε₀ = NBAω",
+   "when": "Coil rotating in uniform B.",
+   "note": "ω = 2πf in rad/s; convert rpm first."
+  },
+  {
+   "name": "Self inductance",
+   "formula": "NΦ = LI;   ε = −L dI/dt;   unit henry",
+   "when": "Coil opposing its own current.",
+   "note": "L comes from geometry; it doesn't depend on the current."
+  },
+  {
+   "name": "Inductance of a solenoid",
+   "formula": "L = μ₀μ_r N²A / l = μ₀μ_r n² A l",
+   "when": "L of a solenoid.",
+   "note": "Goes as N² — doubling the turns makes L four times."
+  },
+  {
+   "name": "Mutual inductance",
+   "formula": "N₂Φ₂ = M I₁;   ε₂ = −M dI₁/dt;   co-axial solenoids: M = μ₀ n₁ N₂ A;   M ≤ √(L₁L₂)",
+   "when": "Two nearby coils.",
+   "note": "M is the same for both coils (M₁₂ = M₂₁)."
+  },
+  {
+   "name": "Energy stored in an inductor",
+   "formula": "U = ½LI²;   energy density u = B²/2μ₀",
+   "when": "Energy in an inductor.",
+   "mistake": "It goes as current squared — don't compute it from voltage directly."
+  },
+  {
+   "name": "LR circuit (growth and decay)",
+   "formula": "Growth: I = (E/R)(1 − e^{−t/τ});  decay: I = I₀e^{−t/τ};  τ = L/R",
+   "when": "Current after switching on/off.",
+   "mistake": "At t = τ the current is 63% of its final value, not 50%."
+  },
+  {
+   "name": "Inductors in series/parallel (no coupling)",
+   "formula": "Series: L = L₁ + L₂;   parallel: 1/L = 1/L₁ + 1/L₂",
+   "when": "Combining inductors.",
+   "mistake": "Like resistors, not like capacitors."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Faraday: average emf",
+   "problem": "Flux per turn through a 100-turn coil falls from 0.02 Wb to 0.005 Wb in 0.1 s. emf?",
+   "solution": "ε = NΔΦ/Δt = 100 × 0.015/0.1 = 15 V. Flux is decreasing ⇒ the induced current makes a field in the same direction (Lenz)."
+  },
+  {
+   "title": "Rod on rails",
+   "problem": "A 0.5 m rod slides at 4 m/s in B = 0.3 T; circuit resistance R = 2 Ω. emf, current, drag force, power?",
+   "solution": "ε = Blv = 0.3 × 0.5 × 4 = 0.6 V. I = 0.3 A. F = BIl = 0.045 N. P = Fv = 0.18 W = I²R ✓."
+  },
+  {
+   "title": "Rotating rod",
+   "problem": "A 1 m rod rotates about one end at 20 rad/s in B = 0.5 T parallel to the axis. emf?",
+   "solution": "ε = ½Bωl² = ½ × 0.5 × 20 × 1 = 5 V."
+  },
+  {
+   "title": "L of a solenoid",
+   "problem": "500 turns, length 0.5 m, area 10⁻³ m² (air core). L?",
+   "solution": "L = μ₀N²A/l = 4π × 10⁻⁷ × 2.5 × 10⁵ × 10⁻³ / 0.5 = 6.3 × 10⁻⁴ H."
+  },
+  {
+   "title": "Self-induced emf and energy",
+   "problem": "Current in L = 0.2 H falls from 5 A to 0 in 0.01 s. emf? Energy stored at 5 A?",
+   "solution": "ε = L ΔI/Δt = 0.2 × 5/0.01 = 100 V (hence the spark at the switch). U = ½LI² = ½ × 0.2 × 25 = 2.5 J."
+  },
+  {
+   "title": "Mutual induction",
+   "problem": "M = 0.05 H; primary current changes at 40 A/s. emf in the secondary?",
+   "solution": "ε = M dI/dt = 0.05 × 40 = 2 V."
+  },
+  {
+   "title": "Peak emf of a generator",
+   "problem": "100 turns, area 0.01 m², B = 0.5 T, coil turns at 50 rev/s. Peak emf?",
+   "solution": "ω = 2π × 50 = 100π rad/s. ε₀ = NBAω = 100 × 0.5 × 0.01 × 314.16 ≈ 157 V."
+  },
+  {
+   "title": "Charge that flows",
+   "problem": "A 10-turn coil of R = 5 Ω has its flux per turn of 0.02 Wb removed completely. Charge that flows?",
+   "solution": "Q = NΔΦ/R = 10 × 0.02/5 = 0.04 C — whether removed quickly or slowly."
+  },
+  {
+   "title": "LR circuit",
+   "problem": "L = 2 H, R = 4 Ω, battery 12 V. Time constant, final current and current at t = τ?",
+   "solution": "τ = L/R = 0.5 s. I₀ = 12/4 = 3 A. At t = τ, I = 3(1 − 1/e) ≈ 1.9 A (63%)."
+  },
+  {
+   "title": "M of two solenoids",
+   "problem": "A long solenoid has 1000 turns/m; inside it is a small 100-turn coil of area 2 × 10⁻⁴ m². M?",
+   "solution": "M = μ₀ n₁ N₂ A = 4π × 10⁻⁷ × 1000 × 100 × 2 × 10⁻⁴ ≈ 2.5 × 10⁻⁵ H."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Experiments of Faraday and Henry",
+   "explain": "(1) Move a magnet towards/away from a coil — the galvanometer deflects; when the magnet stops, zero. (2) Switch the current in a nearby coil on/off — current in the other coil. (3) Rotate a coil in a field. Common idea: changing flux gives emf."
+  },
+  {
+   "title": "Lenz's law and energy",
+   "explain": "Bring a magnet's north pole towards a coil and the near face of the coil becomes north, pushing the magnet away — work is needed to push it in, and that work becomes electrical energy. If the current helped the motion we would get free energy — impossible."
+  },
+  {
+   "title": "How motional emf arises",
+   "explain": "Electrons in the rod feel a force qvB pushing them to one end — the rod becomes a battery. With a closed circuit a current flows, and the current feels a drag force BIl opposing the motion."
+  },
+  {
+   "title": "Eddy currents",
+   "explain": "Changing flux sets up circulating currents in metal plates/cores. Uses: electromagnetic brakes (trains), induction furnaces, induction cooktops, damping in galvanometers, speedometers. Drawback: heating and energy loss — so transformer and motor cores are laminated (thin insulated sheets)."
+  },
+  {
+   "title": "Self induction",
+   "explain": "A coil behaves like electrical inertia: it resists changes in current. Opening a switch makes the current fall suddenly ⇒ large emf ⇒ spark. A choke coil reduces AC current without wasting energy."
+  },
+  {
+   "title": "Mutual induction",
+   "explain": "A changing current in one coil induces emf in another. M depends on distance, orientation and core; closer and coaxial coils give larger M. Transformers and wireless chargers work on this."
+  },
+  {
+   "title": "AC generator",
+   "explain": "A coil rotates in uniform B, Φ = NBA cos ωt ⇒ ε = NBAω sin ωt. Slip rings and brushes take out AC. Mechanical energy (turbine) → electrical energy."
+  }
+ ],
+ "ratta": [
+  "ε = −N dΦ/dt;  Φ = BA cos θ.",
+  "Rod: ε = Blv;  rotating rod: ½Bωl².",
+  "Q = NΔΦ/R (independent of time).",
+  "L_solenoid = μ₀N²A/l;  U = ½LI².",
+  "τ = L/R;  63% at t = τ.",
+  "Generator ε₀ = NBAω.",
+  "Laminated core reduces eddy currents.",
+  "M ≤ √(L₁L₂)."
+ ]
+}

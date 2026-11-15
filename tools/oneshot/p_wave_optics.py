@@ -95,5 +95,80 @@ SYLLABUS = [
 ("Polarization, plane-polarized light, Brewster's law, uses, Polaroid", ["Polarisation", "Brewster's law", "Polaroid", "Uses"]),
 ]
 
+DOC_EN = {
+"slug": "wave-optics", "subject": "Physics", "verifiedOn": "2026-11-15",
+"chapters": {"NEET": "Wave Optics", "JEE": "Wave Optics"},
+"title": "Wave Optics", "readMinutes": 18,
+"summary": [
+"Wave optics treats light as a wave to explain what ray optics cannot: interference, diffraction and polarisation. By Huygens' principle every point of a wavefront acts as a new source; the secondary wavelets combine to form the next wavefront — this also gives the laws of reflection and refraction.",
+"When waves from two coherent sources (same frequency, constant phase difference) overlap, bright (constructive) and dark (destructive) fringes appear — interference. In Young's double slit, fringe width β = λD/d.",
+"Light also bends slightly at a single slit and forms a pattern — diffraction. The central bright fringe is the widest and brightest (width 2λD/a); the first dark fringe is at a sin θ = λ.",
+"Light is a transverse wave, so it can be polarised. A Polaroid passes vibrations in only one direction; between two Polaroids Malus' law I = I₀ cos²θ holds. Reflection also polarises light — at the Brewster angle the reflected light is completely polarised.",
+],
+"formulas": [
+F("Path difference and phase difference", "Δφ = (2π/λ) Δx", "Condition at a point in interference.", "Use the wavelength in the medium where the path lies (λ/n)."),
+F("Resultant intensity of two waves", "I = I₁ + I₂ + 2√(I₁I₂) cos φ;   equal: I = 4I₀ cos²(φ/2)", "Adding two coherent waves.", "For incoherent sources it is just I₁ + I₂ — no cosine term."),
+F("Maxima and minima intensities", "I_max = (√I₁ + √I₂)²;   I_min = (√I₁ − √I₂)²;   I ∝ (amplitude)²", "Intensity-ratio problems.", "If an amplitude ratio is given, square it first — it isn't the intensity ratio."),
+F("Constructive and destructive conditions", "Bright: Δx = nλ (φ = 2nπ);   dark: Δx = (2n − 1)λ/2", "Whether a point is bright or dark.", "Dark is (2n − 1)λ/2, not nλ/2."),
+F("YDSE fringe width and positions", "β = λD/d;   nth bright: y = nλD/d;   nth dark: y = (2n − 1)λD/2d;   angular width = λ/d", "Young's double slit.", "Don't mix D and d: D is the screen distance (large), d the slit separation (small).", None, "PYQ favourite"),
+F("YDSE in a medium", "β' = β/n", "Whole set-up immersed in water/liquid.", "Fringe width decreases, not increases."),
+F("Thin film in front of one slit", "Fringe shift = (n − 1)t D/d;   fringes shifted = (n − 1)t/λ", "Glass sheet in front of one slit.", "The pattern shifts towards the slit with the sheet; fringe width doesn't change."),
+F("Single-slit diffraction", "Minima: a sin θ = nλ;   central max angular width = 2λ/a;   linear width = 2λD/a", "Diffraction at a single slit.", "Opposite of YDSE: here a sin θ = nλ gives DARK, not bright.", None, "PYQ favourite"),
+F("Huygens: refraction", "sin i / sin r = v₁/v₂ = n₂/n₁;   λ₂ = λ₁ v₂/v₁;   f same", "Snell's law from wavefronts.", "Frequency never changes from one medium to another."),
+F("Brewster's law", "tan θ_B = n;   θ_B + r = 90° (reflected ⊥ refracted)", "Polarisation by reflection.", "At Brewster's angle the reflected light is fully polarised, the refracted light only partly."),
+F("Malus' law", "I = I₀ cos²θ;   unpolarised light through a Polaroid: I₀/2", "Intensity between Polaroids.", "Unpolarised light is halved at the first Polaroid — apply cos² after that."),
+F("Coherent sources", "Same frequency + constant phase difference;   YDSE / Lloyd's mirror / biprism make two from one source", "Condition for sustained interference.", "Two separate bulbs are never coherent — the pattern changes instantly."),
+],
+"examples": [
+X("YDSE numbers", "λ = 600 nm, d = 0.5 mm, D = 1 m. Fringe width, third bright and third dark fringe?",
+  f"β = λD/d = 600 × 10⁻⁹ × 1 / 0.5 × 10⁻³ = {fx(b1*1e3)} mm. 3rd bright = 3β = {fx(y3b*1e3)} mm. 3rd dark = 2.5β = {fx(y3d*1e3)} mm.",
+  [(fx(b1*1e3), "1.2"), (fx(y3b*1e3), "3.6"), (fx(y3d*1e3), "3")]),
+X("Set-up in water", "The set-up above is immersed in water (n = 4/3). New fringe width?",
+  f"β' = β/n = 1.2 × 3/4 = {fx(b2*1e3)} mm.", [(fx(b2*1e3), "0.9")]),
+X("Intensity ratio", "Two coherent sources have intensities I and 4I. I_max : I_min?",
+  f"Amplitudes 1 : 2. I_max = (1 + 2)² = 9I, I_min = (2 − 1)² = I ⇒ ratio = {fx(r3)} : 1.",
+  [(fx(r3), "9")]),
+X("Intensity from path difference", "Two equal sources (I₀ each), λ = 600 nm, path difference 150 nm at a point. Intensity?",
+  f"φ = 2π × 150/600 = π/2. I = 4I₀ cos²(π/4) = {fx(I4)}I₀ (half the maximum).",
+  [(fx(I4), "2")]),
+X("Single slit", "a = 0.2 mm, λ = 500 nm, screen at D = 2 m. Angle of the first minimum and width of the central maximum?",
+  f"sin θ ≈ θ = λ/a = {sig(th5)} rad. Width = 2λD/a = 2 × 500 × 10⁻⁹ × 2 / 0.2 × 10⁻³ = {fx(w5*1e3)} mm.",
+  [(sig(th5), "2.5 × 10⁻³"), (fx(w5*1e3), "10")]),
+X("Brewster angle", "Brewster angle for glass with n = √3, and the angle of refraction then?",
+  f"tan θ_B = √3 ⇒ θ_B = {fx(tb6)}°. r = 90° − 60° = {fx(r6)}°.",
+  [(fx(tb6), "60"), (fx(r6), "30")]),
+X("Two Polaroids", "Unpolarised light I₀ passes through two Polaroids whose axes are at 60°. Final intensity?",
+  f"After the first: I₀/2. After the second: (I₀/2)cos²60° = (I₀/2)(1/4) = {fx(I7,3)}I₀ (12.5%).",
+  [(fx(I7,3), "0.125")]),
+X("Fringe shift from a glass sheet", "In YDSE a 6 μm glass sheet (n = 1.5) covers one slit, λ = 600 nm. How many fringes shift?",
+  f"N = (n − 1)t/λ = 0.5 × 6 × 10⁻⁶ / 600 × 10⁻⁹ = {fx(N8)} fringes, towards the covered slit.",
+  [(fx(N8), "5")]),
+X("Light in glass", "Light of 600 nm (in air) enters glass (n = 1.5). Speed, wavelength, frequency?",
+  f"v = c/n = {sig(v9)} m/s. λ = 600/1.5 = {fx(l9)} nm. f = c/λ_air = {sig(f9)} Hz — same in both media.",
+  [(sig(v9), "2.0 × 10⁸"), (fx(l9), "400"), (sig(f9), "5.0 × 10¹⁴")]),
+],
+"topics": [
+T("Wavefront and Huygens' principle", "A wavefront is a surface of points in the same phase (spherical from a point source, plane far away). Huygens: every point on a wavefront sends out secondary wavelets; the surface touching them all is the new wavefront. Rays are always perpendicular to wavefronts."),
+T("Reflection and refraction from Huygens' principle", "When a plane wavefront meets a surface obliquely, each point sends a wavelet. In the same medium wavelets travel at the same speed ⇒ i = r (reflection). In the second medium the speed is v₂ ⇒ sin i/sin r = v₁/v₂ (Snell's law). This showed that light is slower in a denser medium (Newton's corpuscular theory predicted the opposite)."),
+T("Coherent sources and sustained interference", "For a steady pattern the sources must be coherent (same f, constant phase), with nearly equal amplitudes, and the slits narrow and close. Two separate bulbs are not coherent — their phase changes randomly every ~10⁻⁸ s."),
+T("Young's double slit experiment", "Light from one source passes through two narrow slits, giving two coherent sources. The screen shows equally wide bright and dark fringes with a bright centre. White light gives a white centre and coloured fringes. Energy is not destroyed — only redistributed."),
+T("Diffraction due to a single slit", "Each part of the slit sends wavelets; at θ where the two halves of the slit differ in path by λ/2, everything cancels ⇒ first dark fringe at a sin θ = λ. The central maximum is twice as wide as the others. A narrower slit spreads the pattern more."),
+T("Interference vs diffraction", "Interference: two (or more) separate wavefronts, all fringes equally wide and about equally bright. Diffraction: parts of a single wavefront, central fringe widest and brightest, the rest fading gradually."),
+T("Polarisation and its uses", "Light is transverse — its vibrations can be restricted to one plane. Polarisation by Polaroids, reflection (Brewster) and scattering (skylight is partly polarised). Uses: sunglasses (reduce glare), 3D movie glasses, LCD screens, stress analysis, camera filters."),
+],
+"ratta": [
+"β = λD/d;  bright nλD/d, dark (2n − 1)λD/2d.",
+"I = 4I₀cos²(φ/2);  I_max/I_min = [(√I₁ + √I₂)/(√I₁ − √I₂)]².",
+"In a medium β' = β/n.",
+"Film shift: N = (n − 1)t/λ.",
+"Single slit dark: a sin θ = nλ;  central width 2λD/a.",
+"Brewster tan θ_B = n;  θ_B + r = 90°.",
+"Malus I = I₀cos²θ;  unpolarised → I₀/2.",
+"Entering a denser medium: f same, v and λ both divided by n.",
+],
+}
+
+SYLLABUS_EN = [(p, ["Reflection and refraction from Huygens"] if k == ["Huygens se reflection aur refraction"] else k) for p, k in SYLLABUS]
+
 if __name__ == "__main__":
-    build(DOC, SYLLABUS)
+    build(DOC, SYLLABUS, DOC_EN, SYLLABUS_EN)
