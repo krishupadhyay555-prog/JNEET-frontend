@@ -1,0 +1,147 @@
+{
+ "slug": "probability",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Probability"
+ },
+ "title": "Probability",
+ "readMinutes": 15,
+ "summary": [
+  "Probability of an event = favourable outcomes / total equally likely outcomes. The addition rule handles 'or', the multiplication rule handles 'and'.",
+  "Conditional probability P(A|B) = P(A ∩ B)/P(B) leads to the total probability theorem and Bayes' theorem — a JEE favourite.",
+  "A random variable assigns numbers to outcomes; its distribution has a mean (expectation) and variance. The binomial distribution models n independent trials with success probability p."
+ ],
+ "formulas": [
+  {
+   "name": "Classical probability",
+   "formula": "P(A) = n(A)/n(S);  0 ≤ P(A) ≤ 1;  P(A′) = 1 − P(A)",
+   "when": "Equally likely outcomes."
+  },
+  {
+   "name": "Addition rule",
+   "formula": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B);  mutually exclusive: P(A ∪ B) = P(A) + P(B)",
+   "when": "'Or' events.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Conditional probability",
+   "formula": "P(A|B) = P(A ∩ B)/P(B)",
+   "when": "Probability given that B happened."
+  },
+  {
+   "name": "Multiplication rule and independence",
+   "formula": "P(A ∩ B) = P(A)P(B|A);  independent ⇔ P(A ∩ B) = P(A)P(B)",
+   "when": "'And' events.",
+   "mistake": "Mutually exclusive events (with non-zero probabilities) are never independent."
+  },
+  {
+   "name": "Total probability",
+   "formula": "P(A) = Σ P(Eᵢ)P(A|Eᵢ)  for a partition E₁, …, Eₙ",
+   "when": "Probability through cases."
+  },
+  {
+   "name": "Bayes' theorem",
+   "formula": "P(Eᵢ|A) = P(Eᵢ)P(A|Eᵢ) / Σ P(Eⱼ)P(A|Eⱼ)",
+   "when": "Reverse probability — which cause produced the result.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Random variable",
+   "formula": "mean μ = E(X) = Σ xᵢpᵢ;  variance σ² = Σ xᵢ²pᵢ − μ²",
+   "when": "Probability distributions."
+  },
+  {
+   "name": "Binomial distribution",
+   "formula": "P(X = r) = C(n, r) pʳ qⁿ⁻ʳ (q = 1 − p);  mean np;  variance npq",
+   "when": "n independent Bernoulli trials.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "At least one",
+   "formula": "P(at least one) = 1 − P(none)",
+   "when": "Avoiding long case work."
+  },
+  {
+   "name": "Common sample spaces",
+   "formula": "two dice: 36 outcomes;  three coins: 8;  a pack: 52 cards (4 suits × 13)",
+   "when": "Counting outcomes."
+  },
+  {
+   "name": "Odds",
+   "formula": "odds in favour of A = P(A) : P(A′)",
+   "when": "Converting odds to probability."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Sum of 7",
+   "problem": "Two dice are thrown. P(sum = 7)?",
+   "solution": "6 favourable of 36 ⇒ 1/6 ≈ 0.167."
+  },
+  {
+   "title": "Addition rule",
+   "problem": "P(A) = 1/2, P(B) = 1/3, P(A ∩ B) = 1/6. P(A ∪ B)?",
+   "solution": "1/2 + 1/3 − 1/6 = 2/3 ≈ 0.667."
+  },
+  {
+   "title": "Bayes",
+   "problem": "Bag I has 3 red, 2 black; bag II has 2 red, 3 black. A bag is picked at random and a red ball drawn. P(it came from bag I)?",
+   "solution": "(1/2 × 3/5)/(1/2 × 3/5 + 1/2 × 2/5) = 3/5 = 0.6."
+  },
+  {
+   "title": "Binomial",
+   "problem": "A coin is tossed 4 times. P(exactly 2 heads)?",
+   "solution": "C(4, 2)/16 = 6/16 = 0.375."
+  },
+  {
+   "title": "Mean and variance",
+   "problem": "X ~ Binomial(10, 1/2). Mean and variance?",
+   "solution": "np = 5, npq = 2.5."
+  },
+  {
+   "title": "At least one six",
+   "problem": "P(at least one six in 3 throws of a die)?",
+   "solution": "1 − (5/6)³ = 91/216 ≈ 0.421."
+  },
+  {
+   "title": "Expectation",
+   "problem": "Expected value of a fair die roll?",
+   "solution": "(1 + 2 + … + 6)/6 = 3.5."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Events",
+   "explain": "Sample space S, events as subsets; mutually exclusive (no common outcome), exhaustive (union = S), independent (one doesn't affect the other), complementary."
+  },
+  {
+   "title": "Using P&C",
+   "explain": "For cards, committees or arrangements, count favourable and total cases with combinations. E.g. P(2 aces in 2 cards) = ⁴C₂/⁵²C₂ = 1/221."
+  },
+  {
+   "title": "Independent vs mutually exclusive",
+   "explain": "Independent: P(A ∩ B) = P(A)P(B). Mutually exclusive: P(A ∩ B) = 0. If A and B are independent, so are A′ and B, A and B′, A′ and B′."
+  },
+  {
+   "title": "Geometric probability",
+   "explain": "When outcomes are points in a region, probability = favourable length/area/volume ÷ total."
+  },
+  {
+   "title": "Problems on 'without replacement'",
+   "explain": "Probabilities change after each draw; use conditional probabilities or combinations directly."
+  },
+  {
+   "title": "Bayes' strategy",
+   "explain": "List causes (bags, machines, persons) with prior probabilities, find P(result | cause) for each, compute total probability of the result, then divide the required term by the total."
+  }
+ ],
+ "ratta": [
+  "P(A ∪ B) = P(A) + P(B) − P(A ∩ B).",
+  "P(A|B) = P(A ∩ B)/P(B).",
+  "Independent: P(A ∩ B) = P(A)P(B).",
+  "Bayes = one path ÷ total of all paths.",
+  "Binomial: C(n, r)pʳqⁿ⁻ʳ;  mean np, variance npq.",
+  "At least one = 1 − none."
+ ],
+ "verifiedOn": "2026-11-13"
+}

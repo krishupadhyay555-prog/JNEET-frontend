@@ -1,0 +1,149 @@
+{
+ "slug": "limits-continuity-and-differentiability",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Limits, Continuity and Differentiability"
+ },
+ "title": "Limits, Continuity and Differentiability",
+ "readMinutes": 16,
+ "summary": [
+  "A limit describes the value f(x) approaches as x approaches a; it exists when the left-hand and right-hand limits are equal and finite.",
+  "Indeterminate forms (0/0, ∞/∞, 1^∞, 0 × ∞, ∞ − ∞) are handled by factorisation, rationalisation, standard limits, series expansion or L'Hôpital's rule.",
+  "f is continuous at a if lim f(x) = f(a). f is differentiable at a if the left and right derivatives are equal; differentiability implies continuity, but not conversely (|x| at 0)."
+ ],
+ "formulas": [
+  {
+   "name": "Existence of a limit",
+   "formula": "lim (x→a) f(x) exists ⇔ LHL = RHL (finite)",
+   "when": "Checking limits at break points."
+  },
+  {
+   "name": "Algebraic limit",
+   "formula": "lim (x→a) (xⁿ − aⁿ)/(x − a) = naⁿ⁻¹",
+   "when": "Polynomial 0/0 forms.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Trigonometric limits",
+   "formula": "lim sin x/x = 1;  lim tan x/x = 1;  lim (1 − cos x)/x² = 1/2  (x → 0, radians)",
+   "when": "Trig 0/0 forms.",
+   "note": "x must be in radians."
+  },
+  {
+   "name": "Exponential and log limits",
+   "formula": "lim (eˣ − 1)/x = 1;  lim (aˣ − 1)/x = ln a;  lim ln(1 + x)/x = 1  (x → 0)",
+   "when": "Exponential 0/0 forms."
+  },
+  {
+   "name": "1^∞ form",
+   "formula": "lim f^g = e^(lim g(f − 1)) when f → 1, g → ∞;  lim (1 + 1/x)ˣ = e;  lim (1 + x)^(1/x) = e",
+   "when": "Powers tending to 1.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "L'Hôpital's rule",
+   "formula": "for 0/0 or ∞/∞: lim f/g = lim f′/g′",
+   "when": "When standard limits don't fit.",
+   "mistake": "Differentiate numerator and denominator separately — not the quotient."
+  },
+  {
+   "name": "Series expansions",
+   "formula": "eˣ = 1 + x + x²/2! + …;  sin x = x − x³/3! + …;  cos x = 1 − x²/2! + …;  ln(1 + x) = x − x²/2 + …;  tan x = x + x³/3 + …",
+   "when": "Higher-order 0/0 limits."
+  },
+  {
+   "name": "Rational functions at infinity",
+   "formula": "degree num < den → 0;  equal → ratio of leading coefficients;  num > den → ±∞",
+   "when": "Limits as x → ∞."
+  },
+  {
+   "name": "Continuity",
+   "formula": "f continuous at a ⇔ lim (x→a) f(x) = f(a)",
+   "when": "Checking continuity.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Differentiability",
+   "formula": "Lf′(a) = lim (h→0⁻) (f(a + h) − f(a))/h;  Rf′(a) similarly;  differentiable ⇔ Lf′(a) = Rf′(a)",
+   "when": "Checking differentiability.",
+   "note": "Differentiable ⇒ continuous, but continuous ⇏ differentiable (|x| at 0)."
+  },
+  {
+   "name": "Sandwich theorem",
+   "formula": "g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L ⇒ lim f = L",
+   "when": "Limits like x² sin(1/x)."
+  },
+  {
+   "name": "Greatest integer limits",
+   "formula": "lim (x→n⁻)[x] = n − 1;  lim (x→n⁺)[x] = n",
+   "when": "Step-function limits."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Trig limit",
+   "problem": "lim (x→0) sin 3x/x?",
+   "solution": "3 × (sin 3x/3x) → 3."
+  },
+  {
+   "title": "1^∞ form",
+   "problem": "lim (x→∞) (1 + 2/x)ˣ?",
+   "solution": "e^(lim x × 2/x) = e²."
+  },
+  {
+   "title": "Factorisation",
+   "problem": "lim (x→2) (x² − 4)/(x − 2)?",
+   "solution": "(x + 2) → 4."
+  },
+  {
+   "title": "Standard limit",
+   "problem": "lim (x→0) (1 − cos x)/x²?",
+   "solution": "2sin²(x/2)/x² → 1/2 = 0.5."
+  },
+  {
+   "title": "Series",
+   "problem": "lim (x→0) (eˣ − 1 − x)/x²?",
+   "solution": "(x²/2 + …)/x² → 1/2 = 0.5."
+  },
+  {
+   "title": "Continuity condition",
+   "problem": "f(x) = (x³ − 1)/(x − 1) for x ≠ 1 and f(1) = k. Find k for continuity.",
+   "solution": "lim (x→1) = 3 × 1² = 3 ⇒ k = 3."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Rationalisation",
+   "explain": "For limits with square roots like (√(x + 1) − 1)/x, multiply by the conjugate to remove the 0/0 form."
+  },
+  {
+   "title": "Limits at infinity with roots",
+   "explain": "For √(x² + x) − x as x → ∞, rationalise to get x/(√(x² + x) + x) → 1/2."
+  },
+  {
+   "title": "Continuity of standard functions",
+   "explain": "Polynomials, sin, cos, eˣ are continuous everywhere; rational functions except where the denominator is 0; log x for x > 0; [x] is discontinuous at integers."
+  },
+  {
+   "title": "Algebra of continuous functions",
+   "explain": "Sum, difference, product and composition of continuous functions are continuous; quotient too, where the denominator isn't zero."
+  },
+  {
+   "title": "Intermediate value theorem",
+   "explain": "If f is continuous on [a, b] and k lies between f(a) and f(b), then f(c) = k for some c in (a, b) — used to show an equation has a root."
+  },
+  {
+   "title": "Non-differentiable points",
+   "explain": "Corners (|x − a|), cusps, vertical tangents (x^(1/3) at 0) and discontinuities. |f(x)| may fail to be differentiable where f(x) = 0 and changes sign."
+  }
+ ],
+ "ratta": [
+  "(xⁿ − aⁿ)/(x − a) → naⁿ⁻¹.",
+  "sin x/x → 1;  (1 − cos x)/x² → 1/2.",
+  "(eˣ − 1)/x → 1;  (aˣ − 1)/x → ln a.",
+  "1^∞: e^(lim g(f − 1)).",
+  "Differentiable ⇒ continuous (not conversely).",
+  "LHL = RHL = f(a) ⇒ continuous."
+ ],
+ "verifiedOn": "2026-11-13"
+}

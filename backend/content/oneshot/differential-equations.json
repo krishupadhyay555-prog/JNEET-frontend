@@ -1,0 +1,139 @@
+{
+ "slug": "differential-equations",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Differential Equations"
+ },
+ "title": "Differential Equations",
+ "readMinutes": 14,
+ "summary": [
+  "A differential equation relates a function with its derivatives. Its order is the highest derivative present; its degree is the power of that derivative once the equation is a polynomial in derivatives.",
+  "The general solution has as many arbitrary constants as the order; a particular solution uses initial conditions.",
+  "JEE methods: variables separable, homogeneous (y = vx), and linear first-order (integrating factor). Formation of differential equations by eliminating constants and growth/decay applications also appear."
+ ],
+ "formulas": [
+  {
+   "name": "Order and degree",
+   "formula": "order = highest derivative;  degree = power of the highest derivative (equation must be polynomial in derivatives)",
+   "when": "Classifying a DE.",
+   "tag": "PYQ favourite",
+   "note": "Degree is undefined if a derivative appears inside sin, eˣ, log etc."
+  },
+  {
+   "name": "Formation of a DE",
+   "formula": "differentiate as many times as there are arbitrary constants and eliminate them",
+   "when": "Family of curves → DE.",
+   "note": "A family with n arbitrary constants gives a DE of order n."
+  },
+  {
+   "name": "Variables separable",
+   "formula": "dy/dx = f(x)g(y) ⇒ ∫dy/g(y) = ∫f(x)dx + C",
+   "when": "Separate x and y terms."
+  },
+  {
+   "name": "Homogeneous equation",
+   "formula": "dy/dx = F(y/x): put y = vx, dy/dx = v + x dv/dx, then separate",
+   "when": "Equations of degree-0 homogeneity.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Linear first-order",
+   "formula": "dy/dx + P(x)y = Q(x):  IF = e^(∫P dx);  y·IF = ∫Q·IF dx + C",
+   "when": "Integrating factor method.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Linear in x",
+   "formula": "dx/dy + P(y)x = Q(y):  IF = e^(∫P dy);  x·IF = ∫Q·IF dy + C",
+   "when": "When the equation is linear in x."
+  },
+  {
+   "name": "Exponential growth/decay",
+   "formula": "dN/dt = kN ⇒ N = N₀e^(kt);  half-life = ln 2/|k|",
+   "when": "Population, radioactive decay, compound interest.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Newton's law of cooling",
+   "formula": "dT/dt = −k(T − Tₛ) ⇒ T − Tₛ = (T₀ − Tₛ)e^(−kt)",
+   "when": "Cooling problems."
+  },
+  {
+   "name": "Exact-differential tricks",
+   "formula": "x dy + y dx = d(xy);  (x dy − y dx)/x² = d(y/x);  (x dy − y dx)/(x² + y²) = d(tan⁻¹(y/x))",
+   "when": "Spotting total differentials."
+  },
+  {
+   "name": "Bernoulli form",
+   "formula": "dy/dx + Py = Qyⁿ: divide by yⁿ and put z = y¹⁻ⁿ → linear in z",
+   "when": "Reducible to linear."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Order and degree",
+   "problem": "Order and degree of (y″)³ + (y′)⁴ + y = 0?",
+   "solution": "Highest derivative y″ ⇒ order 2; its power ⇒ degree 3."
+  },
+  {
+   "title": "Separable",
+   "problem": "Solve dy/dx = 2xy.",
+   "solution": "dy/y = 2x dx ⇒ ln|y| = x² + c ⇒ y = Ce^(x²)."
+  },
+  {
+   "title": "Linear",
+   "problem": "Solve dy/dx + y = e^(−x).",
+   "solution": "IF = eˣ ⇒ y eˣ = ∫e^(−x)eˣ dx = x + C ⇒ y = (x + C)e^(−x)."
+  },
+  {
+   "title": "Initial value problem",
+   "problem": "dy/dx = 2x with y(0) = 1. Find y(3).",
+   "solution": "y = x² + C, C = 1 ⇒ y(3) = 10."
+  },
+  {
+   "title": "Growth",
+   "problem": "A population doubles in 10 years (dN/dt = kN). When will it triple?",
+   "solution": "k = ln 2/10; tripling time = ln 3/k = 10 ln 3/ln 2 ≈ 15.85 years."
+  },
+  {
+   "title": "Homogeneous",
+   "problem": "Solve dy/dx = (x + y)/x.",
+   "solution": "y = vx ⇒ v + x dv/dx = 1 + v ⇒ dv = dx/x ⇒ v = ln|x| + C ⇒ y = x ln|x| + Cx."
+  }
+ ],
+ "topics": [
+  {
+   "title": "General vs particular solution",
+   "explain": "General: contains arbitrary constants equal to the order. Particular: constants fixed using given conditions. A singular solution (not from the general one) is outside the JEE Main syllabus."
+  },
+  {
+   "title": "Recognising homogeneous functions",
+   "explain": "f(x, y) is homogeneous of degree n if f(λx, λy) = λⁿf(x, y). dy/dx = f/g is homogeneous when f and g have the same degree."
+  },
+  {
+   "title": "Reducible to homogeneous",
+   "explain": "dy/dx = (a₁x + b₁y + c₁)/(a₂x + b₂y + c₂): shift origin x = X + h, y = Y + k to remove constants, unless a₁/a₂ = b₁/b₂ (then put a₁x + b₁y = t)."
+  },
+  {
+   "title": "Geometric applications",
+   "explain": "Slope of tangent = dy/dx; subtangent, subnormal and orthogonal trajectories (replace dy/dx by −dx/dy) lead to DEs."
+  },
+  {
+   "title": "Checking solutions",
+   "explain": "Substitute the solution back into the DE — the fastest way to verify options in MCQs."
+  },
+  {
+   "title": "Standard families",
+   "explain": "Circles through the origin with centre on x-axis, parabolas with axis along x-axis, straight lines y = mx + c (DE y″ = 0) — practise forming their DEs."
+  }
+ ],
+ "ratta": [
+  "Order = highest derivative;  degree = its power.",
+  "IF = e^(∫P dx);  y·IF = ∫Q·IF dx + C.",
+  "Homogeneous: y = vx.",
+  "N = N₀e^(kt);  half-life ln 2/k.",
+  "d(xy) = x dy + y dx;  d(y/x) = (x dy − y dx)/x².",
+  "n constants → order n DE."
+ ],
+ "verifiedOn": "2026-11-13"
+}
