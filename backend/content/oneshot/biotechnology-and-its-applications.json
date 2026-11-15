@@ -1,0 +1,137 @@
+{
+ "slug": "biotechnology-and-its-applications",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biotechnology and its Applications"
+ },
+ "title": "Biotechnology and its Applications",
+ "readMinutes": 12,
+ "summary": [
+  "Biotechnology is applied in agriculture (GM crops — Bt cotton, pest-resistant tobacco via RNAi), medicine (human insulin, gene therapy, molecular diagnosis), transgenic animals, and in industry.",
+  "Bt toxin from Bacillus thuringiensis kills specific insects; cry genes are put into crops. RNA interference silences parasite genes in plants.",
+  "Recombinant human insulin (Eli Lilly, 1983) is made by producing chains A and B separately in E. coli and joining them. The first gene therapy (1990) treated ADA deficiency.",
+  "Ethical issues — GEAC oversight, biopiracy and patents (basmati rice, turmeric, neem) — are also part of the chapter."
+ ],
+ "formulas": [
+  {
+   "name": "Bt toxin",
+   "formula": "Bacillus thuringiensis makes inactive protoxin crystals → alkaline pH of insect gut activates them → toxin binds midgut epithelial cells, creates pores → swelling, lysis, death",
+   "when": "How Bt crops kill pests.",
+   "tag": "PYQ favourite",
+   "note": "The toxin doesn't harm the bacterium itself because it is stored as an inactive protoxin."
+  },
+  {
+   "name": "cry genes",
+   "formula": "cryIAc and cryIIAb → cotton bollworms;  cryIAb → corn borer",
+   "when": "Which gene for which pest.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "RNA interference (RNAi)",
+   "formula": "nematode Meloidogyne incognita infects tobacco roots;  nematode-specific genes introduced via Agrobacterium make sense + antisense RNA → dsRNA → silences parasite mRNA → parasite dies",
+   "when": "Pest-resistant plants.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "GM crop benefits",
+   "formula": "tolerance to abiotic stress (cold, drought, salt, heat);  less reliance on chemical pesticides;  reduced post-harvest losses;  better mineral use;  enhanced nutrition (Golden rice — vitamin A)",
+   "when": "Advantages of genetically modified plants."
+  },
+  {
+   "name": "Human insulin",
+   "formula": "insulin = chains A and B joined by disulphide bonds;  pro-insulin has an extra C-peptide removed during maturation;  Eli Lilly (1983) made A and B chains separately in E. coli and joined them",
+   "when": "Recombinant insulin.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gene therapy for ADA deficiency",
+   "formula": "1990, a 4-year-old girl;  lymphocytes grown in culture, functional ADA cDNA introduced using a retroviral vector, cells returned;  periodic infusions needed;  a permanent cure would need the gene in early embryonic cells",
+   "when": "First clinical gene therapy.",
+   "note": "ADA = adenosine deaminase; its deficiency affects the immune system."
+  },
+  {
+   "name": "Molecular diagnosis",
+   "formula": "PCR (detects very low amounts of DNA — HIV in suspected AIDS patients, mutations in cancer);  ELISA (antigen–antibody interaction);  probes with radioactive labels and autoradiography",
+   "when": "Early detection methods."
+  },
+  {
+   "name": "Transgenic animals uses",
+   "formula": "study of normal physiology and development;  disease models (cancer, cystic fibrosis, rheumatoid arthritis, Alzheimer's);  biological products (α-1-antitrypsin for emphysema);  vaccine safety testing (polio on transgenic mice);  chemical safety (toxicity testing)",
+   "when": "Why transgenic animals are made."
+  },
+  {
+   "name": "Rosie the cow",
+   "formula": "first transgenic cow (1997) — milk with human α-lactalbumin (2.4 g/L), nutritionally more balanced for human babies",
+   "when": "Transgenic animal example.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ethics and patents",
+   "formula": "GEAC (Genetic Engineering Appraisal Committee) checks GM research validity and safety of GM organisms for public use;  biopiracy: use of bio-resources without authorisation or payment;  basmati patented in the USA (1997) — India has 27 documented basmati varieties",
+   "when": "Ethical and legal issues."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Why isn't Bt toxic to the bacterium?",
+   "problem": "Bacillus thuringiensis makes a lethal toxin. Why doesn't it die?",
+   "solution": "The toxin is stored as an inactive protoxin crystal; it becomes active only in the alkaline gut of insects."
+  },
+  {
+   "title": "C-peptide",
+   "problem": "Why was pro-insulin a problem for recombinant production?",
+   "solution": "Insulin is made as pro-insulin with an extra C-peptide that must be removed; Eli Lilly avoided this by making A and B chains separately and joining them with disulphide bonds."
+  },
+  {
+   "title": "Detecting HIV early",
+   "problem": "Which technique detects HIV before symptoms appear?",
+   "solution": "PCR — it amplifies very small amounts of viral nucleic acid. ELISA is also used to detect HIV antibodies."
+  },
+  {
+   "title": "RNAi target",
+   "problem": "In pest-resistant tobacco, which organism's mRNA is silenced?",
+   "solution": "The mRNA of the nematode Meloidogyne incognita — the dsRNA made by the plant silences a specific nematode gene, so it cannot survive."
+  },
+  {
+   "title": "Golden rice",
+   "problem": "What is Golden rice?",
+   "solution": "Rice genetically modified to make β-carotene (provitamin A), to fight vitamin A deficiency."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Three critical research areas",
+   "explain": "Providing the best catalyst (improved organism, usually a microbe or pure enzyme); creating optimal conditions through engineering for the catalyst to act; and downstream processing to purify the product."
+  },
+  {
+   "title": "Green revolution and GM crops",
+   "explain": "The green revolution tripled food supply with improved varieties, better management and agrochemicals, but agrochemicals were costly and harmful. GM crops offer an alternative path to increase yields with fewer chemicals."
+  },
+  {
+   "title": "Genetically engineered insulin",
+   "explain": "Before recombinant insulin, insulin from slaughtered cattle and pigs caused allergies in some patients. Recombinant insulin is made in bacteria and is identical to human insulin."
+  },
+  {
+   "title": "Recombinant therapeutics",
+   "explain": "About 30 recombinant therapeutics are approved worldwide (12 marketed in India). They are safer and more effective because they don't induce unwanted immunological responses."
+  },
+  {
+   "title": "Transgenic animals",
+   "explain": "Animals whose DNA has been manipulated to carry and express an extra (foreign) gene. Over 95% of existing transgenic animals are mice; others include rats, rabbits, pigs, sheep, cows and fish."
+  },
+  {
+   "title": "Biopiracy and India",
+   "explain": "Industrialised nations are rich in finance but poor in biodiversity; developing nations are the opposite. The Indian Parliament amended the Indian Patents Bill to address patent terms, emergency provisions and research and development initiatives."
+  }
+ ],
+ "ratta": [
+  "cryIAc, cryIIAb → cotton bollworm;  cryIAb → corn borer.",
+  "RNAi: Meloidogyne incognita, tobacco.",
+  "Insulin: A + B chains, disulphide bonds; Eli Lilly 1983.",
+  "Gene therapy 1990: ADA deficiency, retroviral vector.",
+  "Rosie 1997: human α-lactalbumin, 2.4 g/L.",
+  "GEAC approves GM organisms.",
+  "Basmati, turmeric, neem — biopiracy cases."
+ ],
+ "verifiedOn": "2026-11-13"
+}

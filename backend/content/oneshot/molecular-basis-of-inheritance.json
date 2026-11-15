@@ -1,0 +1,169 @@
+{
+ "slug": "molecular-basis-of-inheritance",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Molecular Basis of Inheritance"
+ },
+ "title": "Molecular Basis of Inheritance",
+ "readMinutes": 17,
+ "summary": [
+  "DNA is the genetic material in most organisms (RNA in some viruses). Watson and Crick (1953) proposed the double helix: two antiparallel polynucleotide strands with A=T and G≡C pairing (Chargaff's rule).",
+  "Griffith (transformation), Avery–MacLeod–McCarty (transforming principle is DNA) and Hershey–Chase (bacteriophage, ³²P vs ³⁵S) proved DNA is the genetic material. Meselson and Stahl proved semi-conservative replication.",
+  "The central dogma: DNA → (transcription) → RNA → (translation) → protein. The genetic code is triplet, degenerate, universal (nearly) and non-overlapping.",
+  "Gene expression is regulated — the lac operon of E. coli is the classic example. The Human Genome Project and DNA fingerprinting apply this knowledge."
+ ],
+ "formulas": [
+  {
+   "name": "Chargaff's rule",
+   "formula": "A = T, G = C;  (A + G) = (T + C);  purines = pyrimidines",
+   "when": "Base composition of dsDNA.",
+   "mistake": "Does not apply to single-stranded DNA or RNA.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "B-DNA dimensions",
+   "formula": "diameter 2 nm;  pitch 3.4 nm;  10 bp per turn;  0.34 nm between bp;  right-handed, antiparallel (5′→3′ and 3′→5′)",
+   "when": "Watson–Crick model."
+  },
+  {
+   "name": "Length of DNA",
+   "formula": "length = number of bp × 0.34 nm;  human diploid ≈ 6.6 × 10⁹ bp → ≈ 2.2 m",
+   "when": "DNA length calculations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Genome sizes",
+   "formula": "φ × 174: 5386 nucleotides;  λ phage: 48,502 bp;  E. coli: 4.6 × 10⁶ bp;  human haploid: 3.3 × 10⁹ bp",
+   "when": "Standard genome sizes.",
+   "note": "Exam questions often use an E. coli DNA length of 1.36 mm, which works out to 4 × 10⁶ bp."
+  },
+  {
+   "name": "Packaging",
+   "formula": "nucleosome = histone octamer (positively charged, rich in lysine and arginine) + ~200 bp DNA;  beads-on-string → chromatin fibre;  euchromatin (loose, active) vs heterochromatin (dense, inactive)",
+   "when": "DNA packaging in eukaryotes."
+  },
+  {
+   "name": "Key experiments",
+   "formula": "Griffith 1928: S and R strains of Streptococcus pneumoniae — transformation;  Avery, MacLeod, McCarty 1944: DNA is the transforming principle;  Hershey–Chase 1952: ³²P (DNA) entered bacteria, ³⁵S (protein) did not",
+   "when": "Proving DNA is genetic material.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Replication",
+   "formula": "semi-conservative (Meselson–Stahl 1958, ¹⁵N in E. coli; Taylor in Vicia faba);  DNA polymerase works 5′→3′;  leading strand continuous, lagging strand discontinuous (Okazaki fragments joined by DNA ligase);  starts at origin of replication",
+   "when": "DNA replication."
+  },
+  {
+   "name": "Transcription unit",
+   "formula": "promoter (upstream) — structural gene — terminator;  template strand 3′→5′; coding strand 5′→3′ (same sequence as RNA, with T instead of U)",
+   "when": "Parts of a transcription unit."
+  },
+  {
+   "name": "RNA polymerases (eukaryotes)",
+   "formula": "RNA pol I → rRNAs (28S, 18S, 5.8S);  RNA pol II → hnRNA (precursor of mRNA);  RNA pol III → tRNA, 5S rRNA, snRNA",
+   "when": "Which polymerase makes which RNA.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Processing of hnRNA",
+   "formula": "splicing (introns removed, exons joined);  capping (methyl guanosine triphosphate at 5′ end);  tailing (poly-A tail at 3′ end)",
+   "when": "Making mature mRNA in eukaryotes."
+  },
+  {
+   "name": "Genetic code",
+   "formula": "triplet (64 codons, 61 code for amino acids);  start AUG (methionine);  stop UAA, UAG, UGA;  unambiguous, degenerate, universal (some exceptions), commaless",
+   "when": "Properties of the code.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Translation",
+   "formula": "ribosome (small subunit binds mRNA); tRNA (adapter, clover-leaf; anticodon) carries amino acids (charging/aminoacylation);  peptide bond formed by 23S rRNA (ribozyme) in bacteria;  UTRs at both ends",
+   "when": "Protein synthesis."
+  },
+  {
+   "name": "Lac operon",
+   "formula": "i (repressor gene) — p (promoter) — o (operator) — z (β-galactosidase), y (permease), a (transacetylase);  lactose (inducer) inactivates repressor → genes transcribed",
+   "when": "Inducible gene regulation (Jacob and Monod).",
+   "note": "Negative regulation: the repressor turns the operon off."
+  },
+  {
+   "name": "Human Genome Project facts",
+   "formula": "3164.7 million bp;  ~20,000–25,000 genes;  average gene 3000 bases (dystrophin largest, 2.4 million bases);  less than 2% codes for proteins;  chromosome 1 most genes (2968), Y fewest (231);  SNPs ~1.4 million locations",
+   "when": "HGP results."
+  },
+  {
+   "name": "DNA fingerprinting",
+   "formula": "uses VNTRs (minisatellites, repetitive DNA) — Southern blotting with labelled VNTR probe (Alec Jeffreys);  applications: forensics, paternity, population diversity",
+   "when": "Identifying individuals."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Length of human DNA",
+   "problem": "Human diploid DNA has 6.6 × 10⁹ bp. Length?",
+   "solution": "6.6 × 10⁹ × 0.34 × 10⁻⁹ m = 2.24 m."
+  },
+  {
+   "title": "Chargaff",
+   "problem": "A dsDNA has 20% adenine. Percentage of guanine?",
+   "solution": "A = T = 20%, so G + C = 60% and G = 30%."
+  },
+  {
+   "title": "E. coli base pairs",
+   "problem": "E. coli DNA is 1.36 mm long. How many base pairs?",
+   "solution": "1.36 × 10⁻³ m / 0.34 × 10⁻⁹ m = 4 × 10⁶ bp."
+  },
+  {
+   "title": "Bases for a protein",
+   "problem": "How many nucleotides (excluding stop codon) code for a protein of 100 amino acids?",
+   "solution": "3 × 100 = 300 nucleotides."
+  },
+  {
+   "title": "Hershey–Chase",
+   "problem": "Bacteria infected by phage with ³⁵S-labelled protein: where is the radioactivity after centrifugation?",
+   "solution": "In the supernatant (with the phage coats), not in the bacteria — showing that protein does not enter the bacteria; DNA (³²P) does."
+  },
+  {
+   "title": "mRNA from coding strand",
+   "problem": "Coding strand: 5′-ATGCAT-3′. mRNA?",
+   "solution": "5′-AUGCAU-3′ — same as the coding strand with U in place of T."
+  }
+ ],
+ "topics": [
+  {
+   "title": "RNA world",
+   "explain": "RNA was the first genetic material; it can act as a catalyst (ribozyme) and is reactive and unstable. DNA evolved from RNA with chemical changes (2′-OH absent, thymine instead of uracil) that make it more stable."
+  },
+  {
+   "title": "Properties of genetic material",
+   "explain": "It must replicate, be chemically and structurally stable, allow slow changes (mutation) for evolution and express itself as Mendelian characters."
+  },
+  {
+   "title": "Transcription in bacteria",
+   "explain": "One RNA polymerase makes all RNAs. Initiation needs the σ (sigma) factor; termination needs the ρ (rho) factor. Transcription and translation can happen together because there is no nuclear membrane."
+  },
+  {
+   "title": "Split genes",
+   "explain": "Eukaryotic genes have coding exons interrupted by non-coding introns; introns are removed by splicing. Monocistronic genes are mostly eukaryotic; polycistronic genes are mostly bacterial."
+  },
+  {
+   "title": "Mutations and the code",
+   "explain": "Point mutations change a single base (e.g. sickle-cell). Insertion or deletion of one or two bases shifts the reading frame (frameshift); three bases add or remove one amino acid without shifting the frame."
+  },
+  {
+   "title": "Methodology of HGP",
+   "explain": "Expressed sequence tags (identifying expressed genes) and sequence annotation (sequencing the whole genome). DNA was cloned into BAC and YAC vectors, sequenced with automated sequencers (Sanger method) and assembled by computer."
+  }
+ ],
+ "ratta": [
+  "A = T, G = C;  0.34 nm per bp;  10 bp per turn.",
+  "Human DNA 2.2 m;  E. coli DNA 1.36 mm → 4 × 10⁶ bp.",
+  "Griffith → Avery → Hershey–Chase (³²P DNA, ³⁵S protein).",
+  "Meselson–Stahl: ¹⁵N, semi-conservative.",
+  "Pol I rRNA, Pol II hnRNA, Pol III tRNA/5S/snRNA.",
+  "AUG start;  UAA, UAG, UGA stop;  61 sense codons.",
+  "Lac operon: i, p, o, z, y, a;  lactose = inducer.",
+  "Chromosome 1 most genes, Y fewest."
+ ],
+ "verifiedOn": "2026-11-13"
+}

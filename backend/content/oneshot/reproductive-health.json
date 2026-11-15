@@ -1,0 +1,147 @@
+{
+ "slug": "reproductive-health",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Reproductive Health"
+ },
+ "title": "Reproductive Health",
+ "readMinutes": 11,
+ "summary": [
+  "Reproductive health (WHO) means total well-being in all aspects of reproduction — physical, emotional, behavioural and social. India was among the first countries to start national family planning (1951), later broadened into RCH (Reproductive and Child Health Care) programmes.",
+  "Contraceptive methods are natural, barrier, IUDs, oral pills, injectables/implants and surgical (sterilisation). An ideal contraceptive is user-friendly, easily available, effective, reversible and has few side effects.",
+  "Medical termination of pregnancy (MTP) is legal in India under specified conditions (MTP Amendment Act, 2017).",
+  "Sexually transmitted infections (STIs) and infertility are major concerns; assisted reproductive technologies (ART) such as IVF, ZIFT, GIFT, ICSI, AI and IUI help infertile couples."
+ ],
+ "formulas": [
+  {
+   "name": "Natural methods",
+   "formula": "periodic abstinence (days 10–17 of cycle);  withdrawal (coitus interruptus);  lactational amenorrhea (up to 6 months after parturition with full breastfeeding)",
+   "when": "No devices or drugs.",
+   "note": "These have high failure rates."
+  },
+  {
+   "name": "Barrier methods",
+   "formula": "condoms (male — 'Nirodh'; female), diaphragms, cervical caps, vaults (reusable) + spermicidal creams/jellies",
+   "when": "Prevent sperm and ovum meeting.",
+   "note": "Condoms also protect against STIs and AIDS."
+  },
+  {
+   "name": "IUD types",
+   "formula": "non-medicated (Lippes loop);  copper-releasing (CuT, Cu7, Multiload 375);  hormone-releasing (Progestasert, LNG-20)",
+   "when": "Intra-uterine devices.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "How IUDs work",
+   "formula": "increase phagocytosis of sperm in the uterus;  Cu ions suppress sperm motility and fertilising capacity;  hormone IUDs make the uterus unsuitable for implantation and the cervix hostile to sperm",
+   "when": "IUD mechanism."
+  },
+  {
+   "name": "Oral pills",
+   "formula": "progestogens or progestogen–oestrogen combinations; taken daily for 21 days starting within the first 5 days of the cycle;  inhibit ovulation and implantation, alter cervical mucus;  Saheli (non-steroidal, once a week, CDRI Lucknow)",
+   "when": "Hormonal contraception.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Emergency contraception",
+   "formula": "progestogens or progestogen–oestrogen combinations, or IUDs, within 72 hours of coitus",
+   "when": "After unprotected intercourse."
+  },
+  {
+   "name": "Surgical methods",
+   "formula": "vasectomy (part of vas deferens removed/tied);  tubectomy (part of fallopian tube removed/tied)",
+   "when": "Terminal (sterilisation) methods.",
+   "note": "They are very effective but reversibility is poor."
+  },
+  {
+   "name": "MTP",
+   "formula": "safe in the first trimester (up to 12 weeks);  MTP Amendment Act 2017: up to 12 weeks with one registered medical practitioner's opinion, 12–24 weeks with two",
+   "when": "Medical termination of pregnancy."
+  },
+  {
+   "name": "STIs",
+   "formula": "gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, hepatitis B, HIV/AIDS;  hepatitis B, genital herpes and HIV are not completely curable",
+   "when": "Sexually transmitted infections.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "ART methods",
+   "formula": "IVF + ET (test-tube baby): ZIFT — zygote or early embryo (up to 8 blastomeres) into fallopian tube;  IUT — embryo with more than 8 blastomeres into uterus;  GIFT — ovum from donor into fallopian tube;  ICSI — sperm injected into ovum;  AI/IUI — semen into vagina or uterus",
+   "when": "Assisted reproductive technologies.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Amniocentesis",
+   "formula": "testing cells in amniotic fluid for genetic disorders; misused for foetal sex determination — legally banned in India",
+   "when": "Prenatal diagnosis."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Which ART?",
+   "problem": "A woman cannot produce ova but can provide a suitable environment for fertilisation. Which method?",
+   "solution": "GIFT — an ovum from a donor is transferred into her fallopian tube."
+  },
+  {
+   "title": "Low sperm count",
+   "problem": "The husband has a very low sperm count. Which ART suits best?",
+   "solution": "Artificial insemination (AI) or intra-uterine insemination (IUI) with the husband's or donor's semen; ICSI if sperm can't fertilise on their own."
+  },
+  {
+   "title": "ZIFT vs IUT",
+   "problem": "What is the difference between ZIFT and IUT?",
+   "solution": "ZIFT: zygote or embryo with up to 8 blastomeres goes into the fallopian tube. IUT: embryo with more than 8 blastomeres goes into the uterus."
+  },
+  {
+   "title": "Why lactational amenorrhea works",
+   "problem": "Why is there no ovulation during intense breastfeeding?",
+   "solution": "Ovulation and menstrual cycles don't occur during intense lactation after parturition; this is effective only up to about six months after birth."
+  },
+  {
+   "title": "Saheli",
+   "problem": "What is special about Saheli?",
+   "solution": "It is a non-steroidal oral contraceptive taken once a week, developed at the Central Drug Research Institute (CDRI), Lucknow."
+  },
+  {
+   "title": "Preventing STIs",
+   "problem": "List simple ways to prevent STIs.",
+   "solution": "Avoid sex with unknown or multiple partners; always use condoms; seek a doctor early in case of doubt for early detection and complete cure."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Reproductive health problems and strategies",
+   "explain": "Programmes create awareness about reproduction-related aspects, sex education in schools, birth control, care of pregnant mothers, post-natal care, importance of breastfeeding, equal opportunities for male and female children. Successful steps include lower maternal and infant mortality, smaller families, better detection and cure of STDs."
+  },
+  {
+   "title": "Population explosion",
+   "explain": "World population was about 2 billion in 1900 and over 7.2 billion around 2011. India's population was about 350 million at independence and over 1.2 billion by 2011. Reasons: declining death rate, maternal mortality rate (MMR) and infant mortality rate (IMR), and more people in reproducible age. Statutory raising of marriageable age — 18 years for females and 21 for males."
+  },
+  {
+   "title": "Contraceptives and side effects",
+   "explain": "Possible side effects include nausea, abdominal pain, breakthrough bleeding, irregular menstrual bleeding and even breast cancer — so they must be used under medical advice."
+  },
+  {
+   "title": "Why MTP is needed",
+   "explain": "To avoid unwanted pregnancies due to casual intercourse or contraceptive failure, or when continuing the pregnancy could harm the mother or foetus. Misuse includes illegal female foeticide; unqualified quacks make illegal MTPs unsafe."
+  },
+  {
+   "title": "Infertility",
+   "explain": "Inability to conceive despite unprotected sexual cohabitation; causes can be physical, congenital, diseases, drugs, immunological or psychological, and can be in either partner. Specialised health clinics help diagnose and correct some disorders."
+  },
+  {
+   "title": "Complications of untreated STIs",
+   "explain": "Pelvic inflammatory diseases (PID), abortions, still births, ectopic pregnancies, infertility and even cancer of the reproductive tract."
+  }
+ ],
+ "ratta": [
+  "Family planning in India: 1951 → RCH.",
+  "Copper IUDs: CuT, Cu7, Multiload 375;  hormonal: Progestasert, LNG-20.",
+  "Pills: 21 days, start in first 5 days;  Saheli weekly (CDRI).",
+  "Emergency contraception within 72 h.",
+  "MTP safe in first trimester (12 weeks).",
+  "ZIFT ≤ 8 blastomeres → tube;  IUT > 8 → uterus;  GIFT donor ovum → tube.",
+  "Hep B, herpes, HIV not fully curable."
+ ],
+ "verifiedOn": "2026-11-13"
+}

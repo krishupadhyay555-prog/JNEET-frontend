@@ -1,0 +1,153 @@
+{
+ "slug": "biodiversity-and-conservation",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biodiversity and Conservation"
+ },
+ "title": "Biodiversity and Conservation",
+ "readMinutes": 13,
+ "summary": [
+  "Biodiversity (a term popularised by Edward Wilson) exists at three levels: genetic, species and ecological diversity. About 1.5 million species have been described; estimates of the total range up to about 7 million (Robert May).",
+  "India has only 2.4% of the world's land area but 8.1% of its species diversity — one of 12 mega-diversity countries. Diversity is highest in the tropics and falls towards the poles.",
+  "Alexander von Humboldt's species–area relationship: species richness rises with area, up to a limit. Loss of biodiversity is driven by the 'Evil Quartet': habitat loss and fragmentation, over-exploitation, alien species invasions and co-extinctions.",
+  "Conservation is in situ (hotspots, protected areas, sacred groves) or ex situ (zoos, botanical gardens, seed banks, cryopreservation)."
+ ],
+ "formulas": [
+  {
+   "name": "Levels of biodiversity",
+   "formula": "genetic (Rauwolfia vomitoria — reserpine variation; India has 50,000+ strains of rice and 1000 varieties of mango);  species (Western Ghats have more amphibian species than Eastern Ghats);  ecological (India's deserts, rain forests, mangroves, coral reefs, wetlands, estuaries and alpine meadows)",
+   "when": "Three levels.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Global species proportions",
+   "formula": "more than 70% of recorded species are animals; plants (including algae, fungi, bryophytes, gymnosperms, angiosperms) are about 22%;  among animals insects are 70% (7 of every 10 animals)",
+   "when": "Species composition."
+  },
+  {
+   "name": "Species–area relationship",
+   "formula": "log S = log C + Z log A  (S = species richness, A = area, Z = slope, C = Y-intercept)",
+   "when": "Von Humboldt's relationship.",
+   "tag": "PYQ favourite",
+   "note": "For very large areas like whole continents, Z is much steeper (0.6–1.2)."
+  },
+  {
+   "name": "Z values",
+   "formula": "Z ≈ 0.1–0.2 for small areas regardless of taxonomic group or region;  frugivorous birds and mammals in tropical forests across continents: Z ≈ 1.15",
+   "when": "Slope of the species–area line."
+  },
+  {
+   "name": "Why tropics are richer",
+   "formula": "long evolutionary time (undisturbed for millions of years);  less seasonal, more constant environment (niche specialisation);  more solar energy → higher productivity",
+   "when": "Latitudinal gradient.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Evil Quartet",
+   "formula": "habitat loss and fragmentation (Amazon rain forest — 'lungs of the planet');  over-exploitation (Steller's sea cow, passenger pigeon);  alien species invasions (Nile perch in Lake Victoria; Parthenium, Lantana, Eichhornia; African catfish Clarias gariepinus);  co-extinctions (host fish and its parasites; plant–pollinator)",
+   "when": "Causes of biodiversity loss.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Recent extinctions",
+   "formula": "dodo (Mauritius), quagga (Africa), thylacine (Australia), Steller's sea cow (Russia);  three subspecies of tiger: Bali, Javan, Caspian;  last 500 years: 784 extinctions (IUCN 2004)",
+   "when": "Extinction examples.",
+   "note": "The IUCN Red List (Red Data Book) records threatened species in categories such as critically endangered, endangered and vulnerable."
+  },
+  {
+   "name": "Rivet popper hypothesis",
+   "formula": "Paul Ehrlich: the ecosystem is an aeroplane and species are rivets — losing a few may not matter, but losing key ones (on the wings) threatens the whole system",
+   "when": "Why species loss matters."
+  },
+  {
+   "name": "Biodiversity hotspots",
+   "formula": "high species richness + high endemism;  34 hotspots worldwide (less than 2% of land area);  India: Western Ghats and Sri Lanka, Indo-Burma, Himalaya",
+   "when": "In situ conservation priority.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Protected areas in India",
+   "formula": "14 biosphere reserves, 90 national parks, 448 wildlife sanctuaries;  Ramsar sites protect wetlands of international importance",
+   "when": "In situ conservation numbers."
+  },
+  {
+   "name": "Sacred groves",
+   "formula": "Khasi and Jaintia Hills (Meghalaya), Aravalli Hills (Rajasthan), Western Ghats (Karnataka, Maharashtra), Sarguja, Chanda and Bastar (Madhya Pradesh)",
+   "when": "Traditional conservation."
+  },
+  {
+   "name": "Ex situ conservation",
+   "formula": "zoos, botanical gardens, wildlife safari parks;  cryopreservation of gametes (−196 °C);  in vitro fertilisation;  tissue culture propagation;  seed banks",
+   "when": "Conservation outside the natural habitat."
+  },
+  {
+   "name": "International efforts",
+   "formula": "Earth Summit, Rio de Janeiro (1992) — Convention on Biological Diversity;  World Summit on Sustainable Development, Johannesburg (2002) — reduce biodiversity loss by 2010",
+   "when": "Global conventions."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Doubling the area",
+   "problem": "With Z = 0.2, by what factor does species richness rise if the area doubles?",
+   "solution": "S ∝ A^Z, so the ratio = 2^0.2 = 1.15."
+  },
+  {
+   "title": "India's share",
+   "problem": "What share of world land area and species does India have?",
+   "solution": "2.4% of the land area and 8.1% of the species diversity — a mega-diversity country with over 45,000 plant and twice as many animal species recorded."
+  },
+  {
+   "title": "Lake Victoria",
+   "problem": "How did the Nile perch affect Lake Victoria?",
+   "solution": "Introduced into the lake, it led to the extinction of more than 200 species of native cichlid fish — an alien species invasion."
+  },
+  {
+   "title": "Co-extinction",
+   "problem": "Give an example of co-extinction.",
+   "solution": "When a host fish species becomes extinct, its unique parasites also become extinct. Similarly, a plant and its obligate pollinator depend on each other."
+  },
+  {
+   "title": "Why conserve biodiversity?",
+   "problem": "Give the three types of arguments for conservation.",
+   "solution": "Narrowly utilitarian (food, fibre, medicines — over 25% of drugs come from plants), broadly utilitarian (ecosystem services; the Amazon forest produces about 20% of total O₂ by photosynthesis) and ethical (every species has intrinsic value)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Number of species",
+   "explain": "IUCN (2004) put described plants and animals at slightly more than 1.5 million. Robert May estimated about 7 million species globally. Many more species remain undiscovered, especially among prokaryotes, insects and tropical species."
+  },
+  {
+   "title": "Importance of species diversity",
+   "explain": "Communities with more species tend to be more stable — David Tilman's long-term plot experiments showed that plots with more species had less year-to-year variation in biomass and higher productivity."
+  },
+  {
+   "title": "Amazon rain forest",
+   "explain": "It harbours probably millions of species, including more than 40,000 plants, 3000 fish, 1300 birds, 427 mammals, 427 amphibians, 378 reptiles and more than 1,25,000 invertebrates."
+  },
+  {
+   "title": "Biopiracy and bioprospecting",
+   "explain": "Bioprospecting is exploring molecular, genetic and species-level diversity for products of economic importance. Nations rich in biodiversity can benefit by bioprospecting."
+  },
+  {
+   "title": "Loss rate",
+   "explain": "Current species extinction rates are estimated to be 100 to 1000 times faster than in pre-human times; 12% of birds, 23% of mammals, 32% of amphibians and 31% of gymnosperms are facing the threat of extinction. Ecologists warn of a sixth mass extinction."
+  },
+  {
+   "title": "Effects of biodiversity loss",
+   "explain": "Decline in plant production, lower resistance to environmental perturbations such as drought, and increased variability in ecosystem processes such as plant productivity, water use, and pest and disease cycles."
+  }
+ ],
+ "ratta": [
+  "India: 2.4% land, 8.1% species, mega-diversity.",
+  "log S = log C + Z log A;  Z 0.1–0.2 (small areas), 0.6–1.2 (continents).",
+  "Evil Quartet: habitat loss, over-exploitation, alien invasions, co-extinction.",
+  "Nile perch → 200+ cichlids extinct.",
+  "34 hotspots;  India: Western Ghats–Sri Lanka, Indo-Burma, Himalaya.",
+  "14 biosphere reserves, 90 national parks, 448 sanctuaries.",
+  "Rivet popper — Paul Ehrlich.",
+  "Rio 1992 (CBD);  Johannesburg 2002."
+ ],
+ "verifiedOn": "2026-11-13"
+}
