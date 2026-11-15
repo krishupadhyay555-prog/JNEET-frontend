@@ -1,0 +1,212 @@
+{
+ "slug": "work-energy-and-power",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Work, Energy and Power",
+  "JEE": "Work, Energy and Power"
+ },
+ "title": "Work, Energy and Power",
+ "readMinutes": 20,
+ "summary": [
+  "Work is done when there is displacement along the force: W = F·s = Fs cos θ. A force perpendicular to motion (centripetal force, normal force) does zero work. Work can also be negative (friction).",
+  "The work–energy theorem is the biggest shortcut: work done by ALL forces = change in KE. It gives speeds without worrying about how forces vary with time.",
+  "The work of a conservative force (gravity, spring, electric) is path-independent, and a potential energy U is defined for it: F = −dU/dx. If only conservative forces do work, mechanical energy (KE + PE) stays constant. Friction is non-conservative — energy becomes heat.",
+  "Power = rate of doing work, P = dW/dt = F·v. In collisions momentum is always conserved (with no external force), but KE only in elastic collisions; the coefficient of restitution e tells how elastic the collision was."
+ ],
+ "formulas": [
+  {
+   "name": "Work by a constant force",
+   "formula": "W = F·s = Fs cos θ = F_x s_x + F_y s_y + F_z s_z",
+   "when": "Constant force, straight displacement.",
+   "mistake": "θ is between force and DISPLACEMENT, not between force and the surface."
+  },
+  {
+   "name": "Work by a variable force",
+   "formula": "W = ∫F dx = area under the F–x graph",
+   "when": "Force varying with position (spring, F = kx²).",
+   "note": "Area below the x-axis is negative work."
+  },
+  {
+   "name": "Kinetic energy",
+   "formula": "K = ½mv² = p²/2m",
+   "when": "Energy from speed or momentum.",
+   "mistake": "For equal momentum the lighter body has more KE — not the other way round."
+  },
+  {
+   "name": "Work–energy theorem",
+   "formula": "W_all forces = ΔK = K_f − K_i",
+   "when": "Speed with friction, air resistance or variable forces.",
+   "mistake": "Add the work of ALL forces (gravity, friction, normal, applied), not just one.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gravitational potential energy (near earth)",
+   "formula": "U = mgh  (h from a reference level)",
+   "when": "Energy change with height.",
+   "note": "Any reference level gives the same ΔU — absolute U has no meaning."
+  },
+  {
+   "name": "Spring potential energy",
+   "formula": "F = −kx;   U = ½kx²;   work by spring from x₁ to x₂ = ½k(x₁² − x₂²)",
+   "when": "Compressed/stretched springs.",
+   "mistake": "Measure x from the natural length, not the total length."
+  },
+  {
+   "name": "Force from potential energy",
+   "formula": "F = −dU/dx;   equilibrium: dU/dx = 0;   stable: d²U/dx² > 0, unstable: < 0",
+   "when": "When U(x) is given as a graph or function.",
+   "mistake": "Don't forget the minus sign: force acts towards decreasing U."
+  },
+  {
+   "name": "Conservation of mechanical energy",
+   "formula": "K_i + U_i = K_f + U_f  (only conservative forces doing work)",
+   "when": "Pendulums, roller coasters, spring–block.",
+   "note": "With friction it doesn't apply directly — add W_friction."
+  },
+  {
+   "name": "Power",
+   "formula": "P_avg = W/t;   P = dW/dt = F·v = Fv cos θ;   1 hp = 746 W",
+   "when": "Motors, engines, pumps.",
+   "mistake": "kWh is a unit of energy, not power (1 kWh = 3.6 × 10⁶ J)."
+  },
+  {
+   "name": "Vertical circle (string)",
+   "formula": "Minimum speed at bottom √(5gl);  at top √(gl);  T_bottom − T_top = 6mg",
+   "when": "Ball on a string completing the circle.",
+   "mistake": "For a rod (not a string) the minimum is 0 at the top and √(4gl) at the bottom.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Elastic collision in 1-D",
+   "formula": "v₁ = [(m₁ − m₂)u₁ + 2m₂u₂]/(m₁ + m₂);   v₂ = [(m₂ − m₁)u₂ + 2m₁u₁]/(m₁ + m₂)",
+   "when": "Both momentum and KE conserved.",
+   "note": "Equal masses simply exchange velocities — no formula needed."
+  },
+  {
+   "name": "Perfectly inelastic collision",
+   "formula": "v = (m₁u₁ + m₂u₂)/(m₁ + m₂);   KE loss = m₁m₂(u₁ − u₂)² / [2(m₁ + m₂)]",
+   "when": "Bodies stick together.",
+   "mistake": "Assuming KE is conserved is wrong — only momentum is."
+  },
+  {
+   "name": "Coefficient of restitution",
+   "formula": "e = (speed of separation)/(speed of approach) = (v₂ − v₁)/(u₁ − u₂);   e = 1 elastic, e = 0 perfectly inelastic",
+   "when": "Partly elastic collisions, bouncing balls.",
+   "note": "Be careful with signs — take both approach and separation as positive."
+  },
+  {
+   "name": "Bouncing ball",
+   "formula": "Rebound height h₁ = e²h;   nth rebound hₙ = e²ⁿh",
+   "when": "Dropping and bouncing a ball.",
+   "mistake": "Speed is multiplied by e, height by e² — don't mix them."
+  },
+  {
+   "name": "Collision in 2-D",
+   "formula": "Separately in each direction: Σp_x conserved, Σp_y conserved.  Equal masses, elastic, one at rest ⇒ they move off at 90°",
+   "when": "Oblique collisions.",
+   "mistake": "Adding speeds directly is wrong — add vectors (components)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Work from a dot product",
+   "problem": "F = (3î + 4ĵ) N, displacement s = (2î + ĵ) m. Work?",
+   "solution": "W = F·s = 3 × 2 + 4 × 1 = 10 J."
+  },
+  {
+   "title": "Variable force",
+   "problem": "F = 3x² N (x in metres). Work from x = 0 to 2 m?",
+   "solution": "W = ∫₀² 3x² dx = [x³]₀² = 8 J."
+  },
+  {
+   "title": "Block from a spring",
+   "problem": "A spring with k = 200 N/m is compressed 0.1 m and releases a 0.5 kg block (smooth floor). Spring energy and block speed?",
+   "solution": "U = ½kx² = ½ × 200 × 0.01 = 1 J. ½mv² = 1 ⇒ v = √(2/0.5) = 2 m/s."
+  },
+  {
+   "title": "Power of a motor",
+   "problem": "A motor lifts 100 kg at a constant 2 m/s (g = 10). Power?",
+   "solution": "Constant speed ⇒ F = mg = 1000 N. P = Fv = 1000 × 2 = 2000 W (≈ 2.7 hp)."
+  },
+  {
+   "title": "Vertical circle",
+   "problem": "A 0.5 kg ball on a 1 m string must complete a vertical circle (g = 10). Minimum speeds at bottom and top, and the difference in tension?",
+   "solution": "Bottom: √(5gl) = √50 ≈ 7.07 m/s. Top: √(gl) = √10 ≈ 3.16 m/s. T_bottom − T_top = 6mg = 30 N."
+  },
+  {
+   "title": "Elastic collision",
+   "problem": "A 2 kg block at 3 m/s collides elastically with a 1 kg block at rest. Final velocities?",
+   "solution": "v₁ = (2 − 1)/(3) × 3 = 1 m/s,  v₂ = 2 × 2/3 × 3 = 4 m/s (forward). Check: p = 2 + 4 = 6 ✓, KE = 1 + 8 = 9 J ✓."
+  },
+  {
+   "title": "Sticking collision",
+   "problem": "A 2 kg block at 3 m/s hits a 1 kg block at rest and they stick. Common velocity and KE loss?",
+   "solution": "v = 6/3 = 2 m/s. KE before 9 J, after ½ × 3 × 4 = 6 J ⇒ loss = 3 J (heat/sound)."
+  },
+  {
+   "title": "Bouncing ball",
+   "problem": "A ball is dropped from 5 m with e = 0.6. First rebound height?",
+   "solution": "h₁ = e²h = 0.36 × 5 = 1.8 m."
+  },
+  {
+   "title": "Stopping by friction",
+   "problem": "A 2 kg block slides at 10 m/s on a rough floor (μ_k = 0.25). How far before it stops?",
+   "solution": "Work–energy: μmg·s = ½mv² ⇒ s = v²/(2μg) = 100/5 = 20 m. (Mass cancels.)"
+  },
+  {
+   "title": "2-D sticking collision",
+   "problem": "A 2 kg body moving east at 3 m/s and a 3 kg body moving north at 2 m/s collide and stick. Final velocity?",
+   "solution": "p_x = 6, p_y = 6 kg·m/s ⇒ v = √(36 + 36)/5 ≈ 1.7 m/s, at 45° north of east."
+  },
+  {
+   "title": "Work done by air resistance",
+   "problem": "A 2 kg stone falls 5 m and hits the ground at 8 m/s (g = 10). Work done by air resistance?",
+   "solution": "W_gravity = mgh = 100 J. ΔK = ½ × 2 × 64 = 64 J. W_air = 64 − 100 = −36 J (negative — energy taken away)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "When work is zero, positive or negative",
+   "explain": "θ < 90° positive (force helps motion); θ = 90° zero (normal force, centripetal force, gravity on a porter walking horizontally with a load); θ > 90° negative (friction, gravity on a ball thrown up)."
+  },
+  {
+   "title": "Kinetic and potential energy",
+   "explain": "KE is energy of motion, always ≥ 0. PE is energy of position/configuration (height, stretch of a spring) — defined only for conservative forces. Unit joule; 1 eV = 1.6 × 10⁻¹⁹ J."
+  },
+  {
+   "title": "Work–energy theorem",
+   "explain": "Net work = ΔKE. It is the integral form of Newton's second law and the fastest way to get speed with variable forces, curved paths or friction."
+  },
+  {
+   "title": "Conservative vs non-conservative forces",
+   "explain": "Conservative: work is path-independent, zero over a closed loop, and PE is defined (gravity, spring, electrostatic). Non-conservative: work depends on path and energy becomes heat (friction, air drag, viscous force)."
+  },
+  {
+   "title": "Potential energy of a spring",
+   "explain": "Stretching a spring by x needs work ½kx², stored as PE. The spring force is restoring (F = −kx). Two springs: in series 1/k = 1/k₁ + 1/k₂, in parallel k = k₁ + k₂."
+  },
+  {
+   "title": "Motion in a vertical circle",
+   "explain": "Speed falls going up (KE → PE). For the string not to slacken, T ≥ 0 at the top ⇒ v_top ≥ √(gl), and energy gives v_bottom ≥ √(5gl). At the horizontal position tension = mv²/l."
+  },
+  {
+   "title": "Collisions: elastic and inelastic",
+   "explain": "In every collision (no external force) momentum is conserved. In elastic collisions KE is also conserved (e = 1) — atomic or ideal billiard collisions. In inelastic ones some KE becomes heat/sound/deformation. In perfectly inelastic collisions the bodies stick and KE loss is maximum."
+  },
+  {
+   "title": "Collisions in two dimensions",
+   "explain": "Conserve x and y momentum separately. In an elastic oblique collision of equal masses (one at rest) they move off at 90° (billiards). In head-on (1-D) collisions everything is along one line."
+  }
+ ],
+ "ratta": [
+  "W = Fs cos θ;  W_net = ΔK.",
+  "F = −dU/dx;  spring U = ½kx².",
+  "P = F·v;  1 hp = 746 W;  1 kWh = 3.6 × 10⁶ J.",
+  "Vertical circle (string): √(5gl) bottom, √(gl) top, ΔT = 6mg.",
+  "Equal masses, elastic 1-D: velocities exchange.",
+  "Perfectly inelastic: maximum KE loss, e = 0.",
+  "Bounce: h₁ = e²h.",
+  "K = p²/2m."
+ ]
+}

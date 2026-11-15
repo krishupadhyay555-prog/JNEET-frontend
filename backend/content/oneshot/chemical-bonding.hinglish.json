@@ -1,100 +1,196 @@
 {
  "slug": "chemical-bonding",
  "subject": "Chemistry",
+ "verifiedOn": "2026-11-15",
  "chapters": {
   "NEET": "Chemical Bonding and Molecular Structure",
   "JEE": "Chemical Bonding and Molecular Structure"
  },
  "title": "Chemical Bonding and Molecular Structure",
- "readMinutes": 16,
+ "readMinutes": 22,
  "summary": [
-  "Atom bond isliye banate hain kyunki bond banne par energy kam hoti hai aur zyadatar atom stable (octet) configuration paa lete hain. Ionic bond = electron dena-lena; covalent bond = electron share karna.",
-  "Shape ka raaz VSEPR hai: central atom ke electron pairs ek doosre se door rehna chahte hain, aur lone pair, bond pair se zyada jagah leta hai (lp-lp > lp-bp > bp-bp).",
-  "Hybridisation shape ko orbitals ki bhasha mein samjhata hai (sp linear, sp² trigonal, sp³ tetrahedral, sp³d TBP, sp³d² octahedral).",
-  "Molecular orbital theory bond order aur magnetism batati hai — O₂ ka paramagnetism sirf MOT se samajh aata hai. Bond order zyada ⇒ bond chhota aur mazboot."
+  "Atoms bond karke stable (kam energy) bante hain. Ionic bond electron transfer se (Na⁺Cl⁻), covalent bond electron sharing se (H₂, CH₄). Kossel–Lewis ka octet rule shuruaati samajh deta hai, par uske exceptions bhi hain (BF₃, PCl₅, NO).",
+  "Bond parameters — bond length, bond angle, bond enthalpy, bond order — aapas mein jude hain: bond order badhe to length ghate aur bond enthalpy badhe. Resonance aur dipole moment molecules ka asli roop aur polarity batate hain.",
+  "VSEPR theory electron pairs ke repulsion se shape batati hai (lp–lp > lp–bp > bp–bp). Valence bond theory orbitals ke overlap aur hybridisation (sp, sp², sp³, sp³d, sp³d²) se shape aur bond angles samjhati hai.",
+  "Molecular orbital theory bond order aur magnetic behaviour sahi batati hai — O₂ paramagnetic hai, jo Lewis structure nahi samjha sakta. Hydrogen bonding boiling point, solubility aur barf ke halkepan ko samjhata hai."
  ],
  "formulas": [
   {
-   "name": "Formal charge",
-   "formula": "FC = V − L − ½ B",
-   "when": "Best Lewis structure chunna (V = valence e⁻, L = lone e⁻, B = bonding e⁻).",
-   "mistake": "Lowest formal charges wala structure zyada stable."
+   "name": "Octet rule and exceptions",
+   "formula": "Atoms 8 valence electrons tak pahunchte hain;  incomplete octet: BeCl₂ (4), BF₃ (6);  odd electron: NO, NO₂;  expanded octet (3rd period onwards): PCl₅ (10), SF₆ (12)",
+   "when": "Lewis structures.",
+   "mistake": "2nd period elements (C, N, O, F) kabhi octet expand nahi karte — d orbitals nahi hote."
   },
   {
-   "name": "Bond order (MOT)",
-   "formula": "BO = (N_b − N_a) / 2",
-   "when": "Bond length, strength, existence compare karna.",
-   "mistake": "BO = 0 ⇒ molecule exist nahi karta (He₂).",
+   "name": "Formal charge",
+   "formula": "FC = V − L − ½B   (V = valence e⁻, L = lone-pair e⁻, B = bonding e⁻)",
+   "when": "Sabse sahi Lewis structure chunna.",
+   "note": "Sabse kam formal charges wala structure sabse stable."
+  },
+  {
+   "name": "Ionic bond favourable when",
+   "formula": "low ionisation enthalpy (metal) + high electron gain enthalpy (non-metal) + high lattice enthalpy",
+   "when": "Ionic bond banega ya nahi.",
+   "note": "Lattice enthalpy chhote aur zyada charge wale ions mein zyada (MgO > NaCl)."
+  },
+  {
+   "name": "Fajans' rules",
+   "formula": "Covalent character badhta hai jab: cation chhota, cation ka charge zyada, anion bada, cation pseudo-noble gas (18e⁻) configuration wala",
+   "when": "Ionic compound mein covalent character.",
+   "note": "LiCl, NaCl se zyada covalent; AlCl₃ kaafi covalent."
+  },
+  {
+   "name": "Bond order and its effects",
+   "formula": "BO ↑ ⇒ bond length ↓, bond enthalpy ↑, stability ↑;  C–C 154 pm > C=C 134 pm > C≡C 120 pm",
+   "when": "Bonds compare karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Resonance",
+   "formula": "Asli structure sabhi canonical forms ka hybrid;  O₃, CO₃²⁻ (BO 4/3), NO₃⁻, C₆H₆;  resonance hybrid canonical forms se zyada stable",
+   "when": "Equal bond lengths samjhana.",
+   "mistake": "Canonical forms alag-alag exist nahi karte."
+  },
+  {
+   "name": "Dipole moment",
+   "formula": "μ = q × d;  unit debye (1 D = 3.336 × 10⁻³⁰ C·m);  vector sum of bond dipoles",
+   "when": "Molecule polar hai ya nahi.",
+   "tag": "PYQ favourite",
+   "note": "Symmetric molecules (CO₂, BF₃, CH₄, CCl₄) ka net μ = 0 chaahe bonds polar hon."
+  },
+  {
+   "name": "Percentage ionic character",
+   "formula": "% ionic = (μ_observed / μ_ionic) × 100;   μ_ionic = e × d (4.8 D per Å)",
+   "when": "Bond kitna ionic."
+  },
+  {
+   "name": "VSEPR repulsion order",
+   "formula": "lp–lp > lp–bp > bp–bp",
+   "when": "Bond angle ghatne ka reason.",
+   "note": "CH₄ 109.5° > NH₃ 107° > H₂O 104.5° — lone pairs badhne se angle ghatta hai."
+  },
+  {
+   "name": "VSEPR shapes",
+   "formula": "2 bp: linear;  3 bp: trigonal planar;  2 bp + 1 lp: bent (SO₂);  4 bp: tetrahedral;  3 bp + 1 lp: pyramidal (NH₃);  2 bp + 2 lp: bent (H₂O);  5 bp: trigonal bipyramidal (PCl₅);  4 bp + 1 lp: see-saw (SF₄);  3 bp + 2 lp: T-shape (ClF₃);  2 bp + 3 lp: linear (XeF₂, I₃⁻);  6 bp: octahedral (SF₆);  5 bp + 1 lp: square pyramidal (BrF₅);  4 bp + 2 lp: square planar (XeF₄)",
+   "when": "Shape ratta.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Hybridisation shortcut",
-   "formula": "H = ½ [V + M − c + a]",
-   "when": "Central atom ki hybridisation jaldi nikalna (V = valence e⁻, M = monovalent atoms, c = cation charge, a = anion charge).",
-   "mistake": "H = 2, 3, 4, 5, 6 ⇒ sp, sp², sp³, sp³d, sp³d²."
+   "formula": "H = ½(V + M − c + a)   (V = central atom ke valence e⁻, M = monovalent atoms, c = cation charge, a = anion charge);  2 sp, 3 sp², 4 sp³, 5 sp³d, 6 sp³d², 7 sp³d³",
+   "when": "Central atom ka hybridisation.",
+   "mistake": "O aur S jaise divalent atoms M mein nahi gine jaate."
   },
   {
-   "name": "Dipole moment",
-   "formula": "μ = q × d",
-   "when": "Polarity compare karna.",
-   "unit": "debye (1 D = 3.336 × 10⁻³⁰ C·m)",
-   "mistake": "Symmetric molecule (CO₂, BF₃, CH₄) mein bond dipoles cancel ⇒ μ = 0."
+   "name": "Hybrid orbitals and angles",
+   "formula": "sp 180° (BeCl₂, C₂H₂);  sp² 120° (BF₃, C₂H₄);  sp³ 109.5° (CH₄);  sp³d 90°, 120° (PCl₅);  sp³d² 90° (SF₆)",
+   "when": "Geometry from hybridisation.",
+   "note": "PCl₅ mein axial bonds equatorial se lambe (zyada repulsion)."
   },
   {
-   "name": "Percentage ionic character",
-   "formula": "% ionic = (μ_observed / μ_ionic) × 100",
-   "when": "Bond kitna ionic hai."
+   "name": "Sigma and pi bonds",
+   "formula": "Har single bond = 1σ;  double = 1σ + 1π;  triple = 1σ + 2π;  σ head-on overlap (strong), π sideways overlap (weak)",
+   "when": "σ, π ginna.",
+   "mistake": "π bond hybrid orbitals se nahi banta; s orbital π nahi banata."
   },
   {
-   "name": "VSEPR shapes (ratta)",
-   "formula": "AB₂ linear · AB₃ trigonal planar · AB₄ tetrahedral · AB₃E pyramidal · AB₂E₂ bent · AB₅ TBP · AB₄E see-saw · AB₃E₂ T-shape · AB₂E₃ linear · AB₆ octahedral · AB₅E square pyramidal · AB₄E₂ square planar",
-   "when": "Shape wale MCQ.",
-   "tag": "Ratta"
+   "name": "MOT bond order and magnetism",
+   "formula": "BO = ½(N_b − N_a);  BO > 0 ⇒ molecule exist kare;  unpaired e⁻ ⇒ paramagnetic",
+   "when": "MO wale sawal.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "MO energy order",
+   "formula": "Up to N₂ (14 e⁻): σ1s < σ*1s < σ2s < σ*2s < (π2pₓ = π2p_y) < σ2p_z < (π*2pₓ = π*2p_y) < σ*2p_z;   O₂, F₂: σ2p_z, π2p se neeche",
+   "when": "MO configuration likhna.",
+   "note": "B₂ aur O₂ paramagnetic; N₂, F₂, C₂ diamagnetic."
+  },
+  {
+   "name": "Hydrogen bonding",
+   "formula": "H atom F, O, N se juda ho aur doosre F/O/N ke lone pair se attract kare;  intermolecular (H₂O, HF — high bp) aur intramolecular (o-nitrophenol — low bp, volatile)",
+   "when": "Boiling point, solubility.",
+   "mistake": "Intramolecular H-bond boiling point badhata nahi, ghataata hai (association nahi hota)."
   }
  ],
  "examples": [
   {
+   "title": "O₃ mein formal charge",
+   "problem": "O₃ ke central O par formal charge? (2 bonds — ek double, ek single — aur 1 lone pair)",
+   "solution": "FC = 6 − 2 − ½ × 6 = +1. Single-bonded O par −1, double-bonded O par 0."
+  },
+  {
    "title": "O₂ family ka bond order",
-   "problem": "O₂⁺, O₂, O₂⁻, O₂²⁻ ko bond order aur bond length ke order mein lagao.",
-   "solution": "Bond order: O₂⁺ 2.5 > O₂ 2 > O₂⁻ 1.5 > O₂²⁻ 1. Bond length ulta: O₂⁺ sabse chhota, O₂²⁻ sabse lamba. O₂²⁻ diamagnetic hai, baaki teen paramagnetic."
+   "problem": "O₂, O₂⁺, O₂⁻, O₂²⁻ ke bond order aur stability order?",
+   "solution": "O₂ = 2, O₂⁺ = 2.5, O₂⁻ = 1.5, O₂²⁻ = 1. Stability aur bond enthalpy: O₂⁺ > O₂ > O₂⁻ > O₂²⁻; bond length ulta."
   },
   {
    "title": "Hybridisation shortcut",
-   "problem": "I₃⁻ aur ClF₃ ki hybridisation aur shape?",
-   "solution": "I₃⁻: H = ½(7 + 2 + 1) = 5 ⇒ sp³d; 2 bond pair + 3 lone pair ⇒ linear. ClF₃: H = ½(7 + 3) = 5 ⇒ sp³d; 3 bp + 2 lp ⇒ T-shaped."
+   "problem": "SF₄, XeF₄, NH₄⁺ ka hybridisation aur shape?",
+   "solution": "SF₄: ½(6 + 4) = 5 ⇒ sp³d, see-saw (1 lp). XeF₄: ½(8 + 4) = 6 ⇒ sp³d², square planar (2 lp). NH₄⁺: ½(5 + 4 − 1) = 4 ⇒ sp³, tetrahedral."
   },
   {
-   "title": "Ozone ka formal charge",
-   "problem": "O₃ (O=O–O) ke har oxygen ka formal charge?",
-   "solution": "Central O: 6 − 2 − ½(6) = +1. Double-bonded O: 6 − 4 − ½(4) = 0. Single-bonded O: 6 − 6 − ½(2) = −1."
+   "title": "HCl ka % ionic character",
+   "problem": "HCl: μ = 1.03 D, bond length 1.27 Å. % ionic?",
+   "solution": "μ_ionic = 4.8 × 1.27 = 6.1 D. % = 1.03/6.1 × 100 ≈ 17%."
+  },
+  {
+   "title": "σ aur π ginna",
+   "problem": "CH₂=CH–C≡N (acrylonitrile) mein σ aur π bonds?",
+   "solution": "σ: 3 C–H + C=C ka 1 + C–C 1 + C≡N ka 1 = 6. π: C=C 1 + C≡N 2 = 3."
+  },
+  {
+   "title": "NH₃ vs NF₃ dipole",
+   "problem": "NH₃ (1.47 D) ka dipole moment NF₃ (0.23 D) se zyada kyun?",
+   "solution": "NH₃ mein N–H bond dipoles aur lone pair ka dipole same direction mein (jud jaate hain); NF₃ mein N–F bond dipoles lone pair ke ulta (kaat dete hain)."
+  },
+  {
+   "title": "N₂ aur O₂ ki magnetism",
+   "problem": "N₂ aur O₂ mein se kaun paramagnetic, aur kyun?",
+   "solution": "N₂: BO = 3, saare electrons paired ⇒ diamagnetic. O₂: π*2p mein 2 unpaired electrons ⇒ paramagnetic (Lewis structure ye nahi bata paata)."
   }
  ],
  "topics": [
   {
-   "title": "Lone pair ka asar",
-   "explain": "CH₄ 109.5°, NH₃ ~107°, H₂O ~104.5° — har extra lone pair angle ko aur dabata hai."
+   "title": "Kossel–Lewis approach",
+   "explain": "Noble gases stable hain kyunki unka octet poora hai. Doosre atoms electron dekar/lekar (ionic) ya share karke (covalent) octet poora karte hain. Lewis dot structure mein valence electrons dots se dikhaate hain."
   },
   {
-   "title": "Fajans' rule",
-   "explain": "Chhota, zyada charge wala cation aur bada anion ⇒ zyada covalent character. Isliye LiCl, NaCl se zyada covalent hai."
+   "title": "Ionic bond aur lattice enthalpy",
+   "explain": "Ek mole ionic solid ko gaseous ions mein todne ki energy lattice enthalpy hai. Zyada lattice enthalpy = zyada stable solid, zyada melting point. Born–Haber cycle se nikaali jaati hai."
   },
   {
-   "title": "Hydrogen bonding",
-   "explain": "Intermolecular H-bond boiling point badhata hai (H₂O liquid hai). o-nitrophenol mein intramolecular H-bond ⇒ wo p-nitrophenol se zyada volatile hai."
+   "title": "Bond parameters",
+   "explain": "Bond length: nuclei ke beech ki doori (atom size badhe → badhe). Bond angle: central atom ke bonds ke beech ka angle. Bond enthalpy: ek mole bonds todne ki energy. Bond order: do atoms ke beech bonds ki sankhya."
   },
   {
-   "title": "MOT filling order",
-   "explain": "B₂, C₂, N₂ tak π2p orbitals σ2p se pehle bhare jaate hain; O₂, F₂ mein σ2p pehle. B₂ paramagnetic, C₂ diamagnetic — PYQ mein aata hai."
+   "title": "Valence bond theory",
+   "explain": "Bond tab banta hai jab do half-filled orbitals overlap karein aur electrons paired hon. Zyada overlap = strong bond. Overlap: s–s, s–p, p–p (σ), sideways p–p (π)."
   },
   {
-   "title": "Resonance",
-   "explain": "Jab ek Lewis structure kaafi nahi (O₃, CO₃²⁻), asli molecule saare structures ka hybrid hota hai; saare bond lengths barabar ho jaate hain."
+   "title": "Hybridisation ke niyam",
+   "explain": "Same atom ke lagbhag barabar energy wale orbitals mix hote hain; jitne orbitals mile utne hybrid orbitals bante hain; hybrid orbitals sirf σ bond aur lone pairs rakhte hain. Ethane sp³, ethene sp², ethyne sp."
+  },
+  {
+   "title": "MOT ke basics",
+   "explain": "Atomic orbitals mil kar bonding (kam energy) aur antibonding (zyada energy) MOs banate hain. LCAO: same symmetry aur paas ki energy wale orbitals hi milte hain. He₂ ka BO 0 — exist nahi karta. H₂⁺ aur He₂⁺ ka BO 0.5."
+  },
+  {
+   "title": "Electronegativity aur metallic bonding",
+   "explain": "Electronegativity = bond mein shared electrons ko apni taraf kheenchne ki tendency (F sabse zyada, 4.0). Do atoms ka electronegativity difference zyada (~1.7 se upar) ⇒ bond mostly ionic; kam ⇒ polar covalent; zero ⇒ non-polar. Metallic bond: positive metal ions ke beech delocalised electrons ka 'sea' — isliye metals conductor, malleable aur ductile hote hain."
+  },
+  {
+   "title": "Hydrogen bond ke effects",
+   "explain": "HF, H₂O, NH₃ ke boiling points apne group ke baaki hydrides se zyada. Barf mein open cage structure ⇒ paani se halki. Alcohols, carboxylic acids paani mein ghulte hain. Proteins aur DNA ki structure H-bonds par tiki hai."
   }
  ],
  "ratta": [
-  "Shapes: BeCl₂ linear · BF₃ trigonal planar · CH₄ tetrahedral · NH₃ pyramidal · H₂O bent · PCl₅ TBP · SF₄ see-saw · ClF₃ T-shape · XeF₂ linear · SF₆ octahedral · BrF₅ square pyramidal · XeF₄ square planar.",
-  "Repulsion: lp-lp > lp-bp > bp-bp.",
-  "μ = 0: CO₂, BF₃, CH₄, CCl₄, PCl₅, SF₆, XeF₄."
- ],
- "verifiedOn": "2026-11-12"
+  "FC = V − L − ½B.",
+  "Fajans: chhota cation, zyada charge, bada anion ⇒ zyada covalent.",
+  "BO ↑ ⇒ length ↓, enthalpy ↑.",
+  "lp–lp > lp–bp > bp–bp;  CH₄ 109.5° > NH₃ 107° > H₂O 104.5°.",
+  "H = ½(V + M − c + a): 2 sp, 3 sp², 4 sp³, 5 sp³d, 6 sp³d².",
+  "SF₄ see-saw, ClF₃ T-shape, XeF₂ linear, XeF₄ square planar, BrF₅ square pyramidal.",
+  "BO = ½(N_b − N_a);  O₂ & B₂ paramagnetic.",
+  "μ = 0: CO₂, BF₃, CH₄, CCl₄;  NH₃ > NF₃."
+ ]
 }

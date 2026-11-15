@@ -36,7 +36,7 @@
   },
   {
    "name": "1^∞ form",
-   "formula": "lim f^g = e^(lim g(f − 1)) when f → 1, g → ∞;  lim (1 + 1/x)ˣ = e;  lim (1 + x)^(1/x) = e",
+   "formula": "lim f^g = e^{lim g(f − 1)} when f → 1, g → ∞;  lim (1 + 1/x)ˣ = e;  lim (1 + x)^{1/x} = e",
    "when": "Powers tending to 1.",
    "tag": "PYQ favourite"
   },
@@ -88,7 +88,7 @@
   {
    "title": "1^∞ form",
    "problem": "lim (x→∞) (1 + 2/x)ˣ?",
-   "solution": "e^(lim x × 2/x) = e²."
+   "solution": "e^{lim x × 2/x} = e²."
   },
   {
    "title": "Factorisation",
@@ -134,14 +134,14 @@
   },
   {
    "title": "Non-differentiable points",
-   "explain": "Corners (|x − a|), cusps, vertical tangents (x^(1/3) at 0) and discontinuities. |f(x)| may fail to be differentiable where f(x) = 0 and changes sign."
+   "explain": "Corners (|x − a|), cusps, vertical tangents (x^{1/3} at 0) and discontinuities. |f(x)| may fail to be differentiable where f(x) = 0 and changes sign."
   }
  ],
  "ratta": [
   "(xⁿ − aⁿ)/(x − a) → naⁿ⁻¹.",
   "sin x/x → 1;  (1 − cos x)/x² → 1/2.",
   "(eˣ − 1)/x → 1;  (aˣ − 1)/x → ln a.",
-  "1^∞: e^(lim g(f − 1)).",
+  "1^∞: e^{lim g(f − 1)}.",
   "Differentiable ⇒ continuous (not conversely).",
   "LHL = RHL = f(a) ⇒ continuous."
  ],

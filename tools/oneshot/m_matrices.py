@@ -104,9 +104,85 @@ SYLLABUS = [
 ("Test of consistency and solution of simultaneous linear equations (2 or 3 variables) using matrices", ["Consistency", "Cramer", "Homogeneous"]),
 ]
 
+DOC_EN = {
+"slug": "matrices-and-determinants", "subject": "Mathematics",
+"chapters": {"JEE": "Matrices and Determinants"},
+"title": "Matrices and Determinants", "readMinutes": 20,
+"summary": [
+"A matrix is a rectangular table of numbers (m × n). Two matrices can be multiplied only when the columns of the first equal the rows of the second, and AB is usually not equal to BA — order matters.",
+"A determinant is a single number defined only for square matrices. It tells whether the matrix can be 'undone': |A| ≠ 0 ⇒ the inverse exists (non-singular).",
+"The inverse comes from the adjoint: A⁻¹ = adj A / |A|. Power formulas for |adj A|, adj of adj and |kA| are JEE favourites.",
+"Linear equations AX = B: if |A| ≠ 0 there is a unique solution X = A⁻¹B. If |A| = 0 there is either no solution or infinitely many — check with (adj A)B (or Cramer's D₁, D₂, D₃).",
+"Determinants also give the area of a triangle and test collinearity.",
+],
+"formulas": [
+F("Types of matrices", "Square, diagonal, scalar, identity I, zero O, upper/lower triangular, symmetric (Aᵀ = A), skew-symmetric (Aᵀ = −A, all diagonal entries 0)", "Definitions and identification.", "A skew-symmetric matrix always has zero diagonal entries."),
+F("Special square matrices", "Orthogonal: AAᵀ = I.  Idempotent: A² = A.  Involutory: A² = I.  Nilpotent: Aᵏ = O (for some k)", "Property-based questions."),
+F("Matrix multiplication", "(m × n)(n × p) = (m × p);   (AB)ᵢⱼ = Σₖ aᵢₖ bₖⱼ", "Product of two matrices.", "AB = O does not mean A or B is zero; AB = AC does not give B = C."),
+F("Transpose rules", "(Aᵀ)ᵀ = A,  (A + B)ᵀ = Aᵀ + Bᵀ,  (kA)ᵀ = kAᵀ,  (AB)ᵀ = BᵀAᵀ", "Simplifying with transposes.", "The order reverses in (AB)ᵀ."),
+F("Symmetric + skew-symmetric split", "A = ½(A + Aᵀ) + ½(A − Aᵀ)", "Splitting any square matrix (unique way).", None, None, "PYQ favourite"),
+F("Determinant of order 2 and 3", "|a b; c d| = ad − bc.   3 × 3: expand along any row/column: |A| = a₁₁C₁₁ + a₁₂C₁₂ + a₁₃C₁₃", "Finding a determinant.", "Expand along the row/column with the most zeros."),
+F("Minor and cofactor", "Mᵢⱼ = determinant left after deleting row i and column j;   Cᵢⱼ = (−1)^{i+j} Mᵢⱼ", "For expansion and the adjoint.", "Sign pattern: + − + / − + − / + − +."),
+F("Properties of determinants", "|Aᵀ| = |A|;  swapping two rows → sign changes;  two rows equal/proportional → 0;  one row × k → |A| × k;  Rᵢ → Rᵢ + kRⱼ → no change;  triangular → product of diagonal", "Simplifying without full expansion.", "Multiplying one row's entries by another row's cofactors and adding gives 0."),
+F("Determinant of products and scalars", "|AB| = |A||B|;   |kA| = kⁿ |A|  (n = order);   |Aⁿ| = |A|ⁿ;   skew-symmetric of odd order: |A| = 0", "Power questions.", "In |kA| the power of k is the order, not just k.", None, "PYQ favourite"),
+F("Adjoint", "adj A = (cofactor matrix)ᵀ;   A (adj A) = (adj A) A = |A| I", "Route to the inverse.", "2 × 2: adj [a b; c d] = [d −b; −c a]."),
+F("Adjoint properties", "|adj A| = |A|^{n−1};   adj(adj A) = |A|^{n−2} A;   |adj(adj A)| = |A|^{(n−1)²};   adj(AB) = (adj B)(adj A);   adj(Aᵀ) = (adj A)ᵀ", "Power-tower questions.", None, None, "PYQ favourite"),
+F("Inverse", "A⁻¹ = adj A / |A|  (|A| ≠ 0);   (AB)⁻¹ = B⁻¹A⁻¹;   (Aᵀ)⁻¹ = (A⁻¹)ᵀ;   |A⁻¹| = 1/|A|", "Finding the inverse.", "|A| = 0 (singular) ⇒ the inverse doesn't exist."),
+F("Area of triangle and collinearity", "Area = ½ |det [x₁ y₁ 1; x₂ y₂ 1; x₃ y₃ 1]|;   collinear ⇔ det = 0", "Area from three points / whether they lie on a line.", "Area is always positive — take the modulus."),
+F("System AX = B (non-homogeneous)", "|A| ≠ 0: unique, X = A⁻¹B.   |A| = 0 and (adj A)B ≠ O: no solution.   |A| = 0 and (adj A)B = O: infinitely many or none (check further)", "Consistency test.", None, None, "PYQ favourite"),
+F("Cramer's rule", "x = D₁/D, y = D₂/D, z = D₃/D  (D ≠ 0).   D = 0 with some Dᵢ ≠ 0: no solution.   D = 0 and D₁ = D₂ = D₃ = 0: infinitely many or none", "Equations in 2–3 variables.", "Dᵢ = D with the i-th column replaced by B."),
+F("Homogeneous system AX = O", "Always consistent (x = y = z = 0).   Non-trivial solution ⇔ |A| = 0", "'Find k for a non-zero solution' questions.", None, None, "PYQ favourite"),
+F("Characteristic equation (2 × 2)", "A² − (tr A) A + |A| I = O   (Cayley–Hamilton)", "Quickly finding Aⁿ or A⁻¹.", "tr A = sum of the diagonal."),
+F("Trace", "tr(A + B) = tr A + tr B,   tr(kA) = k tr A,   tr(AB) = tr(BA)", "Quick trace questions."),
+],
+"examples": [
+X("3 × 3 determinant", "|1 2 3; 0 4 5; 1 0 6| = ?",
+  f"Along row 1: 1(24 − 0) − 2(0 − 5) + 3(0 − 4) = 24 + 10 − 12 = {d1}.",
+  [(str(d1), "22")]),
+X("2 × 2 inverse", "A = [2 3; 1 4]. A⁻¹?",
+  "|A| = 8 − 3 = 5. adj A = [4 −3; −1 2]. A⁻¹ = (1/5)[4 −3; −1 2]. Check: A·A⁻¹ = I.", []),
+X("Determinants with powers", "A is 3 × 3 with |A| = 4. Find |adj A|, |adj(adj A)| and |2A|.",
+  "|adj A| = |A|² = 16.  |adj(adj A)| = |A|^{(3−1)²} = 4⁴ = 256.  |2A| = 2³ × 4 = 32.", []),
+X("Area of a triangle", "Area of the triangle with vertices (1, 2), (4, 6), (7, 2)?",
+  f"½|1(6 − 2) − 2(4 − 7) + 1(8 − 42)| = ½|4 + 6 − 34| = ½ × 24 = {area4}.",
+  [(str(area4), "12")]),
+X("Solving three equations", "x + y + z = 6,  x − y + z = 2,  2x + y − z = 1.",
+  f"D = |1 1 1; 1 −1 1; 2 1 −1| = {D5} ≠ 0 ⇒ unique solution. By Cramer / A⁻¹B: x = {sol5[0]}, y = {sol5[1]}, z = {sol5[2]}. (First − second gives 2y = 4 ⇒ y = 2 at once.)",
+  [(str(D5), "6")]),
+X("k for infinitely many solutions", "x + y + z = 1,  x + 2y + 3z = 2,  x + 3y + kz = 3. For which k are there infinitely many solutions?",
+  f"D = |1 1 1; 1 2 3; 1 3 k| = k − 5. Unique for k ≠ 5. At k = 5: (eq2 − eq1) and (eq3 − eq2) both give y + 2z = 1 ⇒ consistent ⇒ infinitely many. Answer k = 5.",
+  []),
+X("Non-trivial solution", "kx + y + z = 0,  x + ky + z = 0,  x + y + kz = 0 — when is there a non-trivial solution?",
+  f"|A| = (k + 2)(k − 1)² = 0 ⇒ k = 1 or k = −2.",
+  []),
+X("Inverse by Cayley–Hamilton", "A = [1 2; 3 4]. Write A⁻¹ in terms of A.",
+  "tr A = 5, |A| = −2 ⇒ A² − 5A − 2I = O. Multiplying by A⁻¹: A − 5I − 2A⁻¹ = O ⇒ A⁻¹ = (A − 5I)/2 = [−2 1; 3/2 −1/2].", []),
+],
+"topics": [
+T("Order and equality of matrices", "Order m × n = m rows, n columns. Two matrices are equal only if they have the same order and every entry matches. Addition is defined only for the same order."),
+T("Properties of multiplication", "Associative (AB)C = A(BC), distributive A(B + C) = AB + AC, but not commutative (AB ≠ BA in general). Identity I: AI = IA = A. Hence (A + B)² = A² + AB + BA + B², which equals A² + 2AB + B² only if AB = BA."),
+T("Symmetric and skew-symmetric", "AAᵀ and A + Aᵀ are always symmetric; A − Aᵀ is skew-symmetric. The product of two symmetric matrices is symmetric only if they commute. A skew-symmetric matrix has zero diagonal and, for odd order, zero determinant."),
+T("Strategy to evaluate a determinant", "First use properties: take out common factors, create zeros with Rᵢ → Rᵢ − Rⱼ, then expand along a row/column with zeros. If two rows look proportional the answer is 0 straight away."),
+T("Adjoint and inverse", "Find the cofactors and transpose = adj A. Then divide by |A|. Always check A × A⁻¹ = I. A singular matrix (|A| = 0) has no inverse."),
+T("Consistency — complete flow", "Step 1: find |A|. ≠ 0 ⇒ unique. Step 2: = 0 ⇒ find (adj A)B. ≠ O ⇒ inconsistent (no solution). = O ⇒ compare/eliminate the equations: if they agree, infinitely many; otherwise none."),
+T("Homogeneous system", "x = y = z = 0 is always a solution (trivial). If |A| = 0 there are infinitely many non-trivial ones too. 'Values of k for a non-zero solution' = solve |A| = 0."),
+T("Geometric meaning of a determinant", "In 2D, |det| = area of the parallelogram formed by two vectors; for three points ½|det| = area of the triangle. Area 0 ⇒ the three points are collinear."),
+],
+"ratta": [
+"|kA| = kⁿ|A|;  |adj A| = |A|^{n−1};  |adj adj A| = |A|^{(n−1)²};  adj adj A = |A|^{n−2} A.",
+"A·adj A = |A| I;  A⁻¹ = adj A/|A|.",
+"(AB)ᵀ = BᵀAᵀ;  (AB)⁻¹ = B⁻¹A⁻¹;  adj(AB) = adj B · adj A.",
+"Skew-symmetric of odd order: |A| = 0, diagonal 0.",
+"Homogeneous non-trivial ⇔ |A| = 0.",
+"D ≠ 0 unique;  D = 0 & some Dᵢ ≠ 0 → no solution.",
+"2 × 2: A² − (tr A)A + |A|I = O.",
+"Area = ½|det| (column of 1s);  det = 0 ⇒ collinear.",
+],
+}
+
 if __name__ == "__main__":
     # plain asserts for the symbolic examples (not strings)
     assert d1 == 22 and area4 == 12 and D5 == 6 and list(sol5) == [1, 2, 3]
     assert D6 == k - 5
     assert D7 == (k - 1) ** 2 * (k + 2)
-    build(DOC, SYLLABUS)
+    build(DOC, SYLLABUS, DOC_EN)

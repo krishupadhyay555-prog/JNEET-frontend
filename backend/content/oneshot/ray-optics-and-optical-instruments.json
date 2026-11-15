@@ -1,0 +1,208 @@
+{
+ "slug": "ray-optics-and-optical-instruments",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Ray Optics and Optical Instruments",
+  "JEE": "Ray Optics and Optical Instruments"
+ },
+ "title": "Ray Optics and Optical Instruments",
+ "readMinutes": 24,
+ "summary": [
+  "In ray optics light travels in straight lines (rays). In reflection the angle of incidence equals the angle of reflection; in refraction Snell's law n₁ sin i = n₂ sin r holds. In a denser medium (higher n) light slows down and bends towards the normal.",
+  "All mirror and lens problems use one sign convention (Cartesian: pole/optical centre at origin, direction of light positive) and two formulas: mirror 1/v + 1/u = 1/f, lens 1/v − 1/u = 1/f. Magnification tells the size and whether the image is real or virtual.",
+  "Going from a denser to a rarer medium at more than the critical angle, light is completely reflected back — total internal reflection (optical fibres, sparkle of diamond, mirage). A prism deviates light and splits white light into colours (dispersion).",
+  "Lens power P = 1/f (dioptre, f in metres); powers of lenses in contact simply add. A microscope magnifies small nearby objects; a telescope increases the angle of distant objects — both use two lenses (objective + eyepiece)."
+ ],
+ "formulas": [
+  {
+   "name": "Mirror formula and magnification",
+   "formula": "1/v + 1/u = 1/f;   f = R/2;   m = −v/u = h_i/h_o",
+   "when": "Concave/convex mirrors.",
+   "tag": "PYQ favourite",
+   "note": "Sign convention: u is always negative (object in front). Concave f is negative, convex f positive."
+  },
+  {
+   "name": "Snell's law and refractive index",
+   "formula": "n₁ sin i = n₂ sin r;   n = c/v;   ₁n₂ = n₂/n₁ = v₁/v₂ = λ₁/λ₂",
+   "when": "Refraction between two media.",
+   "mistake": "Frequency does NOT change between media — speed and wavelength do."
+  },
+  {
+   "name": "Apparent depth (normal view)",
+   "formula": "apparent depth = real depth / n;   shift = t(1 − 1/n)",
+   "when": "Objects under water look raised.",
+   "note": "Viewing from the rarer medium, divide; viewing from inside the denser medium outward, multiply."
+  },
+  {
+   "name": "Critical angle and TIR",
+   "formula": "sin C = 1/n  (n = denser/rarer);   TIR when light goes dense → rare with i > C",
+   "when": "Optical fibres, prisms, diamonds.",
+   "mistake": "TIR happens only going from denser to rarer — never the other way."
+  },
+  {
+   "name": "Refraction at a spherical surface",
+   "formula": "n₂/v − n₁/u = (n₂ − n₁)/R",
+   "when": "Glass spheres, curved surfaces, bubbles.",
+   "note": "Sign of R: positive if the centre lies on the refracted (outgoing) side."
+  },
+  {
+   "name": "Thin lens formula and magnification",
+   "formula": "1/v − 1/u = 1/f;   m = v/u",
+   "when": "Convex/concave lenses.",
+   "mistake": "The lens formula has a minus sign, unlike the mirror formula — don't mix them."
+  },
+  {
+   "name": "Lens maker's formula",
+   "formula": "1/f = (n_lens/n_medium − 1)(1/R₁ − 1/R₂)",
+   "when": "f of a lens from its shape; effect of the surrounding medium.",
+   "note": "In a medium denser than the lens, a convex lens becomes diverging."
+  },
+  {
+   "name": "Power of a lens and combination",
+   "formula": "P = 1/f (f in metres, unit dioptre D);   in contact P = P₁ + P₂, 1/F = 1/f₁ + 1/f₂;   separated by d: 1/F = 1/f₁ + 1/f₂ − d/(f₁f₂)",
+   "when": "Spectacles, combining lenses.",
+   "note": "With f in cm, P = 100/f."
+  },
+  {
+   "name": "Prism (angle A)",
+   "formula": "r₁ + r₂ = A;   δ = i + e − A;   minimum deviation: i = e, r = A/2, n = sin[(A + δ_m)/2] / sin(A/2)",
+   "when": "Deviation in a prism, finding n.",
+   "tag": "PYQ favourite",
+   "note": "At minimum deviation the ray inside is parallel to the base — remember r = A/2."
+  },
+  {
+   "name": "Thin prism",
+   "formula": "δ = (n − 1)A",
+   "when": "Small-angle prism (A < 10°).",
+   "mistake": "Don't use this for large-angle prisms."
+  },
+  {
+   "name": "Dispersion",
+   "formula": "Angular dispersion = (n_v − n_r)A;   dispersive power ω = (n_v − n_r)/(n − 1)",
+   "when": "Colours of white light.",
+   "note": "Violet bends most and red least — because n_violet > n_red."
+  },
+  {
+   "name": "Simple microscope (magnifying glass)",
+   "formula": "Image at near point: m = 1 + D/f;   at infinity: m = D/f   (D = 25 cm)",
+   "when": "Reading lens, watchmaker's lens.",
+   "note": "Smaller f = larger magnification."
+  },
+  {
+   "name": "Compound microscope",
+   "formula": "m = m_o × m_e;   image at infinity (normal adjustment): m ≈ (L/f_o)(D/f_e);   at near point: (L/f_o)(1 + D/f_e)",
+   "when": "Magnifying power of a microscope.",
+   "note": "BOTH objective and eyepiece should have small f."
+  },
+  {
+   "name": "Astronomical telescope",
+   "formula": "Normal adjustment: m = f_o/f_e, length = f_o + f_e;   image at near point: m = (f_o/f_e)(1 + f_e/D)",
+   "when": "Refracting telescope.",
+   "note": "Objective f is LARGE (more light, more m); eyepiece f small."
+  },
+  {
+   "name": "Mirror/lens image rules",
+   "formula": "Convex mirror and concave lens: always virtual, erect, diminished image.  Real images are always inverted (m negative)",
+   "when": "Quickly telling the image type.",
+   "mistake": "A virtual image cannot be caught on a screen — it is seen by the eye."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Concave mirror",
+   "problem": "A concave mirror has f = 15 cm and the object is 20 cm away. Where is the image and what is it like?",
+   "solution": "1/v = 1/f − 1/u = −1/15 + 1/20 = −1/60 ⇒ v = −60 cm (in front of the mirror, real). m = −v/u = −3 ⇒ 3 times larger, inverted."
+  },
+  {
+   "title": "Convex lens",
+   "problem": "Convex lens f = 20 cm, object at 30 cm. Image?",
+   "solution": "1/v = 1/f + 1/u = 1/20 − 1/30 = 1/60 ⇒ v = +60 cm (other side, real). m = v/u = −2 (twice the size, inverted)."
+  },
+  {
+   "title": "Lens maker: air and water",
+   "problem": "Biconvex lens, |R₁| = |R₂| = 20 cm, n = 1.5. f in air? f in water (n = 4/3)?",
+   "solution": "Air: 1/f = 0.5 × (1/20 + 1/20) ⇒ f = 20 cm. Water: 1/f = (1.5/1.333 − 1)(1/10) = 0.125 × 0.1 ⇒ f = 80 cm (four times longer)."
+  },
+  {
+   "title": "Critical angle",
+   "problem": "Critical angle for glass (n = 1.5) with air?",
+   "solution": "sin C = 1/1.5 ⇒ C ≈ 41.8°. At larger angles light stays inside the glass."
+  },
+  {
+   "title": "Depth of a tank",
+   "problem": "Water (n = 4/3) is 2 m deep. How deep does it look from above?",
+   "solution": "Apparent depth = 2/(4/3) = 1.5 m. The bottom appears raised by 0.5 m."
+  },
+  {
+   "title": "n from a prism",
+   "problem": "An equilateral prism (A = 60°) has minimum deviation 30°. n?",
+   "solution": "n = sin[(60 + 30)/2]/sin 30° = sin 45°/0.5 = √2 ≈ 1.414."
+  },
+  {
+   "title": "Combination of lenses",
+   "problem": "f₁ = +20 cm and f₂ = −40 cm in contact. Total power and focal length?",
+   "solution": "P = 100/20 + 100/(−40) = 5 − 2.5 = 2.5 D. F = 100/2.5 = 40 cm (converging)."
+  },
+  {
+   "title": "Compound microscope",
+   "problem": "f_o = 1 cm, f_e = 5 cm, tube length L = 20 cm, normal adjustment (D = 25 cm). Magnifying power?",
+   "solution": "m ≈ (L/f_o)(D/f_e) = 20 × 5 = 100."
+  },
+  {
+   "title": "Telescope",
+   "problem": "f_o = 100 cm, f_e = 5 cm, normal adjustment. Magnifying power and tube length?",
+   "solution": "m = f_o/f_e = 20. Length = f_o + f_e = 105 cm."
+  },
+  {
+   "title": "Refraction at a curved surface",
+   "problem": "A point object in air is 30 cm from a convex glass surface (n = 1.5, R = 10 cm). Where is the image?",
+   "solution": "n₂/v − n₁/u = (n₂ − n₁)/R ⇒ 1.5/v + 1/30 = 0.5/10 ⇒ 1.5/v = 1/60 ⇒ v = 90 cm (inside the glass, real)."
+  },
+  {
+   "title": "Thin prism",
+   "problem": "Deviation by a thin prism with A = 4°, n = 1.5?",
+   "solution": "δ = (n − 1)A = 0.5 × 4 = 2°."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Reflection by spherical mirrors",
+   "explain": "Concave mirror (converging) — real or virtual images; with the object inside F the image is virtual, erect and magnified (shaving mirror). Convex mirror (diverging) — always a smaller virtual image with a wide view (vehicle side mirror). Parallel rays pass through the focus F; f = R/2."
+  },
+  {
+   "title": "Refraction at plane surface",
+   "explain": "Light bends towards the normal in a denser medium. A pencil in water looks bent, a swimming pool looks shallower, and stars twinkle (the atmosphere's changing n)."
+  },
+  {
+   "title": "Applications of total internal reflection",
+   "explain": "Optical fibres (light travels in the core by repeated TIR — internet, endoscopy), sparkle of diamond (C ≈ 24°), mirage (air layers over a hot road), totally reflecting prisms (periscopes, binoculars)."
+  },
+  {
+   "title": "Lenses: image formation",
+   "explain": "Convex lens: object beyond 2F — smaller real image; at 2F — same size; between F and 2F — larger real image; inside F — virtual, erect, magnified (magnifier). A concave lens always forms a smaller virtual image."
+  },
+  {
+   "title": "Refraction through a prism",
+   "explain": "Deviation first decreases with i, reaches a minimum (δ_m) where i = e, then increases. Minimum deviation is used to measure n. Rainbows and prism spectra come from dispersion — VIBGYOR, violet bends most."
+  },
+  {
+   "title": "Optical instruments",
+   "explain": "A simple microscope is a single convex lens. Compound microscope: a short-focus objective forms a real magnified image which the eyepiece magnifies further. Refracting telescope: large-focus objective. Reflecting telescope (concave mirror objective, Newtonian/Cassegrain): no chromatic aberration, a large aperture is cheaper, and images are brighter."
+  },
+  {
+   "title": "The human eye (related)",
+   "explain": "Near point D = 25 cm, far point at infinity. Myopia (can see near): concave lens. Hypermetropia (can see far): convex lens. Presbyopia: bifocal lenses. Astigmatism: cylindrical lens."
+  }
+ ],
+ "ratta": [
+  "Mirror 1/v + 1/u = 1/f;  lens 1/v − 1/u = 1/f.",
+  "m_mirror = −v/u;  m_lens = v/u.",
+  "sin C = 1/n;  glass C ≈ 42°, water ≈ 49°, diamond ≈ 24°.",
+  "n = sin[(A + δ_m)/2]/sin(A/2);  thin prism δ = (n − 1)A.",
+  "P = 1/f (m);  in contact P = P₁ + P₂.",
+  "Microscope m ≈ (L/f_o)(D/f_e);  telescope m = f_o/f_e, L = f_o + f_e.",
+  "Apparent depth = real/n.",
+  "Frequency doesn't change; v and λ do."
+ ]
+}

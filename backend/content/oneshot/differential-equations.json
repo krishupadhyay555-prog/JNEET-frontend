@@ -38,24 +38,24 @@
   },
   {
    "name": "Linear first-order",
-   "formula": "dy/dx + P(x)y = Q(x):  IF = e^(∫P dx);  y·IF = ∫Q·IF dx + C",
+   "formula": "dy/dx + P(x)y = Q(x):  IF = e^{∫P dx};  y·IF = ∫Q·IF dx + C",
    "when": "Integrating factor method.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Linear in x",
-   "formula": "dx/dy + P(y)x = Q(y):  IF = e^(∫P dy);  x·IF = ∫Q·IF dy + C",
+   "formula": "dx/dy + P(y)x = Q(y):  IF = e^{∫P dy};  x·IF = ∫Q·IF dy + C",
    "when": "When the equation is linear in x."
   },
   {
    "name": "Exponential growth/decay",
-   "formula": "dN/dt = kN ⇒ N = N₀e^(kt);  half-life = ln 2/|k|",
+   "formula": "dN/dt = kN ⇒ N = N₀e^{kt};  half-life = ln 2/|k|",
    "when": "Population, radioactive decay, compound interest.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Newton's law of cooling",
-   "formula": "dT/dt = −k(T − Tₛ) ⇒ T − Tₛ = (T₀ − Tₛ)e^(−kt)",
+   "formula": "dT/dt = −k(T − Tₛ) ⇒ T − Tₛ = (T₀ − Tₛ)e^{−kt}",
    "when": "Cooling problems."
   },
   {
@@ -78,12 +78,12 @@
   {
    "title": "Separable",
    "problem": "Solve dy/dx = 2xy.",
-   "solution": "dy/y = 2x dx ⇒ ln|y| = x² + c ⇒ y = Ce^(x²)."
+   "solution": "dy/y = 2x dx ⇒ ln|y| = x² + c ⇒ y = Ce^{x²}."
   },
   {
    "title": "Linear",
-   "problem": "Solve dy/dx + y = e^(−x).",
-   "solution": "IF = eˣ ⇒ y eˣ = ∫e^(−x)eˣ dx = x + C ⇒ y = (x + C)e^(−x)."
+   "problem": "Solve dy/dx + y = e^{−x}.",
+   "solution": "IF = eˣ ⇒ y eˣ = ∫e^{−x}eˣ dx = x + C ⇒ y = (x + C)e^{−x}."
   },
   {
    "title": "Initial value problem",
@@ -129,9 +129,9 @@
  ],
  "ratta": [
   "Order = highest derivative;  degree = its power.",
-  "IF = e^(∫P dx);  y·IF = ∫Q·IF dx + C.",
+  "IF = e^{∫P dx};  y·IF = ∫Q·IF dx + C.",
   "Homogeneous: y = vx.",
-  "N = N₀e^(kt);  half-life ln 2/k.",
+  "N = N₀e^{kt};  half-life ln 2/k.",
   "d(xy) = x dy + y dx;  d(y/x) = (x dy − y dx)/x².",
   "n constants → order n DE."
  ],

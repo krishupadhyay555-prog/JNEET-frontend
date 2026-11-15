@@ -120,7 +120,7 @@
   {
    "title": "Kepler's third law",
    "problem": "A geostationary satellite (T = 24 h) has orbital radius r. Period at radius r/4?",
-   "solution": "T ∝ r^(3/2): (1/4)^(3/2) = 1/8 → T = 24/8 = 3 h."
+   "solution": "T ∝ r^{3/2}: (1/4)^{3/2} = 1/8 → T = 24/8 = 3 h."
   },
   {
    "title": "Escape speed of another planet",

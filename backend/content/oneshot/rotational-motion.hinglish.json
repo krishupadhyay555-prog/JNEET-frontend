@@ -1,126 +1,215 @@
 {
  "slug": "rotational-motion",
  "subject": "Physics",
+ "verifiedOn": "2026-11-15",
  "chapters": {
   "NEET": "System of Particles and Rotational Motion",
   "JEE": "System of Particles and Rotational Motion"
  },
- "title": "System of Particles & Rotational Motion",
- "readMinutes": 14,
+ "title": "System of Particles and Rotational Motion",
+ "readMinutes": 22,
  "summary": [
-  "Rotation, translation ki copy hai: F ↔ τ, m ↔ I, v ↔ ω, a ↔ α, p ↔ L. Linear motion ka har formula likho aur uska rotational jodidaar bana lo — aadha chapter wahin ho jaata hai.",
-  "Centre of mass (CM) wo point hai jo aise chalta hai jaise poora mass wahin ho aur saari external force wahin lag rahi ho. Internal forces CM ki motion kabhi nahi badalti.",
-  "Torque batata hai ki force kitna ghumayegi; moment of inertia (I) batata hai ki ghumana kitna mushkil hai — ye mass ke saath-saath is par bhi depend karta hai ki mass axis se kitna door hai.",
-  "Exam ke teen core: (1) standard MI + parallel/perpendicular axis theorem, (2) angular momentum conservation, (3) rolling motion — energy aur incline par acceleration."
+  "Kai particles ya rigid body ki translation ko ek point — centre of mass (COM) — se samjhte hain: poora external force COM par laga maan lo, Ma_cm = F_ext. Internal forces COM ki motion nahi badalte.",
+  "Rotation mein har linear cheez ka ek jodidaar hai: displacement → θ, velocity → ω, acceleration → α, mass → moment of inertia I, force → torque τ, momentum → angular momentum L. Formula bhi same shape ke: τ = Iα, L = Iω, KE = ½Iω².",
+  "Moment of inertia mass ke saath-saath mass ke axis se door hone par depend karta hai (I = Σmr²). Standard bodies ke I ratta maaro; doosre axis ke liye parallel axis (I = I_cm + Md²) aur perpendicular axis (I_z = I_x + I_y, sirf planar body) theorem.",
+  "External torque zero ho to angular momentum conserve hota hai (Iω constant) — skater haath sikodta hai to tez ghoomta hai. Rolling without slipping mein v = ωR, aur KE = ½mv²(1 + k²/R²); incline par jiska k²/R² kam woh pehle neeche pahunchta hai."
  ],
  "formulas": [
   {
    "name": "Centre of mass",
-   "formula": "x_cm = Σmᵢxᵢ / Σmᵢ",
-   "when": "Point masses ya alag-alag tukdon ka CM.",
-   "mistake": "Saare x ek hi origin se naapo."
+   "formula": "x_cm = Σmᵢxᵢ / Σmᵢ;   continuous: x_cm = ∫x dm / ∫dm;   r_cm = Σmᵢrᵢ / M",
+   "when": "Particles ya body ka COM.",
+   "note": "COM body ke bahar bhi ho sakta hai (ring, L-shape)."
+  },
+  {
+   "name": "Standard centres of mass",
+   "formula": "semicircular ring 2R/π;  semicircular disc 4R/3π;  solid hemisphere 3R/8;  hollow hemisphere R/2;  solid cone h/4 (base se)",
+   "when": "Shapes ke COM ratta.",
+   "tag": "PYQ favourite",
+   "note": "Saari doori flat side / centre se naapi gayi hain."
+  },
+  {
+   "name": "Motion of centre of mass",
+   "formula": "M v_cm = Σ mᵢvᵢ (total momentum);   M a_cm = F_ext;   F_ext = 0 ⇒ v_cm constant",
+   "when": "Explosion, internal forces wale sawal.",
+   "note": "Explosion ke baad bhi COM wahi parabola follow karta hai."
+  },
+  {
+   "name": "Rotational kinematics",
+   "formula": "ω = ω₀ + αt;   θ = ω₀t + ½αt²;   ω² = ω₀² + 2αθ;   v = ωr, a_t = αr",
+   "when": "Constant α par ghoomna.",
+   "note": "θ radian mein; rev ko 2π se multiply karo."
   },
   {
    "name": "Torque",
-   "formula": "τ = r × F,  |τ| = r F sinθ",
-   "when": "Force axis se door lage to ghumane wala asar.",
-   "unit": "N·m",
-   "mistake": "r = axis se force ki line tak ki perpendicular doori, rod ki poori length nahi."
+   "formula": "τ = r × F;   |τ| = rF sinθ = F × (perpendicular distance)",
+   "when": "Ghumaane wala asar.",
+   "mistake": "Axis se guzarne wala force torque nahi deta."
   },
   {
-   "name": "Newton's 2nd law (rotation)",
-   "formula": "τ = I α",
-   "when": "Fixed axis ke about angular acceleration.",
-   "mistake": "τ aur I dono SAME axis ke about lo."
+   "name": "Newton's second law for rotation",
+   "formula": "τ_net = Iα",
+   "when": "Pulley, ghoomti disc.",
+   "note": "I usi axis ke baare mein lo jiske baare mein τ liya."
   },
   {
    "name": "Angular momentum",
-   "formula": "L = r × p = I ω,   τ_ext = dL/dt",
-   "when": "τ_ext = 0 ho to L conserve hota hai.",
-   "unit": "kg·m²/s"
+   "formula": "L = r × p;   rigid body: L = Iω;   τ = dL/dt",
+   "when": "Ghoomti body ka momentum.",
+   "note": "Seedhi line mein chalti particle ka bhi kisi point ke baare mein L hota hai (= mvr⊥)."
   },
   {
-   "name": "Moment of inertia",
-   "formula": "I = Σ m r²  = M k²",
-   "when": "Kisi bhi axis ke about; k = radius of gyration.",
-   "unit": "kg·m²"
+   "name": "Conservation of angular momentum",
+   "formula": "τ_ext = 0 ⇒ I₁ω₁ = I₂ω₂",
+   "when": "Skater, ghoomti stool, planet orbit.",
+   "mistake": "L conserve hota hai, rotational KE nahi (haath sikodne par KE badhti hai).",
+   "tag": "PYQ favourite"
   },
   {
-   "name": "Standard MI (ratta)",
-   "formula": "Ring (axis) MR² · Disc (axis) ½MR² · Solid sphere (diameter) ⅖MR² · Hollow sphere ⅔MR² · Rod (centre, ⊥) ML²/12 · Rod (end, ⊥) ML²/3",
-   "when": "Seedha use hote hain — inhe yaad karo.",
-   "tag": "Ratta"
+   "name": "Moment of inertia and radius of gyration",
+   "formula": "I = Σmr² = ∫r² dm;   I = Mk²  (k = radius of gyration)",
+   "when": "Rotational inertia.",
+   "note": "I axis par depend karta hai — 'disc ka I' tab tak adhoora jab tak axis na bataya ho."
+  },
+  {
+   "name": "Standard moments of inertia",
+   "formula": "ring (centre ⊥) MR²;  disc ½MR²;  hollow sphere ⅔MR²;  solid sphere ⅖MR²;  rod (centre ⊥) ML²/12;  rod (end) ML²/3;  ring (diameter) ½MR²;  disc (diameter) ¼MR²;  solid cylinder (axis) ½MR²",
+   "when": "Ratta list.",
+   "tag": "PYQ favourite"
   },
   {
    "name": "Parallel axis theorem",
-   "formula": "I = I_cm + M d²",
-   "when": "CM wali axis se parallel shift.",
-   "mistake": "Sirf us axis se shift karo jo CM se guzarti hai.",
-   "tag": "PYQ favourite"
+   "formula": "I = I_cm + Md²",
+   "when": "COM se d door parallel axis.",
+   "mistake": "Sirf COM wale axis se shuru karo, kisi aur se nahi."
   },
   {
    "name": "Perpendicular axis theorem",
    "formula": "I_z = I_x + I_y",
-   "when": "Sirf flat (laminar) bodies: ring, disc, plate.",
-   "mistake": "3D body (sphere, cylinder) par mat lagao."
+   "when": "Planar (flat) body — ring, disc, plate.",
+   "mistake": "3-D body (sphere, cylinder) par mat lagao."
   },
   {
-   "name": "Rotational KE, work, power",
-   "formula": "KE = ½ I ω²,   W = τ θ,   P = τ ω",
-   "when": "Energy method wale sawal."
+   "name": "Rotational KE, work and power",
+   "formula": "K = ½Iω²;   W = ∫τ dθ;   P = τω",
+   "when": "Flywheel, motor.",
+   "mistake": "W = τθ sirf constant torque par."
   },
   {
    "name": "Rolling without slipping",
-   "formula": "v = R ω,   KE = ½ m v² (1 + k²/R²),   a = g sinθ / (1 + k²/R²)",
-   "when": "Incline par rolling, race wale sawal.",
-   "mistake": "Pure rolling mein friction koi kaam nahi karta.",
+   "formula": "v_cm = ωR;   K = ½mv²(1 + k²/R²);   incline: a = g sinθ/(1 + k²/R²);   v = √[2gh/(1 + k²/R²)]",
+   "when": "Ball, cylinder, ring ludhak rahe hain.",
+   "mistake": "Rolling mein contact point ki velocity zero; friction kaam nahi karta (energy conserve).",
    "tag": "PYQ favourite"
+  },
+  {
+   "name": "Which rolls down first",
+   "formula": "k²/R²: solid sphere 2/5 < disc/solid cylinder 1/2 < hollow sphere 2/3 < ring 1 ⇒ solid sphere pehle, ring aakhir mein",
+   "when": "Race on an incline.",
+   "mistake": "Mass aur radius se farak nahi padta — sirf shape (k²/R²)."
+  },
+  {
+   "name": "Equilibrium of a rigid body",
+   "formula": "ΣF = 0 (translational) aur Στ = 0 kisi bhi point ke baare mein (rotational);   couple: net force 0, torque F × d",
+   "when": "Seesaw, ladder, beam.",
+   "note": "Torque ka point aisa chuno jahan unknown forces lag rahe hon — equations chhoti ho jaati hain."
   }
  ],
  "examples": [
   {
-   "title": "Darwaza aur torque",
-   "problem": "10 N ki force darwaze par hinge se 0.5 m door, perpendicular lagti hai. Torque? Wahi force 0.1 m par lage to?",
-   "solution": "τ = rF = 0.5 × 10 = 5 N·m. 0.1 m par τ = 1 N·m — 5 guna kam. Isliye handle hinge se door lagaya jaata hai."
+   "title": "Do particles ka COM",
+   "problem": "2 kg x = 0 par aur 3 kg x = 5 m par. COM?",
+   "solution": "x_cm = (0 + 15)/5 = 3 m — bhaari mass ki taraf."
   },
   {
-   "title": "Skater ka spin",
-   "problem": "Skater ka I = 4 kg·m², ω = 2 rad/s. Haath andar karke I = 1 kg·m². Naya ω aur KE?",
-   "solution": "L conserve: 4 × 2 = 1 × ω' ⇒ ω' = 8 rad/s. KE pehle ½·4·2² = 8 J, baad mein ½·1·8² = 32 J. Extra energy skater ki muscles ke kaam se aati hai."
+   "title": "Disc: centre aur rim",
+   "problem": "2 kg, R = 0.5 m disc. Centre ke perpendicular axis aur rim par parallel axis ke baare mein I?",
+   "solution": "I_cm = ½MR² = 0.25 kg·m². Rim par: I = I_cm + MR² = 0.75 kg·m² (= 3/2 MR²)."
   },
   {
-   "title": "Incline race",
-   "problem": "Ring, disc aur solid sphere ek hi height se incline par bina slip ke rolling karte hain. Pehle kaun pahunchega?",
-   "solution": "a = g sinθ / (1 + k²/R²). k²/R²: ring 1, disc ½, sphere ⅖ ⇒ a = ½, ⅔, 5/7 (× g sinθ). Solid sphere sabse tez, ring sabse slow — mass aur radius se farak nahi padta."
+   "title": "Rod ke end par I",
+   "problem": "3 kg, 2 m rod, ek end se perpendicular axis. I?",
+   "solution": "I = ML²/3 = 3 × 4/3 = 4 kg·m²."
+  },
+  {
+   "title": "Torque",
+   "problem": "Spanner par 10 N force 0.5 m door, spanner se 30° angle par. Torque?",
+   "solution": "τ = rF sinθ = 0.5 × 10 × 0.5 = 2.5 N·m."
+  },
+  {
+   "title": "Skater",
+   "problem": "Skater I = 4 kg·m², ω = 3 rad/s. Haath sikodkar I = 2 kg·m². Naya ω aur KE?",
+   "solution": "I₁ω₁ = I₂ω₂ ⇒ ω₂ = 12/2 = 6 rad/s. KE: 18 J se 36 J — badhi (muscles ne kaam kiya)."
+  },
+  {
+   "title": "Incline par solid sphere",
+   "problem": "Solid sphere 30° incline par bina slip ludhakta hai, height 7 m (g = 10). Acceleration aur neeche speed?",
+   "solution": "a = g sinθ/(1 + 2/5) = 5/1.4 ≈ 3.57 m/s². v = √(2gh/1.4) = √100 = 10 m/s."
+  },
+  {
+   "title": "Rolling disc ki KE",
+   "problem": "2 kg disc 4 m/s se roll kar rahi hai. Total KE?",
+   "solution": "K = ½mv²(1 + ½) = ½ × 2 × 16 × 1.5 = 24 J (iska 1/3 rotational)."
+  },
+  {
+   "title": "Flywheel",
+   "problem": "Flywheel rest se α = 2 rad/s² se 5 s ghoomta hai. ω aur θ?",
+   "solution": "ω = αt = 10 rad/s. θ = ½αt² = 25 rad."
+  },
+  {
+   "title": "Radius of gyration",
+   "problem": "1 m radius ring ka diameter ke baare mein k?",
+   "solution": "I = ½MR² = Mk² ⇒ k = R/√2 ≈ 0.71 m."
+  },
+  {
+   "title": "Motor ki power",
+   "problem": "Motor 20 N·m torque se 50 rad/s par ghumaata hai. Power?",
+   "solution": "P = τω = 20 × 50 = 1000 W."
+  },
+  {
+   "title": "Seesaw",
+   "problem": "30 kg bachcha pivot se 2 m door. 40 kg bachcha kahan baithe ki balance ho?",
+   "solution": "30 × 2 = 40 × x ⇒ x = 1.5 m."
   }
  ],
  "topics": [
   {
-   "title": "CM ki motion",
-   "explain": "M a_cm = F_ext. Projectile hawa mein phat jaaye to bhi tukdon ka CM usi parabola par chalta rehta hai, kyunki explosion internal force hai."
+   "title": "Rigid body aur motion ke prakaar",
+   "explain": "Rigid body mein particles ki doori nahi badalti. Motion: pure translation (sab points same velocity), pure rotation (fixed axis ke chaaron taraf), ya dono (rolling)."
   },
   {
-   "title": "Equilibrium",
-   "explain": "Rigid body equilibrium ke liye do shartein: ΣF = 0 (translation) aur Στ = 0 (rotation, kisi bhi point ke about)."
+   "title": "Centre of mass vs centre of gravity",
+   "explain": "COM mass distribution se tay hota hai; uniform g mein centre of gravity wahi point. Symmetric uniform body ka COM geometric centre par. COM par lagaaya force sirf translation deta hai."
   },
   {
-   "title": "Moment of inertia ka matlab",
-   "explain": "Same mass, axis se door ho to I zyada. Isliye ring ka I (MR²) disc (½MR²) se zyada hota hai — ring ka saara mass rim par hai."
+   "title": "Torque aur angular momentum ka matlab",
+   "explain": "Torque ghumaane ki koshish hai — darwaze ka handle hinge se door isliye lagta hai. Angular momentum ghoomne ka 'momentum' hai. Particle ka L = mvr⊥ kisi bhi point ke baare mein."
   },
   {
-   "title": "Angular momentum conservation",
-   "explain": "Bahar se torque nahi ⇒ Iω constant. Skater, diver aur ghoomti kursi par baitha student haath phailaye to dheema, sametey to tez."
+   "title": "Moment of inertia kis par depend",
+   "explain": "Mass, mass ka distribution aur axis ki position. Same mass ki ring ka I disc se zyada (saara mass rim par). Flywheel ka zyada mass rim par rakhte hain taaki rotation smooth rahe."
+  },
+  {
+   "title": "Linear vs rotational analogy",
+   "explain": "x ↔ θ, v ↔ ω, a ↔ α, m ↔ I, F ↔ τ, p ↔ L, F = ma ↔ τ = Iα, KE ½mv² ↔ ½Iω², P = Fv ↔ τω. Ek yaad to doosra apne aap."
   },
   {
    "title": "Rolling motion",
-   "explain": "Pure rolling mein contact point ek pal ke liye ruka hota hai (v = Rω). Total KE = translational + rotational; jitna zyada k²/R², utni zyada energy rotation mein, utna slow translation."
+   "explain": "Rolling = translation + rotation. Top point ki speed 2v, contact point zero. Static friction rolling banaata hai par kaam nahi karta. Smooth incline par body sirf slide karegi, roll nahi."
+  },
+  {
+   "title": "Conservation of angular momentum ke examples",
+   "explain": "Skater/dancer haath sikodta hai — I ghata, ω badha. Diver hawa mein body mod kar zyada somersault karta hai. Ghoomte stool par aadmi dumbbells andar kheenchta hai. Planets suraj ke paas tez chalte hain (Kepler ka doosra niyam)."
   }
  ],
  "ratta": [
-  "Standard MI list (upar formula card).",
-  "k²/R²: ring 1 · disc ½ · solid sphere ⅖ · hollow sphere ⅔.",
-  "Incline race: solid sphere > disc > hollow sphere > ring.",
-  "Unit: torque N·m (joule mat likho), L kg·m²/s."
- ],
- "verifiedOn": "2026-11-12"
+  "Ma_cm = F_ext;  internal forces COM nahi hilaate.",
+  "τ = Iα;  L = Iω;  K = ½Iω²;  P = τω.",
+  "Ring MR², disc ½MR², solid sphere ⅖MR², hollow sphere ⅔MR², rod ML²/12 (centre), ML²/3 (end).",
+  "I = I_cm + Md²;  I_z = I_x + I_y (planar).",
+  "τ = 0 ⇒ I₁ω₁ = I₂ω₂.",
+  "Rolling: v = ωR;  a = g sinθ/(1 + k²/R²).",
+  "Race: solid sphere > disc > hollow sphere > ring.",
+  "COM: semicircular ring 2R/π, disc 4R/3π, solid hemisphere 3R/8."
+ ]
 }

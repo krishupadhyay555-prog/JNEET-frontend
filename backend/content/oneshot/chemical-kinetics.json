@@ -11,7 +11,7 @@
   "Chemical kinetics is about how fast reactions go. Rate = change in concentration per unit time, divided by the stoichiometric coefficient so that it is the same for every species.",
   "The rate law (rate = k[A]ˣ[B]ʸ) is found by experiment. The order (x + y) can be 0, fractional or whole; molecularity applies only to elementary steps and is always a whole number.",
   "Integrated rate laws: zero order [A] = [A]₀ − kt (t½ ∝ [A]₀); first order ln([A]₀/[A]) = kt (t½ = 0.693/k, independent of concentration).",
-  "Rates rise sharply with temperature (Arrhenius: k = Ae^(−Ea/RT)) because more molecules have energy above Ea. Catalysts lower Ea without changing ΔH or equilibrium."
+  "Rates rise sharply with temperature (Arrhenius: k = Ae^{−Ea/RT}) because more molecules have energy above Ea. Catalysts lower Ea without changing ΔH or equilibrium."
  ],
  "formulas": [
   {
@@ -57,7 +57,7 @@
   },
   {
    "name": "Arrhenius equation",
-   "formula": "k = A e^(−Ea/RT);  log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂)",
+   "formula": "k = A e^{−Ea/RT};  log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂)",
    "when": "Effect of temperature, finding Ea.",
    "note": "Use kelvin, and R = 8.314 J mol⁻¹ K⁻¹ with Ea in joules."
   },
@@ -68,7 +68,7 @@
   },
   {
    "name": "Collision theory",
-   "formula": "rate = Z_AB e^(−Ea/RT) × P  (P = steric/orientation factor)",
+   "formula": "rate = Z_AB e^{−Ea/RT} × P  (P = steric/orientation factor)",
    "when": "Why only some collisions react."
   }
  ],
@@ -141,7 +141,7 @@
   "Zero: t½ = [A]₀/2k;  first: t½ = 0.693/k (no [A]₀).",
   "k = (2.303/t) log([A]₀/[A]).",
   "t₉₉.₉ ≈ 10 t½;  t₇₅ = 2t½.",
-  "k = Ae^(−Ea/RT);  slope of ln k vs 1/T = −Ea/R.",
+  "k = Ae^{−Ea/RT};  slope of ln k vs 1/T = −Ea/R.",
   "Catalyst lowers Ea; no change in ΔH or K."
  ],
  "verifiedOn": "2026-11-13"

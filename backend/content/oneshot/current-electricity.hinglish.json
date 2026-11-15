@@ -1,118 +1,209 @@
 {
  "slug": "current-electricity",
  "subject": "Physics",
+ "verifiedOn": "2026-11-15",
  "chapters": {
   "NEET": "Current Electricity",
   "JEE": "Current Electricity"
  },
  "title": "Current Electricity",
- "readMinutes": 13,
+ "readMinutes": 20,
  "summary": [
-  "Current = charge ka flow. Wire mein electrons ka asli 'drift' bahut dheema hota hai (mm/s), lekin electric field poore circuit mein turant set ho jaati hai — isliye bulb switch dabate hi jalta hai.",
-  "Resistance material (resistivity ρ), length aur area par depend karta hai: R = ρL/A. Metals garam hone par zyada resist karte hain; semiconductors kam.",
-  "Har circuit sawal do niyamon se solve hota hai: Kirchhoff junction rule (charge conservation) aur loop rule (energy conservation). Series/parallel unhi ka shortcut hai.",
-  "Real cell ki internal resistance hoti hai, isliye current chalte waqt terminal voltage emf se kam hota hai. Bridges (Wheatstone, meter bridge) balance point se resistance naapte hain."
+  "Current = charge flow ki rate, I = dq/dt. Conductor mein electrons random ghoomte hain; field lagne par unhe ek chhoti average drift velocity milti hai (~10⁻⁴ m/s) — I = neAv_d. Bulb turant isliye jalta hai kyunki field poori wire mein lagbhag light ki speed se failta hai.",
+  "Ohm's law V = IR (constant temperature par). Resistance material (ρ), lambai aur area par depend karta hai: R = ρl/A. Metals ka resistance temperature ke saath badhta hai, semiconductors ka ghatta hai.",
+  "Real cell ka emf E aur internal resistance r: terminal voltage V = E − Ir (discharge). Series mein R jodte hain, parallel mein 1/R. Power P = VI = I²R = V²/R; max power tab jab load R = r.",
+  "Kirchhoff ke do niyam (junction: ΣI = 0 — charge conservation; loop: ΣV = 0 — energy conservation) se koi bhi circuit hal hota hai. Wheatstone bridge balance P/Q = R/S; meter bridge isi se unknown resistance naapta hai."
  ],
  "formulas": [
   {
-   "name": "Current and drift speed",
-   "formula": "I = dq/dt = n e A v_d",
-   "when": "Wire mein current ko electrons ki speed se jodna.",
-   "unit": "A (ampere)"
+   "name": "Electric current",
+   "formula": "I = dq/dt;   average I = Δq/Δt;   1 A = 1 C/s",
+   "when": "Current ki definition.",
+   "mistake": "Current scalar hai — direction hote hue bhi vector ki tarah nahi judta."
+  },
+  {
+   "name": "Drift velocity and mobility",
+   "formula": "I = neAv_d;   v_d = eEτ/m;   mobility μ = v_d/E = eτ/m",
+   "when": "Electrons ki average speed.",
+   "mistake": "v_d bahut chhoti (~mm/s) hai; electrons ki thermal speed ~10⁵ m/s alag cheez hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Current density and microscopic Ohm's law",
+   "formula": "J = I/A = nev_d;   J = σE;   σ = 1/ρ = ne²τ/m",
+   "when": "Field aur current ka local relation.",
+   "note": "J vector hai, I scalar."
   },
   {
    "name": "Ohm's law and resistance",
-   "formula": "V = I R,   R = ρ L / A",
-   "when": "Kisi bhi ohmic conductor par.",
-   "unit": "Ω",
-   "mistake": "Wire stretch karo (volume same) to R ∝ L² — sirf L nahi."
+   "formula": "V = IR;   R = ρl/A;   unit ohm (Ω)",
+   "when": "Conductor ka resistance.",
+   "mistake": "Ohm's law sabhi devices par nahi lagta — diode, thermistor non-ohmic hain."
   },
   {
-   "name": "Resistivity and temperature",
-   "formula": "ρ_T = ρ₀ [1 + α (T − T₀)]",
-   "when": "Metal ka resistance temperature ke saath.",
-   "mistake": "Semiconductor ke liye α negative hota hai."
+   "name": "Stretching a wire",
+   "formula": "Volume same: l → nl ⇒ R → n²R;   radius → r/n ⇒ R → n⁴R",
+   "when": "Wire kheenchne ke sawal.",
+   "mistake": "Lambai double karne par area aadha bhi hota hai — isliye 4 guna, 2 guna nahi.",
+   "tag": "PYQ favourite"
   },
   {
-   "name": "Series and parallel",
-   "formula": "Series: R = R₁ + R₂ + …   Parallel: 1/R = 1/R₁ + 1/R₂ + …",
-   "when": "Resistors ka combination.",
-   "mistake": "Parallel ka equivalent hamesha sabse chhote resistor se bhi chhota."
+   "name": "Temperature dependence",
+   "formula": "ρ_T = ρ₀[1 + α(T − T₀)];   R_T = R₀[1 + α(T − T₀)]",
+   "when": "Garam hone par resistance.",
+   "note": "Metals ka α positive, semiconductors ka negative; alloys (manganin, constantan) ka bahut kam."
   },
   {
-   "name": "Real cell",
-   "formula": "V = E − I r   (discharging),   I = E / (R + r)",
-   "when": "Internal resistance wale sawal.",
-   "mistake": "Charging mein V = E + Ir."
+   "name": "Colour code",
+   "formula": "B B R O Y G B V G W = 0–9 (Black Brown Red Orange Yellow Green Blue Violet Grey White);  pehle do band digits, teesra multiplier (10ⁿ), chautha tolerance (gold 5%, silver 10%, none 20%)",
+   "when": "Carbon resistor padhna.",
+   "tag": "Ratta"
+  },
+  {
+   "name": "Series and parallel resistors",
+   "formula": "Series: R = R₁ + R₂ + … (same I);   parallel: 1/R = 1/R₁ + 1/R₂ + … (same V)",
+   "when": "Network simplify karna.",
+   "note": "Parallel ka equivalent sabse chhote resistor se bhi chhota."
+  },
+  {
+   "name": "EMF, internal resistance, terminal voltage",
+   "formula": "I = E/(R + r);   discharge V = E − Ir;   charging V = E + Ir;   open circuit V = E",
+   "when": "Real cell.",
+   "mistake": "Terminal voltage emf se zyada sirf charging ke waqt."
   },
   {
    "name": "Cells in series and parallel",
-   "formula": "Series: E = E₁ + E₂, r = r₁ + r₂.   Parallel: E = (E₁r₂ + E₂r₁)/(r₁ + r₂), r = r₁r₂/(r₁ + r₂)",
-   "when": "Do cells ka equivalent.",
-   "tag": "PYQ favourite"
+   "formula": "n series: E_eq = nE, r_eq = nr;   m parallel (identical): E_eq = E, r_eq = r/m;   mixed: I = nE/(R + nr/m)",
+   "when": "Battery combination.",
+   "mistake": "Ulta joda hua cell (reverse) emf ghatata hai, r phir bhi judta hai."
   },
   {
-   "name": "Electric power",
-   "formula": "P = V I = I² R = V² / R",
-   "when": "Heating, bulb, rating wale sawal.",
-   "mistake": "Series mein same I ⇒ zyada R zyada garam; parallel mein same V ⇒ kam R zyada garam."
+   "name": "Electric power and energy",
+   "formula": "P = VI = I²R = V²/R;   energy = Pt;   1 kWh = 3.6 × 10⁶ J",
+   "when": "Bulb, heater, bill.",
+   "note": "Series mein I same ⇒ zyada R zyada jalta; parallel mein V same ⇒ kam R zyada jalta."
+  },
+  {
+   "name": "Maximum power transfer",
+   "formula": "R = r par P_max = E²/4r (efficiency 50%)",
+   "when": "Load se max power.",
+   "mistake": "Max power par efficiency sirf 50% hoti hai."
   },
   {
    "name": "Kirchhoff's rules",
-   "formula": "Junction: ΣI = 0.   Loop: ΣΔV = 0",
-   "when": "Koi bhi complex circuit.",
-   "mistake": "Loop mein sign convention pehle tay karo aur usi par tike raho."
+   "formula": "Junction: ΣI_in = ΣI_out (charge conservation);   loop: ΣΔV = 0 (energy conservation)",
+   "when": "Complex circuits.",
+   "note": "Loop mein battery − se + jaate waqt +E, resistor mein current ki direction mein −IR."
   },
   {
-   "name": "Wheatstone and meter bridge",
-   "formula": "Balance: P/Q = R/S.   Meter bridge: R/S = l / (100 − l)",
+   "name": "Wheatstone bridge",
+   "formula": "Balanced: P/Q = R/S ⇒ galvanometer mein current zero",
+   "when": "Bridge circuit.",
+   "tag": "PYQ favourite",
+   "note": "Balance par galvanometer wali branch hata do — circuit simple ho jaata hai."
+  },
+  {
+   "name": "Meter bridge",
+   "formula": "X/R = l/(100 − l)   (l cm, unknown X ki taraf)",
    "when": "Unknown resistance naapna.",
-   "tag": "PYQ favourite"
+   "note": "Balance point beech mein ho to error kam (end correction)."
   }
  ],
  "examples": [
   {
-   "title": "Electrons kitne dheeme?",
-   "problem": "Copper wire: A = 1.0 × 10⁻⁷ m², I = 1.5 A, n = 8.5 × 10²⁸ m⁻³. Drift speed?",
-   "solution": "v_d = I/(neA) = 1.5 / (8.5 × 10²⁸ × 1.6 × 10⁻¹⁹ × 1.0 × 10⁻⁷) ≈ 1.1 × 10⁻³ m/s — sirf 1.1 mm per second!"
+   "title": "Drift velocity",
+   "problem": "1 mm² area ki copper wire mein 1.5 A, n = 8.5 × 10²⁸ m⁻³. v_d?",
+   "solution": "v_d = I/(neA) = 1.5/(8.5 × 10²⁸ × 1.6 × 10⁻¹⁹ × 10⁻⁶) ≈ 1.1 × 10⁻⁴ m/s — bahut dheemi."
   },
   {
-   "title": "Cell ka terminal voltage",
-   "problem": "E = 12 V, r = 0.4 Ω ka cell 5.6 Ω resistor se juda hai. Current aur terminal voltage?",
-   "solution": "I = E/(R + r) = 12/6 = 2 A. V = E − Ir = 12 − 2 × 0.4 = 11.2 V."
+   "title": "Wire kheenchi",
+   "problem": "10 Ω wire ko double lambai tak kheencha (volume same). Naya R?",
+   "solution": "R → n²R = 4 × 10 = 40 Ω."
+  },
+  {
+   "title": "Temperature se R",
+   "problem": "20 °C par 10 Ω, α = 0.004 /°C. 70 °C par R?",
+   "solution": "R = 10[1 + 0.004 × 50] = 12 Ω."
+  },
+  {
+   "title": "Network",
+   "problem": "2, 3, 6 Ω parallel mein, phir 4 Ω series mein; 10 V battery. Total R aur current?",
+   "solution": "1/R = 1/2 + 1/3 + 1/6 = 1 ⇒ 1 Ω. Total = 5 Ω. I = 10/5 = 2 A."
+  },
+  {
+   "title": "Real cell",
+   "problem": "E = 12 V, r = 0.5 Ω, R = 5.5 Ω. Current aur terminal voltage?",
+   "solution": "I = 12/6 = 2 A. V = 12 − 2 × 0.5 = 11 V."
+  },
+  {
+   "title": "Max power",
+   "problem": "E = 12 V, r = 2 Ω. Load se max power?",
+   "solution": "R = r = 2 Ω par P = E²/4r = 144/8 = 18 W."
+  },
+  {
+   "title": "Cells in series",
+   "problem": "4 cells (1.5 V, 0.5 Ω each) series mein, R = 4 Ω. Current?",
+   "solution": "I = nE/(R + nr) = 6/(4 + 2) = 1 A."
+  },
+  {
+   "title": "Kirchhoff: do battery",
+   "problem": "6 V (2 Ω branch) aur 3 V (1 Ω branch) parallel mein, dono 2 Ω load ko feed karte hain. Load current aur branch currents?",
+   "solution": "Top node voltage V: (6 − V)/2 + (3 − V)/1 = V/2 ⇒ V = 3 V. Load = 1.5 A; 6 V branch = 1.5 A; 3 V branch = 0 A (3 V cell na charge ho raha na discharge)."
   },
   {
    "title": "Meter bridge",
-   "problem": "Right gap mein S = 30 Ω; balance point left end se 40 cm par. Left gap ka R?",
-   "solution": "R/S = l/(100 − l) = 40/60 ⇒ R = 30 × 40/60 = 20 Ω."
+   "problem": "Right gap mein 30 Ω, balance left end se 40 cm par. Unknown X?",
+   "solution": "X/30 = 40/60 ⇒ X = 20 Ω."
+  },
+  {
+   "title": "Bulb aadhe voltage par",
+   "problem": "100 W, 220 V bulb ko 110 V par chalaya. R aur power?",
+   "solution": "R = V²/P = 484 Ω. P = 110²/484 = 25 W (chautha hissa)."
+  },
+  {
+   "title": "Colour code",
+   "problem": "Brown, black, red, gold bands. Resistance?",
+   "solution": "1, 0, × 10² ⇒ 1000 Ω = 1 kΩ, ± 5%."
   }
  ],
  "topics": [
   {
-   "title": "Drift vs thermal motion",
-   "explain": "Electrons bina field ke bhi tez (random) bhaagte hain, par net flow zero. Field lagne par chhota sa average drift banta hai — wahi current hai."
+   "title": "Electric current aur drift",
+   "explain": "Wire mein free electrons ~10⁵ m/s se random ghoomte hain, net flow zero. Field lagne par unhe drift milta hai. Relaxation time τ do collisions ke beech ka average time; temperature badhne par τ ghatta hai, isliye metal ka ρ badhta hai."
   },
   {
    "title": "Ohmic aur non-ohmic",
-   "explain": "Metal wire (constant temperature) V-I graph seedhi line. Diode, garam hota filament non-ohmic — wahan R = V/I har point par alag."
+   "explain": "Ohmic: V–I graph seedhi line origin se (metals, constant T par). Non-ohmic: diode (ek direction), thermistor, GaAs (negative resistance region), electrolytes."
   },
   {
-   "title": "Temperature ka asar",
-   "explain": "Metal: temperature badhe ⇒ atoms zyada vibrate ⇒ collisions zyada ⇒ ρ badhta hai. Semiconductor: zyada charge carriers free ⇒ ρ ghatta hai."
+   "title": "Resistivity ka comparison",
+   "explain": "Metals ~10⁻⁸ Ω·m, semiconductors beech mein, insulators ~10¹⁴ Ω·m se zyada. Nichrome heater element (high ρ, high melting point); manganin/constantan standard resistors (α bahut kam); copper connecting wires (kam ρ)."
   },
   {
-   "title": "Internal resistance",
-   "explain": "Cell ke andar bhi current ko rukawat milti hai (r). Isliye short circuit current E/r se zyada nahi ho sakta."
+   "title": "Cells: emf aur terminal voltage",
+   "explain": "Emf cell ki electric energy per unit charge dene ki capacity hai, potential difference nahi. Current lene par internal resistance mein voltage drop hota hai. Lambi chalne wali battery ka r badh jaata hai."
   },
   {
-   "title": "Bridges",
-   "explain": "Wheatstone balance par galvanometer mein current zero, isliye uski resistance answer par asar nahi daalti. Meter bridge mein balance point beech ke paas ho to error kam."
+   "title": "Kirchhoff se hal karne ka tarika",
+   "explain": "Har branch ka current maan lo (direction galat ho to answer negative aayega). Junction rule independent junctions par, loop rule independent loops par. Equations solve karo. Symmetric circuits mein same potential wale points jodkar ya todkar simplify karo."
+  },
+  {
+   "title": "Wheatstone bridge aur meter bridge",
+   "explain": "Bridge balance par galvanometer ke dono end same potential par. Meter bridge mein 1 m uniform wire (manganin/constantan) par jockey khiska kar balance dhoondhte hain. Sensitivity zyada jab chaaron resistance lagbhag barabar."
+  },
+  {
+   "title": "Heating effect",
+   "explain": "Joule heating H = I²Rt. Fuse wire ka melting point kam aur resistance zyada — zyada current par pighal kar circuit tod deta hai. Electric power transmission high voltage par taaki I²R loss kam ho."
   }
  ],
  "ratta": [
-  "Colour code 0–9: Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White — \"BB ROY of Great Britain had a Very Good Wife\".",
-  "Tolerance: gold 5%, silver 10%, koi band nahi 20%.",
-  "Resistivity: silver < copper < aluminium (silver sabse kam)."
- ],
- "verifiedOn": "2026-11-12"
+  "I = neAv_d;  v_d ~10⁻⁴ m/s;  μ = v_d/E.",
+  "R = ρl/A;  stretch n times ⇒ n²R.",
+  "R_T = R₀(1 + αΔT);  metal α > 0, semiconductor α < 0.",
+  "Colour: BB ROY Great Britain Very Good Wife (0–9); gold 5%, silver 10%.",
+  "V = E − Ir;  P_max = E²/4r at R = r.",
+  "Series cells nE, nr;  parallel E, r/m.",
+  "Wheatstone P/Q = R/S;  meter bridge X/R = l/(100 − l).",
+  "1 kWh = 3.6 × 10⁶ J."
+ ]
 }

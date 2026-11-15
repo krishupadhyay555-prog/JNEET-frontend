@@ -1,0 +1,241 @@
+{
+ "slug": "equilibrium",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Equilibrium",
+  "JEE": "Equilibrium"
+ },
+ "title": "Equilibrium",
+ "readMinutes": 24,
+ "summary": [
+  "Equilibrium is dynamic: forward and backward reactions both continue, at equal rates — so concentrations appear constant. Equilibrium is reached only in a closed system.",
+  "Every reaction has an equilibrium constant (Kc, Kp) that depends only on temperature. Large K ⇒ mostly products; comparing Q with K tells which way a reaction will move.",
+  "Le Chatelier: disturb an equilibrium (change concentration, pressure or temperature) and the system shifts to reduce the change. A catalyst only gets there faster; it doesn't change the equilibrium.",
+  "Ionic equilibrium: strong electrolytes ionise fully, weak ones partly. Weak acid/base ionisation is described by Ka/Kb, water by Kw. pH = −log[H⁺].",
+  "Three big applications: buffers (keeping pH steady — Henderson equation), salt hydrolysis (pH of salt solutions), and solubility product Ksp (how much a sparingly soluble salt dissolves and when a precipitate forms)."
+ ],
+ "formulas": [
+  {
+   "name": "Law of chemical equilibrium",
+   "formula": "aA + bB ⇌ cC + dD:   Kc = [C]^c[D]^d / ([A]^a[B]^b)",
+   "when": "Writing K for any reversible reaction.",
+   "mistake": "Pure solids and pure liquids (and the solvent in dilute solutions) don't appear in K."
+  },
+  {
+   "name": "Kp and Kc",
+   "formula": "Kp = Kc (RT)^{Δn_g}   (R = 0.0821 L·atm/(K·mol), p in atm)",
+   "when": "Converting for gaseous equilibria.",
+   "tag": "PYQ favourite",
+   "note": "Δn_g = moles of gaseous products − reactants; Δn_g = 0 ⇒ Kp = Kc."
+  },
+  {
+   "name": "Manipulating K",
+   "formula": "Reverse reaction: K' = 1/K.   Reaction × n: K' = Kⁿ.   Add two reactions: K = K₁ × K₂",
+   "when": "K of a new reaction from given ones."
+  },
+  {
+   "name": "Reaction quotient",
+   "formula": "Q (same expression, concentrations at any moment):  Q < K → forward,  Q > K → backward,  Q = K → equilibrium",
+   "when": "Which way the reaction goes."
+  },
+  {
+   "name": "Degree of dissociation (example PCl₅)",
+   "formula": "PCl₅ ⇌ PCl₃ + Cl₂:   Kp = α² P / (1 − α²)",
+   "when": "Gas dissociation problems; α = fraction dissociated.",
+   "note": "Total moles = 1 + α (starting with 1 mol PCl₅)."
+  },
+  {
+   "name": "ΔG and K",
+   "formula": "ΔG° = −RT ln K;   ΔG = ΔG° + RT ln Q;   at equilibrium ΔG = 0",
+   "when": "Thermodynamic meaning of K.",
+   "note": "ΔG° < 0 ⇒ K > 1."
+  },
+  {
+   "name": "Temperature dependence (van 't Hoff)",
+   "formula": "log(K₂/K₁) = (ΔH°/2.303R) (1/T₁ − 1/T₂)",
+   "when": "K at a new temperature.",
+   "note": "Endothermic: T up → K up. Exothermic: T up → K down."
+  },
+  {
+   "name": "Le Chatelier — quick table",
+   "formula": "Add reactant → forward.  Raise pressure → side with fewer gas moles.  Raise T → endothermic side.  Catalyst → no shift.  Inert gas (constant V) → no shift;  (constant p) → side with more moles",
+   "when": "Predicting shifts.",
+   "tag": "PYQ favourite",
+   "note": "Only temperature changes K; everything else changes only the position."
+  },
+  {
+   "name": "Henry's law",
+   "formula": "p = K_H x   (partial pressure of a gas ∝ its mole fraction in solution)",
+   "when": "Gases dissolving in liquids (soda, scuba diving).",
+   "note": "Gas solubility decreases as temperature rises."
+  },
+  {
+   "name": "Ionic product of water",
+   "formula": "Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴ (298 K);   pH + pOH = 14;   pH = −log[H⁺]",
+   "when": "Every aqueous pH problem.",
+   "note": "Kw rises with temperature — hot water's neutral pH is below 7 (still neutral)."
+  },
+  {
+   "name": "Weak acid (Ostwald dilution law)",
+   "formula": "α = √(Ka/C);   [H⁺] = √(Ka C);   pH = ½(pKa − log C)",
+   "when": "pH and α of a weak acid.",
+   "tag": "PYQ favourite",
+   "note": "Valid only when α < 5% (1 − α ≈ 1)."
+  },
+  {
+   "name": "Weak base",
+   "formula": "[OH⁻] = √(Kb C);   pOH = ½(pKb − log C)",
+   "when": "pH of a weak base like NH₃."
+  },
+  {
+   "name": "Conjugate pair",
+   "formula": "Ka × Kb = Kw;   pKa + pKb = 14",
+   "when": "Kb of an acid's conjugate base (or vice versa).",
+   "note": "A strong acid's conjugate base is very weak."
+  },
+  {
+   "name": "Polyprotic acids",
+   "formula": "H₂A: Ka₁ ≫ Ka₂;   pH set almost entirely by Ka₁;  [A²⁻] ≈ Ka₂",
+   "when": "Acids like H₂S, H₂CO₃, H₃PO₄.",
+   "note": "The second proton is harder to remove (from a negative ion)."
+  },
+  {
+   "name": "Common ion effect",
+   "formula": "Weak acid HA + its salt (A⁻, conc C'):  α ≈ Ka / C'",
+   "when": "A common ion suppresses ionisation.",
+   "note": "A common ion lowers the α of a weak electrolyte."
+  },
+  {
+   "name": "Salt hydrolysis",
+   "formula": "SA + SB: pH = 7.   WA + SB (CH₃COONa): pH = 7 + ½pKa + ½log C.   SA + WB (NH₄Cl): pH = 7 − ½pKb − ½log C.   WA + WB: pH = 7 + ½(pKa − pKb)  (independent of C)",
+   "when": "pH of a salt solution.",
+   "tag": "PYQ favourite",
+   "note": "Kh = Kw/Ka (or Kw/Kb); h = √(Kh/C)."
+  },
+  {
+   "name": "Buffer (Henderson–Hasselbalch)",
+   "formula": "Acidic: pH = pKa + log([salt]/[acid]).   Basic: pOH = pKb + log([salt]/[base])",
+   "when": "pH of a buffer.",
+   "tag": "PYQ favourite",
+   "note": "[salt] = [acid] ⇒ pH = pKa (maximum buffer capacity)."
+  },
+  {
+   "name": "Solubility product",
+   "formula": "AₓB_y: Ksp = (xs)^x (ys)^y.   AB: s²,  AB₂/A₂B: 4s³,  AB₃/A₃B: 27s⁴,  A₂B₃: 108s⁵",
+   "when": "Relation between solubility s (mol/L) and Ksp.",
+   "mistake": "Don't compare solubilities of different salt types by Ksp alone — calculate s."
+  },
+  {
+   "name": "Precipitation and common ion",
+   "formula": "Ionic product Q_sp > Ksp ⇒ precipitate.   AB in C M common ion: s ≈ Ksp / C",
+   "when": "Will a precipitate form; solubility with a common ion.",
+   "note": "Use the new (diluted) concentrations after mixing."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Kp from Kc",
+   "problem": "N₂ + 3H₂ ⇌ 2NH₃, Kc = 6.0 × 10⁻² (mol/L)⁻² at 500 K. Kp?",
+   "solution": "Δn_g = 2 − 4 = −2. Kp = Kc(RT)⁻² = 0.06/(0.0821 × 500)² ≈ 3.6 × 10⁻⁵ atm⁻²."
+  },
+  {
+   "title": "Equilibrium concentration",
+   "problem": "A + B ⇌ C + D, Kc = 4. Initially [A] = [B] = 1 M. [C] at equilibrium?",
+   "solution": "x²/(1 − x)² = 4 ⇒ x/(1 − x) = 2 ⇒ x = 2/3 ≈ 0.67 M."
+  },
+  {
+   "title": "pH of a weak acid",
+   "problem": "0.1 M CH₃COOH, Ka = 1.8 × 10⁻⁵. [H⁺], pH and % ionisation?",
+   "solution": "[H⁺] = √(1.8 × 10⁻⁵ × 0.1) = 1.34 × 10⁻³ M. pH = 2.87. α = 1.34% (< 5%, approximation valid)."
+  },
+  {
+   "title": "pH of a strong base",
+   "problem": "pH of 0.01 M NaOH?",
+   "solution": "[OH⁻] = 10⁻² ⇒ pOH = 2 ⇒ pH = 14 − 2 = 12."
+  },
+  {
+   "title": "pH of a buffer",
+   "problem": "0.1 M CH₃COOH + 0.2 M CH₃COONa, pKa = 4.74. pH?",
+   "solution": "pH = 4.74 + log(0.2/0.1) = 4.74 + 0.30 = 5.04."
+  },
+  {
+   "title": "Ksp and common ion",
+   "problem": "Ksp of AgCl = 1.8 × 10⁻¹⁰. Solubility in water? In 0.1 M NaCl?",
+   "solution": "Water: s = √Ksp = 1.34 × 10⁻⁵ M. In 0.1 M Cl⁻: s = Ksp/0.1 = 1.8 × 10⁻⁹ M — about 7500 times less (common ion effect)."
+  },
+  {
+   "title": "Ksp from solubility (AB₂)",
+   "problem": "Solubility of CaF₂ is 2 × 10⁻⁴ mol/L. Ksp?",
+   "solution": "CaF₂ → Ca²⁺ (s) + 2F⁻ (2s). Ksp = s(2s)² = 4s³ = 4 × (2 × 10⁻⁴)³ = 3.2 × 10⁻¹¹."
+  },
+  {
+   "title": "pH of a salt",
+   "problem": "0.1 M CH₃COONa (pKa of CH₃COOH = 4.74). pH?",
+   "solution": "WA + SB salt: pH = 7 + ½(4.74) + ½ log 0.1 = 7 + 2.37 − 0.5 = 8.87 (basic)."
+  },
+  {
+   "title": "Very dilute strong acid",
+   "problem": "pH of 10⁻⁸ M HCl? (not 8!)",
+   "solution": "Include H⁺ from water: [H⁺] = x, [OH⁻] = x − 10⁻⁸, x(x − 10⁻⁸) = 10⁻¹⁴ ⇒ x ≈ 1.05 × 10⁻⁷ M ⇒ pH ≈ 6.98 — slightly acidic, below 7."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Dynamic equilibrium",
+   "explain": "Water in a closed bottle: evaporation and condensation continue at equal rates ⇒ constant vapour pressure. Chemical equilibrium is similar — it can be reached from either side."
+  },
+  {
+   "title": "Physical equilibria",
+   "explain": "Solid ⇌ liquid (ice–water at 0 °C, 1 atm), liquid ⇌ vapour (vapour pressure in a closed vessel), solid ⇌ vapour (camphor, iodine — sublimation), gas ⇌ solution (CO₂ in soda — Henry's law). In each, some property becomes constant, and it happens only at a fixed temperature."
+  },
+  {
+   "title": "Meaning of K",
+   "explain": "K > 10³: reaction goes almost to completion. K < 10⁻³: very little forward reaction. In between: significant amounts of both. K changes only with temperature, not with concentration or catalyst. Units of K depend on Δn."
+  },
+  {
+   "title": "Classic Le Chatelier examples",
+   "explain": "Haber process (N₂ + 3H₂ ⇌ 2NH₃, exothermic): high pressure and removing NH₃ push it forward; low T gives more yield but is slow — hence ~700 K with an Fe catalyst. N₂O₄ ⇌ 2NO₂ (endothermic): heating deepens the brown colour."
+  },
+  {
+   "title": "Strong vs weak electrolytes",
+   "explain": "Strong (NaCl, HCl, NaOH): nearly 100% ions in water. Weak (CH₃COOH, NH₃): only slightly ionised, the rest molecules. On dilution the α of a weak electrolyte increases (Ostwald)."
+  },
+  {
+   "title": "Three acid–base concepts",
+   "explain": "Arrhenius: gives H⁺ in water = acid, gives OH⁻ = base (aqueous only). Brønsted–Lowry: proton donor = acid, acceptor = base; conjugate pairs (HCl/Cl⁻, NH₄⁺/NH₃). Lewis: electron-pair acceptor = acid (BF₃, AlCl₃, H⁺, metal ions), donor = base (NH₃, H₂O, OH⁻)."
+  },
+  {
+   "title": "Trends in acid strength",
+   "explain": "Larger Ka (smaller pKa) = stronger acid. Down a group bonds weaken ⇒ HF < HCl < HBr < HI. Across a period electronegativity rises ⇒ acidity CH₄ < NH₃ < H₂O < HF."
+  },
+  {
+   "title": "pH scale",
+   "explain": "pH 7 is neutral (25 °C), < 7 acidic, > 7 basic. A change of 1 pH unit = 10 times in [H⁺]. Mixing two strong acids: add moles and divide by total volume."
+  },
+  {
+   "title": "How a buffer works",
+   "explain": "Acidic buffer (CH₃COOH + CH₃COONa): added H⁺ combines with CH₃COO⁻, added OH⁻ is neutralised by CH₃COOH. Basic buffer: NH₃ + NH₄Cl. Blood buffer H₂CO₃/HCO₃⁻ (pH ≈ 7.4)."
+  },
+  {
+   "title": "Logic of salt hydrolysis",
+   "explain": "The anion of a weak acid (CH₃COO⁻) takes H⁺ from water and leaves OH⁻ ⇒ basic. The cation of a weak base (NH₄⁺) gives H⁺ ⇒ acidic. Ions from strong acids/bases don't hydrolyse (NaCl is neutral)."
+  },
+  {
+   "title": "Uses of Ksp",
+   "explain": "A precipitate forms when Q_sp > Ksp. Selective precipitation: the one with smaller Ksp precipitates first. A common ion lowers solubility; ions that form complexes (AgCl + NH₃) raise it."
+  }
+ ],
+ "ratta": [
+  "Kp = Kc(RT)^{Δn_g};  reverse 1/K;  ×n → Kⁿ;  add → multiply.",
+  "Q < K forward, Q > K backward.",
+  "Only T changes K; a catalyst doesn't.",
+  "Kw = 10⁻¹⁴ (25 °C);  pH + pOH = 14;  pKa + pKb = 14.",
+  "Weak acid: [H⁺] = √(KaC),  α = √(Ka/C).",
+  "Buffer: pH = pKa + log(salt/acid).",
+  "Hydrolysis: WA+SB pH = 7 + ½pKa + ½logC;  SA+WB pH = 7 − ½pKb − ½logC;  WA+WB pH = 7 + ½(pKa − pKb).",
+  "Ksp: AB s²,  AB₂ 4s³,  AB₃ 27s⁴,  A₂B₃ 108s⁵.",
+  "pH of 10⁻⁸ M HCl ≈ 6.98 (add water's H⁺).",
+  "Lewis acid = e⁻ pair acceptor (BF₃, AlCl₃);  Lewis base = donor (NH₃)."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,167 @@
+{
+ "slug": "breathing-and-exchange-of-gases",
+ "subject": "Biology",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Breathing and Exchange of Gases"
+ },
+ "title": "Breathing and Exchange of Gases",
+ "readMinutes": 14,
+ "summary": [
+  "Breathing (ventilation) draws in atmospheric air and releases CO₂-rich air. Respiration then includes gas exchange in the alveoli, transport of gases by blood, exchange at the tissues and use of O₂ by cells.",
+  "Inspiration is active — contraction of the diaphragm and external intercostal muscles increases thoracic volume, pressure drops below atmospheric and air flows in. Normal expiration is passive.",
+  "Gas exchange is by simple diffusion and depends on the partial pressure gradient, solubility and membrane thickness. CO₂ is 20–25 times more soluble than O₂.",
+  "About 97% of O₂ travels bound to haemoglobin (oxyhaemoglobin) and 3% dissolved in plasma. Of CO₂, 20–25% goes as carbamino-haemoglobin, ~70% as bicarbonate and ~7% dissolved in plasma. The respiratory rhythm centre in the medulla sets the rhythm of breathing."
+ ],
+ "formulas": [
+  {
+   "name": "Respiratory volumes",
+   "formula": "TV ≈ 500 mL;  IRV 2500–3000 mL;  ERV 1000–1100 mL;  RV 1100–1200 mL",
+   "when": "Spirometer questions.",
+   "mistake": "RV can never be breathed out — so a spirometer cannot measure RV or TLC directly.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inspiratory capacity",
+   "formula": "IC = TV + IRV",
+   "when": "Air that can be inhaled after a normal expiration."
+  },
+  {
+   "name": "Expiratory capacity",
+   "formula": "EC = TV + ERV",
+   "when": "Air that can be exhaled after a normal inspiration."
+  },
+  {
+   "name": "Functional residual capacity",
+   "formula": "FRC = ERV + RV",
+   "when": "Air left in the lungs after a normal expiration."
+  },
+  {
+   "name": "Vital capacity",
+   "formula": "VC = ERV + TV + IRV",
+   "when": "Maximum air breathed out after a forced inspiration.",
+   "mistake": "VC does not include RV.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Total lung capacity",
+   "formula": "TLC = RV + ERV + TV + IRV = VC + RV",
+   "when": "Total air in the lungs after a forced inspiration."
+  },
+  {
+   "name": "Pulmonary ventilation",
+   "formula": "minute volume = TV × breathing rate ≈ 500 × 12–16 = 6000–8000 mL/min",
+   "when": "Air breathed per minute.",
+   "note": "A healthy adult breathes 12–16 times a minute."
+  },
+  {
+   "name": "Partial pressures (mm Hg)",
+   "formula": "pO₂ / pCO₂:  atmosphere 159 / 0.3;  alveoli 104 / 40;  deoxygenated blood 40 / 45;  oxygenated blood 95 / 40;  tissues 40 / 45",
+   "when": "Direction of diffusion.",
+   "tag": "PYQ favourite",
+   "note": "A gas always moves from higher to lower partial pressure."
+  },
+  {
+   "name": "Diffusion membrane",
+   "formula": "alveolar squamous epithelium + basement substance + capillary endothelium (total < 1 mm)",
+   "when": "Where exchange takes place."
+  },
+  {
+   "name": "Oxygen transport",
+   "formula": "97% by Hb (oxyhaemoglobin, each Hb up to 4 O₂);  3% in plasma;  100 mL of oxygenated blood delivers ~5 mL O₂ to tissues",
+   "when": "How O₂ is carried.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Oxygen dissociation curve",
+   "formula": "% saturation vs pO₂ — sigmoid curve;  in alveoli high pO₂, low pCO₂, low H⁺, low T ⇒ oxyhaemoglobin forms;  in tissues the reverse ⇒ O₂ is released",
+   "when": "When Hb takes up or releases O₂.",
+   "note": "A right shift (Bohr effect) means O₂ is released more easily."
+  },
+  {
+   "name": "CO₂ transport",
+   "formula": "20–25% carbamino-haemoglobin;  ~70% bicarbonate (HCO₃⁻);  ~7% dissolved in plasma;  100 mL of deoxygenated blood delivers ~4 mL CO₂ to the alveoli",
+   "when": "How CO₂ is carried."
+  },
+  {
+   "name": "Carbonic anhydrase reaction",
+   "formula": "CO₂ + H₂O ⇌ H₂CO₃ ⇌ HCO₃⁻ + H⁺   (carbonic anhydrase in RBCs, a little in plasma)",
+   "when": "Formation of bicarbonate.",
+   "note": "The reaction goes forward in tissues and backward in the alveoli."
+  },
+  {
+   "name": "Regulation of respiration",
+   "formula": "respiratory rhythm centre (medulla);  pneumotaxic centre (pons) — shortens inspiration and so raises the rate;  chemosensitive area (medulla) — sensitive to CO₂ and H⁺;  receptors in the aortic arch and carotid artery",
+   "when": "Control of breathing.",
+   "note": "O₂ plays only a small role in the rhythm; CO₂/H⁺ are the main signals."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Finding capacities",
+   "problem": "TV 500, IRV 3000, ERV 1100, RV 1200 mL. IC, EC, FRC?",
+   "solution": "IC = 500 + 3000 = 3500 mL. EC = 500 + 1100 = 1600 mL. FRC = 1100 + 1200 = 2300 mL."
+  },
+  {
+   "title": "Vital capacity and TLC",
+   "problem": "From the values above, VC and TLC?",
+   "solution": "VC = 1100 + 500 + 3000 = 4600 mL. TLC = VC + RV = 5800 mL."
+  },
+  {
+   "title": "Minute ventilation",
+   "problem": "TV 500 mL, rate 12 per minute. Pulmonary ventilation?",
+   "solution": "500 × 12 = 6000 mL/min."
+  },
+  {
+   "title": "O₂ delivery",
+   "problem": "Cardiac output is 5 L/min and each 100 mL of blood delivers ~5 mL O₂. O₂ delivered to tissues per minute?",
+   "solution": "5000/100 × 5 = 250 mL O₂ per minute."
+  },
+  {
+   "title": "Direction of diffusion",
+   "problem": "Between alveoli (pO₂ 104, pCO₂ 40) and deoxygenated blood (pO₂ 40, pCO₂ 45), which way do the gases move?",
+   "solution": "O₂ moves from alveoli to blood (104 → 40), CO₂ from blood to alveoli (45 → 40). The CO₂ gradient is small, but its 20–25 times higher solubility lets plenty of CO₂ diffuse."
+  },
+  {
+   "title": "Emphysema",
+   "problem": "Why is breathing difficult in emphysema?",
+   "solution": "Alveolar walls are damaged and the respiratory surface decreases — cigarette smoking is the main cause."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Respiratory organs in animals",
+   "explain": "Lower invertebrates (sponges, coelenterates, flatworms) — simple diffusion over the body surface. Earthworm — moist cuticle. Insects — tracheal tubes. Aquatic arthropods and molluscs — gills (branchial respiration). Fish — gills. Amphibians — skin (cutaneous) and lungs. Reptiles, birds, mammals — lungs (pulmonary respiration)."
+  },
+  {
+   "title": "Human respiratory system",
+   "explain": "External nostrils → nasal chamber → pharynx → larynx (sound box; the epiglottis stops food entering) → trachea → primary, secondary, tertiary bronchi → bronchioles → alveoli. Incomplete cartilaginous rings support the trachea to the initial bronchioles. Lungs are covered by double-layered pleura; pleural fluid reduces friction. The conducting part filters, warms and moistens air; the exchange part is the alveoli."
+  },
+  {
+   "title": "Mechanism of breathing",
+   "explain": "Inspiration: the diaphragm contracts (moves down) and external intercostal muscles contract (lifting ribs and sternum) ⇒ thoracic and pulmonary volume increase ⇒ intra-pulmonary pressure falls below atmospheric ⇒ air flows in. Expiration: muscles relax ⇒ volume falls ⇒ pressure rises ⇒ air flows out. Abdominal muscles help in forced breathing."
+  },
+  {
+   "title": "Exchange of gases",
+   "explain": "Alveoli are the primary site, tissues the secondary site. Diffusion depends on the partial pressure gradient, gas solubility and membrane thickness. The diffusion membrane is very thin (< 1 mm)."
+  },
+  {
+   "title": "Transport of gases",
+   "explain": "Haemoglobin (the red iron pigment of RBCs) binds O₂ reversibly. At high pCO₂, CO₂ binds Hb as carbamino-haemoglobin and is released in the alveoli. Carbonic anhydrase in RBCs forms bicarbonate."
+  },
+  {
+   "title": "Disorders of respiratory system",
+   "explain": "Asthma: inflammation of bronchi and bronchioles causes wheezing and difficulty in breathing. Emphysema: a chronic disorder in which alveolar walls are damaged and respiratory surface decreases — mainly caused by smoking. Occupational respiratory disorders: dust (stone breaking, grinding) causes fibrosis of the lungs — protective masks should be worn."
+  }
+ ],
+ "ratta": [
+  "TV 500, IRV 2500–3000, ERV 1000–1100, RV 1100–1200 mL.",
+  "IC = TV + IRV;  EC = TV + ERV;  FRC = ERV + RV;  VC = ERV + TV + IRV;  TLC = VC + RV.",
+  "Alveoli pO₂ 104, pCO₂ 40;  tissues pO₂ 40, pCO₂ 45.",
+  "CO₂ solubility 20–25 × O₂.",
+  "O₂: 97% Hb, 3% plasma;  100 mL blood → 5 mL O₂.",
+  "CO₂: 20–25% carbamino, 70% HCO₃⁻, 7% plasma;  4 mL per 100 mL.",
+  "Rhythm centre in medulla;  pneumotaxic centre in pons.",
+  "Emphysema — smoking;  asthma — inflammation of bronchi."
+ ]
+}

@@ -48,6 +48,7 @@ T("Preparation of inorganic compounds", "Mohr's salt FeSO₄·(NH₄)₂SO₄·6
 T("Preparation of organic compounds", "Acetanilide (aniline + acetic anhydride), p-nitroacetanilide (nitration of acetanilide at low temperature), aniline yellow (p-aminoazobenzene, coupling of benzenediazonium chloride with aniline), iodoform (ethanol or acetone + I₂ + alkali, yellow crystals)."),
 T("Chemistry of titrimetric exercises", "Burette readings at the lower meniscus (upper for coloured KMnO₄). KMnO₄ is not a primary standard; it is standardised against oxalic acid. The end point is the first permanent pale pink colour."),
 T("Tests for proteins and carbohydrates", "Biuret test (violet) for proteins; Molisch's test (violet ring) for all carbohydrates; iodine test (blue) for starch; Fehling's and Benedict's for reducing sugars."),
+T("Physical chemistry experiments (JEE)", "Enthalpy of solution of CuSO₄ and enthalpy of neutralisation of a strong acid with a strong base (≈ −57 kJ/mol) are measured in a calorimeter from q = mcΔT. Lyophilic sols (starch, egg albumin, gum) form simply by warming with water; lyophobic sols (Fe(OH)₃, As₂S₃) need special methods such as hydrolysis or double decomposition. The rate of reaction of iodide ions with H₂O₂ is followed at room temperature (the iodine liberated turns starch blue)."),
 T("Tests for fats and oils", "Fats leave a translucent spot on paper; the acrolein test (pungent smell on heating with KHSO₄) shows glycerol."),
 ],
 "ratta": [
@@ -67,6 +68,7 @@ SYLLABUS = [
 ("Chemistry involved in the preparation of inorganic and organic compounds: Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform", ["Mohr's salt", "potash alum", "acetanilide", "aniline yellow", "iodoform"]),
 ("Chemistry involved in titrimetric exercises — acids, bases and indicators, oxalic acid vs KMnO₄, Mohr's salt vs KMnO₄", ["titration", "oxalic acid", "indicator"]),
 ("Chemical principles involved in qualitative salt analysis — cations and anions", ["cation", "anion", "group"]),
+("Enthalpy of solution and neutralisation, lyophilic and lyophobic sols, kinetics of iodide with H₂O₂ (JEE)", ["enthalpy of solution", "neutralisation", "lyophilic", "lyophobic", "H₂O₂"]),
 ]
 
 if __name__ == "__main__":

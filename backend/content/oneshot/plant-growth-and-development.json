@@ -84,7 +84,7 @@
   {
    "title": "Geometric growth",
    "problem": "A seedling of 5 g grows with relative growth rate r = 0.1 per day. Mass after 10 days (Wₜ = W₀eʳᵗ)?",
-   "solution": "Wₜ = 5 × e^(0.1 × 10) = 5 × 2.718 = 13.6 g."
+   "solution": "Wₜ = 5 × e^{0.1 × 10} = 5 × 2.718 = 13.6 g."
   },
   {
    "title": "Relative growth",

@@ -54,7 +54,7 @@
   },
   {
    "name": "Inserting means",
-   "formula": "n AMs between a and b: d = (b − a)/(n + 1);  n GMs: r = (b/a)^(1/(n + 1))",
+   "formula": "n AMs between a and b: d = (b − a)/(n + 1);  n GMs: r = (b/a)^{1/(n + 1)}",
    "when": "Inserted means."
   },
   {

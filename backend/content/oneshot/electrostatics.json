@@ -1,0 +1,298 @@
+{
+ "slug": "electrostatics",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Electrostatics",
+  "JEE": "Electrostatics"
+ },
+ "title": "Electrostatics",
+ "readMinutes": 25,
+ "summary": [
+  "Charge has three properties: it is quantised (q = ne), conserved (never created or destroyed) and additive (add with sign). The force between two charges follows Coulomb's law — inverse square, along the line joining them.",
+  "Electric field E = force per unit positive test charge. For several charges add their fields as vectors (superposition). For a continuous distribution (rod, ring, sheet) take small pieces dq and integrate.",
+  "Gauss's law: total flux out of a closed surface = enclosed charge / ε₀. Where there is symmetry (line, sheet, sphere) it is the fastest way to find the field.",
+  "Potential V is a scalar (just add, no direction) and E = −dV/dr. The field always points towards decreasing potential. Equipotential surfaces are perpendicular to field lines.",
+  "Inside a conductor the electrostatic field is zero, all excess charge sits on the surface, and the whole conductor is at one potential.",
+  "A capacitor stores charge and energy: C = Q/V. Parallel plate C = Kε₀A/d. In series Q is the same, in parallel V is the same — exactly opposite to resistors. What changes when a dielectric is inserted depends on whether the battery is still connected."
+ ],
+ "formulas": [
+  {
+   "name": "Coulomb's law",
+   "formula": "F = k q₁q₂ / r²,   k = 1/(4πε₀) ≈ 9 × 10⁹ N·m²/C²,   ε₀ = 8.85 × 10⁻¹² C²/(N·m²)",
+   "when": "Force between two point charges (vacuum/air).",
+   "unit": "N",
+   "note": "Use signs only to decide direction; use |q| for the magnitude."
+  },
+  {
+   "name": "Coulomb's law in a medium",
+   "formula": "F_medium = F_vacuum / K   (K = dielectric constant = ε/ε₀)",
+   "when": "Charges placed in a medium (water, oil).",
+   "note": "K ≥ 1 always, so the force is smaller in a medium."
+  },
+  {
+   "name": "Quantisation and conservation",
+   "formula": "q = n e,   e = 1.6 × 10⁻¹⁹ C,   n integer",
+   "when": "How many electrons moved; charge is always an integer multiple of e.",
+   "note": "1 C needs 6.25 × 10¹⁸ electrons."
+  },
+  {
+   "name": "Superposition",
+   "formula": "F_net = F₁ + F₂ + …   (vector sum),   E_net = Σ Eᵢ",
+   "when": "Three or more charges; find each pair's force, then add as vectors."
+  },
+  {
+   "name": "Field of a point charge",
+   "formula": "E = F/q₀ = k q / r²   (away from q if q is positive)",
+   "when": "Field at a point.",
+   "unit": "N/C = V/m"
+  },
+  {
+   "name": "Continuous charge distribution",
+   "formula": "dq = λ dl,  σ dA,  ρ dV;    E = ∫ k dq / r²  (keeping track of direction)",
+   "when": "Rods, rings, discs with spread-out charge.",
+   "note": "First remove components that cancel by symmetry."
+  },
+  {
+   "name": "Ring of charge on its axis",
+   "formula": "E = k Q x / (x² + R²)^{3/2};   at the centre E = 0;   E_max at x = R/√2",
+   "when": "Field at a point on the axis of a ring.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Electric dipole moment",
+   "formula": "p = q × (2a),   direction from −q to +q",
+   "when": "Two equal and opposite charges separated by 2a.",
+   "unit": "C·m"
+  },
+  {
+   "name": "Dipole field (r ≫ a)",
+   "formula": "Axial: E = 2kp/r³ (along p).   Equatorial: E = kp/r³ (opposite to p).   General: E = (kp/r³)√(1 + 3cos²θ)",
+   "when": "Field far from a dipole.",
+   "note": "A dipole field falls as 1/r³, a point charge's as 1/r²."
+  },
+  {
+   "name": "Dipole in uniform field",
+   "formula": "τ = p × E,  |τ| = pE sin θ;   net force F = 0",
+   "when": "In a uniform field a dipole only rotates.",
+   "note": "In a non-uniform field there is also a net force."
+  },
+  {
+   "name": "Dipole potential energy",
+   "formula": "U = −p·E = −pE cos θ;   W(θ₁→θ₂) = pE (cos θ₁ − cos θ₂)",
+   "when": "Work to rotate a dipole, stable/unstable positions.",
+   "note": "θ = 0 stable (U = −pE), θ = 180° unstable (U = +pE). Work from 0 to 180° = 2pE."
+  },
+  {
+   "name": "Electric flux",
+   "formula": "Φ = ∮ E·dA = E A cos θ  (uniform field, flat surface)",
+   "when": "How many field lines cross a surface.",
+   "unit": "N·m²/C",
+   "note": "θ is the angle between the field and the area vector (normal)."
+  },
+  {
+   "name": "Gauss's law",
+   "formula": "Φ_closed = q_enclosed / ε₀",
+   "when": "Closed surface; flux depends only on charge inside.",
+   "mistake": "Outside charges don't change the total flux, but they do change E on the surface.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Infinite line charge",
+   "formula": "E = λ / (2πε₀ r) = 2kλ / r",
+   "when": "Long straight wire (Gauss: cylinder).",
+   "mistake": "Goes as 1/r — not 1/r²."
+  },
+  {
+   "name": "Infinite plane sheet",
+   "formula": "E = σ / (2ε₀)  (independent of r).   Between two oppositely charged plates: E = σ/ε₀, outside 0",
+   "when": "Field near a large flat sheet.",
+   "mistake": "Just outside a conductor's surface E = σ/ε₀, not σ/2ε₀."
+  },
+  {
+   "name": "Thin spherical shell (charge Q)",
+   "formula": "r > R: E = kQ/r²,  V = kQ/r.   r = R: E = kQ/R².   r < R: E = 0,  V = kQ/R (constant)",
+   "when": "Shell or conducting sphere.",
+   "tag": "PYQ favourite",
+   "note": "Inside, E is zero but V is not."
+  },
+  {
+   "name": "Uniformly charged solid sphere (non-conducting)",
+   "formula": "r < R: E = kQr/R³ (grows with r);   r ≥ R: E = kQ/r²",
+   "when": "Insulating solid sphere — common Gauss's-law practice in JEE."
+  },
+  {
+   "name": "Potential and field",
+   "formula": "V = kq/r;   V_A − V_B = −∫_B^A E·dr;   E = −dV/dr  (E_x = −∂V/∂x)",
+   "when": "Potential from field or field from potential.",
+   "unit": "V (volt)",
+   "note": "V is a scalar: add potentials of many charges directly (with sign)."
+  },
+  {
+   "name": "Dipole potential",
+   "formula": "V = k p cos θ / r²;   V = 0 on the equatorial line",
+   "when": "Potential far from a dipole.",
+   "mistake": "On the equatorial line V = 0 but E is not zero."
+  },
+  {
+   "name": "Potential energy of charges",
+   "formula": "Two charges: U = k q₁q₂ / r.   System: U = Σ (each pair) k qᵢqⱼ / rᵢⱼ",
+   "when": "Work to assemble a system.",
+   "note": "Count each pair only once (3 charges = 3 pairs)."
+  },
+  {
+   "name": "Work and energy in a field",
+   "formula": "W_ext = q ΔV;   charge accelerated through V volt: K = qV  (1 eV = 1.6 × 10⁻¹⁹ J)",
+   "when": "Moving or accelerating a charge.",
+   "note": "Work along an equipotential is zero."
+  },
+  {
+   "name": "Capacitance",
+   "formula": "C = Q/V.   Parallel plate: C = ε₀A/d.   Isolated sphere: C = 4πε₀R",
+   "when": "Capacity of a capacitor.",
+   "unit": "F (farad)"
+  },
+  {
+   "name": "Capacitor with dielectric",
+   "formula": "Completely filled: C = Kε₀A/d.   Slab of thickness t: C = ε₀A / (d − t + t/K).   Metal slab: C = ε₀A / (d − t)",
+   "when": "Dielectric or metal between the plates.",
+   "tag": "PYQ favourite",
+   "note": "A metal slab is the K → ∞ case."
+  },
+  {
+   "name": "Combination of capacitors",
+   "formula": "Series: 1/C = 1/C₁ + 1/C₂ + …  (same Q on each).   Parallel: C = C₁ + C₂ + …  (same V on each)",
+   "when": "Capacitor networks.",
+   "note": "Opposite of resistors: the series equivalent is smaller than the smallest capacitor."
+  },
+  {
+   "name": "Energy stored",
+   "formula": "U = ½CV² = Q²/(2C) = ½QV;   energy density u = ½ ε₀ E²  (in a medium ½ε₀KE²)",
+   "when": "Energy of a capacitor.",
+   "unit": "J,  J/m³"
+  },
+  {
+   "name": "Dielectric inserted — battery ON vs OFF",
+   "formula": "Battery ON: V same, C→KC, Q→KQ, U→KU.   Battery OFF: Q same, C→KC, V→V/K, E→E/K, U→U/K",
+   "when": "What changes after inserting a dielectric.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Charge sharing between capacitors",
+   "formula": "Common V = (C₁V₁ + C₂V₂)/(C₁ + C₂);   heat loss = C₁C₂(V₁ − V₂)² / [2(C₁ + C₂)]",
+   "when": "Connecting a charged capacitor to another.",
+   "note": "Energy always decreases (heat/radiation); charge is conserved."
+  },
+  {
+   "name": "Induced charge on dielectric and plate force",
+   "formula": "Q_induced = Q(1 − 1/K);   attraction between plates F = Q²/(2ε₀A)",
+   "when": "Charge on dielectric surfaces; pull between plates.",
+   "note": "The ½ appears because a plate feels no force from its own field."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Force between two charges",
+   "problem": "q₁ = +2 μC and q₂ = −3 μC are 30 cm apart in air. Size and nature of the force?",
+   "solution": "F = kq₁q₂/r² = 9 × 10⁹ × 2 × 10⁻⁶ × 3 × 10⁻⁶ / (0.3)² = 0.6 N. The charges are opposite, so it is attractive."
+  },
+  {
+   "title": "Where is the field zero?",
+   "problem": "+4q is at x = 0 and +q at x = 30 cm. Where between them is E = 0?",
+   "solution": "For like charges the null point lies between them, nearer the smaller charge. At distance x from 4q: k(4q)/x² = kq/(30 − x)² ⇒ x/(30 − x) = 2 ⇒ x = 20 cm (10 cm from q). For unlike charges the null point lies outside, on the side of the smaller charge."
+  },
+  {
+   "title": "Torque and work on a dipole",
+   "problem": "±2 μC charges are 2 cm apart; the dipole makes 30° with E = 5 × 10⁵ N/C. Torque? Work to rotate it from 0° to 180°?",
+   "solution": "p = q(2a) = 2 × 10⁻⁶ × 0.02 = 4.0 × 10⁻⁸ C·m. τ = pE sin 30° = 4.0 × 10⁻⁸ × 5 × 10⁵ × 0.5 = 0.01 N·m. W = pE(cos 0° − cos 180°) = 2pE = 0.04 J."
+  },
+  {
+   "title": "Charge at the centre of a cube",
+   "problem": "q = 1.77 μC sits at the centre of a cube. Flux through the whole cube and through one face?",
+   "solution": "Total Φ = q/ε₀ = 1.77 × 10⁻⁶ / 8.85 × 10⁻¹² ≈ 2.0 × 10⁵ N·m²/C. By symmetry the 6 faces share it equally: one face = q/(6ε₀) ≈ 3.3 × 10⁴ N·m²/C. (If the charge is at a corner, flux through the whole cube is q/(8ε₀); the 3 faces touching that corner get zero flux because the field is parallel to them.)"
+  },
+  {
+   "title": "Shell: E zero inside, V not",
+   "problem": "A thin shell of R = 10 cm carries Q = 1 nC. E and V at the centre? V at 20 cm?",
+   "solution": "Inside E = 0. Inside V = surface value = kQ/R = 9 × 10⁹ × 10⁻⁹ / 0.1 = 90 V. At r = 0.2 m, V = kQ/r = 45 V."
+  },
+  {
+   "title": "Capacitor network",
+   "problem": "3 μF and 6 μF in series; this pair is in parallel with 4 μF; connected to 12 V. C_eq, total charge, energy?",
+   "solution": "Series: 3×6/(3+6) = 2 μF. Parallel: 2 + 4 = 6 μF. Q = CV = 6 × 12 = 72 μC. U = ½CV² = ½ × 6 × 10⁻⁶ × 144 = 432 μJ."
+  },
+  {
+   "title": "Dielectric after removing the battery",
+   "problem": "A 10 pF capacitor is charged to 100 V and the battery is removed. A K = 5 dielectric then fills the gap. New V and energy?",
+   "solution": "Battery OFF ⇒ Q stays = CV = 1 nC. C → 50 pF, V → 100/5 = 20 V. U before = ½CV² = 50 nJ, after = U/K = 10 nJ. Energy decreases — the slab is pulled in (the external agent does negative work)."
+  },
+  {
+   "title": "Energy lost in charge sharing",
+   "problem": "A 2 μF capacitor charged to 100 V is connected to an uncharged 3 μF capacitor. Common V and heat loss?",
+   "solution": "V = C₁V₁/(C₁ + C₂) = 200/5 = 40 V. Before: U = ½ × 2 × 10⁻⁶ × 100² = 10 mJ; after: ½ × 5 × 10⁻⁶ × 40² = 4 mJ. Loss = 6 mJ — the formula C₁C₂ΔV²/[2(C₁+C₂)] = 6 × 10⁻¹² × 10⁴ / 10⁻⁵ gives the same."
+  },
+  {
+   "title": "Electron accelerated through 100 V",
+   "problem": "An electron starts from rest and passes through a potential difference of 100 V. KE and speed?",
+   "solution": "K = eV = 100 eV = 1.6 × 10⁻¹⁷ J. v = √(2K/m) = √(2 × 1.6 × 10⁻¹⁷ / 9.11 × 10⁻³¹) ≈ 5.9 × 10⁶ m/s."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Charge and charging by induction",
+   "explain": "Charge is quantised, conserved and additive. In induction, bring a charged rod near, earth the far side, remove the earth, then the rod — the conductor keeps an opposite charge. The rod loses none of its own charge."
+  },
+  {
+   "title": "Rules of electric field lines",
+   "explain": "They start on positive and end on negative charges. They never cross (a point can't have two field directions). Crowded lines = strong field. They don't form closed loops in electrostatics. They meet conductor surfaces at right angles."
+  },
+  {
+   "title": "Dipole: uniform vs non-uniform field",
+   "explain": "In a uniform field the forces on the two charges are equal and opposite ⇒ net force 0, only torque (it rotates and aligns). In a non-uniform field there is also a net force — the dipole is pulled towards the stronger field (like bits of paper towards a charged comb)."
+  },
+  {
+   "title": "When and how to use Gauss's law",
+   "explain": "Useful only with symmetry: line charge → coaxial cylinder, sheet → pillbox, sphere → concentric sphere. Choose a Gaussian surface where E is constant and perpendicular (or parallel) to the surface. Flux depends only on the charge inside; the field depends on all charges."
+  },
+  {
+   "title": "Conductors in electrostatics",
+   "explain": "Inside E = 0; excess charge lies only on the outer surface; at the surface E is perpendicular with magnitude σ/ε₀; the whole conductor is equipotential. σ is larger at sharp points (hence pointed lightning conductors). Inside a hollow conductor (with no charge in the cavity) the field is zero — electrostatic shielding. An insulator, by contrast, does not let charge move freely."
+  },
+  {
+   "title": "Potential, potential difference and energy",
+   "explain": "V = work per unit charge to bring it from infinity. ΔV between two points is independent of path (conservative field). A positive charge moves from high V to low V; an electron the opposite way. The field is the slope of potential (−dV/dr)."
+  },
+  {
+   "title": "Equipotential surfaces",
+   "explain": "Surfaces on which V is the same everywhere. Field lines are perpendicular to them. No work is done moving a charge along them. Point charge: concentric spheres; uniform field: parallel planes perpendicular to the field. Two equipotentials never intersect."
+  },
+  {
+   "title": "Dielectrics and polarisation",
+   "explain": "A dielectric is an insulator that gets polarised in a field. Polar molecules (H₂O) have permanent dipoles that align; non-polar ones (O₂) get induced dipoles. The field inside drops to E₀/K, so capacitance becomes K times."
+  },
+  {
+   "title": "How a capacitor works",
+   "explain": "Two conductors carry +Q and −Q. C depends only on geometry and medium, not on Q or V. Energy is stored in the field between the plates (u = ½ε₀E²)."
+  },
+  {
+   "title": "Logic of series vs parallel",
+   "explain": "In series every capacitor has the same Q (induced on the inner plates) and V divides — the smaller C gets the larger V. In parallel V is the same and Q divides — the larger C gets more Q."
+  },
+  {
+   "title": "Dielectric: battery connected or not",
+   "explain": "Connected (V fixed): C, Q, U all become K times. Disconnected (Q fixed): V, E, U all become 1/K. If asked 'where did the energy go' — with the battery ON it did extra work; with it OFF the energy decreased and the slab was pulled in."
+  }
+ ],
+ "ratta": [
+  "k = 9 × 10⁹ N·m²/C²,  ε₀ = 8.85 × 10⁻¹² C²/(N·m²),  e = 1.6 × 10⁻¹⁹ C,  1 eV = 1.6 × 10⁻¹⁹ J.",
+  "Field: point 1/r², dipole 1/r³, line 1/r, sheet independent of r.",
+  "Potential: point 1/r, dipole 1/r².",
+  "Shell: inside E = 0, V = kQ/R (constant).  Solid sphere inside E ∝ r.",
+  "Dipole: τ = pE sin θ,  U = −pE cos θ,  work 0 → 180° = 2pE.",
+  "Cube centre: one face q/6ε₀;  charge at a corner: whole cube q/8ε₀.",
+  "Capacitors: series → add 1/C (same Q);  parallel → add C (same V).",
+  "Battery ON: V same → Q, U become K times.  Battery OFF: Q same → V, U become 1/K.",
+  "Ring axis: E_max at x = R/√2.",
+  "Conductor: E = 0 inside, E = σ/ε₀ at surface (perpendicular), whole body equipotential."
+ ],
+ "verifiedOn": "2026-11-13"
+}

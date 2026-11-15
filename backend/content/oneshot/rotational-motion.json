@@ -1,0 +1,215 @@
+{
+ "slug": "rotational-motion",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "System of Particles and Rotational Motion",
+  "JEE": "System of Particles and Rotational Motion"
+ },
+ "title": "System of Particles and Rotational Motion",
+ "readMinutes": 22,
+ "summary": [
+  "The translation of a system of particles or a rigid body is described by one point — the centre of mass (COM): treat all external force as acting at the COM, Ma_cm = F_ext. Internal forces don't change the motion of the COM.",
+  "Every linear quantity has a rotational partner: displacement → θ, velocity → ω, acceleration → α, mass → moment of inertia I, force → torque τ, momentum → angular momentum L. The formulas have the same shape: τ = Iα, L = Iω, KE = ½Iω².",
+  "Moment of inertia depends on mass and on how far it is from the axis (I = Σmr²). Learn I for standard bodies; for other axes use the parallel axis theorem (I = I_cm + Md²) and the perpendicular axis theorem (I_z = I_x + I_y, planar bodies only).",
+  "With zero external torque angular momentum is conserved (Iω constant) — a skater spins faster by pulling in her arms. In rolling without slipping v = ωR and KE = ½mv²(1 + k²/R²); on an incline the body with smaller k²/R² reaches the bottom first."
+ ],
+ "formulas": [
+  {
+   "name": "Centre of mass",
+   "formula": "x_cm = Σmᵢxᵢ / Σmᵢ;   continuous: x_cm = ∫x dm / ∫dm;   r_cm = Σmᵢrᵢ / M",
+   "when": "COM of particles or a body.",
+   "note": "The COM can lie outside the body (ring, L-shape)."
+  },
+  {
+   "name": "Standard centres of mass",
+   "formula": "semicircular ring 2R/π;  semicircular disc 4R/3π;  solid hemisphere 3R/8;  hollow hemisphere R/2;  solid cone h/4 (from the base)",
+   "when": "COM of standard shapes.",
+   "tag": "PYQ favourite",
+   "note": "All distances are measured from the flat side / centre."
+  },
+  {
+   "name": "Motion of centre of mass",
+   "formula": "M v_cm = Σ mᵢvᵢ (total momentum);   M a_cm = F_ext;   F_ext = 0 ⇒ v_cm constant",
+   "when": "Explosions, problems with internal forces.",
+   "note": "After an explosion the COM continues on the same parabola."
+  },
+  {
+   "name": "Rotational kinematics",
+   "formula": "ω = ω₀ + αt;   θ = ω₀t + ½αt²;   ω² = ω₀² + 2αθ;   v = ωr, a_t = αr",
+   "when": "Rotation with constant α.",
+   "note": "θ in radians; multiply revolutions by 2π."
+  },
+  {
+   "name": "Torque",
+   "formula": "τ = r × F;   |τ| = rF sin θ = F × (perpendicular distance)",
+   "when": "Turning effect of a force.",
+   "note": "A force through the axis gives no torque."
+  },
+  {
+   "name": "Newton's second law for rotation",
+   "formula": "τ_net = Iα",
+   "when": "Pulleys, rotating discs.",
+   "note": "Take I about the same axis as τ."
+  },
+  {
+   "name": "Angular momentum",
+   "formula": "L = r × p;   rigid body: L = Iω;   τ = dL/dt",
+   "when": "Momentum of a rotating body.",
+   "note": "Even a particle moving in a straight line has L about a point (= mvr⊥)."
+  },
+  {
+   "name": "Conservation of angular momentum",
+   "formula": "τ_ext = 0 ⇒ I₁ω₁ = I₂ω₂",
+   "when": "Skaters, rotating stools, planetary orbits.",
+   "mistake": "L is conserved but rotational KE is not (KE increases when arms are pulled in).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Moment of inertia and radius of gyration",
+   "formula": "I = Σmr² = ∫r² dm;   I = Mk²  (k = radius of gyration)",
+   "when": "Rotational inertia.",
+   "note": "I depends on the axis — 'I of a disc' is incomplete without the axis."
+  },
+  {
+   "name": "Standard moments of inertia",
+   "formula": "ring (centre ⊥) MR²;  disc ½MR²;  hollow sphere ⅔MR²;  solid sphere ⅖MR²;  rod (centre ⊥) ML²/12;  rod (end) ML²/3;  ring (diameter) ½MR²;  disc (diameter) ¼MR²;  solid cylinder (axis) ½MR²",
+   "when": "List to memorise.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parallel axis theorem",
+   "formula": "I = I_cm + Md²",
+   "when": "Parallel axis at distance d from the COM.",
+   "mistake": "Always start from the axis through the COM, not any other axis."
+  },
+  {
+   "name": "Perpendicular axis theorem",
+   "formula": "I_z = I_x + I_y",
+   "when": "Planar (flat) bodies — ring, disc, plate.",
+   "mistake": "Don't use it for 3-D bodies (sphere, cylinder)."
+  },
+  {
+   "name": "Rotational KE, work and power",
+   "formula": "K = ½Iω²;   W = ∫τ dθ;   P = τω",
+   "when": "Flywheels, motors.",
+   "note": "W = τθ only for constant torque."
+  },
+  {
+   "name": "Rolling without slipping",
+   "formula": "v_cm = ωR;   K = ½mv²(1 + k²/R²);   incline: a = g sin θ/(1 + k²/R²);   v = √[2gh/(1 + k²/R²)]",
+   "when": "Balls, cylinders, rings rolling.",
+   "tag": "PYQ favourite",
+   "note": "The contact point has zero velocity; friction does no work (energy is conserved)."
+  },
+  {
+   "name": "Which rolls down first",
+   "formula": "k²/R²: solid sphere 2/5 < disc/solid cylinder 1/2 < hollow sphere 2/3 < ring 1 ⇒ solid sphere first, ring last",
+   "when": "Race down an incline.",
+   "mistake": "Mass and radius don't matter — only shape (k²/R²)."
+  },
+  {
+   "name": "Equilibrium of a rigid body",
+   "formula": "ΣF = 0 (translational) and Στ = 0 about any point (rotational);   couple: zero net force, torque F × d",
+   "when": "Seesaws, ladders, beams.",
+   "note": "Take torques about the point where unknown forces act — the equations get shorter."
+  }
+ ],
+ "examples": [
+  {
+   "title": "COM of two particles",
+   "problem": "2 kg at x = 0 and 3 kg at x = 5 m. COM?",
+   "solution": "x_cm = (0 + 15)/5 = 3 m — closer to the heavier mass."
+  },
+  {
+   "title": "Disc: centre and rim",
+   "problem": "Disc 2 kg, R = 0.5 m. I about the perpendicular axis through the centre and a parallel axis through the rim?",
+   "solution": "I_cm = ½MR² = 0.25 kg·m². At the rim: I = I_cm + MR² = 0.75 kg·m² (= 3/2 MR²)."
+  },
+  {
+   "title": "I of a rod about its end",
+   "problem": "3 kg, 2 m rod, perpendicular axis through one end. I?",
+   "solution": "I = ML²/3 = 3 × 4/3 = 4 kg·m²."
+  },
+  {
+   "title": "Torque",
+   "problem": "A 10 N force acts 0.5 m from the nut on a spanner, at 30° to the spanner. Torque?",
+   "solution": "τ = rF sin θ = 0.5 × 10 × 0.5 = 2.5 N·m."
+  },
+  {
+   "title": "Skater",
+   "problem": "A skater with I = 4 kg·m² spins at 3 rad/s and pulls in her arms to I = 2 kg·m². New ω and KE?",
+   "solution": "I₁ω₁ = I₂ω₂ ⇒ ω₂ = 12/2 = 6 rad/s. KE goes from 18 J to 36 J — it increases (her muscles did work)."
+  },
+  {
+   "title": "Solid sphere on an incline",
+   "problem": "A solid sphere rolls without slipping down a 30° incline of height 7 m (g = 10). Acceleration and speed at the bottom?",
+   "solution": "a = g sin θ/(1 + 2/5) = 5/1.4 ≈ 3.57 m/s². v = √(2gh/1.4) = √100 = 10 m/s."
+  },
+  {
+   "title": "KE of a rolling disc",
+   "problem": "A 2 kg disc rolls at 4 m/s. Total KE?",
+   "solution": "K = ½mv²(1 + ½) = ½ × 2 × 16 × 1.5 = 24 J (one-third of it rotational)."
+  },
+  {
+   "title": "Flywheel",
+   "problem": "A flywheel starts from rest with α = 2 rad/s² for 5 s. ω and θ?",
+   "solution": "ω = αt = 10 rad/s. θ = ½αt² = 25 rad."
+  },
+  {
+   "title": "Radius of gyration",
+   "problem": "k of a ring of radius 1 m about a diameter?",
+   "solution": "I = ½MR² = Mk² ⇒ k = R/√2 ≈ 0.71 m."
+  },
+  {
+   "title": "Power of a motor",
+   "problem": "A motor delivers 20 N·m of torque at 50 rad/s. Power?",
+   "solution": "P = τω = 20 × 50 = 1000 W."
+  },
+  {
+   "title": "Seesaw",
+   "problem": "A 30 kg child sits 2 m from the pivot. Where should a 40 kg child sit to balance?",
+   "solution": "30 × 2 = 40 × x ⇒ x = 1.5 m."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Rigid bodies and types of motion",
+   "explain": "In a rigid body distances between particles don't change. Motion can be pure translation (all points have the same velocity), pure rotation (about a fixed axis), or both (rolling)."
+  },
+  {
+   "title": "Centre of mass vs centre of gravity",
+   "explain": "The COM is set by mass distribution; in uniform g the centre of gravity is the same point. A symmetric uniform body has its COM at the geometric centre. A force applied at the COM causes only translation."
+  },
+  {
+   "title": "Meaning of torque and angular momentum",
+   "explain": "Torque is the tendency to rotate — a door handle is far from the hinges for this reason. Angular momentum is the 'momentum' of rotation. For a particle, L = mvr⊥ about any point."
+  },
+  {
+   "title": "What moment of inertia depends on",
+   "explain": "Mass, how the mass is distributed and the position of the axis. A ring has larger I than a disc of the same mass (all its mass is at the rim). Flywheels keep most mass at the rim for smooth rotation."
+  },
+  {
+   "title": "Linear vs rotational analogy",
+   "explain": "x ↔ θ, v ↔ ω, a ↔ α, m ↔ I, F ↔ τ, p ↔ L, F = ma ↔ τ = Iα, KE ½mv² ↔ ½Iω², P = Fv ↔ τω. Remember one set and the other follows."
+  },
+  {
+   "title": "Rolling motion",
+   "explain": "Rolling = translation + rotation. The top point moves at 2v, the contact point at zero. Static friction makes rolling possible but does no work. On a smooth incline a body only slides, it cannot roll."
+  },
+  {
+   "title": "Examples of angular momentum conservation",
+   "explain": "A skater or dancer pulls in her arms — I decreases, ω increases. A diver curls up in the air to do more somersaults. A man on a rotating stool pulls dumbbells inward. Planets move faster near the Sun (Kepler's second law)."
+  }
+ ],
+ "ratta": [
+  "Ma_cm = F_ext;  internal forces don't move the COM.",
+  "τ = Iα;  L = Iω;  K = ½Iω²;  P = τω.",
+  "Ring MR², disc ½MR², solid sphere ⅖MR², hollow sphere ⅔MR², rod ML²/12 (centre), ML²/3 (end).",
+  "I = I_cm + Md²;  I_z = I_x + I_y (planar).",
+  "τ = 0 ⇒ I₁ω₁ = I₂ω₂.",
+  "Rolling: v = ωR;  a = g sin θ/(1 + k²/R²).",
+  "Race: solid sphere > disc > hollow sphere > ring.",
+  "COM: semicircular ring 2R/π, disc 4R/3π, solid hemisphere 3R/8."
+ ]
+}

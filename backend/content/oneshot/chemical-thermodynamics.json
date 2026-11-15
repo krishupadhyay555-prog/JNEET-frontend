@@ -1,0 +1,230 @@
+{
+ "slug": "chemical-thermodynamics",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Thermodynamics",
+  "JEE": "Thermodynamics"
+ },
+ "title": "Chemical Thermodynamics",
+ "readMinutes": 20,
+ "summary": [
+  "The system is what we study; the surroundings are everything else. An open system exchanges energy and matter, a closed one only energy, an isolated one neither. State functions (U, H, S, G, p, V, T) depend only on the initial and final states; heat and work are path functions.",
+  "The first law is energy conservation: ΔU = q + w (chemistry sign convention: work done ON the system and heat given TO the system are positive). Heat at constant volume = ΔU; heat at constant pressure = ΔH.",
+  "Enthalpy is additive: by Hess's law the ΔH of any reaction can be found by adding and subtracting other reactions. Formation, combustion, bond, atomisation and phase change enthalpies all link up this way.",
+  "Second law: every spontaneous process increases the entropy of the universe (ΔS_total > 0). For the system one number is enough — Gibbs energy: at constant T and p, ΔG < 0 means spontaneous.",
+  "ΔG° = −RT ln K links standard Gibbs energy and the equilibrium constant. Negative ΔG° ⇒ K > 1 (products favoured)."
+ ],
+ "formulas": [
+  {
+   "name": "First law",
+   "formula": "ΔU = q + w",
+   "when": "Basis of every energy balance.",
+   "note": "Chemistry: work on the system +w, work by the system −w. Physics books use the opposite convention."
+  },
+  {
+   "name": "Work of expansion (irreversible)",
+   "formula": "w = −p_ext ΔV;   free expansion (p_ext = 0): w = 0",
+   "when": "Expansion against a constant external pressure.",
+   "unit": "J",
+   "note": "1 L·atm = 101.3 J."
+  },
+  {
+   "name": "Reversible isothermal work (ideal gas)",
+   "formula": "w_rev = −2.303 nRT log(V₂/V₁) = −2.303 nRT log(p₁/p₂)",
+   "when": "Reversible, constant T.",
+   "tag": "PYQ favourite",
+   "note": "Ideal gas isothermal: ΔU = 0 ⇒ q = −w."
+  },
+  {
+   "name": "Enthalpy",
+   "formula": "H = U + pV;   ΔH = ΔU + Δn_g RT",
+   "when": "Converting between ΔH and ΔU.",
+   "mistake": "Δn_g = moles of gaseous products − moles of gaseous reactants; don't count solids/liquids.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Heat at constant V and p",
+   "formula": "q_V = ΔU,   q_p = ΔH",
+   "when": "A bomb calorimeter (constant V) gives ΔU; a coffee-cup calorimeter (constant p) gives ΔH."
+  },
+  {
+   "name": "Heat capacity",
+   "formula": "q = C ΔT = n C_m ΔT;   C_p − C_V = R (ideal gas, molar);   monoatomic: C_V = 3R/2, C_p = 5R/2",
+   "when": "Heat needed to warm something.",
+   "note": "Specific heat (per gram) and molar heat capacity (per mole) are different."
+  },
+  {
+   "name": "Adiabatic process",
+   "formula": "q = 0 ⇒ ΔU = w;   reversible ideal gas: TV^{γ−1} = constant,  pV^γ = constant",
+   "when": "Expansion/compression with no heat exchange.",
+   "note": "In reversible adiabatic expansion the gas cools (it does work from its own internal energy). Free expansion of an ideal gas: ΔT = 0."
+  },
+  {
+   "name": "Hess's law",
+   "formula": "ΔH (overall) = ΔH₁ + ΔH₂ + …   (reverse a reaction → reverse the sign of ΔH;  ×n → ΔH × n)",
+   "when": "ΔH of reactions that can't be measured directly.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "From enthalpies of formation",
+   "formula": "Δ_rH° = Σ Δ_fH°(products) − Σ Δ_fH°(reactants);   Δ_fH° of an element in its standard state = 0",
+   "when": "Reaction enthalpy from tables.",
+   "mistake": "Don't forget to multiply by the coefficients."
+  },
+  {
+   "name": "From bond enthalpies",
+   "formula": "Δ_rH = Σ BE(reactants, bonds broken) − Σ BE(products, bonds formed)",
+   "when": "Approximate ΔH of gaseous reactions.",
+   "note": "Here it is reactants − products (opposite of the formation formula)."
+  },
+  {
+   "name": "Types of enthalpy",
+   "formula": "Combustion (1 mol + O₂), atomisation (1 mol → gaseous atoms), sublimation = fusion + vaporisation, ionisation, hydration (gaseous ion → aq), solution = lattice + hydration, neutralisation (strong acid + strong base ≈ −57.1 kJ/mol)",
+   "when": "Definition questions.",
+   "note": "With a weak acid/base neutralisation is less exothermic (energy is used for ionisation)."
+  },
+  {
+   "name": "Entropy change",
+   "formula": "ΔS = q_rev / T;   phase change: ΔS = ΔH_trans / T_trans;   ideal gas isothermal: ΔS = 2.303 nR log(V₂/V₁)",
+   "when": "Measure of disorder.",
+   "unit": "J/(K·mol)"
+  },
+  {
+   "name": "Total entropy criterion",
+   "formula": "ΔS_total = ΔS_sys + ΔS_surr > 0 (spontaneous);   ΔS_surr = −ΔH_sys / T",
+   "when": "The basic spontaneity criterion (isolated system/universe).",
+   "note": "At equilibrium ΔS_total = 0."
+  },
+  {
+   "name": "Gibbs energy",
+   "formula": "G = H − TS;   ΔG = ΔH − TΔS;   ΔG = −T ΔS_total",
+   "when": "Spontaneity at constant T and p.",
+   "unit": "kJ/mol",
+   "tag": "PYQ favourite",
+   "note": "ΔG < 0 spontaneous, = 0 equilibrium, > 0 non-spontaneous."
+  },
+  {
+   "name": "Sign table (ΔH, ΔS)",
+   "formula": "(−, +): always spontaneous.  (+, −): never.  (−, −): at low T.  (+, +): at high T.   Switch temperature T = ΔH/ΔS",
+   "when": "At what temperature a reaction will go.",
+   "note": "Convert ΔS from J to kJ before combining it with ΔH."
+  },
+  {
+   "name": "ΔG° and equilibrium constant",
+   "formula": "ΔG° = −RT ln K = −2.303 RT log K;   ΔG = ΔG° + RT ln Q",
+   "when": "Finding K or ΔG°.",
+   "tag": "PYQ favourite",
+   "note": "R = 8.314 J/(K·mol) — keep ΔG° in J."
+  },
+  {
+   "name": "Gibbs energy and useful work",
+   "formula": "ΔG = w_max (non-expansion);   cell: ΔG° = −nFE°",
+   "when": "Link to electrochemistry."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Work against external pressure",
+   "problem": "A gas expands from 2 L to 10 L against a constant external pressure of 1 atm. Work?",
+   "solution": "w = −p_ext ΔV = −1 × 8 = −8 L·atm = −8 × 101.3 J ≈ −810 J. Negative: the system did work."
+  },
+  {
+   "title": "Reversible isothermal expansion",
+   "problem": "1 mol of ideal gas expands reversibly from 10 L to 20 L at 300 K. w, q, ΔU?",
+   "solution": "w = −2.303 × 1 × 8.314 × 300 × log 2 = −1729 J ≈ −1.73 kJ. Isothermal ⇒ ΔU = 0, q = +1.73 kJ."
+  },
+  {
+   "title": "ΔU from ΔH",
+   "problem": "N₂(g) + 3H₂(g) → 2NH₃(g), ΔH = −92.4 kJ at 298 K. ΔU?",
+   "solution": "Δn_g = 2 − 4 = −2. ΔU = ΔH − Δn_g RT = −92.4 − (−2)(8.314 × 298/1000) = −87.4 kJ."
+  },
+  {
+   "title": "Hess's law: formation of CO",
+   "problem": "C + O₂ → CO₂, ΔH = −393.5 kJ;  CO + ½O₂ → CO₂, ΔH = −283.0 kJ. ΔH for C + ½O₂ → CO?",
+   "solution": "First reaction − second: ΔH = −393.5 − (−283.0) = −110.5 kJ/mol."
+  },
+  {
+   "title": "Combustion from formation enthalpies",
+   "problem": "Δ_fH°: CH₄ −74.8, CO₂ −393.5, H₂O(l) −285.8 kJ/mol. Δ_cH° for CH₄ + 2O₂ → CO₂ + 2H₂O(l)?",
+   "solution": "Δ_cH° = [−393.5 + 2(−285.8)] − [−74.8 + 0] = −890.3 kJ/mol."
+  },
+  {
+   "title": "ΔH from bond enthalpies",
+   "problem": "H–H 436, Cl–Cl 242, H–Cl 431 kJ/mol. ΔH for H₂ + Cl₂ → 2HCl?",
+   "solution": "ΔH = (436 + 242) − 2 × 431 = −184 kJ."
+  },
+  {
+   "title": "Entropy of boiling water",
+   "problem": "Δ_vapH = 40.7 kJ/mol at 373 K. Δ_vapS?",
+   "solution": "ΔS = ΔH/T = 40700/373 ≈ 109.1 J/(K·mol)."
+  },
+  {
+   "title": "At what temperature is it spontaneous?",
+   "problem": "CaCO₃ → CaO + CO₂: ΔH = +179 kJ/mol, ΔS = +160 J/(K·mol). When spontaneous?",
+   "solution": "(+, +) ⇒ at high T. T = ΔH/ΔS = 179000/160 ≈ 1119 K and above."
+  },
+  {
+   "title": "K from ΔG°",
+   "problem": "ΔG° = −11.41 kJ/mol at 298 K. K?",
+   "solution": "log K = −ΔG°/(2.303RT) = 11410/(2.303 × 8.314 × 298) ≈ 2 ⇒ K ≈ 100."
+  }
+ ],
+ "topics": [
+  {
+   "title": "System, surroundings and boundary",
+   "explain": "Open (open boiling kettle): matter + energy exchange. Closed (sealed container): only energy. Isolated (ideal thermos): neither. Universe = system + surroundings."
+  },
+  {
+   "title": "Extensive vs intensive properties",
+   "explain": "Extensive properties depend on amount: mass, volume, U, H, S, G, heat capacity. Intensive ones don't: T, p, density, molar quantities, specific heat. The ratio of two extensive properties is intensive (density = m/V)."
+  },
+  {
+   "title": "State functions vs path functions",
+   "explain": "State functions depend only on initial and final states (U, H, S, G, p, V, T) — zero change over a cycle. Path functions depend on the route (q, w). But q + w = ΔU is a state function."
+  },
+  {
+   "title": "Processes",
+   "explain": "Isothermal (constant T), isobaric (constant p), isochoric (constant V), adiabatic (q = 0), cyclic (returns to start: ΔU = 0). Reversible: equilibrium at every step, infinitely slow; irreversible: real, fast processes."
+  },
+  {
+   "title": "Internal energy vs enthalpy",
+   "explain": "U = total energy of the molecules. H = U + pV, the heat supplied at constant pressure. For solids and liquids ΔH ≈ ΔU; for gases they differ by Δn_g RT."
+  },
+  {
+   "title": "Calorimetry",
+   "explain": "A bomb calorimeter (sealed, constant V) measures ΔU — used for combustion. A coffee-cup calorimeter (open, constant p) measures ΔH."
+  },
+  {
+   "title": "Standard state and formation",
+   "explain": "Standard state: 1 bar, given T (usually 298 K), most stable form (C graphite, O₂ gas, Br₂ liquid). Δ_fH° of an element in its standard state is 0. Diamond and O₃ do not have zero Δ_fH°."
+  },
+  {
+   "title": "Lattice and hydration enthalpy",
+   "explain": "Dissolving an ionic solid = breaking the lattice (+, endothermic) + hydrating the ions (−, exothermic). Δ_solH = lattice + hydration. If hydration is larger, dissolving is exothermic."
+  },
+  {
+   "title": "Meaning of spontaneity",
+   "explain": "Spontaneous = can happen on its own without outside help (not necessarily fast — e.g. diamond → graphite). ΔH alone does not decide it (melting ice is endothermic yet spontaneous above 0 °C); entropy must also be considered."
+  },
+  {
+   "title": "Feel for entropy",
+   "explain": "Gas > liquid > solid. Raising temperature, increasing moles of gas, dissolving and expanding all increase entropy. Third law: a perfect crystal has zero entropy at 0 K."
+  },
+  {
+   "title": "ΔG, K and Q",
+   "explain": "ΔG° < 0 ⇒ K > 1; ΔG° > 0 ⇒ K < 1. At any instant the reaction moves forward or back according to ΔG = ΔG° + RT ln Q; at equilibrium ΔG = 0 and Q = K."
+  }
+ ],
+ "ratta": [
+  "ΔU = q + w (chemistry convention).  q_V = ΔU,  q_p = ΔH.",
+  "ΔH = ΔU + Δn_g RT (count only gases).",
+  "w_rev,iso = −2.303 nRT log(V₂/V₁);  1 L·atm = 101.3 J.",
+  "Δ_rH = ΣΔ_fH(P) − ΣΔ_fH(R);  from bond enthalpies: ΣBE(R) − ΣBE(P).",
+  "Strong acid + strong base neutralisation ≈ −57.1 kJ/mol.",
+  "ΔG = ΔH − TΔS;  T_switch = ΔH/ΔS.",
+  "ΔG° = −2.303 RT log K;  ΔG° = −nFE°.",
+  "R = 8.314 J/(K·mol) = 0.0821 L·atm/(K·mol).",
+  "Extensive: m, V, U, H, S, G.  Intensive: T, p, ρ, molar values."
+ ],
+ "verifiedOn": "2026-11-13"
+}

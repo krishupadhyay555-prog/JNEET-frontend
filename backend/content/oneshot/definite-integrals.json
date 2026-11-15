@@ -1,0 +1,201 @@
+{
+ "slug": "definite-integrals",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Definite Integrals"
+ },
+ "title": "Definite Integrals",
+ "readMinutes": 18,
+ "summary": [
+  "A definite integral ∫ₐᵇ f(x) dx is a number — the signed area under the graph (positive above the x-axis, negative below). Fundamental theorem: find an antiderivative F, then F(b) − F(a).",
+  "Most JEE questions are solved with PROPERTIES rather than direct integration: King's property (x → a + b − x), odd/even, periodicity, and splitting at break points (|x|, [x]).",
+  "When the upper limit is a function of x, differentiate with the Leibniz rule. Turn 'limit of a sum' questions into ∫₀¹ f(x) dx.",
+  "Memorise a few standard results: Wallis' formula (sinⁿ, cosⁿ), ∫₀^{π/2} log sin x dx = −(π/2) log 2, and ∫₀^{π/2} sinⁿx/(sinⁿx + cosⁿx) dx = π/4."
+ ],
+ "formulas": [
+  {
+   "name": "Fundamental theorem of calculus",
+   "formula": "∫ₐᵇ f(x) dx = F(b) − F(a),   where F′(x) = f(x)",
+   "when": "Basis of every definite integral.",
+   "note": "The constant C cancels — no need to write it."
+  },
+  {
+   "name": "Leibniz rule",
+   "formula": "d/dx ∫_{g(x)}^{h(x)} f(t) dt = f(h(x)) h′(x) − f(g(x)) g′(x)",
+   "when": "Derivative when the limits contain x.",
+   "mistake": "Apply the chain rule only to the limits, not to the variable inside.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Dummy variable and reversing limits",
+   "formula": "∫ₐᵇ f(x) dx = ∫ₐᵇ f(t) dt;   ∫ₐᵇ f = −∫_b^a f;   ∫ₐᵃ f = 0",
+   "when": "Basic manipulations."
+  },
+  {
+   "name": "Splitting the interval",
+   "formula": "∫ₐᵇ f = ∫_a^c f + ∫_c^b f",
+   "when": "|x|, [x], max/min, piecewise functions.",
+   "note": "Split only at break points (where the sign/value inside changes)."
+  },
+  {
+   "name": "King's property",
+   "formula": "∫ₐᵇ f(x) dx = ∫ₐᵇ f(a + b − x) dx;   ∫₀ᵃ f(x) dx = ∫₀ᵃ f(a − x) dx",
+   "when": "When x → (a + b − x) makes a 'pair' — I + I = 2I.",
+   "tag": "PYQ favourite",
+   "note": "ADD the original and the new integral, then divide by 2."
+  },
+  {
+   "name": "Even and odd functions",
+   "formula": "∫₋ₐᵃ f = 2∫₀ᵃ f  (f even);   ∫₋ₐᵃ f = 0  (f odd)",
+   "when": "Symmetric limits.",
+   "mistake": "First check whether f(−x) = f(x) or −f(x).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Property for 0 to 2a",
+   "formula": "∫₀^{2a} f = 2∫₀ᵃ f  if f(2a − x) = f(x);   = 0  if f(2a − x) = −f(x)",
+   "when": "Trig integrals from 0 to π or 0 to 2π."
+  },
+  {
+   "name": "Periodic functions",
+   "formula": "f with period T: ∫₀^{nT} f = n ∫₀ᵀ f;   ∫ₐ^{a+T} f = ∫₀ᵀ f",
+   "when": "Periodic functions like |sin x|, {x}, sin²x.",
+   "mistake": "|sin x| has period π, not 2π."
+  },
+  {
+   "name": "Wallis formula",
+   "formula": "∫₀^{π/2} sinⁿx dx = ∫₀^{π/2} cosⁿx dx = [(n−1)(n−3)…]/[n(n−2)…] × (π/2 if n even, 1 if n odd)",
+   "when": "sinⁿ or cosⁿ from 0 to π/2.",
+   "tag": "Ratta"
+  },
+  {
+   "name": "Standard results",
+   "formula": "∫₀^{π/2} log sin x dx = ∫₀^{π/2} log cos x dx = −(π/2) log 2;   ∫₀^{π/2} sinⁿx/(sinⁿx + cosⁿx) dx = π/4",
+   "when": "Used directly.",
+   "tag": "Ratta"
+  },
+  {
+   "name": "Limit as a sum",
+   "formula": "lim_{n→∞} (1/n) Σ_{r=1}^{n} f(r/n) = ∫₀¹ f(x) dx;   general: ∫ₐᵇ f = lim h Σ f(a + rh),  h = (b − a)/n",
+   "when": "Limit of a long summation.",
+   "note": "r/n → x, 1/n → dx. If r runs from 0 to n or 1 to 2n, the limits change (up to 2n → 0 to 2)."
+  },
+  {
+   "name": "Substitution in definite integrals",
+   "formula": "x = g(t) ⇒ dx = g′(t) dt and change the limits too: a → g⁻¹(a), b → g⁻¹(b)",
+   "when": "Substitution in a definite integral.",
+   "note": "Once the limits are changed there's no need to return to x."
+  },
+  {
+   "name": "Integration by parts (definite)",
+   "formula": "∫ₐᵇ u v′ dx = [u v]ₐᵇ − ∫ₐᵇ u′ v dx",
+   "when": "Products (x eˣ, x sin x, log x).",
+   "note": "Choose u by ILATE."
+  },
+  {
+   "name": "Greatest integer and fractional part",
+   "formula": "∫₀ⁿ [x] dx = 0 + 1 + … + (n − 1) = n(n − 1)/2;   ∫₀ⁿ {x} dx = n/2",
+   "when": "Integrals of [x] and {x}.",
+   "note": "Split at every integer."
+  },
+  {
+   "name": "Bounds (estimation)",
+   "formula": "m ≤ f ≤ M on [a, b] ⇒ m(b − a) ≤ ∫ₐᵇ f ≤ M(b − a);   |∫ f| ≤ ∫ |f|",
+   "when": "'In what range does the integral lie' questions."
+  }
+ ],
+ "examples": [
+  {
+   "title": "King's property (pair)",
+   "problem": "∫₀^{π/2} sin x / (sin x + cos x) dx = ?",
+   "solution": "I = ∫ sin x/(sin x + cos x). With x → π/2 − x: I = ∫ cos x/(cos x + sin x). Adding: 2I = ∫₀^{π/2} 1 dx = π/2 ⇒ I = π/4."
+  },
+  {
+   "title": "Odd function",
+   "problem": "∫₋₁¹ x³ cos x dx = ?",
+   "solution": "f(−x) = (−x)³ cos(−x) = −x³ cos x ⇒ odd ⇒ integral = 0, without integrating."
+  },
+  {
+   "title": "King + odd-even mix",
+   "problem": "∫₀^π x sin x / (1 + cos²x) dx = ?",
+   "solution": "x → π − x: I = ∫ (π − x) sin x/(1 + cos²x). Adding: 2I = π ∫₀^π sin x/(1 + cos²x) dx. With t = cos x: = π ∫₋₁¹ dt/(1 + t²) = π × π/2 ⇒ I = π²/4."
+  },
+  {
+   "title": "Greatest integer",
+   "problem": "∫₀³ [x] dx = ?",
+   "solution": "On [0, 1) it is 0, on [1, 2) it is 1, on [2, 3) it is 2 ⇒ 0 + 1 + 2 = 3."
+  },
+  {
+   "title": "Splitting a modulus",
+   "problem": "∫₋₁² |x| dx = ?",
+   "solution": "∫₋₁⁰ (−x) dx + ∫₀² x dx = 1/2 + 2 = 5/2."
+  },
+  {
+   "title": "Leibniz rule",
+   "problem": "d/dx ∫₀^{x²} cos t dt = ?",
+   "solution": "f(h(x)) h′(x) = cos(x²) × 2x = 2x cos(x²)."
+  },
+  {
+   "title": "Wallis formula",
+   "problem": "∫₀^{π/2} sin⁵x dx and ∫₀^{π/2} sin⁶x dx?",
+   "solution": "n = 5 (odd): (4/5)(2/3) × 1 = 8/15.   n = 6 (even): (5/6)(3/4)(1/2) × π/2 = 5π/32."
+  },
+  {
+   "title": "Limit as sum",
+   "problem": "lim_{n→∞} (1² + 2² + … + n²)/n³ and lim_{n→∞} Σ_{r=1}^{n} n/(n² + r²) = ?",
+   "solution": "First: (1/n) Σ (r/n)² → ∫₀¹ x² dx = 1/3.  Second: (1/n) Σ 1/(1 + (r/n)²) → ∫₀¹ dx/(1 + x²) = π/4."
+  },
+  {
+   "title": "Log-sine standard result",
+   "problem": "∫₀^{π/2} log sin x dx = ?",
+   "solution": "I = ∫ log sin x = ∫ log cos x (King). 2I = ∫₀^{π/2} log(sin 2x / 2) dx = ∫ log sin 2x − (π/2) log 2. With 2x = t the first part becomes I ⇒ 2I = I − (π/2) log 2 ⇒ I = −(π/2) log 2."
+  },
+  {
+   "title": "By parts",
+   "problem": "∫₀¹ x eˣ dx = ?",
+   "solution": "u = x, v′ = eˣ: [x eˣ]₀¹ − ∫₀¹ eˣ dx = e − (e − 1) = 1."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Meaning of a definite integral",
+   "explain": "Area under a curve: the sum of thin rectangles (width h, height f) as h → 0. So 'limit of a sum' and the integral are the same thing. The part below the x-axis counts negative — for actual area integrate |f|."
+  },
+  {
+   "title": "When to use which property — quick checklist",
+   "explain": "1) Limits from −a to a? → check odd/even. 2) Limits 0 to a or a to b with a sin/cos or x/(a+b−x) type pair? → King. 3) |…|, [x], {x}, max/min inside? → split at break points. 4) Periodic function over a long interval? → split into periods. 5) Limit of a sum? → (1/n)Σ f(r/n)."
+  },
+  {
+   "title": "Real use of King's property",
+   "explain": "When f(x) + f(a + b − x) simplifies (like sin + cos, or x + (π − x) = π). Also to remove a factor of x: ∫₀^π x f(sin x) dx = (π/2)∫₀^π f(sin x) dx."
+  },
+  {
+   "title": "Uses of the Leibniz rule",
+   "explain": "Derivatives of functions defined by integrals with x in the limits, maxima–minima, and 0/0 forms like lim x→0 (∫₀ˣ …)/xⁿ — L'Hôpital and Leibniz together."
+  },
+  {
+   "title": "Recognising a limit of a sum",
+   "explain": "Write the summation as (1/n) × f(r/n) by taking n outside. r from 1 to n ⇒ 0 to 1; 1 to 2n ⇒ 0 to 2; n+1 to 2n ⇒ 1 to 2."
+  },
+  {
+   "title": "Limits under substitution",
+   "explain": "When substituting in a definite integral, change the limits to the new variable. If the substitution isn't one-one (e.g. t = sin x on 0 to π), you may need to split the interval."
+  },
+  {
+   "title": "Connection to area",
+   "explain": "Area between two curves = ∫ (upper − lower) dx between the intersection points. This is the base of the next chapter (Application of Integrals)."
+  }
+ ],
+ "ratta": [
+  "King: ∫ₐᵇ f(x) = ∫ₐᵇ f(a + b − x).",
+  "Odd → 0;  even → 2∫₀ᵃ.",
+  "∫₀^{π/2} sinⁿ/(sinⁿ + cosⁿ) = π/4.",
+  "∫₀^{π/2} log sin x = −(π/2) log 2.",
+  "Wallis: (n−1)(n−3)…/[n(n−2)…] × (π/2 if even).",
+  "∫₀^π x f(sin x) dx = (π/2) ∫₀^π f(sin x) dx.",
+  "∫₀ⁿ [x] dx = n(n − 1)/2;  ∫₀ⁿ {x} dx = n/2.",
+  "lim (1/n) Σ f(r/n) = ∫₀¹ f(x) dx.",
+  "Leibniz: f(h)h′ − f(g)g′."
+ ],
+ "verifiedOn": "2026-11-13"
+}

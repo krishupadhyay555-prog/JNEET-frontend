@@ -73,7 +73,7 @@
   },
   {
    "name": "Number of divisors",
-   "formula": "if N = p^a q^b r^c then divisors = (a + 1)(b + 1)(c + 1);  sum of divisors = Π (p^(a+1) − 1)/(p − 1)",
+   "formula": "if N = p^a q^b r^c then divisors = (a + 1)(b + 1)(c + 1);  sum of divisors = Π (p^{a+1} − 1)/(p − 1)",
    "when": "Divisor counting."
   }
  ],

@@ -1,0 +1,223 @@
+{
+ "slug": "moving-charges-and-magnetism",
+ "subject": "Physics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Moving Charges and Magnetism",
+  "JEE": "Moving Charges and Magnetism"
+ },
+ "title": "Moving Charges and Magnetism",
+ "readMinutes": 22,
+ "summary": [
+  "A moving charge (current) produces a magnetic field B around it (Oersted). The Biot–Savart law gives the field of a current element; for symmetric cases (long wire, solenoid, toroid) Ampere's circuital law is quicker.",
+  "A magnetic field exerts force on a moving charge: F = q(v × B). This force is always perpendicular to velocity, so speed doesn't change and no work is done — only the direction turns (circle or helix). With both E and B, the Lorentz force is F = q(E + v × B).",
+  "A current-carrying wire feels F = I(L × B). Two parallel wires attract if currents are in the same direction and repel if opposite; this gave the definition of the ampere.",
+  "A current loop is a magnetic dipole (m = NIA); in a uniform field the net force is zero but there is a torque τ = m × B. This is the principle of the moving coil galvanometer, which becomes an ammeter with a small parallel resistance (shunt) and a voltmeter with a large series resistance."
+ ],
+ "formulas": [
+  {
+   "name": "Biot–Savart law",
+   "formula": "dB = (μ₀/4π) I dl × r̂ / r² = (μ₀/4π) I dl sin θ / r²",
+   "when": "Field of a wire of any shape (adding small pieces).",
+   "note": "r points from the element to the point; θ is between dl (along the current) and r."
+  },
+  {
+   "name": "Field at centre of circular loop",
+   "formula": "B = μ₀NI / 2R;   arc (angle φ radian): B = μ₀Iφ / 4πR",
+   "when": "Centre of a circular coil or arc.",
+   "mistake": "Put φ in radians, not degrees.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Field on axis of circular loop",
+   "formula": "B = μ₀NIR² / [2(R² + x²)^{3/2}];   x ≫ R: B ≈ μ₀m / 2πx³",
+   "when": "Point on the axis of a coil.",
+   "mistake": "Putting x = 0 should give the centre formula — check it."
+  },
+  {
+   "name": "Straight wire",
+   "formula": "Finite: B = (μ₀I/4πd)(sin φ₁ + sin φ₂);   infinite: B = μ₀I / 2πd;   opposite the end of a semi-infinite wire: μ₀I/4πd",
+   "when": "Field at distance d from a straight wire.",
+   "mistake": "The angles are measured from the perpendicular, not along the wire."
+  },
+  {
+   "name": "Ampere's circuital law",
+   "formula": "∮B·dl = μ₀ I_enclosed",
+   "when": "Symmetric cases: long wire, solenoid, toroid, thick wire.",
+   "mistake": "Don't count currents outside the loop in I_enclosed."
+  },
+  {
+   "name": "Thick (solid) wire, radius R",
+   "formula": "Inside (r < R): B = μ₀Ir / 2πR²;   outside: B = μ₀I / 2πr",
+   "when": "Thick wire with uniform current.",
+   "note": "Inside, the field INCREASES with r and is maximum at the surface."
+  },
+  {
+   "name": "Solenoid and toroid",
+   "formula": "Long solenoid inside: B = μ₀nI (n = turns per metre), at the end μ₀nI/2;   toroid: B = μ₀NI / 2πr",
+   "when": "Uniform field inside coils.",
+   "mistake": "n is turns per METRE, not total turns."
+  },
+  {
+   "name": "Force on moving charge (Lorentz)",
+   "formula": "F = q(v × B);   |F| = qvB sin θ;   with E also: F = q(E + v × B)",
+   "when": "Charge in magnetic/electric fields.",
+   "note": "For an electron (negative) the direction is reversed — flip after using the hand rule."
+  },
+  {
+   "name": "Circular path in uniform B",
+   "formula": "r = mv/qB = p/qB = √(2mK)/qB;   T = 2πm/qB;   f = qB/2πm",
+   "when": "v ⊥ B.",
+   "mistake": "The time period does NOT depend on speed (the cyclotron is based on this).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Helical path",
+   "formula": "v at angle θ to B: radius = mv sin θ / qB;   pitch = 2πm v cos θ / qB",
+   "when": "Velocity oblique to B.",
+   "mistake": "cos θ in the pitch, sin θ in the radius — don't swap them."
+  },
+  {
+   "name": "Velocity selector",
+   "formula": "E and B perpendicular: undeflected when v = E/B",
+   "when": "Crossed fields.",
+   "mistake": "Only for that speed; mass and charge don't matter."
+  },
+  {
+   "name": "Force on current-carrying wire",
+   "formula": "F = I(L × B);   |F| = BIL sin θ;   any closed loop in uniform B: F_net = 0",
+   "when": "Wire in a magnetic field.",
+   "note": "The force on a curved wire equals that on the straight line joining its ends."
+  },
+  {
+   "name": "Force between parallel wires",
+   "formula": "F/L = μ₀I₁I₂ / 2πd;   same direction attract, opposite repel",
+   "when": "Two long parallel wires.",
+   "note": "Opposite of electric charges: here 'like' currents attract."
+  },
+  {
+   "name": "Magnetic dipole moment and torque",
+   "formula": "m = NIA (direction by right-hand rule);   τ = m × B, |τ| = NIAB sin θ;   U = −m·B",
+   "when": "Current loop in a field.",
+   "mistake": "Measure θ from the normal (m), not from the PLANE of the loop."
+  },
+  {
+   "name": "Moving coil galvanometer",
+   "formula": "NIAB = kφ ⇒ φ = (NAB/k) I;   current sensitivity φ/I = NAB/k;   voltage sensitivity φ/V = NAB/(kR_G)",
+   "when": "Working of a galvanometer.",
+   "mistake": "More turns raise current sensitivity but not necessarily voltage sensitivity (R also grows)."
+  },
+  {
+   "name": "Galvanometer → ammeter / voltmeter",
+   "formula": "Ammeter: shunt S = I_g G / (I − I_g) in parallel.   Voltmeter: R = V/I_g − G in series",
+   "when": "Changing the range.",
+   "mistake": "An ammeter has very low resistance, a voltmeter very high — connecting them the wrong way can burn the meter."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Force and radius for an electron",
+   "problem": "An electron moves at 2 × 10⁶ m/s perpendicular to B = 0.5 T. Force and radius of the circle? (m_e = 9.11 × 10⁻³¹ kg)",
+   "solution": "F = qvB = 1.6 × 10⁻¹⁹ × 2 × 10⁶ × 0.5 = 1.6 × 10⁻¹³ N. r = mv/qB = 9.11 × 10⁻³¹ × 2 × 10⁶ / (1.6 × 10⁻¹⁹ × 0.5) = 2.28 × 10⁻⁵ m."
+  },
+  {
+   "title": "Cyclotron frequency",
+   "problem": "A proton circles in B = 1 T. Frequency? (m_p = 1.67 × 10⁻²⁷ kg)",
+   "solution": "f = qB/2πm = 1.6 × 10⁻¹⁹ / (2π × 1.67 × 10⁻²⁷) ≈ 1.52 × 10⁷ Hz — independent of speed."
+  },
+  {
+   "title": "Field at the centre of a coil",
+   "problem": "10 turns, radius 10 cm, current 2 A. B at the centre?",
+   "solution": "B = μ₀NI/2R = 4π × 10⁻⁷ × 10 × 2 / 0.2 = 1.26 × 10⁻⁴ T."
+  },
+  {
+   "title": "Long wire",
+   "problem": "A long straight wire carries 10 A. B at 5 cm?",
+   "solution": "B = μ₀I/2πd = 2 × 10⁻⁷ × 10/0.05 = 4.0 × 10⁻⁵ T."
+  },
+  {
+   "title": "Solenoid",
+   "problem": "A solenoid has 1000 turns per metre and carries 2 A. B inside?",
+   "solution": "B = μ₀nI = 4π × 10⁻⁷ × 1000 × 2 = 2.51 × 10⁻³ T."
+  },
+  {
+   "title": "Force between parallel wires",
+   "problem": "Two long parallel wires 10 cm apart carry 5 A and 10 A in the same direction. Force per metre?",
+   "solution": "F/L = μ₀I₁I₂/2πd = 2 × 10⁻⁷ × 50/0.1 = 1.0 × 10⁻⁴ N/m, attractive."
+  },
+  {
+   "title": "Torque on a coil",
+   "problem": "50 turns, area 0.02 m², current 1 A, B = 0.2 T; the coil's normal is at 30° to B. Magnetic moment and torque?",
+   "solution": "m = NIA = 1 A·m². τ = mB sin 30° = 1 × 0.2 × 0.5 = 0.1 N·m."
+  },
+  {
+   "title": "Galvanometer to ammeter and voltmeter",
+   "problem": "G = 50 Ω, full-scale I_g = 5 mA. Make (a) a 0–5 A ammeter (b) a 0–10 V voltmeter.",
+   "solution": "(a) S = I_g G/(I − I_g) = 0.005 × 50/4.995 ≈ 0.05 Ω in parallel. (b) R = V/I_g − G = 2000 − 50 = 1950 Ω in series."
+  },
+  {
+   "title": "Velocity selector",
+   "problem": "E = 10⁴ V/m and B = 0.02 T are crossed. Which speed passes undeflected?",
+   "solution": "v = E/B = 10⁴/0.02 = 5.0 × 10⁵ m/s."
+  },
+  {
+   "title": "Force on a wire",
+   "problem": "A 0.5 m wire carries 3 A perpendicular to B = 0.4 T. Force?",
+   "solution": "F = BIL = 0.4 × 3 × 0.5 = 0.6 N."
+  },
+  {
+   "title": "Pitch of a helix",
+   "problem": "An electron enters B = 0.01 T at 2 × 10⁶ m/s making 60° with B. Pitch?",
+   "solution": "Pitch = 2πm v cos 60° / qB = 2π × 9.11 × 10⁻³¹ × 10⁶ / (1.6 × 10⁻¹⁹ × 0.01) ≈ 3.6 × 10⁻³ m."
+  },
+  {
+   "title": "Field on the axis",
+   "problem": "1 turn, R = 10 cm, I = 1 A. B on the axis 10 cm from the centre?",
+   "solution": "B = μ₀IR²/[2(R² + x²)^{3/2}] = 4π × 10⁻⁷ × 0.01 / [2 × (0.02)^{3/2}] ≈ 2.2 × 10⁻⁶ T (about 35% of the centre value 6.3 × 10⁻⁶ T)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Oersted's experiment",
+   "explain": "A compass needle near a current-carrying wire deflects — current produces a magnetic field. Reversing the current reverses the deflection. Field lines are concentric circles around the wire."
+  },
+  {
+   "title": "Direction rules",
+   "explain": "Right-hand thumb rule: thumb along current, fingers give B (long wire). For a loop/solenoid, curl fingers with the current and the thumb gives B (north). For force use the cross product in F = q(v × B) or Fleming's left-hand rule."
+  },
+  {
+   "title": "Applications of Biot–Savart",
+   "explain": "Field at the centre and on the axis of a circular loop, field of an arc, finite wire. For an element, the field is proportional to current and inversely proportional to distance squared."
+  },
+  {
+   "title": "Applications of Ampere's law",
+   "explain": "Infinite wire (B ∝ 1/r), inside a solid wire (B ∝ r), solenoid (uniform μ₀nI inside, ≈ 0 outside), toroid (μ₀NI/2πr inside, zero outside). Choose an Amperian loop where B is constant and parallel to dl."
+  },
+  {
+   "title": "Motion of charges in E and B",
+   "explain": "Only B: circle (v ⊥ B), helix (oblique), straight line (v ∥ B, zero force). The magnetic force does no work ⇒ KE stays constant. Crossed E and B: velocity selector. A cyclotron uses f = qB/2πm to accelerate charges repeatedly."
+  },
+  {
+   "title": "Definition of ampere",
+   "explain": "If two infinitely long parallel wires 1 m apart carry equal currents and the force between them is 2 × 10⁻⁷ N per metre, each current is 1 ampere. (Since 2019 the SI ampere is defined through the elementary charge e, but this relation remains true.)"
+  },
+  {
+   "title": "Current loop as a magnetic dipole",
+   "explain": "A loop behaves like a small bar magnet: m = NIA, one face north and one south. Far away its field is dipole-like (1/r³). In a uniform field the net force is zero and the torque m × B tends to align m with B."
+  },
+  {
+   "title": "Moving coil galvanometer",
+   "explain": "The coil sits in a radial magnetic field (concave poles + soft iron core) ⇒ sin θ = 1 in every position, so deflection is proportional to current (linear scale). A spring provides restoring torque kφ. To raise sensitivity increase N, B, A or decrease k."
+  }
+ ],
+ "ratta": [
+  "μ₀/4π = 10⁻⁷ T·m/A;  μ₀/2π = 2 × 10⁻⁷.",
+  "Loop centre μ₀NI/2R;  wire μ₀I/2πd;  solenoid μ₀nI.",
+  "r = mv/qB;  T = 2πm/qB (independent of speed).",
+  "v = E/B (velocity selector).",
+  "F/L = μ₀I₁I₂/2πd — same direction attract.",
+  "m = NIA;  τ = mB sin θ;  U = −mB cos θ.",
+  "Shunt S = I_g G/(I − I_g);  series R = V/I_g − G.",
+  "Magnetic force never does work."
+ ]
+}
