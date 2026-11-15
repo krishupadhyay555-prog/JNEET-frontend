@@ -1,0 +1,154 @@
+{
+ "slug": "structural-organisation-in-animals",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Structural Organisation in Animals"
+ },
+ "title": "Structural Organisation in Animals",
+ "readMinutes": 13,
+ "summary": [
+  "Animal tissues are of four types: epithelial (covering), connective (support and binding), muscular (movement) and neural (control).",
+  "Epithelia are simple or compound and may be squamous, cuboidal, columnar or ciliated; glands are epithelial cells specialised for secretion. Cell junctions (tight, adhering, gap) join cells.",
+  "Connective tissue includes loose and dense connective tissue, cartilage, bone, blood and adipose tissue. Muscles are skeletal, smooth or cardiac.",
+  "The frog (Rana tigrina) is studied as a model vertebrate: its morphology, digestive, respiratory, circulatory, excretory, nervous and reproductive systems."
+ ],
+ "formulas": [
+  {
+   "name": "Simple epithelium",
+   "formula": "squamous — blood vessel walls, air sacs of lungs;  cuboidal — ducts of glands, PCT of nephron (brush border);  columnar — stomach and intestine lining (microvilli);  ciliated — bronchioles, fallopian tubes",
+   "when": "Matching epithelium to location.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Compound epithelium",
+   "formula": "multi-layered; protective (skin, buccal cavity, pharynx, ducts of salivary and pancreatic glands)",
+   "when": "Where protection from chemical and mechanical stress is needed."
+  },
+  {
+   "name": "Glands",
+   "formula": "exocrine (with ducts — saliva, mucus, milk, earwax, digestive enzymes);  endocrine (ductless — hormones into blood)",
+   "when": "Glandular epithelium."
+  },
+  {
+   "name": "Cell junctions",
+   "formula": "tight junctions stop leakage;  adhering junctions cement cells together;  gap junctions connect cytoplasm for rapid transfer of ions and small molecules",
+   "when": "Junction functions.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Connective tissue types",
+   "formula": "loose: areolar (under skin), adipose (fat);  dense regular: tendons (muscle → bone), ligaments (bone → bone);  dense irregular: skin;  specialised: cartilage, bone, blood",
+   "when": "Classifying connective tissue.",
+   "note": "Blood is a fluid connective tissue."
+  },
+  {
+   "name": "Cartilage and bone",
+   "formula": "cartilage: chondrocytes in lacunae, pliable matrix (nose tip, outer ear, between vertebrae);  bone: osteocytes in lacunae, hard matrix of calcium salts and collagen; bone marrow makes blood cells",
+   "when": "Skeletal connective tissue."
+  },
+  {
+   "name": "Muscle types",
+   "formula": "skeletal: striated, voluntary, multinucleate;  smooth: non-striated, involuntary, spindle-shaped (gut, blood vessels);  cardiac: striated, involuntary, branched, intercalated discs",
+   "when": "Comparing muscles.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Neural tissue",
+   "formula": "neurons (excitable) + neuroglia (support and protect; more than half the volume of neural tissue)",
+   "when": "Nervous tissue."
+  },
+  {
+   "name": "Frog heart and blood",
+   "formula": "3 chambers (2 atria + 1 ventricle) + sinus venosus + conus arteriosus;  RBCs nucleated;  hepatic portal and renal portal systems",
+   "when": "Frog circulation.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Frog respiration",
+   "formula": "skin (cutaneous) in water and during hibernation/aestivation;  buccal cavity and lungs on land",
+   "when": "Frog breathing."
+  },
+  {
+   "name": "Frog excretion",
+   "formula": "ureotelic;  kidneys → ureters → cloaca;  in males the ureter is a urinogenital duct; in females ureters and oviducts open separately into the cloaca",
+   "when": "Frog excretory system."
+  },
+  {
+   "name": "Frog nervous system",
+   "formula": "10 pairs of cranial nerves;  brain = forebrain (olfactory lobes, cerebral hemispheres, diencephalon), midbrain (optic lobes), hindbrain (cerebellum, medulla oblongata)",
+   "when": "Frog CNS."
+  },
+  {
+   "name": "Frog reproduction",
+   "formula": "external fertilisation in water;  development via tadpole larva (metamorphosis);  female lays 2500–3000 ova at a time",
+   "when": "Frog life cycle."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Tendon vs ligament",
+   "problem": "What does a tendon connect, and what does a ligament connect?",
+   "solution": "Tendon: skeletal muscle to bone. Ligament: bone to bone. Both are dense regular connective tissue."
+  },
+  {
+   "title": "Which muscle?",
+   "problem": "A muscle is striated, branched and involuntary, with intercalated discs. Which type?",
+   "solution": "Cardiac muscle — the intercalated discs (fused plasma membranes with gap junctions) let the cells contract as a unit."
+  },
+  {
+   "title": "Brush border",
+   "problem": "Where is cuboidal epithelium with a brush border found?",
+   "solution": "In the proximal convoluted tubule (PCT) of the nephron; microvilli increase the surface for reabsorption."
+  },
+  {
+   "title": "Frog skin",
+   "problem": "Why is frog skin always moist?",
+   "solution": "Mucous glands keep it moist, and it must stay moist for cutaneous respiration (gas exchange through the skin) in water and during hibernation and aestivation."
+  },
+  {
+   "title": "Male or female frog?",
+   "problem": "How do you tell a male frog from a female?",
+   "solution": "Males have vocal sacs and a copulatory pad on the first digit of each forelimb; females lack both."
+  },
+  {
+   "title": "Areolar tissue",
+   "problem": "What cells does areolar tissue contain?",
+   "solution": "Fibroblasts (make fibres), macrophages and mast cells, in a semi-fluid ground substance with collagen and elastic fibres."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Organ and organ system",
+   "explain": "Tissues form organs (stomach, lung, heart, kidney); organs form organ systems (digestive, respiratory). Complexity in organ and organ systems displays a recognisable trend through evolution."
+  },
+  {
+   "title": "Blood",
+   "explain": "A fluid connective tissue: plasma + formed elements (RBCs, WBCs, platelets). It is the main circulating fluid that transports substances."
+  },
+  {
+   "title": "Frog morphology",
+   "explain": "Body divisible into head and trunk; no neck or tail. Skin smooth and slippery; dorsal side olive green with dark spots, ventral side pale yellow. Frogs don't drink water but absorb it through the skin. They show camouflage (mimicry) and are cold-blooded (poikilothermous)."
+  },
+  {
+   "title": "Frog digestive system",
+   "explain": "Short alimentary canal (frogs are carnivores). Bilobed tongue catches insects. Liver secretes bile (stored in gall bladder); pancreas secretes pancreatic juice. Digestion completes in the intestine; food is absorbed by villi and microvilli. Undigested waste leaves through the cloaca."
+  },
+  {
+   "title": "Frog sense organs",
+   "explain": "Sense organs: touch (sensory papillae), taste (taste buds), smell (nasal epithelium), vision (eyes) and hearing (tympanum with internal ear). Eyes and internal ears are well organised; the rest are cellular aggregations around nerve endings."
+  },
+  {
+   "title": "Endocrine glands in frog",
+   "explain": "Pituitary, thyroid, parathyroid, thymus, pineal body, pancreatic islets, adrenals and gonads."
+  }
+ ],
+ "ratta": [
+  "Squamous — air sacs;  cuboidal — PCT;  columnar — gut;  ciliated — bronchioles, fallopian tube.",
+  "Tight stops leakage;  adhering cements;  gap connects cytoplasm.",
+  "Tendon: muscle-bone;  ligament: bone-bone.",
+  "Cardiac: striated, involuntary, intercalated discs.",
+  "Frog: 3-chambered heart, nucleated RBCs, 10 cranial nerves, ureotelic.",
+  "Male frog: vocal sacs + copulatory pad."
+ ],
+ "verifiedOn": "2026-11-13"
+}

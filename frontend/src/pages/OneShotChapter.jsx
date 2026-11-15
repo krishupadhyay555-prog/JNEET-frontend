@@ -100,7 +100,7 @@ export default function OneShotChapter() {
                 className={`shrink-0 px-3 py-2.5 text-[13px] border-b-2 -mb-px transition
                   ${tab === t.id ? "border-fg-primary font-bold text-fg-primary" : "border-transparent text-gray-600 hover:text-fg-primary"}`}
               >
-                {t.label}
+                {t.id === "formulas" && doc.subject === "Biology" ? "Key facts" : t.label}
               </button>
             ))}
           </div>

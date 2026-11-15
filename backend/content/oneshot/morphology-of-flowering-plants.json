@@ -1,0 +1,160 @@
+{
+ "slug": "morphology-of-flowering-plants",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Morphology of Flowering Plants"
+ },
+ "title": "Morphology of Flowering Plants",
+ "readMinutes": 14,
+ "summary": [
+  "Morphology is the study of external form: root, stem, leaf, inflorescence, flower, fruit and seed. Each part is modified in many plants for storage, support, protection or reproduction.",
+  "Dicots usually have tap roots and reticulate venation; monocots have fibrous roots and parallel venation.",
+  "A flower is a modified shoot. Its parts (calyx, corolla, androecium, gynoecium) are described by symmetry, aestivation, ovary position and placentation, and summarised in a floral formula and floral diagram.",
+  "Three families are studied in detail: Fabaceae (pea), Solanaceae (potato) and Liliaceae (lily)."
+ ],
+ "formulas": [
+  {
+   "name": "Root types",
+   "formula": "tap root (from radicle — mustard);  fibrous root (wheat);  adventitious (from other parts — grass, Monstera, banyan)",
+   "when": "Root systems."
+  },
+  {
+   "name": "Root modifications",
+   "formula": "storage — carrot, turnip (tap), sweet potato (adventitious);  prop roots — banyan;  stilt roots — maize, sugarcane;  pneumatophores — Rhizophora (mangroves)",
+   "when": "Modified roots.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Stem modifications",
+   "formula": "underground storage — potato (tuber), ginger, turmeric (rhizome), Colocasia (corm), onion (bulb);  tendrils — cucumber, grapes;  thorns — Bougainvillea, Citrus;  phylloclade — Opuntia, Euphorbia;  runner — grass;  stolon — mint, jasmine;  offset — Pistia, Eichhornia;  sucker — banana, pineapple, Chrysanthemum",
+   "when": "Modified stems.",
+   "tag": "PYQ favourite",
+   "note": "Potato is a stem (has nodes and eyes), sweet potato is a root."
+  },
+  {
+   "name": "Leaf modifications",
+   "formula": "tendrils — peas;  spines — cacti;  fleshy storage — onion, garlic;  phyllode (flattened petiole) — Australian Acacia;  pitcher — Nepenthes;  bladder — Utricularia",
+   "when": "Modified leaves."
+  },
+  {
+   "name": "Phyllotaxy",
+   "formula": "alternate — China rose, mustard, sunflower;  opposite — Calotropis, guava;  whorled — Alstonia",
+   "when": "Arrangement of leaves."
+  },
+  {
+   "name": "Inflorescence",
+   "formula": "racemose: main axis keeps growing, flowers acropetal (older below);  cymose: main axis ends in a flower, flowers basipetal",
+   "when": "Types of inflorescence."
+  },
+  {
+   "name": "Flower symmetry and ovary position",
+   "formula": "actinomorphic (radial — mustard, Datura, chilli);  zygomorphic (one plane — pea, gulmohur, Cassia);  hypogynous (superior — mustard, China rose, brinjal);  perigynous (half-inferior — plum, rose, peach);  epigynous (inferior — guava, cucumber, sunflower ray florets)",
+   "when": "Describing flowers."
+  },
+  {
+   "name": "Aestivation",
+   "formula": "valvate (Calotropis);  twisted (China rose, lady's finger, cotton);  imbricate (Cassia, gulmohur);  vexillary/papilionaceous (pea, bean)",
+   "when": "Arrangement of petals in the bud.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Placentation",
+   "formula": "marginal (pea);  axile (China rose, tomato, lemon);  parietal (mustard, Argemone);  free central (Dianthus, Primrose);  basal (sunflower, marigold)",
+   "when": "Ovule arrangement in the ovary.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Stamen terms",
+   "formula": "epipetalous (attached to petals — brinjal);  epiphyllous (attached to perianth — lily);  monoadelphous (China rose), diadelphous (pea), polyadelphous (citrus)",
+   "when": "Androecium questions."
+  },
+  {
+   "name": "Floral formula symbols",
+   "formula": "Br bracteate, ⊕ actinomorphic, % zygomorphic, ⚥ bisexual, K calyx, C corolla, P perianth, A androecium, G gynoecium; G with a line below = superior ovary, line above = inferior",
+   "when": "Reading a floral formula."
+  },
+  {
+   "name": "Fabaceae formula",
+   "formula": "% ⚥ K₍₅₎ C₁₊₂₊₍₂₎ A₍₉₎₊₁ G₁",
+   "when": "Pea family.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Solanaceae formula",
+   "formula": "⊕ ⚥ K₍₅₎ C₍₅₎ A₅ (epipetalous) G₍₂₎, superior, swollen placenta with axile placentation",
+   "when": "Potato family."
+  },
+  {
+   "name": "Liliaceae formula",
+   "formula": "Br ⊕ ⚥ P₍₃₊₃₎ A₃₊₃ G₍₃₎, superior, trilocular, axile",
+   "when": "Lily family."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Root or stem?",
+   "problem": "Ginger grows underground. Is it a root or a stem?",
+   "solution": "A stem (rhizome): it has nodes, internodes, scale leaves and buds. Roots never bear nodes or buds."
+  },
+  {
+   "title": "Fruit type",
+   "problem": "What is the edible part of mango and coconut?",
+   "solution": "Both are drupes. Mango: the fleshy mesocarp. Coconut: the endosperm (and the fibrous mesocarp is coir)."
+  },
+  {
+   "title": "Pea flower",
+   "problem": "Describe the corolla of a pea flower.",
+   "solution": "Papilionaceous: one large standard (vexillum), two lateral wings (alae) and two fused keel petals; vexillary aestivation."
+  },
+  {
+   "title": "Placentation identification",
+   "problem": "Ovules on the central axis of a multilocular ovary — which placentation, and one example?",
+   "solution": "Axile placentation — China rose, tomato or lemon."
+  },
+  {
+   "title": "Economic families",
+   "problem": "Name one food plant each from Fabaceae, Solanaceae and Liliaceae.",
+   "solution": "Fabaceae: gram, arhar, soybean (pulses). Solanaceae: potato, tomato, brinjal. Liliaceae: Asparagus (vegetable); aloe and Colchicum are medicinal, tulip and Gloriosa ornamental."
+  },
+  {
+   "title": "Pneumatophores",
+   "problem": "Why do mangroves like Rhizophora have pneumatophores?",
+   "solution": "They grow in waterlogged, oxygen-poor soil; pneumatophores grow upwards out of the soil to take in oxygen for respiration."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Regions of the root",
+   "explain": "Root cap at the tip protects the apex; region of meristematic activity (cells divide); region of elongation (cells grow); region of maturation (root hairs absorb water and minerals)."
+  },
+  {
+   "title": "The leaf",
+   "explain": "Parts: leaf base (pulvinus in legumes; sheath in monocots), petiole and lamina. Venation is reticulate in dicots and parallel in monocots. Simple leaves have an undivided lamina; compound leaves are pinnate (neem) or palmate (silk cotton). A bud is present in the axil of a leaf but not of a leaflet."
+  },
+  {
+   "title": "Parts of a flower",
+   "explain": "Calyx (sepals), corolla (petals), androecium (stamens) and gynoecium (carpels). When calyx and corolla are not distinct, they form a perianth (lily). Apocarpous carpels are free (lotus, rose); syncarpous are fused (mustard, tomato)."
+  },
+  {
+   "title": "Fruit",
+   "explain": "A fruit is a mature ovary formed after fertilisation; one formed without fertilisation is parthenocarpic. Fruit wall (pericarp) = epicarp, mesocarp, endocarp."
+  },
+  {
+   "title": "Seed",
+   "explain": "Dicot seed (bean, gram, pea): seed coat (testa and tegmen), hilum, micropyle, embryo with two cotyledons, radicle and plumule. Monocot seed (maize): endospermic, single cotyledon (scutellum), aleurone layer, coleoptile and coleorhiza."
+  },
+  {
+   "title": "Family features",
+   "explain": "Fabaceae: tap root with root nodules, pinnately compound leaves with pulvinus, legume fruit. Solanaceae: often hairy stems, berry or capsule fruits, many endospermous seeds. Liliaceae: monocot herbs with bulbs, corms or rhizomes; perianth tepals; capsule or berry fruits."
+  }
+ ],
+ "ratta": [
+  "Potato = stem tuber;  sweet potato = root.",
+  "Pneumatophores — Rhizophora;  stilt — maize;  prop — banyan.",
+  "Twisted: China rose, cotton;  vexillary: pea;  valvate: Calotropis.",
+  "Marginal pea, axile China rose/tomato, parietal mustard, free central Dianthus, basal sunflower.",
+  "Fabaceae: A₍₉₎₊₁ diadelphous;  Solanaceae: epipetalous, swollen placenta;  Liliaceae: P₍₃₊₃₎.",
+  "Mango & coconut = drupe."
+ ],
+ "verifiedOn": "2026-11-13"
+}

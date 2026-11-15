@@ -1,0 +1,151 @@
+{
+ "slug": "locomotion-and-movement",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Locomotion and Movement"
+ },
+ "title": "Locomotion and Movement",
+ "readMinutes": 13,
+ "summary": [
+  "Cells show three types of movement: amoeboid (pseudopodia — macrophages, leucocytes), ciliary (trachea, fallopian tubes) and muscular (limbs, jaws, tongue). Locomotion is a voluntary movement that changes location.",
+  "Skeletal muscle is made of fibres with repeating sarcomeres (actin thin filaments and myosin thick filaments). The sliding filament theory explains contraction, triggered by Ca²⁺ and powered by ATP.",
+  "The human skeleton has 206 bones: axial (80) and appendicular (126). Joints are fibrous, cartilaginous or synovial.",
+  "Disorders of muscles and bones include myasthenia gravis, muscular dystrophy, tetany, arthritis, osteoporosis and gout."
+ ],
+ "formulas": [
+  {
+   "name": "Sarcomere",
+   "formula": "functional unit of contraction = between two successive Z lines;  I band (light, actin only) and A band (dark, myosin);  H zone (centre of A band, no overlap);  M line holds thick filaments",
+   "when": "Muscle fibre structure.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Changes during contraction",
+   "formula": "I band shortens, H zone shortens/disappears, A band length stays the same, sarcomere shortens",
+   "when": "Sliding filament theory.",
+   "mistake": "The filaments don't shorten — they slide over each other.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Contractile proteins",
+   "formula": "actin (thin filament) + tropomyosin + troponin;  myosin (thick filament — meromyosin: heavy (head, with ATPase, actin binding site) and light (tail))",
+   "when": "Proteins of myofilaments."
+  },
+  {
+   "name": "Excitation–contraction",
+   "formula": "motor neuron releases acetylcholine at the neuromuscular junction → action potential → Ca²⁺ released from sarcoplasmic reticulum → Ca²⁺ binds troponin → myosin binding sites on actin exposed → cross-bridge → power stroke (ATP hydrolysis)",
+   "when": "Steps of muscle contraction."
+  },
+  {
+   "name": "Red vs white fibres",
+   "formula": "red: much myoglobin and mitochondria, aerobic;  white: little myoglobin, fewer mitochondria, many sarcoplasmic reticulum, anaerobic",
+   "when": "Types of muscle fibres."
+  },
+  {
+   "name": "Skeleton count",
+   "formula": "total 206 = axial 80 + appendicular 126",
+   "when": "Bone counts.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Axial skeleton",
+   "formula": "skull 22 (cranial 8 + facial 14) + hyoid 1 + ear ossicles 6 + vertebral column 26 + sternum 1 + ribs 24 (12 pairs)",
+   "when": "Axial bone counts."
+  },
+  {
+   "name": "Vertebral column",
+   "formula": "cervical 7 + thoracic 12 + lumbar 5 + sacral 1 (fused) + coccygeal 1 (fused) = 26",
+   "when": "Vertebral counts.",
+   "note": "Almost all mammals, including giraffes and humans, have 7 cervical vertebrae."
+  },
+  {
+   "name": "Ribs",
+   "formula": "true ribs: pairs 1–7 (attached to sternum directly);  false ribs (vertebrochondral): pairs 8–10 (joined to the 7th rib's cartilage);  floating ribs: pairs 11–12",
+   "when": "Rib classification."
+  },
+  {
+   "name": "Appendicular skeleton",
+   "formula": "each limb 30 bones;  forelimb: humerus, radius, ulna, 8 carpals, 5 metacarpals, 14 phalanges;  hind limb: femur (longest), tibia, fibula, 7 tarsals, 5 metatarsals, 14 phalanges, patella;  pectoral girdle: clavicle + scapula;  pelvic girdle: coxal bones (ilium, ischium, pubis)",
+   "when": "Limb and girdle bones."
+  },
+  {
+   "name": "Joints",
+   "formula": "fibrous (immovable — skull sutures);  cartilaginous (limited movement — between vertebrae);  synovial (free movement): ball and socket (humerus–pectoral girdle), hinge (knee), pivot (atlas–axis), gliding (carpals), saddle (carpal–metacarpal of thumb)",
+   "when": "Classifying joints.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Muscle and bone disorders",
+   "formula": "myasthenia gravis (autoimmune, affects neuromuscular junction);  muscular dystrophy (genetic degeneration);  tetany (low Ca²⁺ → rapid spasms);  arthritis (joint inflammation);  osteoporosis (age, low oestrogen — bone mass falls);  gout (uric acid crystals in joints)",
+   "when": "Disorders."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Total bones",
+   "problem": "Axial skeleton has 80 bones and appendicular 126. Total?",
+   "solution": "80 + 126 = 206."
+  },
+  {
+   "title": "Axial count check",
+   "problem": "Add skull (22), hyoid (1), ear ossicles (6), vertebrae (26), sternum (1) and ribs (24).",
+   "solution": "22 + 1 + 6 + 26 + 1 + 24 = 80 — the axial skeleton."
+  },
+  {
+   "title": "Band changes",
+   "problem": "During contraction, which band stays the same length?",
+   "solution": "The A band (length of thick myosin filaments). I band and H zone shorten as actin slides inwards."
+  },
+  {
+   "title": "Role of calcium",
+   "problem": "What does Ca²⁺ do in muscle contraction?",
+   "solution": "It binds troponin, which shifts tropomyosin and uncovers the myosin-binding sites on actin, allowing cross-bridges to form."
+  },
+  {
+   "title": "Fatigue",
+   "problem": "Why do muscles get fatigued after repeated contraction?",
+   "solution": "Anaerobic breakdown of glycogen accumulates lactic acid in the muscle."
+  },
+  {
+   "title": "Joint type",
+   "problem": "Which joint is between atlas and axis, and what movement does it allow?",
+   "solution": "A pivot joint — it allows rotation of the head (saying 'no')."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of muscle",
+   "explain": "Skeletal (striated, voluntary — locomotion and posture), visceral/smooth (non-striated, involuntary — in walls of gut, reproductive tract), cardiac (striated, involuntary, branched)."
+  },
+  {
+   "title": "Structure of skeletal muscle",
+   "explain": "Muscle bundles (fascicles) held by fascia; each muscle fibre is a syncytium with sarcolemma, sarcoplasm and sarcoplasmic reticulum (Ca²⁺ store). Myofibrils show alternate dark (anisotropic, A) and light (isotropic, I) bands."
+  },
+  {
+   "title": "Cross-bridge cycle",
+   "explain": "The myosin head with ADP + Pi binds actin, releases them in a power stroke pulling actin towards the centre; a new ATP releases the head, ATP is hydrolysed and the head is re-cocked. When Ca²⁺ is pumped back, the sites are masked again and the muscle relaxes."
+  },
+  {
+   "title": "Skull",
+   "explain": "Cranium has 8 bones (protects the brain); face has 14 bones. Hyoid is U-shaped at the base of the buccal cavity. The skull joins the vertebral column through two occipital condyles (dicondylic skull)."
+  },
+  {
+   "title": "Vertebral column and sternum",
+   "explain": "The first vertebra is the atlas, which articulates with the occipital condyles. The column protects the spinal cord, supports the head and attaches ribs and back muscles. The sternum is a flat bone on the ventral midline of the thorax."
+  },
+  {
+   "title": "Girdles",
+   "explain": "Pectoral girdle: clavicle (collar bone) and scapula (with glenoid cavity for the head of the humerus, acromion process). Pelvic girdle: two coxal bones, each formed by fusion of ilium, ischium and pubis; the acetabulum receives the thigh bone; the two halves meet at the pubic symphysis."
+  }
+ ],
+ "ratta": [
+  "A band constant; I band & H zone shorten.",
+  "Ca²⁺ binds troponin;  ACh at neuromuscular junction.",
+  "206 = 80 axial + 126 appendicular.",
+  "Vertebrae 7-12-5-1-1 = 26.",
+  "True ribs 7, false 3, floating 2 pairs.",
+  "Pivot: atlas–axis;  hinge: knee;  saddle: thumb;  ball-socket: shoulder.",
+  "Gout = uric acid;  tetany = low Ca²⁺;  myasthenia = autoimmune."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,152 @@
+{
+ "slug": "plant-growth-and-development",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Plant Growth and Development"
+ },
+ "title": "Plant Growth and Development",
+ "readMinutes": 13,
+ "summary": [
+  "Growth is an irreversible permanent increase in size. In plants it is indeterminate (open) because meristems keep dividing. It has three phases — meristematic, elongation and maturation — and follows a sigmoid curve.",
+  "Growth rate can be arithmetic (one daughter cell keeps dividing) or geometric (both daughter cells divide); differentiation, dedifferentiation and redifferentiation shape the plant.",
+  "Five plant growth regulators control growth: auxins, gibberellins, cytokinins (promoters), abscisic acid and ethylene (mainly inhibitors).",
+  "Development is also controlled by photoperiodism (day length) and vernalisation (low temperature) for flowering, and by seed dormancy."
+ ],
+ "formulas": [
+  {
+   "name": "Arithmetic growth",
+   "formula": "Lₜ = L₀ + rt",
+   "when": "Linear growth — root elongating at a constant rate.",
+   "note": "Gives a straight line when length is plotted against time."
+  },
+  {
+   "name": "Geometric growth",
+   "formula": "Wₜ = W₀ eʳᵗ  (r = relative growth rate, e = 2.718)",
+   "when": "Exponential phase of growth (Wₜ final size, W₀ initial size).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Absolute vs relative growth",
+   "formula": "absolute = growth per unit time;  relative = growth per unit time per unit initial size",
+   "when": "Comparing growth of different leaves."
+  },
+  {
+   "name": "Sigmoid growth curve",
+   "formula": "lag phase → log (exponential) phase → stationary phase",
+   "when": "Growth of cells, organs or organisms in a limited environment."
+  },
+  {
+   "name": "Auxins",
+   "formula": "IAA, IBA (natural); NAA, 2,4-D (synthetic);  apical dominance, rooting of cuttings, parthenocarpy (tomato), prevent premature leaf and fruit drop, xylem differentiation;  2,4-D kills dicot weeds",
+   "when": "Auxin functions (F.W. Went, from Avena coleoptile tips).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gibberellins",
+   "formula": "GA₃ most common (from Gibberella fujikuroi — bakanae disease of rice);  stem elongation (sugarcane yield up by ~20 t/acre), bolting in cabbage/beet, fruit size (grapes), malting (brewing), seed germination, delayed senescence",
+   "when": "Gibberellin functions.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cytokinins",
+   "formula": "kinetin (from autoclaved herring sperm DNA), zeatin (corn kernels, coconut milk);  cell division, new leaves and chloroplasts, lateral shoot growth (overcomes apical dominance), delay leaf senescence (Richmond–Lang effect)",
+   "when": "Cytokinin functions."
+  },
+  {
+   "name": "Ethylene",
+   "formula": "gaseous; ripening of fruits (climacteric rise in respiration), triple response in seedlings, horizontal growth, abscission, flowering in pineapple, breaks dormancy;  ethephon releases ethylene",
+   "when": "Ethylene functions.",
+   "note": "Ethylene is the most widely used PGR in agriculture."
+  },
+  {
+   "name": "Abscisic acid (ABA)",
+   "formula": "stress hormone;  closes stomata, induces dormancy in seeds and buds, promotes abscission;  antagonist of GA",
+   "when": "ABA functions.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Photoperiodism",
+   "formula": "short-day plants flower when days are shorter than a critical length (actually need a long uninterrupted dark period);  long-day plants flower when days are longer;  day-neutral plants are unaffected;  leaves perceive the light",
+   "when": "Day-length control of flowering (Garner and Allard)."
+  },
+  {
+   "name": "Vernalisation",
+   "formula": "cold treatment needed to promote flowering in some plants — winter wheat, biennials (carrot, sugarbeet, cabbage)",
+   "when": "Low-temperature control of flowering."
+  },
+  {
+   "name": "Seed dormancy",
+   "formula": "caused by hard seed coat, chemical inhibitors (ABA, phenolics) or immature embryo;  broken by scarification, GA₃, nitrates, chilling",
+   "when": "Dormancy and germination."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Geometric growth",
+   "problem": "A seedling of 5 g grows with relative growth rate r = 0.1 per day. Mass after 10 days (Wₜ = W₀eʳᵗ)?",
+   "solution": "Wₜ = 5 × e^(0.1 × 10) = 5 × 2.718 = 13.6 g."
+  },
+  {
+   "title": "Relative growth",
+   "problem": "A leaf grows from 10 cm² to 15 cm². Relative growth (%)?",
+   "solution": "(15 − 10)/10 × 100 = 50%."
+  },
+  {
+   "title": "Bolting",
+   "problem": "Which hormone promotes bolting in cabbage, and what is bolting?",
+   "solution": "Gibberellin. Bolting is rapid internode elongation just before flowering in rosette plants like cabbage and beet."
+  },
+  {
+   "title": "Apical dominance",
+   "problem": "Removing the shoot tip makes a plant bushy. Why?",
+   "solution": "The apical bud makes auxin that suppresses lateral buds (apical dominance). Removing it (decapitation) lets the lateral buds grow — used in tea plantations and hedge-making."
+  },
+  {
+   "title": "Stress hormone",
+   "problem": "Why is ABA called a stress hormone?",
+   "solution": "It increases plant tolerance to stresses — it closes stomata during water shortage, induces dormancy to survive bad seasons and inhibits growth."
+  },
+  {
+   "title": "Fruit ripening",
+   "problem": "Which hormone hastens fruit ripening, and how is it supplied commercially?",
+   "solution": "Ethylene; it is supplied as ethephon, which releases ethylene in plant tissues. It also promotes female flowers in cucumbers."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Plasticity",
+   "explain": "Plants follow different pathways in response to environment or phases of life to form different structures — e.g. heterophylly in cotton, coriander and larkspur (different leaves in juvenile and mature plants) and in buttercup (different leaves in air and water)."
+  },
+  {
+   "title": "Differentiation, dedifferentiation, redifferentiation",
+   "explain": "Cells from meristems mature to perform specific functions (differentiation). Living differentiated cells can regain the ability to divide (dedifferentiation — e.g. interfascicular cambium, cork cambium) and then form cells that again lose the ability to divide (redifferentiation)."
+  },
+  {
+   "title": "Conditions for growth",
+   "explain": "Water (for cell enlargement and enzymatic activity), oxygen (for metabolic energy), nutrients, and optimum temperature and light."
+  },
+  {
+   "title": "Discovery of PGRs",
+   "explain": "Charles and Francis Darwin observed coleoptiles bending towards light (phototropism); F.W. Went isolated auxin from Avena coleoptile tips; E. Kurosawa found gibberellins from a fungus causing bakanae disease; Skoog and Miller found kinetin; ABA was discovered as inhibitor-B, abscisin II and dormin; Cousins confirmed ethylene from ripened oranges."
+  },
+  {
+   "title": "PGR interactions",
+   "explain": "Hormones act together, sometimes synergistically and sometimes antagonistically — e.g. auxin–cytokinin ratio decides root vs shoot formation in tissue culture; GA and ABA have opposite effects on seed dormancy."
+  },
+  {
+   "title": "Seed germination",
+   "explain": "When conditions are favourable, seeds absorb water, enzymes are activated and the embryo grows into a seedling. Dormancy prevents germination even under favourable conditions."
+  }
+ ],
+ "ratta": [
+  "Arithmetic Lₜ = L₀ + rt;  geometric Wₜ = W₀eʳᵗ.",
+  "Sigmoid: lag → log → stationary.",
+  "Auxin: apical dominance, 2,4-D weedicide.",
+  "GA: bolting, grapes, sugarcane, malting.",
+  "Cytokinin: delays senescence, lateral buds.",
+  "Ethylene: ripening, pineapple flowering, ethephon.",
+  "ABA: stomata close, dormancy, stress hormone.",
+  "Vernalisation = cold;  photoperiodism = day length."
+ ],
+ "verifiedOn": "2026-11-13"
+}

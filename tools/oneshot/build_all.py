@@ -3,5 +3,5 @@ Usage (repo root):  pip install sympy mpmath  →  python3 tools/oneshot/build_a
 import glob, os, runpy, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-for f in sorted(glob.glob(os.path.join(HERE, "[pcm]_*.py"))):
+for f in sorted(glob.glob(os.path.join(HERE, "[pcmb]_*.py"))):
     runpy.run_path(f, run_name="__main__")

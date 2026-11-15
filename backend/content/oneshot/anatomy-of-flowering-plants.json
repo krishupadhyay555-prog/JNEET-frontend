@@ -1,0 +1,157 @@
+{
+ "slug": "anatomy-of-flowering-plants",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Anatomy of Flowering Plants"
+ },
+ "title": "Anatomy of Flowering Plants",
+ "readMinutes": 13,
+ "summary": [
+  "Plant tissues are meristematic (dividing) or permanent (simple: parenchyma, collenchyma, sclerenchyma; complex: xylem and phloem).",
+  "Tissues are organised into three tissue systems: epidermal, ground (fundamental) and vascular.",
+  "Internal structure differs between dicot and monocot roots, stems and leaves — the number and arrangement of vascular bundles is the key.",
+  "Secondary growth (vascular cambium and cork cambium) increases girth in dicots and gymnosperms, giving annual rings, heartwood, sapwood and bark."
+ ],
+ "formulas": [
+  {
+   "name": "Meristems",
+   "formula": "apical (root and shoot tips — length);  intercalary (base of internodes in grasses — regrowth after grazing);  lateral (vascular cambium, cork cambium — girth)",
+   "when": "Types of meristem."
+  },
+  {
+   "name": "Simple permanent tissues",
+   "formula": "parenchyma (thin walls, storage, photosynthesis);  collenchyma (corners thickened with cellulose, hemicellulose, pectin — mechanical support in young dicot stems);  sclerenchyma (lignified, dead — fibres and sclereids)",
+   "when": "Comparing simple tissues."
+  },
+  {
+   "name": "Xylem elements",
+   "formula": "tracheids, vessels, xylem fibres (dead);  xylem parenchyma (only living part)",
+   "when": "Water conduction.",
+   "tag": "PYQ favourite",
+   "note": "Gymnosperms lack vessels (except Gnetum); angiosperms have vessels."
+  },
+  {
+   "name": "Phloem elements",
+   "formula": "sieve tubes + companion cells (angiosperms), phloem parenchyma, phloem fibres (only dead part)",
+   "when": "Food conduction.",
+   "note": "Gymnosperms have albuminous cells and sieve cells instead of sieve tubes and companion cells."
+  },
+  {
+   "name": "Protoxylem position",
+   "formula": "exarch (protoxylem towards periphery — roots);  endarch (protoxylem towards centre — stems)",
+   "when": "Root vs stem.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vascular bundles",
+   "formula": "radial (xylem and phloem on different radii — roots);  conjoint collateral open (with cambium — dicot stem);  conjoint closed (no cambium — monocot stem and leaves)",
+   "when": "Types of vascular bundle."
+  },
+  {
+   "name": "Dicot vs monocot root",
+   "formula": "dicot: 2–4 xylem bundles (diarch–tetrarch), small pith, secondary growth;  monocot: more than 6 (polyarch), large pith, no secondary growth",
+   "when": "Root anatomy.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Dicot vs monocot stem",
+   "formula": "dicot: vascular bundles in a ring, open, endodermis (starch sheath), hypodermis collenchyma;  monocot: scattered bundles, closed, sclerenchymatous bundle sheath, water-containing cavities, hypodermis sclerenchyma, no pith/cortex distinction",
+   "when": "Stem anatomy."
+  },
+  {
+   "name": "Dorsiventral vs isobilateral leaf",
+   "formula": "dicot: palisade + spongy mesophyll, more stomata on lower surface;  monocot: undifferentiated mesophyll, stomata equal on both surfaces, bulliform cells",
+   "when": "Leaf anatomy.",
+   "note": "Bulliform cells lose water and make grass leaves curl to reduce water loss."
+  },
+  {
+   "name": "Stomata",
+   "formula": "dicot: bean-shaped guard cells;  grasses: dumb-bell-shaped guard cells;  stomatal apparatus = pore + guard cells + subsidiary cells",
+   "when": "Epidermal tissue system."
+  },
+  {
+   "name": "Secondary growth outputs",
+   "formula": "vascular cambium → secondary xylem (inside) + secondary phloem (outside);  cork cambium (phellogen) → cork (phellem, outside) + secondary cortex (phelloderm, inside)",
+   "when": "Increase in girth."
+  },
+  {
+   "name": "Periderm and bark",
+   "formula": "periderm = phellem + phellogen + phelloderm;  bark = all tissues outside the vascular cambium (including secondary phloem)",
+   "when": "Bark questions.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Annual rings",
+   "formula": "spring/early wood: lighter, wide vessels;  autumn/late wood: darker, narrow vessels;  one light + one dark band = one year",
+   "when": "Dendrochronology (estimating the age of a tree)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Root or stem section?",
+   "problem": "A section shows radial bundles with exarch xylem and a pericycle. Root or stem?",
+   "solution": "Root — radial bundles and exarch protoxylem are root features (stems have conjoint bundles with endarch protoxylem)."
+  },
+  {
+   "title": "Monocot stem",
+   "problem": "List three features that identify a monocot stem in a T.S.",
+   "solution": "Scattered vascular bundles, each with a sclerenchymatous bundle sheath; bundles conjoint and closed; peripheral bundles smaller than central ones; water-containing cavities; no clear pith."
+  },
+  {
+   "title": "Heartwood vs sapwood",
+   "problem": "Which part of an old trunk conducts water?",
+   "solution": "Sapwood (alburnum) — the outer, light-coloured secondary xylem. Heartwood (duramen) is dark, filled with tannins, resins, oils and gums, and is non-conducting but strong."
+  },
+  {
+   "title": "Living cells in xylem",
+   "problem": "Which element of xylem is alive?",
+   "solution": "Xylem parenchyma. Tracheids, vessels and xylem fibres are dead at maturity."
+  },
+  {
+   "title": "Bark components",
+   "problem": "Is secondary phloem a part of the bark?",
+   "solution": "Yes. Bark includes every tissue outside the vascular cambium: secondary phloem, phelloderm, phellogen and phellem."
+  },
+  {
+   "title": "Grass leaf curling",
+   "problem": "Why do grass leaves roll up on a hot dry day?",
+   "solution": "Bulliform cells on the upper epidermis lose turgor and shrink, making the leaf roll inwards and reducing exposed surface and water loss."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Epidermal tissue system",
+   "explain": "Epidermis (usually single layer, covered by a waxy cuticle — absent in roots), stomata, and appendages: root hairs (unicellular extensions of epidermal cells) and trichomes on stems (usually multicellular, branched or unbranched, may be secretory)."
+  },
+  {
+   "title": "Ground tissue system",
+   "explain": "All tissues except epidermis and vascular bundles: cortex, pericycle, pith and medullary rays in stems and roots; mesophyll in leaves."
+  },
+  {
+   "title": "Endodermis and Casparian strips",
+   "explain": "The innermost cortical layer of roots; its cells have Casparian strips of water-impermeable suberin on radial and inner tangential walls, forcing water to pass through living cells."
+  },
+  {
+   "title": "Formation of the cambial ring",
+   "explain": "In dicot stems, intrafascicular cambium (within bundles) joins with interfascicular cambium (from medullary ray cells) to form a complete ring. Cambium is more active on the inner side, so more secondary xylem than phloem forms."
+  },
+  {
+   "title": "Lenticels",
+   "explain": "Lens-shaped openings in the bark where phellogen forms loosely packed complementary cells instead of cork; they permit gas exchange between the outer atmosphere and inner tissues."
+  },
+  {
+   "title": "Secondary growth in roots",
+   "explain": "The vascular cambium in dicot roots arises partly from conjunctive tissue below the phloem and partly from the pericycle opposite the protoxylem, forming a wavy ring that later becomes circular."
+  }
+ ],
+ "ratta": [
+  "Xylem: only parenchyma living;  phloem: only fibres dead.",
+  "Root: radial, exarch;  stem: conjoint, endarch.",
+  "Dicot root 2–4 bundles; monocot root more than 6.",
+  "Dicot stem: ring, open;  monocot stem: scattered, closed.",
+  "Bulliform cells — grasses curl.",
+  "Bark = everything outside vascular cambium.",
+  "Heartwood non-conducting;  sapwood conducts."
+ ],
+ "verifiedOn": "2026-11-13"
+}
