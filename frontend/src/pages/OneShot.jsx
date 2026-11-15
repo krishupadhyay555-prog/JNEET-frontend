@@ -95,7 +95,7 @@ export default function OneShot() {
                   <span className="flex-1 min-w-0">
                     <span className="block text-sm font-semibold truncate">{c.title}</span>
                     <span className="block text-[11px] text-gray-600 mt-0.5">
-                      {c.subject} · <Clock size={10} className="inline -mt-0.5" /> ~{c.readMinutes} min · {c.formulaCount} formula cards
+                      {c.subject} · <Clock size={10} className="inline -mt-0.5" /> ~{c.readMinutes} min · {c.formulaCount} {c.subject === "Biology" ? "key-fact" : "formula"} cards
                     </span>
                   </span>
                   <ChevronRight size={15} className="text-gray-600 group-hover:text-violet-500 transition" />

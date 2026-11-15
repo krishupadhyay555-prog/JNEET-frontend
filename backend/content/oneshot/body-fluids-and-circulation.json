@@ -1,0 +1,166 @@
+{
+ "slug": "body-fluids-and-circulation",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Body Fluids and Circulation"
+ },
+ "title": "Body Fluids and Circulation",
+ "readMinutes": 14,
+ "summary": [
+  "Blood is a fluid connective tissue: plasma (55%) and formed elements (45%) — RBCs, WBCs and platelets. Lymph is a colourless fluid that drains tissue fluid back into blood and carries fats.",
+  "ABO and Rh blood groups depend on antigens on RBCs; mismatched transfusion or Rh incompatibility in pregnancy can be dangerous.",
+  "The human heart has four chambers and double circulation. Its beat is myogenic, started by the SA node (pacemaker), and the cardiac cycle takes about 0.8 s.",
+  "The ECG records the heart's electrical activity (P, QRS, T). Disorders include hypertension, coronary artery disease, angina and heart failure."
+ ],
+ "formulas": [
+  {
+   "name": "Plasma composition",
+   "formula": "90–92% water, 6–8% proteins (fibrinogen — clotting; globulins — defence; albumins — osmotic balance)",
+   "when": "What plasma contains."
+  },
+  {
+   "name": "Formed elements counts",
+   "formula": "RBC 5–5.5 million/mm³;  WBC 6000–8000/mm³;  platelets 1.5–3.5 lakh/mm³;  haemoglobin 12–16 g/100 mL",
+   "when": "Blood counts.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "RBC facts",
+   "formula": "made in red bone marrow; biconcave, no nucleus in most mammals; life span 120 days; destroyed in spleen (graveyard of RBCs)",
+   "when": "Erythrocytes."
+  },
+  {
+   "name": "WBC percentages",
+   "formula": "neutrophils 60–65% (phagocytes);  lymphocytes 20–25% (B, T — immunity);  monocytes 6–8% (phagocytes);  eosinophils 2–3% (allergy, infections);  basophils 0.5–1% (histamine, serotonin, heparin)",
+   "when": "Differential leucocyte count.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "ABO groups",
+   "formula": "A: antigen A, anti-B;  B: antigen B, anti-A;  AB: both antigens, no antibodies (universal recipient);  O: no antigens, both antibodies (universal donor)",
+   "when": "Blood transfusion compatibility."
+  },
+  {
+   "name": "Rh incompatibility",
+   "formula": "Rh⁻ mother + Rh⁺ foetus → mother makes anti-Rh antibodies → affects the next Rh⁺ foetus (erythroblastosis foetalis);  prevented by anti-Rh antibodies to the mother right after the first delivery",
+   "when": "Pregnancy complication.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Clotting cascade",
+   "formula": "injury → thrombokinase → prothrombin → thrombin (needs Ca²⁺) → fibrinogen → fibrin threads trap blood cells → clot",
+   "when": "Coagulation of blood."
+  },
+  {
+   "name": "Double circulation",
+   "formula": "pulmonary: right ventricle → pulmonary artery → lungs → pulmonary veins → left atrium;  systemic: left ventricle → aorta → body → venae cavae → right atrium",
+   "when": "Human circulation."
+  },
+  {
+   "name": "Conducting system",
+   "formula": "SA node (right upper atrium, 70–75 impulses/min, pacemaker) → AV node → bundle of His → right and left bundle branches → Purkinje fibres",
+   "when": "Origin and spread of heartbeat.",
+   "note": "The heart is myogenic: the impulse starts in the heart muscle itself."
+  },
+  {
+   "name": "Cardiac cycle",
+   "formula": "duration = 60/heart rate ≈ 0.8 s at 72 beats/min;  atrial systole 0.1 s, ventricular systole 0.3 s, joint diastole 0.4 s",
+   "when": "Timing of the heartbeat."
+  },
+  {
+   "name": "Cardiac output",
+   "formula": "cardiac output = stroke volume × heart rate ≈ 70 mL × 72 ≈ 5 L/min",
+   "when": "Blood pumped per minute.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Heart sounds",
+   "formula": "lub (first): closure of tricuspid and bicuspid (AV) valves;  dub (second): closure of semilunar valves",
+   "when": "Auscultation."
+  },
+  {
+   "name": "ECG waves",
+   "formula": "P: atrial depolarisation;  QRS: ventricular depolarisation (start of ventricular contraction);  T: ventricular repolarisation (end of systole)",
+   "when": "Reading an ECG.",
+   "note": "Heart rate = number of QRS complexes per minute."
+  },
+  {
+   "name": "Normal blood pressure",
+   "formula": "120/80 mm Hg (systolic/diastolic);  hypertension ≥ 140/90",
+   "when": "Blood pressure."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Cardiac output",
+   "problem": "Stroke volume is 70 mL and heart rate 72 beats/min. Cardiac output?",
+   "solution": "70 × 72 = 5040 mL/min ≈ 5.04 L/min."
+  },
+  {
+   "title": "Duration of one cycle",
+   "problem": "Heart rate is 72 beats/min. How long is one cardiac cycle?",
+   "solution": "60/72 = 0.83 s (about 0.8 s)."
+  },
+  {
+   "title": "Universal donor",
+   "problem": "Why is group O called the universal donor?",
+   "solution": "O RBCs carry no A or B antigens, so the recipient's antibodies don't agglutinate them."
+  },
+  {
+   "title": "Erythroblastosis foetalis",
+   "problem": "An Rh⁻ woman carries her second Rh⁺ child. What is the risk?",
+   "solution": "Anti-Rh antibodies made after the first delivery cross the placenta and destroy the foetal RBCs — fatal anaemia and jaundice (erythroblastosis foetalis)."
+  },
+  {
+   "title": "Lymph and fat",
+   "problem": "Which vessels absorb fats from the intestine?",
+   "solution": "Lacteals (lymph vessels in the villi). Lymph carries the fat and drains into veins via the thoracic duct."
+  },
+  {
+   "title": "Heart blocked at AV node",
+   "problem": "What happens if the AV node fails?",
+   "solution": "Impulses from the SA node can't reach the ventricles normally; ventricles beat at their own slower rate (heart block), needing an artificial pacemaker."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Blood platelets and WBCs",
+   "explain": "Platelets (thrombocytes) are cell fragments from megakaryocytes in bone marrow and release clotting factors. A fall in their number causes clotting disorders and excessive blood loss."
+  },
+  {
+   "title": "Lymph (tissue fluid)",
+   "explain": "As blood passes through capillaries, some water and small solutes move into tissue spaces, forming interstitial fluid; it has the same mineral distribution as plasma. Lymphatic vessels collect it and return it to major veins. Lymph contains lymphocytes."
+  },
+  {
+   "title": "Open and closed circulation",
+   "explain": "Open: blood pumped into open spaces (arthropods, molluscs). Closed: blood always flows in vessels (annelids, chordates) — more precise regulation."
+  },
+  {
+   "title": "Human heart structure",
+   "explain": "Mesodermal origin, in the thoracic cavity, slightly tilted left, enclosed in double-walled pericardium. Interatrial and interventricular septa; tricuspid (right) and bicuspid/mitral (left) AV valves; semilunar valves at the pulmonary artery and aorta openings."
+  },
+  {
+   "title": "Regulation of cardiac activity",
+   "explain": "Heart activity is auto-regulated by nodal tissue but moderated by the medulla oblongata: sympathetic nerves increase rate and strength; parasympathetic (vagus) decreases them. Adrenal medulla hormones increase cardiac output."
+  },
+  {
+   "title": "Disorders",
+   "explain": "Hypertension (high blood pressure — damages heart, brain, kidneys); coronary artery disease or atherosclerosis (deposits of calcium, fat and cholesterol narrow coronary arteries); angina pectoris (chest pain from insufficient O₂ to heart muscle); heart failure (heart can't pump enough blood — congestion of lungs). Cardiac arrest is when the heart stops beating; heart attack is when heart muscle is damaged by sudden lack of blood."
+  },
+  {
+   "title": "Hepatic portal system",
+   "explain": "The hepatic portal vein carries blood from the intestine to the liver before it reaches the systemic circulation. Coronary circulation supplies the heart muscle itself."
+  }
+ ],
+ "ratta": [
+  "Plasma 55%: water 90–92%, proteins 6–8%.",
+  "Neutrophils most (60–65%); basophils least.",
+  "RBC 120 days; spleen = graveyard.",
+  "AB universal recipient;  O universal donor.",
+  "SA node = pacemaker;  cycle 0.8 s.",
+  "Cardiac output ≈ 5 L/min.",
+  "P atrial depol.;  QRS ventricular depol.;  T ventricular repol.",
+  "Lub = AV valves close;  dub = semilunar valves close."
+ ],
+ "verifiedOn": "2026-11-13"
+}

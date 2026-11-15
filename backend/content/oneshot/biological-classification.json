@@ -1,0 +1,151 @@
+{
+ "slug": "biological-classification",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biological Classification"
+ },
+ "title": "Biological Classification",
+ "readMinutes": 13,
+ "summary": [
+  "R.H. Whittaker (1969) proposed five kingdoms — Monera, Protista, Fungi, Plantae and Animalia — based on cell structure, body organisation, mode of nutrition, reproduction and phylogenetic relationships.",
+  "Monera are prokaryotes (bacteria, cyanobacteria, archaebacteria, mycoplasma). Protista are unicellular eukaryotes (chrysophytes, dinoflagellates, euglenoids, slime moulds, protozoans).",
+  "Fungi are heterotrophic, with chitin cell walls and hyphae; they are classified by spores and fruiting bodies into Phycomycetes, Ascomycetes, Basidiomycetes and Deuteromycetes.",
+  "Viruses, viroids, prions and lichens do not fit the five-kingdom scheme: viruses are nucleoprotein particles that are inert outside a host cell."
+ ],
+ "formulas": [
+  {
+   "name": "Two-kingdom vs five-kingdom",
+   "formula": "Linnaeus: Plantae + Animalia;  Whittaker (1969): Monera, Protista, Fungi, Plantae, Animalia",
+   "when": "History of classification.",
+   "note": "Two-kingdom grouping put prokaryotes with eukaryotes and unicellular with multicellular organisms."
+  },
+  {
+   "name": "Bacterial shapes",
+   "formula": "coccus (spherical), bacillus (rod), vibrium (comma), spirillum (spiral)",
+   "when": "Identifying bacteria."
+  },
+  {
+   "name": "Archaebacteria",
+   "formula": "halophiles (salty areas), thermoacidophiles (hot springs), methanogens (marshes, cattle gut → methane/biogas)",
+   "when": "Extreme-habitat bacteria.",
+   "tag": "PYQ favourite",
+   "note": "Their cell wall structure is different from other bacteria — this lets them survive extreme conditions."
+  },
+  {
+   "name": "Cyanobacteria",
+   "formula": "photosynthetic autotrophs with chlorophyll a; many fix nitrogen in heterocysts (Nostoc, Anabaena); form blooms in polluted water",
+   "when": "Blue-green algae facts."
+  },
+  {
+   "name": "Mycoplasma",
+   "formula": "no cell wall, smallest living cells, can survive without oxygen, many are pathogenic",
+   "when": "Unusual monerans."
+  },
+  {
+   "name": "Protist groups",
+   "formula": "chrysophytes (diatoms, desmids — silica walls, diatomaceous earth);  dinoflagellates (red tides, Gonyaulax);  euglenoids (pellicle, mixotrophic);  slime moulds (saprophytic, plasmodium, spores);  protozoans (amoeboid, flagellated, ciliated, sporozoans)",
+   "when": "Kingdom Protista.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Protozoan examples",
+   "formula": "amoeboid — Amoeba, Entamoeba;  flagellated — Trypanosoma (sleeping sickness);  ciliated — Paramoecium;  sporozoans — Plasmodium (malaria)",
+   "when": "Protozoan diseases."
+  },
+  {
+   "name": "Fungal classes",
+   "formula": "Phycomycetes: aseptate coenocytic, zoospores/aplanospores, oospores/zygospores (Mucor, Rhizopus, Albugo);  Ascomycetes: septate, conidia, ascospores in asci (Penicillium, yeast, Neurospora, morels, truffles);  Basidiomycetes: basidiospores, no asexual spores (Agaricus, Ustilago, Puccinia);  Deuteromycetes: only asexual stage known (Alternaria, Colletotrichum, Trichoderma)",
+   "when": "Classifying fungi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Fungal reproduction",
+   "formula": "plasmogamy → karyogamy → meiosis;  dikaryon (n + n) stage in ascomycetes and basidiomycetes",
+   "when": "Sexual cycle of fungi."
+  },
+  {
+   "name": "Viruses",
+   "formula": "nucleoprotein: DNA or RNA + protein coat (capsid made of capsomeres);  plant viruses usually ssRNA, animal viruses ssRNA/dsRNA/dsDNA, bacteriophages usually dsDNA",
+   "when": "Virus structure.",
+   "note": "D.J. Ivanowsky (1892) found TMV; M.W. Beijerinck called the fluid contagium vivum fluidum; W.M. Stanley crystallised viruses."
+  },
+  {
+   "name": "Viroids and prions",
+   "formula": "viroid: free RNA without protein coat (T.O. Diener, 1971, potato spindle tuber);  prion: abnormally folded protein (BSE/mad cow disease, CJD)",
+   "when": "Sub-viral agents."
+  },
+  {
+   "name": "Lichens",
+   "formula": "symbiotic association of algae (phycobiont, food) and fungi (mycobiont, shelter, water); good pollution indicators — do not grow in polluted areas",
+   "when": "Mutualism example."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Which kingdom?",
+   "problem": "Euglena has chlorophyll but behaves like a heterotroph in the dark. Which kingdom?",
+   "solution": "Protista (euglenoids). It has a pellicle instead of a cell wall and is mixotrophic, so it fits neither plants nor animals."
+  },
+  {
+   "title": "Fungus with no sexual stage known",
+   "problem": "Alternaria and Trichoderma are placed in which class, and why?",
+   "solution": "Deuteromycetes (imperfect fungi): only their asexual (conidial) stage is known. When the sexual stage is found, they are moved to Ascomycetes or Basidiomycetes."
+  },
+  {
+   "title": "Red tide",
+   "problem": "What causes red tides?",
+   "solution": "Rapid multiplication of red dinoflagellates such as Gonyaulax; their toxins can kill fish and other marine animals."
+  },
+  {
+   "title": "Biogas bacteria",
+   "problem": "Which bacteria produce biogas, and where do they live?",
+   "solution": "Methanogens (archaebacteria) — found in the rumen of cattle and in marshy areas; they make methane from cellulose-rich material."
+  },
+  {
+   "title": "Virus vs living",
+   "problem": "Why are viruses called obligate parasites?",
+   "solution": "Outside a host cell they are inert, crystallisable particles. Inside the host they take over its machinery to replicate, often killing the host cell."
+  },
+  {
+   "title": "Rust and smut",
+   "problem": "Name the fungi causing wheat rust and smut. Class?",
+   "solution": "Rust: Puccinia; smut: Ustilago. Both are Basidiomycetes."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Eubacteria nutrition",
+   "explain": "Most bacteria are heterotrophs (decomposers, nitrogen fixers, pathogens). Some are autotrophs: photosynthetic (cyanobacteria) or chemosynthetic (oxidise inorganic substances like nitrates and ammonia, help recycle nutrients). Bacteria reproduce mainly by fission; they also exchange DNA (conjugation, transformation, transduction)."
+  },
+  {
+   "title": "Diseases caused by bacteria",
+   "explain": "Cholera, typhoid, tetanus, citrus canker. Bacteria are also used in curd, antibiotics and nitrogen fixation (Rhizobium)."
+  },
+  {
+   "title": "Slime moulds",
+   "explain": "Saprophytic protists that form an aggregate called a plasmodium under suitable conditions, which can grow and spread over several feet. Under bad conditions they form fruiting bodies with spores that have true walls and survive for years."
+  },
+  {
+   "title": "Kingdom Fungi general features",
+   "explain": "Heterotrophic: saprophytic, parasitic or symbiotic (lichens, mycorrhiza). Hyphae form mycelium; cell walls of chitin and polysaccharides. Yeast is unicellular. Asexual spores: conidia, sporangiospores, zoospores; sexual spores: oospores, ascospores, basidiospores."
+  },
+  {
+   "title": "Kingdom Plantae and Animalia in the five-kingdom scheme",
+   "explain": "Plantae: eukaryotic, chlorophyll-containing, mostly autotrophic, cellulose walls (also partially heterotrophic: insectivorous plants and parasites like Cuscuta). Animalia: heterotrophic, multicellular, no cell walls, store food as glycogen or fat."
+  },
+  {
+   "title": "Three-domain system",
+   "explain": "Carl Woese divided Monera into Archaebacteria and Eubacteria — giving six kingdoms within three domains (Archaea, Bacteria, Eukarya)."
+  }
+ ],
+ "ratta": [
+  "Whittaker 1969: Monera, Protista, Fungi, Plantae, Animalia.",
+  "Methanogens → biogas;  halophiles → salt;  thermoacidophiles → hot springs.",
+  "Mycoplasma: no cell wall, smallest cell.",
+  "Diatoms → diatomaceous earth;  Gonyaulax → red tide.",
+  "Phyco: aseptate;  Asco: ascus;  Basidio: no asexual spores;  Deutero: only asexual.",
+  "TMV: Ivanowsky;  viroid: Diener 1971;  prion → mad cow.",
+  "Lichen = alga + fungus; pollution indicator."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,162 @@
+{
+ "slug": "chemical-coordination-and-integration",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Chemical Coordination and Integration"
+ },
+ "title": "Chemical Coordination and Integration",
+ "readMinutes": 14,
+ "summary": [
+  "Hormones are non-nutrient chemicals that act as intercellular messengers and are produced in trace amounts. Endocrine glands are ductless and release hormones into blood.",
+  "The hypothalamus controls the pituitary through releasing and inhibiting hormones (adenohypophysis) and by sending oxytocin and vasopressin down axons to the neurohypophysis.",
+  "Other glands: pineal, thyroid, parathyroid, thymus, adrenal, pancreas (islets of Langerhans), testes and ovaries. The heart, kidney and gut also make hormones.",
+  "Hormones act through receptors: protein hormones bind membrane receptors and use second messengers (cAMP, IP₃, Ca²⁺); steroid and iodothyronine hormones enter the cell and bind intracellular receptors to regulate genes."
+ ],
+ "formulas": [
+  {
+   "name": "Hypothalamic hormones",
+   "formula": "GnRH → pituitary makes gonadotrophins;  somatostatin inhibits growth hormone release",
+   "when": "Releasing vs inhibiting hormones."
+  },
+  {
+   "name": "Adenohypophysis (pars distalis)",
+   "formula": "GH, PRL, TSH, ACTH, LH, FSH;  pars intermedia: MSH",
+   "when": "Anterior pituitary hormones.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Growth hormone disorders",
+   "formula": "excess in childhood → gigantism;  deficiency → pituitary dwarfism;  excess in adults → acromegaly (especially of face)",
+   "when": "GH problems."
+  },
+  {
+   "name": "Neurohypophysis",
+   "formula": "stores and releases oxytocin (uterine contraction at childbirth, milk ejection) and vasopressin/ADH (water reabsorption in distal tubules; deficiency → diabetes insipidus)",
+   "when": "Posterior pituitary.",
+   "mistake": "These hormones are made in the hypothalamus, not in the posterior pituitary."
+  },
+  {
+   "name": "Pineal gland",
+   "formula": "melatonin → diurnal (24-hour) rhythm of sleep–wake, body temperature; also affects metabolism, pigmentation, menstrual cycle, defence",
+   "when": "Pineal functions."
+  },
+  {
+   "name": "Thyroid",
+   "formula": "T₄ (thyroxine) and T₃ (triiodothyronine) — basal metabolic rate, RBC formation, metabolism of carbohydrates, proteins and fats, water and electrolyte balance;  thyrocalcitonin (TCT) lowers blood Ca²⁺",
+   "when": "Thyroid hormones.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Thyroid disorders",
+   "formula": "iodine deficiency → hypothyroidism and goitre;  in pregnancy → cretinism in the baby (stunted growth, mental retardation, deaf-mutism);  hyperthyroidism → exophthalmic goitre (Graves' disease: enlarged thyroid, protruding eyes, weight loss)",
+   "when": "Hypo- and hyperthyroidism."
+  },
+  {
+   "name": "Parathyroid hormone (PTH)",
+   "formula": "raises blood Ca²⁺: bone resorption (demineralisation), Ca²⁺ reabsorption from renal tubules and absorption from digested food;  with TCT maintains Ca²⁺ balance",
+   "when": "Calcium regulation.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Thymus",
+   "formula": "thymosins → differentiation of T-lymphocytes (cell-mediated immunity) and antibody production (humoral immunity); degenerates with age",
+   "when": "Thymus functions."
+  },
+  {
+   "name": "Adrenal medulla",
+   "formula": "adrenaline (epinephrine) and noradrenaline — emergency hormones (fight or flight): alertness, pupil dilation, piloerection, sweating, increased heart rate, breathing rate, glycogenolysis",
+   "when": "Catecholamines."
+  },
+  {
+   "name": "Adrenal cortex",
+   "formula": "zona glomerulosa → mineralocorticoids (aldosterone: Na⁺, water reabsorption, K⁺ and phosphate excretion);  zona fasciculata → glucocorticoids (cortisol: gluconeogenesis, anti-inflammatory, immunosuppression);  zona reticularis → androgens",
+   "when": "Corticoids.",
+   "note": "Underproduction of adrenal cortex hormones causes Addison's disease."
+  },
+  {
+   "name": "Pancreatic islets",
+   "formula": "α-cells → glucagon (hyperglycaemic: glycogenolysis, gluconeogenesis);  β-cells → insulin (hypoglycaemic: glucose uptake by cells, glycogenesis);  prolonged hyperglycaemia → diabetes mellitus",
+   "when": "Blood sugar control.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gonads",
+   "formula": "testes (Leydig cells) → androgens, mainly testosterone;  ovary → oestrogen (growth of female sex organs, secondary sexual characters) and progesterone (from corpus luteum; supports pregnancy, alveoli of mammary glands)",
+   "when": "Sex hormones."
+  },
+  {
+   "name": "Hormones of heart, kidney, gut",
+   "formula": "heart: ANF (lowers BP);  kidney: erythropoietin (RBC formation);  gut: gastrin, secretin, cholecystokinin (CCK), gastric inhibitory peptide (GIP)",
+   "when": "Hormones from non-endocrine tissues."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Same gland, opposite actions",
+   "problem": "Which two hormones keep blood calcium constant, and how?",
+   "solution": "PTH (parathyroid) raises blood Ca²⁺; thyrocalcitonin (thyroid) lowers it. Together they maintain balance."
+  },
+  {
+   "title": "Emergency hormone",
+   "problem": "Why are adrenaline and noradrenaline called the 3F hormones?",
+   "solution": "They are released quickly in emergencies — fight, flight or fright — raising heart rate, alertness and blood glucose."
+  },
+  {
+   "title": "Cretinism",
+   "problem": "A baby shows stunted growth and mental retardation; the mother had iodine deficiency during pregnancy. Diagnosis?",
+   "solution": "Cretinism — hypothyroidism during pregnancy affects the development of the foetus."
+  },
+  {
+   "title": "Steroid hormone mechanism",
+   "problem": "How does cortisol act on a target cell?",
+   "solution": "Being lipid-soluble, it crosses the membrane, binds an intracellular receptor and the hormone–receptor complex regulates gene expression in the nucleus."
+  },
+  {
+   "title": "Second messenger",
+   "problem": "Name second messengers used by protein hormones.",
+   "solution": "cAMP, IP₃ and Ca²⁺. The hormone binds a membrane receptor and the second messenger carries the signal inside the cell."
+  },
+  {
+   "title": "Gastrointestinal hormones",
+   "problem": "Which hormone stimulates pancreatic juice and bile release?",
+   "solution": "Cholecystokinin (CCK) acts on both pancreas and gall bladder; secretin acts on exocrine pancreas (water and bicarbonate). Gastrin stimulates gastric glands."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Endocrine glands and hormones",
+   "explain": "Classical definition: chemicals made by endocrine glands, released into blood and carried to a distant target organ. Current definition: non-nutrient chemicals that act as intercellular messengers, in trace amounts."
+  },
+  {
+   "title": "Human endocrine system",
+   "explain": "Pituitary, pineal, thyroid, adrenal, pancreas, parathyroid, thymus and gonads, plus hormone-producing tissues in the gastrointestinal tract, liver, kidney and heart."
+  },
+  {
+   "title": "Hypothalamus",
+   "explain": "The basal part of the diencephalon; has several groups of neurosecretory cells (nuclei) making hormones that regulate the synthesis and secretion of pituitary hormones. Hormones reach the anterior pituitary through a portal circulatory system."
+  },
+  {
+   "title": "Pituitary gland",
+   "explain": "Located in the sella turcica (bony cavity), attached to the hypothalamus by a stalk. Anatomically adenohypophysis (pars distalis, pars intermedia) and neurohypophysis (pars nervosa)."
+  },
+  {
+   "title": "Chemical nature of hormones",
+   "explain": "Peptide/polypeptide/protein (insulin, glucagon, pituitary and hypothalamic hormones), steroids (cortisol, testosterone, oestradiol, progesterone), iodothyronines (thyroid hormones), amino acid derivatives (adrenaline, noradrenaline, epinephrine)."
+  },
+  {
+   "title": "Mechanism of hormone action",
+   "explain": "Hormones bind specific receptors on target tissues only. Membrane-bound receptors (for those that can't enter) form a hormone–receptor complex that generates second messengers; intracellular receptors (mostly nuclear) regulate gene expression or chromosome function."
+  }
+ ],
+ "ratta": [
+  "Anterior pituitary: GH, PRL, TSH, ACTH, LH, FSH;  intermediate: MSH.",
+  "Oxytocin & ADH made in hypothalamus, released from posterior pituitary.",
+  "GH excess: child gigantism, adult acromegaly.",
+  "PTH ↑ Ca²⁺;  TCT ↓ Ca²⁺.",
+  "Glomerulosa → aldosterone;  fasciculata → cortisol;  reticularis → androgens.",
+  "α → glucagon;  β → insulin.",
+  "Heart → ANF;  kidney → erythropoietin.",
+  "Graves = hyperthyroid;  cretinism = hypothyroid in pregnancy;  Addison = low corticoids."
+ ],
+ "verifiedOn": "2026-11-13"
+}

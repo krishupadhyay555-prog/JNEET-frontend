@@ -1,0 +1,150 @@
+{
+ "slug": "biomolecules-biology",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biomolecules"
+ },
+ "title": "Biomolecules (Biology)",
+ "readMinutes": 13,
+ "summary": [
+  "Chemical analysis of living tissue gives an acid-soluble pool (micromolecules, molecular weight below ~1000 Da) and an acid-insoluble fraction (macromolecules — proteins, nucleic acids, polysaccharides; lipids appear here because membranes break into vesicles).",
+  "Proteins are polymers of amino acids (heteropolymers); polysaccharides are polymers of sugars; nucleic acids are polymers of nucleotides.",
+  "Enzymes are mostly proteins that speed up reactions by lowering activation energy. Their activity depends on temperature, pH and substrate concentration, and can be inhibited.",
+  "Enzymes are classified into six classes, and many need cofactors: prosthetic groups, coenzymes or metal ions."
+ ],
+ "formulas": [
+  {
+   "name": "Most abundant",
+   "formula": "most abundant chemical in living organisms: water (70–90%);  most abundant protein in the animal world: collagen;  in the whole biosphere: RuBisCO",
+   "when": "Abundance facts.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Amino acid",
+   "formula": "α-carbon bonded to H, –NH₂, –COOH and an R group;  20 types;  zwitterion form at isoelectric pH",
+   "when": "Structure of amino acids."
+  },
+  {
+   "name": "Lipids",
+   "formula": "fatty acid + glycerol → mono-, di-, triglycerides;  saturated (no C=C) or unsaturated (one or more C=C);  phospholipids (lecithin) in membranes",
+   "when": "Lipid structure.",
+   "note": "Palmitic acid has 16 carbons (including the carboxyl carbon); arachidonic acid has 20."
+  },
+  {
+   "name": "Nucleotide",
+   "formula": "nitrogen base + pentose sugar (nucleoside) + phosphate;  adenine, guanine (purines);  cytosine, uracil, thymine (pyrimidines)",
+   "when": "Nucleic acid building blocks."
+  },
+  {
+   "name": "Protein structure levels",
+   "formula": "primary (sequence; N-terminal to C-terminal);  secondary (α-helix — right-handed);  tertiary (3-D folding);  quaternary (subunits — haemoglobin: 2α + 2β)",
+   "when": "Protein structure.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Bonds in polymers",
+   "formula": "peptide bond (amino acids);  glycosidic bond (monosaccharides);  phosphodiester bond (nucleotides);  ester bond (fatty acid + glycerol)",
+   "when": "Linkages."
+  },
+  {
+   "name": "Polysaccharides",
+   "formula": "starch (helical, holds I₂ → blue);  cellulose (no complex helix, doesn't hold I₂);  glycogen (animal storage);  inulin (fructose polymer);  chitin (complex polysaccharide in exoskeletons and fungal walls)",
+   "when": "Carbohydrate polymers (polysaccharides)."
+  },
+  {
+   "name": "Enzyme classes",
+   "formula": "1 oxidoreductases/dehydrogenases;  2 transferases;  3 hydrolases;  4 lyases;  5 isomerases;  6 ligases",
+   "when": "Classifying enzymes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Michaelis constant and inhibition",
+   "formula": "Km = substrate concentration at ½Vmax;  competitive inhibitor resembles substrate — malonate inhibits succinic dehydrogenase",
+   "when": "Enzyme kinetics.",
+   "note": "A competitive inhibitor raises Km but Vmax stays the same."
+  },
+  {
+   "name": "Cofactors",
+   "formula": "prosthetic group (tightly bound — haem in peroxidase, catalase);  coenzyme (loosely bound, often vitamin-derived — NAD, NADP from niacin);  metal ion (Zn²⁺ for carboxypeptidase)",
+   "when": "Holoenzyme = apoenzyme + cofactor."
+  },
+  {
+   "name": "Fastest enzyme",
+   "formula": "carbonic anhydrase: CO₂ + H₂O ⇌ H₂CO₃, about 600,000 reactions per second (≈ 10⁷ times faster than uncatalysed)",
+   "when": "Enzyme speed fact."
+  },
+  {
+   "name": "Effect of temperature and pH",
+   "formula": "activity rises to an optimum, then falls; low temperature inactivates reversibly, high temperature denatures",
+   "when": "Factors affecting enzymes."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Lipids in the acid-insoluble fraction",
+   "problem": "Lipids have small molecular weights, so why do they appear in the acid-insoluble pool?",
+   "solution": "When tissue is ground, cell membranes break into vesicles that are insoluble in acid, so the lipids come down with the macromolecules."
+  },
+  {
+   "title": "Enzyme class",
+   "problem": "An enzyme removes groups from a substrate without hydrolysis, leaving a double bond. Which class?",
+   "solution": "Lyases (class 4)."
+  },
+  {
+   "title": "Competitive inhibition",
+   "problem": "Why does malonate inhibit succinic dehydrogenase?",
+   "solution": "Malonate closely resembles succinate, binds the active site and blocks it — competitive inhibition."
+  },
+  {
+   "title": "Starch vs cellulose",
+   "problem": "Why does starch turn blue with iodine but cellulose doesn't?",
+   "solution": "Starch forms helical secondary structures that can hold I₂ molecules; cellulose has no such complex helices."
+  },
+  {
+   "title": "Haemoglobin structure",
+   "problem": "What is the quaternary structure of adult haemoglobin?",
+   "solution": "Four subunits — two α and two β chains — each holding a haem group."
+  },
+  {
+   "title": "Holoenzyme",
+   "problem": "An enzyme loses activity when its cofactor is removed. What does this show?",
+   "solution": "The protein part (apoenzyme) alone is inactive; the cofactor is essential, together forming the active holoenzyme."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Primary and secondary metabolites",
+   "explain": "Primary metabolites (amino acids, sugars) have known roles in normal physiology. Secondary metabolites in plants, fungi and microbes include pigments (carotenoids, anthocyanins), alkaloids (morphine, codeine), terpenoids (monoterpenes, diterpenes), essential oils (lemongrass oil), toxins (abrin, ricin), lectins (concanavalin A), drugs (vinblastine, curcumin), polymeric substances (rubber, gums, cellulose)."
+  },
+  {
+   "title": "Metabolic basis for living",
+   "explain": "Metabolites are converted into each other by metabolic pathways — anabolic (biosynthetic, consume energy) and catabolic (degradation, release energy). ATP is the energy currency. The living state is a non-equilibrium steady state that can do work."
+  },
+  {
+   "title": "Nature of enzyme action",
+   "explain": "Substrate binds the active site to form an enzyme–substrate complex (ES), the transition state forms, products are released and the enzyme is free to act again. Enzymes lower the activation energy; ribozymes are nucleic acids that act as enzymes."
+  },
+  {
+   "title": "Proteins and their roles",
+   "explain": "Collagen (intercellular ground substance), trypsin (enzyme), insulin (hormone), antibodies (fight infection), receptors (sensory reception, e.g. smell), GLUT-4 (glucose transport into cells)."
+  },
+  {
+   "title": "Effect of substrate concentration",
+   "explain": "Velocity rises with substrate concentration and then reaches a maximum (Vmax) when all active sites are filled."
+  },
+  {
+   "title": "Nucleic acid structure basics",
+   "explain": "In nucleic acids, the phosphate links the 3′ carbon of one sugar to the 5′ carbon of the next. B-DNA (Watson–Crick model) has 10 base pairs per turn, 3.4 nm pitch and 0.34 nm between base pairs."
+  }
+ ],
+ "ratta": [
+  "Collagen — most abundant animal protein;  RuBisCO — biosphere.",
+  "Six classes: Oxido, Trans, Hydro, Lyase, Iso, Ligase.",
+  "Malonate inhibits succinic dehydrogenase.",
+  "Carbonic anhydrase fastest.",
+  "Haemoglobin: 2α + 2β.",
+  "Haem — prosthetic;  NAD (niacin) — coenzyme;  Zn²⁺ — carboxypeptidase.",
+  "Starch holds I₂ (blue); cellulose doesn't."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,146 @@
+{
+ "slug": "respiration-in-plants",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Respiration in Plants"
+ },
+ "title": "Respiration in Plants",
+ "readMinutes": 14,
+ "summary": [
+  "Cellular respiration breaks down food (mainly glucose) to release energy, trapped as ATP. Plants have no special respiratory organs; each part exchanges gases by diffusion through stomata and lenticels.",
+  "Glycolysis (EMP pathway) in the cytoplasm splits glucose into two pyruvate. Without O₂, pyruvate is fermented to ethanol (yeast) or lactic acid (muscle, bacteria).",
+  "With O₂, pyruvate enters mitochondria: link reaction → Krebs cycle (matrix) → electron transport system and oxidative phosphorylation (inner membrane). O₂ is the final electron acceptor.",
+  "Respiration is amphibolic — it both breaks down and builds molecules. The respiratory quotient (RQ) depends on the substrate."
+ ],
+ "formulas": [
+  {
+   "name": "Overall aerobic respiration",
+   "formula": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy",
+   "when": "Summary equation."
+  },
+  {
+   "name": "Glycolysis",
+   "formula": "glucose → 2 pyruvate;  net gain 2 ATP + 2 NADH;  uses 2 ATP (hexokinase, phosphofructokinase), makes 4 ATP",
+   "when": "First stage (Embden, Meyerhof, Parnas).",
+   "tag": "PYQ favourite",
+   "note": "Glycolysis is the only process common to aerobic and anaerobic respiration."
+  },
+  {
+   "name": "Fermentation",
+   "formula": "yeast: pyruvate → acetaldehyde + CO₂ → ethanol (pyruvic acid decarboxylase, alcohol dehydrogenase);  muscle/bacteria: pyruvate → lactic acid (lactate dehydrogenase)",
+   "when": "Anaerobic respiration.",
+   "note": "Yeasts poison themselves when ethanol reaches about 13%."
+  },
+  {
+   "name": "Link reaction",
+   "formula": "pyruvate + CoA + NAD⁺ → acetyl CoA + CO₂ + NADH (pyruvate dehydrogenase, in mitochondrial matrix)",
+   "when": "Joining glycolysis and Krebs cycle."
+  },
+  {
+   "name": "Krebs (TCA) cycle per acetyl CoA",
+   "formula": "acetyl CoA (2C) + OAA (4C) → citric acid (6C) … → OAA;  gives 2 CO₂ + 3 NADH + 1 FADH₂ + 1 ATP (GTP)",
+   "when": "Second stage, in the matrix.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "ETS sequence",
+   "formula": "NADH → complex I (NADH dehydrogenase) → ubiquinone → complex III (cyt bc₁) → cytochrome c → complex IV (cyt a–a₃, Cu centres) → O₂;  FADH₂ enters at complex II",
+   "when": "Electron transport system."
+  },
+  {
+   "name": "ATP yield per carrier",
+   "formula": "1 NADH → 3 ATP;  1 FADH₂ → 2 ATP (complex V — ATP synthase F₀–F₁)",
+   "when": "Counting ATP."
+  },
+  {
+   "name": "Net ATP from one glucose",
+   "formula": "38 ATP (theoretical, aerobic);  2 ATP (fermentation)",
+   "when": "Energy comparison.",
+   "tag": "PYQ favourite",
+   "note": "Real yields are lower; 38 is a theoretical value assuming a sequential pathway."
+  },
+  {
+   "name": "Respiratory quotient",
+   "formula": "RQ = volume of CO₂ evolved / volume of O₂ consumed",
+   "when": "Identifying the respiratory substrate."
+  },
+  {
+   "name": "RQ values",
+   "formula": "carbohydrates = 1;  fats ≈ 0.7;  proteins ≈ 0.9;  organic acids (malic) > 1;  anaerobic = ∞ (CO₂ but no O₂)",
+   "when": "RQ comparisons.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Amphibolic pathway",
+   "formula": "fats → glycerol (→ PGAL) + fatty acids (→ acetyl CoA);  proteins → amino acids → pyruvate/acetyl CoA/Krebs intermediates",
+   "when": "Other substrates entering respiration."
+  }
+ ],
+ "examples": [
+  {
+   "title": "ATP from one glucose",
+   "problem": "Count the theoretical ATP from one glucose in aerobic respiration.",
+   "solution": "Glycolysis 2 ATP + 2 NADH (6 ATP); link reaction 2 NADH (6 ATP); Krebs cycle 6 NADH (18 ATP) + 2 FADH₂ (4 ATP) + 2 ATP. Total = 38 ATP."
+  },
+  {
+   "title": "RQ of a fat",
+   "problem": "2C₅₁H₉₈O₆ + 145O₂ → 102CO₂ + 98H₂O. Find the RQ.",
+   "solution": "RQ = 102/145 = 0.7."
+  },
+  {
+   "title": "RQ of malic acid",
+   "problem": "C₄H₆O₅ + 3O₂ → 4CO₂ + 3H₂O. RQ?",
+   "solution": "RQ = 4/3 = 1.33 — more than 1, as for organic acids."
+  },
+  {
+   "title": "Muscle cramps",
+   "problem": "Why do muscles feel tired after heavy exercise?",
+   "solution": "When O₂ is insufficient, muscle cells reduce pyruvate to lactic acid (anaerobic), which accumulates and causes fatigue."
+  },
+  {
+   "title": "Final electron acceptor",
+   "problem": "What is the role of oxygen in aerobic respiration?",
+   "solution": "Oxygen is the final acceptor of electrons at the end of the ETS; it combines with protons to form water. Without it, the chain stops and ATP production by oxidative phosphorylation ceases."
+  },
+  {
+   "title": "Respiration is amphibolic",
+   "problem": "Why is respiration called an amphibolic pathway?",
+   "solution": "Its intermediates are used both in breakdown (catabolism) and in synthesis (anabolism) — e.g. acetyl CoA is used for fatty acid synthesis and Krebs intermediates for amino acids."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Gas exchange in plants",
+   "explain": "Plants get O₂ through stomata and lenticels; living cells of stems and roots lie close to the surface, and most cells have at least part of their surface in contact with air. Gas exchange needs are low compared with animals."
+  },
+  {
+   "title": "Steps of glycolysis",
+   "explain": "Glucose → glucose-6-phosphate (ATP used) → fructose-6-phosphate → fructose-1,6-bisphosphate (ATP used) → DHAP + 3-PGAL → 1,3-bisphosphoglycerate (NADH formed) → 3-PGA (ATP) → 2-PGA → PEP → pyruvate (ATP)."
+  },
+  {
+   "title": "Krebs cycle details",
+   "explain": "Discovered by Hans Krebs. Citrate → isocitrate → α-ketoglutarate (CO₂, NADH) → succinyl CoA (CO₂, NADH) → succinate (GTP/ATP — substrate-level phosphorylation) → fumarate (FADH₂) → malate → OAA (NADH)."
+  },
+  {
+   "title": "Oxidative phosphorylation",
+   "explain": "Energy from electron transport pumps protons into the intermembrane space; the gradient drives ATP synthesis as protons flow back through F₀ (channel) to F₁ (headpiece, catalytic site) of ATP synthase."
+  },
+  {
+   "title": "Assumptions of the 38 ATP count",
+   "explain": "A sequential, orderly pathway; NADH from glycolysis enters mitochondria and is fully oxidised; no intermediates are used for other compounds; only glucose is respired. In reality none of these fully hold."
+  },
+  {
+   "title": "Fermentation vs aerobic respiration",
+   "explain": "Fermentation partially breaks down glucose, gives net 2 ATP and NADH is re-oxidised to NAD⁺ slowly; aerobic respiration fully oxidises glucose to CO₂ and water, yielding far more ATP."
+  }
+ ],
+ "ratta": [
+  "Glycolysis: cytoplasm, net 2 ATP + 2 NADH.",
+  "Krebs per acetyl CoA: 2 CO₂, 3 NADH, 1 FADH₂, 1 GTP.",
+  "NADH = 3 ATP;  FADH₂ = 2 ATP;  total 38.",
+  "Complex IV: cyt a–a₃ + Cu;  complex V: ATP synthase.",
+  "RQ: carb 1, fat 0.7, protein 0.9, malic acid 1.33.",
+  "Yeast → ethanol + CO₂;  muscle → lactic acid."
+ ],
+ "verifiedOn": "2026-11-13"
+}
