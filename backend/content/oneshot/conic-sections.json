@@ -1,0 +1,153 @@
+{
+ "slug": "conic-sections",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Conic Sections"
+ },
+ "title": "Conic Sections",
+ "readMinutes": 17,
+ "summary": [
+  "A conic is the locus of a point whose distance from a fixed point (focus) is e times its distance from a fixed line (directrix): e = 1 parabola, e < 1 ellipse, e > 1 hyperbola.",
+  "Standard forms: parabola y² = 4ax; ellipse x²/a² + y²/b² = 1 (b² = a²(1 − e²)); hyperbola x²/a² − y²/b² = 1 (b² = a²(e² − 1)).",
+  "For each conic know the focus, directrix, latus rectum, eccentricity, parametric point, tangent and normal equations and the tangent condition."
+ ],
+ "formulas": [
+  {
+   "name": "Parabola y² = 4ax",
+   "formula": "focus (a, 0);  directrix x = −a;  axis y = 0;  latus rectum 4a;  parametric (at², 2at);  focal distance of (x, y) = x + a",
+   "when": "Standard parabola.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parabola tangents",
+   "formula": "at (x₁, y₁): yy₁ = 2a(x + x₁);  slope form y = mx + a/m (condition c = a/m);  at t: ty = x + at²",
+   "when": "Tangents to a parabola."
+  },
+  {
+   "name": "Parabola normal",
+   "formula": "y = mx − 2am − am³;  at t: y + tx = 2at + at³",
+   "when": "Normals to a parabola.",
+   "note": "Three normals can be drawn from a point to a parabola (a cubic in m)."
+  },
+  {
+   "name": "Focal chord",
+   "formula": "for focal chord through t₁ and t₂: t₁t₂ = −1;  harmonic mean of focal segments = semi-latus rectum 2a",
+   "when": "Focal chord properties."
+  },
+  {
+   "name": "Ellipse x²/a² + y²/b² = 1 (a > b)",
+   "formula": "b² = a²(1 − e²);  foci (±ae, 0);  directrices x = ±a/e;  latus rectum 2b²/a;  parametric (a cos θ, b sin θ)",
+   "when": "Standard ellipse.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ellipse focal property",
+   "formula": "SP + S′P = 2a for any point P",
+   "when": "Sum of focal distances."
+  },
+  {
+   "name": "Ellipse tangent",
+   "formula": "at (x₁, y₁): xx₁/a² + yy₁/b² = 1;  y = mx ± √(a²m² + b²)",
+   "when": "Tangents to an ellipse."
+  },
+  {
+   "name": "Hyperbola x²/a² − y²/b² = 1",
+   "formula": "b² = a²(e² − 1);  foci (±ae, 0);  directrices x = ±a/e;  latus rectum 2b²/a;  asymptotes y = ±(b/a)x;  parametric (a sec θ, b tan θ)",
+   "when": "Standard hyperbola.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Hyperbola focal property",
+   "formula": "|SP − S′P| = 2a",
+   "when": "Difference of focal distances."
+  },
+  {
+   "name": "Hyperbola tangent",
+   "formula": "at (x₁, y₁): xx₁/a² − yy₁/b² = 1;  y = mx ± √(a²m² − b²)",
+   "when": "Tangents to a hyperbola."
+  },
+  {
+   "name": "Rectangular hyperbola",
+   "formula": "x² − y² = a² (e = √2);  xy = c² with parametric (ct, c/t)",
+   "when": "Special hyperbola."
+  },
+  {
+   "name": "Conjugate hyperbola",
+   "formula": "−x²/a² + y²/b² = 1;  1/e₁² + 1/e₂² = 1",
+   "when": "Hyperbola and its conjugate."
+  },
+  {
+   "name": "Director circle",
+   "formula": "ellipse: x² + y² = a² + b²;  hyperbola: x² + y² = a² − b²;  parabola: directrix",
+   "when": "Locus of perpendicular tangents."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Parabola",
+   "problem": "For y² = 12x, find a, the focus and the length of the latus rectum.",
+   "solution": "4a = 12 ⇒ a = 3; focus (3, 0); latus rectum = 12."
+  },
+  {
+   "title": "Ellipse",
+   "problem": "For x²/25 + y²/16 = 1, find e, foci and latus rectum.",
+   "solution": "e = √(1 − 16/25) = 0.6; foci (±3, 0); latus rectum = 2 × 16/5 = 6.4."
+  },
+  {
+   "title": "Hyperbola",
+   "problem": "For x²/16 − y²/9 = 1, find e and latus rectum.",
+   "solution": "e = √(1 + 9/16) = 5/4 = 1.25; latus rectum = 2 × 9/4 = 4.5; asymptotes y = ±(3/4)x."
+  },
+  {
+   "title": "Sum of focal distances",
+   "problem": "For the ellipse x²/25 + y²/16 = 1, find SP + S′P for any point P.",
+   "solution": "2a = 10."
+  },
+  {
+   "title": "Tangent condition",
+   "problem": "For what c does y = 2x + c touch y² = 8x?",
+   "solution": "a = 2, m = 2 ⇒ c = a/m = 1."
+  },
+  {
+   "title": "Identify the conic",
+   "problem": "Identify 9x² + 4y² = 36.",
+   "solution": "Divide by 36: x²/4 + y²/9 = 1 — an ellipse with major axis along the y-axis (a = 3, b = 2), e = √5/3."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Other forms of the parabola",
+   "explain": "x² = 4ay (opens up), y² = −4ax (opens left), x² = −4ay (opens down). Shifted: (y − k)² = 4a(x − h) has vertex (h, k)."
+  },
+  {
+   "title": "Ellipse with vertical major axis",
+   "explain": "If b > a in x²/a² + y²/b² = 1, then a² = b²(1 − e²), foci are (0, ±be) and directrices y = ±b/e."
+  },
+  {
+   "title": "Auxiliary circle and eccentric angle",
+   "explain": "The circle on the major axis as diameter is the auxiliary circle x² + y² = a²; the point (a cos θ, b sin θ) has eccentric angle θ."
+  },
+  {
+   "title": "Reflection property",
+   "explain": "Rays parallel to the axis of a parabola reflect through the focus (dish antennas, headlights). Rays from one focus of an ellipse reflect through the other focus."
+  },
+  {
+   "title": "Chord of contact and midpoint chord",
+   "explain": "Same notation as for circles: chord of contact T = 0; chord with given midpoint T = S₁."
+  },
+  {
+   "title": "Identifying a general conic",
+   "explain": "For ax² + 2hxy + by² + 2gx + 2fy + c = 0 (non-degenerate): h² = ab parabola, h² < ab ellipse, h² > ab hyperbola; a + b = 0 rectangular hyperbola."
+  }
+ ],
+ "ratta": [
+  "e = 1 parabola, < 1 ellipse, > 1 hyperbola.",
+  "y² = 4ax: focus (a, 0), LR 4a, focal distance x + a.",
+  "Tangent conditions: parabola c = a/m;  ellipse c² = a²m² + b²;  hyperbola c² = a²m² − b².",
+  "Ellipse b² = a²(1 − e²);  hyperbola b² = a²(e² − 1).",
+  "LR of ellipse and hyperbola = 2b²/a.",
+  "SP + S′P = 2a (ellipse);  |SP − S′P| = 2a (hyperbola).",
+  "Focal chord: t₁t₂ = −1."
+ ],
+ "verifiedOn": "2026-11-13"
+}

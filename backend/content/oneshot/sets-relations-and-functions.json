@@ -1,0 +1,155 @@
+{
+ "slug": "sets-relations-and-functions",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Sets, Relations and Functions"
+ },
+ "title": "Sets, Relations and Functions",
+ "readMinutes": 16,
+ "summary": [
+  "A set is a well-defined collection. Operations — union, intersection, difference, complement — follow De Morgan's laws, and the inclusion–exclusion principle counts elements of unions.",
+  "A relation from A to B is any subset of A × B. Relations on a set can be reflexive, symmetric, transitive (all three = equivalence relation, which splits the set into equivalence classes).",
+  "A function assigns each element of the domain exactly one image. Functions can be one-one (injective), onto (surjective) or both (bijective); only bijections have inverses.",
+  "JEE loves counting questions: number of relations, functions, one-one and onto maps, and reflexive or symmetric relations."
+ ],
+ "formulas": [
+  {
+   "name": "Inclusion–exclusion (2 sets)",
+   "formula": "n(A ∪ B) = n(A) + n(B) − n(A ∩ B)",
+   "when": "Counting elements of a union.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inclusion–exclusion (3 sets)",
+   "formula": "n(A ∪ B ∪ C) = Σn(A) − Σn(A ∩ B) + n(A ∩ B ∩ C)",
+   "when": "Three overlapping sets."
+  },
+  {
+   "name": "De Morgan's laws",
+   "formula": "(A ∪ B)′ = A′ ∩ B′;  (A ∩ B)′ = A′ ∪ B′",
+   "when": "Simplifying complements."
+  },
+  {
+   "name": "Power set",
+   "formula": "n(P(A)) = 2ⁿ for n(A) = n;  proper subsets = 2ⁿ − 1",
+   "when": "Counting subsets."
+  },
+  {
+   "name": "Cartesian product and relations",
+   "formula": "n(A × B) = mn;  number of relations from A to B = 2^(mn)",
+   "when": "Counting relations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Relations on a set with n elements",
+   "formula": "total 2^(n²);  reflexive 2^(n² − n);  symmetric 2^(n(n+1)/2);  reflexive and symmetric 2^(n(n−1)/2)",
+   "when": "Counting special relations."
+  },
+  {
+   "name": "Equivalence relation",
+   "formula": "reflexive (a R a) + symmetric (a R b ⇒ b R a) + transitive (a R b, b R c ⇒ a R c)",
+   "when": "Checking relation types.",
+   "mistake": "The empty relation on a non-empty set is symmetric and transitive but not reflexive."
+  },
+  {
+   "name": "Counting functions (m-set → n-set)",
+   "formula": "all functions nᵐ;  one-one nPm (m ≤ n);  onto Σ (−1)ᵏ C(n, k)(n − k)ᵐ (m ≥ n);  bijections n! (m = n)",
+   "when": "Counting maps.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Domain of common functions",
+   "formula": "√f(x): f(x) ≥ 0;  1/f(x): f(x) ≠ 0;  log f(x): f(x) > 0;  sin⁻¹ f(x): −1 ≤ f(x) ≤ 1",
+   "when": "Finding domains."
+  },
+  {
+   "name": "Even and odd functions",
+   "formula": "even f(−x) = f(x) (symmetric about y-axis);  odd f(−x) = −f(x) (symmetric about origin);  every f = even part + odd part",
+   "when": "Symmetry of functions."
+  },
+  {
+   "name": "Composition and inverse",
+   "formula": "(g∘f)(x) = g(f(x));  (g∘f)⁻¹ = f⁻¹∘g⁻¹;  f⁻¹ exists ⇔ f bijective;  graphs of f and f⁻¹ are mirror images in y = x",
+   "when": "Combining functions."
+  },
+  {
+   "name": "Greatest integer and fractional part",
+   "formula": "[x] ≤ x < [x] + 1;  {x} = x − [x] ∈ [0, 1);  [x + n] = [x] + n for integer n",
+   "when": "Step functions.",
+   "mistake": "[−2.3] = −3, not −2."
+  },
+  {
+   "name": "Periodic functions",
+   "formula": "period of sin, cos = 2π;  tan, cot = π;  {x} = 1;  |sin x| = π;  period of f(ax + b) = T/|a|",
+   "when": "Finding periods."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Union count",
+   "problem": "In a class 40 students like cricket, 30 like football and 15 like both. How many like at least one?",
+   "solution": "n(C ∪ F) = 40 + 30 − 15 = 55."
+  },
+  {
+   "title": "Number of relations",
+   "problem": "A has 3 elements and B has 4. How many relations from A to B?",
+   "solution": "2^(3 × 4) = 2¹² = 4096."
+  },
+  {
+   "title": "Functions and one-one functions",
+   "problem": "A has 3 elements, B has 4. Number of functions and one-one functions from A to B?",
+   "solution": "Functions: 4³ = 64. One-one: ⁴P₃ = 4 × 3 × 2 = 24."
+  },
+  {
+   "title": "Onto functions",
+   "problem": "How many onto functions are there from a 4-element set to a 3-element set?",
+   "solution": "3⁴ − C(3,1)2⁴ + C(3,2)1⁴ = 81 − 48 + 3 = 36."
+  },
+  {
+   "title": "Reflexive and symmetric relations",
+   "problem": "On a set with 3 elements, how many reflexive relations and how many symmetric relations?",
+   "solution": "Reflexive: 2^(9 − 3) = 64. Symmetric: 2^(3 × 4/2) = 64."
+  },
+  {
+   "title": "Domain",
+   "problem": "Find the domain of f(x) = 1/√(x² − 5x + 6).",
+   "solution": "Need x² − 5x + 6 > 0 ⇒ (x − 2)(x − 3) > 0 ⇒ x < 2 or x > 3. Domain: (−∞, 2) ∪ (3, ∞)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of sets",
+   "explain": "Empty (∅), singleton, finite, infinite, equal sets, equivalent sets (same cardinality), subsets, universal set. Intervals: open (a, b), closed [a, b], half-open."
+  },
+  {
+   "title": "Symmetric difference",
+   "explain": "A Δ B = (A − B) ∪ (B − A) = (A ∪ B) − (A ∩ B). Useful in Venn-diagram questions."
+  },
+  {
+   "title": "Equivalence classes",
+   "explain": "An equivalence relation on A partitions A into disjoint classes. Example: R = {(a, b): a − b divisible by 3} on integers has three classes — remainders 0, 1, 2."
+  },
+  {
+   "title": "Checking one-one and onto",
+   "explain": "One-one: f(x₁) = f(x₂) ⇒ x₁ = x₂, or f strictly monotonic; horizontal line test. Onto: range = codomain. A function from a finite set to itself is one-one if and only if it is onto."
+  },
+  {
+   "title": "Range-finding techniques",
+   "explain": "Write y = f(x) and solve for x, then find conditions on y; use monotonicity, completing the square, or the AM–GM inequality; for rational functions in x² use discriminant ≥ 0."
+  },
+  {
+   "title": "Special functions",
+   "explain": "Modulus |x|, signum sgn x (1, 0, −1), greatest integer [x], fractional part {x}, exponential and logarithmic functions. Know their graphs, domains and ranges."
+  }
+ ],
+ "ratta": [
+  "n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+  "Relations A → B: 2^(mn);  on n-set: 2^(n²).",
+  "Reflexive 2^(n² − n);  symmetric 2^(n(n+1)/2).",
+  "Functions nᵐ;  one-one nPm;  bijections n!.",
+  "Onto m → n: Σ(−1)ᵏ C(n,k)(n − k)ᵐ.",
+  "Equivalence = reflexive + symmetric + transitive.",
+  "[−2.3] = −3;  {x} ∈ [0, 1)."
+ ],
+ "verifiedOn": "2026-11-13"
+}

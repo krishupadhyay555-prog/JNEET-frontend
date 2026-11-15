@@ -1,0 +1,149 @@
+{
+ "slug": "sequences-and-series",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Sequences and Series"
+ },
+ "title": "Sequences and Series",
+ "readMinutes": 15,
+ "summary": [
+  "An arithmetic progression (AP) adds a fixed common difference d; a geometric progression (GP) multiplies by a fixed ratio r. Harmonic progression (HP) is the reciprocal of an AP.",
+  "Know the nth term and sum formulas, the sum of an infinite GP (|r| < 1), and the means AM, GM, HM with AM ≥ GM ≥ HM for positive numbers.",
+  "Special series: Σn, Σn², Σn³, arithmetico-geometric progressions (AGP) and telescoping (method of differences) are frequent in JEE."
+ ],
+ "formulas": [
+  {
+   "name": "AP",
+   "formula": "tₙ = a + (n − 1)d;  Sₙ = (n/2)[2a + (n − 1)d] = (n/2)(a + l)",
+   "when": "Arithmetic progressions.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "AP properties",
+   "formula": "three terms in AP: a − d, a, a + d;  if a, b, c in AP then 2b = a + c;  tₙ = Sₙ − Sₙ₋₁",
+   "when": "Choosing terms smartly."
+  },
+  {
+   "name": "GP",
+   "formula": "tₙ = arⁿ⁻¹;  Sₙ = a(rⁿ − 1)/(r − 1) (r ≠ 1)",
+   "when": "Geometric progressions."
+  },
+  {
+   "name": "Infinite GP",
+   "formula": "S∞ = a/(1 − r),  |r| < 1",
+   "when": "Sum to infinity.",
+   "tag": "PYQ favourite",
+   "note": "Valid only for |r| < 1."
+  },
+  {
+   "name": "HP",
+   "formula": "a, b, c in HP ⇔ 1/a, 1/b, 1/c in AP;  b = 2ac/(a + c)",
+   "when": "Harmonic progressions.",
+   "note": "There is no formula for the sum of an HP."
+  },
+  {
+   "name": "Means",
+   "formula": "AM = (a + b)/2;  GM = √(ab);  HM = 2ab/(a + b);  GM² = AM × HM",
+   "when": "Means of two positive numbers."
+  },
+  {
+   "name": "AM–GM–HM inequality",
+   "formula": "AM ≥ GM ≥ HM (equality iff all numbers equal)",
+   "when": "Minimum/maximum problems.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inserting means",
+   "formula": "n AMs between a and b: d = (b − a)/(n + 1);  n GMs: r = (b/a)^(1/(n + 1))",
+   "when": "Inserted means."
+  },
+  {
+   "name": "Special sums",
+   "formula": "Σn = n(n + 1)/2;  Σn² = n(n + 1)(2n + 1)/6;  Σn³ = [n(n + 1)/2]²",
+   "when": "Sums of powers.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "AGP sum to infinity",
+   "formula": "a + (a + d)r + (a + 2d)r² + … = a/(1 − r) + dr/(1 − r)²  (|r| < 1)",
+   "when": "Arithmetico-geometric series."
+  },
+  {
+   "name": "Method of differences",
+   "formula": "if tₙ = f(n) − f(n − 1) then Sₙ = f(n) − f(0);  1/(n(n + 1)) = 1/n − 1/(n + 1)",
+   "when": "Telescoping sums."
+  },
+  {
+   "name": "nth term from differences",
+   "formula": "if successive differences of the terms form an AP, tₙ is quadratic in n; if they form a GP, tₙ = arⁿ + b",
+   "when": "Finding the general term of unusual series."
+  }
+ ],
+ "examples": [
+  {
+   "title": "AP term and sum",
+   "problem": "AP 3, 7, 11, … Find t₂₀ and S₂₀.",
+   "solution": "t₂₀ = 3 + 19 × 4 = 79. S₂₀ = 10 × (6 + 76) = 820."
+  },
+  {
+   "title": "Infinite GP",
+   "problem": "Find 1 + 1/3 + 1/9 + …",
+   "solution": "a/(1 − r) = 1/(1 − 1/3) = 3/2 = 1.5."
+  },
+  {
+   "title": "Sum of squares and cubes",
+   "problem": "Find 1² + 2² + … + 10² and 1³ + … + 10³.",
+   "solution": "10 × 11 × 21/6 = 385;  (55)² = 3025."
+  },
+  {
+   "title": "Means of 4 and 16",
+   "problem": "Find AM, GM and HM of 4 and 16.",
+   "solution": "AM = 10, GM = 8, HM = 6.4; check GM² = AM × HM: 64 = 10 × 6.4."
+  },
+  {
+   "title": "AGP",
+   "problem": "Find 1 + 2(1/2) + 3(1/2)² + … to infinity.",
+   "solution": "a = 1, d = 1, r = 1/2: 1/(1/2) + (1/2)/(1/4) = 2 + 2 = 4."
+  },
+  {
+   "title": "Minimum using AM–GM",
+   "problem": "Find the minimum of x + 9/x for x > 0.",
+   "solution": "AM ≥ GM: (x + 9/x)/2 ≥ √9 = 3, so x + 9/x ≥ 6 (at x = 3)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Choosing terms",
+   "explain": "For AP with known sum use a − d, a, a + d (three terms) or a − 3d, a − d, a + d, a + 3d (four terms). For GP use a/r, a, ar."
+  },
+  {
+   "title": "Properties of AP and GP",
+   "explain": "Adding, subtracting, multiplying or dividing every term of an AP by a constant keeps it an AP (except division by 0). Multiplying terms of a GP by a constant keeps it a GP; reciprocals of a GP also form a GP; logs of a GP form an AP."
+  },
+  {
+   "title": "Sum of n terms from Sₙ",
+   "explain": "If Sₙ is given as a function of n, then tₙ = Sₙ − Sₙ₋₁ (n ≥ 2), t₁ = S₁. A quadratic Sₙ without constant term means AP."
+  },
+  {
+   "title": "Relation between AM, GM, HM",
+   "explain": "For positive a, b: A ≥ G ≥ H, G² = AH. The numbers a and b are roots of x² − 2Ax + G² = 0."
+  },
+  {
+   "title": "Series to recognise",
+   "explain": "1 + 11 + 111 + … — write 111…1 = (10ⁿ − 1)/9. 0.7 + 0.77 + 0.777 + … — similar trick. Sum of products like 1·2 + 2·3 + … = Σn² + Σn."
+  },
+  {
+   "title": "Weighted AM–GM",
+   "explain": "For positive numbers with weights, weighted AM ≥ weighted GM. Used for maximising products under a sum constraint, e.g. maximise x²y³ given x + y = 5."
+  }
+ ],
+ "ratta": [
+  "AP: tₙ = a + (n − 1)d;  Sₙ = n/2[2a + (n − 1)d].",
+  "GP: tₙ = arⁿ⁻¹;  S∞ = a/(1 − r).",
+  "HP: reciprocals in AP; b = 2ac/(a + c).",
+  "AM ≥ GM ≥ HM;  G² = AH.",
+  "Σn², Σn³ = [n(n + 1)/2]².",
+  "AGP: a/(1 − r) + dr/(1 − r)²."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,144 @@
+{
+ "slug": "inverse-trigonometric-functions",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Inverse Trigonometric Functions"
+ },
+ "title": "Inverse Trigonometric Functions",
+ "readMinutes": 12,
+ "summary": [
+  "Trigonometric functions are not one-one, so their inverses are defined on restricted intervals called principal value branches.",
+  "sin⁻¹x and tan⁻¹x take values in [−π/2, π/2] (tan⁻¹ open); cos⁻¹x and cot⁻¹x in [0, π]. Know each domain and range exactly.",
+  "Key identities: sin⁻¹x + cos⁻¹x = π/2, tan⁻¹x + tan⁻¹y = tan⁻¹((x + y)/(1 − xy)) when xy < 1, and the 2tan⁻¹x conversions.",
+  "Most JEE questions test sin⁻¹(sin x)-type expressions outside the principal branch — draw the graph or shift by π."
+ ],
+ "formulas": [
+  {
+   "name": "Domains and ranges",
+   "formula": "sin⁻¹: [−1, 1] → [−π/2, π/2];  cos⁻¹: [−1, 1] → [0, π];  tan⁻¹: ℝ → (−π/2, π/2);  cot⁻¹: ℝ → (0, π);  sec⁻¹: |x| ≥ 1 → [0, π] − {π/2};  cosec⁻¹: |x| ≥ 1 → [−π/2, π/2] − {0}",
+   "when": "Principal value branches.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Negative arguments",
+   "formula": "sin⁻¹(−x) = −sin⁻¹x;  tan⁻¹(−x) = −tan⁻¹x;  cosec⁻¹(−x) = −cosec⁻¹x;  cos⁻¹(−x) = π − cos⁻¹x;  cot⁻¹(−x) = π − cot⁻¹x;  sec⁻¹(−x) = π − sec⁻¹x",
+   "when": "Odd vs 'π minus' functions."
+  },
+  {
+   "name": "Complementary pairs",
+   "formula": "sin⁻¹x + cos⁻¹x = π/2;  tan⁻¹x + cot⁻¹x = π/2;  sec⁻¹x + cosec⁻¹x = π/2",
+   "when": "Sum to π/2.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Reciprocal relations",
+   "formula": "sin⁻¹(1/x) = cosec⁻¹x;  cos⁻¹(1/x) = sec⁻¹x;  tan⁻¹(1/x) = cot⁻¹x (x > 0), = cot⁻¹x − π (x < 0)",
+   "when": "Switching between functions."
+  },
+  {
+   "name": "Sum of tan⁻¹",
+   "formula": "tan⁻¹x + tan⁻¹y = tan⁻¹((x + y)/(1 − xy)) if xy < 1;  = π + tan⁻¹((x + y)/(1 − xy)) if x, y > 0 and xy > 1",
+   "when": "Adding inverse tangents.",
+   "mistake": "Check xy < 1 before using the plain formula.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Difference of tan⁻¹",
+   "formula": "tan⁻¹x − tan⁻¹y = tan⁻¹((x − y)/(1 + xy))  (xy > −1)",
+   "when": "Telescoping series."
+  },
+  {
+   "name": "Double formulas",
+   "formula": "2tan⁻¹x = sin⁻¹(2x/(1 + x²)) (|x| ≤ 1) = cos⁻¹((1 − x²)/(1 + x²)) (x ≥ 0) = tan⁻¹(2x/(1 − x²)) (|x| < 1)",
+   "when": "Substitution x = tan θ."
+  },
+  {
+   "name": "sin⁻¹(sin x) outside branch",
+   "formula": "sin⁻¹(sin x) = x on [−π/2, π/2];  = π − x on [π/2, 3π/2];  = x − 2π on [3π/2, 5π/2]",
+   "when": "Graph is a zig-zag (triangular wave)."
+  },
+  {
+   "name": "cos⁻¹(cos x) outside branch",
+   "formula": "cos⁻¹(cos x) = x on [0, π];  = 2π − x on [π, 2π]",
+   "when": "Graph is a zig-zag starting at the origin."
+  },
+  {
+   "name": "Converting one function to another",
+   "formula": "sin⁻¹x = cos⁻¹√(1 − x²) = tan⁻¹(x/√(1 − x²)) for 0 ≤ x < 1",
+   "when": "Draw a right triangle with opposite x, hypotenuse 1."
+  },
+  {
+   "name": "Telescoping trick",
+   "formula": "tan⁻¹(1/(1 + r(r + 1))) = tan⁻¹(r + 1) − tan⁻¹r",
+   "when": "Sums of inverse tangents.",
+   "tag": "PYQ favourite"
+  }
+ ],
+ "examples": [
+  {
+   "title": "Principal value",
+   "problem": "Find sin⁻¹(sin 150°).",
+   "solution": "150° is outside [−90°, 90°]; sin 150° = sin 30°, so the answer is 30° = π/6 (computed 30°)."
+  },
+  {
+   "title": "Sum of tan⁻¹",
+   "problem": "Evaluate tan⁻¹(1/2) + tan⁻¹(1/3).",
+   "solution": "xy = 1/6 < 1 ⇒ tan⁻¹((1/2 + 1/3)/(1 − 1/6)) = tan⁻¹(1) = π/4."
+  },
+  {
+   "title": "cos(tan⁻¹ ¾)",
+   "problem": "Find cos(tan⁻¹(3/4)).",
+   "solution": "Triangle with opposite 3, adjacent 4, hypotenuse 5 ⇒ cos = 4/5 = 0.8."
+  },
+  {
+   "title": "Outside the branch",
+   "problem": "Find sin⁻¹(sin(4π/3)).",
+   "solution": "4π/3 lies in [π/2, 3π/2], so sin⁻¹(sin x) = π − x = π − 4π/3 = −π/3."
+  },
+  {
+   "title": "Sum equals π",
+   "problem": "Show tan⁻¹1 + tan⁻¹2 + tan⁻¹3 = π.",
+   "solution": "tan⁻¹2 + tan⁻¹3 = π + tan⁻¹((2 + 3)/(1 − 6)) = π + tan⁻¹(−1) = π − π/4 (since xy > 1). Adding tan⁻¹1 = π/4 gives π."
+  },
+  {
+   "title": "Telescoping sum",
+   "problem": "Find Σ (r = 1 to n) tan⁻¹(1/(1 + r + r²)).",
+   "solution": "Each term = tan⁻¹(r + 1) − tan⁻¹r, so the sum telescopes to tan⁻¹(n + 1) − tan⁻¹1 = tan⁻¹(n + 1) − π/4."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Why branches are needed",
+   "explain": "A function has an inverse only if it is one-one and onto. Restricting sin x to [−π/2, π/2] makes it a bijection onto [−1, 1]; other branches like [π/2, 3π/2] are possible but the principal branch is standard."
+  },
+  {
+   "title": "Graphs",
+   "explain": "y = sin⁻¹x rises from (−1, −π/2) to (1, π/2); y = cos⁻¹x falls from (−1, π) to (1, 0); y = tan⁻¹x has horizontal asymptotes y = ±π/2. Graph of f⁻¹ is the reflection of f in y = x."
+  },
+  {
+   "title": "sin(sin⁻¹x) vs sin⁻¹(sin x)",
+   "explain": "sin(sin⁻¹x) = x for all x in [−1, 1] (always true in its domain). sin⁻¹(sin x) = x only when x is in the principal branch."
+  },
+  {
+   "title": "Substitution technique",
+   "explain": "Expressions like √(1 − x²), (1 − x²)/(1 + x²), 2x/(1 − x²) suggest x = sin θ, cos θ or tan θ; then simplify and convert back, keeping track of the branch."
+  },
+  {
+   "title": "Solving equations",
+   "explain": "Convert everything to one inverse function, use identities, then take sin, cos or tan of both sides. Always check that the final answers lie in the domains."
+  },
+  {
+   "title": "Common traps",
+   "explain": "tan⁻¹x + tan⁻¹(1/x) = π/2 only for x > 0 (it is −π/2 for x < 0). cos⁻¹x is never negative. sec⁻¹ and cosec⁻¹ are undefined for |x| < 1. Writing sin⁻¹x as 1/sin x is wrong — it is an inverse, not a reciprocal."
+  }
+ ],
+ "ratta": [
+  "sin⁻¹, tan⁻¹ → [−π/2, π/2];  cos⁻¹, cot⁻¹ → [0, π].",
+  "sin⁻¹x + cos⁻¹x = π/2.",
+  "cos⁻¹(−x) = π − cos⁻¹x;  sin⁻¹(−x) = −sin⁻¹x.",
+  "tan⁻¹x + tan⁻¹y = tan⁻¹((x + y)/(1 − xy)), xy < 1.",
+  "tan⁻¹1 + tan⁻¹2 + tan⁻¹3 = π.",
+  "2tan⁻¹x = sin⁻¹(2x/(1 + x²))."
+ ],
+ "verifiedOn": "2026-11-13"
+}

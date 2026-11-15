@@ -1,0 +1,153 @@
+{
+ "slug": "permutations-and-combinations",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Permutations and Combinations"
+ },
+ "title": "Permutations and Combinations",
+ "readMinutes": 15,
+ "summary": [
+  "Counting starts with the fundamental principle: if one job can be done in m ways and another in n ways, both together can be done in m × n ways (and either one in m + n ways).",
+  "Permutations count arrangements (order matters): ⁿPᵣ = n!/(n − r)!. Combinations count selections (order doesn't matter): ⁿCᵣ = n!/(r!(n − r)!).",
+  "Special cases: identical objects, circular arrangements, restrictions (together / never together), distribution of identical objects (stars and bars) and derangements."
+ ],
+ "formulas": [
+  {
+   "name": "Fundamental principle",
+   "formula": "AND → multiply;  OR → add",
+   "when": "Breaking a counting problem into stages."
+  },
+  {
+   "name": "Permutations",
+   "formula": "ⁿPᵣ = n!/(n − r)!;  with repetition allowed: nʳ",
+   "when": "Ordered arrangements.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Combinations",
+   "formula": "ⁿCᵣ = n!/(r!(n − r)!);  ⁿCᵣ = ⁿCₙ₋ᵣ;  ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ",
+   "when": "Selections.",
+   "note": "If ⁿCₓ = ⁿCᵧ then x = y or x + y = n."
+  },
+  {
+   "name": "Identical objects",
+   "formula": "n!/(p! q! r! …) for p alike of one kind, q of another, …",
+   "when": "Arranging letters of words.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Circular arrangements",
+   "formula": "(n − 1)! (clockwise ≠ anticlockwise);  (n − 1)!/2 (necklaces, garlands — clockwise = anticlockwise)",
+   "when": "Round tables and necklaces."
+  },
+  {
+   "name": "Together / never together",
+   "formula": "k particular objects together: treat as one block → (n − k + 1)! × k!;  never together = total − together",
+   "when": "Restriction problems."
+  },
+  {
+   "name": "Gap method",
+   "formula": "to keep k objects apart, arrange the others first, then choose gaps: (n − k)! × ⁿ⁻ᵏ⁺¹Pₖ",
+   "when": "No two together.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Distributing identical objects",
+   "formula": "n identical objects into r groups: ⁿ⁺ʳ⁻¹Cᵣ₋₁ (empty allowed);  ⁿ⁻¹Cᵣ₋₁ (each group ≥ 1)",
+   "when": "Stars and bars / non-negative integer solutions of x₁ + … + xᵣ = n."
+  },
+  {
+   "name": "Derangements",
+   "formula": "Dₙ = n![1 − 1/1! + 1/2! − … + (−1)ⁿ/n!];  D₁ = 0, D₂ = 1, D₃ = 2, D₄ = 9",
+   "when": "No object in its own place."
+  },
+  {
+   "name": "Selections from identical objects",
+   "formula": "from p alike, q alike, r alike: (p + 1)(q + 1)(r + 1) − 1 non-empty selections;  from n distinct: 2ⁿ − 1",
+   "when": "Number of selections."
+  },
+  {
+   "name": "Geometry counting",
+   "formula": "lines through n points (no 3 collinear) = ⁿC₂;  triangles = ⁿC₃;  diagonals of n-gon = ⁿC₂ − n;  with m collinear: subtract ᵐC₂ − 1 lines, ᵐC₃ triangles",
+   "when": "Points, lines, triangles."
+  },
+  {
+   "name": "Number of divisors",
+   "formula": "if N = p^a q^b r^c then divisors = (a + 1)(b + 1)(c + 1);  sum of divisors = Π (p^(a+1) − 1)/(p − 1)",
+   "when": "Divisor counting."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Letters of BANANA",
+   "problem": "How many arrangements of BANANA?",
+   "solution": "6 letters: A×3, N×2, B×1 ⇒ 6!/(3! 2!) = 60."
+  },
+  {
+   "title": "Round table",
+   "problem": "In how many ways can 6 people sit at a round table? And 6 beads on a necklace?",
+   "solution": "(6 − 1)! = 120;  necklace (6 − 1)!/2 = 60."
+  },
+  {
+   "title": "Committee",
+   "problem": "Choose 3 men from 5 and 2 women from 4.",
+   "solution": "⁵C₃ × ⁴C₂ = 10 × 6 = 60."
+  },
+  {
+   "title": "Derangements of 4 letters",
+   "problem": "In how many ways can 4 letters go into 4 addressed envelopes with none in the right one?",
+   "solution": "D₄ = 4!(1 − 1 + 1/2 − 1/6 + 1/24) = 9."
+  },
+  {
+   "title": "4-digit numbers",
+   "problem": "How many 4-digit numbers can be formed from 0, 1, 2, 3, 4, 5 without repetition?",
+   "solution": "First digit: 5 choices (not 0); remaining 3 places from 5 digits: ⁵P₃ = 60. Total = 5 × 60 = 300."
+  },
+  {
+   "title": "Identical balls",
+   "problem": "In how many ways can 10 identical balls go into 3 different boxes (empty allowed)?",
+   "solution": "¹⁰⁺³⁻¹C₃₋₁ = ¹²C₂ = 66."
+  },
+  {
+   "title": "Diagonals",
+   "problem": "How many diagonals does a decagon have?",
+   "solution": "¹⁰C₂ − 10 = 45 − 10 = 35."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Factorial basics",
+   "explain": "n! = n(n − 1)…1; 0! = 1. ⁿPᵣ = r! × ⁿCᵣ. The exponent of a prime p in n! is [n/p] + [n/p²] + [n/p³] + … (e.g. number of trailing zeros in 100! is 24)."
+  },
+  {
+   "title": "Words with restrictions",
+   "explain": "Vowels together: treat vowels as one block. Vowels at odd places: choose places for vowels first. Dictionary (rank) problems: count words starting with each smaller letter in turn."
+  },
+  {
+   "title": "Grouping and division",
+   "explain": "Dividing m + n distinct objects into two groups of m and n: (m + n)!/(m! n!). Into groups of equal size (unlabelled), divide also by the factorial of the number of equal groups."
+  },
+  {
+   "title": "Circular with restrictions",
+   "explain": "Two particular people together at a round table: (n − 2)! × 2!. Men and women alternating (n each): (n − 1)! × n!."
+  },
+  {
+   "title": "Integer solutions",
+   "explain": "Number of positive integral solutions of x + y + z = 10 is ⁹C₂ = 36; non-negative solutions are ¹²C₂ = 66. For upper limits, use inclusion–exclusion or coefficients of polynomial expansions."
+  },
+  {
+   "title": "When order matters",
+   "explain": "Ask 'does swapping two chosen items give a new outcome?' — if yes, permutation; if no, combination. Most errors come from counting a selection as an arrangement."
+  }
+ ],
+ "ratta": [
+  "ⁿPᵣ = n!/(n − r)!;  ⁿCᵣ = n!/(r!(n − r)!).",
+  "Identical: n!/(p! q! …).",
+  "Circular (n − 1)!;  necklace (n − 1)!/2.",
+  "Stars and bars: ⁿ⁺ʳ⁻¹Cᵣ₋₁.",
+  "D₄ = 9;  D₃ = 2.",
+  "Diagonals = ⁿC₂ − n.",
+  "Divisors of p^a q^b: (a + 1)(b + 1)."
+ ],
+ "verifiedOn": "2026-11-13"
+}

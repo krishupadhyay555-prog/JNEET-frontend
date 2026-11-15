@@ -1,0 +1,149 @@
+{
+ "slug": "trigonometric-functions-and-equations",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Trigonometric Functions and Equations"
+ },
+ "title": "Trigonometric Functions and Equations",
+ "readMinutes": 17,
+ "summary": [
+  "Angles are measured in degrees or radians (π rad = 180°). The six trigonometric functions are defined on the unit circle; their signs follow ASTC (All, Sin, Tan, Cos positive in quadrants I–IV).",
+  "Identities — compound angle, multiple and sub-multiple angle, sum-to-product and product-to-sum — let you simplify any expression.",
+  "Trigonometric equations have general solutions: sin θ = sin α ⇒ θ = nπ + (−1)ⁿα; cos θ = cos α ⇒ θ = 2nπ ± α; tan θ = tan α ⇒ θ = nπ + α.",
+  "The range of a sin θ + b cos θ is [−√(a² + b²), √(a² + b²)] — a JEE favourite for maximum/minimum questions."
+ ],
+ "formulas": [
+  {
+   "name": "Basic identities",
+   "formula": "sin²θ + cos²θ = 1;  1 + tan²θ = sec²θ;  1 + cot²θ = cosec²θ",
+   "when": "Converting between functions."
+  },
+  {
+   "name": "Compound angles",
+   "formula": "sin(A ± B) = sin A cos B ± cos A sin B;  cos(A ± B) = cos A cos B ∓ sin A sin B;  tan(A ± B) = (tan A ± tan B)/(1 ∓ tan A tan B)",
+   "when": "Sum and difference of angles.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Useful products",
+   "formula": "sin(A + B) sin(A − B) = sin²A − sin²B;  cos(A + B) cos(A − B) = cos²A − sin²B",
+   "when": "Shortcuts for simplification."
+  },
+  {
+   "name": "Double angle",
+   "formula": "sin 2θ = 2 sin θ cos θ = 2 tan θ/(1 + tan²θ);  cos 2θ = cos²θ − sin²θ = 1 − 2sin²θ = 2cos²θ − 1 = (1 − tan²θ)/(1 + tan²θ);  tan 2θ = 2 tan θ/(1 − tan²θ)",
+   "when": "Multiple-angle simplification."
+  },
+  {
+   "name": "Triple angle",
+   "formula": "sin 3θ = 3 sin θ − 4 sin³θ;  cos 3θ = 4cos³θ − 3 cos θ;  tan 3θ = (3 tan θ − tan³θ)/(1 − 3tan²θ)",
+   "when": "Cubic expressions in sin, cos."
+  },
+  {
+   "name": "Sum to product",
+   "formula": "sin C + sin D = 2 sin((C + D)/2) cos((C − D)/2);  cos C + cos D = 2 cos((C + D)/2) cos((C − D)/2);  cos C − cos D = −2 sin((C + D)/2) sin((C − D)/2)",
+   "when": "Adding trig functions."
+  },
+  {
+   "name": "Product of three",
+   "formula": "sin θ sin(60° − θ) sin(60° + θ) = ¼ sin 3θ;  cos θ cos(60° − θ) cos(60° + θ) = ¼ cos 3θ;  tan θ tan(60° − θ) tan(60° + θ) = tan 3θ",
+   "when": "Standard product values.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Range of a sin θ + b cos θ",
+   "formula": "−√(a² + b²) ≤ a sin θ + b cos θ ≤ √(a² + b²)",
+   "when": "Maximum and minimum values.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "General solutions",
+   "formula": "sin θ = 0 ⇒ θ = nπ;  cos θ = 0 ⇒ θ = (2n + 1)π/2;  sin θ = sin α ⇒ θ = nπ + (−1)ⁿα;  cos θ = cos α ⇒ θ = 2nπ ± α;  tan θ = tan α ⇒ θ = nπ + α;  sin²θ = sin²α ⇒ θ = nπ ± α",
+   "when": "Solving trigonometric equations (n ∈ ℤ).",
+   "mistake": "Squaring both sides can introduce extra roots — always check."
+  },
+  {
+   "name": "Standard values",
+   "formula": "sin 15° = (√6 − √2)/4;  sin 18° = (√5 − 1)/4;  cos 36° = (√5 + 1)/4;  tan 15° = 2 − √3;  tan 22.5° = √2 − 1",
+   "when": "Non-standard angles."
+  },
+  {
+   "name": "Sine and cosine rules",
+   "formula": "a/sin A = b/sin B = c/sin C = 2R;  cos A = (b² + c² − a²)/(2bc)",
+   "when": "Properties of triangles."
+  },
+  {
+   "name": "Conditional identities (A + B + C = π)",
+   "formula": "tan A + tan B + tan C = tan A tan B tan C;  sin 2A + sin 2B + sin 2C = 4 sin A sin B sin C",
+   "when": "Triangle identities."
+  }
+ ],
+ "examples": [
+  {
+   "title": "sin 75°",
+   "problem": "Find sin 75°.",
+   "solution": "sin(45° + 30°) = (√3 + 1)/(2√2) = (√6 + √2)/4 ≈ 0.9659."
+  },
+  {
+   "title": "Product of cosines",
+   "problem": "Evaluate cos 20° cos 40° cos 80°.",
+   "solution": "Using cos θ cos(60° − θ) cos(60° + θ) = ¼ cos 3θ with θ = 20°: ¼ cos 60° = 1/8 = 0.125."
+  },
+  {
+   "title": "Product of tangents",
+   "problem": "Evaluate tan 20° tan 40° tan 80°.",
+   "solution": "tan θ tan(60° − θ) tan(60° + θ) = tan 3θ ⇒ tan 60° = √3 ≈ 1.732."
+  },
+  {
+   "title": "Maximum value",
+   "problem": "Find the maximum value of 3 sin x + 4 cos x.",
+   "solution": "√(3² + 4²) = 5."
+  },
+  {
+   "title": "Product of sines",
+   "problem": "Evaluate sin 10° sin 50° sin 70°.",
+   "solution": "sin θ sin(60° − θ) sin(60° + θ) = ¼ sin 3θ with θ = 10°: ¼ sin 30° = 0.125."
+  },
+  {
+   "title": "General solution",
+   "problem": "Solve 2cos²x + 3 sin x = 0.",
+   "solution": "2(1 − sin²x) + 3 sin x = 0 ⇒ 2sin²x − 3 sin x − 2 = 0 ⇒ (2 sin x + 1)(sin x − 2) = 0. sin x = 2 is impossible, so sin x = −1/2 = sin(−π/6) ⇒ x = nπ + (−1)ⁿ(−π/6), n ∈ ℤ."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Radian measure",
+   "explain": "One radian is the angle subtended at the centre by an arc equal to the radius. Arc length l = rθ (θ in radians). 1 radian ≈ 57°16′."
+  },
+  {
+   "title": "Signs and allied angles",
+   "explain": "Angles (90° ± θ), (270° ± θ) change sin ↔ cos, tan ↔ cot; angles (180° ± θ), (360° ± θ) keep the function. The sign is taken from the quadrant of the original angle (ASTC)."
+  },
+  {
+   "title": "Graphs and periods",
+   "explain": "sin x and cos x have period 2π and range [−1, 1]; tan x has period π and range ℝ (undefined at odd multiples of π/2). Period of sinⁿx and cosⁿx is π for even n and 2π for odd n."
+  },
+  {
+   "title": "Strategy for equations",
+   "explain": "Reduce to one function (using identities), factorise, then apply general-solution formulas. For a cos x + b sin x = c, divide by √(a² + b²); a solution exists only if |c| ≤ √(a² + b²)."
+  },
+  {
+   "title": "Sum of sines/cosines in AP",
+   "explain": "sin α + sin(α + β) + … n terms = sin(nβ/2)/sin(β/2) × sin(α + (n − 1)β/2); a similar formula holds for cosines. Useful for cos(2π/7) + cos(4π/7) + cos(6π/7) = −1/2."
+  },
+  {
+   "title": "Maximum/minimum tricks",
+   "explain": "For a sin²x + b cos²x the range is between a and b. For expressions like sin x cos x use sin 2x/2. AM ≥ GM helps for sums like tan²x + cot²x ≥ 2."
+  }
+ ],
+ "ratta": [
+  "ASTC: All, Sin, Tan, Cos positive in quadrants I–IV.",
+  "cos 2θ = 1 − 2sin²θ = 2cos²θ − 1.",
+  "sin 3θ = 3 sin θ − 4 sin³θ;  cos 3θ = 4cos³θ − 3 cos θ.",
+  "sin θ sin(60° − θ) sin(60° + θ) = ¼ sin 3θ.",
+  "a sin θ + b cos θ ∈ [−√(a² + b²), √(a² + b²)].",
+  "sin θ = sin α ⇒ nπ + (−1)ⁿα;  cos ⇒ 2nπ ± α;  tan ⇒ nπ + α.",
+  "sin 18° = (√5 − 1)/4;  tan 15° = 2 − √3."
+ ],
+ "verifiedOn": "2026-11-13"
+}

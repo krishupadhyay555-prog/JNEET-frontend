@@ -1,0 +1,141 @@
+{
+ "slug": "binomial-theorem",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Binomial Theorem"
+ },
+ "title": "Binomial Theorem",
+ "readMinutes": 12,
+ "summary": [
+  "For a positive integer n, (x + a)ⁿ = Σ C(n, r) xⁿ⁻ʳ aʳ, with n + 1 terms. The general term Tᵣ₊₁ = C(n, r) xⁿ⁻ʳ aʳ is the key to almost every question.",
+  "Typical questions: a specific term or coefficient, the term independent of x, the middle term(s), the greatest coefficient, and sums of binomial coefficients.",
+  "Binomial coefficients follow Pascal's triangle; their sum is 2ⁿ, and the sums of alternate coefficients are each 2ⁿ⁻¹. Remainders of large powers are found by writing the base near a multiple of the divisor."
+ ],
+ "formulas": [
+  {
+   "name": "Binomial theorem",
+   "formula": "(x + a)ⁿ = C(n,0)xⁿ + C(n,1)xⁿ⁻¹a + … + C(n,n)aⁿ",
+   "when": "Expanding powers of a binomial.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "General term",
+   "formula": "Tᵣ₊₁ = C(n, r) xⁿ⁻ʳ aʳ",
+   "when": "Any specific term.",
+   "mistake": "It is the (r + 1)th term, not the rth.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Middle term",
+   "formula": "n even: one middle term T(n/2 + 1);  n odd: two middle terms T((n + 1)/2) and T((n + 3)/2)",
+   "when": "Middle terms."
+  },
+  {
+   "name": "Term independent of x",
+   "formula": "set the power of x in Tᵣ₊₁ equal to 0 and solve for r",
+   "when": "Constant term."
+  },
+  {
+   "name": "Sum of coefficients",
+   "formula": "put x = 1 (and every other variable 1) in the expansion",
+   "when": "Sum of all coefficients."
+  },
+  {
+   "name": "Binomial coefficient sums",
+   "formula": "C₀ + C₁ + … + Cₙ = 2ⁿ;  C₀ + C₂ + … = C₁ + C₃ + … = 2ⁿ⁻¹;  C₀ − C₁ + C₂ − … = 0",
+   "when": "Identities of coefficients."
+  },
+  {
+   "name": "Pascal's rule",
+   "formula": "C(n, r) + C(n, r − 1) = C(n + 1, r);  C(n, r) = C(n, n − r)",
+   "when": "Building Pascal's triangle."
+  },
+  {
+   "name": "Greatest coefficient",
+   "formula": "n even: C(n, n/2);  n odd: C(n, (n − 1)/2) = C(n, (n + 1)/2)",
+   "when": "Largest binomial coefficient."
+  },
+  {
+   "name": "Sum of squares of coefficients",
+   "formula": "C₀² + C₁² + … + Cₙ² = C(2n, n)",
+   "when": "Vandermonde-type identity."
+  },
+  {
+   "name": "Weighted sum",
+   "formula": "Σ r C(n, r) = n 2ⁿ⁻¹",
+   "when": "Sums with r multiplied in (differentiate (1 + x)ⁿ)."
+  },
+  {
+   "name": "Number of terms",
+   "formula": "(x + a)ⁿ: n + 1 terms;  (x + y + z)ⁿ: C(n + 2, 2) terms",
+   "when": "Counting terms."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Term independent of x",
+   "problem": "Find the term independent of x in (x² + 1/x)⁹.",
+   "solution": "Tᵣ₊₁ = C(9, r) x^(18 − 2r) x^(−r) = C(9, r) x^(18 − 3r). 18 − 3r = 0 ⇒ r = 6; term = C(9, 6) = 84."
+  },
+  {
+   "title": "Middle term",
+   "problem": "Find the middle term of (1 + x)¹⁰.",
+   "solution": "n = 10 is even ⇒ T₆ = C(10, 5)x⁵ = 252x⁵."
+  },
+  {
+   "title": "Coefficient",
+   "problem": "Coefficient of x⁵ in (1 + x)⁷?",
+   "solution": "C(7, 5) = 21."
+  },
+  {
+   "title": "Sum of coefficients",
+   "problem": "Sum of coefficients in (3x − 2y)¹⁰?",
+   "solution": "Put x = y = 1: (3 − 2)¹⁰ = 1."
+  },
+  {
+   "title": "Remainder",
+   "problem": "Remainder when 2¹⁰⁰ is divided by 7?",
+   "solution": "2³ = 8 = 7 + 1, so 2¹⁰⁰ = 2 × (8)³³ = 2(7 + 1)³³ ≡ 2 × 1 = 2 (mod 7)."
+  },
+  {
+   "title": "Number of terms",
+   "problem": "How many terms are there in (2x − 3y)¹⁵?",
+   "solution": "n + 1 = 16."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Pascal's triangle",
+   "explain": "Each entry is the sum of the two above it; row n gives the coefficients of (x + a)ⁿ. The triangle is symmetric because C(n, r) = C(n, n − r)."
+  },
+  {
+   "title": "Expansions with negative signs",
+   "explain": "(x − a)ⁿ = Σ (−1)ʳ C(n, r) xⁿ⁻ʳ aʳ — signs alternate. (x + a)ⁿ + (x − a)ⁿ keeps only odd-numbered terms (even powers of a); the difference keeps the others."
+  },
+  {
+   "title": "Divisibility and remainders",
+   "explain": "To show 9ⁿ − 8n − 1 is divisible by 64, write 9ⁿ = (1 + 8)ⁿ and expand: the first two terms cancel and the rest contain 8². For remainders, express the base as (multiple of divisor ± 1)."
+  },
+  {
+   "title": "Numerically greatest term",
+   "explain": "Find the term whose ratio Tᵣ₊₁/Tᵣ = ((n − r + 1)/r)|a/x| first drops below 1 — that term is numerically greatest."
+  },
+  {
+   "title": "Approximation",
+   "explain": "For small x, (1 + x)ⁿ ≈ 1 + nx. E.g. (1.02)⁸ ≈ 1 + 8 × 0.02 = 1.16 (actual 1.1717)."
+  },
+  {
+   "title": "Coefficient tricks",
+   "explain": "For the coefficient of xᵏ in a product like (1 + x)ᵐ(1 + x)ⁿ, use C(m + n, k), or multiply general terms and sum over matching powers."
+  }
+ ],
+ "ratta": [
+  "Tᵣ₊₁ = C(n, r) xⁿ⁻ʳ aʳ.",
+  "n + 1 terms;  middle T(n/2 + 1) for even n.",
+  "ΣC = 2ⁿ;  odd sum = even sum = 2ⁿ⁻¹.",
+  "ΣC² = C(2n, n);  Σ rC(n, r) = n2ⁿ⁻¹.",
+  "Constant term: power of x = 0.",
+  "Sum of coefficients: put x = 1."
+ ],
+ "verifiedOn": "2026-11-13"
+}
