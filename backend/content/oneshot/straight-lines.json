@@ -1,0 +1,153 @@
+{
+ "slug": "straight-lines",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Straight Lines"
+ },
+ "title": "Straight Lines",
+ "readMinutes": 15,
+ "summary": [
+  "Coordinate geometry starts with the distance and section formulas, the area of a triangle and the centres of a triangle (centroid, incentre, circumcentre, orthocentre).",
+  "A line can be written in slope–intercept, point–slope, two-point, intercept, normal or general form. Slopes decide parallel (m₁ = m₂) and perpendicular (m₁m₂ = −1) lines.",
+  "Distance of a point from a line, distance between parallel lines, angle between lines, family of lines through an intersection and angle bisectors are the core JEE tools."
+ ],
+ "formulas": [
+  {
+   "name": "Distance and section",
+   "formula": "d = √((x₂ − x₁)² + (y₂ − y₁)²);  internal division m:n → ((mx₂ + nx₁)/(m + n), (my₂ + ny₁)/(m + n))",
+   "when": "Basic coordinate formulas."
+  },
+  {
+   "name": "Area of triangle",
+   "formula": "Δ = ½|x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂)|;  area 0 ⇔ collinear",
+   "when": "Area and collinearity.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Centres of a triangle",
+   "formula": "centroid G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3);  incentre I = ((ax₁ + bx₂ + cx₃)/(a + b + c), …);  G divides OH (circumcentre O to orthocentre H) in 1:2",
+   "when": "Triangle centres."
+  },
+  {
+   "name": "Slope",
+   "formula": "m = tan θ = (y₂ − y₁)/(x₂ − x₁);  parallel m₁ = m₂;  perpendicular m₁m₂ = −1",
+   "when": "Direction of a line."
+  },
+  {
+   "name": "Forms of a line",
+   "formula": "y = mx + c;  y − y₁ = m(x − x₁);  x/a + y/b = 1;  x cos α + y sin α = p;  ax + by + c = 0 (slope −a/b)",
+   "when": "Writing equations of lines.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Angle between lines",
+   "formula": "tan θ = |(m₁ − m₂)/(1 + m₁m₂)|",
+   "when": "Acute angle between two lines."
+  },
+  {
+   "name": "Distance from a point",
+   "formula": "d = |ax₁ + by₁ + c|/√(a² + b²)",
+   "when": "Perpendicular distance.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Distance between parallel lines",
+   "formula": "d = |c₁ − c₂|/√(a² + b²)  for ax + by + c₁ = 0 and ax + by + c₂ = 0",
+   "when": "Parallel lines.",
+   "note": "Make the x and y coefficients identical first."
+  },
+  {
+   "name": "Foot of perpendicular and image",
+   "formula": "foot: (x − x₁)/a = (y − y₁)/b = −(ax₁ + by₁ + c)/(a² + b²);  image: same with −2(ax₁ + by₁ + c)/(a² + b²)",
+   "when": "Reflections in a line."
+  },
+  {
+   "name": "Family of lines",
+   "formula": "L₁ + λL₂ = 0 passes through the intersection of L₁ = 0 and L₂ = 0",
+   "when": "Lines through an intersection point."
+  },
+  {
+   "name": "Concurrency",
+   "formula": "three lines concur if the determinant |a₁ b₁ c₁; a₂ b₂ c₂; a₃ b₃ c₃| = 0",
+   "when": "Checking concurrent lines."
+  },
+  {
+   "name": "Angle bisectors",
+   "formula": "(a₁x + b₁y + c₁)/√(a₁² + b₁²) = ±(a₂x + b₂y + c₂)/√(a₂² + b₂²)",
+   "when": "Bisectors of angles between two lines."
+  },
+  {
+   "name": "Position of a point",
+   "formula": "points (x₁, y₁), (x₂, y₂) are on the same side of ax + by + c = 0 if ax₁ + by₁ + c and ax₂ + by₂ + c have the same sign",
+   "when": "Same side or opposite sides."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Distance from a line",
+   "problem": "Distance of (1, 2) from 3x + 4y − 5 = 0?",
+   "solution": "|3 + 8 − 5|/5 = 6/5 = 1.2."
+  },
+  {
+   "title": "Parallel lines",
+   "problem": "Distance between 3x + 4y − 5 = 0 and 3x + 4y + 10 = 0?",
+   "solution": "|−5 − 10|/5 = 3."
+  },
+  {
+   "title": "Area",
+   "problem": "Area of the triangle with vertices (0, 0), (3, 0), (0, 4)?",
+   "solution": "½ × 3 × 4 = 6."
+  },
+  {
+   "title": "Angle between lines",
+   "problem": "Acute angle between y = 3x + 1 and y = x?",
+   "solution": "tan θ = |(3 − 1)/(1 + 3)| = 1/2 ⇒ θ ≈ 26.57°."
+  },
+  {
+   "title": "Section formula",
+   "problem": "Point dividing the join of (1, 2) and (7, 8) internally in 2:1?",
+   "solution": "((2 × 7 + 1 × 1)/3, (2 × 8 + 1 × 2)/3) = (5, 6)."
+  },
+  {
+   "title": "Family of lines",
+   "problem": "Find the line through the intersection of x + y = 5 and x − y = 1 that passes through the origin.",
+   "solution": "(x + y − 5) + λ(x − y − 1) = 0. Origin: −5 − λ = 0 ⇒ λ = −5 ⇒ x + y − 5 − 5x + 5y + 5 = 0 ⇒ −4x + 6y = 0 ⇒ 2x = 3y."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Locus",
+   "explain": "To find a locus, let the moving point be (h, k), write the given condition as an equation in h and k, then replace h, k by x, y."
+  },
+  {
+   "title": "Shifting the origin",
+   "explain": "If the origin moves to (h, k) without rotation, new coordinates are X = x − h, Y = y − k. Rotation of axes by θ: x = X cos θ − Y sin θ, y = X sin θ + Y cos θ."
+  },
+  {
+   "title": "Lines making a given angle",
+   "explain": "Lines through (x₁, y₁) making angle α with y = mx + c: slopes are (m ± tan α)/(1 ∓ m tan α)."
+  },
+  {
+   "title": "Pair of straight lines",
+   "explain": "ax² + 2hxy + by² = 0 represents two lines through the origin; angle tan θ = 2√(h² − ab)/|a + b|. They are perpendicular if a + b = 0 and coincident if h² = ab."
+  },
+  {
+   "title": "Orthocentre shortcut",
+   "explain": "For a right-angled triangle, the orthocentre is the right-angle vertex and the circumcentre is the midpoint of the hypotenuse."
+  },
+  {
+   "title": "Parametric form",
+   "explain": "A point at distance r from (x₁, y₁) along a line with inclination θ is (x₁ + r cos θ, y₁ + r sin θ) — handy for distances along a line."
+  }
+ ],
+ "ratta": [
+  "Area ½|x₁(y₂ − y₃) + …|;  0 ⇒ collinear.",
+  "Perpendicular: m₁m₂ = −1.",
+  "tan θ = |(m₁ − m₂)/(1 + m₁m₂)|.",
+  "Distance |ax₁ + by₁ + c|/√(a² + b²).",
+  "Parallel lines: |c₁ − c₂|/√(a² + b²).",
+  "L₁ + λL₂ = 0 through intersection.",
+  "G divides OH in 1:2."
+ ],
+ "verifiedOn": "2026-11-13"
+}

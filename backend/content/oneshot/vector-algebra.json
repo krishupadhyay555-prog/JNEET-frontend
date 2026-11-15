@@ -1,0 +1,147 @@
+{
+ "slug": "vector-algebra",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Vector Algebra"
+ },
+ "title": "Vector Algebra",
+ "readMinutes": 14,
+ "summary": [
+  "Vectors have magnitude and direction; a = a₁î + a₂ĵ + a₃k̂. They add by the triangle/parallelogram law, and any vector can be written in terms of three non-coplanar vectors.",
+  "The dot product a · b = |a||b| cos θ gives angles, projections and perpendicularity. The cross product a × b = |a||b| sin θ n̂ gives areas and a vector perpendicular to both.",
+  "The scalar triple product [a b c] gives the volume of a parallelepiped and tests coplanarity; the vector triple product expands as a × (b × c) = (a · c)b − (a · b)c."
+ ],
+ "formulas": [
+  {
+   "name": "Magnitude and unit vector",
+   "formula": "|a| = √(a₁² + a₂² + a₃²);  â = a/|a|",
+   "when": "Basic vector facts."
+  },
+  {
+   "name": "Section formula (vectors)",
+   "formula": "internal m:n → (mb + na)/(m + n);  midpoint (a + b)/2",
+   "when": "Position vectors of dividing points."
+  },
+  {
+   "name": "Dot product",
+   "formula": "a · b = |a||b| cos θ = a₁b₁ + a₂b₂ + a₃b₃;  a ⊥ b ⇔ a · b = 0",
+   "when": "Angles and perpendicularity.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Projection",
+   "formula": "projection of a on b = (a · b)/|b|;  vector projection = ((a · b)/|b|²) b",
+   "when": "Component of one vector along another."
+  },
+  {
+   "name": "Cross product",
+   "formula": "a × b = |a||b| sin θ n̂ = determinant |î ĵ k̂; a₁ a₂ a₃; b₁ b₂ b₃|;  a × b = −b × a;  a ∥ b ⇔ a × b = 0",
+   "when": "Perpendicular vector and areas.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Areas",
+   "formula": "parallelogram with sides a, b: |a × b|;  with diagonals d₁, d₂: ½|d₁ × d₂|;  triangle: ½|a × b|",
+   "when": "Area using vectors."
+  },
+  {
+   "name": "Scalar triple product",
+   "formula": "[a b c] = a · (b × c) = determinant of components;  volume of parallelepiped = |[a b c]|;  tetrahedron = |[a b c]|/6",
+   "when": "Volumes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Coplanarity",
+   "formula": "a, b, c coplanar ⇔ [a b c] = 0",
+   "when": "Testing whether vectors lie in a plane."
+  },
+  {
+   "name": "Vector triple product",
+   "formula": "a × (b × c) = (a · c)b − (a · b)c",
+   "when": "Expanding triple cross products.",
+   "note": "a × (b × c) ≠ (a × b) × c in general."
+  },
+  {
+   "name": "Properties of [a b c]",
+   "formula": "[a b c] = [b c a] = [c a b] = −[b a c];  [a a b] = 0;  [a × b  b × c  c × a] = [a b c]²",
+   "when": "Manipulating triple products."
+  },
+  {
+   "name": "Collinearity",
+   "formula": "points A, B, C collinear ⇔ AB = λ AC (or AB × AC = 0)",
+   "when": "Points on a line."
+  },
+  {
+   "name": "Lagrange identity",
+   "formula": "|a × b|² + (a · b)² = |a|²|b|²",
+   "when": "Linking dot and cross products."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Dot product and angle",
+   "problem": "a = î + 2ĵ + 2k̂, b = 2î − ĵ + 2k̂. Find a · b and the angle between them.",
+   "solution": "a · b = 2 − 2 + 4 = 4; |a| = |b| = 3; cos θ = 4/9 ≈ 0.444."
+  },
+  {
+   "title": "Projection",
+   "problem": "Projection of a on b for the vectors above?",
+   "solution": "(a · b)/|b| = 4/3 ≈ 1.333."
+  },
+  {
+   "title": "Area of parallelogram",
+   "problem": "Area of the parallelogram with sides a and b above?",
+   "solution": "a × b = (6, 2, −5) ⇒ |a × b| = √65 ≈ 8.06; triangle area ≈ 4.03."
+  },
+  {
+   "title": "Volume",
+   "problem": "Volume of the parallelepiped with edges î, 2ĵ and î + ĵ + 3k̂?",
+   "solution": "Determinant |1 0 0; 0 2 0; 1 1 3| = 6."
+  },
+  {
+   "title": "Coplanarity",
+   "problem": "Are (1, 2, 3), (2, 3, 4), (3, 4, 5) coplanar?",
+   "solution": "Determinant = 0 ⇒ yes, coplanar (the third is 2 × second − first)."
+  },
+  {
+   "title": "Perpendicular unit vector",
+   "problem": "Unit vector perpendicular to both î + ĵ and ĵ + k̂?",
+   "solution": "(î + ĵ) × (ĵ + k̂) = î − ĵ + k̂; divide by √3 ⇒ ±(î − ĵ + k̂)/√3."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of vectors",
+   "explain": "Zero vector, unit vector, equal vectors, collinear (parallel) vectors, coinitial vectors, coplanar vectors, position vector OP of a point P."
+  },
+  {
+   "title": "Linear combinations",
+   "explain": "Two non-collinear vectors span a plane; three non-coplanar vectors span space. Vectors are linearly dependent if one is a combination of the others."
+  },
+  {
+   "title": "Angle bisectors with vectors",
+   "explain": "The internal bisector of the angle between a and b is along â + b̂; the external bisector along â − b̂."
+  },
+  {
+   "title": "Work and moment",
+   "explain": "Work done by force F through displacement d is F · d. Moment (torque) of F about a point is r × F."
+  },
+  {
+   "title": "Direction cosines with vectors",
+   "explain": "For r = xî + yĵ + zk̂, the direction cosines are x/|r|, y/|r|, z/|r|. A unit vector making equal angles with the axes is (î + ĵ + k̂)/√3."
+  },
+  {
+   "title": "Common mistakes",
+   "explain": "Dot product gives a scalar, cross product a vector. a · b = a · c does not imply b = c. Cross product is not associative and not commutative."
+  }
+ ],
+ "ratta": [
+  "a · b = |a||b| cos θ;  ⊥ ⇔ a · b = 0.",
+  "|a × b| = area of parallelogram;  ½ for triangle.",
+  "Projection = (a · b)/|b|.",
+  "[a b c] = volume;  0 ⇒ coplanar.",
+  "a × (b × c) = (a · c)b − (a · b)c.",
+  "|a × b|² + (a · b)² = |a|²|b|²."
+ ],
+ "verifiedOn": "2026-11-13"
+}

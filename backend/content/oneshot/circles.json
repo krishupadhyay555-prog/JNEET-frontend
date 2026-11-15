@@ -1,0 +1,149 @@
+{
+ "slug": "circles",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Circles"
+ },
+ "title": "Circles",
+ "readMinutes": 14,
+ "summary": [
+  "A circle is the locus of points at a fixed distance (radius) from a fixed point (centre). The general equation x² + y² + 2gx + 2fy + c = 0 has centre (−g, −f) and radius √(g² + f² − c).",
+  "The position of a point or line relative to a circle is decided by S₁ = x₁² + y₁² + 2gx₁ + 2fy₁ + c and by comparing distance from the centre with the radius.",
+  "Tangent, normal, chord of contact, length of tangent, common tangents, family of circles and orthogonal circles are the main JEE tools."
+ ],
+ "formulas": [
+  {
+   "name": "Standard and general form",
+   "formula": "(x − h)² + (y − k)² = r²;  x² + y² + 2gx + 2fy + c = 0 → centre (−g, −f), r = √(g² + f² − c)",
+   "when": "Equation of a circle.",
+   "tag": "PYQ favourite",
+   "note": "A real circle needs g² + f² − c ≥ 0."
+  },
+  {
+   "name": "Diameter form",
+   "formula": "(x − x₁)(x − x₂) + (y − y₁)(y − y₂) = 0",
+   "when": "Circle on the join of two points as diameter."
+  },
+  {
+   "name": "Parametric form",
+   "formula": "x = h + r cos θ, y = k + r sin θ",
+   "when": "Points on a circle."
+  },
+  {
+   "name": "Position of a point",
+   "formula": "S₁ > 0 outside;  S₁ = 0 on;  S₁ < 0 inside",
+   "when": "Where a point lies."
+  },
+  {
+   "name": "Line and circle",
+   "formula": "distance p of centre from line: p > r no intersection;  p = r tangent;  p < r secant;  chord length = 2√(r² − p²)",
+   "when": "Line–circle position.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Tangent condition",
+   "formula": "y = mx + c touches x² + y² = a² iff c² = a²(1 + m²);  tangent: y = mx ± a√(1 + m²)",
+   "when": "Slope form of tangent."
+  },
+  {
+   "name": "Tangent at a point",
+   "formula": "T = 0: xx₁ + yy₁ + g(x + x₁) + f(y + y₁) + c = 0",
+   "when": "Tangent at (x₁, y₁) on the circle."
+  },
+  {
+   "name": "Length of tangent",
+   "formula": "√S₁ from an external point (x₁, y₁)",
+   "when": "Tangent length.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Chord of contact and midpoint chord",
+   "formula": "chord of contact from (x₁, y₁): T = 0;  chord with midpoint (x₁, y₁): T = S₁",
+   "when": "Chords from external or midpoints."
+  },
+  {
+   "name": "Two circles",
+   "formula": "d > r₁ + r₂: 4 common tangents;  d = r₁ + r₂: 3;  |r₁ − r₂| < d < r₁ + r₂: 2;  d = |r₁ − r₂|: 1;  d < |r₁ − r₂|: 0",
+   "when": "Number of common tangents.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Orthogonal circles",
+   "formula": "2g₁g₂ + 2f₁f₂ = c₁ + c₂",
+   "when": "Circles cutting at right angles."
+  },
+  {
+   "name": "Family of circles",
+   "formula": "S + λL = 0 (circle and line);  S₁ + λS₂ = 0 (two circles);  radical axis S₁ − S₂ = 0",
+   "when": "Circles through intersection points."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Centre and radius",
+   "problem": "Find the centre and radius of x² + y² − 4x + 6y − 12 = 0.",
+   "solution": "g = −2, f = 3 ⇒ centre (2, −3); r = √(4 + 9 + 12) = 5."
+  },
+  {
+   "title": "Length of tangent",
+   "problem": "Length of the tangent from (7, 2) to the circle above?",
+   "solution": "S₁ = 49 + 4 − 28 + 12 − 12 = 25 ⇒ length = √25 = 5."
+  },
+  {
+   "title": "Chord length",
+   "problem": "A line is at distance 3 from the centre of x² + y² = 25. Chord length?",
+   "solution": "2√(25 − 9) = 8."
+  },
+  {
+   "title": "Common tangents",
+   "problem": "Circles of radii 3 and 4 have centres 10 apart. Number of common tangents?",
+   "solution": "d = 10 > 3 + 4 = 7 ⇒ 4 common tangents."
+  },
+  {
+   "title": "Tangent with given slope",
+   "problem": "Tangents to x² + y² = 9 with slope 1?",
+   "solution": "y = x ± 3√2 (using c = ±a√(1 + m²))."
+  },
+  {
+   "title": "Circle through three points",
+   "problem": "Find the circle through (0, 0), (2, 0) and (0, 4).",
+   "solution": "c = 0; through (2, 0): 4 + 4g = 0 ⇒ g = −1; through (0, 4): 16 + 8f = 0 ⇒ f = −2. Equation: x² + y² − 2x − 4y = 0 (centre (1, 2), radius √5)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Conditions for a general second-degree equation to be a circle",
+   "explain": "ax² + 2hxy + by² + 2gx + 2fy + c = 0 is a circle if a = b ≠ 0 and h = 0 (and the radius is real)."
+  },
+  {
+   "title": "Normal to a circle",
+   "explain": "Every normal passes through the centre. The normal at (x₁, y₁) is the line joining (x₁, y₁) and the centre."
+  },
+  {
+   "title": "Director circle",
+   "explain": "The locus of points from which perpendicular tangents are drawn to x² + y² = a² is x² + y² = 2a²."
+  },
+  {
+   "title": "Radical axis and centre",
+   "explain": "The radical axis is the locus of points with equal tangent lengths to two circles: S₁ − S₂ = 0, perpendicular to the line of centres. Three circles' radical axes meet at the radical centre."
+  },
+  {
+   "title": "Angle between circles",
+   "explain": "cos θ = (r₁² + r₂² − d²)/(2r₁r₂), where θ is the angle between radii at a point of intersection; θ = 90° gives the orthogonality condition."
+  },
+  {
+   "title": "Common chord",
+   "explain": "The common chord of two intersecting circles is S₁ − S₂ = 0; its length uses the distance from either centre."
+  }
+ ],
+ "ratta": [
+  "Centre (−g, −f), r = √(g² + f² − c).",
+  "Tangent length √S₁.",
+  "Chord length 2√(r² − p²).",
+  "y = mx ± a√(1 + m²) tangent to x² + y² = a².",
+  "Common tangents: 4, 3, 2, 1, 0 as circles move closer.",
+  "Orthogonal: 2g₁g₂ + 2f₁f₂ = c₁ + c₂.",
+  "Director circle x² + y² = 2a²."
+ ],
+ "verifiedOn": "2026-11-13"
+}
