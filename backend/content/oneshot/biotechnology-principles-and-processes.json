@@ -1,0 +1,154 @@
+{
+ "slug": "biotechnology-principles-and-processes",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biotechnology: Principles and Processes"
+ },
+ "title": "Biotechnology: Principles and Processes",
+ "readMinutes": 15,
+ "summary": [
+  "Modern biotechnology rests on genetic engineering (changing DNA/RNA, introducing it into hosts) and bioprocess engineering (sterile large-scale culture). The first recombinant DNA was made by Stanley Cohen and Herbert Boyer (1972) by linking an antibiotic-resistance gene to a native plasmid of Salmonella typhimurium.",
+  "Tools: restriction enzymes (molecular scissors), DNA ligase (glue), cloning vectors (plasmids, phages), competent hosts and gel electrophoresis.",
+  "Process: isolate DNA → cut with restriction enzyme → amplify with PCR → ligate into vector → transform host → select recombinants → grow in bioreactors → downstream processing."
+ ],
+ "formulas": [
+  {
+   "name": "Restriction enzymes",
+   "formula": "first discovered: Hind II (cuts at a specific 6-bp sequence);  exonucleases remove nucleotides from ends; endonucleases cut inside;  recognise palindromic sequences",
+   "when": "Molecular scissors.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Naming EcoRI",
+   "formula": "E = Escherichia (genus), co = coli (species), R = RY13 (strain), I = first enzyme isolated from that strain",
+   "when": "Restriction enzyme nomenclature.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Palindrome and sticky ends",
+   "formula": "5′-GAATTC-3′ / 3′-CTTAAG-5′ reads the same 5′→3′ on both strands;  EcoRI cuts between G and A → sticky ends that pair with complementary ends",
+   "when": "How cut DNA joins."
+  },
+  {
+   "name": "Gel electrophoresis",
+   "formula": "DNA (negatively charged) moves towards the anode through agarose gel (from seaweed);  smaller fragments move farther;  stained with ethidium bromide, seen as orange bands under UV;  bands cut out and purified (elution)",
+   "when": "Separating DNA fragments.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cloning vector features",
+   "formula": "origin of replication (ori — controls copy number);  selectable marker (ampicillin, chloramphenicol, tetracycline or kanamycin resistance);  cloning (recognition) sites, preferably single;  small size",
+   "when": "What makes a good vector."
+  },
+  {
+   "name": "pBR322",
+   "formula": "ori + rop (proteins for replication) + amp^R + tet^R;  BamHI site in tet^R; PstI and PvuI in amp^R",
+   "when": "Standard E. coli vector."
+  },
+  {
+   "name": "Insertional inactivation",
+   "formula": "insert in tet^R gene → recombinants lose tetracycline resistance;  β-galactosidase (lacZ) insertion → recombinants give colourless colonies, non-recombinants blue (with chromogenic substrate)",
+   "when": "Selecting recombinants (blue–white screening).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vectors for plants and animals",
+   "formula": "Agrobacterium tumefaciens — Ti plasmid (tumour-inducing; disarmed for gene transfer);  retroviruses disarmed for animal cells",
+   "when": "Natural genetic engineers."
+  },
+  {
+   "name": "Making cells competent",
+   "formula": "divalent cations (Ca²⁺) → heat shock (ice, 42 °C, ice) → plasmid enters;  other methods: microinjection (animal nucleus), biolistics/gene gun (plant cells, gold or tungsten particles), disarmed pathogen vectors",
+   "when": "Introducing DNA into hosts."
+  },
+  {
+   "name": "PCR steps",
+   "formula": "denaturation (~94 °C) → annealing of primers → extension by Taq polymerase (from Thermus aquaticus, thermostable);  copies double each cycle (2ⁿ)",
+   "when": "Polymerase chain reaction.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Isolating DNA",
+   "formula": "lyse cells with lysozyme (bacteria), cellulase (plants), chitinase (fungi);  remove RNA with ribonuclease, proteins with protease;  chilled ethanol precipitates DNA (fine threads)",
+   "when": "Getting pure DNA."
+  },
+  {
+   "name": "Bioreactors",
+   "formula": "large vessels (100–1000 L) giving optimum temperature, pH, O₂, substrate;  stirred-tank (agitator, oxygen delivery, foam control, temperature and pH control, sampling ports)",
+   "when": "Scaling up production."
+  },
+  {
+   "name": "Downstream processing",
+   "formula": "separation and purification of the product, formulation with preservatives, clinical trials for drugs, quality control",
+   "when": "After biosynthesis."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Fragments from a circular plasmid",
+   "problem": "A circular plasmid has four EcoRI sites. How many fragments form after complete digestion?",
+   "solution": "In a circular DNA, n cuts give n fragments: 4 fragments. (A linear DNA with n cuts gives n + 1.)"
+  },
+  {
+   "title": "Blue–white screening",
+   "problem": "On a plate with X-gal, which colonies carry recombinant plasmids?",
+   "solution": "Colourless (white) colonies — the insert disrupts lacZ (insertional inactivation), so no β-galactosidase forms to give the blue colour."
+  },
+  {
+   "title": "Why one recognition site?",
+   "problem": "Why should a vector have only one site for the chosen restriction enzyme?",
+   "solution": "More than one site would cut the vector into several pieces, complicating gene cloning."
+  },
+  {
+   "title": "Taq polymerase",
+   "problem": "Why is Taq polymerase used in PCR?",
+   "solution": "It comes from the thermophilic bacterium Thermus aquaticus and stays active during the high-temperature denaturation step, so fresh enzyme isn't needed each cycle."
+  },
+  {
+   "title": "Agrobacterium",
+   "problem": "Why is Agrobacterium called a natural genetic engineer of plants?",
+   "solution": "It naturally transfers a piece of its Ti plasmid DNA (T-DNA) into plant cells, transforming them into tumour cells; a disarmed Ti plasmid can deliver useful genes instead."
+  },
+  {
+   "title": "Copies after PCR cycles",
+   "problem": "Starting with one DNA molecule, how many copies after 10 PCR cycles?",
+   "solution": "2¹⁰ = 1024 copies."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Definition of biotechnology",
+   "explain": "The European Federation of Biotechnology (EFB) defines it as the integration of natural science and organisms, cells, parts thereof and molecular analogues for products and services."
+  },
+  {
+   "title": "Basic steps in genetic engineering",
+   "explain": "Identify DNA with desirable genes; introduce it into the host; maintain the introduced DNA in the host and transfer it to progeny. Plasmid DNA acts as a vector to carry the foreign DNA."
+  },
+  {
+   "title": "DNA ligase",
+   "explain": "Joins cut DNA fragments having the same kind of sticky ends; the same restriction enzyme must be used to cut both the vector and the source DNA."
+  },
+  {
+   "title": "Recombinant DNA expression",
+   "explain": "The cloned gene is expressed under suitable conditions to make recombinant protein in a host. Small-volume cultures can't make large quantities, so continuous culture systems keep cells in their physiologically most active log/exponential phase."
+  },
+  {
+   "title": "Selection with antibiotics",
+   "explain": "Transformants are grown on media with antibiotics; only cells carrying the plasmid (with resistance gene) survive. Replica plating on a second antibiotic reveals insertional inactivation."
+  },
+  {
+   "title": "Alternative selectable markers",
+   "explain": "Selection with two antibiotics is cumbersome, so chromogenic substrates (blue–white) are used as an easier method."
+  }
+ ],
+ "ratta": [
+  "EcoRI: E. coli RY13, first enzyme.",
+  "Palindrome GAATTC → sticky ends.",
+  "DNA → anode;  smaller moves farther;  EtBr orange under UV.",
+  "pBR322: ori, rop, amp^R, tet^R;  BamHI in tet^R.",
+  "White colonies = recombinant (lacZ inactivated).",
+  "PCR: denature, anneal, extend;  Taq from Thermus aquaticus.",
+  "Ti plasmid — Agrobacterium;  Cohen & Boyer 1972."
+ ],
+ "verifiedOn": "2026-11-13"
+}

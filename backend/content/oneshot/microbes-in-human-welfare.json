@@ -1,0 +1,134 @@
+{
+ "slug": "microbes-in-human-welfare",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Microbes in Human Welfare"
+ },
+ "title": "Microbes in Human Welfare",
+ "readMinutes": 11,
+ "summary": [
+  "Microbes are used at home (curd, bread, idli, dosa), in industry (beverages, antibiotics, organic acids, enzymes, bioactive molecules), in sewage treatment, biogas production, biocontrol and as biofertilisers.",
+  "Sewage is treated in two stages: primary (physical removal of solids) and secondary/biological (aerobic microbes form flocs in aeration tanks; anaerobic digestion of activated sludge gives biogas).",
+  "Biocontrol uses natural predators and pathogens instead of chemical pesticides; biofertilisers (Rhizobium, Azotobacter, cyanobacteria, mycorrhiza) enrich soil nutrients."
+ ],
+ "formulas": [
+  {
+   "name": "Household products",
+   "formula": "curd — Lactobacillus (LAB) converts milk to curd and adds vitamin B₁₂;  bread dough — Saccharomyces cerevisiae (baker's yeast, CO₂);  Swiss cheese — Propionibacterium sharmanii (large holes from CO₂);  Roquefort cheese — fungi for flavour",
+   "when": "Microbes at home.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Beverages",
+   "formula": "Saccharomyces cerevisiae (brewer's yeast) ferments malted cereals and fruit juices → ethanol;  wine and beer without distillation;  whisky, brandy, rum by distillation",
+   "when": "Alcoholic drinks."
+  },
+  {
+   "name": "Antibiotics",
+   "formula": "penicillin — Penicillium notatum (Alexander Fleming, while working on Staphylococci; full potential shown by Chain and Florey)",
+   "when": "First antibiotic.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Organic acids and alcohol",
+   "formula": "citric acid — Aspergillus niger;  acetic acid — Acetobacter aceti;  butyric acid — Clostridium butylicum;  lactic acid — Lactobacillus;  ethanol — Saccharomyces cerevisiae",
+   "when": "Industrial chemicals.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Enzymes and bioactive molecules",
+   "formula": "lipases (detergents, remove oily stains);  pectinases and proteases (clarify fruit juices);  streptokinase — Streptococcus (clot buster for myocardial infarction);  cyclosporin A — Trichoderma polysporum (immunosuppressant in transplants);  statins — Monascus purpureus (lower blood cholesterol; competitive inhibitors of cholesterol synthesis)",
+   "when": "Medical and industrial products.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Sewage treatment",
+   "formula": "primary: filtration and sedimentation (primary sludge, effluent);  secondary: aeration tank with flocs (bacteria + fungal filaments) → BOD falls → settling tank (activated sludge) → part returned as inoculum, rest to anaerobic sludge digesters (biogas)",
+   "when": "Steps of sewage treatment."
+  },
+  {
+   "name": "BOD",
+   "formula": "biochemical oxygen demand = O₂ consumed if all organic matter in 1 L water were oxidised by bacteria;  higher BOD = more polluted",
+   "when": "Measuring organic pollution."
+  },
+  {
+   "name": "Biogas",
+   "formula": "mainly methane + CO₂ + H₂;  methanogens (Methanobacterium) in cattle dung (gobar) under anaerobic conditions;  slurry used as fertiliser;  technology developed by IARI and KVIC",
+   "when": "Biogas production."
+  },
+  {
+   "name": "Biocontrol agents",
+   "formula": "ladybird and dragonflies (aphids and mosquitoes);  Bacillus thuringiensis (Bt — butterfly caterpillars);  Trichoderma (fungal plant pathogens);  baculoviruses, genus Nucleopolyhedrovirus (species-specific, narrow spectrum insecticide)",
+   "when": "Pest control without chemicals.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Biofertilisers",
+   "formula": "Rhizobium (root nodules of legumes);  Azospirillum, Azotobacter (free-living, fix N₂);  mycorrhiza — Glomus (phosphorus absorption, drought and pathogen resistance);  cyanobacteria — Anabaena, Nostoc, Oscillatoria (paddy fields; also add organic matter)",
+   "when": "Enriching soil naturally."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Curd from milk",
+   "problem": "How does a small amount of curd turn milk into curd?",
+   "solution": "The curd contains Lactobacillus (lactic acid bacteria) that multiply, produce acids that coagulate and partially digest milk proteins, and raise the vitamin B₁₂ content."
+  },
+  {
+   "title": "Heart attack drug",
+   "problem": "Which microbial product dissolves blood clots in patients with myocardial infarction?",
+   "solution": "Streptokinase, from the bacterium Streptococcus (modified by genetic engineering)."
+  },
+  {
+   "title": "Why is high BOD bad?",
+   "problem": "Untreated sewage has high BOD. What does that mean?",
+   "solution": "It contains a lot of biodegradable organic matter; microbes use much dissolved oxygen to break it down, so fish and other aquatic life suffocate."
+  },
+  {
+   "title": "Bt as insecticide",
+   "problem": "How is Bacillus thuringiensis used against caterpillars?",
+   "solution": "Dried spores are mixed with water and sprayed on plants; caterpillars eat them, the toxin is released in their gut and kills them, while other insects are unharmed."
+  },
+  {
+   "title": "Organic farming",
+   "problem": "Why are broad-spectrum pesticides avoided in organic farming?",
+   "solution": "They kill useful insects and other organisms too; organic farmers want a balanced ecosystem with natural predators that keep pests at manageable levels."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Fermented foods",
+   "explain": "Dough for dosa and idli is fermented by bacteria (puffed-up appearance due to CO₂). Toddy, a traditional drink of southern India, is made by fermenting sap from palms. Fish, soybean and bamboo shoots are fermented too."
+  },
+  {
+   "title": "Microbes in industry",
+   "explain": "Large vessels called fermentors are used to grow microbes on an industrial scale for beverages, antibiotics and enzymes."
+  },
+  {
+   "title": "Ganga and Yamuna Action Plans",
+   "explain": "The Ministry of Environment and Forests started Ganga Action Plan and Yamuna Action Plan to save major rivers from pollution, building sewage treatment plants so only treated sewage enters rivers."
+  },
+  {
+   "title": "Integrated pest management",
+   "explain": "Recognise beneficial organisms (predators and parasites) and pests, understand their life cycles and interactions, and rely as far as possible on natural predation instead of chemicals."
+  },
+  {
+   "title": "Biofertilisers vs chemical fertilisers",
+   "explain": "Over-use of chemical fertilisers pollutes soil and water; biofertilisers are living organisms that enrich nutrient quality of soil and support organic farming. Many biofertilisers are now commercially available in India."
+  },
+  {
+   "title": "Antibiotics' role",
+   "explain": "Antibiotics have greatly improved our ability to treat deadly diseases such as plague, whooping cough (kali khansi), diphtheria (gal ghotu) and leprosy (kusht rog)."
+  }
+ ],
+ "ratta": [
+  "Curd — Lactobacillus (B₁₂);  Swiss cheese — Propionibacterium sharmanii.",
+  "Citric — Aspergillus niger;  acetic — Acetobacter aceti;  butyric — Clostridium butylicum.",
+  "Streptokinase — clot buster;  cyclosporin A — Trichoderma polysporum;  statins — Monascus purpureus.",
+  "Penicillin — Fleming;  Chain & Florey proved its use.",
+  "Biogas: methanogens (Methanobacterium); IARI + KVIC.",
+  "Bt, Trichoderma, Nucleopolyhedrovirus — biocontrol.",
+  "Glomus — mycorrhiza;  Anabaena, Nostoc — paddy."
+ ],
+ "verifiedOn": "2026-11-13"
+}

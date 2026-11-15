@@ -1,0 +1,157 @@
+{
+ "slug": "principles-of-inheritance-and-variation",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Principles of Inheritance and Variation"
+ },
+ "title": "Principles of Inheritance and Variation",
+ "readMinutes": 16,
+ "summary": [
+  "Mendel (1856–1863, garden pea) proposed the laws of inheritance: dominance, segregation and independent assortment. Monohybrid F₂ ratio 3:1 (phenotype), 1:2:1 (genotype); dihybrid F₂ 9:3:3:1.",
+  "Deviations from Mendel: incomplete dominance (snapdragon 1:2:1), co-dominance (ABO blood groups), multiple alleles, pleiotropy and polygenic inheritance (skin colour).",
+  "The chromosomal theory of inheritance (Sutton and Boveri) placed genes on chromosomes; Morgan's Drosophila work showed linkage and recombination. Sex is determined by chromosomes (XX–XY, XX–XO, ZW–ZZ) or haplodiploidy.",
+  "Mutations and chromosomal changes cause disorders: Mendelian (haemophilia, colour blindness, sickle-cell anaemia, phenylketonuria, thalassemia) and chromosomal (Down's, Klinefelter's, Turner's syndromes). Pedigree analysis traces traits in families."
+ ],
+ "formulas": [
+  {
+   "name": "Monohybrid cross",
+   "formula": "TT × tt → F₁ Tt (all tall);  F₁ selfed → F₂ phenotype 3:1, genotype 1:2:1 (TT : Tt : tt)",
+   "when": "One character.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Test cross",
+   "formula": "F₁ (Tt) × recessive parent (tt) → 1:1 (monohybrid);  dihybrid test cross → 1:1:1:1",
+   "when": "Finding the unknown genotype of a dominant phenotype."
+  },
+  {
+   "name": "Dihybrid cross",
+   "formula": "RRYY × rryy → F₁ RrYy;  F₂ phenotype 9:3:3:1;  9 genotypes;  4 gamete types from F₁",
+   "when": "Two characters — law of independent assortment.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "General counts",
+   "formula": "gametes = 2ⁿ;  F₂ genotypes = 3ⁿ;  F₂ phenotypes (complete dominance) = 2ⁿ  (n = heterozygous gene pairs)",
+   "when": "Quick counting."
+  },
+  {
+   "name": "Incomplete dominance",
+   "formula": "snapdragon (Antirrhinum): RR red × rr white → Rr pink;  F₂ phenotype = genotype = 1:2:1",
+   "when": "Neither allele fully dominant."
+  },
+  {
+   "name": "Co-dominance and multiple alleles",
+   "formula": "ABO: alleles Iᴬ, Iᴮ, i;  Iᴬ and Iᴮ co-dominant, both dominant over i;  6 genotypes, 4 phenotypes (A, B, AB, O)",
+   "when": "Blood group genetics.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pleiotropy and polygenic traits",
+   "formula": "pleiotropy: one gene, many effects (phenylketonuria);  polygenic: several genes add up (human skin colour, height)",
+   "when": "Beyond simple dominance."
+  },
+  {
+   "name": "Linkage and recombination",
+   "formula": "genes close together on a chromosome are inherited together (linkage);  recombination frequency ∝ distance (Sturtevant used it to map genes);  Morgan: white-eye/yellow-body ~1.3% recombination, white-eye/miniature wing ~37.2%",
+   "when": "Morgan's Drosophila work.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Sex determination types",
+   "formula": "XX–XY: humans, Drosophila (male heterogametic);  XX–XO: grasshopper;  ZW–ZZ: birds (female heterogametic);  haplodiploid: honey bee (males from unfertilised eggs, n = 16; females 2n = 32)",
+   "when": "Chromosomal sex determination."
+  },
+  {
+   "name": "X-linked recessive",
+   "formula": "haemophilia, colour blindness;  carrier mother (XᴴXʰ) × normal father → 50% sons affected, 50% daughters carriers",
+   "when": "Criss-cross inheritance.",
+   "note": "Affected females are rare — they need two copies of the recessive allele."
+  },
+  {
+   "name": "Autosomal recessive disorders",
+   "formula": "sickle-cell anaemia (GAG → GUG, glutamic acid → valine at 6th position of β-globin);  phenylketonuria (no phenylalanine hydroxylase);  thalassemia (α: chromosome 16, β: chromosome 11 — reduced globin synthesis)",
+   "when": "Mendelian disorders.",
+   "mistake": "Thalassemia is a quantitative problem (too little globin); sickle-cell is qualitative (wrong globin)."
+  },
+  {
+   "name": "Chromosomal disorders",
+   "formula": "Down's syndrome: trisomy 21 (47);  Klinefelter's: 47, XXY (male, gynaecomastia, sterile);  Turner's: 45, X0 (female, sterile, rudimentary ovaries)",
+   "when": "Aneuploidy.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pedigree symbols",
+   "formula": "square = male, circle = female, shaded = affected, double line = consanguineous mating",
+   "when": "Reading family trees."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Dihybrid fraction",
+   "problem": "In a dihybrid F₂, what fraction shows both dominant traits?",
+   "solution": "9/16 (the 9 of 9:3:3:1)."
+  },
+  {
+   "title": "Gametes from AaBbCc",
+   "problem": "How many types of gametes does AaBbCc form?",
+   "solution": "2³ = 8."
+  },
+  {
+   "title": "Genotypes in dihybrid F₂",
+   "problem": "How many genotypes appear in a dihybrid F₂?",
+   "solution": "3² = 9."
+  },
+  {
+   "title": "Colour-blind son",
+   "problem": "A carrier woman marries a normal man. Chance that a son is colour blind?",
+   "solution": "Sons get X from mother: half get Xᶜ → 50% of sons."
+  },
+  {
+   "title": "Blood group of children",
+   "problem": "Parents are Iᴬi and Iᴮi. Possible blood groups of children?",
+   "solution": "IᴬIᴮ (AB), Iᴬi (A), Iᴮi (B) and ii (O) — all four, each with probability 1/4."
+  },
+  {
+   "title": "Why Drosophila?",
+   "problem": "Why did Morgan choose Drosophila?",
+   "solution": "Grows on simple synthetic medium, completes its life cycle in about two weeks, a single mating gives many offspring, males and females are easy to tell apart, and it has many hereditary variations visible under low-power microscopes."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Mendel's experimental design",
+   "explain": "Mendel used 14 true-breeding pea varieties with seven pairs of contrasting traits; pea is self-pollinating, short-lived and easy to cross. He used large samples and statistics. His work was rediscovered in 1900 by de Vries, Correns and von Tschermak."
+  },
+  {
+   "title": "Law of dominance and segregation",
+   "explain": "Characters are controlled by discrete factors (genes) occurring in pairs; in a dissimilar pair one dominates (dominance). Alleles separate during gamete formation so each gamete gets only one (segregation) — the law of purity of gametes."
+  },
+  {
+   "title": "Punnett square",
+   "explain": "A graphical grid developed by Reginald C. Punnett to calculate the probability of all possible genotypes of offspring in a genetic cross."
+  },
+  {
+   "title": "Mutation",
+   "explain": "A change in DNA sequence that alters genotype and phenotype. Point mutation: change in a single base pair (sickle-cell anaemia). Frameshift mutations: insertion or deletion of bases. Mutagens include UV radiation and chemicals."
+  },
+  {
+   "title": "Chromosomal theory of inheritance",
+   "explain": "Sutton and Boveri noted that chromosomes, like Mendel's factors, occur in pairs, segregate at gamete formation and assort independently. Sutton united chromosomal segregation with Mendelian principles."
+  },
+  {
+   "title": "Aneuploidy and polyploidy",
+   "explain": "Failure of chromatid segregation in cell division gives gain or loss of a chromosome (aneuploidy). Failure of cytokinesis after telophase gives a whole extra set (polyploidy), common in plants."
+  }
+ ],
+ "ratta": [
+  "Monohybrid 3:1 / 1:2:1;  dihybrid 9:3:3:1;  test cross 1:1.",
+  "Gametes 2ⁿ, genotypes 3ⁿ.",
+  "Snapdragon 1:2:1 = incomplete dominance;  ABO = co-dominance + multiple alleles.",
+  "Morgan: linkage;  Sturtevant: gene mapping.",
+  "Grasshopper XO;  birds ZW female;  honey bee haplodiploid.",
+  "Sickle-cell: GAG → GUG, Glu → Val.",
+  "Down 21 trisomy;  Klinefelter XXY;  Turner XO."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,151 @@
+{
+ "slug": "ecosystem",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Ecosystem"
+ },
+ "title": "Ecosystem",
+ "readMinutes": 12,
+ "summary": [
+  "An ecosystem is a functional unit of nature where living organisms interact among themselves and with the physical environment. Its structure includes species composition and stratification.",
+  "Its functions: productivity, decomposition, energy flow and nutrient cycling. Energy flow is unidirectional, from the sun through producers to consumers; only about 10% passes to each next trophic level (Lindeman's 10% law).",
+  "Ecological pyramids (number, biomass, energy) show trophic structure; the energy pyramid is always upright.",
+  "Ecological succession turns bare areas (primary) or disturbed areas (secondary) into climax communities through seral stages."
+ ],
+ "formulas": [
+  {
+   "name": "Productivity",
+   "formula": "NPP = GPP − R  (R = respiration losses);  secondary productivity = rate of new organic matter formed by consumers",
+   "when": "Primary productivity calculations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "World productivity",
+   "formula": "annual NPP of biosphere ≈ 170 billion tons (dry weight);  oceans (70% of surface) ≈ 55 billion tons",
+   "when": "Global productivity facts."
+  },
+  {
+   "name": "PAR",
+   "formula": "plants capture only 2–10% of photosynthetically active radiation (PAR), which is less than 50% of incident solar radiation",
+   "when": "Energy capture efficiency.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ten per cent law",
+   "formula": "only about 10% of energy passes from one trophic level to the next (Lindeman, 1942)",
+   "when": "Energy flow calculations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Decomposition steps",
+   "formula": "fragmentation (detritivores, earthworm) → leaching (water-soluble nutrients into soil) → catabolism (enzymes of bacteria and fungi) → humification (humus — dark, amorphous, resistant, colloidal) → mineralisation (release of inorganic nutrients)",
+   "when": "Breaking down detritus."
+  },
+  {
+   "name": "Factors affecting decomposition",
+   "formula": "faster when detritus is rich in nitrogen and water-soluble sugars, in warm and moist conditions;  slower with lignin and chitin, low temperature, anaerobiosis",
+   "when": "Decomposition rate."
+  },
+  {
+   "name": "Food chains",
+   "formula": "grazing food chain (GFC): grass → goat → man;  detritus food chain (DFC): begins with dead organic matter — decomposers (saprotrophs)",
+   "when": "Food chain types.",
+   "note": "In aquatic ecosystems GFC is the major conduit for energy; in terrestrial ecosystems far more energy flows through DFC."
+  },
+  {
+   "name": "Trophic levels",
+   "formula": "producers (1st) → primary consumers/herbivores (2nd) → secondary consumers (3rd) → tertiary consumers (4th)",
+   "when": "Positions in a food chain."
+  },
+  {
+   "name": "Ecological pyramids",
+   "formula": "number: upright in grassland, inverted for a tree;  biomass: upright on land, inverted in sea (phytoplankton less than fish);  energy: always upright",
+   "when": "Pyramid shapes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Standing crop and state",
+   "formula": "standing crop = mass of living material at a trophic level at a particular time;  standing state = amount of nutrients present in the soil at any given time",
+   "when": "Ecosystem terms."
+  },
+  {
+   "name": "Succession",
+   "formula": "pioneer species → seral communities (seres) → climax community;  hydrarch (in water): phytoplankton → submerged plants → floating → reed swamp → marsh-meadow → scrub → forest;  xerarch (dry): lichens → mosses → herbs → shrubs → trees",
+   "when": "Ecological succession.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Primary vs secondary succession",
+   "formula": "primary: bare area with no soil (newly cooled lava, bare rock) — slow, hundreds to thousands of years;  secondary: after natural vegetation is lost (abandoned farmland, burned or cut forests) — faster because soil is present",
+   "when": "Types of succession."
+  },
+  {
+   "name": "Nutrient cycles",
+   "formula": "gaseous (reservoir in atmosphere — nitrogen, carbon);  sedimentary (reservoir in Earth's crust — phosphorus, sulphur)",
+   "when": "Biogeochemical cycles."
+  }
+ ],
+ "examples": [
+  {
+   "title": "NPP",
+   "problem": "GPP of an ecosystem is 100 kcal/m²/yr and respiration losses are 20 kcal/m²/yr. NPP?",
+   "solution": "NPP = 100 − 20 = 80 kcal/m²/yr."
+  },
+  {
+   "title": "Energy to tertiary consumers",
+   "problem": "Producers fix 10,000 J. How much reaches tertiary consumers by the 10% law?",
+   "solution": "10,000 → 1000 (primary) → 100 (secondary) → 10 J (tertiary)."
+  },
+  {
+   "title": "Inverted pyramid of biomass",
+   "problem": "Why is the pyramid of biomass inverted in the sea?",
+   "solution": "Phytoplankton have a small standing biomass at any moment but reproduce very fast; the fish that eat them have a larger biomass."
+  },
+  {
+   "title": "Pioneers on rock",
+   "problem": "Why are lichens the pioneers on bare rock?",
+   "solution": "They secrete acids that dissolve rock, helping weathering and soil formation, which later allows mosses and other plants to grow."
+  },
+  {
+   "title": "Carbon cycle fact",
+   "problem": "What fraction of the dry weight of organisms is carbon, and where is most carbon stored?",
+   "solution": "About 49% of the dry weight of organisms is carbon. Oceans hold about 71% of global carbon as dissolved carbon."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Ecosystem structure",
+   "explain": "Biotic components: producers, consumers, decomposers. Abiotic: light, temperature, water, soil. Vertical distribution of species at different levels is called stratification (trees top, shrubs, herbs and grasses bottom in forests)."
+  },
+  {
+   "title": "Phosphorus cycle",
+   "explain": "Rocks are the main reservoir of phosphorus as phosphates; weathering releases them into soil, plants absorb them, and decomposers return phosphorus to the soil. There is no significant respiratory release of phosphorus into the atmosphere, unlike carbon."
+  },
+  {
+   "title": "Carbon cycle",
+   "explain": "Producers fix about 4 × 10¹³ kg of carbon annually through photosynthesis. Carbon returns to the atmosphere through respiration, decomposition, burning of fossil fuels and wood, forest fires and volcanic activity. Human activity has increased atmospheric CO₂."
+  },
+  {
+   "title": "Ecosystem services",
+   "explain": "Healthy ecosystems purify air and water, mitigate floods and droughts, cycle nutrients, generate fertile soils, provide habitat, pollinate flowers and store carbon. Robert Constanza estimated nature's services at about US $33 trillion per year — nearly twice the global gross national product."
+  },
+  {
+   "title": "Limitations of ecological pyramids",
+   "explain": "They don't consider the same species belonging to two or more trophic levels, they assume a simple food chain (not a food web) and saprophytes are not given any place in them even though they play a vital role."
+  },
+  {
+   "title": "Climax community",
+   "explain": "The final, stable community in equilibrium with the environment. All succession — in water or on land — tends towards a medium-water (mesic) climax."
+  }
+ ],
+ "ratta": [
+  "NPP = GPP − R.",
+  "Plants capture 2–10% of PAR;  10% law (Lindeman).",
+  "Energy pyramid always upright;  biomass inverted in sea;  number inverted for a tree.",
+  "Fragmentation → leaching → catabolism → humification → mineralisation.",
+  "Hydrarch: phytoplankton → … → forest;  xerarch: lichens first.",
+  "P cycle: sedimentary (rocks);  C cycle: gaseous.",
+  "Biosphere NPP 170 billion tons; oceans 55."
+ ],
+ "verifiedOn": "2026-11-13"
+}

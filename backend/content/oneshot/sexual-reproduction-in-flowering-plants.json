@@ -1,0 +1,163 @@
+{
+ "slug": "sexual-reproduction-in-flowering-plants",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Sexual Reproduction in Flowering Plants"
+ },
+ "title": "Sexual Reproduction in Flowering Plants",
+ "readMinutes": 15,
+ "summary": [
+  "The flower is the site of sexual reproduction. The stamen's anther makes pollen grains (male gametophytes) by microsporogenesis; the ovule makes the embryo sac (female gametophyte) by megasporogenesis.",
+  "Pollination brings pollen to the stigma — by wind, water or animals. Plants have outbreeding devices to avoid self-pollination; pollen–pistil interaction decides compatibility.",
+  "Angiosperms show double fertilisation: one male gamete fuses with the egg (syngamy → zygote) and the other with the two polar nuclei (triple fusion → primary endosperm nucleus, 3n).",
+  "After fertilisation the ovule becomes the seed and the ovary the fruit. Special cases: apomixis, polyembryony and parthenocarpy."
+ ],
+ "formulas": [
+  {
+   "name": "Anther structure",
+   "formula": "bilobed, dithecous, tetrasporangiate;  wall layers: epidermis, endothecium, middle layers, tapetum (nourishes pollen; dense cytoplasm, often more than one nucleus)",
+   "when": "Microsporangium structure.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Microsporogenesis",
+   "formula": "microspore mother cell (2n) → meiosis → microspore tetrad (n) → pollen grains",
+   "when": "Pollen formation."
+  },
+  {
+   "name": "Pollen grain",
+   "formula": "exine of sporopollenin (most resistant organic material known; germ pores where absent) + intine (cellulose, pectin);  mature pollen: vegetative cell (large) + generative cell (small, divides into 2 male gametes)",
+   "when": "Pollen structure.",
+   "note": "In over 60% of angiosperms pollen is shed at the 2-celled stage."
+  },
+  {
+   "name": "Ovule parts",
+   "formula": "funicle, hilum, integuments, micropyle, chalaza, nucellus, embryo sac",
+   "when": "Megasporangium structure."
+  },
+  {
+   "name": "Megasporogenesis and embryo sac",
+   "formula": "megaspore mother cell → meiosis → 4 megaspores (one functional) → 3 mitotic divisions → 7-celled, 8-nucleate embryo sac (monosporic, Polygonum type)",
+   "when": "Female gametophyte development.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Embryo sac cells",
+   "formula": "micropylar: egg apparatus (egg + 2 synergids with filiform apparatus);  centre: central cell with 2 polar nuclei;  chalazal: 3 antipodals",
+   "when": "Organisation of the embryo sac."
+  },
+  {
+   "name": "Types of pollination",
+   "formula": "autogamy (same flower);  geitonogamy (another flower, same plant — genetically like autogamy);  xenogamy (different plant — genetically different pollen)",
+   "when": "Pollination types.",
+   "note": "Geitonogamy is functionally cross-pollination (needs an agent) but genetically self-pollination."
+  },
+  {
+   "name": "Chasmogamous vs cleistogamous",
+   "formula": "chasmogamous: open flowers;  cleistogamous: never open, assured seed-set without pollinators (Viola, Oxalis, Commelina)",
+   "when": "Flower types and selfing."
+  },
+  {
+   "name": "Pollinating agents",
+   "formula": "wind (light non-sticky pollen, feathery stigma, one ovule — grasses, maize tassels);  water (Vallisneria, Hydrilla, Zostera — water hyacinth and water lily are insect/wind pollinated);  insects (large colourful, fragrant flowers, nectar)",
+   "when": "Pollination adaptations."
+  },
+  {
+   "name": "Outbreeding devices",
+   "formula": "pollen release and stigma receptivity not synchronised;  anther and stigma at different positions;  self-incompatibility;  unisexual flowers (castor, maize — prevents autogamy; papaya dioecious — prevents both autogamy and geitonogamy)",
+   "when": "Avoiding inbreeding.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Double fertilisation",
+   "formula": "syngamy: male gamete + egg → zygote (2n);  triple fusion: male gamete + 2 polar nuclei → PEN (3n)",
+   "when": "Unique to angiosperms.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Post-fertilisation changes",
+   "formula": "ovule → seed;  integuments → seed coat;  ovary → fruit;  ovary wall → pericarp;  zygote → embryo;  PEN → endosperm",
+   "when": "Fate of floral parts."
+  },
+  {
+   "name": "Endosperm types",
+   "formula": "free-nuclear (coconut water: thousands of free nuclei);  cellular (white kernel of coconut);  albuminous seeds keep endosperm (wheat, maize, castor);  non-albuminous use it up (pea, groundnut, bean)",
+   "when": "Endosperm and seeds."
+  },
+  {
+   "name": "Apomixis and polyembryony",
+   "formula": "apomixis: seed without fertilisation (Asteraceae, grasses) — preserves hybrid characters;  polyembryony: more than one embryo (citrus, mango) from nucellar cells",
+   "when": "Special mechanisms."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Ploidy table",
+   "problem": "Give the ploidy of: nucellus, megaspore mother cell, functional megaspore, egg, endosperm, embryo.",
+   "solution": "Nucellus 2n, MMC 2n, megaspore n, egg n, endosperm 3n, embryo 2n."
+  },
+  {
+   "title": "Embryo sac numbers",
+   "problem": "How many cells and nuclei are there in a typical embryo sac?",
+   "solution": "7 cells (3 antipodals, 2 synergids, 1 egg, 1 central cell) and 8 nuclei (the central cell has 2 polar nuclei)."
+  },
+  {
+   "title": "Which prevents both?",
+   "problem": "Which device prevents both autogamy and geitonogamy?",
+   "solution": "Dioecy (separate male and female plants), as in papaya."
+  },
+  {
+   "title": "Fruit without seed",
+   "problem": "Banana fruits form without fertilisation. What is this called?",
+   "solution": "Parthenocarpy — fruit development without fertilisation (it can be induced with growth hormones)."
+  },
+  {
+   "title": "Pollen storage",
+   "problem": "How are pollen grains stored for crop breeding?",
+   "solution": "In liquid nitrogen at −196 °C (pollen banks), which keeps them viable for years."
+  },
+  {
+   "title": "Synergid role",
+   "problem": "What is the function of the filiform apparatus?",
+   "solution": "It is a cellular thickening at the micropylar tip of synergids that guides the pollen tube into the synergid."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Pre-fertilisation events",
+   "explain": "Hormonal and structural changes lead to differentiation of a floral primordium. An inflorescence bears floral buds; androecium and gynoecium differentiate."
+  },
+  {
+   "title": "Pollen viability and allergy",
+   "explain": "Pollen of rice and wheat lose viability within 30 minutes; some members of Rosaceae, Leguminoseae and Solanaceae keep it for months. Pollen of Parthenium (carrot grass) causes allergies and bronchial afflictions. Pollen tablets are used as food supplements."
+  },
+  {
+   "title": "Pollen–pistil interaction",
+   "explain": "The pistil recognises compatible pollen and promotes germination; the pollen tube grows through the style and enters the ovule through the micropyle, then a synergid, releasing two male gametes. Artificial hybridisation uses emasculation (removing anthers) and bagging."
+  },
+  {
+   "title": "Embryo development",
+   "explain": "The zygote divides after some endosperm forms. Dicot embryo: embryonal axis with two cotyledons, epicotyl (plumule) and hypocotyl (radicle). Monocot embryo: one cotyledon (scutellum), coleoptile around the shoot apex and coleorrhiza around the radicle."
+  },
+  {
+   "title": "Seeds",
+   "explain": "Seeds are the final product of sexual reproduction; dormancy lets them survive bad conditions. Residual persistent nucellus is perisperm (black pepper, beet). Old seeds remain viable — lupine (~10,000 years), date palm (~2000 years)."
+  },
+  {
+   "title": "False fruits",
+   "explain": "In apple, strawberry and cashew the thalamus also contributes to fruit formation — these are false fruits. True fruits develop only from the ovary."
+  }
+ ],
+ "ratta": [
+  "Anther: dithecous, tetrasporangiate;  tapetum nourishes.",
+  "Exine = sporopollenin.",
+  "Embryo sac: 7 cells, 8 nuclei (monosporic).",
+  "Geitonogamy: genetically selfing.",
+  "Cleistogamous: Viola, Oxalis, Commelina.",
+  "Vallisneria, Hydrilla, Zostera — water.",
+  "Papaya (dioecious) prevents autogamy + geitonogamy.",
+  "Coconut water = free-nuclear endosperm.",
+  "Apomixis: seed without fertilisation;  polyembryony: citrus, mango."
+ ],
+ "verifiedOn": "2026-11-13"
+}
