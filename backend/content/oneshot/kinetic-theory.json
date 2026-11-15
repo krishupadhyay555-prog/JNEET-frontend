@@ -1,0 +1,161 @@
+{
+ "slug": "kinetic-theory",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Kinetic Theory",
+  "JEE": "Kinetic Theory"
+ },
+ "title": "Kinetic Theory",
+ "readMinutes": 11,
+ "summary": [
+  "A gas is a huge number of tiny molecules in random motion. Their collisions with the walls produce pressure: P = ⅓ρv²_rms.",
+  "Temperature is a measure of the average kinetic energy of the molecules: average translational KE per molecule = (3/2)kT, independent of the gas.",
+  "Equipartition: every degree of freedom gets ½kT per molecule. Counting degrees of freedom gives Cv, Cp and γ of monoatomic, diatomic and polyatomic gases.",
+  "Mean free path — the average distance between collisions — is λ = kT/(√2 π d² P): it grows as the gas gets hotter or thinner."
+ ],
+ "formulas": [
+  {
+   "name": "Ideal gas equation",
+   "formula": "PV = nRT = N k T;  R = 8.314 J mol⁻¹ K⁻¹,  k = R/Nₐ = 1.38 × 10⁻²³ J/K",
+   "when": "Any problem connecting P, V, T and amount of gas.",
+   "note": "Use kelvin, and SI units for P and V (1 L = 10⁻³ m³)."
+  },
+  {
+   "name": "Pressure of an ideal gas",
+   "formula": "P = ⅓ (N m/V) v²_rms = ⅓ ρ v²_rms",
+   "when": "Linking pressure to molecular speed.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Kinetic energy and temperature",
+   "formula": "average translational KE per molecule = (3/2) k T;   per mole = (3/2) R T",
+   "when": "Meaning of temperature.",
+   "note": "It depends only on T — every gas at the same T has the same average translational KE."
+  },
+  {
+   "name": "RMS speed",
+   "formula": "v_rms = √(3RT/M) = √(3kT/m)",
+   "when": "Speed of molecules.",
+   "mistake": "M in kg/mol (0.032 for O₂), not g/mol.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Average and most probable speeds",
+   "formula": "v_avg = √(8RT/πM);   v_mp = √(2RT/M);   v_rms > v_avg > v_mp",
+   "when": "Comparing speed definitions."
+  },
+  {
+   "name": "Degrees of freedom",
+   "formula": "monoatomic f = 3;  diatomic f = 5 (rigid) or 7 (with vibration);  non-linear polyatomic f = 6 (rigid)",
+   "when": "Counting energy modes."
+  },
+  {
+   "name": "Law of equipartition",
+   "formula": "energy per degree of freedom = ½ k T per molecule;  U = (f/2) n R T",
+   "when": "Internal energy of a gas."
+  },
+  {
+   "name": "Specific heats from f",
+   "formula": "Cv = (f/2) R;   Cp = (f/2 + 1) R;   γ = 1 + 2/f",
+   "when": "Finding γ and molar heat capacities."
+  },
+  {
+   "name": "Mean free path",
+   "formula": "λ = k T / (√2 π d² P) = 1/(√2 n π d²)",
+   "when": "Average distance between collisions.",
+   "note": "λ ∝ T/P — doubling pressure halves λ."
+  },
+  {
+   "name": "Avogadro's number",
+   "formula": "Nₐ = 6.022 × 10²³ mol⁻¹;  molar volume at STP ≈ 22.4 L",
+   "when": "Counting molecules."
+  },
+  {
+   "name": "Gas laws (special cases)",
+   "formula": "Boyle: PV = const (T fixed);  Charles: V/T = const (P fixed);  Gay-Lussac: P/T = const (V fixed);  Dalton: P = P₁ + P₂ + …",
+   "when": "Quick ratio problems."
+  }
+ ],
+ "examples": [
+  {
+   "title": "KE of a molecule at room temperature",
+   "problem": "Average translational KE of a gas molecule at 300 K?",
+   "solution": "E = (3/2) × 1.38 × 10⁻²³ × 300 ≈ 6.21 × 10⁻²¹ J."
+  },
+  {
+   "title": "RMS speed of oxygen",
+   "problem": "v_rms of O₂ molecules at 300 K (M = 0.032 kg/mol)?",
+   "solution": "v = √(3 × 8.314 × 300/0.032) ≈ 484 m/s."
+  },
+  {
+   "title": "Matching rms speeds",
+   "problem": "At what temperature will O₂ have the same rms speed as H₂ at 300 K?",
+   "solution": "T/M must be equal: T = 300 × 32/2 = 4800 K."
+  },
+  {
+   "title": "Temperature made 4 times",
+   "problem": "If the kelvin temperature of a gas is made four times, the rms speed becomes?",
+   "solution": "v ∝ √T → √4 = 2 times."
+  },
+  {
+   "title": "Molecules in 1 cm³ of air",
+   "problem": "Number of molecules in 1 cm³ of gas at STP (P = 1.013 × 10⁵ Pa, T = 273 K)?",
+   "solution": "N = PV/kT = 1.013 × 10⁵ × 10⁻⁶/(1.38 × 10⁻²³ × 273) ≈ 2.69 × 10¹⁹ (Loschmidt number)."
+  },
+  {
+   "title": "Mean free path in air",
+   "problem": "Molecular diameter 3 × 10⁻¹⁰ m, T = 300 K, P = 1.013 × 10⁵ Pa. Mean free path?",
+   "solution": "λ = kT/(√2 π d² P) ≈ 102 nm — about 300 times the size of a molecule."
+  },
+  {
+   "title": "Pressure from molecular speed",
+   "problem": "Air has density 1.29 kg/m³ and v_rms = 485 m/s. Pressure?",
+   "solution": "P = ⅓ρv² = ⅓ × 1.29 × 485² ≈ 1.01 × 10⁵ Pa ≈ 1 atm."
+  },
+  {
+   "title": "Internal energy of a diatomic gas",
+   "problem": "Internal energy of 1 mol of a rigid diatomic gas at 300 K?",
+   "solution": "U = (5/2)RT = 2.5 × 8.314 × 300 ≈ 6236 J."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Assumptions of kinetic theory",
+   "explain": "Molecules are point-like, move randomly, collide elastically with each other and the walls, exert no force except during collisions, and the time of a collision is negligible. Real gases follow this at low pressure and high temperature."
+  },
+  {
+   "title": "Molecular nature of matter",
+   "explain": "Matter is made of atoms and molecules (Dalton's atomic theory). Avogadro's hypothesis: equal volumes of all gases at the same temperature and pressure contain equal numbers of molecules."
+  },
+  {
+   "title": "Meaning of temperature",
+   "explain": "Temperature is proportional to the average translational KE of molecules. At absolute zero this motion (classically) stops."
+  },
+  {
+   "title": "Degrees of freedom in detail",
+   "explain": "A monoatomic gas (He, Ar) has 3 translational. A diatomic gas (O₂, N₂) adds 2 rotational = 5; at high temperature vibration adds 2 more = 7. A non-linear molecule (H₂O, CH₄) has 3 translational + 3 rotational = 6."
+  },
+  {
+   "title": "Specific heat of solids",
+   "explain": "By equipartition each atom of a solid has 6 quadratic terms (3 KE + 3 PE), giving molar heat capacity ≈ 3R (Dulong–Petit law), true at high temperature."
+  },
+  {
+   "title": "Mean free path and diffusion",
+   "explain": "Molecules travel fast (~500 m/s) but collide so often that a smell takes a long time to spread across a room. λ increases at low pressure — the basis of vacuum technology."
+  },
+  {
+   "title": "Real vs ideal gas",
+   "explain": "Real gases deviate because molecules have finite size and attract each other — most at high pressure and low temperature."
+  }
+ ],
+ "ratta": [
+  "PV = nRT = NkT;  k = 1.38 × 10⁻²³ J/K.",
+  "P = ⅓ρv²_rms;  KE per molecule = (3/2)kT.",
+  "v_rms = √(3RT/M) > v_avg > v_mp.",
+  "f: 3 (mono), 5 (di), 6 (poly);  ½kT per f.",
+  "Cv = fR/2, Cp = Cv + R, γ = 1 + 2/f.",
+  "λ = kT/(√2πd²P).",
+  "Nₐ = 6.022 × 10²³;  22.4 L at STP."
+ ],
+ "verifiedOn": "2026-11-13"
+}

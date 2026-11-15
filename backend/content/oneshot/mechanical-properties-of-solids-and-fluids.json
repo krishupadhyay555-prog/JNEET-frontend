@@ -1,0 +1,202 @@
+{
+ "slug": "mechanical-properties-of-solids-and-fluids",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Mechanical Properties of Solids and Fluids",
+  "JEE": "Mechanical Properties of Solids and Fluids"
+ },
+ "title": "Mechanical Properties of Solids and Fluids",
+ "readMinutes": 15,
+ "summary": [
+  "Solids resist deformation: within the elastic limit stress ∝ strain (Hooke's law). Young's, bulk and shear moduli measure stiffness for stretching, squeezing and twisting.",
+  "In a fluid at rest, pressure grows with depth (P = P₀ + ρgh) and is transmitted equally in all directions (Pascal's law) — the idea behind hydraulic lifts and brakes.",
+  "Moving fluids obey continuity (Av = constant) and Bernoulli's principle (P + ½ρv² + ρgh = constant). Viscosity opposes flow; a falling sphere reaches a terminal velocity (Stokes' law).",
+  "Surface tension makes liquid surfaces behave like stretched films: it causes excess pressure inside drops and bubbles and capillary rise."
+ ],
+ "formulas": [
+  {
+   "name": "Stress and strain",
+   "formula": "stress = F/A (N/m²);  longitudinal strain = ΔL/L;  volume strain = ΔV/V;  shear strain = θ",
+   "when": "Describing deformation.",
+   "note": "Strain has no unit; stress has the unit of pressure."
+  },
+  {
+   "name": "Hooke's law and Young's modulus",
+   "formula": "Y = (F/A)/(ΔL/L) = FL/(AΔL)",
+   "when": "Stretching wires and rods.",
+   "tag": "PYQ favourite",
+   "note": "ΔL ∝ L/A — a thinner or longer wire stretches more for the same load."
+  },
+  {
+   "name": "Bulk modulus and compressibility",
+   "formula": "B = −P/(ΔV/V);  compressibility k = 1/B",
+   "when": "Squeezing a body from all sides.",
+   "note": "The minus sign makes B positive because volume decreases."
+  },
+  {
+   "name": "Shear modulus (modulus of rigidity)",
+   "formula": "G = (F/A)/θ",
+   "when": "Twisting or sliding layers."
+  },
+  {
+   "name": "Poisson's ratio",
+   "formula": "σ = (lateral strain)/(longitudinal strain) = −(Δd/d)/(ΔL/L);  theoretical range −1 to 0.5",
+   "when": "Change in thickness when a wire is stretched."
+  },
+  {
+   "name": "Elastic potential energy",
+   "formula": "U = ½ × stress × strain × volume = ½ F ΔL;  energy density u = stress²/2Y",
+   "when": "Energy stored in a stretched wire."
+  },
+  {
+   "name": "Pressure in a fluid at rest",
+   "formula": "P = P₀ + ρ g h",
+   "when": "Pressure at a depth h.",
+   "mistake": "Gauge pressure = ρgh (without P₀) — check which one the question asks for.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pascal's law: hydraulic lift",
+   "formula": "F₁/A₁ = F₂/A₂  ⇒  F₂ = F₁ (A₂/A₁)",
+   "when": "Hydraulic lifts, brakes, presses.",
+   "mistake": "Force is multiplied but work is not — the small piston moves farther."
+  },
+  {
+   "name": "Equation of continuity",
+   "formula": "A₁ v₁ = A₂ v₂",
+   "when": "Speed of an incompressible fluid in a pipe of changing area."
+  },
+  {
+   "name": "Bernoulli's principle",
+   "formula": "P + ½ρv² + ρgh = constant along a streamline",
+   "when": "Venturi meter, aerofoil lift, blowing roofs, atomisers.",
+   "note": "Valid for steady, non-viscous, incompressible, streamline flow only."
+  },
+  {
+   "name": "Torricelli's law (speed of efflux)",
+   "formula": "v = √(2gh)  (h = depth of the hole below the free surface)",
+   "when": "Water from a hole in a tank."
+  },
+  {
+   "name": "Viscous force and Stokes' law",
+   "formula": "F = η A (dv/dx);  on a sphere F = 6πηrv",
+   "when": "Drag on spheres, oil drops."
+  },
+  {
+   "name": "Terminal velocity",
+   "formula": "v_t = 2r²(ρ − σ)g / (9η)   (σ = fluid density)",
+   "when": "Rain drops, ball bearings in glycerine.",
+   "tag": "PYQ favourite",
+   "note": "v_t ∝ r² — a drop twice the radius falls four times faster."
+  },
+  {
+   "name": "Reynolds number and critical velocity",
+   "formula": "Rₑ = ρ v D/η;  streamline below ~1000, turbulent above ~2000",
+   "when": "Predicting whether flow is smooth or turbulent."
+  },
+  {
+   "name": "Surface tension and surface energy",
+   "formula": "S = F/L = (surface energy)/(area);  work to increase area W = S ΔA",
+   "when": "Films, drops, blowing bubbles.",
+   "note": "A soap bubble has TWO surfaces — double the area."
+  },
+  {
+   "name": "Excess pressure",
+   "formula": "liquid drop / air bubble in a liquid: ΔP = 2S/r;  soap bubble in air: ΔP = 4S/r",
+   "when": "Pressure inside curved surfaces.",
+   "note": "Use 4S/r only for a soap bubble (two surfaces)."
+  },
+  {
+   "name": "Capillary rise",
+   "formula": "h = 2S cos θ / (r ρ g)",
+   "when": "Liquid rising or falling in a narrow tube.",
+   "note": "If θ > 90° (mercury in glass), h is negative — the liquid falls."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Stretching a steel wire",
+   "problem": "A 2 m steel wire of area 1 mm² carries 100 N. Y = 2 × 10¹¹ N/m². Elongation?",
+   "solution": "ΔL = FL/(AY) = 100 × 2/(10⁻⁶ × 2 × 10¹¹) = 10⁻³ m = 1 mm."
+  },
+  {
+   "title": "Energy stored per unit volume",
+   "problem": "A wire has stress 2 × 10⁸ N/m² and Y = 2 × 10¹¹ N/m². Energy density?",
+   "solution": "u = stress²/2Y = (4 × 10¹⁶)/(4 × 10¹¹) = 1 × 10⁵ J/m³."
+  },
+  {
+   "title": "Hydraulic lift",
+   "problem": "Pistons of area 0.01 m² and 0.5 m². A 100 N force on the small piston lifts what load?",
+   "solution": "F₂ = 100 × 0.5/0.01 = 5000 N."
+  },
+  {
+   "title": "Pressure 10 m under water",
+   "problem": "Absolute pressure at 10 m depth in water (P₀ = 1.013 × 10⁵ Pa)?",
+   "solution": "P = 1.013 × 10⁵ + 1000 × 9.8 × 10 = 1.99 × 10⁵ Pa — about 2 atmospheres."
+  },
+  {
+   "title": "Terminal velocity of a drop",
+   "problem": "A water drop of radius 1 mm falls in air (η = 1.8 × 10⁻⁵ Pa s; ignore air density). Terminal velocity?",
+   "solution": "v_t = 2r²ρg/(9η) = 2 × 10⁻⁶ × 1000 × 9.8/(9 × 1.8 × 10⁻⁵) ≈ 121 m/s (real drops are slower because the flow is no longer streamline)."
+  },
+  {
+   "title": "Water from a tank",
+   "problem": "A hole is 5 m below the water surface of a large tank. Speed of efflux?",
+   "solution": "v = √(2gh) = √(2 × 9.8 × 5) ≈ 9.9 m/s."
+  },
+  {
+   "title": "Capillary rise of water",
+   "problem": "Water (S = 0.072 N/m, θ = 0°) in a tube of radius 0.5 mm. Height?",
+   "solution": "h = 2S/(rρg) = 0.144/(5 × 10⁻⁴ × 1000 × 9.8) ≈ 2.94 cm."
+  },
+  {
+   "title": "Pressure inside a soap bubble",
+   "problem": "Soap bubble of radius 1 cm, S = 0.03 N/m. Excess pressure?",
+   "solution": "ΔP = 4S/r = 4 × 0.03/0.01 = 12 Pa."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Stress–strain curve",
+   "explain": "Up to the proportional limit the graph is a straight line (Hooke's law). Beyond the elastic limit the body does not regain its shape; at the yield point it flows plastically, and at the breaking point it fractures. Ductile materials (copper) have a long plastic region; brittle ones (glass) break soon after the elastic limit."
+  },
+  {
+   "title": "Applications of elasticity",
+   "explain": "Steel is more elastic than rubber (larger Y). Beams are made with an I-section to resist bending with less material. Crane ropes are made of many thin strands, and the maximum height of a mountain is limited by the elastic limit of rocks."
+  },
+  {
+   "title": "Pressure facts",
+   "explain": "Pressure at a depth depends only on depth, not on the shape of the vessel (hydrostatic paradox). Atmospheric pressure ≈ 1.013 × 10⁵ Pa = 76 cm of mercury. A barometer measures it; an open-tube manometer measures gauge pressure."
+  },
+  {
+   "title": "Buoyancy and floating",
+   "explain": "Upthrust = weight of fluid displaced (Archimedes). A body floats when its density is less than the fluid's; the fraction submerged = ρ_body/ρ_fluid."
+  },
+  {
+   "title": "Streamline and turbulent flow",
+   "explain": "In streamline flow the velocity at a point does not change with time and streamlines never cross. Above the critical velocity flow becomes turbulent and Bernoulli's equation no longer applies."
+  },
+  {
+   "title": "Applications of Bernoulli",
+   "explain": "Aerofoil: faster air above the wing → lower pressure → lift. Roofs blow off in storms. Two boats moving side by side are pulled together. Atomisers and Bunsen burners suck in fluid where speed is high."
+  },
+  {
+   "title": "Viscosity",
+   "explain": "Viscosity of liquids decreases with temperature; viscosity of gases increases with temperature. Unit: Pa s (poiseuille); 1 poise = 0.1 Pa s."
+  },
+  {
+   "title": "Surface tension effects",
+   "explain": "Drops are spherical (minimum area). Surface tension falls with temperature and with detergents. Angle of contact < 90° → liquid wets the surface and rises in a capillary (water–glass); > 90° → does not wet and falls (mercury–glass)."
+  }
+ ],
+ "ratta": [
+  "Y = FL/(AΔL);  B = −PV/ΔV;  G = F/(Aθ).",
+  "u = stress²/2Y = ½ × stress × strain.",
+  "P = P₀ + ρgh;  F₂ = F₁A₂/A₁.",
+  "A₁v₁ = A₂v₂;  P + ½ρv² + ρgh = constant;  v = √(2gh).",
+  "F = 6πηrv;  v_t = 2r²(ρ − σ)g/9η  (∝ r²).",
+  "Drop: 2S/r;  soap bubble: 4S/r;  h = 2S cosθ/(rρg).",
+  "Liquids: viscosity ↓ with T;  gases: viscosity ↑ with T."
+ ],
+ "verifiedOn": "2026-11-13"
+}

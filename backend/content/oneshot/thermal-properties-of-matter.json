@@ -1,0 +1,182 @@
+{
+ "slug": "thermal-properties-of-matter",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Thermal Properties of Matter",
+  "JEE": "Thermal Properties of Matter"
+ },
+ "title": "Thermal Properties of Matter",
+ "readMinutes": 13,
+ "summary": [
+  "Temperature tells us which way heat will flow; heat is energy in transit because of a temperature difference. Celsius, Fahrenheit and Kelvin scales are linked linearly.",
+  "Most bodies expand on heating: linear (α), area (β = 2α) and volume (γ = 3α) expansion. Water is special — it contracts from 0 °C to 4 °C, so it is densest at 4 °C.",
+  "Heat needed to change temperature is Q = mcΔT; to change state at constant temperature it is Q = mL. Calorimetry is just 'heat lost = heat gained'.",
+  "Heat moves by conduction (H = KAΔT/L), convection (bulk motion of fluid) and radiation (Stefan–Boltzmann, Wien's law). Newton's law of cooling says the rate of cooling ∝ temperature difference with surroundings."
+ ],
+ "formulas": [
+  {
+   "name": "Temperature scales",
+   "formula": "(C − 0)/100 = (F − 32)/180 = (K − 273.15)/100",
+   "when": "Converting between °C, °F and K.",
+   "mistake": "A change of 1 °C = 1 K = 1.8 °F — don't add 32 to a temperature DIFFERENCE."
+  },
+  {
+   "name": "Linear expansion",
+   "formula": "ΔL = L α ΔT",
+   "when": "Rails, bridges, metal rods, pendulum clocks.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Area and volume expansion",
+   "formula": "ΔA = A β ΔT,  ΔV = V γ ΔT;   β = 2α,  γ = 3α (isotropic solids)",
+   "when": "Holes in plates, liquids in containers.",
+   "note": "A hole in a plate EXPANDS on heating, like the material around it."
+  },
+  {
+   "name": "Thermal stress",
+   "formula": "stress = Y α ΔT  (rod fixed at both ends)",
+   "when": "Force on clamps when a rod is heated."
+  },
+  {
+   "name": "Specific heat capacity",
+   "formula": "Q = m c ΔT;  water c = 4200 J kg⁻¹ K⁻¹ = 1 cal g⁻¹ °C⁻¹",
+   "when": "Heating without change of state."
+  },
+  {
+   "name": "Heat capacity and molar heat capacity",
+   "formula": "C = Q/ΔT = mc;  molar C = Q/(n ΔT)",
+   "when": "Comparing bodies, gases."
+  },
+  {
+   "name": "Latent heat",
+   "formula": "Q = m L;  ice L_f = 80 cal/g = 3.36 × 10⁵ J/kg;  steam L_v = 540 cal/g = 2.26 × 10⁶ J/kg",
+   "when": "Melting, boiling, condensation.",
+   "mistake": "Temperature stays constant during a change of state — don't use mcΔT there."
+  },
+  {
+   "name": "Principle of calorimetry",
+   "formula": "Heat lost by hot bodies = heat gained by cold bodies",
+   "when": "Mixing problems.",
+   "mistake": "With ice, first check whether ALL the ice can melt before assuming a final temperature above 0 °C.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Conduction (Fourier's law)",
+   "formula": "H = dQ/dt = K A (T₁ − T₂)/L;  thermal resistance R = L/(KA)",
+   "when": "Heat flow through rods and walls."
+  },
+  {
+   "name": "Slabs in series and parallel",
+   "formula": "series: R = R₁ + R₂ (same H);  parallel: 1/R = 1/R₁ + 1/R₂ (same ΔT)",
+   "when": "Composite walls, junction temperature."
+  },
+  {
+   "name": "Stefan–Boltzmann law",
+   "formula": "P = e σ A T⁴;  σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴;  net loss = eσA(T⁴ − T₀⁴)",
+   "when": "Power radiated by hot bodies.",
+   "note": "T must be in kelvin."
+  },
+  {
+   "name": "Wien's displacement law",
+   "formula": "λ_max T = b ≈ 2.9 × 10⁻³ m K",
+   "when": "Colour of hot bodies, temperature of stars."
+  },
+  {
+   "name": "Newton's law of cooling",
+   "formula": "dT/dt = −k(T − T₀);  average form (T₁ − T₂)/t = k[(T₁ + T₂)/2 − T₀]",
+   "when": "Time taken for a body to cool.",
+   "note": "Valid only for small temperature differences."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Fever on two scales",
+   "problem": "Normal body temperature is 98.6 °F. In °C?",
+   "solution": "C = (98.6 − 32) × 5/9 = 37 °C."
+  },
+  {
+   "title": "Gap between rails",
+   "problem": "10 m steel rails (α = 1.2 × 10⁻⁵ /°C) must allow a 50 °C rise. Gap needed?",
+   "solution": "ΔL = 10 × 1.2 × 10⁻⁵ × 50 = 6 × 10⁻³ m = 6 mm."
+  },
+  {
+   "title": "Heating water",
+   "problem": "Heat to warm 0.5 kg of water from 20 °C to 100 °C (c = 4200 J/kg K)?",
+   "solution": "Q = 0.5 × 4200 × 80 = 1.68 × 10⁵ J."
+  },
+  {
+   "title": "Mixing hot and cold water",
+   "problem": "0.2 kg of water at 80 °C is mixed with 0.3 kg at 20 °C. Final temperature?",
+   "solution": "0.2 × (80 − T) = 0.3 × (T − 20) → T = 44 °C."
+  },
+  {
+   "title": "Steam into ice",
+   "problem": "20 g of steam at 100 °C is passed into 100 g of ice at 0 °C. Final temperature? (L_v = 540, L_f = 80 cal/g)",
+   "solution": "Steam giving heat down to 0 °C: 20(540 + 100) = 12800 cal. Melting all ice needs 8000 cal, so all ice melts. Remaining 4800 cal heats 120 g: T = 4800/120 = 40 °C."
+  },
+  {
+   "title": "Heat through a copper rod",
+   "problem": "Copper rod: K = 400 W/m K, area 1 cm², length 0.5 m, ends at 100 °C and 0 °C. Heat current?",
+   "solution": "H = 400 × 10⁻⁴ × 100/0.5 = 8 W."
+  },
+  {
+   "title": "Junction of two slabs",
+   "problem": "Two slabs of equal thickness, K₁ = 2K₂, outer faces at 100 °C (slab 1) and 0 °C. Junction temperature?",
+   "solution": "2K(100 − T) = K(T − 0) → T = 200/3 ≈ 66.7 °C."
+  },
+  {
+   "title": "Radiated power",
+   "problem": "A sphere's radius is doubled and its kelvin temperature halved. Radiated power becomes?",
+   "solution": "P ∝ r²T⁴ = 4 × (1/16) = 0.25 times the original."
+  },
+  {
+   "title": "Colour of the Sun",
+   "problem": "The Sun's surface is at about 6000 K. λ_max?",
+   "solution": "λ = 2.9 × 10⁻³/6000 ≈ 483 nm — in the visible (green-blue) region."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Heat and temperature",
+   "explain": "Bodies in thermal contact exchange heat until their temperatures are equal (thermal equilibrium). Heat is measured in joules (1 cal = 4.186 J). Absolute zero (0 K = −273.15 °C) is the lowest possible temperature."
+  },
+  {
+   "title": "Anomalous expansion of water",
+   "explain": "Water contracts when heated from 0 °C to 4 °C and expands above 4 °C. Ponds freeze from the top: the densest water (4 °C) sinks, ice floats and insulates the water below, so aquatic life survives."
+  },
+  {
+   "title": "Applications of expansion",
+   "explain": "Gaps in rails and bridges, loose fitting of telephone wires in summer, bimetallic strips in thermostats (they bend towards the metal with smaller α), and pendulum clocks that lose time in summer."
+  },
+  {
+   "title": "Specific heat facts",
+   "explain": "Water has a very high specific heat, so it is used in radiators and hot-water bags and it keeps coastal climates mild. For gases, Cp > Cv because at constant pressure some heat does work."
+  },
+  {
+   "title": "Change of state",
+   "explain": "Melting point falls with pressure for substances that contract on melting (ice) — the idea behind regelation. Boiling point rises with pressure (pressure cooker) and falls at high altitude. Sublimation: solid → vapour directly (dry ice, naphthalene)."
+  },
+  {
+   "title": "Convection",
+   "explain": "Bulk movement of a fluid because hot, less dense fluid rises. Natural convection: sea and land breezes, trade winds, room heaters. Forced convection: fans, blood circulation, car radiators."
+  },
+  {
+   "title": "Radiation and black bodies",
+   "explain": "Radiation needs no medium and travels at c. A perfect black body absorbs all radiation and is the best emitter (Kirchhoff: good absorbers are good emitters). Hotter bodies peak at shorter wavelengths (Wien) and radiate much more power (T⁴)."
+  },
+  {
+   "title": "Newton's law of cooling",
+   "explain": "A body cools fastest when it is much hotter than the surroundings; the cooling curve is exponential. In exam problems use the average-temperature form unless told to use logarithms."
+  }
+ ],
+ "ratta": [
+  "C/100 = (F − 32)/180 = (K − 273)/100.",
+  "β = 2α, γ = 3α;  a hole expands too.",
+  "Q = mcΔT;  Q = mL (no ΔT during change of state).",
+  "Ice 80 cal/g, steam 540 cal/g, water 1 cal/g°C.",
+  "H = KAΔT/L;  series → resistances add.",
+  "P = eσAT⁴;  λ_max T = 2.9 × 10⁻³ m K.",
+  "Water is densest at 4 °C."
+ ],
+ "verifiedOn": "2026-11-13"
+}

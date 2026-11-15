@@ -1,0 +1,156 @@
+{
+ "slug": "magnetism-and-matter",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Magnetism and Matter",
+  "JEE": "Magnetism and Matter"
+ },
+ "title": "Magnetism and Matter",
+ "readMinutes": 11,
+ "summary": [
+  "A bar magnet behaves exactly like a current-carrying solenoid: both are magnetic dipoles with a magnetic moment m pointing from S to N.",
+  "The field of a magnetic dipole falls as 1/r³: on the axis it is twice as strong as on the equatorial line at the same distance, and the two fields point in opposite directions.",
+  "In a uniform field a dipole feels a torque τ = m × B (no net force) and has potential energy U = −m·B; it oscillates about the field direction like a compass needle.",
+  "Materials are diamagnetic (weakly repelled), paramagnetic (weakly attracted) or ferromagnetic (strongly attracted). Paramagnetism weakens with temperature (Curie's law); above the Curie temperature a ferromagnet becomes paramagnetic."
+ ],
+ "formulas": [
+  {
+   "name": "Magnetic moment",
+   "formula": "bar magnet: m = q_m × 2l;  current loop/solenoid: m = N I A",
+   "when": "Strength of a magnetic dipole.",
+   "note": "Direction: S → N inside the magnet; for a loop use the right-hand rule."
+  },
+  {
+   "name": "Field on the axis of a dipole",
+   "formula": "B_axial = (μ₀/4π) 2m/r³",
+   "when": "Field along the magnet's axis (r ≫ length).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Field on the equatorial line",
+   "formula": "B_equatorial = (μ₀/4π) m/r³  (opposite to m)",
+   "when": "Field on the perpendicular bisector.",
+   "mistake": "B_axial = 2 × B_equatorial at the same r — don't swap the factor 2."
+  },
+  {
+   "name": "Torque on a dipole",
+   "formula": "τ = m × B;  |τ| = mB sin θ",
+   "when": "Compass needles, coils in fields.",
+   "note": "Net force is zero in a uniform field — only torque acts."
+  },
+  {
+   "name": "Potential energy of a dipole",
+   "formula": "U = −m · B = −mB cos θ",
+   "when": "Stable (θ = 0) and unstable (θ = 180°) positions."
+  },
+  {
+   "name": "Work to rotate a dipole",
+   "formula": "W = mB (cos θ₁ − cos θ₂)",
+   "when": "Turning a magnet in a field."
+  },
+  {
+   "name": "Oscillation of a magnet",
+   "formula": "T = 2π √(I/(mB))",
+   "when": "Small oscillations of a magnet or compass needle in a uniform field."
+  },
+  {
+   "name": "Magnetisation and intensity",
+   "formula": "M = m_net/V;  H = B₀/μ₀;  B = μ₀(H + M)",
+   "when": "Describing magnetic materials."
+  },
+  {
+   "name": "Susceptibility and permeability",
+   "formula": "χ = M/H;  μ = μ₀(1 + χ);  μᵣ = 1 + χ",
+   "when": "Classifying materials.",
+   "note": "Diamagnets: χ small and negative; paramagnets: small positive; ferromagnets: very large positive."
+  },
+  {
+   "name": "Curie's law",
+   "formula": "χ = C/T  (paramagnets)",
+   "when": "Temperature dependence of paramagnetism.",
+   "note": "Applies only to paramagnets; diamagnetism hardly depends on temperature."
+  },
+  {
+   "name": "Curie–Weiss law",
+   "formula": "χ = C/(T − T_C) for T > T_C",
+   "when": "Ferromagnets above the Curie temperature."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Axial field of a magnet",
+   "problem": "m = 0.5 A m². Field on the axis at 10 cm (μ₀/4π = 10⁻⁷)?",
+   "solution": "B = 10⁻⁷ × 2 × 0.5/(0.1)³ = 1 × 10⁻⁴ T."
+  },
+  {
+   "title": "Equatorial field",
+   "problem": "Same magnet, 10 cm on the equatorial line?",
+   "solution": "B = 10⁻⁷ × 0.5/(0.1)³ = 5 × 10⁻⁵ T — half the axial value."
+  },
+  {
+   "title": "Torque on a magnet",
+   "problem": "m = 0.5 A m² at 30° to a 0.2 T field. Torque?",
+   "solution": "τ = mB sin30° = 0.5 × 0.2 × 0.5 = 0.05 N m."
+  },
+  {
+   "title": "Work to rotate",
+   "problem": "The same magnet is turned from 0° to 60°. Work needed?",
+   "solution": "W = mB(1 − cos60°) = 0.1 × 0.5 = 0.05 J."
+  },
+  {
+   "title": "Solenoid as a magnet",
+   "problem": "A solenoid has 2000 turns, area 2 cm², current 1.5 A. Magnetic moment?",
+   "solution": "m = NIA = 2000 × 1.5 × 2 × 10⁻⁴ = 0.6 A m²."
+  },
+  {
+   "title": "Curie's law",
+   "problem": "A paramagnet has χ = 2.8 × 10⁻⁴ at 300 K. χ at 400 K?",
+   "solution": "χ ∝ 1/T: 2.8 × 10⁻⁴ × 300/400 = 2.1 × 10⁻⁴."
+  },
+  {
+   "title": "Oscillating magnet",
+   "problem": "I = 10⁻⁴ kg m², m = 0.5 A m², B = 0.4 T. Period of small oscillations?",
+   "solution": "T = 2π√(10⁻⁴/(0.5 × 0.4)) ≈ 0.14 s."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Bar magnet as an equivalent solenoid",
+   "explain": "Field lines of a bar magnet and of a solenoid look identical outside. Cutting a magnet in half gives two smaller magnets — isolated magnetic poles (monopoles) do not exist, unlike electric charges."
+  },
+  {
+   "title": "Magnetic field lines",
+   "explain": "They form closed loops (outside N → S, inside S → N), never intersect, and are crowded where the field is strong. Gauss's law for magnetism: net flux through any closed surface is zero."
+  },
+  {
+   "title": "Dipole in a uniform field",
+   "explain": "Stable equilibrium when m is along B (minimum energy), unstable when opposite. The torque tries to align m with B — this is how a compass works."
+  },
+  {
+   "title": "Diamagnetic substances",
+   "explain": "Weakly repelled, move from stronger to weaker field; χ small negative (≈ −10⁻⁵). Examples: bismuth, copper, lead, water, nitrogen gas. Superconductors are perfect diamagnets (Meissner effect)."
+  },
+  {
+   "title": "Paramagnetic substances",
+   "explain": "Weakly attracted, move from weaker to stronger field; atoms have permanent moments that partly align. Examples: aluminium, sodium, calcium, oxygen gas, copper chloride. χ decreases as temperature rises."
+  },
+  {
+   "title": "Ferromagnetic substances",
+   "explain": "Strongly attracted; domains align easily. Examples: iron, cobalt, nickel, gadolinium. Above the Curie temperature (Fe ≈ 1043 K) they become paramagnetic. Soft iron (easy to magnetise and demagnetise) is used in electromagnets and transformer cores; steel for permanent magnets."
+  },
+  {
+   "title": "Syllabus note",
+   "explain": "Earth's magnetism (dip, declination, horizontal component) has been removed from the current NTA syllabus. Focus on dipole fields, torque and energy, and the three classes of materials with the effect of temperature."
+  }
+ ],
+ "ratta": [
+  "m = NIA;  direction S → N.",
+  "B_axial = μ₀2m/4πr³;  B_eq = μ₀m/4πr³ (half).",
+  "τ = mB sinθ;  U = −mB cosθ;  W = mB(cosθ₁ − cosθ₂).",
+  "T = 2π√(I/mB).",
+  "Dia: χ < 0;  para: small χ > 0;  ferro: huge χ.",
+  "Curie: χ = C/T (para);  ferro → para above T_C.",
+  "No magnetic monopoles; net flux through closed surface = 0."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,175 @@
+{
+ "slug": "units-and-measurement",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Units and Measurement",
+  "JEE": "Units and Measurement"
+ },
+ "title": "Units and Measurement",
+ "readMinutes": 11,
+ "summary": [
+  "Every physical quantity = number × unit. The SI system has 7 base units (m, kg, s, A, K, mol, cd); every other unit is derived from them.",
+  "No measurement is perfect: least count limits precision, and errors (systematic, random, gross) limit accuracy. Errors combine by fixed rules — add absolute errors for sums, add relative errors for products, multiply by the power for powers.",
+  "Significant figures show how precise a number is. The answer of a calculation can never be more precise than the least precise input.",
+  "Dimensions express a quantity in terms of [M], [L], [T], [A], [K]… Dimensional analysis checks equations, converts units and derives relations — but it cannot find pure-number constants or handle sums of terms with different powers."
+ ],
+ "formulas": [
+  {
+   "name": "SI base quantities",
+   "formula": "length m · mass kg · time s · current A · temperature K · amount mol · luminous intensity cd",
+   "when": "Writing any unit or dimension.",
+   "mistake": "Plane angle (rad) and solid angle (sr) are dimensionless, not base units."
+  },
+  {
+   "name": "Least count of vernier callipers",
+   "formula": "LC = 1 MSD − 1 VSD = (value of 1 MSD)/(number of vernier divisions)",
+   "when": "Reading a vernier.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vernier reading",
+   "formula": "Reading = MSR + (coinciding VSD × LC) − (zero error)",
+   "when": "Measuring length with callipers.",
+   "mistake": "Subtract a positive zero error, add a negative one — don't flip the sign."
+  },
+  {
+   "name": "Least count of screw gauge",
+   "formula": "LC = pitch / (number of circular scale divisions)",
+   "when": "Screw gauge readings.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Screw gauge reading",
+   "formula": "Reading = MSR + (CSR × LC) − (zero error)",
+   "when": "Diameter of a wire, thickness of a sheet.",
+   "mistake": "Zero error is positive when the circular-scale zero lies below the reference line — check this before subtracting."
+  },
+  {
+   "name": "Mean value and absolute error",
+   "formula": "a_mean = Σaᵢ/n;  Δaᵢ = |a_mean − aᵢ|;  Δa_mean = Σ|Δaᵢ|/n",
+   "when": "Repeated readings.",
+   "mistake": "Use the modulus of each deviation — never let errors cancel."
+  },
+  {
+   "name": "Relative and percentage error",
+   "formula": "relative error = Δa/a;   percentage error = (Δa/a) × 100%",
+   "when": "Comparing precision of different measurements."
+  },
+  {
+   "name": "Errors in sum and difference",
+   "formula": "Z = A ± B  ⇒  ΔZ = ΔA + ΔB",
+   "when": "Adding or subtracting measured values.",
+   "note": "Errors always ADD, even when the quantities are subtracted."
+  },
+  {
+   "name": "Errors in product, quotient and power",
+   "formula": "Z = Aᵖ Bᵠ / Cʳ  ⇒  ΔZ/Z = p(ΔA/A) + q(ΔB/B) + r(ΔC/C)",
+   "when": "Formulas like g = 4π²L/T² or ρ = m/V.",
+   "tag": "PYQ favourite",
+   "note": "Relative errors add for division too, and each is multiplied by its power."
+  },
+  {
+   "name": "Significant figure rules",
+   "formula": "× and ÷: keep the least number of significant figures;  + and −: keep the least number of decimal places",
+   "when": "Rounding a final answer.",
+   "mistake": "Trailing zeros after a decimal point count; leading zeros never count."
+  },
+  {
+   "name": "Dimensional formula",
+   "formula": "[Q] = [Mᵃ Lᵇ Tᶜ Aᵈ Kᵉ]; e.g. force [MLT⁻²], energy [ML²T⁻²], pressure [ML⁻¹T⁻²]",
+   "when": "Checking and deriving equations."
+  },
+  {
+   "name": "Principle of homogeneity",
+   "formula": "Every term on both sides of a correct equation has the same dimensions",
+   "when": "Checking whether an equation can be right.",
+   "mistake": "A dimensionally correct equation can still be wrong by a pure number like ½ or 2π."
+  },
+  {
+   "name": "Unit conversion",
+   "formula": "n₁[M₁ᵃ L₁ᵇ T₁ᶜ] = n₂[M₂ᵃ L₂ᵇ T₂ᶜ]  ⇒  n₂ = n₁ (M₁/M₂)ᵃ (L₁/L₂)ᵇ (T₁/T₂)ᶜ",
+   "when": "Changing a value from SI to CGS (or any system)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Vernier reading",
+   "problem": "A vernier has 10 divisions equal to 9 main-scale divisions of 1 mm. The main scale reads 2.0 cm and the 7th vernier division coincides. Reading? (no zero error)",
+   "solution": "LC = 1 mm/10 = 0.1 mm = 0.01 cm. Reading = 2.0 cm + 7 × 0.01 cm = 2.07 cm."
+  },
+  {
+   "title": "Screw gauge with zero error",
+   "problem": "Pitch 0.5 mm, 50 circular divisions. With jaws closed the zero is 4 divisions below the line. A wire gives MSR = 3.0 mm, CSR = 36. Diameter?",
+   "solution": "LC = 0.5/50 = 0.01 mm. Zero error = +4 × 0.01 = +0.04 mm. Reading = 3.0 + 36 × 0.01 − 0.04 = 3.32 mm."
+  },
+  {
+   "title": "Error in g from a pendulum",
+   "problem": "g = 4π²L/T². L has 2% error and T has 1% error. Maximum % error in g?",
+   "solution": "Δg/g = ΔL/L + 2 ΔT/T = 2% + 2 × 1% = 4%."
+  },
+  {
+   "title": "Mean absolute error",
+   "problem": "Readings of a period: 2.63, 2.56, 2.42, 2.71, 2.80 s. Mean, mean absolute error and % error?",
+   "solution": "Mean = 2.62 s. Deviations: 0.01, 0.06, 0.20, 0.09, 0.18 → mean abs error = 0.11 s. % error = 4.1%."
+  },
+  {
+   "title": "Converting G to CGS",
+   "problem": "G = 6.67 × 10⁻¹¹ N m² kg⁻². Value in dyne cm² g⁻²? ([G] = M⁻¹L³T⁻²)",
+   "solution": "n₂ = 6.67 × 10⁻¹¹ × (1 kg/1 g)⁻¹ (1 m/1 cm)³ = 6.67 × 10⁻¹¹ × 10⁻³ × 10⁶ = 6.67 × 10⁻⁸ dyne cm² g⁻²."
+  },
+  {
+   "title": "Significant figures in a product",
+   "problem": "Area of a rectangle 3.8 cm × 2.62 cm?",
+   "solution": "3.8 × 2.62 = 9.956; 3.8 has 2 significant figures, so the answer is 10 cm² (written 1.0 × 10¹ cm²)."
+  },
+  {
+   "title": "Deriving the pendulum formula",
+   "problem": "Assume T depends on mass m, length l and g as T ∝ mᵃ lᵇ gᶜ. Find a, b, c.",
+   "solution": "[T] = [M]ᵃ[L]ᵇ[LT⁻²]ᶜ → M: a = 0; T: −2c = 1 → c = −½; L: b + c = 0 → b = ½. So T ∝ √(l/g) (the 2π comes from experiment)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Base and derived units",
+   "explain": "Derived units come from base units: newton = kg m s⁻², joule = kg m² s⁻², pascal = kg m⁻¹ s⁻². Prefixes: nano 10⁻⁹, micro 10⁻⁶, milli 10⁻³, kilo 10³, mega 10⁶, giga 10⁹. Practical length units: 1 Å = 10⁻¹⁰ m, 1 fermi = 10⁻¹⁵ m, 1 light year ≈ 9.46 × 10¹⁵ m, 1 AU ≈ 1.5 × 10¹¹ m, 1 parsec ≈ 3.08 × 10¹⁶ m."
+  },
+  {
+   "title": "Accuracy vs precision",
+   "explain": "Accuracy = how close to the true value. Precision = how close repeated readings are to each other (set by least count). A precise instrument can still be inaccurate if it has a zero error."
+  },
+  {
+   "title": "Types of errors",
+   "explain": "Systematic errors (instrument zero error, imperfect method, personal bias) push all readings one way — reduce by better method and correction. Random errors vary unpredictably — reduce by taking more readings and averaging. Gross errors come from carelessness."
+  },
+  {
+   "title": "Rounding off",
+   "explain": "Drop digits after the last significant one: if the next digit > 5 raise by one; < 5 leave it; = 5 make the last digit even (2.745 → 2.74, 2.735 → 2.74). Do the rounding only at the end of a calculation."
+  },
+  {
+   "title": "Counting significant figures",
+   "explain": "All non-zero digits count. Zeros between non-zero digits count (2.005 → 4). Leading zeros never count (0.0024 → 2). Trailing zeros count only with a decimal point (2.400 → 4; 2400 is ambiguous — write 2.4 × 10³ for 2). Exact numbers (like 2 in 2πr) have infinite significant figures."
+  },
+  {
+   "title": "Uses and limits of dimensional analysis",
+   "explain": "Uses: check an equation, convert units, derive a relation when the quantity depends on a product of powers. Limits: cannot find constants like ½ or 2π, fails for trigonometric/exponential/log relations, cannot handle a quantity that depends on a sum of terms, and cannot tell scalars from vectors."
+  },
+  {
+   "title": "Dimensionless and same-dimension quantities",
+   "explain": "Strain, refractive index, angle, relative density are dimensionless. Same dimensions: work, energy, torque [ML²T⁻²]; impulse and momentum [MLT⁻¹]; stress, pressure, Young's modulus, energy density [ML⁻¹T⁻²]; frequency, angular velocity, velocity gradient [T⁻¹]; Planck's constant and angular momentum [ML²T⁻¹]."
+  },
+  {
+   "title": "Experimental skills",
+   "explain": "Vernier callipers measure internal and external diameters and depth; the screw gauge measures wire diameter and sheet thickness with LC 0.01 mm. Always note zero error with jaws closed before measuring, take readings at several places and average."
+  }
+ ],
+ "ratta": [
+  "7 SI base units: m, kg, s, A, K, mol, cd.",
+  "Vernier LC = MSD/N;  screw gauge LC = pitch/N.",
+  "Corrected reading = observed − zero error (sign included).",
+  "Sums: add absolute errors;  products/powers: add (power × relative error).",
+  "× ÷ → least significant figures;  + − → least decimal places.",
+  "Force MLT⁻², energy ML²T⁻², pressure ML⁻¹T⁻², h ML²T⁻¹, G M⁻¹L³T⁻².",
+  "Dimensional analysis can't give constants like 2π."
+ ],
+ "verifiedOn": "2026-11-13"
+}

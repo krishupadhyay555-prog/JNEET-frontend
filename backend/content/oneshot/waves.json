@@ -1,0 +1,183 @@
+{
+ "slug": "waves",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Waves",
+  "JEE": "Waves"
+ },
+ "title": "Waves",
+ "readMinutes": 13,
+ "summary": [
+  "A wave carries energy and momentum from place to place without carrying matter. In transverse waves particles move perpendicular to the wave; in longitudinal waves (sound) they move along it.",
+  "A progressive wave is y = A sin(kx − ωt + φ), with speed v = ω/k = νλ. On a string v = √(T/μ); sound in a gas v = √(γP/ρ).",
+  "When waves overlap, displacements add (superposition). Two equal waves travelling in opposite directions form a standing wave with fixed nodes and antinodes.",
+  "Strings and organ pipes support only certain frequencies (harmonics). Two close frequencies give beats at the difference frequency."
+ ],
+ "formulas": [
+  {
+   "name": "Wave speed relation",
+   "formula": "v = ν λ = ω/k;  k = 2π/λ,  ω = 2πν",
+   "when": "Converting between speed, frequency and wavelength."
+  },
+  {
+   "name": "Progressive wave",
+   "formula": "y(x, t) = A sin(kx − ωt + φ)  (moving in +x);  kx + ωt → moving in −x",
+   "when": "Reading a wave equation.",
+   "tag": "PYQ favourite",
+   "note": "The sign between kx and ωt tells the direction — opposite signs mean +x direction."
+  },
+  {
+   "name": "Particle velocity and wave speed",
+   "formula": "v_particle = ∂y/∂t;  max = Aω;   wave speed v = ω/k",
+   "when": "Particle vs wave speed questions.",
+   "mistake": "Particle speed and wave speed are different things — don't equate them."
+  },
+  {
+   "name": "Speed on a string",
+   "formula": "v = √(T/μ)   (μ = mass per unit length)",
+   "when": "Sonometer, stretched wires.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Speed of sound in a gas",
+   "formula": "Newton: √(P/ρ) (wrong, ~280 m/s);  Laplace: v = √(γP/ρ) = √(γRT/M)",
+   "when": "Sound speed and its temperature dependence.",
+   "mistake": "v ∝ √T (kelvin); pressure alone does not change v at constant T."
+  },
+  {
+   "name": "Phase and path difference",
+   "formula": "Δφ = (2π/λ) Δx",
+   "when": "Interference and phase questions."
+  },
+  {
+   "name": "Superposition and standing waves",
+   "formula": "y = 2A sin kx cos ωt;  nodes at kx = nπ, antinodes midway;  node-to-node = λ/2",
+   "when": "Standing waves on strings and in pipes."
+  },
+  {
+   "name": "Stretched string (both ends fixed)",
+   "formula": "fₙ = n v/(2L),  n = 1, 2, 3 …  (all harmonics)",
+   "when": "Sonometer, guitar strings.",
+   "note": "Fundamental has nodes at both ends and one antinode in the middle."
+  },
+  {
+   "name": "Closed organ pipe",
+   "formula": "fₙ = (2n − 1) v/(4L):  only odd harmonics",
+   "when": "Pipes closed at one end, resonance tube.",
+   "tag": "PYQ favourite",
+   "note": "There is no 2nd harmonic in a closed pipe — the next note after f₁ is 3f₁."
+  },
+  {
+   "name": "Open organ pipe",
+   "formula": "fₙ = n v/(2L):  all harmonics",
+   "when": "Flutes, pipes open at both ends."
+  },
+  {
+   "name": "End correction",
+   "formula": "closed: L_eff = L + 0.6r;  open: L_eff = L + 1.2r",
+   "when": "Accurate resonance-tube calculations."
+  },
+  {
+   "name": "Beats",
+   "formula": "beat frequency = |ν₁ − ν₂|",
+   "when": "Tuning forks, tuning instruments.",
+   "note": "Loading a fork with wax LOWERS its frequency; filing raises it."
+  },
+  {
+   "name": "Reflection of waves",
+   "formula": "from a rigid end: phase change π (inverted);  from a free/open end: no phase change",
+   "when": "Pulse reflection questions."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Reading a wave equation",
+   "problem": "y = 0.02 sin(100πt − 2πx) (SI). Find frequency, wavelength and speed.",
+   "solution": "ω = 100π → ν = 50 Hz; k = 2π → λ = 1 m; v = ω/k = 50 m/s."
+  },
+  {
+   "title": "Wave on a string",
+   "problem": "A string has tension 100 N and mass per unit length 0.01 kg/m. Wave speed?",
+   "solution": "v = √(100/0.01) = 100 m/s."
+  },
+  {
+   "title": "Fundamental of a string",
+   "problem": "The same string is 0.5 m long and fixed at both ends. Fundamental frequency?",
+   "solution": "f₁ = v/2L = 100/1 = 100 Hz."
+  },
+  {
+   "title": "Closed pipe",
+   "problem": "A pipe 50 cm long is closed at one end (v = 340 m/s). Fundamental and next two notes?",
+   "solution": "f₁ = v/4L = 170 Hz; then 3f₁ = 510 Hz and 5f₁ = 850 Hz (odd harmonics only)."
+  },
+  {
+   "title": "Open pipe",
+   "problem": "Same length but open at both ends. Fundamental?",
+   "solution": "f₁ = v/2L = 340 Hz — double the closed pipe."
+  },
+  {
+   "title": "Speed of sound in air",
+   "problem": "γ = 1.4, P = 1.013 × 10⁵ Pa, ρ = 1.29 kg/m³. Laplace's speed?",
+   "solution": "v = √(1.4 × 1.013 × 10⁵/1.29) ≈ 332 m/s."
+  },
+  {
+   "title": "Phase difference",
+   "problem": "Two points 0.5 m apart on a wave of wavelength 2 m. Phase difference?",
+   "solution": "Δφ = (2π/λ)Δx = (2π/2) × 0.5 = π/2 ≈ 1.57 rad."
+  },
+  {
+   "title": "Beats with wax",
+   "problem": "Fork A (256 Hz) gives 4 beats/s with B. Waxing A increases the beats to 6/s. Frequency of B?",
+   "solution": "B = 252 or 260 Hz. Wax lowers A; beats increase only if B is below A, so B = 252 Hz."
+  },
+  {
+   "title": "Changing tension and length",
+   "problem": "A wire's fundamental is 300 Hz. Tension is raised by 44% and length by 20%. New fundamental?",
+   "solution": "f ∝ √T/L: 300 × √1.44/1.2 = 300 × 1.2/1.2 = 300 Hz."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Transverse and longitudinal waves",
+   "explain": "Transverse waves (on strings, light) have crests and troughs and can travel only where there is rigidity — so mechanical transverse waves don't travel through fluids. Longitudinal waves (sound) have compressions and rarefactions and travel through solids, liquids and gases."
+  },
+  {
+   "title": "What a medium needs",
+   "explain": "Mechanical waves need elasticity (to restore) and inertia (to carry the disturbance forward). Speed depends on the medium, not on the source; frequency depends on the source and does not change when a wave enters a new medium."
+  },
+  {
+   "title": "Factors affecting the speed of sound",
+   "explain": "Increases with temperature (≈ 0.6 m/s per °C in air) and humidity (moist air is less dense). Not affected by pressure at constant temperature. Sound is fastest in solids and slowest in gases."
+  },
+  {
+   "title": "Principle of superposition",
+   "explain": "The net displacement is the vector sum of individual displacements. It explains interference (constructive when Δφ = 2nπ, destructive when Δφ = (2n + 1)π), standing waves and beats."
+  },
+  {
+   "title": "Standing waves",
+   "explain": "No energy is transported. Nodes never move; antinodes vibrate with amplitude 2A. All particles between two nodes move in phase; particles on either side of a node are out of phase by π."
+  },
+  {
+   "title": "Harmonics and overtones",
+   "explain": "The fundamental is the 1st harmonic. In open pipes and strings the 1st overtone is the 2nd harmonic. In closed pipes the 1st overtone is the 3rd harmonic. Richer harmonics give each instrument its own quality (timbre)."
+  },
+  {
+   "title": "Resonance tube",
+   "explain": "In a resonance-tube experiment, successive resonance lengths differ by λ/2: λ = 2(l₂ − l₁), which removes the end correction; e = (l₂ − 3l₁)/2."
+  },
+  {
+   "title": "Syllabus note",
+   "explain": "The Doppler effect has been removed from the current NTA syllabus for both NEET and JEE Main. Focus on wave equations, speeds, superposition, standing waves in strings and pipes, and beats."
+  }
+ ],
+ "ratta": [
+  "v = νλ = ω/k;  string v = √(T/μ);  sound v = √(γRT/M).",
+  "y = A sin(kx − ωt): moves +x.",
+  "String & open pipe: nv/2L (all);  closed pipe: (2n−1)v/4L (odd).",
+  "Node–node = λ/2;  node–antinode = λ/4.",
+  "Beats = |ν₁ − ν₂|;  wax lowers frequency.",
+  "Rigid end: phase change π;  free end: none.",
+  "Δφ = 2πΔx/λ."
+ ],
+ "verifiedOn": "2026-11-13"
+}

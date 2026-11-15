@@ -1,0 +1,168 @@
+{
+ "slug": "oscillations",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Oscillations",
+  "JEE": "Oscillations"
+ },
+ "title": "Oscillations",
+ "readMinutes": 12,
+ "summary": [
+  "A motion that repeats after equal intervals is periodic; back-and-forth periodic motion about a mean position is oscillation.",
+  "Simple harmonic motion (SHM) happens when the restoring force is proportional to displacement and opposite to it: F = −kx. Then x = A sin(ωt + φ) with ω = √(k/m).",
+  "In SHM, speed is maximum at the mean position and zero at the extremes; acceleration is the opposite. Total energy ½kA² stays constant, shared between KE and PE.",
+  "Spring–mass: T = 2π√(m/k). Simple pendulum (small angle): T = 2π√(l/g), independent of mass and amplitude."
+ ],
+ "formulas": [
+  {
+   "name": "Periodic motion",
+   "formula": "T = 1/ν;  ω = 2πν = 2π/T",
+   "when": "Converting time period, frequency and angular frequency."
+  },
+  {
+   "name": "SHM condition",
+   "formula": "F = −kx  ⇔  a = −ω² x",
+   "when": "Testing whether a motion is SHM.",
+   "mistake": "A uniform circular motion projected on a diameter is SHM, but a bouncing ball is periodic, not SHM."
+  },
+  {
+   "name": "Displacement in SHM",
+   "formula": "x = A sin(ωt + φ)  (or A cos(ωt + φ))",
+   "when": "Position at any time; φ is the initial phase.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Velocity in SHM",
+   "formula": "v = Aω cos(ωt + φ) = ±ω√(A² − x²);   v_max = Aω (at x = 0)",
+   "when": "Speed at a given displacement."
+  },
+  {
+   "name": "Acceleration in SHM",
+   "formula": "a = −ω² x;   a_max = ω² A (at x = ±A)",
+   "when": "Force and acceleration at the extremes.",
+   "note": "Acceleration is always towards the mean position — opposite to x."
+  },
+  {
+   "name": "Energy in SHM",
+   "formula": "KE = ½ k(A² − x²);  PE = ½ k x²;  E = ½ k A² = ½ m ω² A²",
+   "when": "Energy at a position.",
+   "mistake": "KE = PE at x = A/√2, not at A/2."
+  },
+  {
+   "name": "Spring–mass system",
+   "formula": "T = 2π √(m/k)",
+   "when": "Mass on a spring (horizontal or vertical).",
+   "tag": "PYQ favourite",
+   "note": "For a vertical spring the same formula holds — gravity only shifts the mean position."
+  },
+  {
+   "name": "Springs in series and parallel",
+   "formula": "series: 1/k = 1/k₁ + 1/k₂;  parallel: k = k₁ + k₂",
+   "when": "Combinations of springs."
+  },
+  {
+   "name": "Cut spring",
+   "formula": "k ∝ 1/length: cutting a spring into n equal parts gives each part nk",
+   "when": "Spring pieces."
+  },
+  {
+   "name": "Simple pendulum",
+   "formula": "T = 2π √(l/g)  (small angles, θ < ~10°)",
+   "when": "Pendulum clocks, measuring g.",
+   "mistake": "T does not depend on the mass of the bob or the amplitude (for small swings).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pendulum with effective g",
+   "formula": "T = 2π√(l/g_eff);  lift accelerating up: g + a;  down: g − a;  car with horizontal a: √(g² + a²)",
+   "when": "Pendulums in lifts and accelerating vehicles."
+  },
+  {
+   "name": "Phase relations",
+   "formula": "velocity leads displacement by π/2;  acceleration leads displacement by π",
+   "when": "Phase questions."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Reading an SHM equation",
+   "problem": "x = 5 sin(πt + π/3) cm. Find amplitude, period, maximum speed and maximum acceleration.",
+   "solution": "A = 5 cm, ω = π rad/s → T = 2π/ω = 2 s. v_max = Aω ≈ 15.7 cm/s, a_max = Aω² ≈ 49.3 cm/s²."
+  },
+  {
+   "title": "Speed at a displacement",
+   "problem": "A = 10 cm, T = π s. Speed at x = 6 cm?",
+   "solution": "ω = 2 rad/s. v = ω√(A² − x²) = 2 × √(100 − 36) = 16 cm/s."
+  },
+  {
+   "title": "Mass on a spring",
+   "problem": "0.5 kg on a spring of k = 200 N/m. Period?",
+   "solution": "T = 2π√(0.5/200) = 2π × 0.05 ≈ 0.314 s."
+  },
+  {
+   "title": "1 m pendulum",
+   "problem": "Period of a 1 m simple pendulum (g = 9.8 m/s²)?",
+   "solution": "T = 2π√(1/9.8) ≈ 2.01 s."
+  },
+  {
+   "title": "Seconds pendulum",
+   "problem": "A seconds pendulum has T = 2 s. Its length (g = 9.8)?",
+   "solution": "l = gT²/4π² = 9.8 × 4/39.48 ≈ 0.993 m (about 1 m)."
+  },
+  {
+   "title": "Energy of oscillation",
+   "problem": "k = 200 N/m, amplitude 10 cm. Total energy?",
+   "solution": "E = ½kA² = ½ × 200 × 0.01 = 1 J."
+  },
+  {
+   "title": "Series vs parallel springs",
+   "problem": "A mass oscillates with springs k and 4k, first in parallel (Tₚ), then in series (Tₛ). Tₛ/Tₚ?",
+   "solution": "kₚ = 5k, kₛ = 4k/5. Tₛ/Tₚ = √(kₚ/kₛ) = √(25/4) = 2.5."
+  },
+  {
+   "title": "Where KE equals PE",
+   "problem": "Amplitude 10 cm. At what displacement are KE and PE equal?",
+   "solution": "½k(A² − x²) = ½kx² → x = A/√2 ≈ 7.07 cm."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Periodic functions",
+   "explain": "sin ωt and cos ωt repeat every 2π/ω, so any periodic motion can be described with them. Functions like sin ωt + cos ωt are still SHM (amplitude √2, phase shifted); sin² ωt is periodic with period π/ω."
+  },
+  {
+   "title": "SHM and circular motion",
+   "explain": "The projection of a particle moving uniformly on a circle onto any diameter performs SHM. The radius is the amplitude and the angular speed is ω — handy for finding time between two positions."
+  },
+  {
+   "title": "Graphs of SHM",
+   "explain": "x, v and a are all sinusoidal with the same ω. v is π/2 ahead of x, a is π ahead of x. The v–x graph is an ellipse; the a–x graph is a straight line with negative slope."
+  },
+  {
+   "title": "Energy graphs",
+   "explain": "Potential energy (PE) is a parabola with minimum at x = 0; kinetic energy (KE) is an inverted parabola; their sum is a horizontal line. KE and PE each oscillate with frequency 2ν (double the SHM frequency)."
+  },
+  {
+   "title": "Restoring force and force constant",
+   "explain": "The spring constant k tells how stiff the system is. For any SHM, ω² = (restoring force per unit displacement)/(mass). For the pendulum, the restoring force mg sinθ ≈ mgθ gives ω² = g/l."
+  },
+  {
+   "title": "Deriving the pendulum period",
+   "explain": "Torque about the pivot −mgl sinθ ≈ −mglθ; with I = ml², α = −(g/l)θ. Comparing with α = −ω²θ gives T = 2π√(l/g)."
+  },
+  {
+   "title": "Time between positions",
+   "explain": "From the mean to an extreme takes T/4. From the mean to A/2 takes T/12; from A/2 to A takes T/6. From the mean to A/√2 takes T/8."
+  }
+ ],
+ "ratta": [
+  "F = −kx;  ω = √(k/m);  T = 2π√(m/k).",
+  "x = A sin(ωt + φ);  v = ω√(A² − x²);  a = −ω²x.",
+  "v_max = Aω;  a_max = Aω².",
+  "E = ½kA²;  KE = PE at A/√2.",
+  "Pendulum T = 2π√(l/g);  seconds pendulum ≈ 1 m.",
+  "Series springs: 1/k adds;  parallel: k adds.",
+  "Mean → A/2: T/12;  A/2 → A: T/6."
+ ],
+ "verifiedOn": "2026-11-13"
+}

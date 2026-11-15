@@ -1,0 +1,170 @@
+{
+ "slug": "thermodynamics",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Thermodynamics",
+  "JEE": "Thermodynamics"
+ },
+ "title": "Thermodynamics",
+ "readMinutes": 13,
+ "summary": [
+  "Zeroth law: two systems in thermal equilibrium with a third are in equilibrium with each other — this is what makes temperature meaningful.",
+  "First law: ΔQ = ΔU + ΔW (heat given = rise in internal energy + work done BY the gas). For an ideal gas U depends only on temperature.",
+  "Work done by a gas = area under the P–V curve. Isothermal, adiabatic, isobaric and isochoric processes each have their own simple formulas.",
+  "Second law: heat does not flow by itself from cold to hot, and no cyclic process can turn heat completely into work. Real processes are irreversible."
+ ],
+ "formulas": [
+  {
+   "name": "First law of thermodynamics",
+   "formula": "ΔQ = ΔU + ΔW",
+   "when": "Every energy-balance question.",
+   "mistake": "Sign convention: heat given TO the gas +, work done BY the gas +. Don't mix conventions."
+  },
+  {
+   "name": "Work done by a gas",
+   "formula": "W = ∫ P dV = area under the P–V curve",
+   "when": "Any process drawn on a P–V diagram.",
+   "note": "In a cycle, work = area enclosed (clockwise on P–V → positive work)."
+  },
+  {
+   "name": "Internal energy of an ideal gas",
+   "formula": "ΔU = n Cv ΔT  (for ANY process)",
+   "when": "Change in internal energy.",
+   "tag": "PYQ favourite",
+   "note": "ΔU depends only on ΔT — use nCvΔT even for non-isochoric processes."
+  },
+  {
+   "name": "Isothermal process (T constant)",
+   "formula": "PV = constant;  ΔU = 0;  W = Q = nRT ln(V₂/V₁) = 2.303 nRT log(V₂/V₁)",
+   "when": "Slow processes in contact with a reservoir."
+  },
+  {
+   "name": "Adiabatic process (Q = 0)",
+   "formula": "PVᵞ = constant;  TVᵞ⁻¹ = constant;  W = (P₁V₁ − P₂V₂)/(γ − 1) = nR(T₁ − T₂)/(γ − 1)",
+   "when": "Fast processes or insulated containers.",
+   "tag": "PYQ favourite",
+   "note": "The adiabatic curve is steeper (slope −γP/V) than the isothermal one (−P/V)."
+  },
+  {
+   "name": "Isobaric process (P constant)",
+   "formula": "W = PΔV = nRΔT;  Q = nCpΔT",
+   "when": "Heating at constant pressure."
+  },
+  {
+   "name": "Isochoric process (V constant)",
+   "formula": "W = 0;  Q = ΔU = nCvΔT",
+   "when": "Heating in a rigid container."
+  },
+  {
+   "name": "Mayer's relation and γ",
+   "formula": "Cp − Cv = R;   γ = Cp/Cv",
+   "when": "Linking the two molar heat capacities."
+  },
+  {
+   "name": "Values of Cv and γ",
+   "formula": "monoatomic: Cv = 3R/2, γ = 5/3;  diatomic (rigid): Cv = 5R/2, γ = 7/5;  polyatomic (non-linear, rigid): Cv = 3R, γ = 4/3",
+   "when": "Choosing γ in a problem."
+  },
+  {
+   "name": "γ of a mixture",
+   "formula": "Cv(mix) = (n₁Cv₁ + n₂Cv₂)/(n₁ + n₂);  γ = (Cv + R)/Cv",
+   "when": "Mixtures of gases."
+  },
+  {
+   "name": "Fraction of heat turned into work (isobaric)",
+   "formula": "W/Q = nRΔT/(nCpΔT) = R/Cp = 1 − 1/γ",
+   "when": "Diatomic gas: 2/7 of the heat becomes work."
+  },
+  {
+   "name": "Cyclic process",
+   "formula": "ΔU = 0 over a cycle ⇒ Q_net = W_net = area of the loop",
+   "when": "Cycles drawn on P–V diagrams."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Isothermal expansion",
+   "problem": "2 mol of an ideal gas expand isothermally at 300 K to double the volume. Work done (ln 2 = 0.693)?",
+   "solution": "W = nRT ln 2 = 2 × 8.314 × 300 × 0.693 ≈ 3458 J (= heat absorbed, since ΔU = 0)."
+  },
+  {
+   "title": "Adiabatic compression",
+   "problem": "A monoatomic gas at 300 K is compressed adiabatically to one-eighth of its volume. Final temperature?",
+   "solution": "TVᵞ⁻¹ = constant, γ − 1 = 2/3: T₂ = 300 × 8^(2/3) = 300 × 4 = 1200 K."
+  },
+  {
+   "title": "Isobaric heating of a diatomic gas",
+   "problem": "2 mol of a diatomic gas are heated by 50 K at constant pressure. Q, W and ΔU?",
+   "solution": "Q = nCpΔT = 2 × 3.5 × 8.314 × 50 ≈ 2910 J; W = nRΔT ≈ 831 J; ΔU = Q − W ≈ 2078 J."
+  },
+  {
+   "title": "Work at constant pressure",
+   "problem": "A gas expands from 1 L to 3 L at 10⁵ Pa. Work done?",
+   "solution": "W = PΔV = 10⁵ × 2 × 10⁻³ = 200 J."
+  },
+  {
+   "title": "Adiabatic pressure change",
+   "problem": "A diatomic gas (γ = 1.4) is compressed adiabatically to half its volume. By what factor does the pressure rise?",
+   "solution": "P₂/P₁ = 2^1.4 ≈ 2.64 (more than the isothermal factor 2)."
+  },
+  {
+   "title": "First law in one line",
+   "problem": "A gas absorbs 500 J of heat and does 200 J of work. Change in internal energy?",
+   "solution": "ΔU = Q − W = 500 − 200 = 300 J (temperature rises)."
+  },
+  {
+   "title": "Work in a triangular cycle",
+   "problem": "A gas goes A(P₀, V₀) → B(2P₀, V₀) → C(2P₀, 2V₀) → back to A along a straight line, with P₀ = 10⁵ Pa and V₀ = 1 L. Net work?",
+   "solution": "Work = area of the triangle = ½ × V₀ × P₀ = ½ × 10⁻³ × 10⁵ = 50 J."
+  },
+  {
+   "title": "γ of a mixture",
+   "problem": "1 mol of a monoatomic gas is mixed with 1 mol of a rigid diatomic gas. γ of the mixture?",
+   "solution": "Cv = (3R/2 + 5R/2)/2 = 2R, Cp = 3R, γ = 3/2 = 1.5."
+  }
+ ],
+ "topics": [
+  {
+   "title": "System, surroundings and state",
+   "explain": "A system is the part we study; everything else is the surroundings. State variables (P, V, T, U) describe equilibrium states. Extensive variables depend on size (V, U, mass); intensive ones don't (P, T, density)."
+  },
+  {
+   "title": "Thermal equilibrium and the zeroth law",
+   "explain": "If A is in equilibrium with C and B is in equilibrium with C, then A and B are in equilibrium. A thermometer works because of this law."
+  },
+  {
+   "title": "Heat, work and internal energy",
+   "explain": "Heat and work are energy in transit and depend on the path. Internal energy is a state function: in an ideal gas it is purely the kinetic energy of molecules and depends only on T."
+  },
+  {
+   "title": "Reading P–V diagrams",
+   "explain": "Isobaric: horizontal line; isochoric: vertical line; isothermal: hyperbola; adiabatic: steeper curve. Expansion (V increasing) → W positive; compression → W negative."
+  },
+  {
+   "title": "Quasi-static processes",
+   "explain": "A process done infinitely slowly so the system is always in equilibrium. Only quasi-static processes can be drawn as curves on a P–V diagram and can be reversible."
+  },
+  {
+   "title": "Reversible and irreversible processes",
+   "explain": "A reversible process can be run backwards so that both system and surroundings return exactly to the start. Friction, free expansion, heat flow across a finite temperature difference and mixing make processes irreversible. All natural processes are irreversible."
+  },
+  {
+   "title": "Second law of thermodynamics",
+   "explain": "Kelvin–Planck: no process whose only result is converting heat completely into work. Clausius: no process whose only result is transferring heat from a colder to a hotter body. Both statements are equivalent."
+  },
+  {
+   "title": "Syllabus note",
+   "explain": "The current NTA syllabus lists the zeroth, first and second laws, processes and reversible/irreversible processes. Heat-engine/refrigerator details and the Carnot cycle are not listed separately, so practise the first law and P–V work most."
+  }
+ ],
+ "ratta": [
+  "ΔQ = ΔU + ΔW;  ΔU = nCvΔT always.",
+  "Isothermal: W = nRT ln(V₂/V₁);  adiabatic: PVᵞ = const, W = nRΔT/(γ − 1).",
+  "Isobaric: W = nRΔT;  isochoric: W = 0.",
+  "Cp − Cv = R;  γ = 5/3, 7/5, 4/3.",
+  "Work = area under P–V;  cycle → area enclosed.",
+  "Adiabatic slope = γ × isothermal slope.",
+  "Natural processes are irreversible."
+ ],
+ "verifiedOn": "2026-11-13"
+}
