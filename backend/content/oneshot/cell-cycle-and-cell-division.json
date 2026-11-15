@@ -1,0 +1,164 @@
+{
+ "slug": "cell-cycle-and-cell-division",
+ "subject": "Biology",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Cell Cycle and Cell Division"
+ },
+ "title": "Cell Cycle and Cell Division",
+ "readMinutes": 14,
+ "summary": [
+  "The cell cycle is a cell growing, copying its DNA and dividing into two. Interphase (G₁ → S → G₂) takes over 95% of the cycle; the actual division (M phase) is short (about 1 hour in a human cell, out of a ~24-hour cycle).",
+  "In S phase DNA doubles (2C → 4C) but the chromosome number stays the same, because each chromosome now has two sister chromatids.",
+  "Mitosis (equational division): 2n → 2n, two identical cells — growth and repair. Meiosis (reductional division): 2n → n, four cells — gametes, with variation from crossing over.",
+  "Exam core: markers of each mitotic stage, the 5 sub-stages of prophase I (leptotene, zygotene, pachytene, diplotene, diakinesis), and chromosome number and DNA content at each stage."
+ ],
+ "formulas": [
+  {
+   "name": "Phases of the cell cycle",
+   "formula": "Interphase = G₁ (growth) → S (DNA synthesis) → G₂ (proteins for mitosis);  M phase = karyokinesis + cytokinesis;  G₀ = quiescent stage",
+   "when": "Order of the cycle.",
+   "mistake": "G₀ cells are metabolically active; they just don't divide (unless needed)."
+  },
+  {
+   "name": "Duration",
+   "formula": "human cell in culture ~24 h (M phase ~1 h);  yeast ~90 min",
+   "when": "Timing questions."
+  },
+  {
+   "name": "Mitosis output",
+   "formula": "1 cell (2n) → 2 cells (2n), genetically identical",
+   "when": "Somatic cells, growth, repair."
+  },
+  {
+   "name": "Meiosis output",
+   "formula": "1 cell (2n) → 4 cells (n);  meiosis I reductional, meiosis II equational (like mitosis)",
+   "when": "Gamete formation.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "DNA content and chromosome number",
+   "formula": "G₁: 2n, 2C → S/G₂: 2n, 4C → after meiosis I: n, 2C → after meiosis II: n, C",
+   "when": "DNA/chromosomes at any stage.",
+   "tag": "PYQ favourite",
+   "note": "Chromosome number halves only in meiosis I (anaphase I); it doesn't change in S phase."
+  },
+  {
+   "name": "Cells and divisions",
+   "formula": "cells after k rounds = 2ᵏ;   mitotic divisions needed for N cells = N − 1",
+   "when": "Counting questions.",
+   "note": "128 cells need 7 generations but 127 divisions."
+  },
+  {
+   "name": "Meiosis counts",
+   "formula": "1 meiosis → 4 pollen grains (or 4 microspores) → but only 1 egg (3 polar bodies/megaspores degenerate);  N pollen need N/4 meioses;  N eggs need N meioses",
+   "when": "Counting gametes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Prophase markers",
+   "formula": "chromatin condenses into chromosomes;  centrosomes move to opposite poles;  by the end nucleolus, Golgi, ER and nuclear envelope disappear",
+   "when": "Identifying prophase."
+  },
+  {
+   "name": "Metaphase markers",
+   "formula": "chromosomes on the equatorial (metaphase) plate;  spindle fibres attached to kinetochores;  best stage to study chromosome morphology",
+   "when": "Identifying metaphase."
+  },
+  {
+   "name": "Anaphase markers",
+   "formula": "centromeres split, sister chromatids (now daughter chromosomes) move to opposite poles;  centromere leads, arms trail",
+   "when": "Identifying anaphase."
+  },
+  {
+   "name": "Telophase markers",
+   "formula": "chromosomes decondense at the poles;  nuclear envelope, nucleolus, Golgi and ER re-form",
+   "when": "Identifying telophase."
+  },
+  {
+   "name": "Cytokinesis",
+   "formula": "animal: a furrow in the cell membrane splits the cell in two;  plant: cell plate (middle lamella) grows from the centre outward;  karyokinesis without cytokinesis ⇒ syncytium (liquid endosperm of coconut)",
+   "when": "Division of cytoplasm."
+  },
+  {
+   "name": "Prophase I sub-stages",
+   "formula": "Leptotene (chromosomes become visible) → Zygotene (synapsis, synaptonemal complex, bivalent/tetrad) → Pachytene (crossing over, recombination nodules, recombinase) → Diplotene (synaptonemal complex dissolves, chiasmata visible) → Diakinesis (terminalisation of chiasmata, nucleolus and nuclear envelope disappear)",
+   "when": "Longest stage of meiosis.",
+   "tag": "PYQ favourite",
+   "note": "Crossing over happens in pachytene; chiasmata become visible in diplotene — two different things."
+  },
+  {
+   "name": "Meiosis I vs II key events",
+   "formula": "Anaphase I: homologous chromosomes separate (sister chromatids stay together);  interkinesis: no DNA replication;  anaphase II: centromeres split, sister chromatids separate",
+   "when": "Comparing stages of meiosis."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Counts at each stage",
+   "problem": "A cell has 2n = 16 and 2C DNA in G₁. Chromosomes and DNA in G₂, after meiosis I and after meiosis II?",
+   "solution": "G₂: 16 chromosomes, 4C. After meiosis I (each cell): 8 chromosomes (each with 2 chromatids), 2C. After meiosis II: 8 chromosomes, C."
+  },
+  {
+   "title": "Divisions vs generations",
+   "problem": "How many mitotic generations and how many divisions make 128 cells from one?",
+   "solution": "2⁷ = 128 ⇒ 7 generations. Divisions = 128 − 1 = 127."
+  },
+  {
+   "title": "Meioses for pollen",
+   "problem": "How many meiotic divisions produce 400 pollen grains?",
+   "solution": "1 meiosis → 4 pollen ⇒ 400/4 = 100."
+  },
+  {
+   "title": "Bivalents",
+   "problem": "How many bivalents (tetrads) are there in prophase I of a cell with 2n = 32?",
+   "solution": "A bivalent is a homologous pair ⇒ 32/2 = 16."
+  },
+  {
+   "title": "Meioses for eggs",
+   "problem": "How many meiotic divisions are needed for 100 eggs (female)?",
+   "solution": "Each meiosis gives only 1 functional egg ⇒ 100."
+  },
+  {
+   "title": "Significance of mitosis",
+   "problem": "Why is mitosis important?",
+   "solution": "Growth of multicellular organisms, cell repair (replacing gut lining, skin and RBCs), restoring the nucleo-cytoplasmic ratio, and continuous growth in plants from apical and lateral cambium."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Interphase",
+   "explain": "G₁: the cell is metabolically active and grows, without replicating DNA. S: DNA replication; in animal cells the centriole also duplicates (in the cytoplasm). G₂: proteins are made in preparation for mitosis. Cells that stop dividing enter G₀ (quiescent) — e.g. heart cells."
+  },
+  {
+   "title": "Where mitosis occurs",
+   "explain": "In animals mitosis occurs only in diploid somatic cells; in plants it can occur in both haploid and diploid cells (the gametophyte also grows by mitosis)."
+  },
+  {
+   "title": "Significance of meiosis",
+   "explain": "It keeps the chromosome number of a species constant across generations in sexual reproduction (gametes n, fertilisation restores 2n). Crossing over and independent assortment produce genetic variation — essential for evolution."
+  },
+  {
+   "title": "Synaptonemal complex and crossing over",
+   "explain": "In zygotene homologous chromosomes pair and are joined by the synaptonemal complex (synapsis). In pachytene non-sister chromatids exchange segments (crossing over) with the enzyme recombinase. In diplotene the X-shaped chiasmata are seen where crossing over happened."
+  },
+  {
+   "title": "Long diplotene",
+   "explain": "In oocytes of some vertebrates diplotene can last for months or years."
+  },
+  {
+   "title": "Meiosis II",
+   "explain": "After interkinesis, meiosis II begins without DNA replication — it resembles mitosis. In anaphase II the centromeres split and sister chromatids separate. The result is four haploid cells."
+  }
+ ],
+ "ratta": [
+  "G₁ → S → G₂ → M;  G₀ quiescent.",
+  "S phase: DNA 2C → 4C, chromosome number unchanged.",
+  "Human cycle ~24 h, M phase ~1 h;  yeast ~90 min.",
+  "Mitosis 2n → 2n (2 cells);  meiosis 2n → n (4 cells).",
+  "Prophase I: Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis.",
+  "Synapsis — zygotene;  crossing over — pachytene;  chiasmata — diplotene.",
+  "Anaphase I: homologues separate;  anaphase II: sister chromatids separate.",
+  "N cells need N − 1 divisions;  N pollen need N/4 meioses."
+ ]
+}

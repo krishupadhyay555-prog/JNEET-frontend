@@ -136,6 +136,9 @@ def _check_and_write(doc, syllabus, filename, lang):
     if len(doc["formulas"]) < 8: errors.append("too few formulas for a full OneShot")
     if len(doc["examples"]) < 5: errors.append("too few examples")
     if len(doc["topics"]) < 6: errors.append("too few topics")
+    for f in doc["formulas"]:
+        if f.get("unit") and any(w in f["unit"] for w in ("PYQ", "Ratta", "favourite")):
+            errors.append(f"[{f['name']}] tag passed as unit — use tag=")
     for key, items, field in (("formula", doc["formulas"], "name"), ("example", doc["examples"], "title"), ("topic", doc["topics"], "title")):
         seen = [i[field] for i in items]
         dup = {k for k in seen if seen.count(k) > 1}

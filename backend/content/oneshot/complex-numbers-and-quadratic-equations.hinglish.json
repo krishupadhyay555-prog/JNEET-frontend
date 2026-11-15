@@ -1,105 +1,196 @@
 {
  "slug": "complex-numbers-and-quadratic-equations",
  "subject": "Mathematics",
+ "verifiedOn": "2026-11-15",
  "chapters": {
   "JEE": "Complex Numbers and Quadratic Equations"
  },
  "title": "Complex Numbers and Quadratic Equations",
- "readMinutes": 13,
+ "readMinutes": 18,
  "summary": [
-  "i ek naya number hai jiska square −1 hai. Har complex number z = a + ib ek point (a, b) hai Argand plane mein — real part x-axis, imaginary part y-axis.",
-  "Do tareeke se dekho: cartesian (a + ib) jodne-ghatane ke liye aur polar (r, θ) guna-bhaag ke liye — polar mein multiply karna = modulus guna, argument jodo.",
-  "Quadratic ax² + bx + c = 0 ki poori kahani discriminant D = b² − 4ac aur roots ke relation (α + β = −b/a, αβ = c/a) mein hai.",
-  "JEE mein sabse zyada: i ki powers, modulus-argument, conjugate ke properties, aur roots ke symmetric expressions (α² + β², 1/α + 1/β …)."
+  "Complex number z = x + iy (i² = −1) ek point (x, y) hai Argand plane mein. Modulus |z| = origin se doori, argument arg z = positive x-axis se angle. Polar form z = r(cosθ + i sinθ) = re^{iθ} multiplication aur powers ko aasaan banata hai.",
+  "Conjugate z̄ = x − iy reflection hai real axis mein. z z̄ = |z|², |z₁z₂| = |z₁||z₂|, arg(z₁z₂) = arg z₁ + arg z₂ — JEE ke saare simplifications inhi par.",
+  "Cube roots of unity 1, ω, ω² (1 + ω + ω² = 0, ω³ = 1) ek alag favourite topic hai. Locus sawal |z − z₁| = r (circle) aur |z − z₁| = |z − z₂| (perpendicular bisector) se hal hote hain.",
+  "Quadratic ax² + bx + c = 0 ke roots (−b ± √D)/2a; D = b² − 4ac nature batata hai. Sum = −b/a, product = c/a — inse bina roots nikaale symmetric expressions aur naye equations ban jaate hain."
  ],
  "formulas": [
   {
    "name": "Powers of i",
-   "formula": "i¹ = i, i² = −1, i³ = −i, i⁴ = 1 (har 4 par repeat)",
-   "when": "iⁿ: n ko 4 se divide karo, remainder dekho."
+   "formula": "i² = −1, i³ = −i, i⁴ = 1;  iⁿ = i^{n mod 4};  i + i² + i³ + i⁴ = 0",
+   "when": "Bade powers.",
+   "mistake": "√a √b = √(ab) sirf jab dono non-negative ho; √(−4)√(−9) = −6, +6 nahi."
   },
   {
-   "name": "Modulus and conjugate",
-   "formula": "|z| = √(a² + b²),   z̄ = a − ib,   z · z̄ = |z|²",
-   "when": "Division ya modulus wale sawal."
+   "name": "Algebra of complex numbers",
+   "formula": "(a + ib) ± (c + id) = (a ± c) + i(b ± d);  (a + ib)(c + id) = (ac − bd) + i(ad + bc);  division: numerator aur denominator ko denominator ke conjugate se multiply karo",
+   "when": "Basic operations."
   },
   {
-   "name": "Polar form",
-   "formula": "z = r (cosθ + i sinθ) = r e^{iθ},   arg(z₁z₂) = arg z₁ + arg z₂",
-   "when": "Guna-bhaag aur powers.",
-   "mistake": "Principal argument (−π, π] mein hota hai; quadrant dekh kar θ lo."
-  },
-  {
-   "name": "Triangle inequality",
-   "formula": "|z₁ + z₂| ≤ |z₁| + |z₂|",
-   "when": "Maximum/minimum |z| wale sawal."
-  },
-  {
-   "name": "Quadratic formula",
-   "formula": "x = [−b ± √(b² − 4ac)] / 2a,   D = b² − 4ac",
-   "when": "Roots nikalna, nature dekhna.",
-   "mistake": "Real coefficients mein D < 0 ⇒ roots conjugate pair."
-  },
-  {
-   "name": "Roots and coefficients",
-   "formula": "α + β = −b/a,   αβ = c/a",
-   "when": "Symmetric expressions.",
+   "name": "Conjugate properties",
+   "formula": "z + z̄ = 2 Re z;  z − z̄ = 2i Im z;  z z̄ = |z|²;  conj(z₁ ± z₂) = z̄₁ ± z̄₂;  conj(z₁z₂) = z̄₁z̄₂;  z real ⇔ z = z̄;  purely imaginary ⇔ z = −z̄",
+   "when": "Simplification.",
    "tag": "PYQ favourite"
   },
   {
-   "name": "Equation from roots",
-   "formula": "x² − (α + β) x + αβ = 0",
-   "when": "Diye gaye roots se equation banana."
+   "name": "Modulus properties",
+   "formula": "|z| = √(x² + y²);  |z₁z₂| = |z₁||z₂|;  |z₁/z₂| = |z₁|/|z₂|;  |zⁿ| = |z|ⁿ;  |z₁ + z₂|² = |z₁|² + |z₂|² + 2Re(z₁z̄₂)",
+   "when": "Modulus nikaalna.",
+   "note": "|z₁ + z₂| ≠ |z₁| + |z₂| aam taur par."
+  },
+  {
+   "name": "Triangle inequality",
+   "formula": "||z₁| − |z₂|| ≤ |z₁ + z₂| ≤ |z₁| + |z₂|",
+   "when": "Max/min of |z| type sawal.",
+   "note": "Equality tab jab z₁, z₂ same direction (ya ulti) mein hon."
+  },
+  {
+   "name": "Argument",
+   "formula": "tanα = |y/x|;  principal arg θ ∈ (−π, π]:  Q1 α,  Q2 π − α,  Q3 −(π − α),  Q4 −α;  arg(z₁z₂) = arg z₁ + arg z₂;  arg(z₁/z₂) = arg z₁ − arg z₂",
+   "when": "Angle nikaalna.",
+   "mistake": "Quadrant dekh kar θ lo — sirf tan⁻¹(y/x) galat ho sakta hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Polar and Euler form",
+   "formula": "z = r(cosθ + i sinθ) = re^{iθ};  z₁z₂ = r₁r₂ e^{i(θ₁ + θ₂)}",
+   "when": "Multiplication, powers, rotation."
+  },
+  {
+   "name": "De Moivre's theorem",
+   "formula": "(cosθ + i sinθ)ⁿ = cos nθ + i sin nθ",
+   "when": "Bade powers jaise (1 + i)¹⁰."
+  },
+  {
+   "name": "Square root of a + ib",
+   "formula": "√(a + ib) = ±[√((|z| + a)/2) + i (sign of b) √((|z| − a)/2)]",
+   "when": "Complex ka square root.",
+   "note": "b negative ho to imaginary part ka sign negative."
   },
   {
    "name": "Cube roots of unity",
-   "formula": "1, ω, ω²;   ω = (−1 + i√3)/2,   1 + ω + ω² = 0,   ω³ = 1",
-   "when": "Simplification wale sawal."
+   "formula": "1, ω, ω²;  ω = (−1 + i√3)/2;  1 + ω + ω² = 0;  ω³ = 1;  ω̄ = ω²",
+   "when": "ω wale simplification.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Locus in Argand plane",
+   "formula": "|z − z₀| = r: circle;  |z − z₁| = |z − z₂|: perpendicular bisector;  |z − z₁| + |z − z₂| = 2a (> |z₁ − z₂|): ellipse;  arg((z − z₁)/(z − z₂)) = constant: circle ka arc",
+   "when": "Locus wale sawal."
+  },
+  {
+   "name": "Quadratic formula and discriminant",
+   "formula": "x = (−b ± √D)/2a,  D = b² − 4ac;  D > 0 real distinct,  D = 0 real equal,  D < 0 complex conjugate pair;  D perfect square (rational coefficients) ⇒ rational roots",
+   "when": "Roots aur unki nature.",
+   "tag": "PYQ favourite",
+   "note": "Complex roots hamesha conjugate pair mein (real coefficients ke saath)."
+  },
+  {
+   "name": "Sum and product of roots",
+   "formula": "α + β = −b/a;  αβ = c/a;  α² + β² = (α + β)² − 2αβ;  |α − β| = √D/|a|",
+   "when": "Bina roots nikaale symmetric expressions."
+  },
+  {
+   "name": "Equation from roots",
+   "formula": "x² − (α + β)x + αβ = 0",
+   "when": "Diye roots se equation banana."
+  },
+  {
+   "name": "Common root",
+   "formula": "a₁x² + b₁x + c₁ = 0 aur a₂x² + b₂x + c₂ = 0 ka ek common root: (c₁a₂ − c₂a₁)² = (a₁b₂ − a₂b₁)(b₁c₂ − b₂c₁);  dono roots common: a₁/a₂ = b₁/b₂ = c₁/c₂",
+   "when": "Common root ke sawal."
+  },
+  {
+   "name": "Extreme value of a quadratic",
+   "formula": "ax² + bx + c ka vertex x = −b/2a par;  value = −D/4a;  a > 0 ⇒ minimum, a < 0 ⇒ maximum",
+   "when": "Range/min/max."
   }
  ],
  "examples": [
   {
-   "title": "Division in one line",
-   "problem": "(1 + i)/(1 − i) aur (1 + i)⁸?",
-   "solution": "(1 + i)/(1 − i) = (1 + i)²/(1² + 1²) = 2i/2 = i. (1 + i)² = 2i ⇒ (1 + i)⁸ = (2i)⁴ = 16."
+   "title": "i ka bada power",
+   "problem": "i²⁰²⁶ = ?",
+   "solution": "2026 = 4 × 506 + 2 ⇒ i²⁰²⁶ = i² = −1."
   },
   {
-   "title": "Symmetric expression",
-   "problem": "α, β roots hain x² − 3x + 1 = 0 ke. α² + β²?",
-   "solution": "α + β = 3, αβ = 1 ⇒ α² + β² = (α + β)² − 2αβ = 9 − 2 = 7."
+   "title": "Modulus aur argument",
+   "problem": "z = 1 + i√3 ka modulus aur principal argument?",
+   "solution": "|z| = √(1 + 3) = 2. Q1 mein, tanα = √3 ⇒ arg z = π/3. Polar: 2(cos π/3 + i sin π/3)."
+  },
+  {
+   "title": "Division",
+   "problem": "(1 + i)/(1 − i) = ?",
+   "solution": "Conjugate (1 + i) se multiply: (1 + i)²/(1 + 1) = 2i/2 = i."
+  },
+  {
+   "title": "Square root",
+   "problem": "√(5 + 12i) = ?",
+   "solution": "|z| = 13. √((13 + 5)/2) = 3, √((13 − 5)/2) = 2, b > 0 ⇒ ±(3 + 2i). Check: (3 + 2i)² = 9 − 4 + 12i ✓."
+  },
+  {
+   "title": "ω wala simplification",
+   "problem": "(1 + ω − ω²)³ = ?",
+   "solution": "1 + ω = −ω² ⇒ 1 + ω − ω² = −2ω² ⇒ (−2ω²)³ = −8ω⁶ = −8."
+  },
+  {
+   "title": "Sum of squares of roots",
+   "problem": "x² − 5x + 6 = 0 ke roots ka α² + β²?",
+   "solution": "α + β = 5, αβ = 6 ⇒ 25 − 12 = 13."
+  },
+  {
+   "title": "Roots se equation",
+   "problem": "Roots 2 + √3 aur 2 − √3 wali quadratic?",
+   "solution": "Sum 4, product 4 − 3 = 1 ⇒ x² − 4x + 1 = 0."
   },
   {
    "title": "Equal roots",
    "problem": "x² + kx + 9 = 0 ke roots barabar hon to k?",
-   "solution": "D = 0 ⇒ k² − 36 = 0 ⇒ k = ±6."
+   "solution": "D = k² − 36 = 0 ⇒ k = ±6."
+  },
+  {
+   "title": "Minimum value",
+   "problem": "x² − 4x + 7 ki minimum value?",
+   "solution": "Vertex x = 2 par, value 4 − 8 + 7 = 3 (= −D/4a = 12/4)."
+  },
+  {
+   "title": "Locus",
+   "problem": "|z − 1| = |z + 1| ka locus?",
+   "solution": "z ki (1, 0) aur (−1, 0) se barabar doori ⇒ perpendicular bisector x = 0, yaani imaginary axis."
   }
  ],
  "topics": [
   {
    "title": "Argand plane",
-   "explain": "z = a + ib point (a, b) hai. |z| origin se doori, arg z positive x-axis se angle. |z − z₁| = r ek circle hai jiska centre z₁ hai."
+   "explain": "x-axis real axis, y-axis imaginary axis. z = x + iy ka point (x, y). |z₁ − z₂| = do points ki doori. iz = z ko 90° anticlockwise ghumana."
   },
   {
-   "title": "Conjugate ke properties",
-   "explain": "(z₁ + z₂)‾ = z̄₁ + z̄₂, (z₁z₂)‾ = z̄₁ z̄₂, z real ⇔ z = z̄, z purely imaginary ⇔ z + z̄ = 0."
+   "title": "Rotation",
+   "explain": "z₂ − z₀ = (z₁ − z₀)(r₂/r₁)e^{iθ}: point z₁ ko z₀ ke around θ se ghumaaya. Equilateral triangle: z₁² + z₂² + z₃² = z₁z₂ + z₂z₃ + z₃z₁."
   },
   {
-   "title": "Nature of roots",
-   "explain": "D > 0: do alag real roots; D = 0: equal real roots; D < 0: non-real conjugate roots. Agar a, b, c rational aur D perfect square, to roots rational."
+   "title": "ω ke uses",
+   "explain": "x³ = 1 ke roots. x² + x + 1 = 0 ke roots ω, ω². 1, ω, ω² Argand plane mein equilateral triangle ke vertices (unit circle par). a + bω + cω² type expressions ka modulus."
   },
   {
-   "title": "Common root",
-   "explain": "Do quadratics a₁x² + b₁x + c₁ = 0 aur a₂x² + b₂x + c₂ = 0 ka ek common root ho to (c₁a₂ − c₂a₁)² = (b₁c₂ − b₂c₁)(a₁b₂ − a₂b₁)."
+   "title": "Nature of roots aur graph",
+   "explain": "y = ax² + bx + c parabola: a > 0 upar khula. D > 0 ⇒ x-axis ko do jagah kaatta; D = 0 ⇒ chhoota; D < 0 ⇒ nahi kaatta (a > 0 par hamesha positive)."
   },
   {
-   "title": "Sign of a quadratic",
-   "explain": "a > 0 aur D < 0 ⇒ ax² + bx + c har real x ke liye positive. Graph upward parabola jo x-axis ko chhoota hi nahi."
+   "title": "Sign scheme aur location of roots",
+   "explain": "Dono roots k se bade: D ≥ 0, af(k) > 0, −b/2a > k. Ek root k se chhota ek bada: af(k) < 0. Inequalities ax² + bx + c > 0 roots ke bahar (a > 0)."
+  },
+  {
+   "title": "Symmetric functions",
+   "explain": "α³ + β³ = (α + β)³ − 3αβ(α + β). 1/α + 1/β = (α + β)/αβ. Roots ko badal kar (jaise 1/α, α + 1) nayi equation: x ko us transformation ke ulte se badlo."
   }
  ],
  "ratta": [
-  "iⁿ cycle: i, −1, −i, 1.",
-  "ω = (−1 + i√3)/2, ω² = (−1 − i√3)/2.",
-  "α + β = −b/a, αβ = c/a."
- ],
- "verifiedOn": "2026-11-12"
+  "iⁿ: cycle i, −1, −i, 1.",
+  "z z̄ = |z|²;  |z₁z₂| = |z₁||z₂|;  arg(z₁z₂) = arg z₁ + arg z₂.",
+  "Principal arg (−π, π]; quadrant dekho.",
+  "1 + ω + ω² = 0;  ω³ = 1;  ω = (−1 + i√3)/2.",
+  "√(5 + 12i) = ±(3 + 2i).",
+  "D = b² − 4ac;  α + β = −b/a;  αβ = c/a.",
+  "Equation: x² − (sum)x + product = 0.",
+  "Extreme value −D/4a at x = −b/2a."
+ ]
 }

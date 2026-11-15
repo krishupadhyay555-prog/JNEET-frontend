@@ -1,0 +1,196 @@
+{
+ "slug": "complex-numbers-and-quadratic-equations",
+ "subject": "Mathematics",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "JEE": "Complex Numbers and Quadratic Equations"
+ },
+ "title": "Complex Numbers and Quadratic Equations",
+ "readMinutes": 18,
+ "summary": [
+  "A complex number z = x + iy (i² = −1) is a point (x, y) in the Argand plane. Modulus |z| = distance from the origin; argument arg z = angle from the positive x-axis. The polar form z = r(cos θ + i sin θ) = re^{iθ} makes multiplication and powers easy.",
+  "The conjugate z̄ = x − iy is the reflection in the real axis. z z̄ = |z|², |z₁z₂| = |z₁||z₂|, arg(z₁z₂) = arg z₁ + arg z₂ — almost every JEE simplification uses these.",
+  "Cube roots of unity 1, ω, ω² (1 + ω + ω² = 0, ω³ = 1) are a separate favourite. Locus questions use |z − z₁| = r (circle) and |z − z₁| = |z − z₂| (perpendicular bisector).",
+  "The roots of ax² + bx + c = 0 are (−b ± √D)/2a; D = b² − 4ac decides their nature. Sum = −b/a, product = c/a — these give symmetric expressions and new equations without finding the roots."
+ ],
+ "formulas": [
+  {
+   "name": "Powers of i",
+   "formula": "i² = −1, i³ = −i, i⁴ = 1;  iⁿ = i^{n mod 4};  i + i² + i³ + i⁴ = 0",
+   "when": "Large powers.",
+   "mistake": "√a √b = √(ab) only when both are non-negative; √(−4)√(−9) = −6, not +6."
+  },
+  {
+   "name": "Algebra of complex numbers",
+   "formula": "(a + ib) ± (c + id) = (a ± c) + i(b ± d);  (a + ib)(c + id) = (ac − bd) + i(ad + bc);  division: multiply numerator and denominator by the conjugate of the denominator",
+   "when": "Basic operations."
+  },
+  {
+   "name": "Conjugate properties",
+   "formula": "z + z̄ = 2 Re z;  z − z̄ = 2i Im z;  z z̄ = |z|²;  conj(z₁ ± z₂) = z̄₁ ± z̄₂;  conj(z₁z₂) = z̄₁z̄₂;  z real ⇔ z = z̄;  purely imaginary ⇔ z = −z̄",
+   "when": "Simplification.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Modulus properties",
+   "formula": "|z| = √(x² + y²);  |z₁z₂| = |z₁||z₂|;  |z₁/z₂| = |z₁|/|z₂|;  |zⁿ| = |z|ⁿ;  |z₁ + z₂|² = |z₁|² + |z₂|² + 2Re(z₁z̄₂)",
+   "when": "Finding moduli.",
+   "note": "|z₁ + z₂| ≠ |z₁| + |z₂| in general."
+  },
+  {
+   "name": "Triangle inequality",
+   "formula": "||z₁| − |z₂|| ≤ |z₁ + z₂| ≤ |z₁| + |z₂|",
+   "when": "Max/min of |z| questions.",
+   "note": "Equality holds when z₁ and z₂ point in the same (or opposite) direction."
+  },
+  {
+   "name": "Argument",
+   "formula": "tan α = |y/x|;  principal arg θ ∈ (−π, π]:  Q1 α,  Q2 π − α,  Q3 −(π − α),  Q4 −α;  arg(z₁z₂) = arg z₁ + arg z₂;  arg(z₁/z₂) = arg z₁ − arg z₂",
+   "when": "Finding the angle.",
+   "mistake": "Pick θ by quadrant — tan⁻¹(y/x) alone can be wrong.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Polar and Euler form",
+   "formula": "z = r(cos θ + i sin θ) = re^{iθ};  z₁z₂ = r₁r₂ e^{i(θ₁ + θ₂)}",
+   "when": "Multiplication, powers, rotation."
+  },
+  {
+   "name": "De Moivre's theorem",
+   "formula": "(cos θ + i sin θ)ⁿ = cos nθ + i sin nθ",
+   "when": "Large powers like (1 + i)¹⁰."
+  },
+  {
+   "name": "Square root of a + ib",
+   "formula": "√(a + ib) = ±[√((|z| + a)/2) + i (sign of b) √((|z| − a)/2)]",
+   "when": "Square root of a complex number.",
+   "note": "If b is negative the imaginary part is negative."
+  },
+  {
+   "name": "Cube roots of unity",
+   "formula": "1, ω, ω²;  ω = (−1 + i√3)/2;  1 + ω + ω² = 0;  ω³ = 1;  ω̄ = ω²",
+   "when": "Simplifying with ω.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Locus in Argand plane",
+   "formula": "|z − z₀| = r: circle;  |z − z₁| = |z − z₂|: perpendicular bisector;  |z − z₁| + |z − z₂| = 2a (> |z₁ − z₂|): ellipse;  arg((z − z₁)/(z − z₂)) = constant: arc of a circle",
+   "when": "Locus questions."
+  },
+  {
+   "name": "Quadratic formula and discriminant",
+   "formula": "x = (−b ± √D)/2a,  D = b² − 4ac;  D > 0 real distinct,  D = 0 real equal,  D < 0 complex conjugate pair;  D a perfect square (rational coefficients) ⇒ rational roots",
+   "when": "Roots and their nature.",
+   "tag": "PYQ favourite",
+   "note": "With real coefficients, complex roots always come in conjugate pairs."
+  },
+  {
+   "name": "Sum and product of roots",
+   "formula": "α + β = −b/a;  αβ = c/a;  α² + β² = (α + β)² − 2αβ;  |α − β| = √D/|a|",
+   "when": "Symmetric expressions without solving."
+  },
+  {
+   "name": "Equation from roots",
+   "formula": "x² − (α + β)x + αβ = 0",
+   "when": "Forming an equation from given roots."
+  },
+  {
+   "name": "Common root",
+   "formula": "One common root of a₁x² + b₁x + c₁ = 0 and a₂x² + b₂x + c₂ = 0: (c₁a₂ − c₂a₁)² = (a₁b₂ − a₂b₁)(b₁c₂ − b₂c₁);  both roots common: a₁/a₂ = b₁/b₂ = c₁/c₂",
+   "when": "Common-root questions."
+  },
+  {
+   "name": "Extreme value of a quadratic",
+   "formula": "vertex of ax² + bx + c at x = −b/2a;  value = −D/4a;  a > 0 ⇒ minimum, a < 0 ⇒ maximum",
+   "when": "Range/min/max."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Large power of i",
+   "problem": "i²⁰²⁶ = ?",
+   "solution": "2026 = 4 × 506 + 2 ⇒ i²⁰²⁶ = i² = −1."
+  },
+  {
+   "title": "Modulus and argument",
+   "problem": "Modulus and principal argument of z = 1 + i√3?",
+   "solution": "|z| = √(1 + 3) = 2. In Q1, tan α = √3 ⇒ arg z = π/3. Polar: 2(cos π/3 + i sin π/3)."
+  },
+  {
+   "title": "Division",
+   "problem": "(1 + i)/(1 − i) = ?",
+   "solution": "Multiply by the conjugate (1 + i): (1 + i)²/(1 + 1) = 2i/2 = i."
+  },
+  {
+   "title": "Square root",
+   "problem": "√(5 + 12i) = ?",
+   "solution": "|z| = 13. √((13 + 5)/2) = 3, √((13 − 5)/2) = 2, b > 0 ⇒ ±(3 + 2i). Check: (3 + 2i)² = 9 − 4 + 12i ✓."
+  },
+  {
+   "title": "Simplifying with ω",
+   "problem": "(1 + ω − ω²)³ = ?",
+   "solution": "1 + ω = −ω² ⇒ 1 + ω − ω² = −2ω² ⇒ (−2ω²)³ = −8ω⁶ = −8."
+  },
+  {
+   "title": "Sum of squares of roots",
+   "problem": "α² + β² for the roots of x² − 5x + 6 = 0?",
+   "solution": "α + β = 5, αβ = 6 ⇒ 25 − 12 = 13."
+  },
+  {
+   "title": "Equation from roots",
+   "problem": "Quadratic with roots 2 + √3 and 2 − √3?",
+   "solution": "Sum 4, product 4 − 3 = 1 ⇒ x² − 4x + 1 = 0."
+  },
+  {
+   "title": "Equal roots",
+   "problem": "For what k does x² + kx + 9 = 0 have equal roots?",
+   "solution": "D = k² − 36 = 0 ⇒ k = ±6."
+  },
+  {
+   "title": "Minimum value",
+   "problem": "Minimum value of x² − 4x + 7?",
+   "solution": "At the vertex x = 2 the value is 4 − 8 + 7 = 3 (= −D/4a = 12/4)."
+  },
+  {
+   "title": "Locus",
+   "problem": "Locus of |z − 1| = |z + 1|?",
+   "solution": "z is equidistant from (1, 0) and (−1, 0) ⇒ perpendicular bisector x = 0, i.e. the imaginary axis."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Argand plane",
+   "explain": "The x-axis is the real axis, the y-axis the imaginary axis. z = x + iy is the point (x, y). |z₁ − z₂| is the distance between two points. Multiplying by i rotates z by 90° anticlockwise."
+  },
+  {
+   "title": "Rotation",
+   "explain": "z₂ − z₀ = (z₁ − z₀)(r₂/r₁)e^{iθ}: z₁ rotated about z₀ by θ. Equilateral triangle: z₁² + z₂² + z₃² = z₁z₂ + z₂z₃ + z₃z₁."
+  },
+  {
+   "title": "Uses of ω",
+   "explain": "Roots of x³ = 1. Roots of x² + x + 1 = 0 are ω and ω². 1, ω, ω² are vertices of an equilateral triangle on the unit circle. Moduli of expressions like a + bω + cω²."
+  },
+  {
+   "title": "Nature of roots and the graph",
+   "explain": "y = ax² + bx + c is a parabola opening upward if a > 0. D > 0 ⇒ it cuts the x-axis twice; D = 0 ⇒ it touches; D < 0 ⇒ it doesn't cut (always positive when a > 0)."
+  },
+  {
+   "title": "Sign scheme and location of roots",
+   "explain": "Both roots greater than k: D ≥ 0, af(k) > 0, −b/2a > k. One root less than k and one greater: af(k) < 0. For a > 0, ax² + bx + c > 0 outside the roots."
+  },
+  {
+   "title": "Symmetric functions",
+   "explain": "α³ + β³ = (α + β)³ − 3αβ(α + β). 1/α + 1/β = (α + β)/αβ. For an equation with transformed roots (like 1/α, α + 1), replace x by the inverse of that transformation."
+  }
+ ],
+ "ratta": [
+  "iⁿ: cycle i, −1, −i, 1.",
+  "z z̄ = |z|²;  |z₁z₂| = |z₁||z₂|;  arg(z₁z₂) = arg z₁ + arg z₂.",
+  "Principal arg in (−π, π]; check the quadrant.",
+  "1 + ω + ω² = 0;  ω³ = 1;  ω = (−1 + i√3)/2.",
+  "√(5 + 12i) = ±(3 + 2i).",
+  "D = b² − 4ac;  α + β = −b/a;  αβ = c/a.",
+  "Equation: x² − (sum)x + product = 0.",
+  "Extreme value −D/4a at x = −b/2a."
+ ]
+}

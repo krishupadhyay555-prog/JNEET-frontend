@@ -1,85 +1,164 @@
 {
  "slug": "cell-cycle-and-cell-division",
  "subject": "Biology",
+ "verifiedOn": "2026-11-15",
  "chapters": {
   "NEET": "Cell Cycle and Cell Division"
  },
  "title": "Cell Cycle and Cell Division",
- "readMinutes": 12,
+ "readMinutes": 14,
  "summary": [
-  "Cell cycle = ek cell ka bada hona, DNA copy karna aur do mein batna. Interphase (G1 → S → G2) poore cycle ka 95% se zyada time leta hai; asli division (M phase) chhota hota hai.",
+  "Cell cycle = ek cell ka bada hona, DNA copy karna aur do mein batna. Interphase (G₁ → S → G₂) poore cycle ka 95% se zyada time leta hai; asli division (M phase) chhota hota hai (human cell mein ~1 ghanta, poora cycle ~24 ghante).",
   "S phase mein DNA double hota hai (2C → 4C), lekin chromosome number same rehta hai, kyunki har chromosome mein ab do sister chromatids hain.",
   "Mitosis (equational division): 2n → 2n, do identical cells — growth, repair. Meiosis (reductional division): 2n → n, chaar cells — gametes, aur crossing over se variation.",
-  "Exam ka core: mitosis ke stages ke markers, prophase I ke 5 sub-stages, aur har stage par chromosome number + DNA content."
+  "Exam ka core: mitosis ke har stage ke markers, prophase I ke 5 sub-stages (leptotene, zygotene, pachytene, diplotene, diakinesis), aur har stage par chromosome number aur DNA content."
  ],
  "formulas": [
   {
+   "name": "Phases of the cell cycle",
+   "formula": "Interphase = G₁ (growth) → S (DNA synthesis) → G₂ (proteins for mitosis);  M phase = karyokinesis + cytokinesis;  G₀ = quiescent stage",
+   "when": "Cycle ka order.",
+   "mistake": "G₀ cells metabolically active hote hain, sirf divide nahi karte (jab tak zaroorat na ho)."
+  },
+  {
+   "name": "Duration",
+   "formula": "human cell in culture ~24 h (M phase ~1 h);  yeast ~90 min",
+   "when": "Time ke sawal."
+  },
+  {
    "name": "Mitosis output",
-   "formula": "1 cell (2n) → 2 cells (2n)",
+   "formula": "1 cell (2n) → 2 cells (2n), genetically identical",
    "when": "Somatic cells, growth, repair."
   },
   {
    "name": "Meiosis output",
-   "formula": "1 cell (2n) → 4 cells (n)",
-   "when": "Gamete formation."
+   "formula": "1 cell (2n) → 4 cells (n);  meiosis I reductional, meiosis II equational (mitosis jaisa)",
+   "when": "Gamete formation.",
+   "tag": "PYQ favourite"
   },
   {
-   "name": "DNA content",
-   "formula": "G1: 2C → S ke baad / G2: 4C → meiosis I ke baad: 2C → meiosis II ke baad: C",
-   "when": "Kisi bhi stage ka DNA nikalna.",
-   "mistake": "Chromosome number sirf meiosis I mein aadha hota hai, S phase mein nahi badalta.",
+   "name": "DNA content and chromosome number",
+   "formula": "G₁: 2n, 2C → S/G₂: 2n, 4C → after meiosis I: n, 2C → after meiosis II: n, C",
+   "when": "Kisi bhi stage ka DNA/chromosome.",
+   "mistake": "Chromosome number sirf meiosis I (anaphase I) mein aadha hota hai, S phase mein nahi badalta.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Cells and divisions",
    "formula": "k rounds ke baad cells = 2ᵏ;   N cells banane ke liye mitotic divisions = N − 1",
    "when": "Ginti wale sawal.",
-   "mistake": "128 cells ke liye 7 generations lagti hain, par divisions 127."
+   "note": "128 cells ke liye 7 generations, par divisions 127."
+  },
+  {
+   "name": "Meiosis counts",
+   "formula": "1 meiosis → 4 pollen grains (ya 4 microspores) → par sirf 1 egg (3 polar bodies/megaspores degenerate);  N pollen ke liye N/4 meiosis;  N eggs ke liye N meiosis",
+   "when": "Gamete ginti.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Prophase markers",
+   "formula": "chromatin condense hokar chromosomes;  centrosomes opposite poles ki taraf;  end mein nucleolus, Golgi, ER aur nuclear envelope gayab",
+   "when": "Prophase pehchaanna."
+  },
+  {
+   "name": "Metaphase markers",
+   "formula": "chromosomes equatorial (metaphase) plate par;  spindle fibres kinetochores se jude;  morphology study ke liye best stage",
+   "when": "Metaphase pehchaanna."
+  },
+  {
+   "name": "Anaphase markers",
+   "formula": "centromere split, sister chromatids (ab daughter chromosomes) opposite poles ki taraf;  centromere aage, arms peeche",
+   "when": "Anaphase pehchaanna."
+  },
+  {
+   "name": "Telophase markers",
+   "formula": "chromosomes poles par decondense;  nuclear envelope, nucleolus, Golgi, ER dobara banate hain",
+   "when": "Telophase pehchaanna."
+  },
+  {
+   "name": "Cytokinesis",
+   "formula": "animal: cell membrane mein furrow, beech se do;  plant: cell plate (middle lamella) centre se bahar ki taraf;  karyokinesis ke baad cytokinesis na ho ⇒ syncytium (coconut ka liquid endosperm)",
+   "when": "Cytoplasm ka bantwaara."
+  },
+  {
+   "name": "Prophase I sub-stages",
+   "formula": "Leptotene (chromosomes dikhte hain) → Zygotene (synapsis, synaptonemal complex, bivalent/tetrad) → Pachytene (crossing over, recombination nodules, recombinase) → Diplotene (synaptonemal complex ghulta, chiasmata dikhte hain) → Diakinesis (chiasmata terminalisation, nucleolus aur nuclear envelope gayab)",
+   "when": "Meiosis ka sabse lamba stage.",
+   "mistake": "Crossing over pachytene mein, chiasmata diplotene mein dikhte hain — dono alag.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Meiosis I vs II key events",
+   "formula": "Anaphase I: homologous chromosomes alag (sister chromatids saath);  interkinesis: DNA replication nahi;  anaphase II: centromere split, sister chromatids alag",
+   "when": "Meiosis ke stages compare karna."
   }
  ],
  "examples": [
   {
    "title": "Har stage ki ginti",
-   "problem": "Ek cell mein 2n = 16, G1 mein DNA = 2C. G2, meiosis I ke baad aur meiosis II ke baad?",
-   "solution": "G2: 16 chromosomes, 4C. Meiosis I ke baad (har cell): 8 chromosomes (har ek mein 2 chromatids), 2C. Meiosis II ke baad: 8 chromosomes, C."
+   "problem": "Ek cell mein 2n = 16, G₁ mein DNA = 2C. G₂, meiosis I ke baad aur meiosis II ke baad chromosomes aur DNA?",
+   "solution": "G₂: 16 chromosomes, 4C. Meiosis I ke baad (har cell): 8 chromosomes (har ek mein 2 chromatids), 2C. Meiosis II ke baad: 8 chromosomes, C."
   },
   {
-   "title": "128 cells",
-   "problem": "Ek cell se 128 cells banane ke liye kitni mitotic divisions?",
-   "solution": "2⁷ = 128 ⇒ 7 generations. Divisions = 128 − 1 = 127 (1 + 2 + 4 + … + 64)."
+   "title": "Divisions vs generations",
+   "problem": "Ek cell se 128 cells banane ke liye kitne mitotic generations aur kitne divisions?",
+   "solution": "2⁷ = 128 ⇒ 7 generations. Divisions = 128 − 1 = 127."
   },
   {
-   "title": "Stage pehchano",
-   "problem": "(a) Chromosomes equator par, spindle fibres kinetochores se jude. (b) Sister chromatids poles ki taraf ja rahe hain.",
-   "solution": "(a) Metaphase. (b) Anaphase — centromere split hokar chromatids alag hote hain."
+   "title": "Pollen ke liye meiosis",
+   "problem": "400 pollen grains banane ke liye kitne meiotic divisions?",
+   "solution": "1 meiosis → 4 pollen ⇒ 400/4 = 100."
+  },
+  {
+   "title": "Bivalents",
+   "problem": "2n = 32 wale cell ke prophase I mein kitne bivalents (tetrads)?",
+   "solution": "Bivalent = homologous pair ⇒ 32/2 = 16."
+  },
+  {
+   "title": "Eggs ke liye meiosis",
+   "problem": "100 eggs ke liye kitne meiotic divisions (female)?",
+   "solution": "Har meiosis se sirf 1 functional egg ⇒ 100."
+  },
+  {
+   "title": "Significance of mitosis",
+   "problem": "Mitosis ka mahatva?",
+   "solution": "Growth (multicellular organisms), cell repair (gut lining, skin, RBCs ka replacement), nucleo-cytoplasmic ratio bahaal rakhna, aur plants mein apical aur lateral cambium se lagataar growth."
   }
  ],
  "topics": [
   {
    "title": "Interphase",
-   "explain": "G1: cell metabolically active, badhta hai. S: DNA replication; animal cells mein centriole bhi duplicate. G2: proteins ban-te hain, mitosis ki taiyari. Divide na karne wale cells G0 (quiescent) mein chale jaate hain."
+   "explain": "G₁: cell metabolically active, badhta hai, DNA replicate nahi hota. S: DNA replication; animal cells mein centriole bhi duplicate (cytoplasm mein). G₂: proteins ban-te hain, mitosis ki taiyari. Divide na karne wale cells G₀ (quiescent) mein chale jaate hain — jaise heart cells."
   },
   {
-   "title": "Mitosis ke stages",
-   "explain": "Prophase: chromatin condense, spindle shuru. Metaphase: chromosomes metaphase plate par — morphology study ke liye best. Anaphase: centromere split, chromatids poles ki taraf. Telophase: nuclear envelope wapas, chromosomes decondense."
+   "title": "Mitosis kahan hota hai",
+   "explain": "Animals mein mitosis sirf diploid somatic cells mein; plants mein haploid aur diploid dono cells mein ho sakta hai (gametophyte bhi mitosis se banta hai)."
   },
   {
-   "title": "Cytokinesis",
-   "explain": "Animal cell: membrane mein furrow ban-ta hai jo andar ki taraf gehra hota hai. Plant cell: rigid wall ki wajah se beech mein cell plate ban-ti hai jo bahar ki taraf badhti hai."
+   "title": "Significance of meiosis",
+   "explain": "Sexual reproduction mein har species ka chromosome number generation dar generation same rakhta hai (gametes n, fertilisation se 2n). Crossing over aur independent assortment se genetic variation — evolution ke liye zaroori."
   },
   {
-   "title": "Prophase I",
-   "explain": "Leptotene (chromosomes dikhne lagte hain) → Zygotene (synapsis, synaptonemal complex) → Pachytene (crossing over) → Diplotene (chiasmata dikhte hain) → Diakinesis (chiasmata terminalise)."
+   "title": "Synaptonemal complex aur crossing over",
+   "explain": "Zygotene mein homologous chromosomes paas aakar synaptonemal complex se jud jaate hain (synapsis). Pachytene mein non-sister chromatids ke beech segments exchange hote hain (crossing over), recombinase enzyme se. Diplotene mein jahan cross hua wahan X-shaped chiasmata dikhte hain."
   },
   {
-   "title": "Significance",
-   "explain": "Mitosis: growth, repair, genetic stability. Meiosis: har generation mein chromosome number constant rakhta hai aur variation laata hai — evolution ka raw material."
+   "title": "Diplotene ka lamba time",
+   "explain": "Kuch vertebrates ke oocytes mein diplotene mahino ya saalon tak chal sakta hai."
+  },
+  {
+   "title": "Meiosis II",
+   "explain": "Interkinesis ke baad bina DNA replication ke meiosis II shuru — yeh mitosis jaisi hai. Anaphase II mein centromere split hota hai aur sister chromatids alag hote hain. End mein chaar haploid cells."
   }
  ],
  "ratta": [
-  "Prophase I mnemonic: \"Lazy Zebra Plays Dirty Dance\" = Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis.",
-  "Human cell in culture ~24 h per cycle; yeast ~90 min.",
-  "Interphase > 95% of the cell cycle."
- ],
- "verifiedOn": "2026-11-12"
+  "G₁ → S → G₂ → M;  G₀ quiescent.",
+  "S phase: DNA 2C → 4C, chromosome number same.",
+  "Human cycle ~24 h, M phase ~1 h;  yeast ~90 min.",
+  "Mitosis 2n → 2n (2 cells);  meiosis 2n → n (4 cells).",
+  "Prophase I: Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis.",
+  "Synapsis — zygotene;  crossing over — pachytene;  chiasmata — diplotene.",
+  "Anaphase I: homologues alag;  anaphase II: sister chromatids alag.",
+  "N cells ke liye N − 1 divisions;  N pollen ke liye N/4 meiosis."
+ ]
 }

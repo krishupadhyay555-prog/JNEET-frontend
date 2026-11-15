@@ -41,7 +41,7 @@
    "name": "King's property",
    "formula": "∫ₐᵇ f(x) dx = ∫ₐᵇ f(a + b − x) dx;   ∫₀ᵃ f(x) dx = ∫₀ᵃ f(a − x) dx",
    "when": "Jab x → (a + b − x) karne se expression 'pair' ban jaaye — I + I = 2I.",
-   "unit": "PYQ favourite",
+   "tag": "PYQ favourite",
    "note": "Original aur naya integral JODO, phir 2 se divide."
   },
   {
