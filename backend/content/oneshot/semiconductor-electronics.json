@@ -1,0 +1,151 @@
+{
+ "slug": "semiconductor-electronics",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Semiconductor Electronics",
+  "JEE": "Semiconductor Electronics"
+ },
+ "title": "Semiconductor Electronics",
+ "readMinutes": 12,
+ "summary": [
+  "Energy bands decide whether a solid conducts: conductors have overlapping bands, insulators a large gap (> 3 eV), and semiconductors a small gap (Si 1.1 eV, Ge 0.7 eV) that heat or light can cross.",
+  "Pure (intrinsic) semiconductors have equal electrons and holes. Doping with pentavalent atoms gives n-type (electrons majority); trivalent atoms give p-type (holes majority).",
+  "A p-n junction forms a depletion layer and a barrier potential. Forward bias lowers the barrier and current flows; reverse bias raises it and only a tiny current flows — so a diode rectifies AC.",
+  "Special diodes: LED (light from recombination), photodiode (light makes current in reverse bias), solar cell (light makes emf, no bias), Zener diode (constant voltage in reverse breakdown). Logic gates (OR, AND, NOT, NAND, NOR) process binary signals."
+ ],
+ "formulas": [
+  {
+   "name": "Band gaps",
+   "formula": "conductor: overlap;  semiconductor: Eg ~ 1 eV (Si 1.1, Ge 0.7);  insulator: Eg > 3 eV (diamond ~5.5)",
+   "when": "Classifying solids."
+  },
+  {
+   "name": "Intrinsic semiconductor",
+   "formula": "nₑ = n_h = nᵢ",
+   "when": "Pure Si or Ge."
+  },
+  {
+   "name": "Mass-action law",
+   "formula": "nₑ n_h = nᵢ²",
+   "when": "Minority-carrier density in a doped semiconductor.",
+   "tag": "PYQ favourite",
+   "note": "Doping raises one carrier and LOWERS the other — the product stays nᵢ²."
+  },
+  {
+   "name": "n-type and p-type",
+   "formula": "n-type: pentavalent donors (P, As, Sb), nₑ ≫ n_h;  p-type: trivalent acceptors (B, Al, In, Ga), n_h ≫ nₑ",
+   "when": "Identifying doping.",
+   "note": "Both n-type and p-type crystals are electrically neutral overall."
+  },
+  {
+   "name": "Conductivity",
+   "formula": "σ = e(nₑμₑ + n_hμ_h)",
+   "when": "How carriers and mobilities set conductivity."
+  },
+  {
+   "name": "Diode in forward and reverse bias",
+   "formula": "forward: current rises sharply after the knee (≈0.7 V Si, 0.3 V Ge);  reverse: tiny saturation current (µA) until breakdown",
+   "when": "Reading I–V characteristics."
+  },
+  {
+   "name": "Half-wave and full-wave rectifier",
+   "formula": "half-wave output frequency = f;  full-wave output frequency = 2f",
+   "when": "Ripple frequency of rectified AC.",
+   "tag": "PYQ favourite",
+   "note": "A full-wave rectifier on 50 Hz mains gives a 100 Hz ripple."
+  },
+  {
+   "name": "Zener regulator",
+   "formula": "I_series = (V_in − V_Z)/R_s;  I_Z = I_series − I_load",
+   "when": "Zener current in a regulator circuit.",
+   "note": "The load voltage stays at V_Z only while I_Z > 0 (Zener in breakdown)."
+  },
+  {
+   "name": "LED and photon energy",
+   "formula": "E_photon ≈ E_g;  λ (nm) ≈ 1240/E_g (eV)",
+   "when": "Colour of an LED, cut-off wavelength of a photodiode."
+  },
+  {
+   "name": "Logic gates",
+   "formula": "OR: Y = A + B;  AND: Y = A·B;  NOT: Y = Ā;  NAND: Y = (A·B)‾;  NOR: Y = (A + B)‾",
+   "when": "Truth-table questions.",
+   "note": "NAND and NOR are universal gates — any gate can be built from them."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Minority carriers",
+   "problem": "Si has nᵢ = 1.5 × 10¹⁶ m⁻³. It is doped with 10²² donors/m³. Electron and hole densities?",
+   "solution": "nₑ ≈ N_D = 1 × 10²² m⁻³; n_h = nᵢ²/nₑ = 2.25 × 10³²/10²² ≈ 2.25 × 10¹⁰ m⁻³."
+  },
+  {
+   "title": "Zener regulator",
+   "problem": "A 6 V Zener with a 500 Ω series resistor is fed from 12 V; the load is 2 kΩ. Load and Zener currents?",
+   "solution": "I_series = (12 − 6)/500 = 12 mA; I_load = 6/2000 = 3 mA; I_Z = 12 − 3 = 9 mA."
+  },
+  {
+   "title": "Ripple frequency",
+   "problem": "50 Hz AC is rectified. Output ripple frequency for half-wave and full-wave rectifiers?",
+   "solution": "Half-wave: 50 Hz; full-wave: 100 Hz."
+  },
+  {
+   "title": "Current through a diode",
+   "problem": "A forward-biased silicon diode (drop 0.7 V) in series with 1 kΩ across 5 V. Current?",
+   "solution": "I = (5 − 0.7)/1000 A = 4.3 mA."
+  },
+  {
+   "title": "Colour of an LED",
+   "problem": "An LED has band gap 1.9 eV. Wavelength of its light?",
+   "solution": "λ ≈ 1240/1.9 ≈ 653 nm — red light."
+  },
+  {
+   "title": "Truth table of a combination",
+   "problem": "Output of a NOR gate whose two inputs are both A?",
+   "solution": "Y = (A + A)‾ = Ā — a NOR gate with joined inputs works as a NOT gate. (Similarly a NAND with joined inputs is a NOT.)"
+  }
+ ],
+ "topics": [
+  {
+   "title": "Energy bands",
+   "explain": "In a solid, atomic levels spread into bands. The valence band holds bonding electrons; the conduction band holds free electrons. At 0 K a semiconductor is an insulator; at room temperature some electrons jump the gap, leaving holes behind."
+  },
+  {
+   "title": "Holes",
+   "explain": "A hole is a missing electron in the valence band that behaves like a positive charge. Holes move when neighbouring electrons fill them; hole mobility is lower than electron mobility."
+  },
+  {
+   "title": "Effect of temperature",
+   "explain": "Resistance of a semiconductor decreases with temperature (more carriers) — a negative temperature coefficient, opposite to metals."
+  },
+  {
+   "title": "Formation of a p-n junction",
+   "explain": "Electrons diffuse from n to p and holes from p to n; they recombine near the junction, leaving fixed ions — the depletion layer with an electric field and barrier potential (~0.7 V for Si). Diffusion current and drift current balance at equilibrium."
+  },
+  {
+   "title": "Biasing",
+   "explain": "Forward bias (p to +) narrows the depletion layer; reverse bias widens it. In reverse bias the small current is due to minority carriers and is almost independent of voltage until breakdown."
+  },
+  {
+   "title": "Rectifiers and filters",
+   "explain": "Half-wave uses one diode and passes one half-cycle. Full-wave uses two diodes with a centre-tap transformer (or four in a bridge) and passes both halves. A capacitor across the load smooths the pulsating DC."
+  },
+  {
+   "title": "Optoelectronic devices",
+   "explain": "LED: forward-biased, light from recombination, colour set by band gap (GaAsP etc.); efficient and long-lasting. Photodiode: reverse-biased, current rises with light intensity — used in detectors. Solar cell: no external bias; light creates electron-hole pairs and an emf (open-circuit voltage) — Si and GaAs are common."
+  },
+  {
+   "title": "Zener diode",
+   "explain": "A heavily doped diode designed to work in reverse breakdown, where the voltage stays almost constant over a wide current range — used as a voltage regulator."
+  }
+ ],
+ "ratta": [
+  "Si 1.1 eV, Ge 0.7 eV;  insulator > 3 eV.",
+  "nₑn_h = nᵢ²;  doped crystals are neutral.",
+  "n-type: P, As, Sb;  p-type: B, Al, In, Ga.",
+  "Knee voltage: Si ≈ 0.7 V, Ge ≈ 0.3 V.",
+  "Half-wave ripple f, full-wave 2f.",
+  "I_Z = (V_in − V_Z)/R − I_load.",
+  "NAND, NOR = universal gates."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,180 @@
+{
+ "slug": "gravitation",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Gravitation",
+  "JEE": "Gravitation"
+ },
+ "title": "Gravitation",
+ "readMinutes": 12,
+ "summary": [
+  "Every mass attracts every other mass with F = Gm₁m₂/r². This one law explains falling apples, planetary orbits (Kepler's laws) and satellites.",
+  "g = GM/R² at the surface. It decreases with height (1/r²), decreases linearly with depth, and is zero at the centre of the Earth.",
+  "Gravitational potential V = −GM/r and potential energy U = −GMm/r are negative: you must supply energy to pull a mass away to infinity.",
+  "Orbital speed √(GM/r), escape speed √(2GM/R) and satellite energy E = −GMm/2r are the core results; a satellite's kinetic energy = −(total energy) = −U/2."
+ ],
+ "formulas": [
+  {
+   "name": "Newton's law of gravitation",
+   "formula": "F = G m₁ m₂ / r²,   G = 6.67 × 10⁻¹¹ N m² kg⁻²",
+   "when": "Force between two point masses (or spheres, centre to centre).",
+   "mistake": "r is centre-to-centre distance, not surface-to-surface."
+  },
+  {
+   "name": "Acceleration due to gravity",
+   "formula": "g = GM/R² ≈ 9.8 m/s²",
+   "when": "Relating g to the planet's mass and radius.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "g at height h",
+   "formula": "g_h = g R²/(R + h)²   ≈ g(1 − 2h/R) for h ≪ R",
+   "when": "Gravity above the surface.",
+   "note": "Use the exact form when h is comparable to R — the approximation fails."
+  },
+  {
+   "name": "g at depth d",
+   "formula": "g_d = g(1 − d/R)",
+   "when": "Gravity inside the Earth (mines, centre).",
+   "note": "g is zero at the centre and maximum at the surface."
+  },
+  {
+   "name": "Effect of rotation (latitude λ)",
+   "formula": "g' = g − ω²R cos²λ",
+   "when": "Weight at the equator vs the poles.",
+   "note": "g is least at the equator and greatest at the poles."
+  },
+  {
+   "name": "Gravitational potential energy",
+   "formula": "U = −G M m / r",
+   "when": "Energy of a mass in a planet's field.",
+   "note": "U is negative; near the surface ΔU ≈ mgh only when h ≪ R."
+  },
+  {
+   "name": "Gravitational potential",
+   "formula": "V = −GM/r (outside);  inside a solid sphere V = −GM(3R² − r²)/(2R³)",
+   "when": "Work per unit mass to bring a mass from infinity."
+  },
+  {
+   "name": "Escape speed",
+   "formula": "vₑ = √(2GM/R) = √(2gR) ≈ 11.2 km/s for Earth",
+   "when": "Minimum speed to leave the planet for ever.",
+   "mistake": "It does not depend on the mass of the body or the direction of throw.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Orbital speed",
+   "formula": "v₀ = √(GM/r) = √(gR²/r);  near the surface v₀ = √(gR) ≈ 7.9 km/s",
+   "when": "Speed of a satellite in a circular orbit of radius r = R + h."
+  },
+  {
+   "name": "Time period of a satellite",
+   "formula": "T = 2π r/v₀ = 2π √(r³/GM)",
+   "when": "Orbit time; geostationary T = 24 h at h ≈ 36,000 km."
+  },
+  {
+   "name": "Energy of a satellite",
+   "formula": "K = GMm/2r,   U = −GMm/r,   E = −GMm/2r",
+   "when": "Energy to launch or move a satellite.",
+   "note": "Total energy is negative for a bound orbit; binding energy = +GMm/2r."
+  },
+  {
+   "name": "Kepler's laws",
+   "formula": "1) orbits are ellipses with the Sun at one focus;  2) equal areas in equal times (dA/dt = L/2m = constant);  3) T² ∝ a³",
+   "when": "Planet and satellite timing problems.",
+   "note": "The second law is conservation of angular momentum — speed is highest at perihelion."
+  },
+  {
+   "name": "Relation vₑ and v₀",
+   "formula": "vₑ = √2 × v₀ (for an orbit at the surface)",
+   "when": "Quick comparisons.",
+   "note": "A satellite needs ≈41% extra speed to escape."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Force between two people",
+   "problem": "Two 50 kg masses are 1 m apart. Gravitational force?",
+   "solution": "F = 6.67 × 10⁻¹¹ × 50 × 50 / 1² ≈ 1.67 × 10⁻⁷ N — far too small to feel."
+  },
+  {
+   "title": "g at height R/2",
+   "problem": "Find g at a height R/2 above the Earth (g = 9.8 m/s²).",
+   "solution": "g_h = g/(1 + 1/2)² = (4/9) × 9.8 ≈ 4.36 m/s². (The approximation g(1 − 2h/R) = 0 would be badly wrong here.)"
+  },
+  {
+   "title": "g in a deep mine",
+   "problem": "g at a depth of 1600 km (R = 6400 km)?",
+   "solution": "g_d = 9.8 × (1 − 1600/6400) = 9.8 × 0.75 = 7.35 m/s²."
+  },
+  {
+   "title": "Escape speed of Earth",
+   "problem": "M = 6 × 10²⁴ kg, R = 6.4 × 10⁶ m. Escape speed?",
+   "solution": "vₑ = √(2 × 6.67 × 10⁻¹¹ × 6 × 10²⁴ / 6.4 × 10⁶) ≈ 11.2 km/s."
+  },
+  {
+   "title": "Satellite at 360 km",
+   "problem": "Orbital speed and period at h = 360 km (same M, R)?",
+   "solution": "r = 6.76 × 10⁶ m. v = √(GM/r) ≈ 7.69 km/s. T = 2πr/v ≈ 92 min."
+  },
+  {
+   "title": "Kepler's third law",
+   "problem": "A geostationary satellite (T = 24 h) has orbital radius r. Period at radius r/4?",
+   "solution": "T ∝ r^(3/2): (1/4)^(3/2) = 1/8 → T = 24/8 = 3 h."
+  },
+  {
+   "title": "Escape speed of another planet",
+   "problem": "A planet has twice the Earth's mass and twice its radius. Escape speed? (Earth 11.2 km/s)",
+   "solution": "vₑ ∝ √(M/R) = √(2/2) = 1 → 11.2 km/s, the same as Earth."
+  },
+  {
+   "title": "Thrown at half the escape speed",
+   "problem": "A body is thrown up with vₑ/2. Maximum height (R = 6400 km)?",
+   "solution": "½m(vₑ/2)² = GMm(1/R − 1/(R+h)) with vₑ² = 2GM/R: GM/4R = GM/R − GM/(R + h) → 1/(R + h) = 3/(4R) → R + h = 4R/3, so h = R/3 ≈ 2133 km."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Universal gravitation",
+   "explain": "Gravity is always attractive, acts along the line joining the masses, follows Newton's third law and works through any medium. It is the weakest fundamental force but dominates at large scales because masses don't cancel like charges."
+  },
+  {
+   "title": "Shell theorem",
+   "explain": "A uniform spherical shell attracts an outside mass as if all its mass were at the centre, and exerts zero force on a mass inside it. That is why g falls linearly inside a solid sphere."
+  },
+  {
+   "title": "Variation of g",
+   "explain": "Height: g ∝ 1/r². Depth: g ∝ r (inside). Rotation and the Earth's shape make g smallest at the equator and largest at the poles. A body weighs nothing at the centre of the Earth."
+  },
+  {
+   "title": "Potential and potential energy",
+   "explain": "Potential is zero at infinity and negative everywhere else. Work done by an external agent = m(V_final − V_initial). For a mass moved from the surface to a height h: ΔU = GMmh/[R(R + h)] = mgh/(1 + h/R)."
+  },
+  {
+   "title": "Satellites",
+   "explain": "A satellite is in free fall around the planet — gravity provides the centripetal force. Orbital speed, period and energy depend only on r, not on the satellite's mass. Astronauts feel weightless because they and the craft fall together."
+  },
+  {
+   "title": "Geostationary and polar satellites",
+   "explain": "Geostationary: period 24 h, above the equator, moving west to east, height ≈ 36,000 km — used for communication. Polar satellites: low height (~500–800 km), pass over the poles — used for weather and remote sensing."
+  },
+  {
+   "title": "Escape and binding energy",
+   "explain": "To escape, total energy must be ≥ 0. Energy needed to take a satellite from orbit r to infinity = GMm/2r. Energy to raise a satellite from orbit r₁ to r₂ = GMm/2 (1/r₁ − 1/r₂)."
+  },
+  {
+   "title": "Kepler's laws in exams",
+   "explain": "Areal velocity is constant, so a planet moves fastest at perihelion: v_p r_p = v_a r_a. For ellipses use the semi-major axis a in T² ∝ a³."
+  }
+ ],
+ "ratta": [
+  "F = Gm₁m₂/r²;  G = 6.67 × 10⁻¹¹ N m² kg⁻².",
+  "g_h = g(R/(R+h))²;  g_d = g(1 − d/R);  g = 0 at centre.",
+  "vₑ = √(2gR) ≈ 11.2 km/s;  v₀ = √(gR) ≈ 7.9 km/s;  vₑ = √2 v₀.",
+  "T = 2π√(r³/GM);  T² ∝ r³.",
+  "Satellite: K = GMm/2r, U = −GMm/r, E = −GMm/2r.",
+  "Geostationary: 24 h, h ≈ 36,000 km, equatorial.",
+  "Kepler 2nd law = angular momentum conserved."
+ ],
+ "verifiedOn": "2026-11-13"
+}

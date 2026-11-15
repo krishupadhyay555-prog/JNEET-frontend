@@ -1,0 +1,146 @@
+{
+ "slug": "electromagnetic-waves",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Electromagnetic Waves",
+  "JEE": "Electromagnetic Waves"
+ },
+ "title": "Electromagnetic Waves",
+ "readMinutes": 9,
+ "summary": [
+  "Maxwell added the displacement current ε₀ dΦ_E/dt to Ampère's law: a changing electric field makes a magnetic field, just as a changing magnetic field makes an electric field. Together they let fields travel as waves.",
+  "Electromagnetic waves are transverse: E, B and the direction of travel are mutually perpendicular. In vacuum they travel at c = 1/√(μ₀ε₀) = 3 × 10⁸ m/s, and E₀ = cB₀.",
+  "They carry energy and momentum; intensity I = ½cε₀E₀². Electric and magnetic fields share the energy equally.",
+  "The spectrum, from long to short wavelength: radio, microwave, infrared, visible, ultraviolet, X-rays, gamma rays — each with typical sources and uses."
+ ],
+ "formulas": [
+  {
+   "name": "Displacement current",
+   "formula": "I_d = ε₀ dΦ_E/dt",
+   "when": "Current 'between' capacitor plates while charging.",
+   "tag": "PYQ favourite",
+   "note": "Inside a charging capacitor I_d equals the conduction current in the wires."
+  },
+  {
+   "name": "Ampère–Maxwell law",
+   "formula": "∮ B · dl = μ₀ (I_c + I_d)",
+   "when": "Why a changing E field produces B."
+  },
+  {
+   "name": "Speed of light",
+   "formula": "c = 1/√(μ₀ ε₀) = 3 × 10⁸ m/s;  in a medium v = 1/√(μ ε) = c/n",
+   "when": "EM wave speed in vacuum and media."
+  },
+  {
+   "name": "Field amplitudes",
+   "formula": "E₀ = c B₀  (E = cB at every instant)",
+   "when": "Finding B from E or vice versa.",
+   "tag": "PYQ favourite",
+   "note": "B₀ is tiny (E₀/3 × 10⁸) — that doesn't mean the magnetic energy is small."
+  },
+  {
+   "name": "Wave equations",
+   "formula": "E = E₀ sin(kx − ωt) ĵ,  B = B₀ sin(kx − ωt) k̂;  c = ω/k",
+   "when": "Writing or reading an EM wave."
+  },
+  {
+   "name": "Direction of propagation",
+   "formula": "along E × B",
+   "when": "Finding which way the wave moves."
+  },
+  {
+   "name": "Energy density",
+   "formula": "u = ½ε₀E² + B²/2μ₀ (equal shares);  average u = ½ε₀E₀²",
+   "when": "Energy stored in the wave."
+  },
+  {
+   "name": "Intensity",
+   "formula": "I = u_avg × c = ½ c ε₀ E₀²",
+   "when": "Power per unit area carried by the wave."
+  },
+  {
+   "name": "Momentum and radiation pressure",
+   "formula": "p = U/c;  pressure = I/c (absorbed),  2I/c (reflected)",
+   "when": "Force of light on surfaces.",
+   "note": "A perfect reflector feels twice the pressure of a perfect absorber."
+  },
+  {
+   "name": "Spectrum order",
+   "formula": "radio > microwave > infrared > visible (700–400 nm) > ultraviolet > X-rays > γ-rays  (wavelength decreasing)",
+   "when": "Ordering and identifying EM waves."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Speed from μ₀ and ε₀",
+   "problem": "Compute 1/√(μ₀ε₀) with μ₀ = 4π × 10⁻⁷ and ε₀ = 8.85 × 10⁻¹².",
+   "solution": "c = 1/√(4π × 10⁻⁷ × 8.85 × 10⁻¹²) ≈ 3.00 × 10⁸ m/s."
+  },
+  {
+   "title": "Magnetic field amplitude",
+   "problem": "An EM wave in vacuum has E₀ = 48 V/m. B₀?",
+   "solution": "B₀ = E₀/c = 48/(3 × 10⁸) = 1.6 × 10⁻⁷ T."
+  },
+  {
+   "title": "Intensity",
+   "problem": "E₀ = 100 V/m. Intensity?",
+   "solution": "I = ½cε₀E₀² = 0.5 × 3 × 10⁸ × 8.85 × 10⁻¹² × 10⁴ ≈ 13.3 W/m²."
+  },
+  {
+   "title": "Displacement current",
+   "problem": "A capacitor plate area is 10⁻² m² and the field between the plates changes at 10¹² V m⁻¹ s⁻¹. Displacement current?",
+   "solution": "I_d = ε₀ A dE/dt = 8.85 × 10⁻¹² × 10⁻² × 10¹² = 0.0885 A."
+  },
+  {
+   "title": "FM radio wavelength",
+   "problem": "Wavelength of a 100 MHz FM signal?",
+   "solution": "λ = c/ν = 3 × 10⁸/10⁸ = 3 m."
+  },
+  {
+   "title": "Frequency of green light",
+   "problem": "Frequency of 500 nm light?",
+   "solution": "ν = c/λ = 3 × 10⁸/(5 × 10⁻⁷) = 6 × 10¹⁴ Hz."
+  },
+  {
+   "title": "Average energy density",
+   "problem": "E₀ = 100 V/m. Average energy density?",
+   "solution": "u = ½ε₀E₀² = 0.5 × 8.85 × 10⁻¹² × 10⁴ ≈ 4.42 × 10⁻⁸ J/m³."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Why displacement current was needed",
+   "explain": "Ampère's law gave different answers for surfaces through a wire and through the gap of a charging capacitor. Maxwell's displacement current fixed this and predicted EM waves; Hertz produced them in 1887."
+  },
+  {
+   "title": "Characteristics of EM waves",
+   "explain": "Transverse, need no medium, travel at c in vacuum, are produced by accelerated charges, obey superposition, can be reflected, refracted, diffracted and polarised, and carry energy and momentum. Frequency does not change from medium to medium."
+  },
+  {
+   "title": "Radio waves and microwaves",
+   "explain": "Radio (> 0.1 m): produced by oscillating charges in antennas — AM, FM, TV, mobile communication. Microwaves (1 mm–0.1 m): klystrons and magnetrons — radar, satellite links, microwave ovens (they make water molecules vibrate)."
+  },
+  {
+   "title": "Infrared and visible",
+   "explain": "Infrared (700 nm–1 mm): emitted by hot bodies — heat lamps, remote controls, night vision, physiotherapy; keeps Earth warm through the greenhouse effect. Visible (400–700 nm): the only band our eyes detect."
+  },
+  {
+   "title": "Ultraviolet",
+   "explain": "Produced by very hot bodies like the Sun and by special lamps. Kills germs (water purifiers), used in LASIK eye surgery; mostly absorbed by the ozone layer. Excess UV is harmful to skin and eyes; ordinary glass absorbs much of it."
+  },
+  {
+   "title": "X-rays and gamma rays",
+   "explain": "X-rays (0.01–10 nm): made by fast electrons hitting a metal target — medical imaging, cancer therapy, crystal structure. Gamma rays (< 0.01 nm): from nuclear reactions — destroying cancer cells, sterilising equipment."
+  }
+ ],
+ "ratta": [
+  "I_d = ε₀ dΦ_E/dt.",
+  "c = 1/√(μ₀ε₀);  E₀ = cB₀;  travel along E × B.",
+  "I = ½cε₀E₀²;  energy shared equally by E and B.",
+  "Pressure: I/c absorbed, 2I/c reflected.",
+  "Order (λ ↓): radio, micro, IR, visible, UV, X, γ.",
+  "Microwave → radar/ovens;  UV → sterilise;  X → imaging;  γ → cancer therapy.",
+  "EM waves are transverse and need no medium."
+ ],
+ "verifiedOn": "2026-11-13"
+}
