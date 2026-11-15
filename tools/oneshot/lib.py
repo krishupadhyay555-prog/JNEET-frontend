@@ -86,6 +86,35 @@ def build(doc, syllabus, doc_en=None, syllabus_en=None):
         _check_and_write(doc_en, syllabus_en or syllabus, doc["slug"] + ".json", "english")
 
 
+def _sup(s):
+    """MathText only understands ^{…} or ^x (one character). Rewrite ^(…) and
+    ^2.5-style powers into ^{…} so nothing renders as a stray caret or a
+    half-raised number (15 Nov 2026 audit)."""
+    out, i = [], 0
+    while i < len(s):
+        if s[i] == "^" and i + 1 < len(s) and s[i + 1] == "(":
+            depth, j = 0, i + 1
+            while j < len(s):
+                depth += s[j] == "("
+                depth -= s[j] == ")"
+                if depth == 0: break
+                j += 1
+            if j < len(s) and "{" not in s[i + 2:j] and "}" not in s[i + 2:j]:
+                out.append("^{" + s[i + 2:j] + "}"); i = j + 1; continue
+        m = re.match(r"\^([0-9]+\.[0-9]+|[0-9]{2,})", s[i:])
+        if m:
+            out.append("^{" + m.group(1) + "}"); i += len(m.group(0)); continue
+        out.append(s[i]); i += 1
+    return "".join(out)
+
+
+def _sup_all(o):
+    if isinstance(o, str): return _sup(o)
+    if isinstance(o, list): return [_sup_all(v) for v in o]
+    if isinstance(o, dict): return {k: (_sup_all(v) if k not in ("slug", "subject", "chapters") else v) for k, v in o.items()}
+    return o
+
+
 def _check_and_write(doc, syllabus, filename, lang):
     errors = []
     # 1. every example check
@@ -107,6 +136,10 @@ def _check_and_write(doc, syllabus, filename, lang):
     if len(doc["formulas"]) < 8: errors.append("too few formulas for a full OneShot")
     if len(doc["examples"]) < 5: errors.append("too few examples")
     if len(doc["topics"]) < 6: errors.append("too few topics")
+    for key, items, field in (("formula", doc["formulas"], "name"), ("example", doc["examples"], "title"), ("topic", doc["topics"], "title")):
+        seen = [i[field] for i in items]
+        dup = {k for k in seen if seen.count(k) > 1}
+        if dup: errors.append(f"duplicate {key} titles (React keys) {sorted(dup)}")
     # 4. "Galti" label only for a real mistake. A plain fact goes to "note"
     #    (shown as "Yaad rakho") — 14 Nov 2026 live-check polish.
     for f in doc["formulas"]:
@@ -115,8 +148,8 @@ def _check_and_write(doc, syllabus, filename, lang):
             f["note"] = f.pop("mistake")
     if errors:
         raise SystemExit(f"\n✗ {doc['slug']} ({lang}):\n  " + "\n  ".join(errors))
-    out = dict(doc)
-    out["examples"] = [dict(x) for x in doc["examples"]]
+    out = _sup_all(dict(doc))
+    out["examples"] = [_sup_all(dict(x)) for x in doc["examples"]]
     out["verifiedOn"] = doc.get("verifiedOn", VERIFIED_ON)
     with open(os.path.join(OUT, filename), "w", encoding="utf-8") as fh:
         json.dump(out, fh, ensure_ascii=False, indent=1)

@@ -75,7 +75,7 @@
   {
    "title": "Term independent of x",
    "problem": "Find the term independent of x in (x² + 1/x)⁹.",
-   "solution": "Tᵣ₊₁ = C(9, r) x^(18 − 2r) x^(−r) = C(9, r) x^(18 − 3r). 18 − 3r = 0 ⇒ r = 6; term = C(9, 6) = 84."
+   "solution": "Tᵣ₊₁ = C(9, r) x^{18 − 2r} x^{−r} = C(9, r) x^{18 − 3r}. 18 − 3r = 0 ⇒ r = 6; term = C(9, 6) = 84."
   },
   {
    "title": "Middle term",

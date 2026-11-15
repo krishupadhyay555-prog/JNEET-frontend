@@ -36,13 +36,13 @@
   },
   {
    "name": "Cartesian product and relations",
-   "formula": "n(A × B) = mn;  number of relations from A to B = 2^(mn)",
+   "formula": "n(A × B) = mn;  number of relations from A to B = 2^{mn}",
    "when": "Counting relations.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Relations on a set with n elements",
-   "formula": "total 2^(n²);  reflexive 2^(n² − n);  symmetric 2^(n(n+1)/2);  reflexive and symmetric 2^(n(n−1)/2)",
+   "formula": "total 2^{n²};  reflexive 2^{n² − n};  symmetric 2^{n(n+1)/2};  reflexive and symmetric 2^{n(n−1)/2}",
    "when": "Counting special relations."
   },
   {
@@ -93,7 +93,7 @@
   {
    "title": "Number of relations",
    "problem": "A has 3 elements and B has 4. How many relations from A to B?",
-   "solution": "2^(3 × 4) = 2¹² = 4096."
+   "solution": "2^{3 × 4} = 2¹² = 4096."
   },
   {
    "title": "Functions and one-one functions",
@@ -108,7 +108,7 @@
   {
    "title": "Reflexive and symmetric relations",
    "problem": "On a set with 3 elements, how many reflexive relations and how many symmetric relations?",
-   "solution": "Reflexive: 2^(9 − 3) = 64. Symmetric: 2^(3 × 4/2) = 64."
+   "solution": "Reflexive: 2^{9 − 3} = 64. Symmetric: 2^{3 × 4/2} = 64."
   },
   {
    "title": "Domain",
@@ -144,8 +144,8 @@
  ],
  "ratta": [
   "n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
-  "Relations A → B: 2^(mn);  on n-set: 2^(n²).",
-  "Reflexive 2^(n² − n);  symmetric 2^(n(n+1)/2).",
+  "Relations A → B: 2^{mn};  on n-set: 2^{n²}.",
+  "Reflexive 2^{n² − n};  symmetric 2^{n(n+1)/2}.",
   "Functions nᵐ;  one-one nPm;  bijections n!.",
   "Onto m → n: Σ(−1)ᵏ C(n,k)(n − k)ᵐ.",
   "Equivalence = reflexive + symmetric + transitive.",

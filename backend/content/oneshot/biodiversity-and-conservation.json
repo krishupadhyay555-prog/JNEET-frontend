@@ -90,7 +90,7 @@
   {
    "title": "Doubling the area",
    "problem": "With Z = 0.2, by what factor does species richness rise if the area doubles?",
-   "solution": "S ∝ A^Z, so the ratio = 2^0.2 = 1.15."
+   "solution": "S ∝ A^Z, so the ratio = 2^{0.2} = 1.15."
   },
   {
    "title": "India's share",

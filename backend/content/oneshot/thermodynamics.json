@@ -90,7 +90,7 @@
   {
    "title": "Adiabatic compression",
    "problem": "A monoatomic gas at 300 K is compressed adiabatically to one-eighth of its volume. Final temperature?",
-   "solution": "TVᵞ⁻¹ = constant, γ − 1 = 2/3: T₂ = 300 × 8^(2/3) = 300 × 4 = 1200 K."
+   "solution": "TVᵞ⁻¹ = constant, γ − 1 = 2/3: T₂ = 300 × 8^{2/3} = 300 × 4 = 1200 K."
   },
   {
    "title": "Isobaric heating of a diatomic gas",
@@ -105,7 +105,7 @@
   {
    "title": "Adiabatic pressure change",
    "problem": "A diatomic gas (γ = 1.4) is compressed adiabatically to half its volume. By what factor does the pressure rise?",
-   "solution": "P₂/P₁ = 2^1.4 ≈ 2.64 (more than the isothermal factor 2)."
+   "solution": "P₂/P₁ = 2^{1.4} ≈ 2.64 (more than the isothermal factor 2)."
   },
   {
    "title": "First law in one line",
