@@ -1,0 +1,147 @@
+{
+ "slug": "application-of-derivatives",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Application of Derivatives"
+ },
+ "title": "Application of Derivatives",
+ "readMinutes": 15,
+ "summary": [
+  "Derivatives give rates of change, slopes of tangents and normals, and tell where a function increases, decreases, or has maxima and minima.",
+  "First-derivative test (sign change of f′) and second-derivative test (sign of f″) locate local extrema; absolute extrema on [a, b] are among critical points and end points.",
+  "Rolle's theorem and the mean value theorem link average and instantaneous rates. Optimisation word problems — areas, volumes, distances — are standard JEE questions."
+ ],
+ "formulas": [
+  {
+   "name": "Rate of change",
+   "formula": "dy/dt = (dy/dx)(dx/dt)",
+   "when": "Related rates (area, volume changing with time).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Tangent and normal",
+   "formula": "tangent: y − y₁ = m(x − x₁), m = f′(x₁);  normal: y − y₁ = −(1/m)(x − x₁)",
+   "when": "Equations at a point."
+  },
+  {
+   "name": "Increasing / decreasing",
+   "formula": "f′(x) > 0 ⇒ strictly increasing;  f′(x) < 0 ⇒ strictly decreasing",
+   "when": "Monotonicity on intervals.",
+   "note": "f′ can be 0 at isolated points and f still increasing (x³ at 0)."
+  },
+  {
+   "name": "Critical points",
+   "formula": "f′(c) = 0 or f′(c) does not exist",
+   "when": "Candidates for extrema."
+  },
+  {
+   "name": "First-derivative test",
+   "formula": "f′ changes + to − ⇒ local maximum;  − to + ⇒ local minimum;  no change ⇒ neither (point of inflection)",
+   "when": "Classifying critical points."
+  },
+  {
+   "name": "Second-derivative test",
+   "formula": "f′(c) = 0 and f″(c) < 0 ⇒ local max;  f″(c) > 0 ⇒ local min;  f″(c) = 0 ⇒ test fails",
+   "when": "Quick classification.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Absolute extrema on [a, b]",
+   "formula": "compare f at all critical points in (a, b) and at a, b",
+   "when": "Global max/min on a closed interval."
+  },
+  {
+   "name": "Rolle's theorem",
+   "formula": "f continuous on [a, b], differentiable on (a, b), f(a) = f(b) ⇒ ∃ c ∈ (a, b): f′(c) = 0",
+   "when": "Existence of horizontal tangent."
+  },
+  {
+   "name": "Lagrange's mean value theorem",
+   "formula": "f′(c) = (f(b) − f(a))/(b − a) for some c ∈ (a, b)",
+   "when": "Average rate = instantaneous rate somewhere.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Approximation",
+   "formula": "f(x + Δx) ≈ f(x) + f′(x)Δx",
+   "when": "Approximate values (√25.3 etc.)."
+  },
+  {
+   "name": "Standard optimisation results",
+   "formula": "fixed perimeter → square has max area;  fixed surface area → cube (or sphere) has max volume;  cylinder of max volume in a sphere: h = 2R/√3",
+   "when": "Common optimisation answers."
+  },
+  {
+   "name": "Angle between curves",
+   "formula": "tan θ = |(m₁ − m₂)/(1 + m₁m₂)| using slopes of tangents at the intersection;  orthogonal if m₁m₂ = −1",
+   "when": "Curves cutting each other."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Local extrema",
+   "problem": "Find the local maximum and minimum values of f(x) = x³ − 3x² − 9x + 5.",
+   "solution": "f′ = 3x² − 6x − 9 = 3(x − 3)(x + 1) ⇒ x = −1, 3. f″(−1) = −12 < 0 ⇒ max f(−1) = 10; f″(3) = 12 > 0 ⇒ min f(3) = −22."
+  },
+  {
+   "title": "Tangent",
+   "problem": "Tangent to y = x² at (1, 1)?",
+   "solution": "slope = 2x = 2 ⇒ y − 1 = 2(x − 1) ⇒ y = 2x − 1."
+  },
+  {
+   "title": "Related rates",
+   "problem": "A sphere's radius grows at 0.1 cm/s. How fast is the volume growing when r = 5 cm?",
+   "solution": "dV/dt = 4πr² dr/dt = 4π × 25 × 0.1 = 10π ≈ 31.42 cm³/s."
+  },
+  {
+   "title": "Maximum area",
+   "problem": "Maximum area of a rectangle with perimeter 20?",
+   "solution": "x + y = 10, A = x(10 − x) ⇒ A′ = 10 − 2x = 0 ⇒ x = 5 ⇒ A = 25 (a square)."
+  },
+  {
+   "title": "Mean value theorem",
+   "problem": "Find c for f(x) = x² on [1, 3].",
+   "solution": "f′(c) = 2c = (9 − 1)/2 = 4 ⇒ c = 2."
+  },
+  {
+   "title": "Increasing interval",
+   "problem": "Where is f(x) = x³ − 3x increasing?",
+   "solution": "f′ = 3(x² − 1) > 0 ⇒ x < −1 or x > 1: increasing on (−∞, −1) ∪ (1, ∞)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Monotonicity and inequalities",
+   "explain": "To prove f(x) > g(x) for x > 0, show h = f − g has h(0) = 0 and h′ > 0. Example: eˣ > 1 + x for x ≠ 0."
+  },
+  {
+   "title": "Points of inflection",
+   "explain": "Where f″ changes sign (concavity changes). f is concave up where f″ > 0 and concave down where f″ < 0."
+  },
+  {
+   "title": "Optimisation steps",
+   "explain": "Write the quantity to optimise in one variable using the constraint, find critical points, test them, and check endpoints/domain restrictions."
+  },
+  {
+   "title": "Shortest distance problems",
+   "explain": "Minimise the square of the distance instead of the distance — same minimiser, easier algebra."
+  },
+  {
+   "title": "Approximation example",
+   "explain": "√25.3 ≈ 5 + 0.3/(2 × 5) = 5.03 using f(x) = √x at x = 25."
+  },
+  {
+   "title": "Tangents from an external point",
+   "explain": "Write the tangent at a general point (t, f(t)) and make it pass through the given point; solve for t."
+  }
+ ],
+ "ratta": [
+  "f′ > 0 increasing;  f′ < 0 decreasing.",
+  "f″(c) < 0 max;  f″(c) > 0 min.",
+  "Normal slope = −1/f′.",
+  "LMVT: f′(c) = (f(b) − f(a))/(b − a).",
+  "Fixed perimeter → square;  fixed surface → cube.",
+  "dV/dt = 4πr² dr/dt."
+ ],
+ "verifiedOn": "2026-11-13"
+}

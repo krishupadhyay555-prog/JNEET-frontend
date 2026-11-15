@@ -1,0 +1,148 @@
+{
+ "slug": "differentiation",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Differentiation"
+ },
+ "title": "Differentiation",
+ "readMinutes": 14,
+ "summary": [
+  "The derivative f′(x) = lim (h→0) (f(x + h) − f(x))/h measures the instantaneous rate of change and the slope of the tangent.",
+  "Learn the standard derivatives and the rules: sum, product, quotient and chain rule. Special techniques: implicit, logarithmic, parametric differentiation, and derivatives of inverse trigonometric functions using substitution.",
+  "Higher-order derivatives and the derivative of one function with respect to another complete the chapter."
+ ],
+ "formulas": [
+  {
+   "name": "First principles",
+   "formula": "f′(x) = lim (h→0) (f(x + h) − f(x))/h",
+   "when": "Definition of derivative."
+  },
+  {
+   "name": "Power, exponential, log",
+   "formula": "d(xⁿ)/dx = nxⁿ⁻¹;  d(eˣ)/dx = eˣ;  d(aˣ)/dx = aˣ ln a;  d(ln x)/dx = 1/x;  d(logₐx)/dx = 1/(x ln a)",
+   "when": "Standard derivatives."
+  },
+  {
+   "name": "Trigonometric",
+   "formula": "(sin x)′ = cos x;  (cos x)′ = −sin x;  (tan x)′ = sec²x;  (cot x)′ = −cosec²x;  (sec x)′ = sec x tan x;  (cosec x)′ = −cosec x cot x",
+   "when": "Trig derivatives.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inverse trigonometric",
+   "formula": "(sin⁻¹x)′ = 1/√(1 − x²);  (cos⁻¹x)′ = −1/√(1 − x²);  (tan⁻¹x)′ = 1/(1 + x²);  (cot⁻¹x)′ = −1/(1 + x²);  (sec⁻¹x)′ = 1/(|x|√(x² − 1))",
+   "when": "Inverse-trig derivatives."
+  },
+  {
+   "name": "Product and quotient rules",
+   "formula": "(uv)′ = u′v + uv′;  (u/v)′ = (u′v − uv′)/v²",
+   "when": "Combining functions."
+  },
+  {
+   "name": "Chain rule",
+   "formula": "dy/dx = (dy/du)(du/dx)",
+   "when": "Composite functions.",
+   "tag": "PYQ favourite",
+   "note": "Differentiate outer, keep inner, then multiply by the inner derivative."
+  },
+  {
+   "name": "Implicit differentiation",
+   "formula": "differentiate both sides w.r.t. x, treating y as a function of x;  then solve for dy/dx",
+   "when": "Equations not solved for y."
+  },
+  {
+   "name": "Logarithmic differentiation",
+   "formula": "y = u^v ⇒ ln y = v ln u ⇒ y′/y = v′ ln u + v u′/u",
+   "when": "Variable powers and long products.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parametric differentiation",
+   "formula": "dy/dx = (dy/dt)/(dx/dt);  d²y/dx² = d/dt(dy/dx) ÷ (dx/dt)",
+   "when": "Curves given by x(t), y(t).",
+   "mistake": "d²y/dx² is not (d²y/dt²)/(d²x/dt²)."
+  },
+  {
+   "name": "Derivative of one function w.r.t. another",
+   "formula": "du/dv = (du/dx)/(dv/dx)",
+   "when": "Differentiating f w.r.t. g."
+  },
+  {
+   "name": "Substitution for inverse trig",
+   "formula": "√(1 − x²) → x = sin θ;  (1 − x²)/(1 + x²) → x = tan θ;  2x/(1 − x²) → x = tan θ",
+   "when": "Simplify before differentiating."
+  },
+  {
+   "name": "Second derivative",
+   "formula": "d²y/dx² = d/dx(dy/dx)",
+   "when": "Concavity, acceleration, differential equations."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Chain rule",
+   "problem": "d/dx sin(x²)?",
+   "solution": "cos(x²) × 2x = 2x cos(x²)."
+  },
+  {
+   "title": "Logarithmic differentiation",
+   "problem": "d/dx (xˣ)?",
+   "solution": "ln y = x ln x ⇒ y′/y = ln x + 1 ⇒ y′ = xˣ(1 + ln x)."
+  },
+  {
+   "title": "Parametric",
+   "problem": "x = t², y = 2t. Find dy/dx at t = 2.",
+   "solution": "dy/dx = 2/(2t) = 1/t ⇒ 0.5 at t = 2."
+  },
+  {
+   "title": "Implicit",
+   "problem": "x² + y² = 25. dy/dx at (3, 4)?",
+   "solution": "2x + 2y y′ = 0 ⇒ y′ = −x/y = −3/4 = −0.75."
+  },
+  {
+   "title": "Second derivative",
+   "problem": "y = x³. Find y″ at x = 2.",
+   "solution": "y″ = 6x ⇒ 12."
+  },
+  {
+   "title": "Inverse-trig substitution",
+   "problem": "d/dx tan⁻¹(2x/(1 − x²)) for |x| < 1, at x = 0?",
+   "solution": "With x = tan θ the function is 2θ = 2tan⁻¹x, so the derivative is 2/(1 + x²) = 2 at x = 0."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Derivative as rate",
+   "explain": "If s(t) is position, s′(t) is velocity and s″(t) acceleration. dy/dx at a point is the slope of the tangent there."
+  },
+  {
+   "title": "Derivatives of modulus and greatest integer",
+   "explain": "d|x|/dx = x/|x| (x ≠ 0). [x] has derivative 0 between integers and is not differentiable at integers."
+  },
+  {
+   "title": "Derivative of determinants",
+   "explain": "Differentiate one row at a time and add the resulting determinants."
+  },
+  {
+   "title": "Rolle's and mean value theorems",
+   "explain": "Rolle's: f continuous on [a, b], differentiable on (a, b), f(a) = f(b) ⇒ f′(c) = 0 for some c. LMVT: f′(c) = (f(b) − f(a))/(b − a)."
+  },
+  {
+   "title": "Even/odd and derivatives",
+   "explain": "The derivative of an even function is odd and that of an odd function is even. Derivatives of periodic functions are periodic with the same period."
+  },
+  {
+   "title": "Leibniz rule for nth derivatives",
+   "explain": "(uv)⁽ⁿ⁾ = Σ C(n, r) u⁽ⁿ⁻ʳ⁾ v⁽ʳ⁾. Useful for xⁿeˣ-type products."
+  }
+ ],
+ "ratta": [
+  "(tan x)′ = sec²x;  (sec x)′ = sec x tan x.",
+  "(sin⁻¹x)′ = 1/√(1 − x²);  (tan⁻¹x)′ = 1/(1 + x²).",
+  "Chain: outer × inner′.",
+  "xˣ → xˣ(1 + ln x).",
+  "Parametric: (dy/dt)/(dx/dt).",
+  "Rolle: f(a) = f(b) ⇒ f′(c) = 0."
+ ],
+ "verifiedOn": "2026-11-13"
+}

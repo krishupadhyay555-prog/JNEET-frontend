@@ -1,0 +1,138 @@
+{
+ "slug": "application-of-integrals",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Application of Integrals"
+ },
+ "title": "Application of Integrals",
+ "readMinutes": 11,
+ "summary": [
+  "A definite integral gives area under a curve: area between y = f(x), the x-axis and x = a, b is ∫ₐᵇ |f(x)| dx.",
+  "Area between two curves is ∫ (upper − lower) dx between their intersection points; sometimes integrating with respect to y (right − left) is easier.",
+  "Sketch first: find intersection points, see which curve is on top, and split the interval wherever the curves cross or the function changes sign."
+ ],
+ "formulas": [
+  {
+   "name": "Area under a curve",
+   "formula": "A = ∫ₐᵇ |f(x)| dx",
+   "when": "Area between a curve and the x-axis.",
+   "tag": "PYQ favourite",
+   "note": "If f changes sign, split at its zeros — otherwise areas cancel."
+  },
+  {
+   "name": "Area with respect to y",
+   "formula": "A = ∫_c^d |g(y)| dy",
+   "when": "Curves given as x = g(y)."
+  },
+  {
+   "name": "Area between curves",
+   "formula": "A = ∫ₐᵇ [f(x) − g(x)] dx  with f ≥ g on [a, b]",
+   "when": "Region enclosed by two curves.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Circle",
+   "formula": "area of x² + y² = a² = πa²",
+   "when": "Standard area."
+  },
+  {
+   "name": "Ellipse",
+   "formula": "area of x²/a² + y²/b² = 1 = πab",
+   "when": "Standard area.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parabola and its latus rectum",
+   "formula": "area bounded by y² = 4ax and x = a = 8a²/3",
+   "when": "Standard area."
+  },
+  {
+   "name": "Two parabolas",
+   "formula": "area between y² = 4ax and x² = 4ay = 16a²/3",
+   "when": "Standard area.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parabola and line",
+   "formula": "area between y = x² and y = x = 1/6;  between y² = 4ax and y = mx = 8a²/(3m³)",
+   "when": "Standard areas."
+  },
+  {
+   "name": "Symmetry",
+   "formula": "use symmetry about the axes to compute one part and multiply",
+   "when": "Saving work for circles, ellipses, parabolas."
+  },
+  {
+   "name": "One arch of sine",
+   "formula": "∫₀^π sin x dx = 2",
+   "when": "Area of one arch of y = sin x."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Under a parabola",
+   "problem": "Area under y = x² from x = 0 to 3?",
+   "solution": "∫₀³ x² dx = 27/3 = 9."
+  },
+  {
+   "title": "Between y = x and y = x²",
+   "problem": "Area enclosed by y = x and y = x²?",
+   "solution": "They meet at x = 0, 1; ∫₀¹ (x − x²) dx = 1/2 − 1/3 = 1/6 ≈ 0.167."
+  },
+  {
+   "title": "Parabola and x-axis",
+   "problem": "Area between y = 4x − x² and the x-axis?",
+   "solution": "Roots x = 0, 4; ∫₀⁴ (4x − x²) dx = 32 − 64/3 = 32/3 ≈ 10.67."
+  },
+  {
+   "title": "Ellipse",
+   "problem": "Area of x²/9 + y²/4 = 1?",
+   "solution": "πab = 6π ≈ 18.85."
+  },
+  {
+   "title": "Sine arch",
+   "problem": "Area under y = sin x from 0 to π?",
+   "solution": "[−cos x]₀^π = 1 + 1 = 2."
+  },
+  {
+   "title": "Latus rectum area",
+   "problem": "Area bounded by y² = 12x and its latus rectum?",
+   "solution": "a = 3: 8a²/3 = 8 × 9/3 = 24."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Sketching tips",
+   "explain": "Mark intercepts, intersection points and symmetry. Shade the region asked; decide vertical strips (dx) or horizontal strips (dy) — choose the one needing fewer pieces."
+  },
+  {
+   "title": "Curves crossing the axis",
+   "explain": "For y = sin x on [0, 2π], the signed integral is 0 but the area is 4. Always use |f(x)| or split at zeros."
+  },
+  {
+   "title": "Modulus and greatest integer curves",
+   "explain": "Areas with |x| or [x] are found by splitting at break points, often giving triangles and rectangles that can be computed geometrically."
+  },
+  {
+   "title": "Inequality regions",
+   "explain": "Regions like {(x, y): x² ≤ y ≤ |x|} are found by identifying boundary curves and their intersections, then integrating upper minus lower."
+  },
+  {
+   "title": "Area via definite integral properties",
+   "explain": "King's property and symmetry from definite integrals can simplify area calculations."
+  },
+  {
+   "title": "Area between a curve and the y-axis",
+   "explain": "For x = g(y) between y = c and y = d, integrate g(y) dy. Example: area between x = y² and the y-axis from y = 0 to 2 is 8/3."
+  }
+ ],
+ "ratta": [
+  "Area = ∫|f(x)|dx (split at zeros).",
+  "Between curves: ∫(upper − lower)dx.",
+  "Ellipse πab;  circle πa².",
+  "y² = 4ax & latus rectum: 8a²/3.",
+  "y² = 4ax & x² = 4ay: 16a²/3.",
+  "y = x & y = x²: 1/6."
+ ],
+ "verifiedOn": "2026-11-13"
+}
