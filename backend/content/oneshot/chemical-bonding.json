@@ -1,0 +1,196 @@
+{
+ "slug": "chemical-bonding",
+ "subject": "Chemistry",
+ "verifiedOn": "2026-11-15",
+ "chapters": {
+  "NEET": "Chemical Bonding and Molecular Structure",
+  "JEE": "Chemical Bonding and Molecular Structure"
+ },
+ "title": "Chemical Bonding and Molecular Structure",
+ "readMinutes": 22,
+ "summary": [
+  "Atoms bond to become more stable (lower energy). Ionic bonds form by electron transfer (Na⁺Cl⁻), covalent bonds by sharing (H₂, CH₄). The Kossel–Lewis octet rule is a good start, but it has exceptions (BF₃, PCl₅, NO).",
+  "Bond parameters — bond length, bond angle, bond enthalpy and bond order — are linked: higher bond order means shorter length and higher bond enthalpy. Resonance and dipole moment describe the true structure and polarity of molecules.",
+  "VSEPR theory predicts shape from repulsion between electron pairs (lp–lp > lp–bp > bp–bp). Valence bond theory explains shapes and bond angles through orbital overlap and hybridisation (sp, sp², sp³, sp³d, sp³d²).",
+  "Molecular orbital theory correctly gives bond order and magnetic behaviour — O₂ is paramagnetic, which a Lewis structure cannot explain. Hydrogen bonding explains boiling points, solubility and why ice floats."
+ ],
+ "formulas": [
+  {
+   "name": "Octet rule and exceptions",
+   "formula": "Atoms reach 8 valence electrons;  incomplete octet: BeCl₂ (4), BF₃ (6);  odd electron: NO, NO₂;  expanded octet (3rd period onwards): PCl₅ (10), SF₆ (12)",
+   "when": "Lewis structures.",
+   "mistake": "2nd-period elements (C, N, O, F) never expand their octet — they have no d orbitals."
+  },
+  {
+   "name": "Formal charge",
+   "formula": "FC = V − L − ½B   (V = valence e⁻, L = lone-pair e⁻, B = bonding e⁻)",
+   "when": "Choosing the best Lewis structure.",
+   "note": "The structure with the smallest formal charges is the most stable."
+  },
+  {
+   "name": "Ionic bond favourable when",
+   "formula": "low ionisation enthalpy (metal) + high electron gain enthalpy (non-metal) + high lattice enthalpy",
+   "when": "Whether an ionic bond will form.",
+   "note": "Lattice enthalpy is higher for small, highly charged ions (MgO > NaCl)."
+  },
+  {
+   "name": "Fajans' rules",
+   "formula": "Covalent character increases when the cation is small, the cation's charge is high, the anion is large, or the cation has a pseudo-noble-gas (18e⁻) configuration",
+   "when": "Covalent character in ionic compounds.",
+   "note": "LiCl is more covalent than NaCl; AlCl₃ is largely covalent."
+  },
+  {
+   "name": "Bond order and its effects",
+   "formula": "BO ↑ ⇒ bond length ↓, bond enthalpy ↑, stability ↑;  C–C 154 pm > C=C 134 pm > C≡C 120 pm",
+   "when": "Comparing bonds.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Resonance",
+   "formula": "The real structure is a hybrid of all canonical forms;  O₃, CO₃²⁻ (BO 4/3), NO₃⁻, C₆H₆;  the resonance hybrid is more stable than any canonical form",
+   "when": "Explaining equal bond lengths.",
+   "mistake": "Canonical forms don't exist separately."
+  },
+  {
+   "name": "Dipole moment",
+   "formula": "μ = q × d;  unit debye (1 D = 3.336 × 10⁻³⁰ C·m);  vector sum of bond dipoles",
+   "when": "Whether a molecule is polar.",
+   "tag": "PYQ favourite",
+   "note": "Symmetric molecules (CO₂, BF₃, CH₄, CCl₄) have net μ = 0 even with polar bonds."
+  },
+  {
+   "name": "Percentage ionic character",
+   "formula": "% ionic = (μ_observed / μ_ionic) × 100;   μ_ionic = e × d (4.8 D per Å)",
+   "when": "How ionic a bond is."
+  },
+  {
+   "name": "VSEPR repulsion order",
+   "formula": "lp–lp > lp–bp > bp–bp",
+   "when": "Why bond angles decrease.",
+   "note": "CH₄ 109.5° > NH₃ 107° > H₂O 104.5° — more lone pairs, smaller angle."
+  },
+  {
+   "name": "VSEPR shapes",
+   "formula": "2 bp: linear;  3 bp: trigonal planar;  2 bp + 1 lp: bent (SO₂);  4 bp: tetrahedral;  3 bp + 1 lp: pyramidal (NH₃);  2 bp + 2 lp: bent (H₂O);  5 bp: trigonal bipyramidal (PCl₅);  4 bp + 1 lp: see-saw (SF₄);  3 bp + 2 lp: T-shape (ClF₃);  2 bp + 3 lp: linear (XeF₂, I₃⁻);  6 bp: octahedral (SF₆);  5 bp + 1 lp: square pyramidal (BrF₅);  4 bp + 2 lp: square planar (XeF₄)",
+   "when": "Shapes to memorise.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Hybridisation shortcut",
+   "formula": "H = ½(V + M − c + a)   (V = valence e⁻ of central atom, M = monovalent atoms, c = cation charge, a = anion charge);  2 sp, 3 sp², 4 sp³, 5 sp³d, 6 sp³d², 7 sp³d³",
+   "when": "Hybridisation of the central atom.",
+   "mistake": "Divalent atoms like O and S are not counted in M."
+  },
+  {
+   "name": "Hybrid orbitals and angles",
+   "formula": "sp 180° (BeCl₂, C₂H₂);  sp² 120° (BF₃, C₂H₄);  sp³ 109.5° (CH₄);  sp³d 90°, 120° (PCl₅);  sp³d² 90° (SF₆)",
+   "when": "Geometry from hybridisation.",
+   "note": "In PCl₅ the axial bonds are longer than the equatorial ones (more repulsion)."
+  },
+  {
+   "name": "Sigma and pi bonds",
+   "formula": "Every single bond = 1σ;  double = 1σ + 1π;  triple = 1σ + 2π;  σ by head-on overlap (strong), π by sideways overlap (weak)",
+   "when": "Counting σ and π.",
+   "mistake": "π bonds are not formed by hybrid orbitals; an s orbital cannot form a π bond."
+  },
+  {
+   "name": "MOT bond order and magnetism",
+   "formula": "BO = ½(N_b − N_a);  BO > 0 ⇒ molecule can exist;  unpaired e⁻ ⇒ paramagnetic",
+   "when": "MO questions.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "MO energy order",
+   "formula": "Up to N₂ (14 e⁻): σ1s < σ*1s < σ2s < σ*2s < (π2pₓ = π2p_y) < σ2p_z < (π*2pₓ = π*2p_y) < σ*2p_z;   for O₂, F₂: σ2p_z lies below π2p",
+   "when": "Writing MO configurations.",
+   "note": "B₂ and O₂ are paramagnetic; N₂, F₂, C₂ are diamagnetic."
+  },
+  {
+   "name": "Hydrogen bonding",
+   "formula": "H bonded to F, O or N is attracted to a lone pair on another F/O/N;  intermolecular (H₂O, HF — high bp) and intramolecular (o-nitrophenol — low bp, volatile)",
+   "when": "Boiling points, solubility.",
+   "mistake": "Intramolecular H-bonding does not raise the boiling point; it lowers it (no association)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Formal charge in O₃",
+   "problem": "Formal charge on the central O of O₃? (2 bonds — one double, one single — and 1 lone pair)",
+   "solution": "FC = 6 − 2 − ½ × 6 = +1. The singly bonded O has −1, the doubly bonded O has 0."
+  },
+  {
+   "title": "Bond orders of the O₂ family",
+   "problem": "Bond orders and stability order of O₂, O₂⁺, O₂⁻, O₂²⁻?",
+   "solution": "O₂ = 2, O₂⁺ = 2.5, O₂⁻ = 1.5, O₂²⁻ = 1. Stability and bond enthalpy: O₂⁺ > O₂ > O₂⁻ > O₂²⁻; bond length the reverse."
+  },
+  {
+   "title": "Hybridisation shortcut",
+   "problem": "Hybridisation and shape of SF₄, XeF₄, NH₄⁺?",
+   "solution": "SF₄: ½(6 + 4) = 5 ⇒ sp³d, see-saw (1 lp). XeF₄: ½(8 + 4) = 6 ⇒ sp³d², square planar (2 lp). NH₄⁺: ½(5 + 4 − 1) = 4 ⇒ sp³, tetrahedral."
+  },
+  {
+   "title": "% ionic character of HCl",
+   "problem": "HCl: μ = 1.03 D, bond length 1.27 Å. % ionic?",
+   "solution": "μ_ionic = 4.8 × 1.27 = 6.1 D. % = 1.03/6.1 × 100 ≈ 17%."
+  },
+  {
+   "title": "Counting σ and π",
+   "problem": "σ and π bonds in CH₂=CH–C≡N (acrylonitrile)?",
+   "solution": "σ: 3 C–H + 1 of C=C + 1 C–C + 1 of C≡N = 6. π: 1 in C=C + 2 in C≡N = 3."
+  },
+  {
+   "title": "Dipole of NH₃ vs NF₃",
+   "problem": "Why is the dipole moment of NH₃ (1.47 D) larger than that of NF₃ (0.23 D)?",
+   "solution": "In NH₃ the N–H bond dipoles and the lone-pair dipole point the same way (they add); in NF₃ the N–F bond dipoles point opposite to the lone pair (they cancel)."
+  },
+  {
+   "title": "Magnetism of N₂ and O₂",
+   "problem": "Which of N₂ and O₂ is paramagnetic, and why?",
+   "solution": "N₂: BO = 3, all electrons paired ⇒ diamagnetic. O₂: 2 unpaired electrons in π*2p ⇒ paramagnetic (a Lewis structure can't show this)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Kossel–Lewis approach",
+   "explain": "Noble gases are stable because their octet is complete. Other atoms complete their octet by giving/taking electrons (ionic) or sharing them (covalent). Lewis dot structures show valence electrons as dots."
+  },
+  {
+   "title": "Ionic bond and lattice enthalpy",
+   "explain": "Lattice enthalpy is the energy needed to break one mole of an ionic solid into gaseous ions. Higher lattice enthalpy = more stable solid, higher melting point. It is found with the Born–Haber cycle."
+  },
+  {
+   "title": "Bond parameters",
+   "explain": "Bond length: distance between nuclei (grows with atomic size). Bond angle: angle between bonds at the central atom. Bond enthalpy: energy to break one mole of bonds. Bond order: number of bonds between two atoms."
+  },
+  {
+   "title": "Valence bond theory",
+   "explain": "A bond forms when two half-filled orbitals overlap and their electrons pair up. Greater overlap = stronger bond. Overlaps: s–s, s–p, p–p head-on (σ), sideways p–p (π)."
+  },
+  {
+   "title": "Rules of hybridisation",
+   "explain": "Orbitals of nearly equal energy on the same atom mix; the number of hybrid orbitals equals the number mixed; hybrid orbitals hold only σ bonds and lone pairs. Ethane sp³, ethene sp², ethyne sp."
+  },
+  {
+   "title": "Basics of MOT",
+   "explain": "Atomic orbitals combine into bonding (lower energy) and antibonding (higher energy) MOs. LCAO: only orbitals of matching symmetry and similar energy combine. He₂ has BO 0 — it doesn't exist. H₂⁺ and He₂⁺ have BO 0.5."
+  },
+  {
+   "title": "Electronegativity and metallic bonding",
+   "explain": "Electronegativity is an atom's tendency to pull shared electrons towards itself (F highest, 4.0). A large electronegativity difference (above ~1.7) ⇒ mostly ionic bond; small ⇒ polar covalent; zero ⇒ non-polar. Metallic bonding: a 'sea' of delocalised electrons among positive metal ions — which is why metals conduct and are malleable and ductile."
+  },
+  {
+   "title": "Effects of hydrogen bonding",
+   "explain": "HF, H₂O and NH₃ have higher boiling points than the other hydrides of their groups. Ice has an open cage structure ⇒ it is lighter than water. Alcohols and carboxylic acids dissolve in water. Protein and DNA structures depend on H-bonds."
+  }
+ ],
+ "ratta": [
+  "FC = V − L − ½B.",
+  "Fajans: small cation, high charge, large anion ⇒ more covalent.",
+  "BO ↑ ⇒ length ↓, enthalpy ↑.",
+  "lp–lp > lp–bp > bp–bp;  CH₄ 109.5° > NH₃ 107° > H₂O 104.5°.",
+  "H = ½(V + M − c + a): 2 sp, 3 sp², 4 sp³, 5 sp³d, 6 sp³d².",
+  "SF₄ see-saw, ClF₃ T-shape, XeF₂ linear, XeF₄ square planar, BrF₅ square pyramidal.",
+  "BO = ½(N_b − N_a);  O₂ & B₂ paramagnetic.",
+  "μ = 0: CO₂, BF₃, CH₄, CCl₄;  NH₃ > NF₃."
+ ]
+}
