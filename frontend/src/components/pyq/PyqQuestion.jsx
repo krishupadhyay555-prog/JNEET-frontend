@@ -44,7 +44,8 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
   const isMcq = q.type === "mcq";
   const done = revealed || (isMcq ? picked !== null : checked);
   const correct = q.correct ?? [];
-  const numericRight = !isMcq && checked && q.answer != null && sameNumber(typed, q.answer);
+  const accepted = q.answers ?? (q.answer != null ? [q.answer] : []);   // NTA may accept several values
+  const numericRight = !isMcq && checked && accepted.some((a) => sameNumber(typed, a));
   const status = STATUS[q.status];
 
   return (

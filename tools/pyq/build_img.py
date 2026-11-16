@@ -21,7 +21,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import ntaparse, ntaimages  # noqa: E402
+import ntaparse, ntakey_cols, ntaimages  # noqa: E402
 from build import fetch, CHAPTERS, SUBJ, katex_check, OUT, PUB  # noqa: E402
 
 SPEC = HERE / "papers_img"
@@ -91,7 +91,11 @@ def build(pid):
     paper = {q["n"]: q for q in ntaparse.parse_paper(pdf)}
     pts = ntaimages.widths(pymupdf.open(pdf))
     wpt = lambda xs: round(max(pts[x] for x in xs))
-    keys = ntaparse.parse_key(fetch(spec["keyPdf"]))
+    if spec.get("keyFormat") == "cols":
+        place = spec.get("keyPlace", "DOMESTIC")
+        keys = {(d, sh): v for (d, sh, pl), v in ntakey_cols.parse(fetch(spec["keyPdf"])).items() if pl == place}
+    else:
+        keys = ntaparse.parse_key(fetch(spec["keyPdf"]))
     key = keys.get((spec["keyDate"], spec["keyShift"]))
     if not key:
         raise SystemExit(f"{pid}: {spec['keyDate']} {spec['keyShift']} not in key; have {list(keys)}")
@@ -132,9 +136,12 @@ def build(pid):
                     status = "multi"
         else:
             item["type"] = "numeric"
-            item["answer"] = None if ans in ("Dropped", "ANY") else ans
+            item["answer"] = None if ans in ("Dropped", "ANY") else ans.replace(",", " or ")
             if ans == "Dropped": status = "dropped"
             if ans == "ANY": status = "bonus"
+            if "," in ans:
+                item["answers"] = ans.split(",")   # NTA accepted any of these values
+                status = "multi"
         item["status"] = status
         item["verified"] = True
         qs.append(item)

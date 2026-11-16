@@ -22,6 +22,9 @@ def layout(pdf):
     for _, _, _, kind, val in ev:
         if kind == "T":
             m = HDR.search(val)
+            if m and int(m.group(1)) in out:
+                # bilingual papers (2025+) print every question again in Hindi: keep the first (English) copy
+                cur = None; phase = None; continue
             if m:
                 cur = int(m.group(1)); out[cur] = {"qid": m.group(2), "type": m.group(3), "q": [], "opts": {}}
                 phase = "q"; pending = []; awaiting = None; continue

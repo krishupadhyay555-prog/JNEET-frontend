@@ -47,6 +47,7 @@ export function validatePaper(d, file = "") {
         if (q.status === "dropped" && q.correct?.length !== 0) bad("dropped has no correct option");
       } else if (q.type === "numeric") {
         if (q.status === "ok" && !str(q.answer)) bad("answer");
+        if (q.answers !== undefined && !(Array.isArray(q.answers) && q.answers.length > 1 && q.answers.every(str))) bad("answers");
       } else bad("type");
     });
   }

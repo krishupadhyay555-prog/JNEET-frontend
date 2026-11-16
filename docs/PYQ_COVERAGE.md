@@ -27,7 +27,9 @@ always our own.
 |---|---|---|---|
 | JEE Main | 2026 S2 | ✅ NTA site — 9 B.Tech shifts (2, 4, 5, 6, 8 Apr) | ✅ NTA |
 | JEE Main | 2026 S1 | ❌ not public on NTA (student copies needed) | ✅ NTA (Domestic + International IDs) |
-| JEE Main | 2023–2025 | ❌ never public (candidate login only) → student-shared official PDFs | ✅ NTA (2023 S1/S2, 2024 S1/S2, 2025 S1/S2) |
+| JEE Main | 2025 S2 | ✅ nta.ac.in/Download/ExamPaper (bilingual; 8 of 9 B.Tech shifts usable — 4 Apr S1 has missing images) — linked from study4india.com lists | ✅ NTA (3-column key, `tools/pyq/ntakey_cols.py`) |
+| JEE Main | 2025 S1 | ❌ NTA's own files are corrupted on the server | ✅ NTA |
+| JEE Main | 2022–2023 | 🟡 nta.ac.in ExamPaper links listed on study4india.com (to verify) | ✅ NTA (2023 S1/S2, 2024 S1/S2, 2025 S1/S2) |
 | JEE Main | 2021–2022 | ❌ candidate login → student-shared official PDFs | 🟡 to collect |
 | JEE Main | 2019–2020 | 🟡 NTA published; now only on the Internet Archive (jeemain.nta.nic.in FileHandler files) | 🟡 Archive |
 | JEE Main | 2014, 2016, 2017 | 🟡 CBSE published sets; Internet Archive (jeemain.nic.in) | 🟡 Archive |
