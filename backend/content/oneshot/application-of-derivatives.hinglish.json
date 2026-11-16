@@ -1,0 +1,147 @@
+{
+ "slug": "application-of-derivatives",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Application of Derivatives"
+ },
+ "title": "Application of Derivatives",
+ "readMinutes": 15,
+ "summary": [
+  "Derivatives se rate of change, tangent aur normal ke slopes milte hain, aur pata chalta hai ki function kahan increasing, decreasing hai ya kahan maxima aur minima hain.",
+  "First-derivative test (f′ ka sign change) aur second-derivative test (f″ ka sign) local extrema dhoondhte hain; [a, b] par absolute extrema critical points aur end points mein se hi hote hain.",
+  "Rolle's theorem aur mean value theorem average aur instantaneous rates ko jodte hain. Optimisation word problems — areas, volumes, distances — standard JEE sawal hain."
+ ],
+ "formulas": [
+  {
+   "name": "Rate of change",
+   "formula": "dy/dt = (dy/dx)(dx/dt)",
+   "when": "Related rates (time ke saath badalta area, volume).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Tangent and normal",
+   "formula": "tangent: y − y₁ = m(x − x₁), m = f′(x₁);  normal: y − y₁ = −(1/m)(x − x₁)",
+   "when": "Point par equations."
+  },
+  {
+   "name": "Increasing / decreasing",
+   "formula": "f′(x) > 0 ⇒ strictly increasing;  f′(x) < 0 ⇒ strictly decreasing",
+   "when": "Intervals par monotonicity.",
+   "mistake": "Isolated points par f′ = 0 ho sakta hai phir bhi f increasing (x³ at 0) — ise decreasing mat samjho."
+  },
+  {
+   "name": "Critical points",
+   "formula": "f′(c) = 0 or f′(c) does not exist",
+   "when": "Extrema ke candidates."
+  },
+  {
+   "name": "First-derivative test",
+   "formula": "f′ changes + to − ⇒ local maximum;  − to + ⇒ local minimum;  no change ⇒ neither (point of inflection)",
+   "when": "Critical points classify karna."
+  },
+  {
+   "name": "Second-derivative test",
+   "formula": "f′(c) = 0 and f″(c) < 0 ⇒ local max;  f″(c) > 0 ⇒ local min;  f″(c) = 0 ⇒ test fails",
+   "when": "Jaldi classification.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Absolute extrema on [a, b]",
+   "formula": "compare f at all critical points in (a, b) and at a, b",
+   "when": "Closed interval par global max/min."
+  },
+  {
+   "name": "Rolle's theorem",
+   "formula": "f continuous on [a, b], differentiable on (a, b), f(a) = f(b) ⇒ ∃ c ∈ (a, b): f′(c) = 0",
+   "when": "Horizontal tangent ka hona."
+  },
+  {
+   "name": "Lagrange's mean value theorem",
+   "formula": "f′(c) = (f(b) − f(a))/(b − a) for some c ∈ (a, b)",
+   "when": "Average rate = kahin na kahin instantaneous rate.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Approximation",
+   "formula": "f(x + Δx) ≈ f(x) + f′(x)Δx",
+   "when": "Approximate values (√25.3 waghera)."
+  },
+  {
+   "name": "Standard optimisation results",
+   "formula": "fixed perimeter → square has max area;  fixed surface area → cube (or sphere) has max volume;  cylinder of max volume in a sphere: h = 2R/√3",
+   "when": "Common optimisation answers."
+  },
+  {
+   "name": "Angle between curves",
+   "formula": "tan θ = |(m₁ − m₂)/(1 + m₁m₂)| using slopes of tangents at the intersection;  orthogonal if m₁m₂ = −1",
+   "when": "Ek doosre ko kaatne wali curves."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Local extrema",
+   "problem": "f(x) = x³ − 3x² − 9x + 5 ki local maximum aur minimum values nikalo.",
+   "solution": "f′ = 3x² − 6x − 9 = 3(x − 3)(x + 1) ⇒ x = −1, 3. f″(−1) = −12 < 0 ⇒ max f(−1) = 10; f″(3) = 12 > 0 ⇒ min f(3) = −22."
+  },
+  {
+   "title": "Tangent",
+   "problem": "y = x² ka (1, 1) par tangent?",
+   "solution": "slope = 2x = 2 ⇒ y − 1 = 2(x − 1) ⇒ y = 2x − 1."
+  },
+  {
+   "title": "Related rates",
+   "problem": "Ek sphere ka radius 0.1 cm/s se badhta hai. r = 5 cm par volume kitni tezi se badh raha hai?",
+   "solution": "dV/dt = 4πr² dr/dt = 4π × 25 × 0.1 = 10π ≈ 31.42 cm³/s."
+  },
+  {
+   "title": "Maximum area",
+   "problem": "Perimeter 20 wale rectangle ka maximum area?",
+   "solution": "x + y = 10, A = x(10 − x) ⇒ A′ = 10 − 2x = 0 ⇒ x = 5 ⇒ A = 25 (square)."
+  },
+  {
+   "title": "Mean value theorem",
+   "problem": "[1, 3] par f(x) = x² ke liye c nikalo.",
+   "solution": "f′(c) = 2c = (9 − 1)/2 = 4 ⇒ c = 2."
+  },
+  {
+   "title": "Increasing interval",
+   "problem": "f(x) = x³ − 3x kahan increasing hai?",
+   "solution": "f′ = 3(x² − 1) > 0 ⇒ x < −1 ya x > 1: (−∞, −1) ∪ (1, ∞) par increasing."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Monotonicity and inequalities",
+   "explain": "x > 0 ke liye f(x) > g(x) saabit karne ke liye dikhao ki h = f − g mein h(0) = 0 aur h′ > 0. Example: x ≠ 0 ke liye eˣ > 1 + x."
+  },
+  {
+   "title": "Points of inflection",
+   "explain": "Jahan f″ ka sign badalta hai (concavity badalti hai). f″ > 0 par f concave up aur f″ < 0 par concave down."
+  },
+  {
+   "title": "Optimisation steps",
+   "explain": "Constraint se optimise karne wali quantity ko ek variable mein likho, critical points nikalo, test karo, aur endpoints/domain restrictions check karo."
+  },
+  {
+   "title": "Shortest distance problems",
+   "explain": "Distance ki jagah distance ka square minimise karo — minimiser wahi, algebra aasaan."
+  },
+  {
+   "title": "Approximation example",
+   "explain": "x = 25 par f(x) = √x lekar √25.3 ≈ 5 + 0.3/(2 × 5) = 5.03."
+  },
+  {
+   "title": "Tangents from an external point",
+   "explain": "General point (t, f(t)) par tangent likho aur use diye point se guzaaro; t ke liye solve karo."
+  }
+ ],
+ "ratta": [
+  "f′ > 0 increasing;  f′ < 0 decreasing.",
+  "f″(c) < 0 max;  f″(c) > 0 min.",
+  "Normal slope = −1/f′.",
+  "LMVT: f′(c) = (f(b) − f(a))/(b − a).",
+  "Fixed perimeter → square;  fixed surface → cube.",
+  "dV/dt = 4πr² dr/dt."
+ ],
+ "verifiedOn": "2026-11-13"
+}

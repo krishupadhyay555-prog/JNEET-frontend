@@ -1,0 +1,138 @@
+{
+ "slug": "application-of-integrals",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Application of Integrals"
+ },
+ "title": "Application of Integrals",
+ "readMinutes": 11,
+ "summary": [
+  "Definite integral curve ke neeche area deta hai: y = f(x), x-axis aur x = a, b ke beech area ∫ₐᵇ |f(x)| dx hai.",
+  "Do curves ke beech area unke intersection points ke beech ∫ (upper − lower) dx hai; kabhi-kabhi y ke respect mein integrate karna (right − left) aasaan hota hai. Circle, parabola aur ellipse ke standard areas yaad rakho.",
+  "Pehle sketch banao: intersection points nikalo, dekho kaunsi curve upar hai, aur jahan curves cross karein ya function sign badle wahan interval tod do."
+ ],
+ "formulas": [
+  {
+   "name": "Area under a curve",
+   "formula": "A = ∫ₐᵇ |f(x)| dx",
+   "when": "Curve aur x-axis ke beech area.",
+   "mistake": "Agar f sign badalta hai to uske zeros par todo — warna areas cancel ho jaayenge, galat answer aayega.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Area with respect to y",
+   "formula": "A = ∫_c^d |g(y)| dy",
+   "when": "x = g(y) se di gayi curves."
+  },
+  {
+   "name": "Area between curves",
+   "formula": "A = ∫ₐᵇ [f(x) − g(x)] dx  with f ≥ g on [a, b]",
+   "when": "Do curves se ghira region.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Circle",
+   "formula": "area of x² + y² = a² = πa²",
+   "when": "Standard area."
+  },
+  {
+   "name": "Ellipse",
+   "formula": "area of x²/a² + y²/b² = 1 = πab",
+   "when": "Standard area.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parabola and its latus rectum",
+   "formula": "area bounded by y² = 4ax and x = a = 8a²/3",
+   "when": "Standard area."
+  },
+  {
+   "name": "Two parabolas",
+   "formula": "area between y² = 4ax and x² = 4ay = 16a²/3",
+   "when": "Standard area.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parabola and line",
+   "formula": "area between y = x² and y = x = 1/6;  between y² = 4ax and y = mx = 8a²/(3m³)",
+   "when": "Standard areas."
+  },
+  {
+   "name": "Symmetry",
+   "formula": "use symmetry about the axes to compute one part and multiply",
+   "when": "Circles, ellipses, parabolas mein kaam bachaana."
+  },
+  {
+   "name": "One arch of sine",
+   "formula": "∫₀^π sin x dx = 2",
+   "when": "y = sin x ke ek arch ka area."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Parabola ke neeche",
+   "problem": "y = x² ke neeche x = 0 se 3 tak area?",
+   "solution": "∫₀³ x² dx = 27/3 = 9."
+  },
+  {
+   "title": "y = x aur y = x² ke beech",
+   "problem": "y = x aur y = x² se ghira area?",
+   "solution": "Ye x = 0, 1 par milte hain; ∫₀¹ (x − x²) dx = 1/2 − 1/3 = 1/6 ≈ 0.167."
+  },
+  {
+   "title": "Parabola aur x-axis",
+   "problem": "y = 4x − x² aur x-axis ke beech area?",
+   "solution": "Roots x = 0, 4; ∫₀⁴ (4x − x²) dx = 32 − 64/3 = 32/3 ≈ 10.67."
+  },
+  {
+   "title": "Ellipse",
+   "problem": "x²/9 + y²/4 = 1 ka area?",
+   "solution": "πab = 6π ≈ 18.85."
+  },
+  {
+   "title": "Sine arch",
+   "problem": "0 se π tak y = sin x ke neeche area?",
+   "solution": "[−cos x]₀^π = 1 + 1 = 2."
+  },
+  {
+   "title": "Latus rectum area",
+   "problem": "y² = 12x aur uske latus rectum se ghira area?",
+   "solution": "a = 3: 8a²/3 = 8 × 9/3 = 24."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Sketching tips",
+   "explain": "Intercepts, intersection points aur symmetry mark karo. Poochha gaya region shade karo; vertical strips (dx) ya horizontal strips (dy) chuno — jisme kam tukde lagein wo lo."
+  },
+  {
+   "title": "Curves crossing the axis",
+   "explain": "[0, 2π] par y = sin x ka signed integral 0 hai par area 4. Hamesha |f(x)| use karo ya zeros par todo."
+  },
+  {
+   "title": "Modulus and greatest integer curves",
+   "explain": "|x| ya [x] wale areas break points par tod kar nikaalte hain, aksar triangles aur rectangles bante hain jo geometry se nikal jaate hain."
+  },
+  {
+   "title": "Inequality regions",
+   "explain": "{(x, y): x² ≤ y ≤ |x|} jaise regions ke liye boundary curves aur unke intersections pehchaano, phir upper minus lower integrate karo."
+  },
+  {
+   "title": "Area via definite integral properties",
+   "explain": "Definite integrals ki King's property aur symmetry area calculations aasaan kar sakti hain."
+  },
+  {
+   "title": "Area between a curve and the y-axis",
+   "explain": "y = c se y = d tak x = g(y) ke liye g(y) dy integrate karo. Example: y = 0 se 2 tak x = y² aur y-axis ke beech area 8/3 hai."
+  }
+ ],
+ "ratta": [
+  "Area = ∫|f(x)|dx (split at zeros).",
+  "Between curves: ∫(upper − lower)dx.",
+  "Ellipse πab;  circle πa².",
+  "y² = 4ax & latus rectum: 8a²/3.",
+  "y² = 4ax & x² = 4ay: 16a²/3.",
+  "y = x & y = x²: 1/6."
+ ],
+ "verifiedOn": "2026-11-13"
+}

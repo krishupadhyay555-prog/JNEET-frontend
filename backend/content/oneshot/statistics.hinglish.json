@@ -1,0 +1,137 @@
+{
+ "slug": "statistics",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Statistics"
+ },
+ "title": "Statistics",
+ "readMinutes": 11,
+ "summary": [
+  "Central tendency ke measures — mean, median aur mode — data ka centre batate hain. Dispersion ke measures — range, mean deviation, variance aur standard deviation — failaav batate hain.",
+  "Ungrouped, discrete aur grouped (continuous) data ke formulas, aur shortcut (step-deviation) method yaad rakho.",
+  "JEE sawal aksar test karte hain ki har observation shift ya scale karne par mean aur variance kaise badalte hain, aur do groups ka combined mean/variance."
+ ],
+ "formulas": [
+  {
+   "name": "Mean",
+   "formula": "x̄ = Σxᵢ/n;  for frequencies x̄ = Σfᵢxᵢ/Σfᵢ;  step deviation x̄ = A + (Σfᵢuᵢ/Σfᵢ)h, uᵢ = (xᵢ − A)/h",
+   "when": "Data ka average."
+  },
+  {
+   "name": "Median",
+   "formula": "ungrouped: middle value of sorted data;  grouped: l + ((N/2 − C)/f) × h",
+   "when": "Beech wali value."
+  },
+  {
+   "name": "Mode",
+   "formula": "grouped: l + ((f₁ − f₀)/(2f₁ − f₀ − f₂)) × h;  empirical: mode ≈ 3 median − 2 mean",
+   "when": "Sabse zyada baar aane wali value."
+  },
+  {
+   "name": "Mean deviation",
+   "formula": "MD about a = Σ|xᵢ − a|/n;  minimum when a = median",
+   "when": "Average absolute deviation.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Variance and SD",
+   "formula": "σ² = Σ(xᵢ − x̄)²/n = Σxᵢ²/n − x̄²;  σ = √σ²",
+   "when": "Data ka failaav.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Effect of change of origin and scale",
+   "formula": "yᵢ = axᵢ + b ⇒ ȳ = a x̄ + b;  σᵧ² = a²σₓ²;  σᵧ = |a|σₓ",
+   "when": "Data shift/scale karna.",
+   "mistake": "Constant jodne se variance nahi badalta — dhyan rakho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Coefficient of variation",
+   "formula": "CV = (σ/x̄) × 100",
+   "when": "Do series ki variability compare karna — kam CV zyada consistent."
+  },
+  {
+   "name": "Combined mean",
+   "formula": "x̄ = (n₁x̄₁ + n₂x̄₂)/(n₁ + n₂)",
+   "when": "Do groups milaana."
+  },
+  {
+   "name": "Combined variance",
+   "formula": "σ² = [n₁(σ₁² + d₁²) + n₂(σ₂² + d₂²)]/(n₁ + n₂),  dᵢ = x̄ᵢ − x̄",
+   "when": "Milaaye gaye groups ka variance."
+  },
+  {
+   "name": "Variance of first n natural numbers",
+   "formula": "σ² = (n² − 1)/12",
+   "when": "Standard result."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Mean, variance, SD",
+   "problem": "Data: 2, 4, 4, 4, 5, 5, 7, 9. Mean, variance aur SD nikalo.",
+   "solution": "Mean = 40/8 = 5; variance = Σ(x − 5)²/8 = 32/8 = 4; SD = 2."
+  },
+  {
+   "title": "Median",
+   "problem": "3, 7, 1, 9, 5 ka median?",
+   "solution": "Sorted 1, 3, 5, 7, 9 ⇒ median = 5."
+  },
+  {
+   "title": "Mean deviation",
+   "problem": "2, 4, 6, 8, 10 ka mean ke about mean deviation?",
+   "solution": "Mean 6; deviations 4, 2, 0, 2, 4 ⇒ MD = 12/5 = 2.4."
+  },
+  {
+   "title": "Scaling",
+   "problem": "Data ka variance 4 hai. Har value ko 3 se multiply karke 5 joda. Naya variance?",
+   "solution": "3² × 4 = 36."
+  },
+  {
+   "title": "Coefficient of variation",
+   "problem": "Pehle data set (mean 5, SD 2) ka CV nikalo.",
+   "solution": "2/5 × 100 = 40%."
+  },
+  {
+   "title": "Combined mean",
+   "problem": "30 students ka average 60 aur 20 students ka average 70. Combined mean?",
+   "solution": "(1800 + 1400)/50 = 64."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Choosing a measure",
+   "explain": "Mean saari values use karta hai par outliers se affect hota hai; median outliers se bacha rehta hai; mode categorical data ke liye. Skewed distributions mein median aksar behtar hai."
+  },
+  {
+   "title": "Range and quartile deviation",
+   "explain": "Range = maximum − minimum. Quartile deviation = (Q₃ − Q₁)/2. Dono failaav ke simple measures hain."
+  },
+  {
+   "title": "Variance shortcuts",
+   "explain": "Har deviation nikaalne se bachne ke liye σ² = Σx²/n − x̄² use karo. Grouped data ke liye step-deviation method σ² = h²[Σfu²/N − (Σfu/N)²]."
+  },
+  {
+   "title": "Correcting wrong observations",
+   "explain": "Agar koi value galat likhi gayi, to Σx aur Σx² mein galat value hata kar sahi jodo, phir mean aur variance dobara nikalo."
+  },
+  {
+   "title": "Properties of SD",
+   "explain": "SD kabhi negative nahi; zero sirf tab jab saari values barabar hon. SD ≥ mean ke about mean deviation."
+  },
+  {
+   "title": "Missing data problems",
+   "explain": "Mean aur variance diye hon aur ek-do values anjaan, to Σx = n x̄ aur Σx² = n(σ² + x̄²) se equations banao."
+  }
+ ],
+ "ratta": [
+  "σ² = Σx²/n − x̄².",
+  "y = ax + b ⇒ σᵧ = |a|σₓ (b doesn't matter).",
+  "MD minimum about median.",
+  "CV = σ/x̄ × 100.",
+  "Mode ≈ 3 median − 2 mean.",
+  "Variance of 1…n = (n² − 1)/12."
+ ],
+ "verifiedOn": "2026-11-13"
+}

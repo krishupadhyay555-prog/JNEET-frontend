@@ -77,5 +77,51 @@ SYLLABUS = [
 ("Binomial distribution (mean and variance)", ["binomial", "mean", "variance"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Event ki probability = favourable outcomes / kul equally likely outcomes. Addition rule 'ya' (or) sambhaalta hai, multiplication rule 'aur' (and).",
+"Conditional probability P(A|B) = P(A ∩ B)/P(B) se total probability theorem aur Bayes' theorem milte hain — JEE favourite.",
+"Random variable outcomes ko numbers deta hai; uske distribution ka mean (expectation) aur variance hota hai. Binomial distribution n independent trials ko success probability p ke saath model karta hai.",
+],
+when=[
+("Equally likely outcomes.", None),
+("'Ya' wale events.", None),
+("B hone ke baad probability.", None),
+("'Aur' wale events.", "Mutually exclusive events (non-zero probabilities ke saath) kabhi independent nahi hote — dono ko confuse mat karo."),
+("Cases ke through probability.", None),
+("Reverse probability — result kis cause se aaya.", None),
+("Probability distributions.", None),
+("n independent Bernoulli trials.", None),
+("Lamba case work bachaana.", None),
+("Outcomes ginna.", None),
+("Odds ko probability mein badalna.", None),
+],
+examples=[
+("Sum 7", "Do dice phenke. P(sum = 7)?",
+ "36 mein se 6 favourable ⇒ 1/6 ≈ ⟨0⟩."),
+("Addition rule", "P(A) = 1/2, P(B) = 1/3, P(A ∩ B) = 1/6. P(A ∪ B)?",
+ "1/2 + 1/3 − 1/6 = 2/3 ≈ ⟨0⟩."),
+("Bayes", "Bag I mein 3 red, 2 black; bag II mein 2 red, 3 black. Random bag chuna aur red ball nikli. P(bag I se aayi)?",
+ "(1/2 × 3/5)/(1/2 × 3/5 + 1/2 × 2/5) = 3/5 = ⟨0⟩."),
+("Binomial", "Ek coin 4 baar uchhaala. P(theek 2 heads)?",
+ "C(4, 2)/16 = 6/16 = ⟨0⟩."),
+("Mean aur variance", "X ~ Binomial(10, 1/2). Mean aur variance?",
+ "np = ⟨0⟩, npq = ⟨1⟩."),
+("Kam se kam ek six", "Die ke 3 throws mein kam se kam ek six ki probability?",
+ "1 − (5/6)³ = 91/216 ≈ ⟨0⟩."),
+("Expectation", "Fair die roll ki expected value?",
+ "(1 + 2 + … + 6)/6 = ⟨0⟩."),
+],
+topics=[
+("Events", "Sample space S, events uske subsets; mutually exclusive (koi common outcome nahi), exhaustive (union = S), independent (ek doosre ko affect nahi karta), complementary."),
+("Using P&C", "Cards, committees ya arrangements ke liye favourable aur total cases combinations se gino. Jaise P(2 cards mein 2 aces) = ⁴C₂/⁵²C₂ = 1/221."),
+("Independent vs mutually exclusive", "Independent: P(A ∩ B) = P(A)P(B). Mutually exclusive: P(A ∩ B) = 0. A aur B independent hon to A′ aur B, A aur B′, A′ aur B′ bhi independent."),
+("Geometric probability", "Jab outcomes kisi region ke points hon, probability = favourable length/area/volume ÷ total."),
+("Problems on 'without replacement'", "Har draw ke baad probabilities badalti hain; conditional probabilities ya seedhe combinations use karo."),
+("Bayes' strategy", "Causes (bags, machines, log) ko prior probabilities ke saath likho, har ek ke liye P(result | cause) nikalo, result ki total probability nikalo, phir chahiye wale term ko total se divide karo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

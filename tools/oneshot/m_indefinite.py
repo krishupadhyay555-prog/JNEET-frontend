@@ -73,5 +73,50 @@ SYLLABUS = [
 ("Evaluation of simple integrals of standard types", ["standard forms"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Integration differentiation ka ulta hai (algebraic, trigonometric, exponential aur logarithmic functions ke antiderivatives): ∫f(x)dx = F(x) + C jahan F′(x) = f(x). Har answer differentiate karke check ho sakta hai.",
+"Main methods: standard formulas, substitution, integration by parts (ILATE), partial fractions aur khaas standard forms (1/(x² ± a²), √(a² − x²) waghera).",
+"JEE shortcuts: ∫eˣ(f + f′)dx = eˣf + C, aur ∫f′(x)/f(x) dx = ln|f(x)| + C jaise integrals.",
+],
+when=[
+("Standard results.", None),
+("Trig antiderivatives.", None),
+("Quadratic denominators.", None),
+("Square-root denominators.", None),
+("Numerator mein square roots.", None),
+("Andar ka function aur uska derivative pehchaanna.", None),
+("Alag type ke functions ke products.", None),
+("eˣ × (function + uska derivative) wale integrals.", None),
+("Rational functions.", "Numerator ki degree ≥ denominator ho to pehle divide karo — seedhe partial fractions mat lagaana."),
+("Mixed rational forms.", None),
+("sin aur cos ki powers.", None),
+("Weierstrass substitution.", None),
+],
+examples=[
+("By parts", "∫x eˣ dx?",
+ "u = x, v = eˣ: x eˣ − ∫eˣ dx = (x − 1)eˣ + C."),
+("Standard form", "∫dx/(x² + 4)?",
+ "(1/2)tan⁻¹(x/2) + C."),
+("Log integral", "∫ln x dx?",
+ "u = ln x, v = 1 lekar by parts: x ln x − x + C."),
+("Partial fractions", "∫dx/(x(x + 1))?",
+ "1/(x(x + 1)) = 1/x − 1/(x + 1) ⇒ ln|x| − ln|x + 1| + C = ln|x/(x + 1)| + C."),
+("Trig power", "∫sin²x dx?",
+ "∫(1 − cos 2x)/2 dx = x/2 − sin 2x/4 + C."),
+("eˣ shortcut", "∫eˣ(sin x + cos x)dx?",
+ "f = sin x, f′ = cos x ⇒ eˣ sin x + C."),
+],
+topics=[
+("Checking answers", "Result ko differentiate karo; integrand waapas milna chahiye. Constant of integration ki wajah se do sahi answers alag dikh sakte hain (jaise sin²x vs −cos²x/2 forms)."),
+("Choosing a substitution", "Function aur uska derivative dhoondho: ∫2x/(x² + 1)dx → t = x² + 1 se ln(x² + 1). √(ax + b) ke liye t² = ax + b rakho."),
+("Trig substitutions", "√(a² − x²): x = a sin θ;  √(a² + x²): x = a tan θ;  √(x² − a²): x = a sec θ."),
+("Integrals of rational functions of sin and cos", "Numerator aur denominator ko cos²x se divide karke sec²x dx banao aur t = tan x rakho, khaaskar ∫dx/(a sin²x + b cos²x) ke liye."),
+("Reduction formulas", "∫sinⁿx dx = −sinⁿ⁻¹x cos x/n + ((n − 1)/n)∫sinⁿ⁻²x dx — definite integrals ke liye Wallis' formula tak le jaata hai."),
+("Special trick for ∫(x² + 1)/(x⁴ + 1)", "x² se divide karo: ∫(1 + 1/x²)/(x² + 1/x²) dx, phir t = x − 1/x rakho. (x² − 1)/(x⁴ + 1) ke liye t = x + 1/x."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

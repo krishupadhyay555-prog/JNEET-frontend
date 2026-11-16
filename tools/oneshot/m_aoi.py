@@ -67,5 +67,48 @@ SYLLABUS = [
 ("Applications of integrals in finding the area under simple curves, especially lines, circles, parabolas and ellipses (in standard form only)", ["area", "circle", "parabola", "ellipse"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Definite integral curve ke neeche area deta hai: y = f(x), x-axis aur x = a, b ke beech area ∫ₐᵇ |f(x)| dx hai.",
+"Do curves ke beech area unke intersection points ke beech ∫ (upper − lower) dx hai; kabhi-kabhi y ke respect mein integrate karna (right − left) aasaan hota hai. Circle, parabola aur ellipse ke standard areas yaad rakho.",
+"Pehle sketch banao: intersection points nikalo, dekho kaunsi curve upar hai, aur jahan curves cross karein ya function sign badle wahan interval tod do.",
+],
+when=[
+("Curve aur x-axis ke beech area.", "Agar f sign badalta hai to uske zeros par todo — warna areas cancel ho jaayenge, galat answer aayega."),
+("x = g(y) se di gayi curves.", None),
+("Do curves se ghira region.", None),
+("Standard area.", None),
+("Standard area.", None),
+("Standard area.", None),
+("Standard area.", None),
+("Standard areas.", None),
+("Circles, ellipses, parabolas mein kaam bachaana.", None),
+("y = sin x ke ek arch ka area.", None),
+],
+examples=[
+("Parabola ke neeche", "y = x² ke neeche x = 0 se 3 tak area?",
+ "∫₀³ x² dx = 27/3 = ⟨0⟩."),
+("y = x aur y = x² ke beech", "y = x aur y = x² se ghira area?",
+ "Ye x = 0, 1 par milte hain; ∫₀¹ (x − x²) dx = 1/2 − 1/3 = 1/6 ≈ ⟨0⟩."),
+("Parabola aur x-axis", "y = 4x − x² aur x-axis ke beech area?",
+ "Roots x = 0, 4; ∫₀⁴ (4x − x²) dx = 32 − 64/3 = 32/3 ≈ ⟨0⟩."),
+("Ellipse", "x²/9 + y²/4 = 1 ka area?",
+ "πab = 6π ≈ ⟨0⟩."),
+("Sine arch", "0 se π tak y = sin x ke neeche area?",
+ "[−cos x]₀^π = 1 + 1 = ⟨0⟩."),
+("Latus rectum area", "y² = 12x aur uske latus rectum se ghira area?",
+ "a = 3: 8a²/3 = 8 × 9/3 = ⟨0⟩."),
+],
+topics=[
+("Sketching tips", "Intercepts, intersection points aur symmetry mark karo. Poochha gaya region shade karo; vertical strips (dx) ya horizontal strips (dy) chuno — jisme kam tukde lagein wo lo."),
+("Curves crossing the axis", "[0, 2π] par y = sin x ka signed integral 0 hai par area 4. Hamesha |f(x)| use karo ya zeros par todo."),
+("Modulus and greatest integer curves", "|x| ya [x] wale areas break points par tod kar nikaalte hain, aksar triangles aur rectangles bante hain jo geometry se nikal jaate hain."),
+("Inequality regions", "{(x, y): x² ≤ y ≤ |x|} jaise regions ke liye boundary curves aur unke intersections pehchaano, phir upper minus lower integrate karo."),
+("Area via definite integral properties", "Definite integrals ki King's property aur symmetry area calculations aasaan kar sakti hain."),
+("Area between a curve and the y-axis", "y = c se y = d tak x = g(y) ke liye g(y) dy integrate karo. Example: y = 0 se 2 tak x = y² aur y-axis ke beech area 8/3 hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

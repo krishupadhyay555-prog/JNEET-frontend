@@ -1,0 +1,147 @@
+{
+ "slug": "indefinite-integrals",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Indefinite Integrals"
+ },
+ "title": "Indefinite Integrals",
+ "readMinutes": 16,
+ "summary": [
+  "Integration differentiation ka ulta hai (algebraic, trigonometric, exponential aur logarithmic functions ke antiderivatives): ∫f(x)dx = F(x) + C jahan F′(x) = f(x). Har answer differentiate karke check ho sakta hai.",
+  "Main methods: standard formulas, substitution, integration by parts (ILATE), partial fractions aur khaas standard forms (1/(x² ± a²), √(a² − x²) waghera).",
+  "JEE shortcuts: ∫eˣ(f + f′)dx = eˣf + C, aur ∫f′(x)/f(x) dx = ln|f(x)| + C jaise integrals."
+ ],
+ "formulas": [
+  {
+   "name": "Basic integrals",
+   "formula": "∫xⁿdx = xⁿ⁺¹/(n + 1) (n ≠ −1);  ∫dx/x = ln|x|;  ∫eˣdx = eˣ;  ∫aˣdx = aˣ/ln a",
+   "when": "Standard results."
+  },
+  {
+   "name": "Trigonometric integrals",
+   "formula": "∫sin x = −cos x;  ∫cos x = sin x;  ∫sec²x = tan x;  ∫tan x = ln|sec x|;  ∫sec x = ln|sec x + tan x|;  ∫cosec x = ln|cosec x − cot x|",
+   "when": "Trig antiderivatives.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Standard forms I",
+   "formula": "∫dx/(x² + a²) = (1/a)tan⁻¹(x/a);  ∫dx/(x² − a²) = (1/2a)ln|(x − a)/(x + a)|;  ∫dx/(a² − x²) = (1/2a)ln|(a + x)/(a − x)|",
+   "when": "Quadratic denominators."
+  },
+  {
+   "name": "Standard forms II",
+   "formula": "∫dx/√(a² − x²) = sin⁻¹(x/a);  ∫dx/√(x² ± a²) = ln|x + √(x² ± a²)|",
+   "when": "Square-root denominators."
+  },
+  {
+   "name": "Standard forms III",
+   "formula": "∫√(a² − x²)dx = (x/2)√(a² − x²) + (a²/2)sin⁻¹(x/a);  ∫√(x² ± a²)dx = (x/2)√(x² ± a²) ± (a²/2)ln|x + √(x² ± a²)|",
+   "when": "Numerator mein square roots."
+  },
+  {
+   "name": "Substitution",
+   "formula": "∫f(g(x))g′(x)dx = ∫f(t)dt with t = g(x);  ∫f′(x)/f(x)dx = ln|f(x)|",
+   "when": "Andar ka function aur uska derivative pehchaanna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Integration by parts",
+   "formula": "∫u v dx = u∫v dx − ∫(u′∫v dx)dx;  choose u by ILATE (Inverse trig, Log, Algebraic, Trig, Exponential)",
+   "when": "Alag type ke functions ke products.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "eˣ shortcut",
+   "formula": "∫eˣ[f(x) + f′(x)]dx = eˣf(x) + C",
+   "when": "eˣ × (function + uska derivative) wale integrals."
+  },
+  {
+   "name": "Partial fractions",
+   "formula": "(px + q)/((x − a)(x − b)) = A/(x − a) + B/(x − b);  repeated factor (x − a)²: A/(x − a) + B/(x − a)²;  quadratic factor: (Bx + C)/(x² + bx + c)",
+   "when": "Rational functions.",
+   "mistake": "Numerator ki degree ≥ denominator ho to pehle divide karo — seedhe partial fractions mat lagaana."
+  },
+  {
+   "name": "Linear over quadratic",
+   "formula": "∫(px + q)/(ax² + bx + c)dx: write px + q = A(2ax + b) + B, then split",
+   "when": "Mixed rational forms."
+  },
+  {
+   "name": "Trig powers",
+   "formula": "sin²x = (1 − cos 2x)/2;  cos²x = (1 + cos 2x)/2;  odd power: save one factor and substitute",
+   "when": "sin aur cos ki powers."
+  },
+  {
+   "name": "a sin x + b cos x forms",
+   "formula": "∫dx/(a + b cos x): use t = tan(x/2), cos x = (1 − t²)/(1 + t²), dx = 2dt/(1 + t²)",
+   "when": "Weierstrass substitution."
+  }
+ ],
+ "examples": [
+  {
+   "title": "By parts",
+   "problem": "∫x eˣ dx?",
+   "solution": "u = x, v = eˣ: x eˣ − ∫eˣ dx = (x − 1)eˣ + C."
+  },
+  {
+   "title": "Standard form",
+   "problem": "∫dx/(x² + 4)?",
+   "solution": "(1/2)tan⁻¹(x/2) + C."
+  },
+  {
+   "title": "Log integral",
+   "problem": "∫ln x dx?",
+   "solution": "u = ln x, v = 1 lekar by parts: x ln x − x + C."
+  },
+  {
+   "title": "Partial fractions",
+   "problem": "∫dx/(x(x + 1))?",
+   "solution": "1/(x(x + 1)) = 1/x − 1/(x + 1) ⇒ ln|x| − ln|x + 1| + C = ln|x/(x + 1)| + C."
+  },
+  {
+   "title": "Trig power",
+   "problem": "∫sin²x dx?",
+   "solution": "∫(1 − cos 2x)/2 dx = x/2 − sin 2x/4 + C."
+  },
+  {
+   "title": "eˣ shortcut",
+   "problem": "∫eˣ(sin x + cos x)dx?",
+   "solution": "f = sin x, f′ = cos x ⇒ eˣ sin x + C."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Checking answers",
+   "explain": "Result ko differentiate karo; integrand waapas milna chahiye. Constant of integration ki wajah se do sahi answers alag dikh sakte hain (jaise sin²x vs −cos²x/2 forms)."
+  },
+  {
+   "title": "Choosing a substitution",
+   "explain": "Function aur uska derivative dhoondho: ∫2x/(x² + 1)dx → t = x² + 1 se ln(x² + 1). √(ax + b) ke liye t² = ax + b rakho."
+  },
+  {
+   "title": "Trig substitutions",
+   "explain": "√(a² − x²): x = a sin θ;  √(a² + x²): x = a tan θ;  √(x² − a²): x = a sec θ."
+  },
+  {
+   "title": "Integrals of rational functions of sin and cos",
+   "explain": "Numerator aur denominator ko cos²x se divide karke sec²x dx banao aur t = tan x rakho, khaaskar ∫dx/(a sin²x + b cos²x) ke liye."
+  },
+  {
+   "title": "Reduction formulas",
+   "explain": "∫sinⁿx dx = −sinⁿ⁻¹x cos x/n + ((n − 1)/n)∫sinⁿ⁻²x dx — definite integrals ke liye Wallis' formula tak le jaata hai."
+  },
+  {
+   "title": "Special trick for ∫(x² + 1)/(x⁴ + 1)",
+   "explain": "x² se divide karo: ∫(1 + 1/x²)/(x² + 1/x²) dx, phir t = x − 1/x rakho. (x² − 1)/(x⁴ + 1) ke liye t = x + 1/x."
+  }
+ ],
+ "ratta": [
+  "∫tan x = ln|sec x|;  ∫sec x = ln|sec x + tan x|.",
+  "∫dx/(x² + a²) = (1/a)tan⁻¹(x/a).",
+  "∫dx/√(a² − x²) = sin⁻¹(x/a).",
+  "ILATE for u in by parts.",
+  "∫eˣ(f + f′) = eˣf.",
+  "∫f′/f = ln|f|."
+ ],
+ "verifiedOn": "2026-11-13"
+}

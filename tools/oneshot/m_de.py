@@ -71,5 +71,48 @@ SYLLABUS = [
 ("Solution of differential equations by the method of separation of variables; solution of homogeneous and linear differential equations", ["separable", "homogeneous", "linear", "integrating factor"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Differential equation function ko uske derivatives se jodti hai. Iska order sabse oonchi derivative hai; degree us derivative ki power hai jab equation derivatives mein polynomial ho.",
+"General solution mein order jitne arbitrary constants hote hain; particular solution initial conditions use karta hai.",
+"JEE methods: variables separable, homogeneous (y = vx), aur linear first-order (integrating factor). Constants hata kar differential equations ka formation aur growth/decay applications bhi aate hain.",
+],
+when=[
+("DE classify karna.", "Agar derivative sin, eˣ, log waghera ke andar ho to degree undefined hai — number mat likhna."),
+("Family of curves → DE.", "n arbitrary constants wali family se order n ki DE banti hai."),
+("x aur y terms alag karo.", None),
+("Degree-0 homogeneity wali equations.", None),
+("Integrating factor method.", None),
+("Jab equation x mein linear ho.", None),
+("Population, radioactive decay, compound interest.", None),
+("Cooling problems.", None),
+("Total differentials pehchaanna.", None),
+("Linear mein badalne wali.", None),
+],
+examples=[
+("Order aur degree", "(y″)³ + (y′)⁴ + y = 0 ka order aur degree?",
+ "Sabse oonchi derivative y″ ⇒ order ⟨0⟩; uski power ⇒ degree ⟨1⟩."),
+("Separable", "dy/dx = 2xy solve karo.",
+ "dy/y = 2x dx ⇒ ln|y| = x² + c ⇒ y = Ce^(x²)."),
+("Linear", "dy/dx + y = e^(−x) solve karo.",
+ "IF = eˣ ⇒ y eˣ = ∫e^(−x)eˣ dx = x + C ⇒ y = (x + C)e^(−x)."),
+("Initial value problem", "dy/dx = 2x aur y(0) = 1. y(3) nikalo.",
+ "y = x² + C, C = 1 ⇒ y(3) = ⟨0⟩."),
+("Growth", "Ek population 10 saal mein dugni hoti hai (dN/dt = kN). Teen guna kab hogi?",
+ "k = ln 2/10; tripling time = ln 3/k = 10 ln 3/ln 2 ≈ ⟨0⟩ saal."),
+("Homogeneous", "dy/dx = (x + y)/x solve karo.",
+ "y = vx ⇒ v + x dv/dx = 1 + v ⇒ dv = dx/x ⇒ v = ln|x| + C ⇒ y = x ln|x| + Cx."),
+],
+topics=[
+("General vs particular solution", "General: order ke barabar arbitrary constants. Particular: di gayi conditions se constants fix. Singular solution (general se na nikalne wala) JEE Main syllabus ke bahar hai."),
+("Recognising homogeneous functions", "f(x, y) degree n ka homogeneous hai agar f(λx, λy) = λⁿf(x, y). dy/dx = f/g homogeneous hai jab f aur g ki degree same ho."),
+("Reducible to homogeneous", "dy/dx = (a₁x + b₁y + c₁)/(a₂x + b₂y + c₂): constants hataane ke liye origin shift karo x = X + h, y = Y + k, jab tak a₁/a₂ = b₁/b₂ na ho (tab a₁x + b₁y = t rakho)."),
+("Geometric applications", "Tangent ka slope = dy/dx; subtangent, subnormal aur orthogonal trajectories (dy/dx ki jagah −dx/dy) se DEs banti hain."),
+("Checking solutions", "Solution ko DE mein waapas rakho — MCQs mein options verify karne ka sabse tez tareeka."),
+("Standard families", "Origin se guzarne wale aur x-axis par centre wale circles, x-axis ke saath axis wale parabolas, straight lines y = mx + c (DE y″ = 0) — inki DEs banana practise karo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -73,5 +73,50 @@ SYLLABUS = [
 ("Composite and implicit functions; derivatives of order up to two", ["chain rule", "implicit", "second derivative"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Derivative f′(x) = lim (h→0) (f(x + h) − f(x))/h instantaneous rate of change aur tangent ka slope naapta hai.",
+"Standard derivatives aur rules seekho: sum, product, quotient aur chain rule. Khaas techniques: implicit, logarithmic, parametric differentiation, aur substitution se inverse trigonometric functions ke derivatives.",
+"Higher-order derivatives (second derivative) aur ek function ka doosre ke respect mein derivative chapter poora karte hain.",
+],
+when=[
+("Derivative ki definition.", None),
+("Standard derivatives.", None),
+("Trig derivatives.", None),
+("Inverse-trig derivatives.", None),
+("Functions ko jodna.", None),
+("Composite functions.", "Bahar wala differentiate karo, andar wala waisa hi rakho, phir andar wale ke derivative se multiply karo — ye step mat bhoolna."),
+("Jo equations y ke liye solve nahi hain.", None),
+("Variable powers aur lambe products.", None),
+("x(t), y(t) se di gayi curves.", "d²y/dx², (d²y/dt²)/(d²x/dt²) nahi hota — galat formula mat lagaana."),
+("f ko g ke respect mein differentiate karna.", None),
+("Differentiate karne se pehle simplify karo.", None),
+("Concavity, acceleration, differential equations.", None),
+],
+examples=[
+("Chain rule", "d/dx sin(x²)?",
+ "cos(x²) × 2x = 2x cos(x²)."),
+("Logarithmic differentiation", "d/dx (xˣ)?",
+ "ln y = x ln x ⇒ y′/y = ln x + 1 ⇒ y′ = xˣ(1 + ln x)."),
+("Parametric", "x = t², y = 2t. t = 2 par dy/dx nikalo.",
+ "dy/dx = 2/(2t) = 1/t ⇒ t = 2 par ⟨0⟩."),
+("Implicit", "x² + y² = 25. (3, 4) par dy/dx?",
+ "2x + 2y y′ = 0 ⇒ y′ = −x/y = −3/4 = ⟨0⟩."),
+("Second derivative", "y = x³. x = 2 par y″ nikalo.",
+ "y″ = 6x ⇒ ⟨0⟩."),
+("Inverse-trig substitution", "|x| < 1 ke liye d/dx tan⁻¹(2x/(1 − x²)), x = 0 par?",
+ "x = tan θ lene par function 2θ = 2tan⁻¹x hai, isliye derivative 2/(1 + x²) = x = 0 par ⟨0⟩."),
+],
+topics=[
+("Derivative as rate", "Agar s(t) position hai to s′(t) velocity aur s″(t) acceleration. Kisi point par dy/dx wahan tangent ka slope hai."),
+("Derivatives of modulus and greatest integer", "d|x|/dx = x/|x| (x ≠ 0). [x] ka derivative integers ke beech 0 hai aur integers par differentiable nahi."),
+("Derivative of determinants", "Ek baar mein ek row differentiate karo aur bane determinants jodo."),
+("Rolle's and mean value theorems", "Rolle's: f, [a, b] par continuous, (a, b) par differentiable, f(a) = f(b) ⇒ kisi c ke liye f′(c) = 0. LMVT: f′(c) = (f(b) − f(a))/(b − a)."),
+("Even/odd and derivatives", "Even function ka derivative odd aur odd function ka derivative even hota hai. Periodic functions ke derivatives same period ke saath periodic hote hain."),
+("Leibniz rule for nth derivatives", "(uv)⁽ⁿ⁾ = Σ C(n, r) u⁽ⁿ⁻ʳ⁾ v⁽ʳ⁾. xⁿeˣ jaise products ke liye kaam ka."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

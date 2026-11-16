@@ -76,5 +76,50 @@ SYLLABUS = [
 ("Rolle's and Lagrange's mean value theorems; tangents and normals", ["Rolle", "mean value", "tangent", "normal"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Derivatives se rate of change, tangent aur normal ke slopes milte hain, aur pata chalta hai ki function kahan increasing, decreasing hai ya kahan maxima aur minima hain.",
+"First-derivative test (f′ ka sign change) aur second-derivative test (f″ ka sign) local extrema dhoondhte hain; [a, b] par absolute extrema critical points aur end points mein se hi hote hain.",
+"Rolle's theorem aur mean value theorem average aur instantaneous rates ko jodte hain. Optimisation word problems — areas, volumes, distances — standard JEE sawal hain.",
+],
+when=[
+("Related rates (time ke saath badalta area, volume).", None),
+("Point par equations.", None),
+("Intervals par monotonicity.", "Isolated points par f′ = 0 ho sakta hai phir bhi f increasing (x³ at 0) — ise decreasing mat samjho."),
+("Extrema ke candidates.", None),
+("Critical points classify karna.", None),
+("Jaldi classification.", None),
+("Closed interval par global max/min.", None),
+("Horizontal tangent ka hona.", None),
+("Average rate = kahin na kahin instantaneous rate.", None),
+("Approximate values (√25.3 waghera).", None),
+("Common optimisation answers.", None),
+("Ek doosre ko kaatne wali curves.", None),
+],
+examples=[
+("Local extrema", "f(x) = x³ − 3x² − 9x + 5 ki local maximum aur minimum values nikalo.",
+ "f′ = 3x² − 6x − 9 = 3(x − 3)(x + 1) ⇒ x = −1, 3. f″(−1) = −12 < 0 ⇒ max f(−1) = ⟨0⟩; f″(3) = 12 > 0 ⇒ min f(3) = ⟨1⟩."),
+("Tangent", "y = x² ka (1, 1) par tangent?",
+ "slope = 2x = ⟨0⟩ ⇒ y − 1 = 2(x − 1) ⇒ y = 2x − 1."),
+("Related rates", "Ek sphere ka radius 0.1 cm/s se badhta hai. r = 5 cm par volume kitni tezi se badh raha hai?",
+ "dV/dt = 4πr² dr/dt = 4π × 25 × 0.1 = 10π ≈ ⟨0⟩ cm³/s."),
+("Maximum area", "Perimeter 20 wale rectangle ka maximum area?",
+ "x + y = 10, A = x(10 − x) ⇒ A′ = 10 − 2x = 0 ⇒ x = 5 ⇒ A = ⟨0⟩ (square)."),
+("Mean value theorem", "[1, 3] par f(x) = x² ke liye c nikalo.",
+ "f′(c) = 2c = (9 − 1)/2 = 4 ⇒ c = ⟨0⟩."),
+("Increasing interval", "f(x) = x³ − 3x kahan increasing hai?",
+ "f′ = 3(x² − 1) > 0 ⇒ x < −1 ya x > 1: (−∞, −1) ∪ (1, ∞) par increasing."),
+],
+topics=[
+("Monotonicity and inequalities", "x > 0 ke liye f(x) > g(x) saabit karne ke liye dikhao ki h = f − g mein h(0) = 0 aur h′ > 0. Example: x ≠ 0 ke liye eˣ > 1 + x."),
+("Points of inflection", "Jahan f″ ka sign badalta hai (concavity badalti hai). f″ > 0 par f concave up aur f″ < 0 par concave down."),
+("Optimisation steps", "Constraint se optimise karne wali quantity ko ek variable mein likho, critical points nikalo, test karo, aur endpoints/domain restrictions check karo."),
+("Shortest distance problems", "Distance ki jagah distance ka square minimise karo — minimiser wahi, algebra aasaan."),
+("Approximation example", "x = 25 par f(x) = √x lekar √25.3 ≈ 5 + 0.3/(2 × 5) = 5.03."),
+("Tangents from an external point", "General point (t, f(t)) par tangent likho aur use diye point se guzaaro; t ke liye solve karo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)
