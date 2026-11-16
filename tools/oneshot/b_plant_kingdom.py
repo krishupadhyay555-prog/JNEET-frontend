@@ -62,5 +62,51 @@ SYLLABUS = [
 ("Plant life cycles and alternation of generations", ["haplontic", "diplontic", "alternation of generations"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Plantae mein algae, bryophyte, pteridophyte, gymnosperm aur angiosperms aate hain. Classification artificial systems (kuch morphological characters) se natural systems (kai characters) aur phir phylogenetic systems (evolutionary relationships) tak aaya.",
+"Algae simple, thalloid, zyadatar aquatic hain; pigments aur stored food ke hisaab se green (Chlorophyceae), brown (Phaeophyceae) aur red (Rhodophyceae) algae mein baante jaate hain.",
+"Bryophytes (plant kingdom ke amphibians) mein gametophyte dominant. Pteridophytes pehle vascular plants, sporophyte dominant. Gymnosperms ke seeds naked; angiosperms ke seeds fruits ke andar.",
+"Plant life cycles alternation of generations dikhate hain — haplontic, diplontic ya haplo-diplontic.",
+],
+when=[
+("Algal groups compare karna (Spirogyra, Fucus, Polysiphonia).", None),
+("Sexual reproduction ke types.", None),
+("Economic importance.", None),
+("Liverworts (Marchantia) aur mosses (Funaria, Polytrichum, Sphagnum).", "Sphagnum se peat milta hai jo fuel aur packing material ki tarah use hota hai kyunki paani rok kar rakhta hai."),
+("Mosses ke stages.", None),
+("Selaginella, Equisetum, Dryopteris, Pteris, Adiantum.", None),
+("Seed habit ki taraf ek kadam.", None),
+("Pteridophytes ka classification.", None),
+("Cycas, Pinus, Ginkgo.", "Cycas ki coralloid roots mein N₂-fixing cyanobacteria; Pinus ki roots mein mycorrhiza."),
+("Sirf angiosperms mein.", None),
+("Ploidy ke sawal.", None),
+("Life cycles classify karna.", None),
+],
+examples=[
+("Plants ke amphibians", "Bryophytes ko plant kingdom ke amphibians kyun kehte hain?",
+ "Ye zameen par rehte hain par sexual reproduction ke liye paani chahiye (sperm tair kar egg tak jaata hai)."),
+("Pehle vascular plants", "Kis group mein pehle xylem aur phloem aaye, aur wahan kaunsi generation dominant?",
+ "Pteridophytes; sporophyte dominant, independent generation hai."),
+("Ploidy ginti", "Moss mein protonema, leafy stage, capsule aur spores ki ploidy?",
+ "Protonema n, leafy stage n, capsule (sporophyte) 2n, spores n (meiosis se)."),
+("Life cycle type", "Fucus ka life-cycle pattern?",
+ "Diplontic — sporophyte dominant aur gametes hi akela haploid stage."),
+("Agar ka source", "Microbiology mein use hone wala agar kaunsi algae se?",
+ "Red algae — Gelidium aur Gracilaria (Rhodophyceae)."),
+("Vishaal ped", "Sabse lamba gymnosperm?",
+ "Sequoia (giant redwood) — sabse lambi tree species mein se ek."),
+],
+topics=[
+("Systems of classification", "Artificial (Linnaeus; mainly vegetative characters ya androecium), natural (Bentham aur Hooker; andar-bahar ke features) aur phylogenetic (evolutionary). Numerical taxonomy computers se, sabhi characters ko barabar weight; cytotaxonomy chromosome number aur structure se; chemotaxonomy chemical constituents se."),
+("Algae general features", "Chlorophyll wale, simple, thalloid, autotrophic, zyadatar aquatic. Forms unicellular (Chlamydomonas) aur colonial (Volvox) se filamentous (Ulothrix, Spirogyra) aur bade marine kelps tak. Earth par lagbhag aadha CO₂ fix karte hain."),
+("Liverworts", "Thalloid (Marchantia), dorsiventral. Asexual reproduction fragmentation aur gemmae se (gemma cups mein hare, multicellular buds). Sporophyte mein foot, seta aur capsule."),
+("Gymnosperm details", "Roots aam taur par tap roots; stems unbranched (Cycas) ya branched (Pinus); conifers mein patte suiyon jaise (moti cuticle, dhanse stomata paani bachaate hain). Male cone mein microsporophylls; female cone mein ovules wale megasporophylls; female gametophyte mein archegonia."),
+("Angiosperms", "Flowering plants: dicots aur monocots. Size chhote Wolffia se lambe Eucalyptus (100 m se zyada) tak. Flower mein stamens (anthers → pollen) aur pistil (ovules wali ovary); embryo sac mein 7 cells aur 8 nuclei."),
+("Ecological importance", "Bryophytes aur lichens chattanon par pioneers hain aur mitti banaane mein madad karte hain; mosses soil erosion rokte hain. Pteridophytes medicine, soil binders aur ornamentals ki tarah use hote hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

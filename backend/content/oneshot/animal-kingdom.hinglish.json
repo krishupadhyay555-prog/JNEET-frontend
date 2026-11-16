@@ -1,0 +1,163 @@
+{
+ "slug": "animal-kingdom",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Animal Kingdom"
+ },
+ "title": "Animal Kingdom",
+ "readMinutes": 15,
+ "summary": [
+  "Animals ko basic features par classify karte hain: level of organisation, symmetry, germ layers (diploblastic ya triploblastic), coelom, segmentation aur notochord.",
+  "Non-chordate phyla Porifera (cellular level) aur Cnidaria (tissue level, radial, diploblastic) se shuru hoke Ctenophora, flatworms (Platyhelminthes), roundworms (Aschelminthes) aur Annelida se Arthropoda (sabse bada phylum), Mollusca, Echinodermata aur Hemichordata tak jaate hain.",
+  "Chordate mein kisi na kisi stage par notochord, dorsal hollow nerve cord aur pharyngeal gill slits hote hain. Vertebrates mein notochord ki jagah vertebral column aa jaata hai.",
+  "Vertebrate ki har class — Cyclostomata, Chondrichthyes, Osteichthyes, Amphibia, Reptilia, Aves aur Mammalia — skin, heart, respiration, temperature regulation aur reproduction mein alag hai."
+ ],
+ "formulas": [
+  {
+   "name": "Levels of organisation",
+   "formula": "cellular (Porifera) → tissue (Cnidaria, Ctenophora) → organ (Platyhelminthes) → organ system (Aschelminthes onwards)",
+   "when": "Body organisation compare karna."
+  },
+  {
+   "name": "Symmetry",
+   "formula": "asymmetrical (most sponges);  radial (Cnidaria, Ctenophora, adult Echinodermata);  bilateral (Platyhelminthes onwards)",
+   "when": "Symmetry se classify karna.",
+   "mistake": "Echinoderm ke larvae bilateral hote hain; adults radial — dono ko ek mat samjho."
+  },
+  {
+   "name": "Germ layers",
+   "formula": "diploblastic: ectoderm + endoderm with mesoglea (Cnidaria, Ctenophora);  triploblastic: + mesoderm (Platyhelminthes to Chordata)",
+   "when": "Embryo ki layers."
+  },
+  {
+   "name": "Coelom",
+   "formula": "acoelomate: Platyhelminthes;  pseudocoelomate: Aschelminthes;  coelomate: Annelida, Arthropoda, Mollusca, Echinodermata, Hemichordata, Chordata",
+   "when": "Body cavity ke sawal.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Porifera",
+   "formula": "canal system (ostia → spongocoel → osculum), choanocytes (collar cells), spicules/spongin fibres; hermaphrodite; internal fertilisation; indirect development",
+   "when": "Sycon, Spongilla, Euspongia."
+  },
+  {
+   "name": "Cnidaria and Ctenophora",
+   "formula": "Cnidaria: cnidoblasts (stinging cells), polyp and medusa forms, metagenesis (Obelia) — Hydra, Physalia, Adamsia, Pennatula, Meandrina;  Ctenophora: comb plates, bioluminescence — Pleurobrachia, Ctenoplana",
+   "when": "Diploblastic phyla.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Worms",
+   "formula": "Platyhelminthes: flattened, flame cells, hooks/suckers (Taenia, Fasciola, Planaria regenerates);  Aschelminthes: round, separate sexes, female larger (Ascaris, Wuchereria, Ancylostoma);  Annelida: metameric segmentation, nephridia, closed circulation (Nereis, Pheretima, Hirudinaria)",
+   "when": "Worms ke phyla."
+  },
+  {
+   "name": "Arthropoda",
+   "formula": "jointed appendages, chitinous exoskeleton, open circulation; respiration by gills, book gills, book lungs or tracheae; Malpighian tubules; compound eyes, statocysts",
+   "when": "Sabse bada phylum (animal species ka do-tihaai se zyada).",
+   "note": "Living fossil: Limulus (king crab)."
+  },
+  {
+   "name": "Mollusca and Echinodermata",
+   "formula": "Mollusca: soft body, mantle, calcareous shell, radula, ctenidia (Pila, Pinctada, Sepia, Loligo, Octopus);  Echinodermata: spiny calcareous ossicles, water vascular system (tube feet), all marine (Asterias, Echinus, Antedon, Cucumaria, Ophiura)",
+   "when": "Molluscs aur echinoderms.",
+   "mistake": "Sepia (cuttlefish), Loligo (squid) aur Octopus (devil fish) molluscs hain, fish nahi."
+  },
+  {
+   "name": "Chordate features",
+   "formula": "notochord + dorsal hollow nerve cord + paired pharyngeal gill slits + post-anal tail",
+   "when": "Chordates vs non-chordates.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Chordate subphyla",
+   "formula": "Urochordata: notochord only in larval tail (Ascidia, Salpa, Doliolum);  Cephalochordata: notochord from head to tail throughout life (Branchiostoma/Amphioxus);  Vertebrata: vertebral column",
+   "when": "Protochordates vs vertebrates."
+  },
+  {
+   "name": "Heart chambers",
+   "formula": "fish 2;  amphibians and reptiles 3 (crocodile 4);  birds and mammals 4",
+   "when": "Circulation ke sawal.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vertebrate classes",
+   "formula": "Cyclostomata (jawless, suctorial mouth — Petromyzon, Myxine);  Chondrichthyes (cartilage, placoid scales, no air bladder — Scoliodon, Pristis, Trygon, Torpedo);  Osteichthyes (bone, operculum, air bladder — Labeo, Catla, Hippocampus, Exocoetus);  Amphibia (moist skin, cloaca — Rana, Bufo, Salamandra, Ichthyophis);  Reptilia (dry scaly skin — Chelone, Chameleon, Naja, Vipera);  Aves (feathers, pneumatic bones — Corvus, Columba, Struthio, Pavo);  Mammalia (hair, mammary glands, external ears — Ornithorhynchus oviparous, Macropus, Pteropus, Balaenoptera)",
+   "when": "Class ke hisaab se examples."
+  },
+  {
+   "name": "Cold vs warm blooded",
+   "formula": "poikilothermous: fish, amphibians, reptiles;  homoiothermous: birds and mammals",
+   "when": "Temperature regulation."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Metagenesis",
+   "problem": "Metagenesis kya hai? Example do.",
+   "solution": "Kuch cnidarians mein polyp (asexual) aur medusa (sexual) generations ka baari-baari aana — Obelia: polyps asexually medusae banate hain; medusae sexually polyps banate hain."
+  },
+  {
+   "title": "Pseudocoelom",
+   "problem": "Kis phylum mein pseudocoelom hai, aur iska matlab kya?",
+   "solution": "Aschelminthes (roundworms). Body cavity poori tarah mesoderm se lined nahi hoti; mesoderm ectoderm aur endoderm ke beech bikhre pouches ki tarah hota hai."
+  },
+  {
+   "title": "Fish nahi hai",
+   "problem": "Inme se asli fish kaun hai: jellyfish, starfish, cuttlefish, flying fish, silverfish?",
+   "solution": "Sirf flying fish (Exocoetus, Osteichthyes). Jellyfish — Cnidaria; starfish — Echinodermata; cuttlefish — Mollusca; silverfish — insect (Arthropoda)."
+  },
+  {
+   "title": "Ande dene wala mammal",
+   "problem": "Ek oviparous mammal ka naam batao.",
+   "solution": "Ornithorhynchus (platypus). Zyadatar mammals viviparous hain."
+  },
+  {
+   "title": "Electric organ aur poison sting",
+   "problem": "Kaunsi cartilaginous fish mein electric organ hai aur kisme poison sting?",
+   "solution": "Torpedo mein electric organs; Trygon (sting ray) mein poison sting."
+  },
+  {
+   "title": "Excretory structures",
+   "problem": "Match karo: flame cells, nephridia, Malpighian tubules, green glands.",
+   "solution": "Flame cells — Platyhelminthes; nephridia — Annelida; Malpighian tubules — zyadatar insects (Arthropoda); green glands — prawn jaise crustaceans."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Segmentation",
+   "explain": "Metameric segmentation — body bahar aur andar se repeated segments mein bati hoti hai aur kuch organs serially repeat hote hain — Annelida (earthworm), Arthropoda aur Chordata mein."
+  },
+  {
+   "title": "Hemichordata",
+   "explain": "Worm jaise marine animals jinmein proboscis, collar aur trunk hote hain; pehle Chordata mein rakhe gaye the par inmein stomochord hai (asli notochord nahi), isliye ab alag non-chordate phylum: Balanoglossus, Saccoglossus."
+  },
+  {
+   "title": "Arthropod examples",
+   "explain": "Economically important: Apis (honey bee), Bombyx (silkworm), Laccifer (lac insect). Vectors: Anopheles, Culex, Aedes (mosquitoes). Jhund mein rehne wala pest: Locusta. Aur: Limulus, butterfly, scorpion, prawn."
+  },
+  {
+   "title": "Amphibians and reptiles",
+   "explain": "Amphibians: do jode limbs, bina scales ki geeli skin, eyelids wali aankhein, tympanum, cloaca, external fertilisation, gills, lungs aur skin se respiration. Reptiles: sookhi cornified skin scales ya scutes ke saath, external ear opening nahi, internal fertilisation, shell wale ande; snakes aur lizards skin ko cast ki tarah utaarte hain."
+  },
+  {
+   "title": "Birds",
+   "explain": "Feathers, beak, forelimbs wings mein badle, hind limbs par scales, pneumatic (hawa bhari) bones, crop aur gizzard, lungs se jude air sacs, four-chambered heart, oviparous aur direct development. Flightless birds: Struthio (ostrich), Aptenodytes (penguin)."
+  },
+  {
+   "title": "Mammals",
+   "explain": "Mammary glands, hair, external pinnae, alag-alag type ke daant, four-chambered heart, zyadatar viviparous. Pteropus (flying fox) udta hai; Balaenoptera (blue whale), Delphinus (dolphin) paani mein rehte hain; Macropus (kangaroo) marsupial hai."
+  }
+ ],
+ "ratta": [
+  "Coelom: acoelomate flatworms, pseudocoelomate roundworms, rest coelomate.",
+  "Cnidoblasts → Cnidaria;  comb plates → Ctenophora.",
+  "Flame cells, nephridia, Malpighian tubules.",
+  "Arthropoda largest phylum;  Limulus = living fossil.",
+  "Water vascular system → Echinodermata.",
+  "Notochord: larval tail (Uro), head to tail (Cephalo).",
+  "Heart: fish 2, amphibia/reptile 3 (crocodile 4), birds/mammals 4.",
+  "Platypus lays eggs;  Torpedo electric;  Trygon sting."
+ ],
+ "verifiedOn": "2026-11-13"
+}

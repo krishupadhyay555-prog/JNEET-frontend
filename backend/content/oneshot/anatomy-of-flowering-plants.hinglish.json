@@ -1,0 +1,157 @@
+{
+ "slug": "anatomy-of-flowering-plants",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Anatomy of Flowering Plants"
+ },
+ "title": "Anatomy of Flowering Plants",
+ "readMinutes": 13,
+ "summary": [
+  "Plant tissues meristematic (meristem — divide hone wale) ya permanent hote hain (simple: parenchyma, collenchyma, sclerenchyma; complex: xylem aur phloem).",
+  "Tissues teen tissue system mein organised hain: epidermal, ground (fundamental) aur vascular.",
+  "Dicot aur monocot ki roots, stems aur leaves ki andar ki structure alag hai — vascular bundles ki sankhya aur arrangement hi key hai.",
+  "Secondary growth (vascular cambium aur cork cambium) dicots aur gymnosperms mein girth badhaati hai, jisse annual rings, heartwood, sapwood aur bark bante hain."
+ ],
+ "formulas": [
+  {
+   "name": "Meristems",
+   "formula": "apical (root and shoot tips — length);  intercalary (base of internodes in grasses — regrowth after grazing);  lateral (vascular cambium, cork cambium — girth)",
+   "when": "Meristem ke types."
+  },
+  {
+   "name": "Simple permanent tissues",
+   "formula": "parenchyma (thin walls, storage, photosynthesis);  collenchyma (corners thickened with cellulose, hemicellulose, pectin — mechanical support in young dicot stems);  sclerenchyma (lignified, dead — fibres and sclereids)",
+   "when": "Simple tissues compare karna."
+  },
+  {
+   "name": "Xylem elements",
+   "formula": "tracheids, vessels, xylem fibres (dead);  xylem parenchyma (only living part)",
+   "when": "Paani ka conduction.",
+   "mistake": "Gymnosperms mein vessels nahi hote (Gnetum ke alawa); angiosperms mein hote hain — confuse mat karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Phloem elements",
+   "formula": "sieve tubes + companion cells (angiosperms), phloem parenchyma, phloem fibres (only dead part)",
+   "when": "Food ka conduction.",
+   "mistake": "Gymnosperms mein sieve tubes aur companion cells ki jagah albuminous cells aur sieve cells hote hain — dhyan rakho."
+  },
+  {
+   "name": "Protoxylem position",
+   "formula": "exarch (protoxylem towards periphery — roots);  endarch (protoxylem towards centre — stems)",
+   "when": "Root vs stem.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vascular bundles",
+   "formula": "radial (xylem and phloem on different radii — roots);  conjoint collateral open (with cambium — dicot stem);  conjoint closed (no cambium — monocot stem and leaves)",
+   "when": "Vascular bundle ke types."
+  },
+  {
+   "name": "Dicot vs monocot root",
+   "formula": "dicot: 2–4 xylem bundles (diarch–tetrarch), small pith, secondary growth;  monocot: more than 6 (polyarch), large pith, no secondary growth",
+   "when": "Root anatomy.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Dicot vs monocot stem",
+   "formula": "dicot: vascular bundles in a ring, open, endodermis (starch sheath), hypodermis collenchyma;  monocot: scattered bundles, closed, sclerenchymatous bundle sheath, water-containing cavities, hypodermis sclerenchyma, no pith/cortex distinction",
+   "when": "Stem anatomy."
+  },
+  {
+   "name": "Dorsiventral vs isobilateral leaf",
+   "formula": "dicot: palisade + spongy mesophyll, more stomata on lower surface;  monocot: undifferentiated mesophyll, stomata equal on both surfaces, bulliform cells",
+   "when": "Leaf anatomy.",
+   "note": "Bulliform cells paani kho kar grass leaves ko mod dete hain, jisse paani ka nuksaan kam hota hai."
+  },
+  {
+   "name": "Stomata",
+   "formula": "dicot: bean-shaped guard cells;  grasses: dumb-bell-shaped guard cells;  stomatal apparatus = pore + guard cells + subsidiary cells",
+   "when": "Epidermal tissue system."
+  },
+  {
+   "name": "Secondary growth outputs",
+   "formula": "vascular cambium → secondary xylem (inside) + secondary phloem (outside);  cork cambium (phellogen) → cork (phellem, outside) + secondary cortex (phelloderm, inside)",
+   "when": "Girth ka badhna."
+  },
+  {
+   "name": "Periderm and bark",
+   "formula": "periderm = phellem + phellogen + phelloderm;  bark = all tissues outside the vascular cambium (including secondary phloem)",
+   "when": "Bark ke sawal.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Annual rings",
+   "formula": "spring/early wood: lighter, wide vessels;  autumn/late wood: darker, narrow vessels;  one light + one dark band = one year",
+   "when": "Dendrochronology (ped ki umar ka andaza)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Root ya stem ka section?",
+   "problem": "Section mein radial bundles, exarch xylem aur pericycle dikh rahe hain. Root hai ya stem?",
+   "solution": "Root — radial bundles aur exarch protoxylem root ke features hain (stems mein conjoint bundles aur endarch protoxylem)."
+  },
+  {
+   "title": "Monocot stem",
+   "problem": "T.S. mein monocot stem pehchaanne ke teen features batao.",
+   "solution": "Bikhre hue vascular bundles, har ek ke saath sclerenchymatous bundle sheath; bundles conjoint aur closed; kinaare wale bundles beech walon se chhote; paani wali cavities; saaf pith nahi."
+  },
+  {
+   "title": "Heartwood vs sapwood",
+   "problem": "Purane tane ka kaunsa hissa paani le jaata hai?",
+   "solution": "Sapwood (alburnum) — bahar ka halke rang ka secondary xylem. Heartwood (duramen) gaadha hai, tannins, resins, oils aur gums se bhara, conducting nahi par mazboot."
+  },
+  {
+   "title": "Xylem mein living cells",
+   "problem": "Xylem ka kaunsa element zinda hai?",
+   "solution": "Xylem parenchyma. Tracheids, vessels aur xylem fibres maturity par dead hote hain."
+  },
+  {
+   "title": "Bark ke components",
+   "problem": "Kya secondary phloem bark ka hissa hai?",
+   "solution": "Haan. Bark mein vascular cambium ke bahar ke saare tissues aate hain: secondary phloem, phelloderm, phellogen aur phellem."
+  },
+  {
+   "title": "Grass leaf ka mudna",
+   "problem": "Garam sookhe din grass ki leaves kyun lipat jaati hain?",
+   "solution": "Upper epidermis ke bulliform cells turgor kho kar sikud jaate hain, leaf andar ki taraf lipat jaati hai aur khula surface aur paani ka nuksaan kam hota hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Epidermal tissue system",
+   "explain": "Epidermis (aam taur par ek layer, waxy cuticle se dhaki — roots mein cuticle nahi), stomata, aur appendages: root hairs (epidermal cells ke unicellular extensions) aur stems par trichomes (aam taur par multicellular, branched ya unbranched, secretory bhi ho sakte)."
+  },
+  {
+   "title": "Ground tissue system",
+   "explain": "Epidermis aur vascular bundles ke alawa saare tissues: stems aur roots mein cortex, pericycle, pith aur medullary rays; leaves mein mesophyll."
+  },
+  {
+   "title": "Endodermis and Casparian strips",
+   "explain": "Roots ki sabse andar wali cortical layer; iske cells ki radial aur inner tangential walls par paani na jaane dene wale suberin ki Casparian strips hoti hain, jisse paani ko living cells se hi guzarna padta hai."
+  },
+  {
+   "title": "Formation of the cambial ring",
+   "explain": "Dicot stems mein intrafascicular cambium (bundles ke andar) interfascicular cambium (medullary ray cells se) ke saath judkar poora ring banata hai. Cambium andar ki taraf zyada active hai, isliye phloem se zyada secondary xylem banta hai."
+  },
+  {
+   "title": "Lenticels",
+   "explain": "Bark mein lens jaise openings jahan phellogen cork ki jagah dheele packed complementary cells banata hai; inse bahar ki hawa aur andar ke tissues ke beech gas exchange hota hai."
+  },
+  {
+   "title": "Secondary growth in roots",
+   "explain": "Dicot roots mein vascular cambium kuch phloem ke neeche ke conjunctive tissue se aur kuch protoxylem ke saamne wale pericycle se banta hai; pehle lehardaar ring banti hai jo baad mein gol ho jaati hai."
+  }
+ ],
+ "ratta": [
+  "Xylem: only parenchyma living;  phloem: only fibres dead.",
+  "Root: radial, exarch;  stem: conjoint, endarch.",
+  "Dicot root 2–4 bundles; monocot root more than 6.",
+  "Dicot stem: ring, open;  monocot stem: scattered, closed.",
+  "Bulliform cells — grasses curl.",
+  "Bark = everything outside vascular cambium.",
+  "Heartwood non-conducting;  sapwood conducts."
+ ],
+ "verifiedOn": "2026-11-13"
+}

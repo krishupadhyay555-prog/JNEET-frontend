@@ -63,5 +63,51 @@ SYLLABUS = [
 ("Viruses and viroids", ["virus", "viroid"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"R.H. Whittaker (1969) ne five kingdom diye — Monera, Protista, Fungi, Plantae aur Animalia — cell structure, body organisation, nutrition ka tarika, reproduction aur phylogenetic relationships ke base par.",
+"Monera prokaryotes hain (bacteria, cyanobacteria, archaebacteria, mycoplasma). Protista unicellular eukaryotes (chrysophytes, dinoflagellates, euglenoids, slime moulds, protozoans).",
+"Fungi heterotrophic hain, chitin wali cell walls aur hyphae ke saath; spores aur fruiting bodies se Phycomycetes, Ascomycetes, Basidiomycetes aur Deuteromycetes mein classify hote hain.",
+"Virus, viroid, prions aur lichen five-kingdom scheme mein fit nahi hote: virus nucleoprotein particles hain jo host cell ke bahar inert rehte hain.",
+],
+when=[
+("Classification ka itihaas.", "Two-kingdom grouping ne prokaryotes ko eukaryotes ke saath aur unicellular ko multicellular ke saath rakh diya tha — isliye galat tha."),
+("Bacteria pehchaanna.", None),
+("Extreme habitat wale bacteria.", "Inki cell wall structure doosre bacteria se alag hai — isi se extreme conditions jhel paate hain."),
+("Blue-green algae ke facts.", None),
+("Alag type ke monerans.", None),
+("Kingdom Protista.", None),
+("Protozoan diseases.", None),
+("Fungi classify karna.", None),
+("Fungi ka sexual cycle.", None),
+("Virus ki structure.", "D.J. Ivanowsky (1892) ne TMV dhoondha; M.W. Beijerinck ne fluid ko contagium vivum fluidum kaha; W.M. Stanley ne viruses ko crystallise kiya."),
+("Sub-viral agents.", None),
+("Mutualism ka example.", None),
+],
+examples=[
+("Kaunsa kingdom?", "Euglena mein chlorophyll hai par andhere mein heterotroph ki tarah rehta hai. Kaunsa kingdom?",
+ "Protista (euglenoids). Cell wall ki jagah pellicle hai aur mixotrophic hai, isliye na plants mein fit na animals mein."),
+("Jiska sexual stage pata nahi", "Alternaria aur Trichoderma kis class mein, aur kyun?",
+ "Deuteromycetes (imperfect fungi): sirf asexual (conidial) stage pata hai. Sexual stage milne par Ascomycetes ya Basidiomycetes mein shift ho jaate hain."),
+("Red tide", "Red tides kyun hote hain?",
+ "Gonyaulax jaise laal dinoflagellates ke tezi se badhne se; inke toxins machhliyon aur doosre marine animals ko maar sakte hain."),
+("Biogas bacteria", "Kaunse bacteria biogas banate hain, aur kahan rehte hain?",
+ "Methanogens (archaebacteria) — cattle ke rumen aur marshy areas mein; cellulose-rich material se methane banate hain."),
+("Virus vs living", "Viruses ko obligate parasites kyun kehte hain?",
+ "Host cell ke bahar ye inert, crystallise hone wale particles hain. Host ke andar uski machinery lekar replicate karte hain, aksar host cell ko maar dete hain."),
+("Rust aur smut", "Wheat rust aur smut kaunsi fungi se? Class?",
+ "Rust: Puccinia; smut: Ustilago. Dono Basidiomycetes."),
+],
+topics=[
+("Eubacteria nutrition", "Zyadatar bacteria heterotrophs hain (decomposers, nitrogen fixers, pathogens). Kuch autotrophs: photosynthetic (cyanobacteria) ya chemosynthetic (nitrates aur ammonia jaise inorganic substances ko oxidise karte, nutrient recycling mein madad). Bacteria mainly fission se reproduce karte hain; DNA bhi exchange karte hain (conjugation, transformation, transduction)."),
+("Diseases caused by bacteria", "Cholera, typhoid, tetanus, citrus canker. Bacteria dahi, antibiotics aur nitrogen fixation (Rhizobium) mein bhi use hote hain."),
+("Slime moulds", "Saprophytic protists jo achhi conditions mein plasmodium naam ka aggregate banate hain jo kai feet tak fail sakta hai. Buri conditions mein spores wale fruiting bodies banate hain; spores ki asli walls hoti hain aur saalon tak bache rehte hain."),
+("Kingdom Fungi general features", "Heterotrophic: saprophytic, parasitic ya symbiotic (lichen, mycorrhiza). Hyphae milkar mycelium; cell walls chitin aur polysaccharides ki. Yeast unicellular. Asexual spores: conidia, sporangiospores, zoospores; sexual spores: oospores, ascospores, basidiospores."),
+("Kingdom Plantae and Animalia in the five-kingdom scheme", "Plantae: eukaryotic, chlorophyll wale, zyadatar autotrophic, cellulose walls (kuch partially heterotrophic: insectivorous plants aur Cuscuta jaise parasites). Animalia: heterotrophic, multicellular, cell walls nahi, food glycogen ya fat ki tarah store."),
+("Three-domain system", "Carl Woese ne Monera ko Archaebacteria aur Eubacteria mein baanta — teen domains (Archaea, Bacteria, Eukarya) ke andar chhe kingdoms."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

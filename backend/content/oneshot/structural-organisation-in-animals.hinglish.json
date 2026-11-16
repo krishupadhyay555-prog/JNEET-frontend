@@ -1,0 +1,154 @@
+{
+ "slug": "structural-organisation-in-animals",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Structural Organisation in Animals"
+ },
+ "title": "Structural Organisation in Animals",
+ "readMinutes": 13,
+ "summary": [
+  "Animal tissues chaar type ke hain: epithelial (dhakne wale), connective (support aur jodne wale), muscular (movement) aur neural (control).",
+  "Epithelia simple ya compound hote hain aur squamous, cuboidal, columnar ya ciliated ho sakte hain; glands secretion ke liye specialised epithelial cells hain. Cell junctions (tight, adhering, gap) cells ko jodte hain.",
+  "Connective tissue mein loose aur dense connective tissue, cartilage, bone, blood aur adipose tissue aate hain. Muscles skeletal, smooth ya cardiac hoti hain.",
+  "Frog (Rana tigrina) ko model vertebrate ki tarah padhte hain: morphology, digestive, respiratory (respiration), circulatory, excretory, nervous aur reproductive (reproduction) systems."
+ ],
+ "formulas": [
+  {
+   "name": "Simple epithelium",
+   "formula": "squamous — blood vessel walls, air sacs of lungs;  cuboidal — ducts of glands, PCT of nephron (brush border);  columnar — stomach and intestine lining (microvilli);  ciliated — bronchioles, fallopian tubes",
+   "when": "Epithelium ko location se milaana.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Compound epithelium",
+   "formula": "multi-layered; protective (skin, buccal cavity, pharynx, ducts of salivary and pancreatic glands)",
+   "when": "Jahan chemical aur mechanical stress se bachav chahiye."
+  },
+  {
+   "name": "Glands",
+   "formula": "exocrine (with ducts — saliva, mucus, milk, earwax, digestive enzymes);  endocrine (ductless — hormones into blood)",
+   "when": "Glandular epithelium."
+  },
+  {
+   "name": "Cell junctions",
+   "formula": "tight junctions stop leakage;  adhering junctions cement cells together;  gap junctions connect cytoplasm for rapid transfer of ions and small molecules",
+   "when": "Junctions ke kaam.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Connective tissue types",
+   "formula": "loose: areolar (under skin), adipose (fat);  dense regular: tendons (muscle → bone), ligaments (bone → bone);  dense irregular: skin;  specialised: cartilage, bone, blood",
+   "when": "Connective tissue classify karna.",
+   "note": "Blood fluid connective tissue hai."
+  },
+  {
+   "name": "Cartilage and bone",
+   "formula": "cartilage: chondrocytes in lacunae, pliable matrix (nose tip, outer ear, between vertebrae);  bone: osteocytes in lacunae, hard matrix of calcium salts and collagen; bone marrow makes blood cells",
+   "when": "Skeletal connective tissue."
+  },
+  {
+   "name": "Muscle types",
+   "formula": "skeletal: striated, voluntary, multinucleate;  smooth: non-striated, involuntary, spindle-shaped (gut, blood vessels);  cardiac: striated, involuntary, branched, intercalated discs",
+   "when": "Muscles compare karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Neural tissue",
+   "formula": "neurons (excitable) + neuroglia (support and protect; more than half the volume of neural tissue)",
+   "when": "Nervous tissue."
+  },
+  {
+   "name": "Frog heart and blood",
+   "formula": "3 chambers (2 atria + 1 ventricle) + sinus venosus + conus arteriosus;  RBCs nucleated;  hepatic portal and renal portal systems",
+   "when": "Frog ka circulation.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Frog respiration",
+   "formula": "skin (cutaneous) in water and during hibernation/aestivation;  buccal cavity and lungs on land",
+   "when": "Frog ki breathing."
+  },
+  {
+   "name": "Frog excretion",
+   "formula": "ureotelic;  kidneys → ureters → cloaca;  in males the ureter is a urinogenital duct; in females ureters and oviducts open separately into the cloaca",
+   "when": "Frog ka excretory system."
+  },
+  {
+   "name": "Frog nervous system",
+   "formula": "10 pairs of cranial nerves;  brain = forebrain (olfactory lobes, cerebral hemispheres, diencephalon), midbrain (optic lobes), hindbrain (cerebellum, medulla oblongata)",
+   "when": "Frog ka CNS."
+  },
+  {
+   "name": "Frog reproduction",
+   "formula": "external fertilisation in water;  development via tadpole larva (metamorphosis);  female lays 2500–3000 ova at a time",
+   "when": "Frog ka life cycle."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Tendon vs ligament",
+   "problem": "Tendon kise jodta hai aur ligament kise?",
+   "solution": "Tendon: skeletal muscle ko bone se. Ligament: bone ko bone se. Dono dense regular connective tissue hain."
+  },
+  {
+   "title": "Kaunsi muscle?",
+   "problem": "Ek muscle striated, branched aur involuntary hai, intercalated discs ke saath. Kaunsa type?",
+   "solution": "Cardiac muscle — intercalated discs (gap junctions wali judi plasma membranes) cells ko ek unit ki tarah contract karne dete hain."
+  },
+  {
+   "title": "Brush border",
+   "problem": "Brush border wala cuboidal epithelium kahan milta hai?",
+   "solution": "Nephron ke proximal convoluted tubule (PCT) mein; microvilli reabsorption ke liye surface badhaate hain."
+  },
+  {
+   "title": "Frog ki skin",
+   "problem": "Frog ki skin hamesha geeli kyun rehti hai?",
+   "solution": "Mucous glands ise geela rakhte hain, aur paani mein aur hibernation aur aestivation ke dauraan cutaneous respiration (skin se gas exchange) ke liye geela rehna zaroori hai."
+  },
+  {
+   "title": "Male ya female frog?",
+   "problem": "Male frog ko female se kaise pehchaanoge?",
+   "solution": "Males mein vocal sacs aur har forelimb ki pehli ungli par copulatory pad hota hai; females mein dono nahi."
+  },
+  {
+   "title": "Areolar tissue",
+   "problem": "Areolar tissue mein kaunse cells hote hain?",
+   "solution": "Fibroblasts (fibres banate hain), macrophages aur mast cells, semi-fluid ground substance mein collagen aur elastic fibres ke saath."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Organ and organ system",
+   "explain": "Tissues milkar organs (stomach, lung, heart, kidney) banate hain; organs milkar organ systems (digestive, respiratory). Organ aur organ systems ki complexity evolution mein ek pehchaanne layak trend dikhati hai."
+  },
+  {
+   "title": "Blood",
+   "explain": "Fluid connective tissue: plasma + formed elements (RBCs, WBCs, platelets). Ye main circulating fluid hai jo substances ko transport karta hai."
+  },
+  {
+   "title": "Frog morphology",
+   "explain": "Body head aur trunk mein bati; gardan aur poonch nahi. Skin chikni aur fisalne wali; dorsal side olive green dark spots ke saath, ventral side halki peeli. Frogs paani peete nahi, skin se absorb karte hain. Camouflage (mimicry) dikhate hain aur cold-blooded (poikilothermous) hain."
+  },
+  {
+   "title": "Frog digestive system",
+   "explain": "Chhota alimentary canal (frogs carnivores hain). Bilobed tongue insects pakadti hai. Liver bile banata hai (gall bladder mein store); pancreas pancreatic juice. Digestion intestine mein poora hota hai; food villi aur microvilli se absorb. Bina pacha waste cloaca se bahar."
+  },
+  {
+   "title": "Frog sense organs",
+   "explain": "Sense organs: touch (sensory papillae), taste (taste buds), smell (nasal epithelium), vision (eyes) aur hearing (tympanum aur internal ear). Eyes aur internal ears achhe se organised; baaki nerve endings ke aas-paas cells ke jhund hain."
+  },
+  {
+   "title": "Endocrine glands in frog",
+   "explain": "Pituitary, thyroid, parathyroid, thymus, pineal body, pancreatic islets, adrenals aur gonads."
+  }
+ ],
+ "ratta": [
+  "Squamous — air sacs;  cuboidal — PCT;  columnar — gut;  ciliated — bronchioles, fallopian tube.",
+  "Tight stops leakage;  adhering cements;  gap connects cytoplasm.",
+  "Tendon: muscle-bone;  ligament: bone-bone.",
+  "Cardiac: striated, involuntary, intercalated discs.",
+  "Frog: 3-chambered heart, nucleated RBCs, 10 cranial nerves, ureotelic.",
+  "Male frog: vocal sacs + copulatory pad."
+ ],
+ "verifiedOn": "2026-11-13"
+}

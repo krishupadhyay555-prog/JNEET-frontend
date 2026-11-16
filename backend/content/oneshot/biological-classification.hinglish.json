@@ -1,0 +1,151 @@
+{
+ "slug": "biological-classification",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biological Classification"
+ },
+ "title": "Biological Classification",
+ "readMinutes": 13,
+ "summary": [
+  "R.H. Whittaker (1969) ne five kingdom diye — Monera, Protista, Fungi, Plantae aur Animalia — cell structure, body organisation, nutrition ka tarika, reproduction aur phylogenetic relationships ke base par.",
+  "Monera prokaryotes hain (bacteria, cyanobacteria, archaebacteria, mycoplasma). Protista unicellular eukaryotes (chrysophytes, dinoflagellates, euglenoids, slime moulds, protozoans).",
+  "Fungi heterotrophic hain, chitin wali cell walls aur hyphae ke saath; spores aur fruiting bodies se Phycomycetes, Ascomycetes, Basidiomycetes aur Deuteromycetes mein classify hote hain.",
+  "Virus, viroid, prions aur lichen five-kingdom scheme mein fit nahi hote: virus nucleoprotein particles hain jo host cell ke bahar inert rehte hain."
+ ],
+ "formulas": [
+  {
+   "name": "Two-kingdom vs five-kingdom",
+   "formula": "Linnaeus: Plantae + Animalia;  Whittaker (1969): Monera, Protista, Fungi, Plantae, Animalia",
+   "when": "Classification ka itihaas.",
+   "mistake": "Two-kingdom grouping ne prokaryotes ko eukaryotes ke saath aur unicellular ko multicellular ke saath rakh diya tha — isliye galat tha."
+  },
+  {
+   "name": "Bacterial shapes",
+   "formula": "coccus (spherical), bacillus (rod), vibrium (comma), spirillum (spiral)",
+   "when": "Bacteria pehchaanna."
+  },
+  {
+   "name": "Archaebacteria",
+   "formula": "halophiles (salty areas), thermoacidophiles (hot springs), methanogens (marshes, cattle gut → methane/biogas)",
+   "when": "Extreme habitat wale bacteria.",
+   "mistake": "Inki cell wall structure doosre bacteria se alag hai — isi se extreme conditions jhel paate hain.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cyanobacteria",
+   "formula": "photosynthetic autotrophs with chlorophyll a; many fix nitrogen in heterocysts (Nostoc, Anabaena); form blooms in polluted water",
+   "when": "Blue-green algae ke facts."
+  },
+  {
+   "name": "Mycoplasma",
+   "formula": "no cell wall, smallest living cells, can survive without oxygen, many are pathogenic",
+   "when": "Alag type ke monerans."
+  },
+  {
+   "name": "Protist groups",
+   "formula": "chrysophytes (diatoms, desmids — silica walls, diatomaceous earth);  dinoflagellates (red tides, Gonyaulax);  euglenoids (pellicle, mixotrophic);  slime moulds (saprophytic, plasmodium, spores);  protozoans (amoeboid, flagellated, ciliated, sporozoans)",
+   "when": "Kingdom Protista.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Protozoan examples",
+   "formula": "amoeboid — Amoeba, Entamoeba;  flagellated — Trypanosoma (sleeping sickness);  ciliated — Paramoecium;  sporozoans — Plasmodium (malaria)",
+   "when": "Protozoan diseases."
+  },
+  {
+   "name": "Fungal classes",
+   "formula": "Phycomycetes: aseptate coenocytic, zoospores/aplanospores, oospores/zygospores (Mucor, Rhizopus, Albugo);  Ascomycetes: septate, conidia, ascospores in asci (Penicillium, yeast, Neurospora, morels, truffles);  Basidiomycetes: basidiospores, no asexual spores (Agaricus, Ustilago, Puccinia);  Deuteromycetes: only asexual stage known (Alternaria, Colletotrichum, Trichoderma)",
+   "when": "Fungi classify karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Fungal reproduction",
+   "formula": "plasmogamy → karyogamy → meiosis;  dikaryon (n + n) stage in ascomycetes and basidiomycetes",
+   "when": "Fungi ka sexual cycle."
+  },
+  {
+   "name": "Viruses",
+   "formula": "nucleoprotein: DNA or RNA + protein coat (capsid made of capsomeres);  plant viruses usually ssRNA, animal viruses ssRNA/dsRNA/dsDNA, bacteriophages usually dsDNA",
+   "when": "Virus ki structure.",
+   "note": "D.J. Ivanowsky (1892) ne TMV dhoondha; M.W. Beijerinck ne fluid ko contagium vivum fluidum kaha; W.M. Stanley ne viruses ko crystallise kiya."
+  },
+  {
+   "name": "Viroids and prions",
+   "formula": "viroid: free RNA without protein coat (T.O. Diener, 1971, potato spindle tuber);  prion: abnormally folded protein (BSE/mad cow disease, CJD)",
+   "when": "Sub-viral agents."
+  },
+  {
+   "name": "Lichens",
+   "formula": "symbiotic association of algae (phycobiont, food) and fungi (mycobiont, shelter, water); good pollution indicators — do not grow in polluted areas",
+   "when": "Mutualism ka example."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Kaunsa kingdom?",
+   "problem": "Euglena mein chlorophyll hai par andhere mein heterotroph ki tarah rehta hai. Kaunsa kingdom?",
+   "solution": "Protista (euglenoids). Cell wall ki jagah pellicle hai aur mixotrophic hai, isliye na plants mein fit na animals mein."
+  },
+  {
+   "title": "Jiska sexual stage pata nahi",
+   "problem": "Alternaria aur Trichoderma kis class mein, aur kyun?",
+   "solution": "Deuteromycetes (imperfect fungi): sirf asexual (conidial) stage pata hai. Sexual stage milne par Ascomycetes ya Basidiomycetes mein shift ho jaate hain."
+  },
+  {
+   "title": "Red tide",
+   "problem": "Red tides kyun hote hain?",
+   "solution": "Gonyaulax jaise laal dinoflagellates ke tezi se badhne se; inke toxins machhliyon aur doosre marine animals ko maar sakte hain."
+  },
+  {
+   "title": "Biogas bacteria",
+   "problem": "Kaunse bacteria biogas banate hain, aur kahan rehte hain?",
+   "solution": "Methanogens (archaebacteria) — cattle ke rumen aur marshy areas mein; cellulose-rich material se methane banate hain."
+  },
+  {
+   "title": "Virus vs living",
+   "problem": "Viruses ko obligate parasites kyun kehte hain?",
+   "solution": "Host cell ke bahar ye inert, crystallise hone wale particles hain. Host ke andar uski machinery lekar replicate karte hain, aksar host cell ko maar dete hain."
+  },
+  {
+   "title": "Rust aur smut",
+   "problem": "Wheat rust aur smut kaunsi fungi se? Class?",
+   "solution": "Rust: Puccinia; smut: Ustilago. Dono Basidiomycetes."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Eubacteria nutrition",
+   "explain": "Zyadatar bacteria heterotrophs hain (decomposers, nitrogen fixers, pathogens). Kuch autotrophs: photosynthetic (cyanobacteria) ya chemosynthetic (nitrates aur ammonia jaise inorganic substances ko oxidise karte, nutrient recycling mein madad). Bacteria mainly fission se reproduce karte hain; DNA bhi exchange karte hain (conjugation, transformation, transduction)."
+  },
+  {
+   "title": "Diseases caused by bacteria",
+   "explain": "Cholera, typhoid, tetanus, citrus canker. Bacteria dahi, antibiotics aur nitrogen fixation (Rhizobium) mein bhi use hote hain."
+  },
+  {
+   "title": "Slime moulds",
+   "explain": "Saprophytic protists jo achhi conditions mein plasmodium naam ka aggregate banate hain jo kai feet tak fail sakta hai. Buri conditions mein spores wale fruiting bodies banate hain; spores ki asli walls hoti hain aur saalon tak bache rehte hain."
+  },
+  {
+   "title": "Kingdom Fungi general features",
+   "explain": "Heterotrophic: saprophytic, parasitic ya symbiotic (lichen, mycorrhiza). Hyphae milkar mycelium; cell walls chitin aur polysaccharides ki. Yeast unicellular. Asexual spores: conidia, sporangiospores, zoospores; sexual spores: oospores, ascospores, basidiospores."
+  },
+  {
+   "title": "Kingdom Plantae and Animalia in the five-kingdom scheme",
+   "explain": "Plantae: eukaryotic, chlorophyll wale, zyadatar autotrophic, cellulose walls (kuch partially heterotrophic: insectivorous plants aur Cuscuta jaise parasites). Animalia: heterotrophic, multicellular, cell walls nahi, food glycogen ya fat ki tarah store."
+  },
+  {
+   "title": "Three-domain system",
+   "explain": "Carl Woese ne Monera ko Archaebacteria aur Eubacteria mein baanta — teen domains (Archaea, Bacteria, Eukarya) ke andar chhe kingdoms."
+  }
+ ],
+ "ratta": [
+  "Whittaker 1969: Monera, Protista, Fungi, Plantae, Animalia.",
+  "Methanogens → biogas;  halophiles → salt;  thermoacidophiles → hot springs.",
+  "Mycoplasma: no cell wall, smallest cell.",
+  "Diatoms → diatomaceous earth;  Gonyaulax → red tide.",
+  "Phyco: aseptate;  Asco: ascus;  Basidio: no asexual spores;  Deutero: only asexual.",
+  "TMV: Ivanowsky;  viroid: Diener 1971;  prion → mad cow.",
+  "Lichen = alga + fungus; pollution indicator."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,135 @@
+{
+ "slug": "the-living-world",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "The Living World"
+ },
+ "title": "The Living World",
+ "readMinutes": 9,
+ "summary": [
+  "Living organisms badhte hain, reproduce karte hain, metabolism karte hain, surroundings ko respond karte hain aur cells se bane hote hain. Metabolism, cellular organisation aur consciousness defining features hain; sirf growth aur reproduction nahi.",
+  "1.7–1.8 million se zyada species describe ho chuki hain (biodiversity). Inhe padhne ke liye naam dena, pehchaanna, classification karna aur hierarchy mein lagaana — ye taxonomy hai; systematics evolutionary relationships bhi jodti hai.",
+  "Binomial nomenclature (Carolus Linnaeus) har organism ko do hisson wala scientific naam deti hai: generic name + specific epithet, jaise Mangifera indica.",
+  "Taxonomic categories kingdom se species tak jaati hain; har neeche wala step zyada characters share karne wale organisms ko group karta hai."
+ ],
+ "formulas": [
+  {
+   "name": "Defining features of life",
+   "formula": "metabolism + cellular organisation + consciousness (response to stimuli)",
+   "when": "Kuch living hai ya nahi, tay karna.",
+   "mistake": "Growth aur reproduction defining nahi hain: crystals badhte hain, aur mules ya worker bees reproduce nahi karte — inse living mat tay karo."
+  },
+  {
+   "name": "Binomial nomenclature",
+   "formula": "Genus (capital first letter) + species (small letter), italicised in print or underlined separately when handwritten, followed by the author's name (abbreviated)",
+   "when": "Scientific naam likhna.",
+   "mistake": "Mangifera indica Linn. — author ka naam roman (italics nahi) mein likha jaata hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Taxonomic hierarchy",
+   "formula": "Kingdom → Phylum (animals) / Division (plants) → Class → Order → Family → Genus → Species",
+   "when": "Categories ko rank karna.",
+   "mistake": "Hierarchy mein upar jaane par shared characters ki sankhya ghatti hai — ulta mat samjho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Species",
+   "formula": "a group of individuals with fundamental similarities that can interbreed and produce fertile offspring",
+   "when": "Classification ki basic unit."
+  },
+  {
+   "name": "Mango classification",
+   "formula": "Plantae → Angiospermae → Dicotyledonae → Sapindales → Anacardiaceae → Mangifera → indica",
+   "when": "Plant ki example hierarchy."
+  },
+  {
+   "name": "Human classification",
+   "formula": "Animalia → Chordata → Mammalia → Primata → Hominidae → Homo → sapiens",
+   "when": "Animal ki example hierarchy."
+  },
+  {
+   "name": "Housefly and wheat",
+   "formula": "housefly: Insecta → Diptera → Muscidae → Musca domestica;  wheat: Monocotyledonae → Poales → Poaceae → Triticum aestivum",
+   "when": "Common PYQ examples."
+  },
+  {
+   "name": "Taxonomic aids",
+   "formula": "herbarium (dried, pressed plant specimens);  botanical garden (living plants);  museum (preserved specimens);  zoological park (live animals);  key (identification by contrasting couplets)",
+   "when": "Pehchaan ke tools.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Taxonomic key",
+   "formula": "based on couplets of contrasting characters (lead); separate keys for each category",
+   "when": "Anjaan organisms pehchaanna."
+  },
+  {
+   "name": "Famous gardens",
+   "formula": "Royal Botanical Gardens, Kew (England);  Indian Botanical Garden, Howrah;  National Botanical Research Institute, Lucknow",
+   "when": "Botanical garden facts."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Living ya nahi?",
+   "problem": "Reproduction ko life ki defining property kyun nahi maana jaata?",
+   "solution": "Kai living organisms reproduce nahi kar sakte (mules, sterile worker bees, infertile insaan), phir bhi zinda hain. Metabolism aur cellular organisation har living organism mein hote hain."
+  },
+  {
+   "title": "Sahi scientific naam",
+   "problem": "Kaunsa sahi likha hai: Mangifera Indica, mangifera indica, Mangifera indica?",
+   "solution": "Mangifera indica — genus capital letter se, specific epithet small letter se, dono italics mein."
+  },
+  {
+   "title": "Shared characters",
+   "problem": "Kinme zyada characters common hain: ek genus ke members ya ek family ke?",
+   "solution": "Genus ke members. Neeche ki categories zyada close related organisms ko group karti hain, isliye zyada characters share hote hain."
+  },
+  {
+   "title": "Herbarium sheet",
+   "problem": "Herbarium sheet par kya information hoti hai?",
+   "solution": "Plant ka scientific naam, family, collector ka naam, collection ki date aur jagah, local naam aur field notes, saath mein pressed specimen."
+  },
+  {
+   "title": "Order vs family",
+   "problem": "Family, order, genus aur class ko upar se neeche lagaao.",
+   "solution": "Class → Order → Family → Genus."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Diversity in the living world",
+   "explain": "Biodiversity = Earth par organisms ki sankhya aur types. Local naam jagah-jagah badalte hain, isliye unique aur duniya bhar mein maane jaane wale scientific naam chahiye. Sabse upar life three domains (teen domains, Carl Woese) mein bati hai: Bacteria, Archaea aur Eukarya."
+  },
+  {
+   "title": "Nomenclature codes",
+   "explain": "Plants ke naam International Code of Botanical Nomenclature (ICBN) se; animals ke International Code of Zoological Nomenclature (ICZN) se. Scientific naam Latin ya Latinised hote hain."
+  },
+  {
+   "title": "Growth and metabolism",
+   "explain": "Living organisms mein growth andar se hoti hai (cells ke mass aur sankhya mein badhat). Metabolism body ki saari chemical reactions ka jod hai; test tube mein alag ki gayi metabolic reactions living nahi hain."
+  },
+  {
+   "title": "Taxonomy and systematics",
+   "explain": "Taxonomy: characterisation, identification, nomenclature aur classification. Systematics (Linnaeus, Systema Naturae) evolutionary relationships bhi dekhti hai."
+  },
+  {
+   "title": "Taxonomic categories",
+   "explain": "Har category (rank) ek taxon kehlati hai. Hierarchy mein saat obligate categories; kabhi-kabhi sub-species ya super-family jaisi beech ki ranks bhi."
+  },
+  {
+   "title": "Museums, zoos and keys",
+   "explain": "Museums mein animals preservative solutions mein aur skins ya skeletons ki tarah rakhe jaate hain; insects boxes mein pin kiye jaate hain. Zoological parks jangli animals ko natural habitat jaisi surakshit jagah mein rakhte hain. Flora, manuals, monographs aur catalogues bhi pehchaan mein madad karte hain."
+  }
+ ],
+ "ratta": [
+  "Defining: metabolism, cellular organisation, consciousness.",
+  "Binomial: Genus capital, species small, italics.",
+  "K → P → C → O → F → G → S.",
+  "Herbarium = dried plants;  key = contrasting couplets.",
+  "Mango: Anacardiaceae, Sapindales;  human: Hominidae, Primata.",
+  "ICBN plants, ICZN animals."
+ ],
+ "verifiedOn": "2026-11-13"
+}
