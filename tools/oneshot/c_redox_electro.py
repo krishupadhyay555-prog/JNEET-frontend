@@ -87,5 +87,60 @@ SYLLABUS = [
 ("Dry cell and lead accumulator; fuel cells", ["dry cell", "lead", "fuel cell"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Oxidation = electrons khona (oxidation number badhta hai); reduction = electrons lena (oxidation number ghatta hai). Dono hamesha saath hote hain — redox reaction.",
+"Galvanic cell spontaneous redox reaction ko bijli mein badalta hai: anode par oxidation, cathode par reduction. Iska emf E°cell = E°cathode − E°anode, aur ΔG° = −nFE°cell.",
+"Nernst equation kisi bhi concentration par cell ya electrode potential deti hai; equilibrium par Ecell = 0, jo E° ko equilibrium constant se jodta hai.",
+"Electrolytic cells bijli se reactions chalaate hain (Faraday's laws). Solutions ka conductance (κ, Λm) aur Kohlrausch's law electrochemistry ko ion mobility aur degree of dissociation se jodte hain.",
+],
+when=[
+("Oxidation states nikaalna.", "Peroxides (H₂O₂, Na₂O₂) mein O ka −1 hai — wahan −2 mat lo."),
+("Koi bhi redox equation balance karna.", None),
+("Daniell cell aur doosre cells.", "Dono ke reduction potentials lo — sign palat kar phir se subtract mat karo."),
+("Cell reaction ki spontaneity.", "Positive E°cell ⇒ negative ΔG° ⇒ spontaneous — sign check karo."),
+("Non-standard concentrations par cell emf.", "Q mein product/reactant concentrations; pure solids aur liquids nahi aate — mat daalo."),
+("Cell reaction kitni aage jaati hai.", None),
+("Electrode potential se pH.", None),
+("Electrolysis mein deposit hua mass.", "1 F = 96500 C = 1 mol electrons ka charge — yaad rakho, bhoolo mat."),
+("Series mein cells.", None),
+("Measured conductance se Λm.", None),
+("Λm vs √C graphs padhna.", None),
+("Weak electrolytes ki limiting molar conductivity.", None),
+("Conductance data se weak electrolytes.", None),
+],
+examples=[
+("Oxidation number", "K₂Cr₂O₇ mein Cr ka oxidation number?",
+ "2(+1) + 2x + 7(−2) = 0 → x = +⟨0⟩."),
+("Daniell cell", "E°(Cu²⁺/Cu) = +0.34 V, E°(Zn²⁺/Zn) = −0.76 V. E°cell?",
+ "E° = 0.34 − (−0.76) = ⟨0⟩ V."),
+("Nernst equation", "Zn | Zn²⁺(0.1 M) || Cu²⁺(0.001 M) | Cu, E° = 1.10 V. 298 K par Ecell?",
+ "E = 1.10 − (0.0591/2) log(0.1/0.001) = 1.10 − 0.0591 ≈ ⟨0⟩ V."),
+("Daniell cell ka ΔG°", "n = 2, E° = 1.10 V. ΔG°?",
+ "ΔG° = −2 × 96500 × 1.10 J = ⟨0⟩ kJ/mol."),
+("Equilibrium constant", "Daniell cell (n = 2, E° = 1.10 V) ka log K?",
+ "log K = 2 × 1.10/0.0591 ≈ ⟨0⟩ → K ≈ 10³⁷ (reaction poori ho jaati hai)."),
+("CuSO₄ ka electrolysis", "CuSO₄ mein 2 A, 1 ghanta. Kitna copper jama (Cu = 63.5)?",
+ "Q = 7200 C; m = (63.5/2 × 96500) × 7200 ≈ ⟨0⟩ g."),
+("Molar conductivity", "0.2 M KCl ka κ = 0.0248 S cm⁻¹. Λm?",
+ "Λm = 0.0248 × 1000/0.2 = ⟨0⟩ S cm² mol⁻¹."),
+("Acetic acid ka degree of dissociation", "Λ°(HCl) = 426.2, Λ°(CH₃COONa) = 91.0, Λ°(NaCl) = 126.4 S cm² mol⁻¹. Dilute acetic acid ka Λm = 39.1. α?",
+ "Λ° = 426.2 + 91.0 − 126.4 = 390.8. α = 39.1/390.8 ≈ ⟨0⟩."),
+("pH 3 par hydrogen electrode", "pH 3 wale solution mein hydrogen electrode ka potential?",
+ "E = −0.0591 × 3 ≈ ⟨0⟩ V."),
+],
+topics=[
+("Types of redox reactions", "Combination, decomposition, displacement (metal aur non-metal) aur disproportionation, jahan ek hi element oxidise bhi hota hai aur reduce bhi: 3Cl₂ + 6OH⁻ → 5Cl⁻ + ClO₃⁻ + 3H₂O; 2H₂O₂ → 2H₂O + O₂."),
+("Redox titrations", "Acid mein KMnO₄ (MnO₄⁻ → Mn²⁺, 5e⁻) self-indicator hai; K₂Cr₂O₇ (Cr₂O₇²⁻ → 2Cr³⁺, 6e⁻) ko indicator chahiye. n-factor = har formula unit par exchange hue electrons."),
+("Electrochemical series", "Zyada negative E° wali metals strong reducing agents hain aur neeche wali metals ko displace karti hain (Zn, Cu ko). Paani mein F₂ sabse strong oxidising agent, Li sabse strong reducing agent."),
+("Galvanic cell anatomy", "Anode: oxidation, negative terminal. Cathode: reduction, positive terminal. Salt bridge (agar mein KCl/KNO₃) circuit poora karta hai aur solutions ko neutral rakhta hai. Electrons wire se anode → cathode."),
+("Products of electrolysis", "Cathode par zyada reduction potential wali species reduce hoti hai; anode par jo sabse aasaani se oxidise ho. Aqueous NaCl: cathode par H₂, anode par Cl₂ (overpotential). Molten NaCl: Na aur Cl₂. Inert (Pt) vs active (Cu) electrode anode reaction badal dete hain."),
+("Batteries", "Primary (recharge nahi): dry cell (Zn anode, MnO₂ cathode), mercury cell (constant 1.35 V). Secondary (rechargeable): lead storage battery (Pb anode, PbO₂ cathode, H₂SO₄), Ni–Cd. Fuel cells (H₂–O₂) fuel ki energy seedha high efficiency se badalte hain."),
+("Corrosion", "Rusting electrochemical hai: anodic spots par iron oxidise, cathodic spots par oxygen reduce, Fe₂O₃·xH₂O banta hai. Bachaav: paint, galvanising (zinc coating — sacrificial protection) ya zyada active metal se jodna."),
+("Conductance basics", "Metallic conduction electrons se, temperature badhne par ghatta hai; electrolytic conduction ions se, temperature badhne par badhta hai. Cell constant = l/A, known conductivity wale KCl se nikaalte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

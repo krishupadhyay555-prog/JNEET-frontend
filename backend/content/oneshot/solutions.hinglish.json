@@ -1,0 +1,148 @@
+{
+ "slug": "solutions",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Solutions",
+  "JEE": "Solutions"
+ },
+ "title": "Solutions",
+ "readMinutes": 13,
+ "summary": [
+  "Solution ek homogeneous mixture hai. Iski concentration mass %, ppm, mole fraction, molarity ya molality mein likhte hain.",
+  "Gases zyada pressure par zyada ghulti hain (Henry's law) aur aam taur par zyada temperature par kam. Volatile liquids ke liye Raoult's law: har component ka vapour pressure = uska mole fraction × pure vapour pressure.",
+  "Ideal solutions Raoult's law bilkul follow karte hain; real solutions positive deviation (kamzor A–B attraction) ya negative deviation (zyada A–B attraction) dikhate hain aur azeotrope bana sakte hain.",
+  "Colligative properties sirf solute particles ki sankhya par depend karti hain: relative lowering of vapour pressure, boiling-point elevation, freezing-point depression aur osmotic pressure. van't Hoff factor i dissociation ya association ke liye correction hai."
+ ],
+ "formulas": [
+  {
+   "name": "Henry's law",
+   "formula": "p = K_H x  (partial pressure ∝ mole fraction of gas in solution)",
+   "when": "Gases ki solubility.",
+   "mistake": "Bada K_H matlab same pressure par KAM solubility — ulta mat samjho."
+  },
+  {
+   "name": "Raoult's law (volatile components)",
+   "formula": "p_A = x_A p°_A;  p_total = x_A p°_A + x_B p°_B",
+   "when": "Liquid mixtures ka vapour pressure.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vapour composition",
+   "formula": "y_A = p_A/p_total",
+   "when": "Vapour mein component ka mole fraction.",
+   "mistake": "Vapour ZYADA volatile component se rich hota hai — dhyan rakho."
+  },
+  {
+   "name": "Relative lowering of vapour pressure",
+   "formula": "(p° − p)/p° = x_solute = i × n₂/(n₁ + n₂)",
+   "when": "Solvent mein non-volatile solute."
+  },
+  {
+   "name": "Boiling-point elevation",
+   "formula": "ΔT_b = i K_b m",
+   "when": "Solutions ka zyada boiling point.",
+   "mistake": "m molality hai (per kg solvent), molarity nahi."
+  },
+  {
+   "name": "Freezing-point depression",
+   "formula": "ΔT_f = i K_f m;  water K_f = 1.86, K_b = 0.52 K kg mol⁻¹",
+   "when": "Antifreeze, cryoscopy se molar mass.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Osmotic pressure",
+   "formula": "π = i C R T  (C in mol/L, R = 0.0821 L atm mol⁻¹ K⁻¹)",
+   "when": "Osmosis, polymers aur proteins ka molar mass.",
+   "mistake": "Yahan molarity aur kelvin lo — bhoolo mat."
+  },
+  {
+   "name": "Molar mass from colligative data",
+   "formula": "M₂ = (K_b × w₂ × 1000)/(ΔT_b × w₁)  (similarly with K_f);  M₂ = w₂RT/(πV)",
+   "when": "Solute ka molar mass nikaalna."
+  },
+  {
+   "name": "van't Hoff factor",
+   "formula": "i = observed colligative property / normal value = normal molar mass / observed molar mass",
+   "when": "Electrolytes aur associating solutes."
+  },
+  {
+   "name": "i from dissociation or association",
+   "formula": "dissociation into n ions: i = 1 + (n − 1)α;  association into n-mers: i = 1 − (1 − 1/n)α",
+   "when": "Degree of dissociation/association.",
+   "mistake": "Dimerisation ke liye i = 1 − α/2 — 1 + α mat lo."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Ideal mixture",
+   "problem": "Benzene (p° = 75 torr) aur toluene (p° = 22 torr), x = 0.5 each. Total vapour pressure aur vapour mein benzene ka mole fraction?",
+   "solution": "p = 37.5 + 11 = 48.5 torr; y(benzene) = 37.5/48.5 ≈ 0.77."
+  },
+  {
+   "title": "Vapour pressure ka lowering",
+   "problem": "Pure paani p° = 23.8 mm Hg. Solute mole fraction 0.02 (non-volatile, non-electrolyte). Lowering?",
+   "solution": "Δp = x₂ p° = 0.02 × 23.8 ≈ 0.476 mm Hg."
+  },
+  {
+   "title": "Namak wale paani ka boiling point",
+   "problem": "0.2 m NaCl (i = 2), K_b = 0.52. Elevation?",
+   "solution": "ΔT_b = 2 × 0.52 × 0.2 = 0.208 K."
+  },
+  {
+   "title": "Partly dissociated electrolyte",
+   "problem": "0.01 m K₂SO₄ 75% dissociated. ΔT_f (K_f = 1.86)?",
+   "solution": "i = 1 + 2(0.75) = 2.5; ΔT_f = 2.5 × 1.86 × 0.01 = 0.0465 K."
+  },
+  {
+   "title": "Osmotic pressure",
+   "problem": "0.1 M glucose, 300 K?",
+   "solution": "π = CRT = 0.1 × 0.0821 × 300 ≈ 2.46 atm."
+  },
+  {
+   "title": "Osmotic pressure se molar mass",
+   "problem": "1.8 g solute 250 mL solution mein, 300 K par π = 0.738 atm. Molar mass?",
+   "solution": "M = wRT/(πV) = 1.8 × 0.0821 × 300/(0.738 × 0.25) ≈ 240 g/mol."
+  },
+  {
+   "title": "Acetic acid ka association",
+   "problem": "Acetic acid (M = 60) benzene mein apparent molar mass 100 dikhata hai. Degree of association?",
+   "solution": "i = 60/100 = 0.6 = 1 − α/2 → α = 0.8 (80%)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of solutions",
+   "explain": "Solvent aur solute kisi bhi phase mein: liquid mein gas (soda), liquid mein solid (cheeni), liquid mein liquid (paani mein alcohol), solid mein solid (alloys), solid mein gas (palladium mein H₂)."
+  },
+  {
+   "title": "Solubility of solids and gases",
+   "explain": "Solids: 'like dissolves like'; ghulna endothermic ho to temperature ke saath solubility badhti hai. Gases: pressure se solubility badhti hai (Henry's law) aur temperature se ghatti hai — machhliyon ko thanda paani chahiye, aur divers ko bends hote hain jab ghuli N₂ bubbles bankar nikalti hai."
+  },
+  {
+   "title": "Ideal and non-ideal solutions",
+   "explain": "Ideal (benzene + toluene): ΔmixH = 0, ΔmixV = 0. Positive deviation (ethanol + acetone, CS₂ + acetone): kamzor A–B forces, ΔmixH > 0, ΔmixV > 0, minimum-boiling azeotrope. Negative deviation (chloroform + acetone, HNO₃ + paani): zyada A–B forces, ΔmixH < 0, ΔmixV < 0, maximum-boiling azeotrope."
+  },
+  {
+   "title": "Azeotropes",
+   "explain": "Constant-boiling mixtures jo simple distillation se alag nahi hote, jaise 95% ethanol–paani (minimum boiling) aur 68% HNO₃–paani (maximum boiling)."
+  },
+  {
+   "title": "Osmosis and reverse osmosis",
+   "explain": "Solvent semipermeable membrane se dilute se concentrated solution ki taraf jaata hai. Isotonic solutions ka π same (0.9% NaCl blood ke isotonic); RBCs hypotonic mein phoolte aur hypertonic mein sikudte hain. π se zyada pressure lagaao to flow ulta — samundar ka paani meetha karne mein."
+  },
+  {
+   "title": "Abnormal molar masses",
+   "explain": "Electrolytes dissociate hote hain (i > 1) aur kam apparent molar mass dete hain; benzene mein acetic acid jaise solutes associate hote hain (i < 1) aur zyada apparent molar mass dete hain."
+  }
+ ],
+ "ratta": [
+  "Henry: p = K_H x (higher K_H → less soluble).",
+  "Raoult: p_A = x_A p°_A;  vapour richer in volatile one.",
+  "Δp/p° = x₂;  ΔT_b = iK_b m;  ΔT_f = iK_f m;  π = iCRT.",
+  "Water: K_b 0.52, K_f 1.86.",
+  "i = 1 + (n − 1)α;  dimer: i = 1 − α/2.",
+  "+ve deviation → min-boiling azeotrope;  −ve → max-boiling.",
+  "0.9% NaCl isotonic with blood."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,161 @@
+{
+ "slug": "coordination-compounds",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Coordination Compounds",
+  "JEE": "Coordination Compounds"
+ },
+ "title": "Coordination Compounds",
+ "readMinutes": 15,
+ "summary": [
+  "Coordination compound mein central metal atom/ion ligands (Lewis bases) se coordinate bonds se juda hota hai, jaise [Co(NH₃)₆]Cl₃. Jude hue donor atoms ki sankhya coordination number hai.",
+  "Werner's theory: metals ki primary valence (oxidation state, ionisable) aur secondary valence (coordination number, directional, non-ionisable) hoti hai.",
+  "Valence bond theory hybridisation se geometry aur magnetic behaviour samjhati hai; crystal field theory d orbitals ki splitting (Δₒ) se colour aur magnetism — strong-field ligands pairing karwaate hain (low spin).",
+  "Isomerism (structural: ionisation, linkage, coordination, hydrate; stereo: geometrical, optical) aur IUPAC naming sabse zyada poochhe jaate hain."
+ ],
+ "formulas": [
+  {
+   "name": "Oxidation state of the metal",
+   "formula": "charge of complex = metal oxidation state + Σ ligand charges",
+   "when": "Metal ka oxidation number nikaalna.",
+   "mistake": "Neutral ligands (NH₃, H₂O, CO, en) 0 dete hain — unhe charge mat do."
+  },
+  {
+   "name": "Coordination number",
+   "formula": "CN = number of donor atoms attached (bidentate en counts 2, EDTA⁴⁻ counts 6)",
+   "when": "CN ginna.",
+   "mistake": "Donor atoms gino, ligands nahi — en jaisa bidentate 2 deta hai."
+  },
+  {
+   "name": "Spectrochemical series",
+   "formula": "I⁻ < Br⁻ < SCN⁻ < Cl⁻ < S²⁻ < F⁻ < OH⁻ < C₂O₄²⁻ < H₂O < NCS⁻ < EDTA⁴⁻ < NH₃ < en < CN⁻ < CO",
+   "when": "Weak-field vs strong-field tay karna.",
+   "mistake": "CN⁻ aur CO strong-field (pairing karwaate); halides weak-field — ulta mat lo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "CFT splitting (octahedral)",
+   "formula": "t₂g (3 orbitals, −0.4Δₒ each) and e_g (2 orbitals, +0.6Δₒ each)",
+   "when": "Electron arrangement aur CFSE."
+  },
+  {
+   "name": "CFSE",
+   "formula": "CFSE = (−0.4 x + 0.6 y) Δₒ (+ pairing energies);  x = t₂g, y = e_g electrons",
+   "when": "Complexes ki stabilisation energy."
+  },
+  {
+   "name": "High spin vs low spin",
+   "formula": "Δₒ < P → high spin (weak field);  Δₒ > P → low spin (strong field)",
+   "when": "d⁴–d⁷ ions ka magnetic moment."
+  },
+  {
+   "name": "Tetrahedral splitting",
+   "formula": "Δₜ = (4/9) Δₒ;  almost always high spin",
+   "when": "[NiCl₄]²⁻, [CoCl₄]²⁻ jaise tetrahedral complexes."
+  },
+  {
+   "name": "Spin-only magnetic moment",
+   "formula": "μ = √(n(n + 2)) BM",
+   "when": "Complexes compare karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "VBT hybridisation and geometry",
+   "formula": "sp³ tetrahedral;  dsp² square planar;  sp³d² octahedral (outer orbital, high spin);  d²sp³ octahedral (inner orbital, low spin)",
+   "when": "Geometry aur magnetism predict karna."
+  },
+  {
+   "name": "Geometrical isomers",
+   "formula": "MA₄B₂ (octahedral): 2 (cis, trans);  MA₃B₃: 2 (fac, mer);  MA₂B₂ square planar: 2;  tetrahedral: none",
+   "when": "cis/trans isomers ginna."
+  },
+  {
+   "name": "Optical isomers",
+   "formula": "[M(AA)₃] (e.g. [Co(en)₃]³⁺): 2 enantiomers;  cis-[M(AA)₂B₂] is optically active, trans is not",
+   "when": "Complexes mein chirality."
+  },
+  {
+   "name": "Werner's theory",
+   "formula": "primary valence = oxidation state (satisfied by anions, ionisable);  secondary valence = CN (fixed geometry)",
+   "when": "AgCl precipitation aur conductance data samajhna."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Oxidation state",
+   "problem": "[Co(NH₃)₅Cl]Cl₂ mein Co ka oxidation state?",
+   "solution": "Complex ion ka charge = +2: x + 0 − 1 = +2 → x = +3."
+  },
+  {
+   "title": "Low-spin iron(III)",
+   "problem": "[Fe(CN)₆]³⁻ ka magnetic moment?",
+   "solution": "Fe³⁺ d⁵, CN⁻ strong field → t₂g⁵ (1 unpaired) → μ = √3 ≈ 1.73 BM (d²sp³)."
+  },
+  {
+   "title": "High-spin iron(III)",
+   "problem": "[FeF₆]³⁻ ka magnetic moment?",
+   "solution": "F⁻ weak field → t₂g³e_g² (5 unpaired) → μ = √35 ≈ 5.92 BM (sp³d²)."
+  },
+  {
+   "title": "[Co(NH₃)₆]³⁺ ka CFSE",
+   "problem": "Co³⁺ d⁶; NH₃ use low spin banata hai. CFSE (pairing energy ignore)?",
+   "solution": "t₂g⁶e_g⁰: 6 × (−0.4Δₒ) = −2.4Δₒ; diamagnetic."
+  },
+  {
+   "title": "d³ ion ka CFSE",
+   "problem": "[Cr(H₂O)₆]³⁺ (d³) ka CFSE?",
+   "solution": "t₂g³: 3 × (−0.4Δₒ) = −1.2Δₒ."
+  },
+  {
+   "title": "Stereoisomers ginna",
+   "problem": "[Co(en)₂Cl₂]⁺ ke kitne stereoisomers?",
+   "solution": "trans (optically inactive) + cis (enantiomers ka ek pair) = 3."
+  },
+  {
+   "title": "Werner ka data",
+   "problem": "1 mol CoCl₃·6NH₃ excess AgNO₃ se 3 mol AgCl deta hai. Formula?",
+   "solution": "Saare 3 Cl⁻ ionisable → [Co(NH₃)₆]Cl₃."
+  },
+  {
+   "title": "IUPAC naam",
+   "problem": "K₃[Fe(C₂O₄)₃] ka naam.",
+   "solution": "Potassium trioxalatoferrate(III): ligands alphabetically prefixes ke saath, anionic complex -ate par khatam (ferrate), oxidation state Roman numerals mein."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Key terms",
+   "explain": "Ligand: electron pair dene wala ion ya molecule (monodentate NH₃, Cl⁻; bidentate en, C₂O₄²⁻; polydentate EDTA⁴⁻). Ambidentate ligands do alag atoms se judte hain (NO₂⁻/ONO⁻, SCN⁻/NCS⁻). Chelate: polydentate ligand se bani ring — extra stable (chelate effect)."
+  },
+  {
+   "title": "IUPAC naming rules",
+   "explain": "Cation pehle, anion baad mein. Bracket ke andar: ligands alphabetical order mein (di/tri prefixes ignore), phir metal aur Roman numerals mein oxidation state. Anionic ligands -o par (chlorido, cyanido, oxalato); neutral: aqua, ammine, carbonyl. Anionic complexes -ate naam (ferrate, cuprate, argentate, aurate, plumbate)."
+  },
+  {
+   "title": "Structural isomerism",
+   "explain": "Ionisation: [Co(NH₃)₅Br]SO₄ vs [Co(NH₃)₅SO₄]Br. Linkage: M–NO₂ vs M–ONO. Coordination: cationic aur anionic complexes ke beech ligands ka exchange. Hydrate (solvate): [Cr(H₂O)₆]Cl₃ (violet) vs [Cr(H₂O)₅Cl]Cl₂·H₂O (green)."
+  },
+  {
+   "title": "Colour of complexes",
+   "explain": "Ek khaas energy (= Δ) ki light electron ko t₂g se e_g tak uthaati hai; hum complementary colour dekhte hain. [Ti(H₂O)₆]³⁺ violet. Ligands na hon (anhydrous CuSO₄) to splitting nahi, isliye safed."
+  },
+  {
+   "title": "Limitations of VBT and CFT",
+   "explain": "VBT colour ya ligands ki strength nahi samjhati. CFT ligands ko point charges maanti hai aur neutral CO strong ligand kyun hai nahi samjha sakti — iske liye metal–ligand π back-bonding chahiye (metal carbonyls jaise Ni(CO)₄, Fe(CO)₅)."
+  },
+  {
+   "title": "Importance and applications",
+   "explain": "Haemoglobin (Fe), chlorophyll (Mg), vitamin B₁₂ (Co) coordination compounds hain. EDTA paani ki hardness naapne aur lead poisoning ke ilaaj mein; cis-platin anticancer drug; complexes metallurgy (CN⁻ se gold extraction) aur analysis (dimethylglyoxime se Ni²⁺) mein."
+  }
+ ],
+ "ratta": [
+  "Oxidation state from charge balance; CN = donor atoms.",
+  "Strong field: CN⁻, CO, en, NH₃;  weak: I⁻, Br⁻, Cl⁻, F⁻.",
+  "t₂g −0.4Δₒ, e_g +0.6Δₒ;  Δₜ = 4/9 Δₒ.",
+  "d²sp³ inner, low spin;  sp³d² outer, high spin;  dsp² square planar.",
+  "MA₄B₂: cis/trans;  MA₃B₃: fac/mer;  [M(AA)₃]: optical.",
+  "Anionic complex → -ate name.",
+  "Cis-platin anticancer;  EDTA hexadentate."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,159 @@
+{
+ "slug": "p-block-elements",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "p-Block Elements",
+  "JEE": "p-Block Elements"
+ },
+ "title": "p-Block Elements (Groups 13–18)",
+ "readMinutes": 16,
+ "summary": [
+  "p-block elements np subshell bharte hain (ns²np¹⁻⁶) — yahi general configuration hai. Group mein neeche size badhne se non-metallic character ghatta aur metallic character badhta hai.",
+  "Inert pair effect bhaari elements mein lower oxidation state ko zyada stable banata hai: Tl⁺ > Tl³⁺, Pb²⁺ > Pb⁴⁺, Bi³⁺ > Bi⁵⁺.",
+  "Har group ka first member anomalous hai: chhota size, zyada electronegativity, d orbitals nahi (maximum covalency 4) aur strong pπ–pπ multiple bonding (N≡N, O=O, C=O).",
+  "Exam structures aur shapes (VSEPR), hydride aur oxoacid ki acid strength aur thermal stability ke trends, aur important compounds (NH₃, HNO₃, H₂SO₄, ozone, interhalogen, xenon fluorides) par focus karta hai."
+ ],
+ "formulas": [
+  {
+   "name": "General configuration",
+   "formula": "ns² np¹⁻⁶;  group number = 10 + valence electrons",
+   "when": "Elements place karna aur valence predict karna."
+  },
+  {
+   "name": "Inert pair effect",
+   "formula": "stability of the lower state (group oxidation state − 2) increases down the group",
+   "when": "Tl⁺ > Tl³⁺, Pb²⁺ > Pb⁴⁺, Bi³⁺ > Bi⁵⁺.",
+   "tag": "PYQ favourite",
+   "note": "Isliye PbO₂ aur Bi(V) compounds strong oxidising agents hain."
+  },
+  {
+   "name": "Hydrides of group 15",
+   "formula": "NH₃ > PH₃ > AsH₃ > SbH₃ > BiH₃: basicity and thermal stability decrease; reducing character increases;  bond angle NH₃ 107° > PH₃ 93.6°",
+   "when": "Hydrides compare karna.",
+   "mistake": "Boiling point: PH₃ < AsH₃ < NH₃ < SbH₃ < BiH₃ — NH₃ hydrogen bonding ki wajah se anomalously high hai, sabse kam nahi."
+  },
+  {
+   "name": "Hydrides of group 16",
+   "formula": "H₂O < H₂S < H₂Se < H₂Te: acidity increases;  thermal stability decreases down the group",
+   "when": "Hydrides ki acid strength.",
+   "mistake": "Paani ka boiling point hydrogen bonding ki wajah se anomalously high hai — trend se ulta, dhyan rakho."
+  },
+  {
+   "name": "Hydrogen halides",
+   "formula": "acid strength: HF < HCl < HBr < HI;  bond strength and thermal stability: HF > HCl > HBr > HI",
+   "when": "HX compare karna.",
+   "mistake": "F sabse electronegative hone ke bawajood HF paani mein sabse KAMZOR acid hai — H–F bond bahut strong, galat mat socho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Oxoacids of chlorine",
+   "formula": "acid strength: HOCl < HClO₂ < HClO₃ < HClO₄;  oxidising power: the reverse",
+   "when": "Oxoacid trends."
+  },
+  {
+   "name": "Phosphorus oxoacids (basicity = P–OH bonds)",
+   "formula": "H₃PO₂ monobasic (2 P–H, reducing);  H₃PO₃ dibasic (1 P–H, reducing);  H₃PO₄ tribasic (no P–H)",
+   "when": "Basicity aur reducing nature.",
+   "mistake": "Basicity ke liye sirf P se jude O–H bonds gino — P–H hydrogens acidic nahi hain."
+  },
+  {
+   "name": "Shapes of interhalogens",
+   "formula": "XX′ linear;  XX′₃ (ClF₃) T-shaped;  XX′₅ (BrF₅) square pyramidal;  XX′₇ (IF₇) pentagonal bipyramidal",
+   "when": "VSEPR ke sawal."
+  },
+  {
+   "name": "Xenon fluorides",
+   "formula": "XeF₂ linear (sp³d);  XeF₄ square planar (sp³d²);  XeF₆ distorted octahedral (sp³d³);  XeO₃ pyramidal",
+   "when": "Noble-gas compounds ki structures.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Key preparations",
+   "formula": "NH₃: Haber process (Fe catalyst, ~200 atm, ~700 K);  HNO₃: Ostwald process (Pt/Rh, NH₃ oxidation);  H₂SO₄: contact process (V₂O₅ catalyst, SO₂ → SO₃)",
+   "when": "Industrial processes."
+  },
+  {
+   "name": "Structures of sulphur and phosphorus",
+   "formula": "white P: P₄ tetrahedral, reactive, glows;  red P: polymeric, less reactive;  rhombic S (S₈ crowns) stable below 369 K;  monoclinic above",
+   "when": "Allotropes."
+  },
+  {
+   "name": "Group 13 & 14 highlights",
+   "formula": "boric acid H₃BO₃ is a weak monobasic Lewis acid (accepts OH⁻);  diborane B₂H₆ has two 3-centre-2-electron (banana) bonds;  CO is a neutral oxide and good ligand; CO₂ acidic; SiO₂ covalent network",
+   "when": "B, Al, C, Si compounds ke sawal."
+  }
+ ],
+ "examples": [
+  {
+   "title": "HF kamzor kyun?",
+   "problem": "Paani mein HF, HCl se kamzor acid kyun hai?",
+   "solution": "H–F bond bahut strong hai aur F⁻ chhota aur zor se hydrated, isliye HF bahut kam ionise hota hai; group mein neeche H–X bond kamzor hone se acid strength badhti hai."
+  },
+  {
+   "title": "H₃PO₃ ki basicity",
+   "problem": "H₃PO₃ mein kitne replaceable hydrogens?",
+   "solution": "Structure HP(O)(OH)₂: do P–OH bonds → dibasic; P–H hydrogen acidic nahi par H₃PO₃ ko reducing agent banata hai."
+  },
+  {
+   "title": "XeF₄ ki shape",
+   "problem": "XeF₄ ki shape?",
+   "solution": "Xe ke 8 valence electrons: 4 bond pairs + 2 lone pairs = 6 pairs (octahedral arrangement, sp³d²). Lone pairs aamne-saamne, isliye molecule square planar."
+  },
+  {
+   "title": "ClF₃ ki shape",
+   "problem": "ClF₃ ki shape?",
+   "solution": "Cl: 3 bond pairs + 2 lone pairs = 5 pairs (trigonal bipyramidal). Lone pairs equatorial positions lete hain, molecule T-shaped."
+  },
+  {
+   "title": "Brown ring test",
+   "problem": "Nitrate test mein brown ring kya banata hai?",
+   "solution": "Conc. H₂SO₄ mein Fe²⁺ NO₃⁻ ko NO mein reduce karta hai; NO iron se judkar [Fe(H₂O)₅NO]²⁺ banata hai, interface par brown ring dikhta hai."
+  },
+  {
+   "title": "Inert pair effect",
+   "problem": "PbO₂ strong oxidising agent kyun hai?",
+   "solution": "Group 14 mein neeche 6s² pair bonding mein hissa nahi lena chahta (inert pair effect), isliye Pb²⁺, Pb⁴⁺ se zyada stable. PbO₂ (Pb⁴⁺) aasaani se electrons lekar Pb²⁺ banta hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Group 13 (B, Al, Ga, In, Tl)",
+   "explain": "B non-metal hai aur covalent compounds banata hai; Al amphoteric. Boron halides Lewis acids hain (back-bonding ki wajah se acid strength BF₃ < BCl₃ < BBr₃). AlCl₃ dimer Al₂Cl₆ ki tarah exist karta hai. Borax aur boric acid important boron compounds hain."
+  },
+  {
+   "title": "Group 14 (C, Si, Ge, Sn, Pb)",
+   "explain": "Carbon catenation dikhata hai (sabse strong C–C bonds) aur allotropes: diamond (sp³, sabse hard), graphite (sp², bijli conduct karta, lubricant), fullerenes (C₆₀). Silicones aur silicates mein Si–O chains; zeolites aluminosilicates hain jo catalysts ki tarah use hote hain."
+  },
+  {
+   "title": "Group 15 (N, P, As, Sb, Bi)",
+   "explain": "N₂ strong triple bond (941 kJ/mol) ki wajah se inert hai. Nitrogen oxides: N₂O, NO (paramagnetic, odd electron), N₂O₃, NO₂ (paramagnetic, N₂O₄ mein dimerise), N₂O₅. PCl₅ gas mein trigonal bipyramidal aur solid mein [PCl₄]⁺[PCl₆]⁻."
+  },
+  {
+   "title": "Group 16 (O, S, Se, Te, Po)",
+   "explain": "O₂ paramagnetic hai. Ozone (O₃) bent, strong oxidising agent, aur UV se bachata hai. Oxide acidic (SO₂), basic (CaO), amphoteric (Al₂O₃) ya neutral (CO) ho sakta hai. H₂SO₄ dehydrating agent (cheeni ko kaala kar deta hai) aur garam concentrated hone par oxidising agent."
+  },
+  {
+   "title": "Group 17 (F, Cl, Br, I)",
+   "explain": "Halogens rangeen, strong oxidising agents (F₂ sabse strong), sabse negative electron gain enthalpy (Cl sabse zyada). F sirf −1 dikhata hai. Cl₂ (nam) oxidation se bleach karta hai; thande dilute NaOH se NaCl + NaOCl aur garam concentrated NaOH se NaCl + NaClO₃ (disproportionation)."
+  },
+  {
+   "title": "Group 18 (noble gases)",
+   "explain": "Poori ns²np⁶ shells, bahut zyada ionisation enthalpy. Xenon F aur O se compounds banata hai kyunki uska IE O₂ ke paas hai (Bartlett ne O₂⁺PtF₆⁻, phir Xe⁺PtF₆⁻ banaya). Uses: He balloons aur diving gas mein, Ne signs mein, Ar welding aur bulbs mein inert atmosphere."
+  },
+  {
+   "title": "Anomalous behaviour summary",
+   "explain": "First members (B, C, N, O, F) chhote, bahut electronegative, d orbitals nahi (covalency ≤ 4) aur strong pπ–pπ multiple bonds banate hain. Bhaari members d orbitals se octet expand karte hain (PCl₅, SF₆) aur dπ–pπ bonds banate hain."
+  }
+ ],
+ "ratta": [
+  "Inert pair: Tl⁺, Pb²⁺, Bi³⁺ more stable.",
+  "HF weakest HX acid;  HI strongest.",
+  "NH₃ 107° > PH₃ 93.6°;  basicity NH₃ > PH₃.",
+  "H₃PO₂ mono, H₃PO₃ di, H₃PO₄ tribasic.",
+  "HClO₄ strongest oxoacid of Cl;  HOCl best oxidiser.",
+  "XeF₂ linear, XeF₄ square planar, XeF₆ distorted octahedral.",
+  "ClF₃ T-shaped;  BrF₅ square pyramidal;  IF₇ pentagonal bipyramidal.",
+  "Haber (Fe), Ostwald (Pt/Rh), contact (V₂O₅)."
+ ],
+ "verifiedOn": "2026-11-13"
+}

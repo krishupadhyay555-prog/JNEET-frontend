@@ -1,0 +1,162 @@
+{
+ "slug": "d-and-f-block-elements",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "d- and f-Block Elements",
+  "JEE": "d- and f-Block Elements"
+ },
+ "title": "d- and f-Block Elements",
+ "readMinutes": 14,
+ "summary": [
+  "Transition (d-block) elements ke atom ya common ion mein d orbitals adhoore bhare hote hain: configuration (n − 1)d¹⁻¹⁰ ns¹⁻². Zn, Cd aur Hg (har state mein d¹⁰) asli transition elements nahi gine jaate.",
+  "Typical properties: high melting points (d electrons se strong metallic bonding), variable oxidation states, rangeen ions (d–d transitions), paramagnetism (magnetic, unpaired electrons), catalyst activity, complex banana, interstitial compounds aur alloy.",
+  "KMnO₄ aur K₂Cr₂O₇ do key compounds hain: strong oxidising agents jinki preparation, structure aur reactions baar-baar poochhe jaate hain.",
+  "Lanthanoid (4f) zyadatar +3 dikhate hain; lanthanoid contraction ki wajah se group ke 4d aur 5d elements (Zr–Hf) lagbhag same size ke. Actinoid (5f) radioactive hain aur zyada oxidation states dikhate hain."
+ ],
+ "formulas": [
+  {
+   "name": "General configuration",
+   "formula": "d-block: (n − 1)d¹⁻¹⁰ ns¹⁻²;  f-block: (n − 2)f¹⁻¹⁴ (n − 1)d⁰⁻¹ ns²",
+   "when": "Configurations likhna.",
+   "mistake": "Cr = [Ar]3d⁵4s¹ aur Cu = [Ar]3d¹⁰4s¹ (half/fully filled d ki extra stability) — 4s² mat likho."
+  },
+  {
+   "name": "Spin-only magnetic moment",
+   "formula": "μ = √(n(n + 2)) BM  (n = unpaired electrons)",
+   "when": "Ions ke magnetic moments.",
+   "mistake": "ION ke unpaired d electrons gino, pehle 4s electrons hataakar — dhyan rakho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Oxidation states",
+   "formula": "maximum = (n − 1)d + ns electrons up to Mn (+7);  Sc only +3;  Zn only +2;  common for many: +2 and +3",
+   "when": "Possible states predict karna."
+  },
+  {
+   "name": "Colour",
+   "formula": "arises from d–d transitions; d⁰ (Sc³⁺, Ti⁴⁺) and d¹⁰ (Zn²⁺, Cu⁺) ions are colourless",
+   "when": "Colour predict karna."
+  },
+  {
+   "name": "E° and stability",
+   "formula": "E°(M²⁺/M) mostly negative;  Cu has positive E° (+0.34 V) — doesn't liberate H₂ from acids;  Mn²⁺ (d⁵) and Zn²⁺ (d¹⁰) are especially stable",
+   "when": "3d ions ka redox behaviour."
+  },
+  {
+   "name": "KMnO₄ in acid",
+   "formula": "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O",
+   "when": "Fe²⁺, oxalate ke saath titrations.",
+   "mistake": "Neutral/weakly alkaline medium mein MnO₄⁻ → MnO₂ (3e⁻); strongly alkaline mein → MnO₄²⁻ (1e⁻) — medium check karo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "K₂Cr₂O₇ in acid",
+   "formula": "Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O",
+   "when": "Volumetric analysis mein oxidising agent."
+  },
+  {
+   "name": "Chromate–dichromate equilibrium",
+   "formula": "2CrO₄²⁻ (yellow) + 2H⁺ ⇌ Cr₂O₇²⁻ (orange) + H₂O",
+   "when": "pH ka colour par effect.",
+   "mistake": "Cr +6 hi rehta hai — ye acid–base change hai, redox nahi, confuse mat karo."
+  },
+  {
+   "name": "Preparation of KMnO₄",
+   "formula": "MnO₂ fused with KOH + O₂ → K₂MnO₄ (green manganate) → disproportionation/electrolytic oxidation → KMnO₄ (purple)",
+   "when": "Industrial preparation."
+  },
+  {
+   "name": "Preparation of K₂Cr₂O₇",
+   "formula": "chromite ore FeCr₂O₄ + Na₂CO₃ + O₂ → Na₂CrO₄ → (H⁺) Na₂Cr₂O₇ → (KCl) K₂Cr₂O₇",
+   "when": "Ore se dichromate."
+  },
+  {
+   "name": "Lanthanoid contraction",
+   "formula": "steady decrease in size from La to Lu due to poor shielding by 4f electrons",
+   "when": "Zr aur Hf ke radii lagbhag barabar aur chemistry milti-julti kyun.",
+   "note": "Ln(OH)₃ ki basicity La(OH)₃ se Lu(OH)₃ tak ghatti hai."
+  },
+  {
+   "name": "Lanthanoid oxidation states",
+   "formula": "+3 common;  Ce⁴⁺ strong oxidant (→ Ce³⁺);  Eu²⁺, Yb²⁺ reductants (→ +3)",
+   "when": "Unusual states ki stability."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Mn²⁺ ka magnetic moment",
+   "problem": "Mn²⁺ ka spin-only moment?",
+   "solution": "Mn²⁺ 3d⁵ → 5 unpaired: μ = √35 ≈ 5.92 BM."
+  },
+  {
+   "title": "Cr³⁺ ka magnetic moment",
+   "problem": "Cr³⁺ ka spin-only moment?",
+   "solution": "3d³ → 3 unpaired: μ = √15 ≈ 3.87 BM."
+  },
+  {
+   "title": "Ti³⁺ ka magnetic moment",
+   "problem": "Ti³⁺ ka spin-only moment?",
+   "solution": "3d¹ → μ = √3 ≈ 1.73 BM."
+  },
+  {
+   "title": "KMnO₄ reduction mein electrons",
+   "problem": "Acid mein 1 mol KMnO₄ kitne mol Fe²⁺ oxidise karta hai?",
+   "solution": "MnO₄⁻ 5 electrons leta hai (+7 → +2); har Fe²⁺ 1 deta hai → 5 mol Fe²⁺."
+  },
+  {
+   "title": "Dichromate ke electrons",
+   "problem": "Ek Cr₂O₇²⁻ ko Cr³⁺ tak reduce karne mein electrons?",
+   "solution": "Har Cr: +6 → +3 (3e⁻); do Cr → 6 electrons."
+  },
+  {
+   "title": "Colourless ions",
+   "problem": "Sc³⁺, Ti³⁺, Cu²⁺, Mn²⁺ mein colourless kaun?",
+   "solution": "Sc³⁺ — ye 3d⁰ hai, isliye koi d–d transition possible nahi."
+  },
+  {
+   "title": "Copper aur acids",
+   "problem": "Copper dilute HCl se hydrogen kyun nahi nikaalta?",
+   "solution": "E°(Cu²⁺/Cu) = +0.34 V positive hai, isliye Cu H⁺ ko H₂ mein reduce nahi kar sakta. Copper sirf HNO₃ jaise oxidising acids mein ghulta hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Position and classification",
+   "explain": "d-block: groups 3–12, periods 4–7 (3d, 4d, 5d, 6d series). f-block: lanthanoids (Ce–Lu, 4f) aur actinoids (Th–Lr, 5f), table ke neeche alag."
+  },
+  {
+   "title": "Physical properties",
+   "explain": "Hard, high melting aur boiling points, achhe conductors. Melting point series ke beech mein sabse zyada (zyada unpaired d electrons, strong bonding); Mn aur Zn anomalously kam. Series mein atomic radii kam badalte hain."
+  },
+  {
+   "title": "Ionisation enthalpies and oxidation states",
+   "explain": "Series mein IE dheere badhta hai. Oxidation states ki sankhya Mn tak badhti hai (+2 se +7) phir ghatti hai. Higher states O aur F se stable hoti hain (MnO₄⁻, CrO₃, VF₅)."
+  },
+  {
+   "title": "Catalytic properties",
+   "explain": "Variable oxidation states aur reactants ko adsorb karne ki kshamta transition metals ko achha catalyst banati hai: V₂O₅ (contact process), Fe (Haber process), Ni (hydrogenation), MnO₂ (KClO₃ ka decomposition)."
+  },
+  {
+   "title": "Interstitial compounds and alloys",
+   "explain": "Chhote atoms (H, C, N) metal lattice mein fit hokar use hard aur high-melting banate hain (steel, TiC). Milte-julte atomic size se transition metals alloy banate hain jaise brass (Cu–Zn) aur bronze (Cu–Sn)."
+  },
+  {
+   "title": "Lanthanoids",
+   "explain": "Mainly +3, rangeen ions (La³⁺, Lu³⁺ ko chhod kar), reactive metals, aur series mein hydroxides kam basic hote jaate hain. Mischmetal (lanthanoid alloy) lighter flints mein use hota hai."
+  },
+  {
+   "title": "Actinoids and comparison",
+   "explain": "Saare actinoids radioactive hain. Inme zyada oxidation states (+7 tak) kyunki 5f, 6d aur 7s ki energies paas hain. Actinoid contraction lanthanoid contraction se zyada hai kyunki 5f electrons aur bhi kharab shield karte hain."
+  }
+ ],
+ "ratta": [
+  "μ = √(n(n + 2)) BM:  d¹ 1.73, d³ 3.87, d⁵ 5.92.",
+  "Cr 3d⁵4s¹, Cu 3d¹⁰4s¹.",
+  "Mn shows max +7;  Sc only +3;  Zn only +2.",
+  "MnO₄⁻ → Mn²⁺ (5e⁻, acid);  Cr₂O₇²⁻ → 2Cr³⁺ (6e⁻).",
+  "CrO₄²⁻ yellow ⇌ Cr₂O₇²⁻ orange (pH, not redox).",
+  "Lanthanoid contraction → Zr ≈ Hf.",
+  "Ce⁴⁺ oxidant;  Eu²⁺ reductant."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -75,5 +75,54 @@ SYLLABUS = [
 ("Actinoids: configuration and oxidation states", ["actinoid"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Transition (d-block) elements ke atom ya common ion mein d orbitals adhoore bhare hote hain: configuration (n − 1)d¹⁻¹⁰ ns¹⁻². Zn, Cd aur Hg (har state mein d¹⁰) asli transition elements nahi gine jaate.",
+"Typical properties: high melting points (d electrons se strong metallic bonding), variable oxidation states, rangeen ions (d–d transitions), paramagnetism (magnetic, unpaired electrons), catalyst activity, complex banana, interstitial compounds aur alloy.",
+"KMnO₄ aur K₂Cr₂O₇ do key compounds hain: strong oxidising agents jinki preparation, structure aur reactions baar-baar poochhe jaate hain.",
+"Lanthanoid (4f) zyadatar +3 dikhate hain; lanthanoid contraction ki wajah se group ke 4d aur 5d elements (Zr–Hf) lagbhag same size ke. Actinoid (5f) radioactive hain aur zyada oxidation states dikhate hain.",
+],
+when=[
+("Configurations likhna.", "Cr = [Ar]3d⁵4s¹ aur Cu = [Ar]3d¹⁰4s¹ (half/fully filled d ki extra stability) — 4s² mat likho."),
+("Ions ke magnetic moments.", "ION ke unpaired d electrons gino, pehle 4s electrons hataakar — dhyan rakho."),
+("Possible states predict karna.", None),
+("Colour predict karna.", None),
+("3d ions ka redox behaviour.", None),
+("Fe²⁺, oxalate ke saath titrations.", "Neutral/weakly alkaline medium mein MnO₄⁻ → MnO₂ (3e⁻); strongly alkaline mein → MnO₄²⁻ (1e⁻) — medium check karo."),
+("Volumetric analysis mein oxidising agent.", None),
+("pH ka colour par effect.", "Cr +6 hi rehta hai — ye acid–base change hai, redox nahi, confuse mat karo."),
+("Industrial preparation.", None),
+("Ore se dichromate.", None),
+("Zr aur Hf ke radii lagbhag barabar aur chemistry milti-julti kyun.", "Ln(OH)₃ ki basicity La(OH)₃ se Lu(OH)₃ tak ghatti hai."),
+("Unusual states ki stability.", None),
+],
+examples=[
+("Mn²⁺ ka magnetic moment", "Mn²⁺ ka spin-only moment?",
+ "Mn²⁺ 3d⁵ → 5 unpaired: μ = √35 ≈ ⟨0⟩ BM."),
+("Cr³⁺ ka magnetic moment", "Cr³⁺ ka spin-only moment?",
+ "3d³ → 3 unpaired: μ = √15 ≈ ⟨0⟩ BM."),
+("Ti³⁺ ka magnetic moment", "Ti³⁺ ka spin-only moment?",
+ "3d¹ → μ = √3 ≈ ⟨0⟩ BM."),
+("KMnO₄ reduction mein electrons", "Acid mein 1 mol KMnO₄ kitne mol Fe²⁺ oxidise karta hai?",
+ "MnO₄⁻ 5 electrons leta hai (+7 → +2); har Fe²⁺ 1 deta hai → ⟨0⟩ mol Fe²⁺."),
+("Dichromate ke electrons", "Ek Cr₂O₇²⁻ ko Cr³⁺ tak reduce karne mein electrons?",
+ "Har Cr: +6 → +3 (3e⁻); do Cr → ⟨0⟩ electrons."),
+("Colourless ions", "Sc³⁺, Ti³⁺, Cu²⁺, Mn²⁺ mein colourless kaun?",
+ "Sc³⁺ — ye 3d⁰ hai, isliye koi d–d transition possible nahi."),
+("Copper aur acids", "Copper dilute HCl se hydrogen kyun nahi nikaalta?",
+ "E°(Cu²⁺/Cu) = +0.34 V positive hai, isliye Cu H⁺ ko H₂ mein reduce nahi kar sakta. Copper sirf HNO₃ jaise oxidising acids mein ghulta hai."),
+],
+topics=[
+("Position and classification", "d-block: groups 3–12, periods 4–7 (3d, 4d, 5d, 6d series). f-block: lanthanoids (Ce–Lu, 4f) aur actinoids (Th–Lr, 5f), table ke neeche alag."),
+("Physical properties", "Hard, high melting aur boiling points, achhe conductors. Melting point series ke beech mein sabse zyada (zyada unpaired d electrons, strong bonding); Mn aur Zn anomalously kam. Series mein atomic radii kam badalte hain."),
+("Ionisation enthalpies and oxidation states", "Series mein IE dheere badhta hai. Oxidation states ki sankhya Mn tak badhti hai (+2 se +7) phir ghatti hai. Higher states O aur F se stable hoti hain (MnO₄⁻, CrO₃, VF₅)."),
+("Catalytic properties", "Variable oxidation states aur reactants ko adsorb karne ki kshamta transition metals ko achha catalyst banati hai: V₂O₅ (contact process), Fe (Haber process), Ni (hydrogenation), MnO₂ (KClO₃ ka decomposition)."),
+("Interstitial compounds and alloys", "Chhote atoms (H, C, N) metal lattice mein fit hokar use hard aur high-melting banate hain (steel, TiC). Milte-julte atomic size se transition metals alloy banate hain jaise brass (Cu–Zn) aur bronze (Cu–Sn)."),
+("Lanthanoids", "Mainly +3, rangeen ions (La³⁺, Lu³⁺ ko chhod kar), reactive metals, aur series mein hydroxides kam basic hote jaate hain. Mischmetal (lanthanoid alloy) lighter flints mein use hota hai."),
+("Actinoids and comparison", "Saare actinoids radioactive hain. Inme zyada oxidation states (+7 tak) kyunki 5f, 6d aur 7s ki energies paas hain. Actinoid contraction lanthanoid contraction se zyada hai kyunki 5f electrons aur bhi kharab shield karte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)
