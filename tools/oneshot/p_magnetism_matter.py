@@ -77,5 +77,53 @@ SYLLABUS = [
 ("Effect of temperature on magnetic properties", ["temperature", "Curie"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Bar magnet bilkul current-carrying solenoid jaisa behave karta hai: dono magnetic dipoles hain jinka magnetic moment m S se N ki taraf hota hai.",
+"Magnetic dipole ka field 1/r³ se girta hai: axis par same doori par equatorial line se double, aur dono fields ulti direction mein.",
+"Uniform field mein dipole par torque τ = m × B (net force nahi) aur potential energy U = −m·B; compass needle ki tarah field direction ke around oscillate karta hai.",
+"Materials diamagnetic (halka repel), paramagnetic (halka attract) ya ferromagnetic (zor se attract) hote hain. Paramagnetism temperature se kamzor hota hai (Curie's law); Curie temperature ke upar ferromagnet paramagnetic ban jaata hai.",
+],
+when=[
+("Magnetic dipole ki strength.", "Direction: magnet ke andar S → N; loop ke liye right-hand rule — ulta mat lo."),
+("Magnet ke axis par field (r ≫ length).", None),
+("Perpendicular bisector par field.", "Same r par B_axial = 2 × B_equatorial — factor 2 ulta mat karo."),
+("Compass needle, field mein coil.", "Uniform field mein net force zero — sirf torque lagta hai, force mat lo."),
+("Stable (θ = 0) aur unstable (θ = 180°) positions.", None),
+("Field mein magnet ghumaana.", None),
+("Uniform field mein magnet ya compass needle ke chhote oscillations.", None),
+("Magnetic materials describe karna.", None),
+("Materials classify karna.", "Diamagnets: χ chhota aur negative; paramagnets: chhota positive; ferromagnets: bahut bada positive — mix mat karo."),
+("Paramagnetism ki temperature dependence.", "Sirf paramagnets par lagta hai; diamagnetism temperature par lagbhag depend nahi karta."),
+("Curie temperature ke upar ferromagnets.", None),
+],
+examples=[
+("Magnet ka axial field", "m = 0.5 A m². Axis par 10 cm par field (μ₀/4π = 10⁻⁷)?",
+ "B = 10⁻⁷ × 2 × 0.5/(0.1)³ = ⟨0⟩ T."),
+("Equatorial field", "Wahi magnet, equatorial line par 10 cm?",
+ "B = 10⁻⁷ × 0.5/(0.1)³ = ⟨0⟩ T — axial ka aadha."),
+("Magnet par torque", "m = 0.5 A m², 0.2 T field se 30° par. Torque?",
+ "τ = mB sin30° = 0.5 × 0.2 × 0.5 = ⟨0⟩ N m."),
+("Ghumaane ka work", "Wahi magnet 0° se 60° tak. Work?",
+ "W = mB(1 − cos60°) = 0.1 × 0.5 = ⟨0⟩ J."),
+("Magnet jaisa solenoid", "Solenoid: 2000 turns, area 2 cm², current 1.5 A. Magnetic moment?",
+ "m = NIA = 2000 × 1.5 × 2 × 10⁻⁴ = ⟨0⟩ A m²."),
+("Curie's law", "Paramagnet ka χ = 2.8 × 10⁻⁴ 300 K par. 400 K par χ?",
+ "χ ∝ 1/T: 2.8 × 10⁻⁴ × 300/400 = ⟨0⟩."),
+("Oscillating magnet", "I = 10⁻⁴ kg m², m = 0.5 A m², B = 0.4 T. Chhote oscillations ka period?",
+ "T = 2π√(10⁻⁴/(0.5 × 0.4)) ≈ ⟨0⟩ s."),
+],
+topics=[
+("Bar magnet as an equivalent solenoid", "Bar magnet aur solenoid ki field lines bahar se bilkul ek jaisi dikhti hain. Magnet ko aadha kaato to do chhote magnets bante hain — isolated magnetic poles (monopoles) exist nahi karte, electric charges ki tarah nahi."),
+("Magnetic field lines", "Closed loops banati hain (bahar N → S, andar S → N), kabhi nahi kaat-ti, aur strong field mein ghani hoti hain. Gauss's law for magnetism: kisi bhi closed surface se net flux zero."),
+("Dipole in a uniform field", "m B ke saath ho to stable equilibrium (minimum energy), ulta ho to unstable. Torque m ko B ke saath align karne ki koshish karta hai — compass isi se kaam karta hai."),
+("Diamagnetic substances", "Halka repel hote hain, strong se weak field ki taraf jaate hain; χ chhota negative (≈ −10⁻⁵). Examples: bismuth, copper, lead, paani, nitrogen gas. Superconductors perfect diamagnets hain (Meissner effect)."),
+("Paramagnetic substances", "Halka attract hote hain, weak se strong field ki taraf; atoms ke permanent moments thode align hote hain. Examples: aluminium, sodium, calcium, oxygen gas, copper chloride. Temperature badhne par χ ghatta hai."),
+("Ferromagnetic substances", "Zor se attract; domains aasaani se align hote hain. Examples: iron, cobalt, nickel, gadolinium. Curie temperature (Fe ≈ 1043 K) ke upar paramagnetic ban jaate hain. Soft iron (aasaani se magnetise/demagnetise) electromagnets aur transformer cores mein; steel permanent magnets ke liye."),
+("Syllabus note", "Earth's magnetism (dip, declination, horizontal component) current NTA syllabus se hata diya gaya hai. Dipole fields, torque aur energy, aur teen tarah ke materials aur temperature ka effect padho."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

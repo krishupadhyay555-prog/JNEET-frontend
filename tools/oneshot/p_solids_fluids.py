@@ -96,5 +96,62 @@ SYLLABUS = [
 ("Surface energy and surface tension, angle of contact, excess pressure, drops, bubbles, capillary rise", ["surface tension", "surface energy", "angle of contact", "excess pressure", "capillary"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Solids deformation ka virodh karte hain: elastic limit ke andar stress ∝ strain (Hooke's law). Young's, bulk aur shear moduli stretching, squeezing aur twisting ki stiffness naapte hain.",
+"Rukay hue fluid mein pressure depth ke saath badhta hai (P = P₀ + ρgh) aur har direction mein barabar transmit hota hai (Pascal's law) — hydraulic lift aur brakes isi par.",
+"Behte fluid continuity (Av = constant) aur Bernoulli's principle (P + ½ρv² + ρgh = constant) follow karte hain. Viscosity flow ka virodh karti hai; girta sphere terminal velocity tak pahunchta hai (Stokes' law).",
+"Surface tension liquid surface ko khinchi hui jhilli jaisa banata hai: drops aur bubbles ke andar excess pressure aur capillary rise isi se.",
+],
+when=[
+("Deformation describe karna.", "Strain ki koi unit nahi; stress ki unit pressure wali — confuse mat karo."),
+("Wires aur rods ko kheenchna.", "ΔL ∝ L/A — patli ya lambi wire same load par zyada khinchti hai, ulta mat socho."),
+("Body ko har taraf se dabaana.", "Minus sign B ko positive banata hai kyunki volume ghatta hai — sign mat bhoolo."),
+("Layers ko twist ya slide karna.", None),
+("Wire kheenchne par motai mein badlav.", None),
+("Khinchi wire mein stored energy.", None),
+("Depth h par pressure.", "Gauge pressure = ρgh (P₀ ke bina) — check karo question kaunsa maang raha hai."),
+("Hydraulic lift, brakes, press.", "Force multiply hota hai, work nahi — chhota piston zyada door chalta hai."),
+("Badalte area wale pipe mein incompressible fluid ki speed.", None),
+("Venturi meter, aerofoil lift, udti chhatein, atomisers.", "Sirf steady, non-viscous, incompressible, streamline flow ke liye valid."),
+("Tank ke chhed se paani.", None),
+("Spheres aur oil drops par drag.", None),
+("Baarish ki boondein, glycerine mein ball bearings.", "v_t ∝ r² — double radius wali boond chaar guna tez girti hai, double nahi."),
+("Flow smooth hoga ya turbulent, ye batana.", None),
+("Films, drops, bubbles phoolana.", "Soap bubble ki DO surfaces hoti hain — area double lo, bhoolo mat."),
+("Curved surfaces ke andar pressure.", "4S/r sirf soap bubble (do surfaces) ke liye; drop ke liye 2S/r — mix mat karo."),
+("Patli tube mein liquid chadhna ya girna.", "θ > 90° (glass mein mercury) ho to h negative — liquid girta hai, chadhta nahi."),
+],
+examples=[
+("Steel wire kheenchna", "2 m steel wire, area 1 mm², 100 N load. Y = 2 × 10¹¹ N/m². Elongation?",
+ "ΔL = FL/(AY) = 100 × 2/(10⁻⁶ × 2 × 10¹¹) = 10⁻³ m = ⟨0⟩ mm."),
+("Energy per unit volume", "Wire ka stress 2 × 10⁸ N/m², Y = 2 × 10¹¹ N/m². Energy density?",
+ "u = stress²/2Y = (4 × 10¹⁶)/(4 × 10¹¹) = ⟨0⟩ J/m³."),
+("Hydraulic lift", "Pistons ka area 0.01 m² aur 0.5 m². Chhote piston par 100 N kitna load uthayega?",
+ "F₂ = 100 × 0.5/0.01 = ⟨0⟩ N."),
+("Paani mein 10 m neeche pressure", "10 m depth par absolute pressure (P₀ = 1.013 × 10⁵ Pa)?",
+ "P = 1.013 × 10⁵ + 1000 × 9.8 × 10 = ⟨0⟩ Pa — lagbhag 2 atmosphere."),
+("Boond ki terminal velocity", "1 mm radius ki paani ki boond hawa mein girti hai (η = 1.8 × 10⁻⁵ Pa s; hawa ki density ignore). Terminal velocity?",
+ "v_t = 2r²ρg/(9η) = 2 × 10⁻⁶ × 1000 × 9.8/(9 × 1.8 × 10⁻⁵) ≈ ⟨0⟩ m/s (asli boondein dheemi hoti hain kyunki flow streamline nahi rehta)."),
+("Tank se paani", "Bade tank mein chhed paani ki surface se 5 m neeche. Efflux speed?",
+ "v = √(2gh) = √(2 × 9.8 × 5) ≈ ⟨0⟩ m/s."),
+("Paani ka capillary rise", "Paani (S = 0.072 N/m, θ = 0°), tube radius 0.5 mm. Height?",
+ "h = 2S/(rρg) = 0.144/(5 × 10⁻⁴ × 1000 × 9.8) ≈ ⟨0⟩ cm."),
+("Soap bubble ke andar pressure", "Soap bubble radius 1 cm, S = 0.03 N/m. Excess pressure?",
+ "ΔP = 4S/r = 4 × 0.03/0.01 = ⟨0⟩ Pa."),
+],
+topics=[
+("Stress–strain curve", "Proportional limit tak graph seedhi line (Hooke's law). Elastic limit ke baad body apni shape wapas nahi leti; yield point par plastic flow hota hai, breaking point par toot jaati hai. Ductile materials (copper) ka plastic region lamba; brittle (glass) elastic limit ke turant baad toot-te hain."),
+("Applications of elasticity", "Steel rubber se zyada elastic hai (Y zyada). Beams I-section ke banate hain taaki kam material mein bending ka virodh ho. Crane ki rassi kai patle strands ki hoti hai, aur pahaad ki maximum height chattanon ki elastic limit se tay hoti hai."),
+("Pressure facts", "Depth par pressure sirf depth par depend karta hai, bartan ki shape par nahi (hydrostatic paradox). Atmospheric pressure ≈ 1.013 × 10⁵ Pa = 76 cm mercury. Barometer ise naapta hai; open-tube manometer gauge pressure."),
+("Buoyancy and floating", "Upthrust = displaced fluid ka weight (Archimedes). Body tab tairti hai jab uski density fluid se kam ho; dooba hua hissa = ρ_body/ρ_fluid."),
+("Streamline and turbulent flow", "Streamline flow mein kisi point par velocity time ke saath nahi badalti aur streamlines kabhi nahi kaat-ti. Critical velocity se upar flow turbulent ho jaata hai aur Bernoulli lagu nahi hota."),
+("Applications of Bernoulli", "Aerofoil: wing ke upar tez hawa → kam pressure → lift. Toofan mein chhatein ud jaati hain. Saath chalti do naavein ek-doosre ki taraf khinchti hain. Atomiser aur Bunsen burner tez speed wali jagah fluid kheenchte hain."),
+("Viscosity", "Liquids ki viscosity temperature badhne par ghatti hai; gases ki badhti hai. Unit: Pa s (poiseuille); 1 poise = 0.1 Pa s."),
+("Surface tension effects", "Boondein gol hoti hain (minimum area). Surface tension temperature aur detergent se ghatta hai. Angle of contact < 90° → liquid surface ko geela karta hai aur capillary mein chadhta hai (paani–glass); > 90° → geela nahi karta aur girta hai (mercury–glass)."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

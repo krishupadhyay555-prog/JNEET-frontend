@@ -73,5 +73,51 @@ SYLLABUS = [
 ("Electromagnetic spectrum (radio, microwaves, infrared, visible, ultraviolet, X-rays, gamma rays) including elementary facts about their uses", ["radio", "microwave", "infrared", "visible", "ultraviolet", "X-rays", "gamma"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Maxwell ne Ampère's law mein displacement current ε₀ dΦ_E/dt joda: badalta electric field magnetic field banata hai, jaise badalta magnetic field electric field banata hai. Dono milkar fields ko wave ki tarah chalne dete hain.",
+"Electromagnetic waves transverse hain: E, B aur chalne ki direction aapas mein perpendicular. Vacuum mein speed c = 1/√(μ₀ε₀) = 3 × 10⁸ m/s, aur E₀ = cB₀.",
+"Ye energy aur momentum le jaati hain; intensity I = ½cε₀E₀². Electric aur magnetic fields energy barabar baant-te hain.",
+"Spectrum, lambi se chhoti wavelength: radio, microwave, infrared, visible, ultraviolet, X-rays, gamma rays — har ek ke apne sources aur uses.",
+],
+when=[
+("Charging capacitor ki plates ke 'beech' current.", "Charging capacitor ke andar I_d wires ke conduction current ke barabar hota hai — alag mat samjho."),
+("Badalta E field B kyun banata hai.", None),
+("Vacuum aur media mein EM wave ki speed.", None),
+("E se B ya B se E nikaalna.", "B₀ bahut chhota hai (E₀/3 × 10⁸) — iska matlab magnetic energy kam nahi, galat mat maano."),
+("EM wave likhna ya padhna.", None),
+("Wave kis taraf ja rahi hai.", None),
+("Wave mein stored energy.", None),
+("Wave dwara per unit area power.", None),
+("Surfaces par light ka force.", "Perfect reflector par perfect absorber se double pressure — dhyan rakho."),
+("EM waves ko order aur identify karna.", None),
+],
+examples=[
+("μ₀ aur ε₀ se speed", "μ₀ = 4π × 10⁻⁷ aur ε₀ = 8.85 × 10⁻¹² se 1/√(μ₀ε₀)?",
+ "c = 1/√(4π × 10⁻⁷ × 8.85 × 10⁻¹²) ≈ ⟨0⟩ m/s."),
+("Magnetic field amplitude", "Vacuum mein EM wave ka E₀ = 48 V/m. B₀?",
+ "B₀ = E₀/c = 48/(3 × 10⁸) = ⟨0⟩ T."),
+("Intensity", "E₀ = 100 V/m. Intensity?",
+ "I = ½cε₀E₀² = 0.5 × 3 × 10⁸ × 8.85 × 10⁻¹² × 10⁴ ≈ ⟨0⟩ W/m²."),
+("Displacement current", "Capacitor plate ka area 10⁻² m², plates ke beech field 10¹² V m⁻¹ s⁻¹ se badal raha. Displacement current?",
+ "I_d = ε₀ A dE/dt = 8.85 × 10⁻¹² × 10⁻² × 10¹² = ⟨0⟩ A."),
+("FM radio wavelength", "100 MHz FM signal ki wavelength?",
+ "λ = c/ν = 3 × 10⁸/10⁸ = ⟨0⟩ m."),
+("Green light ki frequency", "500 nm light ki frequency?",
+ "ν = c/λ = 3 × 10⁸/(5 × 10⁻⁷) = ⟨0⟩ Hz."),
+("Average energy density", "E₀ = 100 V/m. Average energy density?",
+ "u = ½ε₀E₀² = 0.5 × 8.85 × 10⁻¹² × 10⁴ ≈ ⟨0⟩ J/m³."),
+],
+topics=[
+("Why displacement current was needed", "Ampère's law wire se guzarne wali surface aur charging capacitor ke gap se guzarne wali surface ke liye alag answer deta tha. Maxwell ke displacement current ne ise theek kiya aur EM waves predict kiye; Hertz ne 1887 mein unhe banaya."),
+("Characteristics of EM waves", "Transverse, medium nahi chahiye, vacuum mein speed c, accelerated charges se bante hain, superposition follow karte hain, reflect, refract, diffract aur polarise ho sakte hain, energy aur momentum le jaate hain. Medium badalne par frequency nahi badalti."),
+("Radio waves and microwaves", "Radio (> 0.1 m): antennas mein oscillating charges se — AM, FM, TV, mobile communication. Microwaves (1 mm–0.1 m): klystron aur magnetron — radar, satellite links, microwave ovens (paani ke molecules ko vibrate karte hain)."),
+("Infrared and visible", "Infrared (700 nm–1 mm): garam bodies se — heat lamps, remote controls, night vision, physiotherapy; greenhouse effect se Earth ko garam rakhta hai. Visible (400–700 nm): sirf yahi band hamari aankhein dekhti hain."),
+("Ultraviolet", "Bahut garam bodies jaise Suraj aur special lamps se. Germs maarta hai (water purifiers), LASIK eye surgery mein; zyadatar ozone layer absorb kar leti hai. Zyada UV skin aur aankhon ke liye nuksaandeh; normal glass iska bahut hissa absorb karta hai."),
+("X-rays and gamma rays", "X-rays (0.01–10 nm): tez electrons metal target se takraate hain — medical imaging, cancer therapy, crystal structure. Gamma rays (< 0.01 nm): nuclear reactions se — cancer cells nasht karna, equipment sterilise karna."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -86,5 +86,60 @@ SYLLABUS = [
 ("Beats", ["beats"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Wave energy aur momentum ko ek jagah se doosri jagah le jaati hai, matter ko nahi. Transverse waves mein particles wave ke perpendicular chalte hain; longitudinal waves (sound) mein uske saath.",
+"Progressive wave y = A sin(kx − ωt + φ), speed v = ω/k = νλ. String par v = √(T/μ); gas mein sound v = √(γP/ρ).",
+"Waves milti hain to displacements judte hain (superposition). Ulti directions mein chalti do barabar waves fixed nodes aur antinodes wali standing wave banati hain.",
+"Strings aur organ pipes sirf kuch frequencies (harmonics) support karte hain. Do paas ki frequencies difference frequency par beats deti hain.",
+],
+when=[
+("Speed, frequency aur wavelength convert karna.", None),
+("Wave equation padhna.", "kx aur ωt ke beech ka sign direction batata hai — ulte signs matlab +x direction, confuse mat karo."),
+("Particle vs wave speed ke sawal.", "Particle speed aur wave speed alag cheezein hain — barabar mat karo."),
+("Sonometer, khinchi wires.", None),
+("Sound speed aur temperature par dependence.", "v ∝ √T (kelvin); constant T par sirf pressure se v nahi badalta."),
+("Interference aur phase ke sawal.", None),
+("Strings aur pipes mein standing waves.", None),
+("Sonometer, guitar strings.", "Fundamental mein dono ends par nodes aur beech mein ek antinode — dhyan rakho."),
+("Ek end band pipes, resonance tube.", "Closed pipe mein 2nd harmonic nahi hota — f₁ ke baad agla note 3f₁ hai, 2f₁ nahi."),
+("Flute, dono taraf khule pipes.", None),
+("Accurate resonance-tube calculations.", None),
+("Tuning forks, instruments tune karna.", "Fork par wax lagaane se frequency GHAT-ti hai; file karne se badhti hai — ulta mat lo."),
+("Pulse reflection ke sawal.", None),
+],
+examples=[
+("Wave equation padhna", "y = 0.02 sin(100πt − 2πx) (SI). Frequency, wavelength aur speed?",
+ "ω = 100π → ν = ⟨0⟩ Hz; k = 2π → λ = ⟨1⟩ m; v = ω/k = ⟨2⟩ m/s."),
+("String par wave", "String ka tension 100 N, mass per unit length 0.01 kg/m. Wave speed?",
+ "v = √(100/0.01) = ⟨0⟩ m/s."),
+("String ka fundamental", "Wahi string 0.5 m lambi, dono ends fixed. Fundamental frequency?",
+ "f₁ = v/2L = 100/1 = ⟨0⟩ Hz."),
+("Closed pipe", "50 cm pipe ek end band (v = 340 m/s). Fundamental aur agle do notes?",
+ "f₁ = v/4L = ⟨0⟩ Hz; phir 3f₁ = 510 Hz aur 5f₁ = 850 Hz (sirf odd harmonics)."),
+("Open pipe", "Same length, dono ends khule. Fundamental?",
+ "f₁ = v/2L = ⟨0⟩ Hz — closed pipe ka double."),
+("Hawa mein sound ki speed", "γ = 1.4, P = 1.013 × 10⁵ Pa, ρ = 1.29 kg/m³. Laplace ki speed?",
+ "v = √(1.4 × 1.013 × 10⁵/1.29) ≈ ⟨0⟩ m/s."),
+("Phase difference", "2 m wavelength wali wave par 0.5 m door do points. Phase difference?",
+ "Δφ = (2π/λ)Δx = (2π/2) × 0.5 = π/2 ≈ ⟨0⟩ rad."),
+("Wax ke saath beats", "Fork A (256 Hz) B ke saath 4 beats/s deta hai. A par wax lagaane se beats 6/s. B ki frequency?",
+ "B = 252 ya 260 Hz. Wax A ko ghataata hai; beats tabhi badhenge jab B, A se neeche ho, isliye B = ⟨0⟩ Hz."),
+("Tension aur length badalna", "Wire ka fundamental 300 Hz. Tension 44% aur length 20% badhaayi. Naya fundamental?",
+ "f ∝ √T/L: 300 × √1.44/1.2 = 300 × 1.2/1.2 = ⟨0⟩ Hz."),
+],
+topics=[
+("Transverse and longitudinal waves", "Transverse waves (strings, light) mein crests aur troughs; sirf wahan chalti hain jahan rigidity ho — isliye mechanical transverse waves fluids mein nahi chalti. Longitudinal waves (sound) mein compressions aur rarefactions; solids, liquids, gases sab mein chalti hain."),
+("What a medium needs", "Mechanical waves ko elasticity (wapas laane ke liye) aur inertia (disturbance aage le jaane ke liye) chahiye. Speed medium par depend karti hai, source par nahi; frequency source par depend karti hai aur naye medium mein nahi badalti."),
+("Factors affecting the speed of sound", "Temperature ke saath badhti hai (hawa mein ≈ 0.6 m/s per °C) aur humidity ke saath (nam hawa kam dense). Constant temperature par pressure se farak nahi. Sound solids mein sabse tez aur gases mein sabse dheema."),
+("Principle of superposition", "Net displacement individual displacements ka vector sum hai. Isse interference (Δφ = 2nπ par constructive, (2n + 1)π par destructive), standing waves aur beats samajh aate hain."),
+("Standing waves", "Energy transport nahi hoti. Nodes kabhi nahi hilte; antinodes 2A amplitude se vibrate karte hain. Do nodes ke beech saare particles same phase mein; node ke dono taraf ke particles π se out of phase."),
+("Harmonics and overtones", "Fundamental hi 1st harmonic hai. Open pipes aur strings mein 1st overtone = 2nd harmonic. Closed pipes mein 1st overtone = 3rd harmonic. Zyada harmonics har instrument ko apni quality (timbre) dete hain."),
+("Resonance tube", "Resonance-tube experiment mein lagataar resonance lengths λ/2 se alag hoti hain: λ = 2(l₂ − l₁), jo end correction hata deta hai; e = (l₂ − 3l₁)/2."),
+("Syllabus note", "Doppler effect current NTA syllabus se NEET aur JEE Main dono ke liye hata diya gaya hai. Wave equations, speeds, superposition, strings aur pipes mein standing waves aur beats par focus karo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

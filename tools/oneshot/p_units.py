@@ -81,5 +81,56 @@ SYLLABUS = [
 ("Experimental skills: vernier callipers, screw gauge", ["vernier", "screw gauge", "zero error"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Har physical quantity = number × unit. SI system mein 7 base units hain (m, kg, s, A, K, mol, cd); baaki saare units inhi se derived hain.",
+"Koi measurement perfect nahi hota: least count precision ko limit karta hai, aur errors (systematic, random, gross) accuracy ko. Errors fixed rules se judte hain — sum/difference mein absolute errors jodo, product/quotient mein relative errors jodo, power ho to power se multiply karo.",
+"Significant figures batate hain number kitna precise hai. Calculation ka answer sabse kam precise input se zyada precise nahi ho sakta.",
+"Dimensions quantity ko [M], [L], [T], [A], [K]… mein likhte hain. Dimensional analysis equation check karta hai, units convert karta hai aur relations derive karta hai — par ½, 2π jaise pure-number constants nahi nikaal sakta.",
+],
+when=[
+("Koi bhi unit ya dimension likhte waqt.", "Plane angle (rad) aur solid angle (sr) dimensionless hain, base units nahi."),
+("Vernier padhte waqt.", None),
+("Callipers se length naapna.", "Positive zero error ghatao, negative wala jodo — sign ulta mat karo."),
+("Screw gauge readings.", None),
+("Wire ka diameter, sheet ki motai.", "Circular scale ka zero reference line ke neeche ho to zero error positive hai — ghataane se pehle check karo."),
+("Baar-baar li gayi readings.", "Har deviation ka modulus lo — errors ko aapas mein cancel mat hone do."),
+("Alag measurements ki precision compare karna.", None),
+("Measured values jodna ya ghataana.", "Errors hamesha JUDTE hain, chaahe quantities ghataayi ja rahi hon."),
+("g = 4π²L/T², ρ = m/V jaise formulas.", "Division mein bhi relative errors judte hain, aur har ek apni power se multiply hota hai."),
+("Final answer round karna.", "Decimal ke baad trailing zeros gine jaate hain; leading zeros kabhi nahi."),
+("Equations check aur derive karna.", None),
+("Equation sahi ho sakti hai ya nahi, check karna.", "Dimensionally sahi equation bhi ½ ya 2π jaise number se galat ho sakti hai."),
+("SI se CGS (ya kisi system) mein value badalna.", None),
+],
+examples=[
+("Vernier reading", "Vernier ke 10 divisions = main scale ke 9 divisions (1 mm each). Main scale 2.0 cm padhta hai aur 7th vernier division milta hai. Reading? (zero error nahi)",
+ "LC = 1 mm/10 = 0.1 mm = 0.01 cm. Reading = 2.0 cm + 7 × 0.01 cm = ⟨0⟩ cm."),
+("Zero error wala screw gauge", "Pitch 0.5 mm, 50 circular divisions. Jaws band karne par zero line se 4 divisions neeche. Wire par MSR = 3.0 mm, CSR = 36. Diameter?",
+ "LC = 0.5/50 = 0.01 mm. Zero error = +4 × 0.01 = +0.04 mm. Reading = 3.0 + 36 × 0.01 − 0.04 = ⟨0⟩ mm."),
+("Pendulum se g mein error", "g = 4π²L/T². L mein 2% aur T mein 1% error. g mein maximum % error?",
+ "Δg/g = ΔL/L + 2 ΔT/T = 2% + 2 × 1% = ⟨0⟩%."),
+("Mean absolute error", "Time period ki readings: 2.63, 2.56, 2.42, 2.71, 2.80 s. Mean, mean absolute error aur % error?",
+ "Mean = ⟨0⟩ s. Deviations: 0.01, 0.06, 0.20, 0.09, 0.18 → mean abs error = ⟨1⟩ s. % error = ⟨2⟩%."),
+("G ko CGS mein", "G = 6.67 × 10⁻¹¹ N m² kg⁻². dyne cm² g⁻² mein value? ([G] = M⁻¹L³T⁻²)",
+ "n₂ = 6.67 × 10⁻¹¹ × (1 kg/1 g)⁻¹ (1 m/1 cm)³ = 6.67 × 10⁻¹¹ × 10⁻³ × 10⁶ = ⟨0⟩ dyne cm² g⁻²."),
+("Product mein significant figures", "Rectangle 3.8 cm × 2.62 cm ka area?",
+ "3.8 × 2.62 = 9.956; 3.8 mein 2 significant figures hain, isliye answer ⟨0⟩ cm² (1.0 × 10¹ cm² likho)."),
+("Pendulum formula derive karo", "Maano T mass m, length l aur g par T ∝ mᵃ lᵇ gᶜ ki tarah depend karta hai. a, b, c?",
+ "[T] = [M]ᵃ[L]ᵇ[LT⁻²]ᶜ → M: a = 0; T: −2c = 1 → c = −½; L: b + c = 0 → b = ½. Isliye T ∝ √(l/g) (2π experiment se aata hai)."),
+],
+topics=[
+("Base and derived units", "Derived units base units se bante hain: newton = kg m s⁻², joule = kg m² s⁻², pascal = kg m⁻¹ s⁻². Prefixes: nano 10⁻⁹, micro 10⁻⁶, milli 10⁻³, kilo 10³, mega 10⁶, giga 10⁹. Practical length units: 1 Å = 10⁻¹⁰ m, 1 fermi = 10⁻¹⁵ m, 1 light year ≈ 9.46 × 10¹⁵ m, 1 AU ≈ 1.5 × 10¹¹ m, 1 parsec ≈ 3.08 × 10¹⁶ m."),
+("Accuracy vs precision", "Accuracy = true value ke kitna paas. Precision = baar-baar ki readings aapas mein kitni paas (least count se tay). Precise instrument bhi zero error ho to inaccurate ho sakta hai."),
+("Types of errors", "Systematic errors (instrument ka zero error, kharab method, personal bias) saari readings ek taraf dhakelte hain — behtar method aur correction se kam karo. Random errors anpredictable hote hain — zyada readings lekar average karo. Gross errors laparwahi se aate hain."),
+("Rounding off", "Last significant digit ke baad ke digits hatao: agla digit > 5 ho to ek badhao; < 5 ho to waisa hi; = 5 ho to last digit even banao (2.745 → 2.74, 2.735 → 2.74). Rounding sirf calculation ke end mein karo."),
+("Counting significant figures", "Saare non-zero digits gine jaate hain. Non-zero digits ke beech ke zeros bhi (2.005 → 4). Leading zeros kabhi nahi (0.0024 → 2). Trailing zeros sirf decimal point ke saath (2.400 → 4; 2400 ambiguous — 2 ke liye 2.4 × 10³ likho). Exact numbers (2πr ka 2) ke infinite significant figures."),
+("Uses and limits of dimensional analysis", "Uses: equation check karna, units convert karna, product of powers wala relation derive karna. Limits: ½ ya 2π jaise constants nahi milte, trigonometric/exponential/log relations par fail, sum of terms wali quantity handle nahi hoti, scalar aur vector mein farak nahi batata."),
+("Dimensionless and same-dimension quantities", "Strain, refractive index, angle, relative density dimensionless hain. Same dimensions: work, energy, torque [ML²T⁻²]; impulse aur momentum [MLT⁻¹]; stress, pressure, Young's modulus, energy density [ML⁻¹T⁻²]; frequency, angular velocity, velocity gradient [T⁻¹]; Planck's constant aur angular momentum [ML²T⁻¹]."),
+("Experimental skills", "Vernier callipers internal aur external diameter aur depth naapte hain; screw gauge wire ka diameter aur sheet ki motai LC 0.01 mm se. Naapne se pehle jaws band karke zero error note karo, kai jagah reading lo aur average karo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

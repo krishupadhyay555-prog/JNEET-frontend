@@ -82,5 +82,56 @@ SYLLABUS = [
 ("Simple pendulum — derivation of expression for its time period", ["pendulum", "deriving"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Jo motion barabar intervals par dohraaye wo periodic hai; mean position ke aage-peeche wali periodic motion oscillation hai.",
+"Simple harmonic motion (SHM) tab hota hai jab restoring force displacement ke proportional aur ulta ho: F = −kx. Tab x = A sin(ωt + φ), ω = √(k/m).",
+"SHM mein speed mean position par maximum aur extremes par zero; acceleration ulta. Total energy ½kA² constant, KE aur PE mein bantti rehti hai.",
+"Spring–mass: T = 2π√(m/k). Simple pendulum (chhota angle): T = 2π√(l/g), mass aur amplitude se independent.",
+],
+when=[
+("Time period, frequency aur angular frequency convert karna.", None),
+("Check karna ki motion SHM hai ya nahi.", "Diameter par project ki gayi uniform circular motion SHM hai, par uchhalti ball periodic hai, SHM nahi — confuse mat karo."),
+("Kisi bhi time par position; φ initial phase.", None),
+("Diye displacement par speed.", None),
+("Extremes par force aur acceleration.", "Acceleration hamesha mean position ki taraf — x ke ulta, dhyan rakho."),
+("Kisi position par energy.", "KE = PE x = A/√2 par, A/2 par nahi."),
+("Spring par mass (horizontal ya vertical).", "Vertical spring mein bhi same formula — gravity sirf mean position shift karti hai, bhoolo mat."),
+("Springs ke combinations.", None),
+("Spring ke tukde.", None),
+("Pendulum clocks, g naapna.", "T bob ke mass ya amplitude (chhote swings) par depend nahi karta — galat maat maano."),
+("Lift aur accelerating vehicles mein pendulum.", None),
+("Phase ke sawal.", None),
+],
+examples=[
+("SHM equation padhna", "x = 5 sin(πt + π/3) cm. Amplitude, period, maximum speed aur maximum acceleration?",
+ "A = 5 cm, ω = π rad/s → T = 2π/ω = ⟨0⟩ s. v_max = Aω ≈ ⟨1⟩ cm/s, a_max = Aω² ≈ ⟨2⟩ cm/s²."),
+("Displacement par speed", "A = 10 cm, T = π s. x = 6 cm par speed?",
+ "ω = 2 rad/s. v = ω√(A² − x²) = 2 × √(100 − 36) = ⟨0⟩ cm/s."),
+("Spring par mass", "k = 200 N/m wali spring par 0.5 kg. Period?",
+ "T = 2π√(0.5/200) = 2π × 0.05 ≈ ⟨0⟩ s."),
+("1 m pendulum", "1 m simple pendulum ka period (g = 9.8 m/s²)?",
+ "T = 2π√(1/9.8) ≈ ⟨0⟩ s."),
+("Seconds pendulum", "Seconds pendulum ka T = 2 s. Length (g = 9.8)?",
+ "l = gT²/4π² = 9.8 × 4/39.48 ≈ ⟨0⟩ m (lagbhag 1 m)."),
+("Oscillation ki energy", "k = 200 N/m, amplitude 10 cm. Total energy?",
+ "E = ½kA² = ½ × 200 × 0.01 = ⟨0⟩ J."),
+("Series vs parallel springs", "Mass k aur 4k springs ke saath, pehle parallel (Tₚ), phir series (Tₛ). Tₛ/Tₚ?",
+ "kₚ = 5k, kₛ = 4k/5. Tₛ/Tₚ = √(kₚ/kₛ) = √(25/4) = ⟨0⟩."),
+("KE aur PE kahan barabar", "Amplitude 10 cm. Kis displacement par KE = PE?",
+ "½k(A² − x²) = ½kx² → x = A/√2 ≈ ⟨0⟩ cm."),
+],
+topics=[
+("Periodic functions", "sin ωt aur cos ωt har 2π/ω par dohraate hain, isliye koi bhi periodic motion inse likhi ja sakti hai. sin ωt + cos ωt bhi SHM hai (amplitude √2, phase shifted); sin² ωt periodic hai, period π/ω."),
+("SHM and circular motion", "Circle par uniform chalte particle ka kisi diameter par projection SHM karta hai. Radius = amplitude aur angular speed = ω — do positions ke beech ka time nikaalne mein kaam aata hai."),
+("Graphs of SHM", "x, v, a teeno sinusoidal, same ω. v x se π/2 aage, a x se π aage. v–x graph ellipse; a–x graph negative slope wali seedhi line."),
+("Energy graphs", "Potential energy (PE) parabola, minimum x = 0 par; kinetic energy (KE) ulta parabola; dono ka sum horizontal line. KE aur PE dono 2ν frequency (SHM ki double) se oscillate karte hain."),
+("Restoring force and force constant", "Spring constant k batata hai system kitna stiff hai. Har SHM mein ω² = (restoring force per unit displacement)/mass. Pendulum mein mg sinθ ≈ mgθ restoring force se ω² = g/l."),
+("Deriving the pendulum period", "Pivot ke baare mein torque −mgl sinθ ≈ −mglθ; I = ml² se α = −(g/l)θ. α = −ω²θ se compare karke T = 2π√(l/g)."),
+("Time between positions", "Mean se extreme tak T/4. Mean se A/2 tak T/12; A/2 se A tak T/6. Mean se A/√2 tak T/8."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

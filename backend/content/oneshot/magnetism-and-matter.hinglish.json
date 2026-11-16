@@ -1,0 +1,156 @@
+{
+ "slug": "magnetism-and-matter",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Magnetism and Matter",
+  "JEE": "Magnetism and Matter"
+ },
+ "title": "Magnetism and Matter",
+ "readMinutes": 11,
+ "summary": [
+  "Bar magnet bilkul current-carrying solenoid jaisa behave karta hai: dono magnetic dipoles hain jinka magnetic moment m S se N ki taraf hota hai.",
+  "Magnetic dipole ka field 1/r³ se girta hai: axis par same doori par equatorial line se double, aur dono fields ulti direction mein.",
+  "Uniform field mein dipole par torque τ = m × B (net force nahi) aur potential energy U = −m·B; compass needle ki tarah field direction ke around oscillate karta hai.",
+  "Materials diamagnetic (halka repel), paramagnetic (halka attract) ya ferromagnetic (zor se attract) hote hain. Paramagnetism temperature se kamzor hota hai (Curie's law); Curie temperature ke upar ferromagnet paramagnetic ban jaata hai."
+ ],
+ "formulas": [
+  {
+   "name": "Magnetic moment",
+   "formula": "bar magnet: m = q_m × 2l;  current loop/solenoid: m = N I A",
+   "when": "Magnetic dipole ki strength.",
+   "mistake": "Direction: magnet ke andar S → N; loop ke liye right-hand rule — ulta mat lo."
+  },
+  {
+   "name": "Field on the axis of a dipole",
+   "formula": "B_axial = (μ₀/4π) 2m/r³",
+   "when": "Magnet ke axis par field (r ≫ length).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Field on the equatorial line",
+   "formula": "B_equatorial = (μ₀/4π) m/r³  (opposite to m)",
+   "when": "Perpendicular bisector par field.",
+   "mistake": "Same r par B_axial = 2 × B_equatorial — factor 2 ulta mat karo."
+  },
+  {
+   "name": "Torque on a dipole",
+   "formula": "τ = m × B;  |τ| = mB sin θ",
+   "when": "Compass needle, field mein coil.",
+   "mistake": "Uniform field mein net force zero — sirf torque lagta hai, force mat lo."
+  },
+  {
+   "name": "Potential energy of a dipole",
+   "formula": "U = −m · B = −mB cos θ",
+   "when": "Stable (θ = 0) aur unstable (θ = 180°) positions."
+  },
+  {
+   "name": "Work to rotate a dipole",
+   "formula": "W = mB (cos θ₁ − cos θ₂)",
+   "when": "Field mein magnet ghumaana."
+  },
+  {
+   "name": "Oscillation of a magnet",
+   "formula": "T = 2π √(I/(mB))",
+   "when": "Uniform field mein magnet ya compass needle ke chhote oscillations."
+  },
+  {
+   "name": "Magnetisation and intensity",
+   "formula": "M = m_net/V;  H = B₀/μ₀;  B = μ₀(H + M)",
+   "when": "Magnetic materials describe karna."
+  },
+  {
+   "name": "Susceptibility and permeability",
+   "formula": "χ = M/H;  μ = μ₀(1 + χ);  μᵣ = 1 + χ",
+   "when": "Materials classify karna.",
+   "mistake": "Diamagnets: χ chhota aur negative; paramagnets: chhota positive; ferromagnets: bahut bada positive — mix mat karo."
+  },
+  {
+   "name": "Curie's law",
+   "formula": "χ = C/T  (paramagnets)",
+   "when": "Paramagnetism ki temperature dependence.",
+   "mistake": "Sirf paramagnets par lagta hai; diamagnetism temperature par lagbhag depend nahi karta."
+  },
+  {
+   "name": "Curie–Weiss law",
+   "formula": "χ = C/(T − T_C) for T > T_C",
+   "when": "Curie temperature ke upar ferromagnets."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Magnet ka axial field",
+   "problem": "m = 0.5 A m². Axis par 10 cm par field (μ₀/4π = 10⁻⁷)?",
+   "solution": "B = 10⁻⁷ × 2 × 0.5/(0.1)³ = 1 × 10⁻⁴ T."
+  },
+  {
+   "title": "Equatorial field",
+   "problem": "Wahi magnet, equatorial line par 10 cm?",
+   "solution": "B = 10⁻⁷ × 0.5/(0.1)³ = 5 × 10⁻⁵ T — axial ka aadha."
+  },
+  {
+   "title": "Magnet par torque",
+   "problem": "m = 0.5 A m², 0.2 T field se 30° par. Torque?",
+   "solution": "τ = mB sin30° = 0.5 × 0.2 × 0.5 = 0.05 N m."
+  },
+  {
+   "title": "Ghumaane ka work",
+   "problem": "Wahi magnet 0° se 60° tak. Work?",
+   "solution": "W = mB(1 − cos60°) = 0.1 × 0.5 = 0.05 J."
+  },
+  {
+   "title": "Magnet jaisa solenoid",
+   "problem": "Solenoid: 2000 turns, area 2 cm², current 1.5 A. Magnetic moment?",
+   "solution": "m = NIA = 2000 × 1.5 × 2 × 10⁻⁴ = 0.6 A m²."
+  },
+  {
+   "title": "Curie's law",
+   "problem": "Paramagnet ka χ = 2.8 × 10⁻⁴ 300 K par. 400 K par χ?",
+   "solution": "χ ∝ 1/T: 2.8 × 10⁻⁴ × 300/400 = 2.1 × 10⁻⁴."
+  },
+  {
+   "title": "Oscillating magnet",
+   "problem": "I = 10⁻⁴ kg m², m = 0.5 A m², B = 0.4 T. Chhote oscillations ka period?",
+   "solution": "T = 2π√(10⁻⁴/(0.5 × 0.4)) ≈ 0.14 s."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Bar magnet as an equivalent solenoid",
+   "explain": "Bar magnet aur solenoid ki field lines bahar se bilkul ek jaisi dikhti hain. Magnet ko aadha kaato to do chhote magnets bante hain — isolated magnetic poles (monopoles) exist nahi karte, electric charges ki tarah nahi."
+  },
+  {
+   "title": "Magnetic field lines",
+   "explain": "Closed loops banati hain (bahar N → S, andar S → N), kabhi nahi kaat-ti, aur strong field mein ghani hoti hain. Gauss's law for magnetism: kisi bhi closed surface se net flux zero."
+  },
+  {
+   "title": "Dipole in a uniform field",
+   "explain": "m B ke saath ho to stable equilibrium (minimum energy), ulta ho to unstable. Torque m ko B ke saath align karne ki koshish karta hai — compass isi se kaam karta hai."
+  },
+  {
+   "title": "Diamagnetic substances",
+   "explain": "Halka repel hote hain, strong se weak field ki taraf jaate hain; χ chhota negative (≈ −10⁻⁵). Examples: bismuth, copper, lead, paani, nitrogen gas. Superconductors perfect diamagnets hain (Meissner effect)."
+  },
+  {
+   "title": "Paramagnetic substances",
+   "explain": "Halka attract hote hain, weak se strong field ki taraf; atoms ke permanent moments thode align hote hain. Examples: aluminium, sodium, calcium, oxygen gas, copper chloride. Temperature badhne par χ ghatta hai."
+  },
+  {
+   "title": "Ferromagnetic substances",
+   "explain": "Zor se attract; domains aasaani se align hote hain. Examples: iron, cobalt, nickel, gadolinium. Curie temperature (Fe ≈ 1043 K) ke upar paramagnetic ban jaate hain. Soft iron (aasaani se magnetise/demagnetise) electromagnets aur transformer cores mein; steel permanent magnets ke liye."
+  },
+  {
+   "title": "Syllabus note",
+   "explain": "Earth's magnetism (dip, declination, horizontal component) current NTA syllabus se hata diya gaya hai. Dipole fields, torque aur energy, aur teen tarah ke materials aur temperature ka effect padho."
+  }
+ ],
+ "ratta": [
+  "m = NIA;  direction S → N.",
+  "B_axial = μ₀2m/4πr³;  B_eq = μ₀m/4πr³ (half).",
+  "τ = mB sinθ;  U = −mB cosθ;  W = mB(cosθ₁ − cosθ₂).",
+  "T = 2π√(I/mB).",
+  "Dia: χ < 0;  para: small χ > 0;  ferro: huge χ.",
+  "Curie: χ = C/T (para);  ferro → para above T_C.",
+  "No magnetic monopoles; net flux through closed surface = 0."
+ ],
+ "verifiedOn": "2026-11-13"
+}
