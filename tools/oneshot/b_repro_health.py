@@ -64,5 +64,50 @@ SYLLABUS = [
 ("Infertility and assisted reproductive technologies — IVF, ZIFT, GIFT", ["infertility", "IVF", "ZIFT", "GIFT"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Reproductive health (WHO) ka matlab reproduction ke har pehlu mein poori bhalaai — physical, emotional, behavioural aur social. India national family planning (1951) shuru karne wale pehle deshon mein tha, baad mein ise RCH (Reproductive and Child Health Care) programmes mein badhaaya gaya.",
+"Contraceptive methods: natural, barrier, IUD, oral pills, injectables/implants aur surgical (sterilisation). Ideal contraceptive user-friendly, aasaani se milne wala, effective, reversible aur kam side effects wala hota hai.",
+"Medical termination of pregnancy (MTP) India mein tay conditions mein legal hai (MTP Amendment Act, 2017). Prenatal amniocentesis se sex jaanna banned hai.",
+"Sexually transmitted infections (STI) aur infertility badi chintaayein hain; assisted reproductive technologies (ART) jaise IVF, ZIFT, GIFT, ICSI, AI aur IUI infertile couples ki madad karti hain.",
+],
+when=[
+("Bina devices ya drugs ke.", "Inka failure rate zyada hai — bharosa mat karo."),
+("Sperm aur ovum ko milne se rokna.", "Condoms STIs aur AIDS se bhi bachaate hain."),
+("Intra-uterine devices.", None),
+("IUD ka mechanism.", None),
+("Hormonal contraception.", None),
+("Unprotected intercourse ke baad.", None),
+("Terminal (sterilisation) methods.", "Bahut effective hain par reversibility kharab hai."),
+("Medical termination of pregnancy.", None),
+("Sexually transmitted infections.", None),
+("Assisted reproductive technologies.", None),
+("Prenatal diagnosis.", None),
+],
+examples=[
+("Kaunsi ART?", "Ek mahila ova nahi bana sakti par fertilisation ke liye sahi environment de sakti hai. Kaunsa method?",
+ "GIFT — donor ka ovum uski fallopian tube mein daala jaata hai."),
+("Kam sperm count", "Pati ka sperm count bahut kam hai. Kaunsi ART sabse sahi?",
+ "Pati ya donor ke semen se artificial insemination (AI) ya intra-uterine insemination (IUI); agar sperm khud fertilise na kar paayein to ICSI."),
+("ZIFT vs IUT", "ZIFT aur IUT mein kya farak hai?",
+ "ZIFT: zygote ya 8 blastomeres tak ka embryo fallopian tube mein. IUT: 8 se zyada blastomeres wala embryo uterus mein."),
+("Lactational amenorrhea kyun kaam karta hai", "Zyada breastfeeding ke dauraan ovulation kyun nahi hota?",
+ "Parturition ke baad intense lactation mein ovulation aur menstrual cycles nahi hote; ye sirf janm ke lagbhag chhe mahine tak effective hai."),
+("Saheli", "Saheli mein khaas kya hai?",
+ "Ye non-steroidal oral contraceptive hai jo hafte mein ek baar li jaati hai, Central Drug Research Institute (CDRI), Lucknow ne banayi."),
+("STIs se bachav", "STIs se bachne ke aasaan tareeke batao.",
+ "Anjaan ya kai partners ke saath sex se bacho; hamesha condoms use karo; shak hone par jaldi doctor se milo taaki jaldi pata chale aur poora ilaaj ho."),
+],
+topics=[
+("Reproductive health problems and strategies", "Programmes reproduction se jude pehluon ki jaagrukta, schools mein sex education, birth control, pregnant maaon ki dekhbhaal, post-natal care, breastfeeding ki ahmiyat, ladke-ladkiyon ko barabar mauke par dhyan dete hain. Safal kadam: maternal aur infant mortality kam, chhote parivaar, STDs ka behtar pata aur ilaaj."),
+("Population explosion", "Duniya ki aabadi 1900 mein lagbhag 2 billion aur 2011 ke aas-paas 7.2 billion se zyada thi. India ki aabadi aazaadi ke samay lagbhag 350 million aur 2011 tak 1.2 billion se zyada. Kaaran: death rate, maternal mortality rate (MMR) aur infant mortality rate (IMR) ka girna, aur reproducible age mein zyada log. Shaadi ki kanooni umar badhaayi — females 18 saal aur males 21."),
+("Contraceptives and side effects", "Sambhavit side effects: nausea, pet dard, breakthrough bleeding, irregular menstrual bleeding aur breast cancer tak — isliye doctor ki salah se hi use karo."),
+("Why MTP is needed", "Casual intercourse ya contraceptive fail hone se anchaahi pregnancy rokne ke liye, ya jab pregnancy jaari rakhna maa ya foetus ke liye nuksaandeh ho. Galat use: illegal female foeticide; ayogya jhola-chhaap illegal MTPs ko unsafe banate hain."),
+("Infertility", "Unprotected sexual cohabitation ke baad bhi conceive na kar paana; kaaran physical, congenital, bimaariyan, drugs, immunological ya psychological, aur kisi bhi partner mein ho sakte hain. Specialised health clinics kuch disorders ka pata aur ilaaj karte hain."),
+("Complications of untreated STIs", "Pelvic inflammatory diseases (PID), abortions, still births, ectopic pregnancies, infertility aur reproductive tract ka cancer tak."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

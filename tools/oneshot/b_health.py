@@ -67,5 +67,53 @@ SYLLABUS = [
 ("Adolescence — drug and alcohol abuse", ["adolescence", "drug", "alcohol"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Health poori physical, mental aur social bhalaai ki sthiti hai. Diseases infectious hain (pathogens se — bacteria, viruses, fungi, protozoans, helminths; jaise malaria, dengue, chikungunya, filariasis, ascariasis, typhoid, pneumonia, common cold, amoebiasis, ringworm) ya non-infectious (cancer).",
+"Immunity innate (janm se maujood non-specific barriers) ya acquired hoti hai (specific, memory ke saath — B cells antibodies banate hain, T cells cell-mediated immunity dete hain). Vaccine isi memory ka use karta hai.",
+"Allergies, autoimmunity (rheumatoid arthritis) aur AIDS (HIV helper T cells par hamla karta hai) immune system ki naakaami ya hamle hain. Cancer bina control ka cell division hai (contact inhibition khatam).",
+"Drug aur alcohol abuse (opioids, cannabinoids, coca alkaloids) sehat bigaadte hain; adolescence sabse naazuk umar hai, aur bachav ilaaj se behtar hai.",
+],
+when=[
+("Bacterial infections.", None),
+("Doosre infections.", None),
+("Protozoan infections.", None),
+("Malaria parasite.", "Sexual reproduction mosquito mein hota hai; insaan intermediate host hai — ulta mat likhna."),
+("Worm infections.", None),
+("Non-specific defence.", None),
+("Humoral immunity.", None),
+("Acquired immunity ke types.", None),
+("Immune organs.", None),
+("AIDS ki biology.", None),
+("Cancer biology.", None),
+("Cancer ka management.", None),
+("Drugs ke source aur asar.", None),
+("Allergic reactions.", None),
+],
+examples=[
+("Malaria mein thand", "Malaria mein thand aur tez bukhaar kyun aata hai?",
+ "RBCs phatne se toxic substance haemozoin nikalta hai, jo har teen-chaar din mein thand aur tez bukhaar laata hai."),
+("Typhoid ka test", "Kaunsa test typhoid confirm karta hai?",
+ "Widal test."),
+("Colostrum", "Newborn ke liye colostrum kyun zaroori hai?",
+ "Isme bahut saari IgA antibodies hoti hain jo baby ko passive immunity deti hain."),
+("Saanp ke kaatne ka ilaaj", "Saanp ke kaatne ke baad kya diya jaata hai, aur ye kaunsi immunity hai?",
+ "Antivenom — saanp ke zeher ke khilaaf pehle se bani antibodies; ye passive immunisation hai."),
+("AIDS immunity kyun girata hai", "AIDS patients ko wo infections kyun hote hain jinse swasth log bach jaate hain?",
+ "HIV helper T lymphocytes ko nasht karta hai, jo antibody aur cell-mediated dono responses ko coordinate karte hain; immunity dhah jaati hai aur opportunistic infections (Mycobacterium, Toxoplasma, fungi, viruses) pakad bana lete hain."),
+("Organ rejection", "Transplanted organs ko kaunsi immunity reject karti hai?",
+ "Cell-mediated immunity (T lymphocytes). Tissue aur blood group matching aur zindagi bhar immunosuppressants rejection kam karte hain."),
+],
+topics=[
+("Maintaining health", "Balanced diet, personal hygiene, regular exercise, yoga, bimaariyon ki jaankari, vaccination, waste ka sahi nipataan, vectors ka control aur surakshit khaana-paani."),
+("Prevention and control of infectious diseases", "Personal aur public hygiene: waste aur excreta ka sahi nipataan, paani ke tanks ki samay-samay par safaai aur disinfection. Vector-borne diseases (malaria, filariasis, dengue, chikungunya) ke liye mosquitoes control karo: ruka paani na hone do, mosquito nets use karo, talaabon mein Gambusia fish daalo (larvae khaati hai), insecticides spray karo."),
+("Vaccination and immunisation", "Vaccine mein inactivated ya kamzor pathogens ya antigenic proteins hote hain; ye memory B aur T cells banata hai. Recombinant DNA technology se antigenic polypeptides bacteria ya yeast mein banaye jaate hain (yeast se hepatitis B vaccine)."),
+("Autoimmunity", "Genetic aur anjaan kaaranon se body apne hi cells par hamla karti hai — jaise rheumatoid arthritis."),
+("Adolescence and drug abuse", "Adolescence (12–18 saal) naazuk samay hai. Kaaran: curiosity, adventure, excitement, peer pressure, padhai ka stress, asthir parivaar. Asar: laaparwaah vyavhaar, todphod, hinsa; zyada sharaab liver (cirrhosis) aur nervous system ko nuksaan; intravenous drug lene walon ko AIDS aur hepatitis B ka khatra. Anabolic steroids females mein masculinisation aur males mein sperm count kam karte hain."),
+("Prevention of drug and alcohol abuse", "Bewajah peer pressure se bacho, education aur counselling, maa-baap aur doston se madad lo, khatre ke sanket dekho (padhai mein girawat, akelaapan, aggressive vyavhaar) aur professional aur medical madad lo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

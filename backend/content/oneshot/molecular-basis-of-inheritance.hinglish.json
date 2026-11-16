@@ -1,0 +1,169 @@
+{
+ "slug": "molecular-basis-of-inheritance",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Molecular Basis of Inheritance"
+ },
+ "title": "Molecular Basis of Inheritance",
+ "readMinutes": 17,
+ "summary": [
+  "Zyadatar organisms mein DNA genetic material hai (kuch viruses mein RNA). Watson aur Crick (1953) ne double helix diya: do antiparallel polynucleotide strands, A=T aur G≡C pairing ke saath (Chargaff's rule). Eukaryotes mein DNA histones par lipat kar nucleosome banata hai.",
+  "Griffith (transformation), Avery–MacLeod–McCarty (transforming principle DNA hai) aur Hershey–Chase (bacteriophage, ³²P vs ³⁵S) ne DNA ko genetic material saabit kiya. Meselson aur Stahl ne semi-conservative replication saabit kiya; lagging strand par Okazaki fragments bante hain.",
+  "Central dogma: DNA → (transcription) → RNA → (translation) → protein. Genetic code triplet, degenerate, (lagbhag) universal aur non-overlapping hai.",
+  "Gene expression regulate hota hai — E. coli ka lac operon classic example hai. Human Genome Project aur DNA fingerprinting isi gyaan ka use karte hain."
+ ],
+ "formulas": [
+  {
+   "name": "Chargaff's rule",
+   "formula": "A = T, G = C;  (A + G) = (T + C);  purines = pyrimidines",
+   "when": "dsDNA ka base composition.",
+   "mistake": "Single-stranded DNA ya RNA par lagu nahi hota — wahan mat lagaana.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "B-DNA dimensions",
+   "formula": "diameter 2 nm;  pitch 3.4 nm;  10 bp per turn;  0.34 nm between bp;  right-handed, antiparallel (5′→3′ and 3′→5′)",
+   "when": "Watson–Crick model."
+  },
+  {
+   "name": "Length of DNA",
+   "formula": "length = number of bp × 0.34 nm;  human diploid ≈ 6.6 × 10⁹ bp → ≈ 2.2 m",
+   "when": "DNA length ki calculations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Genome sizes",
+   "formula": "φ × 174: 5386 nucleotides;  λ phage: 48,502 bp;  E. coli: 4.6 × 10⁶ bp;  human haploid: 3.3 × 10⁹ bp",
+   "when": "Standard genome sizes.",
+   "note": "Exam ke sawal aksar E. coli DNA length 1.36 mm lete hain, jo 4 × 10⁶ bp banta hai."
+  },
+  {
+   "name": "Packaging",
+   "formula": "nucleosome = histone octamer (positively charged, rich in lysine and arginine) + ~200 bp DNA;  beads-on-string → chromatin fibre;  euchromatin (loose, active) vs heterochromatin (dense, inactive)",
+   "when": "Eukaryotes mein DNA packaging."
+  },
+  {
+   "name": "Key experiments",
+   "formula": "Griffith 1928: S and R strains of Streptococcus pneumoniae — transformation;  Avery, MacLeod, McCarty 1944: DNA is the transforming principle;  Hershey–Chase 1952: ³²P (DNA) entered bacteria, ³⁵S (protein) did not",
+   "when": "DNA ko genetic material saabit karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Replication",
+   "formula": "semi-conservative (Meselson–Stahl 1958, ¹⁵N in E. coli; Taylor in Vicia faba);  DNA polymerase works 5′→3′;  leading strand continuous, lagging strand discontinuous (Okazaki fragments joined by DNA ligase);  starts at origin of replication",
+   "when": "DNA replication."
+  },
+  {
+   "name": "Transcription unit",
+   "formula": "promoter (upstream) — structural gene — terminator;  template strand 3′→5′; coding strand 5′→3′ (same sequence as RNA, with T instead of U)",
+   "when": "Transcription unit ke parts."
+  },
+  {
+   "name": "RNA polymerases (eukaryotes)",
+   "formula": "RNA pol I → rRNAs (28S, 18S, 5.8S);  RNA pol II → hnRNA (precursor of mRNA);  RNA pol III → tRNA, 5S rRNA, snRNA",
+   "when": "Kaunsa polymerase kaunsa RNA banata hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Processing of hnRNA",
+   "formula": "splicing (introns removed, exons joined);  capping (methyl guanosine triphosphate at 5′ end);  tailing (poly-A tail at 3′ end)",
+   "when": "Eukaryotes mein mature mRNA banana."
+  },
+  {
+   "name": "Genetic code",
+   "formula": "triplet (64 codons, 61 code for amino acids);  start AUG (methionine);  stop UAA, UAG, UGA;  unambiguous, degenerate, universal (some exceptions), commaless",
+   "when": "Code ki properties.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Translation",
+   "formula": "ribosome (small subunit binds mRNA); tRNA (adapter, clover-leaf; anticodon) carries amino acids (charging/aminoacylation);  peptide bond formed by 23S rRNA (ribozyme) in bacteria;  UTRs at both ends",
+   "when": "Protein synthesis."
+  },
+  {
+   "name": "Lac operon",
+   "formula": "i (repressor gene) — p (promoter) — o (operator) — z (β-galactosidase), y (permease), a (transacetylase);  lactose (inducer) inactivates repressor → genes transcribed",
+   "when": "Inducible gene regulation (Jacob aur Monod).",
+   "note": "Negative regulation: repressor operon ko band karta hai."
+  },
+  {
+   "name": "Human Genome Project facts",
+   "formula": "3164.7 million bp;  about 30,000 genes (far fewer than the earlier estimates of 80,000–1,40,000);  average gene 3000 bases (dystrophin largest, 2.4 million bases);  less than 2% codes for proteins;  chromosome 1 most genes (2968), Y fewest (231);  SNPs ~1.4 million locations",
+   "when": "HGP ke results."
+  },
+  {
+   "name": "DNA fingerprinting",
+   "formula": "uses VNTRs (minisatellites, repetitive DNA) — Southern blotting with labelled VNTR probe (Alec Jeffreys);  applications: forensics, paternity, population diversity",
+   "when": "Logon ki pehchaan."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Human DNA ki length",
+   "problem": "Human diploid DNA mein 6.6 × 10⁹ bp hain. Length?",
+   "solution": "6.6 × 10⁹ × 0.34 × 10⁻⁹ m = 2.24 m."
+  },
+  {
+   "title": "Chargaff",
+   "problem": "Ek dsDNA mein 20% adenine hai. Guanine kitna percent?",
+   "solution": "A = T = 20%, isliye G + C = 60% aur G = 30%."
+  },
+  {
+   "title": "E. coli ke base pairs",
+   "problem": "E. coli DNA 1.36 mm lamba hai. Kitne base pairs?",
+   "solution": "1.36 × 10⁻³ m / 0.34 × 10⁻⁹ m = 4 × 10⁶ bp."
+  },
+  {
+   "title": "Protein ke liye bases",
+   "problem": "100 amino acids wale protein ko code karne ke liye kitne nucleotides (stop codon chhodkar)?",
+   "solution": "3 × 100 = 300 nucleotides."
+  },
+  {
+   "title": "Hershey–Chase",
+   "problem": "³⁵S-labelled protein wale phage se bacteria infect kiye: centrifugation ke baad radioactivity kahan?",
+   "solution": "Supernatant mein (phage coats ke saath), bacteria mein nahi — matlab protein bacteria mein nahi jaata; DNA (³²P) jaata hai."
+  },
+  {
+   "title": "Coding strand se mRNA",
+   "problem": "Coding strand: 5′-ATGCAT-3′. mRNA?",
+   "solution": "5′-AUGCAU-3′ — coding strand jaisa hi, bas T ki jagah U."
+  }
+ ],
+ "topics": [
+  {
+   "title": "RNA world",
+   "explain": "RNA pehla genetic material tha; ye catalyst (ribozyme) ki tarah kaam kar sakta hai aur reactive aur unstable hai. DNA RNA se chemical badlaav ke saath bana (2′-OH nahi, uracil ki jagah thymine) jo use zyada stable banate hain."
+  },
+  {
+   "title": "Properties of genetic material",
+   "explain": "Ise replicate hona chahiye, chemically aur structurally stable hona chahiye, evolution ke liye dheere badlaav (mutation) hone dena chahiye aur Mendelian characters ki tarah express hona chahiye."
+  },
+  {
+   "title": "Transcription in bacteria",
+   "explain": "Ek hi RNA polymerase saare RNAs banata hai. Initiation ke liye σ (sigma) factor; termination ke liye ρ (rho) factor. Nuclear membrane na hone se transcription aur translation saath-saath ho sakte hain."
+  },
+  {
+   "title": "Split genes",
+   "explain": "Eukaryotic genes mein coding exons ke beech non-coding introns hote hain; introns splicing se hatte hain. Monocistronic genes zyadatar eukaryotic; polycistronic genes zyadatar bacterial."
+  },
+  {
+   "title": "Mutations and the code",
+   "explain": "Point mutations ek base badalte hain (jaise sickle-cell). Ek ya do bases ka insertion ya deletion reading frame khiska deta hai (frameshift); teen bases frame khiskaaye bina ek amino acid jodte ya hataate hain."
+  },
+  {
+   "title": "Methodology of HGP",
+   "explain": "Expressed sequence tags (express hone wale genes pehchaanna) aur sequence annotation (poora genome sequence karna). DNA ko BAC aur YAC vectors mein clone kiya, automated sequencers (Sanger method) se sequence kiya aur computer se joda."
+  }
+ ],
+ "ratta": [
+  "A = T, G = C;  0.34 nm per bp;  10 bp per turn.",
+  "Human DNA 2.2 m;  E. coli DNA 1.36 mm → 4 × 10⁶ bp.",
+  "Griffith → Avery → Hershey–Chase (³²P DNA, ³⁵S protein).",
+  "Meselson–Stahl: ¹⁵N, semi-conservative.",
+  "Pol I rRNA, Pol II hnRNA, Pol III tRNA/5S/snRNA.",
+  "AUG start;  UAA, UAG, UGA stop;  61 sense codons.",
+  "Lac operon: i, p, o, z, y, a;  lactose = inducer.",
+  "Chromosome 1 most genes, Y fewest."
+ ],
+ "verifiedOn": "2026-11-13"
+}

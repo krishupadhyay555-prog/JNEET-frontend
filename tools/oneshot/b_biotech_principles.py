@@ -64,5 +64,51 @@ SYLLABUS = [
 ("Processes — isolation of DNA, PCR, insertion, obtaining product, downstream processing", ["PCR", "bioreactor", "downstream processing"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Modern biotechnology genetic engineering (DNA/RNA badalna, use hosts mein daalna) aur bioprocess engineering (sterile large-scale culture) par tiki hai. Pehla recombinant DNA Stanley Cohen aur Herbert Boyer (1972) ne antibiotic-resistance gene ko Salmonella typhimurium ke native plasmid se jod kar banaya.",
+"Tools: restriction enzymes (molecular scissors), DNA ligase (glue), cloning vector (plasmids, phages), competent hosts aur gel electrophoresis.",
+"Process: DNA isolate karo → restriction enzyme se kaato → PCR se amplify karo → vector mein ligate karo → host transform karo → recombinants select karo → bioreactor mein ugaao → downstream processing.",
+],
+when=[
+("Molecular scissors.", None),
+("Restriction enzyme ka naamkaran.", None),
+("Kata hua DNA kaise judta hai.", None),
+("DNA fragments alag karna.", None),
+("Achhe vector ki pehchaan.", None),
+("Standard E. coli vector.", None),
+("Recombinants select karna (blue–white screening).", None),
+("Natural genetic engineers.", None),
+("Hosts mein DNA daalna.", None),
+("Polymerase chain reaction.", None),
+("Shuddh DNA paana.", None),
+("Production badhaana.", None),
+("Biosynthesis ke baad.", None),
+],
+examples=[
+("Circular plasmid ke fragments", "Ek circular plasmid mein chaar EcoRI sites hain. Poore digestion ke baad kitne fragments?",
+ "Circular DNA mein n cuts se n fragments: ⟨0⟩ fragments. (Linear DNA mein n cuts se n + 1.)"),
+("Blue–white screening", "X-gal wali plate par kaunsi colonies mein recombinant plasmids hain?",
+ "Rang-heen (white) colonies — insert lacZ ko tod deta hai (insertional inactivation), isliye neela rang dene wala β-galactosidase nahi banta."),
+("Ek hi recognition site kyun?", "Vector mein chune gaye restriction enzyme ki sirf ek site kyun honi chahiye?",
+ "Ek se zyada site vector ko kai tukdon mein kaat degi, jisse gene cloning mushkil ho jaayegi."),
+("Taq polymerase", "PCR mein Taq polymerase kyun use hota hai?",
+ "Ye thermophilic bacterium Thermus aquaticus se aata hai aur high-temperature denaturation step mein bhi active rehta hai, isliye har cycle mein naya enzyme nahi chahiye."),
+("Agrobacterium", "Agrobacterium ko plants ka natural genetic engineer kyun kehte hain?",
+ "Ye apne Ti plasmid DNA (T-DNA) ka ek tukda naturally plant cells mein daal kar unhe tumour cells bana deta hai; disarmed Ti plasmid iski jagah useful genes pahuncha sakta hai."),
+("PCR cycles ke baad copies", "Ek DNA molecule se shuru karke 10 PCR cycles ke baad kitni copies?",
+ "2¹⁰ = ⟨0⟩ copies."),
+],
+topics=[
+("Definition of biotechnology", "European Federation of Biotechnology (EFB) ise natural science aur organisms, cells, unke hisson aur molecular analogues ka products aur services ke liye integration kehta hai."),
+("Basic steps in genetic engineering", "Desirable genes wala DNA pehchaano; use host mein daalo; daale gaye DNA ko host mein banaye rakho aur progeny tak pahunchao. Plasmid DNA foreign DNA le jaane wale vector ka kaam karta hai."),
+("DNA ligase", "Same type ke sticky ends wale kate DNA fragments ko jodta hai; vector aur source DNA dono ko same restriction enzyme se kaatna zaroori hai."),
+("Recombinant DNA expression", "Cloned gene sahi conditions mein express hokar host mein recombinant protein banata hai. Chhote volume ke cultures zyada maatra nahi bana sakte, isliye continuous culture systems cells ko physiologically sabse active log/exponential phase mein rakhte hain."),
+("Selection with antibiotics", "Transformants ko antibiotics wale media par ugaate hain; sirf plasmid (resistance gene ke saath) wale cells bachte hain. Doosre antibiotic par replica plating se insertional inactivation pata chalta hai."),
+("Alternative selectable markers", "Do antibiotics se selection jhanjhat wala hai, isliye chromogenic substrates (blue–white) aasaan tareeke ki tarah use hote hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

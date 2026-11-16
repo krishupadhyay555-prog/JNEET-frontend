@@ -60,5 +60,47 @@ SYLLABUS = [
 ("Biosafety issues, biopiracy and patents", ["GEAC", "biopiracy", "patent"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Biotechnology agriculture (GM crops — Bt cotton, RNAi se pest-resistant tobacco), medicine (human insulin, gene therapy, molecular diagnosis), transgenic animals aur industry mein use hoti hai.",
+"Bacillus thuringiensis ka Bt toxin khaas insects ko maarta hai; cry genes crops mein daale jaate hain. RNA interference plants mein parasite ke genes ko silence karta hai.",
+"Recombinant human insulin (Eli Lilly, 1983) E. coli mein chains A aur B alag banakar unhe jod kar banta hai. Pehli gene therapy (1990) ne ADA deficiency ka ilaaj kiya.",
+"Ethical issues — GEAC ki nigraani, biopiracy aur patent (basmati rice, turmeric, neem) — bhi chapter ka hissa hain.",
+],
+when=[
+("Bt crops pests ko kaise maarte hain.", "Toxin khud bacterium ko nuksaan nahi karta kyunki wo inactive protoxin ki tarah store hota hai."),
+("Kaunsa gene kis pest ke liye.", None),
+("Pest-resistant plants.", None),
+("Genetically modified plants ke faayde.", None),
+("Recombinant insulin.", None),
+("Pehli clinical gene therapy.", "ADA = adenosine deaminase; iski kami immune system ko affect karti hai."),
+("Jaldi pata lagaane ke tareeke.", None),
+("Transgenic animals kyun banaye jaate hain.", None),
+("Transgenic animal ka example.", None),
+("Ethical aur legal issues.", None),
+],
+examples=[
+("Bt toxin bacterium ke liye zehreela kyun nahi?", "Bacillus thuringiensis jaanleva toxin banata hai. Ye khud kyun nahi marta?",
+ "Toxin inactive protoxin crystal ki tarah store hota hai; ye sirf insects ke alkaline gut mein active hota hai."),
+("C-peptide", "Recombinant production mein pro-insulin problem kyun tha?",
+ "Insulin pro-insulin ki tarah banta hai jisme extra C-peptide hota hai jo hataana padta hai; Eli Lilly ne A aur B chains alag banakar disulphide bonds se jod kar ise taala."),
+("HIV jaldi pakadna", "Kaunsi technique symptoms aane se pehle HIV detect karti hai?",
+ "PCR — ye viral nucleic acid ki bahut kam maatra ko amplify karta hai. HIV antibodies detect karne ke liye ELISA bhi use hota hai."),
+("RNAi ka target", "Pest-resistant tobacco mein kis organism ka mRNA silence hota hai?",
+ "Nematode Meloidogyne incognita ka mRNA — plant ka banaya dsRNA nematode ke ek khaas gene ko silence karta hai, isliye wo bach nahi paata."),
+("Golden rice", "Golden rice kya hai?",
+ "Genetically modified rice jo β-carotene (provitamin A) banata hai, vitamin A ki kami se ladne ke liye."),
+],
+topics=[
+("Three critical research areas", "Sabse achha catalyst dena (behtar organism, aam taur par microbe ya pure enzyme); engineering se catalyst ke kaam ke liye best conditions banana; aur product shuddh karne ke liye downstream processing."),
+("Green revolution and GM crops", "Green revolution ne behtar varieties, achhe management aur agrochemicals se food supply teen guna ki, par agrochemicals mehenge aur nuksaandeh the. GM crops kam chemicals ke saath yield badhaane ka doosra raasta dete hain."),
+("Genetically engineered insulin", "Recombinant insulin se pehle kaate gaye cattle aur pigs ka insulin kuch patients mein allergy karta tha. Recombinant insulin bacteria mein banta hai aur human insulin jaisa hi hai."),
+("Recombinant therapeutics", "Duniya mein lagbhag 30 recombinant therapeutics approved hain (India mein 12 market mein). Ye zyada surakshit aur effective hain kyunki anchaahe immunological responses nahi karte."),
+("Transgenic animals", "Aise animals jinke DNA ko badal kar ek extra (foreign) gene daala aur express karaya gaya ho. Maujooda transgenic animals mein 95% se zyada mice hain; baaki rats, rabbits, pigs, sheep, cows aur fish."),
+("Biopiracy and India", "Industrialised desh paise mein ameer par biodiversity mein gareeb; developing desh ulta. Indian Parliament ne patent terms, emergency provisions aur research aur development pahal ke liye Indian Patents Bill mein sanshodhan kiya."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

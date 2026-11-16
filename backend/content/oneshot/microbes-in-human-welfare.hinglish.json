@@ -1,0 +1,134 @@
+{
+ "slug": "microbes-in-human-welfare",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Microbes in Human Welfare"
+ },
+ "title": "Microbes in Human Welfare",
+ "readMinutes": 11,
+ "summary": [
+  "Microbes ghar mein (curd — Lactobacillus, bread, idli, dosa), industry mein (beverages, antibiotic jaise penicillin, organic acids jaise citric acid, enzymes, streptokinase jaise bioactive molecules), sewage treatment, biogas banane, biocontrol aur biofertiliser ki tarah use hote hain.",
+  "Sewage do stages mein treat hota hai: primary (solids ko physically hataana) aur secondary/biological (aeration tanks mein aerobic microbes flocs banate hain; activated sludge ke anaerobic digestion se biogas milti hai).",
+  "Biocontrol chemical pesticides ki jagah natural predators aur pathogens use karta hai; biofertilisers (Rhizobium, Azotobacter, cyanobacteria, mycorrhiza) mitti ke nutrients badhaate hain."
+ ],
+ "formulas": [
+  {
+   "name": "Household products",
+   "formula": "curd — Lactobacillus (LAB) converts milk to curd and adds vitamin B₁₂;  bread dough — Saccharomyces cerevisiae (baker's yeast, CO₂);  Swiss cheese — Propionibacterium sharmanii (large holes from CO₂);  Roquefort cheese — fungi for flavour",
+   "when": "Ghar mein microbes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Beverages",
+   "formula": "Saccharomyces cerevisiae (brewer's yeast) ferments malted cereals and fruit juices → ethanol;  wine and beer without distillation;  whisky, brandy, rum by distillation",
+   "when": "Alcoholic drinks."
+  },
+  {
+   "name": "Antibiotics",
+   "formula": "penicillin — Penicillium notatum (Alexander Fleming, while working on Staphylococci; full potential shown by Chain and Florey)",
+   "when": "Pehla antibiotic.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Organic acids and alcohol",
+   "formula": "citric acid — Aspergillus niger;  acetic acid — Acetobacter aceti;  butyric acid — Clostridium butylicum;  lactic acid — Lactobacillus;  ethanol — Saccharomyces cerevisiae",
+   "when": "Industrial chemicals.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Enzymes and bioactive molecules",
+   "formula": "lipases (detergents, remove oily stains);  pectinases and proteases (clarify fruit juices);  streptokinase — Streptococcus (clot buster for myocardial infarction);  cyclosporin A — Trichoderma polysporum (immunosuppressant in transplants);  statins — Monascus purpureus (lower blood cholesterol; competitive inhibitors of cholesterol synthesis)",
+   "when": "Medical aur industrial products.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Sewage treatment",
+   "formula": "primary: filtration and sedimentation (primary sludge, effluent);  secondary: aeration tank with flocs (bacteria + fungal filaments) → BOD falls → settling tank (activated sludge) → part returned as inoculum, rest to anaerobic sludge digesters (biogas)",
+   "when": "Sewage treatment ke steps."
+  },
+  {
+   "name": "BOD",
+   "formula": "biochemical oxygen demand = O₂ consumed if all organic matter in 1 L water were oxidised by bacteria;  higher BOD = more polluted",
+   "when": "Organic pollution naapna."
+  },
+  {
+   "name": "Biogas",
+   "formula": "mainly methane + CO₂ + H₂;  methanogens (Methanobacterium) in cattle dung (gobar) under anaerobic conditions;  slurry used as fertiliser;  technology developed by IARI and KVIC",
+   "when": "Biogas production."
+  },
+  {
+   "name": "Biocontrol agents",
+   "formula": "ladybird and dragonflies (aphids and mosquitoes);  Bacillus thuringiensis (Bt — butterfly caterpillars);  Trichoderma (fungal plant pathogens);  baculoviruses, genus Nucleopolyhedrovirus (species-specific, narrow spectrum insecticide)",
+   "when": "Bina chemicals pest control.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Biofertilisers",
+   "formula": "Rhizobium (root nodules of legumes);  Azospirillum, Azotobacter (free-living, fix N₂);  mycorrhiza — Glomus (phosphorus absorption, drought and pathogen resistance);  cyanobacteria — Anabaena, Nostoc, Oscillatoria (paddy fields; also add organic matter)",
+   "when": "Mitti ko natural tarike se samriddh karna."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Doodh se dahi",
+   "problem": "Thoda sa dahi doodh ko dahi kaise bana deta hai?",
+   "solution": "Dahi mein Lactobacillus (lactic acid bacteria) hote hain jo badhkar acids banate hain, jo milk proteins ko jamaate aur aanshik pachaate hain, aur vitamin B₁₂ badhaate hain."
+  },
+  {
+   "title": "Heart attack ki dawa",
+   "problem": "Myocardial infarction ke patients mein blood clots ghulaane wala microbial product kaunsa hai?",
+   "solution": "Streptokinase, bacterium Streptococcus se (genetic engineering se modify kiya)."
+  },
+  {
+   "title": "High BOD bura kyun?",
+   "problem": "Bina treat kiye sewage ka BOD zyada hota hai. Iska matlab?",
+   "solution": "Isme bahut saara biodegradable organic matter hai; microbes ise todne mein bahut dissolved oxygen use karte hain, isliye fish aur doosre aquatic jeev dum ghut kar marte hain."
+  },
+  {
+   "title": "Insecticide ki tarah Bt",
+   "problem": "Bacillus thuringiensis caterpillars ke khilaaf kaise use hota hai?",
+   "solution": "Sookhe spores paani mein milakar plants par spray karte hain; caterpillars unhe khaate hain, unke gut mein toxin nikal kar unhe maarta hai, jabki doosre insects ko nuksaan nahi."
+  },
+  {
+   "title": "Organic farming",
+   "problem": "Organic farming mein broad-spectrum pesticides kyun nahi use karte?",
+   "solution": "Ye useful insects aur doosre organisms ko bhi maar dete hain; organic farmers balanced ecosystem chahte hain jisme natural predators pests ko control mein rakhein."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Fermented foods",
+   "explain": "Dosa aur idli ka dough bacteria se ferment hota hai (CO₂ se phoola dikhta hai). Toddy, south India ka paaramparik drink, palms ke ras ko ferment karke banta hai. Fish, soybean aur bamboo shoots bhi ferment kiye jaate hain."
+  },
+  {
+   "title": "Microbes in industry",
+   "explain": "Industrial scale par beverages, antibiotics aur enzymes ke liye microbes ugaane ko bade vessels jinhe fermentors kehte hain, use hote hain."
+  },
+  {
+   "title": "Ganga and Yamuna Action Plans",
+   "explain": "Ministry of Environment and Forests ne badi nadiyon ko pollution se bachaane ke liye Ganga Action Plan aur Yamuna Action Plan shuru kiye, sewage treatment plants banaye taaki sirf treated sewage nadiyon mein jaaye."
+  },
+  {
+   "title": "Integrated pest management",
+   "explain": "Faaydemand organisms (predators aur parasites) aur pests ko pehchaano, unke life cycles aur interactions samjho, aur jitna ho sake chemicals ki jagah natural predation par bharosa karo."
+  },
+  {
+   "title": "Biofertilisers vs chemical fertilisers",
+   "explain": "Chemical fertilisers ka zyada use mitti aur paani ko pollute karta hai; biofertilisers living organisms hain jo mitti ki nutrient quality badhaate aur organic farming ko sahara dete hain. India mein ab kai biofertilisers commercially milte hain."
+  },
+  {
+   "title": "Antibiotics' role",
+   "explain": "Antibiotics ne plague, whooping cough (kali khansi), diphtheria (gal ghotu) aur leprosy (kusht rog) jaisi jaanleva bimaariyon ka ilaaj bahut behtar kar diya."
+  }
+ ],
+ "ratta": [
+  "Curd — Lactobacillus (B₁₂);  Swiss cheese — Propionibacterium sharmanii.",
+  "Citric — Aspergillus niger;  acetic — Acetobacter aceti;  butyric — Clostridium butylicum.",
+  "Streptokinase — clot buster;  cyclosporin A — Trichoderma polysporum;  statins — Monascus purpureus.",
+  "Penicillin — Fleming;  Chain & Florey proved its use.",
+  "Biogas: methanogens (Methanobacterium); IARI + KVIC.",
+  "Bt, Trichoderma, Nucleopolyhedrovirus — biocontrol.",
+  "Glomus — mycorrhiza;  Anabaena, Nostoc — paddy."
+ ],
+ "verifiedOn": "2026-11-13"
+}

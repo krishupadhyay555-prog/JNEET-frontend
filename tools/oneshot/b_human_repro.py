@@ -71,5 +71,53 @@ SYLLABUS = [
 ("Pregnancy and placenta formation; parturition; lactation", ["pregnancy", "placenta", "parturition", "lactation"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Insaan sexually reproduce karte hain aur viviparous hain. Events: gametogenesis, insemination, fertilisation, cleavage, blastocyst ka banna, implantation, gestation aur parturition.",
+"Male system mein testis (seminiferous tubules sperm banate hain; Leydig cells androgens), ducts, accessory glands aur penis. Female system mein ovary, oviducts, uterus, cervix, vagina aur mammary glands.",
+"Spermatogenesis puberty par shuru hota hai aur har primary spermatocyte se chaar sperm deta hai; oogenesis janm se pehle shuru hota hai aur har primary oocyte se ek ovum. Menstrual cycle (~28 din) FSH, LH, oestrogen aur progesterone control karte hain.",
+"Fertilisation oviduct ke ampullary region mein hota hai; blastocyst endometrium mein implantation karta hai; pregnancy mein placenta foetus ko sahara deta aur hormones banata hai. Parturition foetal ejection reflex aur oxytocin se; uske baad lactation.",
+],
+when=[
+("Male gonad.", None),
+("Sperm ka transport.", None),
+("Semen ka composition.", None),
+("Sperm ka banna.", None),
+("Male hormones.", None),
+("Sperm ki details.", None),
+("Egg ka banna.", "Janm ke baad naye oogonia nahi bante; kai follicles khatam ho jaate hain, isliye puberty par har ovary mein sirf lagbhag 60,000–80,000 primary follicles bachte hain — dhyan rakho."),
+("~28 din ke cycle ke phases.", None),
+("Ovulation ka trigger.", None),
+("Fertilisation ki jagah aur events.", None),
+("Sex kaun tay karta hai.", "Baby ka sex pita ka sperm tay karta hai, maa nahi — galat mat likhna."),
+("Embryonic stages.", None),
+("Sirf pregnancy mein bane hormones.", None),
+("Birth aur doodh.", None),
+],
+examples=[
+("Gametes ki sankhya", "Ek primary spermatocyte aur ek primary oocyte se kitne sperm aur ova bante hain?",
+ "Ek primary spermatocyte se ⟨0⟩ sperm; ek primary oocyte se ⟨1⟩ ovum (aur polar bodies)."),
+("Spermatid mein chromosomes", "Human spermatogonium mein 46 chromosomes hain. Spermatid mein kitne?",
+ "46/2 = ⟨0⟩ (haploid)."),
+("Corpus luteum", "Fertilisation na ho to corpus luteum ka kya hota hai?",
+ "Ye khatam (degenerate) ho jaata hai, progesterone girta hai, endometrium tootta hai aur menstruation shuru hota hai."),
+("Pregnancy test", "Pregnancy test kit mein kaunsa hormone detect hota hai?",
+ "Human chorionic gonadotropin (hCG), placenta (trophoblast) banata hai — sirf pregnancy mein hota hai."),
+("Organs banne ki timeline", "Foetus ki heartbeat kab shuru hoti hai aur limbs kab bante hain?",
+ "Pregnancy ke ek mahine baad heart banta hai; doosre mahine ke end tak limbs aur digits; 12 hafte (first trimester) ke end tak zyadatar bade organs ban chuke hote hain."),
+("Identical twins", "Identical twins kaise bante hain?",
+ "Ek hi zygote (ya shuruaati embryo) do mein bat jaata hai, isliye dono ka genetic makeup same. Fraternal twins do alag eggs ke do sperm se fertilise hone se bante hain."),
+],
+topics=[
+("Female reproductive system", "Ovaries (2–4 cm lambi) stroma ke saath; oviducts mein infundibulum (fimbriae ovum pakadti hain), ampulla aur isthmus; uterus mein perimetrium, myometrium (smooth muscle; birth par tez contractions) aur endometrium (glandular; cyclic badlaav); cervix aur vagina. External genitalia: mons pubis, labia majora aur minora, hymen, clitoris."),
+("Mammary glands", "Jodi mein, glandular tissue aur fat ke saath. Har breast mein 15–20 mammary lobes jinke alveoli doodh banate hain; doodh tubules, ducts, ampulla aur lactiferous duct se nipple tak jaata hai."),
+("Placenta", "Chorionic villi (trophoblast se) aur uterine tissue se banta hai; embryo ko O₂ aur nutrients deta hai aur CO₂ aur waste hataata hai. Umbilical cord se embryo se juda aur endocrine tissue ki tarah kaam karta hai."),
+("Germ layers", "Inner cell mass se ectoderm, mesoderm aur endoderm bante hain, jinse saare tissues aur organs. Inner cell mass mein stem cells hote hain jo har tissue bana sakte hain."),
+("Menarche and menopause", "Puberty par pehli menstruation menarche hai; lagbhag 50 saal ki umar mein cycles ruk jaate hain (menopause). Pregnancy mein cycles ruk jaate hain aur stress ya kharab sehat se irregular ho sakte hain."),
+("Gestation", "Human pregnancy lagbhag 9 mahine ki hoti hai. Second trimester ke end tak foetus par baarik baal, eyelids alag aur eyelashes ban jaati hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

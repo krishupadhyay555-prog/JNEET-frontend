@@ -1,0 +1,147 @@
+{
+ "slug": "reproductive-health",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Reproductive Health"
+ },
+ "title": "Reproductive Health",
+ "readMinutes": 11,
+ "summary": [
+  "Reproductive health (WHO) ka matlab reproduction ke har pehlu mein poori bhalaai — physical, emotional, behavioural aur social. India national family planning (1951) shuru karne wale pehle deshon mein tha, baad mein ise RCH (Reproductive and Child Health Care) programmes mein badhaaya gaya.",
+  "Contraceptive methods: natural, barrier, IUD, oral pills, injectables/implants aur surgical (sterilisation). Ideal contraceptive user-friendly, aasaani se milne wala, effective, reversible aur kam side effects wala hota hai.",
+  "Medical termination of pregnancy (MTP) India mein tay conditions mein legal hai (MTP Amendment Act, 2017). Prenatal amniocentesis se sex jaanna banned hai.",
+  "Sexually transmitted infections (STI) aur infertility badi chintaayein hain; assisted reproductive technologies (ART) jaise IVF, ZIFT, GIFT, ICSI, AI aur IUI infertile couples ki madad karti hain."
+ ],
+ "formulas": [
+  {
+   "name": "Natural methods",
+   "formula": "periodic abstinence (days 10–17 of cycle);  withdrawal (coitus interruptus);  lactational amenorrhea (up to 6 months after parturition with full breastfeeding)",
+   "when": "Bina devices ya drugs ke.",
+   "mistake": "Inka failure rate zyada hai — bharosa mat karo."
+  },
+  {
+   "name": "Barrier methods",
+   "formula": "condoms (male — 'Nirodh'; female), diaphragms, cervical caps, vaults (reusable) + spermicidal creams/jellies",
+   "when": "Sperm aur ovum ko milne se rokna.",
+   "note": "Condoms STIs aur AIDS se bhi bachaate hain."
+  },
+  {
+   "name": "IUD types",
+   "formula": "non-medicated (Lippes loop);  copper-releasing (CuT, Cu7, Multiload 375);  hormone-releasing (Progestasert, LNG-20)",
+   "when": "Intra-uterine devices.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "How IUDs work",
+   "formula": "increase phagocytosis of sperm in the uterus;  Cu ions suppress sperm motility and fertilising capacity;  hormone IUDs make the uterus unsuitable for implantation and the cervix hostile to sperm",
+   "when": "IUD ka mechanism."
+  },
+  {
+   "name": "Oral pills",
+   "formula": "progestogens or progestogen–oestrogen combinations; taken daily for 21 days starting within the first 5 days of the cycle;  inhibit ovulation and implantation, alter cervical mucus;  Saheli (non-steroidal, once a week, CDRI Lucknow)",
+   "when": "Hormonal contraception.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Emergency contraception",
+   "formula": "progestogens or progestogen–oestrogen combinations, or IUDs, within 72 hours of coitus",
+   "when": "Unprotected intercourse ke baad."
+  },
+  {
+   "name": "Surgical methods",
+   "formula": "vasectomy (part of vas deferens removed/tied);  tubectomy (part of fallopian tube removed/tied)",
+   "when": "Terminal (sterilisation) methods.",
+   "note": "Bahut effective hain par reversibility kharab hai."
+  },
+  {
+   "name": "MTP",
+   "formula": "safe in the first trimester (up to 12 weeks);  MTP Amendment Act 2017: up to 12 weeks with one registered medical practitioner's opinion, 12–24 weeks with two",
+   "when": "Medical termination of pregnancy."
+  },
+  {
+   "name": "STIs",
+   "formula": "gonorrhoea, syphilis, genital herpes, chlamydiasis, genital warts, trichomoniasis, hepatitis B, HIV/AIDS;  hepatitis B, genital herpes and HIV are not completely curable",
+   "when": "Sexually transmitted infections.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "ART methods",
+   "formula": "IVF + ET (test-tube baby): ZIFT — zygote or early embryo (up to 8 blastomeres) into fallopian tube;  IUT — embryo with more than 8 blastomeres into uterus;  GIFT — ovum from donor into fallopian tube;  ICSI — sperm injected into ovum;  AI/IUI — semen into vagina or uterus",
+   "when": "Assisted reproductive technologies.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Amniocentesis",
+   "formula": "testing cells in amniotic fluid for genetic disorders; misused for foetal sex determination — legally banned in India",
+   "when": "Prenatal diagnosis."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Kaunsi ART?",
+   "problem": "Ek mahila ova nahi bana sakti par fertilisation ke liye sahi environment de sakti hai. Kaunsa method?",
+   "solution": "GIFT — donor ka ovum uski fallopian tube mein daala jaata hai."
+  },
+  {
+   "title": "Kam sperm count",
+   "problem": "Pati ka sperm count bahut kam hai. Kaunsi ART sabse sahi?",
+   "solution": "Pati ya donor ke semen se artificial insemination (AI) ya intra-uterine insemination (IUI); agar sperm khud fertilise na kar paayein to ICSI."
+  },
+  {
+   "title": "ZIFT vs IUT",
+   "problem": "ZIFT aur IUT mein kya farak hai?",
+   "solution": "ZIFT: zygote ya 8 blastomeres tak ka embryo fallopian tube mein. IUT: 8 se zyada blastomeres wala embryo uterus mein."
+  },
+  {
+   "title": "Lactational amenorrhea kyun kaam karta hai",
+   "problem": "Zyada breastfeeding ke dauraan ovulation kyun nahi hota?",
+   "solution": "Parturition ke baad intense lactation mein ovulation aur menstrual cycles nahi hote; ye sirf janm ke lagbhag chhe mahine tak effective hai."
+  },
+  {
+   "title": "Saheli",
+   "problem": "Saheli mein khaas kya hai?",
+   "solution": "Ye non-steroidal oral contraceptive hai jo hafte mein ek baar li jaati hai, Central Drug Research Institute (CDRI), Lucknow ne banayi."
+  },
+  {
+   "title": "STIs se bachav",
+   "problem": "STIs se bachne ke aasaan tareeke batao.",
+   "solution": "Anjaan ya kai partners ke saath sex se bacho; hamesha condoms use karo; shak hone par jaldi doctor se milo taaki jaldi pata chale aur poora ilaaj ho."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Reproductive health problems and strategies",
+   "explain": "Programmes reproduction se jude pehluon ki jaagrukta, schools mein sex education, birth control, pregnant maaon ki dekhbhaal, post-natal care, breastfeeding ki ahmiyat, ladke-ladkiyon ko barabar mauke par dhyan dete hain. Safal kadam: maternal aur infant mortality kam, chhote parivaar, STDs ka behtar pata aur ilaaj."
+  },
+  {
+   "title": "Population explosion",
+   "explain": "Duniya ki aabadi 1900 mein lagbhag 2 billion aur 2011 ke aas-paas 7.2 billion se zyada thi. India ki aabadi aazaadi ke samay lagbhag 350 million aur 2011 tak 1.2 billion se zyada. Kaaran: death rate, maternal mortality rate (MMR) aur infant mortality rate (IMR) ka girna, aur reproducible age mein zyada log. Shaadi ki kanooni umar badhaayi — females 18 saal aur males 21."
+  },
+  {
+   "title": "Contraceptives and side effects",
+   "explain": "Sambhavit side effects: nausea, pet dard, breakthrough bleeding, irregular menstrual bleeding aur breast cancer tak — isliye doctor ki salah se hi use karo."
+  },
+  {
+   "title": "Why MTP is needed",
+   "explain": "Casual intercourse ya contraceptive fail hone se anchaahi pregnancy rokne ke liye, ya jab pregnancy jaari rakhna maa ya foetus ke liye nuksaandeh ho. Galat use: illegal female foeticide; ayogya jhola-chhaap illegal MTPs ko unsafe banate hain."
+  },
+  {
+   "title": "Infertility",
+   "explain": "Unprotected sexual cohabitation ke baad bhi conceive na kar paana; kaaran physical, congenital, bimaariyan, drugs, immunological ya psychological, aur kisi bhi partner mein ho sakte hain. Specialised health clinics kuch disorders ka pata aur ilaaj karte hain."
+  },
+  {
+   "title": "Complications of untreated STIs",
+   "explain": "Pelvic inflammatory diseases (PID), abortions, still births, ectopic pregnancies, infertility aur reproductive tract ka cancer tak."
+  }
+ ],
+ "ratta": [
+  "Family planning in India: 1951 → RCH.",
+  "Copper IUDs: CuT, Cu7, Multiload 375;  hormonal: Progestasert, LNG-20.",
+  "Pills: 21 days, start in first 5 days;  Saheli weekly (CDRI).",
+  "Emergency contraception within 72 h.",
+  "MTP safe in first trimester (12 weeks).",
+  "ZIFT ≤ 8 blastomeres → tube;  IUT > 8 → uterus;  GIFT donor ovum → tube.",
+  "Hep B, herpes, HIV not fully curable."
+ ],
+ "verifiedOn": "2026-11-13"
+}
