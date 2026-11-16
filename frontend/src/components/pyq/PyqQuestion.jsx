@@ -24,7 +24,7 @@ function sameNumber(a, b) {
   return Number.isFinite(x) && Number.isFinite(y) && Math.abs(x - y) < 1e-9;
 }
 
-export function PyqQuestion({ q, paperId, showPaper = false }) {
+export function PyqQuestion({ q, paperId, paperTitle }) {
   const [picked, setPicked] = useState(null);     // option index
   const [typed, setTyped] = useState("");
   const [checked, setChecked] = useState(false);  // numeric: answered
@@ -39,12 +39,16 @@ export function PyqQuestion({ q, paperId, showPaper = false }) {
 
   return (
     <article className="glass-panel rounded-2xl p-4 space-y-3" aria-label={`Question ${q.n}`}>
-      <header className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-gray-600">
-        <span className="font-semibold text-fg-primary">Q{q.n}</span>
-        <span>·</span>
-        <span>{q.chapter}</span>
-        {showPaper && q.paper && (<><span>·</span><span>{q.paper.title}</span></>)}
-        {!isMcq && <span className="ml-auto rounded-md bg-violet-500/10 text-violet-600 px-1.5 py-0.5">Numerical</span>}
+      <header className="space-y-1.5">
+        <span className="inline-block text-[11px] font-medium rounded-md bg-amber-500/10 text-amber-700 px-2 py-0.5">
+          {q.paper?.title ?? paperTitle}
+        </span>
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-gray-600">
+          <span className="font-semibold text-fg-primary">Q{q.n}</span>
+          <span>·</span>
+          <span>{q.chapter}</span>
+          {!isMcq && <span className="ml-auto rounded-md bg-violet-500/10 text-violet-600 px-1.5 py-0.5">Numerical</span>}
+        </div>
       </header>
 
       <div className="text-sm leading-relaxed"><MathTex>{q.text}</MathTex></div>

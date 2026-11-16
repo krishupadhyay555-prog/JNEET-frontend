@@ -90,7 +90,7 @@ export default function PYQPaper() {
             )}
             <div className="space-y-3">
               {shown.map((q) => (
-                <PyqQuestion key={`${q.paper?.id ?? id}-${q.n}`} q={q} paperId={q.paper?.id ?? id} showPaper={isChapter} />
+                <PyqQuestion key={`${q.paper?.id ?? id}-${q.n}`} q={q} paperId={q.paper?.id ?? id} paperTitle={state.paper?.title} />
               ))}
             </div>
           </>
