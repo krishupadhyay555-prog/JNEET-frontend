@@ -71,5 +71,52 @@ SYLLABUS = [
 ("Factors affecting photosynthesis", ["limiting factor"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Photosynthesis autotroph nutrition ka base hai: light energy ko chemical energy mein badalta hai: 6CO₂ + 12H₂O → C₆H₁₂O₆ + 6H₂O + 6O₂. Ye chloroplast mein hota hai — light reactions grana (thylakoids) mein, dark (biosynthetic) reactions stroma mein.",
+"Light reactions paani todti hain, O₂ chhodti hain aur Z-scheme (non-cyclic photophosphorylation) se ATP aur NADPH banati hain. ATP chemiosmosis se banta hai.",
+"Calvin cycle (C₃ pathway) RuBisCO se CO₂ ko RuBP par fix karta hai; C₄ plants (maize, sugarcane) pehle mesophyll cells mein PEP carboxylase se CO₂ fix karte hain aur Kranz anatomy rakhte hain, jisse photorespiration nahi hota.",
+"Photosynthesis ki rate light, CO₂, temperature aur paani par depend karti hai — Blackman ka law of limiting factor.",
+],
+when=[
+("Photosynthesis ka summary.", "Nikli O₂ paani se aati hai, CO₂ se nahi (Cornelius van Niel; ¹⁸O se confirm) — galat mat likhna."),
+("Discoveries ka itihaas.", None),
+("Leaf pigment ki chromatography.", None),
+("Light-harvesting complexes.", None),
+("Electrons aur O₂ ka source.", None),
+("Photophosphorylation compare karna.", None),
+("ATP banne ka mechanism.", None),
+("C₃ pathway (Melvin Calvin, ¹⁴C).", None),
+("ATP/NADPH ginna.", None),
+("C₄ plants: maize, sugarcane, sorghum, Amaranthus.", None),
+("C₄ leaves pehchaanna.", None),
+("C₄ plants zyada efficient kyun.", "C₄ plants mein photorespiration nahi hota kyunki RuBisCO ke aas-paas CO₂ concentration zyada hota hai."),
+("Photosynthesis ko affect karne wale factors.", None),
+],
+examples=[
+("ATP aur NADPH ki ginti", "Calvin cycle mein ek glucose banane ke liye kitne ATP aur NADPH chahiye?",
+ "Har turn mein ek CO₂ ke liye 3 ATP + 2 NADPH, aur glucose ke liye 6 turns: ⟨0⟩ ATP aur ⟨1⟩ NADPH."),
+("C₄ plants mein ATP", "C₄ plants ko har CO₂ par 2 extra ATP chahiye (PEP regenerate karne ke liye). Ek glucose ke liye ATP?",
+ "(3 + 2) × 6 = ⟨0⟩ ATP per glucose."),
+("O₂ ka source", "Kaise dikhaya gaya ki nikli O₂ paani se aati hai?",
+ "Van Niel ke purple aur green sulphur bacteria par kaam se pata chala ki H₂O hydrogen donor hai (H₂S ki tarah); baad mein ¹⁸O-labelled paani ke experiments ne dikhaya ki O₂ paani se aayi."),
+("Pehla stable product", "C₃ aur C₄ plants mein pehla stable product kya hai?",
+ "C₃: 3-phosphoglyceric acid (3-PGA, 3-carbon). C₄: oxaloacetic acid (OAA, 4-carbon)."),
+("Greenhouse mein limiting factor", "Tomatoes aur bell peppers CO₂ bhare greenhouses mein kyun ugaate hain?",
+ "CO₂ aksar main limiting factor hota hai; ise badhaane (lagbhag 0.05% tak) se C₃ plants mein photosynthesis ki rate aur yield badhti hai."),
+("Cyclic photophosphorylation kahan", "Cyclic photophosphorylation kahan hota hai, aur kyun?",
+ "Stroma lamellae mein, jinmein PS I hai par PS II aur NADP reductase nahi — isliye electrons ghoom kar waapas aate hain aur sirf ATP banta hai."),
+],
+topics=[
+("Site of photosynthesis", "Mesophyll cells mein chloroplasts walls ke saath line mein lagte hain taaki sahi light mile. Membranes (grana) light pakad kar ATP aur NADPH banati hain; stroma ke enzymes CO₂ ko sugars mein reduce karte hain (light-independent ya dark reactions)."),
+("Action and absorption spectra", "Chlorophyll a sabse zyada blue aur red regions mein absorb karta hai; photosynthesis ka action spectrum chlorophyll a ke absorption spectrum se kaafi milta hai, par doosre pigments bhi yogdaan dete hain."),
+("Electron transport", "PS II 680 nm light absorb karta hai; excited electrons plastoquinone, cytochromes b6f aur plastocyanin se PS I tak jaate hain; PS I unhe 700 nm par phir excite karke ferredoxin aur NADP⁺ reductase ko deta hai, NADPH banta hai. PS II ke khoye electrons water splitting se poore hote hain."),
+("Proton gradient", "Gradient isliye banta hai kyunki water splitting ke protons lumen mein jama hote hain, cytochrome complex se electrons guzarte waqt protons lumen mein jaate hain, aur NADPH banate waqt NADP reductase stroma se protons hataata hai."),
+("Factors affecting photosynthesis", "Light: kam light par intensity ke saath rate badhti hai, full sunlight ke lagbhag 10% par saturate. CO₂: C₃ plants zyada CO₂ par C₄ se zyada respond karte hain (C₄ ~360 ppm par saturate). Temperature: C₄ plants ka optimum zyada. Water stress stomata band karta aur leaf surface ghataata hai."),
+("C₃ vs C₄ comparison", "C₄ plants zyada temperature sehte hain, productivity zyada, CO₂ compensation point kam aur photorespiration nahi. C₄ plants mein RuBisCO sirf bundle sheath cells mein; PEP carboxylase sirf mesophyll mein."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

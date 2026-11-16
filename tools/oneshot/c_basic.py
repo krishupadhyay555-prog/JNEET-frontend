@@ -82,5 +82,57 @@ SYLLABUS = [
 ("Concentration: mass percent, mole fraction, molarity, molality", ["mass percent", "mole fraction", "molarity", "molality"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Chemistry particles ko moles mein ginti hai: 1 mol = 6.022 × 10²³ particles (Avogadro's number), aur uska mass grams mein molar mass ke barabar.",
+"Laws of chemical combination (conservation of mass, definite proportions, multiple proportions, Gay-Lussac's law, Avogadro's law) se Dalton's atomic theory bani.",
+"Balanced equation moles mein ek recipe hai. Jo reactant pehle khatam ho wo limiting reagent hai aur wahi product ki maatra tay karta hai.",
+"Concentration mass %, mole fraction, molarity (mol/L, temperature se badalti hai) ya molality (mol/kg solvent, temperature-independent) mein likhte hain.",
+],
+when=[
+("Mass, particles aur gas volume ke beech convert karna.", "22.4 L sirf STP (273 K, 1 atm) par gas ke liye — liquids ya solids ke liye kabhi nahi."),
+("Atoms, molecules ya ions ginna.", None),
+("Atomic aur molecular masses.", None),
+("Isotopes wale elements, jaise chlorine 35.5.", None),
+("Compound ki composition.", None),
+("% composition se formula nikaalna.", "% ko moles mein badlo, sabse chhote se divide karo, phir whole numbers banao (.5 ya .33 aaye to multiply karo) — seedha round mat karo."),
+("Reactants exact ratio mein na hon tab product ki maatra.", "Masses compare mat karo — moles ko stoichiometric coefficients se divide karke compare karo."),
+("Mass se concentration; bahut dilute solutions (paani, hawa mein pollutants) ke liye ppm.", None),
+("Gas mixtures, Raoult's law.", None),
+("Titrations, dilutions.", "Molarity temperature se badalti hai kyunki volume badalta hai — dhyan rakho."),
+("Colligative properties.", "SOLVENT ka mass lo, solution ka nahi."),
+("Solutions banana.", None),
+("Commercial acids.", None),
+("Titration volumes.", None),
+],
+examples=[
+("Atoms ginna", "4.4 g CO₂ mein kitne atoms?",
+ "n = 4.4/44 = ⟨0⟩ mol; har molecule mein 3 atoms → 0.3 × 6.022 × 10²³ ≈ ⟨1⟩ atoms."),
+("Limiting reagent", "10 g H₂ 64 g O₂ se react karta hai. Kitna paani banega?",
+ "H₂ = 5 mol, O₂ = 2 mol. 2H₂ + O₂ → 2H₂O: O₂ ko 4 mol H₂ chahiye, isliye O₂ limiting → 4 mol H₂O = ⟨0⟩ g (1 mol H₂ bachta hai)."),
+("Molarity", "0.5 mol NaCl ghol kar 250 mL solution. Molarity?",
+ "M = 0.5/0.250 = ⟨0⟩ M."),
+("Mass % se molality", "Solution 20% NaOH by mass. Molality?",
+ "100 g solution: 20 g NaOH = 0.5 mol, 80 g paani mein. m = 0.5/0.080 = ⟨0⟩ m."),
+("Mole fraction", "46 g ethanol 54 g paani mein. Ethanol ka mole fraction?",
+ "Ethanol 1 mol, paani 3 mol → x = 1/4 = ⟨0⟩."),
+("Glucose mein carbon %", "C₆H₁₂O₆ mein C ka %?",
+ "72/180 × 100 = ⟨0⟩%."),
+("Titration volume", "50 mL 0.2 M NaOH ko neutralise karne ke liye 0.1 M H₂SO₄ ka volume?",
+ "2 × 0.1 × V = 1 × 0.2 × 50 → V = ⟨0⟩ mL."),
+("Commercial acid ki molarity", "H₂SO₄ 49% by mass, density 1.5 g/mL. Molarity?",
+ "M = 10 × 1.5 × 49/98 = ⟨0⟩ M."),
+],
+topics=[
+("Matter and its classification", "Matter ya to pure substance (element ya compound) hai ya mixture (homogeneous jaise hawa ya namak ka ghol; heterogeneous jaise paani mein ret). Compounds ki composition fixed; mixtures ki nahi."),
+("Laws of chemical combination", "Conservation of mass (Lavoisier); definite proportions (Proust) — compound mein hamesha same elements same mass ratio mein; multiple proportions (Dalton) — ek element ke masses jo doosre ke fixed mass se milte hain chhote whole-number ratio mein (CO aur CO₂); Gay-Lussac — gases simple volume ratios mein milti hain; Avogadro — same T aur P par barabar volume mein barabar molecules."),
+("Dalton's atomic theory", "Matter indivisible atoms se bana; ek element ke atoms identical; compounds atoms ke fixed ratio mein milne se; reactions atoms ko rearrange karti hain. Baad mein pata chala atoms divisible hain aur isotopes hote hain."),
+("Measurement and significant figures", "SI units use karo. Answer sahi significant figures mein: × ÷ → sabse kam significant figures; + − → sabse kam decimal places. Scientific notation (N × 10ⁿ) isse saaf karta hai."),
+("Stoichiometry in practice", "Pehle equation balance karo. Sab kuch moles mein badlo, equation ka mole ratio lagao, phir wapas mass ya volume mein. Percentage yield = (actual/theoretical) × 100."),
+("Choosing a concentration unit", "Molarity lab mein aasaan par temperature se badalti hai; molality aur mole fraction nahi badalte, isliye colligative properties mein use hote hain. Bahut dilute solutions ke liye ppm = (solute ka mass/solution ka mass) × 10⁶."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

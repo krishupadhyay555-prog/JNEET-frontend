@@ -1,0 +1,170 @@
+{
+ "slug": "thermodynamics",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Thermodynamics",
+  "JEE": "Thermodynamics"
+ },
+ "title": "Thermodynamics",
+ "readMinutes": 13,
+ "summary": [
+  "Zeroth law: do systems agar teesre ke saath thermal equilibrium mein hain to aapas mein bhi equilibrium mein hain — isi se temperature ka matlab banta hai.",
+  "First law: ΔQ = ΔU + ΔW (di gayi heat = internal energy mein badhat + gas dwara kiya work). Ideal gas ka U sirf temperature par depend karta hai.",
+  "Gas ka work = P–V curve ke neeche ka area. Isothermal, adiabatic, isobaric aur isochoric processes ke apne seedhe formulas hain.",
+  "Second law: heat apne aap thande se garam ki taraf nahi behti, aur koi cyclic process heat ko poori tarah work mein nahi badal sakta. Asli processes irreversible hote hain."
+ ],
+ "formulas": [
+  {
+   "name": "First law of thermodynamics",
+   "formula": "ΔQ = ΔU + ΔW",
+   "when": "Har energy-balance sawal.",
+   "mistake": "Sign convention: gas ko di heat +, gas dwara work +. Conventions mix mat karo."
+  },
+  {
+   "name": "Work done by a gas",
+   "formula": "W = ∫ P dV = area under the P–V curve",
+   "when": "P–V diagram par koi bhi process.",
+   "mistake": "Cycle mein work = enclosed area (P–V par clockwise → positive work) — direction check karo."
+  },
+  {
+   "name": "Internal energy of an ideal gas",
+   "formula": "ΔU = n Cv ΔT  (for ANY process)",
+   "when": "Internal energy ka change.",
+   "mistake": "ΔU sirf ΔT par depend — non-isochoric process mein bhi nCvΔT hi lagao.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Isothermal process (T constant)",
+   "formula": "PV = constant;  ΔU = 0;  W = Q = nRT ln(V₂/V₁) = 2.303 nRT log(V₂/V₁)",
+   "when": "Reservoir ke contact mein dheemi processes."
+  },
+  {
+   "name": "Adiabatic process (Q = 0)",
+   "formula": "PVᵞ = constant;  TVᵞ⁻¹ = constant;  W = (P₁V₁ − P₂V₂)/(γ − 1) = nR(T₁ − T₂)/(γ − 1)",
+   "when": "Tez processes ya insulated container.",
+   "mistake": "Adiabatic curve (slope −γP/V) isothermal (−P/V) se zyada steep — confuse mat karo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Isobaric process (P constant)",
+   "formula": "W = PΔV = nRΔT;  Q = nCpΔT",
+   "when": "Constant pressure par garam karna."
+  },
+  {
+   "name": "Isochoric process (V constant)",
+   "formula": "W = 0;  Q = ΔU = nCvΔT",
+   "when": "Rigid container mein garam karna."
+  },
+  {
+   "name": "Mayer's relation and γ",
+   "formula": "Cp − Cv = R;   γ = Cp/Cv",
+   "when": "Dono molar heat capacities ko jodna."
+  },
+  {
+   "name": "Values of Cv and γ",
+   "formula": "monoatomic: Cv = 3R/2, γ = 5/3;  diatomic (rigid): Cv = 5R/2, γ = 7/5;  polyatomic (non-linear, rigid): Cv = 3R, γ = 4/3",
+   "when": "Problem mein γ chunna."
+  },
+  {
+   "name": "γ of a mixture",
+   "formula": "Cv(mix) = (n₁Cv₁ + n₂Cv₂)/(n₁ + n₂);  γ = (Cv + R)/Cv",
+   "when": "Gases ka mixture."
+  },
+  {
+   "name": "Fraction of heat turned into work (isobaric)",
+   "formula": "W/Q = nRΔT/(nCpΔT) = R/Cp = 1 − 1/γ",
+   "when": "Diatomic gas: heat ka 2/7 work banta hai."
+  },
+  {
+   "name": "Cyclic process",
+   "formula": "ΔU = 0 over a cycle ⇒ Q_net = W_net = area of the loop",
+   "when": "P–V diagram par cycles."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Isothermal expansion",
+   "problem": "2 mol ideal gas 300 K par isothermally double volume tak failti hai. Work (ln 2 = 0.693)?",
+   "solution": "W = nRT ln 2 = 2 × 8.314 × 300 × 0.693 ≈ 3458 J (= absorbed heat, kyunki ΔU = 0)."
+  },
+  {
+   "title": "Adiabatic compression",
+   "problem": "300 K ki monoatomic gas adiabatically 1/8 volume tak dabaayi. Final temperature?",
+   "solution": "TVᵞ⁻¹ = constant, γ − 1 = 2/3: T₂ = 300 × 8^{2/3} = 300 × 4 = 1200 K."
+  },
+  {
+   "title": "Diatomic gas ka isobaric heating",
+   "problem": "2 mol diatomic gas constant pressure par 50 K garam. Q, W aur ΔU?",
+   "solution": "Q = nCpΔT = 2 × 3.5 × 8.314 × 50 ≈ 2910 J; W = nRΔT ≈ 831 J; ΔU = Q − W ≈ 2078 J."
+  },
+  {
+   "title": "Constant pressure par work",
+   "problem": "Gas 10⁵ Pa par 1 L se 3 L tak failti hai. Work?",
+   "solution": "W = PΔV = 10⁵ × 2 × 10⁻³ = 200 J."
+  },
+  {
+   "title": "Adiabatic pressure change",
+   "problem": "Diatomic gas (γ = 1.4) adiabatically aadhe volume tak. Pressure kitna guna?",
+   "solution": "P₂/P₁ = 2^{1.4} ≈ 2.64 (isothermal ke factor 2 se zyada)."
+  },
+  {
+   "title": "Ek line mein first law",
+   "problem": "Gas 500 J heat leti hai aur 200 J work karti hai. Internal energy ka change?",
+   "solution": "ΔU = Q − W = 500 − 200 = 300 J (temperature badhta hai)."
+  },
+  {
+   "title": "Triangular cycle ka work",
+   "problem": "Gas A(P₀, V₀) → B(2P₀, V₀) → C(2P₀, 2V₀) → seedhi line se wapas A; P₀ = 10⁵ Pa, V₀ = 1 L. Net work?",
+   "solution": "Work = triangle ka area = ½ × V₀ × P₀ = ½ × 10⁻³ × 10⁵ = 50 J."
+  },
+  {
+   "title": "Mixture ka γ",
+   "problem": "1 mol monoatomic + 1 mol rigid diatomic gas. Mixture ka γ?",
+   "solution": "Cv = (3R/2 + 5R/2)/2 = 2R, Cp = 3R, γ = 3/2 = 1.5."
+  }
+ ],
+ "topics": [
+  {
+   "title": "System, surroundings and state",
+   "explain": "System woh hissa jise hum padhte hain; baaki sab surroundings. State variables (P, V, T, U) equilibrium states batate hain. Extensive variables size par depend (V, U, mass); intensive nahi (P, T, density)."
+  },
+  {
+   "title": "Thermal equilibrium and the zeroth law",
+   "explain": "A agar C ke saath equilibrium mein hai aur B bhi C ke saath, to A aur B bhi equilibrium mein. Thermometer isi law se kaam karta hai."
+  },
+  {
+   "title": "Heat, work and internal energy",
+   "explain": "Heat aur work transit mein energy hain aur path par depend karte hain. Internal energy state function hai: ideal gas mein sirf molecules ki kinetic energy, sirf T par depend."
+  },
+  {
+   "title": "Reading P–V diagrams",
+   "explain": "Isobaric: horizontal line; isochoric: vertical line; isothermal: hyperbola; adiabatic: zyada steep curve. Expansion (V badhe) → W positive; compression → W negative."
+  },
+  {
+   "title": "Quasi-static processes",
+   "explain": "Itni dheemi process ki system hamesha equilibrium mein rahe. Sirf quasi-static processes P–V par curve ki tarah ban sakte hain aur reversible ho sakte hain."
+  },
+  {
+   "title": "Reversible and irreversible processes",
+   "explain": "Reversible process ulti chal sakti hai aur system aur surroundings dono bilkul shuru ki haalat mein laut aate hain. Friction, free expansion, finite temperature difference par heat flow aur mixing processes ko irreversible banate hain. Saari natural processes irreversible hain."
+  },
+  {
+   "title": "Second law of thermodynamics",
+   "explain": "Kelvin–Planck: aisi koi process nahi jiska ek-maatra result heat ko poora work mein badalna ho. Clausius: aisi koi process nahi jiska ek-maatra result thande se garam body tak heat bhejna ho. Dono statements equivalent hain."
+  },
+  {
+   "title": "Syllabus note",
+   "explain": "Current NTA syllabus mein zeroth, first, second law, processes aur reversible/irreversible processes hain. Heat engine/refrigerator details aur Carnot cycle alag se nahi likhe, isliye first law aur P–V work sabse zyada practise karo."
+  }
+ ],
+ "ratta": [
+  "ΔQ = ΔU + ΔW;  ΔU = nCvΔT always.",
+  "Isothermal: W = nRT ln(V₂/V₁);  adiabatic: PVᵞ = const, W = nRΔT/(γ − 1).",
+  "Isobaric: W = nRΔT;  isochoric: W = 0.",
+  "Cp − Cv = R;  γ = 5/3, 7/5, 4/3.",
+  "Work = area under P–V;  cycle → area enclosed.",
+  "Adiabatic slope = γ × isothermal slope.",
+  "Natural processes are irreversible."
+ ],
+ "verifiedOn": "2026-11-13"
+}

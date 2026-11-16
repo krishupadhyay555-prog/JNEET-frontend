@@ -79,5 +79,55 @@ SYLLABUS = [
 ("Importance of coordination compounds (qualitative analysis, extraction of metals and biological systems)", ["haemoglobin", "EDTA", "extraction"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Coordination compound mein central metal atom/ion ligands (Lewis bases) se coordinate bonds se juda hota hai, jaise [Co(NH₃)₆]Cl₃. Jude hue donor atoms ki sankhya coordination number hai.",
+"Werner's theory: metals ki primary valence (oxidation state, ionisable) aur secondary valence (coordination number, directional, non-ionisable) hoti hai.",
+"Valence bond theory hybridisation se geometry aur magnetic behaviour samjhati hai; crystal field theory d orbitals ki splitting (Δₒ) se colour aur magnetism — strong-field ligands pairing karwaate hain (low spin).",
+"Isomerism (structural: ionisation, linkage, coordination, hydrate; stereo: geometrical, optical) aur IUPAC naming sabse zyada poochhe jaate hain.",
+],
+when=[
+("Metal ka oxidation number nikaalna.", "Neutral ligands (NH₃, H₂O, CO, en) 0 dete hain — unhe charge mat do."),
+("CN ginna.", "Donor atoms gino, ligands nahi — en jaisa bidentate 2 deta hai."),
+("Weak-field vs strong-field tay karna.", "CN⁻ aur CO strong-field (pairing karwaate); halides weak-field — ulta mat lo."),
+("Electron arrangement aur CFSE.", None),
+("Complexes ki stabilisation energy.", None),
+("d⁴–d⁷ ions ka magnetic moment.", None),
+("[NiCl₄]²⁻, [CoCl₄]²⁻ jaise tetrahedral complexes.", None),
+("Complexes compare karna.", None),
+("Geometry aur magnetism predict karna.", None),
+("cis/trans isomers ginna.", None),
+("Complexes mein chirality.", None),
+("AgCl precipitation aur conductance data samajhna.", None),
+],
+examples=[
+("Oxidation state", "[Co(NH₃)₅Cl]Cl₂ mein Co ka oxidation state?",
+ "Complex ion ka charge = +2: x + 0 − 1 = +2 → x = +⟨0⟩."),
+("Low-spin iron(III)", "[Fe(CN)₆]³⁻ ka magnetic moment?",
+ "Fe³⁺ d⁵, CN⁻ strong field → t₂g⁵ (1 unpaired) → μ = √3 ≈ ⟨0⟩ BM (d²sp³)."),
+("High-spin iron(III)", "[FeF₆]³⁻ ka magnetic moment?",
+ "F⁻ weak field → t₂g³e_g² (5 unpaired) → μ = √35 ≈ ⟨0⟩ BM (sp³d²)."),
+("[Co(NH₃)₆]³⁺ ka CFSE", "Co³⁺ d⁶; NH₃ use low spin banata hai. CFSE (pairing energy ignore)?",
+ "t₂g⁶e_g⁰: 6 × (−0.4Δₒ) = ⟨0⟩Δₒ; diamagnetic."),
+("d³ ion ka CFSE", "[Cr(H₂O)₆]³⁺ (d³) ka CFSE?",
+ "t₂g³: 3 × (−0.4Δₒ) = ⟨0⟩Δₒ."),
+("Stereoisomers ginna", "[Co(en)₂Cl₂]⁺ ke kitne stereoisomers?",
+ "trans (optically inactive) + cis (enantiomers ka ek pair) = ⟨0⟩."),
+("Werner ka data", "1 mol CoCl₃·6NH₃ excess AgNO₃ se 3 mol AgCl deta hai. Formula?",
+ "Saare ⟨0⟩ Cl⁻ ionisable → [Co(NH₃)₆]Cl₃."),
+("IUPAC naam", "K₃[Fe(C₂O₄)₃] ka naam.",
+ "Potassium trioxalatoferrate(III): ligands alphabetically prefixes ke saath, anionic complex -ate par khatam (ferrate), oxidation state Roman numerals mein."),
+],
+topics=[
+("Key terms", "Ligand: electron pair dene wala ion ya molecule (monodentate NH₃, Cl⁻; bidentate en, C₂O₄²⁻; polydentate EDTA⁴⁻). Ambidentate ligands do alag atoms se judte hain (NO₂⁻/ONO⁻, SCN⁻/NCS⁻). Chelate: polydentate ligand se bani ring — extra stable (chelate effect)."),
+("IUPAC naming rules", "Cation pehle, anion baad mein. Bracket ke andar: ligands alphabetical order mein (di/tri prefixes ignore), phir metal aur Roman numerals mein oxidation state. Anionic ligands -o par (chlorido, cyanido, oxalato); neutral: aqua, ammine, carbonyl. Anionic complexes -ate naam (ferrate, cuprate, argentate, aurate, plumbate)."),
+("Structural isomerism", "Ionisation: [Co(NH₃)₅Br]SO₄ vs [Co(NH₃)₅SO₄]Br. Linkage: M–NO₂ vs M–ONO. Coordination: cationic aur anionic complexes ke beech ligands ka exchange. Hydrate (solvate): [Cr(H₂O)₆]Cl₃ (violet) vs [Cr(H₂O)₅Cl]Cl₂·H₂O (green)."),
+("Colour of complexes", "Ek khaas energy (= Δ) ki light electron ko t₂g se e_g tak uthaati hai; hum complementary colour dekhte hain. [Ti(H₂O)₆]³⁺ violet. Ligands na hon (anhydrous CuSO₄) to splitting nahi, isliye safed."),
+("Limitations of VBT and CFT", "VBT colour ya ligands ki strength nahi samjhati. CFT ligands ko point charges maanti hai aur neutral CO strong ligand kyun hai nahi samjha sakti — iske liye metal–ligand π back-bonding chahiye (metal carbonyls jaise Ni(CO)₄, Fe(CO)₅)."),
+("Importance and applications", "Haemoglobin (Fe), chlorophyll (Mg), vitamin B₁₂ (Co) coordination compounds hain. EDTA paani ki hardness naapne aur lead poisoning ke ilaaj mein; cis-platin anticancer drug; complexes metallurgy (CN⁻ se gold extraction) aur analysis (dimethylglyoxime se Ni²⁺) mein."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -1,0 +1,168 @@
+{
+ "slug": "oscillations",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Oscillations",
+  "JEE": "Oscillations"
+ },
+ "title": "Oscillations",
+ "readMinutes": 12,
+ "summary": [
+  "Jo motion barabar intervals par dohraaye wo periodic hai; mean position ke aage-peeche wali periodic motion oscillation hai.",
+  "Simple harmonic motion (SHM) tab hota hai jab restoring force displacement ke proportional aur ulta ho: F = −kx. Tab x = A sin(ωt + φ), ω = √(k/m).",
+  "SHM mein speed mean position par maximum aur extremes par zero; acceleration ulta. Total energy ½kA² constant, KE aur PE mein bantti rehti hai.",
+  "Spring–mass: T = 2π√(m/k). Simple pendulum (chhota angle): T = 2π√(l/g), mass aur amplitude se independent."
+ ],
+ "formulas": [
+  {
+   "name": "Periodic motion",
+   "formula": "T = 1/ν;  ω = 2πν = 2π/T",
+   "when": "Time period, frequency aur angular frequency convert karna."
+  },
+  {
+   "name": "SHM condition",
+   "formula": "F = −kx  ⇔  a = −ω² x",
+   "when": "Check karna ki motion SHM hai ya nahi.",
+   "mistake": "Diameter par project ki gayi uniform circular motion SHM hai, par uchhalti ball periodic hai, SHM nahi — confuse mat karo."
+  },
+  {
+   "name": "Displacement in SHM",
+   "formula": "x = A sin(ωt + φ)  (or A cos(ωt + φ))",
+   "when": "Kisi bhi time par position; φ initial phase.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Velocity in SHM",
+   "formula": "v = Aω cos(ωt + φ) = ±ω√(A² − x²);   v_max = Aω (at x = 0)",
+   "when": "Diye displacement par speed."
+  },
+  {
+   "name": "Acceleration in SHM",
+   "formula": "a = −ω² x;   a_max = ω² A (at x = ±A)",
+   "when": "Extremes par force aur acceleration.",
+   "mistake": "Acceleration hamesha mean position ki taraf — x ke ulta, dhyan rakho."
+  },
+  {
+   "name": "Energy in SHM",
+   "formula": "KE = ½ k(A² − x²);  PE = ½ k x²;  E = ½ k A² = ½ m ω² A²",
+   "when": "Kisi position par energy.",
+   "mistake": "KE = PE x = A/√2 par, A/2 par nahi."
+  },
+  {
+   "name": "Spring–mass system",
+   "formula": "T = 2π √(m/k)",
+   "when": "Spring par mass (horizontal ya vertical).",
+   "mistake": "Vertical spring mein bhi same formula — gravity sirf mean position shift karti hai, bhoolo mat.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Springs in series and parallel",
+   "formula": "series: 1/k = 1/k₁ + 1/k₂;  parallel: k = k₁ + k₂",
+   "when": "Springs ke combinations."
+  },
+  {
+   "name": "Cut spring",
+   "formula": "k ∝ 1/length: cutting a spring into n equal parts gives each part nk",
+   "when": "Spring ke tukde."
+  },
+  {
+   "name": "Simple pendulum",
+   "formula": "T = 2π √(l/g)  (small angles, θ < ~10°)",
+   "when": "Pendulum clocks, g naapna.",
+   "mistake": "T bob ke mass ya amplitude (chhote swings) par depend nahi karta — galat maat maano.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pendulum with effective g",
+   "formula": "T = 2π√(l/g_eff);  lift accelerating up: g + a;  down: g − a;  car with horizontal a: √(g² + a²)",
+   "when": "Lift aur accelerating vehicles mein pendulum."
+  },
+  {
+   "name": "Phase relations",
+   "formula": "velocity leads displacement by π/2;  acceleration leads displacement by π",
+   "when": "Phase ke sawal."
+  }
+ ],
+ "examples": [
+  {
+   "title": "SHM equation padhna",
+   "problem": "x = 5 sin(πt + π/3) cm. Amplitude, period, maximum speed aur maximum acceleration?",
+   "solution": "A = 5 cm, ω = π rad/s → T = 2π/ω = 2 s. v_max = Aω ≈ 15.7 cm/s, a_max = Aω² ≈ 49.3 cm/s²."
+  },
+  {
+   "title": "Displacement par speed",
+   "problem": "A = 10 cm, T = π s. x = 6 cm par speed?",
+   "solution": "ω = 2 rad/s. v = ω√(A² − x²) = 2 × √(100 − 36) = 16 cm/s."
+  },
+  {
+   "title": "Spring par mass",
+   "problem": "k = 200 N/m wali spring par 0.5 kg. Period?",
+   "solution": "T = 2π√(0.5/200) = 2π × 0.05 ≈ 0.314 s."
+  },
+  {
+   "title": "1 m pendulum",
+   "problem": "1 m simple pendulum ka period (g = 9.8 m/s²)?",
+   "solution": "T = 2π√(1/9.8) ≈ 2.01 s."
+  },
+  {
+   "title": "Seconds pendulum",
+   "problem": "Seconds pendulum ka T = 2 s. Length (g = 9.8)?",
+   "solution": "l = gT²/4π² = 9.8 × 4/39.48 ≈ 0.993 m (lagbhag 1 m)."
+  },
+  {
+   "title": "Oscillation ki energy",
+   "problem": "k = 200 N/m, amplitude 10 cm. Total energy?",
+   "solution": "E = ½kA² = ½ × 200 × 0.01 = 1 J."
+  },
+  {
+   "title": "Series vs parallel springs",
+   "problem": "Mass k aur 4k springs ke saath, pehle parallel (Tₚ), phir series (Tₛ). Tₛ/Tₚ?",
+   "solution": "kₚ = 5k, kₛ = 4k/5. Tₛ/Tₚ = √(kₚ/kₛ) = √(25/4) = 2.5."
+  },
+  {
+   "title": "KE aur PE kahan barabar",
+   "problem": "Amplitude 10 cm. Kis displacement par KE = PE?",
+   "solution": "½k(A² − x²) = ½kx² → x = A/√2 ≈ 7.07 cm."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Periodic functions",
+   "explain": "sin ωt aur cos ωt har 2π/ω par dohraate hain, isliye koi bhi periodic motion inse likhi ja sakti hai. sin ωt + cos ωt bhi SHM hai (amplitude √2, phase shifted); sin² ωt periodic hai, period π/ω."
+  },
+  {
+   "title": "SHM and circular motion",
+   "explain": "Circle par uniform chalte particle ka kisi diameter par projection SHM karta hai. Radius = amplitude aur angular speed = ω — do positions ke beech ka time nikaalne mein kaam aata hai."
+  },
+  {
+   "title": "Graphs of SHM",
+   "explain": "x, v, a teeno sinusoidal, same ω. v x se π/2 aage, a x se π aage. v–x graph ellipse; a–x graph negative slope wali seedhi line."
+  },
+  {
+   "title": "Energy graphs",
+   "explain": "Potential energy (PE) parabola, minimum x = 0 par; kinetic energy (KE) ulta parabola; dono ka sum horizontal line. KE aur PE dono 2ν frequency (SHM ki double) se oscillate karte hain."
+  },
+  {
+   "title": "Restoring force and force constant",
+   "explain": "Spring constant k batata hai system kitna stiff hai. Har SHM mein ω² = (restoring force per unit displacement)/mass. Pendulum mein mg sinθ ≈ mgθ restoring force se ω² = g/l."
+  },
+  {
+   "title": "Deriving the pendulum period",
+   "explain": "Pivot ke baare mein torque −mgl sinθ ≈ −mglθ; I = ml² se α = −(g/l)θ. α = −ω²θ se compare karke T = 2π√(l/g)."
+  },
+  {
+   "title": "Time between positions",
+   "explain": "Mean se extreme tak T/4. Mean se A/2 tak T/12; A/2 se A tak T/6. Mean se A/√2 tak T/8."
+  }
+ ],
+ "ratta": [
+  "F = −kx;  ω = √(k/m);  T = 2π√(m/k).",
+  "x = A sin(ωt + φ);  v = ω√(A² − x²);  a = −ω²x.",
+  "v_max = Aω;  a_max = Aω².",
+  "E = ½kA²;  KE = PE at A/√2.",
+  "Pendulum T = 2π√(l/g);  seconds pendulum ≈ 1 m.",
+  "Series springs: 1/k adds;  parallel: k adds.",
+  "Mean → A/2: T/12;  A/2 → A: T/6."
+ ],
+ "verifiedOn": "2026-11-13"
+}

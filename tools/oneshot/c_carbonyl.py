@@ -68,5 +68,53 @@ SYLLABUS = [
 ("Carboxylic acids: acidic strength and factors affecting it", ["acidity", "−I"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Carbonyl group (>C=O) planar (sp²) aur polar hai: carbon electrophilic, isliye aldehydes aur ketones nucleophilic addition karte hain. Aldehydes ketones se zyada reactive (kam steric hindrance, kam +I alkyl groups) — yahi relative reactivity hai.",
+"Aldehydes aasaani se oxidise hote hain, isliye Tollens', Fehling's aur Benedict's reagents ko reduce karte hain; ketones aam taur par nahi. Ye tests dono ko alag karte hain.",
+"α-hydrogen acidic hote hain, jisse aldol condensation (α-H ke saath) aur Cannizzaro reaction (α-H ke bina) hote hain. Methyl ketones haloform (iodoform) test dete hain.",
+"Carboxylic acids phenols aur alcohols se strong acids hain (resonance-stabilised carboxylate). Electron-withdrawing (−I) groups acidity badhaate hain. Inke derivatives: acid chlorides, anhydrides, esters, amides.",
+],
+when=[
+("Carbonyl compounds banana.", None),
+("Acid chlorides se aldehydes.", "BaSO₄ catalyst ko poison karta hai taaki aldehyde aage reduce na ho — iske bina alcohol ban jaata."),
+("Nitriles se aldehydes.", None),
+("Aromatic aldehydes banana.", None),
+("C=O group ki reactions (HCN, NaHSO₃, ROH, Grignard).", "Reactivity: HCHO > CH₃CHO > CH₃COCH₃ (sterics aur +I effect) — ulta mat lo."),
+("Pehchaan ke liye derivatives.", "2,4-DNP saare aldehydes aur ketones ke saath orange/yellow precipitate deta hai — sirf aldehyde ka test nahi."),
+("Carbonyl ko alkane mein reduce karna.", "Clemmensen acidic hai; Wolff–Kishner basic — molecule mein aur kya hai uske hisaab se chuno, galat chuna to group toot sakta hai."),
+("α-hydrogen wale carbonyl compounds.", "Kam se kam ek α-H zaroori hai."),
+("α-hydrogen ke bina aldehydes (HCHO, C₆H₅CHO).", "Ek molecule oxidise aur ek reduce hota hai (disproportionation)."),
+("CH₃CO– aur CH₃CH(OH)– groups ka test.", "Ethanol aur acetaldehyde dete hain; methanol aur propanal nahi — galti mat karo."),
+("Acid strengths compare karna.", "−I groups badhne ya –COOH ke paas aane par pKa ghatta hai (acid strong hota hai) — dhyan rakho."),
+("α-H wale acids ka α-halogenation.", None),
+("–COOH hataana.", None),
+("Nucleophilic acyl substitution.", None),
+],
+examples=[
+("Tollens' test", "Propanal aur propanone ko kaise alag karoge?",
+ "Propanal (aldehyde) Tollens' reagent ke saath silver mirror aur Fehling's solution ke saath laal precipitate (Cu₂O) deta hai; propanone nahi."),
+("Iodoform test", "Kaun iodoform test dete hain: ethanol, methanol, propan-2-ol, pentan-3-one?",
+ "Ethanol aur propan-2-ol (ye CH₃CO– compounds mein oxidise hote hain). Methanol aur pentan-3-one mein CH₃CO– ya CH₃CH(OH)– group nahi."),
+("Aldol ya Cannizzaro?", "Benzaldehyde conc. NaOH ke saath; ethanal dil. NaOH ke saath.",
+ "Benzaldehyde mein α-H nahi → Cannizzaro: benzyl alcohol + sodium benzoate. Ethanal mein α-H → aldol (3-hydroxybutanal), garam karne par but-2-enal."),
+("Cross aldol", "Benzaldehyde + acetone, dil. NaOH mein?",
+ "Claisen–Schmidt condensation: acetone (α-H wala) enolate banata hai jo benzaldehyde par attack karta hai → C₆H₅CH=CHCOCH₃ (benzalacetone)."),
+("Acid strength", "Order: CH₃COOH, ClCH₂COOH, FCH₂COOH, CH₃CH₂COOH.",
+ "FCH₂COOH > ClCH₂COOH > CH₃COOH > CH₃CH₂COOH. F ka sabse strong −I effect; extra CH₂ (+I) propanoic acid ko kamzor karta hai."),
+("Reduction choice", "Acetophenone ko ethylbenzene mein badlo.",
+ "Clemmensen reduction (Zn–Hg/HCl) ya Wolff–Kishner (NH₂NH₂, KOH, ethylene glycol): C₆H₅COCH₃ → C₆H₅CH₂CH₃."),
+],
+topics=[
+("Structure and physical properties", "C=O bond polar hai, isliye aldehydes aur ketones ke boiling points same mass ke hydrocarbons aur ethers se zyada, par alcohols se kam (apne molecules ke beech H-bonding nahi). Chhote members paani mein ghulte hain. Carboxylic acids ke boiling points aur bhi zyada: hydrogen-bonded dimers banate hain."),
+("Oxidation tests", "Tollens' reagent (ammoniacal AgNO₃) → silver mirror; Fehling's solution (Cu²⁺ tartrate complex) → laal Cu₂O; strong oxidants ketones ko sirf C–C todkar oxidise karte hain. Aromatic aldehydes Fehling's test nahi dete."),
+("Preparation of carboxylic acids", "1° alcohols aur aldehydes ka oxidation, alkylbenzenes ka side-chain oxidation (KMnO₄ → benzoic acid), nitriles aur amides ka hydrolysis, aur Grignard reagent + CO₂ phir hydrolysis."),
+("Reactions of carboxylic acids", "Metals aur alkalis (salts), NaHCO₃ (CO₂ ki effervescence — acids ko phenols se alag karta hai), PCl₅ ya SOCl₂ (acid chlorides), acid ke saath alcohols (esterification), NH₃ phir garam (amides), LiAlH₄ (1° alcohols). Benzoic acid ke electrophilic substitution mein –COOH meta-directing."),
+("Uses", "Formalin (40% HCHO) biological specimens ko surakshit rakhta hai; acetone common solvent; acetic acid (sirka, ~6–8%); benzoic acid ke salts food preservatives; esters phalon ko khushboo dete hain."),
+("Mechanism of nucleophilic addition", "Nucleophile planar ke upar ya neeche se electrophilic carbonyl carbon par attack karta hai, carbon sp² se sp³ banta hai, aur tetrahedral alkoxide intermediate H⁺ lekar product deta hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

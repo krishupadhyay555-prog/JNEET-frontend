@@ -73,5 +73,51 @@ SYLLABUS = [
 ("Distance of a point from a line; centroid, orthocentre and circumcentre of a triangle", ["centroid", "orthocentre", "circumcentre"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Coordinate geometry distance aur section formulas, triangle ka area aur triangle ke centres (centroid, incentre, circumcentre, orthocentre) se shuru hoti hai. Locus nikaalna bhi yahin seekhte hain.",
+"Line ko slope–intercept, point–slope, two-point, intercept, normal ya general form mein likh sakte hain. Slope se parallel (m₁ = m₂) aur perpendicular (m₁m₂ = −1) lines tay hoti hain.",
+"Point ki line se distance, parallel lines ke beech distance, lines ke beech angle between, intersection se guzarne wali family of lines, concurrent lines aur angle bisectors — ye JEE ke core tools hain.",
+],
+when=[
+("Basic coordinate formulas.", None),
+("Area aur collinearity.", None),
+("Triangle ke centres.", None),
+("Line ki direction.", None),
+("Lines ki equations likhna.", None),
+("Do lines ke beech acute angle.", None),
+("Perpendicular distance.", None),
+("Parallel lines.", "Pehle x aur y ke coefficients bilkul same karo — bina iske formula galat aayega."),
+("Line mein reflection.", None),
+("Intersection point se guzarne wali lines.", None),
+("Concurrent lines check karna.", None),
+("Do lines ke beech ke angles ke bisectors.", None),
+("Same side ya opposite sides.", None),
+],
+examples=[
+("Line se distance", "(1, 2) ki 3x + 4y − 5 = 0 se distance?",
+ "|3 + 8 − 5|/5 = 6/5 = ⟨0⟩."),
+("Parallel lines", "3x + 4y − 5 = 0 aur 3x + 4y + 10 = 0 ke beech distance?",
+ "|−5 − 10|/5 = ⟨0⟩."),
+("Area", "Vertices (0, 0), (3, 0), (0, 4) wale triangle ka area?",
+ "½ × 3 × 4 = ⟨0⟩."),
+("Lines ke beech angle", "y = 3x + 1 aur y = x ke beech acute angle?",
+ "tan θ = |(3 − 1)/(1 + 3)| = 1/2 ⇒ θ ≈ ⟨0⟩°."),
+("Section formula", "(1, 2) aur (7, 8) ko 2:1 mein internally divide karne wala point?",
+ "((2 × 7 + 1 × 1)/3, (2 × 8 + 1 × 2)/3) = (⟨0⟩, ⟨1⟩)."),
+("Family of lines", "x + y = 5 aur x − y = 1 ke intersection se guzarne wali wo line nikalo jo origin se guzarti hai.",
+ "(x + y − 5) + λ(x − y − 1) = 0. Origin: −5 − λ = 0 ⇒ λ = −5 ⇒ x + y − 5 − 5x + 5y + 5 = 0 ⇒ −4x + 6y = 0 ⇒ 2x = 3y."),
+],
+topics=[
+("Locus", "Locus nikaalne ke liye moving point ko (h, k) maano, di gayi condition ko h aur k mein equation ki tarah likho, phir h, k ki jagah x, y rakho."),
+("Shifting the origin", "Origin bina rotation (h, k) par shift ho to naye coordinates X = x − h, Y = y − k. Axes ko θ se rotate karne par: x = X cos θ − Y sin θ, y = X sin θ + Y cos θ."),
+("Lines making a given angle", "(x₁, y₁) se guzarne wali aur y = mx + c se angle α banane wali lines ke slopes (m ± tan α)/(1 ∓ m tan α) hain."),
+("Pair of straight lines", "ax² + 2hxy + by² = 0 origin se guzarne wali do lines hai; angle tan θ = 2√(h² − ab)/|a + b|. a + b = 0 ho to perpendicular aur h² = ab ho to coincident."),
+("Orthocentre shortcut", "Right-angled triangle mein orthocentre right-angle wala vertex hai aur circumcentre hypotenuse ka midpoint."),
+("Parametric form", "Inclination θ wali line par (x₁, y₁) se r doori par point (x₁ + r cos θ, y₁ + r sin θ) hai — line ke saath distances ke liye kaam ka."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

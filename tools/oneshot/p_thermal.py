@@ -90,5 +90,60 @@ SYLLABUS = [
 ("Heat transfer: conduction, convection and radiation", ["conduction", "convection", "radiation"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Temperature batata hai heat kis taraf behegi; heat temperature difference ki wajah se transit mein energy hai. Celsius, Fahrenheit aur Kelvin scales linearly jude hain.",
+"Zyadatar cheezein garam hone par failti hain: linear (α), area (β = 2α), volume (γ = 3α) expansion. Paani alag hai — 0 °C se 4 °C tak sikudta hai, isliye 4 °C par sabse dense.",
+"Temperature badalne ki heat Q = mcΔT; constant temperature par state badalne ki Q = mL. Calorimetry bas 'heat lost = heat gained' hai.",
+"Heat conduction (H = KAΔT/L), convection (fluid ki bulk motion) aur radiation (Stefan–Boltzmann, Wien's law) se behti hai. Newton's law of cooling: cooling ki rate ∝ surroundings se temperature difference.",
+],
+when=[
+("°C, °F aur K mein convert karna.", "1 °C change = 1 K = 1.8 °F — temperature DIFFERENCE mein 32 mat jodo."),
+("Rails, bridges, metal rods, pendulum clocks.", None),
+("Plate mein chhed, bartan mein liquid.", "Plate ka chhed garam hone par BADHTA hai, ghatta nahi."),
+("Garam rod ke clamps par force.", None),
+("State badle bina garam karna.", None),
+("Bodies, gases compare karna.", None),
+("Pighalna, ubalna, condensation.", "State change ke dauraan temperature constant rehta hai — wahan mcΔT mat lagao."),
+("Mixing problems.", "Ice ho to pehle check karo SAARI ice pighal sakti hai ya nahi, tabhi 0 °C se upar final temperature maano."),
+("Rods aur deewaron se heat flow.", None),
+("Composite walls, junction temperature.", None),
+("Garam bodies ki radiated power.", "T kelvin mein hi lo, °C mein nahi."),
+("Garam bodies ka rang, stars ka temperature.", None),
+("Body ke thanda hone ka time.", "Sirf chhote temperature difference ke liye valid."),
+],
+examples=[
+("Bukhaar do scales par", "Normal body temperature 98.6 °F. °C mein?",
+ "C = (98.6 − 32) × 5/9 = ⟨0⟩ °C."),
+("Rails ke beech gap", "10 m steel rails (α = 1.2 × 10⁻⁵ /°C), 50 °C rise ke liye gap?",
+ "ΔL = 10 × 1.2 × 10⁻⁵ × 50 = 6 × 10⁻³ m = ⟨0⟩ mm."),
+("Paani garam karna", "0.5 kg paani 20 °C se 100 °C (c = 4200 J/kg K)?",
+ "Q = 0.5 × 4200 × 80 = ⟨0⟩ J."),
+("Garam aur thanda paani milaana", "80 °C ka 0.2 kg paani 20 °C ke 0.3 kg mein. Final temperature?",
+ "0.2 × (80 − T) = 0.3 × (T − 20) → T = ⟨0⟩ °C."),
+("Ice mein steam", "100 °C ki 20 g steam 0 °C ki 100 g ice mein. Final temperature? (L_v = 540, L_f = 80 cal/g)",
+ "Steam 0 °C tak heat degi: 20(540 + 100) = ⟨0⟩ cal. Saari ice pighalne ko ⟨1⟩ cal chahiye, toh saari ice pighlegi. Bachi 4800 cal 120 g ko garam karegi: T = 4800/120 = ⟨2⟩ °C."),
+("Copper rod se heat", "Copper rod: K = 400 W/m K, area 1 cm², length 0.5 m, ends 100 °C aur 0 °C. Heat current?",
+ "H = 400 × 10⁻⁴ × 100/0.5 = ⟨0⟩ W."),
+("Do slabs ka junction", "Barabar motai ke do slabs, K₁ = 2K₂, bahar ki faces 100 °C (slab 1) aur 0 °C. Junction temperature?",
+ "2K(100 − T) = K(T − 0) → T = 200/3 ≈ ⟨0⟩ °C."),
+("Radiated power", "Sphere ka radius double aur kelvin temperature aadha. Radiated power?",
+ "P ∝ r²T⁴ = 4 × (1/16) = original ka ⟨0⟩ guna."),
+("Suraj ka rang", "Suraj ki surface ~6000 K. λ_max?",
+ "λ = 2.9 × 10⁻³/6000 ≈ ⟨0⟩ nm — visible (green-blue) region."),
+],
+topics=[
+("Heat and temperature", "Thermal contact mein bodies tab tak heat lete-dete hain jab tak temperature barabar na ho (thermal equilibrium). Heat joules mein (1 cal = 4.186 J). Absolute zero (0 K = −273.15 °C) sabse kam possible temperature."),
+("Anomalous expansion of water", "Paani 0 °C se 4 °C garam karne par sikudta hai aur 4 °C se upar failta hai. Talaab upar se jamte hain: sabse dense paani (4 °C) neeche, ice upar tairti hai aur neeche ke paani ko insulate karti hai, isliye jal-jeevan bachta hai."),
+("Applications of expansion", "Rails aur bridges mein gaps, garmi mein telephone wires dheeli, thermostats mein bimetallic strip (kam α wali metal ki taraf mudti hai), garmi mein pendulum clocks dheemi."),
+("Specific heat facts", "Paani ki specific heat bahut zyada hai, isliye radiators aur hot-water bags mein use hota hai aur coastal climate narm rakhta hai. Gases mein Cp > Cv kyunki constant pressure par kuch heat work karti hai."),
+("Change of state", "Jo cheezein pighalne par sikudti hain (ice) unka melting point pressure se ghatta hai — regelation. Boiling point pressure se badhta hai (pressure cooker) aur pahaadon par ghatta hai. Sublimation: solid → vapour seedha (dry ice, naphthalene)."),
+("Convection", "Fluid ki bulk movement kyunki garam, kam dense fluid upar uthta hai. Natural convection: sea aur land breeze, trade winds, room heaters. Forced convection: pankhe, blood circulation, car radiators."),
+("Radiation and black bodies", "Radiation ko medium nahi chahiye, speed c. Perfect black body saari radiation absorb karti hai aur best emitter hai (Kirchhoff: achhe absorber achhe emitter). Garam bodies chhoti wavelength par peak karti hain (Wien) aur bahut zyada power deti hain (T⁴)."),
+("Newton's law of cooling", "Body surroundings se bahut garam ho to sabse tez thandi hoti hai; cooling curve exponential hai. Exam mein average-temperature form lagao jab tak log wala form na maanga ho."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -1,0 +1,202 @@
+{
+ "slug": "mechanical-properties-of-solids-and-fluids",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Mechanical Properties of Solids and Fluids",
+  "JEE": "Mechanical Properties of Solids and Fluids"
+ },
+ "title": "Mechanical Properties of Solids and Fluids",
+ "readMinutes": 15,
+ "summary": [
+  "Solids deformation ka virodh karte hain: elastic limit ke andar stress ∝ strain (Hooke's law). Young's, bulk aur shear moduli stretching, squeezing aur twisting ki stiffness naapte hain.",
+  "Rukay hue fluid mein pressure depth ke saath badhta hai (P = P₀ + ρgh) aur har direction mein barabar transmit hota hai (Pascal's law) — hydraulic lift aur brakes isi par.",
+  "Behte fluid continuity (Av = constant) aur Bernoulli's principle (P + ½ρv² + ρgh = constant) follow karte hain. Viscosity flow ka virodh karti hai; girta sphere terminal velocity tak pahunchta hai (Stokes' law).",
+  "Surface tension liquid surface ko khinchi hui jhilli jaisa banata hai: drops aur bubbles ke andar excess pressure aur capillary rise isi se."
+ ],
+ "formulas": [
+  {
+   "name": "Stress and strain",
+   "formula": "stress = F/A (N/m²);  longitudinal strain = ΔL/L;  volume strain = ΔV/V;  shear strain = θ",
+   "when": "Deformation describe karna.",
+   "mistake": "Strain ki koi unit nahi; stress ki unit pressure wali — confuse mat karo."
+  },
+  {
+   "name": "Hooke's law and Young's modulus",
+   "formula": "Y = (F/A)/(ΔL/L) = FL/(AΔL)",
+   "when": "Wires aur rods ko kheenchna.",
+   "mistake": "ΔL ∝ L/A — patli ya lambi wire same load par zyada khinchti hai, ulta mat socho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Bulk modulus and compressibility",
+   "formula": "B = −P/(ΔV/V);  compressibility k = 1/B",
+   "when": "Body ko har taraf se dabaana.",
+   "mistake": "Minus sign B ko positive banata hai kyunki volume ghatta hai — sign mat bhoolo."
+  },
+  {
+   "name": "Shear modulus (modulus of rigidity)",
+   "formula": "G = (F/A)/θ",
+   "when": "Layers ko twist ya slide karna."
+  },
+  {
+   "name": "Poisson's ratio",
+   "formula": "σ = (lateral strain)/(longitudinal strain) = −(Δd/d)/(ΔL/L);  theoretical range −1 to 0.5",
+   "when": "Wire kheenchne par motai mein badlav."
+  },
+  {
+   "name": "Elastic potential energy",
+   "formula": "U = ½ × stress × strain × volume = ½ F ΔL;  energy density u = stress²/2Y",
+   "when": "Khinchi wire mein stored energy."
+  },
+  {
+   "name": "Pressure in a fluid at rest",
+   "formula": "P = P₀ + ρ g h",
+   "when": "Depth h par pressure.",
+   "mistake": "Gauge pressure = ρgh (P₀ ke bina) — check karo question kaunsa maang raha hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pascal's law: hydraulic lift",
+   "formula": "F₁/A₁ = F₂/A₂  ⇒  F₂ = F₁ (A₂/A₁)",
+   "when": "Hydraulic lift, brakes, press.",
+   "mistake": "Force multiply hota hai, work nahi — chhota piston zyada door chalta hai."
+  },
+  {
+   "name": "Equation of continuity",
+   "formula": "A₁ v₁ = A₂ v₂",
+   "when": "Badalte area wale pipe mein incompressible fluid ki speed."
+  },
+  {
+   "name": "Bernoulli's principle",
+   "formula": "P + ½ρv² + ρgh = constant along a streamline",
+   "when": "Venturi meter, aerofoil lift, udti chhatein, atomisers.",
+   "mistake": "Sirf steady, non-viscous, incompressible, streamline flow ke liye valid."
+  },
+  {
+   "name": "Torricelli's law (speed of efflux)",
+   "formula": "v = √(2gh)  (h = depth of the hole below the free surface)",
+   "when": "Tank ke chhed se paani."
+  },
+  {
+   "name": "Viscous force and Stokes' law",
+   "formula": "F = η A (dv/dx);  on a sphere F = 6πηrv",
+   "when": "Spheres aur oil drops par drag."
+  },
+  {
+   "name": "Terminal velocity",
+   "formula": "v_t = 2r²(ρ − σ)g / (9η)   (σ = fluid density)",
+   "when": "Baarish ki boondein, glycerine mein ball bearings.",
+   "mistake": "v_t ∝ r² — double radius wali boond chaar guna tez girti hai, double nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Reynolds number and critical velocity",
+   "formula": "Rₑ = ρ v D/η;  streamline below ~1000, turbulent above ~2000",
+   "when": "Flow smooth hoga ya turbulent, ye batana."
+  },
+  {
+   "name": "Surface tension and surface energy",
+   "formula": "S = F/L = (surface energy)/(area);  work to increase area W = S ΔA",
+   "when": "Films, drops, bubbles phoolana.",
+   "mistake": "Soap bubble ki DO surfaces hoti hain — area double lo, bhoolo mat."
+  },
+  {
+   "name": "Excess pressure",
+   "formula": "liquid drop / air bubble in a liquid: ΔP = 2S/r;  soap bubble in air: ΔP = 4S/r",
+   "when": "Curved surfaces ke andar pressure.",
+   "mistake": "4S/r sirf soap bubble (do surfaces) ke liye; drop ke liye 2S/r — mix mat karo."
+  },
+  {
+   "name": "Capillary rise",
+   "formula": "h = 2S cos θ / (r ρ g)",
+   "when": "Patli tube mein liquid chadhna ya girna.",
+   "mistake": "θ > 90° (glass mein mercury) ho to h negative — liquid girta hai, chadhta nahi."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Steel wire kheenchna",
+   "problem": "2 m steel wire, area 1 mm², 100 N load. Y = 2 × 10¹¹ N/m². Elongation?",
+   "solution": "ΔL = FL/(AY) = 100 × 2/(10⁻⁶ × 2 × 10¹¹) = 10⁻³ m = 1 mm."
+  },
+  {
+   "title": "Energy per unit volume",
+   "problem": "Wire ka stress 2 × 10⁸ N/m², Y = 2 × 10¹¹ N/m². Energy density?",
+   "solution": "u = stress²/2Y = (4 × 10¹⁶)/(4 × 10¹¹) = 1 × 10⁵ J/m³."
+  },
+  {
+   "title": "Hydraulic lift",
+   "problem": "Pistons ka area 0.01 m² aur 0.5 m². Chhote piston par 100 N kitna load uthayega?",
+   "solution": "F₂ = 100 × 0.5/0.01 = 5000 N."
+  },
+  {
+   "title": "Paani mein 10 m neeche pressure",
+   "problem": "10 m depth par absolute pressure (P₀ = 1.013 × 10⁵ Pa)?",
+   "solution": "P = 1.013 × 10⁵ + 1000 × 9.8 × 10 = 1.99 × 10⁵ Pa — lagbhag 2 atmosphere."
+  },
+  {
+   "title": "Boond ki terminal velocity",
+   "problem": "1 mm radius ki paani ki boond hawa mein girti hai (η = 1.8 × 10⁻⁵ Pa s; hawa ki density ignore). Terminal velocity?",
+   "solution": "v_t = 2r²ρg/(9η) = 2 × 10⁻⁶ × 1000 × 9.8/(9 × 1.8 × 10⁻⁵) ≈ 121 m/s (asli boondein dheemi hoti hain kyunki flow streamline nahi rehta)."
+  },
+  {
+   "title": "Tank se paani",
+   "problem": "Bade tank mein chhed paani ki surface se 5 m neeche. Efflux speed?",
+   "solution": "v = √(2gh) = √(2 × 9.8 × 5) ≈ 9.9 m/s."
+  },
+  {
+   "title": "Paani ka capillary rise",
+   "problem": "Paani (S = 0.072 N/m, θ = 0°), tube radius 0.5 mm. Height?",
+   "solution": "h = 2S/(rρg) = 0.144/(5 × 10⁻⁴ × 1000 × 9.8) ≈ 2.94 cm."
+  },
+  {
+   "title": "Soap bubble ke andar pressure",
+   "problem": "Soap bubble radius 1 cm, S = 0.03 N/m. Excess pressure?",
+   "solution": "ΔP = 4S/r = 4 × 0.03/0.01 = 12 Pa."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Stress–strain curve",
+   "explain": "Proportional limit tak graph seedhi line (Hooke's law). Elastic limit ke baad body apni shape wapas nahi leti; yield point par plastic flow hota hai, breaking point par toot jaati hai. Ductile materials (copper) ka plastic region lamba; brittle (glass) elastic limit ke turant baad toot-te hain."
+  },
+  {
+   "title": "Applications of elasticity",
+   "explain": "Steel rubber se zyada elastic hai (Y zyada). Beams I-section ke banate hain taaki kam material mein bending ka virodh ho. Crane ki rassi kai patle strands ki hoti hai, aur pahaad ki maximum height chattanon ki elastic limit se tay hoti hai."
+  },
+  {
+   "title": "Pressure facts",
+   "explain": "Depth par pressure sirf depth par depend karta hai, bartan ki shape par nahi (hydrostatic paradox). Atmospheric pressure ≈ 1.013 × 10⁵ Pa = 76 cm mercury. Barometer ise naapta hai; open-tube manometer gauge pressure."
+  },
+  {
+   "title": "Buoyancy and floating",
+   "explain": "Upthrust = displaced fluid ka weight (Archimedes). Body tab tairti hai jab uski density fluid se kam ho; dooba hua hissa = ρ_body/ρ_fluid."
+  },
+  {
+   "title": "Streamline and turbulent flow",
+   "explain": "Streamline flow mein kisi point par velocity time ke saath nahi badalti aur streamlines kabhi nahi kaat-ti. Critical velocity se upar flow turbulent ho jaata hai aur Bernoulli lagu nahi hota."
+  },
+  {
+   "title": "Applications of Bernoulli",
+   "explain": "Aerofoil: wing ke upar tez hawa → kam pressure → lift. Toofan mein chhatein ud jaati hain. Saath chalti do naavein ek-doosre ki taraf khinchti hain. Atomiser aur Bunsen burner tez speed wali jagah fluid kheenchte hain."
+  },
+  {
+   "title": "Viscosity",
+   "explain": "Liquids ki viscosity temperature badhne par ghatti hai; gases ki badhti hai. Unit: Pa s (poiseuille); 1 poise = 0.1 Pa s."
+  },
+  {
+   "title": "Surface tension effects",
+   "explain": "Boondein gol hoti hain (minimum area). Surface tension temperature aur detergent se ghatta hai. Angle of contact < 90° → liquid surface ko geela karta hai aur capillary mein chadhta hai (paani–glass); > 90° → geela nahi karta aur girta hai (mercury–glass)."
+  }
+ ],
+ "ratta": [
+  "Y = FL/(AΔL);  B = −PV/ΔV;  G = F/(Aθ).",
+  "u = stress²/2Y = ½ × stress × strain.",
+  "P = P₀ + ρgh;  F₂ = F₁A₂/A₁.",
+  "A₁v₁ = A₂v₂;  P + ½ρv² + ρgh = constant;  v = √(2gh).",
+  "F = 6πηrv;  v_t = 2r²(ρ − σ)g/9η  (∝ r²).",
+  "Drop: 2S/r;  soap bubble: 4S/r;  h = 2S cosθ/(rρg).",
+  "Liquids: viscosity ↓ with T;  gases: viscosity ↑ with T."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,150 @@
+{
+ "slug": "plant-kingdom",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Plant Kingdom"
+ },
+ "title": "Plant Kingdom",
+ "readMinutes": 13,
+ "summary": [
+  "Plantae mein algae, bryophyte, pteridophyte, gymnosperm aur angiosperms aate hain. Classification artificial systems (kuch morphological characters) se natural systems (kai characters) aur phir phylogenetic systems (evolutionary relationships) tak aaya.",
+  "Algae simple, thalloid, zyadatar aquatic hain; pigments aur stored food ke hisaab se green (Chlorophyceae), brown (Phaeophyceae) aur red (Rhodophyceae) algae mein baante jaate hain.",
+  "Bryophytes (plant kingdom ke amphibians) mein gametophyte dominant. Pteridophytes pehle vascular plants, sporophyte dominant. Gymnosperms ke seeds naked; angiosperms ke seeds fruits ke andar.",
+  "Plant life cycles alternation of generations dikhate hain — haplontic, diplontic ya haplo-diplontic."
+ ],
+ "formulas": [
+  {
+   "name": "Algal classes",
+   "formula": "Chlorophyceae: chlorophyll a, b; starch; cellulose wall (Chlamydomonas, Volvox, Ulothrix, Spirogyra, Chara);  Phaeophyceae: chlorophyll a, c, fucoxanthin; laminarin, mannitol; algin (Ectocarpus, Dictyota, Laminaria, Sargassum, Fucus);  Rhodophyceae: chlorophyll a, d, r-phycoerythrin; floridean starch (Polysiphonia, Porphyra, Gracilaria, Gelidium)",
+   "when": "Algal groups compare karna (Spirogyra, Fucus, Polysiphonia).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Algal reproduction",
+   "formula": "isogamous (similar gametes — Ulothrix, Spirogyra);  anisogamous (dissimilar size — Eudorina);  oogamous (large egg + small sperm — Volvox, Fucus)",
+   "when": "Sexual reproduction ke types."
+  },
+  {
+   "name": "Useful algae",
+   "formula": "agar (Gelidium, Gracilaria);  carrageen (red algae);  algin (brown algae);  Chlorella — protein-rich food supplement used by space travellers",
+   "when": "Economic importance."
+  },
+  {
+   "name": "Bryophytes",
+   "formula": "gametophyte dominant; rhizoids; sporophyte (foot, seta, capsule) depends on gametophyte; water needed for fertilisation",
+   "when": "Liverworts (Marchantia) aur mosses (Funaria, Polytrichum, Sphagnum).",
+   "note": "Sphagnum se peat milta hai jo fuel aur packing material ki tarah use hota hai kyunki paani rok kar rakhta hai."
+  },
+  {
+   "name": "Moss life cycle",
+   "formula": "spore → protonema (creeping, green, filamentous) → leafy stage (bears sex organs) → zygote → sporophyte",
+   "when": "Mosses ke stages."
+  },
+  {
+   "name": "Pteridophytes",
+   "formula": "sporophyte dominant with true roots, stems, leaves and vascular tissue; spores in sporangia on sporophylls; gametophyte = prothallus; water needed for fertilisation",
+   "when": "Selaginella, Equisetum, Dryopteris, Pteris, Adiantum."
+  },
+  {
+   "name": "Heterospory",
+   "formula": "megaspores (female gametophyte) + microspores (male gametophyte) — Selaginella, Salvinia",
+   "when": "Seed habit ki taraf ek kadam.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pteridophyte classes",
+   "formula": "Psilopsida (Psilotum), Lycopsida (Selaginella, Lycopodium), Sphenopsida (Equisetum), Pteropsida (Dryopteris, Pteris, Adiantum)",
+   "when": "Pteridophytes ka classification."
+  },
+  {
+   "name": "Gymnosperms",
+   "formula": "ovules not enclosed (naked seeds); microsporophylls and megasporophylls in cones (strobili); pollen grains carried by wind; no water needed for fertilisation",
+   "when": "Cycas, Pinus, Ginkgo.",
+   "note": "Cycas ki coralloid roots mein N₂-fixing cyanobacteria; Pinus ki roots mein mycorrhiza."
+  },
+  {
+   "name": "Angiosperm double fertilisation",
+   "formula": "male gamete 1 + egg → zygote (2n);  male gamete 2 + secondary nucleus (2 polar nuclei) → primary endosperm nucleus (3n)",
+   "when": "Sirf angiosperms mein.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ploidy in seeds",
+   "formula": "gymnosperm endosperm = n (female gametophyte);  angiosperm endosperm = 3n",
+   "when": "Ploidy ke sawal."
+  },
+  {
+   "name": "Life cycle patterns",
+   "formula": "haplontic: dominant gametophyte, zygote only diploid stage (Volvox, Spirogyra, Chlamydomonas);  diplontic: dominant sporophyte, gametes only haploid stage (seed plants, Fucus);  haplo-diplontic: both multicellular (bryophytes, pteridophytes; Ectocarpus, Polysiphonia, kelps)",
+   "when": "Life cycles classify karna.",
+   "tag": "PYQ favourite"
+  }
+ ],
+ "examples": [
+  {
+   "title": "Plants ke amphibians",
+   "problem": "Bryophytes ko plant kingdom ke amphibians kyun kehte hain?",
+   "solution": "Ye zameen par rehte hain par sexual reproduction ke liye paani chahiye (sperm tair kar egg tak jaata hai)."
+  },
+  {
+   "title": "Pehle vascular plants",
+   "problem": "Kis group mein pehle xylem aur phloem aaye, aur wahan kaunsi generation dominant?",
+   "solution": "Pteridophytes; sporophyte dominant, independent generation hai."
+  },
+  {
+   "title": "Ploidy ginti",
+   "problem": "Moss mein protonema, leafy stage, capsule aur spores ki ploidy?",
+   "solution": "Protonema n, leafy stage n, capsule (sporophyte) 2n, spores n (meiosis se)."
+  },
+  {
+   "title": "Life cycle type",
+   "problem": "Fucus ka life-cycle pattern?",
+   "solution": "Diplontic — sporophyte dominant aur gametes hi akela haploid stage."
+  },
+  {
+   "title": "Agar ka source",
+   "problem": "Microbiology mein use hone wala agar kaunsi algae se?",
+   "solution": "Red algae — Gelidium aur Gracilaria (Rhodophyceae)."
+  },
+  {
+   "title": "Vishaal ped",
+   "problem": "Sabse lamba gymnosperm?",
+   "solution": "Sequoia (giant redwood) — sabse lambi tree species mein se ek."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Systems of classification",
+   "explain": "Artificial (Linnaeus; mainly vegetative characters ya androecium), natural (Bentham aur Hooker; andar-bahar ke features) aur phylogenetic (evolutionary). Numerical taxonomy computers se, sabhi characters ko barabar weight; cytotaxonomy chromosome number aur structure se; chemotaxonomy chemical constituents se."
+  },
+  {
+   "title": "Algae general features",
+   "explain": "Chlorophyll wale, simple, thalloid, autotrophic, zyadatar aquatic. Forms unicellular (Chlamydomonas) aur colonial (Volvox) se filamentous (Ulothrix, Spirogyra) aur bade marine kelps tak. Earth par lagbhag aadha CO₂ fix karte hain."
+  },
+  {
+   "title": "Liverworts",
+   "explain": "Thalloid (Marchantia), dorsiventral. Asexual reproduction fragmentation aur gemmae se (gemma cups mein hare, multicellular buds). Sporophyte mein foot, seta aur capsule."
+  },
+  {
+   "title": "Gymnosperm details",
+   "explain": "Roots aam taur par tap roots; stems unbranched (Cycas) ya branched (Pinus); conifers mein patte suiyon jaise (moti cuticle, dhanse stomata paani bachaate hain). Male cone mein microsporophylls; female cone mein ovules wale megasporophylls; female gametophyte mein archegonia."
+  },
+  {
+   "title": "Angiosperms",
+   "explain": "Flowering plants: dicots aur monocots. Size chhote Wolffia se lambe Eucalyptus (100 m se zyada) tak. Flower mein stamens (anthers → pollen) aur pistil (ovules wali ovary); embryo sac mein 7 cells aur 8 nuclei."
+  },
+  {
+   "title": "Ecological importance",
+   "explain": "Bryophytes aur lichens chattanon par pioneers hain aur mitti banaane mein madad karte hain; mosses soil erosion rokte hain. Pteridophytes medicine, soil binders aur ornamentals ki tarah use hote hain."
+  }
+ ],
+ "ratta": [
+  "Green: a, b, starch;  brown: a, c, fucoxanthin, laminarin;  red: a, d, phycoerythrin, floridean starch.",
+  "Bryophyte: gametophyte dominant;  pteridophyte onwards: sporophyte dominant.",
+  "Heterospory: Selaginella, Salvinia.",
+  "Gymnosperm endosperm n;  angiosperm 3n.",
+  "Haplontic: Volvox, Spirogyra;  diplontic: seed plants, Fucus;  haplo-diplontic: bryophytes, pteridophytes, Ectocarpus.",
+  "Agar: Gelidium, Gracilaria;  Chlorella for space travellers."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,161 @@
+{
+ "slug": "neural-control-and-coordination",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Neural Control and Coordination"
+ },
+ "title": "Neural Control and Coordination",
+ "readMinutes": 13,
+ "summary": [
+  "Nervous system neuron se bana hai jo electrical impulses le jaate hain. Human system mein central nervous system (brain aur spinal cord) aur peripheral nervous system (cranial aur spinal nerves; somatic aur autonomic) hain.",
+  "Resting neuron polarised hota hai (bahar positive, andar negative, lagbhag −70 mV — resting potential) Na⁺/K⁺ pump ki wajah se. Stimulus Na⁺ channels kholta hai (depolarisation), aur action potential axon par aage badhta hai.",
+  "Impulse agle cell tak synapse se jaata hai — electrical (tez) ya chemical (acetylcholine jaise neurotransmitters).",
+  "Brain mein forebrain (cerebrum, thalamus, hypothalamus), midbrain aur hindbrain (pons, cerebellum, medulla); medulla aur pons brain stem ka hissa hain. Reflex, retina aur cochlea bhi isi chapter mein."
+ ],
+ "formulas": [
+  {
+   "name": "Neuron parts",
+   "formula": "cell body (cyton, with Nissl's granules) + dendrites (carry impulses towards cell body) + axon (carries impulses away, ends in synaptic knobs)",
+   "when": "Neuron ki structure."
+  },
+  {
+   "name": "Neuron types",
+   "formula": "multipolar (cerebral cortex);  bipolar (retina);  unipolar (embryonic stage)",
+   "when": "Processes ke hisaab se classification.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Myelinated vs non-myelinated",
+   "formula": "myelinated: Schwann cells form myelin sheath, nodes of Ranvier — spinal and cranial nerves (saltatory, faster conduction);  non-myelinated: autonomous and somatic neural systems",
+   "when": "Nerve fibre ke types."
+  },
+  {
+   "name": "Resting potential",
+   "formula": "inside −ve, outside +ve;  high K⁺ and negative proteins inside, high Na⁺ outside;  Na⁺/K⁺ pump: 3 Na⁺ out, 2 K⁺ in per ATP",
+   "when": "Polarised membrane.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Action potential",
+   "formula": "stimulus → Na⁺ channels open → Na⁺ rushes in → depolarisation (inside +ve);  then K⁺ channels open → K⁺ moves out → repolarisation",
+   "when": "Nerve impulse ka conduction."
+  },
+  {
+   "name": "Synapse types",
+   "formula": "electrical (gap junctions, very fast, rare);  chemical (synaptic cleft; neurotransmitter like acetylcholine released from vesicles binds receptors on post-synaptic membrane)",
+   "when": "Neurons ke beech transmission."
+  },
+  {
+   "name": "Forebrain",
+   "formula": "cerebrum (two hemispheres joined by corpus callosum; cortex = grey matter, sensory, motor and association areas);  thalamus (relay centre);  hypothalamus (body temperature, hunger, thirst, neurosecretory cells → hormones)",
+   "when": "Forebrain ke parts aur kaam.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Limbic system",
+   "formula": "amygdala + hippocampus + inner parts of cerebral hemispheres + hypothalamus → sexual behaviour, emotional reactions (excitement, pleasure, rage, fear) and motivation",
+   "when": "Emotions."
+  },
+  {
+   "name": "Midbrain",
+   "formula": "corpora quadrigemina (four lobes) — visual and auditory reflexes; cerebral aqueduct passes through",
+   "when": "Midbrain ke kaam."
+  },
+  {
+   "name": "Hindbrain",
+   "formula": "pons (connects brain regions, respiratory centre);  cerebellum (balance, posture, coordination; 'little brain' with many folds);  medulla oblongata (respiration, cardiovascular reflexes, gastric secretions)",
+   "when": "Hindbrain ke kaam.",
+   "mistake": "Brain stem = midbrain + pons + medulla oblongata (cerebellum isme nahi)."
+  },
+  {
+   "name": "Reflex arc",
+   "formula": "receptor → afferent (sensory) neuron → spinal cord (inter-neuron) → efferent (motor) neuron → effector",
+   "when": "Involuntary tez responses (knee-jerk reflex).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Eye layers",
+   "formula": "sclera (outer, cornea in front) → choroid (middle, iris, ciliary body) → retina (inner: ganglion cells, bipolar cells, photoreceptors — rods and cones)",
+   "when": "Eye ki structure."
+  },
+  {
+   "name": "Photoreceptors",
+   "formula": "rods: rhodopsin (visual purple), dim light (scotopic) vision;  cones: photopsins, bright light (photopic) and colour vision (red, green, blue)",
+   "when": "Rods vs cones.",
+   "mistake": "Fovea mein sirf cones (sabse saaf vision); blind spot mein koi photoreceptor nahi — ulta mat likhna."
+  },
+  {
+   "name": "Ear parts and functions",
+   "formula": "outer: pinna, auditory canal, tympanic membrane;  middle: malleus, incus, stapes (ossicles), Eustachian tube;  inner: cochlea (hearing — organ of Corti on basilar membrane), vestibular apparatus (balance — crista in ampullae, macula in saccule and utricle)",
+   "when": "Hearing aur balance."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Sensory ya motor?",
+   "problem": "Kaunse neurons spinal cord se muscles tak impulse le jaate hain?",
+   "solution": "Efferent (motor) neurons. Afferent (sensory) neurons receptors se CNS tak impulse le jaate hain."
+  },
+  {
+   "title": "Depolarisation",
+   "problem": "Action potential ka rising phase kis ion ki movement se hota hai?",
+   "solution": "Voltage-gated sodium channels se Na⁺ ka tezi se andar aana polarity ulat deta hai (andar positive ho jaata hai)."
+  },
+  {
+   "title": "Hypothalamus ka kaam",
+   "problem": "Hypothalamus ke control wale teen kaam batao.",
+   "solution": "Body temperature, bhookh aur pyaas (khaane-peene ki ichchha); isme neurosecretory cells bhi hain jo hypothalamic hormones banate hain."
+  },
+  {
+   "title": "Blind spot",
+   "problem": "Blind spot par padne wali image kyun nahi dikhti?",
+   "solution": "Blind spot par optic nerve aankh se nikalti hai aur retinal blood vessels andar aati hain; wahan photoreceptor cells nahi hote."
+  },
+  {
+   "title": "Saltatory conduction",
+   "problem": "Myelinated fibres mein conduction tez kyun hota hai?",
+   "solution": "Myelin axon ko insulate karta hai; impulse ek node of Ranvier se agle par koodta hai (saltatory conduction)."
+  },
+  {
+   "title": "Hearing mechanism",
+   "problem": "Sound ka brain tak raasta batao.",
+   "solution": "Pinna → ear canal → tympanic membrane kaanpti hai → ossicles (malleus, incus, stapes) → oval window → cochlear lymph mein waves → basilar membrane hilti hai → organ of Corti ke hair cells mudte hain → auditory nerve se nerve impulses → auditory cortex."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Neural system in animals",
+   "explain": "Neeche ke invertebrates mein neurons ka simple network (Hydra — nerve net). Insects mein brain aur kai ganglia. Vertebrates mein zyada developed system."
+  },
+  {
+   "title": "Autonomic nervous system",
+   "explain": "PNS ka hissa jo involuntary organs aur smooth muscles control karta hai; sympathetic aur parasympathetic systems mein bata, jinka asar aam taur par ulta hota hai."
+  },
+  {
+   "title": "Human brain coverings",
+   "explain": "Brain skull aur teen meninges se surakshit: bahar dura mater, beech mein patli arachnoid aur andar pia mater (brain tissue se chipki). Cerebrospinal fluid gaddi ka kaam karta hai."
+  },
+  {
+   "title": "Cerebral cortex",
+   "explain": "Bahar grey matter (cell bodies) convolutions ke saath; andar white matter (myelinated tracts). Association areas complex kaam sambhaalte hain jaise intersensory associations, memory aur communication."
+  },
+  {
+   "title": "Image formation",
+   "explain": "Light cornea aur lens se guzarkar retina par image banati hai. Light rhodopsin mein retinal (vitamin A derivative) ko badalti hai, photoreceptors mein potentials bante hain jo bipolar aur ganglion cells se optic nerve aur visual cortex tak jaate hain."
+  },
+  {
+   "title": "Sensory organs other than eye and ear",
+   "explain": "Naak mein olfactory receptors (olfactory epithelium limbic system se juda); jeebh par taste buds; skin mein touch, pressure, pain aur temperature receptors."
+  }
+ ],
+ "ratta": [
+  "Resting potential: inside −ve; Na⁺/K⁺ pump 3 out, 2 in.",
+  "Depolarisation = Na⁺ in;  repolarisation = K⁺ out.",
+  "Multipolar cortex;  bipolar retina;  unipolar embryo.",
+  "Thalamus relay;  hypothalamus temperature, hunger, thirst.",
+  "Cerebellum balance;  medulla breathing & heart reflexes.",
+  "Rods dim light (rhodopsin);  cones colour.",
+  "Cochlea hearing;  vestibular apparatus balance."
+ ],
+ "verifiedOn": "2026-11-13"
+}

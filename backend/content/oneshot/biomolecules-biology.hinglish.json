@@ -1,0 +1,150 @@
+{
+ "slug": "biomolecules-biology",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biomolecules"
+ },
+ "title": "Biomolecules (Biology)",
+ "readMinutes": 13,
+ "summary": [
+  "Living tissue ke chemical analysis se acid-soluble pool (micromolecules, molecular weight ~1000 Da se kam) aur acid-insoluble fraction (macromolecules — protein, nucleic acid, polysaccharides) milte hain; lipid bhi isme aate hain kyunki membranes vesicles mein toot jaati hain.",
+  "Proteins amino acids ke polymers (heteropolymers) hain; polysaccharides (carbohydrate) sugars ke polymers; nucleic acids nucleotides ke polymers.",
+  "Enzyme zyadatar proteins hain jo activation energy ghata kar reactions tez karte hain. Inki activity temperature, pH aur substrate concentration par depend karti hai, aur inhibit bhi ho sakti hai.",
+  "Enzymes chhe classes mein classify hote hain (jaise oxidoreductase, hydrolase, ligase), aur kai ko cofactors chahiye: prosthetic groups, coenzymes ya metal ions."
+ ],
+ "formulas": [
+  {
+   "name": "Most abundant",
+   "formula": "most abundant chemical in living organisms: water (70–90%);  most abundant protein in the animal world: collagen;  in the whole biosphere: RuBisCO",
+   "when": "Abundance ke facts.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Amino acid",
+   "formula": "α-carbon bonded to H, –NH₂, –COOH and an R group;  20 types;  zwitterion form at isoelectric pH",
+   "when": "Amino acids ki structure."
+  },
+  {
+   "name": "Lipids",
+   "formula": "fatty acid + glycerol → mono-, di-, triglycerides;  saturated (no C=C) or unsaturated (one or more C=C);  phospholipids (lecithin) in membranes",
+   "when": "Lipid ki structure.",
+   "mistake": "Palmitic acid mein 16 carbons (carboxyl carbon milakar); arachidonic acid mein 20 — galat count mat karna."
+  },
+  {
+   "name": "Nucleotide",
+   "formula": "nitrogen base + pentose sugar (nucleoside) + phosphate;  adenine, guanine (purines);  cytosine, uracil, thymine (pyrimidines)",
+   "when": "Nucleic acid ke building blocks."
+  },
+  {
+   "name": "Protein structure levels",
+   "formula": "primary (sequence; N-terminal to C-terminal);  secondary (α-helix — right-handed);  tertiary (3-D folding);  quaternary (subunits — haemoglobin: 2α + 2β)",
+   "when": "Protein structure.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Bonds in polymers",
+   "formula": "peptide bond (amino acids);  glycosidic bond (monosaccharides);  phosphodiester bond (nucleotides);  ester bond (fatty acid + glycerol)",
+   "when": "Linkages."
+  },
+  {
+   "name": "Polysaccharides",
+   "formula": "starch (helical, holds I₂ → blue);  cellulose (no complex helix, doesn't hold I₂);  glycogen (animal storage);  inulin (fructose polymer);  chitin (complex polysaccharide in exoskeletons and fungal walls)",
+   "when": "Carbohydrate polymers (polysaccharides)."
+  },
+  {
+   "name": "Enzyme classes",
+   "formula": "1 oxidoreductases/dehydrogenases;  2 transferases;  3 hydrolases;  4 lyases;  5 isomerases;  6 ligases",
+   "when": "Enzymes classify karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Michaelis constant and inhibition",
+   "formula": "Km = substrate concentration at ½Vmax;  competitive inhibitor resembles substrate — malonate inhibits succinic dehydrogenase",
+   "when": "Enzyme kinetics.",
+   "mistake": "Competitive inhibitor Km badhaata hai par Vmax same rehta hai — confuse mat karna."
+  },
+  {
+   "name": "Cofactors",
+   "formula": "prosthetic group (tightly bound — haem in peroxidase, catalase);  coenzyme (loosely bound, often vitamin-derived — NAD, NADP from niacin);  metal ion (Zn²⁺ for carboxypeptidase)",
+   "when": "Holoenzyme = apoenzyme + cofactor."
+  },
+  {
+   "name": "Fastest enzyme",
+   "formula": "carbonic anhydrase: CO₂ + H₂O ⇌ H₂CO₃, about 600,000 reactions per second (≈ 10⁷ times faster than uncatalysed)",
+   "when": "Enzyme ki speed ka fact."
+  },
+  {
+   "name": "Effect of temperature and pH",
+   "formula": "activity rises to an optimum, then falls; low temperature inactivates reversibly, high temperature denatures",
+   "when": "Enzymes ko affect karne wale factors."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Acid-insoluble fraction mein lipids",
+   "problem": "Lipids ka molecular weight chhota hai, phir acid-insoluble pool mein kyun aate hain?",
+   "solution": "Tissue peesne par cell membranes toot kar acid mein insoluble vesicles ban jaati hain, isliye lipids macromolecules ke saath neeche aa jaate hain."
+  },
+  {
+   "title": "Enzyme class",
+   "problem": "Ek enzyme substrate se bina hydrolysis groups hata kar double bond chhodta hai. Kaunsi class?",
+   "solution": "Lyases (class 4)."
+  },
+  {
+   "title": "Competitive inhibition",
+   "problem": "Malonate succinic dehydrogenase ko kyun inhibit karta hai?",
+   "solution": "Malonate succinate jaisa dikhta hai, active site se judkar use block kar deta hai — competitive inhibition."
+  },
+  {
+   "title": "Starch vs cellulose",
+   "problem": "Starch iodine se neela kyun hota hai par cellulose nahi?",
+   "solution": "Starch helical secondary structures banata hai jo I₂ molecules pakad sakti hain; cellulose mein aisi complex helices nahi."
+  },
+  {
+   "title": "Haemoglobin structure",
+   "problem": "Adult haemoglobin ki quaternary structure kya hai?",
+   "solution": "Chaar subunits — do α aur do β chains — har ek mein ek haem group."
+  },
+  {
+   "title": "Holoenzyme",
+   "problem": "Cofactor hatane par enzyme ki activity khatam ho jaati hai. Isse kya pata chalta hai?",
+   "solution": "Akela protein part (apoenzyme) inactive hai; cofactor zaroori hai, dono milkar active holoenzyme banate hain."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Primary and secondary metabolites",
+   "explain": "Primary metabolites (amino acids, sugars) ka normal physiology mein pata role hai. Plants, fungi aur microbes ke secondary metabolites: pigments (carotenoids, anthocyanins), alkaloids (morphine, codeine), terpenoids (monoterpenes, diterpenes), essential oils (lemongrass oil), toxins (abrin, ricin), lectins (concanavalin A), drugs (vinblastine, curcumin), polymeric substances (rubber, gums, cellulose)."
+  },
+  {
+   "title": "Metabolic basis for living",
+   "explain": "Metabolites metabolic pathways se ek doosre mein badalte hain — anabolic (biosynthetic, energy lete) aur catabolic (degradation, energy chhodte). ATP energy currency hai. Living state ek non-equilibrium steady state hai jo kaam kar sakta hai."
+  },
+  {
+   "title": "Nature of enzyme action",
+   "explain": "Substrate active site se judkar enzyme–substrate complex (ES) banata hai, transition state banti hai, products nikalte hain aur enzyme phir kaam ke liye free. Enzymes activation energy ghataate hain; ribozymes nucleic acids hain jo enzyme ki tarah kaam karte hain."
+  },
+  {
+   "title": "Proteins and their roles",
+   "explain": "Collagen (intercellular ground substance), trypsin (enzyme), insulin (hormone), antibodies (infection se ladte), receptors (sensory reception, jaise smell), GLUT-4 (glucose ko cells mein le jaata)."
+  },
+  {
+   "title": "Effect of substrate concentration",
+   "explain": "Substrate concentration badhne par velocity badhti hai aur phir maximum (Vmax) par ruk jaati hai jab saari active sites bhar jaati hain."
+  },
+  {
+   "title": "Nucleic acid structure basics",
+   "explain": "Nucleic acids mein phosphate ek sugar ke 3′ carbon ko agle ke 5′ carbon se jodta hai. B-DNA (Watson–Crick model) mein har turn mein 10 base pairs, 3.4 nm pitch aur base pairs ke beech 0.34 nm."
+  }
+ ],
+ "ratta": [
+  "Collagen — most abundant animal protein;  RuBisCO — biosphere.",
+  "Six classes: Oxido, Trans, Hydro, Lyase, Iso, Ligase.",
+  "Malonate inhibits succinic dehydrogenase.",
+  "Carbonic anhydrase fastest.",
+  "Haemoglobin: 2α + 2β.",
+  "Haem — prosthetic;  NAD (niacin) — coenzyme;  Zn²⁺ — carboxypeptidase.",
+  "Starch holds I₂ (blue); cellulose doesn't."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,178 @@
+{
+ "slug": "gravitation",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Gravitation",
+  "JEE": "Gravitation"
+ },
+ "title": "Gravitation",
+ "readMinutes": 12,
+ "summary": [
+  "Har mass har doosre mass ko F = Gm₁m₂/r² se kheenchta hai. Yahi ek universal law girte seb, planets ki orbits (Kepler's laws) aur satellites ko samjhata hai.",
+  "Surface par g = GM/R². Height badhne par g ghatta hai (1/r²), depth mein linearly ghatta hai, aur Earth ke centre par zero hai.",
+  "Gravitational potential V = −GM/r aur potential energy U = −GMm/r negative hain: kisi mass ko infinity tak le jaane ke liye energy deni padti hai.",
+  "Orbital speed √(GM/r), escape speed √(2GM/R) aur satellite energy E = −GMm/2r core results hain; satellite ki kinetic energy = −(total energy) = −U/2."
+ ],
+ "formulas": [
+  {
+   "name": "Newton's law of gravitation",
+   "formula": "F = G m₁ m₂ / r²,   G = 6.67 × 10⁻¹¹ N m² kg⁻²",
+   "when": "Do point masses (ya spheres, centre se centre) ke beech force.",
+   "mistake": "r centre-to-centre doori hai, surface-to-surface nahi."
+  },
+  {
+   "name": "Acceleration due to gravity",
+   "formula": "g = GM/R² ≈ 9.8 m/s²",
+   "when": "g ko planet ke mass aur radius se jodna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "g at height h",
+   "formula": "g_h = g R²/(R + h)²   ≈ g(1 − 2h/R) for h ≪ R",
+   "when": "Surface ke upar gravity.",
+   "note": "h agar R ke comparable ho to exact form lagao — approximation fail ho jaata hai."
+  },
+  {
+   "name": "g at depth d",
+   "formula": "g_d = g(1 − d/R)",
+   "when": "Earth ke andar gravity (mines, centre).",
+   "mistake": "Centre par g zero aur surface par maximum hai — dhyan rakho."
+  },
+  {
+   "name": "Effect of rotation (latitude λ)",
+   "formula": "g' = g − ω²R cos²λ",
+   "when": "Equator vs poles par weight."
+  },
+  {
+   "name": "Gravitational potential energy",
+   "formula": "U = −G M m / r",
+   "when": "Planet ke field mein mass ki energy.",
+   "mistake": "U negative hai; surface ke paas ΔU ≈ mgh sirf tab jab h ≪ R."
+  },
+  {
+   "name": "Gravitational potential",
+   "formula": "V = −GM/r (outside);  inside a solid sphere V = −GM(3R² − r²)/(2R³)",
+   "when": "Infinity se mass laane ka work per unit mass."
+  },
+  {
+   "name": "Escape speed",
+   "formula": "vₑ = √(2GM/R) = √(2gR) ≈ 11.2 km/s for Earth",
+   "when": "Planet ko hamesha ke liye chhodne ki minimum speed.",
+   "mistake": "Ye body ke mass ya phenkne ki direction par depend nahi karti.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Orbital speed",
+   "formula": "v₀ = √(GM/r) = √(gR²/r);  near the surface v₀ = √(gR) ≈ 7.9 km/s",
+   "when": "Circular orbit (r = R + h) mein satellite ki speed."
+  },
+  {
+   "name": "Time period of a satellite",
+   "formula": "T = 2π r/v₀ = 2π √(r³/GM)",
+   "when": "Orbit ka time; geostationary T = 24 h, h ≈ 36,000 km par."
+  },
+  {
+   "name": "Energy of a satellite",
+   "formula": "K = GMm/2r,   U = −GMm/r,   E = −GMm/2r",
+   "when": "Satellite launch karne ya orbit badalne ki energy.",
+   "mistake": "Bound orbit ki total energy negative hai; binding energy = +GMm/2r — sign mat bhoolo."
+  },
+  {
+   "name": "Kepler's laws",
+   "formula": "1) orbits are ellipses with the Sun at one focus;  2) equal areas in equal times (dA/dt = L/2m = constant);  3) T² ∝ a³",
+   "when": "Planet aur satellite ke timing problems.",
+   "mistake": "Doosra law angular momentum conservation hai — speed perihelion par sabse zyada, ulta mat samjho."
+  },
+  {
+   "name": "Relation vₑ and v₀",
+   "formula": "vₑ = √2 × v₀ (for an orbit at the surface)",
+   "when": "Quick comparisons."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Do logon ke beech force",
+   "problem": "Do 50 kg masses 1 m door. Gravitational force?",
+   "solution": "F = 6.67 × 10⁻¹¹ × 50 × 50 / 1² ≈ 1.67 × 10⁻⁷ N — mehsoos karne ke liye bahut chhota."
+  },
+  {
+   "title": "R/2 height par g",
+   "problem": "Earth se R/2 upar g? (g = 9.8 m/s²)",
+   "solution": "g_h = g/(1 + 1/2)² = (4/9) × 9.8 ≈ 4.36 m/s². (Approximation g(1 − 2h/R) = 0 yahan bilkul galat hota.)"
+  },
+  {
+   "title": "Gehri mine mein g",
+   "problem": "1600 km depth par g (R = 6400 km)?",
+   "solution": "g_d = 9.8 × (1 − 1600/6400) = 9.8 × 0.75 = 7.35 m/s²."
+  },
+  {
+   "title": "Earth ki escape speed",
+   "problem": "M = 6 × 10²⁴ kg, R = 6.4 × 10⁶ m. Escape speed?",
+   "solution": "vₑ = √(2 × 6.67 × 10⁻¹¹ × 6 × 10²⁴ / 6.4 × 10⁶) ≈ 11.2 km/s."
+  },
+  {
+   "title": "360 km par satellite",
+   "problem": "h = 360 km par orbital speed aur period (same M, R)?",
+   "solution": "r = 6.76 × 10⁶ m. v = √(GM/r) ≈ 7.69 km/s. T = 2πr/v ≈ 92 min."
+  },
+  {
+   "title": "Kepler ka third law",
+   "problem": "Geostationary satellite (T = 24 h) ka orbital radius r. Radius r/4 par period?",
+   "solution": "T ∝ r^{3/2}: (1/4)^{3/2} = 1/8 → T = 24/8 = 3 h."
+  },
+  {
+   "title": "Doosre planet ki escape speed",
+   "problem": "Planet ka mass Earth ka double aur radius bhi double. Escape speed? (Earth 11.2 km/s)",
+   "solution": "vₑ ∝ √(M/R) = √(2/2) = 1 → 11.2 km/s, Earth jitni hi."
+  },
+  {
+   "title": "Aadhi escape speed se phenka",
+   "problem": "Body ko vₑ/2 se upar phenka. Maximum height (R = 6400 km)?",
+   "solution": "½m(vₑ/2)² = GMm(1/R − 1/(R+h)) aur vₑ² = 2GM/R: GM/4R = GM/R − GM/(R + h) → 1/(R + h) = 3/(4R) → R + h = 4R/3, yaani h = R/3 ≈ 2133 km."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Universal gravitation",
+   "explain": "Gravity hamesha attractive hai, masses ko jodne wali line par lagti hai, Newton ka third law follow karti hai aur kisi bhi medium se kaam karti hai. Ye sabse kamzor fundamental force hai, par bade scale par haavi hai kyunki masses charges ki tarah cancel nahi hote."
+  },
+  {
+   "title": "Shell theorem",
+   "explain": "Uniform spherical shell bahar ke mass ko aise kheenchta hai jaise poora mass centre par ho, aur andar ke mass par zero force lagata hai. Isi wajah se solid sphere ke andar g linearly ghatta hai."
+  },
+  {
+   "title": "Variation of g",
+   "explain": "Height: g ∝ 1/r². Depth: g ∝ r (andar). Rotation aur Earth ki shape ki wajah se g equator par sabse kam aur poles par sabse zyada. Earth ke centre par body ka weight zero."
+  },
+  {
+   "title": "Potential and potential energy",
+   "explain": "Potential infinity par zero aur baaki har jagah negative. External agent ka work = m(V_final − V_initial). Surface se height h tak: ΔU = GMmh/[R(R + h)] = mgh/(1 + h/R)."
+  },
+  {
+   "title": "Satellites",
+   "explain": "Satellite planet ke chaaron taraf free fall mein hai — gravity hi centripetal force deti hai. Orbital speed, period aur energy sirf r par depend karte hain, satellite ke mass par nahi. Astronauts weightless mehsoos karte hain kyunki woh aur craft saath gir rahe hain."
+  },
+  {
+   "title": "Geostationary and polar satellites",
+   "explain": "Geostationary: period 24 h, equator ke upar, west se east, height ≈ 36,000 km — communication ke liye. Polar satellites: kam height (~500–800 km), poles ke upar se — weather aur remote sensing ke liye."
+  },
+  {
+   "title": "Escape and binding energy",
+   "explain": "Escape ke liye total energy ≥ 0 honi chahiye. Orbit r se infinity tak le jaane ki energy = GMm/2r. Orbit r₁ se r₂ tak uthaane ki energy = GMm/2 (1/r₁ − 1/r₂)."
+  },
+  {
+   "title": "Kepler's laws in exams",
+   "explain": "Areal velocity constant hai, isliye planet perihelion par sabse tez: v_p r_p = v_a r_a. Ellipse ke liye T² ∝ a³ mein semi-major axis a lo."
+  }
+ ],
+ "ratta": [
+  "F = Gm₁m₂/r²;  G = 6.67 × 10⁻¹¹ N m² kg⁻².",
+  "g_h = g(R/(R+h))²;  g_d = g(1 − d/R);  g = 0 at centre.",
+  "vₑ = √(2gR) ≈ 11.2 km/s;  v₀ = √(gR) ≈ 7.9 km/s;  vₑ = √2 v₀.",
+  "T = 2π√(r³/GM);  T² ∝ r³.",
+  "Satellite: K = GMm/2r, U = −GMm/r, E = −GMm/2r.",
+  "Geostationary: 24 h, h ≈ 36,000 km, equatorial.",
+  "Kepler 2nd law = angular momentum conserved."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,182 @@
+{
+ "slug": "thermal-properties-of-matter",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Thermal Properties of Matter",
+  "JEE": "Thermal Properties of Matter"
+ },
+ "title": "Thermal Properties of Matter",
+ "readMinutes": 13,
+ "summary": [
+  "Temperature batata hai heat kis taraf behegi; heat temperature difference ki wajah se transit mein energy hai. Celsius, Fahrenheit aur Kelvin scales linearly jude hain.",
+  "Zyadatar cheezein garam hone par failti hain: linear (α), area (β = 2α), volume (γ = 3α) expansion. Paani alag hai — 0 °C se 4 °C tak sikudta hai, isliye 4 °C par sabse dense.",
+  "Temperature badalne ki heat Q = mcΔT; constant temperature par state badalne ki Q = mL. Calorimetry bas 'heat lost = heat gained' hai.",
+  "Heat conduction (H = KAΔT/L), convection (fluid ki bulk motion) aur radiation (Stefan–Boltzmann, Wien's law) se behti hai. Newton's law of cooling: cooling ki rate ∝ surroundings se temperature difference."
+ ],
+ "formulas": [
+  {
+   "name": "Temperature scales",
+   "formula": "(C − 0)/100 = (F − 32)/180 = (K − 273.15)/100",
+   "when": "°C, °F aur K mein convert karna.",
+   "mistake": "1 °C change = 1 K = 1.8 °F — temperature DIFFERENCE mein 32 mat jodo."
+  },
+  {
+   "name": "Linear expansion",
+   "formula": "ΔL = L α ΔT",
+   "when": "Rails, bridges, metal rods, pendulum clocks.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Area and volume expansion",
+   "formula": "ΔA = A β ΔT,  ΔV = V γ ΔT;   β = 2α,  γ = 3α (isotropic solids)",
+   "when": "Plate mein chhed, bartan mein liquid.",
+   "mistake": "Plate ka chhed garam hone par BADHTA hai, ghatta nahi."
+  },
+  {
+   "name": "Thermal stress",
+   "formula": "stress = Y α ΔT  (rod fixed at both ends)",
+   "when": "Garam rod ke clamps par force."
+  },
+  {
+   "name": "Specific heat capacity",
+   "formula": "Q = m c ΔT;  water c = 4200 J kg⁻¹ K⁻¹ = 1 cal g⁻¹ °C⁻¹",
+   "when": "State badle bina garam karna."
+  },
+  {
+   "name": "Heat capacity and molar heat capacity",
+   "formula": "C = Q/ΔT = mc;  molar C = Q/(n ΔT)",
+   "when": "Bodies, gases compare karna."
+  },
+  {
+   "name": "Latent heat",
+   "formula": "Q = m L;  ice L_f = 80 cal/g = 3.36 × 10⁵ J/kg;  steam L_v = 540 cal/g = 2.26 × 10⁶ J/kg",
+   "when": "Pighalna, ubalna, condensation.",
+   "mistake": "State change ke dauraan temperature constant rehta hai — wahan mcΔT mat lagao."
+  },
+  {
+   "name": "Principle of calorimetry",
+   "formula": "Heat lost by hot bodies = heat gained by cold bodies",
+   "when": "Mixing problems.",
+   "mistake": "Ice ho to pehle check karo SAARI ice pighal sakti hai ya nahi, tabhi 0 °C se upar final temperature maano.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Conduction (Fourier's law)",
+   "formula": "H = dQ/dt = K A (T₁ − T₂)/L;  thermal resistance R = L/(KA)",
+   "when": "Rods aur deewaron se heat flow."
+  },
+  {
+   "name": "Slabs in series and parallel",
+   "formula": "series: R = R₁ + R₂ (same H);  parallel: 1/R = 1/R₁ + 1/R₂ (same ΔT)",
+   "when": "Composite walls, junction temperature."
+  },
+  {
+   "name": "Stefan–Boltzmann law",
+   "formula": "P = e σ A T⁴;  σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴;  net loss = eσA(T⁴ − T₀⁴)",
+   "when": "Garam bodies ki radiated power.",
+   "mistake": "T kelvin mein hi lo, °C mein nahi."
+  },
+  {
+   "name": "Wien's displacement law",
+   "formula": "λ_max T = b ≈ 2.9 × 10⁻³ m K",
+   "when": "Garam bodies ka rang, stars ka temperature."
+  },
+  {
+   "name": "Newton's law of cooling",
+   "formula": "dT/dt = −k(T − T₀);  average form (T₁ − T₂)/t = k[(T₁ + T₂)/2 − T₀]",
+   "when": "Body ke thanda hone ka time.",
+   "mistake": "Sirf chhote temperature difference ke liye valid."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Bukhaar do scales par",
+   "problem": "Normal body temperature 98.6 °F. °C mein?",
+   "solution": "C = (98.6 − 32) × 5/9 = 37 °C."
+  },
+  {
+   "title": "Rails ke beech gap",
+   "problem": "10 m steel rails (α = 1.2 × 10⁻⁵ /°C), 50 °C rise ke liye gap?",
+   "solution": "ΔL = 10 × 1.2 × 10⁻⁵ × 50 = 6 × 10⁻³ m = 6 mm."
+  },
+  {
+   "title": "Paani garam karna",
+   "problem": "0.5 kg paani 20 °C se 100 °C (c = 4200 J/kg K)?",
+   "solution": "Q = 0.5 × 4200 × 80 = 1.68 × 10⁵ J."
+  },
+  {
+   "title": "Garam aur thanda paani milaana",
+   "problem": "80 °C ka 0.2 kg paani 20 °C ke 0.3 kg mein. Final temperature?",
+   "solution": "0.2 × (80 − T) = 0.3 × (T − 20) → T = 44 °C."
+  },
+  {
+   "title": "Ice mein steam",
+   "problem": "100 °C ki 20 g steam 0 °C ki 100 g ice mein. Final temperature? (L_v = 540, L_f = 80 cal/g)",
+   "solution": "Steam 0 °C tak heat degi: 20(540 + 100) = 12800 cal. Saari ice pighalne ko 8000 cal chahiye, toh saari ice pighlegi. Bachi 4800 cal 120 g ko garam karegi: T = 4800/120 = 40 °C."
+  },
+  {
+   "title": "Copper rod se heat",
+   "problem": "Copper rod: K = 400 W/m K, area 1 cm², length 0.5 m, ends 100 °C aur 0 °C. Heat current?",
+   "solution": "H = 400 × 10⁻⁴ × 100/0.5 = 8 W."
+  },
+  {
+   "title": "Do slabs ka junction",
+   "problem": "Barabar motai ke do slabs, K₁ = 2K₂, bahar ki faces 100 °C (slab 1) aur 0 °C. Junction temperature?",
+   "solution": "2K(100 − T) = K(T − 0) → T = 200/3 ≈ 66.7 °C."
+  },
+  {
+   "title": "Radiated power",
+   "problem": "Sphere ka radius double aur kelvin temperature aadha. Radiated power?",
+   "solution": "P ∝ r²T⁴ = 4 × (1/16) = original ka 0.25 guna."
+  },
+  {
+   "title": "Suraj ka rang",
+   "problem": "Suraj ki surface ~6000 K. λ_max?",
+   "solution": "λ = 2.9 × 10⁻³/6000 ≈ 483 nm — visible (green-blue) region."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Heat and temperature",
+   "explain": "Thermal contact mein bodies tab tak heat lete-dete hain jab tak temperature barabar na ho (thermal equilibrium). Heat joules mein (1 cal = 4.186 J). Absolute zero (0 K = −273.15 °C) sabse kam possible temperature."
+  },
+  {
+   "title": "Anomalous expansion of water",
+   "explain": "Paani 0 °C se 4 °C garam karne par sikudta hai aur 4 °C se upar failta hai. Talaab upar se jamte hain: sabse dense paani (4 °C) neeche, ice upar tairti hai aur neeche ke paani ko insulate karti hai, isliye jal-jeevan bachta hai."
+  },
+  {
+   "title": "Applications of expansion",
+   "explain": "Rails aur bridges mein gaps, garmi mein telephone wires dheeli, thermostats mein bimetallic strip (kam α wali metal ki taraf mudti hai), garmi mein pendulum clocks dheemi."
+  },
+  {
+   "title": "Specific heat facts",
+   "explain": "Paani ki specific heat bahut zyada hai, isliye radiators aur hot-water bags mein use hota hai aur coastal climate narm rakhta hai. Gases mein Cp > Cv kyunki constant pressure par kuch heat work karti hai."
+  },
+  {
+   "title": "Change of state",
+   "explain": "Jo cheezein pighalne par sikudti hain (ice) unka melting point pressure se ghatta hai — regelation. Boiling point pressure se badhta hai (pressure cooker) aur pahaadon par ghatta hai. Sublimation: solid → vapour seedha (dry ice, naphthalene)."
+  },
+  {
+   "title": "Convection",
+   "explain": "Fluid ki bulk movement kyunki garam, kam dense fluid upar uthta hai. Natural convection: sea aur land breeze, trade winds, room heaters. Forced convection: pankhe, blood circulation, car radiators."
+  },
+  {
+   "title": "Radiation and black bodies",
+   "explain": "Radiation ko medium nahi chahiye, speed c. Perfect black body saari radiation absorb karti hai aur best emitter hai (Kirchhoff: achhe absorber achhe emitter). Garam bodies chhoti wavelength par peak karti hain (Wien) aur bahut zyada power deti hain (T⁴)."
+  },
+  {
+   "title": "Newton's law of cooling",
+   "explain": "Body surroundings se bahut garam ho to sabse tez thandi hoti hai; cooling curve exponential hai. Exam mein average-temperature form lagao jab tak log wala form na maanga ho."
+  }
+ ],
+ "ratta": [
+  "C/100 = (F − 32)/180 = (K − 273)/100.",
+  "β = 2α, γ = 3α;  a hole expands too.",
+  "Q = mcΔT;  Q = mL (no ΔT during change of state).",
+  "Ice 80 cal/g, steam 540 cal/g, water 1 cal/g°C.",
+  "H = KAΔT/L;  series → resistances add.",
+  "P = eσAT⁴;  λ_max T = 2.9 × 10⁻³ m K.",
+  "Water is densest at 4 °C."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -71,5 +71,51 @@ SYLLABUS = [
 ("Enthalpy of solution and neutralisation, lyophilic and lyophobic sols, kinetics of iodide with H₂O₂ (JEE)", ["enthalpy of solution", "neutralisation", "lyophilic", "lyophobic", "H₂O₂"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Organic compounds mein extra elements (N, S, halogens) Lassaigne ke sodium fusion extract se detect hote hain; functional groups (alcohol, phenol, aldehyde, carboxyl, amine) simple colour ya precipitate tests se pehchaante hain.",
+"Inorganic salt analysis mein ek cation aur ek anion dhoondhte hain: anions ke liye dilute aur concentrated H₂SO₄ tests, phir group reagents cations ko group 0 se VI mein baant-te hain.",
+"KMnO₄ ki oxalic acid aur Mohr's salt ke saath redox titration mein indicator nahi chahiye — KMnO₄ khud indicator hai (colourless se permanent halka gulabi).",
+"Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) aur har step ki chemistry NEET ke common sawal hain.",
+],
+when=[
+("KMnO₄ standardise karna.", "Oxalic acid ko 60–70 °C tak garam karo; room temperature par reaction dheemi hai (bana Mn²⁺ phir use catalyse karta hai — autocatalysis) — thanda mat chalao."),
+("Fe²⁺ estimation.", "Thande mein karo — garam karne se hawa Fe²⁺ ko oxidise kar degi, galat answer aayega."),
+("Titration calculations.", None),
+("Normality-based calculations.", None),
+("Anions ke preliminary tests.", None),
+("Anion tests ka doosra set.", "Brown ring [Fe(H₂O)₅NO]²⁺ hai, conc. H₂SO₄ ke junction par."),
+("Independent anion tests.", None),
+("Systematic cation analysis.", "Group II mein acid mein H₂S (kam S²⁻); group IV mein ammoniacal medium mein H₂S (zyada S²⁻) — common ion effect, ulta mat lo."),
+("Cations confirm karna.", None),
+("Functional groups pehchaanna.", None),
+("Confirmatory tests.", None),
+],
+examples=[
+("Oxalic acid titration", "25 mL 0.05 M oxalic acid ko acid mein 0.02 M KMnO₄ se titrate kiya. KMnO₄ ka volume?",
+ "Oxalic acid ke moles = 0.025 × 0.05 = 1.25 × 10⁻³. MnO₄⁻ chahiye = (2/5) × 1.25 × 10⁻³ = 5 × 10⁻⁴ mol. Volume = 5 × 10⁻⁴/0.02 L = ⟨0⟩ mL."),
+("Mohr's salt titration", "20 mL 0.1 M Mohr's salt solution ko 0.02 M KMnO₄ se titrate kiya. KMnO₄ ka volume?",
+ "Fe²⁺ ke moles = 0.02 × 0.1 = 2 × 10⁻³. MnO₄⁻ = 2 × 10⁻³/5 = 4 × 10⁻⁴ mol. Volume = 4 × 10⁻⁴/0.02 L = ⟨0⟩ mL."),
+("Dilute H₂SO₄ kyun?", "KMnO₄ titration dilute H₂SO₄ mein kyun, HCl ya HNO₃ mein kyun nahi?",
+ "HCl ko KMnO₄ Cl₂ mein oxidise kar deta hai, extra KMnO₄ kharch hota hai. HNO₃ khud oxidising agent hai. Dilute H₂SO₄ na oxidise hota hai na oxidise karta hai."),
+("Group reagent logic", "Group III mein NH₄OH se pehle NH₄Cl kyun daalte hain?",
+ "Common ion NH₄⁺ NH₄OH ka ionisation dabaata hai, OH⁻ itna kam rehta hai ki sirf group III ke hydroxides (Fe³⁺, Al³⁺) precipitate hon, group IV–VI ke (jaise Mg(OH)₂) nahi."),
+("Brown ring test", "Brown ring kya hai aur kahan banta hai?",
+ "Nitrate solution + taaza FeSO₄, phir conc. H₂SO₄ kinaare se daalo. Dono layers ke milne ki jagah [Fe(H₂O)₅NO]²⁺ ka brown ring banta hai."),
+("Mohr's salt ki preparation", "Mohr's salt banate waqt thoda dilute H₂SO₄ kyun daalte hain?",
+ "FeSO₄ (aur Fe²⁺) ka hydrolysis rokne ke liye, warna solution dhundhla ho jaata hai. Zyada der garam na karke Fe²⁺ ko oxidise hone se bhi bachaate hain."),
+],
+topics=[
+("Detection of extra elements", "Sodium fusion covalent N, S aur X ko ionic NaCN, Na₂S aur NaX mein badalta hai. N: Prussian blue; S: sodium nitroprusside se violet ya kaala PbS; N aur S dono: FeCl₃ se blood red; halogens: AgNO₃ (pehle HNO₃ se CN⁻ aur S²⁻ ubaal kar hatao)."),
+("Preparation of inorganic compounds", "Mohr's salt FeSO₄·(NH₄)₂SO₄·6H₂O aur potash alum K₂SO₄·Al₂(SO₄)₃·24H₂O double salts hain jo equimolar solutions ko crystallise karke bante hain; paani mein apne saare ions ke tests dete hain."),
+("Preparation of organic compounds", "Acetanilide (aniline + acetic anhydride), p-nitroacetanilide (kam temperature par acetanilide ka nitration), aniline yellow (p-aminoazobenzene, benzenediazonium chloride ka aniline se coupling), iodoform (ethanol ya acetone + I₂ + alkali, peele crystals)."),
+("Chemistry of titrimetric exercises", "Burette reading neeche wale meniscus par (rangeen KMnO₄ ke liye upar wala). KMnO₄ primary standard nahi; oxalic acid se standardise karte hain. End point = pehla permanent halka gulabi rang. Acid–base titrations mein indicator chahiye; KMnO₄ titration (titration) mein nahi."),
+("Tests for proteins and carbohydrates", "Proteins ke liye Biuret test (violet); saare carbohydrates ke liye Molisch's test (violet ring); starch ke liye iodine test (neela); reducing sugars ke liye Fehling's aur Benedict's."),
+("Physical chemistry experiments (JEE)", "CuSO₄ ki enthalpy of solution aur strong acid–strong base ki enthalpy of neutralisation (≈ −57 kJ/mol) calorimeter mein q = mcΔT se naapte hain. Lyophilic sols (starch, egg albumin, gum) sirf paani mein garam karke bante hain; lyophobic sols (Fe(OH)₃, As₂S₃) ke liye hydrolysis ya double decomposition jaise khaas tareeke. Iodide ions ki H₂O₂ ke saath reaction ki rate room temperature par follow karte hain (nikli iodine starch ko neela karti hai)."),
+("Tests for fats and oils", "Fats kaagaz par translucent daag chhodte hain; acrolein test (KHSO₄ ke saath garam karne par teekhi gandh) glycerol dikhata hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

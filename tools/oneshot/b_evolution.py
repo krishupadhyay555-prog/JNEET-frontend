@@ -67,5 +67,51 @@ SYLLABUS = [
 ("Adaptive radiation; human evolution", ["adaptive radiation", "human evolution"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Origin of life shayad lagbhag 4 billion saal pehle non-living organic molecules se hua (chemical evolution — Oparin aur Haldane; Miller ka experiment). Universe lagbhag 20 billion saal purana; Earth lagbhag 4.5 billion saal.",
+"Evolution ke saboot: palaeontology (fossil), comparative anatomy (homologous aur analogous organs), embryo aur molecular similarities, aur dekha gaya natural selection (industrial melanism, antibiotic resistance).",
+"Darwin ki theory: variation, overproduction, struggle for existence, natural selection (survival of the fittest — fitness matlab reproductive fitness). De Vries ne mutation (saltation) joda. Selection stabilising, directional ya disruptive ho sakta hai. Hardy–Weinberg principle aisi population batata hai jo evolve nahi ho rahi; gene flow, genetic drift, mutation aur recombination ise bigaadte hain.",
+"Adaptive radiation (Darwin's finches, Australian marsupials) aur Dryopithecus se Homo sapiens tak human evolution chapter poora karte hain.",
+],
+when=[
+("Population evolve ho rahi hai ya nahi, test karna.", None),
+("Evolution ke kaaran.", None),
+("Selection ke patterns.", None),
+("Chemical evolution ka saboot.", None),
+("Common ancestry.", None),
+("Same habitat, alag ancestry.", None),
+("Natural selection hote hue dekhna.", None),
+("Ek area mein ek ancestor se kai forms.", None),
+("Evolution ki theories.", None),
+("Plant evolution.", None),
+("Animal evolution.", None),
+("Insaan ke purvaj.", None),
+],
+examples=[
+("Heterozygote frequency", "Ek population mein recessive allele frequency q = 0.3. Heterozygotes ki frequency?",
+ "p = 0.7, isliye 2pq = 2 × 0.7 × 0.3 = ⟨0⟩."),
+("Homologous ya analogous?", "Bougainvillea ke thorns aur Cucurbita ke tendrils — homologous ya analogous?",
+ "Homologous: dono modified stems (axillary structures) hain, divergent evolution dikhate hain."),
+("Antibiotic resistance", "Antibiotic resistance evolution ka example kaise hai?",
+ "Resistance dene wale mutations wale bacteria antibiotic treatment se bach kar badhte hain; kam samay mein population badal jaati hai — natural selection."),
+("Founder effect", "Founder effect kya hai?",
+ "Jab ek chhota group alag hokar nayi population basaata hai, to sanyog se uski allele frequencies bahut alag ho sakti hain (genetic drift); wahi drifted population founders ban jaati hai."),
+("Brain capacity", "Brain capacity ke hisaab se lagaao: Homo erectus, Homo habilis, Neanderthal man.",
+ "Homo habilis (650–800 cc) < Homo erectus (~900 cc) < Neanderthal man (~1400 cc)."),
+("Darwin wala fitness", "Natural selection mein 'fitness' ka matlab kya?",
+ "Reproductive fitness — environment mein behtar fit log zyada santaan chhodte hain; iska matlab physical taakat nahi."),
+],
+topics=[
+("Origin of life", "Big Bang theory universe ki shuruaat samjhaati hai. Shuruaati Earth par atmosphere nahi tha; pighle hue mass se water vapour, methane, CO₂ aur ammonia nikle; UV rays ne paani toda. Earth banne ke lagbhag 500 million saal baad life aayi. Spontaneous generation ko Louis Pasteur ne galat saabit kiya; panspermia kehta hai spores outer space se aaye."),
+("Theory of special creation vs evolution", "Special creation ke hisaab se saari species jaisi hain waise hi banayi gayi, Earth lagbhag 4000 saal purani hai aur diversity hamesha same rahi — fossils aur Earth ke lagbhag 4.5 billion saal purane hone ki studies ne ise chunauti di."),
+("Fossils and dating", "Fossils chattanon mein life forms ke sakht hisson ke avshesh hain; alag umar ki rock layers alag life forms dikhati hain. Inki umar radioactive dating se nikaalte hain."),
+("Embryological evidence", "Ernst Haeckel ne diya: saare vertebrate embryos mein sir ke peeche vestigial gill slits ki line hoti hai. Karl Ernst von Baer ne galat saabit kiya ki embryos doosre animals ke adult stages se guzarte hain."),
+("Mechanism of evolution", "Variation mutation, gametogenesis mein recombination, aur gene flow ya genetic drift se aata hai. Natural selection is variation par kaam karta hai; peedhiyon mein nayi species ban sakti hain (speciation)."),
+("Brief account of evolution", "Lagbhag 2000 mya pehle cellular forms aaye; single cells multicellular bane; invertebrates bane aur 500 mya tak active ho gaye. Mazboot fins wali machhliyan zameen par aa sakti thi (coelacanth, 1938 South Africa). Amphibians se moti shell wale ande dene wale reptiles bane."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -1,0 +1,161 @@
+{
+ "slug": "organic-chemistry-basic-principles",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Organic Chemistry Basic Principles",
+  "JEE": "Organic Chemistry Basic Principles"
+ },
+ "title": "Organic Chemistry: Some Basic Principles and Techniques",
+ "readMinutes": 15,
+ "summary": [
+  "Carbon chaar bonds banata hai (tetravalency), lambi chains (catenation) aur multiple bonds. Hybridisation (sp³, sp², sp) shape aur bond angles tay karta hai.",
+  "Electron displacement effects — inductive (σ bonds), resonance/mesomeric (π systems), hyperconjugation aur electromeric effect — carbocation, carbanion aur free radical ki stability aur acids/bases ki strength samjhaate hain.",
+  "Reactions tab hoti hain jab nucleophile (electron-rich) electrophile (electron-poor) par attack kare. Bonds homolytic (free radicals) ya heterolytic (ions) tarike se toot-te hain; reactions substitution, addition, elimination ya rearrangement hoti hain.",
+  "Purification (crystallisation, distillation, chromatography), qualitative tests (Lassaigne's test) aur quantitative estimation (Dumas, Kjeldahl, Carius, Liebig) chapter ka practical hissa hain."
+ ],
+ "formulas": [
+  {
+   "name": "Hybridisation from bonds",
+   "formula": "4 σ → sp³ (109.5°);  3 σ + 1 π → sp² (120°);  2 σ + 2 π → sp (180°)",
+   "when": "Carbon par shape aur bond angle.",
+   "mistake": "Atom ke around σ bonds (aur lone pairs) gino, total bonds nahi — galti mat karo."
+  },
+  {
+   "name": "Degree of unsaturation (DBE)",
+   "formula": "DBE = C − H/2 − X/2 + N/2 + 1",
+   "when": "Molecular formula se rings + π bonds.",
+   "mistake": "O aur S ignore karo; halogens ko H jaisa gino — bhoolo mat."
+  },
+  {
+   "name": "Inductive effect",
+   "formula": "−I: NO₂ > CN > F > Cl > Br > I > OH;  +I: (CH₃)₃C > (CH₃)₂CH > CH₃CH₂ > CH₃",
+   "when": "Acid strength, carbocation stability.",
+   "mistake": "Inductive effect doori ke saath jaldi khatam hota hai (~3 carbons ke baad negligible) — door tak mat lagao."
+  },
+  {
+   "name": "Resonance (mesomeric) effect",
+   "formula": "+R: −OH, −OR, −NH₂, −X (donate lone pair);  −R: −NO₂, −CHO, −COOH, −CN (withdraw π electrons)",
+   "when": "Conjugated species ki stability, directing effects."
+  },
+  {
+   "name": "Carbocation stability",
+   "formula": "benzylic ≈ allylic > 3° > 2° > 1° > CH₃⁺",
+   "when": "Rearrangements aur SN1/E1 rates predict karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Free radical stability",
+   "formula": "benzylic > allylic > 3° > 2° > 1° > CH₃•",
+   "when": "Halogenation, peroxide effect."
+  },
+  {
+   "name": "Carbanion stability",
+   "formula": "CH₃⁻ > 1° > 2° > 3° (opposite of carbocations); stabilised by −I/−R groups and sp character",
+   "when": "Acidic C–H, carbanion reactions."
+  },
+  {
+   "name": "Hyperconjugation",
+   "formula": "more α-hydrogens → more hyperconjugation → greater stability",
+   "when": "Carbocations aur alkenes.",
+   "note": "Isi se samajh aata hai ki 3° carbocations aur zyada substituted alkenes zyada stable kyun hain."
+  },
+  {
+   "name": "Kjeldahl's method",
+   "formula": "% N = (1.4 × N_acid × V_acid used)/mass of compound",
+   "when": "Nitrogen estimation.",
+   "mistake": "Nitro, azo compounds ya ring mein N (pyridine) ke liye nahi chalta — dhyan rakho."
+  },
+  {
+   "name": "Dumas method",
+   "formula": "% N = (28 × V_N₂ at STP)/(22400 × mass) × 100",
+   "when": "Saare compounds mein nitrogen estimation."
+  },
+  {
+   "name": "Carius method",
+   "formula": "% X = (atomic mass of X × mass of AgX)/(molar mass of AgX × mass of compound) × 100;  % S via BaSO₄",
+   "when": "Halogen aur sulphur estimation."
+  },
+  {
+   "name": "Liebig's method (C and H)",
+   "formula": "% C = (12/44) × (mass CO₂/mass compound) × 100;  % H = (2/18) × (mass H₂O/mass compound) × 100",
+   "when": "Carbon aur hydrogen estimation."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Kjeldahl",
+   "problem": "0.5 g compound se bani NH₃ 10 mL 1 M H₂SO₄ ko neutralise karti hai. % N?",
+   "solution": "10 mL 1 M H₂SO₄ 0.02 mol NH₃ ko neutralise karta hai = 0.28 g N. % N = 56%."
+  },
+  {
+   "title": "Carius",
+   "problem": "0.20 g compound se 0.287 g AgCl. % Cl?",
+   "solution": "Cl = 0.287 × 35.5/143.5 = 0.071 g → 35.5%."
+  },
+  {
+   "title": "Liebig",
+   "problem": "0.30 g compound se 0.44 g CO₂. % C?",
+   "solution": "C = 0.44 × 12/44 = 0.12 g → 40%."
+  },
+  {
+   "title": "Degree of unsaturation",
+   "problem": "Benzene C₆H₆ ka DBE?",
+   "solution": "DBE = 6 − 6/2 + 1 = 4 (ek ring + teen C=C)."
+  },
+  {
+   "title": "Sabse stable carbocation",
+   "problem": "Order: CH₃⁺, (CH₃)₃C⁺, C₆H₅CH₂⁺, (CH₃)₂CH⁺.",
+   "solution": "C₆H₅CH₂⁺ (resonance) > (CH₃)₃C⁺ > (CH₃)₂CH⁺ > CH₃⁺ (hyperconjugation aur +I)."
+  },
+  {
+   "title": "Acid strength",
+   "problem": "Order: CH₃COOH, ClCH₂COOH, Cl₂CHCOOH, FCH₂COOH.",
+   "solution": "Cl₂CHCOOH > FCH₂COOH > ClCH₂COOH > CH₃COOH — zyada aur strong −I groups carboxylate ion ko stable karte hain."
+  },
+  {
+   "title": "Lassaigne's test",
+   "problem": "Sodium fusion extract FeCl₃ ke saath blood-red colour deta hai. Kaunse elements?",
+   "solution": "N aur S dono: ye NaSCN banate hain, jo blood-red [Fe(SCN)]²⁺ deta hai. Sirf N → Prussian blue; sirf S → sodium nitroprusside ke saath violet."
+  }
+ ],
+ "topics": [
+  {
+   "title": "IUPAC nomenclature",
+   "explain": "Principal functional group wali sabse lambi chain lo, use itna number karo ki us group ko sabse chhota locant mile, substituents alphabetical order mein. Suffix priority: –COOH > –SO₃H > –COOR > –COCl > –CONH₂ > –CN > –CHO > >C=O > –OH > –NH₂ > C=C > C≡C."
+  },
+  {
+   "title": "Isomerism",
+   "explain": "Structural: chain, position, functional group, metamerism, tautomerism (keto–enol). Stereoisomerism: geometrical (C=C ya rings mein cis/trans) aur optical (chiral carbon, non-superimposable mirror images)."
+  },
+  {
+   "title": "Bond fission and reactive intermediates",
+   "explain": "Homolytic fission se free radicals (light/peroxides mein); heterolytic fission se carbocations aur carbanions. Carbocations planar (sp²), carbanions pyramidal (sp³), free radicals planar."
+  },
+  {
+   "title": "Nucleophiles and electrophiles",
+   "explain": "Nucleophiles: OH⁻, CN⁻, NH₃, H₂O, ROH (lone pairs ya negative charge). Electrophiles: H⁺, NO₂⁺, carbocations, BF₃, AlCl₃ (electron-deficient). Reactions: substitution, addition, elimination, rearrangement."
+  },
+  {
+   "title": "Electromeric effect",
+   "explain": "Reagent paas aane par π electrons ka ek atom ki taraf temporary, poora shift — sirf reagent ki maujoodgi mein (permanent inductive aur resonance effects se alag)."
+  },
+  {
+   "title": "Purification methods",
+   "explain": "Crystallisation (solubility difference), sublimation (camphor, naphthalene), simple distillation (bada bp difference), fractional distillation (paas ke bp), reduced pressure par distillation (bp par toot jaaye), steam distillation (steam-volatile, immiscible — aniline), differential extraction, aur chromatography (adsorption ya partition; Rf = compound ki doori/solvent ki doori)."
+  },
+  {
+   "title": "Qualitative analysis",
+   "explain": "Sodium fusion (Lassaigne) N, S, X ko NaCN, Na₂S, NaX mein badalta hai. N: FeSO₄ + FeCl₃ se Prussian blue. S: lead acetate se kaala PbS, nitroprusside se violet. Halogens: HNO₃ ke saath ubaal kar AgNO₃ (safed AgCl NH₃ mein ghulta, halka peela AgBr, peela AgI)."
+  }
+ ],
+ "ratta": [
+  "sp³ 109.5°, sp² 120°, sp 180°.",
+  "DBE = C − H/2 − X/2 + N/2 + 1.",
+  "Carbocation: benzyl ≈ allyl > 3° > 2° > 1° > methyl.",
+  "Carbanion: methyl > 1° > 2° > 3°.",
+  "−I: NO₂ > CN > F > Cl > Br > I;  +I: tert-butyl > isopropyl > ethyl > methyl.",
+  "Kjeldahl % N = 1.4 NV/w (not for nitro/azo/ring N).",
+  "N + S → blood red;  N → Prussian blue."
+ ],
+ "verifiedOn": "2026-11-13"
+}

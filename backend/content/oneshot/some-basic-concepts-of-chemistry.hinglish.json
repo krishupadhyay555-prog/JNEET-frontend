@@ -1,0 +1,173 @@
+{
+ "slug": "some-basic-concepts-of-chemistry",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Some Basic Concepts of Chemistry",
+  "JEE": "Some Basic Concepts of Chemistry"
+ },
+ "title": "Some Basic Concepts of Chemistry",
+ "readMinutes": 12,
+ "summary": [
+  "Chemistry particles ko moles mein ginti hai: 1 mol = 6.022 × 10²³ particles (Avogadro's number), aur uska mass grams mein molar mass ke barabar.",
+  "Laws of chemical combination (conservation of mass, definite proportions, multiple proportions, Gay-Lussac's law, Avogadro's law) se Dalton's atomic theory bani.",
+  "Balanced equation moles mein ek recipe hai. Jo reactant pehle khatam ho wo limiting reagent hai aur wahi product ki maatra tay karta hai.",
+  "Concentration mass %, mole fraction, molarity (mol/L, temperature se badalti hai) ya molality (mol/kg solvent, temperature-independent) mein likhte hain."
+ ],
+ "formulas": [
+  {
+   "name": "Mole concept",
+   "formula": "n = mass/M = N/Nₐ = V(gas at STP)/22.4 L",
+   "when": "Mass, particles aur gas volume ke beech convert karna.",
+   "mistake": "22.4 L sirf STP (273 K, 1 atm) par gas ke liye — liquids ya solids ke liye kabhi nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Avogadro's number",
+   "formula": "Nₐ = 6.022 × 10²³ mol⁻¹",
+   "when": "Atoms, molecules ya ions ginna."
+  },
+  {
+   "name": "Atomic mass unit",
+   "formula": "1 amu (u) = 1/12 × mass of one ¹²C atom = 1.66 × 10⁻²⁴ g",
+   "when": "Atomic aur molecular masses."
+  },
+  {
+   "name": "Average atomic mass",
+   "formula": "A = Σ(isotopic mass × fractional abundance)",
+   "when": "Isotopes wale elements, jaise chlorine 35.5."
+  },
+  {
+   "name": "Percentage composition",
+   "formula": "% of element = (mass of element in 1 mol / molar mass) × 100",
+   "when": "Compound ki composition."
+  },
+  {
+   "name": "Empirical and molecular formula",
+   "formula": "molecular formula = n × empirical formula;  n = molar mass / empirical formula mass",
+   "when": "% composition se formula nikaalna.",
+   "mistake": "% ko moles mein badlo, sabse chhote se divide karo, phir whole numbers banao (.5 ya .33 aaye to multiply karo) — seedha round mat karo."
+  },
+  {
+   "name": "Limiting reagent",
+   "formula": "compare (moles available ÷ coefficient) for each reactant — the smallest is limiting",
+   "when": "Reactants exact ratio mein na hon tab product ki maatra.",
+   "mistake": "Masses compare mat karo — moles ko stoichiometric coefficients se divide karke compare karo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Mass percent",
+   "formula": "w/w % = (mass of solute / mass of solution) × 100;   ppm = (mass of solute / mass of solution) × 10⁶",
+   "when": "Mass se concentration; bahut dilute solutions (paani, hawa mein pollutants) ke liye ppm."
+  },
+  {
+   "name": "Mole fraction",
+   "formula": "x_A = n_A / (n_A + n_B);  x_A + x_B = 1",
+   "when": "Gas mixtures, Raoult's law."
+  },
+  {
+   "name": "Molarity",
+   "formula": "M = moles of solute / volume of solution (L)",
+   "when": "Titrations, dilutions.",
+   "mistake": "Molarity temperature se badalti hai kyunki volume badalta hai — dhyan rakho."
+  },
+  {
+   "name": "Molality",
+   "formula": "m = moles of solute / mass of solvent (kg)",
+   "when": "Colligative properties.",
+   "mistake": "SOLVENT ka mass lo, solution ka nahi."
+  },
+  {
+   "name": "Dilution and mixing",
+   "formula": "M₁V₁ = M₂V₂;  mixing: M = (M₁V₁ + M₂V₂)/(V₁ + V₂)",
+   "when": "Solutions banana."
+  },
+  {
+   "name": "Molarity from mass % and density",
+   "formula": "M = (10 × d × w%)/M_solute   (d in g/mL)",
+   "when": "Commercial acids."
+  },
+  {
+   "name": "Neutralisation (acid–base)",
+   "formula": "n₁ × M₁ × V₁ (acid, n = basicity) = n₂ × M₂ × V₂ (base, n = acidity)",
+   "when": "Titration volumes."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Atoms ginna",
+   "problem": "4.4 g CO₂ mein kitne atoms?",
+   "solution": "n = 4.4/44 = 0.1 mol; har molecule mein 3 atoms → 0.3 × 6.022 × 10²³ ≈ 1.81 × 10²³ atoms."
+  },
+  {
+   "title": "Limiting reagent",
+   "problem": "10 g H₂ 64 g O₂ se react karta hai. Kitna paani banega?",
+   "solution": "H₂ = 5 mol, O₂ = 2 mol. 2H₂ + O₂ → 2H₂O: O₂ ko 4 mol H₂ chahiye, isliye O₂ limiting → 4 mol H₂O = 72 g (1 mol H₂ bachta hai)."
+  },
+  {
+   "title": "Molarity",
+   "problem": "0.5 mol NaCl ghol kar 250 mL solution. Molarity?",
+   "solution": "M = 0.5/0.250 = 2 M."
+  },
+  {
+   "title": "Mass % se molality",
+   "problem": "Solution 20% NaOH by mass. Molality?",
+   "solution": "100 g solution: 20 g NaOH = 0.5 mol, 80 g paani mein. m = 0.5/0.080 = 6.25 m."
+  },
+  {
+   "title": "Mole fraction",
+   "problem": "46 g ethanol 54 g paani mein. Ethanol ka mole fraction?",
+   "solution": "Ethanol 1 mol, paani 3 mol → x = 1/4 = 0.25."
+  },
+  {
+   "title": "Glucose mein carbon %",
+   "problem": "C₆H₁₂O₆ mein C ka %?",
+   "solution": "72/180 × 100 = 40%."
+  },
+  {
+   "title": "Titration volume",
+   "problem": "50 mL 0.2 M NaOH ko neutralise karne ke liye 0.1 M H₂SO₄ ka volume?",
+   "solution": "2 × 0.1 × V = 1 × 0.2 × 50 → V = 50 mL."
+  },
+  {
+   "title": "Commercial acid ki molarity",
+   "problem": "H₂SO₄ 49% by mass, density 1.5 g/mL. Molarity?",
+   "solution": "M = 10 × 1.5 × 49/98 = 7.5 M."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Matter and its classification",
+   "explain": "Matter ya to pure substance (element ya compound) hai ya mixture (homogeneous jaise hawa ya namak ka ghol; heterogeneous jaise paani mein ret). Compounds ki composition fixed; mixtures ki nahi."
+  },
+  {
+   "title": "Laws of chemical combination",
+   "explain": "Conservation of mass (Lavoisier); definite proportions (Proust) — compound mein hamesha same elements same mass ratio mein; multiple proportions (Dalton) — ek element ke masses jo doosre ke fixed mass se milte hain chhote whole-number ratio mein (CO aur CO₂); Gay-Lussac — gases simple volume ratios mein milti hain; Avogadro — same T aur P par barabar volume mein barabar molecules."
+  },
+  {
+   "title": "Dalton's atomic theory",
+   "explain": "Matter indivisible atoms se bana; ek element ke atoms identical; compounds atoms ke fixed ratio mein milne se; reactions atoms ko rearrange karti hain. Baad mein pata chala atoms divisible hain aur isotopes hote hain."
+  },
+  {
+   "title": "Measurement and significant figures",
+   "explain": "SI units use karo. Answer sahi significant figures mein: × ÷ → sabse kam significant figures; + − → sabse kam decimal places. Scientific notation (N × 10ⁿ) isse saaf karta hai."
+  },
+  {
+   "title": "Stoichiometry in practice",
+   "explain": "Pehle equation balance karo. Sab kuch moles mein badlo, equation ka mole ratio lagao, phir wapas mass ya volume mein. Percentage yield = (actual/theoretical) × 100."
+  },
+  {
+   "title": "Choosing a concentration unit",
+   "explain": "Molarity lab mein aasaan par temperature se badalti hai; molality aur mole fraction nahi badalte, isliye colligative properties mein use hote hain. Bahut dilute solutions ke liye ppm = (solute ka mass/solution ka mass) × 10⁶."
+  }
+ ],
+ "ratta": [
+  "1 mol = 6.022 × 10²³;  22.4 L at STP (gases only).",
+  "1 u = 1.66 × 10⁻²⁴ g.",
+  "Limiting reagent: smallest moles ÷ coefficient.",
+  "M = mol/L;  m = mol/kg solvent;  x_A + x_B = 1.",
+  "M₁V₁ = M₂V₂;  M = 10dw/M_solute.",
+  "Molality and mole fraction don't change with T.",
+  "Laws: Lavoisier, Proust, Dalton, Gay-Lussac, Avogadro."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -66,5 +66,49 @@ SYLLABUS = [
 ("Oxidation states and chemical reactivity", ["reactivity", "oxides"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Mendeleev ne elements ko atomic mass se lagaya aur na mile elements ke liye gaps chhode. Moseley ne dikhaya ki atomic number zyada basic hai — modern periodic law: properties atomic number ke periodic functions hain.",
+"Long form periodic table mein 18 groups aur 7 periods hain, aur last electron jis subshell mein jaata hai uske hisaab se s-, p-, d-, f-blocks.",
+"Periodic trends effective nuclear charge aur shielding se aate hain: period mein aage atoms chhote aur electrons zyada kas kar pakadte hain; group mein neeche bade aur dheela pakadte hain.",
+"Key trends: atomic/ionic radius, ionisation enthalpy, electron gain enthalpy, electronegativity aur valence. Exceptions (N vs O, Be vs B, F vs Cl) exam ke favourite hain.",
+],
+when=[
+("Modern table ka base.", None),
+("Z se period, group aur block nikaalna.", None),
+("Saare size aur energy trends samjhaana.", None),
+("Sizes compare karna.", "Noble gas ka van der Waals radius doosre elements ke covalent radius se compare mat karo."),
+("N³⁻ > O²⁻ > F⁻ > Na⁺ > Mg²⁺ > Al³⁺.", None),
+("Electron nikaalne ki energy.", "Exceptions: B < Be aur O < N (stable 2s² aur half-filled 2p³) — bhoolo mat."),
+("Electron jodne par energy change.", "F, Cl se kam negative hai — chhoti 2p shell aane wale electron ko repel karti hai, ulta mat samjho."),
+("Bond polarity aur character.", None),
+("Oxides ki nature: period mein basic → amphoteric → acidic.", None),
+("Compounds ke formula likhna (jaise Al₂O₃) aur common oxidation states.", None),
+],
+examples=[
+("Z = 33 ki position", "Z = 33 wala element: period aur block?",
+ "[Ar]3d¹⁰4s²4p³ → period ⟨0⟩, ⟨1⟩-block, group 15 (arsenic)."),
+("d-block element ka group", "Configuration [Ar]3d²4s². Group?",
+ "ns + (n − 1)d = 2 + 2 = 4 → group ⟨0⟩ (titanium)."),
+("Shielding estimate", "Simple shielding (andar ki 1s² = 1.0 each, 2s²2p⁶ = 0.85 each) se Na ke 3s electron ka Z_eff?",
+ "Z_eff = 11 − (2 × 1.0 + 8 × 0.85) = ⟨0⟩ — bahar ka electron dheela pakda hai, Na use aasaani se kho deta hai."),
+("Ionic radii ka order", "Na⁺, F⁻, Mg²⁺, O²⁻ size ke order mein.",
+ "Sab mein 10 electrons; zyada protons zyada kheenchte hain: O²⁻ > F⁻ > Na⁺ > Mg²⁺."),
+("Ionisation enthalpy ka order", "B, C, N, O first ionisation enthalpy ke order mein.",
+ "B < C < O < N. N (2p³, half-filled) extra stable; O paired 2p electron aasaani se khota hai."),
+("Sabse negative electron gain enthalpy", "F, Cl, Br, O mein sabse negative electron gain enthalpy kiski?",
+ "Cl. F chhota hai, isliye uski compact 2p shell mein electron–electron repulsion uski value ko Cl se kam negative bana deta hai."),
+],
+topics=[
+("History of classification", "Döbereiner ke triads (Li, Na, K), Newlands ka law of octaves, Lothar Meyer ke volume curves, aur Mendeleev ka periodic table (1869) jisne eka-aluminium (Ga) aur eka-silicon (Ge) predict kiye. Moseley (1913) ne dikhaya ki atomic number se order sahi aata hai."),
+("Blocks of the table", "s-block (groups 1, 2): reactive metals, kam IE. p-block (13–18): metals, metalloids aur non-metals, halogens aur noble gases bhi. d-block (3–12): transition metals, variable valency, rangeen ions. f-block: lanthanoids aur actinoids neeche."),
+("Nomenclature of new elements", "Z > 100 wale elements ko digits ke roots se temporary IUPAC naam: 0 nil, 1 un, 2 bi, 3 tri, 4 quad, 5 pent, 6 hex, 7 sept, 8 oct, 9 enn + 'ium'. Z = 120 unbinilium (Ubn)."),
+("Why trends happen", "Period mein electrons same shell mein aate hain aur nuclear charge badhta hai, isliye Z_eff badhta hai: chhota radius, zyada IE, zyada negative electron gain enthalpy, zyada electronegativity. Group mein neeche nayi shell aur zyada shielding, isliye trends ulte."),
+("Anomalous behaviour of the first element", "Har group ka pehla element (Li, Be, B, C, N, O, F) baaki se alag: chhota size, zyada electronegativity, d orbitals nahi (maximum covalency 4). Diagonal relationship: Li–Mg, Be–Al, B–Si milti-julti properties."),
+("Chemical reactivity and oxides", "Reactivity period ke dono siron par sabse zyada (alkali metals, halogens). Period 3 mein oxides strongly basic (Na₂O) se amphoteric (Al₂O₃) hote hue strongly acidic (Cl₂O₇) tak badalte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

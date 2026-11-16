@@ -1,0 +1,154 @@
+{
+ "slug": "biotechnology-principles-and-processes",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biotechnology: Principles and Processes"
+ },
+ "title": "Biotechnology: Principles and Processes",
+ "readMinutes": 15,
+ "summary": [
+  "Modern biotechnology genetic engineering (DNA/RNA badalna, use hosts mein daalna) aur bioprocess engineering (sterile large-scale culture) par tiki hai. Pehla recombinant DNA Stanley Cohen aur Herbert Boyer (1972) ne antibiotic-resistance gene ko Salmonella typhimurium ke native plasmid se jod kar banaya.",
+  "Tools: restriction enzymes (molecular scissors), DNA ligase (glue), cloning vector (plasmids, phages), competent hosts aur gel electrophoresis.",
+  "Process: DNA isolate karo → restriction enzyme se kaato → PCR se amplify karo → vector mein ligate karo → host transform karo → recombinants select karo → bioreactor mein ugaao → downstream processing."
+ ],
+ "formulas": [
+  {
+   "name": "Restriction enzymes",
+   "formula": "first discovered: Hind II (cuts at a specific 6-bp sequence);  exonucleases remove nucleotides from ends; endonucleases cut inside;  recognise palindromic sequences",
+   "when": "Molecular scissors.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Naming EcoRI",
+   "formula": "E = Escherichia (genus), co = coli (species), R = RY13 (strain), I = first enzyme isolated from that strain",
+   "when": "Restriction enzyme ka naamkaran.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Palindrome and sticky ends",
+   "formula": "5′-GAATTC-3′ / 3′-CTTAAG-5′ reads the same 5′→3′ on both strands;  EcoRI cuts between G and A → sticky ends that pair with complementary ends",
+   "when": "Kata hua DNA kaise judta hai."
+  },
+  {
+   "name": "Gel electrophoresis",
+   "formula": "DNA (negatively charged) moves towards the anode through agarose gel (from seaweed);  smaller fragments move farther;  stained with ethidium bromide, seen as orange bands under UV;  bands cut out and purified (elution)",
+   "when": "DNA fragments alag karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cloning vector features",
+   "formula": "origin of replication (ori — controls copy number);  selectable marker (ampicillin, chloramphenicol, tetracycline or kanamycin resistance);  cloning (recognition) sites, preferably single;  small size",
+   "when": "Achhe vector ki pehchaan."
+  },
+  {
+   "name": "pBR322",
+   "formula": "ori + rop (proteins for replication) + amp^R + tet^R;  BamHI site in tet^R; PstI and PvuI in amp^R",
+   "when": "Standard E. coli vector."
+  },
+  {
+   "name": "Insertional inactivation",
+   "formula": "insert in tet^R gene → recombinants lose tetracycline resistance;  β-galactosidase (lacZ) insertion → recombinants give colourless colonies, non-recombinants blue (with chromogenic substrate)",
+   "when": "Recombinants select karna (blue–white screening).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vectors for plants and animals",
+   "formula": "Agrobacterium tumefaciens — Ti plasmid (tumour-inducing; disarmed for gene transfer);  retroviruses disarmed for animal cells",
+   "when": "Natural genetic engineers."
+  },
+  {
+   "name": "Making cells competent",
+   "formula": "divalent cations (Ca²⁺) → heat shock (ice, 42 °C, ice) → plasmid enters;  other methods: microinjection (animal nucleus), biolistics/gene gun (plant cells, gold or tungsten particles), disarmed pathogen vectors",
+   "when": "Hosts mein DNA daalna."
+  },
+  {
+   "name": "PCR steps",
+   "formula": "denaturation (~94 °C) → annealing of primers → extension by Taq polymerase (from Thermus aquaticus, thermostable);  copies double each cycle (2ⁿ)",
+   "when": "Polymerase chain reaction.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Isolating DNA",
+   "formula": "lyse cells with lysozyme (bacteria), cellulase (plants), chitinase (fungi);  remove RNA with ribonuclease, proteins with protease;  chilled ethanol precipitates DNA (fine threads)",
+   "when": "Shuddh DNA paana."
+  },
+  {
+   "name": "Bioreactors",
+   "formula": "large vessels (100–1000 L) giving optimum temperature, pH, O₂, substrate;  stirred-tank (agitator, oxygen delivery, foam control, temperature and pH control, sampling ports)",
+   "when": "Production badhaana."
+  },
+  {
+   "name": "Downstream processing",
+   "formula": "separation and purification of the product, formulation with preservatives, clinical trials for drugs, quality control",
+   "when": "Biosynthesis ke baad."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Circular plasmid ke fragments",
+   "problem": "Ek circular plasmid mein chaar EcoRI sites hain. Poore digestion ke baad kitne fragments?",
+   "solution": "Circular DNA mein n cuts se n fragments: 4 fragments. (Linear DNA mein n cuts se n + 1.)"
+  },
+  {
+   "title": "Blue–white screening",
+   "problem": "X-gal wali plate par kaunsi colonies mein recombinant plasmids hain?",
+   "solution": "Rang-heen (white) colonies — insert lacZ ko tod deta hai (insertional inactivation), isliye neela rang dene wala β-galactosidase nahi banta."
+  },
+  {
+   "title": "Ek hi recognition site kyun?",
+   "problem": "Vector mein chune gaye restriction enzyme ki sirf ek site kyun honi chahiye?",
+   "solution": "Ek se zyada site vector ko kai tukdon mein kaat degi, jisse gene cloning mushkil ho jaayegi."
+  },
+  {
+   "title": "Taq polymerase",
+   "problem": "PCR mein Taq polymerase kyun use hota hai?",
+   "solution": "Ye thermophilic bacterium Thermus aquaticus se aata hai aur high-temperature denaturation step mein bhi active rehta hai, isliye har cycle mein naya enzyme nahi chahiye."
+  },
+  {
+   "title": "Agrobacterium",
+   "problem": "Agrobacterium ko plants ka natural genetic engineer kyun kehte hain?",
+   "solution": "Ye apne Ti plasmid DNA (T-DNA) ka ek tukda naturally plant cells mein daal kar unhe tumour cells bana deta hai; disarmed Ti plasmid iski jagah useful genes pahuncha sakta hai."
+  },
+  {
+   "title": "PCR cycles ke baad copies",
+   "problem": "Ek DNA molecule se shuru karke 10 PCR cycles ke baad kitni copies?",
+   "solution": "2¹⁰ = 1024 copies."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Definition of biotechnology",
+   "explain": "European Federation of Biotechnology (EFB) ise natural science aur organisms, cells, unke hisson aur molecular analogues ka products aur services ke liye integration kehta hai."
+  },
+  {
+   "title": "Basic steps in genetic engineering",
+   "explain": "Desirable genes wala DNA pehchaano; use host mein daalo; daale gaye DNA ko host mein banaye rakho aur progeny tak pahunchao. Plasmid DNA foreign DNA le jaane wale vector ka kaam karta hai."
+  },
+  {
+   "title": "DNA ligase",
+   "explain": "Same type ke sticky ends wale kate DNA fragments ko jodta hai; vector aur source DNA dono ko same restriction enzyme se kaatna zaroori hai."
+  },
+  {
+   "title": "Recombinant DNA expression",
+   "explain": "Cloned gene sahi conditions mein express hokar host mein recombinant protein banata hai. Chhote volume ke cultures zyada maatra nahi bana sakte, isliye continuous culture systems cells ko physiologically sabse active log/exponential phase mein rakhte hain."
+  },
+  {
+   "title": "Selection with antibiotics",
+   "explain": "Transformants ko antibiotics wale media par ugaate hain; sirf plasmid (resistance gene ke saath) wale cells bachte hain. Doosre antibiotic par replica plating se insertional inactivation pata chalta hai."
+  },
+  {
+   "title": "Alternative selectable markers",
+   "explain": "Do antibiotics se selection jhanjhat wala hai, isliye chromogenic substrates (blue–white) aasaan tareeke ki tarah use hote hain."
+  }
+ ],
+ "ratta": [
+  "EcoRI: E. coli RY13, first enzyme.",
+  "Palindrome GAATTC → sticky ends.",
+  "DNA → anode;  smaller moves farther;  EtBr orange under UV.",
+  "pBR322: ori, rop, amp^R, tet^R;  BamHI in tet^R.",
+  "White colonies = recombinant (lacZ inactivated).",
+  "PCR: denature, anneal, extend;  Taq from Thermus aquaticus.",
+  "Ti plasmid — Agrobacterium;  Cohen & Boyer 1972."
+ ],
+ "verifiedOn": "2026-11-13"
+}

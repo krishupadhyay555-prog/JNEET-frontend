@@ -1,0 +1,151 @@
+{
+ "slug": "ecosystem",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Ecosystem"
+ },
+ "title": "Ecosystem",
+ "readMinutes": 12,
+ "summary": [
+  "Ecosystem nature ki functional unit hai jahan living organisms aapas mein aur physical environment se interact karte hain. Iski structure mein species composition aur stratification aate hain.",
+  "Iske functions: productivity, decomposition, energy flow aur nutrient cycling. Energy flow ek-disha hai, sun se producers aur phir consumers tak; har agle trophic level tak sirf lagbhag 10% jaata hai (Lindeman ka 10% law).",
+  "Ecological pyramid (number, biomass, energy) trophic structure dikhate hain; energy pyramid hamesha seedha (upright) hota hai.",
+  "Ecological succession khaali areas (primary) ya disturb hue areas (secondary) ko seral stages se climax communities mein badalta hai. Carbon cycle aur phosphorus cycle nutrient cycling ke examples hain; ecosystem services insaan ke liye anmol hain."
+ ],
+ "formulas": [
+  {
+   "name": "Productivity",
+   "formula": "NPP = GPP − R  (R = respiration losses);  secondary productivity = rate of new organic matter formed by consumers",
+   "when": "Primary productivity ki calculations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "World productivity",
+   "formula": "annual NPP of biosphere ≈ 170 billion tons (dry weight);  oceans (70% of surface) ≈ 55 billion tons",
+   "when": "Global productivity facts."
+  },
+  {
+   "name": "PAR",
+   "formula": "plants capture only 2–10% of photosynthetically active radiation (PAR), which is less than 50% of incident solar radiation",
+   "when": "Energy pakadne ki efficiency.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ten per cent law",
+   "formula": "only about 10% of energy passes from one trophic level to the next (Lindeman, 1942)",
+   "when": "Energy flow ki calculations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Decomposition steps",
+   "formula": "fragmentation (detritivores, earthworm) → leaching (water-soluble nutrients into soil) → catabolism (enzymes of bacteria and fungi) → humification (humus — dark, amorphous, resistant, colloidal) → mineralisation (release of inorganic nutrients)",
+   "when": "Detritus todna."
+  },
+  {
+   "name": "Factors affecting decomposition",
+   "formula": "faster when detritus is rich in nitrogen and water-soluble sugars, in warm and moist conditions;  slower with lignin and chitin, low temperature, anaerobiosis",
+   "when": "Decomposition ki rate."
+  },
+  {
+   "name": "Food chains",
+   "formula": "grazing food chain (GFC): grass → goat → man;  detritus food chain (DFC): begins with dead organic matter — decomposers (saprotrophs)",
+   "when": "Food chain ke types.",
+   "mistake": "Aquatic ecosystems mein GFC energy ka main raasta hai; terrestrial ecosystems mein kahin zyada energy DFC se behti hai — ulta mat likhna."
+  },
+  {
+   "name": "Trophic levels",
+   "formula": "producers (1st) → primary consumers/herbivores (2nd) → secondary consumers (3rd) → tertiary consumers (4th)",
+   "when": "Food chain mein positions."
+  },
+  {
+   "name": "Ecological pyramids",
+   "formula": "number: upright in grassland, inverted for a tree;  biomass: upright on land, inverted in sea (phytoplankton less than fish);  energy: always upright",
+   "when": "Pyramid ke shapes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Standing crop and state",
+   "formula": "standing crop = mass of living material at a trophic level at a particular time;  standing state = amount of nutrients present in the soil at any given time",
+   "when": "Ecosystem ke terms."
+  },
+  {
+   "name": "Succession",
+   "formula": "pioneer species → seral communities (seres) → climax community;  hydrarch (in water): phytoplankton → submerged plants → floating → reed swamp → marsh-meadow → scrub → forest;  xerarch (dry): lichens → mosses → herbs → shrubs → trees",
+   "when": "Ecological succession.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Primary vs secondary succession",
+   "formula": "primary: bare area with no soil (newly cooled lava, bare rock) — slow, hundreds to thousands of years;  secondary: after natural vegetation is lost (abandoned farmland, burned or cut forests) — faster because soil is present",
+   "when": "Succession ke types."
+  },
+  {
+   "name": "Nutrient cycles",
+   "formula": "gaseous (reservoir in atmosphere — nitrogen, carbon);  sedimentary (reservoir in Earth's crust — phosphorus, sulphur)",
+   "when": "Biogeochemical cycles."
+  }
+ ],
+ "examples": [
+  {
+   "title": "NPP",
+   "problem": "Ek ecosystem ka GPP 100 kcal/m²/yr hai aur respiration losses 20 kcal/m²/yr. NPP?",
+   "solution": "NPP = 100 − 20 = 80 kcal/m²/yr."
+  },
+  {
+   "title": "Tertiary consumers tak energy",
+   "problem": "Producers 10,000 J fix karte hain. 10% law se tertiary consumers tak kitna pahunchta hai?",
+   "solution": "10,000 → 1000 (primary) → 100 (secondary) → 10 J (tertiary)."
+  },
+  {
+   "title": "Ulta pyramid of biomass",
+   "problem": "Samudra mein pyramid of biomass ulta kyun hota hai?",
+   "solution": "Phytoplankton ka kisi bhi pal standing biomass kam hota hai par wo bahut tezi se reproduce karte hain; unhe khaane wali fish ka biomass zyada hota hai."
+  },
+  {
+   "title": "Chattan par pioneers",
+   "problem": "Nangi chattan par lichens pioneers kyun hote hain?",
+   "solution": "Ye acids nikaal kar chattan ghulaate hain, weathering aur soil banne mein madad karte hain, jisse baad mein mosses aur doosre plants ug paate hain."
+  },
+  {
+   "title": "Carbon cycle ka fact",
+   "problem": "Organisms ke dry weight ka kitna hissa carbon hai, aur zyadatar carbon kahan store hai?",
+   "solution": "Organisms ke dry weight ka lagbhag 49% carbon hai. Oceans global carbon ka lagbhag 71% dissolved carbon ki tarah rakhte hain."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Ecosystem structure",
+   "explain": "Biotic components: producers, consumers, decomposers. Abiotic: light, temperature, paani, soil. Alag levels par species ka vertical distribution stratification kehlata hai (forests mein upar trees, phir shrubs, neeche herbs aur grasses)."
+  },
+  {
+   "title": "Phosphorus cycle",
+   "explain": "Rocks phosphates ki tarah phosphorus ka main reservoir hain; weathering unhe mitti mein chhodti hai, plants absorb karte hain, aur decomposers phosphorus waapas mitti mein laate hain. Carbon ke ulat, phosphorus ka atmosphere mein koi khaas respiratory release nahi."
+  },
+  {
+   "title": "Carbon cycle",
+   "explain": "Producers har saal photosynthesis se lagbhag 4 × 10¹³ kg carbon fix karte hain. Carbon respiration, decomposition, fossil fuels aur lakdi jalaane, forest fires aur volcanic activity se atmosphere mein lautta hai. Insaani activity ne atmospheric CO₂ badha diya hai."
+  },
+  {
+   "title": "Ecosystem services",
+   "explain": "Swasth ecosystems hawa aur paani saaf karte, baadh aur sookha kam karte, nutrients cycle karte, upjaau mitti banate, habitat dete, flowers pollinate karte aur carbon store karte hain. Robert Constanza ne nature ki services ki keemat lagbhag US $33 trillion per year aanki — global gross national product ka lagbhag dugna."
+  },
+  {
+   "title": "Limitations of ecological pyramids",
+   "explain": "Ye ek hi species ke do ya zyada trophic levels mein hone ko nahi maante, simple food chain maante hain (food web nahi) aur saprophytes ko koi jagah nahi dete jabki unka role bahut zaroori hai."
+  },
+  {
+   "title": "Climax community",
+   "explain": "Environment ke saath equilibrium mein aakhri, stable community. Saari succession — paani mein ho ya zameen par — medium-water (mesic) climax ki taraf jaati hai."
+  }
+ ],
+ "ratta": [
+  "NPP = GPP − R.",
+  "Plants capture 2–10% of PAR;  10% law (Lindeman).",
+  "Energy pyramid always upright;  biomass inverted in sea;  number inverted for a tree.",
+  "Fragmentation → leaching → catabolism → humification → mineralisation.",
+  "Hydrarch: phytoplankton → … → forest;  xerarch: lichens first.",
+  "P cycle: sedimentary (rocks);  C cycle: gaseous.",
+  "Biosphere NPP 170 billion tons; oceans 55."
+ ],
+ "verifiedOn": "2026-11-13"
+}

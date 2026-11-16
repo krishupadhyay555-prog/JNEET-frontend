@@ -1,0 +1,155 @@
+{
+ "slug": "sets-relations-and-functions",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Sets, Relations and Functions"
+ },
+ "title": "Sets, Relations and Functions",
+ "readMinutes": 16,
+ "summary": [
+  "Set ek well-defined collection hai. Operations — union, intersection, difference, complement — De Morgan's laws follow karte hain, aur inclusion–exclusion principle union ke elements ginta hai. Saare subsets ka set power set hai.",
+  "A se B tak relation A × B ka koi bhi subset hai. Set par relation reflexive, symmetric, transitive ho sakta hai (teeno = equivalence relation, jo set ko equivalence classes mein baant deta hai).",
+  "Function domain ke har element ko theek ek image deta hai. Functions one-one (injective), onto (surjective) ya dono (bijective) ho sakte hain; sirf bijections ka inverse hota hai. Composition fog se functions jodte hain.",
+  "JEE ko counting questions bahut pasand hain: relations, functions, one-one aur onto maps, aur reflexive ya symmetric relations ki ginti."
+ ],
+ "formulas": [
+  {
+   "name": "Inclusion–exclusion (2 sets)",
+   "formula": "n(A ∪ B) = n(A) + n(B) − n(A ∩ B)",
+   "when": "Union ke elements ginna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Inclusion–exclusion (3 sets)",
+   "formula": "n(A ∪ B ∪ C) = Σn(A) − Σn(A ∩ B) + n(A ∩ B ∩ C)",
+   "when": "Teen overlapping sets."
+  },
+  {
+   "name": "De Morgan's laws",
+   "formula": "(A ∪ B)′ = A′ ∩ B′;  (A ∩ B)′ = A′ ∪ B′",
+   "when": "Complements simplify karna."
+  },
+  {
+   "name": "Power set",
+   "formula": "n(P(A)) = 2ⁿ for n(A) = n;  proper subsets = 2ⁿ − 1",
+   "when": "Subsets ginna."
+  },
+  {
+   "name": "Cartesian product and relations",
+   "formula": "n(A × B) = mn;  number of relations from A to B = 2^{mn}",
+   "when": "Relations ginna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Relations on a set with n elements",
+   "formula": "total 2^{n²};  reflexive 2^{n² − n};  symmetric 2^{n(n+1)/2};  reflexive and symmetric 2^{n(n−1)/2}",
+   "when": "Khaas relations ginna."
+  },
+  {
+   "name": "Equivalence relation",
+   "formula": "reflexive (a R a) + symmetric (a R b ⇒ b R a) + transitive (a R b, b R c ⇒ a R c)",
+   "when": "Relation ke types check karna.",
+   "mistake": "Non-empty set par empty relation symmetric aur transitive hai par reflexive nahi — dhyan rakho."
+  },
+  {
+   "name": "Counting functions (m-set → n-set)",
+   "formula": "all functions nᵐ;  one-one nPm (m ≤ n);  onto Σ (−1)ᵏ C(n, k)(n − k)ᵐ (m ≥ n);  bijections n! (m = n)",
+   "when": "Maps ginna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Domain of common functions",
+   "formula": "√f(x): f(x) ≥ 0;  1/f(x): f(x) ≠ 0;  log f(x): f(x) > 0;  sin⁻¹ f(x): −1 ≤ f(x) ≤ 1",
+   "when": "Domain nikaalna."
+  },
+  {
+   "name": "Even and odd functions",
+   "formula": "even f(−x) = f(x) (symmetric about y-axis);  odd f(−x) = −f(x) (symmetric about origin);  every f = even part + odd part",
+   "when": "Functions ki symmetry."
+  },
+  {
+   "name": "Composition and inverse",
+   "formula": "(g∘f)(x) = g(f(x));  (g∘f)⁻¹ = f⁻¹∘g⁻¹;  f⁻¹ exists ⇔ f bijective;  graphs of f and f⁻¹ are mirror images in y = x",
+   "when": "Functions ko jodna."
+  },
+  {
+   "name": "Greatest integer and fractional part",
+   "formula": "[x] ≤ x < [x] + 1;  {x} = x − [x] ∈ [0, 1);  [x + n] = [x] + n for integer n",
+   "when": "Step functions.",
+   "mistake": "[−2.3] = −3 hai, −2 nahi — galat mat likhna."
+  },
+  {
+   "name": "Periodic functions",
+   "formula": "period of sin, cos = 2π;  tan, cot = π;  {x} = 1;  |sin x| = π;  period of f(ax + b) = T/|a|",
+   "when": "Period nikaalna."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Union ki ginti",
+   "problem": "Ek class mein 40 students ko cricket, 30 ko football aur 15 ko dono pasand hain. Kam se kam ek kitno ko pasand?",
+   "solution": "n(C ∪ F) = 40 + 30 − 15 = 55."
+  },
+  {
+   "title": "Relations ki sankhya",
+   "problem": "A mein 3 elements aur B mein 4. A se B tak kitne relations?",
+   "solution": "2^{3 × 4} = 2¹² = 4096."
+  },
+  {
+   "title": "Functions aur one-one functions",
+   "problem": "A mein 3 elements, B mein 4. A se B tak functions aur one-one functions ki sankhya?",
+   "solution": "Functions: 4³ = 64. One-one: ⁴P₃ = 4 × 3 × 2 = 24."
+  },
+  {
+   "title": "Onto functions",
+   "problem": "4-element set se 3-element set tak kitne onto functions?",
+   "solution": "3⁴ − C(3,1)2⁴ + C(3,2)1⁴ = 81 − 48 + 3 = 36."
+  },
+  {
+   "title": "Reflexive aur symmetric relations",
+   "problem": "3 elements wale set par kitne reflexive aur kitne symmetric relations?",
+   "solution": "Reflexive: 2^{9 − 3} = 64. Symmetric: 2^{3 × 4/2} = 64."
+  },
+  {
+   "title": "Domain",
+   "problem": "f(x) = 1/√(x² − 5x + 6) ka domain nikalo.",
+   "solution": "Chahiye x² − 5x + 6 > 0 ⇒ (x − 2)(x − 3) > 0 ⇒ x < 2 ya x > 3. Domain: (−∞, 2) ∪ (3, ∞)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of sets",
+   "explain": "Empty (∅), singleton, finite, infinite, equal sets, equivalent sets (same cardinality), subsets, universal set. Intervals: open (a, b), closed [a, b], half-open."
+  },
+  {
+   "title": "Symmetric difference",
+   "explain": "A Δ B = (A − B) ∪ (B − A) = (A ∪ B) − (A ∩ B). Venn-diagram wale sawalon mein kaam aata hai."
+  },
+  {
+   "title": "Equivalence classes",
+   "explain": "A par equivalence relation A ko disjoint classes mein baant deta hai. Example: integers par R = {(a, b): a − b, 3 se divisible} ki teen classes — remainders 0, 1, 2."
+  },
+  {
+   "title": "Checking one-one and onto",
+   "explain": "One-one: f(x₁) = f(x₂) ⇒ x₁ = x₂, ya f strictly monotonic; horizontal line test. Onto: range = codomain. Finite set se usi set tak function one-one tabhi hai jab onto ho."
+  },
+  {
+   "title": "Range-finding techniques",
+   "explain": "y = f(x) likh kar x ke liye solve karo, phir y par conditions nikalo; monotonicity, completing the square ya AM–GM inequality use karo; x² wale rational functions ke liye discriminant ≥ 0."
+  },
+  {
+   "title": "Special functions",
+   "explain": "Modulus |x|, signum sgn x (1, 0, −1), greatest integer [x], fractional part {x}, exponential aur logarithmic functions. Inke graphs, domains aur ranges yaad rakho."
+  }
+ ],
+ "ratta": [
+  "n(A ∪ B) = n(A) + n(B) − n(A ∩ B).",
+  "Relations A → B: 2^{mn};  on n-set: 2^{n²}.",
+  "Reflexive 2^{n² − n};  symmetric 2^{n(n+1)/2}.",
+  "Functions nᵐ;  one-one nPm;  bijections n!.",
+  "Onto m → n: Σ(−1)ᵏ C(n,k)(n − k)ᵐ.",
+  "Equivalence = reflexive + symmetric + transitive.",
+  "[−2.3] = −3;  {x} ∈ [0, 1)."
+ ],
+ "verifiedOn": "2026-11-13"
+}

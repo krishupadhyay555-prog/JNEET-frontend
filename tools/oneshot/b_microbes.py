@@ -60,5 +60,46 @@ SYLLABUS = [
 ("Antibiotics; production and judicious use", ["penicillin"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Microbes ghar mein (curd — Lactobacillus, bread, idli, dosa), industry mein (beverages, antibiotic jaise penicillin, organic acids jaise citric acid, enzymes, streptokinase jaise bioactive molecules), sewage treatment, biogas banane, biocontrol aur biofertiliser ki tarah use hote hain.",
+"Sewage do stages mein treat hota hai: primary (solids ko physically hataana) aur secondary/biological (aeration tanks mein aerobic microbes flocs banate hain; activated sludge ke anaerobic digestion se biogas milti hai).",
+"Biocontrol chemical pesticides ki jagah natural predators aur pathogens use karta hai; biofertilisers (Rhizobium, Azotobacter, cyanobacteria, mycorrhiza) mitti ke nutrients badhaate hain.",
+],
+when=[
+("Ghar mein microbes.", None),
+("Alcoholic drinks.", None),
+("Pehla antibiotic.", None),
+("Industrial chemicals.", None),
+("Medical aur industrial products.", None),
+("Sewage treatment ke steps.", None),
+("Organic pollution naapna.", None),
+("Biogas production.", None),
+("Bina chemicals pest control.", None),
+("Mitti ko natural tarike se samriddh karna.", None),
+],
+examples=[
+("Doodh se dahi", "Thoda sa dahi doodh ko dahi kaise bana deta hai?",
+ "Dahi mein Lactobacillus (lactic acid bacteria) hote hain jo badhkar acids banate hain, jo milk proteins ko jamaate aur aanshik pachaate hain, aur vitamin B₁₂ badhaate hain."),
+("Heart attack ki dawa", "Myocardial infarction ke patients mein blood clots ghulaane wala microbial product kaunsa hai?",
+ "Streptokinase, bacterium Streptococcus se (genetic engineering se modify kiya)."),
+("High BOD bura kyun?", "Bina treat kiye sewage ka BOD zyada hota hai. Iska matlab?",
+ "Isme bahut saara biodegradable organic matter hai; microbes ise todne mein bahut dissolved oxygen use karte hain, isliye fish aur doosre aquatic jeev dum ghut kar marte hain."),
+("Insecticide ki tarah Bt", "Bacillus thuringiensis caterpillars ke khilaaf kaise use hota hai?",
+ "Sookhe spores paani mein milakar plants par spray karte hain; caterpillars unhe khaate hain, unke gut mein toxin nikal kar unhe maarta hai, jabki doosre insects ko nuksaan nahi."),
+("Organic farming", "Organic farming mein broad-spectrum pesticides kyun nahi use karte?",
+ "Ye useful insects aur doosre organisms ko bhi maar dete hain; organic farmers balanced ecosystem chahte hain jisme natural predators pests ko control mein rakhein."),
+],
+topics=[
+("Fermented foods", "Dosa aur idli ka dough bacteria se ferment hota hai (CO₂ se phoola dikhta hai). Toddy, south India ka paaramparik drink, palms ke ras ko ferment karke banta hai. Fish, soybean aur bamboo shoots bhi ferment kiye jaate hain."),
+("Microbes in industry", "Industrial scale par beverages, antibiotics aur enzymes ke liye microbes ugaane ko bade vessels jinhe fermentors kehte hain, use hote hain."),
+("Ganga and Yamuna Action Plans", "Ministry of Environment and Forests ne badi nadiyon ko pollution se bachaane ke liye Ganga Action Plan aur Yamuna Action Plan shuru kiye, sewage treatment plants banaye taaki sirf treated sewage nadiyon mein jaaye."),
+("Integrated pest management", "Faaydemand organisms (predators aur parasites) aur pests ko pehchaano, unke life cycles aur interactions samjho, aur jitna ho sake chemicals ki jagah natural predation par bharosa karo."),
+("Biofertilisers vs chemical fertilisers", "Chemical fertilisers ka zyada use mitti aur paani ko pollute karta hai; biofertilisers living organisms hain jo mitti ki nutrient quality badhaate aur organic farming ko sahara dete hain. India mein ab kai biofertilisers commercially milte hain."),
+("Antibiotics' role", "Antibiotics ne plague, whooping cough (kali khansi), diphtheria (gal ghotu) aur leprosy (kusht rog) jaisi jaanleva bimaariyon ka ilaaj bahut behtar kar diya."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

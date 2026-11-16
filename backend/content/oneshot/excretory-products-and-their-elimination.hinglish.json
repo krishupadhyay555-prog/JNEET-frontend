@@ -1,0 +1,150 @@
+{
+ "slug": "excretory-products-and-their-elimination",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Excretory Products and Their Elimination"
+ },
+ "title": "Excretory Products and Their Elimination",
+ "readMinutes": 14,
+ "summary": [
+  "Animals nitrogenous waste ammonia (ammonotelic — sabse toxic, bahut paani chahiye), urea (ureotelic) ya uric acid (uricotelic — sabse kam toxic, thoda paani) ki tarah nikaalte hain.",
+  "Insaan mein ek jodi kidney hai, har ek mein lagbhag das lakh nephron. Nephron mein glomerulus aur Bowman's capsule (Malpighian body) aur tubule: PCT, loop of Henle, DCT, collecting duct.",
+  "Urine glomerular filtration, tubular reabsorption aur secretion se banta hai. Counter-current mechanism (loop of Henle + vasa recta) urine ko concentrate karta hai.",
+  "Kidney ka kaam ADH, renin–angiotensin–aldosterone system aur ANF (atrial natriuretic factor) control karte hain. Lungs, liver aur skin bhi excretion mein madad karte hain."
+ ],
+ "formulas": [
+  {
+   "name": "Modes of excretion",
+   "formula": "ammonotelic: bony fish, aquatic amphibians, aquatic insects;  ureotelic: mammals, many terrestrial amphibians, marine fish;  uricotelic: reptiles, birds, land snails, insects",
+   "when": "Animals ko waste type se milaana.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Excretory structures",
+   "formula": "protonephridia/flame cells (Platyhelminthes, Amphioxus);  nephridia (annelids);  Malpighian tubules (insects);  antennal/green glands (prawns);  kidneys (vertebrates)",
+   "when": "Alag animals ke excretory organs."
+  },
+  {
+   "name": "Glomerular filtration rate",
+   "formula": "GFR ≈ 125 mL/min ≈ 180 L/day;  urine ≈ 1–1.5 L/day → ~99% of filtrate is reabsorbed",
+   "when": "Filtration ki calculations.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Filtration membrane",
+   "formula": "endothelium of glomerular blood vessels + basement membrane + epithelium of Bowman's capsule (podocytes with filtration slits)",
+   "when": "Ultrafiltration — proteins aur cells ke alawa sab guzarta hai."
+  },
+  {
+   "name": "Tubule functions",
+   "formula": "PCT: reabsorbs 70–80% of electrolytes and water, all glucose and amino acids; secretes H⁺, NH₃, K⁺ (pH balance);  descending limb: permeable to water, not electrolytes;  ascending limb: impermeable to water, transports electrolytes;  DCT: conditional reabsorption of Na⁺ and water, HCO₃⁻ reabsorption;  collecting duct: large water reabsorption, allows some urea to pass into the medulla",
+   "when": "Kaunsa part kya karta hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Counter-current mechanism",
+   "formula": "opposite flow in limbs of Henle's loop and vasa recta → medullary osmolarity rises from 300 to about 1200 mOsmolL⁻¹ (NaCl + urea)",
+   "when": "Urine concentrate karna.",
+   "note": "Human urine filtrate se lagbhag chaar guna zyada concentrated ho sakta hai."
+  },
+  {
+   "name": "ADH (vasopressin)",
+   "formula": "released from neurohypophysis when body fluid volume falls → more water reabsorbed from DCT and collecting duct;  deficiency → diabetes insipidus",
+   "when": "Paani ka hormonal control."
+  },
+  {
+   "name": "RAAS",
+   "formula": "low GFR/BP → JGA releases renin → angiotensinogen → angiotensin I → (ACE) angiotensin II (vasoconstrictor) → aldosterone from adrenal cortex → Na⁺ and water reabsorption → BP and GFR rise",
+   "when": "Renin–angiotensin mechanism.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "ANF (atrial natriuretic factor)",
+   "formula": "released when blood pressure/volume rises → vasodilation → lowers BP;  acts as a check on RAAS",
+   "when": "RAAS ka ulta."
+  },
+  {
+   "name": "Micturition",
+   "formula": "urinary bladder stretches → stretch receptors → CNS → contraction of bladder smooth muscle and relaxation of urethral sphincter (micturition reflex)",
+   "when": "Urine ka nikalna."
+  },
+  {
+   "name": "Abnormal urine tests",
+   "formula": "glycosuria (glucose) and ketonuria (ketone bodies) indicate diabetes mellitus",
+   "when": "Clinical urine analysis."
+  },
+  {
+   "name": "Disorders",
+   "formula": "uremia (urea builds up — treated by haemodialysis);  renal calculi (kidney stones — crystallised salts, oxalates);  glomerulonephritis (inflammation of glomeruli)",
+   "when": "Kidney disorders (uremia, renal calculi, glomerulonephritis)."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Ek din ka filtrate",
+   "problem": "GFR 125 mL/min hai. Ek din mein kitna filtrate banta hai?",
+   "solution": "125 mL × 60 × 24 = 180,000 mL = 180 L/day."
+  },
+  {
+   "title": "Kitna percentage reabsorb",
+   "problem": "180 L filtrate se 1.5 L urine bane to kitna percentage reabsorb hua?",
+   "solution": "(180 − 1.5)/180 × 100 = 99.2%."
+  },
+  {
+   "title": "Birds aur uric acid",
+   "problem": "Birds uric acid kyun nikaalte hain?",
+   "solution": "Uric acid sabse kam toxic hai aur bahut kam paani ke saath paste ki tarah nikal sakta hai, paani aur vazan bachta hai — udne wale animals aur shell wale ande ke andar embryos ke liye faaydemand."
+  },
+  {
+   "title": "Diabetes insipidus",
+   "problem": "Ek vyakti bahut zyada patla urine nikaalta hai jisme glucose nahi. Sambhavit kaaran?",
+   "solution": "ADH ki kami (diabetes insipidus): ADH ke bina DCT aur collecting ducts se paani reabsorb nahi hota."
+  },
+  {
+   "title": "Juxta medullary nephrons",
+   "problem": "Kin nephrons mein lamba loop of Henle hota hai, aur ye kyun zaroori hai?",
+   "solution": "Juxta medullary nephrons — inke lambe loops medulla mein gehre jaate hain aur vasa recta ke saath concentrated urine ke liye medullary gradient banate hain. Cortical nephrons ke loops chhote."
+  },
+  {
+   "title": "Haemodialysis",
+   "problem": "Artificial kidney kaise kaam karti hai?",
+   "solution": "Artery ka blood thanda karke heparin (anticoagulant) milate hain aur dialyser ki cellophane tubes se guzaarte hain jo plasma jaise par bina nitrogenous waste wale dialysing fluid mein hain; waste bahar diffuse hota hai aur saaf blood anti-heparin milakar vein se waapas jaata hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Human excretory system",
+   "explain": "Do kidneys, do ureters, ek urinary bladder aur ek urethra. Kidneys laal-bhoori, sem ke beej jaisi, lagbhag 10–12 cm lambi, 5–7 cm chaudi, 2–3 cm moti, 120–170 g; hilum par ureter, blood vessels aur nerves andar-bahar jaate hain. Bahar cortex, andar medulla medullary pyramids ke saath; renal columns (columns of Bertini) cortex ke extensions hain."
+  },
+  {
+   "title": "Nephron structure",
+   "explain": "Glomerulus: afferent arteriole se bana capillaries ka guchha, efferent arteriole se drain hota hai. Efferent arteriole peritubular capillaries banata hai; Henle's loop ke saath chalne wali patli vessel vasa recta hai (cortical nephrons mein kam ya nahi)."
+  },
+  {
+   "title": "Juxta glomerular apparatus (JGA)",
+   "explain": "DCT aur afferent arteriole ke milne ki jagah cells ke badlaav se bana khaas sensitive region. GFR girne ko mehsoos karke renin chhodta hai."
+  },
+  {
+   "title": "Role of other organs",
+   "explain": "Lungs har minute lagbhag 200 mL CO₂ aur paani nikaalte hain. Liver bile mein bilirubin, biliverdin, cholesterol, toote steroid hormones, vitamins aur drugs nikaalta hai. Skin: sweat glands NaCl, thoda urea aur lactic acid nikaalte hain (mainly thandak ke liye); sebaceous glands sterols, hydrocarbons aur waxes."
+  },
+  {
+   "title": "Kidney transplantation",
+   "explain": "Acute renal failure ka aakhri ilaaj; donor (behtar ho kareebi rishtedaar) se kaam karti kidney li jaati hai taaki immune system rejection kam ho. Dialysis tab tak sahara deta hai."
+  },
+  {
+   "title": "Urine characteristics",
+   "explain": "Halka peela, paani jaisa, thoda acidic (pH 6.0); roz average 25–30 g urea nikalta hai."
+  }
+ ],
+ "ratta": [
+  "Ammonia: bony fish;  urea: mammals;  uric acid: birds, reptiles, insects.",
+  "GFR 125 mL/min = 180 L/day; ~99% reabsorbed.",
+  "PCT: all glucose & amino acids;  ascending limb impermeable to water.",
+  "Medulla gradient: 300 → 1200 mOsmolL⁻¹.",
+  "ADH ↑ water reabsorption; lack → diabetes insipidus.",
+  "JGA → renin → angiotensin II → aldosterone.",
+  "ANF lowers BP (check on RAAS)."
+ ],
+ "verifiedOn": "2026-11-13"
+}

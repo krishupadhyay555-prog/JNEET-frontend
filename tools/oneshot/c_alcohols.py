@@ -66,5 +66,53 @@ SYLLABUS = [
 ("Preparation, properties and reactions of alcohols, phenols and ethers", ["preparation", "Williamson", "Kolbe"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Alcohols (R–OH) aur phenols (Ar–OH) mein –OH group hai; ether (R–O–R′) mein oxygen do carbons ke beech. Hydrogen bonding alcohols aur phenols ko high boiling point aur thodi water solubility deti hai.",
+"Phenols alcohols se kaafi zyada acidic hain kyunki phenoxide ion resonance se stable hai; ortho/para par electron-withdrawing groups (–NO₂) phenol ko aur acidic banate hain.",
+"Alcohols O–H todkar (acidic nature, esterification) ya C–O todkar (substitution, dehydration) react karte hain. Lucas test primary, secondary aur tertiary alcohols ko alag karta hai.",
+"–OH group phenol ki benzene ring ko electrophilic substitution ke liye bahut activate karta hai (bromine water se 2,4,6-tribromophenol). Named reactions: Kolbe, Reimer–Tiemann, Williamson synthesis.",
+],
+when=[
+("Alcohols ki preparation.", None),
+("Reduction routes.", None),
+("Naye C–C bonds ke saath alcohols banana.", None),
+("Acid strengths compare karna.", "Electron-donating groups (–CH₃) phenol ki acidity GHATAATE hain; electron-withdrawing (–NO₂) badhaate hain — ulta mat lo."),
+("1°, 2°, 3° alcohols alag karna.", None),
+("Alcohols se alkenes aur ethers.", "Temperature product tay karta hai: zyada par alkene, kam par ether — mix mat karo."),
+("Products se alcohol ka type pehchaanna.", None),
+("Phenol banana.", None),
+("Phenol ka carboxylation.", None),
+("Ortho position par –CHO laana.", None),
+("Halogenation par solvent ka effect.", None),
+("Ethers banana.", "1° alkyl halide lo — 3° halides ke saath elimination (alkene) haavi hota hai, ether nahi banta."),
+("Ether cleavage ke products.", "Aryl–O bond kabhi nahi toot-ta: anisole se phenol banta hai, iodobenzene nahi."),
+],
+examples=[
+("Grignard synthesis", "Kaunsa carbonyl compound aur Grignard reagent 2-methylpropan-2-ol dega?",
+ "Acetone + CH₃MgBr, phir hydrolysis → (CH₃)₃COH (ketone se 3° alcohol)."),
+("Acidity", "Order: ethanol, phenol, p-nitrophenol, p-cresol.",
+ "p-Nitrophenol > phenol > p-cresol > ethanol (–NO₂ phenoxide ko stable karta hai; –CH₃ destabilise; ethoxide mein resonance nahi)."),
+("Lucas test", "Teen alcohols turbidity dete hain: ek turant, ek 5 minute baad, ek sirf garam karne par. Types?",
+ "Turant: tertiary (2-methylpropan-2-ol); ~5 min: secondary (butan-2-ol); garam karne par: primary (butan-1-ol)."),
+("Steam volatility", "o-Nitrophenol steam volatile kyun hai par p-nitrophenol nahi?",
+ "o-Nitrophenol mein intramolecular hydrogen bonding hai, isliye molecules aapas mein nahi judte. p-Nitrophenol intermolecular H-bonds banata hai jo boiling point badhaate hain."),
+("Ether cleavage", "Anisole + HI ke products?",
+ "Phenol + methyl iodide. O–aryl bond partial double bond jaisa hai, isliye I⁻ methyl carbon par attack karta hai."),
+("Williamson choice", "tert-Butyl methyl ether banane ke liye kaunsa pair: (CH₃)₃CBr + CH₃ONa ya CH₃Br + (CH₃)₃CONa?",
+ "CH₃Br + (CH₃)₃CONa. Strong base ke saath 3° halide elimination karke isobutylene dega."),
+],
+topics=[
+("Classification and structure", "Alcohols: monohydric, dihydric, trihydric; primary, secondary, tertiary; allylic aur benzylic. Alcohols mein O sp³, C–O–H angle tetrahedral se thoda kam; phenols mein C–O bond chhota (partial double-bond character)."),
+("Physical properties", "Alcohols ke boiling points same mass ke hydrocarbons aur ethers se kaafi zyada (hydrogen bonding); branching se ghat-te hain. Chhote alcohols paani mein mil jaate hain; alkyl hissa badhne par solubility ghatti hai."),
+("Reactions of the O–H bond", "Alcohols active metals (Na) se H₂ aur alkoxides dete hain, aur acids, anhydrides ya acid chlorides se esters (esterification). Phenol NaOH se bhi react karta hai (alcohols nahi), yaani uski acidic nature zyada strong hai."),
+("Electrophilic substitution of phenol", "–OH ring ko ortho/para par activate karta hai. Dilute HNO₃ se nitration → o- aur p-nitrophenol; concentrated HNO₃ → picric acid (2,4,6-trinitrophenol). Conc. H₂SO₄ se sulphonation kam temperature par o-phenolsulphonic acid aur zyada par p-isomer. Chromic acid se oxidation → benzoquinone."),
+("Mechanism of dehydration", "–OH ka protonation, paani nikal kar carbocation (slow step), phir H⁺ nikal kar alkene. Carbocation banne ki wajah se aasaani tertiary > secondary > primary aur rearrangements ho sakte hain."),
+("Commercially important alcohols", "Methanol (wood spirit) zehreela: andhapan aur maut. Ethanol cheeni ke fermentation (invertase, zymase) se; denatured alcohol CuSO₄ aur pyridine milakar peene layak nahi rakhte."),
+("Ethers", "Williamson synthesis ya alcohols ke dehydration se. Kam polar, isomeric alcohols se kam boiling point. Anisole mein –OR ring ko activate karta hai (o/p-directing) halogenation, nitration aur Friedel–Crafts ke liye."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

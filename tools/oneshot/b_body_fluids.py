@@ -72,5 +72,54 @@ SYLLABUS = [
 ("Disorders of circulatory system — hypertension, coronary artery disease, angina pectoris, heart failure", ["hypertension", "coronary artery disease", "angina", "heart failure"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Blood ek fluid connective tissue hai: plasma (55%) aur formed elements (45%) — RBCs, WBCs aur platelets. Lymph rang-heen fluid hai jo tissue fluid ko waapas blood mein laata hai aur fats le jaata hai.",
+"ABO aur Rh blood group RBCs par antigens se tay hote hain; galat transfusion ya pregnancy mein Rh incompatibility khatarnaak ho sakti hai. Coagulation (clotting) cascade se khoon jamta hai.",
+"Human heart mein chaar chambers aur double circulation hai. Iski dhadkan myogenic hai, SA node (pacemaker) se shuru hoti hai, aur cardiac cycle lagbhag 0.8 s ka hai; cardiac output = stroke volume × heart rate. Iski regulation nodal tissue aur medulla karte hain.",
+"ECG heart ki electrical activity record karta hai (P, QRS, T). Disorders: hypertension, coronary artery disease, angina aur heart failure.",
+],
+when=[
+("Plasma mein kya hota hai.", None),
+("Blood counts.", None),
+("Erythrocytes.", None),
+("Differential leucocyte count.", None),
+("Blood transfusion compatibility.", None),
+("Pregnancy ki complication.", None),
+("Blood ka coagulation.", None),
+("Human circulation.", None),
+("Heartbeat ki shuruaat aur failaav.", "Heart myogenic hai: impulse heart muscle mein hi shuru hota hai, nerve se nahi — galat mat likhna."),
+("Heartbeat ki timing.", None),
+("Har minute pump hua blood.", None),
+("Auscultation.", None),
+("ECG padhna.", "Heart rate = har minute QRS complexes ki sankhya."),
+("Blood pressure.", None),
+],
+examples=[
+("Cardiac output", "Stroke volume 70 mL aur heart rate 72 beats/min. Cardiac output?",
+ "70 × 72 = 5040 mL/min ≈ ⟨0⟩ L/min."),
+("Ek cycle ki duration", "Heart rate 72 beats/min hai. Ek cardiac cycle kitni der ka?",
+ "60/72 = ⟨0⟩ s (lagbhag 0.8 s)."),
+("Universal donor", "Group O ko universal donor kyun kehte hain?",
+ "O ke RBCs par A ya B antigens nahi hote, isliye recipient ki antibodies unhe agglutinate nahi karti."),
+("Erythroblastosis foetalis", "Rh⁻ mahila ka doosra bachcha Rh⁺ hai. Khatra kya hai?",
+ "Pehli delivery ke baad bani anti-Rh antibodies placenta paar karke foetus ke RBCs tod deti hain — jaanleva anaemia aur jaundice (erythroblastosis foetalis)."),
+("Lymph aur fat", "Intestine se fats kaunsi vessels absorb karti hain?",
+ "Lacteals (villi mein lymph vessels). Lymph fat le jaata hai aur thoracic duct se veins mein khaali hota hai."),
+("AV node par heart block", "AV node fail ho jaaye to kya hoga?",
+ "SA node ke impulses ventricles tak normal tarike se nahi pahunchte; ventricles apni dheemi rate se dhadakte hain (heart block), artificial pacemaker chahiye."),
+],
+topics=[
+("Blood platelets and WBCs", "Platelets (thrombocytes) bone marrow ke megakaryocytes ke tukde hain aur clotting factors chhodte hain. Inki sankhya ghatne par clotting disorders aur zyada khoon behta hai."),
+("Lymph (tissue fluid)", "Capillaries se guzarte waqt kuch paani aur chhote solutes tissue spaces mein jaakar interstitial fluid banate hain; isme plasma jaisa hi mineral distribution hota hai. Lymphatic vessels ise ikattha karke badi veins mein waapas laati hain. Lymph mein lymphocytes hote hain."),
+("Open and closed circulation", "Open: blood khuli jagahon mein pump hota hai (arthropods, molluscs). Closed: blood hamesha vessels mein behta hai (annelids, chordates) — zyada sateek control."),
+("Human heart structure", "Mesodermal origin, thoracic cavity mein, thoda left jhuka, double-walled pericardium mein band. Interatrial aur interventricular septa; tricuspid (right) aur bicuspid/mitral (left) AV valves; pulmonary artery aur aorta ke openings par semilunar valves."),
+("Regulation of cardiac activity", "Heart ki activity nodal tissue se auto-regulated hai par medulla oblongata ise modify karta hai: sympathetic nerves rate aur taakat badhaati hain; parasympathetic (vagus) ghataati hain. Adrenal medulla ke hormones cardiac output badhaate hain."),
+("Disorders", "Hypertension (high blood pressure — heart, brain, kidneys ko nuksaan); coronary artery disease ya atherosclerosis (calcium, fat aur cholesterol jama hokar coronary arteries sankri); angina pectoris (heart muscle ko O₂ kam milne se seene mein dard); heart failure (heart kaafi blood pump nahi kar paata — lungs mein congestion). Cardiac arrest = heart ruk jaana; heart attack = achanak blood ki kami se heart muscle ko nuksaan."),
+("Hepatic portal system", "Hepatic portal vein intestine ka blood systemic circulation se pehle liver tak le jaati hai. Coronary circulation khud heart muscle ko blood deti hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

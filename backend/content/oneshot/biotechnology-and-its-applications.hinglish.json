@@ -1,0 +1,137 @@
+{
+ "slug": "biotechnology-and-its-applications",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biotechnology and its Applications"
+ },
+ "title": "Biotechnology and its Applications",
+ "readMinutes": 12,
+ "summary": [
+  "Biotechnology agriculture (GM crops — Bt cotton, RNAi se pest-resistant tobacco), medicine (human insulin, gene therapy, molecular diagnosis), transgenic animals aur industry mein use hoti hai.",
+  "Bacillus thuringiensis ka Bt toxin khaas insects ko maarta hai; cry genes crops mein daale jaate hain. RNA interference plants mein parasite ke genes ko silence karta hai.",
+  "Recombinant human insulin (Eli Lilly, 1983) E. coli mein chains A aur B alag banakar unhe jod kar banta hai. Pehli gene therapy (1990) ne ADA deficiency ka ilaaj kiya.",
+  "Ethical issues — GEAC ki nigraani, biopiracy aur patent (basmati rice, turmeric, neem) — bhi chapter ka hissa hain."
+ ],
+ "formulas": [
+  {
+   "name": "Bt toxin",
+   "formula": "Bacillus thuringiensis makes inactive protoxin crystals → alkaline pH of insect gut activates them → toxin binds midgut epithelial cells, creates pores → swelling, lysis, death",
+   "when": "Bt crops pests ko kaise maarte hain.",
+   "mistake": "Toxin khud bacterium ko nuksaan nahi karta kyunki wo inactive protoxin ki tarah store hota hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "cry genes",
+   "formula": "cryIAc and cryIIAb → cotton bollworms;  cryIAb → corn borer",
+   "when": "Kaunsa gene kis pest ke liye.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "RNA interference (RNAi)",
+   "formula": "nematode Meloidogyne incognita infects tobacco roots;  nematode-specific genes introduced via Agrobacterium make sense + antisense RNA → dsRNA → silences parasite mRNA → parasite dies",
+   "when": "Pest-resistant plants.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "GM crop benefits",
+   "formula": "tolerance to abiotic stress (cold, drought, salt, heat);  less reliance on chemical pesticides;  reduced post-harvest losses;  better mineral use;  enhanced nutrition (Golden rice — vitamin A)",
+   "when": "Genetically modified plants ke faayde."
+  },
+  {
+   "name": "Human insulin",
+   "formula": "insulin = chains A and B joined by disulphide bonds;  pro-insulin has an extra C-peptide removed during maturation;  Eli Lilly (1983) made A and B chains separately in E. coli and joined them",
+   "when": "Recombinant insulin.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gene therapy for ADA deficiency",
+   "formula": "1990, a 4-year-old girl;  lymphocytes grown in culture, functional ADA cDNA introduced using a retroviral vector, cells returned;  periodic infusions needed;  a permanent cure would need the gene in early embryonic cells",
+   "when": "Pehli clinical gene therapy.",
+   "note": "ADA = adenosine deaminase; iski kami immune system ko affect karti hai."
+  },
+  {
+   "name": "Molecular diagnosis",
+   "formula": "PCR (detects very low amounts of DNA — HIV in suspected AIDS patients, mutations in cancer);  ELISA (antigen–antibody interaction);  probes with radioactive labels and autoradiography",
+   "when": "Jaldi pata lagaane ke tareeke."
+  },
+  {
+   "name": "Transgenic animals uses",
+   "formula": "study of normal physiology and development;  disease models (cancer, cystic fibrosis, rheumatoid arthritis, Alzheimer's);  biological products (α-1-antitrypsin for emphysema);  vaccine safety testing (polio on transgenic mice);  chemical safety (toxicity testing)",
+   "when": "Transgenic animals kyun banaye jaate hain."
+  },
+  {
+   "name": "Rosie the cow",
+   "formula": "first transgenic cow (1997) — milk with human α-lactalbumin (2.4 g/L), nutritionally more balanced for human babies",
+   "when": "Transgenic animal ka example.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ethics and patents",
+   "formula": "GEAC (Genetic Engineering Appraisal Committee) checks GM research validity and safety of GM organisms for public use;  biopiracy: use of bio-resources without authorisation or payment;  basmati patented in the USA (1997) — India has 27 documented basmati varieties",
+   "when": "Ethical aur legal issues."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Bt toxin bacterium ke liye zehreela kyun nahi?",
+   "problem": "Bacillus thuringiensis jaanleva toxin banata hai. Ye khud kyun nahi marta?",
+   "solution": "Toxin inactive protoxin crystal ki tarah store hota hai; ye sirf insects ke alkaline gut mein active hota hai."
+  },
+  {
+   "title": "C-peptide",
+   "problem": "Recombinant production mein pro-insulin problem kyun tha?",
+   "solution": "Insulin pro-insulin ki tarah banta hai jisme extra C-peptide hota hai jo hataana padta hai; Eli Lilly ne A aur B chains alag banakar disulphide bonds se jod kar ise taala."
+  },
+  {
+   "title": "HIV jaldi pakadna",
+   "problem": "Kaunsi technique symptoms aane se pehle HIV detect karti hai?",
+   "solution": "PCR — ye viral nucleic acid ki bahut kam maatra ko amplify karta hai. HIV antibodies detect karne ke liye ELISA bhi use hota hai."
+  },
+  {
+   "title": "RNAi ka target",
+   "problem": "Pest-resistant tobacco mein kis organism ka mRNA silence hota hai?",
+   "solution": "Nematode Meloidogyne incognita ka mRNA — plant ka banaya dsRNA nematode ke ek khaas gene ko silence karta hai, isliye wo bach nahi paata."
+  },
+  {
+   "title": "Golden rice",
+   "problem": "Golden rice kya hai?",
+   "solution": "Genetically modified rice jo β-carotene (provitamin A) banata hai, vitamin A ki kami se ladne ke liye."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Three critical research areas",
+   "explain": "Sabse achha catalyst dena (behtar organism, aam taur par microbe ya pure enzyme); engineering se catalyst ke kaam ke liye best conditions banana; aur product shuddh karne ke liye downstream processing."
+  },
+  {
+   "title": "Green revolution and GM crops",
+   "explain": "Green revolution ne behtar varieties, achhe management aur agrochemicals se food supply teen guna ki, par agrochemicals mehenge aur nuksaandeh the. GM crops kam chemicals ke saath yield badhaane ka doosra raasta dete hain."
+  },
+  {
+   "title": "Genetically engineered insulin",
+   "explain": "Recombinant insulin se pehle kaate gaye cattle aur pigs ka insulin kuch patients mein allergy karta tha. Recombinant insulin bacteria mein banta hai aur human insulin jaisa hi hai."
+  },
+  {
+   "title": "Recombinant therapeutics",
+   "explain": "Duniya mein lagbhag 30 recombinant therapeutics approved hain (India mein 12 market mein). Ye zyada surakshit aur effective hain kyunki anchaahe immunological responses nahi karte."
+  },
+  {
+   "title": "Transgenic animals",
+   "explain": "Aise animals jinke DNA ko badal kar ek extra (foreign) gene daala aur express karaya gaya ho. Maujooda transgenic animals mein 95% se zyada mice hain; baaki rats, rabbits, pigs, sheep, cows aur fish."
+  },
+  {
+   "title": "Biopiracy and India",
+   "explain": "Industrialised desh paise mein ameer par biodiversity mein gareeb; developing desh ulta. Indian Parliament ne patent terms, emergency provisions aur research aur development pahal ke liye Indian Patents Bill mein sanshodhan kiya."
+  }
+ ],
+ "ratta": [
+  "cryIAc, cryIIAb → cotton bollworm;  cryIAb → corn borer.",
+  "RNAi: Meloidogyne incognita, tobacco.",
+  "Insulin: A + B chains, disulphide bonds; Eli Lilly 1983.",
+  "Gene therapy 1990: ADA deficiency, retroviral vector.",
+  "Rosie 1997: human α-lactalbumin, 2.4 g/L.",
+  "GEAC approves GM organisms.",
+  "Basmati, turmeric, neem — biopiracy cases."
+ ],
+ "verifiedOn": "2026-11-13"
+}

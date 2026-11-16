@@ -63,5 +63,51 @@ SYLLABUS = [
 ("Classification and nomenclature of enzymes", ["oxidoreductase", "hydrolase", "ligase"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Living tissue ke chemical analysis se acid-soluble pool (micromolecules, molecular weight ~1000 Da se kam) aur acid-insoluble fraction (macromolecules — protein, nucleic acid, polysaccharides) milte hain; lipid bhi isme aate hain kyunki membranes vesicles mein toot jaati hain.",
+"Proteins amino acids ke polymers (heteropolymers) hain; polysaccharides (carbohydrate) sugars ke polymers; nucleic acids nucleotides ke polymers.",
+"Enzyme zyadatar proteins hain jo activation energy ghata kar reactions tez karte hain. Inki activity temperature, pH aur substrate concentration par depend karti hai, aur inhibit bhi ho sakti hai.",
+"Enzymes chhe classes mein classify hote hain (jaise oxidoreductase, hydrolase, ligase), aur kai ko cofactors chahiye: prosthetic groups, coenzymes ya metal ions.",
+],
+when=[
+("Abundance ke facts.", None),
+("Amino acids ki structure.", None),
+("Lipid ki structure.", "Palmitic acid mein 16 carbons (carboxyl carbon milakar); arachidonic acid mein 20 — galat count mat karna."),
+("Nucleic acid ke building blocks.", None),
+("Protein structure.", None),
+("Linkages.", None),
+("Carbohydrate polymers (polysaccharides).", None),
+("Enzymes classify karna.", None),
+("Enzyme kinetics.", "Competitive inhibitor Km badhaata hai par Vmax same rehta hai — confuse mat karna."),
+("Holoenzyme = apoenzyme + cofactor.", None),
+("Enzyme ki speed ka fact.", None),
+("Enzymes ko affect karne wale factors.", None),
+],
+examples=[
+("Acid-insoluble fraction mein lipids", "Lipids ka molecular weight chhota hai, phir acid-insoluble pool mein kyun aate hain?",
+ "Tissue peesne par cell membranes toot kar acid mein insoluble vesicles ban jaati hain, isliye lipids macromolecules ke saath neeche aa jaate hain."),
+("Enzyme class", "Ek enzyme substrate se bina hydrolysis groups hata kar double bond chhodta hai. Kaunsi class?",
+ "Lyases (class 4)."),
+("Competitive inhibition", "Malonate succinic dehydrogenase ko kyun inhibit karta hai?",
+ "Malonate succinate jaisa dikhta hai, active site se judkar use block kar deta hai — competitive inhibition."),
+("Starch vs cellulose", "Starch iodine se neela kyun hota hai par cellulose nahi?",
+ "Starch helical secondary structures banata hai jo I₂ molecules pakad sakti hain; cellulose mein aisi complex helices nahi."),
+("Haemoglobin structure", "Adult haemoglobin ki quaternary structure kya hai?",
+ "Chaar subunits — do α aur do β chains — har ek mein ek haem group."),
+("Holoenzyme", "Cofactor hatane par enzyme ki activity khatam ho jaati hai. Isse kya pata chalta hai?",
+ "Akela protein part (apoenzyme) inactive hai; cofactor zaroori hai, dono milkar active holoenzyme banate hain."),
+],
+topics=[
+("Primary and secondary metabolites", "Primary metabolites (amino acids, sugars) ka normal physiology mein pata role hai. Plants, fungi aur microbes ke secondary metabolites: pigments (carotenoids, anthocyanins), alkaloids (morphine, codeine), terpenoids (monoterpenes, diterpenes), essential oils (lemongrass oil), toxins (abrin, ricin), lectins (concanavalin A), drugs (vinblastine, curcumin), polymeric substances (rubber, gums, cellulose)."),
+("Metabolic basis for living", "Metabolites metabolic pathways se ek doosre mein badalte hain — anabolic (biosynthetic, energy lete) aur catabolic (degradation, energy chhodte). ATP energy currency hai. Living state ek non-equilibrium steady state hai jo kaam kar sakta hai."),
+("Nature of enzyme action", "Substrate active site se judkar enzyme–substrate complex (ES) banata hai, transition state banti hai, products nikalte hain aur enzyme phir kaam ke liye free. Enzymes activation energy ghataate hain; ribozymes nucleic acids hain jo enzyme ki tarah kaam karte hain."),
+("Proteins and their roles", "Collagen (intercellular ground substance), trypsin (enzyme), insulin (hormone), antibodies (infection se ladte), receptors (sensory reception, jaise smell), GLUT-4 (glucose ko cells mein le jaata)."),
+("Effect of substrate concentration", "Substrate concentration badhne par velocity badhti hai aur phir maximum (Vmax) par ruk jaati hai jab saari active sites bhar jaati hain."),
+("Nucleic acid structure basics", "Nucleic acids mein phosphate ek sugar ke 3′ carbon ko agle ke 5′ carbon se jodta hai. B-DNA (Watson–Crick model) mein har turn mein 10 base pairs, 3.4 nm pitch aur base pairs ke beech 0.34 nm."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

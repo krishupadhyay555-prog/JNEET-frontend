@@ -81,5 +81,57 @@ SYLLABUS = [
 ("Second law: reversible and irreversible processes", ["second law", "reversible", "irreversible"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Zeroth law: do systems agar teesre ke saath thermal equilibrium mein hain to aapas mein bhi equilibrium mein hain — isi se temperature ka matlab banta hai.",
+"First law: ΔQ = ΔU + ΔW (di gayi heat = internal energy mein badhat + gas dwara kiya work). Ideal gas ka U sirf temperature par depend karta hai.",
+"Gas ka work = P–V curve ke neeche ka area. Isothermal, adiabatic, isobaric aur isochoric processes ke apne seedhe formulas hain.",
+"Second law: heat apne aap thande se garam ki taraf nahi behti, aur koi cyclic process heat ko poori tarah work mein nahi badal sakta. Asli processes irreversible hote hain.",
+],
+when=[
+("Har energy-balance sawal.", "Sign convention: gas ko di heat +, gas dwara work +. Conventions mix mat karo."),
+("P–V diagram par koi bhi process.", "Cycle mein work = enclosed area (P–V par clockwise → positive work) — direction check karo."),
+("Internal energy ka change.", "ΔU sirf ΔT par depend — non-isochoric process mein bhi nCvΔT hi lagao."),
+("Reservoir ke contact mein dheemi processes.", None),
+("Tez processes ya insulated container.", "Adiabatic curve (slope −γP/V) isothermal (−P/V) se zyada steep — confuse mat karo."),
+("Constant pressure par garam karna.", None),
+("Rigid container mein garam karna.", None),
+("Dono molar heat capacities ko jodna.", None),
+("Problem mein γ chunna.", None),
+("Gases ka mixture.", None),
+("Diatomic gas: heat ka 2/7 work banta hai.", None),
+("P–V diagram par cycles.", None),
+],
+examples=[
+("Isothermal expansion", "2 mol ideal gas 300 K par isothermally double volume tak failti hai. Work (ln 2 = 0.693)?",
+ "W = nRT ln 2 = 2 × 8.314 × 300 × 0.693 ≈ ⟨0⟩ J (= absorbed heat, kyunki ΔU = 0)."),
+("Adiabatic compression", "300 K ki monoatomic gas adiabatically 1/8 volume tak dabaayi. Final temperature?",
+ "TVᵞ⁻¹ = constant, γ − 1 = 2/3: T₂ = 300 × 8^(2/3) = 300 × 4 = ⟨0⟩ K."),
+("Diatomic gas ka isobaric heating", "2 mol diatomic gas constant pressure par 50 K garam. Q, W aur ΔU?",
+ "Q = nCpΔT = 2 × 3.5 × 8.314 × 50 ≈ ⟨0⟩ J; W = nRΔT ≈ ⟨1⟩ J; ΔU = Q − W ≈ ⟨2⟩ J."),
+("Constant pressure par work", "Gas 10⁵ Pa par 1 L se 3 L tak failti hai. Work?",
+ "W = PΔV = 10⁵ × 2 × 10⁻³ = ⟨0⟩ J."),
+("Adiabatic pressure change", "Diatomic gas (γ = 1.4) adiabatically aadhe volume tak. Pressure kitna guna?",
+ "P₂/P₁ = 2^1.4 ≈ ⟨0⟩ (isothermal ke factor 2 se zyada)."),
+("Ek line mein first law", "Gas 500 J heat leti hai aur 200 J work karti hai. Internal energy ka change?",
+ "ΔU = Q − W = 500 − 200 = ⟨0⟩ J (temperature badhta hai)."),
+("Triangular cycle ka work", "Gas A(P₀, V₀) → B(2P₀, V₀) → C(2P₀, 2V₀) → seedhi line se wapas A; P₀ = 10⁵ Pa, V₀ = 1 L. Net work?",
+ "Work = triangle ka area = ½ × V₀ × P₀ = ½ × 10⁻³ × 10⁵ = ⟨0⟩ J."),
+("Mixture ka γ", "1 mol monoatomic + 1 mol rigid diatomic gas. Mixture ka γ?",
+ "Cv = (3R/2 + 5R/2)/2 = 2R, Cp = 3R, γ = 3/2 = ⟨0⟩."),
+],
+topics=[
+("System, surroundings and state", "System woh hissa jise hum padhte hain; baaki sab surroundings. State variables (P, V, T, U) equilibrium states batate hain. Extensive variables size par depend (V, U, mass); intensive nahi (P, T, density)."),
+("Thermal equilibrium and the zeroth law", "A agar C ke saath equilibrium mein hai aur B bhi C ke saath, to A aur B bhi equilibrium mein. Thermometer isi law se kaam karta hai."),
+("Heat, work and internal energy", "Heat aur work transit mein energy hain aur path par depend karte hain. Internal energy state function hai: ideal gas mein sirf molecules ki kinetic energy, sirf T par depend."),
+("Reading P–V diagrams", "Isobaric: horizontal line; isochoric: vertical line; isothermal: hyperbola; adiabatic: zyada steep curve. Expansion (V badhe) → W positive; compression → W negative."),
+("Quasi-static processes", "Itni dheemi process ki system hamesha equilibrium mein rahe. Sirf quasi-static processes P–V par curve ki tarah ban sakte hain aur reversible ho sakte hain."),
+("Reversible and irreversible processes", "Reversible process ulti chal sakti hai aur system aur surroundings dono bilkul shuru ki haalat mein laut aate hain. Friction, free expansion, finite temperature difference par heat flow aur mixing processes ko irreversible banate hain. Saari natural processes irreversible hain."),
+("Second law of thermodynamics", "Kelvin–Planck: aisi koi process nahi jiska ek-maatra result heat ko poora work mein badalna ho. Clausius: aisi koi process nahi jiska ek-maatra result thande se garam body tak heat bhejna ho. Dono statements equivalent hain."),
+("Syllabus note", "Current NTA syllabus mein zeroth, first, second law, processes aur reversible/irreversible processes hain. Heat engine/refrigerator details aur Carnot cycle alag se nahi likhe, isliye first law aur P–V work sabse zyada practise karo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

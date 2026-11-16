@@ -74,5 +74,52 @@ SYLLABUS = [
 ("Functions — one-one, into and onto functions, composition of functions", ["one-one", "onto", "composition", "bijective"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Set ek well-defined collection hai. Operations — union, intersection, difference, complement — De Morgan's laws follow karte hain, aur inclusion–exclusion principle union ke elements ginta hai. Saare subsets ka set power set hai.",
+"A se B tak relation A × B ka koi bhi subset hai. Set par relation reflexive, symmetric, transitive ho sakta hai (teeno = equivalence relation, jo set ko equivalence classes mein baant deta hai).",
+"Function domain ke har element ko theek ek image deta hai. Functions one-one (injective), onto (surjective) ya dono (bijective) ho sakte hain; sirf bijections ka inverse hota hai. Composition fog se functions jodte hain.",
+"JEE ko counting questions bahut pasand hain: relations, functions, one-one aur onto maps, aur reflexive ya symmetric relations ki ginti.",
+],
+when=[
+("Union ke elements ginna.", None),
+("Teen overlapping sets.", None),
+("Complements simplify karna.", None),
+("Subsets ginna.", None),
+("Relations ginna.", None),
+("Khaas relations ginna.", None),
+("Relation ke types check karna.", "Non-empty set par empty relation symmetric aur transitive hai par reflexive nahi — dhyan rakho."),
+("Maps ginna.", None),
+("Domain nikaalna.", None),
+("Functions ki symmetry.", None),
+("Functions ko jodna.", None),
+("Step functions.", "[−2.3] = −3 hai, −2 nahi — galat mat likhna."),
+("Period nikaalna.", None),
+],
+examples=[
+("Union ki ginti", "Ek class mein 40 students ko cricket, 30 ko football aur 15 ko dono pasand hain. Kam se kam ek kitno ko pasand?",
+ "n(C ∪ F) = 40 + 30 − 15 = ⟨0⟩."),
+("Relations ki sankhya", "A mein 3 elements aur B mein 4. A se B tak kitne relations?",
+ "2^(3 × 4) = 2¹² = ⟨0⟩."),
+("Functions aur one-one functions", "A mein 3 elements, B mein 4. A se B tak functions aur one-one functions ki sankhya?",
+ "Functions: 4³ = ⟨0⟩. One-one: ⁴P₃ = 4 × 3 × 2 = ⟨1⟩."),
+("Onto functions", "4-element set se 3-element set tak kitne onto functions?",
+ "3⁴ − C(3,1)2⁴ + C(3,2)1⁴ = 81 − 48 + 3 = ⟨0⟩."),
+("Reflexive aur symmetric relations", "3 elements wale set par kitne reflexive aur kitne symmetric relations?",
+ "Reflexive: 2^(9 − 3) = ⟨0⟩. Symmetric: 2^(3 × 4/2) = ⟨1⟩."),
+("Domain", "f(x) = 1/√(x² − 5x + 6) ka domain nikalo.",
+ "Chahiye x² − 5x + 6 > 0 ⇒ (x − 2)(x − 3) > 0 ⇒ x < 2 ya x > 3. Domain: (−∞, 2) ∪ (3, ∞)."),
+],
+topics=[
+("Types of sets", "Empty (∅), singleton, finite, infinite, equal sets, equivalent sets (same cardinality), subsets, universal set. Intervals: open (a, b), closed [a, b], half-open."),
+("Symmetric difference", "A Δ B = (A − B) ∪ (B − A) = (A ∪ B) − (A ∩ B). Venn-diagram wale sawalon mein kaam aata hai."),
+("Equivalence classes", "A par equivalence relation A ko disjoint classes mein baant deta hai. Example: integers par R = {(a, b): a − b, 3 se divisible} ki teen classes — remainders 0, 1, 2."),
+("Checking one-one and onto", "One-one: f(x₁) = f(x₂) ⇒ x₁ = x₂, ya f strictly monotonic; horizontal line test. Onto: range = codomain. Finite set se usi set tak function one-one tabhi hai jab onto ho."),
+("Range-finding techniques", "y = f(x) likh kar x ke liye solve karo, phir y par conditions nikalo; monotonicity, completing the square ya AM–GM inequality use karo; x² wale rational functions ke liye discriminant ≥ 0."),
+("Special functions", "Modulus |x|, signum sgn x (1, 0, −1), greatest integer [x], fractional part {x}, exponential aur logarithmic functions. Inke graphs, domains aur ranges yaad rakho."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

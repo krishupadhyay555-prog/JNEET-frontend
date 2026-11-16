@@ -75,5 +75,51 @@ SYLLABUS = [
 ("Focus, directrix, eccentricity, latus rectum", ["focus", "directrix", "eccentricity", "latus rectum"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Conic us point ka locus hai jiski fixed point (focus) se doori, fixed line (directrix) se doori ki e guna hai: e = 1 parabola, e < 1 ellipse, e > 1 hyperbola. e ko eccentricity kehte hain.",
+"Standard forms: parabola y² = 4ax; ellipse x²/a² + y²/b² = 1 (b² = a²(1 − e²)); hyperbola x²/a² − y²/b² = 1 (b² = a²(e² − 1)).",
+"Har conic ke liye focus, directrix, latus rectum, eccentricity, parametric point, tangent aur normal ki equations aur tangent condition yaad rakho.",
+],
+when=[
+("Standard parabola.", None),
+("Parabola ke tangents.", None),
+("Parabola ke normals.", "Ek point se parabola par teen normals khinch sakte hain (m mein cubic) — sirf ek mat samjho."),
+("Focal chord ki properties.", None),
+("Standard ellipse.", None),
+("Focal distances ka sum.", None),
+("Ellipse ke tangents.", None),
+("Standard hyperbola.", None),
+("Focal distances ka difference.", None),
+("Hyperbola ke tangents.", None),
+("Khaas hyperbola.", None),
+("Hyperbola aur uska conjugate.", None),
+("Perpendicular tangents ka locus.", None),
+],
+examples=[
+("Parabola", "y² = 12x ke liye a, focus aur latus rectum ki length nikalo.",
+ "4a = 12 ⇒ a = ⟨0⟩; focus (3, 0); latus rectum = ⟨1⟩."),
+("Ellipse", "x²/25 + y²/16 = 1 ke liye e, foci aur latus rectum nikalo.",
+ "e = √(1 − 16/25) = ⟨0⟩; foci (±⟨1⟩, 0); latus rectum = 2 × 16/5 = ⟨2⟩."),
+("Hyperbola", "x²/16 − y²/9 = 1 ke liye e aur latus rectum nikalo.",
+ "e = √(1 + 9/16) = 5/4 = ⟨0⟩; latus rectum = 2 × 9/4 = ⟨1⟩; asymptotes y = ±(3/4)x."),
+("Focal distances ka sum", "Ellipse x²/25 + y²/16 = 1 ke kisi bhi point P ke liye SP + S′P nikalo.",
+ "2a = ⟨0⟩."),
+("Tangent condition", "c ki kis value par y = 2x + c, y² = 8x ko chhooti hai?",
+ "a = 2, m = 2 ⇒ c = a/m = 1."),
+("Conic pehchaano", "9x² + 4y² = 36 pehchaano.",
+ "36 se divide karo: x²/4 + y²/9 = 1 — ellipse jiska major axis y-axis ke saath hai (a = 3, b = 2), e = √5/3."),
+],
+topics=[
+("Other forms of the parabola", "x² = 4ay (upar khulta), y² = −4ax (left khulta), x² = −4ay (neeche khulta). Shifted: (y − k)² = 4a(x − h) ka vertex (h, k)."),
+("Ellipse with vertical major axis", "x²/a² + y²/b² = 1 mein b > a ho to a² = b²(1 − e²), foci (0, ±be) aur directrices y = ±b/e."),
+("Auxiliary circle and eccentric angle", "Major axis ko diameter maan kar bana circle auxiliary circle x² + y² = a² hai; point (a cos θ, b sin θ) ka eccentric angle θ hai."),
+("Reflection property", "Parabola ke axis ke parallel rays focus se reflect hoti hain (dish antennas, headlights). Ellipse ke ek focus se nikli rays doosre focus se reflect hoti hain."),
+("Chord of contact and midpoint chord", "Circles jaisa notation: chord of contact T = 0; diye midpoint wali chord T = S₁."),
+("Identifying a general conic", "ax² + 2hxy + by² + 2gx + 2fy + c = 0 (non-degenerate) ke liye: h² = ab parabola, h² < ab ellipse, h² > ab hyperbola; a + b = 0 rectangular hyperbola."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

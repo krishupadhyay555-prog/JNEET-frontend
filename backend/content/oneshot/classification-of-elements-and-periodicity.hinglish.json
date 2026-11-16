@@ -1,0 +1,141 @@
+{
+ "slug": "classification-of-elements-and-periodicity",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Classification of Elements and Periodicity",
+  "JEE": "Classification of Elements and Periodicity"
+ },
+ "title": "Classification of Elements and Periodicity",
+ "readMinutes": 11,
+ "summary": [
+  "Mendeleev ne elements ko atomic mass se lagaya aur na mile elements ke liye gaps chhode. Moseley ne dikhaya ki atomic number zyada basic hai — modern periodic law: properties atomic number ke periodic functions hain.",
+  "Long form periodic table mein 18 groups aur 7 periods hain, aur last electron jis subshell mein jaata hai uske hisaab se s-, p-, d-, f-blocks.",
+  "Periodic trends effective nuclear charge aur shielding se aate hain: period mein aage atoms chhote aur electrons zyada kas kar pakadte hain; group mein neeche bade aur dheela pakadte hain.",
+  "Key trends: atomic/ionic radius, ionisation enthalpy, electron gain enthalpy, electronegativity aur valence. Exceptions (N vs O, Be vs B, F vs Cl) exam ke favourite hain."
+ ],
+ "formulas": [
+  {
+   "name": "Modern periodic law",
+   "formula": "properties of elements are periodic functions of their atomic numbers",
+   "when": "Modern table ka base."
+  },
+  {
+   "name": "Position from configuration",
+   "formula": "period = highest n;  s-block group = valence e⁻;  p-block group = 10 + valence e⁻ (ns + np);  d-block group = ns + (n − 1)d electrons",
+   "when": "Z se period, group aur block nikaalna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Effective nuclear charge",
+   "formula": "Z_eff = Z − σ (σ = shielding constant)",
+   "when": "Saare size aur energy trends samjhaana."
+  },
+  {
+   "name": "Atomic radius trend",
+   "formula": "decreases across a period, increases down a group;  noble gases quoted as van der Waals radii",
+   "when": "Sizes compare karna.",
+   "mistake": "Noble gas ka van der Waals radius doosre elements ke covalent radius se compare mat karo."
+  },
+  {
+   "name": "Ionic radius",
+   "formula": "cation < parent atom < anion;  isoelectronic species: higher Z → smaller",
+   "when": "N³⁻ > O²⁻ > F⁻ > Na⁺ > Mg²⁺ > Al³⁺.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ionisation enthalpy",
+   "formula": "IE₁ < IE₂ < IE₃ …;  increases across a period, decreases down a group",
+   "when": "Electron nikaalne ki energy.",
+   "mistake": "Exceptions: B < Be aur O < N (stable 2s² aur half-filled 2p³) — bhoolo mat."
+  },
+  {
+   "name": "Electron gain enthalpy",
+   "formula": "more negative across a period, less negative down a group;  Cl has the most negative value",
+   "when": "Electron jodne par energy change.",
+   "mistake": "F, Cl se kam negative hai — chhoti 2p shell aane wale electron ko repel karti hai, ulta mat samjho."
+  },
+  {
+   "name": "Electronegativity (Pauling)",
+   "formula": "increases across, decreases down;  F = 4.0 (highest), then O, N, Cl",
+   "when": "Bond polarity aur character."
+  },
+  {
+   "name": "Metallic and non-metallic character",
+   "formula": "metallic character decreases across, increases down",
+   "when": "Oxides ki nature: period mein basic → amphoteric → acidic."
+  },
+  {
+   "name": "Valence",
+   "formula": "s/p-block: valence = group electrons or 8 − group electrons",
+   "when": "Compounds ke formula likhna (jaise Al₂O₃) aur common oxidation states."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Z = 33 ki position",
+   "problem": "Z = 33 wala element: period aur block?",
+   "solution": "[Ar]3d¹⁰4s²4p³ → period 4, p-block, group 15 (arsenic)."
+  },
+  {
+   "title": "d-block element ka group",
+   "problem": "Configuration [Ar]3d²4s². Group?",
+   "solution": "ns + (n − 1)d = 2 + 2 = 4 → group 4 (titanium)."
+  },
+  {
+   "title": "Shielding estimate",
+   "problem": "Simple shielding (andar ki 1s² = 1.0 each, 2s²2p⁶ = 0.85 each) se Na ke 3s electron ka Z_eff?",
+   "solution": "Z_eff = 11 − (2 × 1.0 + 8 × 0.85) = 2.2 — bahar ka electron dheela pakda hai, Na use aasaani se kho deta hai."
+  },
+  {
+   "title": "Ionic radii ka order",
+   "problem": "Na⁺, F⁻, Mg²⁺, O²⁻ size ke order mein.",
+   "solution": "Sab mein 10 electrons; zyada protons zyada kheenchte hain: O²⁻ > F⁻ > Na⁺ > Mg²⁺."
+  },
+  {
+   "title": "Ionisation enthalpy ka order",
+   "problem": "B, C, N, O first ionisation enthalpy ke order mein.",
+   "solution": "B < C < O < N. N (2p³, half-filled) extra stable; O paired 2p electron aasaani se khota hai."
+  },
+  {
+   "title": "Sabse negative electron gain enthalpy",
+   "problem": "F, Cl, Br, O mein sabse negative electron gain enthalpy kiski?",
+   "solution": "Cl. F chhota hai, isliye uski compact 2p shell mein electron–electron repulsion uski value ko Cl se kam negative bana deta hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "History of classification",
+   "explain": "Döbereiner ke triads (Li, Na, K), Newlands ka law of octaves, Lothar Meyer ke volume curves, aur Mendeleev ka periodic table (1869) jisne eka-aluminium (Ga) aur eka-silicon (Ge) predict kiye. Moseley (1913) ne dikhaya ki atomic number se order sahi aata hai."
+  },
+  {
+   "title": "Blocks of the table",
+   "explain": "s-block (groups 1, 2): reactive metals, kam IE. p-block (13–18): metals, metalloids aur non-metals, halogens aur noble gases bhi. d-block (3–12): transition metals, variable valency, rangeen ions. f-block: lanthanoids aur actinoids neeche."
+  },
+  {
+   "title": "Nomenclature of new elements",
+   "explain": "Z > 100 wale elements ko digits ke roots se temporary IUPAC naam: 0 nil, 1 un, 2 bi, 3 tri, 4 quad, 5 pent, 6 hex, 7 sept, 8 oct, 9 enn + 'ium'. Z = 120 unbinilium (Ubn)."
+  },
+  {
+   "title": "Why trends happen",
+   "explain": "Period mein electrons same shell mein aate hain aur nuclear charge badhta hai, isliye Z_eff badhta hai: chhota radius, zyada IE, zyada negative electron gain enthalpy, zyada electronegativity. Group mein neeche nayi shell aur zyada shielding, isliye trends ulte."
+  },
+  {
+   "title": "Anomalous behaviour of the first element",
+   "explain": "Har group ka pehla element (Li, Be, B, C, N, O, F) baaki se alag: chhota size, zyada electronegativity, d orbitals nahi (maximum covalency 4). Diagonal relationship: Li–Mg, Be–Al, B–Si milti-julti properties."
+  },
+  {
+   "title": "Chemical reactivity and oxides",
+   "explain": "Reactivity period ke dono siron par sabse zyada (alkali metals, halogens). Period 3 mein oxides strongly basic (Na₂O) se amphoteric (Al₂O₃) hote hue strongly acidic (Cl₂O₇) tak badalte hain."
+  }
+ ],
+ "ratta": [
+  "Modern law: periodic in atomic number (Moseley).",
+  "Period = highest n;  p-block group = 10 + ns + np electrons.",
+  "Radius ↓ across, ↑ down;  isoelectronic: more Z → smaller.",
+  "IE: Be > B, N > O (exceptions).",
+  "Most negative electron gain enthalpy: Cl (not F).",
+  "Electronegativity: F 4.0 > O > N ≈ Cl.",
+  "Oxides across period 3: basic → amphoteric → acidic."
+ ],
+ "verifiedOn": "2026-11-13"
+}

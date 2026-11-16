@@ -160,3 +160,41 @@ def _check_and_write(doc, syllabus, filename, lang):
     n_checks = sum(len(getattr(x, "checks", [])) for x in doc["examples"])
     print(f"✓ {doc['slug']} [{lang}]: {len(doc['formulas'])} formulas, {len(doc['examples'])} examples "
           f"({n_checks} numeric checks), {len(doc['topics'])} topics, {len(syllabus)} syllabus points covered")
+
+
+def hinglish(en, summary, when, examples, topics, ratta=None, title=None):
+    """Hinglish page from an English-first DOC (16 Nov 2026).
+
+    Formula names, formulas, units and tags are copied from the English page
+    (maths is the same in both languages); only the words are new.
+      when     : one (when, mistake_or_None) pair per English formula, same order
+      examples : one (title, problem, solution) per English example, same order.
+                 Write ⟨0⟩, ⟨1⟩… in the solution for the English example's checked
+                 numbers — they are filled in and re-checked, so the Hinglish page
+                 can never show a different number.
+      topics   : list of (title, explain)
+      ratta    : defaults to the English list (it is mostly formulas)
+    """
+    assert len(when) == len(en["formulas"]), f"{en['slug']}: {len(when)} 'when' lines for {len(en['formulas'])} formulas"
+    assert len(examples) == len(en["examples"]), f"{en['slug']}: {len(examples)} examples for {len(en['examples'])}"
+    forms = []
+    for f, (w, m) in zip(en["formulas"], when):
+        forms.append(F(f["name"], f["formula"], w, m, f.get("unit"), f.get("tag")))
+    exs = []
+    for x, (t, p, s) in zip(en["examples"], examples):
+        checks = list(getattr(x, "checks", []))
+        for i, (_, shown) in enumerate(checks):
+            s = s.replace(f"⟨{i}⟩", shown)
+        assert "⟨" not in s, f"{en['slug']}: unfilled placeholder in '{t}'"
+        exs.append(X(t, p, s, checks))
+    doc = {k: v for k, v in en.items() if k not in ("summary", "formulas", "examples", "topics", "ratta")}
+    if title: doc["title"] = title
+    doc.update(summary=list(summary), formulas=forms, examples=exs,
+               topics=[T(a, b) for a, b in topics], ratta=list(ratta if ratta is not None else en["ratta"]))
+    return doc
+
+
+def write_pair(doc_en, syllabus, doc_hi):
+    """English page + Hinglish page for an English-first chapter file."""
+    _check_and_write(doc_hi, syllabus, doc_en["slug"] + ".hinglish.json", "hinglish")
+    _check_and_write(doc_en, syllabus, doc_en["slug"] + ".json", "english")

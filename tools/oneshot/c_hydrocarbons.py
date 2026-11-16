@@ -68,5 +68,53 @@ SYLLABUS = [
 ("Aromatic hydrocarbons — nomenclature, benzene structure and aromaticity; electrophilic substitution: halogenation, nitration, Friedel–Crafts alkylation and acylation; directive influence of functional group in monosubstituted benzene", ["aromatic", "Hückel", "nitration", "Friedel", "directive"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Alkanes (CₙH₂ₙ₊₂, sp³) kaafi unreactive hain aur free-radical substitution karte hain. Unke conformations (ethane ka staggered vs eclipsed) energy mein alag hain.",
+"Alkenes (CₙH₂ₙ, C=C) aur alkynes (CₙH₂ₙ₋₂, C≡C) electrophilic addition karte hain. HX Markovnikov rule se judta hai, sirf peroxide ke saath HBr ulta (anti-Markovnikov). Alkenes geometrical isomerism dikhate hain.",
+"Terminal alkynes thode acidic hain (sp carbon) aur acetylides banate hain. Ozonolysis batata hai double bond kahan tha.",
+"Benzene aromatic hai (planar, cyclic, 6 π electrons — Hückel 4n + 2). Ye electrophilic substitution pasand karta hai, aur substituents aane wale group ko ortho/para ya meta par bhejte hain (directive influence).",
+],
+when=[
+("Symmetrical bade alkanes banana (preparation).", "Do alag alkyl halides se mixture banta hai; methane nahi ban sakta — bhoolo mat."),
+("Even number carbons wale alkanes.", None),
+("Ek carbon kam wala alkane.", None),
+("Alkanes ka halogenation.", "Halogens ki reactivity: F₂ > Cl₂ > Br₂ > I₂; 3° H sabse jaldi badalta hai — dhyan rakho."),
+("Unsymmetrical alkenes mein HX jodna.", "H us carbon par jaata hai jismein pehle se zyada H hai (zyada stable carbocation) — ulta mat karo."),
+("Anti-Markovnikov addition.", "Sirf HBr ke saath — HCl ya HI ke saath nahi."),
+("Double bond dhoondhna.", None),
+("Controlled reduction.", None),
+("Alkynes se aldehydes/ketones banana.", None),
+("Terminal alkynes Na, NaNH₂ aur ammoniacal AgNO₃ se kyun react karte hain.", None),
+("Aromatic compounds pehchaanna.", "Cyclopentadienyl anion (6π) aromatic hai; cation (4π) nahi — confuse mat karo."),
+("Benzene ki reactions.", None),
+("Agla group kahan jaayega, predict karna.", "Halogens alag case hain: deactivating (−I) phir bhi ortho/para-directing (+R) — galat mat samjho."),
+],
+examples=[
+("Ozonolysis product", "But-2-ene ka ozonolysis (Zn/H₂O). Products?",
+ "CH₃CH=CHCH₃ double bond par toot-ta hai → 2 CH₃CHO (ethanal)."),
+("Markovnikov vs peroxide", "Propene + HBr, benzoyl peroxide ke saath aur bina?",
+ "Bina peroxide: 2-bromopropane (Markovnikov, 2° carbocation se). Peroxide ke saath: 1-bromopropane (free-radical, anti-Markovnikov)."),
+("cis ya trans", "But-2-yne ko H₂/Lindlar's catalyst se aur alag se Na/liq. NH₃ se reduce kiya. Products?",
+ "Lindlar → cis-but-2-ene (syn addition). Na/NH₃ → trans-but-2-ene."),
+("Aromatic hai ya nahi?", "Kaun aromatic: benzene, cyclooctatetraene, cyclopentadienyl anion, cyclobutadiene?",
+ "Benzene (6π) aur cyclopentadienyl anion (6π) 4n + 2 follow karte hain. Cyclooctatetraene (8π, non-planar) aur cyclobutadiene (4π, antiaromatic) nahi."),
+("Toluene ka nitration", "Toluene ke nitration ke main products?",
+ "–CH₃ activating aur o/p-directing → o-nitrotoluene aur p-nitrotoluene (kam crowding se p major)."),
+("Friedel–Crafts acylation", "Benzene + CH₃COCl, anhydrous AlCl₃ ke saath?",
+ "Acetophenone (C₆H₅COCH₃). Acylium ion CH₃C≡O⁺ electrophile hai; alkylation ke ulta yahan rearrangement aur polysubstitution nahi."),
+],
+topics=[
+("Conformations of ethane", "C–C single bond par ghoomne se staggered (sabse stable, minimum torsional strain) aur eclipsed (sabse kam stable) conformations; energy difference sirf ~12.5 kJ/mol, isliye tezi se badalte rehte hain. Newman aur sawhorse projections se dikhaate hain."),
+("Geometrical isomerism", "C=C par restricted rotation se cis aur trans isomers, jab har double-bonded carbon par do alag groups hon. cis-But-2-ene ka boiling point zyada (polar); trans ka melting point zyada (achhe se pack hota hai)."),
+("Preparation of alkenes", "Alcohols ka dehydration (conc. H₂SO₄, garam), alkyl halides ka dehydrohalogenation (alcoholic KOH — Saytzeff product, zyada substituted alkene, major), aur alkynes ka partial reduction."),
+("Reactions of alkenes", "H₂, X₂ (bromine water decolourise — unsaturation ka test), HX, H₂O (acid-catalysed) ka addition; thande dilute alkaline KMnO₄ (Baeyer's reagent, diol; purple rang ud jaata hai) se oxidation; ozonolysis; polymerisation (polythene)."),
+("Alkynes", "Calcium carbide se (CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂) ya double dehydrohalogenation se. Terminal alkynes ammoniacal AgNO₃ ke saath safed precipitate dete hain — alkenes se alag karne ka test. Red-hot iron tube mein ethyne polymerise hokar benzene banata hai."),
+("Benzene structure", "Kekulé structures resonance forms hain; saare C–C bonds barabar (139 pm, single aur double ke beech). Benzene addition se bachta hai kyunki usse aromatic stability kho jaayegi."),
+("Carcinogenicity and toxicity", "Kai polynuclear aromatic hydrocarbons (koyla, tobacco ke adhoore jalne se) carcinogenic hain, jaise 1,2-benzanthracene."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

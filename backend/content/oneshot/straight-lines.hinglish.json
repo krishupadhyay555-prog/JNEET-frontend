@@ -1,0 +1,153 @@
+{
+ "slug": "straight-lines",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Straight Lines"
+ },
+ "title": "Straight Lines",
+ "readMinutes": 15,
+ "summary": [
+  "Coordinate geometry distance aur section formulas, triangle ka area aur triangle ke centres (centroid, incentre, circumcentre, orthocentre) se shuru hoti hai. Locus nikaalna bhi yahin seekhte hain.",
+  "Line ko slope–intercept, point–slope, two-point, intercept, normal ya general form mein likh sakte hain. Slope se parallel (m₁ = m₂) aur perpendicular (m₁m₂ = −1) lines tay hoti hain.",
+  "Point ki line se distance, parallel lines ke beech distance, lines ke beech angle between, intersection se guzarne wali family of lines, concurrent lines aur angle bisectors — ye JEE ke core tools hain."
+ ],
+ "formulas": [
+  {
+   "name": "Distance and section",
+   "formula": "d = √((x₂ − x₁)² + (y₂ − y₁)²);  internal division m:n → ((mx₂ + nx₁)/(m + n), (my₂ + ny₁)/(m + n))",
+   "when": "Basic coordinate formulas."
+  },
+  {
+   "name": "Area of triangle",
+   "formula": "Δ = ½|x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂)|;  area 0 ⇔ collinear",
+   "when": "Area aur collinearity.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Centres of a triangle",
+   "formula": "centroid G = ((x₁ + x₂ + x₃)/3, (y₁ + y₂ + y₃)/3);  incentre I = ((ax₁ + bx₂ + cx₃)/(a + b + c), …);  G divides OH (circumcentre O to orthocentre H) in 1:2",
+   "when": "Triangle ke centres."
+  },
+  {
+   "name": "Slope",
+   "formula": "m = tan θ = (y₂ − y₁)/(x₂ − x₁);  parallel m₁ = m₂;  perpendicular m₁m₂ = −1",
+   "when": "Line ki direction."
+  },
+  {
+   "name": "Forms of a line",
+   "formula": "y = mx + c;  y − y₁ = m(x − x₁);  x/a + y/b = 1;  x cos α + y sin α = p;  ax + by + c = 0 (slope −a/b)",
+   "when": "Lines ki equations likhna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Angle between lines",
+   "formula": "tan θ = |(m₁ − m₂)/(1 + m₁m₂)|",
+   "when": "Do lines ke beech acute angle."
+  },
+  {
+   "name": "Distance from a point",
+   "formula": "d = |ax₁ + by₁ + c|/√(a² + b²)",
+   "when": "Perpendicular distance.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Distance between parallel lines",
+   "formula": "d = |c₁ − c₂|/√(a² + b²)  for ax + by + c₁ = 0 and ax + by + c₂ = 0",
+   "when": "Parallel lines.",
+   "mistake": "Pehle x aur y ke coefficients bilkul same karo — bina iske formula galat aayega."
+  },
+  {
+   "name": "Foot of perpendicular and image",
+   "formula": "foot: (x − x₁)/a = (y − y₁)/b = −(ax₁ + by₁ + c)/(a² + b²);  image: same with −2(ax₁ + by₁ + c)/(a² + b²)",
+   "when": "Line mein reflection."
+  },
+  {
+   "name": "Family of lines",
+   "formula": "L₁ + λL₂ = 0 passes through the intersection of L₁ = 0 and L₂ = 0",
+   "when": "Intersection point se guzarne wali lines."
+  },
+  {
+   "name": "Concurrency",
+   "formula": "three lines concur if the determinant |a₁ b₁ c₁; a₂ b₂ c₂; a₃ b₃ c₃| = 0",
+   "when": "Concurrent lines check karna."
+  },
+  {
+   "name": "Angle bisectors",
+   "formula": "(a₁x + b₁y + c₁)/√(a₁² + b₁²) = ±(a₂x + b₂y + c₂)/√(a₂² + b₂²)",
+   "when": "Do lines ke beech ke angles ke bisectors."
+  },
+  {
+   "name": "Position of a point",
+   "formula": "points (x₁, y₁), (x₂, y₂) are on the same side of ax + by + c = 0 if ax₁ + by₁ + c and ax₂ + by₂ + c have the same sign",
+   "when": "Same side ya opposite sides."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Line se distance",
+   "problem": "(1, 2) ki 3x + 4y − 5 = 0 se distance?",
+   "solution": "|3 + 8 − 5|/5 = 6/5 = 1.2."
+  },
+  {
+   "title": "Parallel lines",
+   "problem": "3x + 4y − 5 = 0 aur 3x + 4y + 10 = 0 ke beech distance?",
+   "solution": "|−5 − 10|/5 = 3."
+  },
+  {
+   "title": "Area",
+   "problem": "Vertices (0, 0), (3, 0), (0, 4) wale triangle ka area?",
+   "solution": "½ × 3 × 4 = 6."
+  },
+  {
+   "title": "Lines ke beech angle",
+   "problem": "y = 3x + 1 aur y = x ke beech acute angle?",
+   "solution": "tan θ = |(3 − 1)/(1 + 3)| = 1/2 ⇒ θ ≈ 26.57°."
+  },
+  {
+   "title": "Section formula",
+   "problem": "(1, 2) aur (7, 8) ko 2:1 mein internally divide karne wala point?",
+   "solution": "((2 × 7 + 1 × 1)/3, (2 × 8 + 1 × 2)/3) = (5, 6)."
+  },
+  {
+   "title": "Family of lines",
+   "problem": "x + y = 5 aur x − y = 1 ke intersection se guzarne wali wo line nikalo jo origin se guzarti hai.",
+   "solution": "(x + y − 5) + λ(x − y − 1) = 0. Origin: −5 − λ = 0 ⇒ λ = −5 ⇒ x + y − 5 − 5x + 5y + 5 = 0 ⇒ −4x + 6y = 0 ⇒ 2x = 3y."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Locus",
+   "explain": "Locus nikaalne ke liye moving point ko (h, k) maano, di gayi condition ko h aur k mein equation ki tarah likho, phir h, k ki jagah x, y rakho."
+  },
+  {
+   "title": "Shifting the origin",
+   "explain": "Origin bina rotation (h, k) par shift ho to naye coordinates X = x − h, Y = y − k. Axes ko θ se rotate karne par: x = X cos θ − Y sin θ, y = X sin θ + Y cos θ."
+  },
+  {
+   "title": "Lines making a given angle",
+   "explain": "(x₁, y₁) se guzarne wali aur y = mx + c se angle α banane wali lines ke slopes (m ± tan α)/(1 ∓ m tan α) hain."
+  },
+  {
+   "title": "Pair of straight lines",
+   "explain": "ax² + 2hxy + by² = 0 origin se guzarne wali do lines hai; angle tan θ = 2√(h² − ab)/|a + b|. a + b = 0 ho to perpendicular aur h² = ab ho to coincident."
+  },
+  {
+   "title": "Orthocentre shortcut",
+   "explain": "Right-angled triangle mein orthocentre right-angle wala vertex hai aur circumcentre hypotenuse ka midpoint."
+  },
+  {
+   "title": "Parametric form",
+   "explain": "Inclination θ wali line par (x₁, y₁) se r doori par point (x₁ + r cos θ, y₁ + r sin θ) hai — line ke saath distances ke liye kaam ka."
+  }
+ ],
+ "ratta": [
+  "Area ½|x₁(y₂ − y₃) + …|;  0 ⇒ collinear.",
+  "Perpendicular: m₁m₂ = −1.",
+  "tan θ = |(m₁ − m₂)/(1 + m₁m₂)|.",
+  "Distance |ax₁ + by₁ + c|/√(a² + b²).",
+  "Parallel lines: |c₁ − c₂|/√(a² + b²).",
+  "L₁ + λL₂ = 0 through intersection.",
+  "G divides OH in 1:2."
+ ],
+ "verifiedOn": "2026-11-13"
+}

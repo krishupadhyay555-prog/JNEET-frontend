@@ -1,0 +1,162 @@
+{
+ "slug": "chemical-coordination-and-integration",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Chemical Coordination and Integration"
+ },
+ "title": "Chemical Coordination and Integration",
+ "readMinutes": 14,
+ "summary": [
+  "Hormones non-nutrient chemicals hain jo intercellular messengers ki tarah kaam karte hain aur trace amounts mein bante hain. Endocrine glands ductless hoti hain aur hormones seedhe blood mein chhodti hain.",
+  "Hypothalamus pituitary ko releasing aur inhibiting hormones (adenohypophysis) se control karta hai, aur oxytocin aur vasopressin ko axons se neurohypophysis tak bhejta hai.",
+  "Doosri glands: pineal, thyroid, parathyroid, thymus, adrenal, pancreas (islets of Langerhans), testes aur ovaries (gonad). Heart, kidney aur gut bhi hormones banate hain.",
+  "Hormones receptor se kaam karte hain: protein hormones membrane receptors se judkar second messenger (cAMP, IP₃, Ca²⁺) use karte hain; steroid aur iodothyronine hormones cell mein jaakar intracellular receptors se judte hain aur genes control karte hain. Disorders: dwarfism, acromegaly, cretinism, goitre, diabetes, Addison's disease."
+ ],
+ "formulas": [
+  {
+   "name": "Hypothalamic hormones",
+   "formula": "GnRH → pituitary makes gonadotrophins;  somatostatin inhibits growth hormone release",
+   "when": "Releasing vs inhibiting hormones."
+  },
+  {
+   "name": "Adenohypophysis (pars distalis)",
+   "formula": "GH, PRL, TSH, ACTH, LH, FSH;  pars intermedia: MSH",
+   "when": "Anterior pituitary ke hormones.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Growth hormone disorders",
+   "formula": "excess in childhood → gigantism;  deficiency → pituitary dwarfism;  excess in adults → acromegaly (especially of face)",
+   "when": "GH ki problems."
+  },
+  {
+   "name": "Neurohypophysis",
+   "formula": "stores and releases oxytocin (uterine contraction at childbirth, milk ejection) and vasopressin/ADH (water reabsorption in distal tubules; deficiency → diabetes insipidus)",
+   "when": "Posterior pituitary.",
+   "mistake": "Ye hormones hypothalamus mein bante hain, posterior pituitary mein nahi — wo sirf store karke chhodta hai."
+  },
+  {
+   "name": "Pineal gland",
+   "formula": "melatonin → diurnal (24-hour) rhythm of sleep–wake, body temperature; also affects metabolism, pigmentation, menstrual cycle, defence",
+   "when": "Pineal ke kaam."
+  },
+  {
+   "name": "Thyroid",
+   "formula": "T₄ (thyroxine) and T₃ (triiodothyronine) — basal metabolic rate, RBC formation, metabolism of carbohydrates, proteins and fats, water and electrolyte balance;  thyrocalcitonin (TCT) lowers blood Ca²⁺",
+   "when": "Thyroid hormones.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Thyroid disorders",
+   "formula": "iodine deficiency → hypothyroidism and goitre;  in pregnancy → cretinism in the baby (stunted growth, mental retardation, deaf-mutism);  hyperthyroidism → exophthalmic goitre (Graves' disease: enlarged thyroid, protruding eyes, weight loss)",
+   "when": "Hypo- aur hyperthyroidism."
+  },
+  {
+   "name": "Parathyroid hormone (PTH)",
+   "formula": "raises blood Ca²⁺: bone resorption (demineralisation), Ca²⁺ reabsorption from renal tubules and absorption from digested food;  with TCT maintains Ca²⁺ balance",
+   "when": "Calcium ka control.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Thymus",
+   "formula": "thymosins → differentiation of T-lymphocytes (cell-mediated immunity) and antibody production (humoral immunity); degenerates with age",
+   "when": "Thymus ke kaam."
+  },
+  {
+   "name": "Adrenal medulla",
+   "formula": "adrenaline (epinephrine) and noradrenaline — emergency hormones (fight or flight): alertness, pupil dilation, piloerection, sweating, increased heart rate, breathing rate, glycogenolysis",
+   "when": "Catecholamines."
+  },
+  {
+   "name": "Adrenal cortex",
+   "formula": "zona glomerulosa → mineralocorticoids (aldosterone: Na⁺, water reabsorption, K⁺ and phosphate excretion);  zona fasciculata → glucocorticoids (cortisol: gluconeogenesis, anti-inflammatory, immunosuppression);  zona reticularis → androgens",
+   "when": "Corticoids.",
+   "note": "Adrenal cortex hormones kam banne se Addison's disease hota hai."
+  },
+  {
+   "name": "Pancreatic islets",
+   "formula": "α-cells → glucagon (hyperglycaemic: glycogenolysis, gluconeogenesis);  β-cells → insulin (hypoglycaemic: glucose uptake by cells, glycogenesis);  prolonged hyperglycaemia → diabetes mellitus",
+   "when": "Blood sugar ka control.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gonads",
+   "formula": "testes (Leydig cells) → androgens, mainly testosterone;  ovary → oestrogen (growth of female sex organs, secondary sexual characters) and progesterone (from corpus luteum; supports pregnancy, alveoli of mammary glands)",
+   "when": "Sex hormones."
+  },
+  {
+   "name": "Hormones of heart, kidney, gut",
+   "formula": "heart: ANF (lowers BP);  kidney: erythropoietin (RBC formation);  gut: gastrin, secretin, cholecystokinin (CCK), gastric inhibitory peptide (GIP)",
+   "when": "Non-endocrine tissues ke hormones."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Do hormones, ulta kaam",
+   "problem": "Kaunse do hormones blood calcium constant rakhte hain, aur kaise?",
+   "solution": "PTH (parathyroid) blood Ca²⁺ badhaata hai; thyrocalcitonin (thyroid) ghataata hai. Dono milkar balance rakhte hain."
+  },
+  {
+   "title": "Emergency hormone",
+   "problem": "Adrenaline aur noradrenaline ko 3F hormones kyun kehte hain?",
+   "solution": "Emergency mein tezi se nikalte hain — fight, flight ya fright — heart rate, alertness aur blood glucose badhaate hain."
+  },
+  {
+   "title": "Cretinism",
+   "problem": "Ek bachche mein ruki hui growth aur mental retardation hai; maa ko pregnancy mein iodine ki kami thi. Diagnosis?",
+   "solution": "Cretinism — pregnancy mein hypothyroidism foetus ke development ko affect karta hai."
+  },
+  {
+   "title": "Steroid hormone ka mechanism",
+   "problem": "Cortisol target cell par kaise kaam karta hai?",
+   "solution": "Lipid-soluble hone se membrane paar karta hai, intracellular receptor se judta hai aur hormone–receptor complex nucleus mein gene expression control karta hai."
+  },
+  {
+   "title": "Second messenger",
+   "problem": "Protein hormones kaunse second messengers use karte hain?",
+   "solution": "cAMP, IP₃ aur Ca²⁺. Hormone membrane receptor se judta hai aur second messenger signal cell ke andar le jaata hai."
+  },
+  {
+   "title": "Gastrointestinal hormones",
+   "problem": "Pancreatic juice aur bile nikalne ko kaunsa hormone uksaata hai?",
+   "solution": "Cholecystokinin (CCK) pancreas aur gall bladder dono par kaam karta hai; secretin exocrine pancreas par (paani aur bicarbonate). Gastrin gastric glands ko uksaata hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Endocrine glands and hormones",
+   "explain": "Classical definition: endocrine glands ke banaye chemicals jo blood mein chhode jaakar door ke target organ tak jaate hain. Current definition: non-nutrient chemicals jo trace amounts mein intercellular messengers ka kaam karte hain."
+  },
+  {
+   "title": "Human endocrine system",
+   "explain": "Pituitary, pineal, thyroid, adrenal, pancreas, parathyroid, thymus aur gonads, saath mein gastrointestinal tract, liver, kidney aur heart ke hormone banane wale tissues."
+  },
+  {
+   "title": "Hypothalamus",
+   "explain": "Diencephalon ka basal hissa; isme neurosecretory cells ke kai groups (nuclei) hain jo pituitary hormones ke banne aur nikalne ko control karne wale hormones banate hain. Hormones portal circulatory system se anterior pituitary tak pahunchte hain."
+  },
+  {
+   "title": "Pituitary gland",
+   "explain": "Sella turcica (haddi ki cavity) mein, stalk se hypothalamus se juda. Anatomically adenohypophysis (pars distalis, pars intermedia) aur neurohypophysis (pars nervosa)."
+  },
+  {
+   "title": "Chemical nature of hormones",
+   "explain": "Peptide/polypeptide/protein (insulin, glucagon, pituitary aur hypothalamic hormones), steroids (cortisol, testosterone, oestradiol, progesterone), iodothyronines (thyroid hormones), amino acid derivatives (adrenaline, noradrenaline, epinephrine)."
+  },
+  {
+   "title": "Mechanism of hormone action",
+   "explain": "Hormones sirf target tissues ke specific receptors se judte hain. Membrane-bound receptors (jo hormones andar nahi ja sakte unke liye) hormone–receptor complex banakar second messengers banate hain; intracellular receptors (zyadatar nuclear) gene expression ya chromosome function control karte hain."
+  }
+ ],
+ "ratta": [
+  "Anterior pituitary: GH, PRL, TSH, ACTH, LH, FSH;  intermediate: MSH.",
+  "Oxytocin & ADH made in hypothalamus, released from posterior pituitary.",
+  "GH excess: child gigantism, adult acromegaly.",
+  "PTH ↑ Ca²⁺;  TCT ↓ Ca²⁺.",
+  "Glomerulosa → aldosterone;  fasciculata → cortisol;  reticularis → androgens.",
+  "α → glucagon;  β → insulin.",
+  "Heart → ANF;  kidney → erythropoietin.",
+  "Graves = hyperthyroid;  cretinism = hypothyroid in pregnancy;  Addison = low corticoids."
+ ],
+ "verifiedOn": "2026-11-13"
+}

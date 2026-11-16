@@ -70,5 +70,51 @@ SYLLABUS = [
 ("Differentiation, dedifferentiation and redifferentiation; sequence of developmental process in a plant cell", ["differentiation", "dedifferentiation", "redifferentiation"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Growth size mein irreversible permanent badhat hai. Plants mein ye indeterminate (open) hai kyunki meristems divide hote rehte hain. Iske teen phases hain — meristematic, elongation aur maturation — aur ye sigmoid curve follow karti hai.",
+"Growth rate arithmetic (ek daughter cell divide hota rehta hai) ya geometric (dono daughter cells divide) ho sakti hai; differentiation, dedifferentiation aur redifferentiation plant ko shape dete hain.",
+"Paanch plant growth regulators growth control karte hain: auxin, gibberellin, cytokinin (promoters), abscisic acid aur ethylene (mainly inhibitors).",
+"Development ko photoperiodism (din ki lambai) aur vernalisation (kam temperature) flowering ke liye, aur seed dormancy aur germination bhi control karte hain.",
+],
+when=[
+("Linear growth — root constant rate se lambi hoti hai.", "Length vs time plot karne par seedhi line aati hai."),
+("Growth ka exponential phase (Wₜ final size, W₀ initial size).", None),
+("Alag leaves ki growth compare karna.", None),
+("Limited environment mein cells, organs ya organisms ki growth.", None),
+("Auxin ke kaam (F.W. Went, Avena coleoptile tips se).", None),
+("Gibberellin ke kaam.", None),
+("Cytokinin ke kaam.", None),
+("Ethylene ke kaam.", "Agriculture mein sabse zyada use hone wala PGR ethylene hai."),
+("ABA ke kaam.", None),
+("Din ki lambai se flowering ka control (Garner aur Allard).", None),
+("Kam temperature se flowering ka control.", None),
+("Dormancy aur germination.", None),
+],
+examples=[
+("Geometric growth", "5 g ka seedling relative growth rate r = 0.1 per day se badhta hai. 10 din baad mass (Wₜ = W₀eʳᵗ)?",
+ "Wₜ = 5 × e^(0.1 × 10) = 5 × 2.718 = ⟨0⟩ g."),
+("Relative growth", "Ek leaf 10 cm² se 15 cm² ho gayi. Relative growth (%)?",
+ "(15 − 10)/10 × 100 = ⟨0⟩%."),
+("Bolting", "Cabbage mein bolting kaunsa hormone karata hai, aur bolting kya hai?",
+ "Gibberellin. Bolting = cabbage aur beet jaise rosette plants mein flowering se theek pehle internodes ka tezi se lamba hona."),
+("Apical dominance", "Shoot tip hatane se plant ghana (bushy) kyun ho jaata hai?",
+ "Apical bud auxin banata hai jo lateral buds ko dabaata hai (apical dominance). Ise hatane (decapitation) se lateral buds badhte hain — tea plantations aur hedge banane mein use."),
+("Stress hormone", "ABA ko stress hormone kyun kehte hain?",
+ "Ye plant ki stress sehne ki kshamata badhaata hai — paani ki kami mein stomata band karta, bure season se bachne ke liye dormancy laata aur growth rokta hai."),
+("Fruit ripening", "Kaunsa hormone fruit ripening tez karta hai, aur commercially kaise diya jaata hai?",
+ "Ethylene; ethephon ke roop mein diya jaata hai jo plant tissues mein ethylene chhodta hai. Cucumbers mein female flowers bhi badhaata hai."),
+],
+topics=[
+("Plasticity", "Plants environment ya life ke phases ke hisaab se alag raaste lekar alag structures banate hain — jaise cotton, coriander aur larkspur mein heterophylly (juvenile aur mature plant mein alag leaves) aur buttercup mein (hawa aur paani mein alag leaves)."),
+("Differentiation, dedifferentiation, redifferentiation", "Meristems ke cells khaas kaam ke liye mature hote hain (differentiation). Living differentiated cells phir se divide karne ki kshamata paa sakte hain (dedifferentiation — jaise interfascicular cambium, cork cambium) aur phir aise cells banate hain jo phir divide karna chhod dete hain (redifferentiation)."),
+("Conditions for growth", "Paani (cell enlargement aur enzymatic activity ke liye), oxygen (metabolic energy ke liye), nutrients, aur sahi temperature aur light."),
+("Discovery of PGRs", "Charles aur Francis Darwin ne coleoptiles ko light ki taraf mudte dekha (phototropism); F.W. Went ne Avena coleoptile tips se auxin nikaala; E. Kurosawa ne bakanae disease wale fungus se gibberellins; Skoog aur Miller ne kinetin; ABA inhibitor-B, abscisin II aur dormin ke naam se mila; Cousins ne paki oranges se ethylene confirm kiya."),
+("PGR interactions", "Hormones saath kaam karte hain, kabhi synergistically kabhi antagonistically — jaise tissue culture mein auxin–cytokinin ratio root ya shoot banna tay karta hai; GA aur ABA ka seed dormancy par ulta asar hai."),
+("Seed germination", "Achhi conditions mein seeds paani sokhte hain, enzymes active hote hain aur embryo seedling banta hai. Dormancy achhi conditions mein bhi germination rokti hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

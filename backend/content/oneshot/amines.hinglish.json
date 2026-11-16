@@ -1,0 +1,161 @@
+{
+ "slug": "amines",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Amines",
+  "JEE": "Amines"
+ },
+ "title": "Amines and Diazonium Salts",
+ "readMinutes": 13,
+ "summary": [
+  "Amines ammonia ke derivatives hain: primary (RNH₂), secondary (R₂NH) aur tertiary (R₃N) — inki nomenclature aur classification isi par. Nitrogen ka lone pair inhe bases (basic nature) aur nucleophiles banata hai; nitrogen sp³ aur molecule pyramidal.",
+  "Aliphatic amines ammonia se strong bases hain (alkyl groups ka +I effect); aniline jaise aromatic amines bahut kamzor (lone pair ring mein delocalised). Paani mein order +I effect, solvation aur steric hindrance milkar tay karte hain.",
+  "Primary, secondary aur tertiary amines ko Hinsberg test, carbylamine test (sirf primary) aur nitrous acid ke saath reactions se alag karte hain.",
+  "0–5 °C par aniline NaNO₂/HCl se benzenediazonium chloride banata hai, ek bahut kaam ka intermediate: Sandmeyer, Gattermann, coupling (azo dyes) aur –OH, –I, –F, –H se replacement."
+ ],
+ "formulas": [
+  {
+   "name": "Reduction of nitro compounds",
+   "formula": "ArNO₂ + Fe/HCl (or Sn/HCl, H₂/Pd) → ArNH₂",
+   "when": "Aniline banana.",
+   "note": "Fe/HCl pasand kiya jaata hai: bana FeCl₂ hydrolyse hokar HCl deta hai, isliye thoda hi acid chahiye — yaad rakho."
+  },
+  {
+   "name": "Gabriel phthalimide synthesis",
+   "formula": "phthalimide + KOH → potassium phthalimide;  + RX → N-alkylphthalimide;  hydrolysis → RNH₂",
+   "when": "Pure primary aliphatic amines.",
+   "mistake": "Aromatic amines nahi ban sakte (aryl halides phthalimide anion ke saath SN nahi karte) — galat mat lo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Hoffmann bromamide degradation",
+   "formula": "RCONH₂ + Br₂ + 4NaOH → RNH₂ + Na₂CO₃ + 2NaBr + 2H₂O",
+   "when": "Amide se ek carbon kam wala amine.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Reduction of nitriles and amides",
+   "formula": "RCN + LiAlH₄ (or H₂/Ni) → RCH₂NH₂ (one carbon more);  RCONH₂ + LiAlH₄ → RCH₂NH₂",
+   "when": "Ascending/same-carbon amines."
+  },
+  {
+   "name": "Ammonolysis of alkyl halides",
+   "formula": "RX + NH₃ → RNH₂ → R₂NH → R₃N → R₄N⁺X⁻",
+   "when": "Amines ka mixture.",
+   "mistake": "Mixture banta hai; NH₃ ki bahut zyada maatra primary amine ko badhaati hai — dhyan rakho."
+  },
+  {
+   "name": "Basicity in water (methyl)",
+   "formula": "(CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > NH₃ > C₆H₅NH₂",
+   "when": "Base strengths compare karna.",
+   "mistake": "Gas phase mein order 3° > 2° > 1° > NH₃; paani mein solvation ise badal deta hai — dono mix mat karo."
+  },
+  {
+   "name": "Basicity in water (ethyl)",
+   "formula": "(C₂H₅)₂NH > (C₂H₅)₃N > C₂H₅NH₂ > NH₃",
+   "when": "Ethylamines compare karna."
+  },
+  {
+   "name": "Basicity of anilines",
+   "formula": "p-toluidine > aniline > p-nitroaniline;  pKb larger = weaker base",
+   "when": "Substituent effects.",
+   "mistake": "Electron-donating groups basicity badhaate hain; −R/−I groups ghataate hain — ulta mat lo."
+  },
+  {
+   "name": "Carbylamine test",
+   "formula": "RNH₂ + CHCl₃ + 3KOH (alc.) → RNC (foul smell) + 3KCl + 3H₂O",
+   "when": "Sirf primary amines ka test."
+  },
+  {
+   "name": "Hinsberg test",
+   "formula": "C₆H₅SO₂Cl:  1° → sulphonamide soluble in KOH;  2° → sulphonamide insoluble in KOH;  3° → no reaction",
+   "when": "1°, 2°, 3° amines alag karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Reaction with nitrous acid",
+   "formula": "aliphatic 1° amine + HNO₂ → alcohol + N₂↑;  aniline + NaNO₂/HCl (273–278 K) → C₆H₅N₂⁺Cl⁻",
+   "when": "Diazonium salts banana."
+  },
+  {
+   "name": "Diazonium replacements",
+   "formula": "CuCl/HCl → ArCl;  CuBr/HBr → ArBr;  CuCN/KCN → ArCN (Sandmeyer);  Cu/HX → ArX (Gattermann);  KI → ArI;  HBF₄, heat → ArF;  H₃PO₂ or ethanol → ArH;  warm water → ArOH",
+   "when": "–NH₂ ko doosre groups mein badalna."
+  },
+  {
+   "name": "Coupling reaction",
+   "formula": "C₆H₅N₂⁺Cl⁻ + phenol (OH⁻) → p-hydroxyazobenzene (orange);  + aniline (H⁺) → p-aminoazobenzene (yellow)",
+   "when": "Azo dyes.",
+   "mistake": "Yahan N≡N group bacha rehta hai — replacement reactions ke ulta, confuse mat karo."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Hoffmann product",
+   "problem": "Propanamide ko Br₂ aur NaOH ke saath. Product?",
+   "solution": "Ethanamine, CH₃CH₂NH₂ — amide (CH₃CH₂CONH₂) se ek carbon kam."
+  },
+  {
+   "title": "1°, 2°, 3° alag karo",
+   "problem": "Ethylamine, diethylamine aur triethylamine ko kaise alag karoge?",
+   "solution": "Hinsberg reagent: ethylamine KOH mein ghulne wala sulphonamide; diethylamine na ghulne wala; triethylamine react nahi karta. Sirf ethylamine carbylamine (badboo) test deta hai."
+  },
+  {
+   "title": "Aniline kamzor base kyun?",
+   "problem": "Aniline methylamine se kamzor kyun hai?",
+   "solution": "Aniline mein N ka lone pair benzene ring mein delocalised hai (resonance), isliye H⁺ ke liye kam available. Methylamine mein CH₃ ka +I effect lone pair ko zyada available banata hai."
+  },
+  {
+   "title": "Aniline ka bromination",
+   "problem": "Aniline + bromine water? Sirf p-bromoaniline kaise banaoge?",
+   "solution": "Bromine water 2,4,6-tribromoaniline (safed ppt) deta hai kyunki –NH₂ ring ko bahut activate karta hai. –NH₂ ko acetylation se bachao (acetanilide), brominate karo (p-product), phir hydrolyse karo."
+  },
+  {
+   "title": "Aniline ka nitration",
+   "problem": "Seedhe nitration mein bahut saara m-nitroaniline kyun banta hai?",
+   "solution": "Strong acidic medium mein aniline protonate hokar anilinium ion (–NH₃⁺) banta hai jo meta-directing hai. Lagbhag 47% meta product, para aur thoda ortho ke saath, plus oxidation products."
+  },
+  {
+   "title": "Diazonium route",
+   "problem": "Aniline ko benzonitrile mein badlo.",
+   "solution": "Aniline + NaNO₂/HCl 0–5 °C par → benzenediazonium chloride; phir CuCN/KCN (Sandmeyer) → C₆H₅CN."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Structure and nomenclature",
+   "explain": "Amines mein nitrogen sp³ aur lone pair ke saath; C–N–C angle ~108°. Common names: methylamine, aniline (benzenamine), N,N-dimethylaniline. IUPAC: alkanamine (ethanamine), N-methylethanamine."
+  },
+  {
+   "title": "Physical properties",
+   "explain": "Chhote aliphatic amines machhli jaisi gandh wali gases. Primary aur secondary amines intermolecular hydrogen bonds banate hain; isomeric amines ke boiling points: 1° > 2° > 3°. Tertiary amines mein N–H nahi, isliye aapas mein H-bond nahi."
+  },
+  {
+   "title": "Acylation",
+   "explain": "Primary aur secondary amines acid chlorides ya anhydrides ke saath (nucleophilic substitution) amides banate hain; pyridine HCl hataata hai. Benzoylation benzoyl chloride se. Acetylation –NH₂ ka activating effect kam karta hai."
+  },
+  {
+   "title": "Electrophilic substitution of aniline",
+   "explain": "–NH₂ strongly activating aur o/p-directing. Sulphonation se sulphanilic acid jo zwitterion ki tarah rehta hai. Aniline Friedel–Crafts nahi karta: AlCl₃ (Lewis acid) ke saath salt banata hai jo ring ko deactivate karta hai."
+  },
+  {
+   "title": "Diazonium salts",
+   "explain": "ArN₂⁺X⁻; sirf 273–278 K par stable kyunki positive charge benzene ring par delocalised (aliphatic diazonium salts unstable). Solution mein turant use hote hain aur aromatic compounds aur dyes banane mein bahut important."
+  },
+  {
+   "title": "Importance in daily life",
+   "explain": "Amines proteins, vitamins, alkaloids aur hormones mein milte hain; synthetic examples mein drugs aur dyes. Quaternary ammonium salts detergents ki tarah use hote hain."
+  }
+ ],
+ "ratta": [
+  "Gabriel: only 1° aliphatic amines.",
+  "Hoffmann bromamide: one carbon less.",
+  "Water: 2° > 1° > 3° > NH₃ (methyl);  aniline weakest.",
+  "Carbylamine: only 1° amines (foul smell).",
+  "Hinsberg: 1° soluble in KOH, 2° insoluble, 3° no reaction.",
+  "Diazotisation at 0–5 °C (273–278 K).",
+  "Sandmeyer CuX;  Gattermann Cu/HX;  H₃PO₂ → ArH.",
+  "Aniline: no Friedel–Crafts; nitration gives ~47% meta."
+ ],
+ "verifiedOn": "2026-11-13"
+}

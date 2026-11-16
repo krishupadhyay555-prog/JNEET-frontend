@@ -76,5 +76,54 @@ SYLLABUS = [
 ("Common types of organic reactions — substitution, addition, elimination, rearrangement", ["substitution", "addition", "elimination", "rearrangement"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Carbon chaar bonds banata hai (tetravalency), lambi chains (catenation) aur multiple bonds. Hybridisation (sp³, sp², sp) shape aur bond angles tay karta hai.",
+"Electron displacement effects — inductive (σ bonds), resonance/mesomeric (π systems), hyperconjugation aur electromeric effect — carbocation, carbanion aur free radical ki stability aur acids/bases ki strength samjhaate hain.",
+"Reactions tab hoti hain jab nucleophile (electron-rich) electrophile (electron-poor) par attack kare. Bonds homolytic (free radicals) ya heterolytic (ions) tarike se toot-te hain; reactions substitution, addition, elimination ya rearrangement hoti hain.",
+"Purification (crystallisation, distillation, chromatography), qualitative tests (Lassaigne's test) aur quantitative estimation (Dumas, Kjeldahl, Carius, Liebig) chapter ka practical hissa hain.",
+],
+when=[
+("Carbon par shape aur bond angle.", "Atom ke around σ bonds (aur lone pairs) gino, total bonds nahi — galti mat karo."),
+("Molecular formula se rings + π bonds.", "O aur S ignore karo; halogens ko H jaisa gino — bhoolo mat."),
+("Acid strength, carbocation stability.", "Inductive effect doori ke saath jaldi khatam hota hai (~3 carbons ke baad negligible) — door tak mat lagao."),
+("Conjugated species ki stability, directing effects.", None),
+("Rearrangements aur SN1/E1 rates predict karna.", None),
+("Halogenation, peroxide effect.", None),
+("Acidic C–H, carbanion reactions.", None),
+("Carbocations aur alkenes.", "Isi se samajh aata hai ki 3° carbocations aur zyada substituted alkenes zyada stable kyun hain."),
+("Nitrogen estimation.", "Nitro, azo compounds ya ring mein N (pyridine) ke liye nahi chalta — dhyan rakho."),
+("Saare compounds mein nitrogen estimation.", None),
+("Halogen aur sulphur estimation.", None),
+("Carbon aur hydrogen estimation.", None),
+],
+examples=[
+("Kjeldahl", "0.5 g compound se bani NH₃ 10 mL 1 M H₂SO₄ ko neutralise karti hai. % N?",
+ "10 mL 1 M H₂SO₄ 0.02 mol NH₃ ko neutralise karta hai = 0.28 g N. % N = ⟨0⟩%."),
+("Carius", "0.20 g compound se 0.287 g AgCl. % Cl?",
+ "Cl = 0.287 × 35.5/143.5 = 0.071 g → ⟨0⟩%."),
+("Liebig", "0.30 g compound se 0.44 g CO₂. % C?",
+ "C = 0.44 × 12/44 = 0.12 g → ⟨0⟩%."),
+("Degree of unsaturation", "Benzene C₆H₆ ka DBE?",
+ "DBE = 6 − 6/2 + 1 = ⟨0⟩ (ek ring + teen C=C)."),
+("Sabse stable carbocation", "Order: CH₃⁺, (CH₃)₃C⁺, C₆H₅CH₂⁺, (CH₃)₂CH⁺.",
+ "C₆H₅CH₂⁺ (resonance) > (CH₃)₃C⁺ > (CH₃)₂CH⁺ > CH₃⁺ (hyperconjugation aur +I)."),
+("Acid strength", "Order: CH₃COOH, ClCH₂COOH, Cl₂CHCOOH, FCH₂COOH.",
+ "Cl₂CHCOOH > FCH₂COOH > ClCH₂COOH > CH₃COOH — zyada aur strong −I groups carboxylate ion ko stable karte hain."),
+("Lassaigne's test", "Sodium fusion extract FeCl₃ ke saath blood-red colour deta hai. Kaunse elements?",
+ "N aur S dono: ye NaSCN banate hain, jo blood-red [Fe(SCN)]²⁺ deta hai. Sirf N → Prussian blue; sirf S → sodium nitroprusside ke saath violet."),
+],
+topics=[
+("IUPAC nomenclature", "Principal functional group wali sabse lambi chain lo, use itna number karo ki us group ko sabse chhota locant mile, substituents alphabetical order mein. Suffix priority: –COOH > –SO₃H > –COOR > –COCl > –CONH₂ > –CN > –CHO > >C=O > –OH > –NH₂ > C=C > C≡C."),
+("Isomerism", "Structural: chain, position, functional group, metamerism, tautomerism (keto–enol). Stereoisomerism: geometrical (C=C ya rings mein cis/trans) aur optical (chiral carbon, non-superimposable mirror images)."),
+("Bond fission and reactive intermediates", "Homolytic fission se free radicals (light/peroxides mein); heterolytic fission se carbocations aur carbanions. Carbocations planar (sp²), carbanions pyramidal (sp³), free radicals planar."),
+("Nucleophiles and electrophiles", "Nucleophiles: OH⁻, CN⁻, NH₃, H₂O, ROH (lone pairs ya negative charge). Electrophiles: H⁺, NO₂⁺, carbocations, BF₃, AlCl₃ (electron-deficient). Reactions: substitution, addition, elimination, rearrangement."),
+("Electromeric effect", "Reagent paas aane par π electrons ka ek atom ki taraf temporary, poora shift — sirf reagent ki maujoodgi mein (permanent inductive aur resonance effects se alag)."),
+("Purification methods", "Crystallisation (solubility difference), sublimation (camphor, naphthalene), simple distillation (bada bp difference), fractional distillation (paas ke bp), reduced pressure par distillation (bp par toot jaaye), steam distillation (steam-volatile, immiscible — aniline), differential extraction, aur chromatography (adsorption ya partition; Rf = compound ki doori/solvent ki doori)."),
+("Qualitative analysis", "Sodium fusion (Lassaigne) N, S, X ko NaCN, Na₂S, NaX mein badalta hai. N: FeSO₄ + FeCl₃ se Prussian blue. S: lead acetate se kaala PbS, nitroprusside se violet. Halogens: HNO₃ ke saath ubaal kar AgNO₃ (safed AgCl NH₃ mein ghulta, halka peela AgBr, peela AgI)."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

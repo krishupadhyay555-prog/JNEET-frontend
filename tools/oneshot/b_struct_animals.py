@@ -62,5 +62,52 @@ SYLLABUS = [
 ("Morphology, anatomy and functions of digestive, circulatory, respiratory, nervous and reproductive systems of frog", ["frog", "digestive", "circulat", "respiration", "nervous", "reproduction"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Animal tissues chaar type ke hain: epithelial (dhakne wale), connective (support aur jodne wale), muscular (movement) aur neural (control).",
+"Epithelia simple ya compound hote hain aur squamous, cuboidal, columnar ya ciliated ho sakte hain; glands secretion ke liye specialised epithelial cells hain. Cell junctions (tight, adhering, gap) cells ko jodte hain.",
+"Connective tissue mein loose aur dense connective tissue, cartilage, bone, blood aur adipose tissue aate hain. Muscles skeletal, smooth ya cardiac hoti hain.",
+"Frog (Rana tigrina) ko model vertebrate ki tarah padhte hain: morphology, digestive, respiratory (respiration), circulatory, excretory, nervous aur reproductive (reproduction) systems.",
+],
+when=[
+("Epithelium ko location se milaana.", None),
+("Jahan chemical aur mechanical stress se bachav chahiye.", None),
+("Glandular epithelium.", None),
+("Junctions ke kaam.", None),
+("Connective tissue classify karna.", "Blood fluid connective tissue hai."),
+("Skeletal connective tissue.", None),
+("Muscles compare karna.", None),
+("Nervous tissue.", None),
+("Frog ka circulation.", None),
+("Frog ki breathing.", None),
+("Frog ka excretory system.", None),
+("Frog ka CNS.", None),
+("Frog ka life cycle.", None),
+],
+examples=[
+("Tendon vs ligament", "Tendon kise jodta hai aur ligament kise?",
+ "Tendon: skeletal muscle ko bone se. Ligament: bone ko bone se. Dono dense regular connective tissue hain."),
+("Kaunsi muscle?", "Ek muscle striated, branched aur involuntary hai, intercalated discs ke saath. Kaunsa type?",
+ "Cardiac muscle — intercalated discs (gap junctions wali judi plasma membranes) cells ko ek unit ki tarah contract karne dete hain."),
+("Brush border", "Brush border wala cuboidal epithelium kahan milta hai?",
+ "Nephron ke proximal convoluted tubule (PCT) mein; microvilli reabsorption ke liye surface badhaate hain."),
+("Frog ki skin", "Frog ki skin hamesha geeli kyun rehti hai?",
+ "Mucous glands ise geela rakhte hain, aur paani mein aur hibernation aur aestivation ke dauraan cutaneous respiration (skin se gas exchange) ke liye geela rehna zaroori hai."),
+("Male ya female frog?", "Male frog ko female se kaise pehchaanoge?",
+ "Males mein vocal sacs aur har forelimb ki pehli ungli par copulatory pad hota hai; females mein dono nahi."),
+("Areolar tissue", "Areolar tissue mein kaunse cells hote hain?",
+ "Fibroblasts (fibres banate hain), macrophages aur mast cells, semi-fluid ground substance mein collagen aur elastic fibres ke saath."),
+],
+topics=[
+("Organ and organ system", "Tissues milkar organs (stomach, lung, heart, kidney) banate hain; organs milkar organ systems (digestive, respiratory). Organ aur organ systems ki complexity evolution mein ek pehchaanne layak trend dikhati hai."),
+("Blood", "Fluid connective tissue: plasma + formed elements (RBCs, WBCs, platelets). Ye main circulating fluid hai jo substances ko transport karta hai."),
+("Frog morphology", "Body head aur trunk mein bati; gardan aur poonch nahi. Skin chikni aur fisalne wali; dorsal side olive green dark spots ke saath, ventral side halki peeli. Frogs paani peete nahi, skin se absorb karte hain. Camouflage (mimicry) dikhate hain aur cold-blooded (poikilothermous) hain."),
+("Frog digestive system", "Chhota alimentary canal (frogs carnivores hain). Bilobed tongue insects pakadti hai. Liver bile banata hai (gall bladder mein store); pancreas pancreatic juice. Digestion intestine mein poora hota hai; food villi aur microvilli se absorb. Bina pacha waste cloaca se bahar."),
+("Frog sense organs", "Sense organs: touch (sensory papillae), taste (taste buds), smell (nasal epithelium), vision (eyes) aur hearing (tympanum aur internal ear). Eyes aur internal ears achhe se organised; baaki nerve endings ke aas-paas cells ke jhund hain."),
+("Endocrine glands in frog", "Pituitary, thyroid, parathyroid, thymus, pineal body, pancreatic islets, adrenals aur gonads."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

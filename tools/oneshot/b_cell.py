@@ -67,5 +67,54 @@ SYLLABUS = [
 ("Cell organelles — endomembrane system, ER, Golgi, lysosomes, vacuoles, mitochondria, ribosomes, plastids, microbodies; cytoskeleton, cilia, flagella, centrioles; nucleus", ["endomembrane", "Golgi", "lysosome", "vacuole", "mitochondria", "ribosome", "plastid", "microbodies", "cytoskeleton", "cilia", "flagella", "centriole", "nucleus"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Cell theory (Schleiden aur Schwann; Rudolf Virchow ne modify kiya — omnis cellula e cellula) kehti hai ki saare living organisms cells se bane hain, aur har cell pehle se maujood cell se banta hai.",
+"Prokaryotic cells (bacteria, cyanobacteria, mycoplasma) mein nuclear membrane aur membrane-bound organelles nahi hote; eukaryotic cells mein dono hote hain.",
+"Plasma membrane fluid mosaic model (Singer aur Nicolson, 1972) follow karti hai. Endomembrane system — ER, Golgi, lysosome, vacuole — saath kaam karta hai; mitochondria aur plastids semi-autonomous hain, apne DNA aur 70S ribosomes ke saath.",
+"Nucleus cell ko control karta hai; chromosomes ko centromere ki position se classify karte hain.",
+],
+when=[
+("Cell theory ka itihaas.", None),
+("Size ki tulna.", None),
+("Ribosome ke types.", "S (Svedberg unit) sedimentation rate naapta hai, isliye subunit values seedhe jud-te nahi (50S + 30S se 70S banta hai, 80S nahi) — add mat karna."),
+("Membrane structure.", None),
+("Membranes ke aar-paar transport.", None),
+("Organelles ki grouping.", None),
+("Rough vs smooth ER.", None),
+("Golgi ke kaam (Camillo Golgi, 1898).", None),
+("Mitochondria ki structure.", None),
+("Plastids ke types.", None),
+("Chloroplast ki anatomy.", None),
+("Microtubules ki arrangement.", None),
+("Chromosomes classify karna.", None),
+("Nucleus ki structure (Robert Brown, 1831).", None),
+],
+examples=[
+("Semi-autonomous organelles", "Kaunse organelles semi-autonomous kehlate hain, aur kyun?",
+ "Mitochondria aur chloroplasts: inke paas apna circular DNA, RNA aur 70S ribosomes hain, kuch apne proteins bana sakte hain aur fission se divide hote hain."),
+("Plant vs animal cell", "Plant cells mein hone wale par animal cells mein na hone wale features batao.",
+ "Cell wall, plastids aur bada central vacuole. Animal cells mein centrioles hote hain, jo zyadatar plant cells mein nahi."),
+("Mesosome", "Mesosome kya hai aur kya karta hai?",
+ "Bacteria mein plasma membrane ka andar mudna; cell wall banane, DNA replication aur daughter cells mein baantne, respiration aur secretion mein madad karta hai, aur membrane ka surface area badhaata hai."),
+("Suicidal bags", "Lysosomes ko suicidal bags kyun kehte hain?",
+ "Ye acidic pH par active hydrolytic enzymes (lipases, proteases, carbohydrases) se bhare hain; membrane phatne par enzymes cell ko hi pacha dete hain."),
+("Satellite chromosome", "Chromosome par satellite kya hai?",
+ "Secondary constriction ke aage ka chhota tukda — wo region jo gaadha stain nahi hota; ise rakhne wale chromosomes satellite chromosomes kehlate hain."),
+("Gram staining", "Gram-positive aur Gram-negative bacteria staining mein kaise alag hain?",
+ "Gram-positive bacteria Gram stain rok lete hain (moti peptidoglycan wall); Gram-negative nahi rokte (patli wall aur outer membrane)."),
+],
+topics=[
+("Prokaryotic cell envelope", "Glycocalyx (slime layer ya capsule), cell wall aur plasma membrane. Prokaryotes mein nucleoid (naked circular DNA) aur aksar plasmids (chhote circular DNA jo antibiotic resistance jaise traits dete hain). Inclusion bodies reserve material store karti hain: phosphate granules, cyanophycean granules, glycogen; kuch mein gas vacuoles."),
+("Bacterial appendages", "Flagella (filament, hook, basal body) movement ke liye; pili (lambi tubes) aur fimbriae (chhote baal, chattanon ya host tissue se chipakne mein madad)."),
+("Cell wall in plants", "Algae: cellulose, galactans, mannans aur calcium carbonate. Plants: primary wall (badhte cells), secondary wall (primary ke andar); calcium pectate ki middle lamella padosi cells ko jodti hai; plasmodesmata cytoplasm ko jodte hain."),
+("Vacuoles", "Tonoplast se ghire; plants mein cell volume ka 90% tak le sakte hain aur ions ko cytoplasm se kaafi zyada concentrate karte hain. Amoeba mein contractile vacuoles osmoregulation mein madad; food vacuoles khaana nigal kar bante hain."),
+("Cytoskeleton", "Microtubules, microfilaments aur intermediate filaments mechanical support, motility dete hain aur cell ka shape banaye rakhne mein madad karte hain."),
+("Centrosome", "Aam taur par do cylindrical centrioles ek doosre se right angle par; centrioles cilia aur flagella ke basal bodies aur animal cell division mein spindle apparatus ke spindle fibres banate hain."),
+("Microbodies", "Enzymes wale chhote membrane-bound vesicles, plant aur animal dono cells mein (peroxisomes, glyoxysomes)."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

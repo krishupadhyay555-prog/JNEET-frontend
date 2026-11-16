@@ -1,0 +1,183 @@
+{
+ "slug": "waves",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Waves",
+  "JEE": "Waves"
+ },
+ "title": "Waves",
+ "readMinutes": 13,
+ "summary": [
+  "Wave energy aur momentum ko ek jagah se doosri jagah le jaati hai, matter ko nahi. Transverse waves mein particles wave ke perpendicular chalte hain; longitudinal waves (sound) mein uske saath.",
+  "Progressive wave y = A sin(kx − ωt + φ), speed v = ω/k = νλ. String par v = √(T/μ); gas mein sound v = √(γP/ρ).",
+  "Waves milti hain to displacements judte hain (superposition). Ulti directions mein chalti do barabar waves fixed nodes aur antinodes wali standing wave banati hain.",
+  "Strings aur organ pipes sirf kuch frequencies (harmonics) support karte hain. Do paas ki frequencies difference frequency par beats deti hain."
+ ],
+ "formulas": [
+  {
+   "name": "Wave speed relation",
+   "formula": "v = ν λ = ω/k;  k = 2π/λ,  ω = 2πν",
+   "when": "Speed, frequency aur wavelength convert karna."
+  },
+  {
+   "name": "Progressive wave",
+   "formula": "y(x, t) = A sin(kx − ωt + φ)  (moving in +x);  kx + ωt → moving in −x",
+   "when": "Wave equation padhna.",
+   "mistake": "kx aur ωt ke beech ka sign direction batata hai — ulte signs matlab +x direction, confuse mat karo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Particle velocity and wave speed",
+   "formula": "v_particle = ∂y/∂t;  max = Aω;   wave speed v = ω/k",
+   "when": "Particle vs wave speed ke sawal.",
+   "mistake": "Particle speed aur wave speed alag cheezein hain — barabar mat karo."
+  },
+  {
+   "name": "Speed on a string",
+   "formula": "v = √(T/μ)   (μ = mass per unit length)",
+   "when": "Sonometer, khinchi wires.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Speed of sound in a gas",
+   "formula": "Newton: √(P/ρ) (wrong, ~280 m/s);  Laplace: v = √(γP/ρ) = √(γRT/M)",
+   "when": "Sound speed aur temperature par dependence.",
+   "mistake": "v ∝ √T (kelvin); constant T par sirf pressure se v nahi badalta."
+  },
+  {
+   "name": "Phase and path difference",
+   "formula": "Δφ = (2π/λ) Δx",
+   "when": "Interference aur phase ke sawal."
+  },
+  {
+   "name": "Superposition and standing waves",
+   "formula": "y = 2A sin kx cos ωt;  nodes at kx = nπ, antinodes midway;  node-to-node = λ/2",
+   "when": "Strings aur pipes mein standing waves."
+  },
+  {
+   "name": "Stretched string (both ends fixed)",
+   "formula": "fₙ = n v/(2L),  n = 1, 2, 3 …  (all harmonics)",
+   "when": "Sonometer, guitar strings.",
+   "mistake": "Fundamental mein dono ends par nodes aur beech mein ek antinode — dhyan rakho."
+  },
+  {
+   "name": "Closed organ pipe",
+   "formula": "fₙ = (2n − 1) v/(4L):  only odd harmonics",
+   "when": "Ek end band pipes, resonance tube.",
+   "mistake": "Closed pipe mein 2nd harmonic nahi hota — f₁ ke baad agla note 3f₁ hai, 2f₁ nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Open organ pipe",
+   "formula": "fₙ = n v/(2L):  all harmonics",
+   "when": "Flute, dono taraf khule pipes."
+  },
+  {
+   "name": "End correction",
+   "formula": "closed: L_eff = L + 0.6r;  open: L_eff = L + 1.2r",
+   "when": "Accurate resonance-tube calculations."
+  },
+  {
+   "name": "Beats",
+   "formula": "beat frequency = |ν₁ − ν₂|",
+   "when": "Tuning forks, instruments tune karna.",
+   "mistake": "Fork par wax lagaane se frequency GHAT-ti hai; file karne se badhti hai — ulta mat lo."
+  },
+  {
+   "name": "Reflection of waves",
+   "formula": "from a rigid end: phase change π (inverted);  from a free/open end: no phase change",
+   "when": "Pulse reflection ke sawal."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Wave equation padhna",
+   "problem": "y = 0.02 sin(100πt − 2πx) (SI). Frequency, wavelength aur speed?",
+   "solution": "ω = 100π → ν = 50 Hz; k = 2π → λ = 1 m; v = ω/k = 50 m/s."
+  },
+  {
+   "title": "String par wave",
+   "problem": "String ka tension 100 N, mass per unit length 0.01 kg/m. Wave speed?",
+   "solution": "v = √(100/0.01) = 100 m/s."
+  },
+  {
+   "title": "String ka fundamental",
+   "problem": "Wahi string 0.5 m lambi, dono ends fixed. Fundamental frequency?",
+   "solution": "f₁ = v/2L = 100/1 = 100 Hz."
+  },
+  {
+   "title": "Closed pipe",
+   "problem": "50 cm pipe ek end band (v = 340 m/s). Fundamental aur agle do notes?",
+   "solution": "f₁ = v/4L = 170 Hz; phir 3f₁ = 510 Hz aur 5f₁ = 850 Hz (sirf odd harmonics)."
+  },
+  {
+   "title": "Open pipe",
+   "problem": "Same length, dono ends khule. Fundamental?",
+   "solution": "f₁ = v/2L = 340 Hz — closed pipe ka double."
+  },
+  {
+   "title": "Hawa mein sound ki speed",
+   "problem": "γ = 1.4, P = 1.013 × 10⁵ Pa, ρ = 1.29 kg/m³. Laplace ki speed?",
+   "solution": "v = √(1.4 × 1.013 × 10⁵/1.29) ≈ 332 m/s."
+  },
+  {
+   "title": "Phase difference",
+   "problem": "2 m wavelength wali wave par 0.5 m door do points. Phase difference?",
+   "solution": "Δφ = (2π/λ)Δx = (2π/2) × 0.5 = π/2 ≈ 1.57 rad."
+  },
+  {
+   "title": "Wax ke saath beats",
+   "problem": "Fork A (256 Hz) B ke saath 4 beats/s deta hai. A par wax lagaane se beats 6/s. B ki frequency?",
+   "solution": "B = 252 ya 260 Hz. Wax A ko ghataata hai; beats tabhi badhenge jab B, A se neeche ho, isliye B = 252 Hz."
+  },
+  {
+   "title": "Tension aur length badalna",
+   "problem": "Wire ka fundamental 300 Hz. Tension 44% aur length 20% badhaayi. Naya fundamental?",
+   "solution": "f ∝ √T/L: 300 × √1.44/1.2 = 300 × 1.2/1.2 = 300 Hz."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Transverse and longitudinal waves",
+   "explain": "Transverse waves (strings, light) mein crests aur troughs; sirf wahan chalti hain jahan rigidity ho — isliye mechanical transverse waves fluids mein nahi chalti. Longitudinal waves (sound) mein compressions aur rarefactions; solids, liquids, gases sab mein chalti hain."
+  },
+  {
+   "title": "What a medium needs",
+   "explain": "Mechanical waves ko elasticity (wapas laane ke liye) aur inertia (disturbance aage le jaane ke liye) chahiye. Speed medium par depend karti hai, source par nahi; frequency source par depend karti hai aur naye medium mein nahi badalti."
+  },
+  {
+   "title": "Factors affecting the speed of sound",
+   "explain": "Temperature ke saath badhti hai (hawa mein ≈ 0.6 m/s per °C) aur humidity ke saath (nam hawa kam dense). Constant temperature par pressure se farak nahi. Sound solids mein sabse tez aur gases mein sabse dheema."
+  },
+  {
+   "title": "Principle of superposition",
+   "explain": "Net displacement individual displacements ka vector sum hai. Isse interference (Δφ = 2nπ par constructive, (2n + 1)π par destructive), standing waves aur beats samajh aate hain."
+  },
+  {
+   "title": "Standing waves",
+   "explain": "Energy transport nahi hoti. Nodes kabhi nahi hilte; antinodes 2A amplitude se vibrate karte hain. Do nodes ke beech saare particles same phase mein; node ke dono taraf ke particles π se out of phase."
+  },
+  {
+   "title": "Harmonics and overtones",
+   "explain": "Fundamental hi 1st harmonic hai. Open pipes aur strings mein 1st overtone = 2nd harmonic. Closed pipes mein 1st overtone = 3rd harmonic. Zyada harmonics har instrument ko apni quality (timbre) dete hain."
+  },
+  {
+   "title": "Resonance tube",
+   "explain": "Resonance-tube experiment mein lagataar resonance lengths λ/2 se alag hoti hain: λ = 2(l₂ − l₁), jo end correction hata deta hai; e = (l₂ − 3l₁)/2."
+  },
+  {
+   "title": "Syllabus note",
+   "explain": "Doppler effect current NTA syllabus se NEET aur JEE Main dono ke liye hata diya gaya hai. Wave equations, speeds, superposition, strings aur pipes mein standing waves aur beats par focus karo."
+  }
+ ],
+ "ratta": [
+  "v = νλ = ω/k;  string v = √(T/μ);  sound v = √(γRT/M).",
+  "y = A sin(kx − ωt): moves +x.",
+  "String & open pipe: nv/2L (all);  closed pipe: (2n−1)v/4L (odd).",
+  "Node–node = λ/2;  node–antinode = λ/4.",
+  "Beats = |ν₁ − ν₂|;  wax lowers frequency.",
+  "Rigid end: phase change π;  free end: none.",
+  "Δφ = 2πΔx/λ."
+ ],
+ "verifiedOn": "2026-11-13"
+}

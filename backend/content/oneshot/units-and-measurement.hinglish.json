@@ -1,0 +1,175 @@
+{
+ "slug": "units-and-measurement",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Units and Measurement",
+  "JEE": "Units and Measurement"
+ },
+ "title": "Units and Measurement",
+ "readMinutes": 11,
+ "summary": [
+  "Har physical quantity = number × unit. SI system mein 7 base units hain (m, kg, s, A, K, mol, cd); baaki saare units inhi se derived hain.",
+  "Koi measurement perfect nahi hota: least count precision ko limit karta hai, aur errors (systematic, random, gross) accuracy ko. Errors fixed rules se judte hain — sum/difference mein absolute errors jodo, product/quotient mein relative errors jodo, power ho to power se multiply karo.",
+  "Significant figures batate hain number kitna precise hai. Calculation ka answer sabse kam precise input se zyada precise nahi ho sakta.",
+  "Dimensions quantity ko [M], [L], [T], [A], [K]… mein likhte hain. Dimensional analysis equation check karta hai, units convert karta hai aur relations derive karta hai — par ½, 2π jaise pure-number constants nahi nikaal sakta."
+ ],
+ "formulas": [
+  {
+   "name": "SI base quantities",
+   "formula": "length m · mass kg · time s · current A · temperature K · amount mol · luminous intensity cd",
+   "when": "Koi bhi unit ya dimension likhte waqt.",
+   "mistake": "Plane angle (rad) aur solid angle (sr) dimensionless hain, base units nahi."
+  },
+  {
+   "name": "Least count of vernier callipers",
+   "formula": "LC = 1 MSD − 1 VSD = (value of 1 MSD)/(number of vernier divisions)",
+   "when": "Vernier padhte waqt.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Vernier reading",
+   "formula": "Reading = MSR + (coinciding VSD × LC) − (zero error)",
+   "when": "Callipers se length naapna.",
+   "mistake": "Positive zero error ghatao, negative wala jodo — sign ulta mat karo."
+  },
+  {
+   "name": "Least count of screw gauge",
+   "formula": "LC = pitch / (number of circular scale divisions)",
+   "when": "Screw gauge readings.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Screw gauge reading",
+   "formula": "Reading = MSR + (CSR × LC) − (zero error)",
+   "when": "Wire ka diameter, sheet ki motai.",
+   "mistake": "Circular scale ka zero reference line ke neeche ho to zero error positive hai — ghataane se pehle check karo."
+  },
+  {
+   "name": "Mean value and absolute error",
+   "formula": "a_mean = Σaᵢ/n;  Δaᵢ = |a_mean − aᵢ|;  Δa_mean = Σ|Δaᵢ|/n",
+   "when": "Baar-baar li gayi readings.",
+   "mistake": "Har deviation ka modulus lo — errors ko aapas mein cancel mat hone do."
+  },
+  {
+   "name": "Relative and percentage error",
+   "formula": "relative error = Δa/a;   percentage error = (Δa/a) × 100%",
+   "when": "Alag measurements ki precision compare karna."
+  },
+  {
+   "name": "Errors in sum and difference",
+   "formula": "Z = A ± B  ⇒  ΔZ = ΔA + ΔB",
+   "when": "Measured values jodna ya ghataana.",
+   "note": "Errors hamesha JUDTE hain, chaahe quantities ghataayi ja rahi hon."
+  },
+  {
+   "name": "Errors in product, quotient and power",
+   "formula": "Z = Aᵖ Bᵠ / Cʳ  ⇒  ΔZ/Z = p(ΔA/A) + q(ΔB/B) + r(ΔC/C)",
+   "when": "g = 4π²L/T², ρ = m/V jaise formulas.",
+   "tag": "PYQ favourite",
+   "note": "Division mein bhi relative errors judte hain, aur har ek apni power se multiply hota hai."
+  },
+  {
+   "name": "Significant figure rules",
+   "formula": "× and ÷: keep the least number of significant figures;  + and −: keep the least number of decimal places",
+   "when": "Final answer round karna.",
+   "mistake": "Decimal ke baad trailing zeros gine jaate hain; leading zeros kabhi nahi."
+  },
+  {
+   "name": "Dimensional formula",
+   "formula": "[Q] = [Mᵃ Lᵇ Tᶜ Aᵈ Kᵉ]; e.g. force [MLT⁻²], energy [ML²T⁻²], pressure [ML⁻¹T⁻²]",
+   "when": "Equations check aur derive karna."
+  },
+  {
+   "name": "Principle of homogeneity",
+   "formula": "Every term on both sides of a correct equation has the same dimensions",
+   "when": "Equation sahi ho sakti hai ya nahi, check karna.",
+   "mistake": "Dimensionally sahi equation bhi ½ ya 2π jaise number se galat ho sakti hai."
+  },
+  {
+   "name": "Unit conversion",
+   "formula": "n₁[M₁ᵃ L₁ᵇ T₁ᶜ] = n₂[M₂ᵃ L₂ᵇ T₂ᶜ]  ⇒  n₂ = n₁ (M₁/M₂)ᵃ (L₁/L₂)ᵇ (T₁/T₂)ᶜ",
+   "when": "SI se CGS (ya kisi system) mein value badalna."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Vernier reading",
+   "problem": "Vernier ke 10 divisions = main scale ke 9 divisions (1 mm each). Main scale 2.0 cm padhta hai aur 7th vernier division milta hai. Reading? (zero error nahi)",
+   "solution": "LC = 1 mm/10 = 0.1 mm = 0.01 cm. Reading = 2.0 cm + 7 × 0.01 cm = 2.07 cm."
+  },
+  {
+   "title": "Zero error wala screw gauge",
+   "problem": "Pitch 0.5 mm, 50 circular divisions. Jaws band karne par zero line se 4 divisions neeche. Wire par MSR = 3.0 mm, CSR = 36. Diameter?",
+   "solution": "LC = 0.5/50 = 0.01 mm. Zero error = +4 × 0.01 = +0.04 mm. Reading = 3.0 + 36 × 0.01 − 0.04 = 3.32 mm."
+  },
+  {
+   "title": "Pendulum se g mein error",
+   "problem": "g = 4π²L/T². L mein 2% aur T mein 1% error. g mein maximum % error?",
+   "solution": "Δg/g = ΔL/L + 2 ΔT/T = 2% + 2 × 1% = 4%."
+  },
+  {
+   "title": "Mean absolute error",
+   "problem": "Time period ki readings: 2.63, 2.56, 2.42, 2.71, 2.80 s. Mean, mean absolute error aur % error?",
+   "solution": "Mean = 2.62 s. Deviations: 0.01, 0.06, 0.20, 0.09, 0.18 → mean abs error = 0.11 s. % error = 4.1%."
+  },
+  {
+   "title": "G ko CGS mein",
+   "problem": "G = 6.67 × 10⁻¹¹ N m² kg⁻². dyne cm² g⁻² mein value? ([G] = M⁻¹L³T⁻²)",
+   "solution": "n₂ = 6.67 × 10⁻¹¹ × (1 kg/1 g)⁻¹ (1 m/1 cm)³ = 6.67 × 10⁻¹¹ × 10⁻³ × 10⁶ = 6.67 × 10⁻⁸ dyne cm² g⁻²."
+  },
+  {
+   "title": "Product mein significant figures",
+   "problem": "Rectangle 3.8 cm × 2.62 cm ka area?",
+   "solution": "3.8 × 2.62 = 9.956; 3.8 mein 2 significant figures hain, isliye answer 10 cm² (1.0 × 10¹ cm² likho)."
+  },
+  {
+   "title": "Pendulum formula derive karo",
+   "problem": "Maano T mass m, length l aur g par T ∝ mᵃ lᵇ gᶜ ki tarah depend karta hai. a, b, c?",
+   "solution": "[T] = [M]ᵃ[L]ᵇ[LT⁻²]ᶜ → M: a = 0; T: −2c = 1 → c = −½; L: b + c = 0 → b = ½. Isliye T ∝ √(l/g) (2π experiment se aata hai)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Base and derived units",
+   "explain": "Derived units base units se bante hain: newton = kg m s⁻², joule = kg m² s⁻², pascal = kg m⁻¹ s⁻². Prefixes: nano 10⁻⁹, micro 10⁻⁶, milli 10⁻³, kilo 10³, mega 10⁶, giga 10⁹. Practical length units: 1 Å = 10⁻¹⁰ m, 1 fermi = 10⁻¹⁵ m, 1 light year ≈ 9.46 × 10¹⁵ m, 1 AU ≈ 1.5 × 10¹¹ m, 1 parsec ≈ 3.08 × 10¹⁶ m."
+  },
+  {
+   "title": "Accuracy vs precision",
+   "explain": "Accuracy = true value ke kitna paas. Precision = baar-baar ki readings aapas mein kitni paas (least count se tay). Precise instrument bhi zero error ho to inaccurate ho sakta hai."
+  },
+  {
+   "title": "Types of errors",
+   "explain": "Systematic errors (instrument ka zero error, kharab method, personal bias) saari readings ek taraf dhakelte hain — behtar method aur correction se kam karo. Random errors anpredictable hote hain — zyada readings lekar average karo. Gross errors laparwahi se aate hain."
+  },
+  {
+   "title": "Rounding off",
+   "explain": "Last significant digit ke baad ke digits hatao: agla digit > 5 ho to ek badhao; < 5 ho to waisa hi; = 5 ho to last digit even banao (2.745 → 2.74, 2.735 → 2.74). Rounding sirf calculation ke end mein karo."
+  },
+  {
+   "title": "Counting significant figures",
+   "explain": "Saare non-zero digits gine jaate hain. Non-zero digits ke beech ke zeros bhi (2.005 → 4). Leading zeros kabhi nahi (0.0024 → 2). Trailing zeros sirf decimal point ke saath (2.400 → 4; 2400 ambiguous — 2 ke liye 2.4 × 10³ likho). Exact numbers (2πr ka 2) ke infinite significant figures."
+  },
+  {
+   "title": "Uses and limits of dimensional analysis",
+   "explain": "Uses: equation check karna, units convert karna, product of powers wala relation derive karna. Limits: ½ ya 2π jaise constants nahi milte, trigonometric/exponential/log relations par fail, sum of terms wali quantity handle nahi hoti, scalar aur vector mein farak nahi batata."
+  },
+  {
+   "title": "Dimensionless and same-dimension quantities",
+   "explain": "Strain, refractive index, angle, relative density dimensionless hain. Same dimensions: work, energy, torque [ML²T⁻²]; impulse aur momentum [MLT⁻¹]; stress, pressure, Young's modulus, energy density [ML⁻¹T⁻²]; frequency, angular velocity, velocity gradient [T⁻¹]; Planck's constant aur angular momentum [ML²T⁻¹]."
+  },
+  {
+   "title": "Experimental skills",
+   "explain": "Vernier callipers internal aur external diameter aur depth naapte hain; screw gauge wire ka diameter aur sheet ki motai LC 0.01 mm se. Naapne se pehle jaws band karke zero error note karo, kai jagah reading lo aur average karo."
+  }
+ ],
+ "ratta": [
+  "7 SI base units: m, kg, s, A, K, mol, cd.",
+  "Vernier LC = MSD/N;  screw gauge LC = pitch/N.",
+  "Corrected reading = observed − zero error (sign included).",
+  "Sums: add absolute errors;  products/powers: add (power × relative error).",
+  "× ÷ → least significant figures;  + − → least decimal places.",
+  "Force MLT⁻², energy ML²T⁻², pressure ML⁻¹T⁻², h ML²T⁻¹, G M⁻¹L³T⁻².",
+  "Dimensional analysis can't give constants like 2π."
+ ],
+ "verifiedOn": "2026-11-13"
+}

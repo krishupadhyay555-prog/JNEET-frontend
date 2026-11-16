@@ -63,5 +63,53 @@ SYLLABUS = [
 ("Description of families: Fabaceae, Solanaceae and Liliaceae", ["Fabaceae", "Solanaceae", "Liliaceae"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Morphology bahari roop ki study hai: root, stem, leaf, inflorescence, flower, fruit aur seed. Kai plants mein har part storage, support, protection ya reproduction ke liye modify hota hai.",
+"Dicots mein aam taur par tap roots aur reticulate venation; monocots mein fibrous roots aur parallel venation.",
+"Flower ek modified shoot hai. Iske parts (calyx, corolla, androecium, gynoecium) ko symmetry, aestivation, ovary position aur placentation se describe karte hain, aur floral formula aur floral diagram mein likhte hain.",
+"Teen families detail mein padhte hain: Fabaceae (pea), Solanaceae (potato) aur Liliaceae (lily).",
+],
+when=[
+("Root systems.", None),
+("Modified roots.", None),
+("Modified stems.", "Potato stem hai (nodes aur eyes hain), sweet potato root hai — ulta mat likhna."),
+("Modified leaves.", None),
+("Leaves ki arrangement.", None),
+("Inflorescence ke types.", None),
+("Flowers describe karna.", None),
+("Bud mein petals ki arrangement.", None),
+("Ovary mein ovules ki arrangement.", None),
+("Androecium ke sawal.", None),
+("Floral formula padhna.", None),
+("Pea family.", None),
+("Potato family.", None),
+("Lily family.", None),
+],
+examples=[
+("Root ya stem?", "Ginger zameen ke neeche ugta hai. Root hai ya stem?",
+ "Stem (rhizome): isme nodes, internodes, scale leaves aur buds hain. Roots par kabhi nodes ya buds nahi hote."),
+("Fruit type", "Mango aur coconut ka khaane wala part kaunsa hai?",
+ "Dono drupes hain. Mango: fleshy mesocarp. Coconut: endosperm (aur fibrous mesocarp se coir milta hai)."),
+("Pea ka flower", "Pea flower ki corolla describe karo.",
+ "Papilionaceous: ek bada standard (vexillum), do side wale wings (alae) aur do jude hue keel petals; vexillary aestivation."),
+("Placentation pehchaano", "Multilocular ovary mein ovules central axis par — kaunsi placentation, aur ek example?",
+ "Axile placentation — China rose, tomato ya lemon."),
+("Economic families", "Fabaceae, Solanaceae aur Liliaceae se ek-ek food plant batao.",
+ "Fabaceae: gram, arhar, soybean (pulses). Solanaceae: potato, tomato, brinjal. Liliaceae: Asparagus (sabzi); aloe aur Colchicum medicinal, tulip aur Gloriosa ornamental."),
+("Pneumatophores", "Rhizophora jaise mangroves mein pneumatophores kyun hote hain?",
+ "Ye paani bhari, oxygen ki kami wali mitti mein ugte hain; pneumatophores mitti se upar ki taraf badh kar respiration ke liye oxygen lete hain."),
+],
+topics=[
+("Regions of the root", "Tip par root cap apex ko bachaata hai; region of meristematic activity (cells divide hote hain); region of elongation (cells lambe hote hain); region of maturation (root hairs paani aur minerals absorb karte hain)."),
+("The leaf", "Parts: leaf base (legumes mein pulvinus; monocots mein sheath), petiole aur lamina. Venation dicots mein reticulate, monocots mein parallel. Simple leaf ki lamina bina kati; compound leaves pinnate (neem) ya palmate (silk cotton). Leaf ke axil mein bud hota hai par leaflet ke axil mein nahi."),
+("Parts of a flower", "Calyx (sepals), corolla (petals), androecium (stamens) aur gynoecium (carpels). Calyx aur corolla alag na dikhein to perianth banta hai (lily). Apocarpous carpels free (lotus, rose); syncarpous jude hue (mustard, tomato)."),
+("Fruit", "Fruit fertilisation ke baad bani paki hui ovary hai; bina fertilisation bana fruit parthenocarpic. Fruit wall (pericarp) = epicarp, mesocarp, endocarp."),
+("Seed", "Dicot seed (bean, gram, pea): seed coat (testa aur tegmen), hilum, micropyle, do cotyledons wala embryo, radicle aur plumule. Monocot seed (maize): endospermic, ek cotyledon (scutellum), aleurone layer, coleoptile aur coleorhiza."),
+("Family features", "Fabaceae: root nodules wali tap root, pulvinus wale pinnately compound leaves, legume fruit. Solanaceae: aksar baal wale stems, berry ya capsule fruits, kai endospermous seeds. Liliaceae: bulbs, corms ya rhizomes wale monocot herbs; perianth tepals; capsule ya berry fruits."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -1,0 +1,153 @@
+{
+ "slug": "haloalkanes-and-haloarenes",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Haloalkanes and Haloarenes",
+  "JEE": "Haloalkanes and Haloarenes"
+ },
+ "title": "Haloalkanes and Haloarenes",
+ "readMinutes": 14,
+ "summary": [
+  "Haloalkanes mein C–X bond polar hai (Cδ⁺–Xδ⁻), isliye carbon par nucleophiles attack karte hain. R–X ki reactivity: R–I > R–Br > R–Cl > R–F (kamzor bond, achha leaving group).",
+  "Nucleophilic substitution SN2 (ek step, peeche se attack, inversion, 1° halides pasand) ya SN1 (carbocation, racemisation, 3° halides aur polar protic solvents pasand) se hota hai.",
+  "Alcoholic KOH ke saath haloalkanes elimination (dehydrohalogenation) karke alkenes banate hain; zyada substituted alkene major hota hai (Saytzeff rule).",
+  "Haloarenes nucleophiles ke prati bahut kam reactive hain (resonance se C=X par partial double bond, sp² carbon). Ye ortho/para par electrophilic substitution karte hain."
+ ],
+ "formulas": [
+  {
+   "name": "From alcohols",
+   "formula": "ROH + HX (ZnCl₂ for HCl) → RX;  ROH + PCl₅/PCl₃/SOCl₂ → RCl",
+   "when": "Alkyl halides ki preparation.",
+   "note": "SOCl₂ sabse achha: by-products SO₂ aur HCl gases hain, pure RCl bachta hai — yaad rakho."
+  },
+  {
+   "name": "Finkelstein reaction",
+   "formula": "R–Cl/Br + NaI (dry acetone) → R–I + NaCl/NaBr",
+   "when": "Alkyl iodides banana."
+  },
+  {
+   "name": "Swarts reaction",
+   "formula": "R–Br + AgF/Hg₂F₂/CoF₂/SbF₃ → R–F",
+   "when": "Alkyl fluorides banana."
+  },
+  {
+   "name": "Sandmeyer reaction",
+   "formula": "C₆H₅N₂⁺Cl⁻ + CuCl/HCl → C₆H₅Cl + N₂  (CuBr/HBr → C₆H₅Br)",
+   "when": "Diazonium salts se haloarenes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "SN2 mechanism",
+   "formula": "rate = k[RX][Nu⁻];  one step;  inversion (Walden);  CH₃X > 1° > 2° > 3°",
+   "when": "Strong nucleophile aur aprotic solvent ke saath primary halides.",
+   "mistake": "Steric hindrance 3° carbon par SN2 rok deta hai — wahan SN2 mat lagao.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "SN1 mechanism",
+   "formula": "rate = k[RX];  carbocation intermediate;  racemisation;  3° > 2° > 1° > CH₃X",
+   "when": "Polar protic solvents mein tertiary/benzylic/allylic halides."
+  },
+  {
+   "name": "Elimination (dehydrohalogenation)",
+   "formula": "R–CH₂–CH₂X + alc. KOH → R–CH=CH₂ + KX + H₂O",
+   "when": "Alkenes banana.",
+   "mistake": "Aqueous KOH → substitution (alcohol); alcoholic KOH → elimination (alkene) — confuse mat karo."
+  },
+  {
+   "name": "Saytzeff (Zaitsev) rule",
+   "formula": "the more substituted alkene is the major product of elimination",
+   "when": "Major alkene predict karna."
+  },
+  {
+   "name": "Ambident nucleophiles",
+   "formula": "KCN → R–CN (alkyl cyanide);  AgCN → R–NC (isocyanide);  KNO₂ → R–ONO;  AgNO₂ → R–NO₂",
+   "when": "Cyanide/nitrite salts ke products."
+  },
+  {
+   "name": "Wurtz–Fittig and Fittig",
+   "formula": "ArX + RX + 2Na → Ar–R;  2ArX + 2Na → Ar–Ar",
+   "when": "Sodium ke saath coupling."
+  },
+  {
+   "name": "Grignard reagent",
+   "formula": "R–X + Mg (dry ether) → RMgX;  RMgX + H₂O → R–H",
+   "when": "Alkanes aur C–C bonds banana.",
+   "mistake": "Bilkul dry rakhna zaroori — thoda bhi paani (ya –OH, –NH) ise nasht kar deta hai."
+  },
+  {
+   "name": "Nucleophilic substitution in haloarenes",
+   "formula": "needs drastic conditions (Dow's process: 623 K, 300 atm) unless –NO₂ groups are at ortho/para",
+   "when": "Chlorobenzene se phenol.",
+   "mistake": "o/p-NO₂ groups ise bahut aasaan banate hain; meta-NO₂ ka kam asar — position check karo."
+  }
+ ],
+ "examples": [
+  {
+   "title": "SN1 ya SN2?",
+   "problem": "OH⁻ ke saath SN2 se kaun tez react karega: CH₃Br ya (CH₃)₃CBr?",
+   "solution": "CH₃Br — peeche se attack ke liye koi steric hindrance nahi. (CH₃)₃CBr stable 3° carbocation se SN1 karta hai."
+  },
+  {
+   "title": "Stereochemistry",
+   "problem": "(R)-2-bromobutane OH⁻ ke saath SN2. Product?",
+   "solution": "(S)-butan-2-ol: SN2 configuration ulta kar deta hai. SN1 se lagbhag racemic mixture banta."
+  },
+  {
+   "title": "Major alkene",
+   "problem": "2-Bromobutane + alcoholic KOH. Major product?",
+   "solution": "But-2-ene (zyada substituted) major (Saytzeff); but-1-ene minor."
+  },
+  {
+   "title": "KCN vs AgCN",
+   "problem": "CH₃CH₂Br KCN ke saath aur AgCN ke saath?",
+   "solution": "KCN (ionic, C attack karta hai) → CH₃CH₂CN; AgCN (covalent, N attack karta hai) → CH₃CH₂NC."
+  },
+  {
+   "title": "Chlorobenzene unreactive kyun?",
+   "problem": "Chlorobenzene nucleophilic substitution se kyun bachta hai?",
+   "solution": "Resonance se C–Cl bond partial double bond jaisa, carbon sp² (electrons kas kar pakadta hai), phenyl cation unstable, aur electron-rich ring nucleophiles ko repel karti hai."
+  },
+  {
+   "title": "Finkelstein",
+   "problem": "Ethyl chloride ko ethyl iodide mein badlo.",
+   "solution": "Dry acetone mein NaI ke saath garam karo: C₂H₅Cl + NaI → C₂H₅I + NaCl (NaCl precipitate hokar reaction aage badhata hai)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Classification and nomenclature",
+   "explain": "Mono-, di-, polyhalo compounds; alkyl (1°, 2°, 3°), allylic, benzylic, vinylic aur aryl halides. Vinylic aur aryl halides mein X sp² carbon par hai aur SN reactions mein unreactive hain."
+  },
+  {
+   "title": "Physical properties",
+   "explain": "Boiling points halogen ke size (RI > RBr > RCl > RF) aur chain length ke saath badhte hain, branching se ghat-te hain. Haloalkanes paani mein bahut kam ghulte hain. p-Dichlorobenzene ka melting point o- aur m-isomers se zyada (symmetrical, achha pack)."
+  },
+  {
+   "title": "Factors deciding SN1 vs SN2",
+   "explain": "Substrate: 1° → SN2, 3° → SN1, 2° → dono. Strong nucleophile aur aprotic solvent SN2; weak nucleophile aur polar protic solvent (paani, alcohols) SN1. Benzylic aur allylic halides SN1 se tez (resonance-stabilised carbocations)."
+  },
+  {
+   "title": "Optical activity basics",
+   "explain": "Chiral molecule (chaar alag groups wala carbon) apni mirror image par superimpose nahi hota aur plane-polarised light ghumaata hai. Enantiomers barabar par ulti direction mein ghumaate hain; 50:50 mixture (racemic) optically inactive."
+  },
+  {
+   "title": "Electrophilic substitution in haloarenes",
+   "explain": "Halogen deactivating par o/p-directing: chlorobenzene halogenation, nitration, sulphonation aur Friedel–Crafts mein o- aur p-products deta hai (p major)."
+  },
+  {
+   "title": "Polyhalogen compounds and environment",
+   "explain": "CH₂Cl₂ (solvent), CHCl₃ (chloroform, pehle anaesthetic; dark bottles mein rakhte hain kyunki light mein zehreela phosgene banta hai), CHI₃ (iodoform, antiseptic), CCl₄ (solvent, ozone layer ko nuksaan), freon (CFCs, refrigerants, ozone depletion) aur DDT (insecticide, food chains mein tikta hai)."
+  }
+ ],
+ "ratta": [
+  "Reactivity: RI > RBr > RCl > RF.",
+  "SN2: 1°, inversion, one step;  SN1: 3°, racemisation, carbocation.",
+  "Aq. KOH → alcohol;  alc. KOH → alkene (Saytzeff).",
+  "KCN → RCN;  AgCN → RNC;  KNO₂ → RONO;  AgNO₂ → RNO₂.",
+  "Finkelstein (NaI/acetone);  Swarts (AgF);  Sandmeyer (CuX).",
+  "Haloarenes: o/p-directing, deactivating.",
+  "CHCl₃ in light → phosgene."
+ ],
+ "verifiedOn": "2026-11-13"
+}

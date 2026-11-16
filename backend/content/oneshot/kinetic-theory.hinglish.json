@@ -1,0 +1,161 @@
+{
+ "slug": "kinetic-theory",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Kinetic Theory",
+  "JEE": "Kinetic Theory"
+ },
+ "title": "Kinetic Theory",
+ "readMinutes": 11,
+ "summary": [
+  "Gas bahut saare chhote molecules hain jo random motion mein hain. Deewaron se unki takkar pressure banati hai: P = ⅓ρv²_rms.",
+  "Temperature molecules ki average kinetic energy ka maap hai: har molecule ki average translational KE = (3/2)kT, gas koi bhi ho.",
+  "Equipartition: har degree of freedom ko har molecule mein ½kT milta hai. Degrees of freedom gin kar monoatomic, diatomic, polyatomic gases ke Cv, Cp aur γ milte hain.",
+  "Mean free path — do takkaron ke beech ki average doori — λ = kT/(√2 π d² P) hai: gas garam ya patli ho to badhta hai."
+ ],
+ "formulas": [
+  {
+   "name": "Ideal gas equation",
+   "formula": "PV = nRT = N k T;  R = 8.314 J mol⁻¹ K⁻¹,  k = R/Nₐ = 1.38 × 10⁻²³ J/K",
+   "when": "P, V, T aur gas ki maatra jodne wala koi bhi sawal.",
+   "mistake": "Kelvin lo, aur P, V ke SI units (1 L = 10⁻³ m³) — bhoolo mat."
+  },
+  {
+   "name": "Pressure of an ideal gas",
+   "formula": "P = ⅓ (N m/V) v²_rms = ⅓ ρ v²_rms",
+   "when": "Pressure ko molecular speed se jodna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Kinetic energy and temperature",
+   "formula": "average translational KE per molecule = (3/2) k T;   per mole = (3/2) R T",
+   "when": "Temperature ka matlab.",
+   "mistake": "Ye sirf T par depend — same T par har gas ki average translational KE same, mass se alag nahi."
+  },
+  {
+   "name": "RMS speed",
+   "formula": "v_rms = √(3RT/M) = √(3kT/m)",
+   "when": "Molecules ki speed.",
+   "mistake": "M kg/mol mein (O₂ ke liye 0.032), g/mol nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Average and most probable speeds",
+   "formula": "v_avg = √(8RT/πM);   v_mp = √(2RT/M);   v_rms > v_avg > v_mp",
+   "when": "Speed ki definitions compare karna."
+  },
+  {
+   "name": "Degrees of freedom",
+   "formula": "monoatomic f = 3;  diatomic f = 5 (rigid) or 7 (with vibration);  non-linear polyatomic f = 6 (rigid)",
+   "when": "Energy modes ginna."
+  },
+  {
+   "name": "Law of equipartition",
+   "formula": "energy per degree of freedom = ½ k T per molecule;  U = (f/2) n R T",
+   "when": "Gas ki internal energy."
+  },
+  {
+   "name": "Specific heats from f",
+   "formula": "Cv = (f/2) R;   Cp = (f/2 + 1) R;   γ = 1 + 2/f",
+   "when": "γ aur molar heat capacities nikaalna."
+  },
+  {
+   "name": "Mean free path",
+   "formula": "λ = k T / (√2 π d² P) = 1/(√2 n π d²)",
+   "when": "Takkaron ke beech average doori.",
+   "mistake": "λ ∝ T/P — pressure double karo to λ aadha, ulta mat lo."
+  },
+  {
+   "name": "Avogadro's number",
+   "formula": "Nₐ = 6.022 × 10²³ mol⁻¹;  molar volume at STP ≈ 22.4 L",
+   "when": "Molecules ginna."
+  },
+  {
+   "name": "Gas laws (special cases)",
+   "formula": "Boyle: PV = const (T fixed);  Charles: V/T = const (P fixed);  Gay-Lussac: P/T = const (V fixed);  Dalton: P = P₁ + P₂ + …",
+   "when": "Quick ratio problems."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Room temperature par molecule ki KE",
+   "problem": "300 K par gas molecule ki average translational KE?",
+   "solution": "E = (3/2) × 1.38 × 10⁻²³ × 300 ≈ 6.21 × 10⁻²¹ J."
+  },
+  {
+   "title": "Oxygen ki RMS speed",
+   "problem": "300 K par O₂ ka v_rms (M = 0.032 kg/mol)?",
+   "solution": "v = √(3 × 8.314 × 300/0.032) ≈ 484 m/s."
+  },
+  {
+   "title": "RMS speeds barabar karna",
+   "problem": "Kis temperature par O₂ ki rms speed 300 K wali H₂ jitni hogi?",
+   "solution": "T/M barabar hona chahiye: T = 300 × 32/2 = 4800 K."
+  },
+  {
+   "title": "Temperature 4 guna",
+   "problem": "Gas ka kelvin temperature 4 guna karein to rms speed?",
+   "solution": "v ∝ √T → √4 = 2 guna."
+  },
+  {
+   "title": "1 cm³ hawa mein molecules",
+   "problem": "STP (P = 1.013 × 10⁵ Pa, T = 273 K) par 1 cm³ gas mein molecules?",
+   "solution": "N = PV/kT = 1.013 × 10⁵ × 10⁻⁶/(1.38 × 10⁻²³ × 273) ≈ 2.69 × 10¹⁹ (Loschmidt number)."
+  },
+  {
+   "title": "Hawa mein mean free path",
+   "problem": "Molecular diameter 3 × 10⁻¹⁰ m, T = 300 K, P = 1.013 × 10⁵ Pa. Mean free path?",
+   "solution": "λ = kT/(√2 π d² P) ≈ 102 nm — molecule ke size ka lagbhag 300 guna."
+  },
+  {
+   "title": "Molecular speed se pressure",
+   "problem": "Hawa ki density 1.29 kg/m³, v_rms = 485 m/s. Pressure?",
+   "solution": "P = ⅓ρv² = ⅓ × 1.29 × 485² ≈ 1.01 × 10⁵ Pa ≈ 1 atm."
+  },
+  {
+   "title": "Diatomic gas ki internal energy",
+   "problem": "300 K par 1 mol rigid diatomic gas ki internal energy?",
+   "solution": "U = (5/2)RT = 2.5 × 8.314 × 300 ≈ 6236 J."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Assumptions of kinetic theory",
+   "explain": "Molecules point jaise, random motion, aapas mein aur deewaron se elastic takkar, takkar ke alawa koi force nahi, aur takkar ka time negligible. Real gases low pressure aur high temperature par isse follow karti hain."
+  },
+  {
+   "title": "Molecular nature of matter",
+   "explain": "Matter atoms aur molecules se bana hai (Dalton's atomic theory). Avogadro's hypothesis: same temperature aur pressure par sabhi gases ke barabar volume mein barabar molecules."
+  },
+  {
+   "title": "Meaning of temperature",
+   "explain": "Temperature molecules ki average translational KE ke proportional hai. Absolute zero par ye motion (classically) ruk jaata hai."
+  },
+  {
+   "title": "Degrees of freedom in detail",
+   "explain": "Monoatomic gas (He, Ar): 3 translational. Diatomic (O₂, N₂): 2 rotational aur = 5; high temperature par vibration 2 aur = 7. Non-linear molecule (H₂O, CH₄): 3 translational + 3 rotational = 6."
+  },
+  {
+   "title": "Specific heat of solids",
+   "explain": "Equipartition se solid ke har atom ke 6 quadratic terms (3 KE + 3 PE), molar heat capacity ≈ 3R (Dulong–Petit law), high temperature par sahi."
+  },
+  {
+   "title": "Mean free path and diffusion",
+   "explain": "Molecules tez (~500 m/s) chalte hain par itni baar takraate hain ki khushboo kamre mein failne mein time lagta hai. Low pressure par λ badhta hai — vacuum technology ka base."
+  },
+  {
+   "title": "Real vs ideal gas",
+   "explain": "Real gases deviate karti hain kyunki molecules ka size hota hai aur woh ek-doosre ko kheenchte hain — sabse zyada high pressure aur low temperature par."
+  }
+ ],
+ "ratta": [
+  "PV = nRT = NkT;  k = 1.38 × 10⁻²³ J/K.",
+  "P = ⅓ρv²_rms;  KE per molecule = (3/2)kT.",
+  "v_rms = √(3RT/M) > v_avg > v_mp.",
+  "f: 3 (mono), 5 (di), 6 (poly);  ½kT per f.",
+  "Cv = fR/2, Cp = Cv + R, γ = 1 + 2/f.",
+  "λ = kT/(√2πd²P).",
+  "Nₐ = 6.022 × 10²³;  22.4 L at STP."
+ ],
+ "verifiedOn": "2026-11-13"
+}

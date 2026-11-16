@@ -84,5 +84,58 @@ SYLLABUS = [
 ("Aufbau principle, Pauli's exclusion principle, Hund's rule, electronic configuration, stability of half-filled and completely filled orbitals", ["Aufbau", "Pauli", "Hund", "half-filled"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Atoms mein electrons (Thomson), ek chhota dense positive nucleus (Rutherford) jismein protons aur neutrons (Chadwick) hain. Rutherford ka model atom ki stability aur line spectra nahi samjha paaya.",
+"Light waves ki tarah bhi aur E = hν energy wale photons ki tarah bhi behave karti hai. Photoelectric effect aur hydrogen ke line spectrum ne dikhaya ki energy quantised hai.",
+"Bohr ka model hydrogen-like atoms mein angular momentum quantise karta hai (mvr = nh/2π) aur energies Eₙ = −13.6 Z²/n² eV deta hai, jisse hydrogen spectrum samajh aata hai.",
+"Quantum mechanics ne orbits ki jagah orbitals diye. Chaar quantum numbers (n, l, m_l, m_s) har electron ko describe karte hain; orbitals Aufbau principle, Pauli exclusion principle aur Hund's rule se bharte hain.",
+],
+when=[
+("Light ki energy, spectral lines.", None),
+("Light se electrons nikalna.", "Intensity electrons ki sankhya badalti hai, unki maximum energy nahi — confuse mat karo."),
+("Bohr model derivations.", None),
+("H-like species (H, He⁺, Li²⁺) mein orbit ka size.", "r n² se badhta hai par 1/Z se ghatta hai — dono dhyan mein rakho."),
+("Energy levels, ionisation energy.", None),
+("Electron ki speed.", None),
+("Spectral lines ki wavelengths.", "Lyman n₁ = 1 (UV), Balmer n₁ = 2 (visible), Paschen 3, Brackett 4, Pfund 5 (IR) — series mix mat karo."),
+("Excited atoms ke sample se nikli lines.", None),
+("Electrons ki wave nature.", None),
+("Position aur momentum ek saath jaanne ki limit.", "Ye fundamental limit hai, measuring instrument ki kami nahi — galat mat samjho."),
+("Orbital aur electron describe karna.", "l kabhi n ke barabar nahi ho sakta."),
+("Shape aur node ke sawal.", None),
+("s, p, d, f aur shell mein maximum electrons.", None),
+("Bharne ka order: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p…", None),
+],
+examples=[
+("Photon ki energy", "500 nm photon ki energy?",
+ "E = hc/λ = 6.626 × 10⁻³⁴ × 3 × 10⁸/(5 × 10⁻⁷) ≈ ⟨0⟩ J (≈ 2.48 eV)."),
+("He⁺ transition", "He⁺ ka electron n = 2 se n = 1 par gire to kitni energy?",
+ "ΔE = 13.6 × 2² × (1 − 1/4) = ⟨0⟩ eV."),
+("Li²⁺ mein radius", "Li²⁺ ke second orbit ka radius?",
+ "r = 52.9 × 2²/3 ≈ ⟨0⟩ pm."),
+("Pehli Balmer line", "Hydrogen ki Balmer series ki pehli line ki wavelength?",
+ "1/λ = R(1/4 − 1/9) = 5R/36 → λ ≈ ⟨0⟩ nm (laal H-α line)."),
+("Electron ki de Broglie wavelength", "Electron 10⁶ m/s se. λ?",
+ "λ = h/mv = 6.626 × 10⁻³⁴/(9.1 × 10⁻³¹ × 10⁶) ≈ ⟨0⟩ nm."),
+("Velocity mein uncertainty", "Electron ka Δx = 0.1 nm. Minimum Δv?",
+ "Δv = h/(4πmΔx) ≈ ⟨0⟩ m/s."),
+("Photoelectric effect", "310 nm light 2 eV work function wali metal par. K_max?",
+ "E = 1240/310 = 4 eV → K_max = 4 − 2 = ⟨0⟩ eV (stopping potential 2 V)."),
+("Spectral lines", "Hydrogen atoms n = 5 tak excite. Maximum lines?",
+ "5 × 4/2 = ⟨0⟩ lines."),
+],
+topics=[
+("Discovery of subatomic particles", "Electron: cathode rays, e/m J.J. Thomson ne naapa; charge Millikan ke oil-drop experiment se. Proton: canal (anode) rays. Neutron: Chadwick (1932). Atomic number Z = protons; mass number A = protons + neutrons. Isotopes: same Z (¹H, ²H); isobars: same A (⁴⁰Ar, ⁴⁰Ca)."),
+("Atomic models", "Thomson: plum pudding. Rutherford (gold foil par α-scattering): atom zyadatar khaali, beech mein chhota dense positive nucleus; fail kyunki ghoomta electron radiate karke andar gir jaana chahiye. Bohr ne ise sirf hydrogen-like atoms ke liye theek kiya."),
+("Electromagnetic radiation", "c = νλ. Black-body radiation aur photoelectric effect ke liye Planck ka quantum idea chahiye tha: energy hν ke packets mein. Line (atomic) spectra elements ke fingerprints jaise hain."),
+("Limitations of Bohr's model", "Sirf one-electron species par kaam karta hai; fine structure, Zeeman (magnetic) aur Stark (electric) effects ya chemical bonding nahi samjhata, aur exact orbits dekar uncertainty principle ke khilaaf jaata hai."),
+("Quantum mechanical model", "Schrödinger equation se wave functions ψ; |ψ|² probability density. Orbital woh region jahan electron milne ki probability sabse zyada. Shapes: s orbitals spherical, p dumb-bell (px, py, pz), d zyadatar clover-leaf (dz² alag)."),
+("Filling rules", "Aufbau: pehle kam energy. Pauli: do electrons ke chaaron quantum numbers same nahi. Hund: degenerate orbitals mein electrons pehle akele parallel spin se, phir pair. Half-filled aur fully filled subshells extra stable: Cr = [Ar]3d⁵4s¹, Cu = [Ar]3d¹⁰4s¹."),
+("Energy of orbitals", "Hydrogen mein energy sirf n par (2s = 2p). Many-electron atoms mein n aur l dono par, kyunki andar ke electrons bahar walon ko alag-alag shield karte hain (s sabse zyada penetrate karta hai)."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

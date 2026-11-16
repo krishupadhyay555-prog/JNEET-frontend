@@ -64,5 +64,52 @@ SYLLABUS = [
 ("Secondary growth", ["secondary growth", "cork cambium", "annual rings"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Plant tissues meristematic (meristem — divide hone wale) ya permanent hote hain (simple: parenchyma, collenchyma, sclerenchyma; complex: xylem aur phloem).",
+"Tissues teen tissue system mein organised hain: epidermal, ground (fundamental) aur vascular.",
+"Dicot aur monocot ki roots, stems aur leaves ki andar ki structure alag hai — vascular bundles ki sankhya aur arrangement hi key hai.",
+"Secondary growth (vascular cambium aur cork cambium) dicots aur gymnosperms mein girth badhaati hai, jisse annual rings, heartwood, sapwood aur bark bante hain.",
+],
+when=[
+("Meristem ke types.", None),
+("Simple tissues compare karna.", None),
+("Paani ka conduction.", "Gymnosperms mein vessels nahi hote (Gnetum ke alawa); angiosperms mein hote hain — confuse mat karna."),
+("Food ka conduction.", "Gymnosperms mein sieve tubes aur companion cells ki jagah albuminous cells aur sieve cells hote hain — dhyan rakho."),
+("Root vs stem.", None),
+("Vascular bundle ke types.", None),
+("Root anatomy.", None),
+("Stem anatomy.", None),
+("Leaf anatomy.", "Bulliform cells paani kho kar grass leaves ko mod dete hain, jisse paani ka nuksaan kam hota hai."),
+("Epidermal tissue system.", None),
+("Girth ka badhna.", None),
+("Bark ke sawal.", None),
+("Dendrochronology (ped ki umar ka andaza).", None),
+],
+examples=[
+("Root ya stem ka section?", "Section mein radial bundles, exarch xylem aur pericycle dikh rahe hain. Root hai ya stem?",
+ "Root — radial bundles aur exarch protoxylem root ke features hain (stems mein conjoint bundles aur endarch protoxylem)."),
+("Monocot stem", "T.S. mein monocot stem pehchaanne ke teen features batao.",
+ "Bikhre hue vascular bundles, har ek ke saath sclerenchymatous bundle sheath; bundles conjoint aur closed; kinaare wale bundles beech walon se chhote; paani wali cavities; saaf pith nahi."),
+("Heartwood vs sapwood", "Purane tane ka kaunsa hissa paani le jaata hai?",
+ "Sapwood (alburnum) — bahar ka halke rang ka secondary xylem. Heartwood (duramen) gaadha hai, tannins, resins, oils aur gums se bhara, conducting nahi par mazboot."),
+("Xylem mein living cells", "Xylem ka kaunsa element zinda hai?",
+ "Xylem parenchyma. Tracheids, vessels aur xylem fibres maturity par dead hote hain."),
+("Bark ke components", "Kya secondary phloem bark ka hissa hai?",
+ "Haan. Bark mein vascular cambium ke bahar ke saare tissues aate hain: secondary phloem, phelloderm, phellogen aur phellem."),
+("Grass leaf ka mudna", "Garam sookhe din grass ki leaves kyun lipat jaati hain?",
+ "Upper epidermis ke bulliform cells turgor kho kar sikud jaate hain, leaf andar ki taraf lipat jaati hai aur khula surface aur paani ka nuksaan kam hota hai."),
+],
+topics=[
+("Epidermal tissue system", "Epidermis (aam taur par ek layer, waxy cuticle se dhaki — roots mein cuticle nahi), stomata, aur appendages: root hairs (epidermal cells ke unicellular extensions) aur stems par trichomes (aam taur par multicellular, branched ya unbranched, secretory bhi ho sakte)."),
+("Ground tissue system", "Epidermis aur vascular bundles ke alawa saare tissues: stems aur roots mein cortex, pericycle, pith aur medullary rays; leaves mein mesophyll."),
+("Endodermis and Casparian strips", "Roots ki sabse andar wali cortical layer; iske cells ki radial aur inner tangential walls par paani na jaane dene wale suberin ki Casparian strips hoti hain, jisse paani ko living cells se hi guzarna padta hai."),
+("Formation of the cambial ring", "Dicot stems mein intrafascicular cambium (bundles ke andar) interfascicular cambium (medullary ray cells se) ke saath judkar poora ring banata hai. Cambium andar ki taraf zyada active hai, isliye phloem se zyada secondary xylem banta hai."),
+("Lenticels", "Bark mein lens jaise openings jahan phellogen cork ki jagah dheele packed complementary cells banata hai; inse bahar ki hawa aur andar ke tissues ke beech gas exchange hota hai."),
+("Secondary growth in roots", "Dicot roots mein vascular cambium kuch phloem ke neeche ke conjunctive tissue se aur kuch protoxylem ke saamne wale pericycle se banta hai; pehle lehardaar ring banti hai jo baad mein gol ho jaati hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -1,0 +1,162 @@
+{
+ "slug": "human-health-and-disease",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Human Health and Disease"
+ },
+ "title": "Human Health and Disease",
+ "readMinutes": 15,
+ "summary": [
+  "Health poori physical, mental aur social bhalaai ki sthiti hai. Diseases infectious hain (pathogens se — bacteria, viruses, fungi, protozoans, helminths; jaise malaria, dengue, chikungunya, filariasis, ascariasis, typhoid, pneumonia, common cold, amoebiasis, ringworm) ya non-infectious (cancer).",
+  "Immunity innate (janm se maujood non-specific barriers) ya acquired hoti hai (specific, memory ke saath — B cells antibodies banate hain, T cells cell-mediated immunity dete hain). Vaccine isi memory ka use karta hai.",
+  "Allergies, autoimmunity (rheumatoid arthritis) aur AIDS (HIV helper T cells par hamla karta hai) immune system ki naakaami ya hamle hain. Cancer bina control ka cell division hai (contact inhibition khatam).",
+  "Drug aur alcohol abuse (opioids, cannabinoids, coca alkaloids) sehat bigaadte hain; adolescence sabse naazuk umar hai, aur bachav ilaaj se behtar hai."
+ ],
+ "formulas": [
+  {
+   "name": "Bacterial diseases",
+   "formula": "typhoid — Salmonella typhi (Widal test, intestinal perforation);  pneumonia — Streptococcus pneumoniae, Haemophilus influenzae (alveoli fill with fluid; lips and nails grey to bluish)",
+   "when": "Bacterial infections.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Viral and fungal diseases",
+   "formula": "common cold — rhinoviruses (nose and respiratory passage, not lungs);  ringworm — Microsporum, Trichophyton, Epidermophyton (dry scaly skin lesions; heat and moisture help growth)",
+   "when": "Doosre infections."
+  },
+  {
+   "name": "Protozoan diseases",
+   "formula": "malaria — Plasmodium vivax, P. malariae, P. falciparum (most serious, cerebral malaria);  amoebiasis — Entamoeba histolytica (houseflies carry cysts; mucus and blood clots in stool)",
+   "when": "Protozoan infections.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Plasmodium life cycle",
+   "formula": "sporozoites (infective stage) enter via female Anopheles bite → liver (asexual multiplication) → RBCs (burst, release haemozoin → chills and high fever every 3–4 days) → gametocytes → mosquito gut (fertilisation) → sporozoites in salivary glands",
+   "when": "Malaria parasite.",
+   "mistake": "Sexual reproduction mosquito mein hota hai; insaan intermediate host hai — ulta mat likhna."
+  },
+  {
+   "name": "Helminth diseases",
+   "formula": "ascariasis — Ascaris (eggs in contaminated soil, water, vegetables; internal bleeding, muscular pain, intestinal blockage);  filariasis/elephantiasis — Wuchereria bancrofti, W. malayi (female Culex mosquito; lymphatic vessels of lower limbs)",
+   "when": "Worm infections."
+  },
+  {
+   "name": "Innate immunity barriers",
+   "formula": "physical (skin, mucus);  physiological (stomach acid, saliva, tears);  cellular (neutrophils, monocytes, NK cells, macrophages);  cytokine (interferons from virus-infected cells)",
+   "when": "Non-specific defence."
+  },
+  {
+   "name": "Antibody structure",
+   "formula": "4 polypeptide chains: 2 heavy + 2 light (H₂L₂);  types IgA, IgM, IgE, IgG (IgG crosses placenta; IgA in colostrum)",
+   "when": "Humoral immunity.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Active vs passive immunity",
+   "formula": "active: body makes antibodies (infection or vaccination) — slow, long-lasting;  passive: ready-made antibodies given (mother's milk, placenta, anti-tetanus serum, snake antivenom) — quick, short-lived",
+   "when": "Acquired immunity ke types."
+  },
+  {
+   "name": "Lymphoid organs",
+   "formula": "primary: bone marrow (all blood cells, B cells mature) and thymus (T cells mature);  secondary: spleen, lymph nodes, tonsils, Peyer's patches, appendix, MALT (~50% of lymphoid tissue)",
+   "when": "Immune organs."
+  },
+  {
+   "name": "HIV/AIDS",
+   "formula": "retrovirus (RNA → reverse transcriptase → DNA);  enters macrophages (HIV factory) and helper T cells (T_H) → T_H count falls → opportunistic infections;  diagnosis by ELISA;  treated (not cured) with anti-retroviral drugs",
+   "when": "AIDS ki biology.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cancer basics",
+   "formula": "loss of contact inhibition;  benign tumour (stays in place) vs malignant (spreads — metastasis);  carcinogens: ionising radiation (X-rays, gamma), non-ionising UV, chemicals (tobacco smoke), oncogenic viruses (proto-oncogenes → oncogenes)",
+   "when": "Cancer biology."
+  },
+  {
+   "name": "Cancer detection and treatment",
+   "formula": "detection: biopsy, histopathology, blood/bone marrow tests, X-ray, CT, MRI, antibodies, molecular biology;  treatment: surgery, radiation, chemotherapy, immunotherapy (α-interferon)",
+   "when": "Cancer ka management."
+  },
+  {
+   "name": "Drugs of abuse",
+   "formula": "opioids: morphine (sedative, painkiller), heroin/smack (diacetylmorphine — depressant) from Papaver somniferum;  cannabinoids from Cannabis sativa (marijuana, hashish, charas, ganja) — cardiovascular effects;  coca alkaloid (cocaine/coke/crack) from Erythroxylum coca — interferes with dopamine transport, euphoria;  Atropa belladonna and Datura are hallucinogenic",
+   "when": "Drugs ke source aur asar.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Allergy",
+   "formula": "exaggerated response to allergens (pollen, mites); IgE antibodies; mast cells release histamine and serotonin;  treated with anti-histamines, adrenaline, steroids",
+   "when": "Allergic reactions."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Malaria mein thand",
+   "problem": "Malaria mein thand aur tez bukhaar kyun aata hai?",
+   "solution": "RBCs phatne se toxic substance haemozoin nikalta hai, jo har teen-chaar din mein thand aur tez bukhaar laata hai."
+  },
+  {
+   "title": "Typhoid ka test",
+   "problem": "Kaunsa test typhoid confirm karta hai?",
+   "solution": "Widal test."
+  },
+  {
+   "title": "Colostrum",
+   "problem": "Newborn ke liye colostrum kyun zaroori hai?",
+   "solution": "Isme bahut saari IgA antibodies hoti hain jo baby ko passive immunity deti hain."
+  },
+  {
+   "title": "Saanp ke kaatne ka ilaaj",
+   "problem": "Saanp ke kaatne ke baad kya diya jaata hai, aur ye kaunsi immunity hai?",
+   "solution": "Antivenom — saanp ke zeher ke khilaaf pehle se bani antibodies; ye passive immunisation hai."
+  },
+  {
+   "title": "AIDS immunity kyun girata hai",
+   "problem": "AIDS patients ko wo infections kyun hote hain jinse swasth log bach jaate hain?",
+   "solution": "HIV helper T lymphocytes ko nasht karta hai, jo antibody aur cell-mediated dono responses ko coordinate karte hain; immunity dhah jaati hai aur opportunistic infections (Mycobacterium, Toxoplasma, fungi, viruses) pakad bana lete hain."
+  },
+  {
+   "title": "Organ rejection",
+   "problem": "Transplanted organs ko kaunsi immunity reject karti hai?",
+   "solution": "Cell-mediated immunity (T lymphocytes). Tissue aur blood group matching aur zindagi bhar immunosuppressants rejection kam karte hain."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Maintaining health",
+   "explain": "Balanced diet, personal hygiene, regular exercise, yoga, bimaariyon ki jaankari, vaccination, waste ka sahi nipataan, vectors ka control aur surakshit khaana-paani."
+  },
+  {
+   "title": "Prevention and control of infectious diseases",
+   "explain": "Personal aur public hygiene: waste aur excreta ka sahi nipataan, paani ke tanks ki samay-samay par safaai aur disinfection. Vector-borne diseases (malaria, filariasis, dengue, chikungunya) ke liye mosquitoes control karo: ruka paani na hone do, mosquito nets use karo, talaabon mein Gambusia fish daalo (larvae khaati hai), insecticides spray karo."
+  },
+  {
+   "title": "Vaccination and immunisation",
+   "explain": "Vaccine mein inactivated ya kamzor pathogens ya antigenic proteins hote hain; ye memory B aur T cells banata hai. Recombinant DNA technology se antigenic polypeptides bacteria ya yeast mein banaye jaate hain (yeast se hepatitis B vaccine)."
+  },
+  {
+   "title": "Autoimmunity",
+   "explain": "Genetic aur anjaan kaaranon se body apne hi cells par hamla karti hai — jaise rheumatoid arthritis."
+  },
+  {
+   "title": "Adolescence and drug abuse",
+   "explain": "Adolescence (12–18 saal) naazuk samay hai. Kaaran: curiosity, adventure, excitement, peer pressure, padhai ka stress, asthir parivaar. Asar: laaparwaah vyavhaar, todphod, hinsa; zyada sharaab liver (cirrhosis) aur nervous system ko nuksaan; intravenous drug lene walon ko AIDS aur hepatitis B ka khatra. Anabolic steroids females mein masculinisation aur males mein sperm count kam karte hain."
+  },
+  {
+   "title": "Prevention of drug and alcohol abuse",
+   "explain": "Bewajah peer pressure se bacho, education aur counselling, maa-baap aur doston se madad lo, khatre ke sanket dekho (padhai mein girawat, akelaapan, aggressive vyavhaar) aur professional aur medical madad lo."
+  }
+ ],
+ "ratta": [
+  "Typhoid — Salmonella typhi (Widal);  pneumonia — Streptococcus, Haemophilus.",
+  "Common cold — rhinoviruses;  ringworm — Microsporum, Trichophyton, Epidermophyton.",
+  "Malaria: female Anopheles, haemozoin;  P. falciparum most serious.",
+  "Filariasis — Wuchereria, Culex.",
+  "Antibody H₂L₂;  IgA colostrum.",
+  "HIV: retrovirus, reverse transcriptase, kills T_H; ELISA.",
+  "Morphine/heroin — poppy;  cocaine — Erythroxylum coca (dopamine).",
+  "Gambusia eats mosquito larvae."
+ ],
+ "verifiedOn": "2026-11-13"
+}

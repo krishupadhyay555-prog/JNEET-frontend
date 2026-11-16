@@ -69,5 +69,52 @@ SYLLABUS = [
 ("Population attributes — growth, birth rate and death rate, age distribution", ["birth rate", "death rate", "age pyramid", "exponential", "logistic"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Ecology organisms ke aapas mein aur physical environment ke saath interactions padhti hai, chaar levels par: organisms, populations, communities aur biomes.",
+"Populations ke attributes hain — birth rate (natality), death rate (mortality), sex ratio aur age distribution (age pyramid). Population size births, immigration, deaths aur emigration se badalta hai.",
+"Resources unlimited hon to growth exponential (J-shaped) aur carrying capacity K limit kare to logistic (S-shaped, Verhulst–Pearl) hoti hai.",
+"Population interactions: mutualism (+/+), competition (−/−), predation aur parasitism (+/−), commensalism (+/0) aur amensalism (−/0).",
+],
+when=[
+("Natality, immigration, mortality, emigration.", None),
+("Per capita rates.", None),
+("Unlimited resources — J-shaped curve.", "Norway rat ka r 0.015; flour beetle ka 0.12; 1981 mein India ki human population ka r = 0.0205."),
+("Limited resources — carrying capacity K ke saath S-shaped (sigmoid) curve.", "Growth N = K/2 par sabse tez; N = K par ruk jaati hai — K par sabse tez mat samjho."),
+("Population trends ka andaza.", None),
+("Interactions classify karna.", None),
+("+/+ interactions.", None),
+("+/0 interactions.", None),
+("−/− interactions.", None),
+("+/− interactions.", None),
+("Predation.", None),
+("Badalti conditions se nipatna.", None),
+("Thand ke adaptations.", None),
+],
+examples=[
+("Birth rate", "Ek talaab mein pichle saal 20 lotus plants the; is saal reproduction se 8 naye bane. Birth rate?",
+ "8/20 = ⟨0⟩ offspring per lotus per year."),
+("Death rate", "40 mein se 4 fruit flies ek hafte mein marti hain. Death rate?",
+ "4/40 = ⟨0⟩ individuals per fruit fly per week."),
+("Logistic growth rate", "r = 0.1, N = 200, K = 1000. dN/dt nikalo.",
+ "dN/dt = 0.1 × 200 × (1000 − 200)/1000 = ⟨0⟩ individuals per unit time (exponential growth ⟨1⟩ deti)."),
+("Brood parasitism", "Cuckoo ka anda crow ke ghonsle mein pakda kyun nahi jaata?",
+ "Cuckoo ke ande size aur rang mein host ke andon jaise hote hain — evolve hua adaptation jo host ke unhe bahar phenkne ka chance ghataata hai."),
+("Altitude sickness", "Oonchi jagahon par altitude sickness kyun hoti hai, aur body kaise adjust karti hai?",
+ "Kam atmospheric pressure se body mein O₂ kam (nausea, thakaan, dil ki dhadkan tez). Dheere-dheere body zyada RBCs banati hai, haemoglobin ki binding affinity ghataati hai aur tez saans leti hai."),
+("Prickly pear control", "Australia mein prickly pear cactus kaise control hua?",
+ "Uske natural habitat se cactus khaane wala predator moth laakar — biological control."),
+],
+topics=[
+("Major abiotic factors", "Temperature (eurythermal vs stenothermal organisms), paani (euryhaline vs stenohaline — salinity: inland waters < 5, sea 30–35, hypersaline lagoons > 100 parts per thousand), light (photoperiod flowering ko affect karta; deep-sea organisms andhere mein rehte) aur soil (composition, grain size, aggregation, percolation)."),
+("Adaptations", "Kangaroo rat paani ki zaroorat internal fat oxidation aur concentrated urine se poori karta hai. Desert plants mein moti cuticle, dhanse stomata aur CAM photosynthesis (stomata raat mein khulte); Opuntia ki leaves spines ban gayi aur flat stems photosynthesis karte hain. Polar seals mein moti blubber."),
+("Population attributes", "Sirf populations (individuals nahi) ke birth rates, death rates, sex ratio aur age distribution hote hain. Population density counting, percent cover ya indirect methods (pug marks, faecal pellets) se naapi jaati hai."),
+("Life history variation", "Populations reproductive fitness (Darwinian fitness) maximise karne ke liye evolve hoti hain: kuch zindagi mein ek baar breed karti hain (Pacific salmon, bamboo), kuch kai baar (zyadatar birds aur mammals); kuch bahut chhote offspring (oysters, pelagic fish), kuch kam bade (birds, mammals)."),
+("Amensalism and coexistence", "Amensalism mein ek species ko nuksaan aur doosri par koi asar nahi (Penicillium penicillin nikaal kar bacteria maarta hai). Competition kareebi species mein sabse zyada par anjaan species mein bhi ho sakti hai (South American lakes mein flamingos aur fish zooplankton ke liye competition karte hain)."),
+("Ecological effects of predators", "Predators prey ka zyada shoshan karein to prey extinct ho sakta hai aur phir predators bhi. Keystone predator (rocky intertidal mein starfish Pisaster) hataane se ek saal mein 10 se zyada invertebrate species extinct ho gayi."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

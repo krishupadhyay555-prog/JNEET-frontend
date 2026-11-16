@@ -1,0 +1,146 @@
+{
+ "slug": "electromagnetic-waves",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Electromagnetic Waves",
+  "JEE": "Electromagnetic Waves"
+ },
+ "title": "Electromagnetic Waves",
+ "readMinutes": 9,
+ "summary": [
+  "Maxwell ne Ampère's law mein displacement current ε₀ dΦ_E/dt joda: badalta electric field magnetic field banata hai, jaise badalta magnetic field electric field banata hai. Dono milkar fields ko wave ki tarah chalne dete hain.",
+  "Electromagnetic waves transverse hain: E, B aur chalne ki direction aapas mein perpendicular. Vacuum mein speed c = 1/√(μ₀ε₀) = 3 × 10⁸ m/s, aur E₀ = cB₀.",
+  "Ye energy aur momentum le jaati hain; intensity I = ½cε₀E₀². Electric aur magnetic fields energy barabar baant-te hain.",
+  "Spectrum, lambi se chhoti wavelength: radio, microwave, infrared, visible, ultraviolet, X-rays, gamma rays — har ek ke apne sources aur uses."
+ ],
+ "formulas": [
+  {
+   "name": "Displacement current",
+   "formula": "I_d = ε₀ dΦ_E/dt",
+   "when": "Charging capacitor ki plates ke 'beech' current.",
+   "mistake": "Charging capacitor ke andar I_d wires ke conduction current ke barabar hota hai — alag mat samjho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ampère–Maxwell law",
+   "formula": "∮ B · dl = μ₀ (I_c + I_d)",
+   "when": "Badalta E field B kyun banata hai."
+  },
+  {
+   "name": "Speed of light",
+   "formula": "c = 1/√(μ₀ ε₀) = 3 × 10⁸ m/s;  in a medium v = 1/√(μ ε) = c/n",
+   "when": "Vacuum aur media mein EM wave ki speed."
+  },
+  {
+   "name": "Field amplitudes",
+   "formula": "E₀ = c B₀  (E = cB at every instant)",
+   "when": "E se B ya B se E nikaalna.",
+   "mistake": "B₀ bahut chhota hai (E₀/3 × 10⁸) — iska matlab magnetic energy kam nahi, galat mat maano.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Wave equations",
+   "formula": "E = E₀ sin(kx − ωt) ĵ,  B = B₀ sin(kx − ωt) k̂;  c = ω/k",
+   "when": "EM wave likhna ya padhna."
+  },
+  {
+   "name": "Direction of propagation",
+   "formula": "along E × B",
+   "when": "Wave kis taraf ja rahi hai."
+  },
+  {
+   "name": "Energy density",
+   "formula": "u = ½ε₀E² + B²/2μ₀ (equal shares);  average u = ½ε₀E₀²",
+   "when": "Wave mein stored energy."
+  },
+  {
+   "name": "Intensity",
+   "formula": "I = u_avg × c = ½ c ε₀ E₀²",
+   "when": "Wave dwara per unit area power."
+  },
+  {
+   "name": "Momentum and radiation pressure",
+   "formula": "p = U/c;  pressure = I/c (absorbed),  2I/c (reflected)",
+   "when": "Surfaces par light ka force.",
+   "mistake": "Perfect reflector par perfect absorber se double pressure — dhyan rakho."
+  },
+  {
+   "name": "Spectrum order",
+   "formula": "radio > microwave > infrared > visible (700–400 nm) > ultraviolet > X-rays > γ-rays  (wavelength decreasing)",
+   "when": "EM waves ko order aur identify karna."
+  }
+ ],
+ "examples": [
+  {
+   "title": "μ₀ aur ε₀ se speed",
+   "problem": "μ₀ = 4π × 10⁻⁷ aur ε₀ = 8.85 × 10⁻¹² se 1/√(μ₀ε₀)?",
+   "solution": "c = 1/√(4π × 10⁻⁷ × 8.85 × 10⁻¹²) ≈ 3.00 × 10⁸ m/s."
+  },
+  {
+   "title": "Magnetic field amplitude",
+   "problem": "Vacuum mein EM wave ka E₀ = 48 V/m. B₀?",
+   "solution": "B₀ = E₀/c = 48/(3 × 10⁸) = 1.6 × 10⁻⁷ T."
+  },
+  {
+   "title": "Intensity",
+   "problem": "E₀ = 100 V/m. Intensity?",
+   "solution": "I = ½cε₀E₀² = 0.5 × 3 × 10⁸ × 8.85 × 10⁻¹² × 10⁴ ≈ 13.3 W/m²."
+  },
+  {
+   "title": "Displacement current",
+   "problem": "Capacitor plate ka area 10⁻² m², plates ke beech field 10¹² V m⁻¹ s⁻¹ se badal raha. Displacement current?",
+   "solution": "I_d = ε₀ A dE/dt = 8.85 × 10⁻¹² × 10⁻² × 10¹² = 0.0885 A."
+  },
+  {
+   "title": "FM radio wavelength",
+   "problem": "100 MHz FM signal ki wavelength?",
+   "solution": "λ = c/ν = 3 × 10⁸/10⁸ = 3 m."
+  },
+  {
+   "title": "Green light ki frequency",
+   "problem": "500 nm light ki frequency?",
+   "solution": "ν = c/λ = 3 × 10⁸/(5 × 10⁻⁷) = 6 × 10¹⁴ Hz."
+  },
+  {
+   "title": "Average energy density",
+   "problem": "E₀ = 100 V/m. Average energy density?",
+   "solution": "u = ½ε₀E₀² = 0.5 × 8.85 × 10⁻¹² × 10⁴ ≈ 4.42 × 10⁻⁸ J/m³."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Why displacement current was needed",
+   "explain": "Ampère's law wire se guzarne wali surface aur charging capacitor ke gap se guzarne wali surface ke liye alag answer deta tha. Maxwell ke displacement current ne ise theek kiya aur EM waves predict kiye; Hertz ne 1887 mein unhe banaya."
+  },
+  {
+   "title": "Characteristics of EM waves",
+   "explain": "Transverse, medium nahi chahiye, vacuum mein speed c, accelerated charges se bante hain, superposition follow karte hain, reflect, refract, diffract aur polarise ho sakte hain, energy aur momentum le jaate hain. Medium badalne par frequency nahi badalti."
+  },
+  {
+   "title": "Radio waves and microwaves",
+   "explain": "Radio (> 0.1 m): antennas mein oscillating charges se — AM, FM, TV, mobile communication. Microwaves (1 mm–0.1 m): klystron aur magnetron — radar, satellite links, microwave ovens (paani ke molecules ko vibrate karte hain)."
+  },
+  {
+   "title": "Infrared and visible",
+   "explain": "Infrared (700 nm–1 mm): garam bodies se — heat lamps, remote controls, night vision, physiotherapy; greenhouse effect se Earth ko garam rakhta hai. Visible (400–700 nm): sirf yahi band hamari aankhein dekhti hain."
+  },
+  {
+   "title": "Ultraviolet",
+   "explain": "Bahut garam bodies jaise Suraj aur special lamps se. Germs maarta hai (water purifiers), LASIK eye surgery mein; zyadatar ozone layer absorb kar leti hai. Zyada UV skin aur aankhon ke liye nuksaandeh; normal glass iska bahut hissa absorb karta hai."
+  },
+  {
+   "title": "X-rays and gamma rays",
+   "explain": "X-rays (0.01–10 nm): tez electrons metal target se takraate hain — medical imaging, cancer therapy, crystal structure. Gamma rays (< 0.01 nm): nuclear reactions se — cancer cells nasht karna, equipment sterilise karna."
+  }
+ ],
+ "ratta": [
+  "I_d = ε₀ dΦ_E/dt.",
+  "c = 1/√(μ₀ε₀);  E₀ = cB₀;  travel along E × B.",
+  "I = ½cε₀E₀²;  energy shared equally by E and B.",
+  "Pressure: I/c absorbed, 2I/c reflected.",
+  "Order (λ ↓): radio, micro, IR, visible, UV, X, γ.",
+  "Microwave → radar/ovens;  UV → sterilise;  X → imaging;  γ → cancer therapy.",
+  "EM waves are transverse and need no medium."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -69,5 +69,50 @@ SYLLABUS = [
 ("Inverse trigonometric functions and their properties", ["inverse", "principal value", "domain", "range"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Trigonometric functions one-one nahi hain, isliye unke inverse restricted intervals par define hote hain jinhe principal value branches kehte hain.",
+"sin⁻¹x aur tan⁻¹x ki values [−π/2, π/2] mein (tan⁻¹ ke liye open); cos⁻¹x aur cot⁻¹x ki [0, π] mein. Har ek ka domain aur range bilkul theek yaad rakho.",
+"Key identities: sin⁻¹x + cos⁻¹x = π/2, tan⁻¹x + tan⁻¹y = tan⁻¹((x + y)/(1 − xy)) jab xy < 1, aur 2tan⁻¹x wale conversions.",
+"Zyadatar JEE sawal principal branch ke bahar sin⁻¹(sin x) type expressions test karte hain — graph banao ya π se shift karo.",
+],
+when=[
+("Principal value branches.", None),
+("Odd vs 'π minus' functions.", None),
+("π/2 tak ka sum.", None),
+("Functions badalna.", None),
+("Inverse tangents jodna.", "Plain formula lagaane se pehle xy < 1 check karo."),
+("Telescoping series.", None),
+("Substitution x = tan θ.", None),
+("Graph zig-zag (triangular wave) hai.", None),
+("Graph origin se shuru hone wala zig-zag.", None),
+("Right triangle banao: opposite x, hypotenuse 1.", None),
+("Inverse tangents ke sums.", None),
+],
+examples=[
+("Principal value", "sin⁻¹(sin 150°) nikalo.",
+ "150°, [−90°, 90°] ke bahar hai; sin 150° = sin 30°, isliye answer 30° = π/6 (computed ⟨0⟩°)."),
+("tan⁻¹ ka sum", "tan⁻¹(1/2) + tan⁻¹(1/3) nikalo.",
+ "xy = 1/6 < 1 ⇒ tan⁻¹((1/2 + 1/3)/(1 − 1/6)) = tan⁻¹(1) = π/4."),
+("cos(tan⁻¹ ¾)", "cos(tan⁻¹(3/4)) nikalo.",
+ "Triangle: opposite 3, adjacent 4, hypotenuse 5 ⇒ cos = 4/5 = ⟨0⟩."),
+("Branch ke bahar", "sin⁻¹(sin(4π/3)) nikalo.",
+ "4π/3, [π/2, 3π/2] mein hai, isliye sin⁻¹(sin x) = π − x = π − 4π/3 = −π/3."),
+("Sum π ke barabar", "Dikhao tan⁻¹1 + tan⁻¹2 + tan⁻¹3 = π.",
+ "tan⁻¹2 + tan⁻¹3 = π + tan⁻¹((2 + 3)/(1 − 6)) = π + tan⁻¹(−1) = π − π/4 (kyunki xy > 1). tan⁻¹1 = π/4 jodne par π."),
+("Telescoping sum", "Σ (r = 1 se n) tan⁻¹(1/(1 + r + r²)) nikalo.",
+ "Har term = tan⁻¹(r + 1) − tan⁻¹r, isliye sum telescope hokar tan⁻¹(n + 1) − tan⁻¹1 = tan⁻¹(n + 1) − π/4."),
+],
+topics=[
+("Why branches are needed", "Function ka inverse tabhi hota hai jab wo one-one aur onto ho. sin x ko [−π/2, π/2] tak restrict karne se wo [−1, 1] par bijection ban jaata hai; [π/2, 3π/2] jaisi doosri branches bhi sambhav hain par principal branch standard hai."),
+("Graphs", "y = sin⁻¹x (−1, −π/2) se (1, π/2) tak badhta hai; y = cos⁻¹x (−1, π) se (1, 0) tak girta hai; y = tan⁻¹x ke horizontal asymptotes y = ±π/2. f⁻¹ ka graph y = x mein f ka reflection hai."),
+("sin(sin⁻¹x) vs sin⁻¹(sin x)", "sin(sin⁻¹x) = x, [−1, 1] ke har x ke liye (domain mein hamesha sach). sin⁻¹(sin x) = x sirf tab jab x principal branch mein ho."),
+("Substitution technique", "√(1 − x²), (1 − x²)/(1 + x²), 2x/(1 − x²) jaise expressions x = sin θ, cos θ ya tan θ ka ishaara dete hain; simplify karke waapas badlo, branch ka dhyan rakhte hue."),
+("Solving equations", "Sab kuch ek inverse function mein badlo, identities use karo, phir dono taraf sin, cos ya tan lo. Aakhri answers domain mein hain ya nahi, hamesha check karo."),
+("Common traps", "tan⁻¹x + tan⁻¹(1/x) = π/2 sirf x > 0 ke liye (x < 0 ke liye −π/2). cos⁻¹x kabhi negative nahi. |x| < 1 ke liye sec⁻¹ aur cosec⁻¹ undefined. sin⁻¹x ko 1/sin x likhna galat hai — ye inverse hai, reciprocal nahi."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

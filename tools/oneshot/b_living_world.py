@@ -59,5 +59,47 @@ SYLLABUS = [
 ("Tools for study of taxonomy — museums, zoos, herbaria, botanical gardens", ["museum", "zoo", "herbarium", "botanical garden"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Living organisms badhte hain, reproduce karte hain, metabolism karte hain, surroundings ko respond karte hain aur cells se bane hote hain. Metabolism, cellular organisation aur consciousness defining features hain; sirf growth aur reproduction nahi.",
+"1.7–1.8 million se zyada species describe ho chuki hain (biodiversity). Inhe padhne ke liye naam dena, pehchaanna, classification karna aur hierarchy mein lagaana — ye taxonomy hai; systematics evolutionary relationships bhi jodti hai.",
+"Binomial nomenclature (Carolus Linnaeus) har organism ko do hisson wala scientific naam deti hai: generic name + specific epithet, jaise Mangifera indica.",
+"Taxonomic categories kingdom se species tak jaati hain; har neeche wala step zyada characters share karne wale organisms ko group karta hai.",
+],
+when=[
+("Kuch living hai ya nahi, tay karna.", "Growth aur reproduction defining nahi hain: crystals badhte hain, aur mules ya worker bees reproduce nahi karte — inse living mat tay karo."),
+("Scientific naam likhna.", "Mangifera indica Linn. — author ka naam roman (italics nahi) mein likha jaata hai."),
+("Categories ko rank karna.", "Hierarchy mein upar jaane par shared characters ki sankhya ghatti hai — ulta mat samjho."),
+("Classification ki basic unit.", None),
+("Plant ki example hierarchy.", None),
+("Animal ki example hierarchy.", None),
+("Common PYQ examples.", None),
+("Pehchaan ke tools.", None),
+("Anjaan organisms pehchaanna.", None),
+("Botanical garden facts.", None),
+],
+examples=[
+("Living ya nahi?", "Reproduction ko life ki defining property kyun nahi maana jaata?",
+ "Kai living organisms reproduce nahi kar sakte (mules, sterile worker bees, infertile insaan), phir bhi zinda hain. Metabolism aur cellular organisation har living organism mein hote hain."),
+("Sahi scientific naam", "Kaunsa sahi likha hai: Mangifera Indica, mangifera indica, Mangifera indica?",
+ "Mangifera indica — genus capital letter se, specific epithet small letter se, dono italics mein."),
+("Shared characters", "Kinme zyada characters common hain: ek genus ke members ya ek family ke?",
+ "Genus ke members. Neeche ki categories zyada close related organisms ko group karti hain, isliye zyada characters share hote hain."),
+("Herbarium sheet", "Herbarium sheet par kya information hoti hai?",
+ "Plant ka scientific naam, family, collector ka naam, collection ki date aur jagah, local naam aur field notes, saath mein pressed specimen."),
+("Order vs family", "Family, order, genus aur class ko upar se neeche lagaao.",
+ "Class → Order → Family → Genus."),
+],
+topics=[
+("Diversity in the living world", "Biodiversity = Earth par organisms ki sankhya aur types. Local naam jagah-jagah badalte hain, isliye unique aur duniya bhar mein maane jaane wale scientific naam chahiye. Sabse upar life three domains (teen domains, Carl Woese) mein bati hai: Bacteria, Archaea aur Eukarya."),
+("Nomenclature codes", "Plants ke naam International Code of Botanical Nomenclature (ICBN) se; animals ke International Code of Zoological Nomenclature (ICZN) se. Scientific naam Latin ya Latinised hote hain."),
+("Growth and metabolism", "Living organisms mein growth andar se hoti hai (cells ke mass aur sankhya mein badhat). Metabolism body ki saari chemical reactions ka jod hai; test tube mein alag ki gayi metabolic reactions living nahi hain."),
+("Taxonomy and systematics", "Taxonomy: characterisation, identification, nomenclature aur classification. Systematics (Linnaeus, Systema Naturae) evolutionary relationships bhi dekhti hai."),
+("Taxonomic categories", "Har category (rank) ek taxon kehlati hai. Hierarchy mein saat obligate categories; kabhi-kabhi sub-species ya super-family jaisi beech ki ranks bhi."),
+("Museums, zoos and keys", "Museums mein animals preservative solutions mein aur skins ya skeletons ki tarah rakhe jaate hain; insects boxes mein pin kiye jaate hain. Zoological parks jangli animals ko natural habitat jaisi surakshit jagah mein rakhte hain. Flora, manuals, monographs aur catalogues bhi pehchaan mein madad karte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

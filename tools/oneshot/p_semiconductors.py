@@ -72,5 +72,51 @@ SYLLABUS = [
 ("Logic gates (OR, AND, NOT, NAND and NOR)", ["OR", "AND", "NOT", "NAND", "NOR"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Energy bands batate hain solid conduct karega ya nahi: conductor mein bands overlap, insulator mein bada gap (> 3 eV), semiconductor mein chhota gap (Si 1.1 eV, Ge 0.7 eV) jo heat ya light paar kara sakti hai.",
+"Pure (intrinsic) semiconductor mein electrons aur holes barabar. Pentavalent atoms ki doping se n-type (electrons majority); trivalent se p-type (holes majority).",
+"p-n junction depletion layer aur barrier potential banata hai. Forward bias barrier ghataata hai aur current behta hai; reverse bias barrier badhata hai aur bahut chhota current — isliye diode AC ko rectify karta hai.",
+"Special diodes: LED (recombination se light), photodiode (reverse bias mein light se current), solar cell (light se emf, bias nahi), Zener diode (reverse breakdown mein constant voltage). Logic gates (OR, AND, NOT, NAND, NOR) binary signals process karte hain.",
+],
+when=[
+("Solids classify karna (conductor, insulator, semiconductor).", None),
+("Pure Si ya Ge.", None),
+("Doped semiconductor mein minority-carrier density.", "Doping ek carrier badhaati hai aur doosra GHATAATI hai — product nᵢ² hi rehta hai, bhoolo mat."),
+("Doping pehchaanna.", "n-type aur p-type dono crystals overall electrically neutral hain — charged mat samjho."),
+("Carriers aur mobilities se conductivity.", None),
+("I–V characteristics padhna.", None),
+("Rectified AC ki ripple frequency.", "50 Hz mains par full-wave rectifier 100 Hz ripple deta hai, 50 nahi."),
+("Regulator circuit mein Zener current.", "Load voltage V_Z par tabhi rehta hai jab I_Z > 0 (Zener breakdown mein) — check karo."),
+("LED ka rang, photodiode ki cut-off wavelength.", None),
+("Truth-table ke sawal.", "NAND aur NOR universal gates hain — inse koi bhi gate ban sakta hai, yaad rakho."),
+],
+examples=[
+("Minority carriers", "Si ka nᵢ = 1.5 × 10¹⁶ m⁻³. 10²² donors/m³ se dope kiya. Electron aur hole densities?",
+ "nₑ ≈ N_D = ⟨0⟩ m⁻³; n_h = nᵢ²/nₑ = 2.25 × 10³²/10²² ≈ ⟨1⟩ m⁻³."),
+("Zener regulator", "6 V Zener, 500 Ω series resistor, 12 V supply; load 2 kΩ. Load aur Zener currents?",
+ "I_series = (12 − 6)/500 = 12 mA; I_load = 6/2000 = ⟨0⟩ mA; I_Z = 12 − 3 = ⟨1⟩ mA."),
+("Ripple frequency", "50 Hz AC rectify kiya. Half-wave aur full-wave ki output ripple frequency?",
+ "Half-wave: ⟨0⟩ Hz; full-wave: ⟨1⟩ Hz."),
+("Diode se current", "Forward-biased silicon diode (drop 0.7 V), 1 kΩ ke saath 5 V par. Current?",
+ "I = (5 − 0.7)/1000 A = ⟨0⟩ mA."),
+("LED ka rang", "LED ka band gap 1.9 eV. Light ki wavelength?",
+ "λ ≈ 1240/1.9 ≈ ⟨0⟩ nm — red light."),
+("Combination ki truth table", "NOR gate jiske dono inputs A hon, uska output?",
+ "Y = (A + A)‾ = Ā — inputs jod diye NOR gate NOT gate ki tarah kaam karta hai. (Waise hi jude inputs wala NAND bhi NOT hai.)"),
+],
+topics=[
+("Energy bands", "Solid mein atomic levels fail kar bands bante hain. Valence band mein bonding electrons; conduction band mein free electrons. 0 K par semiconductor insulator hai; room temperature par kuch electrons gap paar karke holes chhod dete hain."),
+("Holes", "Hole valence band mein ek gayab electron hai jo positive charge ki tarah behave karta hai. Paas ke electrons use bharte hain to hole chalta hai; hole mobility electron se kam."),
+("Effect of temperature", "Semiconductor ka resistance temperature badhne par ghatta hai (zyada carriers) — negative temperature coefficient, metals ke ulta."),
+("Formation of a p-n junction", "Electrons n se p aur holes p se n diffuse karte hain; junction ke paas recombine hokar fixed ions chhodte hain — depletion layer jismein electric field aur barrier potential (Si ke liye ~0.7 V). Equilibrium par diffusion aur drift current balance."),
+("Biasing", "Forward bias (p ko +) depletion layer patli karta hai; reverse bias choudi. Reverse bias ka chhota current minority carriers se aur breakdown tak lagbhag voltage se independent."),
+("Rectifiers and filters", "Half-wave ek diode, ek half-cycle paas karta hai. Full-wave do diodes centre-tap transformer ke saath (ya bridge mein chaar), dono halves paas. Load ke across capacitor pulsating DC ko smooth karta hai."),
+("Optoelectronic devices", "LED: forward-biased, recombination se light, rang band gap se (GaAsP wagera); efficient aur lambi chalne wali. Photodiode: reverse-biased, light intensity ke saath current badhta hai — detectors mein. Solar cell: external bias nahi; light electron-hole pairs aur emf banati hai — Si aur GaAs common."),
+("Zener diode", "Heavily doped diode jo reverse breakdown mein kaam ke liye bana hai, jahan bade current range mein voltage lagbhag constant rehta hai — voltage regulator ki tarah use."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

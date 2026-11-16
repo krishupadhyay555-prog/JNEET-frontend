@@ -73,5 +73,52 @@ SYLLABUS = [
 ("Mutation; pedigree analysis", ["mutation", "pedigree"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Mendel (1856–1863, garden pea) ne inheritance ke laws diye: dominance, segregation aur independent assortment. Monohybrid F₂ ratio 3:1 (phenotype), 1:2:1 (genotype); dihybrid F₂ 9:3:3:1.",
+"Mendel se hatke: incomplete dominance (snapdragon 1:2:1), co-dominance (ABO blood groups), multiple alleles, pleiotropy aur polygenic inheritance (skin colour).",
+"Chromosomal theory of inheritance (Sutton aur Boveri) ne genes ko chromosomes par rakha; Morgan ke Drosophila kaam ne linkage aur recombination dikhaya. Sex determination chromosomes se (XX–XY, XX–XO, ZW–ZZ jaise birds mein) ya haplodiploidy (honey bee) se.",
+"Mutation aur chromosomal badlaav disorders karte hain: Mendelian (haemophilia, colour blindness, sickle-cell anaemia, phenylketonuria, thalassemia) aur chromosomal (Down's, Klinefelter's, Turner's syndromes). Pedigree analysis parivaar mein traits trace karta hai.",
+],
+when=[
+("Ek character.", None),
+("Dominant phenotype ka anjaan genotype dhoondhna.", None),
+("Do characters — law of independent assortment.", None),
+("Jaldi ginti.", None),
+("Koi allele poora dominant nahi.", None),
+("Blood group genetics.", None),
+("Simple dominance se aage.", None),
+("Morgan ka Drosophila kaam.", None),
+("Chromosomal sex determination.", None),
+("Criss-cross inheritance.", "Affected females kam hoti hain — unhe recessive allele ki do copies chahiye."),
+("Mendelian disorders.", "Thalassemia quantitative problem hai (globin kam banta hai); sickle-cell qualitative (galat globin) — dono ko mix mat karo."),
+("Aneuploidy.", None),
+("Family trees padhna.", None),
+],
+examples=[
+("Dihybrid fraction", "Dihybrid F₂ mein kitna fraction dono dominant traits dikhata hai?",
+ "⟨0⟩/⟨1⟩ (9:3:3:1 ka 9)."),
+("AaBbCc se gametes", "AaBbCc kitne type ke gametes banata hai?",
+ "2³ = ⟨0⟩."),
+("Dihybrid F₂ mein genotypes", "Dihybrid F₂ mein kitne genotypes aate hain?",
+ "3² = ⟨0⟩."),
+("Colour-blind beta", "Carrier mahila normal aadmi se shaadi karti hai. Bete ke colour blind hone ka chance?",
+ "Bete X maa se lete hain: aadhe ko Xᶜ milta hai → ⟨0⟩% bete."),
+("Bachchon ka blood group", "Maa-baap Iᴬi aur Iᴮi hain. Bachchon ke sambhavit blood groups?",
+ "IᴬIᴮ (AB), Iᴬi (A), Iᴮi (B) aur ii (O) — chaaron, har ek ki probability 1/4."),
+("Drosophila kyun?", "Morgan ne Drosophila kyun chuna?",
+ "Simple synthetic medium par palta hai, lagbhag do hafte mein life cycle poora, ek mating se bahut offspring, male aur female aasaani se pehchaane jaate hain, aur low-power microscope mein dikhne wale kai hereditary variations."),
+],
+topics=[
+("Mendel's experimental design", "Mendel ne saat jodi contrasting traits wali 14 true-breeding pea varieties use ki; pea self-pollinating, kam umar wala aur cross karne mein aasaan hai. Bade samples aur statistics use kiye. Unka kaam 1900 mein de Vries, Correns aur von Tschermak ne dobara khoja."),
+("Law of dominance and segregation", "Characters discrete factors (genes) control karte hain jo jodi mein hote hain; alag jodi mein ek dominate karta hai (dominance). Gamete bante waqt alleles alag hote hain, har gamete ko ek hi milta hai (segregation) — law of purity of gametes."),
+("Punnett square", "Reginald C. Punnett ka banaya graphical grid jo genetic cross mein offspring ke saare sambhavit genotypes ki probability nikaalta hai."),
+("Mutation", "DNA sequence mein badlaav jo genotype aur phenotype badalta hai. Point mutation: ek base pair mein badlaav (sickle-cell anaemia). Frameshift mutations: bases ka insertion ya deletion. Mutagens: UV radiation aur chemicals."),
+("Chromosomal theory of inheritance", "Sutton aur Boveri ne dekha ki chromosomes bhi Mendel ke factors ki tarah jodi mein hote hain, gamete bante waqt alag hote hain aur independently assort hote hain. Sutton ne chromosomal segregation ko Mendelian principles se joda."),
+("Aneuploidy and polyploidy", "Cell division mein chromatids alag na hone se ek chromosome badhta ya ghatta hai (aneuploidy). Telophase ke baad cytokinesis na hone se poora extra set (polyploidy), plants mein aam."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -1,0 +1,148 @@
+{
+ "slug": "chemical-kinetics",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Chemical Kinetics",
+  "JEE": "Chemical Kinetics"
+ },
+ "title": "Chemical Kinetics",
+ "readMinutes": 13,
+ "summary": [
+  "Chemical kinetics batata hai reactions kitni tez chalti hain. Rate = time ke saath concentration ka change, stoichiometric coefficient se divide karke, taaki har species ke liye same aaye.",
+  "Rate law (rate = k[A]ˣ[B]ʸ) experiment se milta hai. Order (x + y) 0, fractional ya whole ho sakta hai; molecularity sirf elementary steps ki hoti hai aur hamesha whole number.",
+  "Integrated rate laws: zero order [A] = [A]₀ − kt (t½ ∝ [A]₀); first order ln([A]₀/[A]) = kt (t½ = 0.693/k, concentration se independent).",
+  "Temperature ke saath rates tezi se badhte hain (Arrhenius: k = Ae^{−Ea/RT}) kyunki zyada molecules ki energy Ea se upar hoti hai. Catalyst Ea ghataata hai, ΔH ya equilibrium nahi badalta."
+ ],
+ "formulas": [
+  {
+   "name": "Rate of reaction",
+   "formula": "for aA + bB → cC + dD:  rate = −(1/a)d[A]/dt = −(1/b)d[B]/dt = (1/c)d[C]/dt",
+   "when": "Alag species ke rates jodna.",
+   "mistake": "Coefficient se divide karo — A ke gaayab hone ki rate = a × rate, bhoolo mat.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Rate law",
+   "formula": "rate = k[A]ˣ[B]ʸ;  order = x + y",
+   "when": "Concentration ka rate par effect.",
+   "mistake": "x aur y experiment se aate hain, balanced equation se nahi — galat mat lo."
+  },
+  {
+   "name": "Units of k",
+   "formula": "(mol L⁻¹)¹⁻ⁿ s⁻¹:  zero order mol L⁻¹ s⁻¹;  first s⁻¹;  second L mol⁻¹ s⁻¹",
+   "when": "Units se order pehchaanna."
+  },
+  {
+   "name": "Zero-order reaction",
+   "formula": "[A] = [A]₀ − kt;  t½ = [A]₀/2k",
+   "when": "Saturated catalyst surface par reactions, photochemical reactions.",
+   "mistake": "Zero order mein t½ initial concentration ke saath badhta hai — first order jaisa constant nahi."
+  },
+  {
+   "name": "First-order reaction",
+   "formula": "k = (2.303/t) log([A]₀/[A]);  t½ = 0.693/k",
+   "when": "Zyadatar decompositions, radioactive-type kinetics.",
+   "mistake": "First order ka t½ initial concentration par depend nahi karta — dhyan rakho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "First-order shortcuts",
+   "formula": "t₇₅% = 2 t½;  t₈₇.₅% = 3 t½;  t₉₉.₉% ≈ 10 t½;  t₉₉% = 2 t₉₀%",
+   "when": "Quick timing sawal."
+  },
+  {
+   "name": "Pseudo-first-order",
+   "formula": "a second-order reaction with one reactant in large excess behaves as first order",
+   "when": "Esters ka acid hydrolysis, cane sugar ka inversion."
+  },
+  {
+   "name": "Arrhenius equation",
+   "formula": "k = A e^{−Ea/RT};  log(k₂/k₁) = (Ea/2.303R)(1/T₁ − 1/T₂)",
+   "when": "Temperature ka effect, Ea nikaalna.",
+   "mistake": "Kelvin lo, aur Ea joules mein ho to R = 8.314 J mol⁻¹ K⁻¹ — units mix mat karo."
+  },
+  {
+   "name": "Temperature coefficient",
+   "formula": "k(T + 10)/k(T) ≈ 2–3",
+   "when": "Rough rule of thumb."
+  },
+  {
+   "name": "Collision theory",
+   "formula": "rate = Z_AB e^{−Ea/RT} × P  (P = steric/orientation factor)",
+   "when": "Sirf kuch collisions hi kyun react karti hain."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Rates jodna",
+   "problem": "2N₂O₅ → 4NO₂ + O₂. NO₂ 2.8 × 10⁻³ mol L⁻¹ s⁻¹ se banta hai. N₂O₅ ke gaayab hone ki rate?",
+   "solution": "−d[N₂O₅]/dt = (2/4) × 2.8 × 10⁻³ = 1.4 × 10⁻³ mol L⁻¹ s⁻¹."
+  },
+  {
+   "title": "Half-life se rate constant",
+   "problem": "First-order t½ = 30 min. k?",
+   "solution": "k = 0.693/30 ≈ 0.0231 min⁻¹."
+  },
+  {
+   "title": "90% completion ka time",
+   "problem": "Wahi reaction: 90% completion ka time?",
+   "solution": "t = (2.303/k) log 10 = 2.303/0.0231 ≈ 99.7 min."
+  },
+  {
+   "title": "Data se order",
+   "problem": "[A] double karne par rate chaar guna. A mein order?",
+   "solution": "2ⁿ = 4 → n = 2."
+  },
+  {
+   "title": "Activation energy",
+   "problem": "300 K se 310 K par rate double. Ea?",
+   "solution": "log 2 = (Ea/2.303R)(10/(300 × 310)) → Ea ≈ 53.6 kJ/mol."
+  },
+  {
+   "title": "99.9% completion",
+   "problem": "First-order reaction ki 99.9% completion mein kitni half-lives?",
+   "solution": "t₉₉.₉/t½ = (2.303 × 3)/0.693 ≈ 10."
+  },
+  {
+   "title": "Zero-order half-life",
+   "problem": "Zero order, [A]₀ = 0.5 M, k = 0.01 mol L⁻¹ s⁻¹. t½?",
+   "solution": "t½ = [A]₀/2k = 0.5/0.02 = 25 s."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Average and instantaneous rate",
+   "explain": "Average rate = interval par Δ[R]/Δt; instantaneous rate = concentration–time curve ka kisi point par slope. Reactants khatam hone ke saath rate aam taur par ghatta hai."
+  },
+  {
+   "title": "Factors affecting rate",
+   "explain": "Concentration (ya pressure), temperature, catalyst, solids ka surface area, aur photochemical reactions ke liye light."
+  },
+  {
+   "title": "Order vs molecularity",
+   "explain": "Order experimental hai, zero ya fractional ho sakta hai aur poori reaction ka hota hai. Molecularity theoretical, whole number (1, 2, kabhi-kabhi 3) aur sirf elementary steps ke liye. Complex reactions mein sabse dheema step rate law tay karta hai."
+  },
+  {
+   "title": "Graphs to identify order",
+   "explain": "Zero order: [A] vs t seedhi line (slope −k). First order: ln[A] (ya log[A]) vs t seedhi line (slope −k ya −k/2.303). Rate vs [A] zero order mein flat aur first order mein origin se seedhi line."
+  },
+  {
+   "title": "Activation energy and catalysts",
+   "explain": "Sirf woh takraate molecules react karte hain jinki energy ≥ Ea aur orientation sahi ho. Catalyst kam Ea wala naya raasta deta hai, forward aur backward dono ko barabar tez karta hai, khatam nahi hota, aur ΔH, ΔG ya K nahi badalta."
+  },
+  {
+   "title": "Effect of temperature (Maxwell distribution)",
+   "explain": "T badhane par energy distribution shift hota hai aur Ea se upar wale molecules ka fraction (Ea ke baad ka area) har 10 K par lagbhag double hota hai. ln k vs 1/T seedhi line, slope −Ea/R aur intercept ln A."
+  }
+ ],
+ "ratta": [
+  "Rate = −(1/a)d[A]/dt;  order is experimental.",
+  "Units of k: (mol L⁻¹)¹⁻ⁿ s⁻¹.",
+  "Zero: t½ = [A]₀/2k;  first: t½ = 0.693/k (no [A]₀).",
+  "k = (2.303/t) log([A]₀/[A]).",
+  "t₉₉.₉ ≈ 10 t½;  t₇₅ = 2t½.",
+  "k = Ae^{−Ea/RT};  slope of ln k vs 1/T = −Ea/R.",
+  "Catalyst lowers Ea; no change in ΔH or K."
+ ],
+ "verifiedOn": "2026-11-13"
+}

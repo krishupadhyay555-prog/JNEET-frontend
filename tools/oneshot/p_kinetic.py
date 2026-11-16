@@ -80,5 +80,55 @@ SYLLABUS = [
 ("Mean free path, Avogadro's number", ["mean free path", "Avogadro"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Gas bahut saare chhote molecules hain jo random motion mein hain. Deewaron se unki takkar pressure banati hai: P = ⅓ρv²_rms.",
+"Temperature molecules ki average kinetic energy ka maap hai: har molecule ki average translational KE = (3/2)kT, gas koi bhi ho.",
+"Equipartition: har degree of freedom ko har molecule mein ½kT milta hai. Degrees of freedom gin kar monoatomic, diatomic, polyatomic gases ke Cv, Cp aur γ milte hain.",
+"Mean free path — do takkaron ke beech ki average doori — λ = kT/(√2 π d² P) hai: gas garam ya patli ho to badhta hai.",
+],
+when=[
+("P, V, T aur gas ki maatra jodne wala koi bhi sawal.", "Kelvin lo, aur P, V ke SI units (1 L = 10⁻³ m³) — bhoolo mat."),
+("Pressure ko molecular speed se jodna.", None),
+("Temperature ka matlab.", "Ye sirf T par depend — same T par har gas ki average translational KE same, mass se alag nahi."),
+("Molecules ki speed.", "M kg/mol mein (O₂ ke liye 0.032), g/mol nahi."),
+("Speed ki definitions compare karna.", None),
+("Energy modes ginna.", None),
+("Gas ki internal energy.", None),
+("γ aur molar heat capacities nikaalna.", None),
+("Takkaron ke beech average doori.", "λ ∝ T/P — pressure double karo to λ aadha, ulta mat lo."),
+("Molecules ginna.", None),
+("Quick ratio problems.", None),
+],
+examples=[
+("Room temperature par molecule ki KE", "300 K par gas molecule ki average translational KE?",
+ "E = (3/2) × 1.38 × 10⁻²³ × 300 ≈ ⟨0⟩ J."),
+("Oxygen ki RMS speed", "300 K par O₂ ka v_rms (M = 0.032 kg/mol)?",
+ "v = √(3 × 8.314 × 300/0.032) ≈ ⟨0⟩ m/s."),
+("RMS speeds barabar karna", "Kis temperature par O₂ ki rms speed 300 K wali H₂ jitni hogi?",
+ "T/M barabar hona chahiye: T = 300 × 32/2 = ⟨0⟩ K."),
+("Temperature 4 guna", "Gas ka kelvin temperature 4 guna karein to rms speed?",
+ "v ∝ √T → √4 = ⟨0⟩ guna."),
+("1 cm³ hawa mein molecules", "STP (P = 1.013 × 10⁵ Pa, T = 273 K) par 1 cm³ gas mein molecules?",
+ "N = PV/kT = 1.013 × 10⁵ × 10⁻⁶/(1.38 × 10⁻²³ × 273) ≈ ⟨0⟩ (Loschmidt number)."),
+("Hawa mein mean free path", "Molecular diameter 3 × 10⁻¹⁰ m, T = 300 K, P = 1.013 × 10⁵ Pa. Mean free path?",
+ "λ = kT/(√2 π d² P) ≈ ⟨0⟩ nm — molecule ke size ka lagbhag 300 guna."),
+("Molecular speed se pressure", "Hawa ki density 1.29 kg/m³, v_rms = 485 m/s. Pressure?",
+ "P = ⅓ρv² = ⅓ × 1.29 × 485² ≈ ⟨0⟩ Pa ≈ 1 atm."),
+("Diatomic gas ki internal energy", "300 K par 1 mol rigid diatomic gas ki internal energy?",
+ "U = (5/2)RT = 2.5 × 8.314 × 300 ≈ ⟨0⟩ J."),
+],
+topics=[
+("Assumptions of kinetic theory", "Molecules point jaise, random motion, aapas mein aur deewaron se elastic takkar, takkar ke alawa koi force nahi, aur takkar ka time negligible. Real gases low pressure aur high temperature par isse follow karti hain."),
+("Molecular nature of matter", "Matter atoms aur molecules se bana hai (Dalton's atomic theory). Avogadro's hypothesis: same temperature aur pressure par sabhi gases ke barabar volume mein barabar molecules."),
+("Meaning of temperature", "Temperature molecules ki average translational KE ke proportional hai. Absolute zero par ye motion (classically) ruk jaata hai."),
+("Degrees of freedom in detail", "Monoatomic gas (He, Ar): 3 translational. Diatomic (O₂, N₂): 2 rotational aur = 5; high temperature par vibration 2 aur = 7. Non-linear molecule (H₂O, CH₄): 3 translational + 3 rotational = 6."),
+("Specific heat of solids", "Equipartition se solid ke har atom ke 6 quadratic terms (3 KE + 3 PE), molar heat capacity ≈ 3R (Dulong–Petit law), high temperature par sahi."),
+("Mean free path and diffusion", "Molecules tez (~500 m/s) chalte hain par itni baar takraate hain ki khushboo kamre mein failne mein time lagta hai. Low pressure par λ badhta hai — vacuum technology ka base."),
+("Real vs ideal gas", "Real gases deviate karti hain kyunki molecules ka size hota hai aur woh ek-doosre ko kheenchte hain — sabse zyada high pressure aur low temperature par."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

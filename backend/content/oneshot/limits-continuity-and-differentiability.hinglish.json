@@ -1,0 +1,149 @@
+{
+ "slug": "limits-continuity-and-differentiability",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Limits, Continuity and Differentiability"
+ },
+ "title": "Limits, Continuity and Differentiability",
+ "readMinutes": 16,
+ "summary": [
+  "Limit batata hai ki x ke a ke paas jaane par f(x) kis value ke paas jaata hai; ye tab exist karta hai jab left-hand aur right-hand limits barabar aur finite hon.",
+  "Indeterminate forms (0/0, ∞/∞, 1^∞, 0 × ∞, ∞ − ∞) factorisation, rationalisation, standard limits, series expansion ya L'Hôpital's rule se solve hote hain.",
+  "f, a par continuous hai agar lim f(x) = f(a). f, a par differentiable hai agar left aur right derivatives barabar hon; differentiability se continuity milti hai, par ulta nahi (|x| at 0)."
+ ],
+ "formulas": [
+  {
+   "name": "Existence of a limit",
+   "formula": "lim (x→a) f(x) exists ⇔ LHL = RHL (finite)",
+   "when": "Break points par limits check karna."
+  },
+  {
+   "name": "Algebraic limit",
+   "formula": "lim (x→a) (xⁿ − aⁿ)/(x − a) = naⁿ⁻¹",
+   "when": "Polynomial 0/0 forms.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Trigonometric limits",
+   "formula": "lim sin x/x = 1;  lim tan x/x = 1;  lim (1 − cos x)/x² = 1/2  (x → 0, radians)",
+   "when": "Trig 0/0 forms.",
+   "mistake": "x radians mein hona chahiye — degrees mein mat lagaana."
+  },
+  {
+   "name": "Exponential and log limits",
+   "formula": "lim (eˣ − 1)/x = 1;  lim (aˣ − 1)/x = ln a;  lim ln(1 + x)/x = 1  (x → 0)",
+   "when": "Exponential 0/0 forms."
+  },
+  {
+   "name": "1^∞ form",
+   "formula": "lim f^g = e^{lim g(f − 1)} when f → 1, g → ∞;  lim (1 + 1/x)ˣ = e;  lim (1 + x)^{1/x} = e",
+   "when": "1 ki taraf jaati powers.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "L'Hôpital's rule",
+   "formula": "for 0/0 or ∞/∞: lim f/g = lim f′/g′",
+   "when": "Jab standard limits fit na hon.",
+   "mistake": "Numerator aur denominator alag-alag differentiate karo — quotient ko nahi."
+  },
+  {
+   "name": "Series expansions",
+   "formula": "eˣ = 1 + x + x²/2! + …;  sin x = x − x³/3! + …;  cos x = 1 − x²/2! + …;  ln(1 + x) = x − x²/2 + …;  tan x = x + x³/3 + …",
+   "when": "Higher-order 0/0 limits."
+  },
+  {
+   "name": "Rational functions at infinity",
+   "formula": "degree num < den → 0;  equal → ratio of leading coefficients;  num > den → ±∞",
+   "when": "x → ∞ par limits."
+  },
+  {
+   "name": "Continuity",
+   "formula": "f continuous at a ⇔ lim (x→a) f(x) = f(a)",
+   "when": "Continuity check karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Differentiability",
+   "formula": "Lf′(a) = lim (h→0⁻) (f(a + h) − f(a))/h;  Rf′(a) similarly;  differentiable ⇔ Lf′(a) = Rf′(a)",
+   "when": "Differentiability check karna.",
+   "mistake": "Differentiable ⇒ continuous, par continuous ⇏ differentiable (|x| at 0) — ulta mat lagaana."
+  },
+  {
+   "name": "Sandwich theorem",
+   "formula": "g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L ⇒ lim f = L",
+   "when": "x² sin(1/x) jaise limits."
+  },
+  {
+   "name": "Greatest integer limits",
+   "formula": "lim (x→n⁻)[x] = n − 1;  lim (x→n⁺)[x] = n",
+   "when": "Step-function limits."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Trig limit",
+   "problem": "lim (x→0) sin 3x/x?",
+   "solution": "3 × (sin 3x/3x) → 3."
+  },
+  {
+   "title": "1^∞ form",
+   "problem": "lim (x→∞) (1 + 2/x)ˣ?",
+   "solution": "e^{lim x × 2/x} = e²."
+  },
+  {
+   "title": "Factorisation",
+   "problem": "lim (x→2) (x² − 4)/(x − 2)?",
+   "solution": "(x + 2) → 4."
+  },
+  {
+   "title": "Standard limit",
+   "problem": "lim (x→0) (1 − cos x)/x²?",
+   "solution": "2sin²(x/2)/x² → 1/2 = 0.5."
+  },
+  {
+   "title": "Series",
+   "problem": "lim (x→0) (eˣ − 1 − x)/x²?",
+   "solution": "(x²/2 + …)/x² → 1/2 = 0.5."
+  },
+  {
+   "title": "Continuity condition",
+   "problem": "x ≠ 1 ke liye f(x) = (x³ − 1)/(x − 1) aur f(1) = k. Continuity ke liye k nikalo.",
+   "solution": "lim (x→1) = 3 × 1² = 3 ⇒ k = 3."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Rationalisation",
+   "explain": "(√(x + 1) − 1)/x jaise square root wale limits mein conjugate se multiply karke 0/0 form hatao."
+  },
+  {
+   "title": "Limits at infinity with roots",
+   "explain": "x → ∞ par √(x² + x) − x ke liye rationalise karke x/(√(x² + x) + x) → 1/2 milta hai."
+  },
+  {
+   "title": "Continuity of standard functions",
+   "explain": "Polynomials, sin, cos, eˣ har jagah continuous; rational functions jahan denominator 0 na ho; log x, x > 0 ke liye; [x] integers par discontinuous."
+  },
+  {
+   "title": "Algebra of continuous functions",
+   "explain": "Continuous functions ka sum, difference, product aur composition continuous hai; quotient bhi, jahan denominator zero na ho."
+  },
+  {
+   "title": "Intermediate value theorem",
+   "explain": "Agar f, [a, b] par continuous hai aur k, f(a) aur f(b) ke beech hai, to (a, b) mein kisi c ke liye f(c) = k — equation ka root dikhaane mein use hota hai."
+  },
+  {
+   "title": "Non-differentiable points",
+   "explain": "Corners (|x − a|), cusps, vertical tangents (0 par x^{1/3}) aur discontinuities. |f(x)| wahan differentiable nahi ho sakta jahan f(x) = 0 ho aur sign badle."
+  }
+ ],
+ "ratta": [
+  "(xⁿ − aⁿ)/(x − a) → naⁿ⁻¹.",
+  "sin x/x → 1;  (1 − cos x)/x² → 1/2.",
+  "(eˣ − 1)/x → 1;  (aˣ − 1)/x → ln a.",
+  "1^∞: e^{lim g(f − 1)}.",
+  "Differentiable ⇒ continuous (not conversely).",
+  "LHL = RHL = f(a) ⇒ continuous."
+ ],
+ "verifiedOn": "2026-11-13"
+}

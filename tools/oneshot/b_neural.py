@@ -67,5 +67,53 @@ SYLLABUS = [
 ("Sensory organs — eye and ear", ["retina", "cochlea"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Nervous system neuron se bana hai jo electrical impulses le jaate hain. Human system mein central nervous system (brain aur spinal cord) aur peripheral nervous system (cranial aur spinal nerves; somatic aur autonomic) hain.",
+"Resting neuron polarised hota hai (bahar positive, andar negative, lagbhag −70 mV — resting potential) Na⁺/K⁺ pump ki wajah se. Stimulus Na⁺ channels kholta hai (depolarisation), aur action potential axon par aage badhta hai.",
+"Impulse agle cell tak synapse se jaata hai — electrical (tez) ya chemical (acetylcholine jaise neurotransmitters).",
+"Brain mein forebrain (cerebrum, thalamus, hypothalamus), midbrain aur hindbrain (pons, cerebellum, medulla); medulla aur pons brain stem ka hissa hain. Reflex, retina aur cochlea bhi isi chapter mein.",
+],
+when=[
+("Neuron ki structure.", None),
+("Processes ke hisaab se classification.", None),
+("Nerve fibre ke types.", None),
+("Polarised membrane.", None),
+("Nerve impulse ka conduction.", None),
+("Neurons ke beech transmission.", None),
+("Forebrain ke parts aur kaam.", None),
+("Emotions.", None),
+("Midbrain ke kaam.", None),
+("Hindbrain ke kaam.", "Brain stem = midbrain + pons + medulla oblongata (cerebellum isme nahi)."),
+("Involuntary tez responses (knee-jerk reflex).", None),
+("Eye ki structure.", None),
+("Rods vs cones.", "Fovea mein sirf cones (sabse saaf vision); blind spot mein koi photoreceptor nahi — ulta mat likhna."),
+("Hearing aur balance.", None),
+],
+examples=[
+("Sensory ya motor?", "Kaunse neurons spinal cord se muscles tak impulse le jaate hain?",
+ "Efferent (motor) neurons. Afferent (sensory) neurons receptors se CNS tak impulse le jaate hain."),
+("Depolarisation", "Action potential ka rising phase kis ion ki movement se hota hai?",
+ "Voltage-gated sodium channels se Na⁺ ka tezi se andar aana polarity ulat deta hai (andar positive ho jaata hai)."),
+("Hypothalamus ka kaam", "Hypothalamus ke control wale teen kaam batao.",
+ "Body temperature, bhookh aur pyaas (khaane-peene ki ichchha); isme neurosecretory cells bhi hain jo hypothalamic hormones banate hain."),
+("Blind spot", "Blind spot par padne wali image kyun nahi dikhti?",
+ "Blind spot par optic nerve aankh se nikalti hai aur retinal blood vessels andar aati hain; wahan photoreceptor cells nahi hote."),
+("Saltatory conduction", "Myelinated fibres mein conduction tez kyun hota hai?",
+ "Myelin axon ko insulate karta hai; impulse ek node of Ranvier se agle par koodta hai (saltatory conduction)."),
+("Hearing mechanism", "Sound ka brain tak raasta batao.",
+ "Pinna → ear canal → tympanic membrane kaanpti hai → ossicles (malleus, incus, stapes) → oval window → cochlear lymph mein waves → basilar membrane hilti hai → organ of Corti ke hair cells mudte hain → auditory nerve se nerve impulses → auditory cortex."),
+],
+topics=[
+("Neural system in animals", "Neeche ke invertebrates mein neurons ka simple network (Hydra — nerve net). Insects mein brain aur kai ganglia. Vertebrates mein zyada developed system."),
+("Autonomic nervous system", "PNS ka hissa jo involuntary organs aur smooth muscles control karta hai; sympathetic aur parasympathetic systems mein bata, jinka asar aam taur par ulta hota hai."),
+("Human brain coverings", "Brain skull aur teen meninges se surakshit: bahar dura mater, beech mein patli arachnoid aur andar pia mater (brain tissue se chipki). Cerebrospinal fluid gaddi ka kaam karta hai."),
+("Cerebral cortex", "Bahar grey matter (cell bodies) convolutions ke saath; andar white matter (myelinated tracts). Association areas complex kaam sambhaalte hain jaise intersensory associations, memory aur communication."),
+("Image formation", "Light cornea aur lens se guzarkar retina par image banati hai. Light rhodopsin mein retinal (vitamin A derivative) ko badalti hai, photoreceptors mein potentials bante hain jo bipolar aur ganglion cells se optic nerve aur visual cortex tak jaate hain."),
+("Sensory organs other than eye and ear", "Naak mein olfactory receptors (olfactory epithelium limbic system se juda); jeebh par taste buds; skin mein touch, pressure, pain aur temperature receptors."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

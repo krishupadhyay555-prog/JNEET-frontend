@@ -76,5 +76,50 @@ SYLLABUS = [
 ("Equations of a line and a plane in different forms", ["plane", "line"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Space mein points ke coordinates (x, y, z) hote hain. Direction cosines (l, m, n) l² + m² + n² = 1 satisfy karte hain; direction ratios unke proportional koi bhi numbers hain. Distance aur section formulas 2D jaise hi.",
+"Line ko vector form r = a + λb ya Cartesian form (x − x₁)/a = (y − y₁)/b = (z − z₁)/c mein likhte hain. Skew lines na milti hain na parallel hoti hain; unka shortest distance JEE favourite hai.",
+"Plane r · n = d ya ax + by + cz + d = 0 hai. Planes aur lines ke beech angle, point ki plane se distance, foot of perpendicular, image aur lines ki coplanarity yaad rakho.",
+],
+when=[
+("Basic 3D formulas.", None),
+("Line ki direction.", None),
+("Line ki equation.", None),
+("Direction ratios ke beech angle.", None),
+("Skew lines r = a₁ + λb₁ aur r = a₂ + μb₂ ke beech distance.", "SD = 0 ho to lines intersect karti hain."),
+("Space mein parallel lines.", None),
+("Plane ki equation.", None),
+("Point se plane tak.", None),
+("3D mein angles.", None),
+("Family of planes.", None),
+("Kya do lines ek plane mein hain?", None),
+("Projection aur reflection.", None),
+],
+examples=[
+("Point se plane", "(1, 2, 3) ki 2x + 3y + 6z − 5 = 0 se distance?",
+ "|2 + 6 + 18 − 5|/√49 = 21/7 = ⟨0⟩."),
+("Lines ke beech angle", "Direction ratios (1, 1, 0) aur (0, 1, 1) wali lines ke beech angle?",
+ "cos θ = 1/(√2 × √2) = 1/2 ⇒ θ = ⟨0⟩°."),
+("Shortest distance", "Lines r = λî aur r = 2k̂ + μĵ. Shortest distance?",
+ "b₁ × b₂ = î × ĵ = k̂; (a₂ − a₁) · k̂ = 2 ⇒ SD = ⟨0⟩."),
+("Direction cosines", "Ratios (2, 3, 6) wali line ke direction cosines?",
+ "√(4 + 9 + 36) = 7 ⇒ (2/7, 3/7, 6/7)."),
+("Parallel planes", "2x − y + 2z + 3 = 0 aur 4x − 2y + 4z + 5 = 0 ke beech distance?",
+ "Doosre ko 2x − y + 2z + 2.5 = 0 likho: |3 − 2.5|/3 = 1/6 ≈ ⟨0⟩."),
+("Teen points se plane", "(1, 0, 0), (0, 2, 0) aur (0, 0, 3) se guzarne wala plane nikalo.",
+ "Intercept form: x/1 + y/2 + z/3 = 1 ⇒ 6x + 3y + 2z = 6."),
+],
+topics=[
+("Projection", "Direction cosines (l, m, n) wali line par segment PQ ka projection |l(x₂ − x₁) + m(y₂ − y₁) + n(z₂ − z₁)| hai."),
+("Intersection of two lines", "Dono lines ke general points parameters λ aur μ ke saath likho, coordinates barabar karke do equations solve karo; teesri check karo. Wo bhi sahi ho to lines intersect karti hain."),
+("Line and plane relations", "Line plane mein hai agar line ka ek point plane par ho aur b · n = 0. Line plane ke parallel hai agar b · n = 0 par line ka koi point us par na ho."),
+("Symmetric form from two planes", "Do planes ki line of intersection ki direction n₁ × n₂ hai; dono planes par ek point dhoondho (jaise z = 0 rakho) aur line likho."),
+("Angle bisector planes", "a₁x + b₁y + c₁z + d₁ = 0 aur a₂x + … = 0 ke beech angles ke bisector planes normalised distances barabar karke milte hain, 2D jaisa."),
+("Vector vs Cartesian", "Aaram se badlo: r = a + λb ⇔ (x − a₁)/b₁ = (y − a₂)/b₂ = (z − a₃)/b₃. Vector forms mein cross aur dot products seedhe lagte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

@@ -76,5 +76,54 @@ SYLLABUS = [
 ("Genome, Human and rice genome projects; DNA fingerprinting", ["Human Genome Project", "fingerprinting"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Zyadatar organisms mein DNA genetic material hai (kuch viruses mein RNA). Watson aur Crick (1953) ne double helix diya: do antiparallel polynucleotide strands, A=T aur G≡C pairing ke saath (Chargaff's rule). Eukaryotes mein DNA histones par lipat kar nucleosome banata hai.",
+"Griffith (transformation), Avery–MacLeod–McCarty (transforming principle DNA hai) aur Hershey–Chase (bacteriophage, ³²P vs ³⁵S) ne DNA ko genetic material saabit kiya. Meselson aur Stahl ne semi-conservative replication saabit kiya; lagging strand par Okazaki fragments bante hain.",
+"Central dogma: DNA → (transcription) → RNA → (translation) → protein. Genetic code triplet, degenerate, (lagbhag) universal aur non-overlapping hai.",
+"Gene expression regulate hota hai — E. coli ka lac operon classic example hai. Human Genome Project aur DNA fingerprinting isi gyaan ka use karte hain.",
+],
+when=[
+("dsDNA ka base composition.", "Single-stranded DNA ya RNA par lagu nahi hota — wahan mat lagaana."),
+("Watson–Crick model.", None),
+("DNA length ki calculations.", None),
+("Standard genome sizes.", "Exam ke sawal aksar E. coli DNA length 1.36 mm lete hain, jo 4 × 10⁶ bp banta hai."),
+("Eukaryotes mein DNA packaging.", None),
+("DNA ko genetic material saabit karna.", None),
+("DNA replication.", None),
+("Transcription unit ke parts.", None),
+("Kaunsa polymerase kaunsa RNA banata hai.", None),
+("Eukaryotes mein mature mRNA banana.", None),
+("Code ki properties.", None),
+("Protein synthesis.", None),
+("Inducible gene regulation (Jacob aur Monod).", "Negative regulation: repressor operon ko band karta hai."),
+("HGP ke results.", None),
+("Logon ki pehchaan.", None),
+],
+examples=[
+("Human DNA ki length", "Human diploid DNA mein 6.6 × 10⁹ bp hain. Length?",
+ "6.6 × 10⁹ × 0.34 × 10⁻⁹ m = ⟨0⟩ m."),
+("Chargaff", "Ek dsDNA mein 20% adenine hai. Guanine kitna percent?",
+ "A = T = 20%, isliye G + C = 60% aur G = ⟨0⟩%."),
+("E. coli ke base pairs", "E. coli DNA 1.36 mm lamba hai. Kitne base pairs?",
+ "1.36 × 10⁻³ m / 0.34 × 10⁻⁹ m = ⟨0⟩ × 10⁶ bp."),
+("Protein ke liye bases", "100 amino acids wale protein ko code karne ke liye kitne nucleotides (stop codon chhodkar)?",
+ "3 × 100 = ⟨0⟩ nucleotides."),
+("Hershey–Chase", "³⁵S-labelled protein wale phage se bacteria infect kiye: centrifugation ke baad radioactivity kahan?",
+ "Supernatant mein (phage coats ke saath), bacteria mein nahi — matlab protein bacteria mein nahi jaata; DNA (³²P) jaata hai."),
+("Coding strand se mRNA", "Coding strand: 5′-ATGCAT-3′. mRNA?",
+ "5′-AUGCAU-3′ — coding strand jaisa hi, bas T ki jagah U."),
+],
+topics=[
+("RNA world", "RNA pehla genetic material tha; ye catalyst (ribozyme) ki tarah kaam kar sakta hai aur reactive aur unstable hai. DNA RNA se chemical badlaav ke saath bana (2′-OH nahi, uracil ki jagah thymine) jo use zyada stable banate hain."),
+("Properties of genetic material", "Ise replicate hona chahiye, chemically aur structurally stable hona chahiye, evolution ke liye dheere badlaav (mutation) hone dena chahiye aur Mendelian characters ki tarah express hona chahiye."),
+("Transcription in bacteria", "Ek hi RNA polymerase saare RNAs banata hai. Initiation ke liye σ (sigma) factor; termination ke liye ρ (rho) factor. Nuclear membrane na hone se transcription aur translation saath-saath ho sakte hain."),
+("Split genes", "Eukaryotic genes mein coding exons ke beech non-coding introns hote hain; introns splicing se hatte hain. Monocistronic genes zyadatar eukaryotic; polycistronic genes zyadatar bacterial."),
+("Mutations and the code", "Point mutations ek base badalte hain (jaise sickle-cell). Ek ya do bases ka insertion ya deletion reading frame khiska deta hai (frameshift); teen bases frame khiskaaye bina ek amino acid jodte ya hataate hain."),
+("Methodology of HGP", "Expressed sequence tags (express hone wale genes pehchaanna) aur sequence annotation (poora genome sequence karna). DNA ko BAC aur YAC vectors mein clone kiya, automated sequencers (Sanger method) se sequence kiya aur computer se joda."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

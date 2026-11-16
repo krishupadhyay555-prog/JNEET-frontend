@@ -66,5 +66,52 @@ SYLLABUS = [
 ("Important compounds: hydrides, oxides, oxoacids, halides, interhalogens, xenon compounds", ["hydride", "oxide", "oxoacid", "interhalogen", "xenon"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"p-block elements np subshell bharte hain (ns²np¹⁻⁶) — yahi general configuration hai. Group mein neeche size badhne se non-metallic character ghatta aur metallic character badhta hai.",
+"Inert pair effect bhaari elements mein lower oxidation state ko zyada stable banata hai: Tl⁺ > Tl³⁺, Pb²⁺ > Pb⁴⁺, Bi³⁺ > Bi⁵⁺.",
+"Har group ka first member anomalous hai: chhota size, zyada electronegativity, d orbitals nahi (maximum covalency 4) aur strong pπ–pπ multiple bonding (N≡N, O=O, C=O).",
+"Exam structures aur shapes (VSEPR), hydride aur oxoacid ki acid strength aur thermal stability ke trends, aur important compounds (NH₃, HNO₃, H₂SO₄, ozone, interhalogen, xenon fluorides) par focus karta hai.",
+],
+when=[
+("Elements place karna aur valence predict karna.", None),
+("Tl⁺ > Tl³⁺, Pb²⁺ > Pb⁴⁺, Bi³⁺ > Bi⁵⁺.", "Isliye PbO₂ aur Bi(V) compounds strong oxidising agents hain."),
+("Hydrides compare karna.", "Boiling point: PH₃ < AsH₃ < NH₃ < SbH₃ < BiH₃ — NH₃ hydrogen bonding ki wajah se anomalously high hai, sabse kam nahi."),
+("Hydrides ki acid strength.", "Paani ka boiling point hydrogen bonding ki wajah se anomalously high hai — trend se ulta, dhyan rakho."),
+("HX compare karna.", "F sabse electronegative hone ke bawajood HF paani mein sabse KAMZOR acid hai — H–F bond bahut strong, galat mat socho."),
+("Oxoacid trends.", None),
+("Basicity aur reducing nature.", "Basicity ke liye sirf P se jude O–H bonds gino — P–H hydrogens acidic nahi hain."),
+("VSEPR ke sawal.", None),
+("Noble-gas compounds ki structures.", None),
+("Industrial processes.", None),
+("Allotropes.", None),
+("B, Al, C, Si compounds ke sawal.", None),
+],
+examples=[
+("HF kamzor kyun?", "Paani mein HF, HCl se kamzor acid kyun hai?",
+ "H–F bond bahut strong hai aur F⁻ chhota aur zor se hydrated, isliye HF bahut kam ionise hota hai; group mein neeche H–X bond kamzor hone se acid strength badhti hai."),
+("H₃PO₃ ki basicity", "H₃PO₃ mein kitne replaceable hydrogens?",
+ "Structure HP(O)(OH)₂: do P–OH bonds → dibasic; P–H hydrogen acidic nahi par H₃PO₃ ko reducing agent banata hai."),
+("XeF₄ ki shape", "XeF₄ ki shape?",
+ "Xe ke 8 valence electrons: 4 bond pairs + 2 lone pairs = 6 pairs (octahedral arrangement, sp³d²). Lone pairs aamne-saamne, isliye molecule square planar."),
+("ClF₃ ki shape", "ClF₃ ki shape?",
+ "Cl: 3 bond pairs + 2 lone pairs = 5 pairs (trigonal bipyramidal). Lone pairs equatorial positions lete hain, molecule T-shaped."),
+("Brown ring test", "Nitrate test mein brown ring kya banata hai?",
+ "Conc. H₂SO₄ mein Fe²⁺ NO₃⁻ ko NO mein reduce karta hai; NO iron se judkar [Fe(H₂O)₅NO]²⁺ banata hai, interface par brown ring dikhta hai."),
+("Inert pair effect", "PbO₂ strong oxidising agent kyun hai?",
+ "Group 14 mein neeche 6s² pair bonding mein hissa nahi lena chahta (inert pair effect), isliye Pb²⁺, Pb⁴⁺ se zyada stable. PbO₂ (Pb⁴⁺) aasaani se electrons lekar Pb²⁺ banta hai."),
+],
+topics=[
+("Group 13 (B, Al, Ga, In, Tl)", "B non-metal hai aur covalent compounds banata hai; Al amphoteric. Boron halides Lewis acids hain (back-bonding ki wajah se acid strength BF₃ < BCl₃ < BBr₃). AlCl₃ dimer Al₂Cl₆ ki tarah exist karta hai. Borax aur boric acid important boron compounds hain."),
+("Group 14 (C, Si, Ge, Sn, Pb)", "Carbon catenation dikhata hai (sabse strong C–C bonds) aur allotropes: diamond (sp³, sabse hard), graphite (sp², bijli conduct karta, lubricant), fullerenes (C₆₀). Silicones aur silicates mein Si–O chains; zeolites aluminosilicates hain jo catalysts ki tarah use hote hain."),
+("Group 15 (N, P, As, Sb, Bi)", "N₂ strong triple bond (941 kJ/mol) ki wajah se inert hai. Nitrogen oxides: N₂O, NO (paramagnetic, odd electron), N₂O₃, NO₂ (paramagnetic, N₂O₄ mein dimerise), N₂O₅. PCl₅ gas mein trigonal bipyramidal aur solid mein [PCl₄]⁺[PCl₆]⁻."),
+("Group 16 (O, S, Se, Te, Po)", "O₂ paramagnetic hai. Ozone (O₃) bent, strong oxidising agent, aur UV se bachata hai. Oxide acidic (SO₂), basic (CaO), amphoteric (Al₂O₃) ya neutral (CO) ho sakta hai. H₂SO₄ dehydrating agent (cheeni ko kaala kar deta hai) aur garam concentrated hone par oxidising agent."),
+("Group 17 (F, Cl, Br, I)", "Halogens rangeen, strong oxidising agents (F₂ sabse strong), sabse negative electron gain enthalpy (Cl sabse zyada). F sirf −1 dikhata hai. Cl₂ (nam) oxidation se bleach karta hai; thande dilute NaOH se NaCl + NaOCl aur garam concentrated NaOH se NaCl + NaClO₃ (disproportionation)."),
+("Group 18 (noble gases)", "Poori ns²np⁶ shells, bahut zyada ionisation enthalpy. Xenon F aur O se compounds banata hai kyunki uska IE O₂ ke paas hai (Bartlett ne O₂⁺PtF₆⁻, phir Xe⁺PtF₆⁻ banaya). Uses: He balloons aur diving gas mein, Ne signs mein, Ar welding aur bulbs mein inert atmosphere."),
+("Anomalous behaviour summary", "First members (B, C, N, O, F) chhote, bahut electronegative, d orbitals nahi (covalency ≤ 4) aur strong pπ–pπ multiple bonds banate hain. Bhaari members d orbitals se octet expand karte hain (PCl₅, SF₆) aur dπ–pπ bonds banate hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

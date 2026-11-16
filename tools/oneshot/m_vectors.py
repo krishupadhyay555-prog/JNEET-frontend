@@ -74,5 +74,50 @@ SYLLABUS = [
 ("Scalar triple product (and vector triple product)", ["scalar triple product", "vector triple product"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Vectors mein magnitude aur direction dono hote hain; a = a₁î + a₂ĵ + a₃k̂ (components). Ye triangle/parallelogram law se judte hain, aur koi bhi vector teen non-coplanar vectors mein likha ja sakta hai. a/|a| unit vector hai.",
+"Dot product a · b = |a||b| cos θ se angles, projections aur perpendicularity milti hai. Cross product a × b = |a||b| sin θ n̂ se areas aur dono ke perpendicular vector milta hai.",
+"Scalar triple product [a b c] parallelepiped ka volume deta hai aur coplanarity test karta hai; vector triple product a × (b × c) = (a · c)b − (a · b)c expand hota hai.",
+],
+when=[
+("Basic vector facts.", None),
+("Divide karne wale points ke position vectors.", None),
+("Angles aur perpendicularity.", None),
+("Ek vector ka doosre ke saath component.", None),
+("Perpendicular vector aur areas.", None),
+("Vectors se area.", None),
+("Volumes.", None),
+("Vectors ek plane mein hain ya nahi, test karna.", None),
+("Triple cross products expand karna.", "Aam taur par a × (b × c) ≠ (a × b) × c — brackets mat badlo."),
+("Triple products ke saath kaam.", None),
+("Ek line par points.", None),
+("Dot aur cross products ko jodna.", None),
+],
+examples=[
+("Dot product aur angle", "a = î + 2ĵ + 2k̂, b = 2î − ĵ + 2k̂. a · b aur unke beech angle nikalo.",
+ "a · b = 2 − 2 + 4 = ⟨0⟩; |a| = |b| = ⟨1⟩; cos θ = 4/9 ≈ ⟨2⟩."),
+("Projection", "Upar wale vectors ke liye a ka b par projection?",
+ "(a · b)/|b| = 4/3 ≈ ⟨0⟩."),
+("Parallelogram ka area", "Upar wale a aur b sides wale parallelogram ka area?",
+ "a × b = (6, 2, −5) ⇒ |a × b| = √65 ≈ ⟨0⟩; triangle area ≈ ⟨1⟩."),
+("Volume", "Edges î, 2ĵ aur î + ĵ + 3k̂ wale parallelepiped ka volume?",
+ "Determinant |1 0 0; 0 2 0; 1 1 3| = ⟨0⟩."),
+("Coplanarity", "Kya (1, 2, 3), (2, 3, 4), (3, 4, 5) coplanar hain?",
+ "Determinant = ⟨0⟩ ⇒ haan, coplanar (teesra = 2 × doosra − pehla)."),
+("Perpendicular unit vector", "î + ĵ aur ĵ + k̂ dono ke perpendicular unit vector?",
+ "(î + ĵ) × (ĵ + k̂) = î − ĵ + k̂; √3 se divide ⇒ ±(î − ĵ + k̂)/√3."),
+],
+topics=[
+("Types of vectors", "Zero vector, unit vector, equal vectors, collinear (parallel) vectors, coinitial vectors, coplanar vectors, point P ka position vector OP."),
+("Linear combinations", "Do non-collinear vectors ek plane span karte hain; teen non-coplanar vectors poora space. Agar ek vector baaki ka combination ho to vectors linearly dependent hain."),
+("Angle bisectors with vectors", "a aur b ke beech angle ka internal bisector â + b̂ ke saath; external bisector â − b̂ ke saath."),
+("Work and moment", "Force F ka displacement d mein kaam F · d hai. Kisi point ke about F ka moment (torque) r × F hai."),
+("Direction cosines with vectors", "r = xî + yĵ + zk̂ ke direction cosines x/|r|, y/|r|, z/|r| hain. Axes se barabar angle banane wala unit vector (î + ĵ + k̂)/√3 hai."),
+("Common mistakes", "Dot product scalar deta hai, cross product vector. a · b = a · c se b = c nahi nikalta. Cross product na associative hai na commutative."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

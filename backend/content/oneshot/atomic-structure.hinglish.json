@@ -1,0 +1,177 @@
+{
+ "slug": "atomic-structure",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Atomic Structure",
+  "JEE": "Atomic Structure"
+ },
+ "title": "Atomic Structure",
+ "readMinutes": 14,
+ "summary": [
+  "Atoms mein electrons (Thomson), ek chhota dense positive nucleus (Rutherford) jismein protons aur neutrons (Chadwick) hain. Rutherford ka model atom ki stability aur line spectra nahi samjha paaya.",
+  "Light waves ki tarah bhi aur E = hν energy wale photons ki tarah bhi behave karti hai. Photoelectric effect aur hydrogen ke line spectrum ne dikhaya ki energy quantised hai.",
+  "Bohr ka model hydrogen-like atoms mein angular momentum quantise karta hai (mvr = nh/2π) aur energies Eₙ = −13.6 Z²/n² eV deta hai, jisse hydrogen spectrum samajh aata hai.",
+  "Quantum mechanics ne orbits ki jagah orbitals diye. Chaar quantum numbers (n, l, m_l, m_s) har electron ko describe karte hain; orbitals Aufbau principle, Pauli exclusion principle aur Hund's rule se bharte hain."
+ ],
+ "formulas": [
+  {
+   "name": "Photon energy",
+   "formula": "E = hν = hc/λ;  E (eV) ≈ 1240/λ (nm)",
+   "when": "Light ki energy, spectral lines.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Photoelectric effect",
+   "formula": "hν = φ + K_max;  K_max = eV₀;  φ = hν₀",
+   "when": "Light se electrons nikalna.",
+   "mistake": "Intensity electrons ki sankhya badalti hai, unki maximum energy nahi — confuse mat karo."
+  },
+  {
+   "name": "Bohr's quantisation",
+   "formula": "m v r = n h/2π",
+   "when": "Bohr model derivations."
+  },
+  {
+   "name": "Radius of Bohr orbit",
+   "formula": "rₙ = 0.529 n²/Z Å = 52.9 n²/Z pm",
+   "when": "H-like species (H, He⁺, Li²⁺) mein orbit ka size.",
+   "mistake": "r n² se badhta hai par 1/Z se ghatta hai — dono dhyan mein rakho."
+  },
+  {
+   "name": "Energy of Bohr orbit",
+   "formula": "Eₙ = −13.6 Z²/n² eV = −2.18 × 10⁻¹⁸ Z²/n² J",
+   "when": "Energy levels, ionisation energy.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Velocity in Bohr orbit",
+   "formula": "vₙ = 2.18 × 10⁶ Z/n m/s",
+   "when": "Electron ki speed."
+  },
+  {
+   "name": "Rydberg formula",
+   "formula": "1/λ = R Z² (1/n₁² − 1/n₂²);  R = 1.097 × 10⁷ m⁻¹",
+   "when": "Spectral lines ki wavelengths.",
+   "mistake": "Lyman n₁ = 1 (UV), Balmer n₁ = 2 (visible), Paschen 3, Brackett 4, Pfund 5 (IR) — series mix mat karo."
+  },
+  {
+   "name": "Number of spectral lines",
+   "formula": "from level n down to 1: n(n − 1)/2",
+   "when": "Excited atoms ke sample se nikli lines."
+  },
+  {
+   "name": "de Broglie wavelength",
+   "formula": "λ = h/p = h/mv = h/√(2mK)",
+   "when": "Electrons ki wave nature."
+  },
+  {
+   "name": "Heisenberg's uncertainty principle",
+   "formula": "Δx · Δp ≥ h/4π",
+   "when": "Position aur momentum ek saath jaanne ki limit.",
+   "mistake": "Ye fundamental limit hai, measuring instrument ki kami nahi — galat mat samjho."
+  },
+  {
+   "name": "Quantum numbers",
+   "formula": "n = 1, 2, 3 …;  l = 0 … n − 1;  m_l = −l … +l;  m_s = ±½",
+   "when": "Orbital aur electron describe karna.",
+   "mistake": "l kabhi n ke barabar nahi ho sakta."
+  },
+  {
+   "name": "Nodes",
+   "formula": "radial nodes = n − l − 1;  angular nodes = l;  total = n − 1",
+   "when": "Shape aur node ke sawal."
+  },
+  {
+   "name": "Orbital capacity",
+   "formula": "subshell: 2(2l + 1) electrons;  shell: 2n² electrons",
+   "when": "s, p, d, f aur shell mein maximum electrons."
+  },
+  {
+   "name": "(n + l) rule",
+   "formula": "lower (n + l) fills first; if equal, lower n fills first",
+   "when": "Bharne ka order: 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p…"
+  }
+ ],
+ "examples": [
+  {
+   "title": "Photon ki energy",
+   "problem": "500 nm photon ki energy?",
+   "solution": "E = hc/λ = 6.626 × 10⁻³⁴ × 3 × 10⁸/(5 × 10⁻⁷) ≈ 3.98 × 10⁻¹⁹ J (≈ 2.48 eV)."
+  },
+  {
+   "title": "He⁺ transition",
+   "problem": "He⁺ ka electron n = 2 se n = 1 par gire to kitni energy?",
+   "solution": "ΔE = 13.6 × 2² × (1 − 1/4) = 40.8 eV."
+  },
+  {
+   "title": "Li²⁺ mein radius",
+   "problem": "Li²⁺ ke second orbit ka radius?",
+   "solution": "r = 52.9 × 2²/3 ≈ 70.5 pm."
+  },
+  {
+   "title": "Pehli Balmer line",
+   "problem": "Hydrogen ki Balmer series ki pehli line ki wavelength?",
+   "solution": "1/λ = R(1/4 − 1/9) = 5R/36 → λ ≈ 656 nm (laal H-α line)."
+  },
+  {
+   "title": "Electron ki de Broglie wavelength",
+   "problem": "Electron 10⁶ m/s se. λ?",
+   "solution": "λ = h/mv = 6.626 × 10⁻³⁴/(9.1 × 10⁻³¹ × 10⁶) ≈ 0.728 nm."
+  },
+  {
+   "title": "Velocity mein uncertainty",
+   "problem": "Electron ka Δx = 0.1 nm. Minimum Δv?",
+   "solution": "Δv = h/(4πmΔx) ≈ 5.79 × 10⁵ m/s."
+  },
+  {
+   "title": "Photoelectric effect",
+   "problem": "310 nm light 2 eV work function wali metal par. K_max?",
+   "solution": "E = 1240/310 = 4 eV → K_max = 4 − 2 = 2 eV (stopping potential 2 V)."
+  },
+  {
+   "title": "Spectral lines",
+   "problem": "Hydrogen atoms n = 5 tak excite. Maximum lines?",
+   "solution": "5 × 4/2 = 10 lines."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Discovery of subatomic particles",
+   "explain": "Electron: cathode rays, e/m J.J. Thomson ne naapa; charge Millikan ke oil-drop experiment se. Proton: canal (anode) rays. Neutron: Chadwick (1932). Atomic number Z = protons; mass number A = protons + neutrons. Isotopes: same Z (¹H, ²H); isobars: same A (⁴⁰Ar, ⁴⁰Ca)."
+  },
+  {
+   "title": "Atomic models",
+   "explain": "Thomson: plum pudding. Rutherford (gold foil par α-scattering): atom zyadatar khaali, beech mein chhota dense positive nucleus; fail kyunki ghoomta electron radiate karke andar gir jaana chahiye. Bohr ne ise sirf hydrogen-like atoms ke liye theek kiya."
+  },
+  {
+   "title": "Electromagnetic radiation",
+   "explain": "c = νλ. Black-body radiation aur photoelectric effect ke liye Planck ka quantum idea chahiye tha: energy hν ke packets mein. Line (atomic) spectra elements ke fingerprints jaise hain."
+  },
+  {
+   "title": "Limitations of Bohr's model",
+   "explain": "Sirf one-electron species par kaam karta hai; fine structure, Zeeman (magnetic) aur Stark (electric) effects ya chemical bonding nahi samjhata, aur exact orbits dekar uncertainty principle ke khilaaf jaata hai."
+  },
+  {
+   "title": "Quantum mechanical model",
+   "explain": "Schrödinger equation se wave functions ψ; |ψ|² probability density. Orbital woh region jahan electron milne ki probability sabse zyada. Shapes: s orbitals spherical, p dumb-bell (px, py, pz), d zyadatar clover-leaf (dz² alag)."
+  },
+  {
+   "title": "Filling rules",
+   "explain": "Aufbau: pehle kam energy. Pauli: do electrons ke chaaron quantum numbers same nahi. Hund: degenerate orbitals mein electrons pehle akele parallel spin se, phir pair. Half-filled aur fully filled subshells extra stable: Cr = [Ar]3d⁵4s¹, Cu = [Ar]3d¹⁰4s¹."
+  },
+  {
+   "title": "Energy of orbitals",
+   "explain": "Hydrogen mein energy sirf n par (2s = 2p). Many-electron atoms mein n aur l dono par, kyunki andar ke electrons bahar walon ko alag-alag shield karte hain (s sabse zyada penetrate karta hai)."
+  }
+ ],
+ "ratta": [
+  "E = hc/λ;  E(eV) = 1240/λ(nm).",
+  "rₙ = 52.9n²/Z pm;  Eₙ = −13.6Z²/n² eV.",
+  "1/λ = RZ²(1/n₁² − 1/n₂²);  lines = n(n − 1)/2.",
+  "λ = h/mv;  ΔxΔp ≥ h/4π.",
+  "Radial nodes n − l − 1;  angular nodes l.",
+  "Cr 3d⁵4s¹, Cu 3d¹⁰4s¹.",
+  "Lyman UV, Balmer visible, Paschen/Brackett/Pfund IR."
+ ],
+ "verifiedOn": "2026-11-13"
+}

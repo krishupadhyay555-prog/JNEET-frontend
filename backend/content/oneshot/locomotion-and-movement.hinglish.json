@@ -1,0 +1,151 @@
+{
+ "slug": "locomotion-and-movement",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Locomotion and Movement"
+ },
+ "title": "Locomotion and Movement",
+ "readMinutes": 13,
+ "summary": [
+  "Cells teen tarah ki movement dikhate hain: amoeboid (pseudopodia — macrophages, leucocytes), ciliary (trachea, fallopian tubes) aur muscular (limbs, jaws, tongue). Locomotion voluntary movement hai jo jagah badalti hai.",
+  "Skeletal muscle fibres se bani hai jinmein repeat hone wale sarcomeres hain (actin thin filaments aur myosin thick filaments). Sliding filament theory contraction samjhaati hai, jo Ca²⁺ se trigger aur ATP se powered hai.",
+  "Human skeleton mein 206 bones: axial (80) aur appendicular (126). Joint fibrous, cartilaginous ya synovial hote hain.",
+  "Muscles aur bones ke disorders: myasthenia gravis, muscular dystrophy, tetany, arthritis, osteoporosis aur gout."
+ ],
+ "formulas": [
+  {
+   "name": "Sarcomere",
+   "formula": "functional unit of contraction = between two successive Z lines;  I band (light, actin only) and A band (dark, myosin);  H zone (centre of A band, no overlap);  M line holds thick filaments",
+   "when": "Muscle fibre ki structure.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Changes during contraction",
+   "formula": "I band shortens, H zone shortens/disappears, A band length stays the same, sarcomere shortens",
+   "when": "Sliding filament theory.",
+   "mistake": "Filaments chhote nahi hote — ek doosre par slide karte hain; galat mat likhna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Contractile proteins",
+   "formula": "actin (thin filament) + tropomyosin + troponin;  myosin (thick filament — meromyosin: heavy (head, with ATPase, actin binding site) and light (tail))",
+   "when": "Myofilaments ke proteins."
+  },
+  {
+   "name": "Excitation–contraction",
+   "formula": "motor neuron releases acetylcholine at the neuromuscular junction → action potential → Ca²⁺ released from sarcoplasmic reticulum → Ca²⁺ binds troponin → myosin binding sites on actin exposed → cross-bridge → power stroke (ATP hydrolysis)",
+   "when": "Muscle contraction ke steps."
+  },
+  {
+   "name": "Red vs white fibres",
+   "formula": "red: much myoglobin and mitochondria, aerobic;  white: little myoglobin, fewer mitochondria, many sarcoplasmic reticulum, anaerobic",
+   "when": "Muscle fibres ke types."
+  },
+  {
+   "name": "Skeleton count",
+   "formula": "total 206 = axial 80 + appendicular 126",
+   "when": "Bones ki ginti.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Axial skeleton",
+   "formula": "skull 22 (cranial 8 + facial 14) + hyoid 1 + ear ossicles 6 + vertebral column 26 + sternum 1 + ribs 24 (12 pairs)",
+   "when": "Axial bones ki ginti."
+  },
+  {
+   "name": "Vertebral column",
+   "formula": "cervical 7 + thoracic 12 + lumbar 5 + sacral 1 (fused) + coccygeal 1 (fused) = 26",
+   "when": "Vertebrae ki ginti.",
+   "note": "Lagbhag saare mammals, giraffe aur insaan samet, mein 7 cervical vertebrae hote hain."
+  },
+  {
+   "name": "Ribs",
+   "formula": "true ribs: pairs 1–7 (attached to sternum directly);  false ribs (vertebrochondral): pairs 8–10 (joined to the 7th rib's cartilage);  floating ribs: pairs 11–12",
+   "when": "Ribs ka classification."
+  },
+  {
+   "name": "Appendicular skeleton",
+   "formula": "each limb 30 bones;  forelimb: humerus, radius, ulna, 8 carpals, 5 metacarpals, 14 phalanges;  hind limb: femur (longest), tibia, fibula, 7 tarsals, 5 metatarsals, 14 phalanges, patella;  pectoral girdle: clavicle + scapula;  pelvic girdle: coxal bones (ilium, ischium, pubis)",
+   "when": "Limb aur girdle bones."
+  },
+  {
+   "name": "Joints",
+   "formula": "fibrous (immovable — skull sutures);  cartilaginous (limited movement — between vertebrae);  synovial (free movement): ball and socket (humerus–pectoral girdle), hinge (knee), pivot (atlas–axis), gliding (carpals), saddle (carpal–metacarpal of thumb)",
+   "when": "Joints classify karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Muscle and bone disorders",
+   "formula": "myasthenia gravis (autoimmune, affects neuromuscular junction);  muscular dystrophy (genetic degeneration);  tetany (low Ca²⁺ → rapid spasms);  arthritis (joint inflammation);  osteoporosis (age, low oestrogen — bone mass falls);  gout (uric acid crystals in joints)",
+   "when": "Disorders."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Kul bones",
+   "problem": "Axial skeleton mein 80 bones aur appendicular mein 126. Kul?",
+   "solution": "80 + 126 = 206."
+  },
+  {
+   "title": "Axial ginti check",
+   "problem": "Skull (22), hyoid (1), ear ossicles (6), vertebrae (26), sternum (1) aur ribs (24) jodo.",
+   "solution": "22 + 1 + 6 + 26 + 1 + 24 = 80 — axial skeleton."
+  },
+  {
+   "title": "Bands mein badlaav",
+   "problem": "Contraction mein kaunsa band utna hi lamba rehta hai?",
+   "solution": "A band (moti myosin filaments ki lambai). Actin andar slide hone se I band aur H zone chhote hote hain."
+  },
+  {
+   "title": "Calcium ka role",
+   "problem": "Muscle contraction mein Ca²⁺ kya karta hai?",
+   "solution": "Troponin se judta hai, jo tropomyosin ko khiskaata hai aur actin par myosin-binding sites khol deta hai, jisse cross-bridges ban paate hain."
+  },
+  {
+   "title": "Thakaan",
+   "problem": "Baar-baar contraction ke baad muscles thak kyun jaati hain?",
+   "solution": "Glycogen ke anaerobic breakdown se muscle mein lactic acid jama hota hai."
+  },
+  {
+   "title": "Joint ka type",
+   "problem": "Atlas aur axis ke beech kaunsa joint hai, aur kaunsi movement deta hai?",
+   "solution": "Pivot joint — sir ghumaana (‘na’ kehna)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Types of muscle",
+   "explain": "Skeletal (striated, voluntary — locomotion aur posture), visceral/smooth (non-striated, involuntary — gut, reproductive tract ki walls mein), cardiac (striated, involuntary, branched)."
+  },
+  {
+   "title": "Structure of skeletal muscle",
+   "explain": "Muscle bundles (fascicles) fascia se bandhe; har muscle fibre ek syncytium hai jisme sarcolemma, sarcoplasm aur sarcoplasmic reticulum (Ca²⁺ store). Myofibrils mein baari-baari dark (anisotropic, A) aur light (isotropic, I) bands."
+  },
+  {
+   "title": "Cross-bridge cycle",
+   "explain": "ADP + Pi wala myosin head actin se judta hai, unhe chhodkar power stroke mein actin ko centre ki taraf kheenchta hai; naya ATP head ko chhudaata hai, ATP hydrolyse hota hai aur head phir taiyaar. Ca²⁺ waapas pump hone par sites phir dhak jaati hain aur muscle relax."
+  },
+  {
+   "title": "Skull",
+   "explain": "Cranium mein 8 bones (brain ki raksha); face mein 14 bones. Hyoid U-shaped, buccal cavity ke base par. Skull do occipital condyles se vertebral column se judta hai (dicondylic skull)."
+  },
+  {
+   "title": "Vertebral column and sternum",
+   "explain": "Pehla vertebra atlas hai, jo occipital condyles se judta hai. Column spinal cord ki raksha karta, sir ko sahara deta aur ribs aur peeth ki muscles jodta hai. Sternum thorax ki ventral midline par flat bone hai."
+  },
+  {
+   "title": "Girdles",
+   "explain": "Pectoral girdle: clavicle (collar bone) aur scapula (humerus ke head ke liye glenoid cavity, acromion process). Pelvic girdle: do coxal bones, har ek ilium, ischium aur pubis ke judne se; acetabulum mein thigh bone fit hoti hai; dono aadhe pubic symphysis par milte hain."
+  }
+ ],
+ "ratta": [
+  "A band constant; I band & H zone shorten.",
+  "Ca²⁺ binds troponin;  ACh at neuromuscular junction.",
+  "206 = 80 axial + 126 appendicular.",
+  "Vertebrae 7-12-5-1-1 = 26.",
+  "True ribs 7, false 3, floating 2 pairs.",
+  "Pivot: atlas–axis;  hinge: knee;  saddle: thumb;  ball-socket: shoulder.",
+  "Gout = uric acid;  tetany = low Ca²⁺;  myasthenia = autoimmune."
+ ],
+ "verifiedOn": "2026-11-13"
+}

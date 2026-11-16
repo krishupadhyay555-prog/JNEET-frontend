@@ -70,5 +70,48 @@ SYLLABUS = [
 ("Calculation of standard deviation, variance and mean deviation for grouped and ungrouped data", ["standard deviation", "variance", "mean deviation"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Central tendency ke measures — mean, median aur mode — data ka centre batate hain. Dispersion ke measures — range, mean deviation, variance aur standard deviation — failaav batate hain.",
+"Ungrouped, discrete aur grouped (continuous) data ke formulas, aur shortcut (step-deviation) method yaad rakho.",
+"JEE sawal aksar test karte hain ki har observation shift ya scale karne par mean aur variance kaise badalte hain, aur do groups ka combined mean/variance.",
+],
+when=[
+("Data ka average.", None),
+("Beech wali value.", None),
+("Sabse zyada baar aane wali value.", None),
+("Average absolute deviation.", None),
+("Data ka failaav.", None),
+("Data shift/scale karna.", "Constant jodne se variance nahi badalta — dhyan rakho."),
+("Do series ki variability compare karna — kam CV zyada consistent.", None),
+("Do groups milaana.", None),
+("Milaaye gaye groups ka variance.", None),
+("Standard result.", None),
+],
+examples=[
+("Mean, variance, SD", "Data: 2, 4, 4, 4, 5, 5, 7, 9. Mean, variance aur SD nikalo.",
+ "Mean = 40/8 = ⟨0⟩; variance = Σ(x − 5)²/8 = 32/8 = ⟨1⟩; SD = ⟨2⟩."),
+("Median", "3, 7, 1, 9, 5 ka median?",
+ "Sorted 1, 3, 5, 7, 9 ⇒ median = ⟨0⟩."),
+("Mean deviation", "2, 4, 6, 8, 10 ka mean ke about mean deviation?",
+ "Mean 6; deviations 4, 2, 0, 2, 4 ⇒ MD = 12/5 = ⟨0⟩."),
+("Scaling", "Data ka variance 4 hai. Har value ko 3 se multiply karke 5 joda. Naya variance?",
+ "3² × 4 = ⟨0⟩."),
+("Coefficient of variation", "Pehle data set (mean 5, SD 2) ka CV nikalo.",
+ "2/5 × 100 = ⟨0⟩%."),
+("Combined mean", "30 students ka average 60 aur 20 students ka average 70. Combined mean?",
+ "(1800 + 1400)/50 = ⟨0⟩."),
+],
+topics=[
+("Choosing a measure", "Mean saari values use karta hai par outliers se affect hota hai; median outliers se bacha rehta hai; mode categorical data ke liye. Skewed distributions mein median aksar behtar hai."),
+("Range and quartile deviation", "Range = maximum − minimum. Quartile deviation = (Q₃ − Q₁)/2. Dono failaav ke simple measures hain."),
+("Variance shortcuts", "Har deviation nikaalne se bachne ke liye σ² = Σx²/n − x̄² use karo. Grouped data ke liye step-deviation method σ² = h²[Σfu²/N − (Σfu/N)²]."),
+("Correcting wrong observations", "Agar koi value galat likhi gayi, to Σx aur Σx² mein galat value hata kar sahi jodo, phir mean aur variance dobara nikalo."),
+("Properties of SD", "SD kabhi negative nahi; zero sirf tab jab saari values barabar hon. SD ≥ mean ke about mean deviation."),
+("Missing data problems", "Mean aur variance diye hon aur ek-do values anjaan, to Σx = n x̄ aur Σx² = n(σ² + x̄²) se equations banao."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)
