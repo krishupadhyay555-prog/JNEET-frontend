@@ -75,5 +75,51 @@ SYLLABUS = [
 ("Radian measure, signs and graphs", ["radian", "period"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Angles degrees ya radian mein naape jaate hain (π rad = 180°). Chhe trigonometric functions unit circle par define hote hain; unke signs ASTC follow karte hain (quadrants I–IV mein All, Sin, Tan, Cos positive). sin, cos ka period 2π, tan ka π.",
+"Identities — compound angle, double angle aur multiple/sub-multiple angle, sum-to-product aur product-to-sum — kisi bhi expression ko simplify karne deti hain.",
+"Trigonometric equation ke general solution: sin θ = sin α ⇒ θ = nπ + (−1)ⁿα; cos θ = cos α ⇒ θ = 2nπ ± α; tan θ = tan α ⇒ θ = nπ + α.",
+"a sin θ + b cos θ ki range [−√(a² + b²), √(a² + b²)] hai — maximum/minimum sawalon ka JEE favourite.",
+],
+when=[
+("Ek function se doosre mein badalna.", None),
+("Angles ka sum aur difference.", None),
+("Simplification ke shortcuts.", None),
+("Multiple-angle simplification.", None),
+("sin, cos ke cubic expressions.", None),
+("Trig functions jodna.", None),
+("Standard product values.", None),
+("Maximum aur minimum values.", None),
+("Trigonometric equations solve karna (n ∈ ℤ).", "Dono taraf square karne se extra roots aa sakte hain — hamesha check karo."),
+("Non-standard angles.", None),
+("Triangles ki properties.", None),
+("Triangle identities.", None),
+],
+examples=[
+("sin 75°", "sin 75° nikalo.",
+ "sin(45° + 30°) = (√3 + 1)/(2√2) = (√6 + √2)/4 ≈ ⟨0⟩."),
+("Cosines ka product", "cos 20° cos 40° cos 80° nikalo.",
+ "cos θ cos(60° − θ) cos(60° + θ) = ¼ cos 3θ, θ = 20° lekar: ¼ cos 60° = 1/8 = ⟨0⟩."),
+("Tangents ka product", "tan 20° tan 40° tan 80° nikalo.",
+ "tan θ tan(60° − θ) tan(60° + θ) = tan 3θ ⇒ tan 60° = √3 ≈ ⟨0⟩."),
+("Maximum value", "3 sin x + 4 cos x ki maximum value nikalo.",
+ "√(3² + 4²) = ⟨0⟩."),
+("Sines ka product", "sin 10° sin 50° sin 70° nikalo.",
+ "sin θ sin(60° − θ) sin(60° + θ) = ¼ sin 3θ, θ = 10° lekar: ¼ sin 30° = ⟨0⟩."),
+("General solution", "2cos²x + 3 sin x = 0 solve karo.",
+ "2(1 − sin²x) + 3 sin x = 0 ⇒ 2sin²x − 3 sin x − 2 = 0 ⇒ (2 sin x + 1)(sin x − 2) = 0. sin x = 2 sambhav nahi, isliye sin x = −1/2 = sin(−π/6) ⇒ x = nπ + (−1)ⁿ(−π/6), n ∈ ℤ."),
+],
+topics=[
+("Radian measure", "Ek radian wo angle hai jo radius ke barabar arc centre par banata hai. Arc length l = rθ (θ radians mein). 1 radian ≈ 57°16′."),
+("Signs and allied angles", "Angles (90° ± θ), (270° ± θ) mein sin ↔ cos, tan ↔ cot badalte hain; (180° ± θ), (360° ± θ) mein function wahi rehta hai. Sign original angle ke quadrant se lo (ASTC)."),
+("Graphs and periods", "sin x aur cos x ka period 2π aur range [−1, 1]; tan x ka period π aur range ℝ (π/2 ke odd multiples par undefined). sinⁿx aur cosⁿx ka period even n ke liye π aur odd n ke liye 2π."),
+("Strategy for equations", "Identities se ek hi function mein laao, factorise karo, phir general-solution formulas lagao. a cos x + b sin x = c ke liye √(a² + b²) se divide karo; solution tabhi hai jab |c| ≤ √(a² + b²)."),
+("Sum of sines/cosines in AP", "sin α + sin(α + β) + … n terms = sin(nβ/2)/sin(β/2) × sin(α + (n − 1)β/2); cosines ke liye bhi aisa hi formula. cos(2π/7) + cos(4π/7) + cos(6π/7) = −1/2 ke liye kaam aata hai."),
+("Maximum/minimum tricks", "a sin²x + b cos²x ki range a aur b ke beech. sin x cos x jaise expressions ke liye sin 2x/2 use karo. tan²x + cot²x ≥ 2 jaise sums ke liye AM ≥ GM."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

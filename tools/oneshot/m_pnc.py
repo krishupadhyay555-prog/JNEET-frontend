@@ -74,5 +74,52 @@ SYLLABUS = [
 ("Meaning of P(n, r) and C(n, r); simple applications", ["ⁿPᵣ", "ⁿCᵣ"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Counting fundamental principle se shuru hoti hai: agar ek kaam m tareekon se aur doosra n tareekon se ho sakta hai, to dono saath m × n tareekon se (aur koi ek m + n tareekon se).",
+"Permutation arrangements ginte hain (order maayne rakhta hai): ⁿPᵣ = n!/(n − r)!. Combination selections ginte hain (order maayne nahi rakhta): ⁿCᵣ = n!/(r!(n − r)!).",
+"Special cases: identical objects, circular arrangements, restrictions (saath / kabhi saath nahi), identical objects ka distribution (stars and bars) aur derangements.",
+],
+when=[
+("Counting problem ko stages mein todna.", None),
+("Ordered arrangements.", None),
+("Selections.", "Agar ⁿCₓ = ⁿCᵧ to x = y ya x + y = n — doosra case mat bhoolna."),
+("Words ke letters arrange karna.", None),
+("Round tables aur necklaces.", None),
+("Restriction problems.", None),
+("Koi do saath nahi.", None),
+("Stars and bars / x₁ + … + xᵣ = n ke non-negative integer solutions.", None),
+("Koi object apni jagah nahi.", None),
+("Selections ki sankhya.", None),
+("Points, lines, triangles.", None),
+("Divisors ginna.", None),
+],
+examples=[
+("BANANA ke letters", "BANANA ke kitne arrangements?",
+ "6 letters: A×3, N×2, B×1 ⇒ 6!/(3! 2!) = ⟨0⟩."),
+("Round table", "6 log round table par kitne tareekon se baith sakte hain? Aur necklace par 6 beads?",
+ "(6 − 1)! = ⟨0⟩;  necklace (6 − 1)!/2 = ⟨1⟩."),
+("Committee", "5 mein se 3 men aur 4 mein se 2 women chuno.",
+ "⁵C₃ × ⁴C₂ = 10 × 6 = ⟨0⟩."),
+("4 letters ke derangements", "4 letters ko 4 addressed envelopes mein kitne tareekon se daal sakte hain ki koi bhi sahi envelope mein na jaaye?",
+ "D₄ = 4!(1 − 1 + 1/2 − 1/6 + 1/24) = ⟨0⟩."),
+("4-digit numbers", "0, 1, 2, 3, 4, 5 se bina repetition kitne 4-digit numbers ban sakte hain?",
+ "Pehla digit: 5 choices (0 nahi); baaki 3 jagah 5 digits se: ⁵P₃ = 60. Total = 5 × 60 = ⟨0⟩."),
+("Identical balls", "10 identical balls ko 3 alag boxes mein kitne tareekon se daal sakte hain (khaali box allowed)?",
+ "¹⁰⁺³⁻¹C₃₋₁ = ¹²C₂ = ⟨0⟩."),
+("Diagonals", "Decagon mein kitne diagonals hote hain?",
+ "¹⁰C₂ − 10 = 45 − 10 = ⟨0⟩."),
+],
+topics=[
+("Factorial basics", "n! = n(n − 1)…1; 0! = 1. ⁿPᵣ = r! × ⁿCᵣ. n! mein prime p ka exponent [n/p] + [n/p²] + [n/p³] + … hai (jaise 100! mein trailing zeros 24)."),
+("Words with restrictions", "Vowels saath: vowels ko ek block maano. Vowels odd places par: pehle vowels ki jagah chuno. Dictionary (rank) problems: har chhote letter se shuru hone wale words baari-baari gino."),
+("Grouping and division", "m + n distinct objects ko m aur n ke do groups mein baantna: (m + n)!/(m! n!). Barabar size ke (unlabelled) groups mein, barabar groups ki sankhya ke factorial se bhi divide karo."),
+("Circular with restrictions", "Round table par do khaas log saath: (n − 2)! × 2!. Men aur women baari-baari (n-n): (n − 1)! × n!."),
+("Integer solutions", "x + y + z = 10 ke positive integral solutions ⁹C₂ = 36; non-negative solutions ¹²C₂ = 66. Upper limits ke liye inclusion–exclusion ya polynomial expansions ke coefficients use karo."),
+("When order matters", "Poocho 'kya do chune items ko swap karne se naya outcome milta hai?' — haan to permutation; nahi to combination. Zyadatar galtiyan selection ko arrangement ki tarah ginne se hoti hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

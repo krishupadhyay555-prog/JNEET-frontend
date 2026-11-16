@@ -72,5 +72,49 @@ SYLLABUS = [
 ("Simple applications", ["coefficient", "remainder"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Positive integer n ke liye (x + a)ⁿ = Σ C(n, r) xⁿ⁻ʳ aʳ, n + 1 terms ke saath. General term Tᵣ₊₁ = C(n, r) xⁿ⁻ʳ aʳ lagbhag har sawal ki chaabi hai.",
+"Typical sawal: koi khaas term ya coefficient, x se independent term, middle term(s), greatest coefficient, aur binomial coefficients ke sums.",
+"Binomial coefficients Pascal's triangle follow karte hain; unka sum 2ⁿ hai, aur alternate coefficients ka sum har ek 2ⁿ⁻¹. Badi powers ka remainder base ko divisor ke multiple ke paas likh kar nikaalte hain.",
+],
+when=[
+("Binomial ki powers expand karna.", None),
+("Koi bhi khaas term.", "Ye (r + 1)th term hai, rth nahi — galat mat lena."),
+("Middle terms.", None),
+("Constant term.", None),
+("Saare coefficients ka sum.", None),
+("Coefficients ki identities.", None),
+("Pascal's triangle banana.", None),
+("Sabse bada binomial coefficient.", None),
+("Vandermonde-type identity.", None),
+("r se multiply wale sums ((1 + x)ⁿ ko differentiate karo).", None),
+("Terms ginna.", None),
+],
+examples=[
+("x se independent term", "(x² + 1/x)⁹ mein x se independent term nikalo.",
+ "Tᵣ₊₁ = C(9, r) x^(18 − 2r) x^(−r) = C(9, r) x^(18 − 3r). 18 − 3r = 0 ⇒ r = ⟨0⟩; term = C(9, 6) = ⟨1⟩."),
+("Middle term", "(1 + x)¹⁰ ka middle term nikalo.",
+ "n = 10 even hai ⇒ T₆ = C(10, 5)x⁵ = ⟨0⟩x⁵."),
+("Coefficient", "(1 + x)⁷ mein x⁵ ka coefficient?",
+ "C(7, 5) = ⟨0⟩."),
+("Coefficients ka sum", "(3x − 2y)¹⁰ mein coefficients ka sum?",
+ "x = y = 1 rakho: (3 − 2)¹⁰ = ⟨0⟩."),
+("Remainder", "2¹⁰⁰ ko 7 se divide karne par remainder?",
+ "2³ = 8 = 7 + 1, isliye 2¹⁰⁰ = 2 × (8)³³ = 2(7 + 1)³³ ≡ 2 × 1 = ⟨0⟩ (mod 7)."),
+("Terms ki sankhya", "(2x − 3y)¹⁵ mein kitne terms?",
+ "n + 1 = ⟨0⟩."),
+],
+topics=[
+("Pascal's triangle", "Har entry upar ki do entries ka sum hai; row n, (x + a)ⁿ ke coefficients deti hai. Triangle symmetric hai kyunki C(n, r) = C(n, n − r)."),
+("Expansions with negative signs", "(x − a)ⁿ = Σ (−1)ʳ C(n, r) xⁿ⁻ʳ aʳ — signs baari-baari badalte hain. (x + a)ⁿ + (x − a)ⁿ mein sirf odd-numbered terms bachte hain (a ki even powers); difference mein baaki."),
+("Divisibility and remainders", "9ⁿ − 8n − 1 ko 64 se divisible dikhaane ke liye 9ⁿ = (1 + 8)ⁿ likh kar expand karo: pehle do terms cancel hote hain aur baaki sab mein 8² hai. Remainders ke liye base ko (divisor ka multiple ± 1) likho."),
+("Numerically greatest term", "Wo term dhoondho jahan ratio Tᵣ₊₁/Tᵣ = ((n − r + 1)/r)|a/x| pehli baar 1 se neeche jaata hai — wahi numerically greatest hai."),
+("Approximation", "Chhote x ke liye (1 + x)ⁿ ≈ 1 + nx. Jaise (1.02)⁸ ≈ 1 + 8 × 0.02 = 1.16 (asli 1.1717)."),
+("Coefficient tricks", "(1 + x)ᵐ(1 + x)ⁿ jaise product mein xᵏ ke coefficient ke liye C(m + n, k) use karo, ya general terms multiply karke matching powers par sum karo."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

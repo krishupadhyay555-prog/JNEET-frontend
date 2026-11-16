@@ -72,5 +72,50 @@ SYLLABUS = [
 ("Relation between AM and GM", ["AM ≥ GM"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Arithmetic progression (AP) mein har baar ek fixed common difference d judta hai; geometric progression (GP) mein fixed ratio r se multiply hota hai. Harmonic progression (HP) AP ka reciprocal hai.",
+"nth term aur sum ke formulas, infinite GP ka sum (|r| < 1), aur means AM, GM, HM yaad rakho — positive numbers ke liye AM ≥ GM ≥ HM. Do numbers ke beech means insert karna bhi aata hai.",
+"Special series: Σn, Σn², Σn³, arithmetico-geometric progressions (AGP) aur telescoping (method of differences) JEE mein baar-baar aate hain.",
+],
+when=[
+("Arithmetic progressions.", None),
+("Terms samajhdaari se chunna.", None),
+("Geometric progressions.", None),
+("Infinity tak sum.", "Sirf |r| < 1 ke liye valid — warna mat lagaana."),
+("Harmonic progressions.", "HP ke sum ka koi formula nahi hai — dhyan rakho."),
+("Do positive numbers ke means.", None),
+("Minimum/maximum problems.", None),
+("Insert kiye gaye means.", None),
+("Powers ke sums.", None),
+("Arithmetico-geometric series.", None),
+("Telescoping sums.", None),
+("Anokhi series ka general term nikaalna.", None),
+],
+examples=[
+("AP ka term aur sum", "AP 3, 7, 11, … t₂₀ aur S₂₀ nikalo.",
+ "t₂₀ = 3 + 19 × 4 = ⟨0⟩. S₂₀ = 10 × (6 + 76) = ⟨1⟩."),
+("Infinite GP", "1 + 1/3 + 1/9 + … nikalo.",
+ "a/(1 − r) = 1/(1 − 1/3) = 3/2 = ⟨0⟩."),
+("Squares aur cubes ka sum", "1² + 2² + … + 10² aur 1³ + … + 10³ nikalo.",
+ "10 × 11 × 21/6 = ⟨0⟩;  (55)² = ⟨1⟩."),
+("4 aur 16 ke means", "4 aur 16 ka AM, GM aur HM nikalo.",
+ "AM = ⟨0⟩, GM = ⟨1⟩, HM = ⟨2⟩; check GM² = AM × HM: 64 = 10 × 6.4."),
+("AGP", "1 + 2(1/2) + 3(1/2)² + … infinity tak nikalo.",
+ "a = 1, d = 1, r = 1/2: 1/(1/2) + (1/2)/(1/4) = 2 + 2 = ⟨0⟩."),
+("AM–GM se minimum", "x > 0 ke liye x + 9/x ka minimum nikalo.",
+ "AM ≥ GM: (x + 9/x)/2 ≥ √9 = 3, isliye x + 9/x ≥ 6 (x = 3 par)."),
+],
+topics=[
+("Choosing terms", "Sum pata ho to AP ke liye a − d, a, a + d (teen terms) ya a − 3d, a − d, a + d, a + 3d (chaar terms) lo. GP ke liye a/r, a, ar."),
+("Properties of AP and GP", "AP ke har term mein constant jodne, ghataane, multiply ya divide karne par wo AP hi rehta hai (0 se divide ke alawa). GP ke terms ko constant se multiply karne par GP hi rehta hai; GP ke reciprocals bhi GP; GP ke logs AP banate hain."),
+("Sum of n terms from Sₙ", "Agar Sₙ, n ka function diya ho to tₙ = Sₙ − Sₙ₋₁ (n ≥ 2), t₁ = S₁. Bina constant term ka quadratic Sₙ matlab AP."),
+("Relation between AM, GM, HM", "Positive a, b ke liye: A ≥ G ≥ H, G² = AH. a aur b, x² − 2Ax + G² = 0 ke roots hain."),
+("Series to recognise", "1 + 11 + 111 + … — 111…1 = (10ⁿ − 1)/9 likho. 0.7 + 0.77 + 0.777 + … — yahi trick. 1·2 + 2·3 + … jaise products ka sum = Σn² + Σn."),
+("Weighted AM–GM", "Weights wale positive numbers ke liye weighted AM ≥ weighted GM. Sum constraint ke saath product maximise karne mein kaam aata hai, jaise x + y = 5 diya ho to x²y³ maximise karna."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)
