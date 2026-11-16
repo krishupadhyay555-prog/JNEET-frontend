@@ -152,7 +152,9 @@ export default function PYQ() {
         )}
 
         {!state.loading && !state.error && state.years.length > 0 && (
-          <p className="text-[11px] text-gray-600 text-center">More years and shifts are added every week.</p>
+          <p className="text-[11px] text-gray-600 text-center">
+            More years and shifts are added every week.{examMode === "JEE" ? " JEE Advanced PYQs: coming soon (after JEE Main results)." : ""}
+          </p>
         )}
       </div>
     </div>

@@ -36,7 +36,7 @@ describe("PYQ content files", () => {
     expect(new Set(doc.questions.map((q) => q.qid)).size).toBe(ns.length);
     for (const q of doc.questions) {
       expect(known.has(`${doc.exam}|${q.subject}|${q.chapter}`), `${q.n} ${q.chapter}`).toBe(true);
-      for (const f of [q.fig, ...(q.optImg ?? [])].filter(Boolean)) {
+      for (const f of [q.fig, q.qimg, ...(q.optImg ?? [])].filter(Boolean)) {
         expect(fs.existsSync(path.join(pub, doc.id, f)), `${doc.id}/${f}`).toBe(true);
       }
     }
@@ -81,7 +81,11 @@ describe("PYQ API", () => {
     expect(row.count).toBeGreaterThanOrEqual(2);
     const qs = await jee.get("/api/pyq/chapter").query({ subject: "Mathematics", chapter: "Matrices and Determinants" });
     expect(qs.body.questions.length).toBe(row.count);
-    expect(qs.body.questions[0].paper.id).toBe("jee-main-2026-04-02-s1");
+    // newest paper first, and every question carries its paper (for the year label)
+    const dates = qs.body.questions.map((q) => q.paper.date);
+    expect(dates).toEqual([...dates].sort().reverse());
+    expect(qs.body.questions.every((q) => q.paper.id && q.paper.title && q.paper.year)).toBe(true);
+    expect(qs.body.questions.some((q) => q.paper.id === "jee-main-2026-04-02-s1")).toBe(true);
     expect((await jee.get("/api/pyq/chapter")).status).toBe(400);
   });
 

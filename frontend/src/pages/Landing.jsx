@@ -95,6 +95,7 @@ export default function Landing() {
             <SecondaryButton to="/login">I have an account</SecondaryButton>
           </div>
           <p className="mt-4 text-[13px] text-[#6E6A76]">For students aged 13+. Under 18? A parent approves the AI mentor by email.</p>
+          <p className="mt-1.5 text-[13px] text-[#6E6A76]">JEE Advanced: coming soon (after JEE Main results).</p>
         </div>
         <HeroCard />
       </section>

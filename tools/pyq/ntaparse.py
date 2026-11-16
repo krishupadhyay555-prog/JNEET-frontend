@@ -44,6 +44,8 @@ def parse_paper(pdf):
         sm = re.findall(r"(Mathematics|Physics|Chemistry|Biology|Botany|Zoology) Section ([AB])", prev)
         if sm: section = sm[-1]
         opts = re.findall(r"^\f?(\d{7,})\.(?=\s|$)", body, re.M) if typ == "MCQ" else []
+        if any(q["n"] == int(n) for q in qs):
+            continue  # Hindi copy of a question already read (bilingual papers)
         qs.append(dict(n=int(n), qid=qid, type=typ, opts=opts, subject=section[0] if section else None, sec=section[1] if section else None))
     return qs
 

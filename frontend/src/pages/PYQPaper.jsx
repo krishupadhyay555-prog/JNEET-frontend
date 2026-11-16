@@ -71,11 +71,13 @@ export default function PYQPaper() {
             ) : (
               <>
                 <p className="text-[11px] text-gray-600 leading-relaxed">
-                  Source: NTA question paper{" "}
+                  Source: NTA question paper{state.paper.paperHost ? ` (candidate copy, hosted on ${state.paper.paperHost}; every Question ID checked against NTA's key)` : ""}{" "}
                   <a href={state.paper.paperPdf} target="_blank" rel="noopener noreferrer" className="text-violet-600 inline-flex items-center gap-0.5">PDF <ExternalLink size={10} /></a>
                   {" "}· Answers: NTA final answer key{" "}
                   <a href={state.paper.keyPdf} target="_blank" rel="noopener noreferrer" className="text-violet-600 inline-flex items-center gap-0.5">PDF <ExternalLink size={10} /></a>
-                  {" "}· Explanations by JNEET+ AI.
+                  {state.paper.questions?.some((q) => q.explanation)
+                    ? " · Explanations by JNEET+ AI."
+                    : " · Questions shown exactly as in NTA's paper. Explanations: coming soon."}
                 </p>
                 <div className="rounded-2xl p-1.5 flex gap-1.5 sticky top-[57px] z-[5] bg-bg-surface border border-bg-border shadow-sm" role="tablist" aria-label="Subject">
                   {subjects.map((s) => (
@@ -90,7 +92,7 @@ export default function PYQPaper() {
             )}
             <div className="space-y-3">
               {shown.map((q) => (
-                <PyqQuestion key={`${q.paper?.id ?? id}-${q.n}`} q={q} paperId={q.paper?.id ?? id} showPaper={isChapter} />
+                <PyqQuestion key={`${q.paper?.id ?? id}-${q.n}`} q={q} paperId={q.paper?.id ?? id} paperTitle={state.paper?.title} />
               ))}
             </div>
           </>

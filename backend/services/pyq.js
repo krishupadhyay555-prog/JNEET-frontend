@@ -7,6 +7,8 @@
 //  so this service never decides answers itself — it just serves them.
 //  Dropped / bonus / several-correct questions keep NTA's ruling
 //  (status: "dropped" | "bonus" | "multi").
+//  Two kinds of question: typed (text + $…$ maths) or NTA's original
+//  images (qimg + optImg, cut from the official PDF — nothing re-typed).
 // ============================================================
 
 import fs from "fs";
@@ -34,15 +36,18 @@ export function validatePaper(d, file = "") {
       const bad = (what) => p.push(`Q${q?.n ?? i + 1}: ${what}`);
       if (!Number.isInteger(q.n)) bad("n");
       if (!SUBJECTS[d.exam]?.includes(q.subject)) bad("subject");
-      if (!str(q.chapter) || !str(q.text) || !str(q.explanation)) bad("chapter/text/explanation");
+      // text OR NTA's original question image; the explanation may still be "coming soon" ("")
+      if (!str(q.chapter) || !(str(q.text) || str(q.qimg)) || typeof (q.explanation ?? "") !== "string") bad("chapter/text/explanation");
       if (!STATUSES.includes(q.status)) bad("status");
       if (q.type === "mcq") {
-        if (!Array.isArray(q.options) || q.options.length !== 4 || !q.options.every(str)) bad("options");
+        const imgs = Array.isArray(q.optImg) && q.optImg.length === 4 && q.optImg.every(str);
+        if (!Array.isArray(q.options) || q.options.length !== 4 || !(imgs || q.options.every(str))) bad("options");
         if (!Array.isArray(q.correct) || !q.correct.every((c) => Number.isInteger(c) && c >= 0 && c <= 3)) bad("correct");
         if (q.status === "ok" && q.correct?.length !== 1) bad("one correct option expected");
         if (q.status === "dropped" && q.correct?.length !== 0) bad("dropped has no correct option");
       } else if (q.type === "numeric") {
         if (q.status === "ok" && !str(q.answer)) bad("answer");
+        if (q.answers !== undefined && !(Array.isArray(q.answers) && q.answers.length > 1 && q.answers.every(str))) bad("answers");
       } else bad("type");
     });
   }
