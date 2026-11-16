@@ -32,10 +32,14 @@ describe("PYQ content files", () => {
   it.each(files)("%s uses known chapters, numbers 1..N once, and its figures exist", (file) => {
     const doc = JSON.parse(fs.readFileSync(path.join(dir, file), "utf-8"));
     const ns = doc.questions.map((q) => q.n);
-    expect(ns).toEqual([...Array(ns.length)].map((_, i) => i + 1));
+    // 1..N in order; a question NTA's own file has broken is left out and listed in "missing"
+    const missing = (doc.missing ?? []).map((m) => m.n);
+    const all = [...ns, ...missing].sort((a, b) => a - b);
+    expect(all).toEqual([...Array(all.length)].map((_, i) => i + 1));
+    expect(ns).toEqual([...ns].sort((a, b) => a - b));
     expect(new Set(doc.questions.map((q) => q.qid)).size).toBe(ns.length);
     for (const q of doc.questions) {
-      expect(known.has(`${doc.exam}|${q.subject}|${q.chapter}`), `${q.n} ${q.chapter}`).toBe(true);
+      if (!q.oldSyllabus) expect(known.has(`${doc.exam}|${q.subject}|${q.chapter}`), `${q.n} ${q.chapter}`).toBe(true);
       for (const f of [q.fig, q.qimg, ...(q.optImg ?? [])].filter(Boolean)) {
         expect(fs.existsSync(path.join(pub, doc.id, f)), `${doc.id}/${f}`).toBe(true);
       }

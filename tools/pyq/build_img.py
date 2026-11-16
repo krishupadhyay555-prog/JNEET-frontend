@@ -21,7 +21,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import ntaparse, ntakey_cols, ntaimages  # noqa: E402
+import ntaparse, ntakey_cols, ntakey_rows, ntaimages  # noqa: E402
 from build import fetch, CHAPTERS, SUBJ, katex_check, OUT, PUB  # noqa: E402
 
 SPEC = HERE / "papers_img"
@@ -37,9 +37,15 @@ def quantize(im):
     return im.point(lambda v: 255 if v > 160 else 0)
 
 
+OLD_CHAPTER = "Not in current syllabus"
+
+
 def export(spec):
     pdf = fetch(spec["paperPdf"])
     doc, lay = ntaimages.layout(pdf)
+    # "skip": {"n": "reason"} — a question whose English copy is broken in NTA's own file
+    for n in spec.get("skip", {}):
+        lay.pop(int(n), None)
     out = PUB / spec["id"]
     out.mkdir(parents=True, exist_ok=True)
     for n, v in lay.items():
@@ -91,7 +97,9 @@ def build(pid):
     paper = {q["n"]: q for q in ntaparse.parse_paper(pdf)}
     pts = ntaimages.widths(pymupdf.open(pdf))
     wpt = lambda xs: round(max(pts[x] for x in xs))
-    if spec.get("keyFormat") == "cols":
+    if spec.get("keyFormat") == "rows":
+        keys = ntakey_rows.parse(fetch(spec["keyPdf"]))
+    elif spec.get("keyFormat") == "cols":
         place = spec.get("keyPlace", "DOMESTIC")
         keys = {(d, sh): v for (d, sh, pl), v in ntakey_cols.parse(fetch(spec["keyPdf"])).items() if pl == place}
     else:
@@ -102,7 +110,10 @@ def build(pid):
     chapters = {int(k): v for k, v in spec.get("chapters", {}).items()}
     expl = {int(k): v for k, v in spec.get("explanations", {}).items()}
     qs = []
+    skip = {int(n) for n in spec.get("skip", {})}
     for n in sorted(paper):
+        if n in skip:
+            continue
         pq, lq = paper[n], lay.get(n)
         e = lambda m: errs.append(f"Q{n}: {m}")
         if lq is None or lq["qid"] != pq["qid"]:
@@ -112,9 +123,14 @@ def build(pid):
         if ans is None:
             e("question id not in NTA key"); continue
         ch = chapters.get(n)
-        if ch not in CHAPTERS.get((spec["exam"], subject), set()):
+        old_topic = spec.get("oldSyllabus", {}).get(str(n))
+        if old_topic:
+            # a topic NTA has since removed (e.g. s-Block, Polymers): kept in its paper, not in any chapter list
+            ch = OLD_CHAPTER
+        elif ch not in CHAPTERS.get((spec["exam"], subject), set()):
             e(f"chapter missing/unknown: {ch!r} ({subject})")
-        item = dict(n=n, qid=pq["qid"], subject=subject, chapter=ch, text="", qimg=f"q{n}.webp",
+        item = dict(n=n, qid=pq["qid"], subject=subject, chapter=ch, **({"oldSyllabus": old_topic} if old_topic else {}),
+                    text="", qimg=f"q{n}.webp",
                     qimgW=wpt(lq["q"]), explanation=expl.get(n, ""))
         status = "ok"
         if pq["type"] == "MCQ":
@@ -155,6 +171,7 @@ def build(pid):
     doc.update(source="NTA question paper (original images) + NTA final answer key",
                paperPdf=spec["paperPdf"], keyPdf=spec["keyPdf"],
                **({"paperHost": spec["paperHost"]} if spec.get("paperHost") else {}),
+               **({"missing": [{"n": int(n), "reason": r} for n, r in spec["skip"].items()]} if spec.get("skip") else {}),
                counts={s: sum(1 for i in qs if i["subject"] == s) for s in dict.fromkeys(i["subject"] for i in qs)},
                questions=qs)
     OUT.mkdir(parents=True, exist_ok=True)
