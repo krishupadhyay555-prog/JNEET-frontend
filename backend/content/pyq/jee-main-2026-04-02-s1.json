@@ -1,0 +1,1412 @@
+{
+ "id": "jee-main-2026-04-02-s1",
+ "exam": "JEE",
+ "year": 2026,
+ "session": 2,
+ "date": "2026-04-02",
+ "shift": 1,
+ "title": "JEE Main 2026 · 2 April · Shift 1",
+ "source": "NTA question paper + NTA final answer key",
+ "paperPdf": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/202604092096865379.pdf",
+ "keyPdf": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf",
+ "counts": {
+  "Mathematics": 25,
+  "Physics": 25,
+  "Chemistry": 25
+ },
+ "questions": [
+  {
+   "n": 1,
+   "qid": "6911211",
+   "subject": "Mathematics",
+   "chapter": "Complex Numbers and Quadratic Equations",
+   "text": "Let $\\alpha,\\ \\alpha+2$, $\\alpha \\in \\mathbb{Z}$, be the roots of the quadratic equation $x(x+2)+(x+1)(x+3)+(x+2)(x+4)+\\dots+(x+n-1)(x+n+1)=4n$ for some $n \\in \\mathbb{N}$. Then $n+\\alpha$ is equal to:",
+   "explanation": "The sum is $nx^2+n(n+1)x+\\sum_{k=0}^{n-1}(k^2+2k)$, so the equation is $nx^2+n(n+1)x+S-4n=0$. Roots differ by 2, so $(\\text{sum})^2-4(\\text{product})=4$: $(n+1)^2-\\frac{4(S-4n)}{n}=4$, which gives $n=7$. Sum of roots $2\\alpha+2=-(n+1)=-8\\Rightarrow\\alpha=-5$, so $n+\\alpha=2$.",
+   "type": "mcq",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 2,
+   "qid": "6911212",
+   "subject": "Mathematics",
+   "chapter": "Complex Numbers and Quadratic Equations",
+   "text": "Let $x$ and $y$ be real numbers such that $50\\left(\\dfrac{2x}{1+3i}-\\dfrac{y}{1-2i}\\right)=31+17i$, $i=\\sqrt{-1}$. Then the value of $10(x-3y)$ is:",
+   "explanation": "$\\frac{2x}{1+3i}=\\frac{x(1-3i)}{5}$ and $\\frac{y}{1-2i}=\\frac{y(1+2i)}{5}$, so the left side is $10[(x-y)-(3x+2y)i]$. Comparing: $x-y=3.1$, $3x+2y=-1.7$, so $x=0.9$, $y=-2.2$ and $10(x-3y)=10(0.9+6.6)=75$.",
+   "type": "mcq",
+   "options": [
+    "20",
+    "31",
+    "35",
+    "75"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 3,
+   "qid": "6911213",
+   "subject": "Mathematics",
+   "chapter": "Matrices and Determinants",
+   "text": "Let $\\alpha,\\beta\\in\\mathbb{R}$ be such that the system of linear equations $x+2y+z=5$, $2x+y+\\alpha z=5$, $8x+4y+\\beta z=18$ has no solution. Then $\\dfrac{\\beta}{\\alpha}$ is equal to:",
+   "explanation": "No solution needs $\\Delta=0$: $\\begin{vmatrix}1&2&1\\\\2&1&\\alpha\\\\8&4&\\beta\\end{vmatrix}=12\\alpha-3\\beta=0$, so $\\beta=4\\alpha$ and $\\frac{\\beta}{\\alpha}=4$ (the third equation then contradicts the first two).",
+   "type": "mcq",
+   "options": [
+    "-4",
+    "4",
+    "8",
+    "-8"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 4,
+   "qid": "6911214",
+   "subject": "Mathematics",
+   "chapter": "Matrices and Determinants",
+   "text": "Let $A=\\begin{bmatrix}1&2\\\\1&\\alpha\\end{bmatrix}$ and $B=\\begin{bmatrix}3&3\\\\\\beta&2\\end{bmatrix}$. If $A^2-4A+I=O$ and $B^2-5B-6I=O$, then among the two statements (S1): $[(B-A)(B+A)]^T=\\begin{bmatrix}13&15\\\\7&10\\end{bmatrix}$ and (S2): $\\det(\\operatorname{adj}(A+B))=-5$,",
+   "explanation": "By Cayley–Hamilton, $\\operatorname{tr}A=4\\Rightarrow\\alpha=3$ and $\\det B=-6\\Rightarrow 6-3\\beta=-6\\Rightarrow\\beta=4$. Then $(B-A)(B+A)=\\begin{bmatrix}13&15\\\\7&10\\end{bmatrix}$, whose transpose is $\\begin{bmatrix}13&7\\\\15&10\\end{bmatrix}$, so (S1) is wrong. For a $2\\times2$ matrix $\\det(\\operatorname{adj}M)=\\det M$, and $\\det(A+B)=\\begin{vmatrix}4&5\\\\5&5\\end{vmatrix}=-5$, so (S2) is correct.",
+   "type": "mcq",
+   "options": [
+    "only (S1) is correct",
+    "only (S2) is correct",
+    "both (S1) and (S2) are correct",
+    "both (S1) and (S2) are wrong"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 5,
+   "qid": "6911215",
+   "subject": "Mathematics",
+   "chapter": "Sequences and Series",
+   "text": "Let $A$ be the set of first 101 terms of an A.P., whose first term is 1 and the common difference is 5 and let $B$ be the set of first 71 terms of an A.P., whose first term is 9 and the common difference is 7. Then the number of elements in $A\\cap B$, which are divisible by 3, is:",
+   "explanation": "$A=\\{1,6,\\dots,501\\}$, $B=\\{9,16,\\dots,499\\}$. Common terms satisfy $x\\equiv1\\pmod5$ and $x\\equiv2\\pmod7$: $x=16,51,86,\\dots$ (difference 35) up to 499, i.e. $16+35m$ for $m=0,\\dots,13$. Divisible by 3 needs $16+35m\\equiv0\\pmod 3\\Rightarrow m\\equiv1\\pmod3$: $m=1,4,7,10,13$ — 5 numbers.",
+   "type": "mcq",
+   "options": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 6,
+   "qid": "6911216",
+   "subject": "Mathematics",
+   "chapter": "Permutations and Combinations",
+   "text": "The number of seven-digit numbers, that can be formed by using the digits 1, 2, 3, 5 and 7 such that each digit is used at least once, is:",
+   "explanation": "Count onto maps from 7 places to 5 digits (inclusion–exclusion): $5^7-\\binom51 4^7+\\binom52 3^7-\\binom53 2^7+\\binom54 1^7=78125-81920+21870-1280+5=16800$.",
+   "type": "mcq",
+   "options": [
+    "15400",
+    "17800",
+    "16800",
+    "29400"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 7,
+   "qid": "6911217",
+   "subject": "Mathematics",
+   "chapter": "Binomial Theorem",
+   "text": "The number of elements in the set $S=\\left\\{(r,k):k\\in\\mathbb{Z}\\text{ and } {}^{36}C_{r+1}=\\dfrac{6\\left({}^{35}C_r\\right)}{k^2-3}\\right\\}$ is:",
+   "explanation": "${}^{36}C_{r+1}=\\frac{36}{r+1}\\,{}^{35}C_r$, so $\\frac{36}{r+1}=\\frac{6}{k^2-3}\\Rightarrow k^2-3=\\frac{r+1}{6}$. With $0\\le r\\le35$, $r+1\\in\\{6,36\\}$ gives $k^2=4$ or $9$: $(5,\\pm2)$ and $(35,\\pm3)$ — 4 elements.",
+   "type": "mcq",
+   "options": [
+    "2",
+    "4",
+    "8",
+    "16"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 8,
+   "qid": "6911218",
+   "subject": "Mathematics",
+   "chapter": "Statistics",
+   "text": "If the mean of the data — class: 5–10, 10–15, 15–20, 20–25, 25–30, 30–35; frequency: 2, $k$, 28, 54, $k+1$, 5 — is 21, then $k$ is one of the roots of the equation:",
+   "explanation": "Using mid-values $7.5,12.5,\\dots,32.5$: $\\sum f_ix_i=1910+40k$ and $\\sum f_i=90+2k$. Mean $21\\Rightarrow1910+40k=1890+42k\\Rightarrow k=10$, and $x=10$ satisfies $2x^2-19x-10=200-190-10=0$.",
+   "type": "mcq",
+   "options": [
+    "$2x^2-23x-10=0$",
+    "$4x^2-35x+24=0$",
+    "$2x^2-19x-10=0$",
+    "$2x^2-35x+98=0$"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 9,
+   "qid": "6911219",
+   "subject": "Mathematics",
+   "chapter": "Straight Lines",
+   "text": "Let the mid points of the sides of a triangle ABC be $\\left(\\frac52,7\\right)$, $\\left(\\frac52,3\\right)$ and $(4,5)$. If its incentre is $(h,k)$, then $3h+k$ is equal to:",
+   "explanation": "Vertices are $D+E-F$ type sums: $(4,1)$, $(4,9)$ and $(1,5)$. Side lengths opposite them: $a=5$, $b=5$, $c=8$. Incentre $=\\frac{5(4,1)+5(4,9)+8(1,5)}{18}=\\left(\\frac83,5\\right)$, so $3h+k=8+5=13$.",
+   "type": "mcq",
+   "options": [
+    "11",
+    "12",
+    "13",
+    "14"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 10,
+   "qid": "69112110",
+   "subject": "Mathematics",
+   "chapter": "Conic Sections",
+   "text": "Let an ellipse $\\dfrac{x^2}{a^2}+\\dfrac{y^2}{b^2}=1$, $a<b$, pass through the point $(4,3)$ and have eccentricity $\\dfrac{\\sqrt5}{3}$. Then the length of its latus rectum is:",
+   "explanation": "Major axis is along $y$: $a^2=b^2(1-e^2)=\\frac{4b^2}{9}$. From $(4,3)$: $\\frac{36}{b^2}+\\frac{9}{b^2}=1\\Rightarrow b^2=45$, $a^2=20$. Latus rectum $=\\frac{2a^2}{b}=\\frac{40}{3\\sqrt5}=\\frac{8\\sqrt5}{3}$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac{4\\sqrt5}{3}$",
+    "$2\\sqrt5$",
+    "$\\frac{7\\sqrt5}{3}$",
+    "$\\frac{8\\sqrt5}{3}$"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 11,
+   "qid": "69112111",
+   "subject": "Mathematics",
+   "chapter": "Trigonometric Functions and Equations",
+   "text": "If $\\sin\\left(\\frac{\\pi}{18}\\right)\\sin\\left(\\frac{5\\pi}{18}\\right)\\sin\\left(\\frac{7\\pi}{18}\\right)=K$, then the value of $\\sin\\left(\\frac{10K\\pi}{3}\\right)$ is:",
+   "explanation": "$\\sin10^\\circ\\sin50^\\circ\\sin70^\\circ=\\sin\\theta\\sin(60^\\circ-\\theta)\\sin(60^\\circ+\\theta)=\\frac14\\sin30^\\circ=\\frac18$ with $\\theta=10^\\circ$. So $\\sin\\frac{10\\pi}{24}=\\sin75^\\circ=\\frac{\\sqrt3+1}{2\\sqrt2}$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac{\\sqrt3+1}{2\\sqrt2}$",
+    "$\\frac{\\sqrt3-1}{\\sqrt2}$",
+    "$\\frac{\\sqrt3}{2}$",
+    "$\\frac12$"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 12,
+   "qid": "69112112",
+   "subject": "Mathematics",
+   "chapter": "Trigonometric Functions and Equations",
+   "text": "Let $S=\\{x\\in[-\\pi,\\pi]:\\sin x(\\sin x+\\cos x)=a,\\ a\\in\\mathbb{Z}\\}$. Then $n(S)$ is equal to:",
+   "explanation": "$\\sin^2x+\\sin x\\cos x=\\frac12+\\frac{1}{\\sqrt2}\\sin\\left(2x-\\frac\\pi4\\right)\\in\\left[\\frac{1-\\sqrt2}{2},\\frac{1+\\sqrt2}{2}\\right]$, so $a\\in\\{0,1\\}$. $a=0$: $\\sin x=0$ ($-\\pi,0,\\pi$) or $\\tan x=-1$ ($-\\frac\\pi4,\\frac{3\\pi}4$) — 5. $a=1$: $\\cos x(\\sin x-\\cos x)=0$ gives $\\pm\\frac\\pi2,\\frac\\pi4,-\\frac{3\\pi}4$ — 4. Total 9.",
+   "type": "mcq",
+   "options": [
+    "3",
+    "6",
+    "7",
+    "9"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 13,
+   "qid": "69112113",
+   "subject": "Mathematics",
+   "chapter": "Three Dimensional Geometry",
+   "text": "If the point of intersection of the lines $\\dfrac{x+1}{3}=\\dfrac{y+a}{5}=\\dfrac{z+b+1}{7}$ and $\\dfrac{x-2}{1}=\\dfrac{y-b}{4}=\\dfrac{z-2a}{7}$ lies on $xy$-plane, then the value of $a+b$ is:",
+   "explanation": "General points: $(3t-1,\\,5t-a,\\,7t-b-1)$ and $(s+2,\\,4s+b,\\,7s+2a)$. Equating and using $z=0$ gives $t=\\frac57$, $s=-\\frac67$, $a=3$, $b=4$, so $a+b=7$.",
+   "type": "mcq",
+   "options": [
+    "2",
+    "5",
+    "7",
+    "9"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 14,
+   "qid": "69112114",
+   "subject": "Mathematics",
+   "chapter": "Vector Algebra",
+   "text": "If $\\vec a$ and $\\vec b$ are two vectors such that $|\\vec a|=2$ and $|\\vec b|=3$, then the maximum value of $3\\left|3\\vec a+2\\vec b\\right|+4\\left|3\\vec a-2\\vec b\\right|$ is:",
+   "explanation": "$|3\\vec a\\pm2\\vec b|^2=36+36\\pm12\\,\\vec a\\cdot\\vec b=72(1\\pm\\cos\\theta)$, so the expression is $12\\sqrt2\\left(3\\sqrt{1+\\cos\\theta}+4\\sqrt{1-\\cos\\theta}\\right)=24\\left(3\\cos\\frac\\theta2+4\\sin\\frac\\theta2\\right)\\le24\\cdot5=60$.",
+   "type": "mcq",
+   "options": [
+    "30",
+    "36",
+    "60",
+    "72"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 15,
+   "qid": "69112115",
+   "subject": "Mathematics",
+   "chapter": "Three Dimensional Geometry",
+   "text": "Let a line L passing through the point $(1,1,1)$ be perpendicular to both the vectors $2\\hat i+2\\hat j+\\hat k$ and $\\hat i+2\\hat j+2\\hat k$. If $P(a,b,c)$ is the foot of perpendicular from the origin on the line L, then the value of $34(a+b+c)$ is:",
+   "explanation": "Direction of L: $(2,2,1)\\times(1,2,2)=(2,-3,2)$. Point on L: $(1+2\\lambda,1-3\\lambda,1+2\\lambda)$; perpendicular from O needs $2(1+2\\lambda)-3(1-3\\lambda)+2(1+2\\lambda)=0\\Rightarrow\\lambda=-\\frac1{17}$. So $P=\\left(\\frac{15}{17},\\frac{20}{17},\\frac{15}{17}\\right)$ and $34(a+b+c)=2\\cdot50=100$.",
+   "type": "mcq",
+   "options": [
+    "50",
+    "80",
+    "100",
+    "120"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 16,
+   "qid": "69112116",
+   "subject": "Mathematics",
+   "chapter": "Limits, Continuity and Differentiability",
+   "text": "If $\\displaystyle\\lim_{x\\to2}\\frac{\\sin\\left(x^3-5x^2+ax+b\\right)}{\\left(\\sqrt{x-1}-1\\right)\\log_e(x-1)}=m$, then $a+b+m$ is equal to:",
+   "explanation": "The denominator behaves like $\\frac{(x-2)}{2}\\cdot(x-2)$, i.e. it has a double zero at $x=2$. A finite limit needs $p(x)=x^3-5x^2+ax+b$ to have a double root at 2: $p(2)=0$, $p'(2)=0\\Rightarrow a=8$, $b=-4$. Then $p(x)=(x-2)^2(x-1)$ and $m=\\lim\\frac{(x-2)^2(x-1)}{(x-2)^2/2}=2$. So $a+b+m=6$.",
+   "type": "mcq",
+   "options": [
+    "5",
+    "6",
+    "8",
+    "10"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 17,
+   "qid": "69112117",
+   "subject": "Mathematics",
+   "chapter": "Differential Equations",
+   "text": "If the curve $y=f(x)$ passes through the point $(1,e)$ and satisfies the differential equation $dy=y(2+\\log_e x)\\,dx$, $x>0$, then $f(e)$ is equal to:",
+   "explanation": "Separate: $\\frac{dy}{y}=(2+\\ln x)dx\\Rightarrow\\ln y=x+x\\ln x+C$. At $(1,e)$: $1=1+C\\Rightarrow C=0$. So $f(e)=e^{e+e}=e^{2e}$.",
+   "type": "mcq",
+   "options": [
+    "$e^{e}$",
+    "$e^{e^2}$",
+    "$e^{2e}$",
+    "$e^{2^e}$"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 18,
+   "qid": "69112118",
+   "subject": "Mathematics",
+   "chapter": "Application of Derivatives",
+   "text": "The number of critical points of the function $f(x)=\\begin{cases}\\left|\\dfrac{\\sin x}{x}\\right|, & x\\ne0\\\\ 1, & x=0\\end{cases}$ in the interval $(-2\\pi,2\\pi)$ is equal to:",
+   "explanation": "$f$ is even and smooth at 0 with $f'(0)=0$ (critical). At $x=\\pm\\pi$, $f=0$ with a corner, so $f'$ does not exist (critical). Between $\\pi$ and $2\\pi$, $f'=0$ where $\\tan x=x$ (one root, $x\\approx4.49$), and likewise at $x\\approx-4.49$. Total: $0,\\pm\\pi,\\pm4.49$ — 5 points.",
+   "type": "mcq",
+   "options": [
+    "1",
+    "3",
+    "5",
+    "7"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 19,
+   "qid": "69112119",
+   "subject": "Mathematics",
+   "chapter": "Definite Integrals",
+   "text": "Let $[\\cdot]$ denote the greatest integer function. Then the value of $\\displaystyle\\int_0^3\\left(\\frac{e^x+e^{-x}}{[x]!}\\right)dx$ is:",
+   "explanation": "With $g(x)=e^x-e^{-x}$: $\\int_0^1(\\dots)=g(1)$, $\\int_1^2=g(2)-g(1)$, $\\int_2^3=\\frac{g(3)-g(2)}{2}$. Sum $=\\frac{g(2)+g(3)}{2}=\\frac12\\left(e^2+e^3-e^{-2}-e^{-3}\\right)$.",
+   "type": "mcq",
+   "options": [
+    "$e^2+e^3-\\frac1{e^2}-\\frac1{e^3}$",
+    "$\\frac12\\left(e^2+e^3-\\frac1{e^2}-\\frac1{e^3}\\right)$",
+    "$e^2+e^3-\\frac1{2e^2}-\\frac1{2e^3}$",
+    "$\\frac12(e^2+e^3)-\\frac1{e^2}-\\frac1{e^3}$"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 20,
+   "qid": "69112120",
+   "subject": "Mathematics",
+   "chapter": "Differential Equations",
+   "text": "Let $y=y(x)$ be the solution curve of the differential equation $(1+\\sin x)\\dfrac{dy}{dx}+(y+1)\\cos x=0$, $y(0)=0$. If the curve $y=y(x)$ passes through the point $\\left(\\alpha,-\\frac12\\right)$, then a value of $\\alpha$ is:",
+   "explanation": "$\\frac{d}{dx}\\left[(y+1)(1+\\sin x)\\right]=0$, so $(y+1)(1+\\sin x)=C=1$ (from $y(0)=0$). For $y=-\\frac12$: $1+\\sin\\alpha=2\\Rightarrow\\alpha=\\frac\\pi2$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac\\pi6$",
+    "$\\frac\\pi4$",
+    "$\\frac\\pi3$",
+    "$\\frac\\pi2$"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 21,
+   "qid": "69112121",
+   "subject": "Mathematics",
+   "chapter": "Sets, Relations and Functions",
+   "text": "If the domain of the function $f(x)=\\sqrt{\\log_{(0.6)}\\left(\\left|\\dfrac{2x-5}{x^2-4}\\right|\\right)}$ is $(-\\infty,a]\\cup\\{b\\}\\cup[c,d)\\cup(e,\\infty)$, then the value of $a+b+c+d+e$ is ______.",
+   "explanation": "Need $0<\\left|\\frac{2x-5}{x^2-4}\\right|\\le1$ (base $0.6<1$), i.e. $|2x-5|\\le|x^2-4|$ with $x\\ne\\pm2,\\frac52$. Solving gives $(-\\infty,-1-\\sqrt{10}]\\cup\\{1\\}\\cup[\\sqrt{10}-1,\\frac52)\\cup(\\frac52,\\infty)$. Sum $=(-1-\\sqrt{10})+1+(\\sqrt{10}-1)+\\frac52+\\frac52=4$.",
+   "type": "numeric",
+   "answer": "4",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 22,
+   "qid": "69112122",
+   "subject": "Mathematics",
+   "chapter": "Sequences and Series",
+   "text": "If $\\displaystyle\\sum_{k=1}^{n}a_k=6n^3$, then $\\displaystyle\\sum_{k=1}^{6}\\left(\\frac{a_{k+1}-a_k}{36}\\right)^2$ is equal to ______.",
+   "explanation": "$a_k=6k^3-6(k-1)^3=18k^2-18k+6$, so $a_{k+1}-a_k=36k$. The sum is $\\sum_{k=1}^6k^2=91$.",
+   "type": "numeric",
+   "answer": "91",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 23,
+   "qid": "69112123",
+   "subject": "Mathematics",
+   "chapter": "Probability",
+   "text": "Let $a,b,c\\in\\{1,2,3,4\\}$. If the probability that $ax^2+2\\sqrt2\\,bx+c>0$ for all $x\\in\\mathbb{R}$ is $\\dfrac mn$, $\\gcd(m,n)=1$, then $m+n$ is equal to ______.",
+   "explanation": "Need $a>0$ (always) and discriminant $8b^2-4ac<0$, i.e. $ac>2b^2$. $b=1$: $ac>2$ — 13 pairs; $b=2$: $ac>8$ — 4 pairs; $b=3,4$: none. Favourable $=17$ of $64$, so $m+n=81$.",
+   "type": "numeric",
+   "answer": "81",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 24,
+   "qid": "69112124",
+   "subject": "Mathematics",
+   "chapter": "Circles",
+   "text": "Let a circle C have its centre in the first quadrant, intersect the coordinate axes at exactly three points and cut off equal intercepts from the coordinate axes. If the length of the chord of C on the line $x+y=1$ is $\\sqrt{14}$, then the square of the radius of C is ______.",
+   "explanation": "Equal intercepts put the centre at $(h,h)$; meeting the axes in exactly three points means it passes through the origin, so $r^2=2h^2$. Chord: $r^2-\\frac{(2h-1)^2}{2}=\\frac{14}{4}\\Rightarrow 4h-1=7\\Rightarrow h=2$, so $r^2=8$.",
+   "type": "numeric",
+   "answer": "8",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 25,
+   "qid": "69112125",
+   "subject": "Mathematics",
+   "chapter": "Definite Integrals",
+   "text": "If $\\alpha=\\displaystyle\\int_0^{2\\sqrt3}\\log_2\\left(x^2+4\\right)dx+\\int_2^4\\sqrt{2^x-4}\\,dx$, then $\\alpha^2$ is equal to ______.",
+   "explanation": "$y=\\log_2(x^2+4)$ and $x=\\sqrt{2^y-4}$ are inverses, mapping $[0,2\\sqrt3]$ onto $[2,4]$. The two areas together fill the rectangle: $\\alpha=2\\sqrt3\\cdot4-0\\cdot2=8\\sqrt3$, so $\\alpha^2=192$.",
+   "type": "numeric",
+   "answer": "192",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 26,
+   "qid": "69112126",
+   "subject": "Physics",
+   "chapter": "Units and Measurement",
+   "text": "The dimensional formula of $\\frac12\\epsilon_0E^2$ ($\\epsilon_0$ = permittivity of vacuum and $E$ = electric field) is $M^aL^bT^c$. The value of $2a-b+c$ = ______.",
+   "explanation": "$\\frac12\\epsilon_0E^2$ is energy per unit volume: $[ML^{-1}T^{-2}]$. So $a=1,b=-1,c=-2$ and $2a-b+c=2+1-2=1$.",
+   "type": "mcq",
+   "options": [
+    "0",
+    "1",
+    "-1",
+    "2"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 27,
+   "qid": "69112127",
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "The diameter of a wire measured by a screw gauge of least count 0.001 cm is 0.08 cm. The length measured by a scale of least count 0.1 cm is 150 cm. When a weight of 100 N is applied to the wire, the extension in length is 0.5 cm, measured by a micrometer of least count 0.001 cm. The error in the measured Young's modulus is $\\alpha\\times10^9\\ \\text{N/m}^2$. The value of $\\alpha$ is ______. (Ignore the contribution of the load to Young's modulus error calculation)",
+   "explanation": "$Y=\\frac{4FL}{\\pi d^2\\,\\Delta l}=\\frac{4(100)(1.5)}{\\pi(8\\times10^{-4})^2(5\\times10^{-3})}\\approx5.97\\times10^{10}$ Pa. $\\frac{\\Delta Y}{Y}=2\\frac{0.001}{0.08}+\\frac{0.1}{150}+\\frac{0.001}{0.5}=0.0277$, so $\\Delta Y\\approx1.65\\times10^9$ Pa.",
+   "type": "mcq",
+   "options": [
+    "1.3",
+    "1.65",
+    "0.13",
+    "0.25"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 28,
+   "qid": "69112128",
+   "subject": "Physics",
+   "chapter": "Kinematics",
+   "text": "The velocity of a particle is given as $\\vec v=-x\\hat i+2y\\hat j-z\\hat k$ m/s. The magnitude of acceleration at point $(1,2,4)$ is ______ m/s².",
+   "explanation": "$a_x=v_x\\frac{\\partial v_x}{\\partial x}=(-x)(-1)=x$, $a_y=(2y)(2)=4y$, $a_z=(-z)(-1)=z$. At $(1,2,4)$: $\\vec a=(1,8,4)$, $|\\vec a|=\\sqrt{81}=9$.",
+   "type": "mcq",
+   "options": [
+    "$\\sqrt6$",
+    "9",
+    "$\\sqrt{33}$",
+    "0"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 29,
+   "qid": "69112129",
+   "subject": "Physics",
+   "chapter": "System of Particles and Rotational Motion",
+   "text": "The position of an object having mass 0.1 kg as a function of time $t$ is given as $\\vec r=\\left(10t^2\\hat i+5t^3\\hat j\\right)$ m. At $t=1$ s, which of the following statements are correct? A. The linear momentum $\\vec p=\\left(2\\hat i+1.5\\hat j\\right)$ kg m/s. B. The force acting on the object $\\vec F=\\left(2\\hat i+3\\hat j\\right)$ N. C. The angular momentum of the object about its origin $\\vec L=15\\hat k$ J s. D. The torque acting on the object about its origin $\\vec\\tau=20\\hat k$ N m. Choose the correct answer from the options given below:",
+   "explanation": "At $t=1$: $\\vec r=(10,5)$, $\\vec v=(20,15)$, $\\vec a=(20,30)$. $\\vec p=(2,1.5)$ ✓, $\\vec F=(2,3)$ ✓. $\\vec L=\\vec r\\times\\vec p=(10)(1.5)-(5)(2)=5\\hat k$ ✗. $\\vec\\tau=\\vec r\\times\\vec F=(10)(3)-(5)(2)=20\\hat k$ ✓. So A, B, D.",
+   "type": "mcq",
+   "options": [
+    "A, B and C only",
+    "B, C and D only",
+    "A, C and D only",
+    "A, B and D only"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 30,
+   "qid": "69112130",
+   "subject": "Physics",
+   "chapter": "Gravitation",
+   "text": "A planet $(P_1)$ is moving around the star of mass $2M$ in the orbit of radius $R$. Another planet $(P_2)$ is moving around another star of mass $4M$ in a orbit of radius $2R$. Ratio of time periods of revolution of $P_2$ and $P_1$ is ______.",
+   "explanation": "$T^2=\\frac{4\\pi^2r^3}{GM}$, so $\\frac{T_2}{T_1}=\\sqrt{\\frac{(2R)^3/4M}{R^3/2M}}=\\sqrt4=2$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac12$",
+    "2",
+    "4",
+    "$\\frac14$"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 31,
+   "qid": "69112131",
+   "subject": "Physics",
+   "chapter": "System of Particles and Rotational Motion",
+   "text": "A particle is rotating in a circular path and at any instant its motion can be described as $\\theta=\\dfrac{5t^4}{40}-\\dfrac{t^3}{3}$. The angular acceleration of the particle after 10 seconds is ______ rad/s².",
+   "explanation": "$\\alpha=\\frac{d^2\\theta}{dt^2}=\\frac{60t^2}{40}-2t=1.5t^2-2t$. At $t=10$: $150-20=130$ rad/s².",
+   "type": "mcq",
+   "options": [
+    "150",
+    "120",
+    "130",
+    "170"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 32,
+   "qid": "69112132",
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "A parallel plate air capacitor has a capacitance C. When it is half filled as shown in figure with a dielectric constant $K=5$, the percentage increase in the capacitance is ______.",
+   "explanation": "The slab fills thickness $\\frac d2$ over the whole plate area, so it acts in series with an air gap $\\frac d2$: $C'=\\frac{\\epsilon_0A}{\\frac d2+\\frac{d}{2K}}=\\frac{\\epsilon_0A}{d}\\cdot\\frac{2K}{K+1}=\\frac{5}{3}C$. Increase $=\\frac23\\times100\\%=66.67\\%$.",
+   "type": "mcq",
+   "options": [
+    "33.34",
+    "66.67",
+    "200",
+    "400"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true,
+   "fig": "q32.png"
+  },
+  {
+   "n": 33,
+   "qid": "69112133",
+   "subject": "Physics",
+   "chapter": "Thermodynamics",
+   "text": "Heat is supplied to a diatomic gas at constant pressure. Then the ratio of $\\Delta Q:\\Delta U:\\Delta W$ is ______.",
+   "explanation": "At constant pressure $\\Delta Q=nC_p\\Delta T$, $\\Delta U=nC_v\\Delta T$, $\\Delta W=nR\\Delta T$. For a diatomic gas $C_p:C_v:R=\\frac72R:\\frac52R:R=7:5:2$.",
+   "type": "mcq",
+   "options": [
+    "2 : 3 : 5",
+    "5 : 3 : 2",
+    "2 : 5 : 7",
+    "7 : 5 : 2"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 34,
+   "qid": "69112134",
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "Two charged conducting spheres $S_1$ and $S_2$ of radii 8 cm and 18 cm are connected to each other by a wire. After equilibrium is established, the ratio of electric fields on $S_1$ and $S_2$ spheres are $E_{S1}$ and $E_{S2}$ respectively. The value of $\\dfrac{E_{S1}}{E_{S2}}$ is ______.",
+   "explanation": "Connected spheres reach the same potential $V$. Surface field $E=\\frac{kQ}{r^2}=\\frac Vr$, so $\\frac{E_1}{E_2}=\\frac{r_2}{r_1}=\\frac{18}{8}=\\frac94$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac32$",
+    "$\\frac23$",
+    "$\\frac49$",
+    "$\\frac94$"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 35,
+   "qid": "69112135",
+   "subject": "Physics",
+   "chapter": "Waves",
+   "text": "The equation of a plane progressive wave is given by $y=5\\cos\\pi\\left(200t-\\dfrac{x}{150}\\right)$ where $x$ and $y$ are in cm and $t$ is in second. The velocity of the wave is ______ m/s.",
+   "explanation": "$\\omega=200\\pi$ rad/s and $k=\\frac{\\pi}{150}$ cm⁻¹, so $v=\\frac\\omega k=200\\times150=30000$ cm/s $=300$ m/s.",
+   "type": "mcq",
+   "options": [
+    "120",
+    "150",
+    "200",
+    "300"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 36,
+   "qid": "69112136",
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "Two short electric dipoles A and B having dipole moment $p_1$ and $p_2$ respectively are placed with their axis mutually perpendicular as shown in the figure. The resultant electric field at a point $x$ is making an angle of $60^\\circ$ with the line joining points O and $x$. The ratio of the dipole moments $p_2/p_1$ is ______.",
+   "explanation": "Point $x$ is on the axis of A and on the equatorial line of B. $E_A=\\frac{2kp_1}{r^3}$ along Ox and $E_B=\\frac{kp_2}{r^3}$ perpendicular to it. $\\tan60^\\circ=\\frac{E_B}{E_A}=\\frac{p_2}{2p_1}\\Rightarrow\\frac{p_2}{p_1}=2\\sqrt3$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac{\\sqrt3}{2}$",
+    "$2\\sqrt3$",
+    "$\\frac{1}{\\sqrt3}$",
+    "$\\sqrt3$"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true,
+   "fig": "q36.png"
+  },
+  {
+   "n": 37,
+   "qid": "69112137",
+   "subject": "Physics",
+   "chapter": "Semiconductor Electronics",
+   "text": "For the given circuit (shown in part (A)) the time dependent input voltage $v_{in}(t)$ and corresponding output $v_o(t)$ are shown in part (B) and part (C), respectively. Identify the components that are used in the circuit between points X and Y.",
+   "explanation": "The output is clipped at +5 V in the positive half and at −5 V in the negative half. The given branch (ideal diode + Zener) conducts only in the positive half, clamping at $V_Z=5$ V. To clamp the negative half at −5 V too, X–Y must hold the same pair the other way round — an ideal diode and a 5 V Zener (option 2). A resistor cannot fix the output at a constant level.",
+   "type": "mcq",
+   "options": [
+    "Option 1 (see figure)",
+    "Option 2 (see figure)",
+    "Option 3 (see figure)",
+    "Option 4 (see figure)"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true,
+   "fig": "q37.png",
+   "optImg": [
+    "q37o1.png",
+    "q37o2.png",
+    "q37o3.png",
+    "q37o4.png"
+   ]
+  },
+  {
+   "n": 38,
+   "qid": "69112138",
+   "subject": "Physics",
+   "chapter": "Electromagnetic Induction",
+   "text": "When a coil is placed in a time dependent magnetic field the power dissipated in it is $P$. The number of turns, area of the coil and radius of the coil wire are $N$, $A$ and $r$ respectively. For a second coils number of turns, area of the coil and radius of the coil wire are $2N$, $2A$ and $3r$ respectively. When the first coil is replaced with second coil the power dissipated in it is $\\sqrt2\\,\\alpha P$. The value of $\\alpha$ is ______.",
+   "explanation": "$\\varepsilon\\propto NA$ and $R\\propto\\frac{N\\cdot2\\pi a}{\\pi r^2}$ with coil radius $a\\propto\\sqrt A$. So $P=\\frac{\\varepsilon^2}{R}\\propto\\frac{N^2A^2r^2}{N\\sqrt A}=NA^{3/2}r^2$. Ratio $=2\\cdot2^{3/2}\\cdot9=36\\sqrt2$, so $\\alpha=36$.",
+   "type": "mcq",
+   "options": [
+    "36",
+    "$128\\sqrt2$",
+    "16",
+    "64"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 39,
+   "qid": "69112139",
+   "subject": "Physics",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "Two identical long current carrying wires are bent into the shapes shown in the following figures. If the magnitude of magnetic fields at the centres P and Q of a semicircular arc are $B_1$ and $B_2$ respectively, then the ratio $\\dfrac{B_1}{B_2}$ is ______.",
+   "explanation": "(I): two semi-infinite wires ending level with P, each $\\frac{\\mu_0I}{4\\pi r}$, plus the semicircle $\\frac{\\mu_0I}{4r}$, all in the same direction: $B_1=\\frac{\\mu_0I}{4\\pi r}(2+\\pi)$. (II): one semi-infinite wire gives $\\frac{\\mu_0I}{4\\pi r}$, the semicircle $\\frac{\\mu_0I}{4r}$, and the downward wire passes through Q's line, giving zero: $B_2=\\frac{\\mu_0I}{4\\pi r}(1+\\pi)$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac{2+\\pi}{1+\\pi}$",
+    "$\\frac{1+\\pi}{1-\\pi}$",
+    "$\\frac{2+\\pi}{1-\\pi}$",
+    "$\\frac{1+\\pi}{2-\\pi}$"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true,
+   "fig": "q39.png"
+  },
+  {
+   "n": 40,
+   "qid": "69112140",
+   "subject": "Physics",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "For a thin symmetric prism made of glass (refractive index 1.5), the ratio of incident angle and minimum deviation will be ______.",
+   "explanation": "Thin prism: $\\delta_m=(\\mu-1)A=0.5A$. At minimum deviation $i=\\frac{A+\\delta_m}{2}=0.75A$. So $i:\\delta_m=0.75:0.5=3:2$.",
+   "type": "mcq",
+   "options": [
+    "3 : 4",
+    "3 : 2",
+    "2 : 1",
+    "1 : 2"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 41,
+   "qid": "69112141",
+   "subject": "Physics",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "Refer the figure given below. $\\mu_1$ and $\\mu_2$ are refractive indices of air and lens material. The height of image will be ______ cm.",
+   "explanation": "Refraction at one spherical surface: $\\frac{\\mu_2}{v}-\\frac{\\mu_1}{u}=\\frac{\\mu_2-\\mu_1}{R}$ with $u=-40$ cm, $R=-20$ cm: $\\frac{1.54}{v}=-0.027-0.025\\Rightarrow v\\approx-29.6$ cm. $m=\\frac{\\mu_1v}{\\mu_2u}=\\frac{-29.6}{1.54\\times(-40)}\\approx0.48$, so image height $\\approx2\\times0.48\\approx1$ cm.",
+   "type": "mcq",
+   "options": [
+    "1",
+    "0.5",
+    "1.2",
+    "0.25"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true,
+   "fig": "q41.png"
+  },
+  {
+   "n": 42,
+   "qid": "69112142",
+   "subject": "Physics",
+   "chapter": "Dual Nature of Radiation and Matter",
+   "text": "For a certain metal, when monochromatic light of wavelength $\\lambda$ is incident, the stopping potential for photoelectrons is $3V_0$. When the same metal is illuminated by light of wavelength $2\\lambda$, then the stopping potential becomes $V_0$. The threshold wavelength for photoelectric emission for the given metal is $\\alpha\\lambda$. The value of $\\alpha$ is ______.",
+   "explanation": "$3eV_0=\\frac{hc}{\\lambda}-\\phi$ and $eV_0=\\frac{hc}{2\\lambda}-\\phi$. Subtracting: $eV_0=\\frac{hc}{4\\lambda}$, so $\\phi=\\frac{hc}{2\\lambda}-\\frac{hc}{4\\lambda}=\\frac{hc}{4\\lambda}$ and $\\lambda_0=4\\lambda$.",
+   "type": "mcq",
+   "options": [
+    "1",
+    "4",
+    "2",
+    "3"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 43,
+   "qid": "69112143",
+   "subject": "Physics",
+   "chapter": "Electromagnetic Waves",
+   "text": "An electromagnetic wave travelling in $x$-direction is described by field equation $E_y=300\\sin\\omega\\left(t-\\dfrac xc\\right)$. If the electron is restricted to move in $y$-direction only with speed of $1.5\\times10^6$ m/s then ratio of maximum electric and magnetic forces acting on the electron is ______.",
+   "explanation": "$F_E=eE_0$ and $F_B=evB_0=\\frac{evE_0}{c}$, so $\\frac{F_E}{F_B}=\\frac cv=\\frac{3\\times10^8}{1.5\\times10^6}=200$.",
+   "type": "mcq",
+   "options": [
+    "200",
+    "150",
+    "400",
+    "300"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 44,
+   "qid": "69112144",
+   "subject": "Physics",
+   "chapter": "Atoms",
+   "text": "Angular momentum of an electron in a hydrogen atom is $\\dfrac{3h}{\\pi}$, then the energy of the electron is ______ eV.",
+   "explanation": "$\\frac{nh}{2\\pi}=\\frac{3h}{\\pi}\\Rightarrow n=6$. $E_6=-\\frac{13.6}{36}\\approx-0.38$ eV.",
+   "type": "mcq",
+   "options": [
+    "-1.51",
+    "-0.85",
+    "-0.38",
+    "-0.28"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 45,
+   "qid": "69112145",
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "A liquid drop of diameter 2 mm breaks into 512 droplets. The change in surface energy is $\\alpha\\times10^{-6}$ J. The value of $\\alpha$ is ______. (Take surface tension of liquid = 0.08 N/m)",
+   "explanation": "Volume conserved: $r=\\frac{R}{8}$ with $R=1$ mm. New area $=512\\cdot4\\pi\\frac{R^2}{64}=8\\cdot4\\pi R^2$, so $\\Delta A=7\\cdot4\\pi R^2$. $\\Delta E=T\\Delta A=0.08\\times7\\times4\\pi\\times10^{-6}\\approx7\\times10^{-6}$ J.",
+   "type": "mcq",
+   "options": [
+    "10",
+    "7",
+    "8",
+    "11"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 46,
+   "qid": "69112146",
+   "subject": "Physics",
+   "chapter": "Wave Optics",
+   "text": "In single slit diffraction pattern, the wavelength of light used is 628 nm and slit width is 0.2 mm, the angular width of central maximum is $\\alpha\\times10^{-2}$ degrees. The value of $\\alpha$ is ______.",
+   "explanation": "Angular width $=\\frac{2\\lambda}{a}=\\frac{2\\times628\\times10^{-9}}{0.2\\times10^{-3}}=6.28\\times10^{-3}$ rad $=6.28\\times10^{-3}\\times\\frac{180}{\\pi}\\approx0.36^\\circ=36\\times10^{-2}$ degrees.",
+   "type": "numeric",
+   "answer": "36",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 47,
+   "qid": "69112147",
+   "subject": "Physics",
+   "chapter": "Thermodynamics",
+   "text": "A vessel contains 0.15 m³ of a gas at pressure 8 bar and temperature 140 °C with $c_p=3R$ and $c_v=2R$. It is expanded adiabatically till pressure falls to 1 bar. The work done during this process is ______ kJ. (R is gas constant)",
+   "explanation": "$\\gamma=\\frac32$. $V_2=V_1\\left(\\frac{P_1}{P_2}\\right)^{1/\\gamma}=0.15\\times8^{2/3}=0.6$ m³. $W=\\frac{P_1V_1-P_2V_2}{\\gamma-1}=\\frac{1.2\\times10^5-0.6\\times10^5}{0.5}=1.2\\times10^5$ J $=120$ kJ.",
+   "type": "numeric",
+   "answer": "120",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 48,
+   "qid": "69112148",
+   "subject": "Physics",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "1 μC charge moving with velocity $\\vec v=\\left(\\hat i-2\\hat j+3\\hat k\\right)$ m/s in the region of magnetic field $\\vec B=\\left(2\\hat i+3\\hat j-5\\hat k\\right)$ T. The magnitude of force acting on it is $\\sqrt\\alpha\\times10^{-6}$ N. The value of $\\alpha$ is ______.",
+   "explanation": "$\\vec v\\times\\vec B=\\left((-2)(-5)-(3)(3),\\ (3)(2)-(1)(-5),\\ (1)(3)-(-2)(2)\\right)=(1,11,7)$. $|\\vec F|=10^{-6}\\sqrt{1+121+49}=\\sqrt{171}\\times10^{-6}$ N.",
+   "type": "numeric",
+   "answer": "171",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 49,
+   "qid": "69112149",
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "A uniform wire of length $l$ of weight $w$ is suspended from the roof with a weight of $W$ at the other end. The stress in the wire at $\\frac l3$ distance from the top is $\\left(\\dfrac WA+\\dfrac{2}{\\gamma}\\dfrac wA\\right)$, where $A$ is the cross sectional area of the wire. The value of $\\gamma$ is ______.",
+   "explanation": "At $\\frac l3$ from the top, the wire supports $W$ plus the wire below it, $\\frac23w$. Stress $=\\frac{W+\\frac23w}{A}$, so $\\gamma=3$.",
+   "type": "numeric",
+   "answer": "3",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 50,
+   "qid": "69112150",
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "A tub is filled with water and a wooden cube 10 cm × 10 cm × 10 cm is placed in the water. The wooden cube is found to float on the water with a part of it submerged in water. When a metal coin is placed on the wooden cube, the submerged part is increased by 3.87 cm. The mass of the metal coin is ______ gram. (Take water density as 1 g/cm³ and density of wood as 0.4 g/cm³)",
+   "explanation": "Extra buoyancy equals the coin's weight: $m=\\rho_w\\times(10\\times10\\times3.87)=387$ g. (Initially 4 cm is under water, so 7.87 cm < 10 cm — the cube still floats.)",
+   "type": "numeric",
+   "answer": "387",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 51,
+   "qid": "69112151",
+   "subject": "Chemistry",
+   "chapter": "Some Basic Concepts of Chemistry",
+   "text": "The mass of iron converted into $\\mathrm{Fe_3O_4}$ by the action of 18 g of steam is: (Given: Molar mass of H, O and Fe are 1, 16 and 56 g mol⁻¹ respectively) Assume iron is present in excess:",
+   "explanation": "$3\\mathrm{Fe}+4\\mathrm{H_2O}\\to\\mathrm{Fe_3O_4}+4\\mathrm{H_2}$. 18 g steam = 1 mol, which reacts with $\\frac34$ mol Fe $=\\frac34\\times56=42$ g.",
+   "type": "mcq",
+   "options": [
+    "2.1 g",
+    "4.2 g",
+    "21 g",
+    "42 g"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 52,
+   "qid": "69112152",
+   "subject": "Chemistry",
+   "chapter": "Atomic Structure",
+   "text": "What is the energy (in J atom⁻¹) required for the following process? $\\mathrm{Li^{2+}(g)\\to Li^{3+}(g)+e^-}$ (Take the ionization energy for the H atom in the ground state as $2.18\\times10^{-18}$ J atom⁻¹)",
+   "explanation": "$\\mathrm{Li^{2+}}$ is hydrogen-like with $Z=3$: $IE=Z^2\\times2.18\\times10^{-18}=9\\times2.18\\times10^{-18}=1.962\\times10^{-17}$ J.",
+   "type": "mcq",
+   "options": [
+    "$8.72\\times10^{-18}$",
+    "$1.962\\times10^{-18}$",
+    "$1.962\\times10^{-17}$",
+    "$6.54\\times10^{-17}$"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 53,
+   "qid": "69112153",
+   "subject": "Chemistry",
+   "chapter": "Chemical Bonding and Molecular Structure",
+   "text": "Given below are two statements: Statement (I): The correct sequence of bond lengths in the following species is $\\mathrm{O_2^+<O_2<O_2^-<O_2^{2-}}$. Statement (II): The correct sequence of number of unpaired electrons in the following species is $\\mathrm{O_2>O_2^+>O_2^->O_2^{2-}}$. In the light of the above statements, choose the correct answer from the options given below:",
+   "explanation": "Bond orders: $\\mathrm{O_2^+}$ 2.5, $\\mathrm{O_2}$ 2, $\\mathrm{O_2^-}$ 1.5, $\\mathrm{O_2^{2-}}$ 1 — bond length rises as bond order falls, so (I) is true. Unpaired electrons: 1, 2, 1, 0 for $\\mathrm{O_2^+,O_2,O_2^-,O_2^{2-}}$; $\\mathrm{O_2^+}$ and $\\mathrm{O_2^-}$ are equal, so (II) is false.",
+   "type": "mcq",
+   "options": [
+    "Both Statement I and Statement II are true",
+    "Both Statement I and Statement II are false",
+    "Statement I is true but Statement II is false",
+    "Statement I is false but Statement II is true"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 54,
+   "qid": "69112154",
+   "subject": "Chemistry",
+   "chapter": "Thermodynamics",
+   "text": "Consider the following data. (i) $\\mathrm{2Al(s)+6HCl(aq)\\to Al_2Cl_6(aq)+3H_2(g)}$ + 1200 kJ/mol (ii) $\\mathrm{H_2(g)+Cl_2(g)\\to2HCl(g)}$ + 164 kJ/mol (iii) $\\mathrm{HCl(g)+aq\\to HCl(aq)}$ + 83 kJ/mol (iv) $\\mathrm{Al_2Cl_6(s)+aq\\to Al_2Cl_6(aq)}$ + 663 kJ/mol. The enthalpy of formation of anhydrous solid $\\mathrm{Al_2Cl_6}$ is:",
+   "explanation": "Heat released means $\\Delta H$ is negative. Target $\\mathrm{2Al+3Cl_2\\to Al_2Cl_6(s)}$ = (i) + 3(ii) + 6(iii) − (iv): $-1200-492-498+663=-1527$ kJ mol⁻¹.",
+   "type": "mcq",
+   "options": [
+    "−648 kJ mol⁻¹",
+    "−1350 kJ mol⁻¹",
+    "−2002 kJ mol⁻¹",
+    "−1527 kJ mol⁻¹"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 55,
+   "qid": "69112155",
+   "subject": "Chemistry",
+   "chapter": "Solutions",
+   "text": "19.5 g of fluoro acetic acid (molar mass = 78 g mol⁻¹) is dissolved in 500 g of water at 298 K. The depression in the freezing point of water was 1 °C. What is $K_a$ of fluoro acetic acid? (For water, $K_f$ = 1.86 K kg mol⁻¹). Assume molarity and molality to have same values.",
+   "explanation": "Molality $m=\\frac{19.5/78}{0.5}=0.5$. From $\\Delta T_f=iK_fm$: $1=i\\times1.86\\times0.5$, so $i\\approx1.075$ and $\\alpha=i-1\\approx0.075$. $K_a=\\frac{c\\alpha^2}{1-\\alpha}=\\frac{0.5\\times0.0057}{0.925}\\approx3\\times10^{-3}$.",
+   "type": "mcq",
+   "options": [
+    "$10^{-6}$",
+    "$4\\times10^{-4}$",
+    "$3\\times10^{-5}$",
+    "$3\\times10^{-3}$"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 56,
+   "qid": "69112156",
+   "subject": "Chemistry",
+   "chapter": "Equilibrium",
+   "text": "The solubility product constants of $\\mathrm{Ag_2CrO_4}$ and AgBr are $32x$ and $4y$ respectively at 298 K. The value of $\\left(\\dfrac{\\text{molarity of }\\mathrm{Ag_2CrO_4}}{\\text{molarity of AgBr}}\\right)$ can be expressed as:",
+   "explanation": "$\\mathrm{Ag_2CrO_4}$: $4s^3=32x\\Rightarrow s=2\\sqrt[3]x$. AgBr: $s'^2=4y\\Rightarrow s'=2\\sqrt y$. Ratio $=\\frac{\\sqrt[3]x}{\\sqrt y}$.",
+   "type": "mcq",
+   "options": [
+    "$\\frac{2\\sqrt[3]x}{y}$",
+    "$2\\sqrt{\\frac xy}$",
+    "$\\sqrt{\\frac xy}$",
+    "$\\frac{\\sqrt[3]x}{\\sqrt y}$"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 57,
+   "qid": "69112157",
+   "subject": "Chemistry",
+   "chapter": "Redox Reactions and Electrochemistry",
+   "text": "An electrochemical cell is constructed using half cells in the direction of spontaneous change: $\\mathrm{Fe(OH)_2(s)+2e^-\\to Fe(s)+2OH^-(aq)}$, $E^\\circ=-0.88$ V and $\\mathrm{AgBr(s)+e^-\\to Ag(s)+Br^-(aq)}$, $E^\\circ=+0.07$ V. Which of the following option is correct?",
+   "explanation": "The AgBr/Ag couple has the higher $E^\\circ$, so it is the cathode; Fe is oxidised to $\\mathrm{Fe(OH)_2}$ at the anode. $E^\\circ_{cell}=0.07-(-0.88)=+0.95$ V (intensive). The overall reaction is the one in option 1.",
+   "type": "mcq",
+   "options": [
+    "Overall reaction $\\mathrm{Fe(s)+2OH^-(aq)+2AgBr(s)\\rightleftharpoons Fe(OH)_2(s)+2Ag(s)+2Br^-(aq)}$",
+    "$E^\\circ_{cell}=-0.95$ V",
+    "Fe is reduced in the electrochemical cell",
+    "$E^\\circ_{cell}$ is an extensive property"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 58,
+   "qid": "69112158",
+   "subject": "Chemistry",
+   "chapter": "Chemical Kinetics",
+   "text": "$t_{100\\%}$ is the time required for the 100% completion of the reaction while $t_{1/2}$ is the time required for 50% of the reaction to be completed. Which of the following option correctly represents the relation between $t_{100\\%}$ and $t_{1/2}$ for zero and first order reactions respectively?",
+   "explanation": "Zero order: $t_{100\\%}=\\frac{[A]_0}{k}=2t_{1/2}$. First order: $t=\\frac1k\\ln\\frac{[A]_0}{[A]}$ becomes infinite as $[A]\\to0$, so a first-order reaction never completes — written here as $(t_{1/2})^\\infty$.",
+   "type": "mcq",
+   "options": [
+    "$t_{100\\%}=(t_{1/2})^2$ and $t_{100\\%}=(t_{1/2})^{-\\infty}$",
+    "$t_{100\\%}=2t_{1/2}$ and $t_{100\\%}=(t_{1/2})^{\\infty}$",
+    "$t_{100\\%}=2t_{1/2}$ and $t_{100\\%}=(2t_{1/2})^2$",
+    "$t_{100\\%}=(t_{1/2})^{\\infty}$ and $t_{100\\%}=2t_{1/2}$"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 59,
+   "qid": "69112159",
+   "subject": "Chemistry",
+   "chapter": "Classification of Elements and Periodicity",
+   "text": "Given below are two statements: Statement (I): The first ionisation enthalpy of the elements Na, Mg, Cl and Ar follows the order Na > Mg > Cl > Ar. Statement (II): Among Ca, Al, Fe and B, the third ionisation enthalpy is very high for Ca. In the light of the above statements, choose the correct answer from the options given below:",
+   "explanation": "Ionisation enthalpy rises across period 3, so the order is Ar > Cl > Mg > Na — (I) is false. $\\mathrm{Ca^{2+}}$ has a noble-gas configuration, so removing a third electron is very hard — (II) is true.",
+   "type": "mcq",
+   "options": [
+    "Both Statement I and Statement II are true",
+    "Both Statement I and Statement II are false",
+    "Statement I is true but Statement II is false",
+    "Statement I is false but Statement II is true"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 60,
+   "qid": "69112160",
+   "subject": "Chemistry",
+   "chapter": "p-Block Elements",
+   "text": "Given below are two statements: Statement (I): Oxidising power of halogens decreases in the order $\\mathrm{F_2>Cl_2>Br_2>I_2}$, which is the basis of “Layer test”. Statement (II): “Layer test” to identify $\\mathrm{Br_2}$ and $\\mathrm{I_2}$ in aqueous solution involves the oxidation of bromide or iodide into $\\mathrm{Br_2}$ or $\\mathrm{I_2}$ respectively with $\\mathrm{Cl_2}$, which is a type of displacement redox reaction. In the light of the above statements, choose the correct answer from the options given below:",
+   "explanation": "Oxidising power does fall from $\\mathrm{F_2}$ to $\\mathrm{I_2}$, and that is why chlorine water displaces $\\mathrm{Br_2}$/$\\mathrm{I_2}$ from bromide/iodide in the layer test (orange/violet layer). Both statements are true.",
+   "type": "mcq",
+   "options": [
+    "Both Statement I and Statement II are true",
+    "Both Statement I and Statement II are false",
+    "Statement I is true but Statement II is false",
+    "Statement I is false but Statement II is true"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 61,
+   "qid": "69112161",
+   "subject": "Chemistry",
+   "chapter": "d- and f-Block Elements",
+   "text": "Which of the following sets includes all the species that will change the orange colour of $\\mathrm{K_2Cr_2O_7}$ in acidic medium?",
+   "explanation": "Acidified dichromate (orange) turns green ($\\mathrm{Cr^{3+}}$) only with reducing agents. $\\mathrm{Fe^{2+},Sn^{2+},I^-,S^{2-}}$ are all reducing; each other set contains a species already in its highest usual state ($\\mathrm{Fe^{3+}}$, $\\mathrm{Sn^{4+}}$, $\\mathrm{SO_4^{2-}}$).",
+   "type": "mcq",
+   "options": [
+    "$\\mathrm{Fe^{2+},Sn^{2+},I^-,S^{2-}}$",
+    "$\\mathrm{S^{2-},Fe^{3+},I^-,C_2O_4^{2-}}$",
+    "$\\mathrm{Fe^{2+},NO_2^-,SO_2,Sn^{4+}}$",
+    "$\\mathrm{Fe^{3+},SO_4^{2-},S^{2-},Sn^{4+}}$"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 62,
+   "qid": "69112162",
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "Match List - I (Chromium (III) Complexes, en = ethylene diamine) with List - II ($\\Delta_0$ in cm⁻¹). A. $\\mathrm{[Cr(CN)_6]^{3-}}$ B. $\\mathrm{[CrF_6]^{3-}}$ C. $\\mathrm{[Cr(H_2O)_6]^{3+}}$ D. $\\mathrm{[Cr(en)_3]^{3+}}$ — I. 15,060 II. 17,400 III. 22,300 IV. 26,600. Choose the correct answer from the options given below:",
+   "explanation": "Spectrochemical series: $\\mathrm{CN^->en>H_2O>F^-}$. So $\\mathrm{CN^-}$ 26,600 (IV), en 22,300 (III), $\\mathrm{H_2O}$ 17,400 (II), $\\mathrm{F^-}$ 15,060 (I).",
+   "type": "mcq",
+   "options": [
+    "A-I, B-II, C-III, D-IV",
+    "A-II, B-III, C-IV, D-I",
+    "A-III, B-IV, C-I, D-II",
+    "A-IV, B-I, C-II, D-III"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 63,
+   "qid": "69112163",
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "Given below are two statements: Statement (I): 1,2,3-Trihydroxypropane can be separated from water by simple distillation. Statement (II): An azeotropic mixture cannot be separated by fractional distillation. In the light of the above statements, choose the correct answer from the options given below:",
+   "explanation": "Glycerol (1,2,3-trihydroxypropane) decomposes at its boiling point, so it is purified by distillation under reduced pressure, not simple distillation — (I) is false. An azeotrope boils at constant composition, so fractional distillation cannot separate it — (II) is true.",
+   "type": "mcq",
+   "options": [
+    "Both Statement I and Statement II are true",
+    "Both Statement I and Statement II are false",
+    "Statement I is true but Statement II is false",
+    "Statement I is false but Statement II is true"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 64,
+   "qid": "69112164",
+   "subject": "Chemistry",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Given below are two statements: Statement (I): Benzyl chloride reacts faster in $S_N1$ mechanism than ethyl chloride. Statement (II): Ethyl carbocation intermediate is less stabilized by hyperconjugation than benzyl carbocation by resonance. In the light of the above statements, choose the correct answer from the options given below:",
+   "explanation": "The benzyl carbocation is resonance-stabilised over the ring, far more than the ethyl carbocation is by hyperconjugation, so benzyl chloride ionises faster by $S_N1$. Both statements are true.",
+   "type": "mcq",
+   "options": [
+    "Both Statement I and Statement II are true",
+    "Both Statement I and Statement II are false",
+    "Statement I is true but Statement II is false",
+    "Statement I is false but Statement II is true"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 65,
+   "qid": "69112165",
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "In IUPAC nomenclature, the correct order of decreasing priority of functional group is:",
+   "explanation": "Priority order: acid > ester > acid halide > amide > nitrile > aldehyde > ketone > alcohol > amine > alkene/alkyne. Only option 3 follows it (option 2 puts ester below amide; option 4 puts nitrile below aldehyde).",
+   "type": "mcq",
+   "options": [
+    "$-\\mathrm{CONH_2}$, $>\\!\\mathrm{C{=}O}$, $-\\mathrm{CHO}$, $-\\mathrm{NH_2}$, $-\\mathrm{C{\\equiv}C}-$",
+    "$-\\mathrm{CONH_2}$, $-\\mathrm{COOCH_3}$, $-\\mathrm{CHO}$, $-\\mathrm{NH_2}$, $-\\mathrm{OH}$",
+    "$-\\mathrm{CONH_2}$, $-\\mathrm{CHO}$, $>\\!\\mathrm{C{=}O}$, $-\\mathrm{NH_2}$, $-\\mathrm{C{\\equiv}C}-$",
+    "$-\\mathrm{CONH_2}$, $-\\mathrm{CHO}$, $-\\mathrm{CN}$, $-\\mathrm{NH_2}$, $-\\mathrm{C{\\equiv}C}-$"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 66,
+   "qid": "69112166",
+   "subject": "Chemistry",
+   "chapter": "Amines",
+   "text": "For the given molecule, “$x$”, the preferred site for the attack of the electrophile is:",
+   "explanation": "The ring on the carbonyl side is deactivated by C=O. The ring on nitrogen is activated (–NHCOPh is an o,p-director, though weaker than –NH₂); the bulky group hinders the ortho position s, so attack is mainly para — at u.",
+   "type": "mcq",
+   "options": [
+    "Predominantly at “r”",
+    "“r” and “u”",
+    "“p” and “s”",
+    "Predominantly at “u”"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true,
+   "fig": "q66.png"
+  },
+  {
+   "n": 67,
+   "qid": "69112167",
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "Match List - I (Mixture of Compounds) with List - II (Reagent used to distinguish). A. Diethyl amine + Ethyl amine B. Acetaldehyde + Acetone C. Ethanol + Phenol D. Benzoic acid + Cinnamic acid — I. Bromine water II. $\\mathrm{CHCl_3}$ + KOH, Δ III. Neutral $\\mathrm{FeCl_3}$ IV. Ammonical silver nitrate. Choose the correct answer from the options given below:",
+   "explanation": "A: carbylamine test (II) works only for the primary amine. B: Tollens' reagent (IV) is reduced by the aldehyde, not the ketone. C: neutral $\\mathrm{FeCl_3}$ (III) gives violet colour with phenol. D: cinnamic acid's C=C decolourises bromine water (I).",
+   "type": "mcq",
+   "options": [
+    "A-IV, B-II, C-I, D-III",
+    "A-IV, B-II, C-III, D-I",
+    "A-II, B-IV, C-I, D-III",
+    "A-II, B-IV, C-III, D-I"
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 68,
+   "qid": "69112168",
+   "subject": "Chemistry",
+   "chapter": "Amines",
+   "text": "Consider the three aromatic molecules (P, Q and R) whose structures have been given below. The correct order regarding the reactivity of these compounds with $\\mathrm{Ph-\\overset{+}{N}{\\equiv}N\\,Cl^-}$ under optimum but slightly acidic medium is:",
+   "explanation": "Azo coupling needs the –NMe₂ lone pair in conjugation with the ring. Ortho-methyl groups twist –NMe₂ out of the ring plane (steric inhibition of resonance): one in Q, two in R. Activation falls P > Q > R.",
+   "type": "mcq",
+   "options": [
+    "P > Q > R",
+    "R > P > Q",
+    "R > Q > P",
+    "P > R > Q"
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true,
+   "fig": "q68.png"
+  },
+  {
+   "n": 69,
+   "qid": "69112169",
+   "subject": "Chemistry",
+   "chapter": "Biomolecules",
+   "text": "Match List - I (Vitamin) with List - II (Name). A. Vitamin $B_1$ B. Vitamin $B_2$ C. Vitamin $B_6$ D. Vitamin C — I. Pyridoxine II. Ascorbic acid III. Thiamine IV. Riboflavin. Choose the correct answer from the options given below:",
+   "explanation": "$B_1$ = thiamine, $B_2$ = riboflavin, $B_6$ = pyridoxine, C = ascorbic acid.",
+   "type": "mcq",
+   "options": [
+    "A-II, B-I, C-III, D-IV",
+    "A-IV, B-III, C-II, D-I",
+    "A-III, B-IV, C-I, D-II",
+    "A-I, B-III, C-II, D-IV"
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 70,
+   "qid": "69112170",
+   "subject": "Chemistry",
+   "chapter": "p-Block Elements",
+   "text": "A salt with few drops of conc. HCl gives apple green colour in flame test. The group precipitate of the salt is dissolved in acetic acid and treated with $\\mathrm{K_2CrO_4}$ to give yellow precipitate. When the sodium carbonate extract of the salt solution is heated with conc. $\\mathrm{HNO_3}$ and ammonium molybdate, it resulted a canary yellow precipitate. The cation and anion present in the salt are respectively,",
+   "explanation": "Apple-green flame and yellow $\\mathrm{BaCrO_4}$ with $\\mathrm{K_2CrO_4}$ point to $\\mathrm{Ba^{2+}}$. A canary-yellow precipitate with ammonium molybdate in $\\mathrm{HNO_3}$ is the test for phosphate.",
+   "type": "mcq",
+   "options": [
+    "$\\mathrm{Ca^{2+}}$ and $\\mathrm{SO_4^{2-}}$",
+    "$\\mathrm{Ba^{2+}}$ and $\\mathrm{PO_4^{3-}}$",
+    "$\\mathrm{Mn^{2+}}$ and $\\mathrm{PO_4^{3-}}$",
+    "$\\mathrm{Ba^{2+}}$ and $\\mathrm{SO_4^{2-}}$"
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 71,
+   "qid": "69112171",
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "5.33 g of $\\mathrm{CrCl_3\\cdot6H_2O}$, which is a 1 : 3 electrolyte, is dissolved in water and is passed through a cation exchanger. The chloride ions in the eluted solution, on treatment with $\\mathrm{AgNO_3}$ results in 8.61 g of AgCl. The ratio of moles of complex reacted and moles of AgCl formed is ______ $\\times10^{-2}$. (Nearest integer) [Molar mass in g mol⁻¹ Cr : 52, Ag : 108, Cl : 35.5, H : 1, O : 16]",
+   "explanation": "Molar mass $=266.5$, so complex $=\\frac{5.33}{266.5}=0.02$ mol. AgCl $=\\frac{8.61}{143.5}=0.06$ mol (all three Cl⁻ are ionic, $\\mathrm{[Cr(H_2O)_6]Cl_3}$). Ratio $=\\frac{0.02}{0.06}=0.33=33\\times10^{-2}$.",
+   "type": "numeric",
+   "answer": "33",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 72,
+   "qid": "69112172",
+   "subject": "Chemistry",
+   "chapter": "Hydrocarbons",
+   "text": "Consider the isomers of hydrocarbon with molecular formula $\\mathrm{C_5H_{10}}$. These isomers do not decolourise $\\mathrm{KMnO_4}$ solution. These isomers are subjected to chlorination with chlorine in presence of light to give monochloro compounds. The total number of monochloro compounds (structural isomers only) formed is ______.",
+   "explanation": "Not decolourising $\\mathrm{KMnO_4}$ means cycloalkanes: cyclopentane (1 monochloro product), methylcyclobutane (4), ethylcyclopropane (4), 1,1-dimethylcyclopropane (2), 1,2-dimethylcyclopropane (3). Total $=14$.",
+   "type": "numeric",
+   "answer": "14",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 73,
+   "qid": "69112173",
+   "subject": "Chemistry",
+   "chapter": "Hydrocarbons",
+   "text": "One mole of an alkane (x) requires 8 mole oxygen for complete combustion. Sum of number of carbon and hydrogen atoms in the alkane (x) is ______.",
+   "explanation": "$\\mathrm{C_nH_{2n+2}}$ needs $\\frac{3n+1}{2}$ mol $\\mathrm{O_2}$. $\\frac{3n+1}{2}=8\\Rightarrow n=5$: $\\mathrm{C_5H_{12}}$, so $5+12=17$.",
+   "type": "numeric",
+   "answer": "17",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 74,
+   "qid": "69112174",
+   "subject": "Chemistry",
+   "chapter": "Chemical Kinetics",
+   "text": "For reaction A → P, rate constant $k=1.5\\times10^3$ s⁻¹ at 27 °C. If activation energy for the above reaction is 60 kJ mol⁻¹, then the temperature (in °C) at which rate constant, $k=4.5\\times10^3$ s⁻¹ is ______. (Nearest integer) Given: log 2 = 0.30, log 3 = 0.48, R = 8.3 J K⁻¹ mol⁻¹, ln 10 = 2.3",
+   "explanation": "$\\log\\frac{k_2}{k_1}=\\frac{E_a}{2.3R}\\left(\\frac1{T_1}-\\frac1{T_2}\\right)$: $0.48=\\frac{60000}{2.3\\times8.3}\\left(\\frac1{300}-\\frac1{T_2}\\right)\\Rightarrow T_2\\approx314$ K $\\approx41$ °C.",
+   "type": "numeric",
+   "answer": "41",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 75,
+   "qid": "69112175",
+   "subject": "Chemistry",
+   "chapter": "Thermodynamics",
+   "text": "At the transition temperature T, $\\mathrm{A\\rightleftharpoons B}$ and $\\Delta G^0=105-35\\log T$ where A and B are two states of substance X. The transition temperature in °C when pressure is 1 atm is ______. (Nearest integer)",
+   "explanation": "At the transition temperature the two states are in equilibrium, so $\\Delta G^0=0$: $\\log T=3\\Rightarrow T=1000$ K $=727$ °C.",
+   "type": "numeric",
+   "answer": "727",
+   "status": "ok",
+   "verified": true
+  }
+ ]
+}

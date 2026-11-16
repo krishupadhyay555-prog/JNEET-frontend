@@ -52,6 +52,8 @@ const Revision        = lazyPage(() => import("./pages/Revision.jsx"));
 const RevisionSession = lazyPage(() => import("./pages/RevisionSession.jsx"));
 const OneShot         = lazyPage(() => import("./pages/OneShot.jsx"));
 const OneShotChapter  = lazyPage(() => import("./pages/OneShotChapter.jsx"));
+const PYQ             = lazyPage(() => import("./pages/PYQ.jsx"));
+const PYQPaper        = lazyPage(() => import("./pages/PYQPaper.jsx"));
 const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
 const About           = lazyPage(() => import("./pages/About.jsx"));
 const Pricing         = lazyPage(() => import("./pages/Pricing.jsx"));
@@ -219,6 +221,9 @@ export default function App() {
               <Route path="/plans"     element={<ProtectedRoute><Plans /></ProtectedRoute>} />
               <Route path="/admin"     element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
               <Route path="/oneshot/:slug" element={<ProtectedRoute><OneShotChapter /></ProtectedRoute>} />
+              <Route path="/pyq"         element={<ProtectedRoute><PYQ /></ProtectedRoute>} />
+              <Route path="/pyq/chapter" element={<ProtectedRoute><PYQPaper /></ProtectedRoute>} />
+              <Route path="/pyq/:id"     element={<ProtectedRoute><PYQPaper /></ProtectedRoute>} />
               <Route
                 path="/test/attempt/:attemptId"
                 element={<ProtectedRoute><TestAttempt /></ProtectedRoute>}

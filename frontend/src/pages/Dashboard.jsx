@@ -21,7 +21,7 @@ import { TodayPlan } from "../components/dashboard/TodayPlan.jsx";
 import toast from "react-hot-toast";
 import {
   RefreshCw, ClipboardList, BarChart3, TrendingUp, StickyNote,
-  ChevronRight, MessageCircle, BookOpen,
+  ChevronRight, MessageCircle, BookOpen, FileText,
 } from "lucide-react";
 
 function formatRelative(dateStr) {
@@ -182,6 +182,14 @@ export default function Dashboard() {
       desc: oneshotDesc,
       available: true,
       onClick: () => navigate("/oneshot"),
+    },
+    {
+      icon: <FileText size={20} className="text-violet-500" />,
+      iconBg: "bg-violet-500/10",
+      title: "PYQs",
+      desc: "Official previous-year papers — year & shift wise, with answers",
+      available: true,
+      onClick: () => navigate("/pyq"),
     },
     {
       icon: <RefreshCw size={20} className="text-teal-500" />,
