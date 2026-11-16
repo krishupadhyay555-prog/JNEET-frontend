@@ -1,0 +1,167 @@
+{
+ "slug": "aldehydes-ketones-and-carboxylic-acids",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Aldehydes, Ketones and Carboxylic Acids",
+  "JEE": "Aldehydes, Ketones and Carboxylic Acids"
+ },
+ "title": "Aldehydes, Ketones and Carboxylic Acids",
+ "readMinutes": 16,
+ "summary": [
+  "Carbonyl group (>C=O) planar (sp²) aur polar hai: carbon electrophilic, isliye aldehydes aur ketones nucleophilic addition karte hain. Aldehydes ketones se zyada reactive (kam steric hindrance, kam +I alkyl groups) — yahi relative reactivity hai.",
+  "Aldehydes aasaani se oxidise hote hain, isliye Tollens', Fehling's aur Benedict's reagents ko reduce karte hain; ketones aam taur par nahi. Ye tests dono ko alag karte hain.",
+  "α-hydrogen acidic hote hain, jisse aldol condensation (α-H ke saath) aur Cannizzaro reaction (α-H ke bina) hote hain. Methyl ketones haloform (iodoform) test dete hain.",
+  "Carboxylic acids phenols aur alcohols se strong acids hain (resonance-stabilised carboxylate). Electron-withdrawing (−I) groups acidity badhaate hain. Inke derivatives: acid chlorides, anhydrides, esters, amides."
+ ],
+ "formulas": [
+  {
+   "name": "Preparation from alcohols",
+   "formula": "1° alcohol + PCC (or CrO₃) → aldehyde;  2° alcohol + K₂Cr₂O₇/H⁺ → ketone",
+   "when": "Carbonyl compounds banana."
+  },
+  {
+   "name": "Rosenmund reduction",
+   "formula": "RCOCl + H₂ (Pd/BaSO₄) → RCHO",
+   "when": "Acid chlorides se aldehydes.",
+   "mistake": "BaSO₄ catalyst ko poison karta hai taaki aldehyde aage reduce na ho — iske bina alcohol ban jaata."
+  },
+  {
+   "name": "Stephen reaction",
+   "formula": "RCN + SnCl₂/HCl → RCH=NH → (H₃O⁺) RCHO",
+   "when": "Nitriles se aldehydes."
+  },
+  {
+   "name": "Etard reaction and Gattermann–Koch",
+   "formula": "toluene + CrO₂Cl₂ → benzaldehyde;  benzene + CO + HCl (AlCl₃/CuCl) → benzaldehyde",
+   "when": "Aromatic aldehydes banana."
+  },
+  {
+   "name": "Nucleophilic addition",
+   "formula": "HCN → cyanohydrin;  NaHSO₃ → bisulphite adduct;  ROH (dry HCl) → hemiacetal → acetal;  RMgX → alcohol",
+   "when": "C=O group ki reactions (HCN, NaHSO₃, ROH, Grignard).",
+   "mistake": "Reactivity: HCHO > CH₃CHO > CH₃COCH₃ (sterics aur +I effect) — ulta mat lo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ammonia derivatives (addition–elimination)",
+   "formula": ">C=O + H₂N–Z → >C=N–Z + H₂O  (Z = OH oxime, NH₂ hydrazone, NHC₆H₅ phenylhydrazone, NHCONH₂ semicarbazone)",
+   "when": "Pehchaan ke liye derivatives.",
+   "mistake": "2,4-DNP saare aldehydes aur ketones ke saath orange/yellow precipitate deta hai — sirf aldehyde ka test nahi."
+  },
+  {
+   "name": "Clemmensen and Wolff–Kishner",
+   "formula": "Zn–Hg/conc. HCl  or  NH₂NH₂ then KOH/ethylene glycol:  >C=O → >CH₂",
+   "when": "Carbonyl ko alkane mein reduce karna.",
+   "mistake": "Clemmensen acidic hai; Wolff–Kishner basic — molecule mein aur kya hai uske hisaab se chuno, galat chuna to group toot sakta hai."
+  },
+  {
+   "name": "Aldol condensation",
+   "formula": "2CH₃CHO (dil. NaOH) → CH₃CH(OH)CH₂CHO → (heat) CH₃CH=CHCHO",
+   "when": "α-hydrogen wale carbonyl compounds.",
+   "mistake": "Kam se kam ek α-H zaroori hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cannizzaro reaction",
+   "formula": "2HCHO + conc. NaOH → CH₃OH + HCOONa",
+   "when": "α-hydrogen ke bina aldehydes (HCHO, C₆H₅CHO).",
+   "note": "Ek molecule oxidise aur ek reduce hota hai (disproportionation)."
+  },
+  {
+   "name": "Haloform (iodoform) reaction",
+   "formula": "CH₃CO–R + 3I₂ + 4NaOH → CHI₃ (yellow) + RCOONa + 3NaI + 3H₂O",
+   "when": "CH₃CO– aur CH₃CH(OH)– groups ka test.",
+   "mistake": "Ethanol aur acetaldehyde dete hain; methanol aur propanal nahi — galti mat karo."
+  },
+  {
+   "name": "Acidity of carboxylic acids",
+   "formula": "F₃CCOOH > Cl₃CCOOH > Cl₂CHCOOH > ClCH₂COOH > HCOOH > C₆H₅COOH > CH₃COOH",
+   "when": "Acid strengths compare karna.",
+   "mistake": "−I groups badhne ya –COOH ke paas aane par pKa ghatta hai (acid strong hota hai) — dhyan rakho."
+  },
+  {
+   "name": "Hell–Volhard–Zelinsky (HVZ)",
+   "formula": "RCH₂COOH + X₂ (red P) → RCHXCOOH",
+   "when": "α-H wale acids ka α-halogenation."
+  },
+  {
+   "name": "Decarboxylation and Kolbe electrolysis",
+   "formula": "RCOONa + NaOH/CaO → RH;  electrolysis of RCOONa → R–R",
+   "when": "–COOH hataana."
+  },
+  {
+   "name": "Reactivity of acid derivatives",
+   "formula": "acid chloride > anhydride > ester > amide",
+   "when": "Nucleophilic acyl substitution."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Tollens' test",
+   "problem": "Propanal aur propanone ko kaise alag karoge?",
+   "solution": "Propanal (aldehyde) Tollens' reagent ke saath silver mirror aur Fehling's solution ke saath laal precipitate (Cu₂O) deta hai; propanone nahi."
+  },
+  {
+   "title": "Iodoform test",
+   "problem": "Kaun iodoform test dete hain: ethanol, methanol, propan-2-ol, pentan-3-one?",
+   "solution": "Ethanol aur propan-2-ol (ye CH₃CO– compounds mein oxidise hote hain). Methanol aur pentan-3-one mein CH₃CO– ya CH₃CH(OH)– group nahi."
+  },
+  {
+   "title": "Aldol ya Cannizzaro?",
+   "problem": "Benzaldehyde conc. NaOH ke saath; ethanal dil. NaOH ke saath.",
+   "solution": "Benzaldehyde mein α-H nahi → Cannizzaro: benzyl alcohol + sodium benzoate. Ethanal mein α-H → aldol (3-hydroxybutanal), garam karne par but-2-enal."
+  },
+  {
+   "title": "Cross aldol",
+   "problem": "Benzaldehyde + acetone, dil. NaOH mein?",
+   "solution": "Claisen–Schmidt condensation: acetone (α-H wala) enolate banata hai jo benzaldehyde par attack karta hai → C₆H₅CH=CHCOCH₃ (benzalacetone)."
+  },
+  {
+   "title": "Acid strength",
+   "problem": "Order: CH₃COOH, ClCH₂COOH, FCH₂COOH, CH₃CH₂COOH.",
+   "solution": "FCH₂COOH > ClCH₂COOH > CH₃COOH > CH₃CH₂COOH. F ka sabse strong −I effect; extra CH₂ (+I) propanoic acid ko kamzor karta hai."
+  },
+  {
+   "title": "Reduction choice",
+   "problem": "Acetophenone ko ethylbenzene mein badlo.",
+   "solution": "Clemmensen reduction (Zn–Hg/HCl) ya Wolff–Kishner (NH₂NH₂, KOH, ethylene glycol): C₆H₅COCH₃ → C₆H₅CH₂CH₃."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Structure and physical properties",
+   "explain": "C=O bond polar hai, isliye aldehydes aur ketones ke boiling points same mass ke hydrocarbons aur ethers se zyada, par alcohols se kam (apne molecules ke beech H-bonding nahi). Chhote members paani mein ghulte hain. Carboxylic acids ke boiling points aur bhi zyada: hydrogen-bonded dimers banate hain."
+  },
+  {
+   "title": "Oxidation tests",
+   "explain": "Tollens' reagent (ammoniacal AgNO₃) → silver mirror; Fehling's solution (Cu²⁺ tartrate complex) → laal Cu₂O; strong oxidants ketones ko sirf C–C todkar oxidise karte hain. Aromatic aldehydes Fehling's test nahi dete."
+  },
+  {
+   "title": "Preparation of carboxylic acids",
+   "explain": "1° alcohols aur aldehydes ka oxidation, alkylbenzenes ka side-chain oxidation (KMnO₄ → benzoic acid), nitriles aur amides ka hydrolysis, aur Grignard reagent + CO₂ phir hydrolysis."
+  },
+  {
+   "title": "Reactions of carboxylic acids",
+   "explain": "Metals aur alkalis (salts), NaHCO₃ (CO₂ ki effervescence — acids ko phenols se alag karta hai), PCl₅ ya SOCl₂ (acid chlorides), acid ke saath alcohols (esterification), NH₃ phir garam (amides), LiAlH₄ (1° alcohols). Benzoic acid ke electrophilic substitution mein –COOH meta-directing."
+  },
+  {
+   "title": "Uses",
+   "explain": "Formalin (40% HCHO) biological specimens ko surakshit rakhta hai; acetone common solvent; acetic acid (sirka, ~6–8%); benzoic acid ke salts food preservatives; esters phalon ko khushboo dete hain."
+  },
+  {
+   "title": "Mechanism of nucleophilic addition",
+   "explain": "Nucleophile planar ke upar ya neeche se electrophilic carbonyl carbon par attack karta hai, carbon sp² se sp³ banta hai, aur tetrahedral alkoxide intermediate H⁺ lekar product deta hai."
+  }
+ ],
+ "ratta": [
+  "HCHO > CH₃CHO > ketones (nucleophilic addition).",
+  "Tollens' & Fehling's: aldehyde yes, ketone no.",
+  "α-H → aldol;  no α-H → Cannizzaro.",
+  "Iodoform: CH₃CO– or CH₃CH(OH)–; yellow CHI₃.",
+  "Rosenmund (Pd/BaSO₄), Stephen (SnCl₂/HCl), Etard (CrO₂Cl₂).",
+  "Clemmensen (Zn–Hg/HCl), Wolff–Kishner (NH₂NH₂/KOH).",
+  "HVZ: α-halogenation with X₂/red P.",
+  "Acid chloride > anhydride > ester > amide."
+ ],
+ "verifiedOn": "2026-11-13"
+}

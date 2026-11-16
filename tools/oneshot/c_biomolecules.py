@@ -69,5 +69,52 @@ SYLLABUS = [
 ("Hormones — general introduction", ["hormone"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Carbohydrates polyhydroxy aldehydes (aldose) ya ketones (ketose) hain: monosaccharides (glucose, fructose), disaccharides (sucrose, maltose, lactose) aur polysaccharides (starch, cellulose, glycogen).",
+"Glucose mainly six-membered ring (pyranose) form mein α aur β anomers ke saath rehta hai. Free aldehyde ya ketone group wali sugars reducing hain; sucrose non-reducing hai.",
+"Proteins α-amino acid ke polymers hain jo peptide bonds se jude hain. Structure ke chaar levels hain (primary se quaternary); denaturation upar ke levels todta hai, primary structure nahi.",
+"Nucleic acids (DNA, RNA) nucleotide ke polymers hain — sugar + base + phosphate. Vitamin aur hormone chhote molecules hain jinka biological role bada hai.",
+],
+when=[
+("Glucose ki open-chain structure.", None),
+("Glucose ki ring structure kyun hai.", None),
+("Solution mein specific rotation ka badalna.", "Anomers sirf C1 par alag hain; ye mirror images nahi hain — galat mat samjho."),
+("Glycosidic linkages.", None),
+("Hydrolysed sucrose ko invert sugar kyun kehte hain.", None),
+("Storage aur structural carbohydrates ki structure.", None),
+("Peptide bonds ginna.", None),
+("Amino acids ka high melting point aur water-solubility kyun.", None),
+("Protein structure describe karna.", None),
+("Nucleic acids ki structure.", None),
+("Base pairing.", None),
+("Vitamins ko diseases se milaana (fat-soluble vs water-soluble).", "B₁₂ water-soluble hai phir bhi liver mein store ho sakta hai — exception yaad rakho."),
+],
+examples=[
+("Peptide bonds", "Hexapeptide mein kitne peptide bonds?",
+ "n − 1 = 6 − 1 = ⟨0⟩."),
+("Tripeptides ki ginti", "Glycine, alanine aur valine se kitne alag tripeptides (har ek baar-baar use ho sakta hai)?",
+ "Har 3 position par 3 choices: 3 × 3 × 3 = ⟨0⟩."),
+("Reducing sugar?", "Kaun reducing hain: glucose, fructose, sucrose, maltose, lactose?",
+ "Sucrose ke alawa sab. Sucrose mein dono anomeric carbons (glucose ka C1 aur fructose ka C2) glycosidic bond mein lage hain, isliye free hemiacetal group nahi."),
+("Denaturation", "Anda ubaalne par kya hota hai?",
+ "Garmi albumin ko denature karti hai: secondary aur tertiary structures khul jaate hain aur globular protein jam jaata hai. Primary structure (amino acid sequence) nahi badalta."),
+("Essential amino acids", "Essential aur non-essential amino acids mein farak?",
+ "Essential (valine, leucine, isoleucine, lysine, threonine, methionine, phenylalanine, tryptophan, histidine, arginine) khaane se aane chahiye; non-essential (glycine, alanine, glutamic acid) body khud banati hai."),
+("DNA vs RNA", "DNA aur RNA mein teen farak?",
+ "DNA mein deoxyribose, thymine aur double helix; RNA mein ribose, uracil aur aam taur par single strand. DNA genetic information rakhta hai; RNA (m, t, r) protein banane mein madad karta hai."),
+],
+topics=[
+("Classification of carbohydrates", "Reducing vs non-reducing; aldoses vs ketoses; monosaccharides (hydrolyse nahi hote), oligosaccharides (2–10 units) aur polysaccharides. D/L last chiral carbon ki configuration glyceraldehyde ke relative batata hai, rotation ki direction nahi."),
+("Fructose", "Ketohexose, laevorotatory; five-membered (furanose) ring banata hai. Tollens' aur Fehling's ko reduce karta hai kyunki alkaline medium mein aldose mein isomerise ho jaata hai."),
+("Amino acids", "α-Amino acids mein –NH₂ aur –COOH same carbon par. Acidic (aspartic, glutamic), basic (lysine, arginine) aur neutral types. Glycine ke alawa sab optically active aur zyadatar L-configuration."),
+("Fibrous and globular proteins", "Fibrous proteins (keratin, myosin) lambe, dhaage jaise aur insoluble; globular proteins (insulin, albumin) gol aur water-soluble."),
+("Enzymes", "Biological catalysts, zyadatar globular proteins, bahut specific; activation energy ghataate hain. Example: maltase maltose ko glucose mein badalta hai."),
+("Hormones", "Endocrine glands ke chemical messengers: steroid (oestrogen, testosterone), polypeptide (insulin, glucagon) aur amino-acid derivatives (thyroxine, adrenaline). Insulin blood glucose ghataata aur glucagon badhaata hai."),
+("Biological functions of nucleic acids", "DNA khud ko replicate karta hai aur heredity rakhta hai; transcription se mRNA banta hai, aur ribosomes par translation (tRNA amino acids laata hai) se proteins."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

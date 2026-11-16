@@ -1,0 +1,150 @@
+{
+ "slug": "practical-chemistry",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Practical Chemistry"
+ },
+ "title": "Practical Chemistry",
+ "readMinutes": 12,
+ "summary": [
+  "Organic compounds mein extra elements (N, S, halogens) Lassaigne ke sodium fusion extract se detect hote hain; functional groups (alcohol, phenol, aldehyde, carboxyl, amine) simple colour ya precipitate tests se pehchaante hain.",
+  "Inorganic salt analysis mein ek cation aur ek anion dhoondhte hain: anions ke liye dilute aur concentrated H₂SO₄ tests, phir group reagents cations ko group 0 se VI mein baant-te hain.",
+  "KMnO₄ ki oxalic acid aur Mohr's salt ke saath redox titration mein indicator nahi chahiye — KMnO₄ khud indicator hai (colourless se permanent halka gulabi).",
+  "Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) aur har step ki chemistry NEET ke common sawal hain."
+ ],
+ "formulas": [
+  {
+   "name": "KMnO₄ vs oxalic acid",
+   "formula": "2MnO₄⁻ + 5C₂O₄²⁻ + 16H⁺ → 2Mn²⁺ + 10CO₂ + 8H₂O",
+   "when": "KMnO₄ standardise karna.",
+   "mistake": "Oxalic acid ko 60–70 °C tak garam karo; room temperature par reaction dheemi hai (bana Mn²⁺ phir use catalyse karta hai — autocatalysis) — thanda mat chalao.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "KMnO₄ vs Mohr's salt",
+   "formula": "MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O",
+   "when": "Fe²⁺ estimation.",
+   "mistake": "Thande mein karo — garam karne se hawa Fe²⁺ ko oxidise kar degi, galat answer aayega."
+  },
+  {
+   "name": "Molarity equation for titration",
+   "formula": "M₁V₁/n₁ = M₂V₂/n₂ (n = stoichiometric coefficient)  or  N₁V₁ = N₂V₂",
+   "when": "Titration calculations."
+  },
+  {
+   "name": "Equivalent weight in acid medium",
+   "formula": "KMnO₄: n-factor 5 (Mn⁺⁷ → Mn²⁺);  oxalic acid: 2;  Mohr's salt (Fe²⁺): 1",
+   "when": "Normality-based calculations."
+  },
+  {
+   "name": "Dilute H₂SO₄ group (anions)",
+   "formula": "CO₃²⁻ → CO₂ (lime water milky);  S²⁻ → H₂S (lead acetate paper black);  SO₃²⁻ → SO₂ (acidified K₂Cr₂O₇ green);  NO₂⁻ → brown NO₂",
+   "when": "Anions ke preliminary tests."
+  },
+  {
+   "name": "Conc. H₂SO₄ group (anions)",
+   "formula": "Cl⁻ → HCl (white fumes with NH₃);  Br⁻ → reddish-brown Br₂;  I⁻ → violet I₂;  NO₃⁻ → brown ring test;  CH₃COO⁻ → vinegar smell",
+   "when": "Anion tests ka doosra set.",
+   "note": "Brown ring [Fe(H₂O)₅NO]²⁺ hai, conc. H₂SO₄ ke junction par."
+  },
+  {
+   "name": "SO₄²⁻ and PO₄³⁻",
+   "formula": "SO₄²⁻ + BaCl₂ → white BaSO₄ (insoluble in HCl);  PO₄³⁻ + ammonium molybdate (HNO₃) → canary-yellow precipitate",
+   "when": "Independent anion tests."
+  },
+  {
+   "name": "Cation groups",
+   "formula": "0: NH₄⁺ (NaOH, heat → NH₃);  I: Pb²⁺ (dil. HCl);  II: Pb²⁺, Cu²⁺, As³⁺ (H₂S in acid);  III: Fe³⁺, Al³⁺ (NH₄OH + NH₄Cl);  IV: Co²⁺, Ni²⁺, Mn²⁺, Zn²⁺ (H₂S in basic);  V: Ba²⁺, Sr²⁺, Ca²⁺ ((NH₄)₂CO₃);  VI: Mg²⁺",
+   "when": "Systematic cation analysis.",
+   "mistake": "Group II mein acid mein H₂S (kam S²⁻); group IV mein ammoniacal medium mein H₂S (zyada S²⁻) — common ion effect, ulta mat lo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Flame colours",
+   "formula": "Ca brick-red;  Sr crimson;  Ba apple-green;  Cu blue-green;  Na golden-yellow;  K lilac",
+   "when": "Cations confirm karna."
+  },
+  {
+   "name": "Functional group tests",
+   "formula": "unsaturation: Br₂ water / Baeyer's reagent decolourised;  alcohol: ceric ammonium nitrate (red);  phenol: neutral FeCl₃ (violet);  aldehyde: Tollens', Fehling's;  carbonyl: 2,4-DNP (orange ppt);  carboxyl –COOH: NaHCO₃ (CO₂);  1° amine: carbylamine",
+   "when": "Functional groups pehchaanna."
+  },
+  {
+   "name": "Ni²⁺ and Fe³⁺ confirmations",
+   "formula": "Ni²⁺ + dimethylglyoxime (NH₄OH) → red precipitate;  Fe³⁺ + K₄[Fe(CN)₆] → Prussian blue;  Fe³⁺ + KSCN → blood red",
+   "when": "Confirmatory tests."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Oxalic acid titration",
+   "problem": "25 mL 0.05 M oxalic acid ko acid mein 0.02 M KMnO₄ se titrate kiya. KMnO₄ ka volume?",
+   "solution": "Oxalic acid ke moles = 0.025 × 0.05 = 1.25 × 10⁻³. MnO₄⁻ chahiye = (2/5) × 1.25 × 10⁻³ = 5 × 10⁻⁴ mol. Volume = 5 × 10⁻⁴/0.02 L = 25 mL."
+  },
+  {
+   "title": "Mohr's salt titration",
+   "problem": "20 mL 0.1 M Mohr's salt solution ko 0.02 M KMnO₄ se titrate kiya. KMnO₄ ka volume?",
+   "solution": "Fe²⁺ ke moles = 0.02 × 0.1 = 2 × 10⁻³. MnO₄⁻ = 2 × 10⁻³/5 = 4 × 10⁻⁴ mol. Volume = 4 × 10⁻⁴/0.02 L = 20 mL."
+  },
+  {
+   "title": "Dilute H₂SO₄ kyun?",
+   "problem": "KMnO₄ titration dilute H₂SO₄ mein kyun, HCl ya HNO₃ mein kyun nahi?",
+   "solution": "HCl ko KMnO₄ Cl₂ mein oxidise kar deta hai, extra KMnO₄ kharch hota hai. HNO₃ khud oxidising agent hai. Dilute H₂SO₄ na oxidise hota hai na oxidise karta hai."
+  },
+  {
+   "title": "Group reagent logic",
+   "problem": "Group III mein NH₄OH se pehle NH₄Cl kyun daalte hain?",
+   "solution": "Common ion NH₄⁺ NH₄OH ka ionisation dabaata hai, OH⁻ itna kam rehta hai ki sirf group III ke hydroxides (Fe³⁺, Al³⁺) precipitate hon, group IV–VI ke (jaise Mg(OH)₂) nahi."
+  },
+  {
+   "title": "Brown ring test",
+   "problem": "Brown ring kya hai aur kahan banta hai?",
+   "solution": "Nitrate solution + taaza FeSO₄, phir conc. H₂SO₄ kinaare se daalo. Dono layers ke milne ki jagah [Fe(H₂O)₅NO]²⁺ ka brown ring banta hai."
+  },
+  {
+   "title": "Mohr's salt ki preparation",
+   "problem": "Mohr's salt banate waqt thoda dilute H₂SO₄ kyun daalte hain?",
+   "solution": "FeSO₄ (aur Fe²⁺) ka hydrolysis rokne ke liye, warna solution dhundhla ho jaata hai. Zyada der garam na karke Fe²⁺ ko oxidise hone se bhi bachaate hain."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Detection of extra elements",
+   "explain": "Sodium fusion covalent N, S aur X ko ionic NaCN, Na₂S aur NaX mein badalta hai. N: Prussian blue; S: sodium nitroprusside se violet ya kaala PbS; N aur S dono: FeCl₃ se blood red; halogens: AgNO₃ (pehle HNO₃ se CN⁻ aur S²⁻ ubaal kar hatao)."
+  },
+  {
+   "title": "Preparation of inorganic compounds",
+   "explain": "Mohr's salt FeSO₄·(NH₄)₂SO₄·6H₂O aur potash alum K₂SO₄·Al₂(SO₄)₃·24H₂O double salts hain jo equimolar solutions ko crystallise karke bante hain; paani mein apne saare ions ke tests dete hain."
+  },
+  {
+   "title": "Preparation of organic compounds",
+   "explain": "Acetanilide (aniline + acetic anhydride), p-nitroacetanilide (kam temperature par acetanilide ka nitration), aniline yellow (p-aminoazobenzene, benzenediazonium chloride ka aniline se coupling), iodoform (ethanol ya acetone + I₂ + alkali, peele crystals)."
+  },
+  {
+   "title": "Chemistry of titrimetric exercises",
+   "explain": "Burette reading neeche wale meniscus par (rangeen KMnO₄ ke liye upar wala). KMnO₄ primary standard nahi; oxalic acid se standardise karte hain. End point = pehla permanent halka gulabi rang. Acid–base titrations mein indicator chahiye; KMnO₄ titration (titration) mein nahi."
+  },
+  {
+   "title": "Tests for proteins and carbohydrates",
+   "explain": "Proteins ke liye Biuret test (violet); saare carbohydrates ke liye Molisch's test (violet ring); starch ke liye iodine test (neela); reducing sugars ke liye Fehling's aur Benedict's."
+  },
+  {
+   "title": "Physical chemistry experiments (JEE)",
+   "explain": "CuSO₄ ki enthalpy of solution aur strong acid–strong base ki enthalpy of neutralisation (≈ −57 kJ/mol) calorimeter mein q = mcΔT se naapte hain. Lyophilic sols (starch, egg albumin, gum) sirf paani mein garam karke bante hain; lyophobic sols (Fe(OH)₃, As₂S₃) ke liye hydrolysis ya double decomposition jaise khaas tareeke. Iodide ions ki H₂O₂ ke saath reaction ki rate room temperature par follow karte hain (nikli iodine starch ko neela karti hai)."
+  },
+  {
+   "title": "Tests for fats and oils",
+   "explain": "Fats kaagaz par translucent daag chhodte hain; acrolein test (KHSO₄ ke saath garam karne par teekhi gandh) glycerol dikhata hai."
+  }
+ ],
+ "ratta": [
+  "KMnO₄: self-indicator, colourless → pink; dil. H₂SO₄ only.",
+  "Oxalic acid titration: warm 60–70 °C; Mohr's salt: cold.",
+  "n-factors: KMnO₄ 5, oxalic acid 2, Fe²⁺ 1.",
+  "Group II: H₂S acidic;  group IV: H₂S basic.",
+  "Ni²⁺ + DMG → red;  Fe³⁺ + KSCN → blood red.",
+  "Brown ring = NO₃⁻;  canary yellow = PO₄³⁻.",
+  "Ca brick-red, Sr crimson, Ba apple-green."
+ ],
+ "verifiedOn": "2026-11-13"
+}

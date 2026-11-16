@@ -1,0 +1,165 @@
+{
+ "slug": "hydrocarbons",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Hydrocarbons",
+  "JEE": "Hydrocarbons"
+ },
+ "title": "Hydrocarbons",
+ "readMinutes": 15,
+ "summary": [
+  "Alkanes (CₙH₂ₙ₊₂, sp³) kaafi unreactive hain aur free-radical substitution karte hain. Unke conformations (ethane ka staggered vs eclipsed) energy mein alag hain.",
+  "Alkenes (CₙH₂ₙ, C=C) aur alkynes (CₙH₂ₙ₋₂, C≡C) electrophilic addition karte hain. HX Markovnikov rule se judta hai, sirf peroxide ke saath HBr ulta (anti-Markovnikov). Alkenes geometrical isomerism dikhate hain.",
+  "Terminal alkynes thode acidic hain (sp carbon) aur acetylides banate hain. Ozonolysis batata hai double bond kahan tha.",
+  "Benzene aromatic hai (planar, cyclic, 6 π electrons — Hückel 4n + 2). Ye electrophilic substitution pasand karta hai, aur substituents aane wale group ko ortho/para ya meta par bhejte hain (directive influence)."
+ ],
+ "formulas": [
+  {
+   "name": "Wurtz reaction",
+   "formula": "2R–X + 2Na → R–R + 2NaX (dry ether)",
+   "when": "Symmetrical bade alkanes banana (preparation).",
+   "mistake": "Do alag alkyl halides se mixture banta hai; methane nahi ban sakta — bhoolo mat."
+  },
+  {
+   "name": "Kolbe's electrolysis",
+   "formula": "2RCOONa + 2H₂O → R–R + 2CO₂ + 2NaOH + H₂ (electrolysis)",
+   "when": "Even number carbons wale alkanes."
+  },
+  {
+   "name": "Decarboxylation",
+   "formula": "RCOONa + NaOH (CaO) → R–H + Na₂CO₃",
+   "when": "Ek carbon kam wala alkane."
+  },
+  {
+   "name": "Free-radical halogenation",
+   "formula": "CH₄ + Cl₂ (hν) → CH₃Cl + HCl (initiation, propagation, termination)",
+   "when": "Alkanes ka halogenation.",
+   "mistake": "Halogens ki reactivity: F₂ > Cl₂ > Br₂ > I₂; 3° H sabse jaldi badalta hai — dhyan rakho."
+  },
+  {
+   "name": "Markovnikov addition",
+   "formula": "CH₃CH=CH₂ + HBr → CH₃CHBrCH₃",
+   "when": "Unsymmetrical alkenes mein HX jodna.",
+   "mistake": "H us carbon par jaata hai jismein pehle se zyada H hai (zyada stable carbocation) — ulta mat karo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Peroxide (Kharasch) effect",
+   "formula": "CH₃CH=CH₂ + HBr (peroxide) → CH₃CH₂CH₂Br",
+   "when": "Anti-Markovnikov addition.",
+   "mistake": "Sirf HBr ke saath — HCl ya HI ke saath nahi."
+  },
+  {
+   "name": "Ozonolysis",
+   "formula": "R₂C=CR′₂ + O₃ then Zn/H₂O → R₂C=O + O=CR′₂",
+   "when": "Double bond dhoondhna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Hydrogenation of alkynes",
+   "formula": "Lindlar's catalyst (Pd/CaCO₃, quinoline) → cis-alkene;  Na in liquid NH₃ → trans-alkene",
+   "when": "Controlled reduction."
+  },
+  {
+   "name": "Hydration of alkynes",
+   "formula": "HC≡CH + H₂O (HgSO₄, dil. H₂SO₄) → CH₃CHO;  other alkynes → ketones",
+   "when": "Alkynes se aldehydes/ketones banana."
+  },
+  {
+   "name": "Acidity of hydrocarbons",
+   "formula": "HC≡CH > CH₂=CH₂ > CH₃–CH₃ (s-character 50% > 33% > 25%)",
+   "when": "Terminal alkynes Na, NaNH₂ aur ammoniacal AgNO₃ se kyun react karte hain."
+  },
+  {
+   "name": "Aromaticity (Hückel rule)",
+   "formula": "planar + cyclic + fully conjugated + (4n + 2) π electrons",
+   "when": "Aromatic compounds pehchaanna.",
+   "mistake": "Cyclopentadienyl anion (6π) aromatic hai; cation (4π) nahi — confuse mat karo."
+  },
+  {
+   "name": "Electrophilic substitution of benzene",
+   "formula": "nitration (HNO₃/H₂SO₄, NO₂⁺);  halogenation (X₂/FeX₃);  sulphonation (fuming H₂SO₄);  Friedel–Crafts alkylation (RX/AlCl₃) and acylation (RCOCl/AlCl₃)",
+   "when": "Benzene ki reactions."
+  },
+  {
+   "name": "Directive influence",
+   "formula": "o/p-directing activating: –OH, –NH₂, –OR, –CH₃;  o/p-directing deactivating: halogens;  m-directing deactivating: –NO₂, –CN, –CHO, –COOH, –SO₃H",
+   "when": "Agla group kahan jaayega, predict karna.",
+   "mistake": "Halogens alag case hain: deactivating (−I) phir bhi ortho/para-directing (+R) — galat mat samjho.",
+   "tag": "PYQ favourite"
+  }
+ ],
+ "examples": [
+  {
+   "title": "Ozonolysis product",
+   "problem": "But-2-ene ka ozonolysis (Zn/H₂O). Products?",
+   "solution": "CH₃CH=CHCH₃ double bond par toot-ta hai → 2 CH₃CHO (ethanal)."
+  },
+  {
+   "title": "Markovnikov vs peroxide",
+   "problem": "Propene + HBr, benzoyl peroxide ke saath aur bina?",
+   "solution": "Bina peroxide: 2-bromopropane (Markovnikov, 2° carbocation se). Peroxide ke saath: 1-bromopropane (free-radical, anti-Markovnikov)."
+  },
+  {
+   "title": "cis ya trans",
+   "problem": "But-2-yne ko H₂/Lindlar's catalyst se aur alag se Na/liq. NH₃ se reduce kiya. Products?",
+   "solution": "Lindlar → cis-but-2-ene (syn addition). Na/NH₃ → trans-but-2-ene."
+  },
+  {
+   "title": "Aromatic hai ya nahi?",
+   "problem": "Kaun aromatic: benzene, cyclooctatetraene, cyclopentadienyl anion, cyclobutadiene?",
+   "solution": "Benzene (6π) aur cyclopentadienyl anion (6π) 4n + 2 follow karte hain. Cyclooctatetraene (8π, non-planar) aur cyclobutadiene (4π, antiaromatic) nahi."
+  },
+  {
+   "title": "Toluene ka nitration",
+   "problem": "Toluene ke nitration ke main products?",
+   "solution": "–CH₃ activating aur o/p-directing → o-nitrotoluene aur p-nitrotoluene (kam crowding se p major)."
+  },
+  {
+   "title": "Friedel–Crafts acylation",
+   "problem": "Benzene + CH₃COCl, anhydrous AlCl₃ ke saath?",
+   "solution": "Acetophenone (C₆H₅COCH₃). Acylium ion CH₃C≡O⁺ electrophile hai; alkylation ke ulta yahan rearrangement aur polysubstitution nahi."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Conformations of ethane",
+   "explain": "C–C single bond par ghoomne se staggered (sabse stable, minimum torsional strain) aur eclipsed (sabse kam stable) conformations; energy difference sirf ~12.5 kJ/mol, isliye tezi se badalte rehte hain. Newman aur sawhorse projections se dikhaate hain."
+  },
+  {
+   "title": "Geometrical isomerism",
+   "explain": "C=C par restricted rotation se cis aur trans isomers, jab har double-bonded carbon par do alag groups hon. cis-But-2-ene ka boiling point zyada (polar); trans ka melting point zyada (achhe se pack hota hai)."
+  },
+  {
+   "title": "Preparation of alkenes",
+   "explain": "Alcohols ka dehydration (conc. H₂SO₄, garam), alkyl halides ka dehydrohalogenation (alcoholic KOH — Saytzeff product, zyada substituted alkene, major), aur alkynes ka partial reduction."
+  },
+  {
+   "title": "Reactions of alkenes",
+   "explain": "H₂, X₂ (bromine water decolourise — unsaturation ka test), HX, H₂O (acid-catalysed) ka addition; thande dilute alkaline KMnO₄ (Baeyer's reagent, diol; purple rang ud jaata hai) se oxidation; ozonolysis; polymerisation (polythene)."
+  },
+  {
+   "title": "Alkynes",
+   "explain": "Calcium carbide se (CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂) ya double dehydrohalogenation se. Terminal alkynes ammoniacal AgNO₃ ke saath safed precipitate dete hain — alkenes se alag karne ka test. Red-hot iron tube mein ethyne polymerise hokar benzene banata hai."
+  },
+  {
+   "title": "Benzene structure",
+   "explain": "Kekulé structures resonance forms hain; saare C–C bonds barabar (139 pm, single aur double ke beech). Benzene addition se bachta hai kyunki usse aromatic stability kho jaayegi."
+  },
+  {
+   "title": "Carcinogenicity and toxicity",
+   "explain": "Kai polynuclear aromatic hydrocarbons (koyla, tobacco ke adhoore jalne se) carcinogenic hain, jaise 1,2-benzanthracene."
+  }
+ ],
+ "ratta": [
+  "Wurtz: 2RX + 2Na → R–R;  Kolbe: even carbons.",
+  "Markovnikov: H to carbon with more H;  peroxide effect only with HBr.",
+  "Ozonolysis tells position of C=C.",
+  "Lindlar → cis;  Na/NH₃ → trans.",
+  "Acidity: ethyne > ethene > ethane.",
+  "Hückel: 4n + 2 π electrons, planar, cyclic.",
+  "o/p: –OH, –NH₂, –CH₃, –X;  m: –NO₂, –CN, –CHO, –COOH.",
+  "Saytzeff: more substituted alkene major."
+ ],
+ "verifiedOn": "2026-11-13"
+}

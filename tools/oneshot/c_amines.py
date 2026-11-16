@@ -65,5 +65,52 @@ SYLLABUS = [
 ("Diazonium salts: importance in synthetic organic chemistry", ["diazonium", "Sandmeyer", "coupling"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Amines ammonia ke derivatives hain: primary (RNH₂), secondary (R₂NH) aur tertiary (R₃N) — inki nomenclature aur classification isi par. Nitrogen ka lone pair inhe bases (basic nature) aur nucleophiles banata hai; nitrogen sp³ aur molecule pyramidal.",
+"Aliphatic amines ammonia se strong bases hain (alkyl groups ka +I effect); aniline jaise aromatic amines bahut kamzor (lone pair ring mein delocalised). Paani mein order +I effect, solvation aur steric hindrance milkar tay karte hain.",
+"Primary, secondary aur tertiary amines ko Hinsberg test, carbylamine test (sirf primary) aur nitrous acid ke saath reactions se alag karte hain.",
+"0–5 °C par aniline NaNO₂/HCl se benzenediazonium chloride banata hai, ek bahut kaam ka intermediate: Sandmeyer, Gattermann, coupling (azo dyes) aur –OH, –I, –F, –H se replacement.",
+],
+when=[
+("Aniline banana.", "Fe/HCl pasand kiya jaata hai: bana FeCl₂ hydrolyse hokar HCl deta hai, isliye thoda hi acid chahiye — yaad rakho."),
+("Pure primary aliphatic amines.", "Aromatic amines nahi ban sakte (aryl halides phthalimide anion ke saath SN nahi karte) — galat mat lo."),
+("Amide se ek carbon kam wala amine.", None),
+("Ascending/same-carbon amines.", None),
+("Amines ka mixture.", "Mixture banta hai; NH₃ ki bahut zyada maatra primary amine ko badhaati hai — dhyan rakho."),
+("Base strengths compare karna.", "Gas phase mein order 3° > 2° > 1° > NH₃; paani mein solvation ise badal deta hai — dono mix mat karo."),
+("Ethylamines compare karna.", None),
+("Substituent effects.", "Electron-donating groups basicity badhaate hain; −R/−I groups ghataate hain — ulta mat lo."),
+("Sirf primary amines ka test.", None),
+("1°, 2°, 3° amines alag karna.", None),
+("Diazonium salts banana.", None),
+("–NH₂ ko doosre groups mein badalna.", None),
+("Azo dyes.", "Yahan N≡N group bacha rehta hai — replacement reactions ke ulta, confuse mat karo."),
+],
+examples=[
+("Hoffmann product", "Propanamide ko Br₂ aur NaOH ke saath. Product?",
+ "Ethanamine, CH₃CH₂NH₂ — amide (CH₃CH₂CONH₂) se ek carbon kam."),
+("1°, 2°, 3° alag karo", "Ethylamine, diethylamine aur triethylamine ko kaise alag karoge?",
+ "Hinsberg reagent: ethylamine KOH mein ghulne wala sulphonamide; diethylamine na ghulne wala; triethylamine react nahi karta. Sirf ethylamine carbylamine (badboo) test deta hai."),
+("Aniline kamzor base kyun?", "Aniline methylamine se kamzor kyun hai?",
+ "Aniline mein N ka lone pair benzene ring mein delocalised hai (resonance), isliye H⁺ ke liye kam available. Methylamine mein CH₃ ka +I effect lone pair ko zyada available banata hai."),
+("Aniline ka bromination", "Aniline + bromine water? Sirf p-bromoaniline kaise banaoge?",
+ "Bromine water 2,4,6-tribromoaniline (safed ppt) deta hai kyunki –NH₂ ring ko bahut activate karta hai. –NH₂ ko acetylation se bachao (acetanilide), brominate karo (p-product), phir hydrolyse karo."),
+("Aniline ka nitration", "Seedhe nitration mein bahut saara m-nitroaniline kyun banta hai?",
+ "Strong acidic medium mein aniline protonate hokar anilinium ion (–NH₃⁺) banta hai jo meta-directing hai. Lagbhag 47% meta product, para aur thoda ortho ke saath, plus oxidation products."),
+("Diazonium route", "Aniline ko benzonitrile mein badlo.",
+ "Aniline + NaNO₂/HCl 0–5 °C par → benzenediazonium chloride; phir CuCN/KCN (Sandmeyer) → C₆H₅CN."),
+],
+topics=[
+("Structure and nomenclature", "Amines mein nitrogen sp³ aur lone pair ke saath; C–N–C angle ~108°. Common names: methylamine, aniline (benzenamine), N,N-dimethylaniline. IUPAC: alkanamine (ethanamine), N-methylethanamine."),
+("Physical properties", "Chhote aliphatic amines machhli jaisi gandh wali gases. Primary aur secondary amines intermolecular hydrogen bonds banate hain; isomeric amines ke boiling points: 1° > 2° > 3°. Tertiary amines mein N–H nahi, isliye aapas mein H-bond nahi."),
+("Acylation", "Primary aur secondary amines acid chlorides ya anhydrides ke saath (nucleophilic substitution) amides banate hain; pyridine HCl hataata hai. Benzoylation benzoyl chloride se. Acetylation –NH₂ ka activating effect kam karta hai."),
+("Electrophilic substitution of aniline", "–NH₂ strongly activating aur o/p-directing. Sulphonation se sulphanilic acid jo zwitterion ki tarah rehta hai. Aniline Friedel–Crafts nahi karta: AlCl₃ (Lewis acid) ke saath salt banata hai jo ring ko deactivate karta hai."),
+("Diazonium salts", "ArN₂⁺X⁻; sirf 273–278 K par stable kyunki positive charge benzene ring par delocalised (aliphatic diazonium salts unstable). Solution mein turant use hote hain aur aromatic compounds aur dyes banane mein bahut important."),
+("Importance in daily life", "Amines proteins, vitamins, alkaloids aur hormones mein milte hain; synthetic examples mein drugs aur dyes. Quaternary ammonium salts detergents ki tarah use hote hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

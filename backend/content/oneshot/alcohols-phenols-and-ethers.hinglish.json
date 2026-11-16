@@ -1,0 +1,162 @@
+{
+ "slug": "alcohols-phenols-and-ethers",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Alcohols, Phenols and Ethers",
+  "JEE": "Alcohols, Phenols and Ethers"
+ },
+ "title": "Alcohols, Phenols and Ethers",
+ "readMinutes": 15,
+ "summary": [
+  "Alcohols (R–OH) aur phenols (Ar–OH) mein –OH group hai; ether (R–O–R′) mein oxygen do carbons ke beech. Hydrogen bonding alcohols aur phenols ko high boiling point aur thodi water solubility deti hai.",
+  "Phenols alcohols se kaafi zyada acidic hain kyunki phenoxide ion resonance se stable hai; ortho/para par electron-withdrawing groups (–NO₂) phenol ko aur acidic banate hain.",
+  "Alcohols O–H todkar (acidic nature, esterification) ya C–O todkar (substitution, dehydration) react karte hain. Lucas test primary, secondary aur tertiary alcohols ko alag karta hai.",
+  "–OH group phenol ki benzene ring ko electrophilic substitution ke liye bahut activate karta hai (bromine water se 2,4,6-tribromophenol). Named reactions: Kolbe, Reimer–Tiemann, Williamson synthesis."
+ ],
+ "formulas": [
+  {
+   "name": "Alcohols from alkenes",
+   "formula": "acid-catalysed hydration (Markovnikov);  hydroboration–oxidation (B₂H₆ then H₂O₂/OH⁻) gives anti-Markovnikov alcohols",
+   "when": "Alcohols ki preparation."
+  },
+  {
+   "name": "Alcohols from carbonyls",
+   "formula": "RCHO + H₂/Ni or NaBH₄/LiAlH₄ → 1° alcohol;  R₂CO → 2° alcohol;  RCOOH + LiAlH₄ → 1° alcohol",
+   "when": "Reduction routes."
+  },
+  {
+   "name": "Grignard route",
+   "formula": "HCHO + RMgX → 1° alcohol;  other aldehydes → 2°;  ketones → 3° (after hydrolysis)",
+   "when": "Naye C–C bonds ke saath alcohols banana.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Acidity order",
+   "formula": "p-nitrophenol > phenol > water > ethanol (1° > 2° > 3° alcohol)",
+   "when": "Acid strengths compare karna.",
+   "mistake": "Electron-donating groups (–CH₃) phenol ki acidity GHATAATE hain; electron-withdrawing (–NO₂) badhaate hain — ulta mat lo."
+  },
+  {
+   "name": "Lucas test",
+   "formula": "conc. HCl + anhydrous ZnCl₂:  3° turbidity immediately;  2° within ~5 min;  1° only on heating",
+   "when": "1°, 2°, 3° alcohols alag karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Dehydration of alcohols",
+   "formula": "conc. H₂SO₄ heat: ethanol → ethene (443 K) or diethyl ether (413 K);  ease 3° > 2° > 1°",
+   "when": "Alcohols se alkenes aur ethers.",
+   "mistake": "Temperature product tay karta hai: zyada par alkene, kam par ether — mix mat karo."
+  },
+  {
+   "name": "Oxidation of alcohols",
+   "formula": "1° → aldehyde (PCC) → acid (KMnO₄);  2° → ketone;  3° resist oxidation;  Cu at 573 K: 1° → aldehyde, 2° → ketone, 3° → alkene",
+   "when": "Products se alcohol ka type pehchaanna."
+  },
+  {
+   "name": "Phenol preparation",
+   "formula": "cumene process (cumene → cumene hydroperoxide → phenol + acetone);  from diazonium salts (warm water);  from chlorobenzene (Dow's process)",
+   "when": "Phenol banana."
+  },
+  {
+   "name": "Kolbe's reaction",
+   "formula": "sodium phenoxide + CO₂ (4–7 atm, 400 K), then H⁺ → salicylic acid",
+   "when": "Phenol ka carboxylation."
+  },
+  {
+   "name": "Reimer–Tiemann reaction",
+   "formula": "phenol + CHCl₃ + aq. NaOH, then H⁺ → salicylaldehyde",
+   "when": "Ortho position par –CHO laana.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Bromination of phenol",
+   "formula": "bromine water → 2,4,6-tribromophenol (white ppt);  Br₂ in CS₂ (low temperature) → o- and p-bromophenol",
+   "when": "Halogenation par solvent ka effect."
+  },
+  {
+   "name": "Williamson synthesis",
+   "formula": "R–X + R′ONa → R–O–R′ + NaX",
+   "when": "Ethers banana.",
+   "mistake": "1° alkyl halide lo — 3° halides ke saath elimination (alkene) haavi hota hai, ether nahi banta."
+  },
+  {
+   "name": "Cleavage of ethers by HI",
+   "formula": "R–O–CH₃ + HI → R–OH + CH₃I (I⁻ attacks the less hindered carbon);  anisole + HI → phenol + CH₃I",
+   "when": "Ether cleavage ke products.",
+   "mistake": "Aryl–O bond kabhi nahi toot-ta: anisole se phenol banta hai, iodobenzene nahi."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Grignard synthesis",
+   "problem": "Kaunsa carbonyl compound aur Grignard reagent 2-methylpropan-2-ol dega?",
+   "solution": "Acetone + CH₃MgBr, phir hydrolysis → (CH₃)₃COH (ketone se 3° alcohol)."
+  },
+  {
+   "title": "Acidity",
+   "problem": "Order: ethanol, phenol, p-nitrophenol, p-cresol.",
+   "solution": "p-Nitrophenol > phenol > p-cresol > ethanol (–NO₂ phenoxide ko stable karta hai; –CH₃ destabilise; ethoxide mein resonance nahi)."
+  },
+  {
+   "title": "Lucas test",
+   "problem": "Teen alcohols turbidity dete hain: ek turant, ek 5 minute baad, ek sirf garam karne par. Types?",
+   "solution": "Turant: tertiary (2-methylpropan-2-ol); ~5 min: secondary (butan-2-ol); garam karne par: primary (butan-1-ol)."
+  },
+  {
+   "title": "Steam volatility",
+   "problem": "o-Nitrophenol steam volatile kyun hai par p-nitrophenol nahi?",
+   "solution": "o-Nitrophenol mein intramolecular hydrogen bonding hai, isliye molecules aapas mein nahi judte. p-Nitrophenol intermolecular H-bonds banata hai jo boiling point badhaate hain."
+  },
+  {
+   "title": "Ether cleavage",
+   "problem": "Anisole + HI ke products?",
+   "solution": "Phenol + methyl iodide. O–aryl bond partial double bond jaisa hai, isliye I⁻ methyl carbon par attack karta hai."
+  },
+  {
+   "title": "Williamson choice",
+   "problem": "tert-Butyl methyl ether banane ke liye kaunsa pair: (CH₃)₃CBr + CH₃ONa ya CH₃Br + (CH₃)₃CONa?",
+   "solution": "CH₃Br + (CH₃)₃CONa. Strong base ke saath 3° halide elimination karke isobutylene dega."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Classification and structure",
+   "explain": "Alcohols: monohydric, dihydric, trihydric; primary, secondary, tertiary; allylic aur benzylic. Alcohols mein O sp³, C–O–H angle tetrahedral se thoda kam; phenols mein C–O bond chhota (partial double-bond character)."
+  },
+  {
+   "title": "Physical properties",
+   "explain": "Alcohols ke boiling points same mass ke hydrocarbons aur ethers se kaafi zyada (hydrogen bonding); branching se ghat-te hain. Chhote alcohols paani mein mil jaate hain; alkyl hissa badhne par solubility ghatti hai."
+  },
+  {
+   "title": "Reactions of the O–H bond",
+   "explain": "Alcohols active metals (Na) se H₂ aur alkoxides dete hain, aur acids, anhydrides ya acid chlorides se esters (esterification). Phenol NaOH se bhi react karta hai (alcohols nahi), yaani uski acidic nature zyada strong hai."
+  },
+  {
+   "title": "Electrophilic substitution of phenol",
+   "explain": "–OH ring ko ortho/para par activate karta hai. Dilute HNO₃ se nitration → o- aur p-nitrophenol; concentrated HNO₃ → picric acid (2,4,6-trinitrophenol). Conc. H₂SO₄ se sulphonation kam temperature par o-phenolsulphonic acid aur zyada par p-isomer. Chromic acid se oxidation → benzoquinone."
+  },
+  {
+   "title": "Mechanism of dehydration",
+   "explain": "–OH ka protonation, paani nikal kar carbocation (slow step), phir H⁺ nikal kar alkene. Carbocation banne ki wajah se aasaani tertiary > secondary > primary aur rearrangements ho sakte hain."
+  },
+  {
+   "title": "Commercially important alcohols",
+   "explain": "Methanol (wood spirit) zehreela: andhapan aur maut. Ethanol cheeni ke fermentation (invertase, zymase) se; denatured alcohol CuSO₄ aur pyridine milakar peene layak nahi rakhte."
+  },
+  {
+   "title": "Ethers",
+   "explain": "Williamson synthesis ya alcohols ke dehydration se. Kam polar, isomeric alcohols se kam boiling point. Anisole mein –OR ring ko activate karta hai (o/p-directing) halogenation, nitration aur Friedel–Crafts ke liye."
+  }
+ ],
+ "ratta": [
+  "Acidity: p-nitrophenol > phenol > water > ethanol.",
+  "Lucas: 3° immediate, 2° ~5 min, 1° on heating.",
+  "HCHO → 1°, RCHO → 2°, ketone → 3° (Grignard).",
+  "Ethanol + H₂SO₄: 443 K ethene, 413 K ether.",
+  "Kolbe → salicylic acid;  Reimer–Tiemann → salicylaldehyde.",
+  "Br₂ water + phenol → 2,4,6-tribromophenol (white).",
+  "Williamson: 1° halide + alkoxide;  anisole + HI → phenol + CH₃I."
+ ],
+ "verifiedOn": "2026-11-13"
+}

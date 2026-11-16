@@ -1,0 +1,155 @@
+{
+ "slug": "biomolecules-chemistry",
+ "subject": "Chemistry",
+ "chapters": {
+  "NEET": "Biomolecules",
+  "JEE": "Biomolecules"
+ },
+ "title": "Biomolecules (Chemistry)",
+ "readMinutes": 13,
+ "summary": [
+  "Carbohydrates polyhydroxy aldehydes (aldose) ya ketones (ketose) hain: monosaccharides (glucose, fructose), disaccharides (sucrose, maltose, lactose) aur polysaccharides (starch, cellulose, glycogen).",
+  "Glucose mainly six-membered ring (pyranose) form mein α aur β anomers ke saath rehta hai. Free aldehyde ya ketone group wali sugars reducing hain; sucrose non-reducing hai.",
+  "Proteins α-amino acid ke polymers hain jo peptide bonds se jude hain. Structure ke chaar levels hain (primary se quaternary); denaturation upar ke levels todta hai, primary structure nahi.",
+  "Nucleic acids (DNA, RNA) nucleotide ke polymers hain — sugar + base + phosphate. Vitamin aur hormone chhote molecules hain jinka biological role bada hai."
+ ],
+ "formulas": [
+  {
+   "name": "Glucose structure evidence",
+   "formula": "HI → n-hexane (straight chain);  acetylation → pentaacetate (5 –OH);  HCN → cyanohydrin and NH₂OH → oxime (C=O);  Br₂ water → gluconic acid (–CHO);  HNO₃ → saccharic acid (–CHO and 1° –OH)",
+   "when": "Glucose ki open-chain structure.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Evidence against open chain",
+   "formula": "no Schiff's test and no reaction with NaHSO₃;  pentaacetate does not react with NH₂OH;  two anomers (α, β)",
+   "when": "Glucose ki ring structure kyun hai."
+  },
+  {
+   "name": "Anomers and mutarotation",
+   "formula": "α-D-glucose (+111°) ⇌ open chain ⇌ β-D-glucose (+19°);  equilibrium +52.5°",
+   "when": "Solution mein specific rotation ka badalna.",
+   "mistake": "Anomers sirf C1 par alag hain; ye mirror images nahi hain — galat mat samjho."
+  },
+  {
+   "name": "Disaccharides and their links",
+   "formula": "sucrose = α-glucose (C1) + β-fructose (C2), non-reducing;  maltose = α-glucose C1–C4, reducing;  lactose = β-galactose C1–C4 glucose, reducing",
+   "when": "Glycosidic linkages.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Invert sugar",
+   "formula": "sucrose (+66.5°) + H₂O → glucose (+52.5°) + fructose (−92.4°) → mixture is laevorotatory",
+   "when": "Hydrolysed sucrose ko invert sugar kyun kehte hain."
+  },
+  {
+   "name": "Polysaccharides",
+   "formula": "starch = amylose (15–20%, unbranched, α-1,4) + amylopectin (80–85%, branched, α-1,6 at branches);  cellulose = β-1,4 glucose;  glycogen = highly branched, like amylopectin",
+   "when": "Storage aur structural carbohydrates ki structure."
+  },
+  {
+   "name": "Peptide bond",
+   "formula": "–CO–NH–, formed by condensation of –COOH of one amino acid and –NH₂ of the next; n amino acids → n − 1 peptide bonds",
+   "when": "Peptide bonds ginna."
+  },
+  {
+   "name": "Zwitterion",
+   "formula": "H₃N⁺–CHR–COO⁻; at the isoelectric point the net charge is zero",
+   "when": "Amino acids ka high melting point aur water-solubility kyun."
+  },
+  {
+   "name": "Levels of protein structure",
+   "formula": "primary (sequence) → secondary (α-helix, β-pleated sheet; H-bonds) → tertiary (overall folding: H-bonds, disulphide, ionic, van der Waals) → quaternary (subunits)",
+   "when": "Protein structure describe karna."
+  },
+  {
+   "name": "Nucleotide",
+   "formula": "nucleoside (base + pentose sugar) + phosphate;  nucleotides joined by 3′–5′ phosphodiester bonds",
+   "when": "Nucleic acids ki structure."
+  },
+  {
+   "name": "Bases",
+   "formula": "DNA: A, G, C, T;  RNA: A, G, C, U;  purines A, G;  pyrimidines C, T, U;  pairs A=T (2 H-bonds), G≡C (3 H-bonds)",
+   "when": "Base pairing."
+  },
+  {
+   "name": "Vitamins and deficiencies",
+   "formula": "fat-soluble A, D, E, K;  water-soluble B group and C.  A → night blindness;  B₁ → beri-beri;  B₁₂ → pernicious anaemia;  C → scurvy;  D → rickets;  K → delayed blood clotting",
+   "when": "Vitamins ko diseases se milaana (fat-soluble vs water-soluble).",
+   "tag": "PYQ favourite",
+   "note": "B₁₂ water-soluble hai phir bhi liver mein store ho sakta hai — exception yaad rakho."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Peptide bonds",
+   "problem": "Hexapeptide mein kitne peptide bonds?",
+   "solution": "n − 1 = 6 − 1 = 5."
+  },
+  {
+   "title": "Tripeptides ki ginti",
+   "problem": "Glycine, alanine aur valine se kitne alag tripeptides (har ek baar-baar use ho sakta hai)?",
+   "solution": "Har 3 position par 3 choices: 3 × 3 × 3 = 27."
+  },
+  {
+   "title": "Reducing sugar?",
+   "problem": "Kaun reducing hain: glucose, fructose, sucrose, maltose, lactose?",
+   "solution": "Sucrose ke alawa sab. Sucrose mein dono anomeric carbons (glucose ka C1 aur fructose ka C2) glycosidic bond mein lage hain, isliye free hemiacetal group nahi."
+  },
+  {
+   "title": "Denaturation",
+   "problem": "Anda ubaalne par kya hota hai?",
+   "solution": "Garmi albumin ko denature karti hai: secondary aur tertiary structures khul jaate hain aur globular protein jam jaata hai. Primary structure (amino acid sequence) nahi badalta."
+  },
+  {
+   "title": "Essential amino acids",
+   "problem": "Essential aur non-essential amino acids mein farak?",
+   "solution": "Essential (valine, leucine, isoleucine, lysine, threonine, methionine, phenylalanine, tryptophan, histidine, arginine) khaane se aane chahiye; non-essential (glycine, alanine, glutamic acid) body khud banati hai."
+  },
+  {
+   "title": "DNA vs RNA",
+   "problem": "DNA aur RNA mein teen farak?",
+   "solution": "DNA mein deoxyribose, thymine aur double helix; RNA mein ribose, uracil aur aam taur par single strand. DNA genetic information rakhta hai; RNA (m, t, r) protein banane mein madad karta hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Classification of carbohydrates",
+   "explain": "Reducing vs non-reducing; aldoses vs ketoses; monosaccharides (hydrolyse nahi hote), oligosaccharides (2–10 units) aur polysaccharides. D/L last chiral carbon ki configuration glyceraldehyde ke relative batata hai, rotation ki direction nahi."
+  },
+  {
+   "title": "Fructose",
+   "explain": "Ketohexose, laevorotatory; five-membered (furanose) ring banata hai. Tollens' aur Fehling's ko reduce karta hai kyunki alkaline medium mein aldose mein isomerise ho jaata hai."
+  },
+  {
+   "title": "Amino acids",
+   "explain": "α-Amino acids mein –NH₂ aur –COOH same carbon par. Acidic (aspartic, glutamic), basic (lysine, arginine) aur neutral types. Glycine ke alawa sab optically active aur zyadatar L-configuration."
+  },
+  {
+   "title": "Fibrous and globular proteins",
+   "explain": "Fibrous proteins (keratin, myosin) lambe, dhaage jaise aur insoluble; globular proteins (insulin, albumin) gol aur water-soluble."
+  },
+  {
+   "title": "Enzymes",
+   "explain": "Biological catalysts, zyadatar globular proteins, bahut specific; activation energy ghataate hain. Example: maltase maltose ko glucose mein badalta hai."
+  },
+  {
+   "title": "Hormones",
+   "explain": "Endocrine glands ke chemical messengers: steroid (oestrogen, testosterone), polypeptide (insulin, glucagon) aur amino-acid derivatives (thyroxine, adrenaline). Insulin blood glucose ghataata aur glucagon badhaata hai."
+  },
+  {
+   "title": "Biological functions of nucleic acids",
+   "explain": "DNA khud ko replicate karta hai aur heredity rakhta hai; transcription se mRNA banta hai, aur ribosomes par translation (tRNA amino acids laata hai) se proteins."
+  }
+ ],
+ "ratta": [
+  "Sucrose: non-reducing; invert sugar is laevorotatory.",
+  "Maltose α-1,4;  lactose β-1,4;  cellulose β-1,4;  amylopectin α-1,6 branches.",
+  "Glucose pentaacetate: 5 –OH;  HI → n-hexane.",
+  "n amino acids → n − 1 peptide bonds.",
+  "A=T (2 H-bonds), G≡C (3);  RNA has U.",
+  "A, D, E, K fat-soluble;  B, C water-soluble.",
+  "C → scurvy;  D → rickets;  B₁ → beri-beri;  A → night blindness."
+ ],
+ "verifiedOn": "2026-11-13"
+}
