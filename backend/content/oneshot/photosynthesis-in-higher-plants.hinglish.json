@@ -1,0 +1,157 @@
+{
+ "slug": "photosynthesis-in-higher-plants",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Photosynthesis in Plants"
+ },
+ "title": "Photosynthesis in Higher Plants",
+ "readMinutes": 15,
+ "summary": [
+  "Photosynthesis autotroph nutrition ka base hai: light energy ko chemical energy mein badalta hai: 6CO₂ + 12H₂O → C₆H₁₂O₆ + 6H₂O + 6O₂. Ye chloroplast mein hota hai — light reactions grana (thylakoids) mein, dark (biosynthetic) reactions stroma mein.",
+  "Light reactions paani todti hain, O₂ chhodti hain aur Z-scheme (non-cyclic photophosphorylation) se ATP aur NADPH banati hain. ATP chemiosmosis se banta hai.",
+  "Calvin cycle (C₃ pathway) RuBisCO se CO₂ ko RuBP par fix karta hai; C₄ plants (maize, sugarcane) pehle mesophyll cells mein PEP carboxylase se CO₂ fix karte hain aur Kranz anatomy rakhte hain, jisse photorespiration nahi hota.",
+  "Photosynthesis ki rate light, CO₂, temperature aur paani par depend karti hai — Blackman ka law of limiting factor."
+ ],
+ "formulas": [
+  {
+   "name": "Overall equation",
+   "formula": "6CO₂ + 12H₂O → (light, chlorophyll) C₆H₁₂O₆ + 6H₂O + 6O₂",
+   "when": "Photosynthesis ka summary.",
+   "mistake": "Nikli O₂ paani se aati hai, CO₂ se nahi (Cornelius van Niel; ¹⁸O se confirm) — galat mat likhna."
+  },
+  {
+   "name": "Early experiments",
+   "formula": "Priestley (1770): plants restore air (mouse and candle);  Ingenhousz: needs sunlight, only green parts;  Sachs (1854): glucose made, stored as starch;  Engelmann: action spectrum with Cladophora and aerobic bacteria (blue and red light)",
+   "when": "Discoveries ka itihaas.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Pigments",
+   "formula": "chlorophyll a (bright/blue-green, main pigment, reaction centre);  chlorophyll b (yellow-green);  xanthophylls (yellow);  carotenoids (yellow-orange) — accessory pigments that also protect chlorophyll from photo-oxidation",
+   "when": "Leaf pigment ki chromatography."
+  },
+  {
+   "name": "Photosystems",
+   "formula": "PS I reaction centre P700;  PS II reaction centre P680;  LHC (antenna) of hundreds of pigment molecules",
+   "when": "Light-harvesting complexes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Photolysis of water",
+   "formula": "2H₂O → 4H⁺ + O₂ + 4e⁻ (on the inner side of thylakoid membrane, linked to PS II; Mn, Cl⁻ needed)",
+   "when": "Electrons aur O₂ ka source."
+  },
+  {
+   "name": "Non-cyclic vs cyclic photophosphorylation",
+   "formula": "non-cyclic: PS II + PS I, gives ATP + NADPH + O₂ (Z-scheme);  cyclic: only PS I, gives only ATP, in stroma lamellae (no NADP reductase there)",
+   "when": "Photophosphorylation compare karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Chemiosmosis",
+   "formula": "proton gradient across thylakoid membrane (high H⁺ in lumen) → H⁺ flow through CF₀ to CF₁ of ATP synthase → ATP",
+   "when": "ATP banne ka mechanism."
+  },
+  {
+   "name": "Calvin cycle",
+   "formula": "carboxylation: RuBP + CO₂ → 2 × 3-PGA (RuBisCO);  reduction: uses ATP + NADPH;  regeneration of RuBP",
+   "when": "C₃ pathway (Melvin Calvin, ¹⁴C)."
+  },
+  {
+   "name": "Energy for one glucose (C₃)",
+   "formula": "6 turns: 18 ATP + 12 NADPH",
+   "when": "ATP/NADPH ginna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "C₄ (Hatch–Slack) pathway",
+   "formula": "PEP (3C) + CO₂ → OAA (4C) by PEP carboxylase in mesophyll → malate/aspartate → bundle sheath → releases CO₂ for Calvin cycle → pyruvate back to mesophyll",
+   "when": "C₄ plants: maize, sugarcane, sorghum, Amaranthus."
+  },
+  {
+   "name": "Kranz anatomy",
+   "formula": "large bundle sheath cells around vascular bundles, many chloroplasts, thick walls impervious to gas, no intercellular spaces",
+   "when": "C₄ leaves pehchaanna."
+  },
+  {
+   "name": "Photorespiration",
+   "formula": "RuBisCO binds O₂: RuBP + O₂ → phosphoglycerate + phosphoglycolate; no sugar, no ATP — wasteful; in chloroplast, peroxisome and mitochondria",
+   "when": "C₄ plants zyada efficient kyun.",
+   "mistake": "C₄ plants mein photorespiration nahi hota kyunki RuBisCO ke aas-paas CO₂ concentration zyada hota hai."
+  },
+  {
+   "name": "Blackman's law of limiting factors (1905)",
+   "formula": "if a process depends on several factors, its rate is set by the factor nearest its minimal value",
+   "when": "Photosynthesis ko affect karne wale factors."
+  }
+ ],
+ "examples": [
+  {
+   "title": "ATP aur NADPH ki ginti",
+   "problem": "Calvin cycle mein ek glucose banane ke liye kitne ATP aur NADPH chahiye?",
+   "solution": "Har turn mein ek CO₂ ke liye 3 ATP + 2 NADPH, aur glucose ke liye 6 turns: 18 ATP aur 12 NADPH."
+  },
+  {
+   "title": "C₄ plants mein ATP",
+   "problem": "C₄ plants ko har CO₂ par 2 extra ATP chahiye (PEP regenerate karne ke liye). Ek glucose ke liye ATP?",
+   "solution": "(3 + 2) × 6 = 30 ATP per glucose."
+  },
+  {
+   "title": "O₂ ka source",
+   "problem": "Kaise dikhaya gaya ki nikli O₂ paani se aati hai?",
+   "solution": "Van Niel ke purple aur green sulphur bacteria par kaam se pata chala ki H₂O hydrogen donor hai (H₂S ki tarah); baad mein ¹⁸O-labelled paani ke experiments ne dikhaya ki O₂ paani se aayi."
+  },
+  {
+   "title": "Pehla stable product",
+   "problem": "C₃ aur C₄ plants mein pehla stable product kya hai?",
+   "solution": "C₃: 3-phosphoglyceric acid (3-PGA, 3-carbon). C₄: oxaloacetic acid (OAA, 4-carbon)."
+  },
+  {
+   "title": "Greenhouse mein limiting factor",
+   "problem": "Tomatoes aur bell peppers CO₂ bhare greenhouses mein kyun ugaate hain?",
+   "solution": "CO₂ aksar main limiting factor hota hai; ise badhaane (lagbhag 0.05% tak) se C₃ plants mein photosynthesis ki rate aur yield badhti hai."
+  },
+  {
+   "title": "Cyclic photophosphorylation kahan",
+   "problem": "Cyclic photophosphorylation kahan hota hai, aur kyun?",
+   "solution": "Stroma lamellae mein, jinmein PS I hai par PS II aur NADP reductase nahi — isliye electrons ghoom kar waapas aate hain aur sirf ATP banta hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Site of photosynthesis",
+   "explain": "Mesophyll cells mein chloroplasts walls ke saath line mein lagte hain taaki sahi light mile. Membranes (grana) light pakad kar ATP aur NADPH banati hain; stroma ke enzymes CO₂ ko sugars mein reduce karte hain (light-independent ya dark reactions)."
+  },
+  {
+   "title": "Action and absorption spectra",
+   "explain": "Chlorophyll a sabse zyada blue aur red regions mein absorb karta hai; photosynthesis ka action spectrum chlorophyll a ke absorption spectrum se kaafi milta hai, par doosre pigments bhi yogdaan dete hain."
+  },
+  {
+   "title": "Electron transport",
+   "explain": "PS II 680 nm light absorb karta hai; excited electrons plastoquinone, cytochromes b6f aur plastocyanin se PS I tak jaate hain; PS I unhe 700 nm par phir excite karke ferredoxin aur NADP⁺ reductase ko deta hai, NADPH banta hai. PS II ke khoye electrons water splitting se poore hote hain."
+  },
+  {
+   "title": "Proton gradient",
+   "explain": "Gradient isliye banta hai kyunki water splitting ke protons lumen mein jama hote hain, cytochrome complex se electrons guzarte waqt protons lumen mein jaate hain, aur NADPH banate waqt NADP reductase stroma se protons hataata hai."
+  },
+  {
+   "title": "Factors affecting photosynthesis",
+   "explain": "Light: kam light par intensity ke saath rate badhti hai, full sunlight ke lagbhag 10% par saturate. CO₂: C₃ plants zyada CO₂ par C₄ se zyada respond karte hain (C₄ ~360 ppm par saturate). Temperature: C₄ plants ka optimum zyada. Water stress stomata band karta aur leaf surface ghataata hai."
+  },
+  {
+   "title": "C₃ vs C₄ comparison",
+   "explain": "C₄ plants zyada temperature sehte hain, productivity zyada, CO₂ compensation point kam aur photorespiration nahi. C₄ plants mein RuBisCO sirf bundle sheath cells mein; PEP carboxylase sirf mesophyll mein."
+  }
+ ],
+ "ratta": [
+  "O₂ from water (van Niel).",
+  "PS I = P700;  PS II = P680.",
+  "Non-cyclic: ATP + NADPH + O₂;  cyclic: only ATP (stroma lamellae).",
+  "Glucose (C₃): 18 ATP + 12 NADPH;  C₄: 30 ATP.",
+  "C₃ first product 3-PGA;  C₄ first product OAA.",
+  "Kranz anatomy → C₄ (maize, sugarcane).",
+  "Photorespiration: RuBisCO + O₂, wasteful, absent in C₄.",
+  "Engelmann — Cladophora action spectrum."
+ ],
+ "verifiedOn": "2026-11-13"
+}

@@ -1,0 +1,146 @@
+{
+ "slug": "respiration-in-plants",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Respiration in Plants"
+ },
+ "title": "Respiration in Plants",
+ "readMinutes": 14,
+ "summary": [
+  "Cellular respiration khaane (mainly glucose) ko todkar energy nikaalti hai, jo ATP mein pakdi jaati hai. Plants mein khaas respiratory organs nahi; har part stomata aur lenticel se diffusion dwara gases exchange karta hai.",
+  "Glycolysis (EMP pathway) cytoplasm mein glucose ko do pyruvate mein todta hai. O₂ na ho to pyruvate ka fermentation ethanol (yeast) ya lactic acid (muscle, bacteria) mein hota hai.",
+  "O₂ ho to pyruvate mitochondria mein jaata hai: link reaction → Krebs cycle (matrix) → electron transport system aur oxidative phosphorylation (inner membrane). O₂ final electron acceptor hai. Theory mein ek glucose se 38 ATP.",
+  "Respiration amphibolic hai — molecules todta bhi hai aur banata bhi. Respiratory quotient (RQ) substrate par depend karta hai."
+ ],
+ "formulas": [
+  {
+   "name": "Overall aerobic respiration",
+   "formula": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy",
+   "when": "Summary equation."
+  },
+  {
+   "name": "Glycolysis",
+   "formula": "glucose → 2 pyruvate;  net gain 2 ATP + 2 NADH;  uses 2 ATP (hexokinase, phosphofructokinase), makes 4 ATP",
+   "when": "Pehla stage (Embden, Meyerhof, Parnas).",
+   "tag": "PYQ favourite",
+   "note": "Glycolysis hi akela process hai jo aerobic aur anaerobic respiration dono mein common hai — yaad rakho."
+  },
+  {
+   "name": "Fermentation",
+   "formula": "yeast: pyruvate → acetaldehyde + CO₂ → ethanol (pyruvic acid decarboxylase, alcohol dehydrogenase);  muscle/bacteria: pyruvate → lactic acid (lactate dehydrogenase)",
+   "when": "Anaerobic respiration.",
+   "note": "Ethanol lagbhag 13% pahunchne par yeasts khud ko zeher de dete hain."
+  },
+  {
+   "name": "Link reaction",
+   "formula": "pyruvate + CoA + NAD⁺ → acetyl CoA + CO₂ + NADH (pyruvate dehydrogenase, in mitochondrial matrix)",
+   "when": "Glycolysis aur Krebs cycle ko jodna."
+  },
+  {
+   "name": "Krebs (TCA) cycle per acetyl CoA",
+   "formula": "acetyl CoA (2C) + OAA (4C) → citric acid (6C) … → OAA;  gives 2 CO₂ + 3 NADH + 1 FADH₂ + 1 ATP (GTP)",
+   "when": "Doosra stage, matrix mein.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "ETS sequence",
+   "formula": "NADH → complex I (NADH dehydrogenase) → ubiquinone → complex III (cyt bc₁) → cytochrome c → complex IV (cyt a–a₃, Cu centres) → O₂;  FADH₂ enters at complex II",
+   "when": "Electron transport system."
+  },
+  {
+   "name": "ATP yield per carrier",
+   "formula": "1 NADH → 3 ATP;  1 FADH₂ → 2 ATP (complex V — ATP synthase F₀–F₁)",
+   "when": "ATP ginna."
+  },
+  {
+   "name": "Net ATP from one glucose",
+   "formula": "38 ATP (theoretical, aerobic);  2 ATP (fermentation)",
+   "when": "Energy ki tulna.",
+   "mistake": "Asli yield kam hoti hai; 38 sequential pathway maan kar theoretical value hai — exact mat samjho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Respiratory quotient",
+   "formula": "RQ = volume of CO₂ evolved / volume of O₂ consumed",
+   "when": "Respiratory substrate pehchaanna."
+  },
+  {
+   "name": "RQ values",
+   "formula": "carbohydrates = 1;  fats ≈ 0.7;  proteins ≈ 0.9;  organic acids (malic) > 1;  anaerobic = ∞ (CO₂ but no O₂)",
+   "when": "RQ ki tulna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Amphibolic pathway",
+   "formula": "fats → glycerol (→ PGAL) + fatty acids (→ acetyl CoA);  proteins → amino acids → pyruvate/acetyl CoA/Krebs intermediates",
+   "when": "Doosre substrates ka respiration mein aana."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Ek glucose se ATP",
+   "problem": "Aerobic respiration mein ek glucose se theoretical ATP gino.",
+   "solution": "Glycolysis 2 ATP + 2 NADH (6 ATP); link reaction 2 NADH (6 ATP); Krebs cycle 6 NADH (18 ATP) + 2 FADH₂ (4 ATP) + 2 ATP. Total = 38 ATP."
+  },
+  {
+   "title": "Fat ka RQ",
+   "problem": "2C₅₁H₉₈O₆ + 145O₂ → 102CO₂ + 98H₂O. RQ nikalo.",
+   "solution": "RQ = 102/145 = 0.7."
+  },
+  {
+   "title": "Malic acid ka RQ",
+   "problem": "C₄H₆O₅ + 3O₂ → 4CO₂ + 3H₂O. RQ?",
+   "solution": "RQ = 4/3 = 1.33 — 1 se zyada, jaisa organic acids mein hota hai."
+  },
+  {
+   "title": "Muscle cramps",
+   "problem": "Bhaari exercise ke baad muscles thaki kyun lagti hain?",
+   "solution": "O₂ kam padne par muscle cells pyruvate ko lactic acid mein reduce karti hain (anaerobic), jo jama hokar thakaan deta hai."
+  },
+  {
+   "title": "Final electron acceptor",
+   "problem": "Aerobic respiration mein oxygen ka role kya hai?",
+   "solution": "Oxygen ETS ke end mein electrons ka final acceptor hai; protons ke saath judkar paani banata hai. Iske bina chain ruk jaati hai aur oxidative phosphorylation se ATP banna band."
+  },
+  {
+   "title": "Respiration amphibolic hai",
+   "problem": "Respiration ko amphibolic pathway kyun kehte hain?",
+   "solution": "Iske intermediates todne (catabolism) aur banane (anabolism) dono mein use hote hain — jaise acetyl CoA fatty acid synthesis mein aur Krebs intermediates amino acids ke liye."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Gas exchange in plants",
+   "explain": "Plants stomata aur lenticels se O₂ lete hain; stems aur roots ke living cells surface ke paas hote hain, aur zyadatar cells ka kuch surface hawa ke sampark mein rehta hai. Animals ke mukable gas exchange ki zaroorat kam hai."
+  },
+  {
+   "title": "Steps of glycolysis",
+   "explain": "Glucose → glucose-6-phosphate (ATP use) → fructose-6-phosphate → fructose-1,6-bisphosphate (ATP use) → DHAP + 3-PGAL → 1,3-bisphosphoglycerate (NADH bana) → 3-PGA (ATP) → 2-PGA → PEP → pyruvate (ATP)."
+  },
+  {
+   "title": "Krebs cycle details",
+   "explain": "Hans Krebs ne dhoondha. Citrate → isocitrate → α-ketoglutarate (CO₂, NADH) → succinyl CoA (CO₂, NADH) → succinate (GTP/ATP — substrate-level phosphorylation) → fumarate (FADH₂) → malate → OAA (NADH)."
+  },
+  {
+   "title": "Oxidative phosphorylation",
+   "explain": "Electron transport ki energy protons ko intermembrane space mein pump karti hai; protons ATP synthase ke F₀ (channel) se F₁ (headpiece, catalytic site) ki taraf waapas behte hain aur gradient ATP banwaata hai."
+  },
+  {
+   "title": "Assumptions of the 38 ATP count",
+   "explain": "Sequential, vyavasthit pathway; glycolysis ka NADH mitochondria mein jaakar poora oxidise hota hai; koi intermediate doosre compounds ke liye use nahi hota; sirf glucose respire hota hai. Asal mein inme se koi poori tarah sach nahi."
+  },
+  {
+   "title": "Fermentation vs aerobic respiration",
+   "explain": "Fermentation glucose ko aadha-adhoora todta hai, net 2 ATP deta hai aur NADH dheere se NAD⁺ mein re-oxidise hota hai; aerobic respiration glucose ko poora CO₂ aur paani mein oxidise karke kahin zyada ATP deta hai."
+  }
+ ],
+ "ratta": [
+  "Glycolysis: cytoplasm, net 2 ATP + 2 NADH.",
+  "Krebs per acetyl CoA: 2 CO₂, 3 NADH, 1 FADH₂, 1 GTP.",
+  "NADH = 3 ATP;  FADH₂ = 2 ATP;  total 38.",
+  "Complex IV: cyt a–a₃ + Cu;  complex V: ATP synthase.",
+  "RQ: carb 1, fat 0.7, protein 0.9, malic acid 1.33.",
+  "Yeast → ethanol + CO₂;  muscle → lactic acid."
+ ],
+ "verifiedOn": "2026-11-13"
+}

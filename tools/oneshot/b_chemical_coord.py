@@ -66,5 +66,53 @@ SYLLABUS = [
 ("Role of hormones as messengers and regulators; hypo- and hyperactivity and related disorders — dwarfism, acromegaly, cretinism, goitre, exophthalmic goitre, diabetes, Addison's disease", ["dwarfism", "acromegaly", "cretinism", "goitre", "diabetes", "Addison"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Hormones non-nutrient chemicals hain jo intercellular messengers ki tarah kaam karte hain aur trace amounts mein bante hain. Endocrine glands ductless hoti hain aur hormones seedhe blood mein chhodti hain.",
+"Hypothalamus pituitary ko releasing aur inhibiting hormones (adenohypophysis) se control karta hai, aur oxytocin aur vasopressin ko axons se neurohypophysis tak bhejta hai.",
+"Doosri glands: pineal, thyroid, parathyroid, thymus, adrenal, pancreas (islets of Langerhans), testes aur ovaries (gonad). Heart, kidney aur gut bhi hormones banate hain.",
+"Hormones receptor se kaam karte hain: protein hormones membrane receptors se judkar second messenger (cAMP, IP₃, Ca²⁺) use karte hain; steroid aur iodothyronine hormones cell mein jaakar intracellular receptors se judte hain aur genes control karte hain. Disorders: dwarfism, acromegaly, cretinism, goitre, diabetes, Addison's disease.",
+],
+when=[
+("Releasing vs inhibiting hormones.", None),
+("Anterior pituitary ke hormones.", None),
+("GH ki problems.", None),
+("Posterior pituitary.", "Ye hormones hypothalamus mein bante hain, posterior pituitary mein nahi — wo sirf store karke chhodta hai."),
+("Pineal ke kaam.", None),
+("Thyroid hormones.", None),
+("Hypo- aur hyperthyroidism.", None),
+("Calcium ka control.", None),
+("Thymus ke kaam.", None),
+("Catecholamines.", None),
+("Corticoids.", "Adrenal cortex hormones kam banne se Addison's disease hota hai."),
+("Blood sugar ka control.", None),
+("Sex hormones.", None),
+("Non-endocrine tissues ke hormones.", None),
+],
+examples=[
+("Do hormones, ulta kaam", "Kaunse do hormones blood calcium constant rakhte hain, aur kaise?",
+ "PTH (parathyroid) blood Ca²⁺ badhaata hai; thyrocalcitonin (thyroid) ghataata hai. Dono milkar balance rakhte hain."),
+("Emergency hormone", "Adrenaline aur noradrenaline ko 3F hormones kyun kehte hain?",
+ "Emergency mein tezi se nikalte hain — fight, flight ya fright — heart rate, alertness aur blood glucose badhaate hain."),
+("Cretinism", "Ek bachche mein ruki hui growth aur mental retardation hai; maa ko pregnancy mein iodine ki kami thi. Diagnosis?",
+ "Cretinism — pregnancy mein hypothyroidism foetus ke development ko affect karta hai."),
+("Steroid hormone ka mechanism", "Cortisol target cell par kaise kaam karta hai?",
+ "Lipid-soluble hone se membrane paar karta hai, intracellular receptor se judta hai aur hormone–receptor complex nucleus mein gene expression control karta hai."),
+("Second messenger", "Protein hormones kaunse second messengers use karte hain?",
+ "cAMP, IP₃ aur Ca²⁺. Hormone membrane receptor se judta hai aur second messenger signal cell ke andar le jaata hai."),
+("Gastrointestinal hormones", "Pancreatic juice aur bile nikalne ko kaunsa hormone uksaata hai?",
+ "Cholecystokinin (CCK) pancreas aur gall bladder dono par kaam karta hai; secretin exocrine pancreas par (paani aur bicarbonate). Gastrin gastric glands ko uksaata hai."),
+],
+topics=[
+("Endocrine glands and hormones", "Classical definition: endocrine glands ke banaye chemicals jo blood mein chhode jaakar door ke target organ tak jaate hain. Current definition: non-nutrient chemicals jo trace amounts mein intercellular messengers ka kaam karte hain."),
+("Human endocrine system", "Pituitary, pineal, thyroid, adrenal, pancreas, parathyroid, thymus aur gonads, saath mein gastrointestinal tract, liver, kidney aur heart ke hormone banane wale tissues."),
+("Hypothalamus", "Diencephalon ka basal hissa; isme neurosecretory cells ke kai groups (nuclei) hain jo pituitary hormones ke banne aur nikalne ko control karne wale hormones banate hain. Hormones portal circulatory system se anterior pituitary tak pahunchte hain."),
+("Pituitary gland", "Sella turcica (haddi ki cavity) mein, stalk se hypothalamus se juda. Anatomically adenohypophysis (pars distalis, pars intermedia) aur neurohypophysis (pars nervosa)."),
+("Chemical nature of hormones", "Peptide/polypeptide/protein (insulin, glucagon, pituitary aur hypothalamic hormones), steroids (cortisol, testosterone, oestradiol, progesterone), iodothyronines (thyroid hormones), amino acid derivatives (adrenaline, noradrenaline, epinephrine)."),
+("Mechanism of hormone action", "Hormones sirf target tissues ke specific receptors se judte hain. Membrane-bound receptors (jo hormones andar nahi ja sakte unke liye) hormone–receptor complex banakar second messengers banate hain; intracellular receptors (zyadatar nuclear) gene expression ya chromosome function control karte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

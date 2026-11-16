@@ -66,5 +66,50 @@ SYLLABUS = [
 ("Amphibolic pathways; respiratory quotient", ["amphibolic", "respiratory quotient"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Cellular respiration khaane (mainly glucose) ko todkar energy nikaalti hai, jo ATP mein pakdi jaati hai. Plants mein khaas respiratory organs nahi; har part stomata aur lenticel se diffusion dwara gases exchange karta hai.",
+"Glycolysis (EMP pathway) cytoplasm mein glucose ko do pyruvate mein todta hai. O₂ na ho to pyruvate ka fermentation ethanol (yeast) ya lactic acid (muscle, bacteria) mein hota hai.",
+"O₂ ho to pyruvate mitochondria mein jaata hai: link reaction → Krebs cycle (matrix) → electron transport system aur oxidative phosphorylation (inner membrane). O₂ final electron acceptor hai. Theory mein ek glucose se 38 ATP.",
+"Respiration amphibolic hai — molecules todta bhi hai aur banata bhi. Respiratory quotient (RQ) substrate par depend karta hai.",
+],
+when=[
+("Summary equation.", None),
+("Pehla stage (Embden, Meyerhof, Parnas).", "Glycolysis hi akela process hai jo aerobic aur anaerobic respiration dono mein common hai — yaad rakho."),
+("Anaerobic respiration.", "Ethanol lagbhag 13% pahunchne par yeasts khud ko zeher de dete hain."),
+("Glycolysis aur Krebs cycle ko jodna.", None),
+("Doosra stage, matrix mein.", None),
+("Electron transport system.", None),
+("ATP ginna.", None),
+("Energy ki tulna.", "Asli yield kam hoti hai; 38 sequential pathway maan kar theoretical value hai — exact mat samjho."),
+("Respiratory substrate pehchaanna.", None),
+("RQ ki tulna.", None),
+("Doosre substrates ka respiration mein aana.", None),
+],
+examples=[
+("Ek glucose se ATP", "Aerobic respiration mein ek glucose se theoretical ATP gino.",
+ "Glycolysis 2 ATP + 2 NADH (6 ATP); link reaction 2 NADH (6 ATP); Krebs cycle 6 NADH (18 ATP) + 2 FADH₂ (4 ATP) + 2 ATP. Total = ⟨0⟩ ATP."),
+("Fat ka RQ", "2C₅₁H₉₈O₆ + 145O₂ → 102CO₂ + 98H₂O. RQ nikalo.",
+ "RQ = 102/145 = ⟨0⟩."),
+("Malic acid ka RQ", "C₄H₆O₅ + 3O₂ → 4CO₂ + 3H₂O. RQ?",
+ "RQ = 4/3 = ⟨0⟩ — 1 se zyada, jaisa organic acids mein hota hai."),
+("Muscle cramps", "Bhaari exercise ke baad muscles thaki kyun lagti hain?",
+ "O₂ kam padne par muscle cells pyruvate ko lactic acid mein reduce karti hain (anaerobic), jo jama hokar thakaan deta hai."),
+("Final electron acceptor", "Aerobic respiration mein oxygen ka role kya hai?",
+ "Oxygen ETS ke end mein electrons ka final acceptor hai; protons ke saath judkar paani banata hai. Iske bina chain ruk jaati hai aur oxidative phosphorylation se ATP banna band."),
+("Respiration amphibolic hai", "Respiration ko amphibolic pathway kyun kehte hain?",
+ "Iske intermediates todne (catabolism) aur banane (anabolism) dono mein use hote hain — jaise acetyl CoA fatty acid synthesis mein aur Krebs intermediates amino acids ke liye."),
+],
+topics=[
+("Gas exchange in plants", "Plants stomata aur lenticels se O₂ lete hain; stems aur roots ke living cells surface ke paas hote hain, aur zyadatar cells ka kuch surface hawa ke sampark mein rehta hai. Animals ke mukable gas exchange ki zaroorat kam hai."),
+("Steps of glycolysis", "Glucose → glucose-6-phosphate (ATP use) → fructose-6-phosphate → fructose-1,6-bisphosphate (ATP use) → DHAP + 3-PGAL → 1,3-bisphosphoglycerate (NADH bana) → 3-PGA (ATP) → 2-PGA → PEP → pyruvate (ATP)."),
+("Krebs cycle details", "Hans Krebs ne dhoondha. Citrate → isocitrate → α-ketoglutarate (CO₂, NADH) → succinyl CoA (CO₂, NADH) → succinate (GTP/ATP — substrate-level phosphorylation) → fumarate (FADH₂) → malate → OAA (NADH)."),
+("Oxidative phosphorylation", "Electron transport ki energy protons ko intermembrane space mein pump karti hai; protons ATP synthase ke F₀ (channel) se F₁ (headpiece, catalytic site) ki taraf waapas behte hain aur gradient ATP banwaata hai."),
+("Assumptions of the 38 ATP count", "Sequential, vyavasthit pathway; glycolysis ka NADH mitochondria mein jaakar poora oxidise hota hai; koi intermediate doosre compounds ke liye use nahi hota; sirf glucose respire hota hai. Asal mein inme se koi poori tarah sach nahi."),
+("Fermentation vs aerobic respiration", "Fermentation glucose ko aadha-adhoora todta hai, net 2 ATP deta hai aur NADH dheere se NAD⁺ mein re-oxidise hota hai; aerobic respiration glucose ko poora CO₂ aur paani mein oxidise karke kahin zyada ATP deta hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

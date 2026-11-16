@@ -1,0 +1,152 @@
+{
+ "slug": "plant-growth-and-development",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Plant Growth and Development"
+ },
+ "title": "Plant Growth and Development",
+ "readMinutes": 13,
+ "summary": [
+  "Growth size mein irreversible permanent badhat hai. Plants mein ye indeterminate (open) hai kyunki meristems divide hote rehte hain. Iske teen phases hain — meristematic, elongation aur maturation — aur ye sigmoid curve follow karti hai.",
+  "Growth rate arithmetic (ek daughter cell divide hota rehta hai) ya geometric (dono daughter cells divide) ho sakti hai; differentiation, dedifferentiation aur redifferentiation plant ko shape dete hain.",
+  "Paanch plant growth regulators growth control karte hain: auxin, gibberellin, cytokinin (promoters), abscisic acid aur ethylene (mainly inhibitors).",
+  "Development ko photoperiodism (din ki lambai) aur vernalisation (kam temperature) flowering ke liye, aur seed dormancy aur germination bhi control karte hain."
+ ],
+ "formulas": [
+  {
+   "name": "Arithmetic growth",
+   "formula": "Lₜ = L₀ + rt",
+   "when": "Linear growth — root constant rate se lambi hoti hai.",
+   "note": "Length vs time plot karne par seedhi line aati hai."
+  },
+  {
+   "name": "Geometric growth",
+   "formula": "Wₜ = W₀ eʳᵗ  (r = relative growth rate, e = 2.718)",
+   "when": "Growth ka exponential phase (Wₜ final size, W₀ initial size).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Absolute vs relative growth",
+   "formula": "absolute = growth per unit time;  relative = growth per unit time per unit initial size",
+   "when": "Alag leaves ki growth compare karna."
+  },
+  {
+   "name": "Sigmoid growth curve",
+   "formula": "lag phase → log (exponential) phase → stationary phase",
+   "when": "Limited environment mein cells, organs ya organisms ki growth."
+  },
+  {
+   "name": "Auxins",
+   "formula": "IAA, IBA (natural); NAA, 2,4-D (synthetic);  apical dominance, rooting of cuttings, parthenocarpy (tomato), prevent premature leaf and fruit drop, xylem differentiation;  2,4-D kills dicot weeds",
+   "when": "Auxin ke kaam (F.W. Went, Avena coleoptile tips se).",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Gibberellins",
+   "formula": "GA₃ most common (from Gibberella fujikuroi — bakanae disease of rice);  stem elongation (sugarcane yield up by ~20 t/acre), bolting in cabbage/beet, fruit size (grapes), malting (brewing), seed germination, delayed senescence",
+   "when": "Gibberellin ke kaam.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Cytokinins",
+   "formula": "kinetin (from autoclaved herring sperm DNA), zeatin (corn kernels, coconut milk);  cell division, new leaves and chloroplasts, lateral shoot growth (overcomes apical dominance), delay leaf senescence (Richmond–Lang effect)",
+   "when": "Cytokinin ke kaam."
+  },
+  {
+   "name": "Ethylene",
+   "formula": "gaseous; ripening of fruits (climacteric rise in respiration), triple response in seedlings, horizontal growth, abscission, flowering in pineapple, breaks dormancy;  ethephon releases ethylene",
+   "when": "Ethylene ke kaam.",
+   "note": "Agriculture mein sabse zyada use hone wala PGR ethylene hai."
+  },
+  {
+   "name": "Abscisic acid (ABA)",
+   "formula": "stress hormone;  closes stomata, induces dormancy in seeds and buds, promotes abscission;  antagonist of GA",
+   "when": "ABA ke kaam.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Photoperiodism",
+   "formula": "short-day plants flower when days are shorter than a critical length (actually need a long uninterrupted dark period);  long-day plants flower when days are longer;  day-neutral plants are unaffected;  leaves perceive the light",
+   "when": "Din ki lambai se flowering ka control (Garner aur Allard)."
+  },
+  {
+   "name": "Vernalisation",
+   "formula": "cold treatment needed to promote flowering in some plants — winter wheat, biennials (carrot, sugarbeet, cabbage)",
+   "when": "Kam temperature se flowering ka control."
+  },
+  {
+   "name": "Seed dormancy",
+   "formula": "caused by hard seed coat, chemical inhibitors (ABA, phenolics) or immature embryo;  broken by scarification, GA₃, nitrates, chilling",
+   "when": "Dormancy aur germination."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Geometric growth",
+   "problem": "5 g ka seedling relative growth rate r = 0.1 per day se badhta hai. 10 din baad mass (Wₜ = W₀eʳᵗ)?",
+   "solution": "Wₜ = 5 × e^{0.1 × 10} = 5 × 2.718 = 13.6 g."
+  },
+  {
+   "title": "Relative growth",
+   "problem": "Ek leaf 10 cm² se 15 cm² ho gayi. Relative growth (%)?",
+   "solution": "(15 − 10)/10 × 100 = 50%."
+  },
+  {
+   "title": "Bolting",
+   "problem": "Cabbage mein bolting kaunsa hormone karata hai, aur bolting kya hai?",
+   "solution": "Gibberellin. Bolting = cabbage aur beet jaise rosette plants mein flowering se theek pehle internodes ka tezi se lamba hona."
+  },
+  {
+   "title": "Apical dominance",
+   "problem": "Shoot tip hatane se plant ghana (bushy) kyun ho jaata hai?",
+   "solution": "Apical bud auxin banata hai jo lateral buds ko dabaata hai (apical dominance). Ise hatane (decapitation) se lateral buds badhte hain — tea plantations aur hedge banane mein use."
+  },
+  {
+   "title": "Stress hormone",
+   "problem": "ABA ko stress hormone kyun kehte hain?",
+   "solution": "Ye plant ki stress sehne ki kshamata badhaata hai — paani ki kami mein stomata band karta, bure season se bachne ke liye dormancy laata aur growth rokta hai."
+  },
+  {
+   "title": "Fruit ripening",
+   "problem": "Kaunsa hormone fruit ripening tez karta hai, aur commercially kaise diya jaata hai?",
+   "solution": "Ethylene; ethephon ke roop mein diya jaata hai jo plant tissues mein ethylene chhodta hai. Cucumbers mein female flowers bhi badhaata hai."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Plasticity",
+   "explain": "Plants environment ya life ke phases ke hisaab se alag raaste lekar alag structures banate hain — jaise cotton, coriander aur larkspur mein heterophylly (juvenile aur mature plant mein alag leaves) aur buttercup mein (hawa aur paani mein alag leaves)."
+  },
+  {
+   "title": "Differentiation, dedifferentiation, redifferentiation",
+   "explain": "Meristems ke cells khaas kaam ke liye mature hote hain (differentiation). Living differentiated cells phir se divide karne ki kshamata paa sakte hain (dedifferentiation — jaise interfascicular cambium, cork cambium) aur phir aise cells banate hain jo phir divide karna chhod dete hain (redifferentiation)."
+  },
+  {
+   "title": "Conditions for growth",
+   "explain": "Paani (cell enlargement aur enzymatic activity ke liye), oxygen (metabolic energy ke liye), nutrients, aur sahi temperature aur light."
+  },
+  {
+   "title": "Discovery of PGRs",
+   "explain": "Charles aur Francis Darwin ne coleoptiles ko light ki taraf mudte dekha (phototropism); F.W. Went ne Avena coleoptile tips se auxin nikaala; E. Kurosawa ne bakanae disease wale fungus se gibberellins; Skoog aur Miller ne kinetin; ABA inhibitor-B, abscisin II aur dormin ke naam se mila; Cousins ne paki oranges se ethylene confirm kiya."
+  },
+  {
+   "title": "PGR interactions",
+   "explain": "Hormones saath kaam karte hain, kabhi synergistically kabhi antagonistically — jaise tissue culture mein auxin–cytokinin ratio root ya shoot banna tay karta hai; GA aur ABA ka seed dormancy par ulta asar hai."
+  },
+  {
+   "title": "Seed germination",
+   "explain": "Achhi conditions mein seeds paani sokhte hain, enzymes active hote hain aur embryo seedling banta hai. Dormancy achhi conditions mein bhi germination rokti hai."
+  }
+ ],
+ "ratta": [
+  "Arithmetic Lₜ = L₀ + rt;  geometric Wₜ = W₀eʳᵗ.",
+  "Sigmoid: lag → log → stationary.",
+  "Auxin: apical dominance, 2,4-D weedicide.",
+  "GA: bolting, grapes, sugarcane, malting.",
+  "Cytokinin: delays senescence, lateral buds.",
+  "Ethylene: ripening, pineapple flowering, ethephon.",
+  "ABA: stomata close, dormancy, stress hormone.",
+  "Vernalisation = cold;  photoperiodism = day length."
+ ],
+ "verifiedOn": "2026-11-13"
+}

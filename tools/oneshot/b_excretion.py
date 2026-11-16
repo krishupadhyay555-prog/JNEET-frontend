@@ -68,5 +68,51 @@ SYLLABUS = [
 ("Disorders — uremia, renal failure, renal calculi, glomerulonephritis; dialysis and artificial kidney, kidney transplant", ["uremia", "renal calculi", "glomerulonephritis", "dialysis", "transplant"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Animals nitrogenous waste ammonia (ammonotelic — sabse toxic, bahut paani chahiye), urea (ureotelic) ya uric acid (uricotelic — sabse kam toxic, thoda paani) ki tarah nikaalte hain.",
+"Insaan mein ek jodi kidney hai, har ek mein lagbhag das lakh nephron. Nephron mein glomerulus aur Bowman's capsule (Malpighian body) aur tubule: PCT, loop of Henle, DCT, collecting duct.",
+"Urine glomerular filtration, tubular reabsorption aur secretion se banta hai. Counter-current mechanism (loop of Henle + vasa recta) urine ko concentrate karta hai.",
+"Kidney ka kaam ADH, renin–angiotensin–aldosterone system aur ANF (atrial natriuretic factor) control karte hain. Lungs, liver aur skin bhi excretion mein madad karte hain.",
+],
+when=[
+("Animals ko waste type se milaana.", None),
+("Alag animals ke excretory organs.", None),
+("Filtration ki calculations.", None),
+("Ultrafiltration — proteins aur cells ke alawa sab guzarta hai.", None),
+("Kaunsa part kya karta hai.", None),
+("Urine concentrate karna.", "Human urine filtrate se lagbhag chaar guna zyada concentrated ho sakta hai."),
+("Paani ka hormonal control.", None),
+("Renin–angiotensin mechanism.", None),
+("RAAS ka ulta.", None),
+("Urine ka nikalna.", None),
+("Clinical urine analysis.", None),
+("Kidney disorders (uremia, renal calculi, glomerulonephritis).", None),
+],
+examples=[
+("Ek din ka filtrate", "GFR 125 mL/min hai. Ek din mein kitna filtrate banta hai?",
+ "125 mL × 60 × 24 = 180,000 mL = ⟨0⟩ L/day."),
+("Kitna percentage reabsorb", "180 L filtrate se 1.5 L urine bane to kitna percentage reabsorb hua?",
+ "(180 − 1.5)/180 × 100 = ⟨0⟩%."),
+("Birds aur uric acid", "Birds uric acid kyun nikaalte hain?",
+ "Uric acid sabse kam toxic hai aur bahut kam paani ke saath paste ki tarah nikal sakta hai, paani aur vazan bachta hai — udne wale animals aur shell wale ande ke andar embryos ke liye faaydemand."),
+("Diabetes insipidus", "Ek vyakti bahut zyada patla urine nikaalta hai jisme glucose nahi. Sambhavit kaaran?",
+ "ADH ki kami (diabetes insipidus): ADH ke bina DCT aur collecting ducts se paani reabsorb nahi hota."),
+("Juxta medullary nephrons", "Kin nephrons mein lamba loop of Henle hota hai, aur ye kyun zaroori hai?",
+ "Juxta medullary nephrons — inke lambe loops medulla mein gehre jaate hain aur vasa recta ke saath concentrated urine ke liye medullary gradient banate hain. Cortical nephrons ke loops chhote."),
+("Haemodialysis", "Artificial kidney kaise kaam karti hai?",
+ "Artery ka blood thanda karke heparin (anticoagulant) milate hain aur dialyser ki cellophane tubes se guzaarte hain jo plasma jaise par bina nitrogenous waste wale dialysing fluid mein hain; waste bahar diffuse hota hai aur saaf blood anti-heparin milakar vein se waapas jaata hai."),
+],
+topics=[
+("Human excretory system", "Do kidneys, do ureters, ek urinary bladder aur ek urethra. Kidneys laal-bhoori, sem ke beej jaisi, lagbhag 10–12 cm lambi, 5–7 cm chaudi, 2–3 cm moti, 120–170 g; hilum par ureter, blood vessels aur nerves andar-bahar jaate hain. Bahar cortex, andar medulla medullary pyramids ke saath; renal columns (columns of Bertini) cortex ke extensions hain."),
+("Nephron structure", "Glomerulus: afferent arteriole se bana capillaries ka guchha, efferent arteriole se drain hota hai. Efferent arteriole peritubular capillaries banata hai; Henle's loop ke saath chalne wali patli vessel vasa recta hai (cortical nephrons mein kam ya nahi)."),
+("Juxta glomerular apparatus (JGA)", "DCT aur afferent arteriole ke milne ki jagah cells ke badlaav se bana khaas sensitive region. GFR girne ko mehsoos karke renin chhodta hai."),
+("Role of other organs", "Lungs har minute lagbhag 200 mL CO₂ aur paani nikaalte hain. Liver bile mein bilirubin, biliverdin, cholesterol, toote steroid hormones, vitamins aur drugs nikaalta hai. Skin: sweat glands NaCl, thoda urea aur lactic acid nikaalte hain (mainly thandak ke liye); sebaceous glands sterols, hydrocarbons aur waxes."),
+("Kidney transplantation", "Acute renal failure ka aakhri ilaaj; donor (behtar ho kareebi rishtedaar) se kaam karti kidney li jaati hai taaki immune system rejection kam ho. Dialysis tab tak sahara deta hai."),
+("Urine characteristics", "Halka peela, paani jaisa, thoda acidic (pH 6.0); roz average 25–30 g urea nikalta hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

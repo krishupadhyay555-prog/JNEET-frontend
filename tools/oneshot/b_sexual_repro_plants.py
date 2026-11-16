@@ -68,5 +68,53 @@ SYLLABUS = [
 ("Special modes — apomixis, parthenocarpy, polyembryony; significance of seed dispersal and fruit formation", ["apomixis", "parthenocarpy", "polyembryony"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Flower sexual reproduction ki jagah hai. Stamen ka anther microsporogenesis se pollen grains (male gametophytes) banata hai; ovule megasporogenesis se embryo sac (female gametophyte) banata hai.",
+"Pollination pollen ko stigma tak laata hai — hawa, paani ya animals se. Autogamy, geitonogamy aur xenogamy ke types hain; plants mein self-pollination se bachne ke outbreeding devices hain; pollen–pistil interaction compatibility tay karta hai.",
+"Angiosperms mein double fertilisation hota hai: ek male gamete egg se judta hai (syngamy → zygote) aur doosra do polar nuclei se (triple fusion → primary endosperm nucleus, 3n).",
+"Fertilisation ke baad ovule seed aur ovary fruit ban jaati hai; zygote se embryo banta hai. Khaas cases: apomixis, polyembryony aur parthenocarpy.",
+],
+when=[
+("Microsporangium ki structure.", None),
+("Pollen ka banna.", None),
+("Pollen ki structure.", "60% se zyada angiosperms mein pollen 2-celled stage par nikalta hai."),
+("Megasporangium ki structure.", None),
+("Female gametophyte ka development.", None),
+("Embryo sac ki arrangement.", None),
+("Pollination ke types.", "Geitonogamy functionally cross-pollination hai (agent chahiye) par genetically self-pollination — confuse mat karna."),
+("Flower types aur selfing.", None),
+("Pollination adaptations.", None),
+("Inbreeding se bachna.", None),
+("Sirf angiosperms mein.", None),
+("Floral parts ka kya hota hai.", None),
+("Endosperm aur seeds.", None),
+("Khaas mechanisms.", None),
+],
+examples=[
+("Ploidy table", "Ploidy batao: nucellus, megaspore mother cell, functional megaspore, egg, endosperm, embryo.",
+ "Nucellus 2n, MMC 2n, megaspore n, egg n, endosperm 3n, embryo 2n."),
+("Embryo sac ki ginti", "Typical embryo sac mein kitne cells aur nuclei?",
+ "7 cells (3 antipodals, 2 synergids, 1 egg, 1 central cell) aur 8 nuclei (central cell mein 2 polar nuclei)."),
+("Dono ko kaun rokta hai?", "Kaunsa device autogamy aur geitonogamy dono rokta hai?",
+ "Dioecy (alag male aur female plants), jaise papaya."),
+("Bina seed ka fruit", "Banana bina fertilisation ke fruit banata hai. Ise kya kehte hain?",
+ "Parthenocarpy — bina fertilisation fruit ka banna (growth hormones se bhi karwa sakte hain)."),
+("Pollen storage", "Crop breeding ke liye pollen grains kaise store karte hain?",
+ "Liquid nitrogen mein −196 °C par (pollen banks), jisse saalon tak viable rehte hain."),
+("Synergid ka role", "Filiform apparatus ka kaam kya hai?",
+ "Synergids ke micropylar sire par cellular thickening jo pollen tube ko synergid ke andar guide karti hai."),
+],
+topics=[
+("Pre-fertilisation events", "Hormonal aur structural badlaav floral primordium ka differentiation karte hain. Inflorescence par floral buds aate hain; androecium aur gynoecium differentiate hote hain."),
+("Pollen viability and allergy", "Rice aur wheat ke pollen 30 minute mein viability kho dete hain; Rosaceae, Leguminoseae aur Solanaceae ke kuch members mahino tak rakhte hain. Parthenium (carrot grass) ke pollen allergy aur bronchial bimaariyan karte hain. Pollen tablets food supplements ki tarah use hoti hain."),
+("Pollen–pistil interaction", "Pistil compatible pollen pehchaan kar germination badhaata hai; pollen tube style se badhkar micropyle se ovule mein, phir synergid mein ghuskar do male gametes chhodti hai. Artificial hybridisation mein emasculation (anthers hataana) aur bagging use hote hain."),
+("Embryo development", "Kuch endosperm banne ke baad zygote divide hota hai. Dicot embryo: do cotyledons wala embryonal axis, epicotyl (plumule) aur hypocotyl (radicle). Monocot embryo: ek cotyledon (scutellum), shoot apex ke aas-paas coleoptile aur radicle ke aas-paas coleorrhiza."),
+("Seeds", "Seeds sexual reproduction ka aakhri product hain; dormancy unhe buri conditions mein bachati hai. Bacha hua persistent nucellus perisperm hai (black pepper, beet). Purane seeds bhi viable — lupine (~10,000 saal), date palm (~2000 saal)."),
+("False fruits", "Apple, strawberry aur cashew mein thalamus bhi fruit banane mein hissa leta hai — ye false fruits hain. True fruits sirf ovary se bante hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

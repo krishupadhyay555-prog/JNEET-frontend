@@ -66,5 +66,51 @@ SYLLABUS = [
 ("Disorders of muscular and skeletal system — myasthenia gravis, tetany, muscular dystrophy, arthritis, osteoporosis, gout", ["myasthenia gravis", "tetany", "muscular dystrophy", "arthritis", "osteoporosis", "gout"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Cells teen tarah ki movement dikhate hain: amoeboid (pseudopodia — macrophages, leucocytes), ciliary (trachea, fallopian tubes) aur muscular (limbs, jaws, tongue). Locomotion voluntary movement hai jo jagah badalti hai.",
+"Skeletal muscle fibres se bani hai jinmein repeat hone wale sarcomeres hain (actin thin filaments aur myosin thick filaments). Sliding filament theory contraction samjhaati hai, jo Ca²⁺ se trigger aur ATP se powered hai.",
+"Human skeleton mein 206 bones: axial (80) aur appendicular (126). Joint fibrous, cartilaginous ya synovial hote hain.",
+"Muscles aur bones ke disorders: myasthenia gravis, muscular dystrophy, tetany, arthritis, osteoporosis aur gout.",
+],
+when=[
+("Muscle fibre ki structure.", None),
+("Sliding filament theory.", "Filaments chhote nahi hote — ek doosre par slide karte hain; galat mat likhna."),
+("Myofilaments ke proteins.", None),
+("Muscle contraction ke steps.", None),
+("Muscle fibres ke types.", None),
+("Bones ki ginti.", None),
+("Axial bones ki ginti.", None),
+("Vertebrae ki ginti.", "Lagbhag saare mammals, giraffe aur insaan samet, mein 7 cervical vertebrae hote hain."),
+("Ribs ka classification.", None),
+("Limb aur girdle bones.", None),
+("Joints classify karna.", None),
+("Disorders.", None),
+],
+examples=[
+("Kul bones", "Axial skeleton mein 80 bones aur appendicular mein 126. Kul?",
+ "80 + 126 = ⟨0⟩."),
+("Axial ginti check", "Skull (22), hyoid (1), ear ossicles (6), vertebrae (26), sternum (1) aur ribs (24) jodo.",
+ "22 + 1 + 6 + 26 + 1 + 24 = ⟨0⟩ — axial skeleton."),
+("Bands mein badlaav", "Contraction mein kaunsa band utna hi lamba rehta hai?",
+ "A band (moti myosin filaments ki lambai). Actin andar slide hone se I band aur H zone chhote hote hain."),
+("Calcium ka role", "Muscle contraction mein Ca²⁺ kya karta hai?",
+ "Troponin se judta hai, jo tropomyosin ko khiskaata hai aur actin par myosin-binding sites khol deta hai, jisse cross-bridges ban paate hain."),
+("Thakaan", "Baar-baar contraction ke baad muscles thak kyun jaati hain?",
+ "Glycogen ke anaerobic breakdown se muscle mein lactic acid jama hota hai."),
+("Joint ka type", "Atlas aur axis ke beech kaunsa joint hai, aur kaunsi movement deta hai?",
+ "Pivot joint — sir ghumaana (‘na’ kehna)."),
+],
+topics=[
+("Types of muscle", "Skeletal (striated, voluntary — locomotion aur posture), visceral/smooth (non-striated, involuntary — gut, reproductive tract ki walls mein), cardiac (striated, involuntary, branched)."),
+("Structure of skeletal muscle", "Muscle bundles (fascicles) fascia se bandhe; har muscle fibre ek syncytium hai jisme sarcolemma, sarcoplasm aur sarcoplasmic reticulum (Ca²⁺ store). Myofibrils mein baari-baari dark (anisotropic, A) aur light (isotropic, I) bands."),
+("Cross-bridge cycle", "ADP + Pi wala myosin head actin se judta hai, unhe chhodkar power stroke mein actin ko centre ki taraf kheenchta hai; naya ATP head ko chhudaata hai, ATP hydrolyse hota hai aur head phir taiyaar. Ca²⁺ waapas pump hone par sites phir dhak jaati hain aur muscle relax."),
+("Skull", "Cranium mein 8 bones (brain ki raksha); face mein 14 bones. Hyoid U-shaped, buccal cavity ke base par. Skull do occipital condyles se vertebral column se judta hai (dicondylic skull)."),
+("Vertebral column and sternum", "Pehla vertebra atlas hai, jo occipital condyles se judta hai. Column spinal cord ki raksha karta, sir ko sahara deta aur ribs aur peeth ki muscles jodta hai. Sternum thorax ki ventral midline par flat bone hai."),
+("Girdles", "Pectoral girdle: clavicle (collar bone) aur scapula (humerus ke head ke liye glenoid cavity, acromion process). Pelvic girdle: do coxal bones, har ek ilium, ischium aur pubis ke judne se; acetabulum mein thigh bone fit hoti hai; dono aadhe pubic symphysis par milte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)
