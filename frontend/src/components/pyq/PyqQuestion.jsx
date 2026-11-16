@@ -7,10 +7,19 @@
 // ============================================================
 
 import { useState } from "react";
-import { CheckCircle2, XCircle, Eye } from "lucide-react";
+import { createPortal } from "react-dom";
+import { CheckCircle2, XCircle, Eye, ZoomIn, X } from "lucide-react";
 import { MathTex } from "../learn/MathTex.jsx";
 
 const LETTERS = ["1", "2", "3", "4"];
+
+// NTA's images are cut from the official PDF. qimgW / optImgW are their printed widths
+// (PDF points). Every image of a question is drawn at ONE scale, so question and
+// options have the same text size: PX_PER_PT on wide screens, shrunk together to fit
+// a phone (100cqw = width of the question card's content box).
+const PX_PER_PT = 1.15;
+const PAD = 18;                                     // white frame padding + border
+const fitW = (w, qW) => `min(${Math.round(w * PX_PER_PT)}px, calc((100cqw - ${PAD}px) * ${(w / qW).toFixed(4)}))`;
 
 const STATUS = {
   dropped: { label: "Dropped by NTA", cls: "bg-gray-500/10 text-gray-600" },
@@ -29,6 +38,7 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
   const [typed, setTyped] = useState("");
   const [checked, setChecked] = useState(false);  // numeric: answered
   const [revealed, setRevealed] = useState(false);
+  const [zoom, setZoom] = useState(null);           // image shown full size
 
   const img = (f) => `/pyq/${paperId ?? q.paper?.id}/${f}`;
   const isMcq = q.type === "mcq";
@@ -38,7 +48,7 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
   const status = STATUS[q.status];
 
   return (
-    <article className="glass-panel rounded-2xl p-4 space-y-3" aria-label={`Question ${q.n}`}>
+    <article className="glass-panel rounded-2xl p-4 space-y-3" style={{ containerType: "inline-size" }} aria-label={`Question ${q.n}`}>
       <header className="space-y-1.5">
         <span className="inline-block text-[11px] font-medium rounded-md bg-amber-500/10 text-amber-700 px-2 py-0.5">
           {q.paper?.title ?? paperTitle}
@@ -51,7 +61,20 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
         </div>
       </header>
 
-      <div className="text-sm leading-relaxed"><MathTex>{q.text}</MathTex></div>
+      {q.qimg ? (
+        <button type="button" onClick={() => setZoom(img(q.qimg))} className="block text-left group max-w-full"
+          aria-label={`Question ${q.n}: tap to zoom`}>
+          <span className="inline-block rounded-lg bg-white p-2 border border-bg-border">
+            <img src={img(q.qimg)} alt={`Question ${q.n} (original NTA paper)`} loading="lazy"
+              style={q.qimgW ? { width: fitW(q.qimgW, q.qimgW) } : undefined} className="block h-auto max-w-full" />
+          </span>
+          <span className="mt-1 flex items-center gap-1 text-[11px] text-gray-600 group-hover:text-violet-600">
+            <ZoomIn size={12} /> Tap to zoom
+          </span>
+        </button>
+      ) : (
+        <div className="text-sm leading-relaxed"><MathTex>{q.text}</MathTex></div>
+      )}
 
       {q.fig && (
         <div className="overflow-x-auto">
@@ -80,7 +103,10 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
                   <span className="font-semibold text-gray-600 shrink-0">({LETTERS[i]})</span>
                   <span className="flex-1 min-w-0">
                     {q.optImg?.[i]
-                      ? <img src={img(q.optImg[i])} alt={`Option ${i + 1}`} loading="lazy" className="max-w-full bg-white rounded p-1" />
+                      ? <span className="inline-block max-w-full bg-white rounded p-1">
+                          <img src={img(q.optImg[i])} alt={`Option ${i + 1}`} loading="lazy" className="block h-auto max-w-full"
+                            style={q.qimgW && q.optImgW ? { width: fitW(q.optImgW[i], q.qimgW) } : undefined} />
+                        </span>
                       : <MathTex>{o}</MathTex>}
                   </span>
                   {isRight && <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />}
@@ -131,8 +157,23 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
                 (q.answer == null ? (q.status === "bonus" ? "Every answer was given marks." : "No answer — this question was dropped.")
                   : `Answer: ${q.answer}`)}
           </p>
-          <div className="text-xs leading-relaxed text-fg-secondary"><MathTex>{q.explanation}</MathTex></div>
+          {q.explanation
+            ? <div className="text-xs leading-relaxed text-fg-secondary"><MathTex>{q.explanation}</MathTex></div>
+            : <p className="text-xs text-gray-600">Answer is NTA's final answer key. Step-by-step explanation: coming soon.</p>}
         </div>
+      )}
+      {zoom && createPortal(
+        <div role="dialog" aria-modal="true" aria-label="Zoomed question"
+          className="fixed inset-0 z-[100] bg-black/85 overflow-auto" onClick={() => setZoom(null)}>
+          <button type="button" onClick={() => setZoom(null)} aria-label="Close"
+            className="fixed top-3 right-3 z-10 rounded-full bg-white text-black p-2 shadow"><X size={18} /></button>
+          <div className="min-h-full flex p-3 pt-14">
+            {/* m-auto (not justify-center) so a wide image can still be scrolled to its left edge */}
+            <img src={zoom} alt="Question, full size" className="m-auto max-w-none bg-white rounded-lg p-3"
+              onClick={(e) => e.stopPropagation()} />
+          </div>
+        </div>,
+        document.body
       )}
     </article>
   );
