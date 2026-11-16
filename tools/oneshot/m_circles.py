@@ -74,5 +74,50 @@ SYLLABUS = [
 ("Points of intersection of a line and a circle; equation of the tangent to a circle", ["tangent", "chord"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Circle un points ka locus hai jo ek fixed point (centre) se fixed doori (radius) par hain. General equation x² + y² + 2gx + 2fy + c = 0 ka centre (−g, −f) aur radius √(g² + f² − c) hai.",
+"Point ya line ki circle ke relative position S₁ = x₁² + y₁² + 2gx₁ + 2fy₁ + c se, aur centre se distance ko radius se compare karke tay hoti hai.",
+"Tangent, normal, chord of contact, tangent ki length, common tangents, family of circles aur orthogonal circles JEE ke main tools hain. Diameter form aur chord length bhi aksar poochhe jaate hain.",
+],
+when=[
+("Circle ki equation.", "Real circle ke liye g² + f² − c ≥ 0 zaroori hai — check karna mat bhoolna."),
+("Do points ko jodne wali line diameter ho to circle.", None),
+("Circle par points.", None),
+("Point kahan hai.", None),
+("Line–circle position.", None),
+("Tangent ka slope form.", None),
+("Circle par (x₁, y₁) par tangent.", None),
+("Tangent ki length.", None),
+("Bahar ke point ya midpoint se chords.", None),
+("Common tangents ki sankhya.", None),
+("Right angle par katne wale circles.", None),
+("Intersection points se guzarne wale circles.", None),
+],
+examples=[
+("Centre aur radius", "x² + y² − 4x + 6y − 12 = 0 ka centre aur radius nikalo.",
+ "g = −2, f = 3 ⇒ centre (2, −3); r = √(4 + 9 + 12) = ⟨0⟩."),
+("Tangent ki length", "(7, 2) se upar wale circle tak tangent ki length?",
+ "S₁ = 49 + 4 − 28 + 12 − 12 = ⟨0⟩ ⇒ length = √25 = ⟨1⟩."),
+("Chord ki length", "Ek line x² + y² = 25 ke centre se 3 doori par hai. Chord length?",
+ "2√(25 − 9) = ⟨0⟩."),
+("Common tangents", "Radii 3 aur 4 wale circles ke centres 10 door hain. Common tangents kitne?",
+ "d = 10 > 3 + 4 = 7 ⇒ ⟨0⟩ common tangents."),
+("Diye slope ka tangent", "x² + y² = 9 ke slope 1 wale tangents?",
+ "y = x ± 3√2 (c = ±a√(1 + m²) se)."),
+("Teen points se circle", "(0, 0), (2, 0) aur (0, 4) se guzarne wala circle nikalo.",
+ "c = 0; (2, 0) se: 4 + 4g = 0 ⇒ g = −1; (0, 4) se: 16 + 8f = 0 ⇒ f = −2. Equation: x² + y² − 2x − 4y = 0 (centre (1, 2), radius √5)."),
+],
+topics=[
+("Conditions for a general second-degree equation to be a circle", "ax² + 2hxy + by² + 2gx + 2fy + c = 0 circle hai agar a = b ≠ 0 aur h = 0 (aur radius real ho)."),
+("Normal to a circle", "Har normal centre se guzarta hai. (x₁, y₁) par normal wo line hai jo (x₁, y₁) ko centre se jodti hai."),
+("Director circle", "Jin points se x² + y² = a² par perpendicular tangents khinchte hain unka locus x² + y² = 2a² hai."),
+("Radical axis and centre", "Radical axis un points ka locus hai jinki do circles tak tangent lengths barabar hain: S₁ − S₂ = 0, line of centres ke perpendicular. Teen circles ke radical axes radical centre par milte hain."),
+("Angle between circles", "cos θ = (r₁² + r₂² − d²)/(2r₁r₂), jahan θ intersection point par radii ke beech angle hai; θ = 90° orthogonality condition deta hai."),
+("Common chord", "Do katne wale circles ki common chord S₁ − S₂ = 0 hai; iski length kisi bhi centre se distance lekar nikaalte hain."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

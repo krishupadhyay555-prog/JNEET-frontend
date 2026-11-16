@@ -1,0 +1,153 @@
+{
+ "slug": "conic-sections",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Conic Sections"
+ },
+ "title": "Conic Sections",
+ "readMinutes": 17,
+ "summary": [
+  "Conic us point ka locus hai jiski fixed point (focus) se doori, fixed line (directrix) se doori ki e guna hai: e = 1 parabola, e < 1 ellipse, e > 1 hyperbola. e ko eccentricity kehte hain.",
+  "Standard forms: parabola y² = 4ax; ellipse x²/a² + y²/b² = 1 (b² = a²(1 − e²)); hyperbola x²/a² − y²/b² = 1 (b² = a²(e² − 1)).",
+  "Har conic ke liye focus, directrix, latus rectum, eccentricity, parametric point, tangent aur normal ki equations aur tangent condition yaad rakho."
+ ],
+ "formulas": [
+  {
+   "name": "Parabola y² = 4ax",
+   "formula": "focus (a, 0);  directrix x = −a;  axis y = 0;  latus rectum 4a;  parametric (at², 2at);  focal distance of (x, y) = x + a",
+   "when": "Standard parabola.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Parabola tangents",
+   "formula": "at (x₁, y₁): yy₁ = 2a(x + x₁);  slope form y = mx + a/m (condition c = a/m);  at t: ty = x + at²",
+   "when": "Parabola ke tangents."
+  },
+  {
+   "name": "Parabola normal",
+   "formula": "y = mx − 2am − am³;  at t: y + tx = 2at + at³",
+   "when": "Parabola ke normals.",
+   "mistake": "Ek point se parabola par teen normals khinch sakte hain (m mein cubic) — sirf ek mat samjho."
+  },
+  {
+   "name": "Focal chord",
+   "formula": "for focal chord through t₁ and t₂: t₁t₂ = −1;  harmonic mean of focal segments = semi-latus rectum 2a",
+   "when": "Focal chord ki properties."
+  },
+  {
+   "name": "Ellipse x²/a² + y²/b² = 1 (a > b)",
+   "formula": "b² = a²(1 − e²);  foci (±ae, 0);  directrices x = ±a/e;  latus rectum 2b²/a;  parametric (a cos θ, b sin θ)",
+   "when": "Standard ellipse.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Ellipse focal property",
+   "formula": "SP + S′P = 2a for any point P",
+   "when": "Focal distances ka sum."
+  },
+  {
+   "name": "Ellipse tangent",
+   "formula": "at (x₁, y₁): xx₁/a² + yy₁/b² = 1;  y = mx ± √(a²m² + b²)",
+   "when": "Ellipse ke tangents."
+  },
+  {
+   "name": "Hyperbola x²/a² − y²/b² = 1",
+   "formula": "b² = a²(e² − 1);  foci (±ae, 0);  directrices x = ±a/e;  latus rectum 2b²/a;  asymptotes y = ±(b/a)x;  parametric (a sec θ, b tan θ)",
+   "when": "Standard hyperbola.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Hyperbola focal property",
+   "formula": "|SP − S′P| = 2a",
+   "when": "Focal distances ka difference."
+  },
+  {
+   "name": "Hyperbola tangent",
+   "formula": "at (x₁, y₁): xx₁/a² − yy₁/b² = 1;  y = mx ± √(a²m² − b²)",
+   "when": "Hyperbola ke tangents."
+  },
+  {
+   "name": "Rectangular hyperbola",
+   "formula": "x² − y² = a² (e = √2);  xy = c² with parametric (ct, c/t)",
+   "when": "Khaas hyperbola."
+  },
+  {
+   "name": "Conjugate hyperbola",
+   "formula": "−x²/a² + y²/b² = 1;  1/e₁² + 1/e₂² = 1",
+   "when": "Hyperbola aur uska conjugate."
+  },
+  {
+   "name": "Director circle",
+   "formula": "ellipse: x² + y² = a² + b²;  hyperbola: x² + y² = a² − b²;  parabola: directrix",
+   "when": "Perpendicular tangents ka locus."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Parabola",
+   "problem": "y² = 12x ke liye a, focus aur latus rectum ki length nikalo.",
+   "solution": "4a = 12 ⇒ a = 3; focus (3, 0); latus rectum = 12."
+  },
+  {
+   "title": "Ellipse",
+   "problem": "x²/25 + y²/16 = 1 ke liye e, foci aur latus rectum nikalo.",
+   "solution": "e = √(1 − 16/25) = 0.6; foci (±3, 0); latus rectum = 2 × 16/5 = 6.4."
+  },
+  {
+   "title": "Hyperbola",
+   "problem": "x²/16 − y²/9 = 1 ke liye e aur latus rectum nikalo.",
+   "solution": "e = √(1 + 9/16) = 5/4 = 1.25; latus rectum = 2 × 9/4 = 4.5; asymptotes y = ±(3/4)x."
+  },
+  {
+   "title": "Focal distances ka sum",
+   "problem": "Ellipse x²/25 + y²/16 = 1 ke kisi bhi point P ke liye SP + S′P nikalo.",
+   "solution": "2a = 10."
+  },
+  {
+   "title": "Tangent condition",
+   "problem": "c ki kis value par y = 2x + c, y² = 8x ko chhooti hai?",
+   "solution": "a = 2, m = 2 ⇒ c = a/m = 1."
+  },
+  {
+   "title": "Conic pehchaano",
+   "problem": "9x² + 4y² = 36 pehchaano.",
+   "solution": "36 se divide karo: x²/4 + y²/9 = 1 — ellipse jiska major axis y-axis ke saath hai (a = 3, b = 2), e = √5/3."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Other forms of the parabola",
+   "explain": "x² = 4ay (upar khulta), y² = −4ax (left khulta), x² = −4ay (neeche khulta). Shifted: (y − k)² = 4a(x − h) ka vertex (h, k)."
+  },
+  {
+   "title": "Ellipse with vertical major axis",
+   "explain": "x²/a² + y²/b² = 1 mein b > a ho to a² = b²(1 − e²), foci (0, ±be) aur directrices y = ±b/e."
+  },
+  {
+   "title": "Auxiliary circle and eccentric angle",
+   "explain": "Major axis ko diameter maan kar bana circle auxiliary circle x² + y² = a² hai; point (a cos θ, b sin θ) ka eccentric angle θ hai."
+  },
+  {
+   "title": "Reflection property",
+   "explain": "Parabola ke axis ke parallel rays focus se reflect hoti hain (dish antennas, headlights). Ellipse ke ek focus se nikli rays doosre focus se reflect hoti hain."
+  },
+  {
+   "title": "Chord of contact and midpoint chord",
+   "explain": "Circles jaisa notation: chord of contact T = 0; diye midpoint wali chord T = S₁."
+  },
+  {
+   "title": "Identifying a general conic",
+   "explain": "ax² + 2hxy + by² + 2gx + 2fy + c = 0 (non-degenerate) ke liye: h² = ab parabola, h² < ab ellipse, h² > ab hyperbola; a + b = 0 rectangular hyperbola."
+  }
+ ],
+ "ratta": [
+  "e = 1 parabola, < 1 ellipse, > 1 hyperbola.",
+  "y² = 4ax: focus (a, 0), LR 4a, focal distance x + a.",
+  "Tangent conditions: parabola c = a/m;  ellipse c² = a²m² + b²;  hyperbola c² = a²m² − b².",
+  "Ellipse b² = a²(1 − e²);  hyperbola b² = a²(e² − 1).",
+  "LR of ellipse and hyperbola = 2b²/a.",
+  "SP + S′P = 2a (ellipse);  |SP − S′P| = 2a (hyperbola).",
+  "Focal chord: t₁t₂ = −1."
+ ],
+ "verifiedOn": "2026-11-13"
+}

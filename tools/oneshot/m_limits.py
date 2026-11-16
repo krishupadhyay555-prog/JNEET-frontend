@@ -69,5 +69,50 @@ SYLLABUS = [
 ("Standard limits, L'Hôpital's rule and indeterminate forms", ["L'Hôpital", "indeterminate"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Limit batata hai ki x ke a ke paas jaane par f(x) kis value ke paas jaata hai; ye tab exist karta hai jab left-hand aur right-hand limits barabar aur finite hon.",
+"Indeterminate forms (0/0, ∞/∞, 1^∞, 0 × ∞, ∞ − ∞) factorisation, rationalisation, standard limits, series expansion ya L'Hôpital's rule se solve hote hain.",
+"f, a par continuous hai agar lim f(x) = f(a). f, a par differentiable hai agar left aur right derivatives barabar hon; differentiability se continuity milti hai, par ulta nahi (|x| at 0).",
+],
+when=[
+("Break points par limits check karna.", None),
+("Polynomial 0/0 forms.", None),
+("Trig 0/0 forms.", "x radians mein hona chahiye — degrees mein mat lagaana."),
+("Exponential 0/0 forms.", None),
+("1 ki taraf jaati powers.", None),
+("Jab standard limits fit na hon.", "Numerator aur denominator alag-alag differentiate karo — quotient ko nahi."),
+("Higher-order 0/0 limits.", None),
+("x → ∞ par limits.", None),
+("Continuity check karna.", None),
+("Differentiability check karna.", "Differentiable ⇒ continuous, par continuous ⇏ differentiable (|x| at 0) — ulta mat lagaana."),
+("x² sin(1/x) jaise limits.", None),
+("Step-function limits.", None),
+],
+examples=[
+("Trig limit", "lim (x→0) sin 3x/x?",
+ "3 × (sin 3x/3x) → ⟨0⟩."),
+("1^∞ form", "lim (x→∞) (1 + 2/x)ˣ?",
+ "e^(lim x × 2/x) = e²."),
+("Factorisation", "lim (x→2) (x² − 4)/(x − 2)?",
+ "(x + 2) → ⟨0⟩."),
+("Standard limit", "lim (x→0) (1 − cos x)/x²?",
+ "2sin²(x/2)/x² → 1/2 = ⟨0⟩."),
+("Series", "lim (x→0) (eˣ − 1 − x)/x²?",
+ "(x²/2 + …)/x² → 1/2 = ⟨0⟩."),
+("Continuity condition", "x ≠ 1 ke liye f(x) = (x³ − 1)/(x − 1) aur f(1) = k. Continuity ke liye k nikalo.",
+ "lim (x→1) = 3 × 1² = 3 ⇒ k = ⟨0⟩."),
+],
+topics=[
+("Rationalisation", "(√(x + 1) − 1)/x jaise square root wale limits mein conjugate se multiply karke 0/0 form hatao."),
+("Limits at infinity with roots", "x → ∞ par √(x² + x) − x ke liye rationalise karke x/(√(x² + x) + x) → 1/2 milta hai."),
+("Continuity of standard functions", "Polynomials, sin, cos, eˣ har jagah continuous; rational functions jahan denominator 0 na ho; log x, x > 0 ke liye; [x] integers par discontinuous."),
+("Algebra of continuous functions", "Continuous functions ka sum, difference, product aur composition continuous hai; quotient bhi, jahan denominator zero na ho."),
+("Intermediate value theorem", "Agar f, [a, b] par continuous hai aur k, f(a) aur f(b) ke beech hai, to (a, b) mein kisi c ke liye f(c) = k — equation ka root dikhaane mein use hota hai."),
+("Non-differentiable points", "Corners (|x − a|), cusps, vertical tangents (0 par x^(1/3)) aur discontinuities. |f(x)| wahan differentiable nahi ho sakta jahan f(x) = 0 ho aur sign badle."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

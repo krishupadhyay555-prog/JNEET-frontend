@@ -1,0 +1,149 @@
+{
+ "slug": "circles",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Circles"
+ },
+ "title": "Circles",
+ "readMinutes": 14,
+ "summary": [
+  "Circle un points ka locus hai jo ek fixed point (centre) se fixed doori (radius) par hain. General equation x² + y² + 2gx + 2fy + c = 0 ka centre (−g, −f) aur radius √(g² + f² − c) hai.",
+  "Point ya line ki circle ke relative position S₁ = x₁² + y₁² + 2gx₁ + 2fy₁ + c se, aur centre se distance ko radius se compare karke tay hoti hai.",
+  "Tangent, normal, chord of contact, tangent ki length, common tangents, family of circles aur orthogonal circles JEE ke main tools hain. Diameter form aur chord length bhi aksar poochhe jaate hain."
+ ],
+ "formulas": [
+  {
+   "name": "Standard and general form",
+   "formula": "(x − h)² + (y − k)² = r²;  x² + y² + 2gx + 2fy + c = 0 → centre (−g, −f), r = √(g² + f² − c)",
+   "when": "Circle ki equation.",
+   "mistake": "Real circle ke liye g² + f² − c ≥ 0 zaroori hai — check karna mat bhoolna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Diameter form",
+   "formula": "(x − x₁)(x − x₂) + (y − y₁)(y − y₂) = 0",
+   "when": "Do points ko jodne wali line diameter ho to circle."
+  },
+  {
+   "name": "Parametric form",
+   "formula": "x = h + r cos θ, y = k + r sin θ",
+   "when": "Circle par points."
+  },
+  {
+   "name": "Position of a point",
+   "formula": "S₁ > 0 outside;  S₁ = 0 on;  S₁ < 0 inside",
+   "when": "Point kahan hai."
+  },
+  {
+   "name": "Line and circle",
+   "formula": "distance p of centre from line: p > r no intersection;  p = r tangent;  p < r secant;  chord length = 2√(r² − p²)",
+   "when": "Line–circle position.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Tangent condition",
+   "formula": "y = mx + c touches x² + y² = a² iff c² = a²(1 + m²);  tangent: y = mx ± a√(1 + m²)",
+   "when": "Tangent ka slope form."
+  },
+  {
+   "name": "Tangent at a point",
+   "formula": "T = 0: xx₁ + yy₁ + g(x + x₁) + f(y + y₁) + c = 0",
+   "when": "Circle par (x₁, y₁) par tangent."
+  },
+  {
+   "name": "Length of tangent",
+   "formula": "√S₁ from an external point (x₁, y₁)",
+   "when": "Tangent ki length.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Chord of contact and midpoint chord",
+   "formula": "chord of contact from (x₁, y₁): T = 0;  chord with midpoint (x₁, y₁): T = S₁",
+   "when": "Bahar ke point ya midpoint se chords."
+  },
+  {
+   "name": "Two circles",
+   "formula": "d > r₁ + r₂: 4 common tangents;  d = r₁ + r₂: 3;  |r₁ − r₂| < d < r₁ + r₂: 2;  d = |r₁ − r₂|: 1;  d < |r₁ − r₂|: 0",
+   "when": "Common tangents ki sankhya.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Orthogonal circles",
+   "formula": "2g₁g₂ + 2f₁f₂ = c₁ + c₂",
+   "when": "Right angle par katne wale circles."
+  },
+  {
+   "name": "Family of circles",
+   "formula": "S + λL = 0 (circle and line);  S₁ + λS₂ = 0 (two circles);  radical axis S₁ − S₂ = 0",
+   "when": "Intersection points se guzarne wale circles."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Centre aur radius",
+   "problem": "x² + y² − 4x + 6y − 12 = 0 ka centre aur radius nikalo.",
+   "solution": "g = −2, f = 3 ⇒ centre (2, −3); r = √(4 + 9 + 12) = 5."
+  },
+  {
+   "title": "Tangent ki length",
+   "problem": "(7, 2) se upar wale circle tak tangent ki length?",
+   "solution": "S₁ = 49 + 4 − 28 + 12 − 12 = 25 ⇒ length = √25 = 5."
+  },
+  {
+   "title": "Chord ki length",
+   "problem": "Ek line x² + y² = 25 ke centre se 3 doori par hai. Chord length?",
+   "solution": "2√(25 − 9) = 8."
+  },
+  {
+   "title": "Common tangents",
+   "problem": "Radii 3 aur 4 wale circles ke centres 10 door hain. Common tangents kitne?",
+   "solution": "d = 10 > 3 + 4 = 7 ⇒ 4 common tangents."
+  },
+  {
+   "title": "Diye slope ka tangent",
+   "problem": "x² + y² = 9 ke slope 1 wale tangents?",
+   "solution": "y = x ± 3√2 (c = ±a√(1 + m²) se)."
+  },
+  {
+   "title": "Teen points se circle",
+   "problem": "(0, 0), (2, 0) aur (0, 4) se guzarne wala circle nikalo.",
+   "solution": "c = 0; (2, 0) se: 4 + 4g = 0 ⇒ g = −1; (0, 4) se: 16 + 8f = 0 ⇒ f = −2. Equation: x² + y² − 2x − 4y = 0 (centre (1, 2), radius √5)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Conditions for a general second-degree equation to be a circle",
+   "explain": "ax² + 2hxy + by² + 2gx + 2fy + c = 0 circle hai agar a = b ≠ 0 aur h = 0 (aur radius real ho)."
+  },
+  {
+   "title": "Normal to a circle",
+   "explain": "Har normal centre se guzarta hai. (x₁, y₁) par normal wo line hai jo (x₁, y₁) ko centre se jodti hai."
+  },
+  {
+   "title": "Director circle",
+   "explain": "Jin points se x² + y² = a² par perpendicular tangents khinchte hain unka locus x² + y² = 2a² hai."
+  },
+  {
+   "title": "Radical axis and centre",
+   "explain": "Radical axis un points ka locus hai jinki do circles tak tangent lengths barabar hain: S₁ − S₂ = 0, line of centres ke perpendicular. Teen circles ke radical axes radical centre par milte hain."
+  },
+  {
+   "title": "Angle between circles",
+   "explain": "cos θ = (r₁² + r₂² − d²)/(2r₁r₂), jahan θ intersection point par radii ke beech angle hai; θ = 90° orthogonality condition deta hai."
+  },
+  {
+   "title": "Common chord",
+   "explain": "Do katne wale circles ki common chord S₁ − S₂ = 0 hai; iski length kisi bhi centre se distance lekar nikaalte hain."
+  }
+ ],
+ "ratta": [
+  "Centre (−g, −f), r = √(g² + f² − c).",
+  "Tangent length √S₁.",
+  "Chord length 2√(r² − p²).",
+  "y = mx ± a√(1 + m²) tangent to x² + y² = a².",
+  "Common tangents: 4, 3, 2, 1, 0 as circles move closer.",
+  "Orthogonal: 2g₁g₂ + 2f₁f₂ = c₁ + c₂.",
+  "Director circle x² + y² = 2a²."
+ ],
+ "verifiedOn": "2026-11-13"
+}

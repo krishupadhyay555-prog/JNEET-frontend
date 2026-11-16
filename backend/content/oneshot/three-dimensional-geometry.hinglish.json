@@ -1,0 +1,147 @@
+{
+ "slug": "three-dimensional-geometry",
+ "subject": "Mathematics",
+ "chapters": {
+  "JEE": "Three Dimensional Geometry"
+ },
+ "title": "Three Dimensional Geometry",
+ "readMinutes": 16,
+ "summary": [
+  "Space mein points ke coordinates (x, y, z) hote hain. Direction cosines (l, m, n) l² + m² + n² = 1 satisfy karte hain; direction ratios unke proportional koi bhi numbers hain. Distance aur section formulas 2D jaise hi.",
+  "Line ko vector form r = a + λb ya Cartesian form (x − x₁)/a = (y − y₁)/b = (z − z₁)/c mein likhte hain. Skew lines na milti hain na parallel hoti hain; unka shortest distance JEE favourite hai.",
+  "Plane r · n = d ya ax + by + cz + d = 0 hai. Planes aur lines ke beech angle, point ki plane se distance, foot of perpendicular, image aur lines ki coplanarity yaad rakho."
+ ],
+ "formulas": [
+  {
+   "name": "Distance and section",
+   "formula": "d = √((x₂ − x₁)² + (y₂ − y₁)² + (z₂ − z₁)²);  internal division m:n as in 2D with z included",
+   "when": "Basic 3D formulas."
+  },
+  {
+   "name": "Direction cosines",
+   "formula": "l = cos α, m = cos β, n = cos γ;  l² + m² + n² = 1;  from ratios (a, b, c): l = a/√(a² + b² + c²), …",
+   "when": "Line ki direction.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Line through two points",
+   "formula": "(x − x₁)/(x₂ − x₁) = (y − y₁)/(y₂ − y₁) = (z − z₁)/(z₂ − z₁)",
+   "when": "Line ki equation."
+  },
+  {
+   "name": "Angle between lines",
+   "formula": "cos θ = |a₁a₂ + b₁b₂ + c₁c₂|/(√(a₁² + b₁² + c₁²)√(a₂² + b₂² + c₂²));  perpendicular: a₁a₂ + b₁b₂ + c₁c₂ = 0;  parallel: a₁/a₂ = b₁/b₂ = c₁/c₂",
+   "when": "Direction ratios ke beech angle."
+  },
+  {
+   "name": "Shortest distance (skew lines)",
+   "formula": "SD = |(a₂ − a₁) · (b₁ × b₂)|/|b₁ × b₂|",
+   "when": "Skew lines r = a₁ + λb₁ aur r = a₂ + μb₂ ke beech distance.",
+   "tag": "PYQ favourite",
+   "note": "SD = 0 ho to lines intersect karti hain."
+  },
+  {
+   "name": "Distance between parallel lines",
+   "formula": "d = |(a₂ − a₁) × b|/|b|",
+   "when": "Space mein parallel lines."
+  },
+  {
+   "name": "Plane forms",
+   "formula": "r · n = d;  ax + by + cz + d = 0 (normal (a, b, c));  intercept x/a + y/b + z/c = 1;  through 3 points: determinant = 0",
+   "when": "Plane ki equation."
+  },
+  {
+   "name": "Distance from a plane",
+   "formula": "|ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²)",
+   "when": "Point se plane tak.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Angle between planes / line and plane",
+   "formula": "planes: cos θ = |n₁ · n₂|/(|n₁||n₂|);  line and plane: sin φ = |b · n|/(|b||n|)",
+   "when": "3D mein angles."
+  },
+  {
+   "name": "Plane through intersection",
+   "formula": "P₁ + λP₂ = 0",
+   "when": "Family of planes."
+  },
+  {
+   "name": "Coplanarity of two lines",
+   "formula": "(a₂ − a₁) · (b₁ × b₂) = 0",
+   "when": "Kya do lines ek plane mein hain?"
+  },
+  {
+   "name": "Foot of perpendicular and image in a plane",
+   "formula": "(x − x₁)/a = (y − y₁)/b = (z − z₁)/c = −(ax₁ + by₁ + cz₁ + d)/(a² + b² + c²);  image: multiply the right side by 2",
+   "when": "Projection aur reflection."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Point se plane",
+   "problem": "(1, 2, 3) ki 2x + 3y + 6z − 5 = 0 se distance?",
+   "solution": "|2 + 6 + 18 − 5|/√49 = 21/7 = 3."
+  },
+  {
+   "title": "Lines ke beech angle",
+   "problem": "Direction ratios (1, 1, 0) aur (0, 1, 1) wali lines ke beech angle?",
+   "solution": "cos θ = 1/(√2 × √2) = 1/2 ⇒ θ = 60°."
+  },
+  {
+   "title": "Shortest distance",
+   "problem": "Lines r = λî aur r = 2k̂ + μĵ. Shortest distance?",
+   "solution": "b₁ × b₂ = î × ĵ = k̂; (a₂ − a₁) · k̂ = 2 ⇒ SD = 2."
+  },
+  {
+   "title": "Direction cosines",
+   "problem": "Ratios (2, 3, 6) wali line ke direction cosines?",
+   "solution": "√(4 + 9 + 36) = 7 ⇒ (2/7, 3/7, 6/7)."
+  },
+  {
+   "title": "Parallel planes",
+   "problem": "2x − y + 2z + 3 = 0 aur 4x − 2y + 4z + 5 = 0 ke beech distance?",
+   "solution": "Doosre ko 2x − y + 2z + 2.5 = 0 likho: |3 − 2.5|/3 = 1/6 ≈ 0.167."
+  },
+  {
+   "title": "Teen points se plane",
+   "problem": "(1, 0, 0), (0, 2, 0) aur (0, 0, 3) se guzarne wala plane nikalo.",
+   "solution": "Intercept form: x/1 + y/2 + z/3 = 1 ⇒ 6x + 3y + 2z = 6."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Projection",
+   "explain": "Direction cosines (l, m, n) wali line par segment PQ ka projection |l(x₂ − x₁) + m(y₂ − y₁) + n(z₂ − z₁)| hai."
+  },
+  {
+   "title": "Intersection of two lines",
+   "explain": "Dono lines ke general points parameters λ aur μ ke saath likho, coordinates barabar karke do equations solve karo; teesri check karo. Wo bhi sahi ho to lines intersect karti hain."
+  },
+  {
+   "title": "Line and plane relations",
+   "explain": "Line plane mein hai agar line ka ek point plane par ho aur b · n = 0. Line plane ke parallel hai agar b · n = 0 par line ka koi point us par na ho."
+  },
+  {
+   "title": "Symmetric form from two planes",
+   "explain": "Do planes ki line of intersection ki direction n₁ × n₂ hai; dono planes par ek point dhoondho (jaise z = 0 rakho) aur line likho."
+  },
+  {
+   "title": "Angle bisector planes",
+   "explain": "a₁x + b₁y + c₁z + d₁ = 0 aur a₂x + … = 0 ke beech angles ke bisector planes normalised distances barabar karke milte hain, 2D jaisa."
+  },
+  {
+   "title": "Vector vs Cartesian",
+   "explain": "Aaram se badlo: r = a + λb ⇔ (x − a₁)/b₁ = (y − a₂)/b₂ = (z − a₃)/b₃. Vector forms mein cross aur dot products seedhe lagte hain."
+  }
+ ],
+ "ratta": [
+  "l² + m² + n² = 1.",
+  "Perpendicular lines: a₁a₂ + b₁b₂ + c₁c₂ = 0.",
+  "SD = |(a₂ − a₁)·(b₁ × b₂)|/|b₁ × b₂|.",
+  "Point–plane distance |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²).",
+  "Line–plane: sin φ = |b·n|/(|b||n|).",
+  "Coplanar lines: (a₂ − a₁)·(b₁ × b₂) = 0."
+ ],
+ "verifiedOn": "2026-11-13"
+}
