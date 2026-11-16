@@ -64,5 +64,50 @@ SYLLABUS = [
 ("Nutrient cycles (carbon and phosphorus); ecological succession; ecological services", ["carbon cycle", "phosphorus cycle", "succession", "ecosystem services"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Ecosystem nature ki functional unit hai jahan living organisms aapas mein aur physical environment se interact karte hain. Iski structure mein species composition aur stratification aate hain.",
+"Iske functions: productivity, decomposition, energy flow aur nutrient cycling. Energy flow ek-disha hai, sun se producers aur phir consumers tak; har agle trophic level tak sirf lagbhag 10% jaata hai (Lindeman ka 10% law).",
+"Ecological pyramid (number, biomass, energy) trophic structure dikhate hain; energy pyramid hamesha seedha (upright) hota hai.",
+"Ecological succession khaali areas (primary) ya disturb hue areas (secondary) ko seral stages se climax communities mein badalta hai. Carbon cycle aur phosphorus cycle nutrient cycling ke examples hain; ecosystem services insaan ke liye anmol hain.",
+],
+when=[
+("Primary productivity ki calculations.", None),
+("Global productivity facts.", None),
+("Energy pakadne ki efficiency.", None),
+("Energy flow ki calculations.", None),
+("Detritus todna.", None),
+("Decomposition ki rate.", None),
+("Food chain ke types.", "Aquatic ecosystems mein GFC energy ka main raasta hai; terrestrial ecosystems mein kahin zyada energy DFC se behti hai — ulta mat likhna."),
+("Food chain mein positions.", None),
+("Pyramid ke shapes.", None),
+("Ecosystem ke terms.", None),
+("Ecological succession.", None),
+("Succession ke types.", None),
+("Biogeochemical cycles.", None),
+],
+examples=[
+("NPP", "Ek ecosystem ka GPP 100 kcal/m²/yr hai aur respiration losses 20 kcal/m²/yr. NPP?",
+ "NPP = 100 − 20 = ⟨0⟩ kcal/m²/yr."),
+("Tertiary consumers tak energy", "Producers 10,000 J fix karte hain. 10% law se tertiary consumers tak kitna pahunchta hai?",
+ "10,000 → 1000 (primary) → 100 (secondary) → ⟨0⟩ J (tertiary)."),
+("Ulta pyramid of biomass", "Samudra mein pyramid of biomass ulta kyun hota hai?",
+ "Phytoplankton ka kisi bhi pal standing biomass kam hota hai par wo bahut tezi se reproduce karte hain; unhe khaane wali fish ka biomass zyada hota hai."),
+("Chattan par pioneers", "Nangi chattan par lichens pioneers kyun hote hain?",
+ "Ye acids nikaal kar chattan ghulaate hain, weathering aur soil banne mein madad karte hain, jisse baad mein mosses aur doosre plants ug paate hain."),
+("Carbon cycle ka fact", "Organisms ke dry weight ka kitna hissa carbon hai, aur zyadatar carbon kahan store hai?",
+ "Organisms ke dry weight ka lagbhag 49% carbon hai. Oceans global carbon ka lagbhag 71% dissolved carbon ki tarah rakhte hain."),
+],
+topics=[
+("Ecosystem structure", "Biotic components: producers, consumers, decomposers. Abiotic: light, temperature, paani, soil. Alag levels par species ka vertical distribution stratification kehlata hai (forests mein upar trees, phir shrubs, neeche herbs aur grasses)."),
+("Phosphorus cycle", "Rocks phosphates ki tarah phosphorus ka main reservoir hain; weathering unhe mitti mein chhodti hai, plants absorb karte hain, aur decomposers phosphorus waapas mitti mein laate hain. Carbon ke ulat, phosphorus ka atmosphere mein koi khaas respiratory release nahi."),
+("Carbon cycle", "Producers har saal photosynthesis se lagbhag 4 × 10¹³ kg carbon fix karte hain. Carbon respiration, decomposition, fossil fuels aur lakdi jalaane, forest fires aur volcanic activity se atmosphere mein lautta hai. Insaani activity ne atmospheric CO₂ badha diya hai."),
+("Ecosystem services", "Swasth ecosystems hawa aur paani saaf karte, baadh aur sookha kam karte, nutrients cycle karte, upjaau mitti banate, habitat dete, flowers pollinate karte aur carbon store karte hain. Robert Constanza ne nature ki services ki keemat lagbhag US $33 trillion per year aanki — global gross national product ka lagbhag dugna."),
+("Limitations of ecological pyramids", "Ye ek hi species ke do ya zyada trophic levels mein hone ko nahi maante, simple food chain maante hain (food web nahi) aur saprophytes ko koi jagah nahi dete jabki unka role bahut zaroori hai."),
+("Climax community", "Environment ke saath equilibrium mein aakhri, stable community. Saari succession — paani mein ho ya zameen par — medium-water (mesic) climax ki taraf jaati hai."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)

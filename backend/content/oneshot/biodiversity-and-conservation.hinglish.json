@@ -1,0 +1,153 @@
+{
+ "slug": "biodiversity-and-conservation",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Biodiversity and Conservation"
+ },
+ "title": "Biodiversity and Conservation",
+ "readMinutes": 13,
+ "summary": [
+  "Biodiversity (Edward Wilson ne term popular kiya) teen levels par hai: genetic, species aur ecological diversity. Lagbhag 1.5 million species describe hui hain; kul ka andaza lagbhag 7 million tak (Robert May).",
+  "India ke paas duniya ka sirf 2.4% land area par 8.1% species diversity hai — 12 mega-diversity deshon mein se ek. Diversity tropics mein sabse zyada aur poles ki taraf kam hoti hai (latitudinal gradient).",
+  "Alexander von Humboldt ka species–area relationship: area ke saath species richness ek had tak badhti hai. Biodiversity ka loss aur extinction 'Evil Quartet' se hota hai: habitat loss aur fragmentation, over-exploitation, alien species invasions aur co-extinctions. IUCN ki Red Data Book threatened species record karti hai.",
+  "Conservation in situ (hotspot, protected areas — national park, sanctuary, biosphere reserve — sacred groves, Ramsar wetlands) ya ex situ (zoos, botanical gardens, seed banks, cryopreservation) hota hai."
+ ],
+ "formulas": [
+  {
+   "name": "Levels of biodiversity",
+   "formula": "genetic (Rauwolfia vomitoria — reserpine variation; India has 50,000+ strains of rice and 1000 varieties of mango);  species (Western Ghats have more amphibian species than Eastern Ghats);  ecological (India's deserts, rain forests, mangroves, coral reefs, wetlands, estuaries and alpine meadows)",
+   "when": "Teen levels.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Global species proportions",
+   "formula": "more than 70% of recorded species are animals; plants (including algae, fungi, bryophytes, gymnosperms, angiosperms) are about 22%;  among animals insects are 70% (7 of every 10 animals)",
+   "when": "Species composition."
+  },
+  {
+   "name": "Species–area relationship",
+   "formula": "log S = log C + Z log A  (S = species richness, A = area, Z = slope, C = Y-intercept)",
+   "when": "Von Humboldt ka relationship.",
+   "tag": "PYQ favourite",
+   "note": "Poore continents jaise bahut bade areas ke liye Z kahin zyada steep (0.6–1.2) hota hai."
+  },
+  {
+   "name": "Z values",
+   "formula": "Z ≈ 0.1–0.2 for small areas regardless of taxonomic group or region;  frugivorous birds and mammals in tropical forests across continents: Z ≈ 1.15",
+   "when": "Species–area line ka slope."
+  },
+  {
+   "name": "Why tropics are richer",
+   "formula": "long evolutionary time (undisturbed for millions of years);  less seasonal, more constant environment (niche specialisation);  more solar energy → higher productivity",
+   "when": "Latitudinal gradient.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Evil Quartet",
+   "formula": "habitat loss and fragmentation (Amazon rain forest — 'lungs of the planet');  over-exploitation (Steller's sea cow, passenger pigeon);  alien species invasions (Nile perch in Lake Victoria; Parthenium, Lantana, Eichhornia; African catfish Clarias gariepinus);  co-extinctions (host fish and its parasites; plant–pollinator)",
+   "when": "Biodiversity loss ke kaaran.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Recent extinctions",
+   "formula": "dodo (Mauritius), quagga (Africa), thylacine (Australia), Steller's sea cow (Russia);  three subspecies of tiger: Bali, Javan, Caspian;  last 500 years: 784 extinctions (IUCN 2004)",
+   "when": "Extinction ke examples.",
+   "note": "IUCN Red List (Red Data Book) threatened species ko critically endangered, endangered aur vulnerable jaisi categories mein record karti hai."
+  },
+  {
+   "name": "Rivet popper hypothesis",
+   "formula": "Paul Ehrlich: the ecosystem is an aeroplane and species are rivets — losing a few may not matter, but losing key ones (on the wings) threatens the whole system",
+   "when": "Species ka khona kyun maayne rakhta hai."
+  },
+  {
+   "name": "Biodiversity hotspots",
+   "formula": "high species richness + high endemism;  34 hotspots worldwide (less than 2% of land area);  India: Western Ghats and Sri Lanka, Indo-Burma, Himalaya",
+   "when": "In situ conservation priority.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Protected areas in India",
+   "formula": "14 biosphere reserves, 90 national parks, 448 wildlife sanctuaries;  Ramsar sites protect wetlands of international importance",
+   "when": "In situ conservation ke numbers."
+  },
+  {
+   "name": "Sacred groves",
+   "formula": "Khasi and Jaintia Hills (Meghalaya), Aravalli Hills (Rajasthan), Western Ghats (Karnataka, Maharashtra), Sarguja, Chanda and Bastar (Madhya Pradesh)",
+   "when": "Paaramparik conservation."
+  },
+  {
+   "name": "Ex situ conservation",
+   "formula": "zoos, botanical gardens, wildlife safari parks;  cryopreservation of gametes (−196 °C);  in vitro fertilisation;  tissue culture propagation;  seed banks",
+   "when": "Natural habitat ke bahar conservation."
+  },
+  {
+   "name": "International efforts",
+   "formula": "Earth Summit, Rio de Janeiro (1992) — Convention on Biological Diversity;  World Summit on Sustainable Development, Johannesburg (2002) — reduce biodiversity loss by 2010",
+   "when": "Global conventions."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Area dugna karna",
+   "problem": "Z = 0.2 ho to area dugna hone par species richness kitne guna badhti hai?",
+   "solution": "S ∝ A^Z, isliye ratio = 2^{0.2} = 1.15."
+  },
+  {
+   "title": "India ka hissa",
+   "problem": "Duniya ke land area aur species mein India ka kitna hissa hai?",
+   "solution": "2.4% land area aur 8.1% species diversity — mega-diversity desh jahan 45,000 se zyada plant aur unse dugni animal species record hain."
+  },
+  {
+   "title": "Lake Victoria",
+   "problem": "Nile perch ne Lake Victoria par kya asar daala?",
+   "solution": "Lake mein laaye jaane ke baad isne 200 se zyada native cichlid fish species ko extinct kar diya — alien species invasion."
+  },
+  {
+   "title": "Co-extinction",
+   "problem": "Co-extinction ka example do.",
+   "solution": "Jab host fish species extinct hoti hai, uske unique parasites bhi extinct ho jaate hain. Waise hi plant aur uska obligate pollinator ek doosre par nirbhar hain."
+  },
+  {
+   "title": "Biodiversity kyun bachaayein?",
+   "problem": "Conservation ke teen tarah ke arguments batao.",
+   "solution": "Narrowly utilitarian (khaana, fibre, dawaayein — 25% se zyada drugs plants se), broadly utilitarian (ecosystem services; Amazon forest photosynthesis se kul O₂ ka lagbhag 20% banata hai) aur ethical (har species ki apni keemat hai)."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Number of species",
+   "explain": "IUCN (2004) ke hisaab se describe kiye gaye plants aur animals 1.5 million se thode zyada hain. Robert May ne duniya mein lagbhag 7 million species ka andaza lagaya. Bahut si species abhi khoji nahi gayi, khaaskar prokaryotes, insects aur tropical species mein."
+  },
+  {
+   "title": "Importance of species diversity",
+   "explain": "Zyada species wali communities zyada stable hoti hain — David Tilman ke lambe plot experiments ne dikhaya ki zyada species wale plots mein saal-dar-saal biomass ka utaar-chadhaav kam aur productivity zyada thi."
+  },
+  {
+   "title": "Amazon rain forest",
+   "explain": "Isme shayad millions species hain, jisme 40,000 se zyada plants, 3000 fish, 1300 birds, 427 mammals, 427 amphibians, 378 reptiles aur 1,25,000 se zyada invertebrates."
+  },
+  {
+   "title": "Biopiracy and bioprospecting",
+   "explain": "Bioprospecting economic importance ke products ke liye molecular, genetic aur species-level diversity ki khoj hai. Biodiversity mein ameer desh bioprospecting se faayda utha sakte hain."
+  },
+  {
+   "title": "Loss rate",
+   "explain": "Abhi species extinction rates insaan se pehle ke samay se 100 se 1000 guna tez maane jaate hain; 12% birds, 23% mammals, 32% amphibians aur 31% gymnosperms par extinction ka khatra. Ecologists sixth mass extinction ki chetaavni dete hain."
+  },
+  {
+   "title": "Effects of biodiversity loss",
+   "explain": "Plant production mein girawat, drought jaise environmental jhatkon ke prati kam resistance, aur plant productivity, water use, aur pest aur disease cycles jaise ecosystem processes mein zyada utaar-chadhaav."
+  }
+ ],
+ "ratta": [
+  "India: 2.4% land, 8.1% species, mega-diversity.",
+  "log S = log C + Z log A;  Z 0.1–0.2 (small areas), 0.6–1.2 (continents).",
+  "Evil Quartet: habitat loss, over-exploitation, alien invasions, co-extinction.",
+  "Nile perch → 200+ cichlids extinct.",
+  "34 hotspots;  India: Western Ghats–Sri Lanka, Indo-Burma, Himalaya.",
+  "14 biosphere reserves, 90 national parks, 448 sanctuaries.",
+  "Rivet popper — Paul Ehrlich.",
+  "Rio 1992 (CBD);  Johannesburg 2002."
+ ],
+ "verifiedOn": "2026-11-13"
+}

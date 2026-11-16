@@ -1,0 +1,156 @@
+{
+ "slug": "organisms-and-populations",
+ "subject": "Biology",
+ "chapters": {
+  "NEET": "Organisms and Populations"
+ },
+ "title": "Organisms and Populations",
+ "readMinutes": 14,
+ "summary": [
+  "Ecology organisms ke aapas mein aur physical environment ke saath interactions padhti hai, chaar levels par: organisms, populations, communities aur biomes.",
+  "Populations ke attributes hain — birth rate (natality), death rate (mortality), sex ratio aur age distribution (age pyramid). Population size births, immigration, deaths aur emigration se badalta hai.",
+  "Resources unlimited hon to growth exponential (J-shaped) aur carrying capacity K limit kare to logistic (S-shaped, Verhulst–Pearl) hoti hai.",
+  "Population interactions: mutualism (+/+), competition (−/−), predation aur parasitism (+/−), commensalism (+/0) aur amensalism (−/0)."
+ ],
+ "formulas": [
+  {
+   "name": "Population density change",
+   "formula": "Nₜ₊₁ = Nₜ + [(B + I) − (D + E)]",
+   "when": "Natality, immigration, mortality, emigration.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Birth and death rates",
+   "formula": "birth rate = new individuals / initial population (per unit time);  death rate = deaths / initial population",
+   "when": "Per capita rates."
+  },
+  {
+   "name": "Exponential growth",
+   "formula": "dN/dt = rN;  Nₜ = N₀eʳᵗ  (r = intrinsic rate of natural increase)",
+   "when": "Unlimited resources — J-shaped curve.",
+   "note": "Norway rat ka r 0.015; flour beetle ka 0.12; 1981 mein India ki human population ka r = 0.0205."
+  },
+  {
+   "name": "Logistic growth",
+   "formula": "dN/dt = rN (K − N)/K",
+   "when": "Limited resources — carrying capacity K ke saath S-shaped (sigmoid) curve.",
+   "mistake": "Growth N = K/2 par sabse tez; N = K par ruk jaati hai — K par sabse tez mat samjho.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Age pyramids",
+   "formula": "triangular (expanding — many young);  bell-shaped (stable);  urn-shaped (declining — fewer young)",
+   "when": "Population trends ka andaza.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Population interactions",
+   "formula": "mutualism +/+;  competition −/−;  predation +/−;  parasitism +/−;  commensalism +/0;  amensalism −/0",
+   "when": "Interactions classify karna.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Mutualism examples",
+   "formula": "lichens (fungus + alga);  mycorrhiza (fungus + roots);  fig and wasp (pollination + egg laying);  Ophrys orchid and bee (sexual deceit, pseudocopulation)",
+   "when": "+/+ interactions."
+  },
+  {
+   "name": "Commensalism examples",
+   "formula": "orchid on mango branch (epiphyte);  barnacles on whale;  cattle egret and grazing cattle;  sea anemone and clown fish",
+   "when": "+/0 interactions."
+  },
+  {
+   "name": "Competition",
+   "formula": "Gause's competitive exclusion principle: two closely related species competing for the same resources can't coexist indefinitely;  resource partitioning (MacArthur's warblers) lets them coexist",
+   "when": "−/− interactions."
+  },
+  {
+   "name": "Parasitism",
+   "formula": "host-specific; ectoparasites (lice, ticks, Cuscuta);  endoparasites (tapeworm, liver fluke — complex life cycles with intermediate hosts);  brood parasitism (cuckoo lays eggs in crow's nest)",
+   "when": "+/− interactions."
+  },
+  {
+   "name": "Predator roles and defences",
+   "formula": "predators transfer energy, control prey (prickly pear in Australia controlled by a cactus-feeding moth), maintain diversity;  prey defences: camouflage, poison (monarch butterfly from milkweed), chemical defences in plants (nicotine, caffeine, quinine, strychnine, opium; Calotropis cardiac glycosides)",
+   "when": "Predation."
+  },
+  {
+   "name": "Responses to abiotic stress",
+   "formula": "regulate (homeostasis — birds, mammals);  conform (most animals, all plants);  migrate (Siberian cranes to Keoladeo National Park, Bharatpur);  suspend (spores, hibernation, aestivation, diapause in zooplankton)",
+   "when": "Badalti conditions se nipatna."
+  },
+  {
+   "name": "Allen's rule",
+   "formula": "mammals from colder climates have shorter ears and limbs to reduce heat loss",
+   "when": "Thand ke adaptations."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Birth rate",
+   "problem": "Ek talaab mein pichle saal 20 lotus plants the; is saal reproduction se 8 naye bane. Birth rate?",
+   "solution": "8/20 = 0.4 offspring per lotus per year."
+  },
+  {
+   "title": "Death rate",
+   "problem": "40 mein se 4 fruit flies ek hafte mein marti hain. Death rate?",
+   "solution": "4/40 = 0.1 individuals per fruit fly per week."
+  },
+  {
+   "title": "Logistic growth rate",
+   "problem": "r = 0.1, N = 200, K = 1000. dN/dt nikalo.",
+   "solution": "dN/dt = 0.1 × 200 × (1000 − 200)/1000 = 16 individuals per unit time (exponential growth 20 deti)."
+  },
+  {
+   "title": "Brood parasitism",
+   "problem": "Cuckoo ka anda crow ke ghonsle mein pakda kyun nahi jaata?",
+   "solution": "Cuckoo ke ande size aur rang mein host ke andon jaise hote hain — evolve hua adaptation jo host ke unhe bahar phenkne ka chance ghataata hai."
+  },
+  {
+   "title": "Altitude sickness",
+   "problem": "Oonchi jagahon par altitude sickness kyun hoti hai, aur body kaise adjust karti hai?",
+   "solution": "Kam atmospheric pressure se body mein O₂ kam (nausea, thakaan, dil ki dhadkan tez). Dheere-dheere body zyada RBCs banati hai, haemoglobin ki binding affinity ghataati hai aur tez saans leti hai."
+  },
+  {
+   "title": "Prickly pear control",
+   "problem": "Australia mein prickly pear cactus kaise control hua?",
+   "solution": "Uske natural habitat se cactus khaane wala predator moth laakar — biological control."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Major abiotic factors",
+   "explain": "Temperature (eurythermal vs stenothermal organisms), paani (euryhaline vs stenohaline — salinity: inland waters < 5, sea 30–35, hypersaline lagoons > 100 parts per thousand), light (photoperiod flowering ko affect karta; deep-sea organisms andhere mein rehte) aur soil (composition, grain size, aggregation, percolation)."
+  },
+  {
+   "title": "Adaptations",
+   "explain": "Kangaroo rat paani ki zaroorat internal fat oxidation aur concentrated urine se poori karta hai. Desert plants mein moti cuticle, dhanse stomata aur CAM photosynthesis (stomata raat mein khulte); Opuntia ki leaves spines ban gayi aur flat stems photosynthesis karte hain. Polar seals mein moti blubber."
+  },
+  {
+   "title": "Population attributes",
+   "explain": "Sirf populations (individuals nahi) ke birth rates, death rates, sex ratio aur age distribution hote hain. Population density counting, percent cover ya indirect methods (pug marks, faecal pellets) se naapi jaati hai."
+  },
+  {
+   "title": "Life history variation",
+   "explain": "Populations reproductive fitness (Darwinian fitness) maximise karne ke liye evolve hoti hain: kuch zindagi mein ek baar breed karti hain (Pacific salmon, bamboo), kuch kai baar (zyadatar birds aur mammals); kuch bahut chhote offspring (oysters, pelagic fish), kuch kam bade (birds, mammals)."
+  },
+  {
+   "title": "Amensalism and coexistence",
+   "explain": "Amensalism mein ek species ko nuksaan aur doosri par koi asar nahi (Penicillium penicillin nikaal kar bacteria maarta hai). Competition kareebi species mein sabse zyada par anjaan species mein bhi ho sakti hai (South American lakes mein flamingos aur fish zooplankton ke liye competition karte hain)."
+  },
+  {
+   "title": "Ecological effects of predators",
+   "explain": "Predators prey ka zyada shoshan karein to prey extinct ho sakta hai aur phir predators bhi. Keystone predator (rocky intertidal mein starfish Pisaster) hataane se ek saal mein 10 se zyada invertebrate species extinct ho gayi."
+  }
+ ],
+ "ratta": [
+  "Nₜ₊₁ = Nₜ + (B + I) − (D + E).",
+  "Exponential dN/dt = rN (J);  logistic dN/dt = rN(K − N)/K (S).",
+  "Age pyramids: triangle growing, bell stable, urn declining.",
+  "Mutualism +/+;  commensalism +/0;  amensalism −/0;  predation/parasitism +/−;  competition −/−.",
+  "Ophrys — sexual deceit;  fig–wasp;  cuckoo — brood parasite.",
+  "Gause: competitive exclusion;  MacArthur: warblers.",
+  "Allen's rule: short ears and limbs in cold."
+ ],
+ "verifiedOn": "2026-11-13"
+}

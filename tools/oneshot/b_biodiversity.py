@@ -67,5 +67,50 @@ SYLLABUS = [
 ("In situ and ex situ conservation", ["in situ", "ex situ"]),
 ]
 
+from lib import hinglish, write_pair
+
+DOC_HI = hinglish(DOC,
+summary=[
+"Biodiversity (Edward Wilson ne term popular kiya) teen levels par hai: genetic, species aur ecological diversity. Lagbhag 1.5 million species describe hui hain; kul ka andaza lagbhag 7 million tak (Robert May).",
+"India ke paas duniya ka sirf 2.4% land area par 8.1% species diversity hai — 12 mega-diversity deshon mein se ek. Diversity tropics mein sabse zyada aur poles ki taraf kam hoti hai (latitudinal gradient).",
+"Alexander von Humboldt ka species–area relationship: area ke saath species richness ek had tak badhti hai. Biodiversity ka loss aur extinction 'Evil Quartet' se hota hai: habitat loss aur fragmentation, over-exploitation, alien species invasions aur co-extinctions. IUCN ki Red Data Book threatened species record karti hai.",
+"Conservation in situ (hotspot, protected areas — national park, sanctuary, biosphere reserve — sacred groves, Ramsar wetlands) ya ex situ (zoos, botanical gardens, seed banks, cryopreservation) hota hai.",
+],
+when=[
+("Teen levels.", None),
+("Species composition.", None),
+("Von Humboldt ka relationship.", "Poore continents jaise bahut bade areas ke liye Z kahin zyada steep (0.6–1.2) hota hai."),
+("Species–area line ka slope.", None),
+("Latitudinal gradient.", None),
+("Biodiversity loss ke kaaran.", None),
+("Extinction ke examples.", "IUCN Red List (Red Data Book) threatened species ko critically endangered, endangered aur vulnerable jaisi categories mein record karti hai."),
+("Species ka khona kyun maayne rakhta hai.", None),
+("In situ conservation priority.", None),
+("In situ conservation ke numbers.", None),
+("Paaramparik conservation.", None),
+("Natural habitat ke bahar conservation.", None),
+("Global conventions.", None),
+],
+examples=[
+("Area dugna karna", "Z = 0.2 ho to area dugna hone par species richness kitne guna badhti hai?",
+ "S ∝ A^Z, isliye ratio = 2^0.2 = ⟨0⟩."),
+("India ka hissa", "Duniya ke land area aur species mein India ka kitna hissa hai?",
+ "2.4% land area aur 8.1% species diversity — mega-diversity desh jahan 45,000 se zyada plant aur unse dugni animal species record hain."),
+("Lake Victoria", "Nile perch ne Lake Victoria par kya asar daala?",
+ "Lake mein laaye jaane ke baad isne 200 se zyada native cichlid fish species ko extinct kar diya — alien species invasion."),
+("Co-extinction", "Co-extinction ka example do.",
+ "Jab host fish species extinct hoti hai, uske unique parasites bhi extinct ho jaate hain. Waise hi plant aur uska obligate pollinator ek doosre par nirbhar hain."),
+("Biodiversity kyun bachaayein?", "Conservation ke teen tarah ke arguments batao.",
+ "Narrowly utilitarian (khaana, fibre, dawaayein — 25% se zyada drugs plants se), broadly utilitarian (ecosystem services; Amazon forest photosynthesis se kul O₂ ka lagbhag 20% banata hai) aur ethical (har species ki apni keemat hai)."),
+],
+topics=[
+("Number of species", "IUCN (2004) ke hisaab se describe kiye gaye plants aur animals 1.5 million se thode zyada hain. Robert May ne duniya mein lagbhag 7 million species ka andaza lagaya. Bahut si species abhi khoji nahi gayi, khaaskar prokaryotes, insects aur tropical species mein."),
+("Importance of species diversity", "Zyada species wali communities zyada stable hoti hain — David Tilman ke lambe plot experiments ne dikhaya ki zyada species wale plots mein saal-dar-saal biomass ka utaar-chadhaav kam aur productivity zyada thi."),
+("Amazon rain forest", "Isme shayad millions species hain, jisme 40,000 se zyada plants, 3000 fish, 1300 birds, 427 mammals, 427 amphibians, 378 reptiles aur 1,25,000 se zyada invertebrates."),
+("Biopiracy and bioprospecting", "Bioprospecting economic importance ke products ke liye molecular, genetic aur species-level diversity ki khoj hai. Biodiversity mein ameer desh bioprospecting se faayda utha sakte hain."),
+("Loss rate", "Abhi species extinction rates insaan se pehle ke samay se 100 se 1000 guna tez maane jaate hain; 12% birds, 23% mammals, 32% amphibians aur 31% gymnosperms par extinction ka khatra. Ecologists sixth mass extinction ki chetaavni dete hain."),
+("Effects of biodiversity loss", "Plant production mein girawat, drought jaise environmental jhatkon ke prati kam resistance, aur plant productivity, water use, aur pest aur disease cycles jaise ecosystem processes mein zyada utaar-chadhaav."),
+])
+
 if __name__ == "__main__":
-    _check_and_write(DOC, SYLLABUS, DOC["slug"] + ".json", "english")
+    write_pair(DOC, SYLLABUS, DOC_HI)
