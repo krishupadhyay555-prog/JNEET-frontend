@@ -55,9 +55,9 @@ always our own.
 
 | Exam | Year | Have | Missing (why) |
 |---|---|---|---|
-| JEE Main | 2026 | S2: 9/9 | **S1 (Jan 2026): not added yet** — key format (Domestic/International, answers 1–4) needs its parser; papers to locate |
+| JEE Main | 2026 | S1: 10/10 (blank response sheets, collegepravesh Drive) · S2: 9/9 | — |
 | JEE Main | 2025 | S1: 10/10 (response sheets) · S2: 8/9 | 4 Apr S1 (NTA file missing images) |
-| JEE Main | 2024 | S1: 8/10 · S2: 10/10 | 27 Jan S2, 29 Jan S2 (only copies without a text layer; not verified yet) |
+| JEE Main | 2024 | S1: 8/10 · S2: 10/10 | 27 Jan S2, 29 Jan S2 (only prepp re-typed copies — not usable) |
 | JEE Main | 2023 | S2: 12/12 | S1 (Jan/Feb 2023): no official copy found |
 | JEE Main | 2022 | 24/24 | — |
 | JEE Main | 2021 | 24/26 | 16 Mar S1, 31 Aug S2 (+ 20/27 Jul: not verified) |
