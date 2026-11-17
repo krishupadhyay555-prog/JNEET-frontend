@@ -1,0 +1,2268 @@
+{
+ "id": "jee-main-2025-01-22-s2",
+ "exam": "JEE",
+ "year": 2025,
+ "session": 1,
+ "date": "2025-01-22",
+ "shift": 2,
+ "title": "JEE Main 2025 · 22 January · Shift 2",
+ "source": "NTA question paper (original images) + NTA final answer key",
+ "paperPdf": "https://drive.google.com/file/d/1D9HgKkhzdB7CeD1k8kLUFVfGSxW6ZFKn/view",
+ "keyPdf": "https://nta.ac.in/Download/Notice/Notice_20250210115032.pdf",
+ "paperHost": "collegepravesh.com (Google Drive) — a blank candidate response sheet; question and option order as shown to that candidate",
+ "counts": {
+  "Mathematics": 25,
+  "Physics": 25,
+  "Chemistry": 25
+ },
+ "questions": [
+  {
+   "n": 1,
+   "qid": "656445236",
+   "subject": "Mathematics",
+   "chapter": "Conic Sections",
+   "text": "",
+   "qimg": "q1.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q1o1.webp",
+    "q1o2.webp",
+    "q1o3.webp",
+    "q1o4.webp"
+   ],
+   "optImgW": [
+    26,
+    22,
+    22,
+    20
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 2,
+   "qid": "656445239",
+   "subject": "Mathematics",
+   "chapter": "Three Dimensional Geometry",
+   "text": "",
+   "qimg": "q2.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q2o1.webp",
+    "q2o2.webp",
+    "q2o3.webp",
+    "q2o4.webp"
+   ],
+   "optImgW": [
+    46,
+    20,
+    44,
+    44
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 3,
+   "qid": "656445238",
+   "subject": "Mathematics",
+   "chapter": "Vector Algebra",
+   "text": "",
+   "qimg": "q3.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q3o1.webp",
+    "q3o2.webp",
+    "q3o3.webp",
+    "q3o4.webp"
+   ],
+   "optImgW": [
+    20,
+    22,
+    20,
+    20
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 4,
+   "qid": "656445242",
+   "subject": "Mathematics",
+   "chapter": "Application of Derivatives",
+   "text": "",
+   "qimg": "q4.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q4o1.webp",
+    "q4o2.webp",
+    "q4o3.webp",
+    "q4o4.webp"
+   ],
+   "optImgW": [
+    64,
+    62,
+    62,
+    64
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 5,
+   "qid": "656445241",
+   "subject": "Mathematics",
+   "chapter": "Limits, Continuity and Differentiability",
+   "text": "",
+   "qimg": "q5.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q5o1.webp",
+    "q5o2.webp",
+    "q5o3.webp",
+    "q5o4.webp"
+   ],
+   "optImgW": [
+    38,
+    26,
+    38,
+    22
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 6,
+   "qid": "656445240",
+   "subject": "Mathematics",
+   "chapter": "Three Dimensional Geometry",
+   "text": "",
+   "qimg": "q6.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q6o1.webp",
+    "q6o2.webp",
+    "q6o3.webp",
+    "q6o4.webp"
+   ],
+   "optImgW": [
+    38,
+    38,
+    40,
+    38
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 7,
+   "qid": "656445231",
+   "subject": "Mathematics",
+   "chapter": "Sequences and Series",
+   "text": "",
+   "qimg": "q7.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q7o1.webp",
+    "q7o2.webp",
+    "q7o3.webp",
+    "q7o4.webp"
+   ],
+   "optImgW": [
+    20,
+    22,
+    22,
+    20
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 8,
+   "qid": "656445245",
+   "subject": "Mathematics",
+   "chapter": "Indefinite Integrals",
+   "text": "",
+   "qimg": "q8.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q8o1.webp",
+    "q8o2.webp",
+    "q8o3.webp",
+    "q8o4.webp"
+   ],
+   "optImgW": [
+    56,
+    56,
+    56,
+    58
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 9,
+   "qid": "656445226",
+   "subject": "Mathematics",
+   "chapter": "Sets, Relations and Functions",
+   "text": "",
+   "qimg": "q9.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q9o1.webp",
+    "q9o2.webp",
+    "q9o3.webp",
+    "q9o4.webp"
+   ],
+   "optImgW": [
+    40,
+    38,
+    38,
+    38
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 10,
+   "qid": "656445230",
+   "subject": "Mathematics",
+   "chapter": "Matrices and Determinants",
+   "text": "",
+   "qimg": "q10.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q10o1.webp",
+    "q10o2.webp",
+    "q10o3.webp",
+    "q10o4.webp"
+   ],
+   "optImgW": [
+    38,
+    28,
+    38,
+    38
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 11,
+   "qid": "656445235",
+   "subject": "Mathematics",
+   "chapter": "Conic Sections",
+   "text": "",
+   "qimg": "q11.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q11o1.webp",
+    "q11o2.webp",
+    "q11o3.webp",
+    "q11o4.webp"
+   ],
+   "optImgW": [
+    56,
+    50,
+    50,
+    56
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 12,
+   "qid": "656445234",
+   "subject": "Mathematics",
+   "chapter": "Probability",
+   "text": "",
+   "qimg": "q12.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q12o1.webp",
+    "q12o2.webp",
+    "q12o3.webp",
+    "q12o4.webp"
+   ],
+   "optImgW": [
+    26,
+    28,
+    26,
+    26
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 13,
+   "qid": "656445233",
+   "subject": "Mathematics",
+   "chapter": "Binomial Theorem",
+   "text": "",
+   "qimg": "q13.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q13o1.webp",
+    "q13o2.webp",
+    "q13o3.webp",
+    "q13o4.webp"
+   ],
+   "optImgW": [
+    22,
+    22,
+    20,
+    20
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 14,
+   "qid": "656445237",
+   "subject": "Mathematics",
+   "chapter": "Trigonometric Functions and Equations",
+   "text": "",
+   "qimg": "q14.webp",
+   "qimgW": 308,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q14o1.webp",
+    "q14o2.webp",
+    "q14o3.webp",
+    "q14o4.webp"
+   ],
+   "optImgW": [
+    28,
+    20,
+    32,
+    32
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 15,
+   "qid": "656445232",
+   "subject": "Mathematics",
+   "chapter": "Permutations and Combinations",
+   "text": "",
+   "qimg": "q15.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q15o1.webp",
+    "q15o2.webp",
+    "q15o3.webp",
+    "q15o4.webp"
+   ],
+   "optImgW": [
+    38,
+    28,
+    38,
+    26
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 16,
+   "qid": "656445243",
+   "subject": "Mathematics",
+   "chapter": "Application of Integrals",
+   "text": "",
+   "qimg": "q16.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q16o1.webp",
+    "q16o2.webp",
+    "q16o3.webp",
+    "q16o4.webp"
+   ],
+   "optImgW": [
+    26,
+    20,
+    28,
+    20
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 17,
+   "qid": "656445228",
+   "subject": "Mathematics",
+   "chapter": "Complex Numbers and Quadratic Equations",
+   "text": "",
+   "qimg": "q17.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q17o1.webp",
+    "q17o2.webp",
+    "q17o3.webp",
+    "q17o4.webp"
+   ],
+   "optImgW": [
+    58,
+    56,
+    56,
+    56
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 18,
+   "qid": "656445244",
+   "subject": "Mathematics",
+   "chapter": "Differential Equations",
+   "text": "",
+   "qimg": "q18.webp",
+   "qimgW": 352,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q18o1.webp",
+    "q18o2.webp",
+    "q18o3.webp",
+    "q18o4.webp"
+   ],
+   "optImgW": [
+    50,
+    44,
+    43,
+    46
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 19,
+   "qid": "656445229",
+   "subject": "Mathematics",
+   "chapter": "Matrices and Determinants",
+   "text": "",
+   "qimg": "q19.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q19o1.webp",
+    "q19o2.webp",
+    "q19o3.webp",
+    "q19o4.webp"
+   ],
+   "optImgW": [
+    26,
+    26,
+    22,
+    28
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 20,
+   "qid": "656445227",
+   "subject": "Mathematics",
+   "chapter": "Complex Numbers and Quadratic Equations",
+   "text": "",
+   "qimg": "q20.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q20o1.webp",
+    "q20o2.webp",
+    "q20o3.webp",
+    "q20o4.webp"
+   ],
+   "optImgW": [
+    26,
+    26,
+    26,
+    28
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 21,
+   "qid": "656445247",
+   "subject": "Mathematics",
+   "chapter": "Straight Lines",
+   "text": "",
+   "qimg": "q21.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "145",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 22,
+   "qid": "656445248",
+   "subject": "Mathematics",
+   "chapter": "Differential Equations",
+   "text": "",
+   "qimg": "q22.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "27",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 23,
+   "qid": "656445246",
+   "subject": "Mathematics",
+   "chapter": "Binomial Theorem",
+   "text": "",
+   "qimg": "q23.webp",
+   "qimgW": 378,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "465",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 24,
+   "qid": "656445249",
+   "subject": "Mathematics",
+   "chapter": "Straight Lines",
+   "text": "",
+   "qimg": "q24.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "28",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 25,
+   "qid": "656445250",
+   "subject": "Mathematics",
+   "chapter": "Sets, Relations and Functions",
+   "text": "",
+   "qimg": "q25.webp",
+   "qimgW": 378,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "3",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 26,
+   "qid": "656445264",
+   "subject": "Physics",
+   "chapter": "Alternating Current",
+   "text": "",
+   "qimg": "q26.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q26o1.webp",
+    "q26o2.webp",
+    "q26o3.webp",
+    "q26o4.webp"
+   ],
+   "optImgW": [
+    25,
+    32,
+    32,
+    38
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 27,
+   "qid": "656445257",
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "",
+   "qimg": "q27.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q27o1.webp",
+    "q27o2.webp",
+    "q27o3.webp",
+    "q27o4.webp"
+   ],
+   "optImgW": [
+    56,
+    58,
+    56,
+    56
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 28,
+   "qid": "656445251",
+   "subject": "Physics",
+   "chapter": "Units and Measurement",
+   "text": "",
+   "qimg": "q28.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q28o1.webp",
+    "q28o2.webp",
+    "q28o3.webp",
+    "q28o4.webp"
+   ],
+   "optImgW": [
+    154,
+    146,
+    140,
+    140
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 29,
+   "qid": "656445270",
+   "subject": "Physics",
+   "chapter": "Semiconductor Electronics",
+   "text": "",
+   "qimg": "q29.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q29o1.webp",
+    "q29o2.webp",
+    "q29o3.webp",
+    "q29o4.webp"
+   ],
+   "optImgW": [
+    98,
+    86,
+    82,
+    68
+   ],
+   "correct": [],
+   "status": "dropped",
+   "verified": true
+  },
+  {
+   "n": 30,
+   "qid": "656445258",
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "",
+   "qimg": "q30.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q30o1.webp",
+    "q30o2.webp",
+    "q30o3.webp",
+    "q30o4.webp"
+   ],
+   "optImgW": [
+    38,
+    32,
+    50,
+    58
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 31,
+   "qid": "656445253",
+   "subject": "Physics",
+   "chapter": "System of Particles and Rotational Motion",
+   "text": "",
+   "qimg": "q31.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q31o1.webp",
+    "q31o2.webp",
+    "q31o3.webp",
+    "q31o4.webp"
+   ],
+   "optImgW": [
+    86,
+    56,
+    58,
+    56
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 32,
+   "qid": "656445266",
+   "subject": "Physics",
+   "chapter": "Wave Optics",
+   "text": "",
+   "qimg": "q32.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q32o1.webp",
+    "q32o2.webp",
+    "q32o3.webp",
+    "q32o4.webp"
+   ],
+   "optImgW": [
+    74,
+    64,
+    68,
+    68
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 33,
+   "qid": "656445269",
+   "subject": "Physics",
+   "chapter": "Atoms",
+   "text": "",
+   "qimg": "q33.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q33o1.webp",
+    "q33o2.webp",
+    "q33o3.webp",
+    "q33o4.webp"
+   ],
+   "optImgW": [
+    56,
+    64,
+    56,
+    56
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 34,
+   "qid": "656445254",
+   "subject": "Physics",
+   "chapter": "Kinematics",
+   "text": "",
+   "qimg": "q34.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q34o1.webp",
+    "q34o2.webp",
+    "q34o3.webp",
+    "q34o4.webp"
+   ],
+   "optImgW": [
+    34,
+    44,
+    38,
+    38
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 35,
+   "qid": "656445256",
+   "subject": "Physics",
+   "chapter": "Work, Energy and Power",
+   "text": "",
+   "qimg": "q35.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q35o1.webp",
+    "q35o2.webp",
+    "q35o3.webp",
+    "q35o4.webp"
+   ],
+   "optImgW": [
+    26,
+    26,
+    20,
+    22
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 36,
+   "qid": "656445259",
+   "subject": "Physics",
+   "chapter": "Kinetic Theory",
+   "text": "",
+   "qimg": "q36.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q36o1.webp",
+    "q36o2.webp",
+    "q36o3.webp",
+    "q36o4.webp"
+   ],
+   "optImgW": [
+    56,
+    56,
+    70,
+    62
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 37,
+   "qid": "656445263",
+   "subject": "Physics",
+   "chapter": "Electromagnetic Induction",
+   "text": "",
+   "qimg": "q37.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q37o1.webp",
+    "q37o2.webp",
+    "q37o3.webp",
+    "q37o4.webp"
+   ],
+   "optImgW": [
+    170,
+    172,
+    170,
+    170
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 38,
+   "qid": "656445261",
+   "subject": "Physics",
+   "chapter": "Gravitation",
+   "text": "",
+   "qimg": "q38.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q38o1.webp",
+    "q38o2.webp",
+    "q38o3.webp",
+    "q38o4.webp"
+   ],
+   "optImgW": [
+    380,
+    182,
+    380,
+    182
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 39,
+   "qid": "656445267",
+   "subject": "Physics",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "",
+   "qimg": "q39.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q39o1.webp",
+    "q39o2.webp",
+    "q39o3.webp",
+    "q39o4.webp"
+   ],
+   "optImgW": [
+    32,
+    34,
+    28,
+    32
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 40,
+   "qid": "656445262",
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "",
+   "qimg": "q40.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q40o1.webp",
+    "q40o2.webp",
+    "q40o3.webp",
+    "q40o4.webp"
+   ],
+   "optImgW": [
+    98,
+    92,
+    100,
+    86
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 41,
+   "qid": "656445260",
+   "subject": "Physics",
+   "chapter": "Thermodynamics",
+   "text": "",
+   "qimg": "q41.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q41o1.webp",
+    "q41o2.webp",
+    "q41o3.webp",
+    "q41o4.webp"
+   ],
+   "optImgW": [
+    128,
+    128,
+    130,
+    124
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 42,
+   "qid": "656445265",
+   "subject": "Physics",
+   "chapter": "Wave Optics",
+   "text": "",
+   "qimg": "q42.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q42o1.webp",
+    "q42o2.webp",
+    "q42o3.webp",
+    "q42o4.webp"
+   ],
+   "optImgW": [
+    380,
+    182,
+    380,
+    182
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 43,
+   "qid": "656445255",
+   "subject": "Physics",
+   "chapter": "Work, Energy and Power",
+   "text": "",
+   "qimg": "q43.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q43o1.webp",
+    "q43o2.webp",
+    "q43o3.webp",
+    "q43o4.webp"
+   ],
+   "optImgW": [
+    64,
+    62,
+    62,
+    62
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 44,
+   "qid": "656445268",
+   "subject": "Physics",
+   "chapter": "Dual Nature of Radiation and Matter",
+   "text": "",
+   "qimg": "q44.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q44o1.webp",
+    "q44o2.webp",
+    "q44o3.webp",
+    "q44o4.webp"
+   ],
+   "optImgW": [
+    46,
+    44,
+    44,
+    44
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 45,
+   "qid": "656445252",
+   "subject": "Physics",
+   "chapter": "Units and Measurement",
+   "text": "",
+   "qimg": "q45.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q45o1.webp",
+    "q45o2.webp",
+    "q45o3.webp",
+    "q45o4.webp"
+   ],
+   "optImgW": [
+    20,
+    20,
+    20,
+    20
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 46,
+   "qid": "656445271",
+   "subject": "Physics",
+   "chapter": "Laws of Motion",
+   "text": "",
+   "qimg": "q46.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "1",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 47,
+   "qid": "656445272",
+   "subject": "Physics",
+   "chapter": "Current Electricity",
+   "text": "",
+   "qimg": "q47.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "1",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 48,
+   "qid": "656445273",
+   "subject": "Physics",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "",
+   "qimg": "q48.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "1",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 49,
+   "qid": "656445275",
+   "subject": "Physics",
+   "chapter": "Electromagnetic Waves",
+   "text": "",
+   "qimg": "q49.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "1200",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 50,
+   "qid": "656445274",
+   "subject": "Physics",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "",
+   "qimg": "q50.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "2",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 51,
+   "qid": "656445285",
+   "subject": "Chemistry",
+   "chapter": "p-Block Elements",
+   "text": "",
+   "qimg": "q51.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q51o1.webp",
+    "q51o2.webp",
+    "q51o3.webp",
+    "q51o4.webp"
+   ],
+   "optImgW": [
+    20,
+    20,
+    20,
+    22
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 52,
+   "qid": "656445284",
+   "subject": "Chemistry",
+   "chapter": "Classification of Elements and Periodicity",
+   "text": "",
+   "qimg": "q52.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q52o1.webp",
+    "q52o2.webp",
+    "q52o3.webp",
+    "q52o4.webp"
+   ],
+   "optImgW": [
+    308,
+    308,
+    308,
+    310
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 53,
+   "qid": "656445295",
+   "subject": "Chemistry",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q53.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q53o1.webp",
+    "q53o2.webp",
+    "q53o3.webp",
+    "q53o4.webp"
+   ],
+   "optImgW": [
+    40,
+    38,
+    44,
+    40
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 54,
+   "qid": "656445288",
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "",
+   "qimg": "q54.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q54o1.webp",
+    "q54o2.webp",
+    "q54o3.webp",
+    "q54o4.webp"
+   ],
+   "optImgW": [
+    310,
+    308,
+    308,
+    308
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 55,
+   "qid": "656445276",
+   "subject": "Chemistry",
+   "chapter": "Atomic Structure",
+   "text": "",
+   "qimg": "q55.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q55o1.webp",
+    "q55o2.webp",
+    "q55o3.webp",
+    "q55o4.webp"
+   ],
+   "optImgW": [
+    308,
+    308,
+    308,
+    310
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 56,
+   "qid": "656445282",
+   "subject": "Chemistry",
+   "chapter": "Chemical Kinetics",
+   "text": "",
+   "qimg": "q56.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q56o1.webp",
+    "q56o2.webp",
+    "q56o3.webp",
+    "q56o4.webp"
+   ],
+   "optImgW": [
+    379,
+    379,
+    379,
+    379
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 57,
+   "qid": "656445277",
+   "subject": "Chemistry",
+   "chapter": "Equilibrium",
+   "text": "",
+   "qimg": "q57.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q57o1.webp",
+    "q57o2.webp",
+    "q57o3.webp",
+    "q57o4.webp"
+   ],
+   "optImgW": [
+    70,
+    68,
+    68,
+    68
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 58,
+   "qid": "656445290",
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "",
+   "qimg": "q58.webp",
+   "qimgW": 352,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q58o1.webp",
+    "q58o2.webp",
+    "q58o3.webp",
+    "q58o4.webp"
+   ],
+   "optImgW": [
+    164,
+    116,
+    116,
+    164
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 59,
+   "qid": "656445283",
+   "subject": "Chemistry",
+   "chapter": "Chemical Bonding and Molecular Structure",
+   "text": "",
+   "qimg": "q59.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q59o1.webp",
+    "q59o2.webp",
+    "q59o3.webp",
+    "q59o4.webp"
+   ],
+   "optImgW": [
+    190,
+    188,
+    188,
+    188
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 60,
+   "qid": "656445286",
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "",
+   "qimg": "q60.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q60o1.webp",
+    "q60o2.webp",
+    "q60o3.webp",
+    "q60o4.webp"
+   ],
+   "optImgW": [
+    122,
+    68,
+    122,
+    120
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 61,
+   "qid": "656445287",
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "",
+   "qimg": "q61.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q61o1.webp",
+    "q61o2.webp",
+    "q61o3.webp",
+    "q61o4.webp"
+   ],
+   "optImgW": [
+    380,
+    380,
+    380,
+    380
+   ],
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 62,
+   "qid": "656445279",
+   "subject": "Chemistry",
+   "chapter": "Thermodynamics",
+   "text": "",
+   "qimg": "q62.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q62o1.webp",
+    "q62o2.webp",
+    "q62o3.webp",
+    "q62o4.webp"
+   ],
+   "optImgW": [
+    232,
+    230,
+    230,
+    230
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 63,
+   "qid": "656445278",
+   "subject": "Chemistry",
+   "chapter": "Redox Reactions and Electrochemistry",
+   "text": "",
+   "qimg": "q63.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q63o1.webp",
+    "q63o2.webp",
+    "q63o3.webp",
+    "q63o4.webp"
+   ],
+   "optImgW": [
+    308,
+    308,
+    308,
+    310
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 64,
+   "qid": "656445280",
+   "subject": "Chemistry",
+   "chapter": "Some Basic Concepts of Chemistry",
+   "text": "",
+   "qimg": "q64.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q64o1.webp",
+    "q64o2.webp",
+    "q64o3.webp",
+    "q64o4.webp"
+   ],
+   "optImgW": [
+    38,
+    38,
+    56,
+    58
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 65,
+   "qid": "656445294",
+   "subject": "Chemistry",
+   "chapter": "Amines",
+   "text": "",
+   "qimg": "q65.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q65o1.webp",
+    "q65o2.webp",
+    "q65o3.webp",
+    "q65o4.webp"
+   ],
+   "optImgW": [
+    230,
+    230,
+    232,
+    230
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 66,
+   "qid": "656445292",
+   "subject": "Chemistry",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "",
+   "qimg": "q66.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q66o1.webp",
+    "q66o2.webp",
+    "q66o3.webp",
+    "q66o4.webp"
+   ],
+   "optImgW": [
+    20,
+    20,
+    20,
+    22
+   ],
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 67,
+   "qid": "656445281",
+   "subject": "Chemistry",
+   "chapter": "Redox Reactions and Electrochemistry",
+   "text": "",
+   "qimg": "q67.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q67o1.webp",
+    "q67o2.webp",
+    "q67o3.webp",
+    "q67o4.webp"
+   ],
+   "optImgW": [
+    50,
+    50,
+    52,
+    50
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 68,
+   "qid": "656445289",
+   "subject": "Chemistry",
+   "chapter": "Hydrocarbons",
+   "text": "",
+   "qimg": "q68.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q68o1.webp",
+    "q68o2.webp",
+    "q68o3.webp",
+    "q68o4.webp"
+   ],
+   "optImgW": [
+    104,
+    92,
+    92,
+    94
+   ],
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 69,
+   "qid": "656445291",
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "",
+   "qimg": "q69.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q69o1.webp",
+    "q69o2.webp",
+    "q69o3.webp",
+    "q69o4.webp"
+   ],
+   "optImgW": [
+    200,
+    194,
+    200,
+    196
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 70,
+   "qid": "656445293",
+   "subject": "Chemistry",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "",
+   "qimg": "q70.webp",
+   "qimgW": 380,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optImg": [
+    "q70o1.webp",
+    "q70o2.webp",
+    "q70o3.webp",
+    "q70o4.webp"
+   ],
+   "optImgW": [
+    236,
+    212,
+    328,
+    260
+   ],
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 71,
+   "qid": "656445300",
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "",
+   "qimg": "q71.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "14",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 72,
+   "qid": "656445298",
+   "subject": "Chemistry",
+   "chapter": "d- and f-Block Elements",
+   "text": "",
+   "qimg": "q72.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "11",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 73,
+   "qid": "656445299",
+   "subject": "Chemistry",
+   "chapter": "Hydrocarbons",
+   "text": "",
+   "qimg": "q73.webp",
+   "qimgW": 378,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "8",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 74,
+   "qid": "656445296",
+   "subject": "Chemistry",
+   "chapter": "Some Basic Concepts of Chemistry",
+   "text": "",
+   "qimg": "q74.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "57",
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 75,
+   "qid": "656445297",
+   "subject": "Chemistry",
+   "chapter": "Thermodynamics",
+   "text": "",
+   "qimg": "q75.webp",
+   "qimgW": 379,
+   "explanation": "",
+   "type": "numeric",
+   "answer": "95",
+   "status": "ok",
+   "verified": true
+  }
+ ]
+}

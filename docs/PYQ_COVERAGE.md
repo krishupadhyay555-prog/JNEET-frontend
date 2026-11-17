@@ -49,3 +49,18 @@ always our own.
 | Paper | Questions | Notes |
 |---|---|---|
 | JEE Main 2026 · 2 Apr · Shift 1 | 75 | all 75 answers = NTA final key |
+
+
+## Status after PR #34 (17 Nov 2026)
+
+| Exam | Year | Have | Missing (why) |
+|---|---|---|---|
+| JEE Main | 2026 | S2: 9/9 | **S1 (Jan 2026): not added yet** — key format (Domestic/International, answers 1–4) needs its parser; papers to locate |
+| JEE Main | 2025 | S1: 10/10 (response sheets) · S2: 8/9 | 4 Apr S1 (NTA file missing images) |
+| JEE Main | 2024 | S1: 8/10 · S2: 10/10 | 27 Jan S2, 29 Jan S2 (only copies without text, OCR read failed the ID check) |
+| JEE Main | 2023 | S2: 12/12 | S1 (Jan/Feb 2023): no official copy found |
+| JEE Main | 2022 | 24/24 | — |
+| JEE Main | 2021 | 24/26 | 16 Mar S1, 31 Aug S2 (+ 20/27 Jul: not verified) |
+| JEE Main | 2020 | Sep: 8/10 | 5 Sep S2, 6 Sep S1; January 2020: not verified |
+| JEE Main | 2019 | 0 | official papers not found (archive.org unreachable from the build machine) |
+| NEET (UG) | 2020–2025 | 2020, 2021, 2023, 2024, 2025 | 2022 + 2019 (no official booklet found), 2023 Manipur (6 Jun) + 2024 re-test (23 Jun): no official booklet |

@@ -30,11 +30,18 @@ def parse_key(pdf):
             s = s[a.end():].lstrip()
     return out
 
-def parse_paper(pdf):
-    """Return paper header + list of questions: n, qid, type, option ids in order, section."""
-    t = text(pdf, layout=False)
-    head = {}
-    m = re.search(r"Display Marks:\s*\n\s*(.+?)\n", t)
+def parse_paper(pdf, ocr=False):
+    """Return paper header + list of questions: n, qid, type, option ids in order, section.
+    ocr=True reads the Tesseract text of a copy without a text layer (ntaocr)."""
+    if ocr:
+        import ntaocr
+        t = "\n".join(l for _, _, l in ntaocr.lines(pdf))
+    else:
+        t = text(pdf, layout=False)
+    return parse_text(t)
+
+
+def parse_text(t):
     qs = []; section = None
     parts = re.split(r"(Question Number : \d+ Question Id : \d+ Question Type : \w+)", t)
     for i in range(1, len(parts), 2):
@@ -43,6 +50,10 @@ def parse_paper(pdf):
         prev = parts[i - 1]
         sm = re.findall(r"(Mathematics|Physics|Chemistry|Biology|Botany|Zoology) Section ([AB])", prev)
         if sm: section = sm[-1]
+        else:
+            # September 2020 papers head each part with the bare subject name
+            sm = re.findall(r"^\s*(Mathematics|Physics|Chemistry)\s*$", prev, re.M)
+            if sm: section = (sm[-1], "")
         opts = re.findall(r"^\f?(\d{7,})\.(?=\s|$)", body, re.M) if typ == "MCQ" else []
         if any(q["n"] == int(n) for q in qs):
             continue  # Hindi copy of a question already read (bilingual papers)

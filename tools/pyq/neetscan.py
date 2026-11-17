@@ -155,6 +155,71 @@ def _cut_heading(doc, part, first=True):
     return part
 
 
+def layout_text(pdf, expected):
+    """Booklets NTA published as typeset PDFs (NEET 2020, 2021): question numbers ("12.") are real
+    text at the left edge of each column, so read them from the text layer instead of the scan.
+    Same output as layout(); the numbering must run 1..expected in order or it is reported."""
+    from collections import Counter
+    doc = pymupdf.open(pdf)
+    num = re.compile(r"\d{1,3}\.")
+    words = [(pno, w) for pno, page in enumerate(doc) for w in page.get_text("words")]
+    W = doc[0].rect.width
+    xs = Counter(round(w[0]) for _, w in words if num.fullmatch(w[4]))
+    left = max((x for x in xs if x < W * .2), key=lambda x: xs[x])
+    right = max((x for x in xs if W * .4 < x < W * .65), key=lambda x: xs[x])
+    columns, idx = [], {}
+    for pno, page in enumerate(doc):
+        pw = [w for p, w in words if p == pno]
+        H = page.rect.height
+        # chemical structures and figures are vector drawings / images, not words: include them
+        art = [d["rect"] for d in page.get_drawings()] + [pymupdf.Rect(i["bbox"]) for i in page.get_image_info()]
+        for side, (x0, x1) in enumerate([(left - 6, right - 10), (right - 6, W - 15)]):
+            body = [(w[1], w[3]) for w in pw if x0 <= w[0] < x1 and w[1] > 82 and w[3] < H - 25]
+            if not body:
+                continue
+            body += [(r.y0, r.y1) for r in art if r.x0 >= x0 - 2 and r.x1 <= x1 + 2 and r.y0 > 82 and r.y1 < H - 25
+                     and r.width < (x1 - x0) * 0.98]        # skip full-width rules
+            idx[(pno, side)] = len(columns)
+            columns.append(dict(page=pno, x0=x0, x1=x1, top=min(a for a, _ in body) - 2,
+                                bottom=max(b for _, b in body) + 3))
+    heads = [(pno, w[0], w[1]) for pno, w in words if w[4] == "Section"
+             and any(p == pno and abs(v[1] - w[1]) < 2 and re.match(r"\(?(Physics|Chemistry|Biology|Botany|Zoology)", v[4]) for p, v in words)]
+    starts, n = [], 1
+    for pno, w in sorted(words, key=lambda pw: (pw[0], 0 if pw[1][0] < right - 10 else 1, pw[1][1])):
+        side = 0 if abs(w[0] - left) <= 3 else 1 if abs(w[0] - right) <= 3 else None
+        if side is None or w[4] != f"{n}." or (pno, side) not in idx:
+            continue
+        starts.append((idx[(pno, side)], w[1] - 3, str(n)))
+        n += 1
+    problems = [] if len(starts) == expected else [("count", len(starts), expected)]
+    out = []
+    for i, (ci, y, o) in enumerate(starts):
+        col = columns[ci]
+        nxt = starts[i + 1] if i + 1 < len(starts) else None
+        if nxt and nxt[0] == ci:
+            parts = [(col["page"], col["x0"], y, col["x1"], nxt[1])]
+        else:
+            parts = [(col["page"], col["x0"], y, col["x1"], col["bottom"])]
+            cj, last = ci + 1, (nxt[0] if nxt else ci)
+            while cj <= last and cj < len(columns):
+                c = columns[cj]
+                end = nxt[1] if (nxt and cj == nxt[0]) else c["bottom"]
+                if end - c["top"] > 6:
+                    parts.append((c["page"], c["x0"], c["top"], c["x1"], end))
+                cj += 1
+        out.append(dict(n=i + 1, parts=[q for q in (_cut_heading_text(heads, p_, j == 0) for j, p_ in enumerate(parts)) if q], ocr=o))
+    return doc, out, problems
+
+
+def _cut_heading_text(heads, part, first):
+    """Text-layer booklets: end a part above a "Section - A (Chemistry)" heading line."""
+    pno, x0, y0, x1, y1 = part
+    for hp, hx, hy in heads:
+        if hp == pno and x0 - 2 <= hx < x1 and y0 + (8 if first else -1) < hy < y1:
+            return (pno, x0, y0, x1, hy - 3) if hy - 3 - y0 > 6 else None
+    return part
+
+
 def to_image(doc, parts, dpi=200):
     ims = []
     for pno, x0, y0, x1, y1 in parts:
