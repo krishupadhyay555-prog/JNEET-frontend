@@ -10,13 +10,19 @@ OPTID = re.compile(r"^(\d{7,})\.$")
 def layout(pdf):
     doc = pymupdf.open(pdf)
     ev = []
+    # A host's watermark / logo is one image drawn on (nearly) every page; NTA's question and option
+    # images are each used once. Ignore any image that repeats on many pages.
+    from collections import Counter
+    use = Counter(i["xref"] for page in doc for i in page.get_image_info(xrefs=True))
+    stamp = {x for x, k in use.items() if k >= max(8, len(doc) // 3)}
     for pno, page in enumerate(doc):
         for b in page.get_text("dict")["blocks"]:
             if b["type"] == 0:
                 t = " ".join(s["text"] for l in b["lines"] for s in l["spans"]).strip()
                 ev.append((pno, b["bbox"][1], 0, "T", t))
         for info in page.get_image_info(xrefs=True):
-            ev.append((pno, info["bbox"][1], 1, "I", info["xref"]))
+            if info["xref"] not in stamp:
+                ev.append((pno, info["bbox"][1], 1, "I", info["xref"]))
     ev.sort(key=lambda e: (e[0], e[1], e[2]))
     out = {}; cur = None; phase = None; pending = []; awaiting = None
     for _, _, _, kind, val in ev:

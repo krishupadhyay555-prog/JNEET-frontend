@@ -30,7 +30,7 @@ always our own.
 | JEE Main | 2025 S2 | ✅ nta.ac.in/Download/ExamPaper (bilingual; 8 of 9 B.Tech shifts usable — 4 Apr S1 has missing images) — linked from study4india.com lists | ✅ NTA (3-column key, `tools/pyq/ntakey_cols.py`) |
 | JEE Main | 2025 S1 | ❌ NTA's own files are corrupted on the server | ✅ NTA |
 | JEE Main | 2024 S1 | ✅ nta.ac.in ExamPaper (8 of 10; 27 Jan S2 + 29 Jan S2 not found) | ✅ NTA (cols) |
-| JEE Main | 2024 S2 | 🟡 only watermarked copies (prepp/aglasem; IDs match but logos break the image cutter) | ✅ NTA |
+| JEE Main | 2024 S2 | ✅ 6, 8, 9 Apr (S1+S2) from prepp.in copies — watermark image filtered out, IDs = NTA key; 🟡 4 + 5 Apr: copies have no text layer (IDs drawn as curves) | ✅ NTA Notice_20240424132602 (as on 22.04.2024) |
 | JEE Main | 2023 S2 | ✅ nta.ac.in ExamPaper — all 12 B.Tech shifts | ✅ NTA CDN 2023/04/2023042419.pdf (`ntakey_rows.py`) |
 | JEE Main | 2023 S1 | ❌ not found yet (only B.Arch on the list) | ✅ NTA |
 | JEE Main | 2022 S1 + S2 | ✅ nta.ac.in ExamPaper — all 24 B.Tech shifts (format "2022": `nta2022.py`) | ✅ NTA CDN 2022/07/2022070665.pdf, 2022/08/2022080753.pdf (`ntakey_2022.py`) |
