@@ -42,7 +42,8 @@ export function validatePaper(d, file = "") {
       if (!STATUSES.includes(q.status)) bad("status");
       if (q.type === "mcq") {
         const imgs = Array.isArray(q.optImg) && q.optImg.length === 4 && q.optImg.every(str);
-        if (!Array.isArray(q.options) || q.options.length !== 4 || !(imgs || q.options.every(str))) bad("options");
+        // NEET booklets print the options inside the question image ("optionsInImage")
+        if (!Array.isArray(q.options) || q.options.length !== 4 || !(imgs || q.optionsInImage === true || q.options.every(str))) bad("options");
         if (!Array.isArray(q.correct) || !q.correct.every((c) => Number.isInteger(c) && c >= 0 && c <= 3)) bad("correct");
         if (q.status === "ok" && q.correct?.length !== 1) bad("one correct option expected");
         if (q.status === "dropped" && q.correct?.length !== 0) bad("dropped has no correct option");

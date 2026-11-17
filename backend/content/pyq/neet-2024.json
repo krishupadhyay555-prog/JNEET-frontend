@@ -1,0 +1,4420 @@
+{
+ "id": "neet-2024",
+ "exam": "NEET",
+ "year": 2024,
+ "date": "2024-05-05",
+ "title": "NEET (UG) 2024 · 5 May · Code T1",
+ "session": null,
+ "shift": null,
+ "code": "T1",
+ "source": "NTA question booklet (original scan) + NTA final answer key",
+ "paperPdf": "https://nta.ac.in/Download/ExamPaper/Paper_20250124132822.pdf",
+ "keyPdf": "https://nta.ac.in/Download/Notice/Notice_20240726171027.pdf",
+ "counts": {
+  "Physics": 50,
+  "Chemistry": 50,
+  "Biology": 100
+ },
+ "questions": [
+  {
+   "n": 1,
+   "subject": "Physics",
+   "chapter": "System of Particles and Rotational Motion",
+   "text": "",
+   "qimg": "q1.webp",
+   "qimgW": 263,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 2,
+   "subject": "Physics",
+   "chapter": "Electromagnetic Induction",
+   "text": "",
+   "qimg": "q2.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 3,
+   "subject": "Physics",
+   "chapter": "Semiconductor Electronics",
+   "text": "",
+   "qimg": "q3.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 4,
+   "subject": "Physics",
+   "chapter": "Current Electricity",
+   "text": "",
+   "qimg": "q4.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 5,
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "",
+   "qimg": "q5.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 6,
+   "subject": "Physics",
+   "chapter": "Semiconductor Electronics",
+   "text": "",
+   "qimg": "q6.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 7,
+   "subject": "Physics",
+   "chapter": "Current Electricity",
+   "text": "",
+   "qimg": "q7.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 8,
+   "subject": "Physics",
+   "chapter": "Gravitation",
+   "text": "",
+   "qimg": "q8.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 9,
+   "subject": "Physics",
+   "chapter": "Magnetism and Matter",
+   "text": "",
+   "qimg": "q9.webp",
+   "qimgW": 263,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 10,
+   "subject": "Physics",
+   "chapter": "Dual Nature of Radiation and Matter",
+   "text": "",
+   "qimg": "q10.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 11,
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "",
+   "qimg": "q11.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 12,
+   "subject": "Physics",
+   "chapter": "Semiconductor Electronics",
+   "text": "",
+   "qimg": "q12.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 13,
+   "subject": "Physics",
+   "chapter": "System of Particles and Rotational Motion",
+   "text": "",
+   "qimg": "q13.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 14,
+   "subject": "Physics",
+   "chapter": "Units and Measurement",
+   "text": "",
+   "qimg": "q14.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 15,
+   "subject": "Physics",
+   "chapter": "Atoms",
+   "text": "",
+   "qimg": "q15.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 16,
+   "subject": "Physics",
+   "chapter": "Wave Optics",
+   "text": "",
+   "qimg": "q16.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 17,
+   "subject": "Physics",
+   "chapter": "Dual Nature of Radiation and Matter",
+   "text": "",
+   "qimg": "q17.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 18,
+   "subject": "Physics",
+   "chapter": "Magnetism and Matter",
+   "text": "",
+   "qimg": "q18.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 19,
+   "subject": "Physics",
+   "chapter": "Wave Optics",
+   "text": "",
+   "qimg": "q19.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 20,
+   "subject": "Physics",
+   "chapter": "Kinematics",
+   "text": "",
+   "qimg": "q20.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 21,
+   "subject": "Physics",
+   "chapter": "Units and Measurement",
+   "text": "",
+   "qimg": "q21.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 22,
+   "subject": "Physics",
+   "chapter": "Laws of Motion",
+   "text": "",
+   "qimg": "q22.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 23,
+   "subject": "Physics",
+   "chapter": "Oscillations",
+   "text": "",
+   "qimg": "q23.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 24,
+   "subject": "Physics",
+   "chapter": "Thermodynamics",
+   "text": "",
+   "qimg": "q24.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 25,
+   "subject": "Physics",
+   "chapter": "Atoms",
+   "text": "",
+   "qimg": "q25.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 26,
+   "subject": "Physics",
+   "chapter": "Alternating Current",
+   "text": "",
+   "qimg": "q26.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 27,
+   "subject": "Physics",
+   "chapter": "Work, Energy and Power",
+   "text": "",
+   "qimg": "q27.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 28,
+   "subject": "Physics",
+   "chapter": "Nuclei",
+   "text": "",
+   "qimg": "q28.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 29,
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "",
+   "qimg": "q29.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 30,
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "",
+   "qimg": "q30.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 31,
+   "subject": "Physics",
+   "chapter": "Mechanical Properties of Solids and Fluids",
+   "text": "",
+   "qimg": "q31.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 32,
+   "subject": "Physics",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "",
+   "qimg": "q32.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 33,
+   "subject": "Physics",
+   "chapter": "Work, Energy and Power",
+   "text": "",
+   "qimg": "q33.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 34,
+   "subject": "Physics",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "",
+   "qimg": "q34.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 35,
+   "subject": "Physics",
+   "chapter": "Laws of Motion",
+   "text": "",
+   "qimg": "q35.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 36,
+   "subject": "Physics",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "",
+   "qimg": "q36.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 37,
+   "subject": "Physics",
+   "chapter": "Current Electricity",
+   "text": "",
+   "qimg": "q37.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 38,
+   "subject": "Physics",
+   "chapter": "Oscillations",
+   "text": "",
+   "qimg": "q38.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 39,
+   "subject": "Physics",
+   "chapter": "Electromagnetic Waves",
+   "text": "",
+   "qimg": "q39.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 40,
+   "subject": "Physics",
+   "chapter": "Thermal Properties of Matter",
+   "text": "",
+   "qimg": "q40.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 41,
+   "subject": "Physics",
+   "chapter": "Kinematics",
+   "text": "",
+   "qimg": "q41.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 42,
+   "subject": "Physics",
+   "chapter": "Kinetic Theory",
+   "text": "",
+   "qimg": "q42.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 43,
+   "subject": "Physics",
+   "chapter": "Alternating Current",
+   "text": "",
+   "qimg": "q43.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 44,
+   "subject": "Physics",
+   "chapter": "Current Electricity",
+   "text": "",
+   "qimg": "q44.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 45,
+   "subject": "Physics",
+   "chapter": "Electromagnetic Waves",
+   "text": "",
+   "qimg": "q45.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 46,
+   "subject": "Physics",
+   "chapter": "Gravitation",
+   "text": "",
+   "qimg": "q46.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 47,
+   "subject": "Physics",
+   "chapter": "Electrostatics",
+   "text": "",
+   "qimg": "q47.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 48,
+   "subject": "Physics",
+   "chapter": "Units and Measurement",
+   "text": "",
+   "qimg": "q48.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 49,
+   "subject": "Physics",
+   "chapter": "Electromagnetic Induction",
+   "text": "",
+   "qimg": "q49.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 50,
+   "subject": "Physics",
+   "chapter": "Magnetism and Matter",
+   "text": "",
+   "qimg": "q50.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 51,
+   "subject": "Chemistry",
+   "chapter": "Thermodynamics",
+   "text": "",
+   "qimg": "q51.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 52,
+   "subject": "Chemistry",
+   "chapter": "Hydrocarbons",
+   "text": "",
+   "qimg": "q52.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 53,
+   "subject": "Chemistry",
+   "chapter": "Chemical Bonding and Molecular Structure",
+   "text": "",
+   "qimg": "q53.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 54,
+   "subject": "Chemistry",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "",
+   "qimg": "q54.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 55,
+   "subject": "Chemistry",
+   "chapter": "Atomic Structure",
+   "text": "",
+   "qimg": "q55.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 56,
+   "subject": "Chemistry",
+   "chapter": "d- and f-Block Elements",
+   "text": "",
+   "qimg": "q56.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 57,
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "",
+   "qimg": "q57.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 58,
+   "subject": "Chemistry",
+   "chapter": "Atomic Structure",
+   "text": "",
+   "qimg": "q58.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 59,
+   "subject": "Chemistry",
+   "chapter": "Chemical Kinetics",
+   "text": "",
+   "qimg": "q59.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 60,
+   "subject": "Chemistry",
+   "chapter": "Chemical Kinetics",
+   "text": "",
+   "qimg": "q60.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 61,
+   "subject": "Chemistry",
+   "chapter": "p-Block Elements",
+   "text": "",
+   "qimg": "q61.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 62,
+   "subject": "Chemistry",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q62.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 63,
+   "subject": "Chemistry",
+   "chapter": "Classification of Elements and Periodicity",
+   "text": "",
+   "qimg": "q63.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 64,
+   "subject": "Chemistry",
+   "chapter": "Classification of Elements and Periodicity",
+   "text": "",
+   "qimg": "q64.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 65,
+   "subject": "Chemistry",
+   "chapter": "d- and f-Block Elements",
+   "text": "",
+   "qimg": "q65.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 66,
+   "subject": "Chemistry",
+   "chapter": "Chemical Bonding and Molecular Structure",
+   "text": "",
+   "qimg": "q66.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 67,
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "",
+   "qimg": "q67.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 68,
+   "subject": "Chemistry",
+   "chapter": "Chemical Bonding and Molecular Structure",
+   "text": "",
+   "qimg": "q68.webp",
+   "qimgW": 252,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 69,
+   "subject": "Chemistry",
+   "chapter": "Amines",
+   "text": "",
+   "qimg": "q69.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 70,
+   "subject": "Chemistry",
+   "chapter": "Some Basic Concepts of Chemistry",
+   "text": "",
+   "qimg": "q70.webp",
+   "qimgW": 232,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 71,
+   "subject": "Chemistry",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "",
+   "qimg": "q71.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 72,
+   "subject": "Chemistry",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "",
+   "qimg": "q72.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 73,
+   "subject": "Chemistry",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "",
+   "qimg": "q73.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 74,
+   "subject": "Chemistry",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "",
+   "qimg": "q74.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 75,
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "",
+   "qimg": "q75.webp",
+   "qimgW": 221,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 76,
+   "subject": "Chemistry",
+   "chapter": "Equilibrium",
+   "text": "",
+   "qimg": "q76.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 77,
+   "subject": "Chemistry",
+   "chapter": "Solutions",
+   "text": "",
+   "qimg": "q77.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 78,
+   "subject": "Chemistry",
+   "chapter": "Organic Chemistry Basic Principles",
+   "text": "",
+   "qimg": "q78.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 79,
+   "subject": "Chemistry",
+   "chapter": "Equilibrium",
+   "text": "",
+   "qimg": "q79.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 80,
+   "subject": "Chemistry",
+   "chapter": "Redox Reactions and Electrochemistry",
+   "text": "",
+   "qimg": "q80.webp",
+   "qimgW": 225,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 81,
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "",
+   "qimg": "q81.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 82,
+   "subject": "Chemistry",
+   "chapter": "Some Basic Concepts of Chemistry",
+   "text": "",
+   "qimg": "q82.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 83,
+   "subject": "Chemistry",
+   "chapter": "p-Block Elements",
+   "text": "",
+   "qimg": "q83.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 84,
+   "subject": "Chemistry",
+   "chapter": "Thermodynamics",
+   "text": "",
+   "qimg": "q84.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 85,
+   "subject": "Chemistry",
+   "chapter": "Redox Reactions and Electrochemistry",
+   "text": "",
+   "qimg": "q85.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 86,
+   "subject": "Chemistry",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "",
+   "qimg": "q86.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 87,
+   "subject": "Chemistry",
+   "chapter": "Equilibrium",
+   "text": "",
+   "qimg": "q87.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 88,
+   "subject": "Chemistry",
+   "chapter": "p-Block Elements",
+   "text": "",
+   "qimg": "q88.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 89,
+   "subject": "Chemistry",
+   "chapter": "Practical Chemistry",
+   "text": "",
+   "qimg": "q89.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 90,
+   "subject": "Chemistry",
+   "chapter": "Practical Chemistry",
+   "text": "",
+   "qimg": "q90.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 91,
+   "subject": "Chemistry",
+   "chapter": "Thermodynamics",
+   "text": "",
+   "qimg": "q91.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 92,
+   "subject": "Chemistry",
+   "chapter": "Hydrocarbons",
+   "text": "",
+   "qimg": "q92.webp",
+   "qimgW": 203,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 93,
+   "subject": "Chemistry",
+   "chapter": "Solutions",
+   "text": "",
+   "qimg": "q93.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 94,
+   "subject": "Chemistry",
+   "chapter": "Amines",
+   "text": "",
+   "qimg": "q94.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 95,
+   "subject": "Chemistry",
+   "chapter": "Some Basic Concepts of Chemistry",
+   "text": "",
+   "qimg": "q95.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 96,
+   "subject": "Chemistry",
+   "chapter": "Chemical Kinetics",
+   "text": "",
+   "qimg": "q96.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 97,
+   "subject": "Chemistry",
+   "chapter": "Chemical Bonding and Molecular Structure",
+   "text": "",
+   "qimg": "q97.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 98,
+   "subject": "Chemistry",
+   "chapter": "d- and f-Block Elements",
+   "text": "",
+   "qimg": "q98.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 99,
+   "subject": "Chemistry",
+   "chapter": "Coordination Compounds",
+   "text": "",
+   "qimg": "q99.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 100,
+   "subject": "Chemistry",
+   "chapter": "Redox Reactions and Electrochemistry",
+   "text": "",
+   "qimg": "q100.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 101,
+   "subject": "Biology",
+   "chapter": "Anatomy of Flowering Plants",
+   "text": "",
+   "qimg": "q101.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 102,
+   "subject": "Biology",
+   "chapter": "Biodiversity and Conservation",
+   "text": "",
+   "qimg": "q102.webp",
+   "qimgW": 228,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 103,
+   "subject": "Biology",
+   "chapter": "Biodiversity and Conservation",
+   "text": "",
+   "qimg": "q103.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 104,
+   "subject": "Biology",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "",
+   "qimg": "q104.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 105,
+   "subject": "Biology",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "",
+   "qimg": "q105.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 106,
+   "subject": "Biology",
+   "chapter": "Microbes in Human Welfare",
+   "text": "",
+   "qimg": "q106.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 107,
+   "subject": "Biology",
+   "chapter": "Organisms and Populations",
+   "text": "",
+   "qimg": "q107.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 108,
+   "subject": "Biology",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "",
+   "qimg": "q108.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 109,
+   "subject": "Biology",
+   "chapter": "Plant Growth and Development",
+   "text": "",
+   "qimg": "q109.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 110,
+   "subject": "Biology",
+   "chapter": "Biological Classification",
+   "text": "",
+   "qimg": "q110.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 111,
+   "subject": "Biology",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "",
+   "qimg": "q111.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 112,
+   "subject": "Biology",
+   "chapter": "Cell: The Unit of Life",
+   "text": "",
+   "qimg": "q112.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 113,
+   "subject": "Biology",
+   "chapter": "Morphology of Flowering Plants",
+   "text": "",
+   "qimg": "q113.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 114,
+   "subject": "Biology",
+   "chapter": "Cell Cycle and Cell Division",
+   "text": "",
+   "qimg": "q114.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 115,
+   "subject": "Biology",
+   "chapter": "Biodiversity and Conservation",
+   "text": "",
+   "qimg": "q115.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 116,
+   "subject": "Biology",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q116.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 117,
+   "subject": "Biology",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "",
+   "qimg": "q117.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 118,
+   "subject": "Biology",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q118.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 119,
+   "subject": "Biology",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q119.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 120,
+   "subject": "Biology",
+   "chapter": "Morphology of Flowering Plants",
+   "text": "",
+   "qimg": "q120.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 121,
+   "subject": "Biology",
+   "chapter": "Cell Cycle and Cell Division",
+   "text": "",
+   "qimg": "q121.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 122,
+   "subject": "Biology",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "",
+   "qimg": "q122.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 123,
+   "subject": "Biology",
+   "chapter": "Anatomy of Flowering Plants",
+   "text": "",
+   "qimg": "q123.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 124,
+   "subject": "Biology",
+   "chapter": "Biotechnology and its Applications",
+   "text": "",
+   "qimg": "q124.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 125,
+   "subject": "Biology",
+   "chapter": "Biological Classification",
+   "text": "",
+   "qimg": "q125.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 126,
+   "subject": "Biology",
+   "chapter": "Biotechnology and its Applications",
+   "text": "",
+   "qimg": "q126.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 127,
+   "subject": "Biology",
+   "chapter": "Photosynthesis in Plants",
+   "text": "",
+   "qimg": "q127.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 128,
+   "subject": "Biology",
+   "chapter": "Biodiversity and Conservation",
+   "text": "",
+   "qimg": "q128.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 129,
+   "subject": "Biology",
+   "chapter": "Morphology of Flowering Plants",
+   "text": "",
+   "qimg": "q129.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 130,
+   "subject": "Biology",
+   "chapter": "Photosynthesis in Plants",
+   "text": "",
+   "qimg": "q130.webp",
+   "qimgW": 262,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 131,
+   "subject": "Biology",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "",
+   "qimg": "q131.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 132,
+   "subject": "Biology",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "",
+   "qimg": "q132.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 133,
+   "subject": "Biology",
+   "chapter": "Anatomy of Flowering Plants",
+   "text": "",
+   "qimg": "q133.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 134,
+   "subject": "Biology",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "",
+   "qimg": "q134.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 135,
+   "subject": "Biology",
+   "chapter": "Plant Growth and Development",
+   "text": "",
+   "qimg": "q135.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 136,
+   "subject": "Biology",
+   "chapter": "Morphology of Flowering Plants",
+   "text": "",
+   "qimg": "q136.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 137,
+   "subject": "Biology",
+   "chapter": "Cell: The Unit of Life",
+   "text": "",
+   "qimg": "q137.webp",
+   "qimgW": 202,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 138,
+   "subject": "Biology",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "",
+   "qimg": "q138.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 139,
+   "subject": "Biology",
+   "chapter": "Biodiversity and Conservation",
+   "text": "",
+   "qimg": "q139.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 140,
+   "subject": "Biology",
+   "chapter": "Photosynthesis in Plants",
+   "text": "",
+   "qimg": "q140.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 141,
+   "subject": "Biology",
+   "chapter": "Respiration in Plants",
+   "text": "",
+   "qimg": "q141.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 142,
+   "subject": "Biology",
+   "chapter": "Respiration in Plants",
+   "text": "",
+   "qimg": "q142.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 143,
+   "subject": "Biology",
+   "chapter": "Biotechnology and its Applications",
+   "text": "",
+   "qimg": "q143.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 144,
+   "subject": "Biology",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q144.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 145,
+   "subject": "Biology",
+   "chapter": "Morphology of Flowering Plants",
+   "text": "",
+   "qimg": "q145.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 146,
+   "subject": "Biology",
+   "chapter": "Plant Kingdom",
+   "text": "",
+   "qimg": "q146.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 147,
+   "subject": "Biology",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "",
+   "qimg": "q147.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 148,
+   "subject": "Biology",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "",
+   "qimg": "q148.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 149,
+   "subject": "Biology",
+   "chapter": "Plant Growth and Development",
+   "text": "",
+   "qimg": "q149.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 150,
+   "subject": "Biology",
+   "chapter": "Ecosystem",
+   "text": "",
+   "qimg": "q150.webp",
+   "qimgW": 259,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 151,
+   "subject": "Biology",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "",
+   "qimg": "q151.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 152,
+   "subject": "Biology",
+   "chapter": "Cell Cycle and Cell Division",
+   "text": "",
+   "qimg": "q152.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 153,
+   "subject": "Biology",
+   "chapter": "Breathing and Exchange of Gases",
+   "text": "",
+   "qimg": "q153.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 154,
+   "subject": "Biology",
+   "chapter": "Human Health and Disease",
+   "text": "",
+   "qimg": "q154.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 155,
+   "subject": "Biology",
+   "chapter": "Breathing and Exchange of Gases",
+   "text": "",
+   "qimg": "q155.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 156,
+   "subject": "Biology",
+   "chapter": "Locomotion and Movement",
+   "text": "",
+   "qimg": "q156.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 157,
+   "subject": "Biology",
+   "chapter": "Excretory Products and Their Elimination",
+   "text": "",
+   "qimg": "q157.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 158,
+   "subject": "Biology",
+   "chapter": "Chemical Coordination and Integration",
+   "text": "",
+   "qimg": "q158.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 159,
+   "subject": "Biology",
+   "chapter": "Chemical Coordination and Integration",
+   "text": "",
+   "qimg": "q159.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 160,
+   "subject": "Biology",
+   "chapter": "Evolution",
+   "text": "",
+   "qimg": "q160.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 161,
+   "subject": "Biology",
+   "chapter": "Structural Organisation in Animals",
+   "text": "",
+   "qimg": "q161.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 162,
+   "subject": "Biology",
+   "chapter": "Human Health and Disease",
+   "text": "",
+   "qimg": "q162.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 163,
+   "subject": "Biology",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "",
+   "qimg": "q163.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 164,
+   "subject": "Biology",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "",
+   "qimg": "q164.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 165,
+   "subject": "Biology",
+   "chapter": "Animal Kingdom",
+   "text": "",
+   "qimg": "q165.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 166,
+   "subject": "Biology",
+   "chapter": "Locomotion and Movement",
+   "text": "",
+   "qimg": "q166.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 167,
+   "subject": "Biology",
+   "chapter": "Evolution",
+   "text": "",
+   "qimg": "q167.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 168,
+   "subject": "Biology",
+   "chapter": "Biotechnology and its Applications",
+   "text": "",
+   "qimg": "q168.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 169,
+   "subject": "Biology",
+   "chapter": "Cell: The Unit of Life",
+   "text": "",
+   "qimg": "q169.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 170,
+   "subject": "Biology",
+   "chapter": "Human Reproduction",
+   "text": "",
+   "qimg": "q170.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 171,
+   "subject": "Biology",
+   "chapter": "Human Reproduction",
+   "text": "",
+   "qimg": "q171.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 172,
+   "subject": "Biology",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "",
+   "qimg": "q172.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 173,
+   "subject": "Biology",
+   "chapter": "Neural Control and Coordination",
+   "text": "",
+   "qimg": "q173.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 174,
+   "subject": "Biology",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q174.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 175,
+   "subject": "Biology",
+   "chapter": "Reproductive Health",
+   "text": "",
+   "qimg": "q175.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 176,
+   "subject": "Biology",
+   "chapter": "Body Fluids and Circulation",
+   "text": "",
+   "qimg": "q176.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 177,
+   "subject": "Biology",
+   "chapter": "Animal Kingdom",
+   "text": "",
+   "qimg": "q177.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 178,
+   "subject": "Biology",
+   "chapter": "Human Health and Disease",
+   "text": "",
+   "qimg": "q178.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 179,
+   "subject": "Biology",
+   "chapter": "Animal Kingdom",
+   "text": "",
+   "qimg": "q179.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 180,
+   "subject": "Biology",
+   "chapter": "Structural Organisation in Animals",
+   "text": "",
+   "qimg": "q180.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 181,
+   "subject": "Biology",
+   "chapter": "Human Reproduction",
+   "text": "",
+   "qimg": "q181.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 182,
+   "subject": "Biology",
+   "chapter": "Evolution",
+   "text": "",
+   "qimg": "q182.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 183,
+   "subject": "Biology",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "",
+   "qimg": "q183.webp",
+   "qimgW": 249,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 184,
+   "subject": "Biology",
+   "chapter": "Reproductive Health",
+   "text": "",
+   "qimg": "q184.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 185,
+   "subject": "Biology",
+   "chapter": "Cell Cycle and Cell Division",
+   "text": "",
+   "qimg": "q185.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 186,
+   "subject": "Biology",
+   "chapter": "Excretory Products and Their Elimination",
+   "text": "",
+   "qimg": "q186.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 187,
+   "subject": "Biology",
+   "chapter": "Animal Kingdom",
+   "text": "",
+   "qimg": "q187.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 188,
+   "subject": "Biology",
+   "chapter": "Cell: The Unit of Life",
+   "text": "",
+   "qimg": "q188.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 189,
+   "subject": "Biology",
+   "chapter": "Biomolecules",
+   "text": "",
+   "qimg": "q189.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 190,
+   "subject": "Biology",
+   "chapter": "Body Fluids and Circulation",
+   "text": "",
+   "qimg": "q190.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    3
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 191,
+   "subject": "Biology",
+   "chapter": "Human Health and Disease",
+   "text": "",
+   "qimg": "q191.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 192,
+   "subject": "Biology",
+   "chapter": "Structural Organisation in Animals",
+   "text": "",
+   "qimg": "q192.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 193,
+   "subject": "Biology",
+   "chapter": "Neural Control and Coordination",
+   "text": "",
+   "qimg": "q193.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    0
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 194,
+   "subject": "Biology",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "",
+   "qimg": "q194.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 195,
+   "subject": "Biology",
+   "chapter": "Evolution",
+   "text": "",
+   "qimg": "q195.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 196,
+   "subject": "Biology",
+   "chapter": "Organisms and Populations",
+   "text": "",
+   "qimg": "q196.webp",
+   "qimgW": 248,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 197,
+   "subject": "Biology",
+   "chapter": "Chemical Coordination and Integration",
+   "text": "",
+   "qimg": "q197.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    1
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 198,
+   "subject": "Biology",
+   "chapter": "Human Reproduction",
+   "text": "",
+   "qimg": "q198.webp",
+   "qimgW": 261,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 199,
+   "subject": "Biology",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "",
+   "qimg": "q199.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  },
+  {
+   "n": 200,
+   "subject": "Biology",
+   "chapter": "Structural Organisation in Animals",
+   "text": "",
+   "qimg": "q200.webp",
+   "qimgW": 247,
+   "explanation": "",
+   "type": "mcq",
+   "options": [
+    "",
+    "",
+    "",
+    ""
+   ],
+   "optionsInImage": true,
+   "correct": [
+    2
+   ],
+   "status": "ok",
+   "verified": true
+  }
+ ]
+}
