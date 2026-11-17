@@ -29,7 +29,8 @@ export function validatePaper(d, file = "") {
   if (!SUBJECTS[d.exam]) p.push("exam");
   if (!Number.isInteger(d.year) || d.year < 2013 || d.year > 2100) p.push("year");
   if (!str(d.title) || !str(d.date)) p.push("title/date");
-  if (!str(d.paperPdf) || !str(d.keyPdf)) p.push("source links");
+  // paperPdf may be null when the only copy is a candidate's own response sheet (not linked: personal data)
+  if (!(str(d.paperPdf) || d.paperPdf === null) || !str(d.keyPdf)) p.push("source links");
   if (!Array.isArray(d.questions) || d.questions.length === 0) p.push("questions");
   else {
     d.questions.forEach((q, i) => {

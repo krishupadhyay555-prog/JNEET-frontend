@@ -72,7 +72,9 @@ export default function PYQPaper() {
               <>
                 <p className="text-[11px] text-gray-600 leading-relaxed">
                   Source: NTA question paper{state.paper.paperHost ? ` (candidate copy, hosted on ${state.paper.paperHost}; every Question ID checked against NTA's key)` : ""}{" "}
-                  <a href={state.paper.paperPdf} target="_blank" rel="noopener noreferrer" className="text-violet-600 inline-flex items-center gap-0.5">PDF <ExternalLink size={10} /></a>
+                  {state.paper.paperPdf
+                    ? <a href={state.paper.paperPdf} target="_blank" rel="noopener noreferrer" className="text-violet-600 inline-flex items-center gap-0.5">PDF <ExternalLink size={10} /></a>
+                    : null}
                   {" "}· Answers: NTA final answer key{" "}
                   <a href={state.paper.keyPdf} target="_blank" rel="noopener noreferrer" className="text-violet-600 inline-flex items-center gap-0.5">PDF <ExternalLink size={10} /></a>
                   {state.paper.questions?.some((q) => q.explanation)

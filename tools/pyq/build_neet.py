@@ -31,7 +31,7 @@ DPI = 200
 
 def export(spec):
     pdf = fetch(spec["paperPdf"])
-    doc, qs, problems = neetscan.layout(pdf, spec["count"])
+    doc, qs, problems = (neetscan.layout_text if spec.get("textLayer") else neetscan.layout)(pdf, spec["count"])
     ok = spec.get("ocrChecked", {})
     problems = [p for p in problems if not (isinstance(p[0], int) and str(p[0]) in ok)]
     if problems:
@@ -113,14 +113,15 @@ def build(pid):
         return False
     doc = {k: spec[k] for k in ("id", "exam", "year", "date", "title")}
     doc.update(session=None, shift=None, code=spec["code"],
-               source="NTA question booklet (original scan) + NTA final answer key",
+               source=("NTA question booklet (original PDF)" if spec.get("textLayer") else "NTA question booklet (original scan)")
+               + " + NTA final answer key",
                paperPdf=spec["paperPdf"], keyPdf=spec["keyPdf"],
                counts={s: sum(1 for i in items if i["subject"] == s) for s in dict.fromkeys(i["subject"] for i in items)},
                questions=items)
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{pid}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
     st = {s: sum(1 for i in items if i["status"] == s) for s in ("dropped", "multi")}
-    print(f"✓ {pid}: {len(items)} questions (NTA booklet scan, code {spec['code']}), answers = NTA final key"
+    print(f"✓ {pid}: {len(items)} questions (NTA booklet, code {spec['code']}), answers = NTA final key"
           + (f"; NTA changes {st}" if any(st.values()) else ""))
     return True
 

@@ -44,6 +44,20 @@ def paper_tools(spec):
     """(layout, parse_paper) for the paper's printing: "format": "2022" = ItemCode / option-letter papers."""
     if spec.get("format") == "2022":
         return nta2022.layout, nta2022.parse_paper
+    if spec.get("format") == "response-sheet":
+        import ntaresp
+        return ntaresp.layout, ntaresp.parse_paper
+    if spec.get("ocr"):
+        # copy without a text layer: text from Tesseract; the IDs it reads must match NTA's key
+        def lay(pdf):
+            return ntaimages.layout(pdf, ocr=True)
+
+        def parse(pdf):
+            subj = {q["n"]: q for q in ntaparse.parse_paper(pdf, ocr=True)}
+            _, L = lay(pdf)
+            return [dict(n=n, qid=v["qid"], type=v["type"], opts=list(v["opts"]) if v["type"] == "MCQ" else [],
+                         subject=subj.get(n, {}).get("subject"), sec=subj.get(n, {}).get("sec")) for n, v in sorted(L.items())]
+        return lay, parse
     return ntaimages.layout, ntaparse.parse_paper
 
 
@@ -104,7 +118,14 @@ def build(pid):
     paper = {q["n"]: q for q in paper_tools(spec)[1](pdf)}
     pts = ntaimages.widths(pymupdf.open(pdf))
     wpt = lambda xs: round(max(pts[x] for x in xs))
-    if spec.get("keyFormat") == "2022":
+    if spec.get("keyFormat") == "2026s1":
+        import ntakey_2026s1
+        keys = ntakey_2026s1.parse(fetch(spec["keyPdf"]))
+    elif spec.get("keyFormat") in ("rows-medium", "cols2020"):
+        import ntakey_old
+        fn = ntakey_old.rows if spec["keyFormat"] == "rows-medium" else ntakey_old.cols2020
+        keys = {(d, sh): v for (d, sh, md), v in fn(fetch(spec["keyPdf"])).items() if md == spec["keyMedium"]}
+    elif spec.get("keyFormat") == "2022":
         keys = ntakey_2022.parse(fetch(spec["keyPdf"]))
     elif spec.get("keyFormat") == "rows":
         keys = ntakey_rows.parse(fetch(spec["keyPdf"]))
@@ -180,7 +201,8 @@ def build(pid):
         return False
     doc = {k: spec[k] for k in ("id", "exam", "year", "session", "date", "shift", "title")}
     doc.update(source="NTA question paper (original images) + NTA final answer key",
-               paperPdf=spec["paperPdf"], keyPdf=spec["keyPdf"],
+               # "hideSource": the copy is a real candidate's response sheet -> use NTA's images, never link it
+               paperPdf=None if spec.get("hideSource") else spec["paperPdf"], keyPdf=spec["keyPdf"],
                **({"paperHost": spec["paperHost"]} if spec.get("paperHost") else {}),
                **({"missing": [{"n": int(n), "reason": r} for n, r in spec["skip"].items()]} if spec.get("skip") else {}),
                counts={s: sum(1 for i in qs if i["subject"] == s) for s in dict.fromkeys(i["subject"] for i in qs)},

@@ -30,7 +30,7 @@ always our own.
 | JEE Main | 2025 S2 | ✅ nta.ac.in/Download/ExamPaper (bilingual; 8 of 9 B.Tech shifts usable — 4 Apr S1 has missing images) — linked from study4india.com lists | ✅ NTA (3-column key, `tools/pyq/ntakey_cols.py`) |
 | JEE Main | 2025 S1 | ❌ NTA's own files are corrupted on the server | ✅ NTA |
 | JEE Main | 2024 S1 | ✅ nta.ac.in ExamPaper (8 of 10; 27 Jan S2 + 29 Jan S2 not found) | ✅ NTA (cols) |
-| JEE Main | 2024 S2 | 🟡 only watermarked copies (prepp/aglasem; IDs match but logos break the image cutter) | ✅ NTA |
+| JEE Main | 2024 S2 | ✅ 6, 8, 9 Apr (S1+S2) from prepp.in copies — watermark image filtered out, IDs = NTA key; 🟡 4 + 5 Apr: copies have no text layer (IDs drawn as curves) | ✅ NTA Notice_20240424132602 (as on 22.04.2024) |
 | JEE Main | 2023 S2 | ✅ nta.ac.in ExamPaper — all 12 B.Tech shifts | ✅ NTA CDN 2023/04/2023042419.pdf (`ntakey_rows.py`) |
 | JEE Main | 2023 S1 | ❌ not found yet (only B.Arch on the list) | ✅ NTA |
 | JEE Main | 2022 S1 + S2 | ✅ nta.ac.in ExamPaper — all 24 B.Tech shifts (format "2022": `nta2022.py`) | ✅ NTA CDN 2022/07/2022070665.pdf, 2022/08/2022080753.pdf (`ntakey_2022.py`) |
@@ -49,3 +49,18 @@ always our own.
 | Paper | Questions | Notes |
 |---|---|---|
 | JEE Main 2026 · 2 Apr · Shift 1 | 75 | all 75 answers = NTA final key |
+
+
+## Status after PR #34 (17 Nov 2026)
+
+| Exam | Year | Have | Missing (why) |
+|---|---|---|---|
+| JEE Main | 2026 | S1: 10/10 (blank response sheets, collegepravesh Drive) · S2: 9/9 | — |
+| JEE Main | 2025 | S1: 10/10 (response sheets) · S2: 8/9 | 4 Apr S1 (NTA file missing images) |
+| JEE Main | 2024 | S1: 8/10 · S2: 10/10 | 27 Jan S2, 29 Jan S2 (only prepp re-typed copies — not usable) |
+| JEE Main | 2023 | S2: 12/12 | S1 (Jan/Feb 2023): no official copy found |
+| JEE Main | 2022 | 24/24 | — |
+| JEE Main | 2021 | 24/26 | 16 Mar S1, 31 Aug S2 (+ 20/27 Jul: not verified) |
+| JEE Main | 2020 | Sep: 8/10 | 5 Sep S2, 6 Sep S1; January 2020: not verified |
+| JEE Main | 2019 | 0 | official papers not found (archive.org unreachable from the build machine) |
+| NEET (UG) | 2020–2025 | 2020, 2021, 2023, 2024, 2025 | 2022 + 2019 (no official booklet found), 2023 Manipur (6 Jun) + 2024 re-test (23 Jun): no official booklet |
