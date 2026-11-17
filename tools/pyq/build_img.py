@@ -21,7 +21,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import ntaparse, ntakey_cols, ntakey_rows, ntaimages  # noqa: E402
+import ntaparse, ntakey_cols, ntakey_rows, ntakey_2022, ntaimages, nta2022  # noqa: E402
 from build import fetch, CHAPTERS, SUBJ, katex_check, OUT, PUB  # noqa: E402
 
 SPEC = HERE / "papers_img"
@@ -40,9 +40,16 @@ def quantize(im):
 OLD_CHAPTER = "Not in current syllabus"
 
 
+def paper_tools(spec):
+    """(layout, parse_paper) for the paper's printing: "format": "2022" = ItemCode / option-letter papers."""
+    if spec.get("format") == "2022":
+        return nta2022.layout, nta2022.parse_paper
+    return ntaimages.layout, ntaparse.parse_paper
+
+
 def export(spec):
     pdf = fetch(spec["paperPdf"])
-    doc, lay = ntaimages.layout(pdf)
+    doc, lay = paper_tools(spec)[0](pdf)
     # "skip": {"n": "reason"} — a question whose English copy is broken in NTA's own file
     for n in spec.get("skip", {}):
         lay.pop(int(n), None)
@@ -94,10 +101,12 @@ def build(pid):
     spec = json.loads((SPEC / f"{pid}.json").read_text())
     errs = []
     pdf, lay = export(spec)
-    paper = {q["n"]: q for q in ntaparse.parse_paper(pdf)}
+    paper = {q["n"]: q for q in paper_tools(spec)[1](pdf)}
     pts = ntaimages.widths(pymupdf.open(pdf))
     wpt = lambda xs: round(max(pts[x] for x in xs))
-    if spec.get("keyFormat") == "rows":
+    if spec.get("keyFormat") == "2022":
+        keys = ntakey_2022.parse(fetch(spec["keyPdf"]))
+    elif spec.get("keyFormat") == "rows":
         keys = ntakey_rows.parse(fetch(spec["keyPdf"]))
     elif spec.get("keyFormat") == "cols":
         place = spec.get("keyPlace", "DOMESTIC")
@@ -145,6 +154,8 @@ def build(pid):
                 status, item["correct"] = "bonus", [0, 1, 2, 3]
             else:
                 ids = ans.split(",")
+                if spec.get("format") == "2022":   # key gives the option number (1-4) or letter (A-D)
+                    ids = ["ABCD"[int(i) - 1] if i.isdigit() and 1 <= int(i) <= 4 else i for i in ids]
                 if not all(i in opt_ids for i in ids):
                     e(f"key option {ans} not among the paper's options"); continue
                 item["correct"] = [opt_ids.index(i) for i in ids]

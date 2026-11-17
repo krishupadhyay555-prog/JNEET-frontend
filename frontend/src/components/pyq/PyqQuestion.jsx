@@ -86,8 +86,11 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
         </div>
       )}
 
+      {isMcq && q.optionsInImage && (
+        <p className="text-[11px] text-gray-600">Options (1)–(4) are printed in the question above. Pick one:</p>
+      )}
       {isMcq ? (
-        <ol className="space-y-2">
+        <ol className={q.optionsInImage ? "grid grid-cols-4 gap-2" : "space-y-2"}>
           {q.options.map((o, i) => {
             const isRight = done && correct.includes(i);
             const isWrongPick = done && picked === i && !correct.includes(i);
@@ -97,21 +100,23 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
                   type="button"
                   disabled={done}
                   onClick={() => setPicked(i)}
+                  aria-label={q.optionsInImage ? `Option ${LETTERS[i]}` : undefined}
                   className={`w-full text-left rounded-xl border px-3 py-2.5 text-sm flex gap-3 items-start transition
+                    ${q.optionsInImage ? "justify-center items-center" : ""}
                     ${isRight ? "border-emerald-500/60 bg-emerald-500/10"
                       : isWrongPick ? "border-red-500/60 bg-red-500/10"
                       : "border-bg-border hover:border-violet-600/40"}
                     ${done ? "cursor-default" : ""}`}
                 >
                   <span className="font-semibold text-gray-600 shrink-0">({LETTERS[i]})</span>
-                  <span className="flex-1 min-w-0">
+                  {!q.optionsInImage && <span className="flex-1 min-w-0">
                     {q.optImg?.[i]
                       ? <span className="inline-block max-w-full bg-white rounded p-1">
                           <img src={img(q.optImg[i])} alt={`Option ${i + 1}`} loading="lazy" className="block h-auto max-w-full"
                             style={q.qimgW && q.optImgW ? { width: fitW(q.optImgW[i], q.qimgW) } : undefined} />
                         </span>
                       : <MathTex>{o}</MathTex>}
-                  </span>
+                  </span>}
                   {isRight && <CheckCircle2 size={16} className="text-emerald-600 shrink-0 mt-0.5" />}
                   {isWrongPick && <XCircle size={16} className="text-red-500 shrink-0 mt-0.5" />}
                 </button>

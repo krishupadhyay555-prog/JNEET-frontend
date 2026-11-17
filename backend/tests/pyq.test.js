@@ -37,7 +37,9 @@ describe("PYQ content files", () => {
     const all = [...ns, ...missing].sort((a, b) => a - b);
     expect(all).toEqual([...Array(all.length)].map((_, i) => i + 1));
     expect(ns).toEqual([...ns].sort((a, b) => a - b));
-    expect(new Set(doc.questions.map((q) => q.qid)).size).toBe(ns.length);
+    // JEE: NTA Question IDs are unique; NEET booklets have no IDs (question number + booklet code)
+    if (doc.exam === "JEE") expect(new Set(doc.questions.map((q) => q.qid)).size).toBe(ns.length);
+    else expect(doc.code, "NEET paper needs its booklet code").toBeTruthy();
     for (const q of doc.questions) {
       if (!q.oldSyllabus) expect(known.has(`${doc.exam}|${q.subject}|${q.chapter}`), `${q.n} ${q.chapter}`).toBe(true);
       for (const f of [q.fig, q.qimg, ...(q.optImg ?? [])].filter(Boolean)) {
