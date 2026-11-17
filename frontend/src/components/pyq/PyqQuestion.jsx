@@ -57,7 +57,9 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-gray-600">
           <span className="font-semibold text-fg-primary">Q{q.n}</span>
           <span>·</span>
-          <span>{q.chapter}</span>
+          {q.oldSyllabus
+            ? <span className="rounded-md bg-gray-500/10 text-gray-600 px-1.5 py-0.5">Not in the current JEE Main syllabus · {q.oldSyllabus}</span>
+            : <span>{q.chapter}</span>}
           {!isMcq && <span className="ml-auto rounded-md bg-violet-500/10 text-violet-600 px-1.5 py-0.5">Numerical</span>}
         </div>
       </header>

@@ -35,6 +35,7 @@ export function validatePaper(d, file = "") {
     d.questions.forEach((q, i) => {
       const bad = (what) => p.push(`Q${q?.n ?? i + 1}: ${what}`);
       if (!Number.isInteger(q.n)) bad("n");
+      if (q.oldSyllabus !== undefined && !str(q.oldSyllabus)) bad("oldSyllabus");
       if (!SUBJECTS[d.exam]?.includes(q.subject)) bad("subject");
       // text OR NTA's original question image; the explanation may still be "coming soon" ("")
       if (!str(q.chapter) || !(str(q.text) || str(q.qimg)) || typeof (q.explanation ?? "") !== "string") bad("chapter/text/explanation");
@@ -100,6 +101,7 @@ export function listChapters(exam) {
   const map = new Map();
   for (const d of loadPapers().filter((p) => p.exam === exam)) {
     for (const q of d.questions) {
+      if (q.oldSyllabus) continue;     // topic NTA has removed: shown in its paper only
       const key = `${q.subject}|${q.chapter}`;
       map.set(key, (map.get(key) ?? 0) + 1);
     }
@@ -114,7 +116,7 @@ export function chapterQuestions(exam, subject, chapter) {
   const out = [];
   for (const d of loadPapers().filter((p) => p.exam === exam)) {
     for (const q of d.questions) {
-      if (q.subject === subject && q.chapter === chapter) {
+      if (q.subject === subject && q.chapter === chapter && !q.oldSyllabus) {
         out.push({ ...q, paper: { id: d.id, title: d.title, year: d.year, date: d.date, shift: d.shift ?? null } });
       }
     }
