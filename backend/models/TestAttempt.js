@@ -26,14 +26,26 @@ const attemptQuestionSchema = new mongoose.Schema(
     // "fill_blank": options is empty, correctIndex is 0 and the server
     // records selectedIndex 0 (correct) / 1 (wrong) / null (skipped), so
     // scoring, WMS and analytics treat both kinds the same way.
-    type:          { type: String, enum: ["mcq", "fill_blank"], default: "mcq" },
-    questionText:  { type: String, required: true },
+    // "numeric": a JEE numerical-value PYQ — the student types a number;
+    // like fill_blank, correctIndex is 0 and selectedIndex 0 / 1 / null.
+    type:          { type: String, enum: ["mcq", "fill_blank", "numeric"], default: "mcq" },
+    // "pyq": a real previous-year question shown as NTA's own image with its
+    // paper label (exam · date · shift). Its text may be empty (image only).
+    source:        { type: String, enum: ["bank", "pyq"], default: "bank" },
+    pyqRef:        { type: String, default: undefined },   // "<paper id>#<number>"
+    pyqLabel:      { type: String, default: undefined },   // "JEE Main 2025 · 2 April · Shift 1"
+    questionText:  { type: String, required: function () { return this.source !== "pyq"; }, default: "" },
     options:       { type: [String], default: [] },
     correctIndex:  { type: Number, required: true },
     selectedIndex: { type: Number, default: null },
     answers:       { type: [String], default: undefined },
     textAnswer:    { type: String, default: null },
     imageUrl:      { type: String, default: null },
+    imageW:        { type: Number, default: undefined },     // printed width (pt) of a PYQ image
+    figUrl:        { type: String, default: undefined },
+    optionImages:  { type: [String], default: undefined },   // PYQ options drawn as NTA images
+    optionImageW:  { type: [Number], default: undefined },
+    optionsInImage:{ type: Boolean, default: undefined },    // NEET: options printed inside the question image
     explanation:   { type: String, default: "" },
   },
   { _id: false }
