@@ -21,6 +21,7 @@ import { env } from "../config/env.js";
 import Question    from "../models/Question.js";
 import TestAttempt from "../models/TestAttempt.js";
 import { isBlankCorrect } from "../services/blankAnswer.js";
+import { samplePyq, pyqSnapshot, sameNumber } from "../services/pyqPool.js";
 
 const SUBJECTS_BY_EXAM = {
   NEET: ["Physics", "Chemistry", "Biology"],
@@ -40,11 +41,25 @@ const FULL_TEST_CONFIG = {
   JEE: {
     maxMarks: 300,
     durationMinutes: 180,   // NTA: 3h
+    // NTA's JEE Main paper order (2024–2026 papers): Mathematics, Physics, Chemistry.
     subjects: [
-      { subject: "Physics",     count: 25 },
-      { subject: "Chemistry",  count: 25 },
       { subject: "Mathematics", count: 25 },
+      { subject: "Physics",     count: 25 },
+      { subject: "Chemistry",   count: 25 },
     ],
+  },
+};
+
+// Real PYQs mixed into every full mock (founder, 19 Nov 2026). Per section:
+// `mcq` PYQ MCQs + `numeric` PYQ numericals (JEE Section B: 5 per subject,
+// NTA marking +4/−1); the rest of the section comes from our question bank.
+// If the PYQ pool runs short, the bank fills the gap.
+const PYQ_MIX = {
+  NEET: { Physics: { mcq: 15 }, Chemistry: { mcq: 15 }, Biology: { mcq: 30 } },
+  JEE:  {
+    Mathematics: { mcq: 10, numeric: 5 },
+    Physics:     { mcq: 10, numeric: 5 },
+    Chemistry:   { mcq: 10, numeric: 5 },
   },
 };
 
@@ -151,15 +166,22 @@ function snapshot(q) {
 
 // What the student may see of an unanswered question: never the answer.
 export function publicQuestion(q) {
-  return {
+  const out = {
     questionId: q.questionId,
     type: q.type ?? "mcq",
     subject: q.subject,
     chapter: q.chapter,
-    questionText: q.questionText,
+    questionText: q.questionText ?? "",
     options: q.options ?? [],
     imageUrl: q.imageUrl ?? null,
   };
+  if (q.source === "pyq") {
+    Object.assign(out, {
+      source: "pyq", pyqLabel: q.pyqLabel, imageW: q.imageW ?? null, figUrl: q.figUrl ?? null,
+      optionImages: q.optionImages ?? [], optionImageW: q.optionImageW ?? [], optionsInImage: q.optionsInImage === true,
+    });
+  }
+  return out;
 }
 
 // Shared by chapter Revision and the chat "Pichli baar ka recap".
@@ -244,11 +266,23 @@ export const startFullTest = async (req, res, next) => {
     const examMode = req.user.examMode;
     const config = FULL_TEST_CONFIG[examMode] ?? FULL_TEST_CONFIG.NEET;
 
+    // PYQs the student met in the last 10 mocks are avoided while enough are left.
+    const recent = await TestAttempt.find({ userId: req.user.id, examMode, mode: "test" })
+      .sort({ startedAt: -1 }).limit(10).select("questions.pyqRef").lean();
+    const avoid = new Set(recent.flatMap((t) => t.questions.map((q) => q.pyqRef).filter(Boolean)));
+
+    const plan = config.subjects.map((s) => {
+      const mix = PYQ_MIX[examMode]?.[s.subject] ?? {};
+      const numeric = samplePyq(examMode, s.subject, "numeric", Math.min(mix.numeric ?? 0, s.count), avoid);
+      const mcq = samplePyq(examMode, s.subject, "mcq", Math.min(mix.mcq ?? 0, s.count - numeric.length), avoid);
+      return { ...s, pyqMcq: mcq, pyqNumeric: numeric, bankCount: s.count - mcq.length - numeric.length };
+    });
+
     const shortfalls = [];
-    for (const s of config.subjects) {
+    for (const s of plan) {
       const available = await Question.countDocuments({ examMode, subject: s.subject, ...SERVABLE });
-      if (available < s.count) {
-        shortfalls.push(`${s.subject} (need ${s.count}, have ${available})`);
+      if (available < s.bankCount) {
+        shortfalls.push(`${s.subject} (need ${s.bankCount}, have ${available})`);
       }
     }
     if (shortfalls.length > 0) {
@@ -258,16 +292,28 @@ export const startFullTest = async (req, res, next) => {
       });
     }
 
-    // Like the real NTA paper: one section per subject, in the official
-    // order (Physics → Chemistry → Biology/Mathematics), shuffled inside
-    // each section — not all three subjects mixed together.
-    let allPicked = [];
-    for (const s of config.subjects) {
-      const picked = await pickRandomForSubject(examMode, s.subject, s.count, []);
-      allPicked = allPicked.concat(shuffleArray(picked));
+    // Like the real NTA paper: one section per subject in NTA's order, MCQs
+    // first (bank + PYQ shuffled together), then the numericals (Section B).
+    const snaps = [];
+    for (const s of plan) {
+      const bank = (await pickRandomForSubject(examMode, s.subject, s.bankCount, [])).map((q) => {
+        const o = shuffleOptions(q);
+        return {
+          questionId: o._id, source: "bank", subject: o.subject, chapter: o.chapter, type: "mcq",
+          questionText: o.questionText, options: o.options, correctIndex: o.correctIndex, selectedIndex: null,
+          imageUrl: o.imageUrl || null, explanation: o.explanation || "",
+        };
+      });
+      const mcqs = shuffleArray([...bank, ...s.pyqMcq.map(pyqSnapshot)]);
+      snaps.push(...mcqs, ...s.pyqNumeric.map(pyqSnapshot));
     }
-
-    const shuffled = dedupe(allPicked).map(shuffleOptions);
+    const seen = new Set();
+    const questions = snaps.filter((q) => {
+      const key = String(q.questionId);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
 
     const attempt = await TestAttempt.create({
       userId: req.user.id,
@@ -277,18 +323,8 @@ export const startFullTest = async (req, res, next) => {
       mode: "test",
       maxMarks: config.maxMarks,
       durationMinutes: config.durationMinutes,
-      questions: shuffled.map((q) => ({
-        questionId:    q._id,
-        subject:       q.subject,
-        chapter:       q.chapter,
-        questionText:  q.questionText,
-        options:       q.options,
-        correctIndex:  q.correctIndex,
-        selectedIndex: null,
-        imageUrl:      q.imageUrl || null,
-        explanation:   q.explanation || "",
-      })),
-      totalQuestions: shuffled.length,
+      questions,
+      totalQuestions: questions.length,
       status: "in-progress",
     });
 
@@ -299,12 +335,8 @@ export const startFullTest = async (req, res, next) => {
       maxMarks: attempt.maxMarks,
       durationMinutes: attempt.durationMinutes,
       startedAt: attempt.startedAt,
-      questions: attempt.questions.map((q) => ({
-        questionId: q.questionId,
-        questionText: q.questionText,
-        options: q.options,
-        imageUrl: q.imageUrl,
-      })),
+      pyqCount: questions.filter((q) => q.source === "pyq").length,
+      questions: attempt.questions.map(publicQuestion),
     });
 
   } catch (err) {
@@ -392,15 +424,21 @@ export const submitTest = async (req, res, next) => {
     const answerMap = new Map(
       answers.map((a) => [a.questionId, a.selectedIndex])
     );
+    const textMap = new Map(answers.map((a) => [a.questionId, a.textAnswer]));
 
     let correctCount = 0, wrongCount = 0, unattemptedCount = 0;
 
     attempt.questions.forEach((q) => {
       const key = q.questionId.toString();
       // Fill-in-the-blank: the server already recorded 0 / 1 / null in /answer.
-      const selected = q.type === "fill_blank"
-        ? q.selectedIndex
-        : (answerMap.has(key) ? answerMap.get(key) : null);
+      let selected;
+      if (q.type === "fill_blank") selected = q.selectedIndex;
+      else if (q.type === "numeric") {
+        // A typed number: kept as typed, marked 0 (right) / 1 (wrong) / null (left blank).
+        const typed = typeof textMap.get(key) === "string" ? textMap.get(key).trim().slice(0, 20) : "";
+        q.textAnswer = typed || null;
+        selected = typed ? ((q.answers ?? []).some((a) => sameNumber(typed, a)) ? 0 : 1) : null;
+      } else selected = answerMap.has(key) ? answerMap.get(key) : null;
       q.selectedIndex = selected;
 
       if (selected === null || selected === undefined) {

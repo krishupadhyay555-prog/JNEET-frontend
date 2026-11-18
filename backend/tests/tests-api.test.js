@@ -163,6 +163,40 @@ describe('Tests API', () => {
     expect(new Set(attempt.questions.map((x) => String(x.questionId))).size).toBe(180)
   })
 
+  it('mixes real PYQs into a JEE full mock: NTA order, 5 numericals per subject, answers hidden', async () => {
+    const { c } = await signedInClient({ examMode: 'JEE' })
+    const mk = (subject, n) => Array.from({ length: n }, (_, i) => q(`${subject}-${i}`, { examMode: 'JEE', subject, chapter: `${subject} ch` }))
+    await Question.insertMany([...mk('Mathematics', 12), ...mk('Physics', 12), ...mk('Chemistry', 12)])
+    const res = await c.post('/api/test/start-full')
+    expect(res.status).toBe(200)
+    expect(res.body.totalQuestions).toBe(75)
+    expect(res.body.pyqCount).toBe(45)
+    const qs = res.body.questions
+    expect(qs.slice(0, 25).every((x) => x.subject === 'Mathematics')).toBe(true)
+    expect(qs.slice(25, 50).every((x) => x.subject === 'Physics')).toBe(true)
+    expect(qs.slice(50).every((x) => x.subject === 'Chemistry')).toBe(true)
+    for (const sec of [0, 25, 50]) {
+      expect(qs.slice(sec, sec + 20).every((x) => x.type === 'mcq')).toBe(true)
+      expect(qs.slice(sec + 20, sec + 25).every((x) => x.type === 'numeric' && x.source === 'pyq')).toBe(true)
+    }
+    const pyq = qs.find((x) => x.source === 'pyq')
+    expect(pyq.pyqLabel).toMatch(/^JEE Main 20\d\d · /)
+    expect(pyq.imageUrl).toMatch(/^\/pyq\/jee-main-/)
+    for (const x of qs) { expect(x).not.toHaveProperty('correctIndex'); expect(x).not.toHaveProperty('answers') }
+
+    // scoring: one numerical right, one wrong, one MCQ right → 4 + 4 − 1 = 7
+    const saved = await TestAttempt.findById(res.body.attemptId).lean()
+    const nums = saved.questions.filter((x) => x.type === 'numeric')
+    const mcq = saved.questions.find((x) => x.type === 'mcq')
+    const sub = await c.post(`/api/test/${res.body.attemptId}/submit`).send({ answers: [
+      { questionId: String(nums[0].questionId), textAnswer: ` ${nums[0].answers[0]} ` },
+      { questionId: String(nums[1].questionId), textAnswer: '123456.789' },
+      { questionId: String(mcq.questionId), selectedIndex: mcq.correctIndex },
+    ] })
+    expect(sub.status).toBe(200)
+    expect(sub.body.attempt).toMatchObject({ correctCount: 2, wrongCount: 1, marksObtained: 7 })
+  })
+
   it('keeps attempts private to their owner', async () => {
     const start = await a.post('/api/test/start').send({ subject: 'Physics', chapter: 'Laws of Motion', easy: 2 })
     const id = start.body.attemptId

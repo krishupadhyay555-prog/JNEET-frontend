@@ -8,11 +8,17 @@
 // ============================================================
 
 import { Check, X } from "lucide-react";
+import { useState } from "react";
 import { ReportQuestion } from "./ReportQuestion.jsx";
+import { PyqBadge, PyqImage, ZoomView } from "./CbtQuestion.jsx";
+import { fitW } from "../pyq/pyqImage.js";
 
 export function ReviewAnswer({ question, index, mode = "revision", attemptId }) {
   const { questionText, options = [], correctIndex, selectedIndex, explanation, imageUrl, type, answers, textAnswer } = question;
-  const isBlank = type === "fill_blank";
+  const isPyq = question.source === "pyq";
+  const [zoom, setZoom] = useState(null);
+  // fill-in-the-blank and numericals: a typed answer, marked 0 (right) / 1 (wrong)
+  const isBlank = type === "fill_blank" || type === "numeric";
   const wasCorrect = selectedIndex === correctIndex;
   const wasSkipped = selectedIndex === null || selectedIndex === undefined;
 
@@ -27,9 +33,11 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
   };
 
   return (
-    <div className="glass-panel rounded-2xl p-5">
-      <div className="flex items-center justify-between mb-2">
-        <p className="text-[11px] text-gray-600 font-medium">Question {index + 1}</p>
+    <div className="glass-panel rounded-2xl p-5" style={isPyq ? { containerType: "inline-size" } : undefined}>
+      <div className="flex items-center justify-between gap-2 mb-2">
+        <p className="text-[11px] text-gray-600 font-medium flex flex-wrap items-center gap-2">
+          Question {index + 1}{isPyq && <PyqBadge label={question.pyqLabel} />}
+        </p>
         {wasSkipped ? (
           <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-bg-panel border border-bg-border text-gray-600">
             Skipped
@@ -45,7 +53,11 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
         )}
       </div>
 
-      {imageUrl && (
+      {isPyq && imageUrl && (
+        <div className="mb-3"><PyqImage src={imageUrl} w={question.imageW} refW={question.imageW} alt={`Question ${index + 1} (original NTA paper)`} onZoom={setZoom} /></div>
+      )}
+      {isPyq && question.figUrl && <div className="mb-3"><PyqImage src={question.figUrl} alt="Figure" onZoom={setZoom} /></div>}
+      {!isPyq && imageUrl && (
         <img
           src={imageUrl}
           alt="Question diagram"
@@ -53,7 +65,7 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
         />
       )}
 
-      <p className="text-sm text-fg-primary leading-relaxed mb-3">{questionText}</p>
+      {questionText && <p className="text-sm text-fg-primary leading-relaxed mb-3">{questionText}</p>}
 
       {isBlank ? (
         <div className="space-y-1.5 mb-3 text-sm">
@@ -73,8 +85,13 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
             key={i}
             className={`text-sm px-4 py-2.5 rounded-xl border ${optionClass(i)}`}
           >
-            <span className="font-semibold mr-2">{String.fromCharCode(65 + i)}.</span>
-            {opt}
+            <span className="font-semibold mr-2">{isPyq ? `(${i + 1})` : `${String.fromCharCode(65 + i)}.`}</span>
+            {isPyq && question.optionImages?.[i] ? (
+              <span className="inline-block max-w-full align-middle bg-white rounded p-1">
+                <img src={question.optionImages[i]} alt={`Option ${i + 1}`} loading="lazy" className="block h-auto max-w-full"
+                  style={question.imageW && question.optionImageW?.[i] ? { width: fitW(question.optionImageW[i], question.imageW) } : undefined} />
+              </span>
+            ) : opt}
           </div>
         ))}
       </div>
@@ -87,6 +104,7 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
           <p className="text-xs text-fg-primary leading-relaxed">{explanation}</p>
         </div>
       )}
+      <ZoomView src={zoom} onClose={() => setZoom(null)} />
       <ReportQuestion attemptId={attemptId} questionId={question.questionId} />
     </div>
   );

@@ -1,46 +1,46 @@
 // ============================================================
-//  JNEET+ AI — pages/TestAttempt.jsx  (v3 — exit auto-submits
-//  partial progress)
-//  FIXED (root cause of "abandoned attempts never count in WMS"):
-//  the exit button previously just navigated away after a plain
-//  confirm() — the attempt stayed status: "in-progress" forever,
-//  and WMS/Analytics only aggregate status: "submitted" attempts.
-//  A student who quit halfway through a test got ZERO credit or
-//  weakness-signal from it, no matter how many questions they'd
-//  actually answered.
-//  Exit now calls the EXISTING handleSubmit() (same function the
-//  "Submit Test" button already uses) instead of a bare navigate —
-//  whatever's in local `answers` state gets submitted as-is
-//  (unanswered questions correctly become "unattempted", which
-//  WMS already understands as a weakness signal). No new scoring
-//  logic was written — this reuses the already-tested submit path.
-//  Confirm-dialog wording updated to reflect the new behavior.
-//  Everything else — one-question-at-a-time UI, QuestionPalette,
-//  timer, fetch-fresh-on-mount architecture — UNCHANGED from v2.
+//  JNEET+ AI — pages/TestAttempt.jsx  (v4 — NTA-style exam screen)
+//  Full mocks now look and work like NTA's computer-based test:
+//    - section tabs (JEE: Mathematics · Physics · Chemistry; NEET:
+//      Physics · Chemistry · Biology) with the answered count;
+//    - NTA's palette states: Not visited · Not answered · Answered ·
+//      Marked for review · Answered & marked (counts as answered);
+//    - NTA's buttons: Save & Next · Clear Response · Mark for Review
+//      & Next · Back, and a Submit summary per section;
+//    - real PYQs show NTA's own image with "PYQ · <exam · date · shift>";
+//      numericals (JEE Section B) take a typed number.
+//  Kept from v3: server-based timer (auto-submit at zero), answers kept
+//  on this device (refresh / crash safe), exit = submit what is done.
 // ============================================================
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, ChevronLeft, ChevronRight, Send } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Send, Bookmark, Eraser, LayoutGrid, X } from "lucide-react";
 import { testApi } from "../api/testApi.js";
 import { MCQCard } from "../components/tests/MCQCard.jsx";
-import { QuestionPalette } from "../components/tests/QuestionPalette.jsx";
+import { CbtQuestion } from "../components/tests/CbtQuestion.jsx";
+import { CbtPalette, CbtLegend } from "../components/tests/CbtPalette.jsx";
+import { questionState } from "../components/tests/cbtState.js";
 import { TestTimer } from "../components/tests/TestTimer.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
 import toast from "react-hot-toast";
+
+const hasValue = (v) => v !== undefined && v !== null && v !== "";
 
 export default function TestAttempt() {
   const { attemptId } = useParams();
   const navigate = useNavigate();
 
   const [attempt, setAttempt] = useState(null);
-  const [showPalette, setShowPalette] = useState(false);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState({});          // qid → option index | typed number
+  const [marked, setMarked] = useState(() => new Set());
+  const [visited, setVisited] = useState(() => new Set());
+  const [showPalette, setShowPalette] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [confirmExit, setConfirmExit] = useState(false);
+  const [confirm, setConfirm] = useState(null);         // "submit" | "exit" | null
   const submittedRef = useRef(false);
 
   // Progress lives on this device too: a refresh, a crash or the phone killing
@@ -66,13 +66,15 @@ export default function TestAttempt() {
 
         const initialAnswers = {};
         a.questions.forEach((q) => {
-          if (q.selectedIndex !== null && q.selectedIndex !== undefined) {
-            initialAnswers[q.questionId] = q.selectedIndex;
+          if (q.type === "numeric" ? hasValue(q.textAnswer) : hasValue(q.selectedIndex)) {
+            initialAnswers[q.questionId] = q.type === "numeric" ? q.textAnswer : q.selectedIndex;
           }
         });
         try {
           const saved = JSON.parse(localStorage.getItem(storeKey) || "null");
           if (saved?.answers) Object.assign(initialAnswers, saved.answers);
+          if (Array.isArray(saved?.marked)) setMarked(new Set(saved.marked));
+          if (Array.isArray(saved?.visited)) setVisited(new Set(saved.visited));
           if (Number.isInteger(saved?.index) && saved.index >= 0 && saved.index < a.questions.length) setCurrentIndex(saved.index);
         } catch { /* storage unavailable or corrupt — start from what the server has */ }
         setAnswers(initialAnswers);
@@ -88,11 +90,19 @@ export default function TestAttempt() {
     return () => { cancelled = true; };
   }, [attemptId, navigate, storeKey]);
 
+  // the question on screen counts as visited (NTA: "Not answered" once seen)
+  useEffect(() => {
+    const qid = attempt?.questions?.[currentIndex]?.questionId;
+    if (qid && !visited.has(qid)) setVisited((v) => new Set(v).add(qid));
+  }, [attempt, currentIndex, visited]);
+
   // keep the on-device copy current
   useEffect(() => {
     if (!attempt || submittedRef.current) return;
-    try { localStorage.setItem(storeKey, JSON.stringify({ answers, index: currentIndex })); } catch { /* ignore */ }
-  }, [answers, currentIndex, attempt, storeKey]);
+    try {
+      localStorage.setItem(storeKey, JSON.stringify({ answers, index: currentIndex, marked: [...marked], visited: [...visited] }));
+    } catch { /* ignore */ }
+  }, [answers, currentIndex, marked, visited, attempt, storeKey]);
 
   // closing / reloading mid-test asks first (the browser shows its own wording)
   useEffect(() => {
@@ -109,10 +119,9 @@ export default function TestAttempt() {
     setSubmitting(true);
     try {
       await testApi.submit(attemptId, {
-        answers: attempt.questions.map((q) => ({
-          questionId: q.questionId,
-          selectedIndex: answers[q.questionId] ?? null,
-        })),
+        answers: attempt.questions.map((q) => (q.type === "numeric"
+          ? { questionId: q.questionId, selectedIndex: null, textAnswer: hasValue(answers[q.questionId]) ? String(answers[q.questionId]) : null }
+          : { questionId: q.questionId, selectedIndex: answers[q.questionId] ?? null })),
       });
       submittedRef.current = true;
       try { localStorage.removeItem(storeKey); } catch { /* ignore */ }
@@ -134,6 +143,17 @@ export default function TestAttempt() {
     }
   }, [attempt, answers, attemptId, navigate, storeKey]);
 
+  // sections in paper order: [{ subject, start, items: [{ q, index }] }]
+  const sections = useMemo(() => {
+    const out = [];
+    (attempt?.questions ?? []).forEach((q, index) => {
+      const last = out[out.length - 1];
+      if (!last || last.subject !== q.subject) out.push({ subject: q.subject, start: index, items: [{ q, index }] });
+      else last.items.push({ q, index });
+    });
+    return out;
+  }, [attempt]);
+
   if (loading) {
     return (
       <div className="min-h-screen bg-bg-base flex items-center justify-center">
@@ -146,136 +166,176 @@ export default function TestAttempt() {
 
   const questions = attempt.questions;
   const currentQuestion = questions[currentIndex];
-  const answeredCount = Object.keys(answers).length;
   const isLast = currentIndex === questions.length - 1;
-  const allAnswered = answeredCount === questions.length;
+  const answered = (qid) => hasValue(answers[qid]);
+  const stateOf = (qid) => questionState(qid, { answered, visited, marked });
+  const counts = questions.reduce((c, q) => { const s = stateOf(q.questionId); c[s] = (c[s] ?? 0) + 1; return c; }, {});
+  const answeredCount = questions.filter((q) => answered(q.questionId)).length;
+  const section = sections.find((s) => currentIndex >= s.start && currentIndex < s.start + s.items.length) ?? sections[0];
 
-  const handleSelect = (questionId, index) => {
-    setAnswers((prev) => ({ ...prev, [questionId]: index }));
-  };
+  const setAnswer = (qid, value) => setAnswers((prev) => ({ ...prev, [qid]: value }));
+  const clearAnswer = (qid) => setAnswers((prev) => { const n = { ...prev }; delete n[qid]; return n; });
+  const go = (i) => setCurrentIndex(Math.max(0, Math.min(questions.length - 1, i)));
+  const next = () => { if (!isLast) go(currentIndex + 1); };
+  const toggleMark = (qid, on) => setMarked((m) => { const n = new Set(m); on ? n.add(qid) : n.delete(qid); return n; });
 
-  const handleExit = () => setConfirmExit(true);
+  const qid = currentQuestion.questionId;
+  const summary = sections.map((s) => {
+    const done = s.items.filter(({ q }) => answered(q.questionId)).length;
+    return `${s.subject}: ${done}/${s.items.length}`;
+  }).join(" · ");
+
+  // Revision-style attempts that still open here (old links) keep the simple card.
+  const isMock = attempt.mode === "test";
 
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
       <ConfirmDialog
-        open={confirmExit}
-        title="Exit this test?"
-        message="Whatever you've answered so far will be submitted and scored — unanswered questions count as unattempted."
-        confirmLabel="Submit & exit"
+        open={confirm !== null}
+        title={confirm === "exit" ? "Exit this test?" : "Submit the test?"}
+        message={`${answeredCount} of ${questions.length} answered (${summary}). ${counts.marked ? `${counts.marked} marked for review without an answer. ` : ""}Unanswered questions get 0; a wrong answer is −1. You cannot change answers after submitting.`}
+        confirmLabel="Submit"
         cancelLabel="Keep going"
         tone="danger"
         busy={submitting}
-        onConfirm={() => { setConfirmExit(false); handleSubmit(); }}
-        onCancel={() => setConfirmExit(false)}
+        onConfirm={() => { setConfirm(null); handleSubmit(); }}
+        onCancel={() => setConfirm(null)}
       />
-      <nav className="border-b border-bg-border bg-bg-surface/90 backdrop-blur-xl px-5 py-3.5 flex items-center justify-between sticky top-0 z-10">
-        <div className="flex items-center gap-3 min-w-0">
+
+      <nav className="border-b border-bg-border bg-bg-surface/90 backdrop-blur-xl px-4 py-3 flex items-center justify-between gap-3 sticky top-0 z-20">
+        <div className="flex items-center gap-2.5 min-w-0">
           <button
-            onClick={handleExit}
+            onClick={() => setConfirm("exit")}
             disabled={submitting}
-            className="flex items-center gap-1.5 text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover shrink-0 disabled:opacity-50"
+            className="text-gray-500 hover:text-fg-primary transition p-1.5 rounded-lg hover:bg-bg-hover shrink-0 disabled:opacity-50"
             title="Exit and submit"
           >
             <ArrowLeft size={16} />
           </button>
           <div className="min-w-0">
             <p className="font-semibold text-sm truncate">{attempt.chapter}</p>
-            <p className="text-[10px] text-gray-600">{attempt.subject}</p>
+            <p className="text-[10px] text-gray-600">{answeredCount}/{questions.length} answered · +4 / −1</p>
           </div>
         </div>
-        <TestTimer startedAt={attempt.startedAt} durationMinutes={attempt.durationMinutes} onExpire={() => handleSubmit({ timeUp: true })} />
+        <div className="flex items-center gap-2">
+          <TestTimer startedAt={attempt.startedAt} durationMinutes={attempt.durationMinutes} onExpire={() => handleSubmit({ timeUp: true })} />
+          <button
+            onClick={() => setConfirm("submit")}
+            disabled={submitting}
+            className="hidden sm:flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-semibold px-3 py-2 rounded-lg"
+          >
+            <Send size={12} /> Submit
+          </button>
+        </div>
       </nav>
 
-      <div className="max-w-2xl mx-auto px-5 py-6 space-y-5">
-        <div className="glass-panel rounded-2xl p-3">
-          {/* A full mock has 75–180 questions: on a phone the whole grid pushed the
-              question off the screen. Big papers start with the grid folded. */}
-          <div className="flex items-center justify-between gap-2 px-1">
-            <p className="text-[11px] text-gray-600">
-              {answeredCount} of {questions.length} answered
-              {currentQuestion?.subject && attempt.mode === "test" && (
-                <span className="ml-1.5 text-fg-primary font-medium">· {currentQuestion.subject}</span>
-              )}
-            </p>
-            {questions.length > 30 && (
+      {/* section tabs */}
+      {sections.length > 1 && (
+        <div className="border-b border-bg-border bg-bg-surface px-3 flex gap-1 overflow-x-auto sticky top-[57px] z-10" role="tablist">
+          {sections.map((s) => {
+            const active = s === section;
+            const done = s.items.filter(({ q }) => answered(q.questionId)).length;
+            return (
               <button
-                onClick={() => setShowPalette((v) => !v)}
-                className="text-[11px] font-semibold text-violet-500 hover:text-violet-400 px-2 py-1 rounded-lg hover:bg-bg-hover"
-                aria-expanded={showPalette}
+                key={s.subject}
+                role="tab"
+                aria-selected={active}
+                onClick={() => go(s.start)}
+                className={`px-3 py-2.5 text-xs font-semibold whitespace-nowrap border-b-2 transition
+                  ${active ? "border-violet-600 text-fg-primary" : "border-transparent text-gray-600 hover:text-fg-primary"}`}
               >
-                {showPalette ? "Hide questions" : "All questions"}
+                {s.subject} <span className="text-[10px] font-normal text-gray-600">{done}/{s.items.length}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      <div className="max-w-6xl mx-auto px-4 py-5 lg:grid lg:grid-cols-[1fr_300px] lg:gap-5">
+        <main className="space-y-4 min-w-0">
+          <div key={qid} className="animate-fade-up">
+            {isMock ? (
+              <CbtQuestion question={currentQuestion} number={currentIndex + 1} value={answers[qid]} onChange={setAnswer} />
+            ) : (
+              <MCQCard question={currentQuestion} index={currentIndex} total={questions.length}
+                selectedIndex={answers[qid] ?? null} onSelect={setAnswer} />
+            )}
+          </div>
+
+          {/* NTA's buttons */}
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={() => { toggleMark(qid, true); next(); }}
+              className="flex items-center justify-center gap-1.5 bg-violet-600/10 border border-violet-600/40 text-violet-600 text-xs font-semibold px-3 py-2.5 rounded-xl hover:bg-violet-600/20"
+            >
+              <Bookmark size={13} /> Mark for Review & Next
+            </button>
+            <button
+              onClick={() => { clearAnswer(qid); toggleMark(qid, false); }}
+              disabled={!answered(qid) && !marked.has(qid)}
+              className="flex items-center justify-center gap-1.5 bg-bg-panel border border-bg-border text-fg-primary text-xs font-semibold px-3 py-2.5 rounded-xl disabled:opacity-40"
+            >
+              <Eraser size={13} /> Clear Response
+            </button>
+            <button
+              onClick={() => go(currentIndex - 1)}
+              disabled={currentIndex === 0}
+              className="flex items-center justify-center gap-1.5 bg-bg-panel border border-bg-border text-fg-primary text-xs font-semibold px-3 py-2.5 rounded-xl disabled:opacity-40"
+            >
+              <ChevronLeft size={14} /> Back
+            </button>
+            {isLast ? (
+              <button
+                onClick={() => setConfirm("submit")}
+                disabled={submitting}
+                className="flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-semibold px-3 py-2.5 rounded-xl"
+              >
+                <Send size={13} /> {submitting ? "Submitting..." : "Submit Test"}
+              </button>
+            ) : (
+              <button
+                onClick={() => { toggleMark(qid, false); next(); }}
+                className="flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-3 py-2.5 rounded-xl"
+              >
+                Save & Next <ChevronRight size={14} />
               </button>
             )}
           </div>
-          {(showPalette || questions.length <= 30) && (
-            <div className="mt-2.5">
-              <QuestionPalette
-                questions={questions}
-                currentIndex={currentIndex}
-                answers={answers}
-                onJump={(i) => { setCurrentIndex(i); if (questions.length > 30) setShowPalette(false); }}
-              />
-            </div>
-          )}
-        </div>
 
-        <div key={currentQuestion.questionId} className="animate-fade-up">
-          <MCQCard
-            question={currentQuestion}
-            index={currentIndex}
-            total={questions.length}
-            selectedIndex={answers[currentQuestion.questionId] ?? null}
-            onSelect={handleSelect}
-          />
-        </div>
-
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
-            disabled={currentIndex === 0}
-            className="flex items-center gap-1.5 bg-bg-panel border border-bg-border disabled:opacity-40
-              disabled:cursor-not-allowed text-fg-primary text-xs font-semibold px-4 py-2.5 rounded-xl
-              hover:border-violet-600/40 transition-all duration-150"
-          >
-            <ChevronLeft size={14} /> Previous
-          </button>
-
-          {isLast ? (
+          <div className="flex gap-2 lg:hidden">
             <button
-              onClick={() => handleSubmit()}
+              onClick={() => setShowPalette(true)}
+              className="flex-1 flex items-center justify-center gap-1.5 bg-bg-panel border border-bg-border text-fg-primary text-xs font-semibold px-3 py-2.5 rounded-xl"
+            >
+              <LayoutGrid size={13} /> All questions
+            </button>
+            <button
+              onClick={() => setConfirm("submit")}
               disabled={submitting}
-              className="flex-1 flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500
-                disabled:opacity-50 text-white text-xs font-semibold px-4 py-2.5 rounded-xl
-                transition-all duration-150 active:scale-[0.98]"
+              className="sm:hidden flex items-center justify-center gap-1.5 bg-emerald-600 text-white text-xs font-semibold px-4 py-2.5 rounded-xl disabled:opacity-50"
             >
-              <Send size={13} />
-              {submitting ? "Submitting..." : "Submit Test"}
+              <Send size={12} /> Submit
             </button>
-          ) : (
-            <button
-              onClick={() => setCurrentIndex((i) => Math.min(questions.length - 1, i + 1))}
-              className="flex-1 flex items-center justify-center gap-1.5 bg-violet-600 hover:bg-violet-500
-                text-white text-xs font-semibold px-4 py-2.5 rounded-xl
-                transition-all duration-150 active:scale-[0.98]"
-            >
-              Next <ChevronRight size={14} />
-            </button>
-          )}
-        </div>
+          </div>
+        </main>
 
-        {!isLast && allAnswered && (
-          <button
-            onClick={() => handleSubmit()}
-            disabled={submitting}
-            className="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500
-              disabled:opacity-50 text-white text-xs font-semibold px-4 py-2.5 rounded-xl
-              transition-all duration-150 active:scale-[0.98]"
-          >
-            <Send size={13} />
-            All answered — Submit now
-          </button>
-        )}
+        {/* palette: side column on wide screens, a sheet on phones */}
+        <aside className={`${showPalette ? "fixed inset-0 z-30 bg-black/50 flex items-end" : "hidden"} lg:static lg:block lg:bg-transparent`}
+          onClick={() => setShowPalette(false)}>
+          <div className="w-full bg-bg-surface lg:bg-transparent rounded-t-2xl lg:rounded-none p-4 lg:p-0 max-h-[80vh] overflow-y-auto lg:sticky lg:top-28 space-y-3"
+            onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between lg:hidden">
+              <p className="text-sm font-semibold">{section?.subject}</p>
+              <button onClick={() => setShowPalette(false)} className="p-1.5 rounded-lg hover:bg-bg-hover" aria-label="Close"><X size={16} /></button>
+            </div>
+            <div className="glass-panel rounded-2xl p-3 space-y-3">
+              <CbtLegend counts={counts} />
+              <p className="text-[11px] font-semibold text-fg-primary hidden lg:block">{section?.subject}</p>
+              <CbtPalette items={section?.items ?? []} currentIndex={currentIndex} stateOf={stateOf}
+                onJump={(i) => { go(i); setShowPalette(false); }} />
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   );

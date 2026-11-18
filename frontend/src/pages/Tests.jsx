@@ -17,8 +17,8 @@ import { testApi } from "../api/testApi.js";
 import toast from "react-hot-toast";
 
 const FULL_TEST_LABEL = {
-  NEET: "180 questions · 720 marks · +4/−1 marking",
-  JEE:  "75 questions · 300 marks · +4/−1 marking",
+  NEET: "180 questions · 720 marks · +4/−1 marking · 60 real NEET PYQs inside",
+  JEE:  "75 questions (20 MCQ + 5 numerical per subject) · 300 marks · +4/−1 · 45 real JEE Main PYQs inside",
 };
 
 export default function Tests() {
@@ -65,7 +65,7 @@ export default function Tests() {
             </div>
           </div>
           <p className="text-xs text-gray-600 mb-4 leading-relaxed">
-            A complete, exam-pattern mock — timed feel, no explanations shown mid-test, just like the real exam. Results and review appear after you submit.
+            A complete, exam-pattern mock on an NTA-style screen (sections, palette, Mark for Review), timed like the real exam. Our questions and real previous-year questions are mixed — every PYQ shows NTA's original question with its exam, date and shift. Results and review appear after you submit.
           </p>
           <button
             onClick={handleStartFull}
