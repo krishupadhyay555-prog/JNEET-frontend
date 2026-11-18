@@ -64,3 +64,10 @@ always our own.
 | JEE Main | 2020 | Sep: 8/10 | 5 Sep S2, 6 Sep S1; January 2020: not verified |
 | JEE Main | 2019 | 0 | official papers not found (archive.org unreachable from the build machine) |
 | NEET (UG) | 2020–2025 | 2020, 2021, 2023, 2024, 2025 | 2022 + 2019 (no official booklet found), 2023 Manipur (6 Jun) + 2024 re-test (23 Jun): no official booklet |
+
+### 18 Nov 2026 — founder-sent copies checked and rejected
+97 JEE PDFs sent by the founder (2019, 2020 Jan + Sep, 2021, 2023 Jan, 2024 Jan, 2025 Apr, 2026 Jan) are
+**reconstructions** (PDF metadata "reconstructed question paper", no Question / Option IDs). Their question
+and option order does not match NTA's key, so they cannot carry NTA's answers. The gaps above stay open.
+What works: NTA's own PDF with printed Question IDs, or a candidate response sheet with IDs, whose IDs match
+NTA's final key (Internet Archive copies of jeemain.nta.nic.in / nta.ac.in, collegepravesh-style Drive sheets).
