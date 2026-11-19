@@ -146,7 +146,7 @@ export default function Login() {
       <AuthShell
         title="Check your email"
         subtitle={<>Enter the code sent to <span className="font-medium text-[#2D2A32]">{email}</span></>}
-        footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}
+        footer={<>New here? <Link to="/register" className="text-[#0F766E] hover:text-[#115E59] font-medium">Register now</Link></>}
       >
         {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
         <form onSubmit={(e) => { e.preventDefault(); verifyCode(otp); }} noValidate className="space-y-4">
@@ -154,7 +154,7 @@ export default function Login() {
           <OtpInput value={otp} onChange={setOtp} onComplete={verifyCode} disabled={loading} error={errors.otp} idPrefix="login-otp" />
           <SubmitButton loading={loading} loadingText="Checking…" disabled={otp.length !== 6}>Log in</SubmitButton>
           <button type="button" onClick={sendCode} disabled={loading || cooldown > 0}
-            className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]">
+            className="w-full text-center text-[#0F766E] hover:text-[#115E59] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]">
             {cooldown > 0 ? `Send a new code in ${cooldown}s` : "Send a new code"}
           </button>
           <button type="button" onClick={() => switchMode("password")}
@@ -170,7 +170,7 @@ export default function Login() {
   if (mode === "code-email") {
     return (
       <AuthShell title="Log in with a code" subtitle="We'll email you a 6-digit code — no password needed"
-        footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}>
+        footer={<>New here? <Link to="/register" className="text-[#0F766E] hover:text-[#115E59] font-medium">Register now</Link></>}>
         <form onSubmit={sendCode} noValidate className="space-y-4">
           <Captcha ref={captchaRef} />
           <FormField label="Email" name="email" type="email" value={form.email} onChange={handleChange}
@@ -189,7 +189,7 @@ export default function Login() {
   // ── Password login (default) ─────────────────────────────────
   return (
     <AuthShell title="JNEET+ AI" subtitle="Welcome back"
-      footer={<>New here? <Link to="/register" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Register now</Link></>}>
+      footer={<>New here? <Link to="/register" className="text-[#0F766E] hover:text-[#115E59] font-medium">Register now</Link></>}>
       {formErr ? <Notice tone="error">{formErr}</Notice> : null}
       <form onSubmit={submitPassword} noValidate className="space-y-4">
         <Captcha ref={captchaRef} />
@@ -208,7 +208,7 @@ export default function Login() {
             </button>
           </FormField>
           <div className="text-right mt-1.5">
-            <Link to="/forgot-password" className="text-[#8B8594] hover:text-[#5B9FE8] text-xs transition-colors">
+            <Link to="/forgot-password" className="text-[#8B8594] hover:text-[#0F766E] text-xs transition-colors">
               Forgot password?
             </Link>
           </div>
@@ -221,7 +221,7 @@ export default function Login() {
         </div>
 
         <button type="button" onClick={() => switchMode("code-email")}
-          className="w-full flex items-center justify-center gap-2 border border-[#EDE6F3] hover:border-[#93C5FD]/60 hover:bg-[#F7FAFF] text-[#2D2A32] text-sm font-medium py-2.5 rounded-xl transition-all active:scale-[0.98]">
+          className="w-full flex items-center justify-center gap-2 border border-[#EDE6F3] hover:border-[#0D9488]/50 hover:bg-[#F0FDFA] text-[#2D2A32] text-sm font-medium py-2.5 rounded-xl transition-all active:scale-[0.98]">
           <Mail size={14} /> Email me a login code
         </button>
       </form>

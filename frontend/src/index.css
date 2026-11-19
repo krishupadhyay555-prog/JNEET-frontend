@@ -349,11 +349,11 @@ input:-webkit-autofill:focus {
 
 @keyframes scaleIn {
   from { opacity: 0; transform: scale(0.97) translateY(8px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
+  to   { opacity: 1; transform: none; }
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.2s ease-out forwards;
+  animation: scaleIn 0.2s ease-out backwards;   /* not forwards: see fadeUp in tailwind.config.js */
 }
 
 /* Chat fills exactly the visible screen. 100vh is taller than a phone's
@@ -374,11 +374,11 @@ input:-webkit-autofill:focus {
 
 @keyframes messageIn {
   from { opacity: 0; transform: translateY(8px) scale(0.99); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 1; transform: none; }
 }
 
 .animate-message-in {
-  animation: messageIn 0.22s ease-out both;
+  animation: messageIn 0.22s ease-out backwards;
 }
 
 /* Page-to-page transition (App.jsx PageTransition) */
@@ -386,7 +386,7 @@ input:-webkit-autofill:focus {
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: none; }
 }
-.page-enter { animation: pageEnter 0.24s ease-out both; }
+.page-enter { animation: pageEnter 0.24s ease-out backwards; }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-message-in,

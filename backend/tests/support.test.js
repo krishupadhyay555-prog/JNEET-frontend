@@ -70,5 +70,6 @@ describe("public stats", () => {
     expect(r.body).toMatchObject({ success: true, exams: ["NEET UG", "JEE Main"] });
     expect(typeof r.body.questions).toBe("number");
     expect(r.body.oneshots).toBeGreaterThan(0);
+    expect(r.body.pyqs).toBeGreaterThan(10000);   // official PYQs from content/pyq
   });
 });

@@ -49,7 +49,7 @@ export function FormField({
             children ? "pr-10" : "",
             error
               ? "border-red-400 focus:border-red-400 focus:shadow-[0_0_0_3px_rgba(248,113,113,0.12)]"
-              : "border-[#EDE6F3] focus:border-[#93C5FD] focus:shadow-[0_0_0_3px_rgba(147,197,253,0.14)]",
+              : "border-[#EDE6F3] focus:border-[#0D9488] focus:shadow-[0_0_0_3px_rgba(13,148,136,0.14)]",
             "disabled:opacity-50 disabled:cursor-not-allowed",
           ]
             .filter(Boolean)
