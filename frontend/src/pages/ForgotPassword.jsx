@@ -96,7 +96,7 @@ export default function ForgotPassword() {
     }
   };
 
-  const footer = <>Remembered it? <Link to="/login" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Log in</Link></>;
+  const footer = <>Remembered it? <Link to="/login" className="text-[#0F766E] hover:text-[#115E59] font-medium">Log in</Link></>;
 
   if (step === 1) {
     return (
@@ -141,7 +141,7 @@ export default function ForgotPassword() {
         <SubmitButton loading={loading} loadingText="Resetting…" disabled={otp.length !== 6}>Reset password</SubmitButton>
 
         <button type="button" onClick={requestCode} disabled={loading || cooldown > 0}
-          className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]">
+          className="w-full text-center text-[#0F766E] hover:text-[#115E59] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]">
           {cooldown > 0 ? `Send a new code in ${cooldown}s` : "Send a new code"}
         </button>
         <button type="button" onClick={() => { setStep(1); setErrors({}); setNotice(null); }}

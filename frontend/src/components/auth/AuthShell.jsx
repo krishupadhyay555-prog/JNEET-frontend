@@ -12,9 +12,9 @@ export function AuthShell({ title, subtitle, children, footer, wide = false }) {
   return (
     <div className="min-h-screen bg-[#FDFBFC] flex items-center justify-center px-4 py-8 relative overflow-hidden">
       <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#93C5FD]/25 rounded-full blur-[110px] animate-pulse-soft" />
+        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-[#99F6E4]/30 rounded-full blur-[110px] animate-pulse-soft" />
         <div
-          className="absolute -bottom-24 -right-24 w-[420px] h-[420px] bg-[#F5A9C8]/25 rounded-full blur-[110px] animate-pulse-soft"
+          className="absolute -bottom-24 -right-24 w-[420px] h-[420px] bg-[#BAE6FD]/30 rounded-full blur-[110px] animate-pulse-soft"
           style={{ animationDelay: "1s" }}
         />
       </div>
@@ -43,8 +43,8 @@ export function SubmitButton({ loading, loadingText, children, disabled, type = 
       type={type}
       onClick={onClick}
       disabled={loading || disabled}
-      className="w-full bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8]
-        hover:shadow-[0_8px_24px_rgba(147,197,253,0.45)]
+      className="w-full bg-[#0D9488] hover:bg-[#0F766E]
+        shadow-[0_6px_20px_-6px_rgba(13,148,136,0.55)]
         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none
         text-white font-semibold py-2.5 rounded-xl transition-all duration-200
         flex items-center justify-center gap-2 text-sm

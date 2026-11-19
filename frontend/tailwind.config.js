@@ -73,8 +73,8 @@ export default {
       },
       animation: {
         "fade-in":       "fadeIn 0.2s ease-out forwards",
-        "fade-up":       "fadeUp 0.25s ease-out forwards",
-        "slide-in":      "slideIn 0.25s ease-out forwards",
+        "fade-up":       "fadeUp 0.25s ease-out backwards",
+        "slide-in":      "slideIn 0.25s ease-out backwards",
         "bounce-dots":   "bounceDots 1.1s ease-in-out infinite",
         "spin-slow":     "spin 1.2s linear infinite",
         "pulse-soft":    "pulseSoft 2s ease-in-out infinite",
@@ -84,11 +84,16 @@ export default {
         fadeIn: { from: { opacity: "0" }, to: { opacity: "1" } },
         fadeUp: {
           from: { opacity: "0", transform: "translateY(8px)" },
-          to:   { opacity: "1", transform: "translateY(0)" },
+          // fill-mode is "backwards", not "forwards": a transform kept after the animation
+          // (even translateY(0)) turns the element into the containing block of every
+          // position:fixed child, so floating buttons / sheets inside it stopped sticking to
+          // the screen (Notes "+" button floated mid-page). After the animation ends the
+          // element is back to no transform at all.
+          to:   { opacity: "1", transform: "none" },
         },
         slideIn: {
           from: { opacity: "0", transform: "translateX(-10px)" },
-          to:   { opacity: "1", transform: "translateX(0)" },
+          to:   { opacity: "1", transform: "none" },
         },
         bounceDots: {
           "0%, 80%, 100%": { transform: "translateY(0)",    opacity: "0.35" },

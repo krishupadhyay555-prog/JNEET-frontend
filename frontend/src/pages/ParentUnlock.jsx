@@ -96,7 +96,7 @@ export default function ParentUnlock() {
         </p>
 
         <div className="rounded-xl border border-[#EDE6F3] bg-[#FBF9FD] p-3.5 text-xs text-[#6B6572] leading-relaxed space-y-1.5">
-          <p className="flex items-center gap-1.5 font-semibold text-[#2D2A32]"><ShieldCheck size={14} className="text-[#5B9FE8]" /> Good to know</p>
+          <p className="flex items-center gap-1.5 font-semibold text-[#2D2A32]"><ShieldCheck size={14} className="text-[#0F766E]" /> Good to know</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>The chat rules: no 18+ content and no abusive language. Questions about the syllabus (including reproduction and health topics) are always allowed.</li>
             <li>We do not keep the messages — only the kind of rule and the time.</li>
@@ -104,19 +104,19 @@ export default function ParentUnlock() {
             <li>If you unlock and the rules are broken again, the chat locks again straight away.</li>
           </ul>
           <p>
-            Read the full <Link to="/privacy" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Privacy Policy</Link>{" "}
-            and <Link to="/terms" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Terms</Link>.
+            Read the full <Link to="/privacy" target="_blank" rel="noopener" className="text-[#0F766E] hover:underline font-medium">Privacy Policy</Link>{" "}
+            and <Link to="/terms" target="_blank" rel="noopener" className="text-[#0F766E] hover:underline font-medium">Terms</Link>.
           </p>
         </div>
 
         <label className="flex items-start gap-2.5 text-xs text-[#6B6572] leading-relaxed cursor-pointer">
           <input type="checkbox" checked={isAdult} onChange={(e) => { setIsAdult(e.target.checked); setError(""); }}
-            className="mt-0.5 h-4 w-4 accent-[#5B9FE8] shrink-0" />
+            className="mt-0.5 h-4 w-4 accent-[#0D9488] shrink-0" />
           <span>I am {info.studentName}'s parent or legal guardian and I am 18 or older.</span>
         </label>
         <label className="flex items-start gap-2.5 text-xs text-[#6B6572] leading-relaxed cursor-pointer">
           <input type="checkbox" checked={agree} onChange={(e) => { setAgree(e.target.checked); setError(""); }}
-            className="mt-0.5 h-4 w-4 accent-[#5B9FE8] shrink-0" />
+            className="mt-0.5 h-4 w-4 accent-[#0D9488] shrink-0" />
           <span>I have spoken to {info.studentName} about the chat rules and I want to unlock the AI chat.</span>
         </label>
 

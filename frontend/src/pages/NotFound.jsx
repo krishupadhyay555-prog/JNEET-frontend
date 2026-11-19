@@ -16,7 +16,7 @@ export default function NotFound() {
       </p>
       <Link
         to={isLoggedIn ? "/dashboard" : "/login"}
-        className="block w-full text-center bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8] text-white font-semibold py-2.5 rounded-xl text-sm"
+        className="block w-full text-center bg-[#0D9488] hover:bg-[#0F766E] text-white font-semibold py-2.5 rounded-xl text-sm"
       >
         {isLoggedIn ? "Go to dashboard" : "Go to login"}
       </Link>

@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   BrainCircuit, ClipboardCheck, RefreshCcw, BookOpenCheck, LineChart, Flag,
-  ShieldCheck, Lock, HeartHandshake, Calculator, ScanSearch, ListChecks, ArrowRight, Check,
+  ShieldCheck, Lock, HeartHandshake, Calculator, ScanSearch, ListChecks, ArrowRight, Check, FileText,
 } from "lucide-react";
 import { PublicShell, PrimaryButton, SecondaryButton } from "../components/public/PublicShell.jsx";
 import { PricingCards } from "../components/public/PricingCards.jsx";
@@ -19,11 +19,11 @@ import { usePublicStats, fmtCount } from "../hooks/usePublicStats.js";
 
 const FEATURES = [
   { icon: BrainCircuit, title: "A mentor that makes you think", text: "Ask any doubt. You get a hint first, then the full step-by-step solution — anchored to NCERT, in English, Hinglish or your own language." },
-  { icon: ClipboardCheck, title: "Mock tests that feel real", text: "Chapter tests and full NEET / JEE papers with timing, scoring and a question-by-question review." },
+  { icon: ClipboardCheck, title: "Mock tests that feel real", text: "Full NEET / JEE mocks on an NTA-style screen — sections, palette, Mark for Review — with real previous-year questions mixed in, then a question-by-question review." },
+  { icon: FileText, title: "Every PYQ, NTA-checked", text: "JEE Main and NEET previous-year papers, year and shift wise, shown exactly as NTA printed them — every answer from NTA's final key." },
   { icon: RefreshCcw, title: "Revision with instant feedback", text: "MCQs and fill-in-the-blanks that tell you right away why an answer is right or wrong." },
   { icon: BookOpenCheck, title: "OneShot chapter notes", text: "Every formula, key idea, common mistake and must-memorise fact of a chapter on one page." },
   { icon: LineChart, title: "Know your weak topics", text: "Chapter-wise strength from your own answers, so every study hour goes where it counts." },
-  { icon: Flag, title: "Spot an error? Report it", text: "Every question has a report button. We check each report and fix the question for everyone." },
 ];
 
 const CHECKS = [
@@ -74,7 +74,7 @@ export default function Landing() {
   const STAT = [
     [stats ? fmtCount(stats.questions) : "13,000+", "practice questions"],
     [stats ? String(stats.oneshots) : "20+", "OneShot chapter notes"],
-    ["2", "exams: NEET UG & JEE Main"],
+    [stats?.pyqs ? fmtCount(stats.pyqs) : "11,000+", "official PYQs with NTA's answer key"],
     ["₹0", "to start — no card"],
   ];
 

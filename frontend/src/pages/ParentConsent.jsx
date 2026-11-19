@@ -123,7 +123,7 @@ export default function ParentConsent({ revoke = false }) {
         </p>
 
         <div className="rounded-xl border border-[#EDE6F3] bg-[#FBF9FD] p-3.5 text-xs text-[#6B6572] leading-relaxed space-y-1.5">
-          <p className="flex items-center gap-1.5 font-semibold text-[#2D2A32]"><ShieldCheck size={14} className="text-[#5B9FE8]" /> What you're approving</p>
+          <p className="flex items-center gap-1.5 font-semibold text-[#2D2A32]"><ShieldCheck size={14} className="text-[#0F766E]" /> What you're approving</p>
           <ul className="list-disc pl-4 space-y-1">
             <li>{info.studentName} can ask the AI mentor study questions. It is an AI, can make mistakes, and is built to guide the student to think, not just hand over answers.</li>
             <li>Questions are sent to our AI provider to generate replies. We do not use them for advertising and do not sell them.</li>
@@ -131,19 +131,19 @@ export default function ParentConsent({ revoke = false }) {
             <li>You can withdraw approval at any time using the link in the confirmation email.</li>
           </ul>
           <p>
-            Read the full <Link to="/privacy" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Privacy Policy</Link>{" "}
-            and <Link to="/terms" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Terms</Link>.
+            Read the full <Link to="/privacy" target="_blank" rel="noopener" className="text-[#0F766E] hover:underline font-medium">Privacy Policy</Link>{" "}
+            and <Link to="/terms" target="_blank" rel="noopener" className="text-[#0F766E] hover:underline font-medium">Terms</Link>.
           </p>
         </div>
 
         <label className="flex items-start gap-2.5 text-xs text-[#6B6572] leading-relaxed cursor-pointer">
           <input type="checkbox" checked={isAdult} onChange={(e) => { setIsAdult(e.target.checked); setError(""); }}
-            className="mt-0.5 h-4 w-4 accent-[#5B9FE8] shrink-0" />
+            className="mt-0.5 h-4 w-4 accent-[#0D9488] shrink-0" />
           <span>I am {info.studentName}'s parent or legal guardian and I am 18 or older.</span>
         </label>
         <label className="flex items-start gap-2.5 text-xs text-[#6B6572] leading-relaxed cursor-pointer">
           <input type="checkbox" checked={agree} onChange={(e) => { setAgree(e.target.checked); setError(""); }}
-            className="mt-0.5 h-4 w-4 accent-[#5B9FE8] shrink-0" />
+            className="mt-0.5 h-4 w-4 accent-[#0D9488] shrink-0" />
           <span>I have read the above and approve {info.studentName}'s use of the AI mentor.</span>
         </label>
 

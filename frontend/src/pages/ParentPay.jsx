@@ -108,7 +108,7 @@ export default function ParentPay() {
             return (
               <button type="button" key={p.id} role="radio" aria-checked={planId === p.id} disabled={lower}
                 onClick={() => setPlanId(p.id)}
-                className={`text-left rounded-xl border p-3 transition disabled:opacity-40 ${planId === p.id ? "border-[#93C5FD] bg-[#EBF5FF]" : "border-[#EDE6F3] hover:border-[#93C5FD]/60"}`}>
+                className={`text-left rounded-xl border p-3 transition disabled:opacity-40 ${planId === p.id ? "border-[#0D9488] bg-[#F0FDFA]" : "border-[#EDE6F3] hover:border-[#0D9488]/50"}`}>
                 <span className="block text-sm font-semibold text-[#2D2A32]">{NAMES[p.tier]} · {p.months} month{p.months > 1 ? "s" : ""}</span>
                 <span className="block text-xs text-[#6B6572]">{rupees(p.amount)}{p.months > 1 ? ` (${rupees(p.perMonth)}/mo)` : ""}</span>
               </button>

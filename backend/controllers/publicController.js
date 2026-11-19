@@ -1,11 +1,12 @@
 // ============================================================
 //  JNEET+ AI — controllers/publicController.js
 //    GET /api/public/stats   numbers shown on the public home/About
-//  pages (question count, chapters, OneShots). Cached for 1 hour.
+//  pages (question count, chapters, OneShots, official PYQs). Cached for 1 hour.
 // ============================================================
 
 import Question from "../models/Question.js";
 import { listOneShots } from "../services/oneshot.js";
+import { loadPapers } from "../services/pyq.js";
 
 let cache = { at: 0, data: null };
 const TTL = 60 * 60 * 1000;
@@ -16,7 +17,8 @@ export async function buildPublicStats() {
     Question.aggregate([{ $group: { _id: { e: "$examMode", s: "$subject", c: "$chapter" } } }, { $count: "n" }]),
   ]);
   const one = new Set([...listOneShots("NEET"), ...listOneShots("JEE")].map((o) => o.slug));
-  return { questions, chapters: chapterGroups[0]?.n || 0, oneshots: one.size, exams: ["NEET UG", "JEE Main"] };
+  const pyqs = loadPapers().reduce((n, d) => n + d.questions.length, 0);
+  return { questions, chapters: chapterGroups[0]?.n || 0, oneshots: one.size, pyqs, exams: ["NEET UG", "JEE Main"] };
 }
 
 export const getPublicStats = async (req, res, next) => {

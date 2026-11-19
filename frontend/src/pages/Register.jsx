@@ -213,7 +213,7 @@ export default function Register() {
       <AuthShell
         title="Verify your email"
         subtitle={<>Code sent to <span className="font-medium text-[#2D2A32]">{form.email}</span></>}
-        footer={<>Already verified? <Link to="/login" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Log in</Link></>}
+        footer={<>Already verified? <Link to="/login" className="text-[#0F766E] hover:text-[#115E59] font-medium">Log in</Link></>}
       >
         {notice ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
 
@@ -229,7 +229,7 @@ export default function Register() {
             type="button"
             onClick={resend}
             disabled={resending || loading || cooldown > 0}
-            className="w-full text-center text-[#5B9FE8] hover:text-[#3D7DC9] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]"
+            className="w-full text-center text-[#0F766E] hover:text-[#115E59] text-xs font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:text-[#8B8594]"
           >
             {resending ? "Sending…" : cooldown > 0 ? `Send a new code in ${cooldown}s` : "Send a new code"}
           </button>
@@ -252,7 +252,7 @@ export default function Register() {
     <AuthShell
       title="JNEET+ AI"
       subtitle="Create your account"
-      footer={<>Already have an account? <Link to="/login" className="text-[#5B9FE8] hover:text-[#3D7DC9] font-medium">Log in</Link></>}
+      footer={<>Already have an account? <Link to="/login" className="text-[#0F766E] hover:text-[#115E59] font-medium">Log in</Link></>}
     >
       {formErr ? <Notice tone="error">{formErr}</Notice> : null}
 
@@ -305,8 +305,8 @@ export default function Register() {
                 className={[
                   "py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 border active:scale-[0.97]",
                   form.examMode === value
-                    ? "bg-gradient-to-br from-[#93C5FD] to-[#F5A9C8] border-transparent text-white shadow-[0_4px_14px_rgba(147,197,253,0.35)]"
-                    : "bg-white border-[#EDE6F3] text-[#6B6572] hover:border-[#93C5FD]/50 hover:text-[#2D2A32]",
+                    ? "bg-[#0D9488] border-[#0D9488] text-white shadow-[0_4px_14px_-4px_rgba(13,148,136,0.5)]"
+                    : "bg-white border-[#EDE6F3] text-[#6B6572] hover:border-[#0D9488]/50 hover:text-[#2D2A32]",
                 ].join(" ")}>
                 {label}
               </button>
@@ -318,12 +318,12 @@ export default function Register() {
           <label className="flex items-start gap-2.5 text-xs text-[#6B6572] leading-relaxed cursor-pointer">
             <input type="checkbox" name="acceptTerms" checked={form.acceptTerms} onChange={handleChange}
               disabled={loading} aria-invalid={errors.acceptTerms ? "true" : undefined}
-              className="mt-0.5 h-4 w-4 rounded border-[#EDE6F3] accent-[#5B9FE8] shrink-0" />
+              className="mt-0.5 h-4 w-4 rounded border-[#EDE6F3] accent-[#0D9488] shrink-0" />
             <span>
               I agree to the{" "}
-              <Link to="/terms" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Terms of Service</Link>
+              <Link to="/terms" target="_blank" rel="noopener" className="text-[#0F766E] hover:underline font-medium">Terms of Service</Link>
               {" "}and{" "}
-              <Link to="/privacy" target="_blank" rel="noopener" className="text-[#5B9FE8] hover:underline font-medium">Privacy Policy</Link>.
+              <Link to="/privacy" target="_blank" rel="noopener" className="text-[#0F766E] hover:underline font-medium">Privacy Policy</Link>.
             </span>
           </label>
           {errors.acceptTerms ? <p role="alert" className="text-red-500 text-xs mt-1.5 animate-fade-in">{errors.acceptTerms}</p> : null}
