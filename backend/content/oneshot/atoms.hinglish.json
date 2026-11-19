@@ -18,7 +18,8 @@
    "name": "Distance of closest approach",
    "formula": "r₀ = k (2e)(Ze) / K   (alpha ki KE = K, head-on)",
    "when": "Alpha particle nucleus ke kitna paas aa sakta hai — nucleus ke size ki upper limit.",
-   "mistake": "Alpha ka charge 2e hai, e nahi."
+   "mistake": "Alpha ka charge 2e hai, e nahi.",
+   "note": "r₀ nucleus ke RADIUS ki limit hai. Sawal nucleus ka DIAMETER (size) pooche to 2r₀ do — r₀ wala option trap hai."
   },
   {
    "name": "Impact parameter",
@@ -108,7 +109,7 @@
   {
    "title": "Alpha kitna paas aayega?",
    "problem": "7.7 MeV ka alpha particle gold (Z = 79) nucleus ki taraf seedha aata hai. Closest approach?",
-   "solution": "r₀ = k(2e)(79e)/K. K = 7.7 × 10⁶ × 1.6 × 10⁻¹⁹ J. r₀ = 9 × 10⁹ × 158 × 1.6 × 10⁻¹⁹ / 7.7 × 10⁶ ≈ 3.0 × 10⁻¹⁴ m (≈ 30 fm). Nucleus isse bhi chhota hai."
+   "solution": "r₀ = k(2e)(79e)/K. K = 7.7 × 10⁶ × 1.6 × 10⁻¹⁹ J. r₀ = 9 × 10⁹ × 158 × 1.6 × 10⁻¹⁹ / 7.7 × 10⁶ ≈ 3.0 × 10⁻¹⁴ m (≈ 30 fm). Nucleus isse bhi chhota hai. Agar nucleus ka estimated diameter poocha ho to 2r₀ ≈ 6 × 10⁻¹⁴ m do, r₀ nahi."
   },
   {
    "title": "Hydrogen n = 2",
@@ -183,7 +184,7 @@
   "Series: Lyman 1 (UV), Balmer 2 (visible), Paschen 3, Brackett 4, Pfund 5 (IR).",
   "Lines = n(n − 1)/2.",
   "H: ionisation 13.6 eV, first excitation 10.2 eV.  He⁺: 54.4 eV.",
-  "Closest approach r₀ = k(2e)(Ze)/K;  N(θ) ∝ 1/sin⁴(θ/2)."
+  "Closest approach r₀ = k(2e)(Ze)/K (radius ki limit; diameter = 2r₀);  N(θ) ∝ 1/sin⁴(θ/2)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -59,14 +59,15 @@
   },
   {
    "name": "Frog heart and blood",
-   "formula": "3 chambers (2 atria + 1 ventricle) + sinus venosus + conus arteriosus;  RBCs nucleated;  hepatic portal and renal portal systems",
+   "formula": "3 chambers (2 atria + 1 ventricle) inside a pericardium;  sinus venosus joins the right atrium and receives blood from the body through the venae cavae;  conus arteriosus on the ventral side;  closed circulation + lymphatic system;  RBCs nucleated;  hepatic portal system = liver ↔ intestine;  renal portal system = kidney ↔ lower parts of the body",
    "when": "Frog ka circulation.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Frog respiration",
-   "formula": "skin (cutaneous) in water and during hibernation/aestivation;  buccal cavity and lungs on land",
-   "when": "Frog ki breathing."
+   "formula": "in water: skin ONLY (cutaneous — dissolved O₂ diffuses through the moist skin);  on land: skin + buccal cavity + lungs (pulmonary);  during hibernation/aestivation: skin",
+   "when": "Frog ki breathing.",
+   "note": "Trap: land par bhi skin kaam karti hai. 'Paani mein skin + buccal cavity' galat hai; 'land par skin + buccal cavity + lungs' sahi hai."
   },
   {
    "name": "Frog excretion",
@@ -103,7 +104,7 @@
   {
    "title": "Frog ki skin",
    "problem": "Frog ki skin hamesha geeli kyun rehti hai?",
-   "solution": "Mucous glands ise geela rakhte hain, aur paani mein aur hibernation aur aestivation ke dauraan cutaneous respiration (skin se gas exchange) ke liye geela rehna zaroori hai."
+   "solution": "Mucous glands ise geela rakhte hain. Cutaneous respiration ke liye skin ka geela rehna zaroori hai — paani mein aur hibernation/aestivation mein gas exchange sirf skin se hota hai, aur land par bhi buccal cavity aur lungs ke saath skin kaam karti hai."
   },
   {
    "title": "Male ya female frog?",
@@ -148,7 +149,9 @@
   "Tendon: muscle-bone;  ligament: bone-bone.",
   "Cardiac: striated, involuntary, intercalated discs.",
   "Frog: 3-chambered heart, nucleated RBCs, 10 cranial nerves, ureotelic.",
-  "Male frog: vocal sacs + copulatory pad."
+  "Male frog: vocal sacs + copulatory pad.",
+  "Frog breathing: water = skin only;  land = skin + buccal cavity + lungs;  hibernation/aestivation = skin.",
+  "Frog portals: hepatic = liver–intestine;  renal = kidney–lower body;  venae cavae → sinus venosus → right atrium."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

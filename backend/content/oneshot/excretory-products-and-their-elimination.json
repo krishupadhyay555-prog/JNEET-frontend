@@ -37,7 +37,7 @@
   },
   {
    "name": "Tubule functions",
-   "formula": "PCT: reabsorbs 70–80% of electrolytes and water, all glucose and amino acids; secretes H⁺, NH₃, K⁺ (pH balance);  descending limb: permeable to water, not electrolytes;  ascending limb: impermeable to water, transports electrolytes;  DCT: conditional reabsorption of Na⁺ and water, HCO₃⁻ reabsorption;  collecting duct: large water reabsorption, allows some urea to pass into the medulla",
+   "formula": "PCT: reabsorbs 70–80% of electrolytes and water, all glucose and amino acids; reabsorbs HCO₃⁻; secretes H⁺, NH₃, K⁺ (pH and ionic balance);  descending limb: permeable to water, not electrolytes;  ascending limb: impermeable to water, transports electrolytes;  DCT: conditional reabsorption of Na⁺ (NaCl) and water, HCO₃⁻ reabsorption; secretes H⁺, K⁺, NH₃ (pH and Na⁺–K⁺ balance);  collecting duct: large water reabsorption, allows some urea to pass into the medulla",
    "when": "Which part does what.",
    "tag": "PYQ favourite"
   },
@@ -144,7 +144,8 @@
   "Medulla gradient: 300 → 1200 mOsmolL⁻¹.",
   "ADH ↑ water reabsorption; lack → diabetes insipidus.",
   "JGA → renin → angiotensin II → aldosterone.",
-  "ANF lowers BP (check on RAAS)."
+  "ANF lowers BP (check on RAAS).",
+  "PCT and DCT both: reabsorb NaCl, H₂O, HCO₃⁻;  secrete H⁺, K⁺, NH₃."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

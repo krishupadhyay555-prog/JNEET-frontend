@@ -1,7 +1,7 @@
 {
  "slug": "ray-optics-and-optical-instruments",
  "subject": "Physics",
- "verifiedOn": "2026-11-14",
+ "verifiedOn": "2026-11-19",
  "chapters": {
   "NEET": "Ray Optics and Optical Instruments",
   "JEE": "Ray Optics and Optical Instruments"
@@ -60,9 +60,9 @@
   },
   {
    "name": "Power of a lens and combination",
-   "formula": "P = 1/f (f metre mein, unit dioptre D);   contact mein P = P₁ + P₂, 1/F = 1/f₁ + 1/f₂;   distance d par 1/F = 1/f₁ + 1/f₂ − d/(f₁f₂)",
+   "formula": "P = 1/f (f metre mein, unit dioptre D);   contact mein P = P₁ + P₂, 1/F = 1/f₁ + 1/f₂;   distance d par 1/F = 1/f₁ + 1/f₂ − d/(f₁f₂);   combination ka total magnification m = m₁ × m₂ × m₃ …",
    "when": "Spectacles, lens jodna.",
-   "note": "f cm mein ho to P = 100/f."
+   "note": "f cm mein ho to P = 100/f. Power JUDTI hai par magnification GUNA hota hai (n same lenses: P = np, m = mⁿ)."
   },
   {
    "name": "Prism (angle A)",
@@ -200,7 +200,7 @@
   "m_mirror = −v/u;  m_lens = v/u.",
   "sin C = 1/n;  glass C ≈ 42°, paani ≈ 49°, heera ≈ 24°.",
   "n = sin[(A + δ_m)/2]/sin(A/2);  thin prism δ = (n − 1)A.",
-  "P = 1/f (m);  contact P = P₁ + P₂.",
+  "P = 1/f (m);  contact P = P₁ + P₂;  combination m = m₁m₂m₃…",
   "Microscope m ≈ (L/f_o)(D/f_e);  telescope m = f_o/f_e, L = f_o + f_e.",
   "Apparent depth = real/n.",
   "Frequency nahi badalti; v aur λ badalte hain."

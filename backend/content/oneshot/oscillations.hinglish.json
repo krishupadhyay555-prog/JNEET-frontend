@@ -6,7 +6,7 @@
   "JEE": "Oscillations"
  },
  "title": "Oscillations",
- "readMinutes": 12,
+ "readMinutes": 13,
  "summary": [
   "Jo motion barabar intervals par dohraaye wo periodic hai; mean position ke aage-peeche wali periodic motion oscillation hai.",
   "Simple harmonic motion (SHM) tab hota hai jab restoring force displacement ke proportional aur ulta ho: F = −kx. Tab x = A sin(ωt + φ), ω = √(k/m).",
@@ -81,6 +81,12 @@
    "name": "Phase relations",
    "formula": "velocity leads displacement by π/2;  acceleration leads displacement by π",
    "when": "Phase ke sawal."
+  },
+  {
+   "name": "Damped oscillations",
+   "formula": "x = A₀ e^(−bt/2m) cos(ω′t + φ);  amplitude A(t) = A₀ e^(−bt/2m);  energy E ∝ e^(−bt/m);  ω′ = √(k/m − b²/4m²)",
+   "when": "Asli oscillators jo energy khote hain (air drag, friction) — amplitude time ke saath ghatta hai.",
+   "mistake": "Zyaadatar qualitative idea poochha jaata hai: amplitude ghatta hai, aur ω′ thoda √(k/m) se kam hota hai — amplitude ko constant mat maano."
   }
  ],
  "examples": [
@@ -153,6 +159,10 @@
   {
    "title": "Time between positions",
    "explain": "Mean se extreme tak T/4. Mean se A/2 tak T/12; A/2 se A tak T/6. Mean se A/√2 tak T/8."
+  },
+  {
+   "title": "Damping aur dheere badalta mass",
+   "explain": "Har asli oscillation friction/drag mein energy khota hai, isliye amplitude time ke saath ghatta hai (damped oscillation); energy na mile to aakhir ruk jaata hai. Agar mass dheere-dheere badle — jaise spring par lage box se ret (sand) nikal rahi ho — to har pal ω = √(k/m) lagao: m ghata, to ω badha (T ghata), aur average amplitude ghatta rehta hai."
   }
  ],
  "ratta": [
@@ -162,7 +172,8 @@
   "E = ½kA²;  KE = PE at A/√2.",
   "Pendulum T = 2π√(l/g);  seconds pendulum ≈ 1 m.",
   "Series springs: 1/k adds;  parallel: k adds.",
-  "Mean → A/2: T/12;  A/2 → A: T/6."
+  "Mean → A/2: T/12;  A/2 → A: T/6.",
+  "Damped: A = A₀e^(−bt/2m) (amplitude ↓);  mass ↓ → ω = √(k/m) ↑."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

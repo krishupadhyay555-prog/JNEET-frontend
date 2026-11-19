@@ -51,7 +51,7 @@
   },
   {
    "name": "Mutualism examples",
-   "formula": "lichens (fungus + alga);  mycorrhiza (fungus + roots);  fig and wasp (pollination + egg laying);  Ophrys orchid and bee (sexual deceit, pseudocopulation)",
+   "formula": "lichens (fungus + alga);  mycorrhiza (fungus + roots);  fig and wasp (each fig species has its own partner wasp; the female wasp pollinates the fig inflorescence while searching for egg-laying sites; the fruit is her oviposition site and some developing seeds feed her larvae);  Ophrys orchid and bee (sexual deceit, pseudocopulation)",
    "when": "+/+ interactions."
   },
   {
@@ -150,7 +150,9 @@
   "Mutualism +/+;  commensalism +/0;  amensalism −/0;  predation/parasitism +/−;  competition −/−.",
   "Ophrys — sexual deceit;  fig–wasp;  cuckoo — brood parasite.",
   "Gause: competitive exclusion;  MacArthur: warblers.",
-  "Allen's rule: short ears and limbs in cold."
+  "Allen's rule: short ears and limbs in cold.",
+  "Ramdeo Misra = Father of Ecology in India (first ecology research school, BHU Varanasi).",
+  "Fig–wasp = mutualism (pollination ↔ egg site + seeds for larvae);  'fig is a non-vegetarian fruit' is not an NCERT idea."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -79,7 +79,8 @@
   {
    "name": "Electrophilic substitution of benzene",
    "formula": "nitration (HNO₃/H₂SO₄, NO₂⁺);  halogenation (X₂/FeX₃);  sulphonation (fuming H₂SO₄);  Friedel–Crafts alkylation (RX/AlCl₃) and acylation (RCOCl/AlCl₃)",
-   "when": "Benzene ki reactions."
+   "when": "Benzene ki reactions.",
+   "note": "Strongly deactivated rings par Friedel–Crafts nahi hota: nitrobenzene alkylation/acylation NAHI deta (ise FC reactions ke solvent ki tarah bhi use karte hain); aniline bhi fail (–NH₂ AlCl₃ se bandh jaata hai)."
   },
   {
    "name": "Directive influence",
@@ -159,7 +160,8 @@
   "Acidity: ethyne > ethene > ethane.",
   "Hückel: 4n + 2 π electrons, planar, cyclic.",
   "o/p: –OH, –NH₂, –CH₃, –X;  m: –NO₂, –CN, –CHO, –COOH.",
-  "Saytzeff: more substituted alkene major."
+  "Saytzeff: more substituted alkene major.",
+  "Nitrobenzene: Friedel–Crafts nahi (FC solvent ki tarah use)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -46,7 +46,7 @@
    "name": "Ionisation enthalpy",
    "formula": "IE₁ < IE₂ < IE₃ …;  increases across a period, decreases down a group",
    "when": "Electron nikaalne ki energy.",
-   "mistake": "Exceptions: B < Be aur O < N (stable 2s² aur half-filled 2p³) — bhoolo mat."
+   "mistake": "Exceptions: B < Be aur O < N (stable 2s² aur half-filled 2p³) — bhoolo mat. Period 3 mein bhi: Mg > Al (3s² stable, Al ka 3p¹ asaani se nikalta) aur P > S (3p³ half-filled), isliye Na < Al < Mg < Si < S < P."
   },
   {
    "name": "Electron gain enthalpy",
@@ -56,7 +56,7 @@
   },
   {
    "name": "Electronegativity (Pauling)",
-   "formula": "increases across, decreases down;  F = 4.0 (highest), then O, N, Cl",
+   "formula": "increases across, decreases down;  F 4.0 > O 3.5 > N 3.0 = Cl 3.0 (N and Cl are the SAME on the Pauling scale)",
    "when": "Bond polarity aur character."
   },
   {
@@ -134,8 +134,10 @@
   "Radius ↓ across, ↑ down;  isoelectronic: more Z → smaller.",
   "IE: Be > B, N > O (exceptions).",
   "Most negative electron gain enthalpy: Cl (not F).",
-  "Electronegativity: F 4.0 > O > N ≈ Cl.",
-  "Oxides across period 3: basic → amphoteric → acidic."
+  "Electronegativity (Pauling): F 4.0 > O 3.5 > N = Cl = 3.0.",
+  "Oxides across period 3: basic → amphoteric → acidic.",
+  "IE period 3: Na 496 < Al 577 < Mg 737 < Si 786 kJ/mol (Mg > Al, P > S).",
+  "Ga ka m.p. sirf 303 K (haath mein pighal jaata) — Cs (~302 K) jaisa bahut kam, high nahi."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

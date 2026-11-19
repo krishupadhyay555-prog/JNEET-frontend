@@ -18,7 +18,7 @@
    "name": "Henry's law",
    "formula": "p = K_H x  (partial pressure ∝ mole fraction of gas in solution)",
    "when": "Solubility of gases.",
-   "note": "A larger K_H means LOWER solubility at the same pressure."
+   "note": "A larger K_H means LOWER solubility at the same pressure. K_H depends on the nature of the gas, the solvent and the temperature (K_H rises with T, so solubility falls); for a given gas–solvent pair at fixed T it stays constant with concentration only in the ideally dilute range."
   },
   {
    "name": "Raoult's law (volatile components)",
@@ -112,7 +112,7 @@
  "topics": [
   {
    "title": "Types of solutions",
-   "explain": "Solvent and solute can be any phase: gas in liquid (soda), solid in liquid (sugar), liquid in liquid (alcohol in water), solid in solid (alloys), gas in solid (H₂ in palladium)."
+   "explain": "Solvent and solute can be any phase: gas in liquid (soda), solid in liquid (sugar), liquid in liquid (alcohol in water), solid in solid (alloys), gas in solid (H₂ in palladium). All nine types — gas in gas (air), liquid in gas (humidity, chloroform mixed with N₂), solid in gas (camphor in N₂, smoke), gas in liquid, liquid in liquid, solid in liquid, gas in solid, liquid in solid (amalgam of Hg with Na), solid in solid (alloys, Cu in Au)."
   },
   {
    "title": "Solubility of solids and gases",
@@ -142,7 +142,9 @@
   "Water: K_b 0.52, K_f 1.86.",
   "i = 1 + (n − 1)α;  dimer: i = 1 − α/2.",
   "+ve deviation → min-boiling azeotrope;  −ve → max-boiling.",
-  "0.9% NaCl isotonic with blood."
+  "0.9% NaCl isotonic with blood.",
+  "Humidity = liquid in gas;  smoke/camphor in N₂ = solid in gas;  amalgam = liquid in solid;  alloy = solid in solid.",
+  "K_H depends on gas + solvent + T (same gas, different solvent → different K_H)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

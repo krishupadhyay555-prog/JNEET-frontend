@@ -6,7 +6,7 @@
   "JEE": "Thermodynamics"
  },
  "title": "Chemical Thermodynamics",
- "readMinutes": 20,
+ "readMinutes": 21,
  "summary": [
   "The system is what we study; the surroundings are everything else. An open system exchanges energy and matter, a closed one only energy, an isolated one neither. State functions (U, H, S, G, p, V, T) depend only on the initial and final states; heat and work are path functions.",
   "The first law is energy conservation: ΔU = q + w (chemistry sign convention: work done ON the system and heat given TO the system are positive). Heat at constant volume = ΔU; heat at constant pressure = ΔH.",
@@ -82,6 +82,12 @@
    "formula": "Combustion (1 mol + O₂), atomisation (1 mol → gaseous atoms), sublimation = fusion + vaporisation, ionisation, hydration (gaseous ion → aq), solution = lattice + hydration, neutralisation (strong acid + strong base ≈ −57.1 kJ/mol)",
    "when": "Definition questions.",
    "note": "With a weak acid/base neutralisation is less exothermic (energy is used for ionisation)."
+  },
+  {
+   "name": "Ions in water: precipitation / crystallisation",
+   "formula": "M⁺(aq) + X⁻(aq) → MX(s):   Δ_precipH = Δ_fH°(MX, s) − [Δ_fH°(M⁺, aq) + Δ_fH°(X⁻, aq)];   Δ_fH°(H⁺, aq) = 0 by convention",
+   "when": "A salt forming from (or dissolving into) its aqueous ions; finding Δ_fH of one ion.",
+   "note": "Enthalpy of crystallisation/precipitation is for 1 mol of solid forming from the aqueous ions — it is just Hess's law with Δ_fH of ions."
   },
   {
    "name": "Entropy change",
@@ -167,6 +173,11 @@
    "title": "K from ΔG°",
    "problem": "ΔG° = −11.41 kJ/mol at 298 K. K?",
    "solution": "log K = −ΔG°/(2.303RT) = 11410/(2.303 × 8.314 × 298) ≈ 2 ⇒ K ≈ 100."
+  },
+  {
+   "title": "Δ_fH of an aqueous ion",
+   "problem": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s), ΔH = −65.4 kJ/mol. Given Δ_fH°: AgCl(s) = −127.0, Cl⁻(aq) = −167.2 kJ/mol. Find Δ_fH°(Ag⁺, aq).",
+   "solution": "−65.4 = −127.0 − [x + (−167.2)] ⇒ x = −127.0 + 167.2 + 65.4 = +105.6 kJ/mol."
   }
  ],
  "topics": [
@@ -199,6 +210,10 @@
    "explain": "Standard state: 1 bar, given T (usually 298 K), most stable form (C graphite, O₂ gas, Br₂ liquid). Δ_fH° of an element in its standard state is 0. Diamond and O₃ do not have zero Δ_fH°."
   },
   {
+   "title": "Reading an energy profile",
+   "explain": "ΔH = H(products) − H(reactants) is the vertical gap between the reactant level R and the product level P, not the height of the hump (that hump is the activation energy Ea, which ΔH does not show). Exothermic (ΔH < 0): P lies BELOW R; endothermic (ΔH > 0): P lies above R."
+  },
+  {
    "title": "Lattice and hydration enthalpy",
    "explain": "Dissolving an ionic solid = breaking the lattice (+, endothermic) + hydrating the ions (−, exothermic). Δ_solH = lattice + hydration. If hydration is larger, dissolving is exothermic."
   },
@@ -224,7 +239,9 @@
   "ΔG = ΔH − TΔS;  T_switch = ΔH/ΔS.",
   "ΔG° = −2.303 RT log K;  ΔG° = −nFE°.",
   "R = 8.314 J/(K·mol) = 0.0821 L·atm/(K·mol).",
-  "Extensive: m, V, U, H, S, G.  Intensive: T, p, ρ, molar values."
+  "Extensive: m, V, U, H, S, G.  Intensive: T, p, ρ, molar values.",
+  "Energy profile: ΔH = gap R → P (not the peak);  exothermic ⇒ P below R.",
+  "Precipitation: ΔH = Δ_fH(solid) − ΣΔ_fH(aq ions);  Δ_fH(H⁺, aq) = 0."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

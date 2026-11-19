@@ -6,7 +6,7 @@
   "JEE": "Thermodynamics"
  },
  "title": "Chemical Thermodynamics",
- "readMinutes": 20,
+ "readMinutes": 21,
  "summary": [
   "System = jo hum study kar rahe hain, surroundings = baaki sab. Open system energy aur matter dono exchange karta hai, closed sirf energy, isolated kuch nahi. State functions (U, H, S, G, p, V, T) sirf shuruaat aur ant par depend karte hain; heat aur work path functions hain.",
   "First law energy conservation hai: ΔU = q + w (chemistry sign convention: system PAR kiya gaya kaam aur system KO di gayi heat positive). Constant volume par heat = ΔU, constant pressure par heat = ΔH.",
@@ -82,6 +82,12 @@
    "formula": "Combustion (1 mol + O₂), atomisation (1 mol → gaseous atoms), sublimation = fusion + vaporisation, ionisation, hydration (gaseous ion → aq), solution = lattice + hydration, neutralisation (strong acid + strong base ≈ −57.1 kJ/mol)",
    "when": "Definition wale sawal.",
    "note": "Weak acid/base ke saath neutralisation kam exothermic (ionisation mein energy lagti hai)."
+  },
+  {
+   "name": "Ions in water: precipitation / crystallisation",
+   "formula": "M⁺(aq) + X⁻(aq) → MX(s):   Δ_precipH = Δ_fH°(MX, s) − [Δ_fH°(M⁺, aq) + Δ_fH°(X⁻, aq)];   Δ_fH°(H⁺, aq) = 0 by convention",
+   "when": "Aqueous ions se salt banna (ya ghulna); kisi ek ion ka Δ_fH nikaalna.",
+   "note": "Enthalpy of crystallisation/precipitation = aqueous ions se 1 mol solid banne ki enthalpy — bas ions ke Δ_fH ke saath Hess's law."
   },
   {
    "name": "Entropy change",
@@ -167,6 +173,11 @@
    "title": "ΔG° se K",
    "problem": "298 K par ΔG° = −11.41 kJ/mol. K?",
    "solution": "log K = −ΔG°/(2.303RT) = 11410/(2.303 × 8.314 × 298) ≈ 2 ⇒ K ≈ 100."
+  },
+  {
+   "title": "Aqueous ion ka Δ_fH",
+   "problem": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s), ΔH = −65.4 kJ/mol. Diya hai Δ_fH°: AgCl(s) = −127.0, Cl⁻(aq) = −167.2 kJ/mol. Δ_fH°(Ag⁺, aq) nikaalo.",
+   "solution": "−65.4 = −127.0 − [x + (−167.2)] ⇒ x = −127.0 + 167.2 + 65.4 = +105.6 kJ/mol."
   }
  ],
  "topics": [
@@ -199,6 +210,10 @@
    "explain": "Standard state: 1 bar, diya hua T (aksar 298 K), sabse stable form (C graphite, O₂ gas, Br₂ liquid). Element ki standard state ka Δ_fH° = 0. Diamond, O₃ ka Δ_fH° zero nahi."
   },
   {
+   "title": "Energy profile padhna",
+   "explain": "ΔH = H(products) − H(reactants) reactant level R aur product level P ke beech ka vertical gap hai, hump ki height nahi (hump activation energy Ea hai, ΔH use nahi dikhata). Exothermic (ΔH < 0): P, R se NEECHE; endothermic (ΔH > 0): P, R se upar."
+  },
+  {
    "title": "Lattice aur hydration enthalpy",
    "explain": "Ionic solid ka ghulna = lattice todna (+, endothermic) + ions ka hydration (−, exothermic). Δ_solH = lattice + hydration. Hydration zyada ho to ghulna exothermic."
   },
@@ -224,7 +239,9 @@
   "ΔG = ΔH − TΔS;  T_switch = ΔH/ΔS.",
   "ΔG° = −2.303 RT log K;  ΔG° = −nFE°.",
   "R = 8.314 J/(K·mol) = 0.0821 L·atm/(K·mol).",
-  "Extensive: m, V, U, H, S, G.  Intensive: T, p, ρ, molar values."
+  "Extensive: m, V, U, H, S, G.  Intensive: T, p, ρ, molar values.",
+  "Energy profile: ΔH = R → P ka gap (peak nahi);  exothermic ⇒ P, R se neeche.",
+  "Precipitation: ΔH = Δ_fH(solid) − ΣΔ_fH(aq ions);  Δ_fH(H⁺, aq) = 0."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

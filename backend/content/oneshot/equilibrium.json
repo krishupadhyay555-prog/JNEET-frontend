@@ -22,6 +22,12 @@
    "mistake": "Pure solids and pure liquids (and the solvent in dilute solutions) don't appear in K."
   },
   {
+   "name": "K from rate constants",
+   "formula": "At equilibrium rate_f = rate_b  ⇒  Kc = k_f / k_b",
+   "when": "When forward and backward rate constants are given.",
+   "note": "Then convert with Kp = Kc(RT)^{Δn_g} if Kp is asked."
+  },
+  {
    "name": "Kp and Kc",
    "formula": "Kp = Kc (RT)^{Δn_g}   (R = 0.0821 L·atm/(K·mol), p in atm)",
    "when": "Converting for gaseous equilibria.",
@@ -177,6 +183,11 @@
    "title": "Very dilute strong acid",
    "problem": "pH of 10⁻⁸ M HCl? (not 8!)",
    "solution": "Include H⁺ from water: [H⁺] = x, [OH⁻] = x − 10⁻⁸, x(x − 10⁻⁸) = 10⁻¹⁴ ⇒ x ≈ 1.05 × 10⁻⁷ M ⇒ pH ≈ 6.98 — slightly acidic, below 7."
+  },
+  {
+   "title": "K from rate constants",
+   "problem": "X(g) ⇌ Y(g) + Z(g) at 500 K: k_f = 3.0 × 10⁻³, k_b = 1.5 × 10⁻² (consistent units). Find Kc and Kp (R = 0.0821 L·atm/(K·mol)).",
+   "solution": "Kc = k_f/k_b = 0.20 mol/L. Δn_g = +1 ⇒ Kp = 0.20 × 0.0821 × 500 ≈ 8.2 atm."
   }
  ],
  "topics": [
@@ -235,7 +246,8 @@
   "Hydrolysis: WA+SB pH = 7 + ½pKa + ½logC;  SA+WB pH = 7 − ½pKb − ½logC;  WA+WB pH = 7 + ½(pKa − pKb).",
   "Ksp: AB s²,  AB₂ 4s³,  AB₃ 27s⁴,  A₂B₃ 108s⁵.",
   "pH of 10⁻⁸ M HCl ≈ 6.98 (add water's H⁺).",
-  "Lewis acid = e⁻ pair acceptor (BF₃, AlCl₃);  Lewis base = donor (NH₃)."
+  "Lewis acid = e⁻ pair acceptor (BF₃, AlCl₃);  Lewis base = donor (NH₃).",
+  "Kc = k_f / k_b."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

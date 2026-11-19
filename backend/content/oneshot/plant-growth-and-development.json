@@ -43,14 +43,15 @@
   },
   {
    "name": "Gibberellins",
-   "formula": "GA₃ most common (from Gibberella fujikuroi — bakanae disease of rice);  stem elongation (sugarcane yield up by ~20 t/acre), bolting in cabbage/beet, fruit size (grapes), malting (brewing), seed germination, delayed senescence",
+   "formula": "GA₃ most common (from Gibberella fujikuroi — bakanae disease of rice);  stem elongation (sugarcane yield up by ~20 t/acre), bolting in cabbage/beet, fruit size (grapes), malting (brewing), seed germination, delay fruit senescence (fruits can stay on the tree longer — longer market period)",
    "when": "Gibberellin functions.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Cytokinins",
-   "formula": "kinetin (from autoclaved herring sperm DNA), zeatin (corn kernels, coconut milk);  cell division, new leaves and chloroplasts, lateral shoot growth (overcomes apical dominance), delay leaf senescence (Richmond–Lang effect)",
-   "when": "Cytokinin functions."
+   "formula": "kinetin (from autoclaved herring sperm DNA), zeatin (corn kernels, coconut milk);  cell division, new leaves and chloroplasts, lateral shoot growth (overcomes apical dominance), promote nutrient mobilisation, which delays leaf senescence (Richmond–Lang effect)",
+   "when": "Cytokinin functions.",
+   "note": "Trap: 'nutrient mobilisation delays leaf senescence' = cytokinin; GA delays fruit senescence."
   },
   {
    "name": "Ethylene",
@@ -142,11 +143,11 @@
   "Arithmetic Lₜ = L₀ + rt;  geometric Wₜ = W₀eʳᵗ.",
   "Sigmoid: lag → log → stationary.",
   "Auxin: apical dominance, 2,4-D weedicide.",
-  "GA: bolting, grapes, sugarcane, malting.",
-  "Cytokinin: delays senescence, lateral buds.",
+  "GA: bolting, grapes, sugarcane, malting;  delays FRUIT senescence.",
+  "Cytokinin: nutrient mobilisation → delays LEAF senescence;  lateral buds.",
   "Ethylene: ripening, pineapple flowering, ethephon.",
   "ABA: stomata close, dormancy, stress hormone.",
   "Vernalisation = cold;  photoperiodism = day length."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

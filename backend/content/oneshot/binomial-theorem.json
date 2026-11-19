@@ -5,7 +5,7 @@
   "JEE": "Binomial Theorem"
  },
  "title": "Binomial Theorem",
- "readMinutes": 12,
+ "readMinutes": 13,
  "summary": [
   "For a positive integer n, (x + a)ⁿ = Σ C(n, r) xⁿ⁻ʳ aʳ, with n + 1 terms. The general term Tᵣ₊₁ = C(n, r) xⁿ⁻ʳ aʳ is the key to almost every question.",
   "Typical questions: a specific term or coefficient, the term independent of x, the middle term(s), the greatest coefficient, and sums of binomial coefficients.",
@@ -51,6 +51,12 @@
    "when": "Building Pascal's triangle."
   },
   {
+   "name": "Hockey-stick identity",
+   "formula": "C(r, r) + C(r + 1, r) + C(r + 2, r) + … + C(n, r) = C(n + 1, r + 1)",
+   "when": "Sum of the same coefficient C(k, r) over many powers k — e.g. coefficient of xʳ in (1 + x)ʳ + (1 + x)ʳ⁺¹ + … + (1 + x)ⁿ.",
+   "note": "Comes from applying Pascal's rule repeatedly. Terms with k < r contribute 0."
+  },
+  {
    "name": "Greatest coefficient",
    "formula": "n even: C(n, n/2);  n odd: C(n, (n − 1)/2) = C(n, (n + 1)/2)",
    "when": "Largest binomial coefficient."
@@ -64,6 +70,12 @@
    "name": "Weighted sum",
    "formula": "Σ r C(n, r) = n 2ⁿ⁻¹",
    "when": "Sums with r multiplied in (differentiate (1 + x)ⁿ)."
+  },
+  {
+   "name": "Coefficient in Σ k(1 + x)ᵏ",
+   "formula": "k·C(k, r) = r·C(k, r) + (r + 1)·C(k, r + 1)  ⇒  Σₖ₌₁ⁿ k·C(k, r) = r·C(n + 1, r + 1) + (r + 1)·C(n + 1, r + 2)",
+   "when": "Coefficient of xʳ in (1 + x) + 2(1 + x)² + … + n(1 + x)ⁿ.",
+   "note": "Alternative: treat the series as an AGP, sum it in closed form, then read off the coefficient."
   },
   {
    "name": "Number of terms",
@@ -101,6 +113,11 @@
    "title": "Number of terms",
    "problem": "How many terms are there in (2x − 3y)¹⁵?",
    "solution": "n + 1 = 16."
+  },
+  {
+   "title": "Weighted hockey-stick",
+   "problem": "Coefficient of x² in (1 + x) + 2(1 + x)² + 3(1 + x)³ + 4(1 + x)⁴?",
+   "solution": "Need Σ k·C(k, 2) for k = 2 to 4. Split k·C(k, 2) = 2C(k, 2) + 3C(k, 3), then hockey-stick: 2C(5, 3) + 3C(5, 4) = 20 + 15 = 35. Check directly: 2·1 + 3·3 + 4·6 = 35."
   }
  ],
  "topics": [
@@ -135,7 +152,8 @@
   "ΣC = 2ⁿ;  odd sum = even sum = 2ⁿ⁻¹.",
   "ΣC² = C(2n, n);  Σ rC(n, r) = n2ⁿ⁻¹.",
   "Constant term: power of x = 0.",
-  "Sum of coefficients: put x = 1."
+  "Sum of coefficients: put x = 1.",
+  "Hockey-stick: C(r, r) + C(r + 1, r) + … + C(n, r) = C(n + 1, r + 1)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

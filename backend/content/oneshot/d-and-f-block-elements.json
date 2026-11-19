@@ -6,7 +6,7 @@
   "JEE": "d- and f-Block Elements"
  },
  "title": "d- and f-Block Elements",
- "readMinutes": 14,
+ "readMinutes": 15,
  "summary": [
   "Transition (d-block) elements have partly filled d orbitals in the atom or a common ion: configuration (n − 1)d¹⁻¹⁰ ns¹⁻². Zn, Cd and Hg (d¹⁰ in all states) are not counted as true transition elements.",
   "Typical properties: high melting points (strong metallic bonding from d electrons), variable oxidation states, coloured ions (d–d transitions), paramagnetism (unpaired electrons), catalytic activity, complex formation, interstitial compounds and alloys.",
@@ -80,6 +80,12 @@
    "name": "Lanthanoid oxidation states",
    "formula": "+3 common;  Ce⁴⁺ strong oxidant (→ Ce³⁺);  Eu²⁺, Yb²⁺ reductants (→ +3)",
    "when": "Stability of unusual states."
+  },
+  {
+   "name": "Ln³⁺ configuration",
+   "formula": "Ln³⁺ = [Xe]4fⁿ with n = Z − 57:  La³⁺ 4f⁰, Ce³⁺ 4f¹, Nd³⁺ 4f³, Gd³⁺ 4f⁷, Lu³⁺ 4f¹⁴",
+   "when": "Unpaired electrons / colour of lanthanoid ions.",
+   "note": "Unpaired = n for n ≤ 7, else 14 − n. Don't mix with d-ions: Cr²⁺ (3d⁴) has 4 unpaired, Nd³⁺ (4f³) only 3."
   }
  ],
  "examples": [
@@ -126,7 +132,7 @@
   },
   {
    "title": "Physical properties",
-   "explain": "Hard, high melting and boiling points, good conductors. Melting point peaks in the middle of the series (more unpaired d electrons, stronger bonding); Mn and Zn are anomalously low. Atomic radii change little across the series."
+   "explain": "Hard, high melting and boiling points, good conductors. Melting point peaks in the middle of the series (more unpaired d electrons, stronger bonding); Mn and Zn are anomalously low. Atomic radii change little across the series. Magnetism: unpaired electrons give paramagnetism; ferromagnetism (Fe, Co, Ni) is an extreme form of paramagnetism."
   },
   {
    "title": "Ionisation enthalpies and oxidation states",
@@ -134,7 +140,7 @@
   },
   {
    "title": "Catalytic properties",
-   "explain": "Variable oxidation states and the ability to adsorb reactants make transition metals good catalysts: V₂O₅ (contact process), Fe (Haber process), Ni (hydrogenation), MnO₂ (decomposition of KClO₃)."
+   "explain": "Variable oxidation states and the ability to adsorb reactants make transition metals good catalysts: V₂O₅ (contact process), Fe (Haber process), Ni (hydrogenation), MnO₂ (decomposition of KClO₃). More catalysts: Ziegler–Natta = TiCl₄ with Al(CH₃)₃ (polythene), Wacker process = PdCl₂ (ethene → ethanal), Wilkinson's catalyst = [RhCl(PPh₃)₃] (hydrogenation of alkenes)."
   },
   {
    "title": "Interstitial compounds and alloys",
@@ -156,7 +162,10 @@
   "MnO₄⁻ → Mn²⁺ (5e⁻, acid);  Cr₂O₇²⁻ → 2Cr³⁺ (6e⁻).",
   "CrO₄²⁻ yellow ⇌ Cr₂O₇²⁻ orange (pH, not redox).",
   "Lanthanoid contraction → Zr ≈ Hf.",
-  "Ce⁴⁺ oxidant;  Eu²⁺ reductant."
+  "Ce⁴⁺ oxidant;  Eu²⁺ reductant.",
+  "Ferromagnetism = extreme form of paramagnetism.",
+  "Ziegler–Natta TiCl₄ + Al(CH₃)₃;  Wacker PdCl₂;  Wilkinson [RhCl(PPh₃)₃];  Haber Fe.",
+  "Ln³⁺ = 4f^(Z−57):  Nd³⁺ 4f³ (3 unpaired), Gd³⁺ 4f⁷ (7)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

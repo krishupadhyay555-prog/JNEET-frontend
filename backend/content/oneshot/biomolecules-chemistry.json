@@ -74,7 +74,7 @@
   },
   {
    "name": "Vitamins and deficiencies",
-   "formula": "fat-soluble A, D, E, K;  water-soluble B group and C.  A → night blindness;  B₁ → beri-beri;  B₁₂ → pernicious anaemia;  C → scurvy;  D → rickets;  K → delayed blood clotting",
+   "formula": "fat-soluble A, D, E, K;  water-soluble B group and C.  A → night blindness;  B₁ → beri-beri;  B₂ → cheilosis (cracked lips/mouth corners);  B₆ → convulsions;  B₁₂ → pernicious anaemia;  C → scurvy;  D → rickets;  K → delayed blood clotting",
    "when": "Matching vitamins to diseases.",
    "tag": "PYQ favourite",
    "note": "B₁₂ is water-soluble but can be stored in the liver."
@@ -119,7 +119,7 @@
   },
   {
    "title": "Fructose",
-   "explain": "A ketohexose, laevorotatory; it forms a five-membered (furanose) ring. It reduces Tollens' and Fehling's reagents because in alkaline medium it isomerises to an aldose."
+   "explain": "A ketohexose, laevorotatory; it forms a five-membered (furanose) ring. It reduces Tollens' and Fehling's reagents because in alkaline medium it isomerises to an aldose. Found in fruits and honey; it exists in α and β anomeric forms (α-D- and β-D-fructofuranose)."
   },
   {
    "title": "Amino acids",
@@ -149,7 +149,9 @@
   "n amino acids → n − 1 peptide bonds.",
   "A=T (2 H-bonds), G≡C (3);  RNA has U.",
   "A, D, E, K fat-soluble;  B, C water-soluble.",
-  "C → scurvy;  D → rickets;  B₁ → beri-beri;  A → night blindness."
+  "C → scurvy;  D → rickets;  B₁ → beri-beri;  A → night blindness.",
+  "B₂ → cheilosis;  B₆ → convulsions;  B₁₂ → pernicious anaemia.",
+  "Fructose: keto sugar, laevorotatory, in honey/fruits, α/β anomers."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -5,7 +5,7 @@
   "NEET": "Biomolecules"
  },
  "title": "Biomolecules (Biology)",
- "readMinutes": 13,
+ "readMinutes": 14,
  "summary": [
   "Chemical analysis of living tissue gives an acid-soluble pool (micromolecules, molecular weight below ~1000 Da) and an acid-insoluble fraction (macromolecules — proteins, nucleic acids, polysaccharides; lipids appear here because membranes break into vesicles).",
   "Proteins are polymers of amino acids (heteropolymers); polysaccharides are polymers of sugars; nucleic acids are polymers of nucleotides.",
@@ -36,6 +36,12 @@
    "when": "Nucleic acid building blocks."
   },
   {
+   "name": "Base → nucleoside → nucleotide names",
+   "formula": "adenine (base) → adenosine (nucleoside = base + sugar) → adenylic acid (nucleotide = nucleoside + phosphate);  guanine → guanosine → guanylic acid;  cytosine → cytidine → cytidylic acid;  uracil → uridine → uridylic acid;  thymine → thymidine → thymidylic acid",
+   "when": "Match-the-list naming questions.",
+   "note": "Don't confuse adenine/adenosine with alanine — alanine is an amino acid (like glycine and serine)."
+  },
+  {
    "name": "Protein structure levels",
    "formula": "primary (sequence; N-terminal to C-terminal);  secondary (α-helix — right-handed);  tertiary (3-D folding);  quaternary (subunits — haemoglobin: 2α + 2β)",
    "when": "Protein structure.",
@@ -55,6 +61,12 @@
    "name": "Enzyme classes",
    "formula": "1 oxidoreductases/dehydrogenases;  2 transferases;  3 hydrolases;  4 lyases;  5 isomerases;  6 ligases",
    "when": "Classifying enzymes.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Enzyme class reactions",
+   "formula": "oxidoreductases: S reduced + S′ oxidised → S oxidised + S′ reduced;  transferases: S–G + S′ → S + S′–G (G = a group other than hydrogen);  hydrolases: break ester, ether, peptide, glycosidic, C–C, C–halide or P–N bonds by adding water;  lyases: remove groups without hydrolysis, leaving a double bond (X–C–C–Y → X–Y + C=C);  isomerases: interconvert optical, geometric or positional isomers;  ligases: join two compounds (C–O, C–S, C–N, P–O bonds)",
+   "when": "Naming the class from a given reaction.",
    "tag": "PYQ favourite"
   },
   {
@@ -144,7 +156,10 @@
   "Carbonic anhydrase fastest.",
   "Haemoglobin: 2α + 2β.",
   "Haem — prosthetic;  NAD (niacin) — coenzyme;  Zn²⁺ — carboxypeptidase.",
-  "Starch holds I₂ (blue); cellulose doesn't."
+  "Starch holds I₂ (blue); cellulose doesn't.",
+  "Reductionist biology = physico-chemical approach to study and understand living organisms.",
+  "Transferase: S–G + S′ → S + S′–G;  lyase leaves a double bond;  ligase joins two molecules.",
+  "Adenosine = nucleoside;  adenylic acid = nucleotide;  adenine = base;  alanine = amino acid."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

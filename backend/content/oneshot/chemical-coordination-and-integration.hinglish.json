@@ -64,7 +64,7 @@
   },
   {
    "name": "Adrenal medulla",
-   "formula": "adrenaline (epinephrine) and noradrenaline — emergency hormones (fight or flight): alertness, pupil dilation, piloerection, sweating, increased heart rate, breathing rate, glycogenolysis",
+   "formula": "adrenaline (epinephrine) and noradrenaline — emergency hormones (fight or flight): alertness, pupil dilation, piloerection, sweating, increased heart rate, strength of heart contraction and breathing rate;  glycogenolysis → raised blood glucose (hyperglycaemic);  also breakdown of lipids and proteins",
    "when": "Catecholamines."
   },
   {
@@ -156,7 +156,8 @@
   "Glomerulosa → aldosterone;  fasciculata → cortisol;  reticularis → androgens.",
   "α → glucagon;  β → insulin.",
   "Heart → ANF;  kidney → erythropoietin.",
-  "Graves = hyperthyroid;  cretinism = hypothyroid in pregnancy;  Addison = low corticoids."
+  "Graves = hyperthyroid;  cretinism = hypothyroid in pregnancy;  Addison = low corticoids.",
+  "Adrenaline: pupil DILATION, piloerection, ↑ heart rate + strength of contraction, hyperglycaemic."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -6,7 +6,7 @@
   "JEE": "Haloalkanes and Haloarenes"
  },
  "title": "Haloalkanes and Haloarenes",
- "readMinutes": 14,
+ "readMinutes": 15,
  "summary": [
   "In haloalkanes the C–X bond is polar (Cδ⁺–Xδ⁻), so the carbon is attacked by nucleophiles. Reactivity of R–X: R–I > R–Br > R–Cl > R–F (weaker bond, better leaving group).",
   "Nucleophilic substitution goes by SN2 (one step, backside attack, inversion, favoured by 1° halides) or SN1 (carbocation, racemisation, favoured by 3° halides and polar protic solvents).",
@@ -42,6 +42,12 @@
    "when": "Primary halides with strong nucleophiles in aprotic solvents.",
    "tag": "PYQ favourite",
    "note": "Steric hindrance stops SN2 at 3° carbons."
+  },
+  {
+   "name": "Nucleophilicity in a polar protic solvent",
+   "formula": "I⁻ > Br⁻ > Cl⁻ > F⁻;   RO⁻ > C₆H₅O⁻;   e.g. towards CH₃Br in methanol: I⁻ > C₂H₅O⁻ > C₆H₅O⁻ > F⁻",
+   "when": "Ranking nucleophiles in water/alcohols (SN2 rate).",
+   "note": "Small, hard anions (F⁻) are held tightly by H-bonding to the solvent, so they react slowly; phenoxide is weaker than ethoxide because its charge is delocalised into the ring. In aprotic solvents (DMSO, acetone) the halide order reverses: F⁻ > Cl⁻ > Br⁻ > I⁻."
   },
   {
    "name": "SN1 mechanism",
@@ -125,7 +131,7 @@
   },
   {
    "title": "Factors deciding SN1 vs SN2",
-   "explain": "Substrate: 1° → SN2, 3° → SN1, 2° → both. Strong nucleophiles and aprotic solvents favour SN2; weak nucleophiles and polar protic solvents (water, alcohols) favour SN1. Benzylic and allylic halides react fast by SN1 (resonance-stabilised carbocations)."
+   "explain": "Substrate: 1° → SN2, 3° → SN1, 2° → both. Strong nucleophiles and aprotic solvents favour SN2; weak nucleophiles and polar protic solvents (water, alcohols) favour SN1. Benzylic and allylic halides react fast by SN1 (resonance-stabilised carbocations). Bridgehead halides (1-bromobicyclo[2.2.2]octane, 1-bromonorbornane) react extremely slowly by SN1 — the rigid cage cannot let the carbocation become planar; the more strained norbornyl is the slowest. At the other end, (C₆H₅)₃C⁺ is very stable (three rings share the charge), so trityl halides are fastest."
   },
   {
    "title": "Optical activity basics",
@@ -147,7 +153,9 @@
   "KCN → RCN;  AgCN → RNC;  KNO₂ → RONO;  AgNO₂ → RNO₂.",
   "Finkelstein (NaI/acetone);  Swarts (AgF);  Sandmeyer (CuX).",
   "Haloarenes: o/p-directing, deactivating.",
-  "CHCl₃ in light → phosgene."
+  "CHCl₃ in light → phosgene.",
+  "Protic solvent: I⁻ > C₂H₅O⁻ > C₆H₅O⁻ > F⁻ (F⁻ most solvated).",
+  "SN1: Ph₃C–X fastest;  bridgehead halides very slow (no planar carbocation)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -60,7 +60,8 @@
   {
    "name": "Pollinating agents",
    "formula": "wind (light non-sticky pollen, feathery stigma, one ovule — grasses, maize tassels);  water (Vallisneria, Hydrilla, Zostera — water hyacinth and water lily are insect/wind pollinated);  insects (large colourful, fragrant flowers, nectar)",
-   "when": "Pollination adaptations."
+   "when": "Pollination adaptations.",
+   "note": "Wind- and water-pollinated flowers are not very colourful and produce no nectar. Abiotic pollination is a matter of chance, so these flowers make enormous amounts of pollen compared with the number of ovules."
   },
   {
    "name": "Outbreeding devices",
@@ -137,7 +138,7 @@
   },
   {
    "title": "Embryo development",
-   "explain": "The zygote divides after some endosperm forms. Dicot embryo: embryonal axis with two cotyledons, epicotyl (plumule) and hypocotyl (radicle). Monocot embryo: one cotyledon (scutellum), coleoptile around the shoot apex and coleorrhiza around the radicle."
+   "explain": "The zygote divides after some endosperm forms. Dicot embryo: embryonal axis with two cotyledons, epicotyl (plumule) and hypocotyl (radicle). Monocot embryo: one cotyledon (scutellum), coleoptile around the shoot apex and coleorrhiza around the radicle. In the grass embryo, the scutellum is the single cotyledon and the epiblast is a rudimentary cotyledon."
   },
   {
    "title": "Seeds",
@@ -157,7 +158,9 @@
   "Vallisneria, Hydrilla, Zostera — water.",
   "Papaya (dioecious) prevents autogamy + geitonogamy.",
   "Coconut water = free-nuclear endosperm.",
-  "Apomixis: seed without fertilisation;  polyembryony: citrus, mango."
+  "Apomixis: seed without fertilisation;  polyembryony: citrus, mango.",
+  "Wind/water-pollinated flowers: not colourful, no nectar, enormous pollen output.",
+  "Grass embryo: scutellum = cotyledon;  epiblast = rudimentary cotyledon."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

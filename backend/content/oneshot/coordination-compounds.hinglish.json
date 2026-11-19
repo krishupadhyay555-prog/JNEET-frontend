@@ -146,6 +146,10 @@
   {
    "title": "Importance and applications",
    "explain": "Haemoglobin (Fe), chlorophyll (Mg), vitamin B₁₂ (Co) coordination compounds hain. EDTA paani ki hardness naapne aur lead poisoning ke ilaaj mein; cis-platin anticancer drug; complexes metallurgy (CN⁻ se gold extraction) aur analysis (dimethylglyoxime se Ni²⁺) mein."
+  },
+  {
+   "title": "Bahut stable complex metal ion ko chhupa leta hai",
+   "explain": "Complex bahut stable ho to itna kam free metal ion bachta hai ki uske normal tests fail ho jaate hain. Excess CN⁻ ke saath Cu²⁺ cyano complex deta hai — asal mein Cu(I): 2Cu²⁺ + 10CN⁻ → 2[Cu(CN)₄]³⁻ + (CN)₂ (NCERT ise K₂[Cu(CN)₄] likhta hai). Dono tarah H₂S pass karne par CuS precipitate NAHI aata. Saath hi Cu dilute HCl se H₂ nahi nikaalta (E°(Cu²⁺/Cu) = +0.34 V)."
   }
  ],
  "ratta": [
@@ -155,7 +159,8 @@
   "d²sp³ inner, low spin;  sp³d² outer, high spin;  dsp² square planar.",
   "MA₄B₂: cis/trans;  MA₃B₃: fac/mer;  [M(AA)₃]: optical.",
   "Anionic complex → -ate name.",
-  "Cis-platin anticancer;  EDTA hexadentate."
+  "Cis-platin anticancer;  EDTA hexadentate.",
+  "CuSO₄ + excess KCN → stable cyano complex [Cu(CN)₄]³⁻ → H₂S se CuS nahi."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

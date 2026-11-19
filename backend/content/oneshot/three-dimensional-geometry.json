@@ -5,7 +5,7 @@
   "JEE": "Three Dimensional Geometry"
  },
  "title": "Three Dimensional Geometry",
- "readMinutes": 16,
+ "readMinutes": 17,
  "summary": [
   "Points in space have coordinates (x, y, z). Direction cosines (l, m, n) satisfy l² + m² + n² = 1; direction ratios are any numbers proportional to them.",
   "A line is written in vector form r = a + λb or Cartesian form (x − x₁)/a = (y − y₁)/b = (z − z₁)/c. Skew lines neither meet nor are parallel; their shortest distance is a JEE favourite.",
@@ -75,6 +75,12 @@
    "name": "Foot of perpendicular and image in a plane",
    "formula": "(x − x₁)/a = (y − y₁)/b = (z − z₁)/c = −(ax₁ + by₁ + cz₁ + d)/(a² + b² + c²);  image: multiply the right side by 2",
    "when": "Projection and reflection."
+  },
+  {
+   "name": "Foot of perpendicular and image in a LINE",
+   "formula": "line r = a + λb: general point M = a + λb;  solve (M − P) · b = 0 for λ;  foot = M;  image P′ = 2M − P;  distance = |PM|",
+   "when": "Projection or reflection of a point in a line (the plane formula above does not apply).",
+   "mistake": "Read direction ratios from the form (x − x₁)/a: a term like (7 − z)/2 = (z − 7)/(−2) has direction ratio −2, not 2."
   }
  ],
  "examples": [
@@ -107,6 +113,11 @@
    "title": "Plane through three points",
    "problem": "Find the plane through (1, 0, 0), (0, 2, 0) and (0, 0, 3).",
    "solution": "Intercept form: x/1 + y/2 + z/3 = 1 ⇒ 6x + 3y + 2z = 6."
+  },
+  {
+   "title": "Image of a point in a line",
+   "problem": "Image of P(4, 0, 2) in the line (x − 1)/2 = (y + 1)/1 = (3 − z)/2?",
+   "solution": "Direction b = (2, 1, −2) (note the −2). M = (1 + 2λ, −1 + λ, 3 − 2λ). PM · b = 2(2λ − 3) + (λ − 1) − 2(1 − 2λ) = 9λ − 9 = 0 ⇒ λ = 1, foot M = (3, 0, 1). Image = 2M − P = (2, 0, 0)."
   }
  ],
  "topics": [
@@ -141,7 +152,8 @@
   "SD = |(a₂ − a₁)·(b₁ × b₂)|/|b₁ × b₂|.",
   "Point–plane distance |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²).",
   "Line–plane: sin φ = |b·n|/(|b||n|).",
-  "Coplanar lines: (a₂ − a₁)·(b₁ × b₂) = 0."
+  "Coplanar lines: (a₂ − a₁)·(b₁ × b₂) = 0.",
+  "Image in a line: M = a + λb with PM·b = 0;  image = 2M − P."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -5,7 +5,7 @@
   "NEET": "Principles of Inheritance and Variation"
  },
  "title": "Principles of Inheritance and Variation",
- "readMinutes": 16,
+ "readMinutes": 17,
  "summary": [
   "Mendel (1856–1863, garden pea) proposed the laws of inheritance: dominance, segregation and independent assortment. Monohybrid F₂ ratio 3:1 (phenotype), 1:2:1 (genotype); dihybrid F₂ 9:3:3:1.",
   "Deviations from Mendel: incomplete dominance (snapdragon 1:2:1), co-dominance (ABO blood groups), multiple alleles, pleiotropy and polygenic inheritance (skin colour).",
@@ -64,7 +64,7 @@
   },
   {
    "name": "X-linked recessive",
-   "formula": "haemophilia, colour blindness;  carrier mother (XᴴXʰ) × normal father → 50% sons affected, 50% daughters carriers",
+   "formula": "haemophilia, colour blindness;  carrier mother (XᴴXʰ) × normal father → 50% sons affected, 50% daughters carriers;  carrier mother × affected father (XʰY) → daughters 1/2 carriers + 1/2 affected, sons 1/2 normal + 1/2 affected",
    "when": "Criss-cross inheritance.",
    "note": "Affected females are rare — they need two copies of the recessive allele."
   },
@@ -116,6 +116,11 @@
    "title": "Why Drosophila?",
    "problem": "Why did Morgan choose Drosophila?",
    "solution": "Grows on simple synthetic medium, completes its life cycle in about two weeks, a single mating gives many offspring, males and females are easy to tell apart, and it has many hereditary variations visible under low-power microscopes."
+  },
+  {
+   "title": "Affected father × carrier mother",
+   "problem": "A colour-blind man marries a woman who is a carrier. What fraction of all their children is expected to be (a) colour blind, (b) normal-vision carrier daughters?",
+   "solution": "XᶜY × XXᶜ → daughters: XXᶜ (carrier) or XᶜXᶜ (colour blind); sons: XY (normal) or XᶜY (colour blind) — each 1/2 within its sex. Of all children: (a) colour blind = 1/4 daughters + 1/4 sons = 1/2; (b) normal carrier daughters = 1/4."
   }
  ],
  "topics": [
@@ -153,5 +158,5 @@
   "Sickle-cell: GAG → GUG, Glu → Val.",
   "Down 21 trisomy;  Klinefelter XXY;  Turner XO."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -49,6 +49,12 @@
    "when": "Halogenation, peroxide effect."
   },
   {
+   "name": "C–H bond dissociation energy",
+   "formula": "sp C–H > sp² C–H > sp³ C–H  (more s-character → shorter, stronger bond);  allylic/benzylic C–H weakest (gives a resonance-stabilised radical)",
+   "when": "Ranking C–H bond strengths.",
+   "note": "Weaker C–H ⇔ more stable radical formed (same order as free-radical stability)."
+  },
+  {
    "name": "Carbanion stability",
    "formula": "CH₃⁻ > 1° > 2° > 3° (opposite of carbocations); stabilised by −I/−R groups and sp character",
    "when": "Acidic C–H, carbanion reactions."
@@ -145,7 +151,7 @@
   },
   {
    "title": "Qualitative analysis",
-   "explain": "Sodium fusion (Lassaigne) converts N, S, X to NaCN, Na₂S, NaX. N: Prussian blue with FeSO₄ + FeCl₃. S: black PbS with lead acetate, violet with nitroprusside. Halogens: AgNO₃ after boiling with HNO₃ (white AgCl soluble in NH₃, pale-yellow AgBr, yellow AgI)."
+   "explain": "Sodium fusion (Lassaigne) converts N, S, X to NaCN, Na₂S, NaX. N: Prussian blue with FeSO₄ + FeCl₃. S: black PbS with lead acetate, violet with nitroprusside. Halogens: AgNO₃ after boiling with HNO₃ (white AgCl soluble in NH₃, pale-yellow AgBr, yellow AgI). Br vs I (layer test): sodium-fusion extract + chlorine water + CHCl₃/CCl₄ — Cl₂ frees the halogen into the organic layer: violet = iodine, orange/brown = bromine."
   }
  ],
  "ratta": [
@@ -155,7 +161,9 @@
   "Carbanion: methyl > 1° > 2° > 3°.",
   "−I: NO₂ > CN > F > Cl > Br > I;  +I: tert-butyl > isopropyl > ethyl > methyl.",
   "Kjeldahl % N = 1.4 NV/w (not for nitro/azo/ring N).",
-  "N + S → blood red;  N → Prussian blue."
+  "N + S → blood red;  N → Prussian blue.",
+  "C–H BDE: sp > sp² > sp³;  allylic/benzylic C–H weakest.",
+  "Layer test (Cl₂ water + CHCl₃): violet = I, orange/brown = Br."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

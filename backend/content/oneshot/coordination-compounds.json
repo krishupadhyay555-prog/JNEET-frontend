@@ -146,6 +146,10 @@
   {
    "title": "Importance and applications",
    "explain": "Haemoglobin (Fe), chlorophyll (Mg), vitamin B₁₂ (Co) are coordination compounds. EDTA is used to measure water hardness and treat lead poisoning; cis-platin is an anticancer drug; complexes are used in metallurgy (gold extraction with CN⁻) and analysis (Ni²⁺ with dimethylglyoxime)."
+  },
+  {
+   "title": "Very stable complexes hide the metal ion",
+   "explain": "If a complex is very stable, so little free metal ion is left that its usual tests fail. Cu²⁺ with excess CN⁻ gives a cyano complex — actually Cu(I): 2Cu²⁺ + 10CN⁻ → 2[Cu(CN)₄]³⁻ + (CN)₂ (NCERT writes it as K₂[Cu(CN)₄]). Either way H₂S then gives NO CuS precipitate. Also, Cu does not liberate H₂ from dilute HCl (E°(Cu²⁺/Cu) = +0.34 V)."
   }
  ],
  "ratta": [
@@ -155,7 +159,8 @@
   "d²sp³ inner, low spin;  sp³d² outer, high spin;  dsp² square planar.",
   "MA₄B₂: cis/trans;  MA₃B₃: fac/mer;  [M(AA)₃]: optical.",
   "Anionic complex → -ate name.",
-  "Cis-platin anticancer;  EDTA hexadentate."
+  "Cis-platin anticancer;  EDTA hexadentate.",
+  "CuSO₄ + excess KCN → stable cyano complex [Cu(CN)₄]³⁻ → no CuS with H₂S."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

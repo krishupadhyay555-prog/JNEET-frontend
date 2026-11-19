@@ -145,7 +145,7 @@
   },
   {
    "title": "Gestation",
-   "explain": "Human pregnancy lasts about 9 months. By the end of the second trimester the foetus has fine hair, eyelids separate and eyelashes form."
+   "explain": "Human pregnancy lasts about 9 months. By the end of the second trimester the foetus has fine hair, eyelids separate and eyelashes form. The first foetal movements and hair on the head usually appear in the fifth month."
   }
  ],
  "ratta": [
@@ -155,7 +155,8 @@
   "Ovulation ~day 14 (LH surge);  corpus luteum → progesterone.",
   "Fertilisation in ampulla;  implantation as blastocyst.",
   "hCG, hPL, relaxin — only in pregnancy.",
-  "Oxytocin → parturition;  colostrum → IgA."
+  "Oxytocin → parturition;  colostrum → IgA.",
+  "Pregnancy: heart after 1 month;  limbs/digits by end of month 2;  major organs by 12 weeks;  movements + head hair in month 5;  body hair, eyelids, eyelashes by 24 weeks."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

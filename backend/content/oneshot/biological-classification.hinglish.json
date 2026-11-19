@@ -5,7 +5,7 @@
   "NEET": "Biological Classification"
  },
  "title": "Biological Classification",
- "readMinutes": 13,
+ "readMinutes": 14,
  "summary": [
   "R.H. Whittaker (1969) ne five kingdom diye — Monera, Protista, Fungi, Plantae aur Animalia — cell structure, body organisation, nutrition ka tarika, reproduction aur phylogenetic relationships ke base par.",
   "Monera prokaryotes hain (bacteria, cyanobacteria, archaebacteria, mycoplasma). Protista unicellular eukaryotes (chrysophytes, dinoflagellates, euglenoids, slime moulds, protozoans).",
@@ -18,6 +18,12 @@
    "formula": "Linnaeus: Plantae + Animalia;  Whittaker (1969): Monera, Protista, Fungi, Plantae, Animalia",
    "when": "Classification ka itihaas.",
    "mistake": "Two-kingdom grouping ne prokaryotes ko eukaryotes ke saath aur unicellular ko multicellular ke saath rakh diya tha — isliye galat tha."
+  },
+  {
+   "name": "Five-kingdom comparison (Whittaker)",
+   "formula": "Monera: prokaryotic, non-cellulosic wall (polysaccharide + amino acid), cellular body, autotrophic or heterotrophic;  Protista: eukaryotic, wall in some, cellular (unicellular) body, autotrophic or heterotrophic;  Fungi: eukaryotic, wall of chitin (no cellulose), multicellular/loose tissue, heterotrophic (saprophytic/parasitic);  Plantae: eukaryotic, cellulose wall, tissue/organ level, autotrophic;  Animalia: eukaryotic, no cell wall, tissue/organ/organ-system level, heterotrophic (holozoic)",
+   "when": "Kingdoms ko body organisation ki complexity ke order mein lagaana (Monera → Protista → Fungi → Plantae → Animalia).",
+   "tag": "PYQ favourite"
   },
   {
    "name": "Bacterial shapes",
@@ -145,7 +151,9 @@
   "Diatoms → diatomaceous earth;  Gonyaulax → red tide.",
   "Phyco: aseptate;  Asco: ascus;  Basidio: no asexual spores;  Deutero: only asexual.",
   "TMV: Ivanowsky;  viroid: Diener 1971;  prion → mad cow.",
-  "Lichen = alga + fungus; pollution indicator."
+  "Lichen = alga + fungus; pollution indicator.",
+  "N₂-fixers: Nostoc, Anabaena, Oscillatoria (cyanobacteria), Azotobacter (free-living), Rhizobium (symbiotic);  Volvox (green alga) cannot fix N₂.",
+  "Body organisation: Monera → Protista → Fungi → Plantae → Animalia."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

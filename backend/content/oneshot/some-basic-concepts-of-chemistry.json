@@ -145,7 +145,7 @@
   },
   {
    "title": "Dalton's atomic theory",
-   "explain": "Matter is made of indivisible atoms; atoms of one element are identical; compounds form by atoms combining in fixed ratios; reactions rearrange atoms. Later work showed atoms are divisible and isotopes exist."
+   "explain": "Matter is made of indivisible atoms; atoms of one element are identical; compounds form by atoms combining in fixed ratios; reactions rearrange atoms. Later work showed atoms are divisible and isotopes exist. It explained the laws of conservation of mass, constant proportions and multiple proportions, but it could NOT explain Gay-Lussac's law of gaseous volumes — that was explained later by Avogadro (equal volumes contain equal numbers of molecules)."
   },
   {
    "title": "Measurement and significant figures",
@@ -167,7 +167,8 @@
   "M = mol/L;  m = mol/kg solvent;  x_A + x_B = 1.",
   "M₁V₁ = M₂V₂;  M = 10dw/M_solute.",
   "Molality and mole fraction don't change with T.",
-  "Laws: Lavoisier, Proust, Dalton, Gay-Lussac, Avogadro."
+  "Laws: Lavoisier, Proust, Dalton, Gay-Lussac, Avogadro.",
+  "Dalton's theory could NOT explain Gay-Lussac's law of gaseous volumes (Avogadro did)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

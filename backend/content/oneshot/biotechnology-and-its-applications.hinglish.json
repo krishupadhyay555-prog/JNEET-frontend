@@ -109,7 +109,7 @@
   },
   {
    "title": "Genetically engineered insulin",
-   "explain": "Recombinant insulin se pehle kaate gaye cattle aur pigs ka insulin kuch patients mein allergy karta tha. Recombinant insulin bacteria mein banta hai aur human insulin jaisa hi hai."
+   "explain": "Recombinant insulin se pehle kaate gaye cattle aur pigs ka insulin kuch patients mein allergy karta tha. Recombinant insulin bacteria mein banta hai aur human insulin jaisa hi hai. Insulin ek protein hai, muh se lene par GI tract mein digest ho jaayega — isliye diabetics ko injection se diya jaata hai."
   },
   {
    "title": "Recombinant therapeutics",
@@ -131,7 +131,8 @@
   "Gene therapy 1990: ADA deficiency, retroviral vector.",
   "Rosie 1997: human α-lactalbumin, 2.4 g/L.",
   "GEAC approves GM organisms.",
-  "Basmati, turmeric, neem — biopiracy cases."
+  "Basmati, turmeric, neem — biopiracy cases.",
+  "Insulin is not given orally: it is a protein and would be digested in the GI tract → injected."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

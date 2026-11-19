@@ -6,7 +6,7 @@
   "JEE": "d- and f-Block Elements"
  },
  "title": "d- and f-Block Elements",
- "readMinutes": 14,
+ "readMinutes": 15,
  "summary": [
   "Transition (d-block) elements ke atom ya common ion mein d orbitals adhoore bhare hote hain: configuration (n − 1)d¹⁻¹⁰ ns¹⁻². Zn, Cd aur Hg (har state mein d¹⁰) asli transition elements nahi gine jaate.",
   "Typical properties: high melting points (d electrons se strong metallic bonding), variable oxidation states, rangeen ions (d–d transitions), paramagnetism (magnetic, unpaired electrons), catalyst activity, complex banana, interstitial compounds aur alloy.",
@@ -80,6 +80,12 @@
    "name": "Lanthanoid oxidation states",
    "formula": "+3 common;  Ce⁴⁺ strong oxidant (→ Ce³⁺);  Eu²⁺, Yb²⁺ reductants (→ +3)",
    "when": "Unusual states ki stability."
+  },
+  {
+   "name": "Ln³⁺ configuration",
+   "formula": "Ln³⁺ = [Xe]4fⁿ with n = Z − 57:  La³⁺ 4f⁰, Ce³⁺ 4f¹, Nd³⁺ 4f³, Gd³⁺ 4f⁷, Lu³⁺ 4f¹⁴",
+   "when": "Lanthanoid ions ke unpaired electrons / colour.",
+   "note": "Unpaired = n jab n ≤ 7, warna 14 − n. d-ions se mat milao: Cr²⁺ (3d⁴) mein 4 unpaired, Nd³⁺ (4f³) mein sirf 3."
   }
  ],
  "examples": [
@@ -126,7 +132,7 @@
   },
   {
    "title": "Physical properties",
-   "explain": "Hard, high melting aur boiling points, achhe conductors. Melting point series ke beech mein sabse zyada (zyada unpaired d electrons, strong bonding); Mn aur Zn anomalously kam. Series mein atomic radii kam badalte hain."
+   "explain": "Hard, high melting aur boiling points, achhe conductors. Melting point series ke beech mein sabse zyada (zyada unpaired d electrons, strong bonding); Mn aur Zn anomalously kam. Series mein atomic radii kam badalte hain. Magnetism: unpaired electrons se paramagnetism; ferromagnetism (Fe, Co, Ni) paramagnetism ka extreme form hai."
   },
   {
    "title": "Ionisation enthalpies and oxidation states",
@@ -134,7 +140,7 @@
   },
   {
    "title": "Catalytic properties",
-   "explain": "Variable oxidation states aur reactants ko adsorb karne ki kshamta transition metals ko achha catalyst banati hai: V₂O₅ (contact process), Fe (Haber process), Ni (hydrogenation), MnO₂ (KClO₃ ka decomposition)."
+   "explain": "Variable oxidation states aur reactants ko adsorb karne ki kshamta transition metals ko achha catalyst banati hai: V₂O₅ (contact process), Fe (Haber process), Ni (hydrogenation), MnO₂ (KClO₃ ka decomposition). Aur catalysts: Ziegler–Natta = TiCl₄ ke saath Al(CH₃)₃ (polythene), Wacker process = PdCl₂ (ethene → ethanal), Wilkinson's catalyst = [RhCl(PPh₃)₃] (alkenes ka hydrogenation)."
   },
   {
    "title": "Interstitial compounds and alloys",
@@ -156,7 +162,10 @@
   "MnO₄⁻ → Mn²⁺ (5e⁻, acid);  Cr₂O₇²⁻ → 2Cr³⁺ (6e⁻).",
   "CrO₄²⁻ yellow ⇌ Cr₂O₇²⁻ orange (pH, not redox).",
   "Lanthanoid contraction → Zr ≈ Hf.",
-  "Ce⁴⁺ oxidant;  Eu²⁺ reductant."
+  "Ce⁴⁺ oxidant;  Eu²⁺ reductant.",
+  "Ferromagnetism = paramagnetism ka extreme form.",
+  "Ziegler–Natta TiCl₄ + Al(CH₃)₃;  Wacker PdCl₂;  Wilkinson [RhCl(PPh₃)₃];  Haber Fe.",
+  "Ln³⁺ = 4f^(Z−57):  Nd³⁺ 4f³ (3 unpaired), Gd³⁺ 4f⁷ (7)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

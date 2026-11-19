@@ -5,7 +5,7 @@
   "JEE": "Indefinite Integrals"
  },
  "title": "Indefinite Integrals",
- "readMinutes": 16,
+ "readMinutes": 17,
  "summary": [
   "Integration is the reverse of differentiation (antiderivatives of algebraic, trigonometric, exponential and logarithmic functions): ∫f(x)dx = F(x) + C where F′(x) = f(x). Every answer can be checked by differentiating.",
   "Main methods: standard formulas, substitution, integration by parts (ILATE), partial fractions and special standard forms (1/(x² ± a²), √(a² − x²) etc.).",
@@ -72,6 +72,12 @@
    "when": "Powers of sin and cos."
   },
   {
+   "name": "sinᵐx cosⁿx with m + n a negative even integer",
+   "formula": "let m + n = −2k:  sinᵐx cosⁿx = tanᵐx (1 + tan²x)ᵏ⁻¹ sec²x  → t = tan x;   or = cotⁿx (1 + cot²x)ᵏ⁻¹ cosec²x  → t = cot x",
+   "when": "Fractional or negative powers of sin and cos, e.g. sin^(−11/2)x cos^(−5/2)x (sum −8, k = 4).",
+   "note": "With t = cot x, dt = −cosec²x dx — keep the minus sign. Answer in cot x → use cot; answer in tan x → use tan."
+  },
+  {
    "name": "a sin x + b cos x forms",
    "formula": "∫dx/(a + b cos x): use t = tan(x/2), cos x = (1 − t²)/(1 + t²), dx = 2dt/(1 + t²)",
    "when": "Weierstrass substitution."
@@ -107,6 +113,11 @@
    "title": "eˣ shortcut",
    "problem": "∫eˣ(sin x + cos x)dx?",
    "solution": "f = sin x, f′ = cos x ⇒ eˣ sin x + C."
+  },
+  {
+   "title": "Negative even total power",
+   "problem": "∫ sin^(−1/2)x cos^(−7/2)x dx?",
+   "solution": "m + n = −4 ⇒ k = 2. Integrand = tan^(−1/2)x (1 + tan²x) sec²x. Put t = tan x: ∫(t^(−1/2) + t^(3/2)) dt = 2√t + (2/5)t^(5/2) = 2√(tan x) + (2/5)tan^(5/2)x + C."
   }
  ],
  "topics": [
@@ -141,7 +152,8 @@
   "∫dx/√(a² − x²) = sin⁻¹(x/a).",
   "ILATE for u in by parts.",
   "∫eˣ(f + f′) = eˣf.",
-  "∫f′/f = ln|f|."
+  "∫f′/f = ln|f|.",
+  "sinᵐcosⁿ, m + n = −2k: tanᵐ(1 + tan²)ᵏ⁻¹sec² → t = tan x (or cot form, t = cot x)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

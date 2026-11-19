@@ -6,7 +6,7 @@
   "JEE": "Aldehydes, Ketones and Carboxylic Acids"
  },
  "title": "Aldehydes, Ketones and Carboxylic Acids",
- "readMinutes": 16,
+ "readMinutes": 17,
  "summary": [
   "The carbonyl group (>C=O) is planar (sp²) and polar: the carbon is electrophilic, so aldehydes and ketones undergo nucleophilic addition. Aldehydes are more reactive than ketones (less steric hindrance, fewer +I alkyl groups).",
   "Aldehydes are easily oxidised, so they reduce Tollens', Fehling's and Benedict's reagents; ketones generally don't. These tests distinguish the two.",
@@ -29,6 +29,13 @@
    "name": "Stephen reaction",
    "formula": "RCN + SnCl₂/HCl → RCH=NH → (H₃O⁺) RCHO",
    "when": "Aldehydes from nitriles."
+  },
+  {
+   "name": "From nitriles and esters (Grignard, DIBAL-H)",
+   "formula": "RCN + R′MgX → (H₃O⁺) R–CO–R′ (ketone);   RCN or RCOOR′ + DIBAL-H [AlH(i-Bu)₂] → (H₂O) RCHO",
+   "when": "Making ketones from nitriles, or stopping an ester/nitrile at the aldehyde stage.",
+   "tag": "PYQ favourite",
+   "note": "With excess RMgX, a C=O already in the molecule goes on to a 3° alcohol, but –CN stops at the ketone (the imine salt is not attacked again; the ketone forms only on hydrolysis). LiAlH₄/NaBH₄ take an ester to the alcohol, not the aldehyde."
   },
   {
    "name": "Etard reaction and Gattermann–Koch",
@@ -125,6 +132,11 @@
    "title": "Reduction choice",
    "problem": "Convert acetophenone to ethylbenzene.",
    "solution": "Clemmensen reduction (Zn–Hg/HCl) or Wolff–Kishner (NH₂NH₂, KOH, ethylene glycol): C₆H₅COCH₃ → C₆H₅CH₂CH₃."
+  },
+  {
+   "title": "Ester to aldehyde",
+   "problem": "Ethyl propanoate (CH₃CH₂COOC₂H₅) → propanal. Which reagent: LiAlH₄ or DIBAL-H?",
+   "solution": "DIBAL-H at low temperature, then H₂O: CH₃CH₂COOC₂H₅ → CH₃CH₂CHO (+ C₂H₅OH). LiAlH₄ would reduce all the way to propan-1-ol."
   }
  ],
  "topics": [
@@ -161,7 +173,9 @@
   "Rosenmund (Pd/BaSO₄), Stephen (SnCl₂/HCl), Etard (CrO₂Cl₂).",
   "Clemmensen (Zn–Hg/HCl), Wolff–Kishner (NH₂NH₂/KOH).",
   "HVZ: α-halogenation with X₂/red P.",
-  "Acid chloride > anhydride > ester > amide."
+  "Acid chloride > anhydride > ester > amide.",
+  "RCN + R′MgX → ketone;  excess RMgX: C=O → 3° alcohol but –CN stops at ketone.",
+  "DIBAL-H: ester → aldehyde, nitrile → aldehyde."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }
