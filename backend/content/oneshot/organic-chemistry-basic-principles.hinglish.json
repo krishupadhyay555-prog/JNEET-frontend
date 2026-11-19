@@ -49,6 +49,12 @@
    "when": "Halogenation, peroxide effect."
   },
   {
+   "name": "C–H bond dissociation energy",
+   "formula": "sp C–H > sp² C–H > sp³ C–H  (more s-character → shorter, stronger bond);  allylic/benzylic C–H weakest (gives a resonance-stabilised radical)",
+   "when": "C–H bond strengths ka order.",
+   "note": "Kamzor C–H ⇔ zyada stable radical banta hai (free-radical stability wala hi order)."
+  },
+  {
    "name": "Carbanion stability",
    "formula": "CH₃⁻ > 1° > 2° > 3° (opposite of carbocations); stabilised by −I/−R groups and sp character",
    "when": "Acidic C–H, carbanion reactions."
@@ -145,7 +151,7 @@
   },
   {
    "title": "Qualitative analysis",
-   "explain": "Sodium fusion (Lassaigne) N, S, X ko NaCN, Na₂S, NaX mein badalta hai. N: FeSO₄ + FeCl₃ se Prussian blue. S: lead acetate se kaala PbS, nitroprusside se violet. Halogens: HNO₃ ke saath ubaal kar AgNO₃ (safed AgCl NH₃ mein ghulta, halka peela AgBr, peela AgI)."
+   "explain": "Sodium fusion (Lassaigne) N, S, X ko NaCN, Na₂S, NaX mein badalta hai. N: FeSO₄ + FeCl₃ se Prussian blue. S: lead acetate se kaala PbS, nitroprusside se violet. Halogens: HNO₃ ke saath ubaal kar AgNO₃ (safed AgCl NH₃ mein ghulta, halka peela AgBr, peela AgI). Br vs I (layer test): sodium-fusion extract + chlorine water + CHCl₃/CCl₄ — Cl₂ halogen ko free karke organic layer mein bhejta hai: violet = iodine, orange/brown = bromine."
   }
  ],
  "ratta": [
@@ -155,7 +161,9 @@
   "Carbanion: methyl > 1° > 2° > 3°.",
   "−I: NO₂ > CN > F > Cl > Br > I;  +I: tert-butyl > isopropyl > ethyl > methyl.",
   "Kjeldahl % N = 1.4 NV/w (not for nitro/azo/ring N).",
-  "N + S → blood red;  N → Prussian blue."
+  "N + S → blood red;  N → Prussian blue.",
+  "C–H BDE: sp > sp² > sp³;  allylic/benzylic C–H sabse kamzor.",
+  "Layer test (Cl₂ water + CHCl₃): violet = I, orange/brown = Br."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

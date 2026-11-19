@@ -6,7 +6,7 @@
   "JEE": "Mechanical Properties of Solids and Fluids"
  },
  "title": "Mechanical Properties of Solids and Fluids",
- "readMinutes": 15,
+ "readMinutes": 16,
  "summary": [
   "Solids resist deformation: within the elastic limit stress ∝ strain (Hooke's law). Young's, bulk and shear moduli measure stiffness for stretching, squeezing and twisting.",
   "In a fluid at rest, pressure grows with depth (P = P₀ + ρgh) and is transmitted equally in all directions (Pascal's law) — the idea behind hydraulic lifts and brakes.",
@@ -107,6 +107,12 @@
    "note": "Use 4S/r only for a soap bubble (two surfaces)."
   },
   {
+   "name": "General curved surface (pressure jump)",
+   "formula": "ΔP = S(1/R₁ + 1/R₂);  sphere R₁ = R₂ = r → 2S/r;  cylindrical surface (R₂ = ∞) → S/R;  gently curved surface y(x): 1/R ≈ d²y/dx²",
+   "when": "Liquid surface curved in one direction only (long trough, near a wall), balanced against ρgy.",
+   "note": "Pressure is higher on the concave side. 2S/r and 4S/r are just special cases of this."
+  },
+  {
    "name": "Capillary rise",
    "formula": "h = 2S cos θ / (r ρ g)",
    "when": "Liquid rising or falling in a narrow tube.",
@@ -166,7 +172,7 @@
   },
   {
    "title": "Pressure facts",
-   "explain": "Pressure at a depth depends only on depth, not on the shape of the vessel (hydrostatic paradox). Atmospheric pressure ≈ 1.013 × 10⁵ Pa = 76 cm of mercury. A barometer measures it; an open-tube manometer measures gauge pressure."
+   "explain": "Pressure at a depth depends only on depth, not on the shape of the vessel (hydrostatic paradox). Atmospheric pressure ≈ 1.013 × 10⁵ Pa = 76 cm of mercury. A barometer measures it; an open-tube manometer measures gauge pressure. Pressure exists at every point inside a fluid at rest (not only where it touches a wall) and acts equally in all directions at that point."
   },
   {
    "title": "Buoyancy and floating",
@@ -186,7 +192,11 @@
   },
   {
    "title": "Surface tension effects",
-   "explain": "Drops are spherical (minimum area). Surface tension falls with temperature and with detergents. Angle of contact < 90° → liquid wets the surface and rises in a capillary (water–glass); > 90° → does not wet and falls (mercury–glass)."
+   "explain": "Origin: a molecule at the surface has neighbours only on one side, so it has extra potential energy compared with a molecule inside; the liquid tries to reduce this extra energy by reducing its surface area — that is surface tension. Drops are spherical (minimum area). Surface tension falls with temperature and with detergents. Angle of contact < 90° → liquid wets the surface and rises in a capillary (water–glass); > 90° → does not wet and falls (mercury–glass)."
+  },
+  {
+   "title": "Curved surface held by surface tension",
+   "explain": "For a liquid surface that bends in one direction (very wide in the other), the pressure jump across it is S × curvature, and for a gentle slope curvature ≈ d²y/dx². At height y above the flat level the liquid just below the surface has pressure P₀ − ρgy, so S·d²y/dx² = ρgy, i.e. d²y/dx² = (ρg/S)·y. Set up the balance, then use the contact angle at the wall as the slope dy/dx there."
   }
  ],
  "ratta": [
@@ -196,7 +206,9 @@
   "A₁v₁ = A₂v₂;  P + ½ρv² + ρgh = constant;  v = √(2gh).",
   "F = 6πηrv;  v_t = 2r²(ρ − σ)g/9η  (∝ r²).",
   "Drop: 2S/r;  soap bubble: 4S/r;  h = 2S cosθ/(rρg).",
-  "Liquids: viscosity ↓ with T;  gases: viscosity ↑ with T."
+  "Liquids: viscosity ↓ with T;  gases: viscosity ↑ with T.",
+  "ΔP = S(1/R₁ + 1/R₂): sphere 2S/r, cylinder S/R, gentle surface S·d²y/dx².",
+  "Pressure exists at every point of a fluid at rest;  surface tension = extra PE of surface molecules."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

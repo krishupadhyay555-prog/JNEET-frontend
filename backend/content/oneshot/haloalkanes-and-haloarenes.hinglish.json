@@ -6,7 +6,7 @@
   "JEE": "Haloalkanes and Haloarenes"
  },
  "title": "Haloalkanes and Haloarenes",
- "readMinutes": 14,
+ "readMinutes": 15,
  "summary": [
   "Haloalkanes mein C–X bond polar hai (Cδ⁺–Xδ⁻), isliye carbon par nucleophiles attack karte hain. R–X ki reactivity: R–I > R–Br > R–Cl > R–F (kamzor bond, achha leaving group).",
   "Nucleophilic substitution SN2 (ek step, peeche se attack, inversion, 1° halides pasand) ya SN1 (carbocation, racemisation, 3° halides aur polar protic solvents pasand) se hota hai.",
@@ -42,6 +42,12 @@
    "when": "Strong nucleophile aur aprotic solvent ke saath primary halides.",
    "mistake": "Steric hindrance 3° carbon par SN2 rok deta hai — wahan SN2 mat lagao.",
    "tag": "PYQ favourite"
+  },
+  {
+   "name": "Nucleophilicity in a polar protic solvent",
+   "formula": "I⁻ > Br⁻ > Cl⁻ > F⁻;   RO⁻ > C₆H₅O⁻;   e.g. towards CH₃Br in methanol: I⁻ > C₂H₅O⁻ > C₆H₅O⁻ > F⁻",
+   "when": "Paani/alcohols mein nucleophiles ka order (SN2 rate).",
+   "note": "Chhote, hard anions (F⁻) solvent se H-bonding mein kas ke bandhe rehte hain, isliye dheere react karte hain; phenoxide ethoxide se kamzor kyunki charge ring mein delocalise hota hai. Aprotic solvents (DMSO, acetone) mein halide order ulta: F⁻ > Cl⁻ > Br⁻ > I⁻."
   },
   {
    "name": "SN1 mechanism",
@@ -125,7 +131,7 @@
   },
   {
    "title": "Factors deciding SN1 vs SN2",
-   "explain": "Substrate: 1° → SN2, 3° → SN1, 2° → dono. Strong nucleophile aur aprotic solvent SN2; weak nucleophile aur polar protic solvent (paani, alcohols) SN1. Benzylic aur allylic halides SN1 se tez (resonance-stabilised carbocations)."
+   "explain": "Substrate: 1° → SN2, 3° → SN1, 2° → dono. Strong nucleophile aur aprotic solvent SN2; weak nucleophile aur polar protic solvent (paani, alcohols) SN1. Benzylic aur allylic halides SN1 se tez (resonance-stabilised carbocations). Bridgehead halides (1-bromobicyclo[2.2.2]octane, 1-bromonorbornane) SN1 se bahut hi dheere — rigid cage carbocation ko planar nahi hone deta; zyada strained norbornyl sabse slow. Doosri taraf (C₆H₅)₃C⁺ bahut stable (teen rings charge baantte hain), isliye trityl halides sabse tez."
   },
   {
    "title": "Optical activity basics",
@@ -147,7 +153,9 @@
   "KCN → RCN;  AgCN → RNC;  KNO₂ → RONO;  AgNO₂ → RNO₂.",
   "Finkelstein (NaI/acetone);  Swarts (AgF);  Sandmeyer (CuX).",
   "Haloarenes: o/p-directing, deactivating.",
-  "CHCl₃ in light → phosgene."
+  "CHCl₃ in light → phosgene.",
+  "Protic solvent: I⁻ > C₂H₅O⁻ > C₆H₅O⁻ > F⁻ (F⁻ sabse zyada solvated).",
+  "SN1: Ph₃C–X sabse tez;  bridgehead halides bahut slow (planar carbocation nahi)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

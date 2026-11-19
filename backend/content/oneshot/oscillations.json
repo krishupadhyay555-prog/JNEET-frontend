@@ -6,7 +6,7 @@
   "JEE": "Oscillations"
  },
  "title": "Oscillations",
- "readMinutes": 12,
+ "readMinutes": 13,
  "summary": [
   "A motion that repeats after equal intervals is periodic; back-and-forth periodic motion about a mean position is oscillation.",
   "Simple harmonic motion (SHM) happens when the restoring force is proportional to displacement and opposite to it: F = −kx. Then x = A sin(ωt + φ) with ω = √(k/m).",
@@ -81,6 +81,12 @@
    "name": "Phase relations",
    "formula": "velocity leads displacement by π/2;  acceleration leads displacement by π",
    "when": "Phase questions."
+  },
+  {
+   "name": "Damped oscillations",
+   "formula": "x = A₀ e^(−bt/2m) cos(ω′t + φ);  amplitude A(t) = A₀ e^(−bt/2m);  energy E ∝ e^(−bt/m);  ω′ = √(k/m − b²/4m²)",
+   "when": "Real oscillators that lose energy (air drag, friction) — the amplitude dies away with time.",
+   "note": "Qualitative idea is what is usually tested: amplitude decreases, and ω′ is slightly less than √(k/m)."
   }
  ],
  "examples": [
@@ -153,6 +159,10 @@
   {
    "title": "Time between positions",
    "explain": "From the mean to an extreme takes T/4. From the mean to A/2 takes T/12; from A/2 to A takes T/6. From the mean to A/√2 takes T/8."
+  },
+  {
+   "title": "Damping and slowly changing mass",
+   "explain": "Every real oscillation loses energy to friction/drag, so its amplitude decreases with time (damped oscillation); with no energy supply it finally stops. If the mass changes slowly — e.g. sand leaking from a box on a spring — use ω = √(k/m) at each instant: m falls, so ω rises (T falls), while the average amplitude keeps decaying."
   }
  ],
  "ratta": [
@@ -162,7 +172,8 @@
   "E = ½kA²;  KE = PE at A/√2.",
   "Pendulum T = 2π√(l/g);  seconds pendulum ≈ 1 m.",
   "Series springs: 1/k adds;  parallel: k adds.",
-  "Mean → A/2: T/12;  A/2 → A: T/6."
+  "Mean → A/2: T/12;  A/2 → A: T/6.",
+  "Damped: A = A₀e^(−bt/2m) (amplitude ↓);  mass ↓ → ω = √(k/m) ↑."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

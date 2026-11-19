@@ -141,7 +141,7 @@
   },
   {
    "title": "Seed",
-   "explain": "Dicot seed (bean, gram, pea): seed coat (testa aur tegmen), hilum, micropyle, do cotyledons wala embryo, radicle aur plumule. Monocot seed (maize): endospermic, ek cotyledon (scutellum), aleurone layer, coleoptile aur coleorhiza."
+   "explain": "Dicot seed (bean, gram, pea): seed coat (testa aur tegmen), hilum, micropyle, do cotyledons wala embryo, radicle aur plumule. Monocot seed (maize): endospermic, ek cotyledon (scutellum), aleurone layer (endosperm ki protein-rich bahari layer jo use embryo se alag karti hai), coleoptile aur coleorhiza."
   },
   {
    "title": "Family features",
@@ -154,7 +154,8 @@
   "Twisted: China rose, cotton;  vexillary: pea;  valvate: Calotropis.",
   "Marginal pea, axile China rose/tomato, parietal mustard, free central Dianthus, basal sunflower.",
   "Fabaceae: A₍₉₎₊₁ diadelphous;  Solanaceae: epipetalous, swollen placenta;  Liliaceae: P₍₃₊₃₎.",
-  "Mango & coconut = drupe."
+  "Mango & coconut = drupe.",
+  "Aleurone layer = protein-rich outer layer of the endosperm in cereals, separating it from the embryo."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

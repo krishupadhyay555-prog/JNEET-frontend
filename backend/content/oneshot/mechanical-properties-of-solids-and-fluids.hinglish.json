@@ -6,7 +6,7 @@
   "JEE": "Mechanical Properties of Solids and Fluids"
  },
  "title": "Mechanical Properties of Solids and Fluids",
- "readMinutes": 15,
+ "readMinutes": 16,
  "summary": [
   "Solids deformation ka virodh karte hain: elastic limit ke andar stress ∝ strain (Hooke's law). Young's, bulk aur shear moduli stretching, squeezing aur twisting ki stiffness naapte hain.",
   "Rukay hue fluid mein pressure depth ke saath badhta hai (P = P₀ + ρgh) aur har direction mein barabar transmit hota hai (Pascal's law) — hydraulic lift aur brakes isi par.",
@@ -107,6 +107,12 @@
    "mistake": "4S/r sirf soap bubble (do surfaces) ke liye; drop ke liye 2S/r — mix mat karo."
   },
   {
+   "name": "General curved surface (pressure jump)",
+   "formula": "ΔP = S(1/R₁ + 1/R₂);  sphere R₁ = R₂ = r → 2S/r;  cylindrical surface (R₂ = ∞) → S/R;  gently curved surface y(x): 1/R ≈ d²y/dx²",
+   "when": "Liquid surface sirf ek direction mein curved ho (lamba trough, wall ke paas) — ρgy se balance karo.",
+   "mistake": "Pressure concave side par zyada hota hai. 2S/r aur 4S/r isi ke special cases hain — cylinder par 2S/r mat lagao."
+  },
+  {
    "name": "Capillary rise",
    "formula": "h = 2S cos θ / (r ρ g)",
    "when": "Patli tube mein liquid chadhna ya girna.",
@@ -166,7 +172,7 @@
   },
   {
    "title": "Pressure facts",
-   "explain": "Depth par pressure sirf depth par depend karta hai, bartan ki shape par nahi (hydrostatic paradox). Atmospheric pressure ≈ 1.013 × 10⁵ Pa = 76 cm mercury. Barometer ise naapta hai; open-tube manometer gauge pressure."
+   "explain": "Depth par pressure sirf depth par depend karta hai, bartan ki shape par nahi (hydrostatic paradox). Atmospheric pressure ≈ 1.013 × 10⁵ Pa = 76 cm mercury. Barometer ise naapta hai; open-tube manometer gauge pressure. Rukke hue fluid ke andar har point par pressure hota hai (sirf wall par nahi), aur us point par har direction mein barabar lagta hai."
   },
   {
    "title": "Buoyancy and floating",
@@ -186,7 +192,11 @@
   },
   {
    "title": "Surface tension effects",
-   "explain": "Boondein gol hoti hain (minimum area). Surface tension temperature aur detergent se ghatta hai. Angle of contact < 90° → liquid surface ko geela karta hai aur capillary mein chadhta hai (paani–glass); > 90° → geela nahi karta aur girta hai (mercury–glass)."
+   "explain": "Origin: surface wale molecule ke padosi sirf ek taraf hote hain, isliye uski potential energy andar wale molecule se zyada hoti hai; liquid ye extra energy kam karne ke liye apna surface area kam karta hai — yahi surface tension hai. Boondein gol hoti hain (minimum area). Surface tension temperature aur detergent se ghatta hai. Angle of contact < 90° → liquid surface ko geela karta hai aur capillary mein chadhta hai (paani–glass); > 90° → geela nahi karta aur girta hai (mercury–glass)."
+  },
+  {
+   "title": "Surface tension se curved surface",
+   "explain": "Jo liquid surface ek hi direction mein mudti hai (doosri direction mein bahut chaudi), uske aar-paar pressure jump = S × curvature, aur halke slope ke liye curvature ≈ d²y/dx². Flat level se y oonchai par surface ke theek neeche liquid ka pressure P₀ − ρgy hota hai, isliye S·d²y/dx² = ρgy, yaani d²y/dx² = (ρg/S)·y. Pehle ye balance likho, phir wall par contact angle ko wahan ka slope dy/dx maano."
   }
  ],
  "ratta": [
@@ -196,7 +206,9 @@
   "A₁v₁ = A₂v₂;  P + ½ρv² + ρgh = constant;  v = √(2gh).",
   "F = 6πηrv;  v_t = 2r²(ρ − σ)g/9η  (∝ r²).",
   "Drop: 2S/r;  soap bubble: 4S/r;  h = 2S cosθ/(rρg).",
-  "Liquids: viscosity ↓ with T;  gases: viscosity ↑ with T."
+  "Liquids: viscosity ↓ with T;  gases: viscosity ↑ with T.",
+  "ΔP = S(1/R₁ + 1/R₂): sphere 2S/r, cylinder S/R, gentle surface S·d²y/dx².",
+  "Rukke fluid mein har point par pressure hota hai;  surface tension = surface molecules ki extra PE."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

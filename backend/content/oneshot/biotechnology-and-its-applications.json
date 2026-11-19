@@ -109,7 +109,7 @@
   },
   {
    "title": "Genetically engineered insulin",
-   "explain": "Before recombinant insulin, insulin from slaughtered cattle and pigs caused allergies in some patients. Recombinant insulin is made in bacteria and is identical to human insulin."
+   "explain": "Before recombinant insulin, insulin from slaughtered cattle and pigs caused allergies in some patients. Recombinant insulin is made in bacteria and is identical to human insulin. Insulin is a protein, so taken by mouth it would be digested in the gut — diabetics take it by injection."
   },
   {
    "title": "Recombinant therapeutics",
@@ -131,7 +131,8 @@
   "Gene therapy 1990: ADA deficiency, retroviral vector.",
   "Rosie 1997: human α-lactalbumin, 2.4 g/L.",
   "GEAC approves GM organisms.",
-  "Basmati, turmeric, neem — biopiracy cases."
+  "Basmati, turmeric, neem — biopiracy cases.",
+  "Insulin is not given orally: it is a protein and would be digested in the GI tract → injected."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

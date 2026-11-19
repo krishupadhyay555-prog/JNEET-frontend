@@ -48,7 +48,7 @@
   },
   {
    "name": "Antibody structure",
-   "formula": "4 polypeptide chains: 2 heavy + 2 light (H₂L₂);  types IgA, IgM, IgE, IgG (IgG crosses placenta; IgA in colostrum)",
+   "formula": "4 polypeptide chains: 2 heavy + 2 light (H₂L₂), held together by disulphide bonds;  antigen-binding site = variable region at the N-terminal ends (tips of the Y);  constant region at the C-terminal end;  types IgA, IgM, IgE, IgG (IgG crosses placenta; IgA in colostrum)",
    "when": "Humoral immunity.",
    "tag": "PYQ favourite"
   },
@@ -70,12 +70,12 @@
   },
   {
    "name": "Cancer basics",
-   "formula": "loss of contact inhibition;  benign tumour (stays in place) vs malignant (spreads — metastasis);  carcinogens: ionising radiation (X-rays, gamma), non-ionising UV, chemicals (tobacco smoke), oncogenic viruses (proto-oncogenes → oncogenes)",
+   "formula": "loss of contact inhibition;  benign tumour (stays confined to its original location, little damage) vs malignant (a mass of proliferating neoplastic/tumour cells that grow very rapidly, invade and damage surrounding tissue, and spread by metastasis);  carcinogens: ionising radiation (X-rays, gamma), non-ionising UV, chemicals (tobacco smoke), oncogenic viruses (proto-oncogenes → oncogenes)",
    "when": "Cancer biology."
   },
   {
    "name": "Cancer detection and treatment",
-   "formula": "detection: biopsy, histopathology, blood/bone marrow tests, X-ray, CT, MRI, antibodies, molecular biology;  treatment: surgery, radiation, chemotherapy, immunotherapy (α-interferon)",
+   "formula": "detection: biopsy, histopathology, blood/bone marrow tests (increased cell counts in leukaemia), X-ray, CT, MRI (cancers of internal organs), antibodies, molecular biology;  treatment: surgery, radiation, chemotherapy (drugs kill cancerous cells; side effects like hair loss, anaemia), immunotherapy (biological response modifiers such as α-interferon activate the immune system to destroy the tumour)",
    "when": "Managing cancer."
   },
   {
@@ -156,7 +156,10 @@
   "Antibody H₂L₂;  IgA colostrum.",
   "HIV: retrovirus, reverse transcriptase, kills T_H; ELISA.",
   "Morphine/heroin — poppy;  cocaine — Erythroxylum coca (dopamine).",
-  "Gambusia eats mosquito larvae."
+  "Gambusia eats mosquito larvae.",
+  "Neoplastic (malignant) cells: proliferating mass, very rapid growth, invade surrounding tissue;  benign = confined.",
+  "Leukaemia: blood cell count UP;  chemo kills cancer cells;  α-interferon = biological response modifier.",
+  "Antibody: H and L chains joined by S–S bonds;  antigen binding at N-terminal (variable), constant region at C-terminal."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

@@ -59,7 +59,7 @@
   },
   {
    "name": "Mollusca and Echinodermata",
-   "formula": "Mollusca: soft body, mantle, calcareous shell, radula, ctenidia (Pila, Pinctada, Sepia, Loligo, Octopus);  Echinodermata: spiny calcareous ossicles, water vascular system (tube feet), all marine (Asterias, Echinus, Antedon, Cucumaria, Ophiura)",
+   "formula": "Mollusca: soft body, mantle, calcareous shell, radula, ctenidia (Pila, Pinctada, Sepia, Loligo, Octopus);  Echinodermata: spiny calcareous ossicles, water vascular system (tube feet — locomotion, capture and transport of food, respiration), all marine (Asterias, Echinus, Antedon, Cucumaria, Ophiura)",
    "when": "Molluscs and echinoderms.",
    "mistake": "Sepia (cuttlefish), Loligo (squid) and Octopus (devil fish) are molluscs, not fish."
   },
@@ -82,7 +82,7 @@
   },
   {
    "name": "Vertebrate classes",
-   "formula": "Cyclostomata (jawless, suctorial mouth — Petromyzon, Myxine);  Chondrichthyes (cartilage, placoid scales, no air bladder — Scoliodon, Pristis, Trygon, Torpedo);  Osteichthyes (bone, operculum, air bladder — Labeo, Catla, Hippocampus, Exocoetus);  Amphibia (moist skin, cloaca — Rana, Bufo, Salamandra, Ichthyophis);  Reptilia (dry scaly skin — Chelone, Chameleon, Naja, Vipera);  Aves (feathers, pneumatic bones — Corvus, Columba, Struthio, Pavo);  Mammalia (hair, mammary glands, external ears — Ornithorhynchus oviparous, Macropus, Pteropus, Balaenoptera)",
+   "formula": "Cyclostomata (jawless, circular sucking mouth; all living members are ectoparasites on some fishes; 6–15 pairs of gill slits; no scales or paired fins; marine but migrate to fresh water to spawn, die a few days later, larvae return to the ocean after metamorphosis — Petromyzon, Myxine);  Chondrichthyes (cartilage, placoid scales, no air bladder — Scoliodon, Pristis, Trygon, Torpedo);  Osteichthyes (bone, operculum, air bladder — Labeo, Catla, Hippocampus, Exocoetus);  Amphibia (moist skin, cloaca — Rana, Bufo, Salamandra, Ichthyophis);  Reptilia (dry scaly skin — Chelone, Chameleon, Naja, Vipera);  Aves (feathers, pneumatic bones — Corvus, Columba, Struthio, Pavo);  Mammalia (hair, mammary glands, external ears — Ornithorhynchus oviparous, Macropus, Pteropus, Balaenoptera)",
    "when": "Examples by class."
   },
   {
@@ -154,10 +154,11 @@
   "Cnidoblasts → Cnidaria;  comb plates → Ctenophora.",
   "Flame cells, nephridia, Malpighian tubules.",
   "Arthropoda largest phylum;  Limulus = living fossil.",
-  "Water vascular system → Echinodermata.",
+  "Water vascular system → Echinodermata (locomotion, food capture/transport, respiration).",
   "Notochord: larval tail (Uro), head to tail (Cephalo).",
   "Heart: fish 2, amphibia/reptile 3 (crocodile 4), birds/mammals 4.",
-  "Platypus lays eggs;  Torpedo electric;  Trygon sting."
+  "Platypus lays eggs;  Torpedo electric;  Trygon sting.",
+  "Cyclostomes: all living members are ectoparasites on fishes;  spawn in fresh water, then die."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

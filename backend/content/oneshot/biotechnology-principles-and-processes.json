@@ -74,8 +74,9 @@
   },
   {
    "name": "Bioreactors",
-   "formula": "large vessels (100–1000 L) giving optimum temperature, pH, O₂, substrate;  stirred-tank (agitator, oxygen delivery, foam control, temperature and pH control, sampling ports)",
-   "when": "Scaling up production."
+   "formula": "large vessels (100–1000 L) giving optimum temperature, pH, O₂, substrate;  stirred-tank (agitator, oxygen delivery, foam control, temperature and pH control, sampling ports): motor on top drives a shaft with flat-bladed impellers;  foam breaker = blade on the shaft near the top of the vessel, above the impellers and the broth;  sterile air enters at the bottom through a sparger",
+   "when": "Scaling up production.",
+   "note": "Diagram trap: the motor/drive sits outside at the very top; the foam breaker is the first blade inside, just under the lid."
   },
   {
    "name": "Downstream processing",
@@ -148,7 +149,8 @@
   "pBR322: ori, rop, amp^R, tet^R;  BamHI in tet^R.",
   "White colonies = recombinant (lacZ inactivated).",
   "PCR: denature, anneal, extend;  Taq from Thermus aquaticus.",
-  "Ti plasmid — Agrobacterium;  Cohen & Boyer 1972."
+  "Ti plasmid — Agrobacterium;  Cohen & Boyer 1972.",
+  "Stirred-tank bioreactor: foam breaker at the top of the shaft (above impellers);  sparger (sterile air) at the bottom."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

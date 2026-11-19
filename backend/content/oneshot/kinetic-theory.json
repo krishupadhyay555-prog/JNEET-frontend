@@ -74,6 +74,12 @@
    "name": "Gas laws (special cases)",
    "formula": "Boyle: PV = const (T fixed);  Charles: V/T = const (P fixed);  Gay-Lussac: P/T = const (V fixed);  Dalton: P = P₁ + P₂ + …",
    "when": "Quick ratio problems."
+  },
+  {
+   "name": "Pressure in a rotating gas (isothermal)",
+   "formula": "dP/dr = ρω²r with ρ = PM/RT  ⇒  P(r) = P_axis · e^(Mω²r²/2RT);  tube of length l rotated about end A: P_B = P_A e^(Mω²l²/2RT)",
+   "when": "Closed tube of gas spun about an axis at the same temperature — pressure is higher at the far end.",
+   "note": "M = molar mass (kg/mol). For an incompressible liquid instead: P = P_axis + ½ρω²r²."
   }
  ],
  "examples": [
@@ -155,7 +161,8 @@
   "f: 3 (mono), 5 (di), 6 (poly);  ½kT per f.",
   "Cv = fR/2, Cp = Cv + R, γ = 1 + 2/f.",
   "λ = kT/(√2πd²P).",
-  "Nₐ = 6.022 × 10²³;  22.4 L at STP."
+  "Nₐ = 6.022 × 10²³;  22.4 L at STP.",
+  "Rotating gas tube: P_B = P_A e^(Mω²l²/2RT)  (far end higher)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

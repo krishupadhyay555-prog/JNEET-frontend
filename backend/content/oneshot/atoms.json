@@ -18,7 +18,8 @@
    "name": "Distance of closest approach",
    "formula": "r₀ = k (2e)(Ze) / K   (alpha KE = K, head-on)",
    "when": "How close an alpha particle gets — an upper limit on nuclear size.",
-   "mistake": "The alpha's charge is 2e, not e."
+   "mistake": "The alpha's charge is 2e, not e.",
+   "note": "r₀ bounds the nuclear RADIUS. If the question asks for the nuclear DIAMETER (size), give 2r₀ — r₀ itself is the trap option."
   },
   {
    "name": "Impact parameter",
@@ -108,7 +109,7 @@
   {
    "title": "How close does the alpha get?",
    "problem": "A 7.7 MeV alpha particle heads straight at a gold nucleus (Z = 79). Distance of closest approach?",
-   "solution": "r₀ = k(2e)(79e)/K with K = 7.7 × 10⁶ × 1.6 × 10⁻¹⁹ J. r₀ = 9 × 10⁹ × 158 × 1.6 × 10⁻¹⁹ / 7.7 × 10⁶ ≈ 3.0 × 10⁻¹⁴ m (≈ 30 fm). The nucleus is smaller still."
+   "solution": "r₀ = k(2e)(79e)/K with K = 7.7 × 10⁶ × 1.6 × 10⁻¹⁹ J. r₀ = 9 × 10⁹ × 158 × 1.6 × 10⁻¹⁹ / 7.7 × 10⁶ ≈ 3.0 × 10⁻¹⁴ m (≈ 30 fm). The nucleus is smaller still. If asked for the estimated nuclear diameter, answer 2r₀ ≈ 6 × 10⁻¹⁴ m, not r₀."
   },
   {
    "title": "Hydrogen n = 2",
@@ -183,7 +184,7 @@
   "Series: Lyman 1 (UV), Balmer 2 (visible), Paschen 3, Brackett 4, Pfund 5 (IR).",
   "Lines = n(n − 1)/2.",
   "H: ionisation 13.6 eV, first excitation 10.2 eV.  He⁺: 54.4 eV.",
-  "Closest approach r₀ = k(2e)(Ze)/K;  N(θ) ∝ 1/sin⁴(θ/2)."
+  "Closest approach r₀ = k(2e)(Ze)/K (radius bound; diameter = 2r₀);  N(θ) ∝ 1/sin⁴(θ/2)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

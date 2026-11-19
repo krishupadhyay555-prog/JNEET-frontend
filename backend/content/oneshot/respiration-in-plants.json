@@ -44,7 +44,7 @@
   },
   {
    "name": "ETS sequence",
-   "formula": "NADH → complex I (NADH dehydrogenase) → ubiquinone → complex III (cyt bc₁) → cytochrome c → complex IV (cyt a–a₃, Cu centres) → O₂;  FADH₂ enters at complex II",
+   "formula": "NADH → complex I (NADH dehydrogenase) → ubiquinone → complex III (cyt bc₁) → cytochrome c → complex IV (cytochrome c oxidase: cyt a–a₃ + 2 Cu centres) → O₂;  FADH₂ enters at complex II (succinate dehydrogenase)",
    "when": "Electron transport system."
   },
   {
@@ -138,9 +138,9 @@
   "Glycolysis: cytoplasm, net 2 ATP + 2 NADH.",
   "Krebs per acetyl CoA: 2 CO₂, 3 NADH, 1 FADH₂, 1 GTP.",
   "NADH = 3 ATP;  FADH₂ = 2 ATP;  total 38.",
-  "Complex IV: cyt a–a₃ + Cu;  complex V: ATP synthase.",
+  "Complex I: NADH dehydrogenase;  II: succinate dehydrogenase;  III: cyt bc₁;  IV: cytochrome c oxidase (cyt a–a₃ + Cu);  V: ATP synthase.",
   "RQ: carb 1, fat 0.7, protein 0.9, malic acid 1.33.",
   "Yeast → ethanol + CO₂;  muscle → lactic acid."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

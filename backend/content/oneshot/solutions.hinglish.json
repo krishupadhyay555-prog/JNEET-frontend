@@ -18,7 +18,7 @@
    "name": "Henry's law",
    "formula": "p = K_H x  (partial pressure ∝ mole fraction of gas in solution)",
    "when": "Gases ki solubility.",
-   "mistake": "Bada K_H matlab same pressure par KAM solubility — ulta mat samjho."
+   "mistake": "Bada K_H matlab same pressure par KAM solubility — ulta mat samjho. K_H gas ki nature, solvent aur temperature par depend karta hai (T badhe to K_H badhe, solubility ghate); ek gas–solvent pair ke liye fixed T par concentration ke saath constant sirf ideally dilute range mein rehta hai."
   },
   {
    "name": "Raoult's law (volatile components)",
@@ -112,7 +112,7 @@
  "topics": [
   {
    "title": "Types of solutions",
-   "explain": "Solvent aur solute kisi bhi phase mein: liquid mein gas (soda), liquid mein solid (cheeni), liquid mein liquid (paani mein alcohol), solid mein solid (alloys), solid mein gas (palladium mein H₂)."
+   "explain": "Solvent aur solute kisi bhi phase mein: liquid mein gas (soda), liquid mein solid (cheeni), liquid mein liquid (paani mein alcohol), solid mein solid (alloys), solid mein gas (palladium mein H₂). Saare nau types — gas mein gas (hawa), gas mein liquid (humidity, N₂ mein chloroform), gas mein solid (N₂ mein camphor, smoke), liquid mein gas, liquid mein liquid, liquid mein solid, solid mein gas, solid mein liquid (Hg ka Na ke saath amalgam), solid mein solid (alloys, Au mein Cu)."
   },
   {
    "title": "Solubility of solids and gases",
@@ -142,7 +142,9 @@
   "Water: K_b 0.52, K_f 1.86.",
   "i = 1 + (n − 1)α;  dimer: i = 1 − α/2.",
   "+ve deviation → min-boiling azeotrope;  −ve → max-boiling.",
-  "0.9% NaCl isotonic with blood."
+  "0.9% NaCl isotonic with blood.",
+  "Humidity = liquid in gas;  smoke/camphor in N₂ = solid in gas;  amalgam = liquid in solid;  alloy = solid in solid.",
+  "K_H gas + solvent + T par depend (same gas, alag solvent → alag K_H)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

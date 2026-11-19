@@ -73,7 +73,8 @@
    "name": "Genetic code",
    "formula": "triplet (64 codons, 61 code for amino acids);  start AUG (methionine);  stop UAA, UAG, UGA;  unambiguous, degenerate, universal (some exceptions), commaless",
    "when": "Code ki properties.",
-   "tag": "PYQ favourite"
+   "tag": "PYQ favourite",
+   "note": "George Gamow (ek physicist) ne kaha ki 4 bases ko 20 amino acids code karne hain, isliye code triplet hona chahiye (4³ = 64 codons). Khorana ki defined base combinations wale RNA ki chemical synthesis, Nirenberg ka cell-free protein synthesis system aur Ochoa ka enzyme (polynucleotide phosphorylase) code decipher karne mein kaam aaye."
   },
   {
    "name": "Translation",
@@ -132,7 +133,7 @@
  "topics": [
   {
    "title": "RNA world",
-   "explain": "RNA pehla genetic material tha; ye catalyst (ribozyme) ki tarah kaam kar sakta hai aur reactive aur unstable hai. DNA RNA se chemical badlaav ke saath bana (2′-OH nahi, uracil ki jagah thymine) jo use zyada stable banate hain."
+   "explain": "RNA pehla genetic material tha; ye catalyst (ribozyme) ki tarah kaam kar sakta hai aur reactive aur unstable hai. DNA RNA se chemical badlaav ke saath bana (2′-OH nahi, uracil ki jagah thymine) jo use zyada stable banate hain. Double-stranded aur complementary strands hone ki wajah se DNA badlaav ka virodh karta hai — isne repair mechanisms bhi evolve kiye."
   },
   {
    "title": "Properties of genetic material",
@@ -163,7 +164,9 @@
   "Pol I rRNA, Pol II hnRNA, Pol III tRNA/5S/snRNA.",
   "AUG start;  UAA, UAG, UGA stop;  61 sense codons.",
   "Lac operon: i, p, o, z, y, a;  lactose = inducer.",
-  "Chromosome 1 most genes, Y fewest."
+  "Chromosome 1 most genes, Y fewest.",
+  "Triplet code proposed by George Gamow (physicist);  decoded with Khorana, Nirenberg, Ochoa.",
+  "RNAi (complementary dsRNA silences an mRNA) occurs in all eukaryotes as cellular defence;  tRNA and rRNA both interact with mRNA in translation."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

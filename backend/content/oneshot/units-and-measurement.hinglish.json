@@ -6,7 +6,7 @@
   "JEE": "Units and Measurement"
  },
  "title": "Units and Measurement",
- "readMinutes": 11,
+ "readMinutes": 12,
  "summary": [
   "Har physical quantity = number × unit. SI system mein 7 base units hain (m, kg, s, A, K, mol, cd); baaki saare units inhi se derived hain.",
   "Koi measurement perfect nahi hota: least count precision ko limit karta hai, aur errors (systematic, random, gross) accuracy ko. Errors fixed rules se judte hain — sum/difference mein absolute errors jodo, product/quotient mein relative errors jodo, power ho to power se multiply karo.",
@@ -158,6 +158,10 @@
    "explain": "Strain, refractive index, angle, relative density dimensionless hain. Same dimensions: work, energy, torque [ML²T⁻²]; impulse aur momentum [MLT⁻¹]; stress, pressure, Young's modulus, energy density [ML⁻¹T⁻²]; frequency, angular velocity, velocity gradient [T⁻¹]; Planck's constant aur angular momentum [ML²T⁻¹]."
   },
   {
+   "title": "Common constants ke dimensions",
+   "explain": "Spring constant k aur surface tension [MT⁻²]; thermal conductivity [MLT⁻³K⁻¹]; Boltzmann constant k_B [ML²T⁻²K⁻¹]; gas constant R [ML²T⁻²K⁻¹mol⁻¹]; specific heat [L²T⁻²K⁻¹]; viscosity η [ML⁻¹T⁻¹]; resistance, reactance aur impedance [ML²T⁻³A⁻²]; capacitance [M⁻¹L⁻²T⁴A²]; inductance [ML²T⁻²A⁻²]; ε₀ [M⁻¹L⁻³T⁴A²]; μ₀ [MLT⁻²A⁻²]; magnetic field B [MT⁻²A⁻¹]. Koi bhi defining formula se nikal lo: k = F/x, K ke liye Q/t = KAΔT/L, k_B = E/T, R = V/I."
+  },
+  {
    "title": "Experimental skills",
    "explain": "Vernier callipers internal aur external diameter aur depth naapte hain; screw gauge wire ka diameter aur sheet ki motai LC 0.01 mm se. Naapne se pehle jaws band karke zero error note karo, kai jagah reading lo aur average karo."
   }
@@ -169,7 +173,8 @@
   "Sums: add absolute errors;  products/powers: add (power × relative error).",
   "× ÷ → least significant figures;  + − → least decimal places.",
   "Force MLT⁻², energy ML²T⁻², pressure ML⁻¹T⁻², h ML²T⁻¹, G M⁻¹L³T⁻².",
-  "Dimensional analysis can't give constants like 2π."
+  "Dimensional analysis can't give constants like 2π.",
+  "k (spring) MT⁻²;  thermal conductivity MLT⁻³K⁻¹;  k_B ML²T⁻²K⁻¹;  R, X_L, X_C ML²T⁻³A⁻²."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

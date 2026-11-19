@@ -126,7 +126,7 @@
   },
   {
    "title": "Group 15 (N, P, As, Sb, Bi)",
-   "explain": "N₂ strong triple bond (941 kJ/mol) ki wajah se inert hai. Nitrogen oxides: N₂O, NO (paramagnetic, odd electron), N₂O₃, NO₂ (paramagnetic, N₂O₄ mein dimerise), N₂O₅. PCl₅ gas mein trigonal bipyramidal aur solid mein [PCl₄]⁺[PCl₆]⁻."
+   "explain": "N₂ strong triple bond (941 kJ/mol) ki wajah se inert hai. Nitrogen oxides: N₂O, NO (paramagnetic, odd electron), N₂O₃, NO₂ (paramagnetic, N₂O₄ mein dimerise), N₂O₅. PCl₅ gas mein trigonal bipyramidal aur solid mein [PCl₄]⁺[PCl₆]⁻. Common oxidation states −3, +3, +5; sabhi members hydrides EH₃ (NH₃, PH₃, AsH₃ arsine, SbH₃, BiH₃) aur oxides E₂O₃ aur E₂O₅ banate hain — Sb₂O₅ exist karta hai; sirf Bi ki +5 state unstable hai (inert pair effect). NH₃/NH₄⁺ test: Nessler's reagent (KOH mein K₂HgI₄) brown precipitate deta hai (basic mercury(II) amido-iodide)."
   },
   {
    "title": "Group 16 (O, S, Se, Te, Po)",
@@ -153,7 +153,10 @@
   "HClO₄ strongest oxoacid of Cl;  HOCl best oxidiser.",
   "XeF₂ linear, XeF₄ square planar, XeF₆ distorted octahedral.",
   "ClF₃ T-shaped;  BrF₅ square pyramidal;  IF₇ pentagonal bipyramidal.",
-  "Haber (Fe), Ostwald (Pt/Rh), contact (V₂O₅)."
+  "Haber (Fe), Ostwald (Pt/Rh), contact (V₂O₅).",
+  "Group 15: −3, +3, +5;  sabka E₂O₃ aur E₂O₅ (Sb₂O₅ exist karta hai; Bi(V) unstable).",
+  "Nessler's reagent (K₂HgI₄ + KOH) + NH₃/NH₄⁺ → brown ppt.",
+  "1st IE (kJ/mol): B 801 < C 1086 < O 1314 < N 1402 (N > O anomaly)."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

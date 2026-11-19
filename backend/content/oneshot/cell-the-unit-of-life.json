@@ -54,7 +54,7 @@
   },
   {
    "name": "Golgi apparatus",
-   "formula": "cis (forming) face → trans (maturing) face;  packaging of materials, site of formation of glycoproteins and glycolipids",
+   "formula": "cis (forming, convex) face receives ER vesicles → materials modified → trans (maturing, concave) face releases them to intracellular targets or for secretion outside the cell;  packaging of materials, site of formation of glycoproteins and glycolipids",
    "when": "Golgi functions (Camillo Golgi, 1898)."
   },
   {
@@ -75,13 +75,13 @@
   },
   {
    "name": "Cilia and flagella",
-   "formula": "axoneme with 9 + 2 microtubule arrangement;  centriole and basal body: 9 + 0 (nine triplets, cartwheel)",
+   "formula": "cilia: short, oar-like — move the cell or the surrounding fluid;  flagella: longer — cell movement;  axoneme with 9 + 2 microtubule arrangement;  centriole and basal body: 9 + 0 (nine triplets, cartwheel)",
    "when": "Microtubule arrangements.",
    "tag": "PYQ favourite"
   },
   {
    "name": "Chromosome types (by centromere)",
-   "formula": "metacentric (middle, equal arms);  sub-metacentric (slightly away);  acrocentric (near end, very short arm);  telocentric (terminal)",
+   "formula": "metacentric (middle, equal arms);  sub-metacentric (slightly away);  acrocentric (near end, very short arm);  telocentric (terminal);  centromere (primary constriction) holds the sister chromatids and bears disc-shaped kinetochores that attach spindle fibres in cell division",
    "when": "Classifying chromosomes."
   },
   {
@@ -159,7 +159,9 @@
   "Cilia 9+2;  centriole 9+0 triplets.",
   "Amyloplast starch, elaioplast oil, aleuroplast protein.",
   "Metacentric middle, acrocentric near end, telocentric tip.",
-  "Nucleolus → rRNA."
+  "Nucleolus → rRNA.",
+  "Golgi: ER vesicles fuse with cis face;  products leave from trans face.",
+  "Centromere → cell division (kinetochores);  cilium → movement;  cristae → mitochondrion."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

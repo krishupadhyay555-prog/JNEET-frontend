@@ -5,7 +5,7 @@
   "JEE": "Three Dimensional Geometry"
  },
  "title": "Three Dimensional Geometry",
- "readMinutes": 16,
+ "readMinutes": 17,
  "summary": [
   "Space mein points ke coordinates (x, y, z) hote hain. Direction cosines (l, m, n) l² + m² + n² = 1 satisfy karte hain; direction ratios unke proportional koi bhi numbers hain. Distance aur section formulas 2D jaise hi.",
   "Line ko vector form r = a + λb ya Cartesian form (x − x₁)/a = (y − y₁)/b = (z − z₁)/c mein likhte hain. Skew lines na milti hain na parallel hoti hain; unka shortest distance JEE favourite hai.",
@@ -75,6 +75,12 @@
    "name": "Foot of perpendicular and image in a plane",
    "formula": "(x − x₁)/a = (y − y₁)/b = (z − z₁)/c = −(ax₁ + by₁ + cz₁ + d)/(a² + b² + c²);  image: multiply the right side by 2",
    "when": "Projection aur reflection."
+  },
+  {
+   "name": "Foot of perpendicular and image in a LINE",
+   "formula": "line r = a + λb: general point M = a + λb;  solve (M − P) · b = 0 for λ;  foot = M;  image P′ = 2M − P;  distance = |PM|",
+   "when": "Point ka line par projection ya reflection (upar wala plane formula yahan nahi lagta).",
+   "mistake": "Direction ratios (x − x₁)/a form se padho: (7 − z)/2 = (z − 7)/(−2), to direction ratio −2 hai, 2 nahi."
   }
  ],
  "examples": [
@@ -107,6 +113,11 @@
    "title": "Teen points se plane",
    "problem": "(1, 0, 0), (0, 2, 0) aur (0, 0, 3) se guzarne wala plane nikalo.",
    "solution": "Intercept form: x/1 + y/2 + z/3 = 1 ⇒ 6x + 3y + 2z = 6."
+  },
+  {
+   "title": "Line mein point ki image",
+   "problem": "P(4, 0, 2) ki line (x − 1)/2 = (y + 1)/1 = (3 − z)/2 mein image?",
+   "solution": "Direction b = (2, 1, −2) (−2 dhyan se). M = (1 + 2λ, −1 + λ, 3 − 2λ). PM · b = 2(2λ − 3) + (λ − 1) − 2(1 − 2λ) = 9λ − 9 = 0 ⇒ λ = 1, foot M = (3, 0, 1). Image = 2M − P = (2, 0, 0)."
   }
  ],
  "topics": [
@@ -141,7 +152,8 @@
   "SD = |(a₂ − a₁)·(b₁ × b₂)|/|b₁ × b₂|.",
   "Point–plane distance |ax₁ + by₁ + cz₁ + d|/√(a² + b² + c²).",
   "Line–plane: sin φ = |b·n|/(|b||n|).",
-  "Coplanar lines: (a₂ − a₁)·(b₁ × b₂) = 0."
+  "Coplanar lines: (a₂ − a₁)·(b₁ × b₂) = 0.",
+  "Line mein image: M = a + λb, PM·b = 0 se λ;  image = 2M − P."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

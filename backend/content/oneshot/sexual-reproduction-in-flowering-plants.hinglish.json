@@ -60,7 +60,8 @@
   {
    "name": "Pollinating agents",
    "formula": "wind (light non-sticky pollen, feathery stigma, one ovule — grasses, maize tassels);  water (Vallisneria, Hydrilla, Zostera — water hyacinth and water lily are insect/wind pollinated);  insects (large colourful, fragrant flowers, nectar)",
-   "when": "Pollination adaptations."
+   "when": "Pollination adaptations.",
+   "note": "Wind aur water pollinated flowers zyada rangeen nahi hote aur nectar nahi banate. Abiotic pollination chance par chalta hai, isliye ye flowers ovules ke mukaable bahut zyada pollen banate hain."
   },
   {
    "name": "Outbreeding devices",
@@ -137,7 +138,7 @@
   },
   {
    "title": "Embryo development",
-   "explain": "Kuch endosperm banne ke baad zygote divide hota hai. Dicot embryo: do cotyledons wala embryonal axis, epicotyl (plumule) aur hypocotyl (radicle). Monocot embryo: ek cotyledon (scutellum), shoot apex ke aas-paas coleoptile aur radicle ke aas-paas coleorrhiza."
+   "explain": "Kuch endosperm banne ke baad zygote divide hota hai. Dicot embryo: do cotyledons wala embryonal axis, epicotyl (plumule) aur hypocotyl (radicle). Monocot embryo: ek cotyledon (scutellum), shoot apex ke aas-paas coleoptile aur radicle ke aas-paas coleorrhiza. Grass embryo mein scutellum hi akela cotyledon hai aur epiblast ek rudimentary (adhoora vikasit) cotyledon hai."
   },
   {
    "title": "Seeds",
@@ -157,7 +158,9 @@
   "Vallisneria, Hydrilla, Zostera — water.",
   "Papaya (dioecious) prevents autogamy + geitonogamy.",
   "Coconut water = free-nuclear endosperm.",
-  "Apomixis: seed without fertilisation;  polyembryony: citrus, mango."
+  "Apomixis: seed without fertilisation;  polyembryony: citrus, mango.",
+  "Wind/water-pollinated flowers: not colourful, no nectar, enormous pollen output.",
+  "Grass embryo: scutellum = cotyledon;  epiblast = rudimentary cotyledon."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

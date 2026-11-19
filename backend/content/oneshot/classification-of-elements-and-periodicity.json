@@ -46,7 +46,7 @@
    "name": "Ionisation enthalpy",
    "formula": "IE₁ < IE₂ < IE₃ …;  increases across a period, decreases down a group",
    "when": "Energy to remove an electron.",
-   "note": "Exceptions: B < Be and O < N (stable 2s² and half-filled 2p³)."
+   "note": "Exceptions: B < Be and O < N (stable 2s² and half-filled 2p³). Period 3 too: Mg > Al (stable 3s²; Al loses an easy 3p¹ electron) and P > S (half-filled 3p³), so Na < Al < Mg < Si < S < P."
   },
   {
    "name": "Electron gain enthalpy",
@@ -56,7 +56,7 @@
   },
   {
    "name": "Electronegativity (Pauling)",
-   "formula": "increases across, decreases down;  F = 4.0 (highest), then O, N, Cl",
+   "formula": "increases across, decreases down;  F 4.0 > O 3.5 > N 3.0 = Cl 3.0 (N and Cl are the SAME on the Pauling scale)",
    "when": "Bond polarity and character."
   },
   {
@@ -134,8 +134,10 @@
   "Radius ↓ across, ↑ down;  isoelectronic: more Z → smaller.",
   "IE: Be > B, N > O (exceptions).",
   "Most negative electron gain enthalpy: Cl (not F).",
-  "Electronegativity: F 4.0 > O > N ≈ Cl.",
-  "Oxides across period 3: basic → amphoteric → acidic."
+  "Electronegativity (Pauling): F 4.0 > O 3.5 > N = Cl = 3.0.",
+  "Oxides across period 3: basic → amphoteric → acidic.",
+  "IE period 3: Na 496 < Al 577 < Mg 737 < Si 786 kJ/mol (Mg > Al, P > S).",
+  "Ga melts at only 303 K (melts in the hand) — very low like Cs (~302 K), not high."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }

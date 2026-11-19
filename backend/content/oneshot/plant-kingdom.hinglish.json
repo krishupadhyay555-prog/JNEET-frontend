@@ -5,7 +5,7 @@
   "NEET": "Plant Kingdom"
  },
  "title": "Plant Kingdom",
- "readMinutes": 13,
+ "readMinutes": 14,
  "summary": [
   "Plantae mein algae, bryophyte, pteridophyte, gymnosperm aur angiosperms aate hain. Classification artificial systems (kuch morphological characters) se natural systems (kai characters) aur phir phylogenetic systems (evolutionary relationships) tak aaya.",
   "Algae simple, thalloid, zyadatar aquatic hain; pigments aur stored food ke hisaab se green (Chlorophyceae), brown (Phaeophyceae) aur red (Rhodophyceae) algae mein baante jaate hain.",
@@ -41,9 +41,21 @@
    "when": "Mosses ke stages."
   },
   {
+   "name": "Bryophyte life cycle (order)",
+   "formula": "haploid gametophyte attached to the substratum by rhizoids → antheridia release antherozoids into water → antherozoid fuses with the egg in the archegonium → zygote (no meiosis yet) → multicellular sporophyte (foot, seta, capsule) → meiosis (reduction division) in the capsule → haploid spores → new gametophyte",
+   "when": "Bryophyte life cycle ke events ka sahi order.",
+   "tag": "PYQ favourite"
+  },
+  {
    "name": "Pteridophytes",
    "formula": "sporophyte dominant with true roots, stems, leaves and vascular tissue; spores in sporangia on sporophylls; gametophyte = prothallus; water needed for fertilisation",
    "when": "Selaginella, Equisetum, Dryopteris, Pteris, Adiantum."
+  },
+  {
+   "name": "Pteridophyte life cycle (order)",
+   "formula": "sporophyte (2n) → sporangia on sporophylls → meiosis in spore mother cells → haploid spores → spore germinates into the prothallus (small, free-living, mostly photosynthetic gametophyte of cool, damp, shady places) → antheridia and archegonia form on it → antherozoids reach the archegonia through water → fertilisation → zygote → new sporophyte",
+   "when": "Pteridophyte life cycle ke events ka sahi order.",
+   "tag": "PYQ favourite"
   },
   {
    "name": "Heterospory",
@@ -144,7 +156,9 @@
   "Heterospory: Selaginella, Salvinia.",
   "Gymnosperm endosperm n;  angiosperm 3n.",
   "Haplontic: Volvox, Spirogyra;  diplontic: seed plants, Fucus;  haplo-diplontic: bryophytes, pteridophytes, Ectocarpus.",
-  "Agar: Gelidium, Gracilaria;  Chlorella for space travellers."
+  "Agar: Gelidium, Gracilaria;  Chlorella for space travellers.",
+  "Bryophyte order: rhizoids attach → antherozoids in water → fertilisation → sporophyte → meiosis → spores.",
+  "Pteridophyte order: meiosis in spore mother cells → spores → prothallus → antheridia/archegonia → water → fertilisation."
  ],
- "verifiedOn": "2026-11-13"
+ "verifiedOn": "2026-11-19"
 }
