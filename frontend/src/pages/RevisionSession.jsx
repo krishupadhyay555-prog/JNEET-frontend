@@ -22,9 +22,14 @@ import { ArrowLeft, Check, X as XIcon, SkipForward, ChevronRight } from "lucide-
 import { testApi } from "../api/testApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
+import { PyqBadge, PyqImage, ZoomView } from "../components/tests/CbtQuestion.jsx";
+import { MathTex } from "../components/learn/MathTex.jsx";
+import { fitW } from "../components/pyq/pyqImage.js";
 import toast from "react-hot-toast";
 
 const OPTION_LETTERS = ["A", "B", "C", "D"];
+// A typed answer: fill-in-the-blank (words) or a PYQ numerical (a number).
+const isTypedQ = (q) => q?.type === "fill_blank" || q?.type === "numeric";
 
 // "____" in a fill-in-the-blank question becomes a visible blank line.
 function BlankText({ text }) {
@@ -58,6 +63,7 @@ export default function RevisionSession() {
   const [answering, setAnswering] = useState(false);
   const [finishing, setFinishing] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
+  const [zoom, setZoom] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -86,7 +92,7 @@ export default function RevisionSession() {
         a.questions.forEach((q, i) => {
           if (q.selectedIndex !== null && q.selectedIndex !== undefined) {
             restored[q.questionId] = q.selectedIndex;
-            if (q.type === "fill_blank" && q.textAnswer) restoredText[q.questionId] = q.textAnswer;
+            if (isTypedQ(q) && q.textAnswer) restoredText[q.questionId] = q.textAnswer;
           } else if (firstOpen === -1) firstOpen = i;
         });
         setLocalAnswers(restored);
@@ -107,7 +113,7 @@ export default function RevisionSession() {
   // A restored answer has no explanation on screen yet — re-submitting the SAME
   // choice is idempotent on the server and returns the feedback for it.
   const currentQid = attempt?.questions?.[currentIndex]?.questionId;
-  const currentIsBlank = attempt?.questions?.[currentIndex]?.type === "fill_blank";
+  const currentIsBlank = isTypedQ(attempt?.questions?.[currentIndex]);
   const restoredChoice = currentQid !== undefined ? localAnswers[currentQid] : undefined;
   const restoredText = currentQid !== undefined ? typed[currentQid] : undefined;
   const needsFeedback = currentQid !== undefined && restoredChoice !== undefined && !feedback[currentQid];
@@ -143,6 +149,7 @@ export default function RevisionSession() {
   const questions = attempt.questions;
   const currentQuestion = questions[currentIndex];
   const currentFeedback = feedback[currentQuestion.questionId];
+  const isPyq = currentQuestion.source === "pyq";
   const isLast = currentIndex === questions.length - 1;
   const progressPct = Math.round(((currentIndex + 1) / questions.length) * 100);
 
@@ -275,16 +282,28 @@ export default function RevisionSession() {
 
       <div className="max-w-2xl mx-auto px-5 py-6 space-y-5">
         <div key={currentQuestion.questionId} className="animate-fade-up space-y-4">
-          <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-violet-500">
-            {currentQuestion.type === "fill_blank" ? "Fill in the blank" : "MCQ"}
-          </span>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-violet-500">
+              {currentQuestion.type === "fill_blank" ? "Fill in the blank" : currentQuestion.type === "numeric" ? "Numerical" : "MCQ"}
+            </span>
+            {isPyq && <PyqBadge label={currentQuestion.pyqLabel} />}
+          </div>
+          {isPyq && currentQuestion.imageUrl && (
+            <div style={{ containerType: "inline-size" }}>
+              <PyqImage src={currentQuestion.imageUrl} w={currentQuestion.imageW} refW={currentQuestion.imageW}
+                alt={`Question ${currentIndex + 1} (original NTA paper)`} onZoom={setZoom} />
+            </div>
+          )}
+          {isPyq && currentQuestion.figUrl && <PyqImage src={currentQuestion.figUrl} alt="Figure" onZoom={setZoom} />}
+          {currentQuestion.questionText && (
           <p className="text-sm leading-relaxed text-fg-primary font-medium">
             {currentQuestion.type === "fill_blank"
               ? <BlankText text={currentQuestion.questionText} />
-              : currentQuestion.questionText}
+              : isPyq ? <MathTex>{currentQuestion.questionText}</MathTex> : currentQuestion.questionText}
           </p>
+          )}
 
-          {currentQuestion.imageUrl && (
+          {!isPyq && currentQuestion.imageUrl && (
             <img
               src={currentQuestion.imageUrl}
               alt="Question diagram"
@@ -292,7 +311,7 @@ export default function RevisionSession() {
             />
           )}
 
-          {currentQuestion.type === "fill_blank" ? (
+          {isTypedQ(currentQuestion) ? (
             <form
               onSubmit={(e) => { e.preventDefault(); recordBlank(typed[currentQuestion.questionId] ?? ""); }}
               className="flex gap-2"
@@ -303,11 +322,12 @@ export default function RevisionSession() {
                 value={typed[currentQuestion.questionId] ?? ""}
                 onChange={(e) => setTyped((p) => ({ ...p, [currentQuestion.questionId]: e.target.value }))}
                 disabled={!!currentFeedback || answering}
-                maxLength={200}
+                maxLength={currentQuestion.type === "numeric" ? 12 : 200}
+                inputMode={currentQuestion.type === "numeric" ? "decimal" : undefined}
                 autoComplete="off"
                 autoCapitalize="off"
                 spellCheck={false}
-                placeholder="Type your answer…"
+                placeholder={currentQuestion.type === "numeric" ? "Type the number…" : "Type your answer…"}
                 className={`flex-1 min-w-0 rounded-xl border px-4 py-3 text-sm bg-bg-surface text-fg-primary outline-none transition
                   ${currentFeedback
                     ? (currentFeedback.isCorrect ? "border-emerald-600/60 bg-emerald-600/10" : currentFeedback.skipped ? "border-bg-border" : "border-red-500/60 bg-red-500/10")
@@ -324,8 +344,8 @@ export default function RevisionSession() {
               )}
             </form>
           ) : (
-          <div className="space-y-2">
-            {currentQuestion.options.map((opt, idx) => {
+          <div className={currentQuestion.optionsInImage ? "grid grid-cols-4 gap-2" : "space-y-2"} style={isPyq ? { containerType: "inline-size" } : undefined}>
+            {(currentQuestion.optionsInImage ? ["", "", "", ""] : currentQuestion.options).map((opt, idx) => {
               const selected = localAnswers[currentQuestion.questionId] === idx;
               const isCorrectOption = currentFeedback && idx === currentFeedback.correctIndex;
               const isWrongSelected = currentFeedback && selected && !currentFeedback.isCorrect;
@@ -352,9 +372,18 @@ export default function RevisionSession() {
                 >
                   <span className="w-6 h-6 rounded-full bg-bg-panel border border-bg-border
                     flex items-center justify-center text-[11px] font-bold shrink-0">
-                    {OPTION_LETTERS[idx]}
+                    {isPyq ? idx + 1 : OPTION_LETTERS[idx]}
                   </span>
-                  <span className="flex-1 text-fg-primary">{opt}</span>
+                  {!currentQuestion.optionsInImage && (
+                    <span className="flex-1 min-w-0 text-fg-primary">
+                      {isPyq && currentQuestion.optionImages?.[idx] ? (
+                        <span className="inline-block max-w-full bg-white rounded p-1">
+                          <img src={currentQuestion.optionImages[idx]} alt={`Option ${idx + 1}`} loading="lazy" className="block h-auto max-w-full"
+                            style={currentQuestion.imageW && currentQuestion.optionImageW?.[idx] ? { width: fitW(currentQuestion.optionImageW[idx], currentQuestion.imageW) } : undefined} />
+                        </span>
+                      ) : isPyq ? <MathTex>{opt}</MathTex> : opt}
+                    </span>
+                  )}
                   {currentFeedback && isCorrectOption && (
                     <Check size={16} className="text-emerald-600 shrink-0" />
                   )}
@@ -369,7 +398,7 @@ export default function RevisionSession() {
 
           {!currentFeedback && (
             <button
-              onClick={() => (currentQuestion.type === "fill_blank" ? recordBlank(null) : recordAnswer(null))}
+              onClick={() => (isTypedQ(currentQuestion) ? recordBlank(null) : recordAnswer(null))}
               disabled={answering}
               className="flex items-center gap-1.5 text-xs text-gray-600 hover:text-fg-primary
                 transition disabled:opacity-50 px-3 py-2 rounded-lg hover:bg-bg-hover"
@@ -394,10 +423,13 @@ export default function RevisionSession() {
                     ? "Correct!"
                     : "Not quite."}
               </p>
-              {currentQuestion.type === "fill_blank" && currentFeedback.correctAnswer && (
+              {isTypedQ(currentQuestion) && currentFeedback.correctAnswer && (
                 <p className="text-sm text-fg-primary">
-                  Answer: <span className="font-semibold text-emerald-600">{currentFeedback.correctAnswer}</span>
+                  {isPyq ? "NTA's answer" : "Answer"}: <span className="font-semibold text-emerald-600">{currentFeedback.correctAnswer}</span>
                 </p>
+              )}
+              {isPyq && !currentFeedback.explanation && (
+                <p className="text-[11px] text-gray-600">Answer from NTA&apos;s final answer key. Stuck on the method? Ask the AI Mentor.</p>
               )}
               {currentFeedback.explanation && (
                 <div className="bg-bg-panel border border-bg-border rounded-xl p-3.5">
@@ -408,6 +440,7 @@ export default function RevisionSession() {
               )}
             </div>
           )}
+          <ZoomView src={zoom} onClose={() => setZoom(null)} />
           <ReportQuestion key={`r-${currentQuestion.questionId}`} attemptId={attemptId} questionId={currentQuestion.questionId} />
         </div>
 

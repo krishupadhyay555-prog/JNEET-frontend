@@ -20,8 +20,9 @@
 import { env } from "../config/env.js";
 import Question    from "../models/Question.js";
 import TestAttempt from "../models/TestAttempt.js";
+import AllIndiaMock from "../models/AllIndiaMock.js";
 import { isBlankCorrect } from "../services/blankAnswer.js";
-import { samplePyq, pyqSnapshot, sameNumber } from "../services/pyqPool.js";
+import { samplePyq, samplePyqChapter, pyqChapterCounts, pyqSnapshot, sameNumber } from "../services/pyqPool.js";
 
 const SUBJECTS_BY_EXAM = {
   NEET: ["Physics", "Chemistry", "Biology"],
@@ -186,7 +187,8 @@ export function publicQuestion(q) {
 
 // Shared by chapter Revision and the chat "Pichli baar ka recap".
 export async function createRevisionAttempt({ userId, examMode, subject, chapter, difficultyMix, questions }) {
-  const snaps = questions.map(snapshot);
+  // PYQs arrive already as snapshots (services/pyqPool.js pyqSnapshot)
+  const snaps = questions.map((q) => (q.source === "pyq" ? q : snapshot(q)));
   return TestAttempt.create({
     userId, examMode, subject, chapter,
     mode: "revision",
@@ -208,7 +210,7 @@ export function revisionStartResponse(attempt) {
 
 export const startTest = async (req, res, next) => {
   try {
-    const { subject, chapter, easy = 0, moderate = 0, tough = 0, blanks = 0 } = req.body;
+    const { subject, chapter, easy = 0, moderate = 0, tough = 0, blanks = 0, pyq = 0 } = req.body;
     const examMode = req.user.examMode;
 
     const validSubjects = SUBJECTS_BY_EXAM[examMode] ?? SUBJECTS_BY_EXAM.NEET;
@@ -225,12 +227,13 @@ export const startTest = async (req, res, next) => {
       userId: req.user.id, examMode, subject, chapter, mode: "revision", status: "submitted",
     })
       .sort({ submittedAt: -1 })
-      .select("questions.questionId")
+      .select("questions.questionId questions.pyqRef")
       .lean();
 
     const excludeIds = lastAttempt
-      ? lastAttempt.questions.map((q) => q.questionId)
+      ? lastAttempt.questions.filter((q) => !q.pyqRef).map((q) => q.questionId)
       : [];
+    const avoidPyq = new Set((lastAttempt?.questions ?? []).map((q) => q.pyqRef).filter(Boolean));
 
     const [easyQ, moderateQ, toughQ, blankQ] = await Promise.all([
       pickForDifficulty(baseFilter, "easy",     easy,     excludeIds),
@@ -239,7 +242,8 @@ export const startTest = async (req, res, next) => {
       sampleUnique({ ...baseFilter, type: "fill_blank" }, blanks, excludeIds),
     ]);
 
-    const combined = shuffleArray(dedupe([...easyQ, ...moderateQ, ...toughQ, ...blankQ]));
+    const pyqQ = samplePyqChapter(examMode, subject, chapter, pyq, avoidPyq).map(pyqSnapshot);
+    const combined = shuffleArray([...dedupe([...easyQ, ...moderateQ, ...toughQ, ...blankQ]), ...pyqQ]);
 
     if (combined.length === 0) {
       return res.status(404).json({
@@ -261,59 +265,76 @@ export const startTest = async (req, res, next) => {
   }
 };
 
+// One full NTA-pattern paper as attempt snapshots. Shared by the student's own
+// full mock and the weekly All-India Mock (services/allIndiaMock.js).
+//   mix:        per-subject PYQ counts (PYQ_MIX shape)
+//   avoid:      PYQ refs to avoid while enough fresh ones are left
+//   bankFilter: extra filter for bank questions (All-India: { difficulty: "tough" } first)
+// Returns { questions } or { shortfall: "Physics (need 10, have 3), …" }.
+export async function buildFullPaper(examMode, { mix = PYQ_MIX[examMode] ?? {}, avoid = new Set(), bankFilter = null } = {}) {
+  const config = FULL_TEST_CONFIG[examMode] ?? FULL_TEST_CONFIG.NEET;
+  const plan = config.subjects.map((s) => {
+    const m = mix[s.subject] ?? {};
+    const numeric = samplePyq(examMode, s.subject, "numeric", Math.min(m.numeric ?? 0, s.count), avoid);
+    const mcq = samplePyq(examMode, s.subject, "mcq", Math.min(m.mcq ?? 0, s.count - numeric.length), avoid);
+    return { ...s, pyqMcq: mcq, pyqNumeric: numeric, bankCount: s.count - mcq.length - numeric.length };
+  });
+
+  const shortfalls = [];
+  for (const s of plan) {
+    const available = await Question.countDocuments({ examMode, subject: s.subject, ...SERVABLE });
+    if (available < s.bankCount) shortfalls.push(`${s.subject} (need ${s.bankCount}, have ${available})`);
+  }
+  if (shortfalls.length > 0) return { shortfall: shortfalls.join(", ") };
+
+  // Like the real NTA paper: one section per subject in NTA's order, MCQs
+  // first (bank + PYQ shuffled together), then the numericals (Section B).
+  const toSnap = (q) => {
+    const o = shuffleOptions(q);
+    return {
+      questionId: o._id, source: "bank", subject: o.subject, chapter: o.chapter, type: "mcq",
+      questionText: o.questionText, options: o.options, correctIndex: o.correctIndex, selectedIndex: null,
+      imageUrl: o.imageUrl || null, explanation: o.explanation || "",
+    };
+  };
+  const snaps = [];
+  for (const s of plan) {
+    let bankQs = [];
+    if (bankFilter) bankQs = await sampleUnique({ examMode, subject: s.subject, ...bankFilter }, s.bankCount);
+    if (bankQs.length < s.bankCount) {
+      const more = await pickRandomForSubject(examMode, s.subject, s.bankCount - bankQs.length, bankQs.map((q) => q._id));
+      bankQs = [...bankQs, ...more];
+    }
+    const mcqs = shuffleArray([...bankQs.map(toSnap), ...s.pyqMcq.map(pyqSnapshot)]);
+    snaps.push(...mcqs, ...s.pyqNumeric.map(pyqSnapshot));
+  }
+  const seen = new Set();
+  const questions = snaps.filter((q) => {
+    const key = String(q.questionId);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  return { questions, maxMarks: config.maxMarks, durationMinutes: config.durationMinutes };
+}
+
 export const startFullTest = async (req, res, next) => {
   try {
     const examMode = req.user.examMode;
-    const config = FULL_TEST_CONFIG[examMode] ?? FULL_TEST_CONFIG.NEET;
 
     // PYQs the student met in the last 10 mocks are avoided while enough are left.
     const recent = await TestAttempt.find({ userId: req.user.id, examMode, mode: "test" })
       .sort({ startedAt: -1 }).limit(10).select("questions.pyqRef").lean();
     const avoid = new Set(recent.flatMap((t) => t.questions.map((q) => q.pyqRef).filter(Boolean)));
 
-    const plan = config.subjects.map((s) => {
-      const mix = PYQ_MIX[examMode]?.[s.subject] ?? {};
-      const numeric = samplePyq(examMode, s.subject, "numeric", Math.min(mix.numeric ?? 0, s.count), avoid);
-      const mcq = samplePyq(examMode, s.subject, "mcq", Math.min(mix.mcq ?? 0, s.count - numeric.length), avoid);
-      return { ...s, pyqMcq: mcq, pyqNumeric: numeric, bankCount: s.count - mcq.length - numeric.length };
-    });
-
-    const shortfalls = [];
-    for (const s of plan) {
-      const available = await Question.countDocuments({ examMode, subject: s.subject, ...SERVABLE });
-      if (available < s.bankCount) {
-        shortfalls.push(`${s.subject} (need ${s.bankCount}, have ${available})`);
-      }
-    }
-    if (shortfalls.length > 0) {
+    const paper = await buildFullPaper(examMode, { avoid });
+    if (paper.shortfall) {
       return res.status(404).json({
         success: false,
-        error: `Not enough questions yet for a full ${examMode} test. Missing: ${shortfalls.join(", ")}.`,
+        error: `Not enough questions yet for a full ${examMode} test. Missing: ${paper.shortfall}.`,
       });
     }
-
-    // Like the real NTA paper: one section per subject in NTA's order, MCQs
-    // first (bank + PYQ shuffled together), then the numericals (Section B).
-    const snaps = [];
-    for (const s of plan) {
-      const bank = (await pickRandomForSubject(examMode, s.subject, s.bankCount, [])).map((q) => {
-        const o = shuffleOptions(q);
-        return {
-          questionId: o._id, source: "bank", subject: o.subject, chapter: o.chapter, type: "mcq",
-          questionText: o.questionText, options: o.options, correctIndex: o.correctIndex, selectedIndex: null,
-          imageUrl: o.imageUrl || null, explanation: o.explanation || "",
-        };
-      });
-      const mcqs = shuffleArray([...bank, ...s.pyqMcq.map(pyqSnapshot)]);
-      snaps.push(...mcqs, ...s.pyqNumeric.map(pyqSnapshot));
-    }
-    const seen = new Set();
-    const questions = snaps.filter((q) => {
-      const key = String(q.questionId);
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+    const { questions } = paper;
 
     const attempt = await TestAttempt.create({
       userId: req.user.id,
@@ -321,8 +342,8 @@ export const startFullTest = async (req, res, next) => {
       subject: "All Subjects",
       chapter: `${examMode} Full Test`,
       mode: "test",
-      maxMarks: config.maxMarks,
-      durationMinutes: config.durationMinutes,
+      maxMarks: paper.maxMarks,
+      durationMinutes: paper.durationMinutes,
       questions,
       totalQuestions: questions.length,
       status: "in-progress",
@@ -392,6 +413,25 @@ export const answerQuestion = async (req, res, next) => {
       });
     }
 
+    if (question.type === "numeric") {
+      // A PYQ numerical: the typed number against NTA's value(s).
+      const typed = typeof textAnswer === "string" ? textAnswer.trim().slice(0, 20) : "";
+      const isCorrect = typed ? (question.answers ?? []).some((a) => sameNumber(typed, a)) : false;
+      question.textAnswer = typed || null;
+      question.selectedIndex = typed ? (isCorrect ? 0 : 1) : null;
+      await attempt.save();
+      return res.json({
+        success: true,
+        type: "numeric",
+        isCorrect,
+        selectedIndex: question.selectedIndex,
+        correctIndex: 0,
+        correctAnswer: question.answers?.[0] ?? "",
+        acceptedAnswers: question.answers ?? [],
+        explanation: question.explanation || "",
+      });
+    }
+
     question.selectedIndex = selectedIndex;
     await attempt.save();
 
@@ -433,6 +473,7 @@ export const submitTest = async (req, res, next) => {
       // Fill-in-the-blank: the server already recorded 0 / 1 / null in /answer.
       let selected;
       if (q.type === "fill_blank") selected = q.selectedIndex;
+      else if (q.type === "numeric" && attempt.mode === "revision") selected = q.selectedIndex;   // checked in /answer
       else if (q.type === "numeric") {
         // A typed number: kept as typed, marked 0 (right) / 1 (wrong) / null (left blank).
         const typed = typeof textMap.get(key) === "string" ? textMap.get(key).trim().slice(0, 20) : "";
@@ -491,6 +532,26 @@ export const getAttempt = async (req, res, next) => {
           })),
         },
       });
+    }
+
+    // All-India Mock: answers stay hidden until the mock closes for everyone,
+    // so a student who finished early cannot pass them on.
+    if (attempt.allIndiaMockId) {
+      const mock = await AllIndiaMock.findById(attempt.allIndiaMockId).select("closesAt").lean();
+      if (mock && Date.now() <= mock.closesAt.getTime()) {
+        return res.json({
+          success: true,
+          attempt: {
+            ...attempt,
+            reviewOpensAt: mock.closesAt,
+            questions: attempt.questions.map((q) => ({
+              ...publicQuestion(q),
+              selectedIndex: q.type === "numeric" || q.type === "fill_blank" ? null : q.selectedIndex,
+              textAnswer: q.textAnswer ?? null,
+            })),
+          },
+        });
+      }
     }
 
     return res.json({ success: true, attempt });
@@ -562,6 +623,8 @@ export const getAvailableChapters = async (req, res, next) => {
       if (chapterMap[key]) chapterMap[key].blanks = row.count;
     }
     for (const c of Object.values(chapterMap)) c.blanks = c.blanks ?? 0;
+    const pyqCounts = pyqChapterCounts(examMode);
+    for (const c of Object.values(chapterMap)) c.pyq = pyqCounts[`${c.subject}::${c.chapter}`] ?? 0;
 
     return res.json({ success: true, chapters: Object.values(chapterMap) });
 

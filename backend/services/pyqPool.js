@@ -117,3 +117,46 @@ export function sameNumber(a, b) {
   const y = Number(String(b ?? "").trim());
   return String(a ?? "").trim() !== "" && Number.isFinite(x) && Number.isFinite(y) && Math.abs(x - y) < 1e-9;
 }
+
+// Per chapter: how many servable PYQs (for the Revision chapter list).
+let chapterCounts = null;
+export function pyqChapterCounts(examMode) {
+  if (!chapterCounts) {
+    chapterCounts = { NEET: {}, JEE: {} };
+    for (const [exam, bySubject] of Object.entries(pyqPools())) {
+      for (const [subject, { mcq, numeric }] of Object.entries(bySubject)) {
+        for (const p of [...mcq, ...numeric]) {
+          const k = `${subject}::${p.chapter}`;
+          chapterCounts[exam][k] = (chapterCounts[exam][k] ?? 0) + 1;
+        }
+      }
+    }
+  }
+  return chapterCounts[examMode] ?? {};
+}
+
+// `count` random PYQs of one chapter (MCQs and numericals together),
+// avoiding `avoidRefs` while enough are left.
+export function samplePyqChapter(examMode, subject, chapter, count, avoidRefs = new Set()) {
+  if (count <= 0) return [];
+  const p = pyqPools()[examMode]?.[subject];
+  if (!p) return [];
+  const pool = [...p.mcq, ...p.numeric].filter((q) => q.chapter === chapter);
+  const fresh = pool.filter((q) => !avoidRefs.has(q.ref));
+  const source = fresh.length >= count ? fresh : pool;
+  const a = [...source];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a.slice(0, count);
+}
+
+// Servable PYQs in total (they count as practice questions next to the bank).
+export function pyqServableTotal() {
+  let n = 0;
+  for (const bySubject of Object.values(pyqPools())) {
+    for (const { mcq, numeric } of Object.values(bySubject)) n += mcq.length + numeric.length;
+  }
+  return n;
+}

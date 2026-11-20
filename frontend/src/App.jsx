@@ -46,6 +46,7 @@ const Settings        = lazyPage(() => import("./pages/Settings.jsx"));
 const WMS             = lazyPage(() => import("./pages/WMS.jsx"));
 const Analytics       = lazyPage(() => import("./pages/Analytics.jsx"));
 const Tests           = lazyPage(() => import("./pages/Tests.jsx"));
+const AllIndiaMock    = lazyPage(() => import("./pages/AllIndiaMock.jsx"));
 const TestAttempt     = lazyPage(() => import("./pages/TestAttempt.jsx"));
 const TestResult      = lazyPage(() => import("./pages/TestResult.jsx"));
 const Revision        = lazyPage(() => import("./pages/Revision.jsx"));
@@ -57,6 +58,7 @@ const PYQPaper        = lazyPage(() => import("./pages/PYQPaper.jsx"));
 const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
 const About           = lazyPage(() => import("./pages/About.jsx"));
 const Pricing         = lazyPage(() => import("./pages/Pricing.jsx"));
+const RankPredictor   = lazyPage(() => import("./pages/RankPredictor.jsx"));
 const Contact         = lazyPage(() => import("./pages/Contact.jsx"));
 const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
 const ParentUnlock    = lazyPage(() => import("./pages/ParentUnlock.jsx"));
@@ -202,6 +204,7 @@ export default function App() {
               <Route path="/delivery"        element={<Legal doc="delivery" />} />
               <Route path="/about"           element={<About />}   />
               <Route path="/pricing"         element={<Pricing />} />
+              <Route path="/rank-predictor"  element={<RankPredictor />} />
               <Route path="/contact"         element={<Contact />} />
               <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
               <Route path="/parent-consent/:token"        element={<ParentConsent />} />
@@ -215,6 +218,7 @@ export default function App() {
               <Route path="/wms"       element={<ProtectedRoute><WMS /></ProtectedRoute>} />
               <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
               <Route path="/tests"     element={<ProtectedRoute><Tests /></ProtectedRoute>} />
+              <Route path="/all-india" element={<ProtectedRoute><AllIndiaMock /></ProtectedRoute>} />
               <Route path="/revision"  element={<ProtectedRoute><Revision /></ProtectedRoute>} />
               <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
               <Route path="/oneshot"   element={<ProtectedRoute><OneShot /></ProtectedRoute>} />
