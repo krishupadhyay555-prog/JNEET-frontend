@@ -8,15 +8,16 @@ import { useState } from "react";
 import { ChevronDown, Play } from "lucide-react";
 
 export function TestCard({ chapterInfo, onStart, starting }) {
-  const { chapter, easy, moderate, tough, total, blanks = 0 } = chapterInfo;
+  const { chapter, easy, moderate, tough, total, blanks = 0, pyq = 0 } = chapterInfo;
   const [open, setOpen] = useState(false);
   const [mix, setMix] = useState({
     easy: Math.min(easy, 5),
     moderate: Math.min(moderate, 5),
     tough: Math.min(tough, 5),
     blanks: Math.min(blanks, 3),
+    pyq: Math.min(pyq, 5),
   });
-  const count = mix.easy + mix.moderate + mix.tough + mix.blanks;
+  const count = mix.easy + mix.moderate + mix.tough + mix.blanks + mix.pyq;
 
   const clamp = (val, max) => Math.max(0, Math.min(val, max));
 
@@ -33,7 +34,7 @@ export function TestCard({ chapterInfo, onStart, starting }) {
         <div>
           <p className="text-sm font-medium text-fg-primary">{chapter}</p>
           <p className="text-[11px] text-gray-600 mt-0.5">
-            {total} MCQ{total === 1 ? "" : "s"}{blanks ? ` · ${blanks} fill in the blank${blanks === 1 ? "" : "s"}` : ""}
+            {total} MCQ{total === 1 ? "" : "s"}{blanks ? ` · ${blanks} fill in the blank${blanks === 1 ? "" : "s"}` : ""}{pyq ? ` · ${pyq} PYQ${pyq === 1 ? "" : "s"}` : ""}
           </p>
         </div>
         <ChevronDown
@@ -49,6 +50,7 @@ export function TestCard({ chapterInfo, onStart, starting }) {
             { key: "moderate", label: "Moderate", max: moderate },
             { key: "tough",    label: "Tough",    max: tough },
             ...(blanks ? [{ key: "blanks", label: "Fill in the blanks", max: blanks }] : []),
+            ...(pyq ? [{ key: "pyq", label: "Real PYQs (NTA)", max: Math.min(pyq, 30) }] : []),
           ].map((d) => (
             <div key={d.key} className="flex items-center justify-between">
               <span className="text-xs text-gray-600">

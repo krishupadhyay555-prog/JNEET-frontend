@@ -76,6 +76,10 @@ const testAttemptSchema = new mongoose.Schema(
 
     questions: { type: [attemptQuestionSchema], default: [] },
 
+    // Set when this attempt is a student's sitting of the weekly All-India Mock
+    // (models/AllIndiaMock.js). One per student per mock.
+    allIndiaMockId: { type: mongoose.Schema.Types.ObjectId, ref: "AllIndiaMock", default: undefined },
+
     totalQuestions:   { type: Number, required: true },
     correctCount:     { type: Number, default: 0 },
     wrongCount:       { type: Number, default: 0 },
@@ -107,4 +111,9 @@ testAttemptSchema.index({ userId: 1, examMode: 1, subject: 1, chapter: 1, status
 // a user's submitted attempts by each question's own subject.
 testAttemptSchema.index({ userId: 1, status: 1, "questions.subject": 1 });
 
+// All-India Mock: one sitting per student per mock; the rank list reads all sittings of a mock.
+testAttemptSchema.index({ allIndiaMockId: 1, userId: 1 }, { unique: true, partialFilterExpression: { allIndiaMockId: { $exists: true } } });
+testAttemptSchema.index({ allIndiaMockId: 1, status: 1, marksObtained: -1 }, { partialFilterExpression: { allIndiaMockId: { $exists: true } } });
+
+export { attemptQuestionSchema };
 export default mongoose.model("TestAttempt", testAttemptSchema);

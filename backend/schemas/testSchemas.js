@@ -18,8 +18,10 @@ export const startTestSchema = z
     tough:    z.number().int().min(0).max(50).default(0),
     // Fill-in-the-blank questions added to a Revision (0 = none).
     blanks:   z.number().int().min(0).max(20).default(0),
+    // Real previous-year questions of the chapter (NTA images + NTA's answer).
+    pyq:      z.number().int().min(0).max(30).default(0),
   })
-  .refine((d) => d.easy + d.moderate + d.tough + d.blanks > 0, {
+  .refine((d) => d.easy + d.moderate + d.tough + d.blanks + d.pyq > 0, {
     message: "Select at least one question.",
   });
 
