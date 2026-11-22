@@ -19,7 +19,7 @@ const LETTERS = ["A", "B", "C", "D"];
 
 export function PyqBadge({ label }) {
   return (
-    <span className="inline-flex items-center gap-1 text-[11px] font-semibold rounded-md bg-amber-500/15 text-amber-700 px-2 py-0.5">
+    <span title="Official NTA question paper. JNEET+ AI is not affiliated with NTA." className="inline-flex items-center gap-1 text-[11px] font-semibold rounded-md bg-amber-500/15 text-amber-700 px-2 py-0.5">
       PYQ · {label}
     </span>
   );

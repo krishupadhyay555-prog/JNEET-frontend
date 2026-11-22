@@ -59,6 +59,7 @@ const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
 const About           = lazyPage(() => import("./pages/About.jsx"));
 const Pricing         = lazyPage(() => import("./pages/Pricing.jsx"));
 const RankPredictor   = lazyPage(() => import("./pages/RankPredictor.jsx"));
+const SeoLanding      = lazyPage(() => import("./pages/SeoLanding.jsx"));
 const Contact         = lazyPage(() => import("./pages/Contact.jsx"));
 const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
 const ParentUnlock    = lazyPage(() => import("./pages/ParentUnlock.jsx"));
@@ -207,6 +208,10 @@ export default function App() {
               <Route path="/rank-predictor"  element={<RankPredictor />} />
               <Route path="/jee-main-rank-predictor" element={<RankPredictor fixedExam="jee" />} />
               <Route path="/neet-rank-predictor" element={<RankPredictor fixedExam="neet" />} />
+              <Route path="/jee-main-mock-test" element={<SeoLanding path="jee-main-mock-test" />} />
+              <Route path="/neet-mock-test" element={<SeoLanding path="neet-mock-test" />} />
+              <Route path="/jee-main-pyq" element={<SeoLanding path="jee-main-pyq" />} />
+              <Route path="/neet-pyq" element={<SeoLanding path="neet-pyq" />} />
               <Route path="/contact"         element={<Contact />} />
               <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
               <Route path="/parent-consent/:token"        element={<ParentConsent />} />

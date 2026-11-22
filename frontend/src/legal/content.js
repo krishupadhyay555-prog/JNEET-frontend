@@ -27,7 +27,7 @@ export const BUSINESS = {
 };
 
 export const LEGAL_VERSION = "2026-11-14";
-export const LEGAL_UPDATED = "15 November 2026";
+export const LEGAL_UPDATED = "22 November 2026";
 
 const B = BUSINESS;
 
@@ -218,8 +218,11 @@ export const LEGAL = {
         p: ["These terms are governed by the laws of India. Disputes will be handled by the competent courts in India. Please contact us first — most problems can be solved by talking."],
       },
       {
-        h: "11. Contact",
-        p: [`${B.supportEmail}${B.address ? ` · ${B.address}` : ""}`],
+        h: "11. Contact and Grievance Officer",
+        p: [
+          `${B.supportEmail}${B.address ? ` · ${B.address}` : ""}`,
+          `Grievance Officer: ${B.grievanceOfficer.name}, ${B.grievanceOfficer.email}. We acknowledge every complaint within 48 hours and resolve it within one month.`,
+        ],
       },
     ],
   },
@@ -258,7 +261,10 @@ export const LEGAL = {
       },
       {
         h: "5. How to ask",
-        p: [`Email ${B.supportEmail} from your registered address with the payment reference. We reply within 2 working days.`],
+        p: [
+          `Email ${B.supportEmail} from your registered address with the payment reference. We reply within 2 working days.`,
+          `Not happy with the answer? Write to our Grievance Officer: ${B.grievanceOfficer.name}, ${B.grievanceOfficer.email}. We acknowledge within 48 hours and resolve within one month.`,
+        ],
       },
     ],
   },

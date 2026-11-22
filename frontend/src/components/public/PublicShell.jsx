@@ -85,7 +85,7 @@ function Footer() {
   const a = "block text-[13.5px] text-[#5F5B67] hover:text-[#17161C] transition-colors";
   return (
     <footer className="border-t border-[#E7E4DD] bg-[#EFEDE7]/60 mt-8">
-      <div className="max-w-6xl mx-auto px-5 py-12 grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="max-w-6xl mx-auto px-5 py-12 grid gap-10 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
         <div className="space-y-3">
           <Logo />
           <p className="text-[13.5px] leading-relaxed text-[#5F5B67] max-w-xs">
@@ -99,6 +99,15 @@ function Footer() {
           <Link to="/rank-predictor" className={a}>Rank Predictor</Link>
           <Link to="/register" className={a}>Create free account</Link>
           <Link to="/login" className={a}>Log in</Link>
+        </div>
+        <div className={col}>
+          <p className="text-[12px] font-semibold uppercase tracking-wider text-[#17161C]">Practice</p>
+          <Link to="/jee-main-mock-test" className={a}>JEE Main mock test</Link>
+          <Link to="/neet-mock-test" className={a}>NEET mock test</Link>
+          <Link to="/jee-main-pyq" className={a}>JEE Main PYQs</Link>
+          <Link to="/neet-pyq" className={a}>NEET PYQs</Link>
+          <Link to="/jee-main-rank-predictor" className={a}>JEE Main rank predictor</Link>
+          <Link to="/neet-rank-predictor" className={a}>NEET rank predictor</Link>
         </div>
         <div className={col}>
           <p className="text-[12px] font-semibold uppercase tracking-wider text-[#17161C]">Help</p>
