@@ -6,8 +6,9 @@
 //   - links open in a new tab safely
 // ============================================================
 
-import { memo, isValidElement } from "react";
+import { memo, isValidElement, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import { DiagramZoom } from "../learn/DiagramGallery.jsx";
 import remarkGfm from "remark-gfm";
 import { Copy, Check } from "lucide-react";
 import { useCopy } from "../../hooks/useCopy.js";
@@ -44,8 +45,25 @@ function CodeBlock({ children }) {
   );
 }
 
+// Only our own diagram library images render in chat (never remote URLs).
+function ChatImage({ src, alt }) {
+  const [open, setOpen] = useState(false);
+  if (typeof src !== "string" || !src.startsWith("/diagrams/")) return null;
+  return (
+    <span className="block my-2 not-prose">
+      <button type="button" onClick={() => setOpen(true)} className="block w-full bg-white rounded-xl border border-bg-border overflow-hidden">
+        <img src={src} alt={alt || "Diagram"} loading="lazy" className="w-full max-h-[420px] object-contain" />
+      </button>
+      <span className="block text-[11.5px] text-gray-600 mt-1">{alt} · tap to zoom</span>
+      {open && <DiagramZoom d={{ f: src, t: alt || "Diagram" }} onClose={() => setOpen(false)} />}
+    </span>
+  );
+}
+
 const components = {
   pre: CodeBlock,
+  // eslint-disable-next-line no-unused-vars
+  img: ({ node, ...props }) => <ChatImage {...props} />,
   // react-markdown passes an AST `node` prop that must not reach the DOM
   // eslint-disable-next-line no-unused-vars
   a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" />,
