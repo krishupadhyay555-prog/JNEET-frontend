@@ -11,7 +11,9 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, AlertTriangle, XCircle, ExternalLink, Info } from "lucide-react";
 import { PublicShell, PageHero, PrimaryButton } from "../components/public/PublicShell.jsx";
 import { BUSINESS } from "../legal/content.js";
-import { predictJee, predictNeet, validateJeeMarks, validateNeetMarks } from "../utils/rankPredict.js";
+import SeoFaq from "../components/public/SeoFaq.jsx";
+import { seoPage } from "../seo/seoContent.js";
+import { predictJee, predictNeet, validateJeeMarks, validateNeetMarks, expectedJeeRankFromPercentile } from "../utils/rankPredict.js";
 import { JEE_SHIFTS, JEE_FACTS, NEET_YEARS, sources, asOf } from "../utils/rankData.js";
 
 const HONEST_LINE = "An estimate from official NTA result data and published shift-wise analyses — your real rank depends on your paper.";
@@ -39,17 +41,17 @@ function fmtDate(iso) {
 const card = "bg-white rounded-2xl border border-[#E7E4DD]";
 const inputCls = "w-full h-12 px-4 rounded-xl border border-[#E2DED6] bg-white text-[17px] font-semibold text-[#17161C] placeholder:font-normal placeholder:text-[#9A96A1] focus:outline-none focus:border-[#0D9488] focus:ring-4 focus:ring-[#0D9488]/15 transition";
 
-function MarksField({ id, label, hint, value, onChange, error, min, max }) {
+function MarksField({ id, label, hint, value, onChange, error, min, max, step = 1 }) {
   return (
     <div>
       <label htmlFor={id} className="block text-[14px] font-semibold text-[#17161C] mb-1.5">{label}</label>
       <input
         id={id}
         type="number"
-        inputMode="numeric"
+        inputMode={step === 1 ? "numeric" : "decimal"}
         min={min}
         max={max}
-        step={1}
+        step={step}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={`e.g. ${Math.round(max / 2)}`}
@@ -131,7 +133,84 @@ const SESSIONS = [1, 2].map((n) => ({
   shifts: JEE_SHIFTS.filter((s) => s.session === n),
 }));
 
+// After the result, NTA gives a percentile (not marks). Rank from it is direct.
+function validatePercentile(v) {
+  const n = Number(v);
+  if (!Number.isFinite(n)) return "Enter a number.";
+  if (n < 0 || n > 100) return "Percentile must be between 0 and 100.";
+  return null;
+}
+
+function JeePercentilePanel() {
+  const [pct, setPct] = useState("");
+  const error = pct === "" ? null : validatePercentile(pct);
+  const p = pct === "" || error ? null : Number(pct);
+  const cutoff = JEE_FACTS.advancedCutoffGeneral;
+  const status = p == null ? null : p >= cutoff ? "yes" : p >= cutoff - 0.5 ? "borderline" : "no";
+  return (
+    <div className="space-y-6">
+      <div className="grid gap-4 sm:grid-cols-2">
+        <MarksField
+          id="jee-pct"
+          label="Your NTA percentile"
+          hint="From your JEE Main scorecard, e.g. 97.4512."
+          value={pct}
+          onChange={setPct}
+          error={error}
+          min={0}
+          max={100}
+          step="any"
+        />
+      </div>
+      <div aria-live="polite">
+        {p == null ? (
+          <EmptyHint text="Enter your percentile to see your expected All India Rank." />
+        ) : (
+          <div className="space-y-4">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Stat label="Expected All India Rank (CRL)" value={fmtInt(expectedJeeRankFromPercentile(p))}
+                sub={`Out of ${fmtInt(JEE_FACTS.uniqueCandidates)} candidates (JEE Main ${JEE_FACTS.year})`} />
+              <Stat label="You are in" value={fmtTop(100 - p)} sub="Of all JEE Main candidates" />
+            </div>
+            <StatusBox
+              status={status}
+              title={{ yes: "Likely to qualify for JEE Advanced (General)", borderline: "Borderline for JEE Advanced (General)", no: "Below the JEE Advanced General cutoff" }[status]}
+            >
+              The {JEE_FACTS.year} General (CRL) cutoff was <b className="tabular-nums">{cutoff}</b> percentile. Cutoffs for OBC-NCL, EWS, SC, ST and PwD candidates are lower.
+            </StatusBox>
+            <DataNote>Rank = (100 − percentile) × {fmtInt(JEE_FACTS.uniqueCandidates)} unique candidates. NTA's real rank can differ by a few hundred because of ties and the session-best rule.</DataNote>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function JeeModeSwitch({ mode, setMode }) {
+  const opts = [["marks", "I know my marks"], ["percentile", "I know my percentile"]];
+  return (
+    <div role="radiogroup" aria-label="What do you know?" className="inline-flex rounded-xl border border-[#E7E4DD] bg-white p-1">
+      {opts.map(([k, l]) => (
+        <button key={k} type="button" role="radio" aria-checked={mode === k} onClick={() => setMode(k)}
+          className={`px-3.5 py-1.5 rounded-lg text-[13.5px] font-semibold transition-colors ${mode === k ? "bg-[#0F766E] text-white" : "text-[#3A3741] hover:bg-[#F4F2EE]"}`}>
+          {l}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function JeePanel() {
+  const [mode, setMode] = useState("marks");
+  return (
+    <div className="space-y-5">
+      <JeeModeSwitch mode={mode} setMode={setMode} />
+      {mode === "marks" ? <JeeMarksPanel /> : <JeePercentilePanel />}
+    </div>
+  );
+}
+
+function JeeMarksPanel() {
   const [marks, setMarks] = useState("");
   const [shift, setShift] = useState("typical");
   const error = marks === "" ? null : validateJeeMarks(marks);
@@ -434,8 +513,10 @@ export default function RankPredictor({ fixedExam = null }) {
           </p>
         </Block>
 
+        <SeoFaq faq={seoPage(fixedExam === "neet" ? "neet-rank-predictor" : fixedExam === "jee" ? "jee-main-rank-predictor" : "rank-predictor")?.faq} />
+
         <div className="border-t border-[#E7E4DD] pt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:justify-between">
-          <p className="text-[16px] text-[#3A3741] max-w-xl">Want a better rank? Practise with full-length mocks and see your weak topics.</p>
+          <p className="text-[16px] text-[#3A3741] max-w-xl">Don&apos;t know your marks yet? Take the free All-India Mock every Sunday (real PYQs, NTA-style screen) and get your rank among all students plus a predicted JEE/NEET rank.</p>
           <PrimaryButton to="/register">Create free account <ArrowRight size={17} /></PrimaryButton>
         </div>
       </div>

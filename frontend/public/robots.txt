@@ -8,6 +8,10 @@ Allow: /refund
 Allow: /rank-predictor
 Allow: /jee-main-rank-predictor
 Allow: /neet-rank-predictor
+Allow: /jee-main-mock-test
+Allow: /neet-mock-test
+Allow: /jee-main-pyq
+Allow: /neet-pyq
 Disallow: /api/
 Disallow: /dashboard
 Disallow: /ask

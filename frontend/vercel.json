@@ -28,6 +28,10 @@
     { "source": "/rank-predictor", "destination": "/rank-predictor/index.html" },
     { "source": "/jee-main-rank-predictor", "destination": "/jee-main-rank-predictor/index.html" },
     { "source": "/neet-rank-predictor", "destination": "/neet-rank-predictor/index.html" },
+    { "source": "/jee-main-mock-test", "destination": "/jee-main-mock-test/index.html" },
+    { "source": "/neet-mock-test", "destination": "/neet-mock-test/index.html" },
+    { "source": "/jee-main-pyq", "destination": "/jee-main-pyq/index.html" },
+    { "source": "/neet-pyq", "destination": "/neet-pyq/index.html" },
     { "source": "/((?!api/|assets/|.*\\..*).*)", "destination": "/index.html" }
   ]
 }

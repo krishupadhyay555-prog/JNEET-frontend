@@ -23,7 +23,7 @@ const NEET = [
 // JEE Main only (JEE Advanced is out of scope — see ROADMAP.md §0).
 // 2027 Session 1 dates are from the NTA calendar (16 Sep 2026: 22–24 & 28–30 Jan).
 const JEE = [
-  ["JEE_MAIN_2027",    "JEE Main 2027 (Session 1)", "2027-01-22T03:30:00.000Z", false],
+  ["JEE_MAIN_2027",    "JEE Main 2027 (Session 1)", "2027-01-20T03:30:00.000Z", false],
   ["JEE_MAIN_2027_S2", "JEE Main 2027 (Session 2)", "2027-04-02T03:30:00.000Z", true],
   ["JEE_MAIN_2028",    "JEE Main 2028", "2028-01-22T03:30:00.000Z", true],
   ["JEE_MAIN_2029",    "JEE Main 2029", "2029-01-22T03:30:00.000Z", true],
