@@ -17,10 +17,11 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Trophy, Lock } from "lucide-react";
 import { testApi } from "../api/testApi.js";
 import { ResultSummary } from "../components/tests/ResultSummary.jsx";
 import { ReviewAnswer } from "../components/tests/ReviewAnswer.jsx";
+import { PredictedRank } from "../components/tests/PredictedRank.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import toast from "react-hot-toast";
 
@@ -75,7 +76,8 @@ export default function TestResult() {
   // FIX: route back to whichever page this attempt actually came
   // from — Revision (chapter-wise, instant-feedback) or Tests
   // (Full-Test-only page) — never hardcoded to one or the other.
-  const backPath = attempt.mode === "revision" ? "/revision" : "/tests";
+  const backPath = attempt.allIndiaMockId ? "/all-india" : attempt.mode === "revision" ? "/revision" : "/tests";
+  const reviewLocked = Boolean(attempt.reviewOpensAt);
 
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
@@ -95,14 +97,33 @@ export default function TestResult() {
 
       <div className="max-w-2xl mx-auto px-5 py-8 space-y-4">
         <ResultSummary attempt={attempt} />
+        <PredictedRank attempt={attempt} />
 
-        <p className="text-[10px] text-gray-700 uppercase tracking-widest font-medium pt-2">
-          Review
-        </p>
+        {attempt.allIndiaMockId && (
+          <button onClick={() => navigate("/all-india")}
+            className="w-full flex items-center justify-center gap-2 bg-amber-500/15 border border-amber-500/30 text-amber-700 text-xs font-semibold py-2.5 rounded-xl hover:bg-amber-500/20">
+            <Trophy size={14} /> See your All-India rank
+          </button>
+        )}
 
-        {attempt.questions.map((q, i) => (
-          <ReviewAnswer key={q.questionId} question={q} index={i} mode={attempt.mode} attemptId={attemptId} />
-        ))}
+        {reviewLocked ? (
+          <div className="glass-panel rounded-2xl p-5 text-center space-y-1">
+            <Lock size={18} className="mx-auto text-gray-600" />
+            <p className="text-sm font-semibold">Review opens when the mock closes</p>
+            <p className="text-xs text-gray-600">
+              Answers and solutions unlock for everyone at {new Date(attempt.reviewOpensAt).toLocaleString("en-IN", { timeZone: "Asia/Kolkata", weekday: "short", hour: "numeric", minute: "2-digit" })} IST, so no one can pass them on.
+            </p>
+          </div>
+        ) : (
+          <>
+            <p className="text-[10px] text-gray-700 uppercase tracking-widest font-medium pt-2">
+              Review
+            </p>
+            {attempt.questions.map((q, i) => (
+              <ReviewAnswer key={q.questionId} question={q} index={i} mode={attempt.mode} attemptId={attemptId} />
+            ))}
+          </>
+        )}
       </div>
     </div>
   );

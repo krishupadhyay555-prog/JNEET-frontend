@@ -13,6 +13,13 @@ export const testApi = {
   getAttempt:     (attemptId) => api.get(`/test/${attemptId}`),
   getHistory:     () => api.get("/test/history"),
 };
+// Weekly All-India Mock (backend/services/allIndiaMock.js)
+export const allIndiaApi = {
+  get:         ()       => api.get("/all-india"),
+  start:       (mockId) => api.post(`/all-india/${mockId}/start`),
+  leaderboard: (mockId) => api.get(`/all-india/${mockId}/leaderboard`),
+};
+
 export const reportApi = {
   report:      (data) => api.post("/test/report", data),
   list:        (status = "open") => api.get("/admin/reports", { params: { status } }),

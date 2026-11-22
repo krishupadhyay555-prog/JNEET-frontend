@@ -74,6 +74,7 @@ export default function Revision() {
         moderate: mix.moderate,
         tough: mix.tough,
         blanks: mix.blanks ?? 0,
+        pyq: mix.pyq ?? 0,
       });
       navigate(`/revision/attempt/${res.data.attemptId}`);
     } catch (err) {
@@ -100,7 +101,7 @@ export default function Revision() {
         <div>
           <h1 className="text-lg font-bold mb-1">Chapter-wise Revision</h1>
           <p className="text-xs text-gray-600">
-            Pick a chapter — MCQs and fill in the blanks, with instant feedback on every question.
+            Pick a chapter — MCQs, fill in the blanks and real PYQs (NTA&apos;s originals with NTA&apos;s answers), with instant feedback on every question.
           </p>
         </div>
 

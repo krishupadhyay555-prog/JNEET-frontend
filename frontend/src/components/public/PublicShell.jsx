@@ -1,7 +1,7 @@
 // ============================================================
 //  JNEET+ AI — components/public/PublicShell.jsx
 //  Header + footer shared by every public page (home, About, Pricing,
-//  Contact, legal pages). Calm, editorial look: warm paper background,
+//  Contact, Rank Predictor, legal pages). Calm, editorial look: warm paper background,
 //  ink text, one teal accent. The footer carries every page Razorpay
 //  and the DPDP rules expect (About, Contact, Pricing, Terms, Privacy,
 //  Refund, Delivery) and the plain-language AI disclosure.
@@ -16,6 +16,7 @@ export const INK = "text-[#17161C]";
 export const MUTED = "text-[#5F5B67]";
 
 const NAV = [
+  ["/rank-predictor", "Rank Predictor"],
   ["/about", "About"],
   ["/pricing", "Pricing"],
   ["/contact", "Contact"],
@@ -95,6 +96,7 @@ function Footer() {
           <p className="text-[12px] font-semibold uppercase tracking-wider text-[#17161C]">Product</p>
           <Link to="/about" className={a}>About us</Link>
           <Link to="/pricing" className={a}>Pricing</Link>
+          <Link to="/rank-predictor" className={a}>Rank Predictor</Link>
           <Link to="/register" className={a}>Create free account</Link>
           <Link to="/login" className={a}>Log in</Link>
         </div>

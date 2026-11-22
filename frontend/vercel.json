@@ -25,6 +25,9 @@
     }
   ],
   "rewrites": [
+    { "source": "/rank-predictor", "destination": "/rank-predictor/index.html" },
+    { "source": "/jee-main-rank-predictor", "destination": "/jee-main-rank-predictor/index.html" },
+    { "source": "/neet-rank-predictor", "destination": "/neet-rank-predictor/index.html" },
     { "source": "/((?!api/|assets/|.*\\..*).*)", "destination": "/index.html" }
   ]
 }

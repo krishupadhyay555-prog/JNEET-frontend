@@ -21,8 +21,7 @@ import { TodayPlan } from "../components/dashboard/TodayPlan.jsx";
 import toast from "react-hot-toast";
 import {
   RefreshCw, ClipboardList, BarChart3, TrendingUp, StickyNote,
-  ChevronRight, MessageCircle, BookOpen, FileText,
-} from "lucide-react";
+  ChevronRight, MessageCircle, BookOpen, FileText, Trophy } from "lucide-react";
 
 function formatRelative(dateStr) {
   if (!dateStr) return null;
@@ -198,6 +197,14 @@ export default function Dashboard() {
       desc: revisionDesc,
       available: true,
       onClick: () => navigate("/revision"),
+    },
+    {
+      icon: <Trophy size={20} className="text-amber-500" />,
+      iconBg: "bg-amber-500/10",
+      title: "All-India Mock",
+      desc: "Every Sunday · same paper for all · your All-India rank",
+      available: true,
+      onClick: () => navigate("/all-india"),
     },
     {
       icon: <ClipboardList size={20} className="text-blue-500" />,
