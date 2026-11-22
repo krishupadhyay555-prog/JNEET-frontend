@@ -12,6 +12,8 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { oneshotApi } from "../api/learnApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { MathText } from "../components/learn/MathText.jsx";
+import { DiagramGallery } from "../components/learn/DiagramGallery.jsx";
+import { diagramsFor } from "../api/diagrams.js";
 
 const TABS = [
   { id: "summary",  label: "Summary" },
@@ -19,6 +21,7 @@ const TABS = [
   { id: "examples", label: "Examples" },
   { id: "topics",   label: "Key topics" },
   { id: "ratta",    label: "Ratta (Must memorise)" },
+  { id: "diagrams", label: "Diagrams" },
 ];
 
 function FormulaCard({ f }) {
@@ -61,6 +64,14 @@ export default function OneShotChapter() {
     ? { loading: false, doc: loaded.doc, error: loaded.error }
     : { loading: true, doc: null, error: "" };
   const [tab, setTab] = useState("summary");
+  const [diagrams, setDiagrams] = useState({ slug: null, items: [] });
+
+  useEffect(() => {
+    let cancelled = false;
+    diagramsFor(slug).then((items) => { if (!cancelled) setDiagrams({ slug, items }); });
+    return () => { cancelled = true; };
+  }, [slug]);
+  const chapterDiagrams = diagrams.slug === slug ? diagrams.items : [];
 
   useEffect(() => {
     let cancelled = false;
@@ -91,7 +102,7 @@ export default function OneShotChapter() {
         </div>
         {doc && (
           <div role="tablist" aria-label="OneShot sections" className="max-w-2xl mx-auto px-3 mt-2 flex gap-1 overflow-x-auto no-scrollbar">
-            {TABS.filter((t) => t.id !== "ratta" || doc.ratta?.length).map((t) => (
+            {TABS.filter((t) => (t.id !== "ratta" || doc.ratta?.length) && (t.id !== "diagrams" || chapterDiagrams.length)).map((t) => (
               <button
                 key={t.id}
                 role="tab"
@@ -100,7 +111,7 @@ export default function OneShotChapter() {
                 className={`shrink-0 px-3 py-2.5 text-[13px] border-b-2 -mb-px transition
                   ${tab === t.id ? "border-fg-primary font-bold text-fg-primary" : "border-transparent text-gray-600 hover:text-fg-primary"}`}
               >
-                {t.id === "formulas" && doc.subject === "Biology" ? "Key facts" : t.label}
+                {t.id === "formulas" && doc.subject === "Biology" ? "Key facts" : t.id === "diagrams" ? `Diagrams (${chapterDiagrams.length})` : t.label}
               </button>
             ))}
           </div>
@@ -161,6 +172,10 @@ export default function OneShotChapter() {
                 </div>
               </article>
             ))}
+          </div>
+        ) : tab === "diagrams" ? (
+          <div className="space-y-2.5 animate-fade-up">
+            <DiagramGallery items={chapterDiagrams} />
           </div>
         ) : tab === "topics" ? (
           <div className="space-y-2.5 animate-fade-up">

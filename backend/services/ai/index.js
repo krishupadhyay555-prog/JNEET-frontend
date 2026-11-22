@@ -11,6 +11,7 @@
 
 import { env } from "../../config/env.js";
 import { buildSystemPrompt, detectDistress } from "./persona.js";
+import { wantsDiagram, findDiagram, diagramMarkdown } from "../diagrams.js";
 import { streamResponse, createResponse, AiProviderError } from "./openaiClient.js";
 
 export { detectDistress };
@@ -64,7 +65,11 @@ export async function streamAnswer({
   const route = resolveRoute(plan, { deep });
   // The safety screen may already know (any language); patterns as a backup.
   const distress = Boolean(distressFlag) || detectDistress(prompt);
-  const instructions = buildSystemPrompt({ examMode, persona, distress, studyLanguage });
+  // "Diagram se samjhao": attach a checked diagram from our library (no image AI).
+  const diagram = !distress && wantsDiagram(prompt) ? findDiagram(prompt, examMode) : null;
+  const instructions = buildSystemPrompt({ examMode, persona, distress, studyLanguage }) + (diagram
+    ? `\n\nThe app will show the student a labelled diagram titled "${diagram.t}" right below your answer. Refer to it ("see the diagram below") and explain its key parts in words. Do not draw ASCII art and do not say you cannot show images.`
+    : "");
   const input = [...history, { role: "user", content: prompt }];
 
   const attempts = [{ ...route, kind: "primary" }, { ...route, kind: "retry" }];
@@ -94,6 +99,11 @@ export async function streamAnswer({
           fullText += evt.text;
           onToken?.(evt.text);
         } else if (evt.type === "done") {
+          if (diagram && fullText) {
+            const md = diagramMarkdown(diagram);
+            fullText += md;
+            onToken?.(md);
+          }
           return {
             fullText,
             usage: evt.usage,
