@@ -7,7 +7,7 @@
 // ============================================================
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, AlertTriangle, XCircle, ExternalLink, Info } from "lucide-react";
 import { PublicShell, PageHero, PrimaryButton } from "../components/public/PublicShell.jsx";
 import { BUSINESS } from "../legal/content.js";
@@ -346,15 +346,22 @@ const TABS = [
 
 // ---------- page ----------
 
-export default function RankPredictor() {
+export default function RankPredictor({ fixedExam = null }) {
   const [params, setParams] = useSearchParams();
-  const exam = params.get("exam") === "neet" ? "neet" : "jee";
+  const navigate = useNavigate();
+  const exam = fixedExam || (params.get("exam") === "neet" ? "neet" : "jee");
   const tabRefs = useRef({});
 
-  useEffect(() => { document.title = `Rank Predictor — JEE Main & NEET UG — ${BUSINESS.product}`; window.scrollTo(0, 0); }, []);
+  useEffect(() => { window.scrollTo(0, 0); }, []);
+  useEffect(() => {
+    document.title = fixedExam === "neet" ? `NEET UG Rank Predictor 2027 (Free) — ${BUSINESS.product}`
+      : fixedExam === "jee" ? `JEE Main Rank Predictor 2027 (Free) — ${BUSINESS.product}`
+      : `JEE Main & NEET Rank Predictor 2027 (Free) — ${BUSINESS.product}`;
+  }, [fixedExam]);
 
   const select = (key, focus = false) => {
-    setParams(key === "jee" ? {} : { exam: key }, { replace: true });
+    if (fixedExam) navigate(key === "neet" ? "/neet-rank-predictor" : "/jee-main-rank-predictor", { replace: true });
+    else setParams(key === "jee" ? {} : { exam: key }, { replace: true });
     if (focus) tabRefs.current[key]?.focus();
   };
   const onTabKey = (e) => {

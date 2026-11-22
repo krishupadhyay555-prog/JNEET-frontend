@@ -171,6 +171,26 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 - [ ] **L8** Production 10-minute smoke test.
 - [ ] **L10** Payments go-live (after PR #13 merge; do **L9** first — Vercel Hobby is non-commercial): Razorpay account + KYC → Dashboard **Test mode** first → Settings → API Keys → Render `RAZORPAY_KEY_ID` + `RAZORPAY_KEY_SECRET` → Webhooks → URL `https://api.jneetai.com/api/payments/webhook`, events `payment.captured`, `order.paid`, `payment.failed`, `refund.processed`, a secret → Render `RAZORPAY_WEBHOOK_SECRET` → Render `ADMIN_ALERT_EMAIL` (founder's inbox) → turn on 2-factor login in Razorpay and confirm the settlement bank account → test-mode purchase on jneetai.com/plans → then swap to **Live** keys + a live webhook. Optional prices (whole rupees): `PRICE_PRO_1M` (199), `PRICE_PRO_4M` (699), `PRICE_ELITE_1M` (349), `PRICE_ELITE_4M` (1199). Without the keys the site says "Paid plans open soon". With `rzp_test_` keys the Plans page shows a "Test mode" banner.
 - [ ] **L9** Before paid plans: Vercel Hobby is **non-commercial only** → move to Vercel Pro ($20/mo) or Cloudflare Pages (free, commercial allowed).
+- [x] **SEO-1** Free Rank Predictor as Google pages — done 22 Nov 2026 (PR #39): `/rank-predictor`, `/jee-main-rank-predictor`, `/neet-rank-predictor` get static HTML at build (own title, description, canonical, FAQ JSON-LD; `frontend/seoPages.js`), `sitemap.xml`, robots `Sitemap:` line. After merge: founder adds jneetai.com to **Google Search Console** (DNS TXT at Hostinger) → submit `https://jneetai.com/sitemap.xml`.
+
+### Legal / privacy / security gaps found in chat review (22 Nov 2026) — I am not a lawyer/CA; founder confirms with one
+- [ ] **LG1** "Not affiliated with NTA" line in the site footer and on every page that shows PYQs / "NTA-checked" (only About + Rank Predictor have it now). Never use the NTA logo.
+- [ ] **LG2** Grievance officer name + email + 30-day reply promise on Terms + Refund pages (Consumer Protection (E-Commerce) Rules 2020; Razorpay also checks this). Privacy page has it, Terms/Refund don't.
+- [ ] **LG3** Early-bird seat counter must be real (server count). No fake timers / "only 3 left" (CCPA Dark Patterns Guidelines 2023). Prices shown must be final (incl. GST once registered).
+- [ ] **LG4** Under-18: pass purchase only through the parent payment link + parent consent (DPDP Rules 2025). No names on All-India rank lists (codes only — done in PR #39).
+- [ ] **LG5** Affiliates/ambassadors: written terms; creators must label posts "#ad / paid partnership" (ASCI influencer rules). Ask CA about TDS (sec 194H) once a creator's yearly commission crosses the limit. No coaching names/logos on flyers, no "best/No.1" claims.
+- [ ] **LG6** GST: register when yearly sales near ₹20 lakh (or earlier if CA says so for online services). Keep invoices from Razorpay.
+- [ ] **LG7** Diagrams: AI-made JEE images (no licence file) — keep a record of which tool made them (most allow commercial use; check its terms). No NCERT/coaching scans. Wikimedia images need credit line + licence.
+- [ ] **LG8** Codex / any AI tool on the laptop: it can read `backend/.env`. Never let it commit; check `git status` before every push; `.env` must stay in `.gitignore`. If a key ever lands in a commit → rotate it the same day.
+- [ ] **LG9** Data-breach plan: if user data leaks, email users + report to Data Protection Board (DPDP) — write a 5-line runbook in `docs/`.
+- [ ] **LG10** School visits: principal's written OK; never collect phone numbers on paper; QR only.
+
+### Pricing decision (22 Nov 2026, founder to say "go")
+- [ ] **PR1** Recommended: Pro **₹199**/mo · Elite **₹349**/mo · JEE Pass (Jan+Apr, till 30 Apr 2027) **₹699** · NEET Pass **₹1,299**. Launch early-bird (first 500 real seats): JEE ₹599, NEET ₹1,199. Per-user monthly AI ₹ cap: Pro ₹50, Elite ₹100, Pass ₹30. Affiliate 15% on passes, none on monthly. Worst-case margin (cap hit + affiliate) ≥ ~50%; typical 73–84%.
+
+### Diagrams received 22 Nov 2026 (ZIPs, not in repo yet)
+- [ ] **DG1** BIO-001…028 (Matplotlib, labels inside, Class 11 Diversity chapters) + JEE_001…028 (AI images, labels inside, Class 11 Mechanics/Fluids/Gravitation). Spot-checked formulas OK. To do: convert to WebP ≤1200 px (JEE PNGs 500–770 KB each), map to OneShot chapter slugs, add zoom; BIO-019→028 use a cream background (others white) — make one style.
+
 - [x] Brevo domain authenticated, sender verified, OTP arriving (Oct 2026).
 - [x] Turnstile code (invisible, fresh token per request, fails open, rate limits unchanged) and email logo — in PR #2.
 

@@ -5,9 +5,14 @@ Allow: /register
 Allow: /privacy
 Allow: /terms
 Allow: /refund
+Allow: /rank-predictor
+Allow: /jee-main-rank-predictor
+Allow: /neet-rank-predictor
 Disallow: /api/
 Disallow: /dashboard
 Disallow: /ask
 Disallow: /parent-consent/
 Disallow: /parent-unlock/
 Disallow: /admin
+
+Sitemap: https://jneetai.com/sitemap.xml

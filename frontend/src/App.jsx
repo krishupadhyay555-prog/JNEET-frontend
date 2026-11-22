@@ -205,6 +205,8 @@ export default function App() {
               <Route path="/about"           element={<About />}   />
               <Route path="/pricing"         element={<Pricing />} />
               <Route path="/rank-predictor"  element={<RankPredictor />} />
+              <Route path="/jee-main-rank-predictor" element={<RankPredictor fixedExam="jee" />} />
+              <Route path="/neet-rank-predictor" element={<RankPredictor fixedExam="neet" />} />
               <Route path="/contact"         element={<Contact />} />
               <Route path="/parent-consent/revoke/:token" element={<ParentConsent revoke />} />
               <Route path="/parent-consent/:token"        element={<ParentConsent />} />
