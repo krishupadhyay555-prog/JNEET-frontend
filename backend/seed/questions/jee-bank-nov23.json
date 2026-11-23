@@ -1,0 +1,5357 @@
+[
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a cell reaction involving $n=2$ electrons, the standard cell potential is $0.30$ V at 298 K. The equilibrium constant is closest to:",
+  "options": [
+   "$1.4\\times10^{-5}$",
+   "$1.4\\times10^{-10}$",
+   "$1.4\\times10^5$",
+   "$1.4\\times10^{10}$"
+  ],
+  "correctIndex": 3,
+  "explanation": "At 298 K, $\\log_{10}K=nE^\\circ/0.0591=0.60/0.0591\\approx10.15$. Hence $K\\approx1.4\\times10^{10}$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Definite Integrals",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Evaluate $I=\\int_0^{\\pi/2}\\frac{\\sin x}{\\sin x+\\cos x}\\,dx$.",
+  "options": [
+   "$1$",
+   "$\\pi/8$",
+   "$\\pi/4$",
+   "$\\pi/2$"
+  ],
+  "correctIndex": 2,
+  "explanation": "Replacing $x$ by $\\pi/2-x$ gives $I=\\int_0^{\\pi/2}\\frac{\\cos x}{\\sin x+\\cos x}dx$. Adding both expressions yields $2I=\\int_0^{\\pi/2}1dx=\\pi/2$, so $I=\\pi/4$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Work, Energy and Power",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A particle of mass 2 kg moves along the x-axis under $F(x)=6x-2x^2$ N. Its speed at $x=0$ is 2 m/s. Its speed at $x=2$ m is:",
+  "options": [
+   "$2\\sqrt7$ m/s",
+   "4 m/s",
+   "$4\\sqrt{2/3}$ m/s",
+   "$2\\sqrt3$ m/s"
+  ],
+  "correctIndex": 2,
+  "explanation": "$W=\\int_0^2(6x-2x^2)dx=20/3$ J. Initial kinetic energy is 4 J, so final kinetic energy is $32/3$ J. Since $K_f=\\frac12(2)v^2=v^2$, $v^2=32/3$, giving $v=4\\sqrt{2/3}$ m/s."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Oscillations",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A simple pendulum of length $L$ is suspended inside a lift accelerating vertically upwards with acceleration $g/3$. Its time period is $T$. If the lift is instead at rest, the time period is $T_0$. The ratio $T/T_0$ is:",
+  "options": [
+   "$\\sqrt{3/2}$",
+   "$2/\\sqrt3$",
+   "$\\sqrt{4/3}$",
+   "$\\sqrt{3/4}$"
+  ],
+  "correctIndex": 3,
+  "explanation": "In the upward-accelerating lift, effective gravity is $g'=g+g/3=4g/3$. Thus $T=2\\pi\\sqrt{L/(4g/3)}$, while $T_0=2\\pi\\sqrt{L/g}$. Therefore $T/T_0=\\sqrt{g/(4g/3)}=\\sqrt{3/4}$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A $3\\,\\mu\\mathrm F$ and a $6\\,\\mu\\mathrm F$ capacitor are connected in parallel. This combination is then connected in series with a $2\\,\\mu\\mathrm F$ capacitor. The equivalent capacitance is:",
+  "options": [
+   "$11/3\\,\\mu\\mathrm F$",
+   "$11/2\\,\\mu\\mathrm F$",
+   "$18/11\\,\\mu\\mathrm F$",
+   "$9/2\\,\\mu\\mathrm F$"
+  ],
+  "correctIndex": 2,
+  "explanation": "Parallel combination: $C_p=3+6=9\\,\\mu\\mathrm F$. In series with $2\\,\\mu\\mathrm F$:\n$\nC_{\\rm eq}=\\frac{9\\times2}{9+2}=\\frac{18}{11}\\,\\mu\\mathrm F.\n$"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A buffer contains acetic acid and sodium acetate with $[{\\rm salt}]/[{\\rm acid}]=0.10$. Given $pK_a=4.76$, its pH is:",
+  "options": [
+   "2.76",
+   "5.76",
+   "3.76",
+   "4.76"
+  ],
+  "correctIndex": 2,
+  "explanation": "Henderson–Hasselbalch equation:\n$\npH=pK_a+\\log\\frac{[{\\rm salt}]}{[{\\rm acid}]}\n=4.76+\\log(0.10)=4.76-1=3.76.\n$"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Kinetics",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A first-order reaction reaches 90% completion in 20 minutes. Its half-life is closest to:",
+  "options": [
+   "8.0 min",
+   "4.0 min",
+   "6.0 min",
+   "10.0 min"
+  ],
+  "correctIndex": 2,
+  "explanation": "For 90% completion, 10% remains:\n$\nk=\\frac{2.303}{20}\\log 10=\\frac{2.303}{20}\\ {\\rm min}^{-1}.\n$\nThe half-life is $t_{1/2}=0.693/k=0.693(20)/2.303\\approx6.02$ min."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If $A=\\begin{pmatrix}2&1\\\\1&2\\end{pmatrix}$, then $\\det(A^2-3A+2I)$ equals:",
+  "options": [
+   "0",
+   "1",
+   "4",
+   "2"
+  ],
+  "correctIndex": 0,
+  "explanation": "The eigenvalues of A are 3 and 1 (eigenvectors proportional to $(1,1)$ and $(1,-1)$). The eigenvalues of $A^2-3A+2I$ are $p(3)=9-9+2=2$ and $p(1)=1-3+2=0$. Its determinant is their product, $2\\cdot0=0$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A uniform solid cylinder rolls without slipping from rest down an incline through a vertical height $h$. Its speed at the bottom is:",
+  "options": [
+   "$\\sqrt{\\frac{gh}{2}}$",
+   "$\\sqrt{\\frac{3gh}{2}}$",
+   "$\\sqrt{2gh}$",
+   "$\\sqrt{\\frac{4gh}{3}}$"
+  ],
+  "correctIndex": 3,
+  "explanation": "Conservation of energy gives\n$\nmgh=\\frac12mv^2+\\frac12I\\omega^2.\n$\nFor a solid cylinder, $I=\\frac12mR^2$, and rolling gives $\\omega=v/R$. Therefore\n$\nmgh=\\frac12mv^2+\\frac14mv^2=\\frac34mv^2,\n\\quad v^2=\\frac{4gh}{3}.\n$\nSo $v=\\sqrt{4gh/3}$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For the gaseous equilibrium $A(g)\\rightleftharpoons B(g)+C(g)$, initially 1 mol of A is placed in a 1 L vessel. If one-third of A dissociates at equilibrium, the value of $K_c$ is:",
+  "options": [
+   "$1/3$",
+   "$1/9$",
+   "$1/12$",
+   "$1/6$"
+  ],
+  "correctIndex": 3,
+  "explanation": "Let the degree of dissociation be $\\alpha=1/3$. At equilibrium, $[A]=1-\\alpha=2/3$ M and $[B]=[C]=\\alpha=1/3$ M. Thus\n$\nK_c=\\frac{[B][C]}{[A]}\n=\\frac{(1/3)(1/3)}{2/3}=\\frac16.\n$"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Definite Integrals",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Evaluate $ \\int_0^1\\frac{x}{1+x^2}\\,dx. $",
+  "options": [
+   "$2\\ln2$",
+   "$\\frac12\\ln2$",
+   "$\\ln 2$",
+   "$\\frac12$"
+  ],
+  "correctIndex": 1,
+  "explanation": "Put $u=1+x^2$, so $du=2x\\,dx$:\n$\nI=\\frac12\\int_1^2\\frac{du}{u}\n=\\frac12[\\ln u]_1^2=\\frac12\\ln2.\n$"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Gravitation",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two point masses $M$ and $4M$ are separated by distance $d$. The magnitude of the net gravitational field at their midpoint is:",
+  "options": [
+   "$4GM/d^2$",
+   "$12GM/d^2$",
+   "$20GM/d^2$",
+   "$8GM/d^2$"
+  ],
+  "correctIndex": 1,
+  "explanation": "The midpoint is at distance $d/2$ from each mass. The two gravitational fields point in opposite directions, towards their respective masses. Their magnitudes are $GM/(d/2)^2=4GM/d^2$ and $4GM/(d/2)^2=16GM/d^2$. The net magnitude is the difference:\n$\n16GM/d^2-4GM/d^2=12GM/d^2.\n$"
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Thermodynamics",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For the reaction $2A(g)\\rightarrow B(g)$, the relation between enthalpy change and internal-energy change is:",
+  "options": [
+   "$\\Delta H=\\Delta U$",
+   "$\\Delta H=\\Delta U-RT$",
+   "$\\Delta H=\\Delta U+2RT$",
+   "$\\Delta H=\\Delta U+RT$"
+  ],
+  "correctIndex": 1,
+  "explanation": "For ideal gases, $\\Delta H=\\Delta U+\\Delta n_gRT$. Here $\\Delta n_g=1-2=-1$. Therefore $\\Delta H=\\Delta U-RT$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a positive integer $n$, evaluate $ S_n=\\sum_{k=1}^{n} k\\,2^k. $",
+  "options": [
+   "$n2^n+2$",
+   "$n2^{n+1}-2$",
+   "$(n+1)2^n-2$",
+   "$(n-1)2^{n+1}+2$"
+  ],
+  "correctIndex": 3,
+  "explanation": "Differentiate the finite geometric sum, or use induction. The identity is\n$\n\\sum_{k=1}^{n}k2^k=(n-1)2^{n+1}+2.\n$\nCheck at $n=1$: both sides equal 2. Assuming it holds for n, adding $(n+1)2^{n+1}$ gives $n2^{n+2}+2$, which is the stated expression with $n$ replaced by $n+1$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Oscillations",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A mass $m$ is attached to two ideal springs of spring constants $k$ and $2k$ connected in series. The angular frequency of small oscillations is:",
+  "options": [
+   "$\\sqrt{2k/m}$",
+   "$\\sqrt{2k/(3m)}$",
+   "$\\sqrt{k/m}$",
+   "$\\sqrt{3k/(2m)}$"
+  ],
+  "correctIndex": 1,
+  "explanation": "For two springs in series,\n$\n\\frac1{k_{\\rm eq}}=\\frac1k+\\frac1{2k}=\\frac3{2k},\n\\quad k_{\\rm eq}=\\frac{2k}{3}.\n$\nThe angular frequency is $\\omega=\\sqrt{k_{\\rm eq}/m}=\\sqrt{2k/(3m)}$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Kinetics",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A first-order reaction has a half-life of 10 minutes. The percentage of reactant remaining after 30 minutes is:",
+  "options": [
+   "25%",
+   "50%",
+   "6.25%",
+   "12.5%"
+  ],
+  "correctIndex": 3,
+  "explanation": "Thirty minutes is three half-lives. The fraction remaining is $(1/2)^3=1/8$, i.e. $12.5\\%$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For $A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$, which expression equals $\\det A$?",
+  "options": [
+   "$ad+bc$",
+   "$ad-bc$",
+   "$ac-bd$",
+   "$ab-cd$"
+  ],
+  "correctIndex": 1,
+  "explanation": "The determinant of a $2\\times2$ matrix is the product of its main-diagonal entries minus the product of its other diagonal entries: $\\det A=ad-bc$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Kinematics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A particle moves along a straight line with $v(t)=3t^2-12t+9$ m/s. Its displacement from $t=0$ to $t=3$ s is:",
+  "options": [
+   "3 m",
+   "6 m",
+   "9 m",
+   "0 m"
+  ],
+  "correctIndex": 3,
+  "explanation": "$\\Delta x=\\int_0^3(3t^2-12t+9)dt=[t^3-6t^2+9t]_0^3=27-54+27=0$ m."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Laws of Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 4 kg block slides on a horizontal surface with coefficient of kinetic friction 0.25. A horizontal force of 20 N acts on it. Take $g=10$ m/s². Its acceleration is:",
+  "options": [
+   "2.5 m/s²",
+   "1.25 m/s²",
+   "5 m/s²",
+   "0"
+  ],
+  "correctIndex": 0,
+  "explanation": "$f_k=\\mu mg=0.25(4)(10)=10$ N. Net force $=20-10=10$ N, so $a=10/4=2.5$ m/s²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Work, Energy and Power",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A spring of force constant 200 N/m is compressed by 10 cm. The stored potential energy is:",
+  "options": [
+   "0.1 J",
+   "0.5 J",
+   "1 J",
+   "2 J"
+  ],
+  "correctIndex": 2,
+  "explanation": "$U=\\frac12kx^2=\\frac12(200)(0.1)^2=1$ J."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A solid sphere rolls without slipping with centre-of-mass speed $v$. Its total kinetic energy is:",
+  "options": [
+   "$\\frac7{10}mv^2$",
+   "$\\frac57mv^2$",
+   "$\\frac12mv^2$",
+   "$mv^2$"
+  ],
+  "correctIndex": 0,
+  "explanation": "$I=\\frac25mR^2,\\ \\omega=v/R$. Thus $K=\\frac12mv^2+\\frac12I\\omega^2=\\frac12mv^2+\\frac15mv^2=\\frac7{10}mv^2$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two equal charges $+q$ are separated by distance $2a$. The electric potential at their midpoint is:",
+  "options": [
+   "0",
+   "$4kq/a$",
+   "$2kq/a$",
+   "$kq/a$"
+  ],
+  "correctIndex": 2,
+  "explanation": "Potential is scalar. Each charge contributes $kq/a$, so $V=2kq/a$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 6 Ω resistor and a 3 Ω resistor are connected in parallel across a 12 V battery. Total current is:",
+  "options": [
+   "4 A",
+   "6 A",
+   "2 A",
+   "8 A"
+  ],
+  "correctIndex": 1,
+  "explanation": "$R_{\\rm eq}^{-1}=1/6+1/3=1/2$, so $R_{\\rm eq}=2$ Ω and $I=12/2=6$ A."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Some Basic Concepts of Chemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The number of moles in 11 g of $CO_2$ (molar mass 44 g mol⁻¹) is:",
+  "options": [
+   "0.1",
+   "4",
+   "0.5",
+   "0.25"
+  ],
+  "correctIndex": 3,
+  "explanation": "$n=m/M=11/44=0.25$ mol."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The maximum number of electrons in the shell with principal quantum number $n=3$ is:",
+  "options": [
+   "8",
+   "32",
+   "18",
+   "9"
+  ],
+  "correctIndex": 2,
+  "explanation": "Maximum shell capacity is $2n^2=2(3)^2=18$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The molecular geometry of $SF_4$, according to VSEPR theory, is:",
+  "options": [
+   "square planar",
+   "tetrahedral",
+   "see-saw",
+   "trigonal planar"
+  ],
+  "correctIndex": 2,
+  "explanation": "Sulfur has five electron domains (four bond pairs and one lone pair); trigonal-bipyramidal electron-domain arrangement with one equatorial lone pair gives a see-saw molecular shape."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Thermodynamics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For an ideal gas undergoing an isothermal process, the change in internal energy is:",
+  "options": [
+   "depends on pressure only",
+   "negative",
+   "positive",
+   "zero"
+  ],
+  "correctIndex": 3,
+  "explanation": "Internal energy of an ideal gas depends only on temperature. Isothermal means $\\Delta T=0$, hence $\\Delta U=0$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For $H_2(g)+I_2(g)\\rightleftharpoons2HI(g)$, the relation between $K_p$ and $K_c$ is:",
+  "options": [
+   "$K_p=K_c$",
+   "$K_p=K_cRT$",
+   "$K_p=K_c(RT)^2$",
+   "$K_p=K_c/(RT)$"
+  ],
+  "correctIndex": 0,
+  "explanation": "$\\Delta n_g=2-(1+1)=0$, and $K_p=K_c(RT)^{\\Delta n_g}=K_c$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a cell reaction with $n=1$ and $E^\\circ=0.0591$ V at 298 K, $\\log_{10}K$ is:",
+  "options": [
+   "0.5",
+   "1",
+   "0.1",
+   "2"
+  ],
+  "correctIndex": 1,
+  "explanation": "$\\log_{10}K=nE^\\circ/0.0591=1$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Trigonometric Functions and Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The value of $\\sin^2 30^\\circ+\\cos^2 30^\\circ$ is:",
+  "options": [
+   "0",
+   "2",
+   "1/2",
+   "1"
+  ],
+  "correctIndex": 3,
+  "explanation": "By the Pythagorean identity, $\\sin^2\\theta+\\cos^2\\theta=1$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Evaluate $\\lim_{x\\to0}\\frac{\\sin 5x}{x}$.",
+  "options": [
+   "5",
+   "1",
+   "0",
+   "Does not exist"
+  ],
+  "correctIndex": 0,
+  "explanation": "$\\frac{\\sin5x}{x}=5\\frac{\\sin5x}{5x}\\to5$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Differentiation",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If $y=x^3-4x$, then $dy/dx$ at $x=2$ is:",
+  "options": [
+   "8",
+   "6",
+   "4",
+   "12"
+  ],
+  "correctIndex": 0,
+  "explanation": "$dy/dx=3x^2-4$; at $x=2$, derivative $=12-4=8$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Definite Integrals",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Evaluate $\\int_0^1 2x\\,dx$.",
+  "options": [
+   "2",
+   "1",
+   "1/2",
+   "0"
+  ],
+  "correctIndex": 1,
+  "explanation": "$[x^2]_0^1=1$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A fair coin is tossed twice. Probability of exactly one head is:",
+  "options": [
+   "3/4",
+   "1/2",
+   "1/4",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Outcomes are HH, HT, TH, TT. Exactly one head occurs in HT and TH, so probability $2/4=1/2$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Work, Energy and Power",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A particle of mass $m$ moves in one dimension under the conservative force $F(x)=-kx$. It is released from rest at $x=A$. Its speed when it reaches $x=A/2$ is:",
+  "options": [
+   "$A\\sqrt{3k/(2m)}$",
+   "$A\\sqrt{3k/(4m)}$",
+   "$A\\sqrt{k/(2m)}$",
+   "$A\\sqrt{k/m}$"
+  ],
+  "correctIndex": 1,
+  "explanation": "The potential is $U=\\frac12kx^2$. Energy conservation gives $\\frac12mv^2=\\frac12k(A^2-A^2/4)=3kA^2/8$. Hence $v=A\\sqrt{3k/(4m)}$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A uniform rod of length $L$ and mass $M$ is pivoted at one end and released from the horizontal position. Its angular speed when it first reaches the vertically downward position is:",
+  "options": [
+   "$\\sqrt{3g/L}$",
+   "$\\sqrt{2g/L}$",
+   "$\\sqrt{6g/L}$",
+   "$\\sqrt{g/L}$"
+  ],
+  "correctIndex": 0,
+  "explanation": "The centre of mass falls by $L/2$. Thus $MgL/2=\\frac12 I\\omega^2$, with $I=ML^2/3$. Therefore $\\omega^2=3g/L$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A charge $q$ is placed at the centre of a cube. The electric flux through one face of the cube in vacuum is:",
+  "options": [
+   "$q/(2\\epsilon_0)$",
+   "$q/\\epsilon_0$",
+   "$q/(4\\epsilon_0)$",
+   "$q/(6\\epsilon_0)$"
+  ],
+  "correctIndex": 3,
+  "explanation": "By Gauss's law, total flux through the cube is $q/\\epsilon_0$. Symmetry distributes it equally among six faces, giving $q/(6\\epsilon_0)$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Kinetics",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a first-order reaction, the time required for 75% completion is:",
+  "options": [
+   "$t_{1/2}$",
+   "$4t_{1/2}$",
+   "$3t_{1/2}$",
+   "$2t_{1/2}$"
+  ],
+  "correctIndex": 3,
+  "explanation": "75% completion means 25% remains, i.e. $(1/2)^2$ of the initial amount. This requires two half-lives."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For $A(g)\\rightleftharpoons 2B(g)$, initially only $A$ is present at pressure $P_0$. If the degree of dissociation is $\\alpha$, the total equilibrium pressure at constant temperature and volume is:",
+  "options": [
+   "$P_0(1+\\alpha)$",
+   "$P_0(1-\\alpha/2)$",
+   "$P_0(1+2\\alpha)$",
+   "$P_0(1-\\alpha)$"
+  ],
+  "correctIndex": 0,
+  "explanation": "Starting with 1 mol A, equilibrium moles are $1-\\alpha$ of A and $2\\alpha$ of B, total $1+\\alpha$. At fixed $T,V$, pressure is proportional to total moles, so $P=P_0(1+\\alpha)$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a galvanic cell, $E^\\circ_{\\rm cell}=0.1182$ V at 298 K and $n=2$. Using $0.0591$ V in the base-10 Nernst relation, $\\log_{10}K$ is:",
+  "options": [
+   "2",
+   "1",
+   "4",
+   "8"
+  ],
+  "correctIndex": 2,
+  "explanation": "$\\log_{10}K=nE^\\circ/0.0591=2(0.1182)/0.0591=4$.\n\nCorrection before acceptance: The accepted answer is (C); option (B) is not correct."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Coordination Compounds",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The oxidation state of cobalt in $[Co(NH_3)_5Cl]Cl_2$ is:",
+  "options": [
+   "+3",
+   "+4",
+   "+1",
+   "+2"
+  ],
+  "correctIndex": 0,
+  "explanation": "The complex ion has charge +2. Let cobalt oxidation state be $x$: $x+5(0)-1=+2$, so $x=+3$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Evaluate $\\lim_{x\\to0}\\frac{\\sin 3x}{\\sin 5x}$.",
+  "options": [
+   "$3/5$",
+   "$5/3$",
+   "0",
+   "1"
+  ],
+  "correctIndex": 0,
+  "explanation": "Using $\\sin ax\\sim ax$ as $x\\to0$, the limit is $3x/5x=3/5$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Differentiation",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If $y=\\ln(x^2+1)$, then $dy/dx$ is:",
+  "options": [
+   "$x/(x^2+1)$",
+   "$1/(x^2+1)$",
+   "$2/(x^2+1)$",
+   "$2x/(x^2+1)$"
+  ],
+  "correctIndex": 3,
+  "explanation": "By the chain rule, $dy/dx=(1/(x^2+1))(2x)=2x/(x^2+1)$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Indefinite Integrals",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Evaluate $\\int xe^x\\,dx$.",
+  "options": [
+   "$(x-1)e^x+C$",
+   "$e^x+C$",
+   "$xe^x+C$",
+   "$(x+1)e^x+C$"
+  ],
+  "correctIndex": 0,
+  "explanation": "Integration by parts with $u=x,\\ dv=e^x dx$: $\\int xe^x dx=xe^x-\\int e^x dx=(x-1)e^x+C$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "moderate",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two fair dice are thrown. Given that their sum is even, the probability that both outcomes are odd is:",
+  "options": [
+   "$2/3$",
+   "$1/3$",
+   "$1/4$",
+   "$1/2$"
+  ],
+  "correctIndex": 3,
+  "explanation": "An even sum occurs when both dice have the same parity. There are 18 such ordered outcomes: 9 odd-odd and 9 even-even. Thus the conditional probability is $9/18=1/2$."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Laws of Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A block of mass 2 kg rests on a smooth 30° incline and is connected over a smooth pulley to a hanging 2 kg block. Taking g=10 m s⁻², the acceleration magnitude is:",
+  "options": [
+   "5 m s⁻²",
+   "7.5 m s⁻²",
+   "2.5 m s⁻²",
+   "10 m s⁻²"
+  ],
+  "correctIndex": 2,
+  "explanation": "For the system, driving force = 2g−2g sin30°=20−10=10 N; total mass=4 kg. Thus a=10/4=2.5 m s⁻²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Work, Energy and Power",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A particle moves along x under F(x)=6x−2x² N. Work done from x=0 to x=3 m is:",
+  "options": [
+   "18 J",
+   "36 J",
+   "27 J",
+   "9 J"
+  ],
+  "correctIndex": 3,
+  "explanation": "W=∫₀³(6x−2x²)dx=[3x²−(2/3)x³]₀³=27−18=9 J."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A solid cylinder rolls without slipping down a height h from rest. Its speed at the bottom is:",
+  "options": [
+   "√(4gh/3)",
+   "√(gh)",
+   "√(2gh)",
+   "√(gh/2)"
+  ],
+  "correctIndex": 0,
+  "explanation": "mgh=½mv²+½Iω²; I=½mR² and ω=v/R. Hence mgh=(3/4)mv², so v²=4gh/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Gravitation",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A satellite is shifted from a circular orbit of radius r to a circular orbit of radius 4r around the same planet. The change in total mechanical energy is:",
+  "options": [
+   "−GMm/2r",
+   "−3GMm/8r",
+   "+3GMm/8r",
+   "+GMm/2r"
+  ],
+  "correctIndex": 2,
+  "explanation": "For a circular orbit E=−GMm/(2r). At 4r, E₂=−GMm/(8r). ΔE=E₂−E₁=3GMm/(8r)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Mechanical Properties of Solids and Fluids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Water flows steadily through a horizontal pipe whose cross-sectional area decreases from 4A to A. If speed in the wider section is v, the pressure difference P_wide−P_narrow is:",
+  "options": [
+   "6ρv²",
+   "(15/2)ρv²",
+   "3ρv²",
+   "(15/4)ρv²"
+  ],
+  "correctIndex": 1,
+  "explanation": "Continuity gives v₂=4v. Bernoulli in a horizontal pipe: P₁−P₂=½ρ(v₂²−v₁²)=½ρ(16−1)v²=(15/2)ρv²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Thermodynamics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "One mole of ideal gas expands isothermally and reversibly from V to 3V at temperature T. Work done by gas is:",
+  "options": [
+   "2RT",
+   "RT/3",
+   "RT ln 3",
+   "3RT ln 3"
+  ],
+  "correctIndex": 2,
+  "explanation": "For reversible isothermal expansion, W=nRT ln(V₂/V₁)=RT ln3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Oscillations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A particle in SHM has total energy E. At displacement x=A/2, its kinetic energy is:",
+  "options": [
+   "E/2",
+   "3E/4",
+   "√3E/2",
+   "E/4"
+  ],
+  "correctIndex": 1,
+  "explanation": "U/E=x²/A²=1/4. Therefore K=E−U=3E/4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A string fixed at both ends vibrates in its third harmonic at 150 Hz. Its fundamental frequency is:",
+  "options": [
+   "25 Hz",
+   "75 Hz",
+   "450 Hz",
+   "50 Hz"
+  ],
+  "correctIndex": 3,
+  "explanation": "For a string fixed at both ends, f_n=n f₁. Thus f₁=150/3=50 Hz."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A point charge q is placed at the centre of a cube. Electric flux through one face is:",
+  "options": [
+   "q/6ε₀",
+   "q/ε₀",
+   "q/12ε₀",
+   "q/4ε₀"
+  ],
+  "correctIndex": 0,
+  "explanation": "Total flux is q/ε₀. By symmetry it is equally distributed among six faces, so each face has q/(6ε₀)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A parallel-plate capacitor is charged and disconnected. A dielectric of constant K is inserted fully. Its stored energy becomes:",
+  "options": [
+   "U/K",
+   "U/K²",
+   "U",
+   "K U"
+  ],
+  "correctIndex": 0,
+  "explanation": "Charge remains constant. C′=KC, so U′=Q²/(2KC)=U/K."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "In a balanced Wheatstone bridge, the four arms are P=2 Ω, Q=3 Ω, R=4 Ω and S. The value of S is:",
+  "options": [
+   "6 Ω",
+   "4 Ω",
+   "8 Ω",
+   "12 Ω"
+  ],
+  "correctIndex": 0,
+  "explanation": "Balance condition P/Q=R/S gives 2/3=4/S, hence S=6 Ω."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Moving Charges and Magnetism",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A proton enters a uniform magnetic field perpendicular to it with speed v. If its speed is doubled and B is halved, its circular orbit radius changes by factor:",
+  "options": [
+   "2",
+   "1",
+   "4",
+   "8"
+  ],
+  "correctIndex": 2,
+  "explanation": "r=mv/(qB). New radius=(2v)/(B/2)=4 times the original."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Magnetism and Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A magnetic dipole of moment M is rotated from parallel to antiparallel orientation in a uniform field B. Work done by an external agent is:",
+  "options": [
+   "0",
+   "−2MB",
+   "+2MB",
+   "+MB"
+  ],
+  "correctIndex": 2,
+  "explanation": "Potential energy U=−MB cosθ. Change from θ=0 to π is (+MB)−(−MB)=2MB."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electromagnetic Induction",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A rod of length 0.5 m moves at 8 m s⁻¹ perpendicular to a 2 T magnetic field. The induced emf is:",
+  "options": [
+   "8 V",
+   "2 V",
+   "16 V",
+   "4 V"
+  ],
+  "correctIndex": 0,
+  "explanation": "Motional emf ε=Blv=2×0.5×8=8 V."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Alternating Current",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "At resonance in a series RLC circuit, the impedance is:",
+  "options": [
+   "0",
+   "R",
+   "√(R²+(XL−XC)²)",
+   "XL+XC"
+  ],
+  "correctIndex": 1,
+  "explanation": "At resonance XL=XC, net reactance is zero and Z=R."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electromagnetic Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "An electromagnetic wave has frequency 3×10¹⁰ Hz in vacuum. Its wavelength is:",
+  "options": [
+   "1 cm",
+   "1 mm",
+   "10 cm",
+   "1 m"
+  ],
+  "correctIndex": 0,
+  "explanation": "λ=c/f=3×10⁸/(3×10¹⁰)=10⁻² m=1 cm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Ray Optics and Optical Instruments",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two thin lenses of powers +5 D and −2 D are in contact. Their equivalent focal length is:",
+  "options": [
+   "33.3 cm",
+   "20 cm",
+   "100 cm",
+   "50 cm"
+  ],
+  "correctIndex": 0,
+  "explanation": "P_eq=5−2=3 D, so f=1/3 m=0.333 m=33.3 cm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Wave Optics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "In YDSE, wavelength is 600 nm, slit separation 0.3 mm and screen distance 1.5 m. Fringe width is:",
+  "options": [
+   "4 mm",
+   "3 mm",
+   "1 mm",
+   "2 mm"
+  ],
+  "correctIndex": 1,
+  "explanation": "β=λD/d=(600×10⁻⁹×1.5)/(0.3×10⁻³)=3×10⁻³ m=3 mm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a metal, threshold frequency is ν₀. Light of frequency 3ν₀ is incident. The maximum kinetic energy is:",
+  "options": [
+   "hν₀",
+   "2hν₀",
+   "3hν₀",
+   "4hν₀"
+  ],
+  "correctIndex": 1,
+  "explanation": "Einstein equation K_max=hν−hν₀=h(3ν₀−ν₀)=2hν₀."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Atoms",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The ratio of radii of the second and first Bohr orbits of a hydrogen-like ion is:",
+  "options": [
+   "1/2",
+   "4",
+   "8",
+   "2"
+  ],
+  "correctIndex": 1,
+  "explanation": "Bohr radius r_n∝n²/Z. For the same ion, r₂/r₁=4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Nuclei",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A nucleus has mass defect 0.2 u. Its binding energy is approximately:",
+  "options": [
+   "18.6 MeV",
+   "931 MeV",
+   "186.3 MeV",
+   "93.1 MeV"
+  ],
+  "correctIndex": 2,
+  "explanation": "Binding energy=0.2×931.5 MeV=186.3 MeV."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Semiconductor Electronics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "An ideal diode is forward biased in series with a 1 kΩ resistor and a 5 V ideal source. Current is:",
+  "options": [
+   "1 mA",
+   "5 mA",
+   "10 mA",
+   "0"
+  ],
+  "correctIndex": 1,
+  "explanation": "Ideal forward diode drop is zero. I=V/R=5/1000=5 mA."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If z=x²y⁻³ and percentage errors in x and y are 1% and 2%, respectively, maximum percentage error in z is:",
+  "options": [
+   "6%",
+   "8%",
+   "10%",
+   "4%"
+  ],
+  "correctIndex": 1,
+  "explanation": "For products of powers, fractional errors add with absolute exponents: 2(1%)+3(2%)=8%."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Kinematics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A projectile is launched at speed u at angle θ. Its speed at the highest point is:",
+  "options": [
+   "u",
+   "u cosθ",
+   "0",
+   "u sinθ"
+  ],
+  "correctIndex": 1,
+  "explanation": "At the top, vertical velocity is zero and horizontal velocity remains u cosθ."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Laws of Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A frictionless road is banked at angle θ for a vehicle moving at speed v on a curve of radius r. The correct relation is:",
+  "options": [
+   "tanθ=rg/v²",
+   "sinθ=v²/(rg)",
+   "cosθ=v²/(rg)",
+   "tanθ=v²/(rg)"
+  ],
+  "correctIndex": 3,
+  "explanation": "Resolving normal reaction: tanθ=v²/(rg)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Masses 2 kg and 3 kg are at x=0 and x=5 m. The centre of mass coordinate is:",
+  "options": [
+   "3 m",
+   "2 m",
+   "4 m",
+   "5 m"
+  ],
+  "correctIndex": 0,
+  "explanation": "x_cm=(2×0+3×5)/(2+3)=3 m."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Mechanical Properties of Solids and Fluids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A wire of length L and area A extends by x under force F. If its length is doubled and area halved with same material and force, extension becomes:",
+  "options": [
+   "2x",
+   "x",
+   "8x",
+   "4x"
+  ],
+  "correctIndex": 3,
+  "explanation": "ΔL=FL/(AY). New extension=F(2L)/((A/2)Y)=4x."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Oscillations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two identical springs of constant k are connected in parallel to a mass m. The angular frequency is:",
+  "options": [
+   "√(k/m)",
+   "√(m/2k)",
+   "√(2k/m)",
+   "2√(k/m)"
+  ],
+  "correctIndex": 2,
+  "explanation": "Parallel equivalent spring constant is 2k. Thus ω=√(2k/m)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "At a far axial point r from an electric dipole p, potential varies as:",
+  "options": [
+   "1/r",
+   "1/r²",
+   "1/r³",
+   "r²"
+  ],
+  "correctIndex": 1,
+  "explanation": "Dipole potential V=(1/4πε₀)(p cosθ/r²), so it varies as r⁻²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A vernier caliper has 10 vernier divisions equal to 9 main-scale divisions; 1 MSD=1 mm. Least count is:",
+  "options": [
+   "1 mm",
+   "0.1 mm",
+   "0.01 mm",
+   "0.9 mm"
+  ],
+  "correctIndex": 1,
+  "explanation": "1 VSD=0.9 mm; least count=1 MSD−1 VSD=0.1 mm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Thermal Properties of Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 2 m rod has coefficient of linear expansion 1.2×10⁻⁵ K⁻¹. Its increase in length for a 50 K rise is:",
+  "options": [
+   "1.2 mm",
+   "2.4 mm",
+   "0.12 mm",
+   "0.6 mm"
+  ],
+  "correctIndex": 0,
+  "explanation": "ΔL=αLΔT=1.2×10⁻⁵×2×50=1.2×10⁻³ m=1.2 mm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The energy density in vacuum where electric field magnitude is E is:",
+  "options": [
+   "½ε₀E²",
+   "2ε₀E²",
+   "ε₀E²",
+   "E²/2ε₀"
+  ],
+  "correctIndex": 0,
+  "explanation": "Energy density u=½ε₀E²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Some Basic Concepts of Chemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "10.0 g CaCO₃ (M=100 g mol⁻¹) is heated: CaCO₃→CaO+CO₂. The volume of CO₂ at STP (22.4 L mol⁻¹) is:",
+  "options": [
+   "1.12 L",
+   "22.4 L",
+   "4.48 L",
+   "2.24 L"
+  ],
+  "correctIndex": 3,
+  "explanation": "n(CaCO₃)=10/100=0.1 mol; 1:1 stoichiometry gives 0.1 mol CO₂. V=0.1×22.4=2.24 L."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a hydrogen atom, the energy required to excite an electron from n=1 to n=3 is:",
+  "options": [
+   "13.6 eV",
+   "10.2 eV",
+   "12.09 eV",
+   "1.51 eV"
+  ],
+  "correctIndex": 2,
+  "explanation": "ΔE=13.6(1−1/9)=13.6×8/9=12.09 eV."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Classification of Elements and Periodicity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Among O²⁻, F⁻, Na⁺ and Mg²⁺, the largest ionic radius is:",
+  "options": [
+   "F⁻",
+   "O²⁻",
+   "Na⁺",
+   "Mg²⁺"
+  ],
+  "correctIndex": 1,
+  "explanation": "All are isoelectronic (10 electrons). In an isoelectronic series, radius decreases as nuclear charge increases; O²⁻ has lowest Z."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The number of lone pairs on the central atom in XeF₄ is:",
+  "options": [
+   "2",
+   "3",
+   "0",
+   "1"
+  ],
+  "correctIndex": 0,
+  "explanation": "Xe has 8 valence electrons; four Xe–F bonds use four electron pairs, leaving two lone pairs. Geometry is square planar."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Thermodynamics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Given ΔHf°[CO₂]=−394 and ΔHf°[CO]=−111 kJ mol⁻¹, ΔH for CO+½O₂→CO₂ is:",
+  "options": [
+   "−505 kJ mol⁻¹",
+   "+283 kJ mol⁻¹",
+   "+505 kJ mol⁻¹",
+   "−283 kJ mol⁻¹"
+  ],
+  "correctIndex": 3,
+  "explanation": "ΔH=ΔHf(CO₂)−ΔHf(CO)=−394−(−111)=−283 kJ mol⁻¹."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Solutions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 0.1 m aqueous solution of a non-electrolyte has Kf=1.86 K kg mol⁻¹. Its freezing point is:",
+  "options": [
+   "−1.86°C",
+   "−0.186°C",
+   "+0.186°C",
+   "−0.0186°C"
+  ],
+  "correctIndex": 1,
+  "explanation": "ΔTf=Kf m=1.86×0.1=0.186 K; freezing point=−0.186°C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A buffer contains equal concentrations of CH₃COOH and CH₃COO⁻. Its pH is:",
+  "options": [
+   "pKa+1",
+   "pKa",
+   "7",
+   "pKa−1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Henderson–Hasselbalch: pH=pKa+log([salt]/[acid])=pKa."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The n-factor of KMnO₄ when reduced to Mn²⁺ in acidic medium is:",
+  "options": [
+   "7",
+   "5",
+   "3",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Mn changes from +7 to +2, gaining 5 electrons per Mn; n-factor=5."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a cell reaction involving n=2 electrons, at 298 K the Nernst slope 0.0591/n equals:",
+  "options": [
+   "0.02955",
+   "0.01182",
+   "0.0591",
+   "0.1182"
+  ],
+  "correctIndex": 0,
+  "explanation": "0.0591/2=0.02955 V per decade of reaction quotient."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Kinetics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A first-order reaction is 75% complete in 20 min. Its half-life is:",
+  "options": [
+   "40 min",
+   "10 min",
+   "5 min",
+   "20 min"
+  ],
+  "correctIndex": 1,
+  "explanation": "75% complete means 25% remains=(1/2)², i.e. two half-lives in 20 min; t½=10 min."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "p-Block Elements",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The strongest reducing hydrogen halide in aqueous solution is:",
+  "options": [
+   "HCl",
+   "HF",
+   "HI",
+   "HBr"
+  ],
+  "correctIndex": 2,
+  "explanation": "Reducing strength increases down the group as H–X bond strength decreases; HI is strongest."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "d- and f-Block Elements",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The spin-only magnetic moment of high-spin Fe³⁺ (Z=26) is approximately:",
+  "options": [
+   "6.93 BM",
+   "1.73 BM",
+   "3.87 BM",
+   "5.92 BM"
+  ],
+  "correctIndex": 3,
+  "explanation": "Fe³⁺ is 3d⁵ with five unpaired electrons. μ=√[n(n+2)]=√35=5.92 BM."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Coordination Compounds",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "[Co(en)₃]³⁺ exhibits:",
+  "options": [
+   "Ionisation isomerism",
+   "Linkage isomerism",
+   "Geometrical isomerism only",
+   "Optical isomerism"
+  ],
+  "correctIndex": 3,
+  "explanation": "Three bidentate en ligands in octahedral arrangement form Δ and Λ enantiomers."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Organic Chemistry Basic Principles",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which is the strongest −I group among these?",
+  "options": [
+   "−C₂H₅",
+   "−CH₃",
+   "−OH",
+   "−NO₂"
+  ],
+  "correctIndex": 3,
+  "explanation": "Nitro is strongly electron withdrawing by both inductive and resonance effects; among the listed groups it has the strongest −I effect."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Hydrocarbons",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The total number of π electrons in the cyclopentadienyl anion is:",
+  "options": [
+   "4",
+   "5",
+   "8",
+   "6"
+  ],
+  "correctIndex": 3,
+  "explanation": "Two double bonds contribute 4 π electrons and the negative-charge lone pair contributes 2; total 6, satisfying 4n+2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Haloalkanes and Haloarenes",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which substrate reacts fastest by SN1 in a polar protic solvent?",
+  "options": [
+   "(CH₃)₃CCl",
+   "C₂H₅Cl",
+   "CH₃Cl",
+   "(CH₃)₂CHCl"
+  ],
+  "correctIndex": 0,
+  "explanation": "SN1 rate depends on carbocation stability; tertiary carbocation is most stable among these."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Alcohols, Phenols and Ethers",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The most acidic compound is:",
+  "options": [
+   "p-Nitrophenol",
+   "Phenol",
+   "p-Cresol",
+   "Cyclohexanol"
+  ],
+  "correctIndex": 0,
+  "explanation": "The para nitro group stabilises phenoxide by −I and −M effects, increasing acidity."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which compound undergoes self-aldol condensation?",
+  "options": [
+   "Formaldehyde",
+   "Acetaldehyde",
+   "Benzaldehyde",
+   "Benzophenone"
+  ],
+  "correctIndex": 1,
+  "explanation": "Aldol condensation requires at least one α-hydrogen; acetaldehyde has α-hydrogens."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which is more acidic?",
+  "options": [
+   "Cl₂CHCOOH",
+   "CH₃COOH",
+   "CCl₃COOH",
+   "ClCH₂COOH"
+  ],
+  "correctIndex": 2,
+  "explanation": "More chlorine substituents strengthen −I effect and stabilise carboxylate; trichloroacetic acid is strongest."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Amines",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "In aqueous solution, the most basic among these is generally:",
+  "options": [
+   "Aniline",
+   "Ammonia",
+   "Methylamine",
+   "p-Nitroaniline"
+  ],
+  "correctIndex": 2,
+  "explanation": "Methyl group donates electron density and methylamine is more basic than ammonia; aniline lone pair is delocalised."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The bond order of O₂⁺ according to MO theory is:",
+  "options": [
+   "2.5",
+   "1.5",
+   "2",
+   "3"
+  ],
+  "correctIndex": 0,
+  "explanation": "O₂ has bond order 2; removing one electron from antibonding π* orbital increases bond order by 0.5."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For AgCl(s)⇌Ag⁺+Cl⁻, if molar solubility is s in pure water, Ksp equals:",
+  "options": [
+   "2s",
+   "s",
+   "4s²",
+   "s²"
+  ],
+  "correctIndex": 3,
+  "explanation": "[Ag⁺]=[Cl⁻]=s, hence Ksp=s²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "How much Ag is deposited by 9650 C from Ag⁺ solution? (F=96500 C mol⁻¹, Ag=108)",
+  "options": [
+   "1.08 g",
+   "108 g",
+   "0.108 g",
+   "10.8 g"
+  ],
+  "correctIndex": 3,
+  "explanation": "Moles e⁻=Q/F=0.1; Ag⁺+e⁻→Ag gives 0.1 mol Ag=10.8 g."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Kinetics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a reaction, k doubles when temperature rises from 300 K to 310 K. The approximate activation energy is (R=8.314 J mol⁻¹ K⁻¹):",
+  "options": [
+   "107 kJ mol⁻¹",
+   "17.9 kJ mol⁻¹",
+   "53.6 kJ mol⁻¹",
+   "89.3 kJ mol⁻¹"
+  ],
+  "correctIndex": 2,
+  "explanation": "ln2=Ea/R(1/300−1/310); Ea=8.314×0.693×93000≈53.6 kJ mol⁻¹."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Coordination Compounds",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For an octahedral d⁶ strong-field complex, the electron configuration is:",
+  "options": [
+   "t₂g⁴e_g²",
+   "t₂g⁵e_g¹",
+   "t₂g⁶e_g⁰",
+   "t₂g³e_g³"
+  ],
+  "correctIndex": 2,
+  "explanation": "Strong field causes pairing in lower t₂g orbitals before occupation of e_g; low-spin d⁶ is t₂g⁶."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Organic Chemistry Basic Principles",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which species is most stabilised by resonance?",
+  "options": [
+   "CH₂=CH−CH₂⁺",
+   "CH₃⁺",
+   "(CH₃)₃C⁺",
+   "CH₃CH₂⁺"
+  ],
+  "correctIndex": 0,
+  "explanation": "Allyl cation delocalises positive charge over two terminal carbon atoms by resonance."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Hydrocarbons",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Reductive ozonolysis of 2-methylpropene gives:",
+  "options": [
+   "Acetone + formaldehyde",
+   "Acetone only",
+   "Methanal + ethanal",
+   "Acetaldehyde only"
+  ],
+  "correctIndex": 0,
+  "explanation": "Cleavage of (CH₃)₂C=CH₂ gives (CH₃)₂C=O and HCHO."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Haloalkanes and Haloarenes",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "2-Bromobutane on dehydrohalogenation with alcoholic KOH gives major product:",
+  "options": [
+   "trans-But-2-ene",
+   "cis-But-2-ene",
+   "But-1-ene",
+   "Butane"
+  ],
+  "correctIndex": 0,
+  "explanation": "Zaitsev product but-2-ene predominates; trans is more stable than cis."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Alcohols, Phenols and Ethers",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Phenol with CHCl₃ and NaOH followed by acidification gives mainly:",
+  "options": [
+   "Anisole",
+   "Salicylaldehyde",
+   "Benzaldehyde",
+   "Benzoic acid"
+  ],
+  "correctIndex": 1,
+  "explanation": "Reimer–Tiemann reaction introduces −CHO mainly at ortho position."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Amines",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Aniline treated with NaNO₂/HCl at 0–5°C forms:",
+  "options": [
+   "Chlorobenzene",
+   "Benzenediazonium chloride",
+   "Nitrobenzene",
+   "Phenyl isocyanide"
+  ],
+  "correctIndex": 1,
+  "explanation": "Primary aromatic amine undergoes diazotisation at 0–5°C to give stable diazonium salt."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Biomolecules",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The peptide bond has partial double-bond character mainly due to:",
+  "options": [
+   "Hydrogen bonding",
+   "Hyperconjugation",
+   "Inductive effect",
+   "Resonance"
+  ],
+  "correctIndex": 3,
+  "explanation": "Delocalisation of the nitrogen lone pair into the carbonyl group gives the C−N bond partial double-bond character and planarity."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Solutions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "At the same temperature, which solution has the highest osmotic pressure?",
+  "options": [
+   "0.1 M urea",
+   "0.05 M CaCl₂ (fully dissociated)",
+   "0.1 M NaCl (fully dissociated)",
+   "0.1 M glucose"
+  ],
+  "correctIndex": 2,
+  "explanation": "π=iCRT. Effective particle concentrations are 0.1, 0.2, 0.1 and 0.15 M respectively; NaCl is highest."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sets, Relations and Functions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If f(x)=(2x−3)/(x+4), x≠−4, then f⁻¹(x) is:",
+  "options": [
+   "(4x+3)/(2−x)",
+   "(2x+3)/(4−x)",
+   "(3−4x)/(x−2)",
+   "(4x−3)/(2−x)"
+  ],
+  "correctIndex": 0,
+  "explanation": "Put y=(2x−3)/(x+4). Then yx+4y=2x−3, so x(y−2)=−3−4y and x=(4y+3)/(2−y)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The value of (1+i)⁸ is:",
+  "options": [
+   "−16i",
+   "16",
+   "−16",
+   "16i"
+  ],
+  "correctIndex": 1,
+  "explanation": "1+i=√2 e^{iπ/4}; eighth power=(√2)⁸e^{i2π}=16."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If A is a 3×3 matrix and |A|=2, then |3A| equals:",
+  "options": [
+   "27",
+   "18",
+   "54",
+   "6"
+  ],
+  "correctIndex": 2,
+  "explanation": "For an n×n matrix, |kA|=kⁿ|A|. Thus |3A|=3³×2=54."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Permutations and Combinations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The number of distinct circular arrangements of 6 distinct people around a round table is:",
+  "options": [
+   "60",
+   "720",
+   "360",
+   "120"
+  ],
+  "correctIndex": 3,
+  "explanation": "Circular arrangements of n distinct objects=(n−1)!=5!=120."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Binomial Theorem",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The coefficient of x⁴ in (2x−1)⁶ is:",
+  "options": [
+   "−160",
+   "160",
+   "240",
+   "−240"
+  ],
+  "correctIndex": 2,
+  "explanation": "Term with x⁴: C(6,4)(2x)⁴(−1)²=15×16=240."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Three positive numbers are in GP. Their sum is 13 and product is 27. The numbers are:",
+  "options": [
+   "1,3,9",
+   "1,4,8",
+   "3,3,3",
+   "2,3,8"
+  ],
+  "correctIndex": 0,
+  "explanation": "For GP a/r,a,ar, product=a³=27 so a=3; sum=3(1/r+1+r)=13. Thus r+1/r=10/3, giving r=3 or 1/3; numbers 1,3,9."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "limₓ→0 (sin 5x)/(tan 2x) equals:",
+  "options": [
+   "5",
+   "2/5",
+   "1",
+   "5/2"
+  ],
+  "correctIndex": 3,
+  "explanation": "Using sin5x~5x and tan2x~2x, limit=5/2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For f(x)=|x|/x for x≠0, no value assigned at x=0, the discontinuity at zero is:",
+  "options": [
+   "Jump",
+   "Oscillatory",
+   "Removable",
+   "Infinite"
+  ],
+  "correctIndex": 0,
+  "explanation": "Left limit is −1 and right limit is +1, finite but unequal; it is a jump discontinuity."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Application of Derivatives",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The slope of the tangent to y=x³−3x at x=2 is:",
+  "options": [
+   "6",
+   "3",
+   "9",
+   "12"
+  ],
+  "correctIndex": 2,
+  "explanation": "dy/dx=3x²−3; at x=2, slope=12−3=9."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Indefinite Integrals",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "∫ x/(x²+1) dx equals:",
+  "options": [
+   "½ln(x²+1)+C",
+   "ln(x²+1)+C",
+   "x²/(x²+1)+C",
+   "tan⁻¹x+C"
+  ],
+  "correctIndex": 0,
+  "explanation": "Let u=x²+1, du=2x dx. Integral=½ ln(x²+1)+C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Differential Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The solution of dy/dx+2y=e^(−2x) is:",
+  "options": [
+   "e^(−2x)(x²+C)",
+   "e^(−2x)(x+C)",
+   "e^(2x)(x+C)",
+   "e^(2x)(C−x)"
+  ],
+  "correctIndex": 1,
+  "explanation": "Integrating factor e^{2x}; d(ye^{2x})/dx=1. Hence ye^{2x}=x+C, y=e^{−2x}(x+C)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Straight Lines",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The distance between parallel lines 3x+4y+7=0 and 3x+4y−8=0 is:",
+  "options": [
+   "2",
+   "1",
+   "3",
+   "5"
+  ],
+  "correctIndex": 2,
+  "explanation": "Distance=|7−(−8)|/√(3²+4²)=15/5=3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Circles",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A chord of a circle of radius 5 cm is 8 cm long. Its perpendicular distance from the centre is:",
+  "options": [
+   "√41 cm",
+   "4 cm",
+   "3 cm",
+   "2 cm"
+  ],
+  "correctIndex": 2,
+  "explanation": "Half chord=4; distance=√(5²−4²)=3 cm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Conic Sections",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For ellipse x²/25+y²/9=1, eccentricity is:",
+  "options": [
+   "4/5",
+   "5/4",
+   "3/5",
+   "√(34)/5"
+  ],
+  "correctIndex": 0,
+  "explanation": "a²=25,b²=9; e=√(1−b²/a²)=√(16/25)=4/5."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Three Dimensional Geometry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The angle between line with direction ratios (1,1,1) and plane x+y+z=0 is:",
+  "options": [
+   "0°",
+   "90°",
+   "sin⁻¹(1/√3)",
+   "sin⁻¹(1)"
+  ],
+  "correctIndex": 1,
+  "explanation": "The line direction vector (1,1,1) is parallel to plane normal (1,1,1), so it is perpendicular to the plane."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Vector Algebra",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The volume of parallelepiped formed by vectors a=(1,0,0), b=(0,2,0), c=(0,0,3) is:",
+  "options": [
+   "3",
+   "9",
+   "6",
+   "5"
+  ],
+  "correctIndex": 2,
+  "explanation": "Volume=|a·(b×c)|=1×2×3=6."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A fair die is rolled. Given that the outcome is even, the probability it is greater than 3 is:",
+  "options": [
+   "1/3",
+   "2/3",
+   "1/2",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Even outcomes are {2,4,6}; those greater than 3 are {4,6}. Probability=2/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Statistics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The variance of data 2, 4, 6, 8 is:",
+  "options": [
+   "6",
+   "4",
+   "8",
+   "5"
+  ],
+  "correctIndex": 3,
+  "explanation": "Mean=5; squared deviations 9,1,1,9 sum=20; population variance=20/4=5."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sets, Relations and Functions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If f(x)=x² and g(x)=x+1, then (f∘g)(−2) equals:",
+  "options": [
+   "−1",
+   "0",
+   "4",
+   "1"
+  ],
+  "correctIndex": 3,
+  "explanation": "g(−2)=−1 and f(−1)=1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For A=[[1,2],[3,4]], det(A) is:",
+  "options": [
+   "5",
+   "2",
+   "−2",
+   "−5"
+  ],
+  "correctIndex": 2,
+  "explanation": "Determinant=1×4−2×3=−2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Permutations and Combinations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A committee of 3 is selected from 5 men and 4 women with at least one woman. Number of ways is:",
+  "options": [
+   "80",
+   "74",
+   "70",
+   "84"
+  ],
+  "correctIndex": 1,
+  "explanation": "Total C(9,3)=84; all-men C(5,3)=10; desired=84−10=74."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Binomial Theorem",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The middle term in the expansion of (x+2)⁶ is:",
+  "options": [
+   "160x³",
+   "120x³",
+   "80x³",
+   "320x³"
+  ],
+  "correctIndex": 0,
+  "explanation": "There are seven terms; the middle is T₄=C(6,3)x³2³=20×8x³=160x³."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "limₓ→1 (x²−1)/(x−1) equals:",
+  "options": [
+   "2",
+   "1",
+   "0",
+   "∞"
+  ],
+  "correctIndex": 0,
+  "explanation": "Factor numerator=(x−1)(x+1); limit=x+1→2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Differentiation",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If x=t²+1 and y=t³−t, then dy/dx at t=1 is:",
+  "options": [
+   "1",
+   "1/2",
+   "3",
+   "2"
+  ],
+  "correctIndex": 0,
+  "explanation": "dy/dt=3t²−1=2; dx/dt=2t=2; dy/dx=1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Definite Integrals",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Area under y=2x from x=0 to x=3 is:",
+  "options": [
+   "12",
+   "9",
+   "6",
+   "18"
+  ],
+  "correctIndex": 1,
+  "explanation": "Area=∫₀³2x dx=[x²]₀³=9."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Conic Sections",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The eccentricity of x²/9−y²/16=1 is:",
+  "options": [
+   "5/4",
+   "3/4",
+   "4/3",
+   "5/3"
+  ],
+  "correctIndex": 3,
+  "explanation": "For hyperbola e=√(1+b²/a²)=√(1+16/9)=5/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Three Dimensional Geometry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Distance between points (1,2,3) and (4,6,3) is:",
+  "options": [
+   "4",
+   "3",
+   "5",
+   "6"
+  ],
+  "correctIndex": 2,
+  "explanation": "Distance=√(3²+4²+0²)=5."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A bag has 2 red and 3 blue balls. Two balls are drawn without replacement. Probability both are red is:",
+  "options": [
+   "2/5",
+   "1/5",
+   "1/10",
+   "1/2"
+  ],
+  "correctIndex": 2,
+  "explanation": "P=2/5×1/4=1/10."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For x²−5x+6=0, the sum of reciprocals of its roots is:",
+  "options": [
+   "6/5",
+   "5",
+   "1/6",
+   "5/6"
+  ],
+  "correctIndex": 3,
+  "explanation": "Roots are 2 and 3; reciprocal sum=1/2+1/3=5/6."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Kinematics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A boat moves east at 6 m/s relative to water while the river flows north at 8 m/s. Its speed relative to the bank is:",
+  "options": [
+   "10 m/s",
+   "12 m/s",
+   "8 m/s",
+   "14 m/s"
+  ],
+  "correctIndex": 0,
+  "explanation": "Perpendicular velocities combine: v=√(6²+8²)=10 m/s."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Laws of Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 2 kg and 3 kg block are connected on a frictionless horizontal surface and pulled by 20 N on the 3 kg block. Tension is:",
+  "options": [
+   "8 N",
+   "4 N",
+   "12 N",
+   "16 N"
+  ],
+  "correctIndex": 0,
+  "explanation": "Acceleration=20/(2+3)=4 m/s². Tension accelerates 2 kg: T=2×4=8 N."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Work, Energy and Power",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A force F=3x² N acts along x. Work from x=0 to x=2 m is:",
+  "options": [
+   "6 J",
+   "8 J",
+   "4 J",
+   "12 J"
+  ],
+  "correctIndex": 1,
+  "explanation": "W=∫₀²3x²dx=[x³]₀²=8 J."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A solid sphere rolls without slipping. The ratio of translational to rotational kinetic energy is:",
+  "options": [
+   "5:2",
+   "2:5",
+   "1:1",
+   "7:2"
+  ],
+  "correctIndex": 0,
+  "explanation": "Ktrans=½Mv²; Krot=½(2/5 MR²)(v²/R²)=1/5Mv²; ratio=(1/2):(1/5)=5:2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Gravitation",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two equal masses m are separated by r. Work required to separate them to infinity is:",
+  "options": [
+   "Gm²/r",
+   "0",
+   "2Gm²/r",
+   "−Gm²/r"
+  ],
+  "correctIndex": 0,
+  "explanation": "Initial potential energy is −Gm²/r and final is zero; external work=ΔU=Gm²/r."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Mechanical Properties of Solids and Fluids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Water speed is 2 m/s in a pipe of area 6 cm². At area 3 cm², speed is:",
+  "options": [
+   "4 m/s",
+   "1 m/s",
+   "6 m/s",
+   "2 m/s"
+  ],
+  "correctIndex": 0,
+  "explanation": "Continuity A₁v₁=A₂v₂ gives v₂=(6/3)×2=4 m/s."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Thermodynamics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "One mole ideal gas expands reversibly and isothermally from V to 2V at T. Work done by gas is:",
+  "options": [
+   "2RT",
+   "RT ln2",
+   "RT",
+   "RT/2"
+  ],
+  "correctIndex": 1,
+  "explanation": "For reversible isothermal expansion, W=nRT ln(V₂/V₁)=RT ln2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Kinetic Theory",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "At fixed temperature, if molar mass is quadrupled, rms speed becomes:",
+  "options": [
+   "half",
+   "2 times",
+   "one-fourth",
+   "4 times"
+  ],
+  "correctIndex": 0,
+  "explanation": "vᵣₘₛ=√(3RT/M); quadrupling M halves the speed."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Oscillations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "At displacement x=A/2, the fraction of total SHM energy that is potential is:",
+  "options": [
+   "1/4",
+   "1/2",
+   "3/4",
+   "1"
+  ],
+  "correctIndex": 0,
+  "explanation": "U/E=x²/A²=(A/2)²/A²=1/4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A string under tension T has wave speed v. If tension becomes 9T, speed becomes:",
+  "options": [
+   "9v",
+   "3v",
+   "v/3",
+   "v"
+  ],
+  "correctIndex": 1,
+  "explanation": "v=√(T/μ); multiplying tension by 9 multiplies speed by 3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A point charge q is moved from r to 2r from a fixed charge Q. Electric potential energy changes by:",
+  "options": [
+   "kQq/r",
+   "0",
+   "kQq/(2r)",
+   "−kQq/(2r)"
+  ],
+  "correctIndex": 3,
+  "explanation": "ΔU=kQq/(2r)−kQq/r=−kQq/(2r)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A capacitor remains connected to a battery while dielectric K is inserted fully. Its stored energy becomes:",
+  "options": [
+   "KU",
+   "K²U",
+   "U/K",
+   "U"
+  ],
+  "correctIndex": 0,
+  "explanation": "V is constant and C becomes KC; U=½CV² therefore becomes KU."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A wire's cross-sectional area is doubled with same material, current and carrier density. Drift speed becomes:",
+  "options": [
+   "v/2",
+   "v",
+   "v/4",
+   "2v"
+  ],
+  "correctIndex": 0,
+  "explanation": "I=neAv_d; with I fixed and A doubled, drift speed halves."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Moving Charges and Magnetism",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A charged particle enters a uniform magnetic field perpendicular to it. If momentum doubles, orbit radius:",
+  "options": [
+   "quadruples",
+   "unchanged",
+   "doubles",
+   "halves"
+  ],
+  "correctIndex": 2,
+  "explanation": "r=p/(|q|B), so doubling momentum doubles radius."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electromagnetic Induction",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 0.5 m rod moves at 4 m/s perpendicular to a 2 T field. Induced emf is:",
+  "options": [
+   "1 V",
+   "8 V",
+   "4 V",
+   "2 V"
+  ],
+  "correctIndex": 2,
+  "explanation": "ε=Blv=2×0.5×4=4 V."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Alternating Current",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "At resonance in a series RLC circuit, impedance equals:",
+  "options": [
+   "XL",
+   "XC",
+   "R",
+   "XL+XC"
+  ],
+  "correctIndex": 2,
+  "explanation": "At resonance XL=XC, net reactance is zero and Z=R."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Ray Optics and Optical Instruments",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "An object is 30 cm in front of a concave mirror of focal length 15 cm. Image distance magnitude is:",
+  "options": [
+   "15 cm",
+   "10 cm",
+   "60 cm",
+   "30 cm"
+  ],
+  "correctIndex": 3,
+  "explanation": "Using 1/f=1/v+1/u with f=−15,u=−30 gives v=−30 cm; magnitude 30 cm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Wave Optics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "In YDSE, if slit separation is doubled and all else unchanged, fringe width:",
+  "options": [
+   "doubles",
+   "unchanged",
+   "halves",
+   "quadruples"
+  ],
+  "correctIndex": 2,
+  "explanation": "β=λD/d; doubling d halves β."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If incident frequency is increased while intensity remains fixed above threshold, maximum kinetic energy:",
+  "options": [
+   "unchanged",
+   "becomes zero",
+   "decreases",
+   "increases"
+  ],
+  "correctIndex": 3,
+  "explanation": "Kmax=hν−φ; it increases linearly with frequency."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Atoms",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The energy of electron in n=2 hydrogen orbit is:",
+  "options": [
+   "−6.8 eV",
+   "−3.4 eV",
+   "−13.6 eV",
+   "−1.51 eV"
+  ],
+  "correctIndex": 1,
+  "explanation": "Eₙ=−13.6/n² eV; for n=2, E=−3.4 eV."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Nuclei",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A nucleus has mass defect Δm. Its binding energy is:",
+  "options": [
+   "Δm/c",
+   "Δm/c²",
+   "Δm c",
+   "Δmc²"
+  ],
+  "correctIndex": 3,
+  "explanation": "Mass-energy equivalence gives binding energy Δm c²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Semiconductor Electronics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A p-n junction diode is forward biased when:",
+  "options": [
+   "p-side negative w.r.t. n-side",
+   "p-side positive w.r.t. n-side",
+   "no battery is connected",
+   "both sides grounded"
+  ],
+  "correctIndex": 1,
+  "explanation": "Forward bias connects p to positive and n to negative terminal, reducing barrier potential."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If z=x²y and percentage errors in x,y are 1% and 2%, maximum percentage error in z is:",
+  "options": [
+   "3%",
+   "2%",
+   "4%",
+   "5%"
+  ],
+  "correctIndex": 2,
+  "explanation": "For z=x²y, relative maximum error=2(1%)+2%=4%."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Laws of Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For frictionless banking, tanθ for speed v on radius r is:",
+  "options": [
+   "g r²/v²",
+   "v²/rg",
+   "rg/v²",
+   "v/rg"
+  ],
+  "correctIndex": 1,
+  "explanation": "Equating horizontal and vertical components gives tanθ=v²/(rg)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A body initially at rest explodes into two fragments. Their momenta are:",
+  "options": [
+   "equal and opposite",
+   "unequal and opposite",
+   "both zero",
+   "equal and same direction"
+  ],
+  "correctIndex": 0,
+  "explanation": "Total momentum is conserved and initially zero; fragment momenta sum to zero."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Thermal Properties of Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Equal masses of substances with specific heats c and 2c at temperatures 80°C and 20°C are mixed without loss. Final temperature is:",
+  "options": [
+   "40°C",
+   "60°C",
+   "50°C",
+   "30°C"
+  ],
+  "correctIndex": 0,
+  "explanation": "mc(80−T)=2mc(T−20); 80−T=2T−40, so T=40°C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Potential on the equatorial line of an ideal electric dipole is:",
+  "options": [
+   "zero",
+   "infinite",
+   "depends on distance only",
+   "maximum"
+  ],
+  "correctIndex": 0,
+  "explanation": "Equatorial point is equidistant from +q and −q, so scalar potentials cancel."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Magnetism and Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a diamagnetic material, magnetic susceptibility is:",
+  "options": [
+   "small positive",
+   "zero exactly",
+   "large positive",
+   "small negative"
+  ],
+  "correctIndex": 3,
+  "explanation": "Diamagnetic materials acquire magnetisation opposite to applied field; χ is small and negative."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electromagnetic Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Among these, the highest frequency is of:",
+  "options": [
+   "ultraviolet",
+   "radio waves",
+   "microwaves",
+   "infrared"
+  ],
+  "correctIndex": 0,
+  "explanation": "Frequency order rises from radio/microwave/IR to visible/UV/X-rays/gamma."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Gravitation",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Total energy of a satellite in circular orbit of radius r is:",
+  "options": [
+   "−GMm/r",
+   "−GMm/(2r)",
+   "+GMm/(2r)",
+   "0"
+  ],
+  "correctIndex": 1,
+  "explanation": "K=GMm/(2r), U=−GMm/r, hence E=K+U=−GMm/(2r)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A stationary source emits 600 Hz; observer moves toward it at 20 m/s. Speed of sound=340 m/s. Observed frequency is:",
+  "options": [
+   "600 Hz",
+   "635.3 Hz",
+   "565 Hz",
+   "640 Hz"
+  ],
+  "correctIndex": 1,
+  "explanation": "f'=f(v+v_o)/v=600×360/340≈635.3 Hz."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Ray Optics and Optical Instruments",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a simple microscope, angular magnification for final image at infinity is:",
+  "options": [
+   "D/f",
+   "1+D/f",
+   "f/D",
+   "D+f"
+  ],
+  "correctIndex": 0,
+  "explanation": "For relaxed eye, magnifying power M=D/f."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Some Basic Concepts of Chemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A compound contains 40% C, 6.67% H and 53.33% O by mass. Its empirical formula is:",
+  "options": [
+   "CH₃O",
+   "CHO",
+   "CH₂O",
+   "C₂H₄O₂"
+  ],
+  "correctIndex": 2,
+  "explanation": "Moles in 100 g: C=3.33, H=6.67, O=3.33; ratio 1:2:1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If an electron's kinetic energy is increased fourfold (non-relativistic), its de Broglie wavelength becomes:",
+  "options": [
+   "4λ",
+   "λ/4",
+   "λ/2",
+   "2λ"
+  ],
+  "correctIndex": 2,
+  "explanation": "λ=h/√(2mK), so quadrupling K halves λ."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Classification of Elements and Periodicity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Among O²⁻, F⁻, Na⁺ and Mg²⁺, the smallest radius is:",
+  "options": [
+   "O²⁻",
+   "F⁻",
+   "Mg²⁺",
+   "Na⁺"
+  ],
+  "correctIndex": 2,
+  "explanation": "All have 10 electrons; radius decreases with increasing nuclear charge, greatest Z is Mg."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Thermodynamics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "At constant T and P, a spontaneous process has:",
+  "options": [
+   "ΔH<0 necessarily",
+   "ΔG>0",
+   "ΔG=0 always",
+   "ΔG<0"
+  ],
+  "correctIndex": 3,
+  "explanation": "Spontaneity at constant temperature and pressure requires negative Gibbs energy change."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For N₂O₄(g)⇌2NO₂(g), the relation is:",
+  "options": [
+   "Kp=Kc/(RT)",
+   "Kp=KcRT",
+   "Kp=Kc",
+   "Kp=Kc(RT)²"
+  ],
+  "correctIndex": 1,
+  "explanation": "Δn_g=2−1=1, so Kp=Kc(RT)^Δn=KcRT."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The pH of 10⁻³ M HCl at 25°C is approximately:",
+  "options": [
+   "2",
+   "11",
+   "3",
+   "4"
+  ],
+  "correctIndex": 2,
+  "explanation": "Strong acid fully dissociates; [H⁺]=10⁻³ M and pH=3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Equivalent weight of KMnO₄ in acidic medium (molar mass 158) is:",
+  "options": [
+   "158",
+   "52.7",
+   "79",
+   "31.6"
+  ],
+  "correctIndex": 3,
+  "explanation": "n-factor=5 in acidic medium; equivalent weight=158/5=31.6."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Solutions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For equal molal aqueous solutions of glucose and NaCl (ideal dissociation), which has greater boiling-point elevation?",
+  "options": [
+   "Equal",
+   "Cannot compare",
+   "NaCl",
+   "Glucose"
+  ],
+  "correctIndex": 2,
+  "explanation": "ΔTb=iKbm; NaCl has van't Hoff factor approximately 2, glucose 1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a cell reaction involving n=2, at 298 K the Nernst coefficient 0.0591/n is:",
+  "options": [
+   "0.02955 V",
+   "0.01478 V",
+   "0.1182 V",
+   "0.0591 V"
+  ],
+  "correctIndex": 0,
+  "explanation": "0.0591/2=0.02955 V."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "p-Block Elements",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Among halogens, the strongest oxidising agent in aqueous solution is:",
+  "options": [
+   "Cl₂",
+   "I₂",
+   "F₂",
+   "Br₂"
+  ],
+  "correctIndex": 2,
+  "explanation": "Fluorine has the highest standard reduction potential and strongest oxidising power."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "d- and f-Block Elements",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Spin-only magnetic moment for 3 unpaired electrons is:",
+  "options": [
+   "4.90 BM",
+   "3.87 BM",
+   "1.73 BM",
+   "2.83 BM"
+  ],
+  "correctIndex": 1,
+  "explanation": "μ=√[n(n+2)] BM=√15≈3.87 BM."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Coordination Compounds",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "[Co(NH₃)₅NO₂]Cl₂ exhibits linkage isomerism because NO₂⁻ is:",
+  "options": [
+   "ambidentate",
+   "non-coordinating",
+   "bidentate only",
+   "neutral"
+  ],
+  "correctIndex": 0,
+  "explanation": "Nitrite can coordinate through N (nitro) or O (nitrito)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Hydrocarbons",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Cyclopentadienyl anion is aromatic because it has:",
+  "options": [
+   "8π electrons",
+   "2π electrons",
+   "6π electrons",
+   "4π electrons"
+  ],
+  "correctIndex": 2,
+  "explanation": "Two double bonds plus the lone pair give 6π electrons, satisfying Hückel 4n+2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Haloalkanes and Haloarenes",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For an SN1 reaction, the rate depends primarily on:",
+  "options": [
+   "solvent concentration only",
+   "nucleophile concentration only",
+   "substrate concentration only",
+   "both equally"
+  ],
+  "correctIndex": 2,
+  "explanation": "The slow ionisation step is unimolecular; rate=k[substrate]."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Alcohols, Phenols and Ethers",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Best substrate for Williamson ether synthesis is generally:",
+  "options": [
+   "aryl halide",
+   "tertiary alkyl halide",
+   "vinyl halide",
+   "primary alkyl halide"
+  ],
+  "correctIndex": 3,
+  "explanation": "SN2 ether formation is favoured with primary alkyl halides; tertiary substrates undergo elimination."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Alcohols, Phenols and Ethers",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Sodium phenoxide with CO₂ under pressure followed by acidification gives mainly:",
+  "options": [
+   "benzoic acid",
+   "benzaldehyde",
+   "salicylic acid",
+   "phenyl acetate"
+  ],
+  "correctIndex": 2,
+  "explanation": "Kolbe–Schmitt reaction introduces COOH ortho to phenoxide oxygen."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Ethanal in dilute NaOH gives the initial aldol product:",
+  "options": [
+   "3-hydroxybutanal",
+   "propanone",
+   "ethanoic acid",
+   "but-2-enal"
+  ],
+  "correctIndex": 0,
+  "explanation": "Two ethanal molecules undergo aldol addition to form CH₃CH(OH)CH₂CHO."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The strongest acid among these is:",
+  "options": [
+   "Cl₂CHCOOH",
+   "CH₃COOH",
+   "CCl₃COOH",
+   "ClCH₂COOH"
+  ],
+  "correctIndex": 2,
+  "explanation": "Increasing electron-withdrawing chlorine substituents stabilise carboxylate and increase acidity."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Amines",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Aniline forms benzenediazonium chloride with NaNO₂/HCl at:",
+  "options": [
+   "50–60°C",
+   "0–5°C",
+   "100°C",
+   "25–30°C"
+  ],
+  "correctIndex": 1,
+  "explanation": "Arenediazonium salts are prepared and maintained at 0–5°C to avoid decomposition."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Biomolecules",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A peptide bond is chemically a:",
+  "options": [
+   "glycosidic linkage",
+   "amide linkage",
+   "ester linkage",
+   "phosphodiester linkage"
+  ],
+  "correctIndex": 1,
+  "explanation": "Peptide bond is the –CO–NH– amide linkage between amino acids."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Surface Chemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Physisorption generally:",
+  "options": [
+   "is non-specific and reversible",
+   "forms chemical bonds only",
+   "increases strongly with temperature",
+   "has high activation energy"
+  ],
+  "correctIndex": 0,
+  "explanation": "Weak van der Waals forces make physical adsorption generally non-specific and reversible."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "General Principles of Metallurgy",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A metal oxide is more readily reduced by carbon at a temperature where the carbon oxidation line is:",
+  "options": [
+   "above oxide line",
+   "unrelated",
+   "parallel to oxide line",
+   "below oxide line"
+  ],
+  "correctIndex": 3,
+  "explanation": "A lower ΔG line for carbon oxidation indicates it can reduce the metal oxide under those conditions."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Hydrogen",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "In H₂O₂, oxidation number of oxygen is:",
+  "options": [
+   "−1",
+   "+1",
+   "0",
+   "−2"
+  ],
+  "correctIndex": 0,
+  "explanation": "In peroxide compounds, each oxygen has oxidation number −1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "s-Block Elements",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The characteristic flame colour of potassium is:",
+  "options": [
+   "golden yellow",
+   "lilac",
+   "brick red",
+   "apple green"
+  ],
+  "correctIndex": 1,
+  "explanation": "Potassium imparts a lilac flame."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Polymers",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Nylon-6,6 is formed from:",
+  "options": [
+   "caprolactam only",
+   "ethylene glycol and terephthalic acid",
+   "adipic acid and hexamethylenediamine",
+   "styrene"
+  ],
+  "correctIndex": 2,
+  "explanation": "Nylon-6,6 is a condensation polyamide from a C6 diacid and C6 diamine."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemistry in Everyday Life",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which is commonly used as an antacid?",
+  "options": [
+   "NaCl",
+   "Mg(OH)₂",
+   "KNO₃",
+   "CaSO₄"
+  ],
+  "correctIndex": 1,
+  "explanation": "Magnesium hydroxide neutralises excess gastric HCl."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The molecular shape of XeF₄ is:",
+  "options": [
+   "tetrahedral",
+   "square planar",
+   "trigonal bipyramidal",
+   "see-saw"
+  ],
+  "correctIndex": 1,
+  "explanation": "XeF₄ has six electron domains (AX₄E₂); two lone pairs opposite, giving square planar shape."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "An acidic buffer is typically a mixture of:",
+  "options": [
+   "strong acid and strong base",
+   "strong acid and its salt",
+   "weak base and its salt",
+   "weak acid and its salt"
+  ],
+  "correctIndex": 3,
+  "explanation": "A weak acid/conjugate-base salt mixture resists pH changes."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The roots of z²−2z+5=0 are:",
+  "options": [
+   "1±2i",
+   "−1±2i",
+   "1±√5 i",
+   "2±i"
+  ],
+  "correctIndex": 0,
+  "explanation": "Quadratic formula gives z=(2±√(4−20))/2=1±2i."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For x²−2kx+9=0 to have equal real roots, k is:",
+  "options": [
+   "−3 only",
+   "±3",
+   "3 only",
+   "±6"
+  ],
+  "correctIndex": 1,
+  "explanation": "Discriminant 4k²−36=0 gives k²=9, hence k=±3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The sum to infinity of a GP with first term 6 and common ratio 1/3 is:",
+  "options": [
+   "18",
+   "9",
+   "8",
+   "12"
+  ],
+  "correctIndex": 1,
+  "explanation": "S∞=a/(1−r)=6/(2/3)=9."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Binomial Theorem",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Coefficient of x³ in (1+2x)⁵ is:",
+  "options": [
+   "100",
+   "60",
+   "80",
+   "40"
+  ],
+  "correctIndex": 2,
+  "explanation": "Choose k=3: C(5,3)(2³)=10×8=80."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Permutations and Combinations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Number of distinct arrangements of the letters in LEVEL is:",
+  "options": [
+   "60",
+   "120",
+   "30",
+   "20"
+  ],
+  "correctIndex": 2,
+  "explanation": "Five letters with L repeated twice and E repeated twice: 5!/(2!2!)=30."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If A is 2×2 with det A=−3, then det(A⁻¹) is:",
+  "options": [
+   "1/3",
+   "−1/3",
+   "−3",
+   "3"
+  ],
+  "correctIndex": 1,
+  "explanation": "det(A⁻¹)=1/det(A)=−1/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Area of triangle with vertices (0,0),(4,0),(0,3) is:",
+  "options": [
+   "12",
+   "6",
+   "24",
+   "7"
+  ],
+  "correctIndex": 1,
+  "explanation": "Area=½×base 4×height 3=6."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "limₓ→0 (e^{3x}−1)/x equals:",
+  "options": [
+   "2",
+   "3",
+   "6",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Using e^{3x}≈1+3x, quotient tends to 3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For f(x)=ax+1 for x≤1 and x²+2 for x>1, continuity at x=1 requires a:",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "1"
+  ],
+  "correctIndex": 0,
+  "explanation": "Left value=a+1; right limit=3; set a+1=3 gives a=2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Differentiation",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If y=ln(sin x), dy/dx is:",
+  "options": [
+   "cot x",
+   "cosec x",
+   "tan x",
+   "sec x"
+  ],
+  "correctIndex": 0,
+  "explanation": "d/dx ln(sin x)=cos x/sin x=cot x."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Application of Derivatives",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For f(x)=x³−3x, f is increasing on:",
+  "options": [
+   "(−1,1) only",
+   "all real numbers",
+   "(-∞,−1)∪(1,∞)",
+   "(-∞,1)"
+  ],
+  "correctIndex": 2,
+  "explanation": "f′=3(x²−1)>0 for |x|>1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Indefinite Integrals",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "∫e^{2x}dx equals:",
+  "options": [
+   "eˣ+C",
+   "2e^{2x}+C",
+   "e^{2x}+C",
+   "½e^{2x}+C"
+  ],
+  "correctIndex": 3,
+  "explanation": "Substitute u=2x; integral is e^{2x}/2+C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Differential Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The general solution of dy/dx=3x² is:",
+  "options": [
+   "y=3x³+C",
+   "y=x³+C",
+   "y=3x+C",
+   "y=x²+C"
+  ],
+  "correctIndex": 1,
+  "explanation": "Integrating both sides gives y=∫3x²dx=x³+C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Straight Lines",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The acute angle between lines with slopes 1 and −1/3 has tanθ:",
+  "options": [
+   "3/2",
+   "1/2",
+   "2",
+   "1"
+  ],
+  "correctIndex": 2,
+  "explanation": "tanθ=|(m₁−m₂)/(1+m₁m₂)|=|(1+1/3)/(1−1/3)|=2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Circles",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Tangent to x²+y²=25 at (3,4) is:",
+  "options": [
+   "3x−4y=25",
+   "3x+4y=25",
+   "4x+3y=25",
+   "x+y=7"
+  ],
+  "correctIndex": 1,
+  "explanation": "For circle x²+y²=a², tangent at (x₁,y₁): xx₁+yy₁=a²."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Conic Sections",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Focus of y²=12x is:",
+  "options": [
+   "(0,3)",
+   "(0,−3)",
+   "(3,0)",
+   "(−3,0)"
+  ],
+  "correctIndex": 2,
+  "explanation": "For y²=4ax, a=3 and focus=(a,0)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Conic Sections",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For x²/16+y²/7=1, eccentricity is:",
+  "options": [
+   "√9/4",
+   "1/4",
+   "3/4",
+   "√7/4"
+  ],
+  "correctIndex": 2,
+  "explanation": "e=√(1−7/16)=√(9/16)=3/4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Conic Sections",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Asymptotes of x²/9−y²/4=1 are:",
+  "options": [
+   "y=±x/3",
+   "y=±x",
+   "y=±2x/3",
+   "y=±3x/2"
+  ],
+  "correctIndex": 2,
+  "explanation": "For standard hyperbola, asymptotes y=±(b/a)x=±(2/3)x."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Vector Algebra",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If |a|=2, |b|=3 and angle between them is 60°, a·b is:",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "6"
+  ],
+  "correctIndex": 1,
+  "explanation": "a·b=|a||b|cos60°=2×3×1/2=3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Three Dimensional Geometry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Distance of point (1,2,2) from plane 2x−y+2z−3=0 is:",
+  "options": [
+   "1/3",
+   "1",
+   "2",
+   "2/3"
+  ],
+  "correctIndex": 0,
+  "explanation": "Distance=|2−2+4−3|/√(4+1+4)=1/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If P(A)=1/2 and P(B)=1/3 and A,B independent, P(A∩B) is:",
+  "options": [
+   "5/6",
+   "1/6",
+   "1/5",
+   "2/3"
+  ],
+  "correctIndex": 1,
+  "explanation": "For independent events, intersection probability is product: 1/2×1/3=1/6."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Statistics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For data 1,1,3,3, population standard deviation is:",
+  "options": [
+   "1",
+   "2",
+   "1/2",
+   "√2"
+  ],
+  "correctIndex": 0,
+  "explanation": "Mean=2; variance=[1+1+1+1]/4=1; SD=1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Trigonometric Functions and Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If tanθ=3/4 and θ is acute, sin2θ is:",
+  "options": [
+   "7/25",
+   "4/5",
+   "24/25",
+   "3/5"
+  ],
+  "correctIndex": 2,
+  "explanation": "sin2θ=2tanθ/(1+tan²θ)= (3/2)/(25/16)=24/25."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sets, Relations and Functions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If f(x)=3x−7, then f⁻¹(x) is:",
+  "options": [
+   "3x+7",
+   "(x+7)/3",
+   "(x−7)/3",
+   "7−3x"
+  ],
+  "correctIndex": 1,
+  "explanation": "Set y=3x−7; solve x=(y+7)/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sets, Relations and Functions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "On integers, a~b iff a−b is divisible by 5. The relation is:",
+  "options": [
+   "reflexive only",
+   "symmetric only",
+   "equivalence",
+   "not transitive"
+  ],
+  "correctIndex": 2,
+  "explanation": "Congruence modulo 5 is reflexive, symmetric and transitive."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Principal argument of −1+i is:",
+  "options": [
+   "π/4",
+   "3π/4",
+   "−3π/4",
+   "−π/4"
+  ],
+  "correctIndex": 1,
+  "explanation": "The point (−1,1) lies in quadrant II with reference angle π/4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Permutations and Combinations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Number of ways to choose 2 objects from 8 is:",
+  "options": [
+   "16",
+   "56",
+   "32",
+   "28"
+  ],
+  "correctIndex": 3,
+  "explanation": "C(8,2)=8×7/2=28."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "limₓ→0 (√(1+4x)−1)/x equals:",
+  "options": [
+   "4",
+   "2",
+   "0",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Rationalise: 4/[√(1+4x)+1]→2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Definite Integrals",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "∫₀² x dx equals:",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "1"
+  ],
+  "correctIndex": 1,
+  "explanation": "Integral=[x²/2]₀²=2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A fair coin is tossed 3 times. Probability of exactly 2 heads is:",
+  "options": [
+   "1/8",
+   "1/2",
+   "3/8",
+   "5/8"
+  ],
+  "correctIndex": 2,
+  "explanation": "There are C(3,2)=3 favourable outcomes among 8 equally likely outcomes."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Nuclei",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A radioactive nuclide has decay constant λ=ln2 day⁻¹. Its half-life is:",
+  "options": [
+   "1 day",
+   "0.5 day",
+   "ln2 days",
+   "2 days"
+  ],
+  "correctIndex": 0,
+  "explanation": "t₁/₂=ln2/λ=ln2/(ln2 day⁻¹)=1 day."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Kinematics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A particle has position x=2t^2-8t+3 m. Its velocity at t=3 s is?",
+  "options": [
+   "8 m/s",
+   "2 m/s",
+   "12 m/s",
+   "4 m/s"
+  ],
+  "correctIndex": 3,
+  "explanation": "v=dx/dt=4t-8; at t=3 s, v=4 m/s."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Kinematics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A projectile is launched at 20 m/s at 30°; take g=10 m/s². Its time of flight is?",
+  "options": [
+   "4 s",
+   "√3 s",
+   "2 s",
+   "1 s"
+  ],
+  "correctIndex": 2,
+  "explanation": "T=2u sinθ/g=2×20×1/2/10=2 s."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Laws of Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 5 kg block rests on a horizontal surface with μs=0.4. The limiting friction is (g=10 m/s²):",
+  "options": [
+   "50 N",
+   "20 N",
+   "10 N",
+   "40 N"
+  ],
+  "correctIndex": 1,
+  "explanation": "N=mg=50 N; fmax=μsN=0.4×50=20 N."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Laws of Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 0.5 kg body moves at 4 m/s in a circle of radius 2 m. Required centripetal force is?",
+  "options": [
+   "8 N",
+   "4 N",
+   "2 N",
+   "16 N"
+  ],
+  "correctIndex": 1,
+  "explanation": "Fc=mv²/r=0.5×16/2=4 N."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 2 N force acts perpendicular at 0.30 m from an axis. Torque magnitude is?",
+  "options": [
+   "6 N m",
+   "0.15 N m",
+   "0.60 N m",
+   "2.3 N m"
+  ],
+  "correctIndex": 2,
+  "explanation": "τ=rF sin90°=0.30×2=0.60 N m."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "System of Particles and Rotational Motion",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A solid cylinder rolls without slipping. The ratio of translational kinetic energy to total kinetic energy is?",
+  "options": [
+   "3/4",
+   "1/2",
+   "2/3",
+   "1/3"
+  ],
+  "correctIndex": 2,
+  "explanation": "Ktrans=½Mv²; Krot=½(Iω²)=¼Mv² for I=½MR² and ω=v/R. Ratio=(1/2)/(3/4)=2/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Gravitation",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A satellite orbits at radius 4R around a planet of mass M. Its orbital speed is?",
+  "options": [
+   "½√(GM/R)",
+   "2√(GM/R)",
+   "¼√(GM/R)",
+   "√(GM/R)"
+  ],
+  "correctIndex": 0,
+  "explanation": "v=√(GM/r)=√(GM/4R)=½√(GM/R)."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Mechanical Properties of Solids and Fluids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For steady ideal flow, speed increases from 2 to 6 m/s at equal height. Pressure change (ρ=1000 kg/m³) is?",
+  "options": [
+   "−16000 Pa",
+   "+8000 Pa",
+   "+16000 Pa",
+   "−8000 Pa"
+  ],
+  "correctIndex": 0,
+  "explanation": "P₂−P₁=½ρ(v₁²−v₂²)=500(4−36)=−16000 Pa."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Thermal Properties of Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A 0.2 kg metal (c=400 J kg⁻¹K⁻¹) cools by 25 K. Heat released is?",
+  "options": [
+   "2000 J",
+   "4000 J",
+   "1000 J",
+   "500 J"
+  ],
+  "correctIndex": 0,
+  "explanation": "Q=mcΔT=0.2×400×25=2000 J."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Thermodynamics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A gas absorbs 500 J heat and does 180 J work. Change in internal energy is?",
+  "options": [
+   "−320 J",
+   "−680 J",
+   "320 J",
+   "680 J"
+  ],
+  "correctIndex": 2,
+  "explanation": "ΔU=Q−W=500−180=320 J."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Oscillations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For x=0.04 cos(5t) m, maximum speed is?",
+  "options": [
+   "0.25 m/s",
+   "1.25 m/s",
+   "0.20 m/s",
+   "0.04 m/s"
+  ],
+  "correctIndex": 2,
+  "explanation": "vmax=Aω=0.04×5=0.20 m/s."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A string has tension 100 N and linear density 0.01 kg/m. Wave speed is?",
+  "options": [
+   "100 m/s",
+   "1000 m/s",
+   "10 m/s",
+   "50 m/s"
+  ],
+  "correctIndex": 0,
+  "explanation": "v=√(T/μ)=√(100/0.01)=100 m/s."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A +2 μC point charge produces what field magnitude at 3 m? (k=9×10⁹)",
+  "options": [
+   "1000 N/C",
+   "6000 N/C",
+   "4000 N/C",
+   "2000 N/C"
+  ],
+  "correctIndex": 3,
+  "explanation": "E=kq/r²=9×10⁹×2×10⁻⁶/9=2000 N/C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two 6 μF capacitors are connected in series. Equivalent capacitance is?",
+  "options": [
+   "12 μF",
+   "1.5 μF",
+   "6 μF",
+   "3 μF"
+  ],
+  "correctIndex": 3,
+  "explanation": "For equal capacitors in series, Ceq=C/2=3 μF."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A wire carries 2 A for 3 minutes. Total charge passing is?",
+  "options": [
+   "600 C",
+   "6 C",
+   "180 C",
+   "360 C"
+  ],
+  "correctIndex": 3,
+  "explanation": "Q=It=2×180=360 C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Current Electricity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A wire is stretched to twice its original length with volume constant. Its resistance becomes?",
+  "options": [
+   "R/2",
+   "4R",
+   "R/4",
+   "2R"
+  ],
+  "correctIndex": 1,
+  "explanation": "Area halves; R'=ρ(2L)/(A/2)=4R."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Moving Charges and Magnetism",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A charge 2 μC moves at 3×10⁵ m/s perpendicular to 0.5 T field. Force is?",
+  "options": [
+   "3.0 N",
+   "0.15 N",
+   "0.30 N",
+   "0.03 N"
+  ],
+  "correctIndex": 2,
+  "explanation": "F=qvB=2×10⁻⁶×3×10⁵×0.5=0.30 N."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Magnetism and Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A magnetic dipole moment 2 A m² is perpendicular to a 0.4 T field. Torque is?",
+  "options": [
+   "1.6 N m",
+   "0 N m",
+   "0.2 N m",
+   "0.8 N m"
+  ],
+  "correctIndex": 3,
+  "explanation": "τ=mB sin90°=2×0.4=0.8 N m."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electromagnetic Induction",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Flux through a 50-turn coil changes by 0.02 Wb in 0.1 s. Average induced emf magnitude is?",
+  "options": [
+   "20 V",
+   "1 V",
+   "5 V",
+   "10 V"
+  ],
+  "correctIndex": 3,
+  "explanation": "|ε|=N|ΔΦ|/Δt=50×0.02/0.1=10 V."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Alternating Current",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "An inductor of 0.2 H is connected to 50 Hz AC. Its inductive reactance is approximately?",
+  "options": [
+   "31.4 Ω",
+   "100 Ω",
+   "125.6 Ω",
+   "62.8 Ω"
+  ],
+  "correctIndex": 3,
+  "explanation": "XL=2πfL=2π×50×0.2≈62.8 Ω."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electromagnetic Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which electromagnetic radiation has the highest frequency?",
+  "options": [
+   "Infrared",
+   "Microwaves",
+   "Ultraviolet",
+   "Gamma rays"
+  ],
+  "correctIndex": 3,
+  "explanation": "In the electromagnetic spectrum, gamma rays occupy the highest-frequency region."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Ray Optics and Optical Instruments",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "An object is 30 cm from a convex lens of focal length 15 cm. Image distance is?",
+  "options": [
+   "−30 cm",
+   "15 cm",
+   "60 cm",
+   "30 cm"
+  ],
+  "correctIndex": 3,
+  "explanation": "1/f=1/v−1/u; with f=+15 cm,u=−30 cm, v=+30 cm."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Wave Optics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "In YDSE, wavelength is doubled while D and d remain fixed. Fringe width becomes?",
+  "options": [
+   "Unchanged",
+   "Four times",
+   "Double",
+   "Half"
+  ],
+  "correctIndex": 2,
+  "explanation": "β=λD/d; doubling λ doubles β."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If incident frequency is below threshold frequency, increasing intensity alone causes?",
+  "options": [
+   "Higher stopping potential",
+   "More emitted electrons",
+   "No photoemission",
+   "Photoemission after a delay"
+  ],
+  "correctIndex": 2,
+  "explanation": "Below threshold, photon energy hν is insufficient; intensity cannot compensate."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Atoms",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For hydrogen, the energy of n=2 state is?",
+  "options": [
+   "−1.51 eV",
+   "−6.8 eV",
+   "−3.4 eV",
+   "−13.6 eV"
+  ],
+  "correctIndex": 2,
+  "explanation": "En=−13.6/n² eV; for n=2, −3.4 eV."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Nuclei",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A sample has half-life 5 days. Fraction remaining after 15 days is?",
+  "options": [
+   "1/2",
+   "1/4",
+   "1/8",
+   "1/16"
+  ],
+  "correctIndex": 2,
+  "explanation": "15 days is 3 half-lives; remaining fraction=(1/2)³=1/8."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Semiconductor Electronics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A silicon diode in forward bias has its anode at higher potential than cathode. It is generally?",
+  "options": [
+   "Conducting",
+   "Breakdown biased",
+   "Reverse biased",
+   "Open circuit"
+  ],
+  "correctIndex": 0,
+  "explanation": "Forward bias lowers the junction barrier and permits substantial current."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Units and Measurement",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If z=xy and fractional errors in x and y are 2% and 3%, maximum fractional error in z is?",
+  "options": [
+   "5%",
+   "1%",
+   "0.5%",
+   "6%"
+  ],
+  "correctIndex": 0,
+  "explanation": "For a product, maximum fractional errors add: 2%+3%=5%."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Kinematics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A body starting from rest has acceleration 4 m/s² for 5 s. Displacement is?",
+  "options": [
+   "50 m",
+   "40 m",
+   "100 m",
+   "20 m"
+  ],
+  "correctIndex": 0,
+  "explanation": "s=½at²=0.5×4×25=50 m."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Work, Energy and Power",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A spring of k=200 N/m is compressed by 0.1 m. Stored energy is?",
+  "options": [
+   "0.1 J",
+   "10 J",
+   "1 J",
+   "2 J"
+  ],
+  "correctIndex": 2,
+  "explanation": "U=½kx²=0.5×200×0.01=1 J."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Waves",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A source approaches a stationary observer; observed frequency compared with emitted frequency is?",
+  "options": [
+   "Higher",
+   "Lower",
+   "Zero",
+   "Same"
+  ],
+  "correctIndex": 0,
+  "explanation": "Approach reduces wavelength reaching the observer, increasing observed frequency."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Physics",
+  "chapter": "Electrostatics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Two charges +2 μC and +3 μC are separated by 0.3 m. Their electrostatic potential energy is? (k=9×10⁹)",
+  "options": [
+   "0.18 J",
+   "0.09 J",
+   "0.36 J",
+   "0.06 J"
+  ],
+  "correctIndex": 0,
+  "explanation": "U=kq₁q₂/r=9×10⁹×6×10⁻¹²/0.3=0.18 J."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Atomic Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If a particle's momentum doubles, its de Broglie wavelength becomes?",
+  "options": [
+   "Four times",
+   "Unchanged",
+   "Double",
+   "Half"
+  ],
+  "correctIndex": 3,
+  "explanation": "λ=h/p, so doubling p halves λ."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The central carbon in CO₂ has which hybridisation?",
+  "options": [
+   "sp³",
+   "dsp²",
+   "sp²",
+   "sp"
+  ],
+  "correctIndex": 3,
+  "explanation": "Two electron domains around carbon give linear geometry and sp hybridisation."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Bonding and Molecular Structure",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The molecular shape of SF₄ is?",
+  "options": [
+   "Tetrahedral",
+   "Square planar",
+   "Trigonal planar",
+   "See-saw"
+  ],
+  "correctIndex": 3,
+  "explanation": "Sulfur has five electron domains (AX₄E); trigonal-bipyramidal electron geometry gives see-saw shape."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Thermodynamics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a reaction, ΔH=−40 kJ mol⁻¹. The reaction is?",
+  "options": [
+   "Endothermic",
+   "Athermic",
+   "Always non-spontaneous",
+   "Exothermic"
+  ],
+  "correctIndex": 3,
+  "explanation": "Negative enthalpy change means heat is released at constant pressure."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For A ⇌ 2B, if equilibrium concentrations are [A]=0.5 M and [B]=1 M, Kc is?",
+  "options": [
+   "1",
+   "2",
+   "0.5",
+   "4"
+  ],
+  "correctIndex": 1,
+  "explanation": "Kc=[B]²/[A]=1²/0.5=2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Equilibrium",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The pH of 10⁻³ M HCl (complete dissociation) is?",
+  "options": [
+   "11",
+   "1",
+   "2",
+   "3"
+  ],
+  "correctIndex": 3,
+  "explanation": "[H⁺]=10⁻³ M; pH=−log[H⁺]=3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Oxidation number of Cr in Cr₂O₇²⁻ is?",
+  "options": [
+   "+12",
+   "+7",
+   "+3",
+   "+6"
+  ],
+  "correctIndex": 3,
+  "explanation": "2x+7(−2)=−2 ⇒ 2x=12 ⇒ x=+6."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Solutions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For an ideal solution, pA=xA P°A. If xA=0.4 and P°A=100 kPa, pA is?",
+  "options": [
+   "25 kPa",
+   "40 kPa",
+   "60 kPa",
+   "100 kPa"
+  ],
+  "correctIndex": 1,
+  "explanation": "pA=0.4×100=40 kPa."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a cell reaction with n=2, increasing reaction quotient Q by a factor of 100 at 298 K changes E by approximately?",
+  "options": [
+   "+0.118 V",
+   "−0.118 V",
+   "+0.059 V",
+   "−0.059 V"
+  ],
+  "correctIndex": 3,
+  "explanation": "ΔE=−(0.0591/n)log(100)=−(0.0591/2)×2≈−0.059 V."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Kinetics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A first-order reaction has k=0.2 min⁻¹. Its half-life is?",
+  "options": [
+   "3.47 min",
+   "5 min",
+   "6.93 min",
+   "0.2 min"
+  ],
+  "correctIndex": 0,
+  "explanation": "t½=0.693/k=0.693/0.2=3.465 min."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Classification of Elements and Periodicity",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Across a period from left to right, effective nuclear charge generally?",
+  "options": [
+   "Decreases",
+   "Increases",
+   "Remains constant",
+   "Becomes zero"
+  ],
+  "correctIndex": 1,
+  "explanation": "Proton number increases while shielding changes less, so effective nuclear charge generally rises."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "p-Block Elements",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The most stable oxidation state of Tl among +1 and +3 is generally?",
+  "options": [
+   "+5",
+   "+2",
+   "+1",
+   "+3"
+  ],
+  "correctIndex": 2,
+  "explanation": "Inert-pair effect stabilises the lower +1 oxidation state for thallium."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "d- and f-Block Elements",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which ion is d⁵?",
+  "options": [
+   "Fe²⁺",
+   "Ni²⁺",
+   "Co²⁺",
+   "Mn²⁺"
+  ],
+  "correctIndex": 3,
+  "explanation": "Mn is [Ar]3d⁵4s²; Mn²⁺ loses 4s electrons, leaving 3d⁵."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Coordination Compounds",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Coordination number of Co in [Co(en)₃]³⁺ is?",
+  "options": [
+   "6",
+   "9",
+   "4",
+   "3"
+  ],
+  "correctIndex": 0,
+  "explanation": "Each bidentate en ligand binds through two donor atoms; 3×2=6."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Coordination Compounds",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "[Pt(NH₃)₂Cl₂] exhibits which geometrical isomerism?",
+  "options": [
+   "Linkage only",
+   "Optical only",
+   "Cis-trans",
+   "Ionisation only"
+  ],
+  "correctIndex": 2,
+  "explanation": "Square-planar Pt(II) complex has cis and trans arrangements."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Organic Chemistry Basic Principles",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which group has the strongest −I effect among these?",
+  "options": [
+   "−C₂H₅",
+   "−NO₂",
+   "−CH₃",
+   "−OCH₃"
+  ],
+  "correctIndex": 1,
+  "explanation": "Nitro is strongly electron withdrawing through both electronegativity and charge-separated resonance/inductive effects."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Hydrocarbons",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Propene reacts with HBr (no peroxide) to give mainly?",
+  "options": [
+   "propane",
+   "2-bromopropane",
+   "1,2-dibromopropane",
+   "1-bromopropane"
+  ],
+  "correctIndex": 1,
+  "explanation": "Markovnikov addition places Br on the more substituted carbon, yielding 2-bromopropane."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Haloalkanes and Haloarenes",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which substrate generally undergoes SN1 fastest?",
+  "options": [
+   "tert-Butyl chloride",
+   "Methyl chloride",
+   "n-Propyl chloride",
+   "Ethyl chloride"
+  ],
+  "correctIndex": 0,
+  "explanation": "SN1 rate follows carbocation stability; tertiary carbocation is most stable among these."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which compound gives Tollens' silver mirror test?",
+  "options": [
+   "Benzophenone",
+   "Diethyl ether",
+   "Propanone",
+   "Ethanal"
+  ],
+  "correctIndex": 3,
+  "explanation": "Aldehydes reduce Tollens' reagent to metallic silver; ketones generally do not."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which is strongest acid?",
+  "options": [
+   "ClCH₂COOH",
+   "CH₃COOH",
+   "(CH₃)₂CHCOOH",
+   "CH₃CH₂COOH"
+  ],
+  "correctIndex": 0,
+  "explanation": "The electron-withdrawing Cl stabilises the carboxylate conjugate base by −I effect."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Amines",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "In aqueous solution, which is generally the strongest base?",
+  "options": [
+   "(CH₃)₂NH",
+   "(CH₃)₃N",
+   "NH₃",
+   "CH₃NH₂"
+  ],
+  "correctIndex": 0,
+  "explanation": "Secondary alkyl amines are often most basic in water due to +I effect and effective solvation."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Biomolecules",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Which disaccharide is non-reducing?",
+  "options": [
+   "Sucrose",
+   "Cellobiose",
+   "Lactose",
+   "Maltose"
+  ],
+  "correctIndex": 0,
+  "explanation": "Both anomeric carbons are involved in the glycosidic bond in sucrose; no free hemiacetal remains."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Polymers",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The monomer of PVC is?",
+  "options": [
+   "Styrene",
+   "Vinyl chloride",
+   "Tetrafluoroethene",
+   "Ethene"
+  ],
+  "correctIndex": 1,
+  "explanation": "PVC is formed by addition polymerisation of CH₂=CHCl."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemistry in Everyday Life",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Cetirizine is primarily used as an?",
+  "options": [
+   "Antihistamine",
+   "Antiseptic",
+   "Antibiotic",
+   "Antacid"
+  ],
+  "correctIndex": 0,
+  "explanation": "Cetirizine blocks H₁ histamine receptors and is used for allergic symptoms."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Surface Chemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Physical adsorption generally decreases with increase in?",
+  "options": [
+   "Pressure at low pressure",
+   "Temperature",
+   "Adsorbate concentration",
+   "Surface area"
+  ],
+  "correctIndex": 1,
+  "explanation": "Physisorption is exothermic; increasing temperature generally favours desorption."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Solutions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a dilute non-electrolyte solution, relative lowering of vapour pressure equals?",
+  "options": [
+   "Mass fraction of solvent",
+   "Molarity of solvent",
+   "Mole fraction of solvent",
+   "Mole fraction of solute"
+  ],
+  "correctIndex": 3,
+  "explanation": "Raoult's law gives (P°−P)/P°=xsolute."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Redox Reactions and Electrochemistry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "On dilution, molar conductivity of a strong electrolyte generally?",
+  "options": [
+   "Increases",
+   "Decreases",
+   "Remains fixed",
+   "Becomes zero"
+  ],
+  "correctIndex": 0,
+  "explanation": "Interionic interactions weaken on dilution, increasing ionic mobility and molar conductivity."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Chemistry",
+  "chapter": "Chemical Kinetics",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A catalyst increases reaction rate mainly by?",
+  "options": [
+   "Increasing ΔH",
+   "Changing reaction enthalpy",
+   "Increasing equilibrium constant",
+   "Lowering activation energy"
+  ],
+  "correctIndex": 3,
+  "explanation": "Catalyst offers an alternate pathway with lower activation energy; equilibrium constant is unchanged."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sets, Relations and Functions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If f(x)=2x+1 and g(x)=x², then (g∘f)(1) is?",
+  "options": [
+   "6",
+   "25",
+   "9",
+   "5"
+  ],
+  "correctIndex": 2,
+  "explanation": "f(1)=3 and g(3)=9."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Complex Numbers and Quadratic Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For what real k does x²−2kx+4=0 have equal roots?",
+  "options": [
+   "k=2 only",
+   "k=0",
+   "k=±2",
+   "k=±4"
+  ],
+  "correctIndex": 2,
+  "explanation": "D=4k²−16=0 ⇒ k²=4 ⇒ k=±2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The sum to infinity of a GP with first term 12 and common ratio 1/3 is?",
+  "options": [
+   "18",
+   "36",
+   "16",
+   "24"
+  ],
+  "correctIndex": 0,
+  "explanation": "S∞=a/(1−r)=12/(2/3)=18."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Determinant of [[2,1],[5,3]] is?",
+  "options": [
+   "−1",
+   "11",
+   "6",
+   "1"
+  ],
+  "correctIndex": 3,
+  "explanation": "2×3−1×5=1."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The system 2x+y=5, x−y=1 has x equal to?",
+  "options": [
+   "2",
+   "4",
+   "3",
+   "1"
+  ],
+  "correctIndex": 0,
+  "explanation": "Adding equations gives 3x=6, so x=2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "lim(x→0) sin(3x)/x equals?",
+  "options": [
+   "1",
+   "1/3",
+   "0",
+   "3"
+  ],
+  "correctIndex": 3,
+  "explanation": "sin(3x)/x=3·sin(3x)/(3x)→3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If y=x³−3x, then dy/dx at x=2 is?",
+  "options": [
+   "12",
+   "9",
+   "6",
+   "15"
+  ],
+  "correctIndex": 1,
+  "explanation": "dy/dx=3x²−3; at 2 gives 12−3=9."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Application of Derivatives",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Slope of tangent to y=x² at x=−2 is?",
+  "options": [
+   "−2",
+   "4",
+   "8",
+   "−4"
+  ],
+  "correctIndex": 3,
+  "explanation": "dy/dx=2x; at x=−2, slope=−4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Definite Integrals",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "∫₀² 3x² dx equals?",
+  "options": [
+   "12",
+   "8",
+   "6",
+   "4"
+  ],
+  "correctIndex": 1,
+  "explanation": "Antiderivative is x³; evaluate 0 to 2 gives 8."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Vector Algebra",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For a=(1,2,2), b=(2,0,1), a·b is?",
+  "options": [
+   "4",
+   "5",
+   "2",
+   "3"
+  ],
+  "correctIndex": 0,
+  "explanation": "1×2+2×0+2×1=4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Three Dimensional Geometry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Distance between (1,2,3) and (4,6,3) is?",
+  "options": [
+   "7",
+   "√41",
+   "5",
+   "4"
+  ],
+  "correctIndex": 2,
+  "explanation": "Distance=√(3²+4²+0²)=5."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Linear Programming",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For P=3x+2y on vertices (0,0),(4,0),(0,3), the maximum is?",
+  "options": [
+   "12",
+   "9",
+   "6",
+   "10"
+  ],
+  "correctIndex": 0,
+  "explanation": "P values are 0,12,6; maximum is 12."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A fair die is rolled. Given the result is even, probability it is 4 is?",
+  "options": [
+   "2/3",
+   "1/2",
+   "1/6",
+   "1/3"
+  ],
+  "correctIndex": 3,
+  "explanation": "Even outcomes are {2,4,6}; one of three is 4."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Trigonometric Functions and Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If sinθ=3/5 and θ is acute, cosθ is?",
+  "options": [
+   "4/5",
+   "1/5",
+   "3/4",
+   "5/4"
+  ],
+  "correctIndex": 0,
+  "explanation": "cosθ=√(1−9/25)=4/5 for acute θ."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Inverse Trigonometric Functions",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "tan⁻¹(1)+tan⁻¹(1) equals?",
+  "options": [
+   "π",
+   "0",
+   "π/2",
+   "π/4"
+  ],
+  "correctIndex": 2,
+  "explanation": "Each principal value is π/4; sum is π/2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Sequences and Series",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The 20th term of an AP with a=7,d=3 is?",
+  "options": [
+   "67",
+   "61",
+   "64",
+   "60"
+  ],
+  "correctIndex": 2,
+  "explanation": "a₂₀=7+19×3=64."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Permutations and Combinations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "Number of ways to choose 2 people from 8 is?",
+  "options": [
+   "56",
+   "28",
+   "16",
+   "64"
+  ],
+  "correctIndex": 1,
+  "explanation": "⁸C₂=8×7/2=28."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Binomial Theorem",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The middle term of (x+1/x)⁶ is?",
+  "options": [
+   "30",
+   "15",
+   "20",
+   "6"
+  ],
+  "correctIndex": 2,
+  "explanation": "There are 7 terms; middle is r=3: C(6,3)x⁰=20."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Matrices and Determinants",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For A=[[1,0],[0,2]], A⁻¹ is?",
+  "options": [
+   "[[1,0],[0,1/2]]",
+   "[[1,0],[0,2]]",
+   "[[2,0],[0,1]]",
+   "[[0,1],[2,0]]"
+  ],
+  "correctIndex": 0,
+  "explanation": "The inverse of a diagonal matrix is formed by reciprocating its nonzero diagonal entries."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Limits, Continuity and Differentiability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "lim(x→0)(e^(2x)−1)/x equals?",
+  "options": [
+   "e²",
+   "1",
+   "0",
+   "2"
+  ],
+  "correctIndex": 3,
+  "explanation": "Using e^u−1≈u for u→0, quotient tends to 2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Application of Derivatives",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For f(x)=x²−4x, f is decreasing on?",
+  "options": [
+   "(−∞,0)",
+   "(−∞,2)",
+   "All real x",
+   "(2,∞)"
+  ],
+  "correctIndex": 1,
+  "explanation": "f'=2x−4<0 when x<2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Definite Integrals",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "∫2x cos(x²) dx equals?",
+  "options": [
+   "x²sin(x²)+C",
+   "2sin x+C",
+   "sin(x²)+C",
+   "cos(x²)+C"
+  ],
+  "correctIndex": 2,
+  "explanation": "Put u=x², du=2x dx; integral becomes ∫cosu du=sinu+C."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Differential Equations",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "The order of d²y/dx²+(dy/dx)³+y=0 is?",
+  "options": [
+   "1",
+   "3",
+   "2",
+   "6"
+  ],
+  "correctIndex": 2,
+  "explanation": "Highest derivative present is the second derivative; order is 2."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Vector Algebra",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "For perpendicular vectors of magnitudes 3 and 4, |a×b| is?",
+  "options": [
+   "1",
+   "12",
+   "7",
+   "24"
+  ],
+  "correctIndex": 1,
+  "explanation": "|a×b|=|a||b|sin90°=3×4=12."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Three Dimensional Geometry",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "If direction cosines are (1/3,2/3,l), positive l is?",
+  "options": [
+   "1/3",
+   "√(2/3)",
+   "√(4/9)=2/3",
+   "1"
+  ],
+  "correctIndex": 2,
+  "explanation": "l²=1−1/9−4/9=4/9; positive l=2/3."
+ },
+ {
+  "examMode": "JEE",
+  "subject": "Mathematics",
+  "chapter": "Probability",
+  "difficulty": "easy",
+  "level": "main",
+  "type": "mcq",
+  "questionText": "A box is chosen at random from two boxes. Box I has 2 red, 1 blue; Box II has 1 red, 2 blue. Given a red ball was drawn, probability it came from Box I is?",
+  "options": [
+   "1/3",
+   "1/2",
+   "2/3",
+   "3/4"
+  ],
+  "correctIndex": 2,
+  "explanation": "P(I|R)=P(R|I)P(I)/P(R)=(2/3×1/2)/[(2/3×1/2)+(1/3×1/2)]=2/3."
+ }
+]

@@ -7,6 +7,7 @@
 //  explaining why, which is what revision mode is for).
 // ============================================================
 
+import { MathTex } from "../learn/MathTex.jsx";
 import { ExplainWithAi } from "./ExplainWithAi.jsx";
 import { Check, X } from "lucide-react";
 import { useState } from "react";
@@ -66,7 +67,7 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
         />
       )}
 
-      {questionText && <p className="text-sm text-fg-primary leading-relaxed mb-3">{questionText}</p>}
+      {questionText && <p className="text-sm text-fg-primary leading-relaxed mb-3"><MathTex>{questionText}</MathTex></p>}
 
       {isBlank ? (
         <div className="space-y-1.5 mb-3 text-sm">
@@ -92,7 +93,7 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
                 <img src={question.optionImages[i]} alt={`Option ${i + 1}`} loading="lazy" className="block h-auto max-w-full"
                   style={question.imageW && question.optionImageW?.[i] ? { width: fitW(question.optionImageW[i], question.imageW) } : undefined} />
               </span>
-            ) : opt}
+            ) : <MathTex>{opt}</MathTex>}
           </div>
         ))}
       </div>
@@ -102,7 +103,7 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
       {mode === "revision" && explanation && (
         <div className="bg-bg-panel border border-bg-border rounded-xl p-3">
           <p className="text-[11px] text-gray-600 font-medium mb-1">Explanation</p>
-          <p className="text-xs text-fg-primary leading-relaxed">{explanation}</p>
+          <p className="text-xs text-fg-primary leading-relaxed"><MathTex>{explanation}</MathTex></p>
         </div>
       )}
       {isPyq && <div className="mt-3"><ExplainWithAi questionId={question.questionId} /></div>}

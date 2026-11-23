@@ -300,7 +300,7 @@ export default function RevisionSession() {
           <p className="text-sm leading-relaxed text-fg-primary font-medium">
             {currentQuestion.type === "fill_blank"
               ? <BlankText text={currentQuestion.questionText} />
-              : isPyq ? <MathTex>{currentQuestion.questionText}</MathTex> : currentQuestion.questionText}
+              : <MathTex>{currentQuestion.questionText}</MathTex>}
           </p>
           )}
 
@@ -382,7 +382,7 @@ export default function RevisionSession() {
                           <img src={currentQuestion.optionImages[idx]} alt={`Option ${idx + 1}`} loading="lazy" className="block h-auto max-w-full"
                             style={currentQuestion.imageW && currentQuestion.optionImageW?.[idx] ? { width: fitW(currentQuestion.optionImageW[idx], currentQuestion.imageW) } : undefined} />
                         </span>
-                      ) : isPyq ? <MathTex>{opt}</MathTex> : opt}
+                      ) : <MathTex>{opt}</MathTex>}
                     </span>
                   )}
                   {currentFeedback && isCorrectOption && (
@@ -438,7 +438,7 @@ export default function RevisionSession() {
               {currentFeedback.explanation && (
                 <div className="bg-bg-panel border border-bg-border rounded-xl p-3.5">
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {currentFeedback.explanation}
+                    <MathTex>{currentFeedback.explanation}</MathTex>
                   </p>
                 </div>
               )}
