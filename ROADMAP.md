@@ -192,6 +192,10 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 
 ### Diagrams received 22 Nov 2026 (ZIPs, not in repo yet)
 - [x] **DG1** Diagrams live in OneShot + chat — done 22 Nov 2026: 986 checked diagrams (Biology 435, Physics 250, Chemistry 129, Maths 172) across 96/99 chapters, WebP in `frontend/public/diagrams/`, index `diagrams/index.json` + `backend/content/diagrams.json`. OneShot gets a "Diagrams" tab (tap to zoom). AI Mentor: "diagram se samjhao" attaches the best matching diagram below the answer (`services/diagrams.js`, no image-AI cost). From 1,231 files: 0 exact duplicates, ~230 same-topic copies merged, 12 wrong/garbled dropped, 34 out-of-syllabus (digestion, transport in plants, solid state, metallurgy, surface chem, eye/ear) not shipped. Thumbnail-level visual check only — label-by-label review continues as students report.
+- [x] **DG2** Diagram gap-fill — done 23 Nov 2026: +39 (Some Basic Concepts, p-Block, Alcohols-Phenols-Ethers, Amines, FBDs, g vs altitude/depth, Newman, antigen–antibody, Venn) → **1,025 diagrams, 99/99 chapters**. Rejected ~54 files of the founder's "Coverage Expansion Batch 01": AI tool made empty templates ("Input → Mechanism → Output" boxes) and fake graphs (same sine wave titled chromatography/equilibrium/trig; a circle titled Kepler ellipse). Rule: never ship a diagram without looking at it.
+- [x] **F-ELITE** Deep test analysis — done 23 Nov 2026 (PR #43): Elite only: accuracy, negative marks, time per question/subject (test screen now records seconds per question), 5 weakest chapters with OneShot link, PYQ vs practice accuracy, last 6 tests trend, rule-based action plan. No AI cost.
+- [x] **F-EXPLAIN** "Explain with AI" on PYQs — done 23 Nov 2026 (PR #43): Pro + Elite. AI reads NTA's image and must end with FINAL; saved only if it matches NTA's key (2nd try on the deep model), else "not available" and the doubt is given back. Cached per question + language for all students. Shown in test review, revision feedback and the Mistake Notebook.
+- [x] **SEC-AIM** All-India submit no longer returns the answer key in its response while the mock is open (found + fixed 23 Nov 2026, PR #43).
 
 - [x] Brevo domain authenticated, sender verified, OTP arriving (Oct 2026).
 - [x] Turnstile code (invisible, fresh token per request, fails open, rate limits unchanged) and email logo — in PR #2.
@@ -268,7 +272,7 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 - [ ] **D6 Daily 9 PM Live Challenge** — 15 questions, instant rank.
 
 ### D-b. Learning that raises marks
-- [ ] **D7 Mistake Notebook (auto)** with reason tags (silly / concept / time / didn't know) + spaced repetition.
+- [x] **D7 Mistake Notebook (auto)** — done 23 Nov 2026 (PR #43): wrong answers (and skipped in full tests) auto-saved; back after 1 day, then 3 days; 2 right in a row clears it; wrong → tomorrow. Counts free, revision Pro + Elite. All-India mistakes added only after the mock closes. Reason tags still to do.
 - [ ] **D8 Flashcards with spaced repetition** (formulas, NCERT Biology facts, reactions).
 - [ ] **D9 NTA-style exam interface** (palette, mark-for-review, negative marking, timer).
 - [ ] **D10 Deep mock analysis** (time per question, marks lost to silly mistakes, attempt strategy).
