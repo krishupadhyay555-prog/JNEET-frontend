@@ -75,7 +75,7 @@ export function CbtQuestion({ question: q, number, value, onChange }) {
       ) : null}
       {isPyq && q.figUrl && <PyqImage src={q.figUrl} alt={`Figure for question ${number}`} onZoom={setZoom} />}
       {q.questionText && (
-        <div className="text-sm text-fg-primary leading-relaxed">{isPyq ? <MathTex>{q.questionText}</MathTex> : q.questionText}</div>
+        <div className="text-sm text-fg-primary leading-relaxed"><MathTex>{q.questionText}</MathTex></div>
       )}
 
       {q.type === "numeric" ? (
@@ -128,7 +128,7 @@ export function CbtQuestion({ question: q, number, value, onChange }) {
                     <img src={q.optionImages[i]} alt={`Option ${i + 1}`} loading="lazy" className="block h-auto max-w-full"
                       style={refW && q.optionImageW?.[i] ? { width: fitW(q.optionImageW[i], refW) } : undefined} />
                   </span>
-                ) : isPyq ? <MathTex>{opt}</MathTex> : opt}
+                ) : <MathTex>{opt}</MathTex>}
               </span>
             </button>
           ))}

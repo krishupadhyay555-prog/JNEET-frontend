@@ -13,6 +13,7 @@ import { useGoBack } from "../hooks/useGoBack.js";
 import { mistakesApi } from "../api/testApi.js";
 import { CbtQuestion } from "../components/tests/CbtQuestion.jsx";
 import { ExplainWithAi } from "../components/tests/ExplainWithAi.jsx";
+import { MathTex } from "../components/learn/MathTex.jsx";
 
 const TABS = [["due", "Due today"], ["open", "All open"], ["cleared", "Cleared"]];
 
@@ -83,7 +84,7 @@ function Review({ items, onDone }) {
               ? (result.mistake.resolvedAt ? "Right again — cleared from your notebook!" : `Right! It comes back ${when(result.mistake.nextReviewAt)} for one more check.`)
               : `Not yet. Answer: ${typed ? result.answers.join(" / ") : `option ${result.correctIndex + 1}`}. It comes back tomorrow.`}
           </div>
-          {result.explanation && <p className="text-xs text-gray-600 bg-bg-panel border border-bg-border rounded-xl p-3">{result.explanation}</p>}
+          {result.explanation && <p className="text-xs text-gray-600 bg-bg-panel border border-bg-border rounded-xl p-3"><MathTex>{result.explanation}</MathTex></p>}
           {q.source === "pyq" && <ExplainWithAi key={m.id} questionId={q.questionId} />}
           <button type="button" onClick={next} className="w-full rounded-xl border border-bg-border text-sm font-semibold py-2.5">
             {i + 1 >= items.length ? "Finish" : "Next question"}
@@ -190,7 +191,7 @@ export default function MistakeNotebook() {
                       <li key={m.id} className="glass-panel rounded-xl p-3 flex items-start gap-3">
                         <div className="min-w-0 flex-1">
                           <p className="text-[11px] text-gray-600">{m.subject} · {m.chapter}{m.q.pyqLabel ? ` · PYQ ${m.q.pyqLabel}` : ""}</p>
-                          <p className="text-sm line-clamp-2">{m.q.questionText || "Official NTA question (image)"}</p>
+                          <p className="text-sm line-clamp-2"><MathTex>{m.q.questionText || "Official NTA question (image)"}</MathTex></p>
                           <p className="text-[11px] text-gray-600 mt-0.5">
                             {m.resolvedAt ? "Cleared" : `${m.reason === "skipped" ? "Skipped" : `Wrong ×${m.wrongCount}`} · ${when(m.nextReviewAt)}`}
                           </p>
