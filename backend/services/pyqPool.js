@@ -160,3 +160,23 @@ export function pyqServableTotal() {
   }
   return n;
 }
+
+// Servable PYQ by ref ("<paper id>#<n>"), or null.
+let byRef = null;
+let byId = null;
+export function pyqByRef(ref) {
+  if (!byRef) {
+    byRef = new Map();
+    byId = new Map();
+    for (const [exam, subjects] of Object.entries(pyqPools())) {
+      for (const subj of Object.values(subjects)) for (const e of [...subj.mcq, ...subj.numeric]) { const x = { ...e, exam }; byRef.set(e.ref, x); byId.set(String(e.id), x); }
+    }
+  }
+  return byRef.get(String(ref)) ?? null;
+}
+
+// Same, by the question's id (what the test screens know; the ref stays server-side).
+export function pyqById(id) {
+  pyqByRef("");
+  return byId.get(String(id)) ?? null;
+}

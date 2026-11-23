@@ -15,6 +15,7 @@
 //  aware exit destination (v2 fix) — UNCHANGED.
 // ============================================================
 
+import { ExplainWithAi } from "../components/tests/ExplainWithAi.jsx";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ReportQuestion } from "../components/tests/ReportQuestion.jsx";
@@ -429,7 +430,10 @@ export default function RevisionSession() {
                 </p>
               )}
               {isPyq && !currentFeedback.explanation && (
-                <p className="text-[11px] text-gray-600">Answer from NTA&apos;s final answer key. Stuck on the method? Ask the AI Mentor.</p>
+                <>
+                  <p className="text-[11px] text-gray-600">Answer from NTA&apos;s final answer key.</p>
+                  <ExplainWithAi key={currentQuestion.questionId} questionId={currentQuestion.questionId} />
+                </>
               )}
               {currentFeedback.explanation && (
                 <div className="bg-bg-panel border border-bg-border rounded-xl p-3.5">

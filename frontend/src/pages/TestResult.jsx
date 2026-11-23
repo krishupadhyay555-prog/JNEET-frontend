@@ -22,6 +22,7 @@ import { testApi } from "../api/testApi.js";
 import { ResultSummary } from "../components/tests/ResultSummary.jsx";
 import { ReviewAnswer } from "../components/tests/ReviewAnswer.jsx";
 import { PredictedRank } from "../components/tests/PredictedRank.jsx";
+import { DeepAnalysis } from "../components/tests/DeepAnalysis.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import toast from "react-hot-toast";
 
@@ -98,6 +99,7 @@ export default function TestResult() {
       <div className="max-w-2xl mx-auto px-5 py-8 space-y-4">
         <ResultSummary attempt={attempt} />
         <PredictedRank attempt={attempt} />
+        {attempt.mode === "test" && !reviewLocked && <DeepAnalysis attemptId={attemptId} />}
 
         {attempt.allIndiaMockId && (
           <button onClick={() => navigate("/all-india")}

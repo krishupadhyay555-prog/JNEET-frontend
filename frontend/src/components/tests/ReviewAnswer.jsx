@@ -7,6 +7,7 @@
 //  explaining why, which is what revision mode is for).
 // ============================================================
 
+import { ExplainWithAi } from "./ExplainWithAi.jsx";
 import { Check, X } from "lucide-react";
 import { useState } from "react";
 import { ReportQuestion } from "./ReportQuestion.jsx";
@@ -104,6 +105,7 @@ export function ReviewAnswer({ question, index, mode = "revision", attemptId }) 
           <p className="text-xs text-fg-primary leading-relaxed">{explanation}</p>
         </div>
       )}
+      {isPyq && <div className="mt-3"><ExplainWithAi questionId={question.questionId} /></div>}
       <ZoomView src={zoom} onClose={() => setZoom(null)} />
       <ReportQuestion attemptId={attemptId} questionId={question.questionId} />
     </div>

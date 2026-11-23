@@ -38,6 +38,8 @@ import consentRoutes from "./routes/consentRoutes.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 import adminRoutes   from "./routes/adminRoutes.js";
 import supportRoutes from "./routes/supportRoutes.js";
+import mistakeRoutes from "./routes/mistakeRoutes.js";
+import pyqExplainRoutes from "./routes/pyqExplainRoutes.js";
 import { getPublicStats } from "./controllers/publicController.js";
 import { requireAdmin } from "./middleware/admin.js";
 
@@ -107,6 +109,8 @@ app.use("/api/pyq",     protect, userLimiter, pyqRoutes);
 app.use("/api/all-india/:mockId/start", protect, heavyLimiter); // copies a full paper
 app.use("/api/all-india", protect, userLimiter, allIndiaRoutes);
 app.use("/api/recap",   protect, userLimiter, recapRoutes);
+app.use("/api/mistakes", protect, userLimiter, mistakeRoutes);
+app.use("/api/pyq-explain", protect, heavyLimiter, pyqExplainRoutes);
 app.use("/api/admin",   protect, userLimiter, requireAdmin, adminRoutes); // founder only (ADMIN_EMAILS)
 app.use("/api/payments", paymentRoutes);  // web-only checkout; own auth/limiters inside
 app.use("/api/support", supportRoutes);     // public Contact form (captcha + own limiter)

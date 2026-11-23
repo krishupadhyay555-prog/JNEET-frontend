@@ -34,6 +34,7 @@ export const submitTestSchema = z.object({
         // whatever arrives here for them is ignored.
         selectedIndex: z.number().int().min(0).max(3).nullable().optional().default(null),
         textAnswer:    z.string().max(200).nullable().optional(),
+        timeSec:       z.number().int().min(0).max(36000).optional(),
       })
     )
     .min(1, "No answers submitted.")

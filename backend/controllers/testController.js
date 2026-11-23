@@ -20,6 +20,8 @@
 import { env } from "../config/env.js";
 import Question    from "../models/Question.js";
 import TestAttempt from "../models/TestAttempt.js";
+import { recordMistakes } from "../services/mistakes.js";
+import { analyseAttempt } from "../services/testAnalysis.js";
 import AllIndiaMock from "../models/AllIndiaMock.js";
 import { isBlankCorrect } from "../services/blankAnswer.js";
 import { samplePyq, samplePyqChapter, pyqChapterCounts, pyqSnapshot, sameNumber } from "../services/pyqPool.js";
@@ -465,6 +467,7 @@ export const submitTest = async (req, res, next) => {
       answers.map((a) => [a.questionId, a.selectedIndex])
     );
     const textMap = new Map(answers.map((a) => [a.questionId, a.textAnswer]));
+    const timeMap = new Map(answers.filter((a) => Number.isInteger(a.timeSec)).map((a) => [a.questionId, a.timeSec]));
 
     let correctCount = 0, wrongCount = 0, unattemptedCount = 0;
 
@@ -481,6 +484,7 @@ export const submitTest = async (req, res, next) => {
         selected = typed ? ((q.answers ?? []).some((a) => sameNumber(typed, a)) ? 0 : 1) : null;
       } else selected = answerMap.has(key) ? answerMap.get(key) : null;
       q.selectedIndex = selected;
+      if (attempt.mode === "test" && timeMap.has(key)) q.timeSpentSec = Math.min(timeMap.get(key), 3600);
 
       if (selected === null || selected === undefined) {
         unattemptedCount += 1;
@@ -502,6 +506,14 @@ export const submitTest = async (req, res, next) => {
 
     await attempt.save();
 
+    // Mistake Notebook (All-India: only after the mock closes — see getAttempt).
+    if (!attempt.allIndiaMockId) await recordMistakes(attempt).catch((e) => console.error("[mistakes]", e.message));
+
+    if (attempt.allIndiaMockId) {
+      // Never send the answer key back while the mock is still open.
+      const { questions: _q, ...rest } = attempt.toObject();
+      return res.json({ success: true, attempt: rest });
+    }
     return res.json({ success: true, attempt });
 
   } catch (err) {
@@ -552,10 +564,30 @@ export const getAttempt = async (req, res, next) => {
           },
         });
       }
+      if (!attempt.mistakesLogged) await recordMistakes(attempt).catch((e) => console.error("[mistakes]", e.message));
     }
 
     return res.json({ success: true, attempt });
 
+  } catch (err) {
+    next(err);
+  }
+};
+
+// GET /api/test/:attemptId/analysis — Elite deep analysis (route is tier-gated).
+export const getAnalysis = async (req, res, next) => {
+  try {
+    const attempt = await TestAttempt.findOne({ _id: req.params.attemptId, userId: req.user.id }).lean();
+    if (!attempt || attempt.status !== "submitted") {
+      return res.status(404).json({ success: false, error: "Submitted test not found." });
+    }
+    if (attempt.allIndiaMockId) {
+      const mock = await AllIndiaMock.findById(attempt.allIndiaMockId).select("closesAt").lean();
+      if (mock && Date.now() <= mock.closesAt.getTime()) {
+        return res.status(409).json({ success: false, code: "REVIEW_LOCKED", reviewOpensAt: mock.closesAt, error: "Analysis opens when the All-India Mock closes." });
+      }
+    }
+    return res.json({ success: true, analysis: await analyseAttempt(attempt) });
   } catch (err) {
     next(err);
   }

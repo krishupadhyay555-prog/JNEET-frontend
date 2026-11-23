@@ -50,6 +50,7 @@ const AllIndiaMock    = lazyPage(() => import("./pages/AllIndiaMock.jsx"));
 const TestAttempt     = lazyPage(() => import("./pages/TestAttempt.jsx"));
 const TestResult      = lazyPage(() => import("./pages/TestResult.jsx"));
 const Revision        = lazyPage(() => import("./pages/Revision.jsx"));
+const MistakeNotebook = lazyPage(() => import("./pages/MistakeNotebook.jsx"));
 const RevisionSession = lazyPage(() => import("./pages/RevisionSession.jsx"));
 const OneShot         = lazyPage(() => import("./pages/OneShot.jsx"));
 const OneShotChapter  = lazyPage(() => import("./pages/OneShotChapter.jsx"));
@@ -227,6 +228,7 @@ export default function App() {
               <Route path="/tests"     element={<ProtectedRoute><Tests /></ProtectedRoute>} />
               <Route path="/all-india" element={<ProtectedRoute><AllIndiaMock /></ProtectedRoute>} />
               <Route path="/revision"  element={<ProtectedRoute><Revision /></ProtectedRoute>} />
+              <Route path="/mistakes"  element={<ProtectedRoute><MistakeNotebook /></ProtectedRoute>} />
               <Route path="/notes"     element={<ProtectedRoute><Notes /></ProtectedRoute>} />
               <Route path="/oneshot"   element={<ProtectedRoute><OneShot /></ProtectedRoute>} />
               <Route path="/plans"     element={<ProtectedRoute><Plans /></ProtectedRoute>} />
