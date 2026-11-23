@@ -30,3 +30,15 @@ export const supportAdminApi = {
   list:      (status = "open") => api.get("/admin/support", { params: { status } }),
   setStatus: (id, status) => api.patch(`/admin/support/${id}`, { status }),
 };
+
+export const mistakesApi = {
+  summary: ()                => api.get("/mistakes/summary"),
+  list:    (params)          => api.get("/mistakes", { params }),
+  answer:  (id, data)        => api.post(`/mistakes/${id}/answer`, data),
+  master:  (id)              => api.post(`/mistakes/${id}/master`),
+};
+
+export const learnApi = {
+  explainPyq: (questionId)   => api.post("/pyq-explain", { questionId: String(questionId) }),
+  analysis:   (attemptId)    => api.get(`/test/${attemptId}/analysis`),
+};

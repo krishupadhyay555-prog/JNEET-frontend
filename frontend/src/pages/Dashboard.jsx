@@ -13,7 +13,7 @@ import { QuoteOfDay } from "../components/dashboard/QuoteOfDay.jsx";
 import { ProfileMenu } from "../components/ProfileMenu.jsx";
 import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
 import { getTargetExam } from "../config/targetExams.js";
-import { testApi } from "../api/testApi.js";
+import { testApi, mistakesApi } from "../api/testApi.js";
 import { notesApi } from "../api/notesApi.js";
 import { oneshotApi } from "../api/learnApi.js";
 import { useRecap } from "../hooks/useRecap.js";
@@ -21,7 +21,7 @@ import { TodayPlan } from "../components/dashboard/TodayPlan.jsx";
 import toast from "react-hot-toast";
 import {
   RefreshCw, ClipboardList, BarChart3, TrendingUp, StickyNote,
-  ChevronRight, MessageCircle, BookOpen, FileText, Trophy } from "lucide-react";
+  ChevronRight, MessageCircle, BookOpen, FileText, Trophy, BookX } from "lucide-react";
 
 function formatRelative(dateStr) {
   if (!dateStr) return null;
@@ -71,6 +71,12 @@ function FeatureCard({ icon, iconBg, title, desc, available, onClick }) {
 
 export default function Dashboard() {
   const { user, examMode, updateTargetExam, switchExamMode } = useAuth();
+  const [mistakes, setMistakes] = useState(null);
+  useEffect(() => {
+    let off = false;
+    mistakesApi.summary().then(({ data }) => { if (!off) setMistakes(data); }).catch(() => {});
+    return () => { off = true; };
+  }, [examMode]);
   const navigate = useNavigate();
   const [targetModalOpen, setTargetModalOpen] = useState(
     !!user && !user.targetExam && !user.targetExamPromptDismissed
@@ -197,6 +203,15 @@ export default function Dashboard() {
       desc: revisionDesc,
       available: true,
       onClick: () => navigate("/revision"),
+    },
+    {
+      icon: <BookX size={20} className="text-red-500" />,
+      iconBg: "bg-red-500/10",
+      title: "Mistake Notebook",
+      desc: mistakes == null ? "Your wrong answers, back for revision at the right time"
+        : mistakes.due ? `${mistakes.due} due for revision today` : mistakes.open ? `${mistakes.open} open · nothing due today` : "Empty — take a test to fill it",
+      available: true,
+      onClick: () => navigate("/mistakes"),
     },
     {
       icon: <Trophy size={20} className="text-amber-500" />,

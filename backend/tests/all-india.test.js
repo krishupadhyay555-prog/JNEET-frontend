@@ -131,7 +131,9 @@ describe('All-India Mock', () => {
     // s1: 3 right → 12; s2: 1 right, 1 wrong → 3
     const right = (x) => ({ questionId: String(x.questionId), selectedIndex: x.correctIndex })
     const wrong = (x) => ({ questionId: String(x.questionId), selectedIndex: (x.correctIndex + 1) % 4 })
-    expect((await s1.c.post(`/api/test/${st1.body.attemptId}/submit`).send({ answers: mcq.slice(0, 3).map(right) })).status).toBe(200)
+    const sub1 = await s1.c.post(`/api/test/${st1.body.attemptId}/submit`).send({ answers: mcq.slice(0, 3).map(right) })
+    expect(sub1.status).toBe(200)
+    expect(sub1.body.attempt).not.toHaveProperty('questions')   // no answer key while open
     expect((await s2.c.post(`/api/test/${st2.body.attemptId}/submit`).send({ answers: [right(mcq[0]), wrong(mcq[1])] })).status).toBe(200)
 
     expect((await s1.c.post(`/api/all-india/${id}/start`)).status).toBe(409)

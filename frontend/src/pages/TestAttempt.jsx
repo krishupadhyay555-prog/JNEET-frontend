@@ -41,6 +41,9 @@ export default function TestAttempt() {
   const [showPalette, setShowPalette] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [confirm, setConfirm] = useState(null);         // "submit" | "exit" | null
+  // seconds spent on each question (for Elite analysis); counts only while the tab is visible
+  const timesRef = useRef({});
+  const onQRef = useRef({ qid: null, since: 0 });
   const submittedRef = useRef(false);
 
   // Progress lives on this device too: a refresh, a crash or the phone killing
@@ -73,6 +76,7 @@ export default function TestAttempt() {
         try {
           const saved = JSON.parse(localStorage.getItem(storeKey) || "null");
           if (saved?.answers) Object.assign(initialAnswers, saved.answers);
+          if (saved?.times && typeof saved.times === "object") timesRef.current = { ...saved.times };
           if (Array.isArray(saved?.marked)) setMarked(new Set(saved.marked));
           if (Array.isArray(saved?.visited)) setVisited(new Set(saved.visited));
           if (Number.isInteger(saved?.index) && saved.index >= 0 && saved.index < a.questions.length) setCurrentIndex(saved.index);
@@ -96,13 +100,32 @@ export default function TestAttempt() {
     if (qid && !visited.has(qid)) setVisited((v) => new Set(v).add(qid));
   }, [attempt, currentIndex, visited]);
 
+  // time on the question on screen: close the running slice, start a new one
+  const flushTime = useCallback(() => {
+    const cur = onQRef.current;
+    if (cur.qid && cur.since) {
+      const sec = Math.round((Date.now() - cur.since) / 1000);
+      if (sec > 0) timesRef.current[cur.qid] = Math.min((timesRef.current[cur.qid] ?? 0) + sec, 3600);
+    }
+    onQRef.current = { qid: cur.qid, since: document.visibilityState === "visible" ? Date.now() : 0 };
+  }, []);
+  useEffect(() => {
+    flushTime();
+    onQRef.current = { qid: attempt?.questions?.[currentIndex]?.questionId ?? null, since: Date.now() };
+  }, [attempt, currentIndex, flushTime]);
+  useEffect(() => {
+    document.addEventListener("visibilitychange", flushTime);
+    return () => document.removeEventListener("visibilitychange", flushTime);
+  }, [flushTime]);
+
   // keep the on-device copy current
   useEffect(() => {
     if (!attempt || submittedRef.current) return;
     try {
-      localStorage.setItem(storeKey, JSON.stringify({ answers, index: currentIndex, marked: [...marked], visited: [...visited] }));
+      flushTime();
+      localStorage.setItem(storeKey, JSON.stringify({ answers, index: currentIndex, marked: [...marked], visited: [...visited], times: timesRef.current }));
     } catch { /* ignore */ }
-  }, [answers, currentIndex, marked, visited, attempt, storeKey]);
+  }, [answers, currentIndex, marked, visited, attempt, storeKey, flushTime]);
 
   // closing / reloading mid-test asks first (the browser shows its own wording)
   useEffect(() => {
@@ -118,10 +141,12 @@ export default function TestAttempt() {
     inFlightRef.current = true;
     setSubmitting(true);
     try {
+      flushTime();
+      const timeOf = (q) => (Number.isFinite(timesRef.current[q.questionId]) ? { timeSec: Math.round(timesRef.current[q.questionId]) } : {});
       await testApi.submit(attemptId, {
         answers: attempt.questions.map((q) => (q.type === "numeric"
-          ? { questionId: q.questionId, selectedIndex: null, textAnswer: hasValue(answers[q.questionId]) ? String(answers[q.questionId]) : null }
-          : { questionId: q.questionId, selectedIndex: answers[q.questionId] ?? null })),
+          ? { questionId: q.questionId, selectedIndex: null, textAnswer: hasValue(answers[q.questionId]) ? String(answers[q.questionId]) : null, ...timeOf(q) }
+          : { questionId: q.questionId, selectedIndex: answers[q.questionId] ?? null, ...timeOf(q) })),
       });
       submittedRef.current = true;
       try { localStorage.removeItem(storeKey); } catch { /* ignore */ }
@@ -141,7 +166,7 @@ export default function TestAttempt() {
       inFlightRef.current = false;
       setSubmitting(false);
     }
-  }, [attempt, answers, attemptId, navigate, storeKey]);
+  }, [attempt, answers, attemptId, navigate, storeKey, flushTime]);
 
   // sections in paper order: [{ subject, start, items: [{ q, index }] }]
   const sections = useMemo(() => {

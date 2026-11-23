@@ -47,6 +47,7 @@ const attemptQuestionSchema = new mongoose.Schema(
     optionImageW:  { type: [Number], default: undefined },
     optionsInImage:{ type: Boolean, default: undefined },    // NEET: options printed inside the question image
     explanation:   { type: String, default: "" },
+    timeSpentSec:  { type: Number, default: undefined },   // test mode: seconds the student spent on it
   },
   { _id: false }
 );
@@ -79,6 +80,7 @@ const testAttemptSchema = new mongoose.Schema(
     // Set when this attempt is a student's sitting of the weekly All-India Mock
     // (models/AllIndiaMock.js). One per student per mock.
     allIndiaMockId: { type: mongoose.Schema.Types.ObjectId, ref: "AllIndiaMock", default: undefined },
+    mistakesLogged: { type: Boolean, default: false },   // wrong/skipped copied to the Mistake Notebook
 
     totalQuestions:   { type: Number, required: true },
     correctCount:     { type: Number, default: 0 },
