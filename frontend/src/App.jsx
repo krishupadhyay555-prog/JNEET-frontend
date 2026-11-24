@@ -22,6 +22,7 @@ import Dashboard            from "./pages/Dashboard.jsx";
 import Notes                from "./pages/Notes.jsx";
 import NotFound             from "./pages/NotFound.jsx";
 import { LoadingScreen }    from "./components/ui/LoadingScreen.jsx";
+import { FreeMockClaimer } from "./components/FreeMockClaimer.jsx";
 
 
 // Heavy / rarely-first pages load on demand so the first screen is fast on a
@@ -60,6 +61,7 @@ const Legal           = lazyPage(() => import("./pages/Legal.jsx"));
 const About           = lazyPage(() => import("./pages/About.jsx"));
 const Pricing         = lazyPage(() => import("./pages/Pricing.jsx"));
 const RankPredictor   = lazyPage(() => import("./pages/RankPredictor.jsx"));
+const FreeMock        = lazyPage(() => import("./pages/FreeMock.jsx"));
 const SeoLanding      = lazyPage(() => import("./pages/SeoLanding.jsx"));
 const Contact         = lazyPage(() => import("./pages/Contact.jsx"));
 const ParentConsent   = lazyPage(() => import("./pages/ParentConsent.jsx"));
@@ -192,6 +194,7 @@ export default function App() {
           <AccentSync />
           <Toaster position="top-center" toastOptions={TOAST_CONFIG} />
           <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+            <FreeMockClaimer />
             <ChatScope>
             <RouteTracker />
             <PageTransition>
@@ -207,6 +210,7 @@ export default function App() {
               <Route path="/about"           element={<About />}   />
               <Route path="/pricing"         element={<Pricing />} />
               <Route path="/rank-predictor"  element={<RankPredictor />} />
+              <Route path="/free-mock"       element={<FreeMock />} />
               <Route path="/jee-main-rank-predictor" element={<RankPredictor fixedExam="jee" />} />
               <Route path="/neet-rank-predictor" element={<RankPredictor fixedExam="neet" />} />
               <Route path="/jee-main-mock-test" element={<SeoLanding path="jee-main-mock-test" />} />

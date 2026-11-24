@@ -79,6 +79,9 @@ Code only goes live after its PR is **merged into `main`**. Until then the found
 | #55 | **Friendly errors**: no raw error text on the crash screen, auto-reload after a deploy (stale chunks), no Mongoose jargon | ✅ Merged 24 Nov |
 | #56 | **Design polish**: Escape + phone Back close zooms/test palette, global reduced motion, keyboard doesn't cover inputs, tiny text → 10 px, footer links easier to tap | ✅ Merged 24 Nov |
 | #57 | **Legal**: Turnstile + Listen voice listed, fair-use cap + early-bird + chargeback lines, Terms/Privacy v2026-11-24 with one-time re-accept popup; 13+ kept | ✅ Merged 24 Nov |
+| #59 | Missing 24 Nov follow-ups (signup caps, day-one AI limit, Terms re-accept, footer) + utm/src saved at sign-up | ⏳ Open |
+| #60 | Free Quick Mock backend (pool, guest attempt, server scoring, claim) | ⏳ Open |
+| #61 | Free Quick Mock page `/free-mock` (CBT, result, claim after signup) | ⏳ Open |
 
 ### Live check 14 Nov 2026 (Claude, built-in browser in the founder's Claude desktop app, logged in by the founder as a student)
 - Backend `api.jneetai.com/health` → ok; `/api/oneshot` → 401 without login (new code is deployed on Render). Vercel production = `9303da6`.
@@ -218,6 +221,7 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 - [ ] **STAGING (founder asked 23 Nov 2026):** test every change before students see it — Vercel preview link per PR (free) + Render staging backend + separate Atlas DB; founder and Claude check the preview, then merge. Student feedback/report inbox visible in /admin.
 - [x] **CHAT-RESET** done 24 Nov 2026 (PR #46): chat opens again by itself when the daily limit resets (midnight IST) or a pause ends — timer + check when the phone wakes; typed draft survives back swipe / reload; "couldn't load" screen now student-friendly (no dev tip, invisible title fixed) and retries itself.
 - [x] **RANK-2** done 24 Nov 2026 (PR #46): NEET "I know my percentile" mode (rank from NEET 2025's 22,09,318 candidates); both exams show Marks / Percentile / "No marks yet? Take the free mock".
+- [x] **FREE-MOCK** done 24 Nov 2026 (PRs #60 backend, #61 page): no-signup **Free Quick Mock** at `/free-mock`. JEE 30 Qs / 60 min (10 M/P/C, 6 numericals), NEET 45 Qs / 45 min (11/11/23). Pool per exam = list of ~500 servable PYQs + up to 500 hardest bank Qs (no copy). Server-side guest attempt (httpOnly `jneet_guest` cookie), +4/−1 scored on the server, guests never get answers/solutions. Result: score, accuracy, subject-wise, time, top 3 weak chapters, est. rank. Signup (same exam) moves it into the account → answers + Mistake Notebook. Anti-bot only: Turnstile, 60 starts/IP/hour, `FREE_MOCK_STARTS_PER_MIN` (300). utm/src kept through signup (PR #59). Next: link it from the home page, nav and Instagram bio.
 - [x] **RANK-3** done 24 Nov 2026 (PR #48): Rank Predictor card on the Dashboard (opens the JEE or NEET predictor by exam); public pages show "Back to dashboard" instead of Log in / Start free when logged in.
 - [x] **VOICE** done 24 Nov 2026 (PR #47): Elite "Listen" on AI answers — gpt-4o-mini-tts on tap, mp3 cached 14 days, ≈ ₹1–2 per long answer, counted in the monthly cap.
 - [x] **L-seed-4** done 23 Nov 2026 by the founder (live stats: 14,079 questions, 11,354 PYQs).
