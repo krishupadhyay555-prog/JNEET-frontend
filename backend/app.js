@@ -146,8 +146,11 @@ app.use((err, req, res, next) => {
     return res.status(409).json({ success: false, error: "A record with these details already exists." });
   }
   if (err.name === "ValidationError") {
-    const messages = Object.values(err.errors).map((e) => e.message);
-    return res.status(400).json({ success: false, error: messages.join(". ") });
+    // Mongoose's own wording ("Path `x` is required.") is developer jargon.
+    const messages = Object.values(err.errors).map((e) => e.message)
+      .map((m) => (/^Path `|^Cast to|^Validator failed/.test(m) ? "Some details are missing or invalid" : m));
+    const text = [...new Set(messages)].map((m) => m.replace(/\.$/, "")).join(". ");
+    return res.status(400).json({ success: false, error: `${text}.` });
   }
   if (err.name === "JsonWebTokenError" || err.name === "TokenExpiredError") {
     return res.status(401).json({ success: false, error: "Invalid or expired session. Please login again." });
