@@ -2,9 +2,11 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
+import { useOverlayClose } from "../../hooks/useOverlayClose.js";
 
 export function DiagramZoom({ d, onClose }) {
   const [big, setBig] = useState(false);
+  useOverlayClose(Boolean(d), onClose);
   if (!d) return null;
   return createPortal(
     <div className="fixed inset-0 z-50 bg-black/85 overflow-auto p-3 flex flex-col" onClick={onClose} role="dialog" aria-label={d.t}>

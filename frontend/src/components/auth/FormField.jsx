@@ -65,7 +65,7 @@ export function FormField({
 
       {error ? (
         <p id={`${name}-error`} role="alert" className="text-red-500 text-xs mt-1.5 flex items-center gap-1.5 animate-fade-in">
-          <span className="w-3.5 h-3.5 rounded-full bg-red-100 border border-red-300 flex items-center justify-center text-[9px] font-bold shrink-0 text-red-500">
+          <span className="w-3.5 h-3.5 rounded-full bg-red-100 border border-red-300 flex items-center justify-center text-[10px] font-bold shrink-0 text-red-500">
             !
           </span>
           {error}

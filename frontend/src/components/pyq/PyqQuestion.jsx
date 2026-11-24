@@ -11,6 +11,7 @@ import { createPortal } from "react-dom";
 import { CheckCircle2, XCircle, Eye, ZoomIn, X } from "lucide-react";
 import { MathTex } from "../learn/MathTex.jsx";
 import { fitW } from "./pyqImage.js";
+import { useOverlayClose } from "../../hooks/useOverlayClose.js";
 
 const LETTERS = ["1", "2", "3", "4"];
 
@@ -34,6 +35,7 @@ export function PyqQuestion({ q, paperId, paperTitle }) {
   const [checked, setChecked] = useState(false);  // numeric: answered
   const [revealed, setRevealed] = useState(false);
   const [zoom, setZoom] = useState(null);           // image shown full size
+  useOverlayClose(Boolean(zoom), () => setZoom(null));
 
   const img = (f) => `/pyq/${paperId ?? q.paper?.id}/${f}`;
   const isMcq = q.type === "mcq";

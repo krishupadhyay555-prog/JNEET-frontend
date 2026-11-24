@@ -14,6 +14,7 @@ import { createPortal } from "react-dom";
 import { ZoomIn, X } from "lucide-react";
 import { MathTex } from "../learn/MathTex.jsx";
 import { fitW } from "../pyq/pyqImage.js";
+import { useOverlayClose } from "../../hooks/useOverlayClose.js";
 
 const LETTERS = ["A", "B", "C", "D"];
 
@@ -39,6 +40,7 @@ export function PyqImage({ src, w, refW, alt, onZoom }) {
 }
 
 export function ZoomView({ src, onClose }) {
+  useOverlayClose(Boolean(src), onClose);
   if (!src) return null;
   return createPortal(
     <div className="fixed inset-0 z-50 bg-black/80 overflow-auto p-4 flex" onClick={onClose} role="dialog" aria-label="Zoomed question">
