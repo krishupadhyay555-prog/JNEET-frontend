@@ -201,6 +201,7 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 - [ ] **STAGING (founder asked 23 Nov 2026):** test every change before students see it — Vercel preview link per PR (free) + Render staging backend + separate Atlas DB; founder and Claude check the preview, then merge. Student feedback/report inbox visible in /admin.
 - [x] **CHAT-RESET** done 24 Nov 2026 (PR #46): chat opens again by itself when the daily limit resets (midnight IST) or a pause ends — timer + check when the phone wakes; typed draft survives back swipe / reload; "couldn't load" screen now student-friendly (no dev tip, invisible title fixed) and retries itself.
 - [x] **RANK-2** done 24 Nov 2026 (PR #46): NEET "I know my percentile" mode (rank from NEET 2025's 22,09,318 candidates); both exams show Marks / Percentile / "No marks yet? Take the free mock".
+- [x] **RANK-3** done 24 Nov 2026 (PR #48): Rank Predictor card on the Dashboard (opens the JEE or NEET predictor by exam); public pages show "Back to dashboard" instead of Log in / Start free when logged in.
 - [x] **VOICE** done 24 Nov 2026 (PR #47): Elite "Listen" on AI answers — gpt-4o-mini-tts on tap, mp3 cached 14 days, ≈ ₹1–2 per long answer, counted in the monthly cap.
 - [x] **L-seed-4** done 23 Nov 2026 by the founder (live stats: 14,079 questions, 11,354 PYQs).
 
