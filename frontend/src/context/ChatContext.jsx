@@ -71,6 +71,33 @@ export function ChatProvider({ children }) {
   const [usage,            setUsage]             = useState(null);
   // Why the AI can't answer right now: { code, message, resetsAt?, limit? }
   const [aiNotice,         setAiNotice]          = useState(null);
+
+  // Refresh today's AI doubts (used on load and when a limit/pause ends).
+  const refreshUsage = useCallback(() => aiApi.usage()
+    .then((r) => {
+      const d = r.data?.daily;
+      if (d) setUsage({ remaining: d.remaining, limit: d.limit, resetsAt: d.resetsAt });
+      if (r.data?.chatLock) setAiNotice({ code: "CHAT_LOCKED", lock: r.data.chatLock });
+      else if (r.data?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: r.data.pausedUntil });
+      else if (r.data?.aiLocked) setAiNotice((n) => n ?? { code: "PARENT_CONSENT_REQUIRED", message: "Your parent or guardian needs to approve your account before you can use the AI mentor." });
+      else setAiNotice((n) => (n && ["DAILY_LIMIT", "CHAT_PAUSED"].includes(n.code) ? null : n));
+    })
+    .catch(() => { /* usage is a nicety; the chat works without it */ }), []);
+
+  // Like Claude: when the daily limit resets (midnight IST) or a pause ends,
+  // the chat opens again by itself — on a timer, and when the phone wakes up.
+  const unblockAt = (usage?.limit != null && usage.remaining === 0 ? usage.resetsAt : null)
+    ?? aiNotice?.resetsAt ?? aiNotice?.resumesAt ?? null;
+  useEffect(() => {
+    if (!unblockAt) return undefined;
+    const at = new Date(unblockAt).getTime();
+    if (!Number.isFinite(at)) return undefined;
+    const check = () => { if (Date.now() >= at) refreshUsage(); };
+    const t = setTimeout(check, Math.min(Math.max(at - Date.now() + 1500, 1000), 2_000_000_000));
+    document.addEventListener("visibilitychange", check);
+    window.addEventListener("focus", check);
+    return () => { clearTimeout(t); document.removeEventListener("visibilitychange", check); window.removeEventListener("focus", check); };
+  }, [unblockAt, refreshUsage]);
   // A prompt that failed to send, handed back so the student doesn't retype it
   const [failedPrompt,     setFailedPrompt]      = useState(null);
 
@@ -120,15 +147,7 @@ export function ChatProvider({ children }) {
       }
 
       // Non-blocking: today's remaining AI doubts
-      aiApi.usage()
-        .then((r) => {
-          const d = r.data?.daily;
-          if (d) setUsage({ remaining: d.remaining, limit: d.limit, resetsAt: d.resetsAt });
-          if (r.data?.chatLock) setAiNotice({ code: "CHAT_LOCKED", lock: r.data.chatLock });
-          else if (r.data?.pausedUntil) setAiNotice({ code: "CHAT_PAUSED", resumesAt: r.data.pausedUntil });
-          else if (r.data?.aiLocked) setAiNotice((n) => n ?? { code: "PARENT_CONSENT_REQUIRED", message: "Your parent or guardian needs to approve your account before you can use the AI mentor." });
-        })
-        .catch(() => { /* usage is a nicety; the chat works without it */ });
+      refreshUsage();
 
       const loadedSessions = (sessRes.data.sessions ?? [])
         .map((session) => ({
@@ -166,7 +185,7 @@ export function ChatProvider({ children }) {
       setIsSessionsLoaded(true);
       setIsMsgLoading(false);
     }
-  }, [examMode, setActiveSession]);
+  }, [examMode, setActiveSession, refreshUsage]);
 
   const loadSession = useCallback(async (sessionId, existingRequestId = null) => {
     const normalizedId = normalizeSessionId(sessionId);

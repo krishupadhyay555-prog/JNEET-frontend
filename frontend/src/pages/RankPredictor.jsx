@@ -7,7 +7,7 @@
 // ============================================================
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, AlertTriangle, XCircle, ExternalLink, Info } from "lucide-react";
 import { PublicShell, PageHero, PrimaryButton } from "../components/public/PublicShell.jsx";
 import { BUSINESS } from "../legal/content.js";
@@ -186,16 +186,21 @@ function JeePercentilePanel() {
   );
 }
 
-function JeeModeSwitch({ mode, setMode }) {
+function ModeSwitch({ mode, setMode }) {
   const opts = [["marks", "I know my marks"], ["percentile", "I know my percentile"]];
   return (
-    <div role="radiogroup" aria-label="What do you know?" className="inline-flex rounded-xl border border-[#E7E4DD] bg-white p-1">
-      {opts.map(([k, l]) => (
-        <button key={k} type="button" role="radio" aria-checked={mode === k} onClick={() => setMode(k)}
-          className={`px-3.5 py-1.5 rounded-lg text-[13.5px] font-semibold transition-colors ${mode === k ? "bg-[#0F766E] text-white" : "text-[#3A3741] hover:bg-[#F4F2EE]"}`}>
-          {l}
-        </button>
-      ))}
+    <div className="flex flex-wrap items-center gap-2">
+      <div role="radiogroup" aria-label="What do you know?" className="inline-flex rounded-xl border border-[#E7E4DD] bg-white p-1">
+        {opts.map(([k, l]) => (
+          <button key={k} type="button" role="radio" aria-checked={mode === k} onClick={() => setMode(k)}
+            className={`px-3.5 py-2 rounded-lg text-[13.5px] font-semibold transition-colors ${mode === k ? "bg-[#0F766E] text-white" : "text-[#3A3741] hover:bg-[#F4F2EE]"}`}>
+            {l}
+          </button>
+        ))}
+      </div>
+      <Link to="/all-india" className="px-3.5 py-2 rounded-xl border border-dashed border-[#0F766E] text-[13.5px] font-semibold text-[#0F766E] hover:bg-[#F0FDFA]">
+        No marks yet? Take the free mock →
+      </Link>
     </div>
   );
 }
@@ -204,7 +209,7 @@ function JeePanel() {
   const [mode, setMode] = useState("marks");
   return (
     <div className="space-y-5">
-      <JeeModeSwitch mode={mode} setMode={setMode} />
+      <ModeSwitch mode={mode} setMode={setMode} />
       {mode === "marks" ? <JeeMarksPanel /> : <JeePercentilePanel />}
     </div>
   );
@@ -340,7 +345,46 @@ function NeetYearCard({ y, r, qualifies }) {
   );
 }
 
+function NeetPercentilePanel() {
+  const [pct, setPct] = useState("");
+  const error = pct === "" ? null : validatePercentile(pct);
+  const p = pct === "" || error ? null : Number(pct);
+  const y25 = NEET_YEARS.y2025;
+  const rank = p == null ? null : Math.max(1, Math.round(((100 - p) / 100) * y25.appeared));
+  return (
+    <div className="space-y-6">
+      <div className="grid gap-4 sm:grid-cols-2">
+        <MarksField id="neet-pct" label="Your NEET percentile" hint="From your NEET scorecard, e.g. 98.7654." value={pct}
+          onChange={setPct} error={error} min={0} max={100} step="any" />
+      </div>
+      <div aria-live="polite">
+        {p == null ? (
+          <EmptyHint text="Enter your percentile to see your expected All India Rank." />
+        ) : (
+          <div className="space-y-4">
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Stat label="Expected All India Rank" value={fmtInt(rank)} sub={`Out of ${fmtInt(y25.appeared)} candidates (NEET ${y25.year})`} />
+              <Stat label="You are in" value={fmtTop(100 - p)} sub="Of all NEET candidates" />
+            </div>
+            <DataNote>Rank ≈ (100 − percentile) × candidates who appeared. NTA&apos;s real rank can differ slightly because of ties and the number of candidates in your year.</DataNote>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function NeetPanel() {
+  const [mode, setMode] = useState("marks");
+  return (
+    <div className="space-y-5">
+      <ModeSwitch mode={mode} setMode={setMode} />
+      {mode === "marks" ? <NeetMarksPanel /> : <NeetPercentilePanel />}
+    </div>
+  );
+}
+
+function NeetMarksPanel() {
   const [marks, setMarks] = useState("");
   const error = marks === "" ? null : validateNeetMarks(marks);
   const result = useMemo(() => (marks === "" || error ? null : predictNeet({ marks })), [marks, error]);

@@ -59,7 +59,12 @@ export default function AskAI() {
     setFeedback,
   } = useChat();
 
-  const [prompt,        setPrompt]        = useState("");
+  // Draft survives a back swipe / closing the app (per exam), like Claude.
+  const draftKey = `jneet:draft:${examMode ?? "x"}`;
+  const [prompt,        setPrompt]        = useState(() => { try { return localStorage.getItem(draftKey) ?? ""; } catch { return ""; } });
+  useEffect(() => {
+    try { if (prompt) localStorage.setItem(draftKey, prompt.slice(0, 4000)); else localStorage.removeItem(draftKey); } catch { /* storage off */ }
+  }, [prompt, draftKey]);
   // Desktop starts open (old default), mobile starts closed (old
   // default) — checked once on mount, matches previous visual
   // behavior exactly while adding the new toggle capability.
