@@ -73,6 +73,7 @@ export const LEGAL = {
         h: "4. How the AI mentor handles your data",
         p: [
           "When you ask the AI mentor a question, we send that question, a few earlier messages from the same chat (so it can follow the conversation) and your exam type to our AI provider, OpenAI, through its API, to generate the reply. We identify you to the provider only with an anonymous, one-way hashed ID — not your name or email.",
+          "Listen (Elite): when you tap Listen, the text of that AI answer is sent to OpenAI to turn it into speech. The audio is stored on our side so the same answer can be played again without another request; it is not linked to your name.",
           "We ask the provider not to store these requests for its own product use. Under the provider's API terms, API data is not used to train its models by default, and the provider may keep requests for a limited period for safety and abuse monitoring as set out in its terms.",
           "The AI can make mistakes. Please do not type sensitive personal information (phone numbers, addresses, ID numbers, health details) into the chat.",
         ],
@@ -85,6 +86,7 @@ export const LEGAL = {
           "MongoDB Atlas — database where account, chat and study data are stored.",
           "Brevo — delivers our emails (it receives your email address and the message, such as a code).",
           "Vercel and Render — host the website and the server.",
+          "Cloudflare Turnstile — checks that sign-up, login and password-reset requests come from a real person (it receives technical data such as your IP address and browser details).",
           "Razorpay — processes payments for paid plans (it receives the payer's contact details and payment information). We never see your card, UPI or bank details; we keep only the payment reference, amount, plan and date.",
         ],
         p2: ["Some of these providers store or process data outside India. We choose providers that use industry-standard safeguards. We may also disclose information if the law requires it."],
@@ -172,6 +174,8 @@ export const LEGAL = {
       {
         h: "3. Plans and limits",
         p: [
+          "Every plan also has a monthly fair-use limit on AI usage, so that a few heavy users cannot slow the service for everyone. If it is reached, the AI mentor pauses until the 1st of the next month (India time); tests, PYQs, revision and notes keep working.",
+          "Early-bird prices, when offered, apply only to the number of seats shown on the plans page and only while seats are left. The price on the payment screen is the price you pay; if seats run out before you pay, we show you the new price first.",
           "The free plan includes a daily limit on AI questions (currently 5 per day, resetting at midnight India time). Limits can change.",
           "Paid plans (Pro and Elite) are sold only on our website, as prepaid passes: 1 month (30 days) or an exam pass valid till a fixed date shown before you pay (JEE Main pass: 30 April 2027; NEET UG pass: 31 May 2027, extended to the exam day if NTA holds NEET later). A paid plan or pass is for the exam chosen at purchase; the exam can't be switched while it is active. The price (in Indian rupees, including taxes), the benefits and the end date are shown before you pay. Passes do not renew automatically. Buying again adds days to your current pass; moving from Pro to Elite converts your unused Pro days into Elite days by value.",
           "Users under 18 cannot buy a plan themselves: a parent or legal guardian pays using a link the student shares. By paying, the payer confirms they are 18 or older and agree to these Terms and our Refund Policy.",
