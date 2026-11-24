@@ -187,8 +187,8 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 - [ ] **LG9** Data-breach plan: if user data leaks, email users + report to Data Protection Board (DPDP) — write a 5-line runbook in `docs/`.
 - [ ] **LG10** School visits: principal's written OK; never collect phone numbers on paper; QR only.
 
-### Pricing decision (22 Nov 2026, founder to say "go")
-- [ ] **PR1** Recommended: Pro **₹199**/mo · Elite **₹349**/mo · JEE Pass (Jan+Apr, till 30 Apr 2027) **₹699** · NEET Pass **₹1,299**. Launch early-bird (first 500 real seats): JEE ₹599, NEET ₹1,199. Per-user monthly AI ₹ cap: Pro ₹50, Elite ₹100, Pass ₹30. Affiliate 15% on passes, none on monthly. Worst-case margin (cap hit + affiliate) ≥ ~50%; typical 73–84%.
+### Pricing decision — FINAL (founder "go" 24 Nov 2026, built in PR #47)
+- [x] **PR1** Pro ₹199/mo · Elite ₹349/mo · JEE Main 2027 Pass ₹699 (early-bird ₹599, first 500 real seats, till 30 Apr 2027) · NEET UG 2027 Pass ₹999 (till 31 May 2027). Passes = Pro + deep analysis. Monthly AI ₹ cap: Free 10, Pro 50, Pass 30, Elite 100. Affiliates (15% on passes) still to build.
 
 ### Diagrams received 22 Nov 2026 (ZIPs, not in repo yet)
 - [x] **DG1** Diagrams live in OneShot + chat — done 22 Nov 2026: 986 checked diagrams (Biology 435, Physics 250, Chemistry 129, Maths 172) across 96/99 chapters, WebP in `frontend/public/diagrams/`, index `diagrams/index.json` + `backend/content/diagrams.json`. OneShot gets a "Diagrams" tab (tap to zoom). AI Mentor: "diagram se samjhao" attaches the best matching diagram below the answer (`services/diagrams.js`, no image-AI cost). From 1,231 files: 0 exact duplicates, ~230 same-topic copies merged, 12 wrong/garbled dropped, 34 out-of-syllabus (digestion, transport in plants, solid state, metallurgy, surface chem, eye/ear) not shipped. Thumbnail-level visual check only — label-by-label review continues as students report.
@@ -197,8 +197,11 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 - [x] **F-EXPLAIN** "Explain with AI" on PYQs — done 23 Nov 2026 (PR #43): Pro + Elite. AI reads NTA's image and must end with FINAL; saved only if it matches NTA's key (2nd try on the deep model), else "not available" and the doubt is given back. Cached per question + language for all students. Shown in test review, revision feedback and the Mistake Notebook.
 - [x] **SEC-AIM** All-India submit no longer returns the answer key in its response while the mock is open (found + fixed 23 Nov 2026, PR #43).
 - [x] **QB-JEE-1** JEE question bank add — done 23 Nov 2026 (PR #44): founder's ZIP (448 JEE questions) → **315 added** (`seed/questions/jee-bank-nov23.json`), every key checked by hand. Removed: Batch 08 (template junk, e.g. "E=hν=0 J", options like 3.4649999999999994), 40 exact + near duplicates, 1 wrong key fixed (logK=4), 2 wrong/out-of-syllabus, 4 out-of-syllabus chapters (solid state, environmental, practical). Options reshuffled (file had answer B/A bias). LaTeX now renders in bank questions. 10 PDFs rejected: MathonGo/Collegedunia retyped AIEEE 2002–2011 + 1 reconstructed paper — not NTA, no Question IDs, coaching copyright. Bank total now 14079.
-- [ ] **LOCK-EXAM (founder asked 23 Nov 2026 — must do with passes):** stop free JEE ⇄ NEET switching. Paid plan/pass is tied to one exam; switching allowed once (or after the pass ends) and never unlocks the other exam's paid content.
+- [x] **LOCK-EXAM** done 24 Nov 2026 (PR #47): paid plan/pass tied to the exam at purchase; no switching while active; free accounts once a week; NEET account can't buy JEE pass.
 - [ ] **STAGING (founder asked 23 Nov 2026):** test every change before students see it — Vercel preview link per PR (free) + Render staging backend + separate Atlas DB; founder and Claude check the preview, then merge. Student feedback/report inbox visible in /admin.
+- [x] **CHAT-RESET** done 24 Nov 2026 (PR #46): chat opens again by itself when the daily limit resets (midnight IST) or a pause ends — timer + check when the phone wakes; typed draft survives back swipe / reload; "couldn't load" screen now student-friendly (no dev tip, invisible title fixed) and retries itself.
+- [x] **RANK-2** done 24 Nov 2026 (PR #46): NEET "I know my percentile" mode (rank from NEET 2025's 22,09,318 candidates); both exams show Marks / Percentile / "No marks yet? Take the free mock".
+- [x] **VOICE** done 24 Nov 2026 (PR #47): Elite "Listen" on AI answers — gpt-4o-mini-tts on tap, mp3 cached 14 days, ≈ ₹1–2 per long answer, counted in the monthly cap.
 - [x] **L-seed-4** done 23 Nov 2026 by the founder (live stats: 14,079 questions, 11,354 PYQs).
 
 - [x] Brevo domain authenticated, sender verified, OTP arriving (Oct 2026).
