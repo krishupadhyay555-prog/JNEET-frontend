@@ -94,6 +94,11 @@ export function DobGate() {
                 placeholder="parent@example.com" disabled={loading} autoCapitalize="none" spellCheck={false} inputMode="email" />
             </div>
           ) : null}
+          <p className="text-[11px] text-[#6B6572] leading-relaxed">
+            By continuing you agree to our{" "}
+            <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-[#0F766E] underline">Terms</a> and{" "}
+            <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-[#0F766E] underline">Privacy Policy</a>.
+          </p>
           <SubmitButton loading={loading} loadingText="Saving…">Continue</SubmitButton>
         </form>
         <button type="button" onClick={logout}

@@ -93,8 +93,8 @@ function Header() {
 }
 
 function Footer() {
-  const col = "space-y-2.5";
-  const a = "block text-[13.5px] text-[#5F5B67] hover:text-[#17161C] transition-colors";
+  const col = "space-y-1 sm:space-y-2.5";
+  const a = "block py-1.5 sm:py-0.5 text-[13.5px] text-[#5F5B67] hover:text-[#17161C] transition-colors";
   return (
     <footer className="border-t border-[#E7E4DD] bg-[#EFEDE7]/60 mt-8">
       <div className="max-w-6xl mx-auto px-5 py-12 grid gap-10 sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">

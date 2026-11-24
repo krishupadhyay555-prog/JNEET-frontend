@@ -3,8 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { detectAppShell } from "./utils/appShell.js";
+import { captureSource } from "./utils/signupSource.js";
 
 detectAppShell(); // before the first render: hides every payment UI inside the Play Store app
+captureSource(); // remember ?utm_* / ?src= for the sign-up
 
 // After a new deploy, an open tab may ask for an old page chunk that no
 // longer exists ("Failed to fetch dynamically imported module"). Reload

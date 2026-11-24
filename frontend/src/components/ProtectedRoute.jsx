@@ -13,6 +13,7 @@ import { Navigate } from "react-router-dom";
 import { useAuth }  from "../context/AuthContext.jsx";
 import { LoadingScreen } from "./ui/LoadingScreen.jsx";
 import { DobGate } from "./auth/DobGate.jsx";
+import { TermsUpdateGate } from "./auth/TermsUpdateGate.jsx";
 
 export function ProtectedRoute({ children }) {
   const { isLoggedIn, isInitializing } = useAuth();
@@ -28,6 +29,7 @@ export function ProtectedRoute({ children }) {
     <>
       {children}
       <DobGate />
+      <TermsUpdateGate />
     </>
   );
 }

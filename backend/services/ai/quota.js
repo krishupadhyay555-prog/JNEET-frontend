@@ -35,8 +35,21 @@ export function nextIstMonthStart(now = new Date()) {
   return new Date(next - IST_OFFSET_MS).toISOString();
 }
 
-export function dailyLimitFor(plan) {
-  return env.AI_DAILY[plan] ?? env.AI_DAILY.free;
+// Brand-new free accounts get a smaller daily AI limit for their first
+// 24 hours, so making many accounts to farm free AI doesn't pay off.
+export const NEW_ACCOUNT_HOURS = 24;
+export function newAccountLimit() {
+  const v = Number.parseInt(process.env.AI_NEW_ACCOUNT_DAILY ?? "", 10);
+  return Number.isFinite(v) && v >= 0 ? v : 3;
+}
+export function isNewAccount(createdAt, now = new Date()) {
+  return Boolean(createdAt) && now.getTime() - new Date(createdAt).getTime() < NEW_ACCOUNT_HOURS * 3_600_000;
+}
+
+export function dailyLimitFor(plan, { createdAt = null, now = new Date() } = {}) {
+  const base = env.AI_DAILY[plan] ?? env.AI_DAILY.free;
+  if (plan === "free" && isNewAccount(createdAt, now)) return Math.min(base, newAccountLimit());
+  return base;
 }
 
 // Atomically take one unit if the user is under `limit`.
@@ -66,9 +79,9 @@ async function giveBack(userId, kind, key) {
   ).catch((err) => console.warn("[AI] quota refund failed:", err.message));
 }
 
-export async function reserveDoubt(userId, plan, now = new Date()) {
+export async function reserveDoubt(userId, plan, now = new Date(), { createdAt = null } = {}) {
   const key = istDayKey(now);
-  const limit = dailyLimitFor(plan);
+  const limit = dailyLimitFor(plan, { createdAt, now });
   const res = await takeUnit(userId, "day", key, limit);
   return {
     ...res,
@@ -90,12 +103,12 @@ export async function reserveDeepSolve(userId, plan, now = new Date()) {
   };
 }
 
-export async function getUsageSnapshot(userId, plan, now = new Date()) {
+export async function getUsageSnapshot(userId, plan, now = new Date(), { createdAt = null } = {}) {
   const [day, deep] = await Promise.all([
     AiDaily.findOne({ userId, kind: "day", key: istDayKey(now) }).lean(),
     AiDaily.findOne({ userId, kind: "deep_month", key: istMonthKey(now) }).lean(),
   ]);
-  const limit = dailyLimitFor(plan);
+  const limit = dailyLimitFor(plan, { createdAt, now });
   const used = day?.count ?? 0;
   const deepLimit = plan === "elite" ? env.AI_DEEP_MONTHLY_ELITE : 0;
   return {

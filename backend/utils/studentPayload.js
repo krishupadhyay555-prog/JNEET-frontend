@@ -9,6 +9,7 @@ import { env } from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
 import { effectivePlan } from "./plan.js";
 import { isAdminEmail } from "../middleware/admin.js";
+import { TERMS_VERSION, PRIVACY_VERSION } from "../config/legal.js";
 
 // True when the AI mentor must stay locked for this user: an under-18
 // whose parent hasn't approved yet (or has withdrawn approval).
@@ -45,6 +46,10 @@ export function toStudent(user) {
       parentEmailMasked: c.parentEmail ? maskParent(c.parentEmail) : null,
     },
     aiLocked:   isAiLocked(user),
+    // Terms / Privacy changed since this student last accepted → the app
+    // asks them to accept the new version once (students without a date of
+    // birth accept it in the date-of-birth step instead).
+    termsUpdate: !!user.dateOfBirth && (c.termsVersion !== TERMS_VERSION || c.privacyVersion !== PRIVACY_VERSION),
     lastLogin:  user.lastLogin,
     createdAt:  user.createdAt,
   };

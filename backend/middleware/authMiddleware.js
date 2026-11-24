@@ -85,6 +85,7 @@ export const protect = async (req, res, next) => {
       aiLocked: isAiLocked(user),
       chatPausedUntil: user.policy?.pausedUntil ?? null,
       chatLocked: Boolean(user.policy?.locked),
+      createdAt: user.createdAt ?? null,
     };
 
     next();

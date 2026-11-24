@@ -35,7 +35,7 @@ import {
 } from "../services/ai/index.js";
 import { loadHistory } from "../services/ai/history.js";
 import { checkMonthlyCap } from "../services/ai/monthlyCap.js";
-import { reserveDoubt, getUsageSnapshot, istDayKey } from "../services/ai/quota.js";
+import { reserveDoubt, getUsageSnapshot, istDayKey, isNewAccount } from "../services/ai/quota.js";
 import { isOverBudget, aiPaused } from "../services/ai/budget.js";
 import { estimateCost as estimateCostFor } from "../services/ai/prices.js";
 import { resolveRoute } from "../services/ai/index.js";
@@ -177,12 +177,14 @@ export const askAI = async (req, res, next) => {
 
     let reservation = null;
     if (!distress) {
-      reservation = await reserveDoubt(user.id, user.plan);
+      reservation = await reserveDoubt(user.id, user.plan, new Date(), { createdAt: user.createdAt });
       if (!reservation.ok) {
         return res.status(429).json({
           success: false,
           code: "DAILY_LIMIT",
-          error: `You've used all ${reservation.limit} AI doubts for today. They reset at midnight IST.`,
+          error: user.plan === "free" && isNewAccount(user.createdAt)
+            ? `New accounts get ${reservation.limit} AI doubts on their first day. You'll get the full daily limit from tomorrow — mock tests, PYQs and revision are open now.`
+            : `You've used all ${reservation.limit} AI doubts for today. They reset at midnight IST.`,
           plan: user.plan,
           limit: reservation.limit,
           resetsAt: reservation.resetsAt,
@@ -328,7 +330,7 @@ export const askAI = async (req, res, next) => {
 // GET /api/ai/usage — how many doubts are left today (for the UI)
 export const getUsage = async (req, res, next) => {
   try {
-    const snapshot = await getUsageSnapshot(req.user.id, req.user.plan);
+    const snapshot = await getUsageSnapshot(req.user.id, req.user.plan, new Date(), { createdAt: req.user.createdAt });
     const paused = req.user.chatPausedUntil && new Date(req.user.chatPausedUntil) > new Date()
       ? new Date(req.user.chatPausedUntil).toISOString() : null;
     const lock = req.user.chatLocked ? await getLockState(req.user.id) : null;

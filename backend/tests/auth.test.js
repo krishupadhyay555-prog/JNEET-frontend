@@ -350,3 +350,45 @@ describe("audit: log out of all devices", () => {
     expect((await client().post("/api/auth/logout-all")).status).toBe(401);
   });
 });
+
+describe("audit: new-account caps (anti free-AI farming)", () => {
+  it("one device: 3 new accounts a day, the 4th is refused (different networks)", async () => {
+    const deviceId = "dev-test-1234abcd";
+    for (let i = 0; i < 3; i++) {
+      expect((await client().post("/api/auth/register").send({ ...registerBody(), deviceId })).status).toBe(201);
+    }
+    const r = await client().post("/api/auth/register").send({ ...registerBody(), deviceId });
+    expect(r.status).toBe(429);
+    expect(r.body.code).toBe("TOO_MANY_ACCOUNTS");
+    // A different device on another network is fine.
+    expect((await client().post("/api/auth/register").send({ ...registerBody(), deviceId: "dev-other-99999999" })).status).toBe(201);
+  });
+
+  it("one network: 10 new accounts a day, the 11th is refused", async () => {
+    const ip = "203.0.113.77";
+    for (let i = 0; i < 10; i++) {
+      const r = await request(app).post("/api/auth/register").set("X-Forwarded-For", ip).send(registerBody());
+      expect(r.status).toBe(201);
+    }
+    const r = await request(app).post("/api/auth/register").set("X-Forwarded-For", ip).send(registerBody());
+    expect(r.status).toBe(429);
+  });
+
+  it("stores only hashes, never the raw device id", async () => {
+    const body = { ...registerBody(), deviceId: "dev-raw-secret-777" };
+    await client().post("/api/auth/register").send(body);
+    const u = await User.findOne({ email: body.email }).select("+signupDevice +signupNet").lean();
+    expect(u.signupDevice).toMatch(/^[0-9a-f]{32}$/);
+    expect(JSON.stringify(u)).not.toContain("dev-raw-secret-777");
+  });
+});
+
+describe("signup source (utm / src)", () => {
+  it("keeps clean utm/src values and drops junk", async () => {
+    const body = { ...registerBody(), source: { src: "free-mock", utm_source: "instagram", utm_campaign: "<script>" } };
+    expect((await client().post("/api/auth/register").send(body)).status).toBe(201);
+    const u = await User.findOne({ email: body.email }).lean();
+    expect(u.signupSource).toMatchObject({ src: "free-mock", utm_source: "instagram" });
+    expect(u.signupSource.utm_campaign).toBeUndefined();
+  });
+});

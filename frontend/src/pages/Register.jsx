@@ -21,6 +21,8 @@ import { passwordMeetsPolicy } from "../utils/password.js";
 import { AuthShell, SubmitButton, Notice } from "../components/auth/AuthShell.jsx";
 import { useCountdown }   from "../hooks/useCountdown.js";
 import { Eye, EyeOff, ArrowLeft } from "lucide-react";
+import { deviceId } from "../utils/deviceId.js";
+import { signupSource } from "../utils/signupSource.js";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -118,6 +120,8 @@ export default function Register() {
         examMode: form.examMode,
         dateOfBirth: form.dateOfBirth,
         acceptTerms: true,
+        ...(deviceId() ? { deviceId: deviceId() } : {}),
+        ...(signupSource() ? { source: signupSource() } : {}),
         ...(isMinor ? { parentEmail: form.parentEmail.trim().toLowerCase() } : {}),
       }));
 
@@ -148,7 +152,9 @@ export default function Register() {
     } else if (fields.length) {
       setErrors(Object.fromEntries(fields.map(({ field, message }) => [field, message])));
     } else if (status === 429) {
-      setFormErr("Too many attempts. Please wait a little and try again.");
+      setFormErr(err.response?.data?.code === "TOO_MANY_ACCOUNTS"
+        ? err.response.data.error
+        : "Too many attempts. Please wait a little and try again.");
     } else if (status === 400) {
       setFormErr(err.response?.data?.error || "Please check your details and try again.");
     } else {
