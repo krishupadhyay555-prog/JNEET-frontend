@@ -27,7 +27,7 @@ export const BUSINESS = {
 };
 
 export const LEGAL_VERSION = "2026-11-14";
-export const LEGAL_UPDATED = "22 November 2026";
+export const LEGAL_UPDATED = "24 November 2026";
 
 const B = BUSINESS;
 
@@ -173,7 +173,7 @@ export const LEGAL = {
         h: "3. Plans and limits",
         p: [
           "The free plan includes a daily limit on AI questions (currently 5 per day, resetting at midnight India time). Limits can change.",
-          "Paid plans (Pro and Elite) are sold only on our website, as prepaid passes for 1 or 4 months. The price (in Indian rupees, including taxes), the benefits and the end date are shown before you pay. Passes do not renew automatically. Buying again adds days to your current pass; moving from Pro to Elite converts your unused Pro days into Elite days by value.",
+          "Paid plans (Pro and Elite) are sold only on our website, as prepaid passes: 1 month (30 days) or an exam pass valid till a fixed date shown before you pay (JEE Main pass: 30 April 2027; NEET UG pass: 31 May 2027, extended to the exam day if NTA holds NEET later). A paid plan or pass is for the exam chosen at purchase; the exam can't be switched while it is active. The price (in Indian rupees, including taxes), the benefits and the end date are shown before you pay. Passes do not renew automatically. Buying again adds days to your current pass; moving from Pro to Elite converts your unused Pro days into Elite days by value.",
           "Users under 18 cannot buy a plan themselves: a parent or legal guardian pays using a link the student shares. By paying, the payer confirms they are 18 or older and agree to these Terms and our Refund Policy.",
           "Paid plans are non-refundable, as explained in our Refund Policy.",
         ],
@@ -241,7 +241,7 @@ export const LEGAL = {
       {
         h: "2. Paid plans",
         ul: [
-          "Paid plans are sold on our website only, as prepaid passes for 1 month (30 days) or 4 months (120 days). They do not renew automatically, and no card or UPI mandate is saved.",
+          "Paid plans are sold on our website only, as prepaid passes for 1 month (30 days) or exam passes valid till a fixed date shown before you pay. They do not renew automatically, and no card or UPI mandate is saved.",
           "Prices are shown in Indian rupees, inclusive of applicable taxes, before you pay.",
           "Payments are processed by Razorpay. We never see your card, UPI or bank details.",
         ],

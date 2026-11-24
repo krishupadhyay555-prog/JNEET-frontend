@@ -101,7 +101,7 @@ describe("plan catalog", () => {
     const res = await client().get("/api/payments/plans");
     expect(res.status).toBe(200);
     expect(res.body.enabled).toBe(true);
-    expect(res.body.plans.map((p) => p.id)).toEqual(["pro_1m", "pro_4m", "elite_1m", "elite_4m"]);
+    expect(res.body.plans.map((p) => p.id)).toEqual(["pro_1m", "elite_1m", "jee_pass", "neet_pass"]);
     expect(res.body.plans.every((p) => Number.isInteger(p.amount) && p.amount > 0)).toBe(true);
     expect(res.body.features.free[0]).toMatch(/5 AI doubts/);
     expect(JSON.stringify(res.body)).not.toContain("fake_key_secret");
@@ -148,7 +148,7 @@ describe("student checkout (adult)", () => {
 
   it("refuses a payment whose amount differs from the order", async () => {
     const { c } = await signedInClient();
-    const order = await c.post("/api/payments/order").send({ planId: "elite_4m" });
+    const order = await c.post("/api/payments/order").send({ planId: "elite_1m" });
     const res = await c.post("/api/payments/verify").send(payOrder(order.body.orderId, { amount: 100 }));
     expect(res.status).toBe(400);
     expect((await c.get("/api/payments/me")).body.plan).toBe("free");
@@ -193,7 +193,7 @@ describe("student checkout (adult)", () => {
 describe("webhook", () => {
   it("activates the plan even if the student closed the tab, and only once", async () => {
     const { c } = await signedInClient();
-    const order = await c.post("/api/payments/order").send({ planId: "pro_4m" });
+    const order = await c.post("/api/payments/order").send({ planId: "pro_1m" });
     const paid = payOrder(order.body.orderId);
     const raw = webhookBody("payment.captured", paid.paymentId);
     const w = client();
@@ -206,8 +206,8 @@ describe("webhook", () => {
     const me = await c.get("/api/payments/me");
     const left = (new Date(me.body.expiresAt) - Date.now()) / DAY;
     expect(me.body.plan).toBe("pro");
-    expect(left).toBeGreaterThan(119.9);
-    expect(left).toBeLessThan(120.1);          // 120 days, not 240 or 360
+    expect(left).toBeGreaterThan(29.9);
+    expect(left).toBeLessThan(30.1);           // 30 days, not 60 or 90
     expect(mailbox.receipts.length).toBe(2);   // student + payer, once
   });
 
@@ -322,8 +322,8 @@ describe("plan expiry and limits", () => {
     const lower = await c.post("/api/payments/order").send({ planId: "pro_1m" });
     expect(lower.status).toBe(409);
     expect(lower.body.code).toBe("HIGHER_PLAN_ACTIVE");
-    await User.updateOne({ email: body.email }, { plan: "elite", planExpiresAt: new Date(Date.now() + 300 * DAY) });
-    const far = await c.post("/api/payments/order").send({ planId: "elite_4m" });
+    await User.updateOne({ email: body.email }, { plan: "elite", planExpiresAt: new Date(Date.now() + 380 * DAY) });
+    const far = await c.post("/api/payments/order").send({ planId: "elite_1m" });
     expect(far.status).toBe(409);
     expect(far.body.code).toBe("TOO_FAR_AHEAD");
   });
@@ -395,7 +395,7 @@ describe("hardening: one order, one charge", () => {
 describe("hardening: money taken = plan given", () => {
   it("reconciliation activates a captured payment when BOTH the callback and the webhook were lost", async () => {
     const { c } = await signedInClient();
-    const o = await c.post("/api/payments/order").send({ planId: "elite_4m" });
+    const o = await c.post("/api/payments/order").send({ planId: "elite_1m" });
     payOrder(o.body.orderId);                          // paid at Razorpay; tab closed; no webhook
     expect((await User.findOne({}).lean()).plan ?? "free").not.toBe("elite");
 
@@ -475,3 +475,41 @@ describe("hardening: webhook repeats and refunds", () => {
     expect(res.body.mode).toBe("test");
   });
 });
+
+describe("exam passes, exam lock and fair-use cap", () => {
+  it("JEE pass: early-bird price from real seats, ends 30 Apr 2027, locks the exam, unlocks analysis", async () => {
+    const plans = (await client().get("/api/payments/plans")).body.plans
+    const jee = plans.find((p) => p.id === "jee_pass")
+    expect(jee).toMatchObject({ exam: "JEE", amount: 69900, current: 59900 })
+    expect(jee.early.seatsLeft).toBe(500)
+
+    const { c, body } = await signedInClient({ examMode: "JEE" })
+    const order = await c.post("/api/payments/order").send({ planId: "jee_pass" })
+    expect(order.status).toBe(201)
+    expect(order.body.amount).toBe(59900)
+    expect((await c.post("/api/payments/verify").send(payOrder(order.body.orderId))).body.plan).toBe("pro")
+    const u = await User.findOne({ email: body.email }).lean()
+    expect(u.planExam).toBe("JEE")
+    expect(new Date(u.planPassUntil).toISOString().slice(0, 10)).toBe("2027-04-30")
+    expect((await client().get("/api/payments/plans")).body.plans.find((p) => p.id === "jee_pass").early.seatsLeft).toBe(499)
+
+    const sw = await c.patch("/api/user/exam-mode").send({ examMode: "NEET" })
+    expect(sw.status).toBe(403)
+    expect(sw.body.code).toBe("PLAN_EXAM_LOCKED")
+  })
+
+  it("a NEET account can't buy the JEE pass", async () => {
+    const { c } = await signedInClient({ examMode: "NEET" })
+    const r = await c.post("/api/payments/order").send({ planId: "jee_pass" })
+    expect(r.body.code).toBe("WRONG_EXAM")
+  })
+
+  it("free accounts can switch exam once, then once a week", async () => {
+    const { c } = await signedInClient({ examMode: "JEE" })
+    expect((await c.patch("/api/user/exam-mode").send({ examMode: "NEET" })).status).toBe(200)
+    const again = await c.patch("/api/user/exam-mode").send({ examMode: "JEE" })
+    expect(again.status).toBe(429)
+    expect(again.body.code).toBe("SWITCH_COOLDOWN")
+  })
+})
+

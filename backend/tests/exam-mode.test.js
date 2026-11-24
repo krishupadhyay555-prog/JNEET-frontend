@@ -73,6 +73,7 @@ describe('Exam mode', () => {
     const jee = await a.get('/api/test/history')
     expect(jee.body.attempts).toHaveLength(1)
 
+    await User.updateMany({}, { $set: { examSwitchedAt: null } })   // a week later (free accounts: one switch a week)
     await a.patch('/api/user/exam-mode').send({ examMode: 'NEET' })
     expect((await a.get('/api/test/history')).body.attempts).toHaveLength(2)
   })

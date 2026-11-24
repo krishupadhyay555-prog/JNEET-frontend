@@ -34,6 +34,7 @@ import {
   isAiConfigured,
 } from "../services/ai/index.js";
 import { loadHistory } from "../services/ai/history.js";
+import { checkMonthlyCap } from "../services/ai/monthlyCap.js";
 import { reserveDoubt, getUsageSnapshot, istDayKey } from "../services/ai/quota.js";
 import { isOverBudget } from "../services/ai/budget.js";
 import { screenMessage, contextFromHistory, REFUSE_MESSAGE } from "../services/ai/safety.js";
@@ -133,6 +134,18 @@ export const askAI = async (req, res, next) => {
         code: "AI_BUSY",
         error: "The AI mentor is very busy today. Please try again tomorrow — mock tests and revision are still available.",
       });
+    }
+
+    if (!distress) {
+      const capState = await checkMonthlyCap(user);
+      if (!capState.ok) {
+        return res.status(429).json({
+          success: false,
+          code: "MONTHLY_CAP",
+          error: "You've reached this month's fair-use limit for the AI mentor. It resets on the 1st. Mock tests, PYQs and revision still work.",
+          plan: user.plan,
+        });
+      }
     }
 
     let reservation = null;

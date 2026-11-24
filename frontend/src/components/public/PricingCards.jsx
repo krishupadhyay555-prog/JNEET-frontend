@@ -28,7 +28,7 @@ export function PricingCards({ catalog }) {
       {["pro", "elite"].map((tier) => {
         const name = tier === "pro" ? "Pro" : "Elite";
         const m1 = catalog?.plans?.find((p) => p.tier === tier && p.duration === "1m");
-        const m4 = catalog?.plans?.find((p) => p.tier === tier && p.duration === "4m");
+        const pass = tier === "pro" ? catalog?.plans?.filter((p) => p.duration === "pass").sort((a, b) => (a.current ?? a.amount) - (b.current ?? b.amount))[0] : null;
         const live = catalog?.enabled && m1;
         const featured = tier === "pro";
         return (
@@ -40,7 +40,7 @@ export function PricingCards({ catalog }) {
             ) : live ? (
               <>
                 <p className="mt-2 text-[34px] font-bold tracking-tight">{rupees(m1.amount)}<span className={`text-[14px] font-medium ${featured ? "text-white/70" : "text-[#6E6A76]"}`}> / month</span></p>
-                <p className={`text-[13px] ${featured ? "text-white/70" : "text-[#6E6A76]"}`}>{m4 ? `or ${rupees(m4.amount)} for 4 months` : " "}</p>
+                <p className={`text-[13px] ${featured ? "text-white/70" : "text-[#6E6A76]"}`}>{pass ? `or exam pass from ${rupees(pass.current ?? pass.amount)}` : " "}</p>
               </>
             ) : (
               <>
@@ -67,7 +67,7 @@ export function PricingCards({ catalog }) {
 
 export function PaymentFacts() {
   const facts = [
-    ["Prepaid pass", "1 month (30 days) or 4 months (120 days). It never renews on its own — no saved card, no UPI mandate."],
+    ["Prepaid, no renewal", "1 month (30 days), or an exam pass valid till a fixed date (JEE: 30 Apr 2027, NEET: 31 May 2027). It never renews on its own — no saved card, no UPI mandate."],
     ["Safe checkout", "Payments are processed by Razorpay (UPI, cards, net banking). We never see your card or UPI details."],
     ["Instant access", "Your plan switches on the moment the payment is confirmed, and you get a receipt by email."],
     ["Clear refunds", "If you are charged twice or a plan doesn't activate because of us, we refund it in 5–7 working days."],

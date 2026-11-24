@@ -155,6 +155,11 @@ const userSchema = new mongoose.Schema(
     // instant (null + paid plan = a manual grant with no end date).
     // Use utils/plan.js effectivePlan() — never read `plan` directly.
     planExpiresAt: { type: Date, default: null },
+    // Exam the paid plan was bought for (JEE/NEET): switching exams is locked
+    // while it is active. planPassUntil is set for exam passes.
+    planExam:      { type: String, enum: ["JEE", "NEET", null], default: null },
+    planPassUntil: { type: Date, default: null },
+    examSwitchedAt: { type: Date, default: null },
     payLockUntil:  { type: Date, default: null, select: false }, // a few seconds while an order is created
 
     lastLogin: { type: Date, default: null },

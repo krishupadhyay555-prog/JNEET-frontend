@@ -15,6 +15,7 @@ import {
   ThumbsUp, ThumbsDown, Pencil, X, ArrowUp,
 } from "lucide-react";
 import { Markdown } from "./Markdown.jsx";
+import { ListenButton } from "./ListenButton.jsx";
 import { ContextMenu } from "../ui/ContextMenu.jsx";
 import { useCopy } from "../../hooks/useCopy.js";
 
@@ -217,6 +218,7 @@ export const MessageBubble = memo(function MessageBubble({
 
             {!isUser && (
               <>
+                <ListenButton text={msg.content} />
                 <ActionButton label="Good response" active={msg.feedback === "up"} activeClass="text-emerald-500" onClick={() => onFeedback?.(msg, "up")}>
                   <ThumbsUp size={14} className={msg.feedback === "up" ? "fill-current" : ""} />
                 </ActionButton>

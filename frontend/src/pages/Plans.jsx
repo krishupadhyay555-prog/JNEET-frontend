@@ -54,13 +54,12 @@ export function CurrentPlanBanner({ me }) {
 
 export default function Plans() {
   const goBack = useGoBack();
-  const { refreshUser } = useAuth();
+  const { refreshUser, examMode } = useAuth();
   const inApp = isAppShell();
 
   const [catalog, setCatalog] = useState(null);
   const [me, setMe] = useState(null);
   const [error, setError] = useState("");
-  const [duration, setDuration] = useState("4m");
   const [busy, setBusy] = useState(null);          // planId being paid
   const [confirming, setConfirming] = useState(false);
   const [success, setSuccess] = useState(null);
@@ -141,7 +140,8 @@ export default function Plans() {
     try { await navigator.clipboard.writeText(link.url); toast.success("Link copied"); } catch { toast.error("Couldn't copy — please select the link and copy it."); }
   };
 
-  const plansFor = (tier) => catalog?.plans.find((p) => p.tier === tier && p.duration === duration);
+  const plansFor = (tier) => catalog?.plans.find((p) => p.tier === tier && p.duration === "1m");
+  const passes = (catalog?.plans ?? []).filter((p) => p.duration === "pass");
 
   return (
     <div className="min-h-screen bg-bg-base text-fg-primary">
@@ -197,15 +197,6 @@ export default function Plans() {
               </div>
             )}
 
-            <div className="glass-panel rounded-2xl p-1.5 flex gap-1.5 max-w-xs mx-auto" role="tablist" aria-label="Duration">
-              {[["1m", "1 month"], ["4m", "4 months"]].map(([v, label]) => (
-                <button key={v} role="tab" aria-selected={duration === v} onClick={() => setDuration(v)}
-                  className={`flex-1 text-xs font-medium px-3 py-2 rounded-xl transition ${duration === v ? "bg-violet-600 text-white" : "text-gray-600 hover:text-fg-primary"}`}>
-                  {label}{v === "4m" ? " · save more" : ""}
-                </button>
-              ))}
-            </div>
-
             <div className="grid sm:grid-cols-3 gap-3">
               {["free", "pro", "elite"].map((tier) => {
                 const meta = TIER_META[tier];
@@ -213,8 +204,6 @@ export default function Plans() {
                 const plan = tier === "free" ? null : plansFor(tier);
                 const isCurrent = me.plan === tier;
                 const lowerThanCurrent = RANK[tier] < RANK[me.plan];
-                const monthly = tier === "free" ? null : catalog.plans.find((p) => p.tier === tier && p.duration === "1m");
-                const saving = plan && duration === "4m" && monthly ? Math.round(100 - (plan.amount / (monthly.amount * 4)) * 100) : 0;
                 return (
                   <div key={tier} className={`glass-panel rounded-2xl p-4 flex flex-col ${tier === "pro" ? "ring-1 ring-violet-600/40" : ""}`}>
                     <div className="flex items-center gap-2 mb-2">
@@ -227,7 +216,7 @@ export default function Plans() {
                       <span className="text-xs font-medium text-gray-600"> {plan ? `/ ${plan.months} month${plan.months > 1 ? "s" : ""}` : "forever"}</span>
                     </p>
                     <p className="text-[11px] text-gray-600 h-4">
-                      {plan && duration === "4m" ? `${rupees(plan.perMonth)}/month${saving > 0 ? ` · ${saving}% kam` : ""}` : plan ? "incl. taxes" : ""}
+                      {plan ? "incl. taxes" : ""}
                     </p>
                     <ul className="mt-3 space-y-1.5 text-xs text-gray-600 flex-1">
                       {(catalog.features[tier] ?? []).map((f) => (
@@ -254,6 +243,41 @@ export default function Plans() {
                 );
               })}
             </div>
+
+            {passes.length > 0 && (
+              <section aria-label="Exam passes" className="space-y-3">
+                <div>
+                  <h2 className="text-sm font-bold">Exam passes — pay once, till your exam</h2>
+                  <p className="text-[11px] text-gray-600">Everything in Pro + deep test analysis. No renewal.</p>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {passes.map((p) => {
+                    const mine = p.exam === examMode;
+                    const price = p.current ?? p.amount;
+                    const early = p.early && p.early.seatsLeft > 0;
+                    return (
+                      <div key={p.id} className={`glass-panel rounded-2xl p-4 flex flex-col ${mine ? "ring-1 ring-teal-600/50" : "opacity-70"}`}>
+                        <p className="font-semibold text-sm">{p.label}</p>
+                        <p className="text-2xl font-bold mt-1">
+                          {rupees(price)}
+                          {early && <span className="ml-2 text-sm font-medium text-gray-500 line-through">{rupees(p.amount)}</span>}
+                        </p>
+                        <p className="text-[11px] text-gray-600">Valid till {istDate(p.endsAt)} · ≈ {rupees(Math.round(price / Math.max(1, p.months)))}/month</p>
+                        {early && <p className="text-[11px] font-semibold text-teal-700 mt-1">Early-bird price · {p.early.seatsLeft} of {p.early.seats} seats left</p>}
+                        {mine ? (
+                          me.canPayDirectly ? (
+                            <button onClick={() => buy(p)} disabled={!catalog.enabled || Boolean(busy) || me.plan === "elite"}
+                              className="mt-3 w-full text-xs font-semibold py-2.5 rounded-xl bg-teal-600 text-white hover:bg-teal-700 disabled:opacity-50 transition flex items-center justify-center gap-2">
+                              {busy === p.id ? <><Spinner size={13} /> {confirming ? "Confirming…" : "Opening…"}</> : me.plan === "elite" ? "Elite already active" : `Get the pass · ${rupees(price)}`}
+                            </button>
+                          ) : <p className="mt-3 text-[11px] text-center text-gray-600">Parent se pay karwao ↓</p>
+                        ) : <p className="mt-3 text-[11px] text-gray-600">For {p.exam} students.</p>}
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
 
             {me.plan === "pro" && (
               <p className="text-[11px] text-gray-600 text-center">
@@ -298,7 +322,7 @@ export default function Plans() {
                 <ul className="divide-y divide-bg-border">
                   {me.history.map((h) => (
                     <li key={h.paymentId} className="py-2 flex items-center justify-between text-xs">
-                      <span>{TIER_META[h.tier]?.name} · {h.planId.endsWith("4m") ? "4 months" : "1 month"}<span className="block text-[10px] text-gray-600">{istDate(h.paidAt)} · {h.paymentId}{h.payer === "parent" ? " · paid by parent" : ""}</span></span>
+                      <span>{TIER_META[h.tier]?.name} · {h.planId.endsWith("_pass") ? "Exam pass" : h.planId.endsWith("4m") ? "4 months" : "1 month"}<span className="block text-[10px] text-gray-600">{istDate(h.paidAt)} · {h.paymentId}{h.payer === "parent" ? " · paid by parent" : ""}</span></span>
                       <span className="font-semibold">{rupees(h.amount)}</span>
                     </li>
                   ))}

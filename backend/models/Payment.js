@@ -24,6 +24,9 @@ const paymentSchema = new mongoose.Schema(
     planId:    { type: String, required: true },
     tier:      { type: String, enum: ["pro", "elite"], required: true },
     days:      { type: Number, required: true },
+    exam:      { type: String, enum: ["JEE", "NEET", null], default: null },   // exam the plan is for
+    pass:      { type: Boolean, default: false },                            // exam pass (fixed end date)
+    passEndsAt:{ type: Date, default: null },
     amount:    { type: Number, required: true },      // paise
     currency:  { type: String, default: "INR" },
 

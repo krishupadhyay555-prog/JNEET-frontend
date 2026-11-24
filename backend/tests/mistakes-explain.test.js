@@ -154,3 +154,38 @@ describe('Explain with AI by question id', () => {
     expect((await c.post('/api/pyq-explain').send({})).status).toBe(400)
   })
 })
+
+describe('Voice (Elite) and monthly fair-use cap', () => {
+  it('voice is Elite only and caches the audio', async () => {
+    const realFetch = global.fetch
+    let calls = 0
+    global.fetch = vi.fn(async (url, opts) => {
+      if (String(url).includes('/audio/speech')) { calls += 1; return new Response(new Uint8Array([1, 2, 3, 4]), { status: 200 }) }
+      return realFetch(url, opts)
+    })
+    try {
+      const { c, body } = await signedInClient({ examMode: 'JEE' })
+      expect((await c.post('/api/ai/tts').send({ text: 'Hello' })).body.code).toBe('PLAN_REQUIRED')
+      await setPlan(body.email, 'elite')
+      const a = await c.post('/api/ai/tts').send({ text: 'Newton ka **pehla** niyam: $F = ma$' })
+      expect(a.status).toBe(200)
+      expect(a.headers['content-type']).toMatch(/audio\/mpeg/)
+      const b = await c.post('/api/ai/tts').send({ text: 'Newton ka **pehla** niyam: $F = ma$' })
+      expect(b.headers['x-tts-cached']).toBe('1')
+      expect(calls).toBe(1)
+    } finally { global.fetch = realFetch }
+  })
+
+  it('blocks AI once the month\'s ₹ cap is used', async () => {
+    const { capFor, checkMonthlyCap, _resetCapCache } = await import('../services/ai/monthlyCap.js')
+    const AiUsage = (await import('../models/AiUsage.js')).default
+    const { istDayKey } = await import('../services/ai/quota.js')
+    const u = await User.create({ name: 'Cap', email: 'cap@example.test', password: 'Cap#Local12345', examMode: 'JEE', isEmailVerified: true, isActive: true, dateOfBirth: new Date('2000-01-01') })
+    expect(capFor({ plan: 'pro', planPass: true })).toBe(30)
+    await AiUsage.create({ userId: u._id, day: istDayKey(), kind: 'chat', plan: 'pro', model: 'x', status: 'ok', costInr: 55 })
+    _resetCapCache()
+    expect((await checkMonthlyCap({ id: u._id, plan: 'pro' })).ok).toBe(false)
+    _resetCapCache()
+    expect((await checkMonthlyCap({ id: u._id, plan: 'elite' })).ok).toBe(true)
+  })
+})

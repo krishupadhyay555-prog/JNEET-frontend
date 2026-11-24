@@ -102,13 +102,28 @@ function daysAhead(date, now = new Date()) {
   return (new Date(date).getTime() - now.getTime()) / DAY_MS;
 }
 
+// ── Early-bird seats (real count of applied payments at the early price) ──
+export async function earlySeatsUsed(plan) {
+  if (!plan?.early) return 0;
+  return Payment.countDocuments({ planId: plan.id, amount: plan.early.amount, appliedAt: { $ne: null } });
+}
+export async function currentPrice(plan) {
+  if (!plan?.early) return plan.amount;
+  return (await earlySeatsUsed(plan)) < plan.early.seats ? plan.early.amount : plan.amount;
+}
+
 // ── Orders ───────────────────────────────────────────────────────
 export async function startOrder(user, planId, { payer }) {
   if (!paymentsEnabled()) {
     throw new BillingError(503, "PAYMENTS_OFF", "Paid plans are not open yet. Please check back soon.");
   }
-  const plan = getPlan(planId);
-  if (!plan) throw new BillingError(400, "BAD_PLAN", "That plan does not exist.");
+  const base = getPlan(planId);
+  if (!base || base.hidden) throw new BillingError(400, "BAD_PLAN", "That plan does not exist.");
+  const plan = { ...base, amount: await currentPrice(base) };
+  const exam = plan.exam ?? user.examMode ?? null;
+  if (plan.exam && user.examMode && plan.exam !== user.examMode) {
+    throw new BillingError(409, "WRONG_EXAM", `This pass is for ${plan.exam}. Your account is set to ${user.examMode}.`);
+  }
 
   const now = new Date();
   const current = effectivePlan(user, now);
@@ -160,6 +175,7 @@ export async function startOrder(user, planId, { payer }) {
 
   const doc = await Payment.create({
     userId: user._id, payer, planId: plan.id, tier: plan.tier, days: plan.days,
+    exam, pass: plan.duration === "pass", passEndsAt: plan.duration === "pass" ? new Date(plan.endsAt) : null,
     amount: plan.amount, currency: "INR", orderId: order.id,
     events: [ev("order_created", payer)],
   });
@@ -274,13 +290,19 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
 
   let before; let period;
   for (let attempt = 0; attempt < 4; attempt += 1) {
-    const user = await User.findById(claimed.userId).select("plan planExpiresAt").lean();
+    const user = await User.findById(claimed.userId).select("plan planExpiresAt examMode").lean();
     if (!user) throw new Error("user for payment not found");
     before = effectivePlan(user, now);
     period = computeNewPeriod(user, claimed.tier, claimed.days, now);
+    if (claimed.pass && claimed.passEndsAt) {
+      // A pass ends on its fixed date (or later, if the student already had more).
+      const curEnd = user.planExpiresAt ? new Date(user.planExpiresAt) : null;
+      period = { ...period, end: curEnd && curEnd > claimed.passEndsAt && before !== "free" ? curEnd : new Date(claimed.passEndsAt) };
+    }
     const upd = await User.updateOne(
       { _id: user._id, plan: user.plan ? user.plan : { $in: [null, "free"] }, planExpiresAt: user.planExpiresAt ?? null },
-      { $set: { plan: period.tier, planExpiresAt: period.end } }
+      { $set: { plan: period.tier, planExpiresAt: period.end, planExam: claimed.exam ?? user.examMode ?? null,
+        ...(claimed.pass ? { planPassUntil: period.end } : {}) } }
     );
     if (upd.modifiedCount === 1) break;
     if (attempt === 3) throw new Error("plan update kept conflicting");
@@ -468,9 +490,23 @@ export async function userFromParentToken(token) {
   return user;
 }
 
-export function describeForParent(user) {
+// Catalog + real early-bird seats and today's price (never a fake counter).
+export async function catalogWithSeats(cat = publicCatalog()) {
+  for (const p of cat.plans) {
+    p.current = p.amount;
+    if (!p.early) continue;
+    const used = await earlySeatsUsed({ id: p.id, early: p.early });
+    p.early.seatsLeft = Math.max(0, p.early.seats - used);
+    if (p.early.seatsLeft > 0) p.current = p.early.amount;
+  }
+  return cat;
+}
+
+export async function describeForParent(user) {
   const first = (String(user.name ?? "").trim().split(/\s+/)[0] || "Student").slice(0, 30);
-  return { studentFirstName: first, examMode: user.examMode, ...planStatus(user), catalog: publicCatalog() };
+  const catalog = await catalogWithSeats();
+  catalog.plans = catalog.plans.filter((p) => !p.exam || p.exam === user.examMode);
+  return { studentFirstName: first, examMode: user.examMode, ...planStatus(user), catalog };
 }
 
 // ── helpers ───────────────────────────────────────────────────────
