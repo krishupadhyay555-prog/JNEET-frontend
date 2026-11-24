@@ -27,6 +27,7 @@ import {
   deleteAccount,
   setDateOfBirth,
   updatePreferences,
+  acceptTerms,
   updateExamMode,
 } from "../controllers/userController.js";
 
@@ -39,6 +40,7 @@ router.patch( "/profile",       validate(updateProfileSchema),  updateProfile);
 router.patch( "/password",      authLimiter, validate(changePasswordSchema), changePassword);
 router.delete("/account",       authLimiter, validate(deleteAccountSchema),  deleteAccount);
 router.patch( "/date-of-birth", otpIpLimiter, validate(dateOfBirthSchema),   setDateOfBirth);
+router.post(  "/accept-terms",  authLimiter, acceptTerms);
 router.patch( "/preferences",   validate(preferencesSchema),    updatePreferences);
 router.patch( "/exam-mode",     validate(examModeSchema),       updateExamMode);
 
