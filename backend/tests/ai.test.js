@@ -3,6 +3,9 @@ import { describe, it, expect, beforeAll, afterAll, beforeEach, afterEach, vi } 
 vi.hoisted(() => {
   process.env.OPENAI_API_KEY = "sk-test-not-real";
   process.env.AI_MODEL_FALLBACK = "";
+  // Older tests check the normal free limit (5); the first-24-hours limit
+  // has its own tests below.
+  process.env.AI_NEW_ACCOUNT_DAILY = "5";
 });
 
 import User from "../models/User.js";
@@ -246,5 +249,33 @@ describe("audit: AI budget alert email", () => {
     expect(await isOverBudget()).toBe(true);
     await new Promise((r) => setTimeout(r, 20));
     expect(mailbox.alerts.filter((a) => /budget reached/.test(a.subject))).toHaveLength(1);
+  });
+});
+
+describe("audit: first-24-hours AI limit for new free accounts", () => {
+  beforeEach(() => { process.env.AI_NEW_ACCOUNT_DAILY = "3"; });
+  afterEach(() => { process.env.AI_NEW_ACCOUNT_DAILY = "5"; });
+
+  it("a brand-new free account gets 3 doubts on day one, with a clear message", async () => {
+    const { c } = await signedInClient();
+    for (let i = 0; i < 3; i++) expect((await ask(c, `Question ${i}`)).status).toBe(200);
+    const fourth = await ask(c, "Question 4");
+    expect(fourth.status).toBe(429);
+    const b = JSON.parse(fourth.body);
+    expect(b.limit).toBe(3);
+    expect(b.error).toMatch(/New accounts get 3 AI doubts/);
+  });
+
+  it("after 24 hours the normal free limit (5) applies", async () => {
+    const { c, body } = await signedInClient();
+    await User.collection.updateOne({ email: body.email }, { $set: { createdAt: new Date(Date.now() - 25 * 3600 * 1000) } }); // createdAt is immutable in Mongoose
+    for (let i = 0; i < 5; i++) expect((await ask(c, `Question ${i}`)).status).toBe(200);
+    expect((await ask(c, "Question 6")).status).toBe(429);
+  });
+
+  it("paid plans are never cut on day one", async () => {
+    const { dailyLimitFor } = await import("../services/ai/quota.js");
+    expect(dailyLimitFor("pro", { createdAt: new Date() })).toBe(dailyLimitFor("pro"));
+    expect(dailyLimitFor("free", { createdAt: new Date() })).toBe(3);
   });
 });
