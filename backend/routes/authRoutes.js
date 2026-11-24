@@ -27,6 +27,7 @@ import {
   register,
   login,
   logout,
+  logoutAll,
   getMe,
   updateTargetExam,
   forgotPassword,
@@ -59,6 +60,7 @@ router.post("/resend-verification", requireCaptcha, validate(resendVerificationS
 
 // Protected
 router.post("/logout", logout);
+router.post("/logout-all", authLimiter, protect, logoutAll);
 router.get( "/me",     protect, getMe);
 router.patch("/me/target-exam", protect, validate(targetExamSchema), updateTargetExam);
 

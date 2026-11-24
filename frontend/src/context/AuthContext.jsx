@@ -102,6 +102,16 @@ export function AuthProvider({ children }) {
     clearOfflineData();
   }, []);
 
+  // Signs out every device (throws if the server can't be reached, so the
+  // student knows other devices may still be signed in).
+  const logoutAll = useCallback(async () => {
+    await authApi.logoutAll();
+    authEpochRef.current += 1;
+    setUser(null);
+    writeCached(null);
+    clearOfflineData();
+  }, []);
+
   const refreshUser = useCallback(async () => {
     try {
       const res = await authApi.getMe();
@@ -159,6 +169,7 @@ export function AuthProvider({ children }) {
         examMode:   user?.examMode ?? "NEET",
         login,
         logout,
+        logoutAll,
         refreshUser,
         setStudent,
         updateTargetExam,

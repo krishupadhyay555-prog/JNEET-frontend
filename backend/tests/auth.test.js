@@ -309,3 +309,44 @@ describe("Session length", () => {
     expect(maxAge).toBe(15 * 24 * 60 * 60);
   });
 });
+
+// ── 24 Nov audit: OTP brute force with parallel guesses ──
+describe("audit: OTP attempts are atomic", () => {
+  it("20 wrong reset codes sent at once (different IPs) → at most 5 tried, real code then refused", async () => {
+    const { body } = await signedInClient();
+    await client().post("/api/auth/forgot-password").send({ email: body.email });
+    const real = mailbox.reset.get(body.email);
+    const bad = real === "111111" ? "222222" : "111111";
+    const res = await Promise.all(Array.from({ length: 20 }, () =>
+      client().post("/api/auth/reset-password").send({ email: body.email, otp: bad, newPassword: "Hacked-Pass-99" })));
+    expect(res.filter((r) => r.status === 200)).toHaveLength(0);
+    const u = await User.findOne({ email: body.email }).select("+resetOtpAttempts +resetOtpHash").lean();
+    expect(u.resetOtpAttempts ?? 0).toBeLessThanOrEqual(5);
+    const after = await client().post("/api/auth/reset-password").send({ email: body.email, otp: real, newPassword: "Hacked-Pass-99" });
+    expect(after.status).not.toBe(200);
+  });
+
+  it("wrong code still says how many tries are left", async () => {
+    const { body } = await signedInClient();
+    await client().post("/api/auth/forgot-password").send({ email: body.email });
+    const real = mailbox.reset.get(body.email);
+    const r = await client().post("/api/auth/reset-password").send({ email: body.email, otp: real === "111111" ? "222222" : "111111", newPassword: "Fresh-Mango-78" });
+    expect(r.body.error).toMatch(/4 attempts remaining/);
+  });
+});
+
+describe("audit: log out of all devices", () => {
+  it("kills every session (this one too), password still works", async () => {
+    const { c, body } = await signedInClient();
+    const other = client();
+    expect((await other.post("/api/auth/login").send({ email: body.email, password: body.password })).status).toBe(200);
+    expect((await c.post("/api/auth/logout-all")).status).toBe(200);
+    expect((await c.get("/api/auth/me")).status).toBe(401);
+    expect((await other.get("/api/auth/me")).status).toBe(401);
+    expect((await client().post("/api/auth/login").send({ email: body.email, password: body.password })).status).toBe(200);
+  });
+
+  it("needs a session", async () => {
+    expect((await client().post("/api/auth/logout-all")).status).toBe(401);
+  });
+});

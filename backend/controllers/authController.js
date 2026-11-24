@@ -307,6 +307,18 @@ export const logout = (req, res) => {
   return res.status(200).json({ success: true, message: "Logged out successfully." });
 };
 
+// "Log out of all devices": every old session token stops working at
+// once (tokenVersion bump), including this one.
+export const logoutAll = async (req, res, next) => {
+  try {
+    await User.updateOne({ _id: req.user.id }, { $inc: { tokenVersion: 1 } });
+    clearSessionCookie(res);
+    return res.status(200).json({ success: true, message: "Logged out of all devices." });
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const getMe = async (req, res, next) => {
   try {
     const user = await User.findById(req.user.id).lean();
