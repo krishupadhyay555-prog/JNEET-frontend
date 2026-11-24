@@ -125,7 +125,7 @@ export function TargetExamModal({ user, open, onClose, onSave, allowLater = true
                 <div className="flex items-center gap-1.5 flex-wrap">
                   <span className="block text-sm font-semibold">{exam.label}</span>
                   {exam.tentative && (
-                    <span className="text-[8px] uppercase tracking-wide bg-amber-600/15 text-amber-600 border border-amber-600/30 rounded-full px-1.5 py-0.5">
+                    <span className="text-[10px] uppercase tracking-wide bg-amber-600/15 text-amber-600 border border-amber-600/30 rounded-full px-1.5 py-0.5">
                       Tentative
                     </span>
                   )}

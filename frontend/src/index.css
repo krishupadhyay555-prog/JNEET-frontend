@@ -388,6 +388,17 @@ input:-webkit-autofill:focus {
 }
 .page-enter { animation: pageEnter 0.24s ease-out backwards; }
 
+/* Reduced motion (OS setting): every animation and transition becomes
+   instant everywhere, not just the few named ones below. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-message-in,
   .animate-scale-in,

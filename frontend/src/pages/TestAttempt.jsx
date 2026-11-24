@@ -25,6 +25,7 @@ import { TestTimer } from "../components/tests/TestTimer.jsx";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { ConfirmDialog } from "../components/ui/ConfirmDialog.jsx";
 import toast from "react-hot-toast";
+import { useOverlayClose } from "../hooks/useOverlayClose.js";
 
 const hasValue = (v) => v !== undefined && v !== null && v !== "";
 
@@ -39,6 +40,7 @@ export default function TestAttempt() {
   const [marked, setMarked] = useState(() => new Set());
   const [visited, setVisited] = useState(() => new Set());
   const [showPalette, setShowPalette] = useState(false);
+  useOverlayClose(showPalette, () => setShowPalette(false));
   const [submitting, setSubmitting] = useState(false);
   const [confirm, setConfirm] = useState(null);         // "submit" | "exit" | null
   // seconds spent on each question (for Elite analysis); counts only while the tab is visible

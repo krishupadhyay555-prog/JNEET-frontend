@@ -70,7 +70,7 @@ function Digit({ value, label, urgent }) {
           {String(value).padStart(2, "0")}
         </span>
       </div>
-      <span className="text-[9px] text-gray-600 mt-1 uppercase tracking-wider font-medium">
+      <span className="text-[10px] text-gray-600 mt-1 uppercase tracking-wider font-medium">
         {label}
       </span>
     </div>

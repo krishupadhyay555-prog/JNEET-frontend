@@ -365,7 +365,7 @@ export default function Analytics() {
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <span className="text-xs font-semibold text-fg-primary tabular-nums">{a.score}%</span>
-                      <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide
+                      <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full uppercase tracking-wide
                         ${a.mode === "test" ? "bg-violet-600/10 text-violet-600" : "bg-teal-600/10 text-teal-600"}`}>
                         {a.mode === "test" ? "Test" : "Revision"}
                       </span>

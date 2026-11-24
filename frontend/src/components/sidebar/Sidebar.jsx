@@ -28,8 +28,11 @@ import { ContextMenu }     from "../ui/ContextMenu.jsx";
 import { SessionItem }     from "./SessionItem.jsx";
 import { SavedItem }       from "./SavedItem.jsx";
 import { SidebarSkeletons } from "../ui/SkeletonLoader.jsx";
+import { useOverlayClose } from "../../hooks/useOverlayClose.js";
 
 export function Sidebar({ pinned, onTogglePin, mobileOpen, onMobileClose }) {
+  // Escape closes the phone drawer (no Back hook: tapping a link navigates).
+  useOverlayClose(Boolean(mobileOpen), onMobileClose, { back: false });
   const navigate                  = useNavigate();
   const isDesktop                 = useMediaQuery("(min-width: 768px)");
   const canHover                  = useMediaQuery("(hover: hover) and (pointer: fine)");
