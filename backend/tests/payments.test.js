@@ -16,8 +16,9 @@ import Payment from "../models/Payment.js";
 import AiDaily from "../models/AiDaily.js";
 import { mailbox, clearMailbox } from "./mailbox.js";
 import { connectTestDb, disconnectTestDb, signedInClient, client } from "./helpers.js";
-import { computeNewPeriod, reconcilePayments } from "../services/payments/billing.js";
+import { computeNewPeriod, reconcilePayments, releaseExpiredSeats } from "../services/payments/billing.js";
 import WebhookEvent from "../models/WebhookEvent.js";
+import SeatCounter from "../models/SeatCounter.js";
 import { effectivePlan, canPayDirectly } from "../utils/plan.js";
 import { env } from "../config/env.js";
 
@@ -91,7 +92,7 @@ const sendWebhook = (c, raw, secret = "fake_webhook_secret_for_tests") =>
 beforeAll(connectTestDb);
 afterAll(disconnectTestDb);
 beforeEach(async () => {
-  await Promise.all([User.deleteMany({}), Payment.deleteMany({}), AiDaily.deleteMany({}), WebhookEvent.deleteMany({})]);
+  await Promise.all([User.deleteMany({}), Payment.deleteMany({}), AiDaily.deleteMany({}), WebhookEvent.deleteMany({}), SeatCounter.deleteMany({})]);
   clearMailbox(); stubRazorpay();
 });
 afterEach(() => { globalThis.fetch = realFetch; });
@@ -513,3 +514,116 @@ describe("exam passes, exam lock and fair-use cap", () => {
   })
 })
 
+
+// ── 24 Nov audit: early-bird seat race, exact pass refunds, chargebacks ──
+describe("audit: early-bird seats are atomic", () => {
+  const seatsLeft = async () => (await client().get("/api/payments/plans")).body.plans.find((p) => p.id === "jee_pass").early.seatsLeft;
+
+  it("seat race at 498/500: 3 buyers at once → exactly 2 get ₹599, 1 gets ₹699, never 501 seats", async () => {
+    await SeatCounter.create({ _id: "jee_pass", reserved: 498 });
+    const buyers = await Promise.all([1, 2, 3].map(() => signedInClient({ examMode: "JEE" })));
+    const orders = await Promise.all(buyers.map(({ c }) => c.post("/api/payments/order").send({ planId: "jee_pass" })));
+    expect(orders.map((o) => o.status)).toEqual([201, 201, 201]);
+    expect(orders.map((o) => o.body.amount).sort()).toEqual([59900, 59900, 69900]);
+    expect((await SeatCounter.findById("jee_pass").lean()).reserved).toBe(500);
+    expect(await seatsLeft()).toBe(0);
+    // Each one is charged exactly the price on its order.
+    for (let i = 0; i < 3; i += 1) {
+      const r = await buyers[i].c.post("/api/payments/verify").send(payOrder(orders[i].body.orderId));
+      expect(r.body.applied).toBe(true);
+    }
+    expect((await SeatCounter.findById("jee_pass").lean()).reserved).toBe(500);
+    expect(await Payment.countDocuments({ amount: 59900, appliedAt: { $ne: null } })).toBe(2);
+  });
+
+  it("seat 500 is reserved when the order is made, so the next buyer sees ₹699 (499 → 500 → 501)", async () => {
+    await SeatCounter.create({ _id: "jee_pass", reserved: 499 });
+    expect(await seatsLeft()).toBe(1);
+    const a = await signedInClient({ examMode: "JEE" });
+    const oa = await a.c.post("/api/payments/order").send({ planId: "jee_pass" });
+    expect(oa.body.amount).toBe(59900);
+    expect(await seatsLeft()).toBe(0);
+    const b = await signedInClient({ examMode: "JEE" });
+    expect((await b.c.post("/api/payments/order").send({ planId: "jee_pass" })).body.amount).toBe(69900);
+    // Double-tap by A keeps the SAME ₹599 order and does not take a 2nd seat.
+    const again = await a.c.post("/api/payments/order").send({ planId: "jee_pass" });
+    expect(again.body).toMatchObject({ orderId: oa.body.orderId, amount: 59900, reused: true });
+    expect((await SeatCounter.findById("jee_pass").lean()).reserved).toBe(500);
+  });
+
+  it("an unpaid order gives its seat back after 30 min; a late payment is still honoured and flagged if full", async () => {
+    await SeatCounter.create({ _id: "jee_pass", reserved: 499 });
+    const a = await signedInClient({ examMode: "JEE" });
+    const oa = await a.c.post("/api/payments/order").send({ planId: "jee_pass" });
+    expect(await releaseExpiredSeats()).toBe(0); // too fresh
+    expect(await releaseExpiredSeats({ now: new Date(Date.now() + 31 * 60 * 1000) })).toBe(1);
+    expect(await seatsLeft()).toBe(1);
+    // Someone else takes the freed seat.
+    const b = await signedInClient({ examMode: "JEE" });
+    const ob = await b.c.post("/api/payments/order").send({ planId: "jee_pass" });
+    expect(ob.body.amount).toBe(59900);
+    // A pays the old ₹599 order late: plan given (money never ignored), founder told.
+    const r = await a.c.post("/api/payments/verify").send(payOrder(oa.body.orderId));
+    expect(r.body.applied).toBe(true);
+    const d = await Payment.findOne({ orderId: oa.body.orderId }).lean();
+    expect(d.flag).toBe("early_seat_over");
+    expect(mailbox.alerts.some((m) => /seats filled/i.test(m.subject))).toBe(true);
+  });
+
+  it("gateway down → the seat is given back (no ghost seats)", async () => {
+    await SeatCounter.create({ _id: "jee_pass", reserved: 10 });
+    rz.failCreate = true;
+    const { c } = await signedInClient({ examMode: "JEE" });
+    expect((await c.post("/api/payments/order").send({ planId: "jee_pass" })).status).toBe(502);
+    expect((await SeatCounter.findById("jee_pass").lean()).reserved).toBe(10);
+  });
+
+  it("the client can't choose the price: amount/tier/days in the body are ignored", async () => {
+    const { c } = await signedInClient({ examMode: "JEE" });
+    const o = await c.post("/api/payments/order").send({ planId: "jee_pass", amount: 100, tier: "elite", days: 9999, exam: "NEET" });
+    expect([201, 400]).toContain(o.status);
+    if (o.status === 201) {
+      expect(o.body.amount).toBe(59900);
+      expect(o.body.tier).toBe("pro");
+    }
+  });
+});
+
+describe("audit: refunds and chargebacks take back exactly what was bought", () => {
+  async function buyJeePass() {
+    const s = await signedInClient({ examMode: "JEE" });
+    const o = await s.c.post("/api/payments/order").send({ planId: "jee_pass" });
+    const paid = payOrder(o.body.orderId);
+    await s.c.post("/api/payments/verify").send(paid);
+    return { ...s, paid };
+  }
+
+  it("full refund of a JEE pass bought on a free account → back to free, deep analysis off", async () => {
+    const { c, body, paid } = await buyJeePass();
+    const raw = JSON.stringify({ event: "refund.processed", payload: { refund: { entity: { id: "rfnd_A1", payment_id: paid.paymentId, amount: 59900 } } } });
+    expect((await sendWebhook(c, raw)).status).toBe(200);
+    const u = await User.findOne({ email: body.email }).lean();
+    expect(effectivePlan(u)).toBe("free");
+    expect(u.planPassUntil).toBeNull();
+  });
+
+  it("a lost chargeback removes the plan; a new dispute only flags it", async () => {
+    const { c, body, paid } = await buyJeePass();
+    const dispute = (event) => JSON.stringify({ event, payload: { dispute: { entity: { id: "disp_A1", payment_id: paid.paymentId } } } });
+    await sendWebhook(c, dispute("payment.dispute.created"));
+    let u = await User.findOne({ email: body.email }).lean();
+    expect(effectivePlan(u)).toBe("pro");
+    expect((await Payment.findOne({ paymentId: paid.paymentId }).lean()).flag).toBe("dispute");
+    await sendWebhook(c, dispute("payment.dispute.lost"));
+    u = await User.findOne({ email: body.email }).lean();
+    expect(effectivePlan(u)).toBe("free");
+    expect((await Payment.findOne({ paymentId: paid.paymentId }).lean()).status).toBe("refunded");
+  });
+
+  it("forged dispute webhook (wrong secret) is rejected and changes nothing", async () => {
+    const { c, body, paid } = await buyJeePass();
+    const raw = JSON.stringify({ event: "payment.dispute.lost", payload: { dispute: { entity: { id: "disp_X", payment_id: paid.paymentId } } } });
+    expect((await sendWebhook(c, raw, "wrong_secret")).status).toBe(400);
+    expect(effectivePlan(await User.findOne({ email: body.email }).lean())).toBe("pro");
+  });
+});
