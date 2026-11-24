@@ -19,6 +19,16 @@ export class ErrorBoundary extends Component {
 
   componentDidCatch(error, info) {
     console.error("[ErrorBoundary]", error, info);
+    // A stale page chunk after a deploy: one automatic reload fixes it.
+    if (/dynamically imported module|Importing a module script failed|ChunkLoadError/i.test(String(error?.message))) {
+      try {
+        const last = Number(sessionStorage.getItem("jn_chunk_reload") || 0);
+        if (Date.now() - last > 60_000) {
+          sessionStorage.setItem("jn_chunk_reload", String(Date.now()));
+          window.location.reload();
+        }
+      } catch { /* ignore */ }
+    }
   }
 
   handleReset = () => {
@@ -36,25 +46,31 @@ export class ErrorBoundary extends Component {
               flex items-center justify-center mx-auto mb-6">
               <AlertTriangle size={28} className="text-red-400" />
             </div>
-            <h1 className="text-xl font-semibold text-white mb-2">
+            <h1 className="text-xl font-semibold text-fg-primary mb-2">
               Something went wrong
             </h1>
-            <p className="text-sm text-gray-500 mb-2">
-              An unexpected error occurred. Please try again.
+            <p className="text-sm text-fg-secondary mb-6">
+              This page didn&apos;t load properly. Please try again — your work is saved.
             </p>
-            {this.state.error && (
-              <p className="text-xs text-gray-700 font-mono bg-bg-card rounded-lg p-3 mb-6 text-left">
+            {import.meta.env.DEV && this.state.error ? (
+              <p className="text-xs text-gray-500 font-mono bg-bg-card rounded-lg p-3 mb-6 text-left">
                 {this.state.error.message}
               </p>
-            )}
-            <button
-              onClick={this.handleReset}
-              className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500
-                text-white font-medium px-5 py-2.5 rounded-xl transition text-sm"
-            >
-              <RefreshCw size={14} />
-              Retry
-            </button>
+            ) : null}
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={this.handleReset}
+                className="min-h-[44px] inline-flex items-center gap-2 bg-[#0D9488] hover:bg-[#0F766E]
+                  text-white font-medium px-5 py-2.5 rounded-xl transition text-sm"
+              >
+                <RefreshCw size={14} />
+                Try again
+              </button>
+              <a href="/dashboard"
+                className="min-h-[44px] inline-flex items-center px-5 py-2.5 rounded-xl border border-bg-border text-fg-primary text-sm font-medium hover:bg-bg-hover transition">
+                Go to dashboard
+              </a>
+            </div>
           </div>
         </div>
       );
