@@ -103,6 +103,9 @@ const testAttemptSchema = new mongoose.Schema(
 
     startedAt:   { type: Date, default: Date.now },
     submittedAt: { type: Date, default: null },
+    // Short lock while a submit is being scored, so a double-tap / second
+    // tab can't score the same attempt twice (or overwrite the marks).
+    submittingAt: { type: Date, default: null },
   },
   { timestamps: true }
 );

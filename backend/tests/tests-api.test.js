@@ -209,3 +209,37 @@ describe('Tests API', () => {
     expect((await a.post('/api/test/start').send({ subject: 'Physics', chapter: 'Laws of Motion', easy: 999 })).status).toBe(400)
   })
 })
+
+// ── 24 Nov audit: double-tap / two tabs submitting at once ──
+describe('audit: a test is scored exactly once', () => {
+  it('two submits at the same instant → one 200, one 409, marks from the first only', async () => {
+    const start = await a.post('/api/test/start').send({ subject: 'Physics', chapter: 'Laws of Motion', easy: 3 })
+    const { attemptId, questions } = start.body
+    const stored = await TestAttempt.findById(attemptId).lean()
+    const key = (id) => stored.questions.find((s) => String(s.questionId) === String(id)).correctIndex
+    const right = questions.map((x) => ({ questionId: String(x.questionId), selectedIndex: key(x.questionId) }))
+    const wrong = questions.map((x) => ({ questionId: String(x.questionId), selectedIndex: (key(x.questionId) + 1) % 4 }))
+    const [r1, r2] = await Promise.all([
+      a.post(`/api/test/${attemptId}/submit`).send({ answers: right }),
+      a.post(`/api/test/${attemptId}/submit`).send({ answers: wrong }),
+    ])
+    expect([r1.status, r2.status].sort()).toEqual([200, 409])
+    const winner = r1.status === 200 ? r1 : r2
+    const saved = await TestAttempt.findById(attemptId).lean()
+    expect(saved.marksObtained).toBe(winner.body.attempt.marksObtained)
+    expect([12, -3]).toContain(saved.marksObtained) // 3×(+4) or 3×(−1), hand-computed
+  })
+
+  it('hand-computed mixed paper: 2 right, 1 wrong → +7 marks, score 67', async () => {
+    const start = await a.post('/api/test/start').send({ subject: 'Physics', chapter: 'Laws of Motion', easy: 3 })
+    const [x, y, z] = start.body.questions
+    const stored = await TestAttempt.findById(start.body.attemptId).lean()
+    const key = (id) => stored.questions.find((s) => String(s.questionId) === String(id)).correctIndex
+    const sub = await a.post(`/api/test/${start.body.attemptId}/submit`).send({ answers: [
+      { questionId: String(x.questionId), selectedIndex: key(x.questionId) },
+      { questionId: String(y.questionId), selectedIndex: key(y.questionId) },
+      { questionId: String(z.questionId), selectedIndex: (key(z.questionId) + 1) % 4 },
+    ] })
+    expect(sub.body.attempt).toMatchObject({ correctCount: 2, wrongCount: 1, unattemptedCount: 0, marksObtained: 7, score: 67 })
+  })
+})

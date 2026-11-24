@@ -20,6 +20,17 @@ import {
 
 // ---------- input validation ----------
 
+// Can `m` be scored with +4 right / −1 wrong on `n` questions?
+// (e.g. NEET 717–719 and JEE 297–299 can't.)
+const impossibleMsg = (m, max) =>
+  reachableMarks(m, Math.round(max / 4)) ? null : `${m} isn't possible with +4 / −1 marking. Please check your marks.`;
+export function reachableMarks(m, n) {
+  if (m < 0) return -m <= n;
+  const right = Math.ceil(m / 4);
+  const wrong = right * 4 - m;
+  return right + wrong <= n;
+}
+
 function parseMarks(value, min, max, exam) {
   const n = typeof value === "string" && value.trim() !== "" ? Number(value.trim()) : value;
   if (typeof n !== "number" || !Number.isFinite(n)) {
@@ -36,13 +47,13 @@ function parseMarks(value, min, max, exam) {
 
 /** Returns null if the value is valid JEE Main marks, else a message. */
 export function validateJeeMarks(value) {
-  try { parseMarks(value, JEE_FACTS.minMarks, JEE_FACTS.maxMarks, "JEE Main"); return null; }
+  try { return impossibleMsg(parseMarks(value, JEE_FACTS.minMarks, JEE_FACTS.maxMarks, "JEE Main"), JEE_FACTS.maxMarks); }
   catch (e) { return e.message; }
 }
 
 /** Returns null if the value is valid NEET UG marks, else a message. */
 export function validateNeetMarks(value) {
-  try { parseMarks(value, NEET_FACTS.minMarks, NEET_FACTS.maxMarks, "NEET UG"); return null; }
+  try { return impossibleMsg(parseMarks(value, NEET_FACTS.minMarks, NEET_FACTS.maxMarks, "NEET UG"), NEET_FACTS.maxMarks); }
   catch (e) { return e.message; }
 }
 

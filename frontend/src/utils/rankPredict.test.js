@@ -173,3 +173,20 @@ describe("NEET UG", () => {
     expect(validateNeetMarks(800)).toMatch(/between -180 and 720/);
   });
 });
+
+// 24 Nov audit: impossible scores are refused (hand-checked with 4c − w, c + w ≤ N)
+import { reachableMarks, validateNeetMarks as vNeet, validateJeeMarks as vJee } from "./rankPredict.js";
+describe("impossible marks", () => {
+  it("NEET: 720 / 716 / 715 ok; 717, 718, 719 impossible", () => {
+    expect([720, 716, 715, 0, -180].map((m) => reachableMarks(m, 180))).toEqual([true, true, true, true, true]);
+    expect([717, 718, 719, -181].map((m) => reachableMarks(m, 180))).toEqual([false, false, false, false]);
+    expect(vNeet(719)).toMatch(/isn't possible/);
+    expect(vNeet(716)).toBeNull();
+  });
+  it("JEE: 300 / 296 ok; 297–299 impossible", () => {
+    expect(vJee(299)).toMatch(/isn't possible/);
+    expect(vJee(297)).toMatch(/isn't possible/);
+    expect(vJee(296)).toBeNull();
+    expect(vJee(-75)).toBeNull();
+  });
+});

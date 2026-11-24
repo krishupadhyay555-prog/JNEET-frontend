@@ -455,11 +455,17 @@ export const submitTest = async (req, res, next) => {
     const { attemptId } = req.params;
     const { answers } = req.body;
 
-    const attempt = await TestAttempt.findOne({ _id: attemptId, userId: req.user.id });
+    // Claim the attempt atomically: only ONE submit can score it.
+    const now = new Date();
+    const attempt = await TestAttempt.findOneAndUpdate(
+      { _id: attemptId, userId: req.user.id, status: { $ne: "submitted" },
+        $or: [{ submittingAt: null }, { submittingAt: { $lt: new Date(now.getTime() - 30_000) } }] },
+      { $set: { submittingAt: now } },
+      { new: true }
+    );
     if (!attempt) {
-      return res.status(404).json({ success: false, error: "Test attempt not found." });
-    }
-    if (attempt.status === "submitted") {
+      const exists = await TestAttempt.exists({ _id: attemptId, userId: req.user.id });
+      if (!exists) return res.status(404).json({ success: false, error: "Test attempt not found." });
       return res.status(409).json({ success: false, error: "This test was already submitted." });
     }
 
