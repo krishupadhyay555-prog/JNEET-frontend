@@ -32,6 +32,7 @@
 import jwt from "jsonwebtoken";
 import Payment from "../../models/Payment.js";
 import WebhookEvent from "../../models/WebhookEvent.js";
+import SeatCounter from "../../models/SeatCounter.js";
 import User from "../../models/User.js";
 import { env } from "../../config/env.js";
 import { getPlan, paymentsEnabled, TIER_RANK, dailyValue, publicCatalog } from "../../config/plans.js";
@@ -48,6 +49,7 @@ const ORDER_LOCK_MS = 15 * 1000;         // per-user lock while an order is crea
 const DUPLICATE_WINDOW_MS = 30 * 60 * 1000;
 const RECONCILE_MIN_AGE_MS = 3 * 60 * 1000;
 const RECONCILE_MAX_AGE_MS = 3 * DAY_MS;
+const SEAT_HOLD_MS = 30 * 60 * 1000;     // an unpaid early-bird order keeps its seat this long
 
 function ev(type, source, note = "") {
   return { at: new Date(), type, source, note: String(note).slice(0, 200) };
@@ -102,10 +104,47 @@ function daysAhead(date, now = new Date()) {
   return (new Date(date).getTime() - now.getTime()) / DAY_MS;
 }
 
-// ── Early-bird seats (real count of applied payments at the early price) ──
+// ── Early-bird seats ─────────────────────────────────────────────
+// SeatCounter.reserved = paid early seats + seats held by open orders.
+// A seat is taken atomically when the order is created (so the price on
+// the Razorpay order is the price the student pays), and given back if
+// the order isn't paid within 30 min or the student opens another order.
+async function ensureCounter(plan) {
+  if (await SeatCounter.exists({ _id: plan.id })) return;
+  const used = await Payment.countDocuments({ planId: plan.id, amount: plan.early.amount, appliedAt: { $ne: null } });
+  await SeatCounter.updateOne({ _id: plan.id }, { $setOnInsert: { reserved: used } }, { upsert: true })
+    .catch((err) => { if (err?.code !== 11000) throw err; });
+}
 export async function earlySeatsUsed(plan) {
   if (!plan?.early) return 0;
-  return Payment.countDocuments({ planId: plan.id, amount: plan.early.amount, appliedAt: { $ne: null } });
+  await ensureCounter(plan);
+  return (await SeatCounter.findById(plan.id).lean())?.reserved ?? 0;
+}
+async function takeSeat(plan) {
+  await ensureCounter(plan);
+  return Boolean(await SeatCounter.findOneAndUpdate(
+    { _id: plan.id, reserved: { $lt: plan.early.seats } }, { $inc: { reserved: 1 } }, { projection: { _id: 1 } }
+  ));
+}
+async function giveBackSeat(planId) {
+  await SeatCounter.updateOne({ _id: planId, reserved: { $gt: 0 } }, { $inc: { reserved: -1 } });
+}
+// Frees the seat of one unpaid order (atomic on the Payment, so a seat is
+// never given back twice, and never while the plan is being applied).
+async function releaseSeat(docId, planId, note) {
+  const r = await Payment.updateOne(
+    { _id: docId, seatHeld: true, appliedAt: null, claimedAt: null },
+    { $set: { seatHeld: false }, $push: { events: ev("seat_released", "system", note) } }
+  );
+  if (r.modifiedCount === 1) { await giveBackSeat(planId); return true; }
+  return false;
+}
+export async function releaseExpiredSeats({ now = new Date() } = {}) {
+  const docs = await Payment.find({ seatHeld: true, appliedAt: null, createdAt: { $lt: new Date(now.getTime() - SEAT_HOLD_MS) } })
+    .select("_id planId").limit(200).lean();
+  let released = 0;
+  for (const d of docs) if (await releaseSeat(d._id, d.planId, "not paid within 30 min")) released += 1;
+  return released;
 }
 export async function currentPrice(plan) {
   if (!plan?.early) return plan.amount;
@@ -119,7 +158,7 @@ export async function startOrder(user, planId, { payer }) {
   }
   const base = getPlan(planId);
   if (!base || base.hidden) throw new BillingError(400, "BAD_PLAN", "That plan does not exist.");
-  const plan = { ...base, amount: await currentPrice(base) };
+  const plan = { ...base }; // amount is decided below, after the seat check
   const exam = plan.exam ?? user.examMode ?? null;
   if (plan.exam && user.examMode && plan.exam !== user.examMode) {
     throw new BillingError(409, "WRONG_EXAM", `This pass is for ${plan.exam}. Your account is set to ${user.examMode}.`);
@@ -146,7 +185,9 @@ export async function startOrder(user, planId, { payer }) {
     userId: user._id, planId: plan.id, payer, status: "created", appliedAt: null,
     supersededAt: null, createdAt: { $gt: new Date(now.getTime() - REUSE_ORDER_MS) },
   }).sort({ createdAt: -1 }).lean();
-  if (open && open.amount === plan.amount) return { ...orderResponse(open, plan, preview), reused: true };
+  if (open && (open.amount === base.amount || (base.early && open.seatHeld && open.amount === base.early.amount))) {
+    return { ...orderResponse(open, plan, preview), reused: true };
+  }
 
   // Per-user lock: two requests at the same instant can't both create orders.
   const locked = await User.findOneAndUpdate(
@@ -156,6 +197,15 @@ export async function startOrder(user, planId, { payer }) {
   );
   if (!locked) throw new BillingError(409, "ORDER_IN_PROGRESS", "A payment is already being started. Please wait a few seconds.");
 
+  // Early-bird: take a seat atomically, or charge the full price.
+  let seatHeld = false;
+  plan.amount = base.amount;
+  if (base.early && (await takeSeat(base))) { seatHeld = true; plan.amount = base.early.amount; }
+  const abort = async () => {
+    await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
+    if (seatHeld) await giveBackSeat(base.id);
+  };
+
   let order;
   try {
     order = await rzp.createOrder({
@@ -164,20 +214,20 @@ export async function startOrder(user, planId, { payer }) {
       notes: { userId, planId: plan.id, payer },
     });
   } catch (err) {
-    await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
+    await abort();
     console.error("[pay] create order failed:", err.message);
     throw new BillingError(502, "GATEWAY_ERROR", "Couldn't start the payment right now. Please try again in a minute.");
   }
   if (order?.amount !== plan.amount || order?.currency !== "INR" || !order?.id) {
-    await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
+    await abort();
     throw new BillingError(502, "GATEWAY_ERROR", "Couldn't start the payment right now. Please try again in a minute.");
   }
 
   const doc = await Payment.create({
     userId: user._id, payer, planId: plan.id, tier: plan.tier, days: plan.days,
     exam, pass: plan.duration === "pass", passEndsAt: plan.duration === "pass" ? new Date(plan.endsAt) : null,
-    amount: plan.amount, currency: "INR", orderId: order.id,
-    events: [ev("order_created", payer)],
+    amount: plan.amount, currency: "INR", orderId: order.id, seatHeld,
+    events: [ev("order_created", payer, seatHeld ? "early-bird seat held" : "")],
   });
   // Any other open order of this student is now "superseded": if it is
   // still paid later (old tab), the money is honoured but flagged.
@@ -185,6 +235,9 @@ export async function startOrder(user, planId, { payer }) {
     { userId: user._id, status: "created", appliedAt: null, supersededAt: null, _id: { $ne: doc._id } },
     { $set: { supersededAt: now }, $push: { events: ev("superseded", "system", `by ${order.id}`) } }
   );
+  // Their older unpaid orders give back any early-bird seat at once.
+  const held = await Payment.find({ userId: user._id, seatHeld: true, appliedAt: null, _id: { $ne: doc._id } }).select("_id planId").lean();
+  for (const h of held) await releaseSeat(h._id, h.planId, `student opened ${order.id}`);
   await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
 
   return orderResponse(doc, plan, preview);
@@ -250,6 +303,7 @@ export async function handleWebhook(rawBody, signature, eventId = null) {
 
 async function processWebhookEvent(evt) {
   if (evt?.event === "refund.processed" || evt?.event === "refund.created") return handleRefund(evt);
+  if (typeof evt?.event === "string" && evt.event.startsWith("payment.dispute.")) return handleDispute(evt);
 
   const entity = evt?.payload?.payment?.entity;
   if (!entity?.order_id) return 200;
@@ -287,13 +341,21 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
   );
   if (!claimed) return Payment.findById(paymentDocId); // already applied, or being applied right now
   if (!claimed.paidAt) await Payment.updateOne({ _id: claimed._id, paidAt: null }, { $set: { paidAt: now } });
+  await keepEarlySeat(claimed);
 
-  let before; let period;
+  let before; let period; let endBefore = null; let passUntilBefore = null;
   for (let attempt = 0; attempt < 4; attempt += 1) {
-    const user = await User.findById(claimed.userId).select("plan planExpiresAt examMode").lean();
+    const user = await User.findById(claimed.userId).select("plan planExpiresAt planPassUntil examMode").lean();
     if (!user) throw new Error("user for payment not found");
     before = effectivePlan(user, now);
     period = computeNewPeriod(user, claimed.tier, claimed.days, now);
+    endBefore = before !== "free" && user.planExpiresAt ? new Date(user.planExpiresAt) : null;
+    passUntilBefore = user.planPassUntil ? new Date(user.planPassUntil) : null;
+    // Deep analysis (pass) runs till the pass date — never longer just
+    // because an older monthly plan happens to end later.
+    const passUntil = claimed.pass
+      ? new Date(Math.max(passUntilBefore?.getTime() ?? 0, new Date(claimed.passEndsAt ?? period.end).getTime()))
+      : null;
     if (claimed.pass && claimed.passEndsAt) {
       // A pass ends on its fixed date (or later, if the student already had more).
       const curEnd = user.planExpiresAt ? new Date(user.planExpiresAt) : null;
@@ -302,7 +364,7 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
     const upd = await User.updateOne(
       { _id: user._id, plan: user.plan ? user.plan : { $in: [null, "free"] }, planExpiresAt: user.planExpiresAt ?? null },
       { $set: { plan: period.tier, planExpiresAt: period.end, planExam: claimed.exam ?? user.examMode ?? null,
-        ...(claimed.pass ? { planPassUntil: period.end } : {}) } }
+        ...(claimed.pass ? { planPassUntil: passUntil } : {}) } }
     );
     if (upd.modifiedCount === 1) break;
     if (attempt === 3) throw new Error("plan update kept conflicting");
@@ -310,7 +372,7 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
 
   const done = await Payment.findOneAndUpdate(
     { _id: claimed._id },
-    { $set: { appliedAt: new Date(), planBefore: before, planAfter: period.tier, periodEnd: period.end },
+    { $set: { appliedAt: new Date(), planBefore: before, planAfter: period.tier, periodEnd: period.end, endBefore, passUntilBefore },
       $push: { events: ev("plan_applied", source, `${before} → ${period.tier} till ${period.end.toISOString()}`) } },
     { returnDocument: "after" }
   );
@@ -318,6 +380,24 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
   sendReceipt(done).catch(() => {});
   await checkForDuplicate(done);
   return done;
+}
+
+// A paid early-price order always keeps (or re-takes) its seat. If its
+// seat had been given back (paid after 30 min) and the 500 are now full,
+// the money is still honoured and the founder is told.
+async function keepEarlySeat(doc) {
+  const plan = getPlan(doc.planId);
+  if (!plan?.early || doc.amount !== plan.early.amount || doc.seatHeld) return;
+  await ensureCounter(plan);
+  const c = await SeatCounter.findOneAndUpdate({ _id: plan.id }, { $inc: { reserved: 1 } }, { returnDocument: "after" });
+  const over = (c?.reserved ?? 0) > plan.early.seats;
+  await Payment.updateOne({ _id: doc._id }, { $set: { seatHeld: true, ...(over ? { flag: "early_seat_over" } : {}) },
+    $push: { events: ev("seat_retaken", "system", over ? "early seats were already full" : "") } });
+  if (over) alertFounder("Early-bird order paid after seats filled", [
+    `Order ${doc.orderId} · ₹${doc.amount / 100} · plan ${doc.planId}.`,
+    `It was paid late (after its seat hold expired), so early-bird seats are now ${c.reserved}/${plan.early.seats}.`,
+    "The plan was activated at the early price the student was shown. No action needed unless you want to cap it.",
+  ]);
 }
 
 // Money is never refused once captured — but a second purchase within
@@ -360,21 +440,62 @@ async function handleRefund(evt) {
     return 200;
   }
 
-  // Full refund of an activated pass: take back exactly the value it added.
-  const now = new Date();
-  for (let attempt = 0; attempt < 4; attempt += 1) {
-    const user = await User.findById(doc.userId).select("plan planExpiresAt").lean();
-    if (!user) break;
-    const current = effectivePlan(user, now);
-    if (current === "free" || !user.planExpiresAt) break;
-    const daysBack = (doc.amount / dailyValue(current));
-    const newEnd = new Date(new Date(user.planExpiresAt).getTime() - daysBack * DAY_MS);
-    const set = newEnd <= now ? { plan: "free", planExpiresAt: null } : { planExpiresAt: newEnd };
-    const upd = await User.updateOne({ _id: user._id, plan: user.plan, planExpiresAt: user.planExpiresAt }, { $set: set });
-    if (upd.modifiedCount === 1) break;
-  }
+  await takeBackPaid(doc);
   await Payment.updateOne({ _id: doc._id }, { $set: { status: "refunded", flag: "refund" }, $push: { events: ev("refunded", "webhook", `${refund.id}; paid days removed`) } });
   alertFounder("Refund processed — paid days removed", [`Order ${doc.orderId} · ₹${doc.amount / 100} refunded (${refund.id}).`]);
+  return 200;
+}
+
+// Takes back exactly what one activated payment added.
+//   Pass  → the time span it added (pass end − old end), and the deep-
+//           analysis date goes back to what it was. Value maths would only
+//           remove ~90 days of a ₹599 pass, which is wrong.
+//   Month → its value in days of the current tier (handles upgrades).
+async function takeBackPaid(doc) {
+  const now = new Date();
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const user = await User.findById(doc.userId).select("plan planExpiresAt planPassUntil").lean();
+    if (!user) return;
+    const current = effectivePlan(user, now);
+    const set = {};
+    if (doc.pass) set.planPassUntil = doc.passUntilBefore ?? null;
+    if (current !== "free" && user.planExpiresAt) {
+      const end = new Date(user.planExpiresAt).getTime();
+      let backMs;
+      if (doc.pass && doc.periodEnd && (doc.endBefore || doc.planBefore === "free")) {
+        const base = doc.endBefore ? Math.max(new Date(doc.endBefore).getTime(), new Date(doc.appliedAt).getTime()) : new Date(doc.appliedAt).getTime();
+        backMs = Math.max(0, new Date(doc.periodEnd).getTime() - base);
+      } else {
+        backMs = (doc.amount / dailyValue(current)) * DAY_MS;
+      }
+      const newEnd = new Date(end - backMs);
+      if (newEnd <= now) { set.plan = "free"; set.planExpiresAt = null; } else set.planExpiresAt = newEnd;
+    }
+    if (!Object.keys(set).length) return;
+    const upd = await User.updateOne({ _id: user._id, plan: user.plan, planExpiresAt: user.planExpiresAt }, { $set: set });
+    if (upd.modifiedCount === 1) return;
+  }
+}
+
+// Chargebacks: a new dispute is flagged for the founder; a LOST dispute
+// (money returned to the payer by the bank) removes the plan like a refund.
+async function handleDispute(evt) {
+  const d = evt?.payload?.dispute?.entity;
+  const paymentId = d?.payment_id ?? evt?.payload?.payment?.entity?.id;
+  if (!paymentId) return 200;
+  const doc = await Payment.findOne({ paymentId });
+  if (!doc) return 200;
+  if (evt.event === "payment.dispute.lost") {
+    if (doc.status === "refunded") return 200;
+    if (doc.appliedAt) await takeBackPaid(doc);
+    await Payment.updateOne({ _id: doc._id }, { $set: { status: "refunded", flag: "dispute" }, $push: { events: ev("dispute_lost", "webhook", `${d?.id ?? ""}; paid days removed`) } });
+    alertFounder("Chargeback lost — paid days removed", [`Order ${doc.orderId} · ₹${doc.amount / 100} · dispute ${d?.id ?? "?"}.`]);
+    return 200;
+  }
+  await Payment.updateOne({ _id: doc._id }, { $set: { flag: "dispute" }, $push: { events: ev(evt.event.replace("payment.", ""), "webhook", d?.id ?? "") } });
+  if (evt.event === "payment.dispute.created") {
+    alertFounder("Chargeback (dispute) opened", [`Order ${doc.orderId} · ₹${doc.amount / 100} · dispute ${d?.id ?? "?"}.`, "Reply with evidence in the Razorpay dashboard before the deadline. The plan stays on unless the dispute is lost."]);
+  }
   return 200;
 }
 
@@ -384,6 +505,7 @@ async function handleRefund(evt) {
 // captured first. Runs every 5 minutes on the server.
 export async function reconcilePayments({ now = new Date() } = {}) {
   if (!paymentsEnabled()) return { checked: 0, applied: 0 };
+  await releaseExpiredSeats({ now }).catch((err) => console.warn("[pay] seat release failed:", err.message));
   const docs = await Payment.find({
     appliedAt: null, status: { $in: ["created", "paid"] },
     createdAt: { $lt: new Date(now.getTime() - RECONCILE_MIN_AGE_MS), $gt: new Date(now.getTime() - RECONCILE_MAX_AGE_MS) },

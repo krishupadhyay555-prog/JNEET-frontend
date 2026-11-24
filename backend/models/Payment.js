@@ -37,7 +37,8 @@ const paymentSchema = new mongoose.Schema(
     payerEmail:{ type: String, default: null },        // from Razorpay, for the receipt
     source:    { type: String, enum: ["checkout", "webhook", "reconcile", null], default: null },
     supersededAt: { type: Date, default: null },       // student opened a different plan afterwards
-    flag:      { type: String, enum: ["possible_duplicate", "superseded_paid", "refund", "mismatch", null], default: null },
+    flag:      { type: String, enum: ["possible_duplicate", "superseded_paid", "refund", "mismatch", "dispute", "early_seat_over", null], default: null },
+    seatHeld:  { type: Boolean, default: false },      // holds one early-bird seat (SeatCounter)
     events: {
       type: [{ _id: false, at: Date, type: { type: String }, source: String, note: String }],
       default: [],
@@ -49,6 +50,8 @@ const paymentSchema = new mongoose.Schema(
     planBefore:   { type: String, default: null },
     planAfter:    { type: String, default: null },
     periodEnd:    { type: Date, default: null },
+    endBefore:    { type: Date, default: null },       // plan end just before this payment (for exact refunds)
+    passUntilBefore: { type: Date, default: null },
     receiptSent:  { type: Boolean, default: false },
   },
   { timestamps: true, versionKey: false }
@@ -57,5 +60,6 @@ const paymentSchema = new mongoose.Schema(
 paymentSchema.index({ paymentId: 1 }, { unique: true, partialFilterExpression: { paymentId: { $type: "string" } } });
 paymentSchema.index({ userId: 1, createdAt: -1 });
 paymentSchema.index({ status: 1, appliedAt: 1, createdAt: 1 }); // reconciliation sweep
+paymentSchema.index({ seatHeld: 1, appliedAt: 1, createdAt: 1 }, { partialFilterExpression: { seatHeld: true } });
 
 export default mongoose.model("Payment", paymentSchema);

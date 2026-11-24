@@ -48,6 +48,12 @@ export default function ParentPay() {
     try {
       if (!(await loadCheckout())) { setError("The payment page couldn't load. Please check your connection and try again."); return; }
       const { data: order } = await paymentApi.parentOrder(token, planId);
+      const shown = info.catalog.plans.find((p) => p.id === planId);
+      if (shown && order.amount !== (shown.current ?? shown.amount)) {
+        paymentApi.parentInfo(token).then((r) => setInfo(r.data)).catch(() => {});
+        setError(`The price just changed to ${rupees(order.amount)} (early-bird seats are full). Press Pay again to continue at ${rupees(order.amount)}.`);
+        return;
+      }
       const paid = await openCheckout(order);
       if (!paid) return;
       try {

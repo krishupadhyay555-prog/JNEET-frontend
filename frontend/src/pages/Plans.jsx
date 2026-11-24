@@ -98,6 +98,13 @@ export default function Plans() {
       const ok = await loadCheckout();
       if (!ok) { toast.error("The payment window didn't open. Check your internet and try again."); return; }
       const { data: order } = await paymentApi.order(plan.id);
+      // Early-bird seats can run out between page load and tap: never open
+      // the payment window at a price the student wasn't shown.
+      if (order.amount !== (plan.current ?? plan.amount)) {
+        paymentApi.plans().then((p) => setCatalog(p.data)).catch(() => {});
+        toast(`The price just changed to ${rupees(order.amount)} (early-bird seats are full). Tap again to pay ${rupees(order.amount)}.`, { duration: 9000 });
+        return;
+      }
       const paid = await openCheckout(order);
       if (!paid) return; // closed the window — nothing charged
       setConfirming(true);
