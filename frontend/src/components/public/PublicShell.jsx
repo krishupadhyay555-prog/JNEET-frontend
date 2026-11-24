@@ -11,6 +11,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { BUSINESS, LEGAL } from "../../legal/content.js";
+import { useAuth } from "../../context/AuthContext.jsx";
 
 export const INK = "text-[#17161C]";
 export const MUTED = "text-[#5F5B67]";
@@ -49,6 +50,7 @@ export function SecondaryButton({ to, children, className = "" }) {
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const { isLoggedIn } = useAuth();
   const link = ({ isActive }) => `px-3 py-2 rounded-lg text-[14px] font-medium transition-colors ${isActive ? "text-[#0D9488]" : "text-[#3A3741] hover:text-[#17161C] hover:bg-black/[0.03]"}`;
   return (
     <header className="sticky top-0 z-30 bg-[#F6F5F2]/85 backdrop-blur-md border-b border-[#E7E4DD]/70">
@@ -58,8 +60,14 @@ function Header() {
           {NAV.map(([to, label]) => <NavLink key={to} to={to} className={link}>{label}</NavLink>)}
         </nav>
         <div className="hidden md:flex items-center gap-2">
-          <Link to="/login" className="px-3.5 py-2 rounded-lg text-[14px] font-semibold text-[#17161C] hover:bg-black/[0.04]">Log in</Link>
-          <Link to="/register" className="px-4 py-2 rounded-lg text-[14px] font-semibold bg-[#17161C] text-white hover:bg-black">Start free</Link>
+          {isLoggedIn ? (
+            <Link to="/dashboard" className="px-4 py-2 rounded-lg text-[14px] font-semibold bg-[#17161C] text-white hover:bg-black">Back to dashboard</Link>
+          ) : (
+            <>
+              <Link to="/login" className="px-3.5 py-2 rounded-lg text-[14px] font-semibold text-[#17161C] hover:bg-black/[0.04]">Log in</Link>
+              <Link to="/register" className="px-4 py-2 rounded-lg text-[14px] font-semibold bg-[#17161C] text-white hover:bg-black">Start free</Link>
+            </>
+          )}
         </div>
         <button className="md:hidden p-2 -mr-2 rounded-lg text-[#17161C]" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-label="Menu">
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -70,10 +78,14 @@ function Header() {
           {NAV.map(([to, label]) => (
             <NavLink key={to} to={to} onClick={() => setOpen(false)} className="block px-2 py-2.5 rounded-lg text-[15px] font-medium text-[#17161C]">{label}</NavLink>
           ))}
-          <div className="grid grid-cols-2 gap-2 pt-2">
-            <SecondaryButton to="/login" className="py-2.5">Log in</SecondaryButton>
-            <PrimaryButton to="/register" className="py-2.5">Start free</PrimaryButton>
-          </div>
+          {isLoggedIn ? (
+            <div className="pt-2"><PrimaryButton to="/dashboard" className="py-2.5 w-full">Back to dashboard</PrimaryButton></div>
+          ) : (
+            <div className="grid grid-cols-2 gap-2 pt-2">
+              <SecondaryButton to="/login" className="py-2.5">Log in</SecondaryButton>
+              <PrimaryButton to="/register" className="py-2.5">Start free</PrimaryButton>
+            </div>
+          )}
         </div>
       )}
     </header>

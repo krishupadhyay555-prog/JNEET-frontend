@@ -21,7 +21,7 @@ import { TodayPlan } from "../components/dashboard/TodayPlan.jsx";
 import toast from "react-hot-toast";
 import {
   RefreshCw, ClipboardList, BarChart3, TrendingUp, StickyNote,
-  ChevronRight, MessageCircle, BookOpen, FileText, Trophy, BookX } from "lucide-react";
+  ChevronRight, MessageCircle, BookOpen, FileText, Trophy, BookX, Gauge } from "lucide-react";
 
 function formatRelative(dateStr) {
   if (!dateStr) return null;
@@ -203,6 +203,14 @@ export default function Dashboard() {
       desc: revisionDesc,
       available: true,
       onClick: () => navigate("/revision"),
+    },
+    {
+      icon: <Gauge size={20} className="text-indigo-500" />,
+      iconBg: "bg-indigo-500/10",
+      title: "Rank Predictor",
+      desc: `Marks or percentile → your expected ${examMode === "NEET" ? "NEET" : "JEE Main"} All-India Rank`,
+      available: true,
+      onClick: () => navigate(examMode === "NEET" ? "/neet-rank-predictor" : "/jee-main-rank-predictor"),
     },
     {
       icon: <BookX size={20} className="text-red-500" />,
