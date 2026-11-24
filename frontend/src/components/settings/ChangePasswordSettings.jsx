@@ -15,7 +15,18 @@ const inputCls =
   "w-full bg-bg-panel border border-bg-border rounded-xl px-3.5 py-2.5 text-base sm:text-sm text-fg-primary placeholder-gray-500 focus:outline-none focus:border-violet-500/60 transition";
 
 export function ChangePasswordSettings() {
-  const { changePassword } = useAuth();
+  const { changePassword, logoutAll } = useAuth();
+  const [allBusy, setAllBusy] = useState(false);
+  const signOutEverywhere = async () => {
+    setAllBusy(true);
+    try {
+      await logoutAll();
+      toast.success("Logged out of all devices.");
+    } catch {
+      toast.error("Couldn't reach the server. Please try again.");
+      setAllBusy(false);
+    }
+  };
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState("");
   const [next, setNext] = useState("");
@@ -46,10 +57,16 @@ export function ChangePasswordSettings() {
 
   if (!open) {
     return (
-      <button type="button" onClick={() => setOpen(true)}
-        className="border border-bg-border hover:bg-bg-hover text-fg-primary text-xs font-semibold px-4 py-2 rounded-xl transition active:scale-95">
-        Change password
-      </button>
+      <div className="flex flex-wrap gap-2">
+        <button type="button" onClick={() => setOpen(true)}
+          className="min-h-[44px] border border-bg-border hover:bg-bg-hover text-fg-primary text-xs font-semibold px-4 py-2 rounded-xl transition active:scale-95">
+          Change password
+        </button>
+        <button type="button" onClick={signOutEverywhere} disabled={allBusy}
+          className="min-h-[44px] border border-bg-border hover:bg-bg-hover text-fg-primary text-xs font-semibold px-4 py-2 rounded-xl transition active:scale-95 disabled:opacity-50 flex items-center gap-2">
+          {allBusy ? <Spinner size={12} /> : null} Log out of all devices
+        </button>
+      </div>
     );
   }
 

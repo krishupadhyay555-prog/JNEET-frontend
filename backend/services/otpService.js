@@ -98,15 +98,28 @@ export async function checkOtp(user, purpose, submitted) {
     return { ok: false, status: 429, clear: true, error: "Too many incorrect attempts. Please request a new code." };
   }
 
+  // Take one attempt ATOMICALLY before checking the code, so many guesses
+  // sent at the same instant can never get more than OTP_MAX_ATTEMPTS tries
+  // (a read-then-save counter let parallel guesses all see "0 used").
+  const taken = await user.constructor.findOneAndUpdate(
+    { _id: user._id, [f.hash]: hash, [f.attempts]: { $not: { $gte: OTP_MAX_ATTEMPTS } } },
+    { $inc: { [f.attempts]: 1 } },
+    { new: true, projection: { [f.attempts]: 1 } }
+  ).select(`+${f.attempts}`).lean();
+  if (!taken) {
+    clearOtp(user, f);
+    return { ok: false, status: 429, clear: true, error: "Too many incorrect attempts. Please request a new code." };
+  }
+  const used = taken[f.attempts] ?? 1;
+
   const valid = await verifyOtp(purpose, user._id, submitted, hash);
   if (!valid) {
-    user[f.attempts] = (user[f.attempts] ?? 0) + 1;
-    const remaining = OTP_MAX_ATTEMPTS - user[f.attempts];
+    const remaining = OTP_MAX_ATTEMPTS - used;
     if (remaining <= 0) clearOtp(user, f);
     return {
       ok: false,
       status: 400,
-      clear: true,
+      clear: remaining <= 0,
       error:
         remaining > 0
           ? `Incorrect code. ${remaining} attempt${remaining === 1 ? "" : "s"} remaining.`
