@@ -19,7 +19,7 @@ export const BUSINESS = {
   // Postal address for legal notices. Set to a string to publish it, or leave null.
   address: null,
   // Phone shown on the Contact page (Razorpay asks for one). Set a string like "+91 98xxxxxx10", or leave null.
-  phone: null,
+  phone: "+91 84830 61178",
   phoneHours: "Mon–Sat, 10 am – 6 pm IST",
   supportEmail: "official.krishupadhyay@gmail.com",
   // IT Rules / DPDP Act: name and contact of the person who handles complaints.
@@ -220,7 +220,7 @@ export const LEGAL = {
       {
         h: "11. Contact and Grievance Officer",
         p: [
-          `${B.supportEmail}${B.address ? ` · ${B.address}` : ""}`,
+          `${B.supportEmail}${B.phone ? ` · ${B.phone}` : ""}${B.address ? ` · ${B.address}` : ""}`,
           `Grievance Officer: ${B.grievanceOfficer.name}, ${B.grievanceOfficer.email}. We acknowledge every complaint within 48 hours and resolve it within one month.`,
         ],
       },
