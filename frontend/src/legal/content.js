@@ -255,6 +255,7 @@ export const LEGAL = {
         p: ["All purchases are final: paid plans are non-refundable once purchased, and we do not give refunds for unused time or because you changed your mind. Please try the free plan first to see if JNEET+ AI suits you."],
         ul: [
           "The only exceptions are our own errors: if you were charged twice, charged the wrong amount, or paid and your plan was never activated because of a fault on our side, we will correct it or refund the affected amount in full.",
+          "If a payment is reversed through a chargeback or bank dispute that is decided against us, the plan bought with that payment is removed, the same as after a full refund.",
           "Nothing here limits any right you have under Indian consumer law that cannot be waived.",
         ],
         p2: ["Approved refunds go back to the original payment method and normally reach you within 5–7 working days, depending on your bank."],

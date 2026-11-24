@@ -150,10 +150,11 @@ export const setDateOfBirth = async (req, res, next) => {
     user.dateOfBirth = parseDob(dateOfBirth);
     user.consent.ageGroup = minor ? "minor" : "adult";
     user.consent.parentStatus = minor ? "pending" : "not_required";
-    // Existing users accept the current documents by continuing to use the service.
-    user.consent.termsVersion = user.consent.termsVersion ?? TERMS_VERSION;
-    user.consent.privacyVersion = user.consent.privacyVersion ?? PRIVACY_VERSION;
-    user.consent.acceptedAt = user.consent.acceptedAt ?? new Date();
+    // The date-of-birth step shows the current Terms + Privacy links and
+    // "By continuing you agree…", so it records the current versions.
+    user.consent.termsVersion = TERMS_VERSION;
+    user.consent.privacyVersion = PRIVACY_VERSION;
+    user.consent.acceptedAt = new Date();
     await user.save({ validateBeforeSave: false });
 
     let parentRequestSent = null;
@@ -203,6 +204,21 @@ export const updateExamMode = async (req, res, next) => {
 
     return res.json({ success: true, student: toStudent(user) });
 
+  } catch (err) {
+    next(err);
+  }
+};
+
+// The student accepts the current Terms + Privacy Policy (after an update).
+export const acceptTerms = async (req, res, next) => {
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { $set: { "consent.termsVersion": TERMS_VERSION, "consent.privacyVersion": PRIVACY_VERSION, "consent.acceptedAt": new Date() } },
+      { new: true }
+    );
+    if (!user) return res.status(404).json({ success: false, error: "Account not found." });
+    return res.json({ success: true, student: toStudent(user) });
   } catch (err) {
     next(err);
   }
