@@ -22,6 +22,7 @@ import { AuthShell, SubmitButton, Notice } from "../components/auth/AuthShell.js
 import { useCountdown }   from "../hooks/useCountdown.js";
 import { Eye, EyeOff, ArrowLeft } from "lucide-react";
 import { deviceId } from "../utils/deviceId.js";
+import { signupSource } from "../utils/signupSource.js";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -120,6 +121,7 @@ export default function Register() {
         dateOfBirth: form.dateOfBirth,
         acceptTerms: true,
         ...(deviceId() ? { deviceId: deviceId() } : {}),
+        ...(signupSource() ? { source: signupSource() } : {}),
         ...(isMinor ? { parentEmail: form.parentEmail.trim().toLowerCase() } : {}),
       }));
 

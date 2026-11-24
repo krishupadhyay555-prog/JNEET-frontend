@@ -382,3 +382,13 @@ describe("audit: new-account caps (anti free-AI farming)", () => {
     expect(JSON.stringify(u)).not.toContain("dev-raw-secret-777");
   });
 });
+
+describe("signup source (utm / src)", () => {
+  it("keeps clean utm/src values and drops junk", async () => {
+    const body = { ...registerBody(), source: { src: "free-mock", utm_source: "instagram", utm_campaign: "<script>" } };
+    expect((await client().post("/api/auth/register").send(body)).status).toBe(201);
+    const u = await User.findOne({ email: body.email }).lean();
+    expect(u.signupSource).toMatchObject({ src: "free-mock", utm_source: "instagram" });
+    expect(u.signupSource.utm_campaign).toBeUndefined();
+  });
+});

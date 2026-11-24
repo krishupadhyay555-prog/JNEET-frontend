@@ -16,6 +16,12 @@
 import { z } from "zod";
 import { emailSchema, passwordSchema, otpSchema, dobSchema } from "./common.js";
 
+// Where a student came from (utm / src such as "free-mock"); bad values are dropped.
+const sourceTag = z.string().trim().max(60).regex(/^[\w.\-+ ]*$/).optional().catch(undefined);
+export const sourceSchema = z.object({
+  src: sourceTag, utm_source: sourceTag, utm_medium: sourceTag, utm_campaign: sourceTag, utm_content: sourceTag, utm_term: sourceTag,
+}).optional().catch(undefined);
+
 export const registerSchema = z.object({
   name: z
     .string({ required_error: "Name is required" })
@@ -36,6 +42,7 @@ export const registerSchema = z.object({
   parentEmail: emailSchema.optional().or(z.literal("").transform(() => undefined)),
   // Random id the browser keeps (localStorage) — only used to cap how many
   // new accounts one device can create per day. Never shown or shared.
+  source: sourceSchema,
   deviceId: z.string().trim().regex(/^[A-Za-z0-9-]{8,64}$/).optional().catch(undefined),
 
   acceptTerms: z.literal(true, {

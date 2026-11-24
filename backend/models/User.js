@@ -102,6 +102,8 @@ const userSchema = new mongoose.Schema(
     // new accounts per day. One-way hashes — the raw values are not kept here.
     signupNet:    { type: String, default: null, select: false },
     signupDevice: { type: String, default: null, select: false },
+    // Where the student came from (utm / src, e.g. "free-mock"), for marketing reports.
+    signupSource: { type: Object, default: null },
     consent:     { type: consentSchema, default: () => ({}) },
 
     // Chat-rules record (18+ content / abusive language): category + time

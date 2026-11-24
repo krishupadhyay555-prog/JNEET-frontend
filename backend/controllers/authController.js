@@ -202,6 +202,7 @@ export const register = async (req, res, next) => {
     const newUser = await User.create({
       signupNet,
       signupDevice,
+      signupSource: req.body.source ?? null,
       name,
       email,
       emailNormalized,
