@@ -33,6 +33,8 @@ export function toStudent(user) {
     targetExamPromptDismissed: targetValid || (!user.targetExam && !!user.targetExamPromptDismissed),
     plan:       effectivePlan(user),
     planExpiresAt: effectivePlan(user) === "free" ? null : (user.planExpiresAt ?? null),
+    planExam:   effectivePlan(user) === "free" ? null : (user.planExam ?? null),
+    planPass:   effectivePlan(user) !== "free" && Boolean(user.planPassUntil && new Date(user.planPassUntil) > new Date()),
     persona:    user.persona ?? "mentor",
     studyLanguage: user.studyLanguage ?? "auto",
     ...(isAdminEmail(user.email) ? { isAdmin: true } : {}),

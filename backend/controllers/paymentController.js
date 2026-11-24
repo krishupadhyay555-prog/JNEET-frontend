@@ -19,6 +19,7 @@ import User from "../models/User.js";
 import { publicCatalog } from "../config/plans.js";
 import { canPayDirectly } from "../utils/plan.js";
 import {
+  catalogWithSeats,
   BillingError, startOrder, confirmCheckout, handleWebhook, billingSummary,
   makeParentLink, userFromParentToken, describeForParent,
 } from "../services/payments/billing.js";
@@ -38,9 +39,11 @@ const APP_SHELL_ERROR = {
   error: "Plans can't be bought inside the app. Please visit jneetai.com in your browser.",
 };
 
-export const getPlans = (req, res) => {
-  res.set("Cache-Control", "public, max-age=300");
-  res.json({ success: true, ...publicCatalog() });
+export const getPlans = async (req, res, next) => {
+  try {
+    res.set("Cache-Control", "public, max-age=60");
+    res.json({ success: true, ...(await catalogWithSeats()) });
+  } catch (err) { next(err); }
 };
 
 export const getMine = async (req, res, next) => {
@@ -86,7 +89,7 @@ export const parentLink = (req, res) => {
 export const describeParent = async (req, res, next) => {
   try {
     const user = await userFromParentToken(req.params.token);
-    return res.json({ success: true, ...describeForParent(user) });
+    return res.json({ success: true, ...(await describeForParent(user)) });
   } catch (err) { return fail(res, err, next); }
 };
 

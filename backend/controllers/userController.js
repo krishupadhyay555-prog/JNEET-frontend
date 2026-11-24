@@ -16,6 +16,7 @@
 // ============================================================
 
 import User from "../models/User.js";
+import { effectivePlan } from "../utils/plan.js";
 import { toStudent } from "../utils/studentPayload.js";
 import { setSessionCookie, clearSessionCookie } from "../utils/authCookie.js";
 import { parseDob, calcAge, ADULT_AGE } from "../utils/age.js";
@@ -180,6 +181,19 @@ export const updateExamMode = async (req, res, next) => {
 
     const { examMode } = req.body;
     if (user.examMode !== examMode) {
+      // A paid plan/pass belongs to one exam: no switching while it is active.
+      if (effectivePlan(user) !== "free" && user.planExam && user.planExam !== examMode) {
+        return res.status(403).json({ success: false, code: "PLAN_EXAM_LOCKED",
+          error: `Your ${effectivePlan(user) === "elite" ? "Elite" : "paid"} plan is for ${user.planExam}, so the exam can't be switched until it ends. Need help? Write to support.` });
+      }
+      // Free accounts: first switch any time, then at most once a week.
+      const WEEK = 7 * 86_400_000;
+      if (effectivePlan(user) === "free" && user.examSwitchedAt && Date.now() - new Date(user.examSwitchedAt).getTime() < WEEK) {
+        const next = new Date(new Date(user.examSwitchedAt).getTime() + WEEK);
+        return res.status(429).json({ success: false, code: "SWITCH_COOLDOWN", nextAt: next,
+          error: `You can switch exams once a week. Next switch: ${next.toLocaleDateString("en-IN", { day: "numeric", month: "short", timeZone: "Asia/Kolkata" })}.` });
+      }
+      user.examSwitchedAt = new Date();
       user.examMode = examMode;
       user.targetExam = null;
       user.targetExamPromptDismissed = false;

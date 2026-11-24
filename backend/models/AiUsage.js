@@ -11,7 +11,7 @@ const aiUsageSchema = new mongoose.Schema(
   {
     userId:   { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, index: true },
     day:      { type: String, required: true, index: true }, // IST day, YYYY-MM-DD
-    kind:     { type: String, enum: ["chat", "title", "deep", "explain"], default: "chat" },
+    kind:     { type: String, enum: ["chat", "title", "deep", "explain", "voice"], default: "chat" },
     plan:     { type: String, default: "free" },
     model:    { type: String, required: true },
     effort:   { type: String, default: null },

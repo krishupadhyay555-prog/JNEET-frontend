@@ -78,6 +78,8 @@ export const protect = async (req, res, next) => {
       email:    user.email,
       examMode: user.examMode,
       plan:     effectivePlan(user),   // expired pass → "free" automatically
+      planExam: user.planExam ?? null,
+      planPass: effectivePlan(user) !== "free" && Boolean(user.planPassUntil && new Date(user.planPassUntil) > new Date()),
       persona:  user.persona ?? "mentor",
       studyLanguage: user.studyLanguage ?? "auto",
       aiLocked: isAiLocked(user),

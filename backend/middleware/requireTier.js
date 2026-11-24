@@ -14,3 +14,10 @@ export function requireTier(min) {
 }
 
 export const hasTier = (plan, min) => (TIER_RANK[plan] ?? 0) >= TIER_RANK[min];
+
+// Deep test analysis: Elite, or any exam pass.
+export function requireAnalysisAccess(req, res, next) {
+  if (hasTier(req.user?.plan, "elite") || req.user?.planPass) return next();
+  return res.status(403).json({ success: false, code: "PLAN_REQUIRED", requiredPlan: "elite",
+    error: "Deep analysis is part of Elite and the exam passes." });
+}

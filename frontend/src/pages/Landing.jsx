@@ -39,7 +39,7 @@ const FAQ = [
   ["Can the AI be wrong?", "Yes — any AI can make mistakes. That's why the mentor shows its steps, our question bank is checked by code, and every question has a report button. For anything important, check with your NCERT book or teacher."],
   ["I'm under 18. Can I use it?", "Yes, if you are 13 or older. Mock tests, revision and notes work right away; the AI mentor switches on once a parent or guardian approves it by email. Paid plans for under-18 students are paid by a parent through a link you share."],
   ["Is my data safe?", "We store your data securely, never sell it, show no ads, and you can download or delete your data any time in Settings. Read our Privacy Policy for details."],
-  ["Does a paid plan renew automatically?", "No. Plans are prepaid passes for 1 or 4 months. When a pass ends you simply return to Free — no surprise charges."],
+  ["Does a paid plan renew automatically?", "No. Plans are prepaid: 1 month, or an exam pass till your exam. When a pass ends you simply return to Free — no surprise charges."],
 ];
 
 function HeroCard() {

@@ -22,7 +22,7 @@ export default function ParentPay() {
   const [info, setInfo] = useState(null);
   const [loadError, setLoadError] = useState("");
   const [invalid, setInvalid] = useState("");
-  const [planId, setPlanId] = useState("pro_4m");
+  const [planId, setPlanId] = useState("pro_1m");
   const [isParent, setIsParent] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -109,8 +109,8 @@ export default function ParentPay() {
               <button type="button" key={p.id} role="radio" aria-checked={planId === p.id} disabled={lower}
                 onClick={() => setPlanId(p.id)}
                 className={`text-left rounded-xl border p-3 transition disabled:opacity-40 ${planId === p.id ? "border-[#0D9488] bg-[#F0FDFA]" : "border-[#EDE6F3] hover:border-[#0D9488]/50"}`}>
-                <span className="block text-sm font-semibold text-[#2D2A32]">{NAMES[p.tier]} · {p.months} month{p.months > 1 ? "s" : ""}</span>
-                <span className="block text-xs text-[#6B6572]">{rupees(p.amount)}{p.months > 1 ? ` (${rupees(p.perMonth)}/mo)` : ""}</span>
+                <span className="block text-sm font-semibold text-[#2D2A32]">{p.duration === "pass" ? p.label : `${NAMES[p.tier]} · 1 month`}</span>
+                <span className="block text-xs text-[#6B6572]">{rupees(p.current ?? p.amount)}{p.duration === "pass" ? ` · till ${istDate(p.endsAt)}` : ""}{p.early?.seatsLeft > 0 ? " · early-bird" : ""}</span>
               </button>
             );
           })}
@@ -128,7 +128,7 @@ export default function ParentPay() {
         </label>
 
         {error && <Notice tone="error">{error}</Notice>}
-        <SubmitButton loading={busy} loadingText="Opening payment…">Pay {chosen ? rupees(chosen.amount) : ""}</SubmitButton>
+        <SubmitButton loading={busy} loadingText="Opening payment…">Pay {chosen ? rupees(chosen.current ?? chosen.amount) : ""}</SubmitButton>
         <p className="text-[11px] text-center text-[#8B8594]">Secure payment by Razorpay (UPI, cards, netbanking). We never see your card or UPI details.</p>
       </form>
     );

@@ -230,7 +230,7 @@ export default function AdminDashboard() {
                 <Rows rows={[
                   ["Passes ending in the next 7 days", nf.format(s.plans.expiringIn7Days)],
                   ["Payments (all-time)", `${nf.format(s.revenue.allTime.payments)} by ${nf.format(s.revenue.allTime.buyers)} students`],
-                  ...s.revenue.byPlan.map((p) => [`  ${p.planId.replace("_", " · ").replace("1m", "1 month").replace("4m", "4 months")}`, `${p.payments} · ${inr(p.rupees)}`]),
+                  ...s.revenue.byPlan.map((p) => [`  ${p.planId.replace("_", " · ").replace("1m", "1 month").replace("4m", "4 months").replace("pass", "exam pass")}`, `${p.payments} · ${inr(p.rupees)}`]),
                   ["Orders not paid / failed / refunded", `${nf.format(s.revenue.statusCounts.created ?? 0)} / ${nf.format(s.revenue.statusCounts.failed ?? 0)} / ${nf.format(s.revenue.statusCounts.refunded ?? 0)}`],
                 ]} />
                 {s.revenue.flagged.length > 0 && (

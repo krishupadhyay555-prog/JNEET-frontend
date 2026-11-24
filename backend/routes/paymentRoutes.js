@@ -17,7 +17,7 @@ import {
 
 const router = Router();
 
-const planIdSchema = z.enum(["pro_1m", "pro_4m", "elite_1m", "elite_4m"], {
+const planIdSchema = z.enum(["pro_1m", "pro_4m", "elite_1m", "elite_4m", "jee_pass", "neet_pass"], {
   errorMap: () => ({ message: "Please choose a plan" }),
 });
 const orderSchema = z.object({ planId: planIdSchema }).strict();

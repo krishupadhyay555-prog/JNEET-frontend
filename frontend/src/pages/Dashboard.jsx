@@ -260,7 +260,7 @@ export default function Dashboard() {
       <ConfirmDialog
         open={!!pendingMode}
         title={`Switch to ${pendingMode} mode?`}
-        message={`Your ${examMode} chats, tests and progress are kept safe — you'll see them again whenever you switch back. Revision, mock tests and the AI mentor will now follow ${pendingMode}.`}
+        message={`Your ${examMode} chats, tests and progress are kept safe — you'll see them again whenever you switch back. Revision, mock tests and the AI mentor will now follow ${pendingMode}. ${user?.plan && user.plan !== "free" ? `Your paid plan is for ${user.planExam ?? examMode}.` : "You can switch exams once a week."}`}
         confirmLabel={`Switch to ${pendingMode}`}
         busy={switching}
         onConfirm={confirmModeSwitch}
