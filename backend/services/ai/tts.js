@@ -2,7 +2,7 @@
 //  JNEET+ AI — services/ai/tts.js
 //  "Listen" for AI answers (Elite). Text → speech with OpenAI
 //  (gpt-4o-mini-tts), only when the student taps the button. The mp3
-//  is cached for 14 days by a hash of the text, so replaying the same
+//  is cached for 3 days by a hash of the text, so replaying the same
 //  answer costs nothing.
 // ─────────────────────────────────────────────────────────────
 import crypto from "crypto";
@@ -19,7 +19,7 @@ const MAX_CHARS = 3800;
 const ttsSchema = new mongoose.Schema({
   hash: { type: String, required: true, unique: true },
   audio: { type: Buffer, required: true },
-  createdAt: { type: Date, default: Date.now, expires: 14 * 86_400 },
+  createdAt: { type: Date, default: Date.now, expires: 3 * 86_400 },   // 3 days: keeps the DB small (Atlas Flex = 5 GB)
 });
 const TtsAudio = mongoose.models.TtsAudio || mongoose.model("TtsAudio", ttsSchema);
 
@@ -71,6 +71,6 @@ export async function speak(text, { userId, plan }) {
   const usd = minutes * USD_PER_MIN;
   AiUsage.create({ userId, day: istDayKey(), kind: "voice", plan, model: MODEL, effort: "none", status: "ok",
     costUsd: usd, costInr: usd * env.AI_USD_INR, latencyMs: Date.now() - started }).catch(() => {});
-  if (audio.length < 15_000_000) await TtsAudio.updateOne({ hash }, { $setOnInsert: { hash, audio } }, { upsert: true }).catch(() => {});
+  if (audio.length < 2_500_000) await TtsAudio.updateOne({ hash }, { $setOnInsert: { hash, audio } }, { upsert: true }).catch(() => {});
   return { audio, cached: false };
 }
