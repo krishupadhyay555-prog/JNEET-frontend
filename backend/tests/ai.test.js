@@ -32,6 +32,12 @@ function stubOpenAI() {
     const body = JSON.parse(init.body);
     calls.push(body);
     if (mode === "fail") return new Response(JSON.stringify({ error: { message: "boom" } }), { status: 500 });
+    if (mode === "partial") {
+      return sse([
+        { type: "response.output_text.delta", delta: "x".repeat(3000) },
+        { type: "response.failed", response: { error: { message: "provider died mid-answer" } } },
+      ]);
+    }
     return sse([
       { type: "response.output_text.delta", delta: "Hello " },
       { type: "response.output_text.delta", delta: "student" },
@@ -180,5 +186,65 @@ describe("quota", () => {
     const { student } = await signedInClient();
     const results = await Promise.all(Array.from({ length: 20 }, () => reserveDoubt(student._id, "free")));
     expect(results.filter((r) => r.ok).length).toBe(5);
+  });
+});
+
+// ── 24 Nov audit: kill switch + no free answers via Stop / mid-stream failure ──
+describe("audit: AI kill switch (AI_PAUSED) and partial-stream cost", () => {
+  afterEach(() => { delete process.env.AI_PAUSED; _resetBudgetCache(); });
+
+  it("AI_PAUSED=1 → no OpenAI call at all, friendly 503 for normal questions", async () => {
+    process.env.AI_PAUSED = "1";
+    const { c } = await signedInClient();
+    const res = await ask(c, "Explain Newton's second law");
+    expect(res.status).toBe(503);
+    expect(JSON.parse(res.body).code).toBe("AI_PAUSED");
+    expect(calls).toHaveLength(0);
+  });
+
+  it("AI_PAUSED=1 → a student in distress still gets the helplines (no AI call)", async () => {
+    process.env.AI_PAUSED = "1";
+    const { c } = await signedInClient();
+    const res = await ask(c, "I want to die, I can't take this exam pressure anymore");
+    expect(res.status).toBe(200);
+    expect(res.body).toMatch(/14416/);
+    expect(calls).toHaveLength(0);
+  });
+
+  it("AI_PAUSED=1 also stops Explain-with-AI and voice (budget gate)", async () => {
+    process.env.AI_PAUSED = "1";
+    const { isOverBudget } = await import("../services/ai/budget.js");
+    expect(await isOverBudget()).toBe(true);
+  });
+
+  it("a stream that dies after sending text still counts its ₹ cost (monthly cap can't be dodged)", async () => {
+    mode = "partial";
+    const { c } = await signedInClient();
+    await ask(c, "Explain Newton's second law");
+    const row = await AiUsage.findOne().lean();
+    expect(["error", "aborted", "incomplete", "ok"]).toContain(row.status);
+    expect(row.costInr).toBeGreaterThan(0);
+  });
+});
+
+describe("audit: AI budget alert email", () => {
+  afterEach(() => { delete process.env.AI_DAILY_BUDGET_INR; _resetBudgetCache(); });
+  it("emails the founder once at 80% and once at 100% of the daily budget", async () => {
+    const { _resetBudgetAlerts, isOverBudget } = await import("../services/ai/budget.js");
+    const { istDayKey } = await import("../services/ai/quota.js");
+    _resetBudgetAlerts();
+    process.env.AI_DAILY_BUDGET_INR = "100";
+    const { body } = await signedInClient();
+    const u = await User.findOne({ email: body.email }).lean();
+    await AiUsage.create({ userId: u._id, day: istDayKey(), plan: "free", kind: "chat", model: "gpt-6-luna", status: "ok", costInr: 85 });
+    expect(await isOverBudget()).toBe(false);
+    _resetBudgetCache(); expect(await isOverBudget()).toBe(false);
+    await new Promise((r) => setTimeout(r, 20));
+    expect(mailbox.alerts.filter((a) => /80%/.test(a.subject))).toHaveLength(1);
+    await AiUsage.create({ userId: u._id, day: istDayKey(), plan: "free", kind: "chat", model: "gpt-6-luna", status: "ok", costInr: 20 });
+    _resetBudgetCache();
+    expect(await isOverBudget()).toBe(true);
+    await new Promise((r) => setTimeout(r, 20));
+    expect(mailbox.alerts.filter((a) => /budget reached/.test(a.subject))).toHaveLength(1);
   });
 });

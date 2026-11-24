@@ -10,6 +10,7 @@ import mongoose from "mongoose";
 import { env } from "../../config/env.js";
 import AiUsage from "../../models/AiUsage.js";
 import { istDayKey } from "./quota.js";
+import { aiPaused } from "./budget.js";
 
 const MODEL = "gpt-4o-mini-tts";
 const VOICE = "coral";
@@ -51,6 +52,7 @@ export async function speak(text, { userId, plan }) {
   const hit = await TtsAudio.findOne({ hash }).lean();
   if (hit) return { audio: Buffer.from(hit.audio.buffer ?? hit.audio), cached: true };
 
+  if (aiPaused()) return null;
   const started = Date.now();
   const r = await fetch(`${env.OPENAI_BASE_URL}/audio/speech`, {
     method: "POST",
