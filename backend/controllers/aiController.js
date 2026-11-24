@@ -36,7 +36,25 @@ import {
 import { loadHistory } from "../services/ai/history.js";
 import { checkMonthlyCap } from "../services/ai/monthlyCap.js";
 import { reserveDoubt, getUsageSnapshot, istDayKey } from "../services/ai/quota.js";
-import { isOverBudget } from "../services/ai/budget.js";
+import { isOverBudget, aiPaused } from "../services/ai/budget.js";
+import { estimateCost as estimateCostFor } from "../services/ai/prices.js";
+import { resolveRoute } from "../services/ai/index.js";
+
+// AI is paused (kill switch) but the student may be in distress: never
+// leave them with an error — give the helplines without calling the AI.
+const PAUSED_DISTRESS_MESSAGE =
+  "I'm really glad you told me. What you're feeling matters, and you don't have to carry it alone. " +
+  "Please talk to a parent, teacher or friend you trust today. You can also call **Tele-MANAS on 14416** " +
+  "(free, 24x7, India) — and **112** in an emergency. I'm here whenever you want to talk.";
+
+// Rough cost of a stream that stopped early (tab closed / Stop pressed /
+// provider failed mid-answer): the provider still bills those tokens, so
+// they count toward the daily budget and the monthly ₹ cap too.
+function estimatePartialCost(plan, promptChars, outputChars) {
+  const { model } = resolveRoute(plan);
+  const usage = { inputTokens: Math.ceil(promptChars / 3) + 1500, cachedTokens: 0, outputTokens: Math.ceil(outputChars / 3) };
+  return { model, usage, cost: estimateCostFor(model, usage) };
+}
 import { screenMessage, contextFromHistory, REFUSE_MESSAGE } from "../services/ai/safety.js";
 import { recordFlag, getPolicySummary, getLockState, requestUnlock } from "../services/ai/policy.js";
 import { estimateCost } from "../services/ai/prices.js";
@@ -123,6 +141,15 @@ export const askAI = async (req, res, next) => {
       });
     }
 
+    if (aiPaused()) {
+      if (distress) return replyOnce(res, PAUSED_DISTRESS_MESSAGE, {});
+      return res.status(503).json({
+        success: false,
+        code: "AI_PAUSED",
+        error: "The AI mentor is taking a short break. Mock tests, PYQs and revision are still available.",
+      });
+    }
+
     if (!distress && screen.verdict === "refuse") {
       return replyOnce(res, REFUSE_MESSAGE, { refused: true });
     }
@@ -197,6 +224,8 @@ export const askAI = async (req, res, next) => {
     };
 
     let emittedAny = false;
+
+    let streamedChars = 0;
     const base = {
       userId: user.id,
       day: istDayKey(),
@@ -217,6 +246,7 @@ export const askAI = async (req, res, next) => {
         signal: abort.signal,
         onToken: (text) => {
           emittedAny = true;
+          streamedChars += text.length;
           send({ token: text });
         },
       });
@@ -253,11 +283,16 @@ export const askAI = async (req, res, next) => {
       });
 
     } catch (err) {
+      const historyChars = history.reduce((n, m) => n + String(m?.content ?? "").length, 0);
+      const partial = estimatePartialCost(user.plan, String(prompt ?? "").length + historyChars, streamedChars);
+      const spent = { model: partial.model, inputTokens: partial.usage.inputTokens, outputTokens: partial.usage.outputTokens,
+        costUsd: partial.cost.usd, costInr: partial.cost.inr };
       if (abort.signal.aborted) {
-        // Student closed the tab / pressed stop. Tokens were spent, keep the quota unit.
+        // Student closed the tab / pressed stop. Tokens were spent, keep the
+        // quota unit AND count the estimated cost (no free answers via Stop).
         await writeLedger({
           ...base,
-          model: env.AI_MODEL_FREE,
+          ...spent,
           status: "aborted",
           latencyMs: Date.now() - startedAt,
         });
@@ -268,7 +303,7 @@ export const askAI = async (req, res, next) => {
         });
         await writeLedger({
           ...base,
-          model: env.AI_MODEL_FREE,
+          ...(emittedAny ? spent : { model: env.AI_MODEL_FREE }),
           status: "error",
           errorCode: friendly.code,
           latencyMs: Date.now() - startedAt,

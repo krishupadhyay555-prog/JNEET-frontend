@@ -246,7 +246,7 @@ export async function sendAdminAlert(subject, lines, { area = "payments" } = {})
     preheader: subject,
     heading: subject,
     bodyHtml: body.map((l) => `<p style="margin:6px 0;">${escapeHtml(l)}</p>`).join(""),
-    footerHtml: `Automatic alert from the JNEET+ AI ${area === "payments" ? "payment system" : "question bank"}.`,
+    footerHtml: `Automatic alert from the JNEET+ AI ${area === "payments" ? "payment system" : area === "ai" ? "AI cost guard" : "question bank"}.`,
   });
   return sendEmail({ to: env.ADMIN_ALERT_EMAIL, subject: `[JNEET+ ${area}] ${subject}`, html, text: body.join("\n") });
 }

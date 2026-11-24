@@ -24,6 +24,7 @@
 
 import crypto from "crypto";
 import { env } from "../../config/env.js";
+import { aiPaused } from "./budget.js";
 
 const CONNECT_TIMEOUT_MS = 20_000;
 const IDLE_TIMEOUT_MS = 40_000;
@@ -83,6 +84,7 @@ async function parseError(response) {
 }
 
 async function post(body, signal, timeoutMs) {
+  if (aiPaused()) throw new AiProviderError("AI paused by AI_PAUSED", { status: 503, code: "AI_PAUSED" });
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(new AiProviderError("Connect timeout", { timeout: true, retryable: true })), timeoutMs);
   const onAbort = () => controller.abort(signal.reason);
