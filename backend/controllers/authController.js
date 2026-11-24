@@ -27,7 +27,9 @@
 // ============================================================
 
 import bcrypt   from "bcryptjs";
+import crypto   from "crypto";
 import User     from "../models/User.js";
+import { env } from "../config/env.js";
 import { getTargetExamOption } from "../config/targetExams.js";
 import {
   sendPasswordResetOtp,
@@ -90,6 +92,19 @@ function logMailFailure(context, err) {
 }
 
 // ── Register ─────────────────────────────────────────────────────
+// New accounts allowed per day. The network cap is generous because many
+// Indian mobile users share one IP (carrier NAT); the device cap is tight.
+const SIGNUPS_PER_NET_DAY = Number(process.env.SIGNUPS_PER_NET_DAY) || 10;
+const SIGNUPS_PER_DEVICE_DAY = Number(process.env.SIGNUPS_PER_DEVICE_DAY) || 3;
+function ipKey(ip = "") {
+  if (!ip.includes(":")) return ip || "unknown";
+  if (ip.startsWith("::ffff:")) return ip.slice(7);
+  return ip.split(":").slice(0, 4).join(":");
+}
+function signupHash(kind, value) {
+  return crypto.createHmac("sha256", env.COOKIE_SECRET).update(`${kind}:${value}`).digest("hex").slice(0, 32);
+}
+
 export const register = async (req, res, next) => {
   try {
     const { name, email, password, examMode, dateOfBirth, parentEmail } = req.body;
@@ -168,7 +183,25 @@ export const register = async (req, res, next) => {
       });
     }
 
+    // Anti-farming: cap new accounts per network and per device per day.
+    const signupNet = signupHash("net", ipKey(req.ip));
+    const signupDevice = req.body.deviceId ? signupHash("dev", req.body.deviceId) : null;
+    const since = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    const [fromNet, fromDevice] = await Promise.all([
+      User.countDocuments({ signupNet, createdAt: { $gt: since } }),
+      signupDevice ? User.countDocuments({ signupDevice, createdAt: { $gt: since } }) : 0,
+    ]);
+    if (fromDevice >= SIGNUPS_PER_DEVICE_DAY || fromNet >= SIGNUPS_PER_NET_DAY) {
+      return res.status(429).json({
+        success: false,
+        code: "TOO_MANY_ACCOUNTS",
+        error: "Too many new accounts were created from this device or network today. If you already have an account, please log in — or try again tomorrow.",
+      });
+    }
+
     const newUser = await User.create({
+      signupNet,
+      signupDevice,
       name,
       email,
       emailNormalized,
