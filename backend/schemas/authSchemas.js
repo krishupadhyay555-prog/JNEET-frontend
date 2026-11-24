@@ -34,6 +34,9 @@ export const registerSchema = z.object({
   dateOfBirth: dobSchema,
 
   parentEmail: emailSchema.optional().or(z.literal("").transform(() => undefined)),
+  // Random id the browser keeps (localStorage) — only used to cap how many
+  // new accounts one device can create per day. Never shown or shared.
+  deviceId: z.string().trim().regex(/^[A-Za-z0-9-]{8,64}$/).optional().catch(undefined),
 
   acceptTerms: z.literal(true, {
     errorMap: () => ({ message: "Please accept the Terms and Privacy Policy to continue" }),
