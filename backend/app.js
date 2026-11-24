@@ -38,6 +38,7 @@ import consentRoutes from "./routes/consentRoutes.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
 import adminRoutes   from "./routes/adminRoutes.js";
 import supportRoutes from "./routes/supportRoutes.js";
+import freeMockRoutes from "./routes/freeMockRoutes.js";
 import mistakeRoutes from "./routes/mistakeRoutes.js";
 import pyqExplainRoutes from "./routes/pyqExplainRoutes.js";
 import { getPublicStats } from "./controllers/publicController.js";
@@ -113,6 +114,7 @@ app.use("/api/mistakes", protect, userLimiter, mistakeRoutes);
 app.use("/api/pyq-explain", protect, heavyLimiter, pyqExplainRoutes);
 app.use("/api/admin",   protect, userLimiter, requireAdmin, adminRoutes); // founder only (ADMIN_EMAILS)
 app.use("/api/payments", paymentRoutes);  // web-only checkout; own auth/limiters inside
+app.use("/api/free-mock", freeMockRoutes);  // public Free Quick Mock (guest cookie, captcha, own limiters)
 app.use("/api/support", supportRoutes);     // public Contact form (captcha + own limiter)
 app.get("/api/public/stats", getPublicStats); // public numbers for the home / About pages
 
