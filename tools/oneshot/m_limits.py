@@ -53,6 +53,7 @@ T("Continuity of standard functions", "Polynomials, sin, cos, eˣ are continuous
 T("Algebra of continuous functions", "Sum, difference, product and composition of continuous functions are continuous; quotient too, where the denominator isn't zero."),
 T("Intermediate value theorem", "If f is continuous on [a, b] and k lies between f(a) and f(b), then f(c) = k for some c in (a, b) — used to show an equation has a root."),
 T("Non-differentiable points", "Corners (|x − a|), cusps, vertical tangents (x^(1/3) at 0) and discontinuities. |f(x)| may fail to be differentiable where f(x) = 0 and changes sign."),
+T("Real functions and their graphs", "Syllabus starts this unit with real-valued functions: algebra of functions (f ± g, fg, f/g where g ≠ 0, f∘g), polynomial, rational, trigonometric, exponential (aˣ) and logarithmic (logₐx, domain x > 0) functions, and inverse functions (exist only for one-one onto f; graph of f⁻¹ is the mirror image of f in y = x). Know the graphs of |x|, [x], {x}, sgn x, eˣ, ln x, sin x, cos x, tan x and 1/x — their domain, range and the points where they break or have corners give most continuity and differentiability answers."),
 ],
 "ratta": [
 "(xⁿ − aⁿ)/(x − a) → naⁿ⁻¹.",
@@ -67,6 +68,7 @@ T("Non-differentiable points", "Corners (|x − a|), cusps, vertical tangents (x
 SYLLABUS = [
 ("Limits of functions; continuity and differentiability", ["limit", "continuous", "differentiab"]),
 ("Standard limits, L'Hôpital's rule and indeterminate forms", ["L'Hôpital", "indeterminate"]),
+("Real-valued functions, algebra of functions, polynomial, rational, trigonometric, logarithmic, exponential and inverse functions; graphs of simple functions", ["algebra of functions", "rational", "logarithmic", "exponential", "inverse functions", "graph"]),
 ]
 
 from lib import hinglish, write_pair
@@ -112,6 +114,7 @@ topics=[
 ("Algebra of continuous functions", "Continuous functions ka sum, difference, product aur composition continuous hai; quotient bhi, jahan denominator zero na ho."),
 ("Intermediate value theorem", "Agar f, [a, b] par continuous hai aur k, f(a) aur f(b) ke beech hai, to (a, b) mein kisi c ke liye f(c) = k — equation ka root dikhaane mein use hota hai."),
 ("Non-differentiable points", "Corners (|x − a|), cusps, vertical tangents (0 par x^(1/3)) aur discontinuities. |f(x)| wahan differentiable nahi ho sakta jahan f(x) = 0 ho aur sign badle."),
+("Real functions and their graphs", "Syllabus yeh unit real-valued functions se shuru karta hai: algebra of functions (f ± g, fg, f/g jahan g ≠ 0, f∘g), polynomial, rational, trigonometric, exponential (aˣ) aur logarithmic (logₐx, domain x > 0) functions, aur inverse functions (sirf one-one onto f ke liye; f⁻¹ ka graph y = x line mein f ka mirror image). |x|, [x], {x}, sgn x, eˣ, ln x, sin x, cos x, tan x aur 1/x ke graph yaad rakho — inka domain, range aur jahan ye toot-te hain ya corner banate hain, wahi continuity aur differentiability ke zyaadatar answer dete hain."),
 ])
 
 if __name__ == "__main__":

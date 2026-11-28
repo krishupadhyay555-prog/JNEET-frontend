@@ -7,13 +7,13 @@ v_kmno4b = mohr_mol / 5 / 0.02 * 1000   # mL of 0.02 M KMnO4
 
 DOC = {
 "slug": "practical-chemistry", "subject": "Chemistry",
-"chapters": {"NEET": "Practical Chemistry"},
+"chapters": {"NEET": "Practical Chemistry", "JEE": "Practical Chemistry"},
 "title": "Practical Chemistry", "readMinutes": 12,
 "summary": [
 "Detection of extra elements (N, S, halogens) in organic compounds uses Lassaigne's sodium fusion extract; functional groups are identified by simple colour or precipitate tests.",
 "Inorganic salt analysis finds one cation and one anion: dilute and concentrated H₂SO₄ tests for anions, then group reagents separate cations into groups 0 to VI.",
 "Redox titrations of KMnO₄ against oxalic acid and Mohr's salt need no indicator — KMnO₄ is its own indicator (colourless to permanent light pink).",
-"Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) and the chemistry behind each step are common NEET questions.",
+"Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) and the chemistry behind each step are common NEET and JEE Main questions.",
 ],
 "formulas": [
 F("KMnO₄ vs oxalic acid", "2MnO₄⁻ + 5C₂O₄²⁻ + 16H⁺ → 2Mn²⁺ + 10CO₂ + 8H₂O", "Standardising KMnO₄.", "Warm the oxalic acid to 60–70 °C; the reaction is slow at room temperature (Mn²⁺ formed then catalyses it — autocatalysis).", tag="PYQ favourite"),
@@ -78,7 +78,7 @@ summary=[
 "Organic compounds mein extra elements (N, S, halogens) Lassaigne ke sodium fusion extract se detect hote hain; functional groups (alcohol, phenol, aldehyde, carboxyl, amine) simple colour ya precipitate tests se pehchaante hain.",
 "Inorganic salt analysis mein ek cation aur ek anion dhoondhte hain: anions ke liye dilute aur concentrated H₂SO₄ tests, phir group reagents cations ko group 0 se VI mein baant-te hain.",
 "KMnO₄ ki oxalic acid aur Mohr's salt ke saath redox titration mein indicator nahi chahiye — KMnO₄ khud indicator hai (colourless se permanent halka gulabi).",
-"Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) aur har step ki chemistry NEET ke common sawal hain.",
+"Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) aur har step ki chemistry NEET aur JEE Main dono ke common sawal hain.",
 ],
 when=[
 ("KMnO₄ standardise karna.", "Oxalic acid ko 60–70 °C tak garam karo; room temperature par reaction dheemi hai (bana Mn²⁺ phir use catalyse karta hai — autocatalysis) — thanda mat chalao."),

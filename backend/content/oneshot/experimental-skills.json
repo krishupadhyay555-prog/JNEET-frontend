@@ -1,0 +1,243 @@
+{
+ "slug": "experimental-skills",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Experimental Skills",
+  "JEE": "Experimental Skills"
+ },
+ "title": "Experimental Skills",
+ "readMinutes": 16,
+ "verifiedOn": "2026-11-28",
+ "summary": [
+  "Both NEET and JEE Main list 18 lab experiments as a separate unit. Questions ask what is measured, the formula used, how to read the instrument, which graph is drawn, and which error or precaution matters.",
+  "Length instruments: vernier callipers (LC 0.01 cm) for external and internal diameter and depth; screw gauge (LC 0.001 cm) for wire diameter and sheet thickness. Always correct for zero error first.",
+  "Mechanics and properties of matter: simple pendulum (energy loss from A² vs t), metre scale (principle of moments), Searle's apparatus (Young's modulus), capillary rise (surface tension), falling ball (viscosity), resonance tube (speed of sound), method of mixtures (specific heat).",
+  "Electricity, optics and electronics: metre bridge (resistivity), Ohm's law (V–I graph), half-deflection method (galvanometer resistance and figure of merit), u–v method with parallax (focal length), i–δ curve of a prism, travelling microscope (refractive index of a glass slab), diode and Zener characteristics, and identifying a diode, LED, resistor and capacitor."
+ ],
+ "formulas": [
+  {
+   "name": "Vernier callipers",
+   "formula": "LC = 1 MSD − 1 VSD = MSD/N;  reading = MSR + (VSD × LC) − zero error",
+   "when": "External and internal diameter and depth of a vessel.",
+   "mistake": "A negative zero error is ADDED back (subtracting a negative number) — don't drop the sign.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Screw gauge",
+   "formula": "LC = pitch/N;  reading = PSR + (CSR × LC) − zero error",
+   "when": "Diameter of a wire, thickness of a sheet.",
+   "note": "Turn only with the ratchet and always in one direction — backlash error comes from reversing the screw."
+  },
+  {
+   "name": "Simple pendulum and damping",
+   "formula": "T = 2π√(l/g);  energy E ∝ A²;  A = A₀e^{−bt/2m}",
+   "when": "Energy dissipation: plot A² (energy) against t.",
+   "mistake": "The A²–t graph is a falling curve, not a straight line; ln A against t is the straight line."
+  },
+  {
+   "name": "Metre scale — principle of moments",
+   "formula": "m₁d₁ = m₂d₂ (moments about the balance point)",
+   "when": "Mass of an object with a known mass on a balanced metre scale.",
+   "mistake": "Measure each distance from the balance point (knife edge), not from the 0 cm end."
+  },
+  {
+   "name": "Young's modulus (Searle's apparatus)",
+   "formula": "Y = MgL/(πr²Δl) = gL/(πr² × slope),  slope = Δl/M",
+   "when": "Young's modulus of a metallic wire.",
+   "tag": "PYQ favourite",
+   "note": "r is half the screw-gauge diameter — using the diameter makes Y four times too small."
+  },
+  {
+   "name": "Surface tension by capillary rise",
+   "formula": "T = hrρg/(2 cos θ);  for water on clean glass θ ≈ 0",
+   "when": "Surface tension of water; effect of detergent.",
+   "note": "Detergent LOWERS surface tension, so the water rises less."
+  },
+  {
+   "name": "Viscosity from terminal velocity",
+   "formula": "v_t = 2r²(ρ − σ)g/(9η)  ⇒  η = 2r²(ρ − σ)g/(9v_t)",
+   "when": "Coefficient of viscosity of a liquid (glycerine, castor oil).",
+   "note": "Time the ball only after it has reached terminal velocity — start the marks a few cm below the surface."
+  },
+  {
+   "name": "Resonance tube",
+   "formula": "l₁ + e = λ/4;  l₂ + e = 3λ/4  ⇒  v = 2f(l₂ − l₁);  e = (l₂ − 3l₁)/2 ≈ 0.3d",
+   "when": "Speed of sound in air at room temperature.",
+   "tag": "PYQ favourite",
+   "note": "Using v = 4fl₁ ignores end correction; the two-length method cancels it."
+  },
+  {
+   "name": "Method of mixtures",
+   "formula": "heat lost = heat gained:  m_s s_s (T_s − T_f) = (m_w s_w + W) (T_f − T_w)",
+   "when": "Specific heat of a solid or a liquid.",
+   "mistake": "Include the calorimeter (water equivalent W) — leaving it out gives a wrong specific heat."
+  },
+  {
+   "name": "Metre bridge",
+   "formula": "X/R = l/(100 − l);  ρ = XA/L = Xπr²/L",
+   "when": "Unknown resistance and resistivity of a wire.",
+   "note": "Get the balance point near the middle (40–60 cm) and interchange X and R to cancel end error."
+  },
+  {
+   "name": "Ohm's law",
+   "formula": "V = IR;  R = slope of V–I graph (V on y-axis)",
+   "when": "Resistance of a wire.",
+   "note": "Ammeter goes in series and voltmeter in parallel — swapping them breaks the circuit reading."
+  },
+  {
+   "name": "Half-deflection method",
+   "formula": "G = RS/(R − S)  (≈ S when R ≫ G);  figure of merit k = I/θ = E/((R + G)θ)",
+   "when": "Resistance and figure of merit of a galvanometer.",
+   "mistake": "k is current per division (A/div), not divisions per ampere.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Focal length by u–v method",
+   "formula": "mirror: 1/f = 1/v + 1/u;  lens: 1/f = 1/v − 1/u (sign convention)",
+   "when": "Focal length of a concave mirror, convex mirror (with a convex lens) and convex lens.",
+   "note": "No parallax means the needle tip and image tip move together — remove it tip to tip."
+  },
+  {
+   "name": "Prism i–δ curve",
+   "formula": "δ = i + e − A;  at minimum deviation i = e, r = A/2,  μ = sin((A + δm)/2)/sin(A/2)",
+   "when": "Angle of deviation against angle of incidence.",
+   "mistake": "The curve is U-shaped: δ falls, reaches δm, then rises — it is not a straight line."
+  },
+  {
+   "name": "Travelling microscope",
+   "formula": "μ = real thickness/apparent thickness = (R₃ − R₁)/(R₃ − R₂)",
+   "when": "Refractive index of a glass slab.",
+   "note": "R₁ = mark without slab, R₂ = mark through slab, R₃ = top of slab (lycopodium powder) — mixing them up inverts μ."
+  },
+  {
+   "name": "p-n junction and Zener",
+   "formula": "diode: forward knee ≈ 0.7 V (Si), reverse µA current;  r_d = ΔV/ΔI;  Zener: reverse bias, V stays ≈ V_Z after breakdown",
+   "when": "Characteristic curves; reverse breakdown voltage of a Zener.",
+   "note": "A Zener is used in REVERSE bias as a regulator — forward bias makes it an ordinary diode."
+  },
+  {
+   "name": "Identifying components (multimeter)",
+   "formula": "resistor: same steady reading both ways;  diode: conducts one way only;  LED: one way and glows;  capacitor: reading jumps then falls to zero (no steady current)",
+   "when": "Picking out a diode, LED, resistor and capacitor from a mixed set."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Vernier with negative zero error",
+   "problem": "A vernier (LC 0.01 cm) shows its zero to the LEFT of the main-scale zero when the jaws are closed, with the 6th vernier division coinciding. Measuring a cylinder, MSR = 3.1 cm and the 4th vernier division coincides. Correct diameter?",
+   "solution": "Negative zero error = −(10 − 6) × 0.01 = −0.04 cm. Observed = 3.1 + 4 × 0.01 = 3.14 cm. Correct = 3.14 − (−0.04) = 3.18 cm."
+  },
+  {
+   "title": "Mass by principle of moments",
+   "problem": "A uniform metre scale balances at the 50 cm mark. A 50 g mass hangs at 20 cm and an unknown mass at 70 cm keeps it balanced. Unknown mass?",
+   "solution": "Moments about 50 cm: 50 × (50 − 20) = m × (70 − 50) ⇒ m = 1500/20 = 75 g."
+  },
+  {
+   "title": "Young's modulus of a wire",
+   "problem": "In Searle's apparatus a 2.0 m wire of radius 0.25 mm stretches by 2.5 mm under a 5 kg load (g = 9.8 m/s²). Y?",
+   "solution": "Y = MgL/(πr²Δl) = 5 × 9.8 × 2/(π × (0.25 × 10⁻³)² × 2.5 × 10⁻³) ≈ 2.0 × 10¹¹ N/m² (steel)."
+  },
+  {
+   "title": "Surface tension by capillary rise",
+   "problem": "Water rises 5.9 cm in a clean glass capillary of radius 0.25 mm (θ = 0, ρ = 1000 kg/m³, g = 9.8 m/s²). Surface tension?",
+   "solution": "T = hrρg/2 = 0.059 × 0.25 × 10⁻³ × 1000 × 9.8/2 ≈ 0.072 N/m."
+  },
+  {
+   "title": "Viscosity of glycerine",
+   "problem": "A steel ball (r = 1 mm, ρ = 7800 kg/m³) falls through glycerine (σ = 1260 kg/m³) at a terminal speed of 1.2 cm/s. η? (g = 9.8 m/s²)",
+   "solution": "η = 2r²(ρ − σ)g/(9v) = 2 × 10⁻⁶ × 6540 × 9.8/(9 × 0.012) ≈ 1.19 Pa s."
+  },
+  {
+   "title": "Speed of sound with a resonance tube",
+   "problem": "With a 512 Hz fork, resonance occurs at 16 cm and 50 cm. Speed of sound and end correction?",
+   "solution": "v = 2f(l₂ − l₁) = 2 × 512 × 0.34 ≈ 348 m/s. e = (l₂ − 3l₁)/2 = (50 − 48)/2 = 1 cm."
+  },
+  {
+   "title": "Specific heat by method of mixtures",
+   "problem": "100 g of a solid at 100 °C is dropped into 200 g of water at 20 °C in a calorimeter of water equivalent 10 g. Final temperature 25 °C. Specific heat of the solid?",
+   "solution": "Heat lost = heat gained: 100 × s × 75 = 210 × 1 × 5 ⇒ s = 1050/7500 = 0.14 cal g⁻¹ °C⁻¹."
+  },
+  {
+   "title": "Resistivity with a metre bridge",
+   "problem": "With 6 Ω in the right gap, the null point is at 40 cm from the left end. The unknown wire is 1 m long with diameter 0.4 mm. X and ρ?",
+   "solution": "X = R l/(100 − l) = 6 × 40/60 = 4 Ω. ρ = Xπr²/L = 4 × π × (0.2 × 10⁻³)² ≈ 5.0 × 10⁻⁷ Ω m."
+  },
+  {
+   "title": "Galvanometer by half deflection",
+   "problem": "With R = 5000 Ω a cell of 2 V gives 20 divisions. A shunt S = 50 Ω halves the deflection. G and the figure of merit?",
+   "solution": "G = RS/(R − S) = 5000 × 50/4950 ≈ 50.5 Ω. k = E/((R + G)θ) = 2/(5050.5 × 20) ≈ 2.0 × 10⁻⁵ A/div."
+  },
+  {
+   "title": "Refractive index with a travelling microscope",
+   "problem": "Readings: mark without slab R₁ = 2.100 cm, mark through slab R₂ = 3.100 cm, top of slab R₃ = 5.100 cm. μ of the glass?",
+   "solution": "Real thickness = R₃ − R₁ = 3.000 cm; apparent = R₃ − R₂ = 2.000 cm. μ = 3/2 = 1.5."
+  },
+  {
+   "title": "Prism from the i–δ curve",
+   "problem": "For a 60° prism the i–δ curve has its lowest point at δm = 40°. μ?",
+   "solution": "μ = sin((60° + 40°)/2)/sin(30°) = sin 50°/0.5 ≈ 1.53."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Reading length instruments",
+   "explain": "Vernier callipers: outer jaws for external diameter, inner jaws for internal diameter, the thin strip for depth. Zero error is positive when the vernier zero is to the right of the main-scale zero. Screw gauge: pitch = distance moved in one full turn; LC = pitch/N (typically 0.5 mm/50 = 0.01 mm). Take readings at several places at right angles and average."
+  },
+  {
+   "title": "Simple pendulum — energy dissipation",
+   "explain": "Air drag and friction make the amplitude fall with time. Energy ∝ A², so plotting A² against t shows energy dying out (a decaying curve). For small amplitudes T = 2π√(l/g) does not depend on amplitude; l is measured to the centre of the bob. Count many oscillations to reduce timing error."
+  },
+  {
+   "title": "Searle's apparatus",
+   "explain": "Two identical wires hang from the same support: a reference wire and an experimental wire. The spirit level joins the two wires and the micrometer measures only their DIFFERENCE in length, so sagging of the support and temperature change cancel. Load and unload in steps, take the mean extension, plot load–extension; the graph must be a straight line (stay within the elastic limit)."
+  },
+  {
+   "title": "Surface tension and detergents",
+   "explain": "Capillary rise h ∝ 1/r and h ∝ T. Clean the tube first (grease changes the angle of contact). Adding detergent lowers surface tension, so h decreases. Read the bottom of the meniscus with a travelling microscope."
+  },
+  {
+   "title": "Viscosity by a falling ball",
+   "explain": "Drop small steel balls gently along the axis of a tall jar of glycerine; time them between two marks once speed is steady. Terminal velocity ∝ r². Viscosity of liquids falls as temperature rises, so note the room temperature."
+  },
+  {
+   "title": "Resonance tube details",
+   "explain": "The air column above the water is a closed pipe: first resonance at λ/4, second at 3λ/4 (both plus end correction e ≈ 0.3 × diameter). Loudest sound marks resonance. Speed of sound rises with temperature (about 0.61 m/s per °C)."
+  },
+  {
+   "title": "Method of mixtures — precautions",
+   "explain": "Use a polished, lagged calorimeter to reduce radiation loss; transfer the hot solid quickly; stir and note the highest steady temperature. The same idea gives the specific heat of a liquid using a solid of known specific heat."
+  },
+  {
+   "title": "Metre bridge and Ohm's law",
+   "explain": "Metre bridge is a Wheatstone bridge with a 100 cm wire; at null point no current flows in the galvanometer. Keep the jockey pressed only briefly (heating changes resistance). Ohm's law experiment: rheostat varies current, V–I graph through the origin; slope (V/I) = R."
+  },
+  {
+   "title": "Galvanometer: half deflection",
+   "explain": "First set a large resistance R so the deflection θ is within range, then add shunt S across the galvanometer and adjust it until deflection is θ/2. Then G = RS/(R − S); if R is very large, G ≈ S. Figure of merit = current for one division."
+  },
+  {
+   "title": "Focal length and parallax",
+   "explain": "Concave mirror and convex lens: place the object needle, find the real image needle position with no parallax, record u and v; plot 1/v against 1/u — a straight line of slope 1 whose y-intercept is 1/f. Convex mirror gives a virtual image, so a convex lens first forms a real image that acts as the object for the mirror."
+  },
+  {
+   "title": "Prism and glass slab",
+   "explain": "i–δ curve: vary i, measure δ; minimum deviation δm occurs when the ray passes symmetrically (i = e). Travelling microscope: focus on a mark, then on the mark through the slab, then on lycopodium powder on top; real/apparent thickness gives μ."
+  },
+  {
+   "title": "Diode, Zener and identification",
+   "explain": "Forward characteristic: almost no current up to the knee voltage, then a sharp rise. Reverse characteristic: tiny saturation current. Zener (heavily doped) in reverse bias breaks down at V_Z and holds the voltage nearly constant — a voltage regulator. With a multimeter: resistor reads the same both ways, diode one way, LED one way and lights up, capacitor shows a reading that falls to zero."
+  }
+ ],
+ "ratta": [
+  "Vernier LC = MSD/N (0.01 cm); screw gauge LC = pitch/N (0.001 cm).",
+  "Corrected reading = observed − zero error (sign included).",
+  "Energy ∝ A² → plot A² vs t for damping.",
+  "Y = MgL/(πr²Δl); T = hrρg/(2 cos θ); η = 2r²(ρ − σ)g/(9v).",
+  "Resonance tube: v = 2f(l₂ − l₁), e = (l₂ − 3l₁)/2 ≈ 0.3d.",
+  "Metre bridge: X = R l/(100 − l); balance near the middle.",
+  "Half deflection: G = RS/(R − S); figure of merit = current per division.",
+  "Prism: μ = sin((A + δm)/2)/sin(A/2); i–δ curve is U-shaped.",
+  "Glass slab: μ = (R₃ − R₁)/(R₃ − R₂).",
+  "Zener works in reverse bias; detergent lowers surface tension."
+ ]
+}

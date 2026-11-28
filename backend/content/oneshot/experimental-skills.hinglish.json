@@ -1,0 +1,243 @@
+{
+ "slug": "experimental-skills",
+ "subject": "Physics",
+ "chapters": {
+  "NEET": "Experimental Skills",
+  "JEE": "Experimental Skills"
+ },
+ "title": "Experimental Skills",
+ "readMinutes": 16,
+ "verifiedOn": "2026-11-28",
+ "summary": [
+  "NEET aur JEE Main dono mein 18 lab experiments ek alag unit hain. Sawaal poochte hain: kya naapa jaata hai, kaunsa formula lagta hai, instrument kaise padhte hain, kaunsa graph banta hai, aur kaunsi error ya precaution zaroori hai.",
+  "Length ke instruments: vernier callipers (LC 0.01 cm) external aur internal diameter aur depth ke liye; screw gauge (LC 0.001 cm) wire ke diameter aur sheet ki motai ke liye. Pehle zero error correct karo.",
+  "Mechanics aur properties of matter: simple pendulum (A² vs t se energy loss), metre scale (principle of moments), Searle's apparatus (Young's modulus), capillary rise (surface tension), girti ball (viscosity), resonance tube (speed of sound), method of mixtures (specific heat).",
+  "Electricity, optics aur electronics: metre bridge (resistivity), Ohm's law (V–I graph), half-deflection method (galvanometer resistance aur figure of merit), parallax ke saath u–v method (focal length), prism ka i–δ curve, travelling microscope (glass slab ka refractive index), diode aur Zener characteristics, aur diode, LED, resistor, capacitor ki pehchaan."
+ ],
+ "formulas": [
+  {
+   "name": "Vernier callipers",
+   "formula": "LC = 1 MSD − 1 VSD = MSD/N;  reading = MSR + (VSD × LC) − zero error",
+   "when": "Vessel ka external aur internal diameter aur depth.",
+   "mistake": "Negative zero error ko wapas JODO (negative ko ghataana) — sign mat chhodo.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Screw gauge",
+   "formula": "LC = pitch/N;  reading = PSR + (CSR × LC) − zero error",
+   "when": "Wire ka diameter, sheet ki motai.",
+   "mistake": "Sirf ratchet se ghumao aur ek hi direction mein — screw ulta ghumane se backlash error aata hai."
+  },
+  {
+   "name": "Simple pendulum and damping",
+   "formula": "T = 2π√(l/g);  energy E ∝ A²;  A = A₀e^{−bt/2m}",
+   "when": "Energy dissipation: A² (energy) ko t ke against plot karo.",
+   "mistake": "A²–t graph girta hua curve hai, straight line nahi; ln A vs t straight line hoti hai."
+  },
+  {
+   "name": "Metre scale — principle of moments",
+   "formula": "m₁d₁ = m₂d₂ (moments about the balance point)",
+   "when": "Balanced metre scale par known mass se kisi object ka mass.",
+   "mistake": "Har distance balance point (knife edge) se naapo, 0 cm wale end se nahi."
+  },
+  {
+   "name": "Young's modulus (Searle's apparatus)",
+   "formula": "Y = MgL/(πr²Δl) = gL/(πr² × slope),  slope = Δl/M",
+   "when": "Metallic wire ka Young's modulus.",
+   "tag": "PYQ favourite",
+   "note": "r screw-gauge diameter ka aadha hai — diameter daal diya to Y chaar guna chhota aayega."
+  },
+  {
+   "name": "Surface tension by capillary rise",
+   "formula": "T = hrρg/(2 cos θ);  for water on clean glass θ ≈ 0",
+   "when": "Paani ka surface tension; detergent ka effect.",
+   "note": "Detergent surface tension KAM karta hai, isliye paani kam chadhta hai."
+  },
+  {
+   "name": "Viscosity from terminal velocity",
+   "formula": "v_t = 2r²(ρ − σ)g/(9η)  ⇒  η = 2r²(ρ − σ)g/(9v_t)",
+   "when": "Liquid (glycerine, castor oil) ka coefficient of viscosity.",
+   "mistake": "Ball ka time tabhi lo jab woh terminal velocity pakad le — marks surface se kuch cm neeche se shuru karo."
+  },
+  {
+   "name": "Resonance tube",
+   "formula": "l₁ + e = λ/4;  l₂ + e = 3λ/4  ⇒  v = 2f(l₂ − l₁);  e = (l₂ − 3l₁)/2 ≈ 0.3d",
+   "when": "Room temperature par hawa mein speed of sound.",
+   "mistake": "v = 4fl₁ lene se end correction chhoot jaata hai; do-length method ise cancel karta hai.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Method of mixtures",
+   "formula": "heat lost = heat gained:  m_s s_s (T_s − T_f) = (m_w s_w + W) (T_f − T_w)",
+   "when": "Solid ya liquid ki specific heat.",
+   "mistake": "Calorimeter (water equivalent W) zaroor jodo — chhod diya to specific heat galat aayegi."
+  },
+  {
+   "name": "Metre bridge",
+   "formula": "X/R = l/(100 − l);  ρ = XA/L = Xπr²/L",
+   "when": "Unknown resistance aur wire ki resistivity.",
+   "note": "Balance point beech mein (40–60 cm) lao aur end error cancel karne ke liye X aur R ki jagah badlo."
+  },
+  {
+   "name": "Ohm's law",
+   "formula": "V = IR;  R = slope of V–I graph (V on y-axis)",
+   "when": "Wire ka resistance.",
+   "mistake": "Ammeter series mein aur voltmeter parallel mein — ulta lagaya to reading galat."
+  },
+  {
+   "name": "Half-deflection method",
+   "formula": "G = RS/(R − S)  (≈ S when R ≫ G);  figure of merit k = I/θ = E/((R + G)θ)",
+   "when": "Galvanometer ka resistance aur figure of merit.",
+   "mistake": "k current per division (A/div) hai, divisions per ampere nahi.",
+   "tag": "PYQ favourite"
+  },
+  {
+   "name": "Focal length by u–v method",
+   "formula": "mirror: 1/f = 1/v + 1/u;  lens: 1/f = 1/v − 1/u (sign convention)",
+   "when": "Concave mirror, convex mirror (convex lens ke saath) aur convex lens ki focal length.",
+   "note": "No parallax ka matlab needle tip aur image tip saath hilte hain — tip to tip parallax hatao."
+  },
+  {
+   "name": "Prism i–δ curve",
+   "formula": "δ = i + e − A;  at minimum deviation i = e, r = A/2,  μ = sin((A + δm)/2)/sin(A/2)",
+   "when": "Angle of deviation vs angle of incidence.",
+   "mistake": "Curve U-shape ka hai: δ girta hai, δm tak pahunchta hai, phir badhta hai — straight line nahi."
+  },
+  {
+   "name": "Travelling microscope",
+   "formula": "μ = real thickness/apparent thickness = (R₃ − R₁)/(R₃ − R₂)",
+   "when": "Glass slab ka refractive index.",
+   "mistake": "R₁ = bina slab mark, R₂ = slab ke through mark, R₃ = slab ka top (lycopodium powder) — mix kiya to μ ulta aa jaayega."
+  },
+  {
+   "name": "p-n junction and Zener",
+   "formula": "diode: forward knee ≈ 0.7 V (Si), reverse µA current;  r_d = ΔV/ΔI;  Zener: reverse bias, V stays ≈ V_Z after breakdown",
+   "when": "Characteristic curves; Zener ka reverse breakdown voltage.",
+   "note": "Zener REVERSE bias mein regulator ki tarah use hota hai — forward bias mein woh normal diode hai."
+  },
+  {
+   "name": "Identifying components (multimeter)",
+   "formula": "resistor: same steady reading both ways;  diode: conducts one way only;  LED: one way and glows;  capacitor: reading jumps then falls to zero (no steady current)",
+   "when": "Mixed set se diode, LED, resistor aur capacitor alag karna."
+  }
+ ],
+ "examples": [
+  {
+   "title": "Negative zero error wala vernier",
+   "problem": "Vernier (LC 0.01 cm) mein jaws band karne par vernier zero main-scale zero ke LEFT mein hai aur 6th vernier division milta hai. Cylinder naapne par MSR = 3.1 cm aur 4th vernier division milta hai. Sahi diameter?",
+   "solution": "Negative zero error = −(10 − 6) × 0.01 = −0.04 cm. Observed = 3.1 + 4 × 0.01 = 3.14 cm. Sahi = 3.14 − (−0.04) = 3.18 cm."
+  },
+  {
+   "title": "Principle of moments se mass",
+   "problem": "Uniform metre scale 50 cm par balance hota hai. 20 cm par 50 g mass aur 70 cm par unknown mass latakne par bhi balance rehta hai. Unknown mass?",
+   "solution": "50 cm ke around moments: 50 × (50 − 20) = m × (70 − 50) ⇒ m = 1500/20 = 75 g."
+  },
+  {
+   "title": "Wire ka Young's modulus",
+   "problem": "Searle's apparatus mein 2.0 m lambi, 0.25 mm radius wali wire 5 kg load se 2.5 mm khinchti hai (g = 9.8 m/s²). Y?",
+   "solution": "Y = MgL/(πr²Δl) = 5 × 9.8 × 2/(π × (0.25 × 10⁻³)² × 2.5 × 10⁻³) ≈ 2.0 × 10¹¹ N/m² (steel)."
+  },
+  {
+   "title": "Capillary rise se surface tension",
+   "problem": "Saaf glass capillary (radius 0.25 mm) mein paani 5.9 cm chadhta hai (θ = 0, ρ = 1000 kg/m³, g = 9.8 m/s²). Surface tension?",
+   "solution": "T = hrρg/2 = 0.059 × 0.25 × 10⁻³ × 1000 × 9.8/2 ≈ 0.072 N/m."
+  },
+  {
+   "title": "Glycerine ki viscosity",
+   "problem": "Steel ball (r = 1 mm, ρ = 7800 kg/m³) glycerine (σ = 1260 kg/m³) mein 1.2 cm/s ki terminal speed se girti hai. η? (g = 9.8 m/s²)",
+   "solution": "η = 2r²(ρ − σ)g/(9v) = 2 × 10⁻⁶ × 6540 × 9.8/(9 × 0.012) ≈ 1.19 Pa s."
+  },
+  {
+   "title": "Resonance tube se speed of sound",
+   "problem": "512 Hz fork se resonance 16 cm aur 50 cm par milti hai. Speed of sound aur end correction?",
+   "solution": "v = 2f(l₂ − l₁) = 2 × 512 × 0.34 ≈ 348 m/s. e = (l₂ − 3l₁)/2 = (50 − 48)/2 = 1 cm."
+  },
+  {
+   "title": "Method of mixtures se specific heat",
+   "problem": "100 °C par 100 g solid ko 20 °C ke 200 g paani mein daalte hain; calorimeter ka water equivalent 10 g. Final temperature 25 °C. Solid ki specific heat?",
+   "solution": "Heat lost = heat gained: 100 × s × 75 = 210 × 1 × 5 ⇒ s = 1050/7500 = 0.14 cal g⁻¹ °C⁻¹."
+  },
+  {
+   "title": "Metre bridge se resistivity",
+   "problem": "Right gap mein 6 Ω ke saath null point left end se 40 cm par hai. Unknown wire 1 m lambi aur 0.4 mm diameter ki hai. X aur ρ?",
+   "solution": "X = R l/(100 − l) = 6 × 40/60 = 4 Ω. ρ = Xπr²/L = 4 × π × (0.2 × 10⁻³)² ≈ 5.0 × 10⁻⁷ Ω m."
+  },
+  {
+   "title": "Half deflection se galvanometer",
+   "problem": "R = 5000 Ω ke saath 2 V cell se 20 divisions deflection. Shunt S = 50 Ω lagane par deflection aadha. G aur figure of merit?",
+   "solution": "G = RS/(R − S) = 5000 × 50/4950 ≈ 50.5 Ω. k = E/((R + G)θ) = 2/(5050.5 × 20) ≈ 2.0 × 10⁻⁵ A/div."
+  },
+  {
+   "title": "Travelling microscope se refractive index",
+   "problem": "Readings: bina slab mark R₁ = 2.100 cm, slab ke through mark R₂ = 3.100 cm, slab ka top R₃ = 5.100 cm. Glass ka μ?",
+   "solution": "Real thickness = R₃ − R₁ = 3.000 cm; apparent = R₃ − R₂ = 2.000 cm. μ = 3/2 = 1.5."
+  },
+  {
+   "title": "i–δ curve se prism",
+   "problem": "60° prism ke i–δ curve ka sabse neeche ka point δm = 40° par hai. μ?",
+   "solution": "μ = sin((60° + 40°)/2)/sin(30°) = sin 50°/0.5 ≈ 1.53."
+  }
+ ],
+ "topics": [
+  {
+   "title": "Reading length instruments",
+   "explain": "Vernier callipers: bahar ke jaws external diameter, andar ke jaws internal diameter, patli strip depth ke liye. Vernier zero main-scale zero ke right mein ho to zero error positive. Screw gauge: pitch = ek poore chakkar mein screw kitna chala; LC = pitch/N (aam taur par 0.5 mm/50 = 0.01 mm). Kai jagah, ek-doosre ke right angle par reading lekar average karo."
+  },
+  {
+   "title": "Simple pendulum — energy dissipation",
+   "explain": "Hawa ka drag aur friction amplitude ko time ke saath kam karte hain. Energy ∝ A², isliye A² vs t plot energy ka khatam hona dikhata hai (girta curve). Chhote amplitude par T = 2π√(l/g) amplitude par depend nahi karta; l bob ke centre tak naapo. Timing error kam karne ke liye bahut saare oscillations gino."
+  },
+  {
+   "title": "Searle's apparatus",
+   "explain": "Ek hi support se do same wires latakti hain: reference wire aur experimental wire. Spirit level dono wires ko jodta hai aur micrometer sirf unki lambai ka FARAK naapta hai, isliye support ka jhukna aur temperature change cancel ho jaata hai. Load steps mein badhao aur ghatao, mean extension lo, load–extension plot karo; graph straight line honi chahiye (elastic limit ke andar raho)."
+  },
+  {
+   "title": "Surface tension and detergents",
+   "explain": "Capillary rise h ∝ 1/r aur h ∝ T. Tube pehle saaf karo (grease angle of contact badal deta hai). Detergent daalne se surface tension kam hota hai, isliye h kam ho jaata hai. Meniscus ka bottom travelling microscope se padho."
+  },
+  {
+   "title": "Viscosity by a falling ball",
+   "explain": "Chhoti steel balls ko glycerine ke lambe jar ke axis par dheere se chhodo; speed steady hone ke baad do marks ke beech time lo. Terminal velocity ∝ r². Liquids ki viscosity temperature badhne par kam hoti hai, isliye room temperature note karo."
+  },
+  {
+   "title": "Resonance tube details",
+   "explain": "Paani ke upar ka air column closed pipe hai: pehli resonance λ/4 par, doosri 3λ/4 par (dono mein end correction e ≈ 0.3 × diameter juda hai). Sabse tez awaaz resonance batati hai. Speed of sound temperature ke saath badhti hai (lagbhag 0.61 m/s per °C)."
+  },
+  {
+   "title": "Method of mixtures — precautions",
+   "explain": "Radiation loss kam karne ke liye polished, lagged calorimeter lo; garam solid jaldi transfer karo; hilao aur sabse zyada steady temperature note karo. Yahi tareeka known specific heat wale solid se liquid ki specific heat bhi deta hai."
+  },
+  {
+   "title": "Metre bridge and Ohm's law",
+   "explain": "Metre bridge 100 cm wire wala Wheatstone bridge hai; null point par galvanometer mein current nahi behta. Jockey thodi der hi dabao (garam hone se resistance badalta hai). Ohm's law experiment: rheostat current badalta hai, V–I graph origin se guzarta hai; slope (V/I) = R."
+  },
+  {
+   "title": "Galvanometer: half deflection",
+   "explain": "Pehle bada resistance R lagao taaki deflection θ range mein rahe, phir galvanometer ke across shunt S lagao aur use tab tak badlo jab tak deflection θ/2 na ho. Tab G = RS/(R − S); R bahut bada ho to G ≈ S. Figure of merit = ek division ke liye current."
+  },
+  {
+   "title": "Focal length and parallax",
+   "explain": "Concave mirror aur convex lens: object needle rakho, real image needle ki jagah no parallax par dhoondo, u aur v likho; 1/v vs 1/u plot karo — slope 1 wali straight line, jiska y-intercept 1/f hai. Convex mirror virtual image banata hai, isliye pehle convex lens real image banata hai jo mirror ke liye object ka kaam karti hai."
+  },
+  {
+   "title": "Prism and glass slab",
+   "explain": "i–δ curve: i badlo, δ naapo; minimum deviation δm tab aata hai jab ray symmetric guzarti hai (i = e). Travelling microscope: pehle mark par focus, phir slab ke through mark par, phir top par lycopodium powder par; real/apparent thickness se μ milta hai."
+  },
+  {
+   "title": "Diode, Zener and identification",
+   "explain": "Forward characteristic: knee voltage tak lagbhag zero current, phir tez badhta hai. Reverse characteristic: bahut chhota saturation current. Zener (heavily doped) reverse bias mein V_Z par breakdown karke voltage lagbhag constant rakhta hai — voltage regulator. Multimeter se: resistor dono taraf same reading, diode ek taraf, LED ek taraf aur jalta hai, capacitor ki reading aakar zero ho jaati hai."
+  }
+ ],
+ "ratta": [
+  "Vernier LC = MSD/N (0.01 cm); screw gauge LC = pitch/N (0.001 cm).",
+  "Sahi reading = observed − zero error (sign ke saath).",
+  "Energy ∝ A² → damping ke liye A² vs t plot.",
+  "Y = MgL/(πr²Δl); T = hrρg/(2 cos θ); η = 2r²(ρ − σ)g/(9v).",
+  "Resonance tube: v = 2f(l₂ − l₁), e = (l₂ − 3l₁)/2 ≈ 0.3d.",
+  "Metre bridge: X = R l/(100 − l); balance beech mein.",
+  "Half deflection: G = RS/(R − S); figure of merit = current per division.",
+  "Prism: μ = sin((A + δm)/2)/sin(A/2); i–δ curve U-shape.",
+  "Glass slab: μ = (R₃ − R₁)/(R₃ − R₂).",
+  "Zener reverse bias mein kaam karta hai; detergent surface tension kam karta hai."
+ ]
+}
