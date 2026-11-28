@@ -14,8 +14,9 @@
 // ============================================================
 
 import rateLimit from "express-rate-limit";
+import { ipKeyGenerator } from "./otpLimiter.js";
 
-export const authLimiter = rateLimit({
+const perAccount = rateLimit({
   windowMs:        15 * 60 * 1000,  // 15 minutes
   max:             10,               // Max 10 attempts per window
   standardHeaders: "draft-7",       // RateLimit-* headers (RFC draft 7)
@@ -40,5 +41,20 @@ export const authLimiter = rateLimit({
     });
   },
 
-  keyGenerator: (req) => `auth:${req.ip}:${req.path}`,
+  // Per network + account: many students share one mobile IP (Jio /
+  // Airtel carrier NAT), so one person's typos must not lock out the rest.
+  keyGenerator: (req) => `auth:${ipKeyGenerator(req.ip ?? "")}:${req.path}:${String(req.body?.email ?? "").trim().toLowerCase().slice(0, 254)}`,
 });
+
+// A looser ceiling for the whole network (stops one IP spraying many accounts).
+const perNetwork = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: () => Number(process.env.AUTH_FAILS_PER_NETWORK) || 100,
+  standardHeaders: false,
+  legacyHeaders: false,
+  skipSuccessfulRequests: true,
+  keyGenerator: (req) => `auth-net:${ipKeyGenerator(req.ip ?? "")}:${req.path}`,
+  handler: (req, res) => res.status(429).json({ success: false, error: "Too many attempts from this network. Please wait 15 minutes and try again.", retryAfter: 900 }),
+});
+
+export const authLimiter = (req, res, next) => perNetwork(req, res, (err) => (err ? next(err) : perAccount(req, res, next)));

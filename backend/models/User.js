@@ -104,6 +104,7 @@ const userSchema = new mongoose.Schema(
     signupDevice: { type: String, default: null, select: false },
     // Where the student came from (utm / src, e.g. "free-mock"), for marketing reports.
     signupSource: { type: Object, default: null },
+    signupTicketHash: { type: String, default: null, select: false }, // code works only in the signup browser
     consent:     { type: consentSchema, default: () => ({}) },
 
     // Chat-rules record (18+ content / abusive language): category + time

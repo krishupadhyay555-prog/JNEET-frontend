@@ -15,6 +15,9 @@ import { TERMS_VERSION, PRIVACY_VERSION } from "../config/legal.js";
 // whose parent hasn't approved yet (or has withdrawn approval).
 export function isAiLocked(user) {
   if (!env.REQUIRE_PARENT_CONSENT_FOR_AI) return false;
+  // No date of birth yet (very old accounts): AI stays locked until the
+  // student gives it in the date-of-birth step (age decides consent).
+  if (!user?.dateOfBirth) return true;
   const c = user?.consent;
   if (!c || c.ageGroup !== "minor") return false;
   return c.parentStatus !== "granted";

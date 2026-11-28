@@ -16,6 +16,11 @@
 
 import { env } from "../config/env.js";
 
+// Loud at boot: in production a missing key silently turns the captcha off.
+if (env.NODE_ENV === "production" && !env.TURNSTILE_SECRET_KEY) {
+  console.error("[Captcha] TURNSTILE_SECRET_KEY is NOT set — sign-up / login / free-mock captcha is OFF in production.");
+}
+
 const VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 const TIMEOUT_MS = 4000;
 const OUR_PROBLEM = new Set(["missing-input-secret", "invalid-input-secret", "internal-error", "bad-request"]);

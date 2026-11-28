@@ -18,7 +18,7 @@ import { normalizeEmail } from "../utils/email.js";
 
 // IPv6 users get a fresh address per connection inside their /64, so
 // bucket IPv6 by its /64 prefix; IPv4 is used as-is.
-function ipKeyGenerator(ip) {
+export function ipKeyGenerator(ip) {
   if (!ip || !ip.includes(":")) return ip || "unknown";
   if (ip.startsWith("::ffff:")) return ip.slice(7); // IPv4-mapped
   return ip.split(":").slice(0, 4).join(":");
@@ -37,7 +37,9 @@ function tooMany(message, fallbackSec) {
 
 export const otpIpLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
-  limit: 20,
+  // Shared mobile IPs: generous per network; the per-mailbox limit and
+  // the captcha are what stop email bombing.
+  limit: () => Number(process.env.OTP_PER_NETWORK_HOUR) || 120,
   standardHeaders: "draft-7",
   legacyHeaders: false,
   keyGenerator: (req) => `otp-ip:${ipKeyGenerator(req.ip ?? "")}`,
