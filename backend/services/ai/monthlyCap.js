@@ -12,6 +12,9 @@ export const MONTHLY_CAP_INR = { free: 10, pro: 50, elite: 100, pass: 30 };
 const cache = new Map();
 
 export function capFor(user) {
+  // A pass is Pro-level, so a pass holder's plan is "pro" → ₹30 pass cap.
+  // But a pass never LOWERS Elite (Elite bought after a pass = ₹100).
+  if (user?.plan === "elite") return MONTHLY_CAP_INR.elite;
   if (user?.planPass) return MONTHLY_CAP_INR.pass;
   return MONTHLY_CAP_INR[user?.plan] ?? MONTHLY_CAP_INR.free;
 }
