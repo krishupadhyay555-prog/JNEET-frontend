@@ -1,0 +1,3504 @@
+[
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area bounded by the curve y = 4x − x² and the x-axis is",
+    "options": [
+      "16/3",
+      "64/3",
+      "8",
+      "32/3"
+    ],
+    "correctIndex": 3,
+    "explanation": "Roots 0 and 4: ∫₀⁴ (4x − x²) dx = 32 − 64/3 = 32/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area enclosed between y = √x and y = x is",
+    "options": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1/6"
+    ],
+    "correctIndex": 3,
+    "explanation": "They meet at x = 0, 1: ∫₀¹ (√x − x) dx = 2/3 − 1/2 = 1/6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area of the region between the line y = x and the parabola y = 3x − x² is",
+    "options": [
+      "2/3",
+      "4/3",
+      "8/3",
+      "9/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "3x − x² = x at x = 0, 2: ∫₀² (2x − x²) dx = 4 − 8/3 = 4/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area enclosed by the circle x² + y² = 4 is found by integration as 4∫₀² √(4 − x²) dx. Its value is",
+    "options": [
+      "2π",
+      "8π",
+      "16π",
+      "4π"
+    ],
+    "correctIndex": 3,
+    "explanation": "Each quarter is ∫₀² √(4 − x²) dx = π; total 4π (= πr²)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area bounded by y = eˣ, the x-axis and the lines x = 0, x = ln 3 is",
+    "options": [
+      "3",
+      "2",
+      "ln 3",
+      "e³ − 1"
+    ],
+    "correctIndex": 1,
+    "explanation": "∫₀^{ln 3} eˣ dx = 3 − 1 = 2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area bounded by y = sin x and the x-axis for 0 ≤ x ≤ 2π is",
+    "options": [
+      "0",
+      "2",
+      "4",
+      "2π"
+    ],
+    "correctIndex": 2,
+    "explanation": "The signed integral is 0, but area counts both arches: 2∫₀^π sin x dx = 2 × 2 = 4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area bounded by y = |x − 1|, the x-axis and the lines x = 0, x = 3 is",
+    "options": [
+      "2",
+      "3",
+      "5/2",
+      "9/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Two triangles: ½ × 1 × 1 + ½ × 2 × 2 = 1/2 + 2 = 5/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area bounded by y = ln x, the x-axis and the line x = e is",
+    "options": [
+      "e",
+      "e − 1",
+      "1",
+      "1/e"
+    ],
+    "correctIndex": 2,
+    "explanation": "∫₁^e ln x dx = [x ln x − x]₁^e = (e − e) − (0 − 1) = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area enclosed between the parabolas y = x² and y = 4x − x² is",
+    "options": [
+      "4/3",
+      "16/3",
+      "32/3",
+      "8/3"
+    ],
+    "correctIndex": 3,
+    "explanation": "They meet at x = 0, 2: ∫₀² (4x − 2x²) dx = 8 − 16/3 = 8/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area bounded by the parabola y² = 4x and its latus rectum is",
+    "options": [
+      "8/3",
+      "4/3",
+      "2",
+      "16/3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Latus rectum x = 1: 2∫₀¹ 2√x dx = 4 × 2/3 = 8/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area bounded by y = x³, the x-axis and the lines x = −1, x = 1 is",
+    "options": [
+      "0",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    "correctIndex": 2,
+    "explanation": "By symmetry 2∫₀¹ x³ dx = 1/2 (the signed integral is 0)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The value of sin⁻¹(sin(2π/3)) is",
+    "options": [
+      "2π/3",
+      "π/3",
+      "−π/3",
+      "π/6"
+    ],
+    "correctIndex": 1,
+    "explanation": "sin(2π/3) = √3/2, and the principal value of sin⁻¹(√3/2) in [−π/2, π/2] is π/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "tan⁻¹(1/2) + tan⁻¹(1/3) equals",
+    "options": [
+      "π/3",
+      "π/4",
+      "π/6",
+      "π/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "tan⁻¹a + tan⁻¹b = tan⁻¹((a + b)/(1 − ab)) = tan⁻¹((5/6)/(5/6)) = tan⁻¹ 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "tan⁻¹ 2 + tan⁻¹ 3 equals",
+    "options": [
+      "π/4",
+      "−π/4",
+      "3π/4",
+      "π/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Here ab = 6 > 1 and both are positive, so the sum = π + tan⁻¹((2 + 3)/(1 − 6)) = π − π/4 = 3π/4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "sin(cos⁻¹(3/5)) equals",
+    "options": [
+      "3/5",
+      "4/5",
+      "3/4",
+      "5/4"
+    ],
+    "correctIndex": 1,
+    "explanation": "If cos θ = 3/5 with θ ∈ [0, π], sin θ = 4/5 (positive)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "tan(2 tan⁻¹(1/3)) equals",
+    "options": [
+      "2/3",
+      "3/4",
+      "1/3",
+      "4/3"
+    ],
+    "correctIndex": 1,
+    "explanation": "tan 2θ = 2(1/3)/(1 − 1/9) = (2/3)/(8/9) = 3/4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The domain of f(x) = sin⁻¹(2x − 1) is",
+    "options": [
+      "[−1, 1]",
+      "[0, 1]",
+      "[−1/2, 1/2]",
+      "(0, 1)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Need −1 ≤ 2x − 1 ≤ 1 ⇒ 0 ≤ x ≤ 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "sin⁻¹(3/5) + cos⁻¹(3/5) equals",
+    "options": [
+      "π",
+      "π/2",
+      "π/4",
+      "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "sin⁻¹x + cos⁻¹x = π/2 for every x in [−1, 1]."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of real solutions of tan⁻¹x + tan⁻¹(2x) = π/4 is",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "infinitely many"
+    ],
+    "correctIndex": 1,
+    "explanation": "(3x)/(1 − 2x²) = 1 ⇒ 2x² + 3x − 1 = 0 ⇒ x = (−3 ± √17)/4. The negative root makes both terms negative (sum < 0), so only x = (√17 − 3)/4 works."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "tan⁻¹ 1 + tan⁻¹ 2 + tan⁻¹ 3 equals",
+    "options": [
+      "π",
+      "π/2",
+      "3π/4",
+      "2π"
+    ],
+    "correctIndex": 0,
+    "explanation": "tan⁻¹ 2 + tan⁻¹ 3 = 3π/4, plus π/4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "cos(sin⁻¹(1/3) + cos⁻¹(1/3)) equals",
+    "options": [
+      "1",
+      "1/3",
+      "2√2/3",
+      "0"
+    ],
+    "correctIndex": 3,
+    "explanation": "The angle inside is π/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The range of f(x) = cot⁻¹x (principal value) is",
+    "options": [
+      "(0, π)",
+      "[0, π]",
+      "(−π/2, π/2)",
+      "[−π/2, π/2]"
+    ],
+    "correctIndex": 0,
+    "explanation": "cot⁻¹ takes values strictly between 0 and π."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The principal value of cos⁻¹(−1/2) is",
+    "options": [
+      "−π/3",
+      "π/3",
+      "2π/3",
+      "4π/3"
+    ],
+    "correctIndex": 2,
+    "explanation": "cos⁻¹(−x) = π − cos⁻¹x = π − π/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If sin⁻¹x + sin⁻¹y = 2π/3, then cos⁻¹x + cos⁻¹y equals",
+    "options": [
+      "2π/3",
+      "π/6",
+      "4π/3",
+      "π/3"
+    ],
+    "correctIndex": 3,
+    "explanation": "cos⁻¹x + cos⁻¹y = (π/2 − sin⁻¹x) + (π/2 − sin⁻¹y) = π − 2π/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The term independent of x in (x² + 2/x)⁶ is",
+    "options": [
+      "240",
+      "160",
+      "60",
+      "480"
+    ],
+    "correctIndex": 0,
+    "explanation": "T_{r+1} = C(6, r)x^{12−2r}(2/x)^r = C(6, r)2^r x^{12−3r}. r = 4: 15 × 16 = 240."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The middle term coefficient of (1 + x)¹⁰ is",
+    "options": [
+      "210",
+      "252",
+      "120",
+      "462"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 6th term: C(10, 5) = 252."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The coefficient of x³ in (2x − 3)⁵ is",
+    "options": [
+      "−720",
+      "1080",
+      "240",
+      "720"
+    ],
+    "correctIndex": 3,
+    "explanation": "The x³ term is C(5, 3)(2x)³(−3)² = 10 × 8 × 9 x³ = 720x³ (the even power of −3 makes it positive)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "C(8, 0) + C(8, 2) + C(8, 4) + C(8, 6) + C(8, 8) equals",
+    "options": [
+      "256",
+      "128",
+      "64",
+      "70"
+    ],
+    "correctIndex": 1,
+    "explanation": "The sum of even-indexed coefficients is 2^{n−1} = 2⁷."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Σ_{r=0}^{10} r·C(10, r) equals",
+    "options": [
+      "1024",
+      "10240",
+      "5120",
+      "2560"
+    ],
+    "correctIndex": 2,
+    "explanation": "Σ r C(n, r) = n·2^{n−1} = 10 × 512."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The coefficient of x⁴ in (1 + x)⁵(1 − x)⁵ is",
+    "options": [
+      "10",
+      "−10",
+      "5",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "(1 − x²)⁵: the x⁴ term is C(5, 2)(−x²)² = 10x⁴."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of terms in the expansion of (a + b)²⁰ is",
+    "options": [
+      "20",
+      "40",
+      "21",
+      "22"
+    ],
+    "correctIndex": 2,
+    "explanation": "(a + b)ⁿ has n + 1 terms."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The coefficient of x³ in (1 + x + x²)³ is",
+    "options": [
+      "6",
+      "10",
+      "3",
+      "7"
+    ],
+    "correctIndex": 3,
+    "explanation": "Pick exponents (from each bracket, 0–2) summing to 3: (1,1,1) once, (0,1,2) in 3! = 6 ways ⇒ 7."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The coefficient of x⁶ in (1 + 2x²)⁹ is",
+    "options": [
+      "84",
+      "672",
+      "336",
+      "1344"
+    ],
+    "correctIndex": 1,
+    "explanation": "x⁶ needs (2x²)³: C(9, 3) × 8 = 84 × 8 = 672."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the expansion of (x + 1/x)¹², the coefficient of x⁴ is",
+    "options": [
+      "220",
+      "792",
+      "924",
+      "495"
+    ],
+    "correctIndex": 3,
+    "explanation": "T_{r+1} = C(12, r)x^{12−2r}; 12 − 2r = 4 ⇒ r = 4: C(12, 4) = 495."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Binomial Theorem",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Using the binomial theorem, which is larger: (1.01)¹⁰ or 1.1?",
+    "options": [
+      "1.1",
+      "(1.01)¹⁰",
+      "they are equal",
+      "cannot be decided without a calculator"
+    ],
+    "correctIndex": 1,
+    "explanation": "(1 + 0.01)¹⁰ = 1 + 10(0.01) + 45(0.0001) + … = 1.1 + positive terms."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The eccentricity of the ellipse 9x² + 25y² = 225 is",
+    "options": [
+      "3/5",
+      "5/4",
+      "4/5",
+      "√34/5"
+    ],
+    "correctIndex": 2,
+    "explanation": "x²/25 + y²/9 = 1: e = √(1 − 9/25) = 4/5."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The equation of the tangent to the parabola y² = 8x at the point (2, 4) is",
+    "options": [
+      "y = 2x",
+      "y = x − 2",
+      "x + y = 6",
+      "y = x + 2"
+    ],
+    "correctIndex": 3,
+    "explanation": "yy₁ = 2a(x + x₁) with a = 2: 4y = 4(x + 2)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The line y = mx + 1 touches the parabola y² = 4x. Then m is",
+    "options": [
+      "2",
+      "1/2",
+      "1",
+      "−1"
+    ],
+    "correctIndex": 2,
+    "explanation": "Condition c = a/m with a = 1, c = 1 ⇒ m = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The foci of the ellipse x²/16 + y²/25 = 1 are",
+    "options": [
+      "(±3, 0)",
+      "(0, ±4)",
+      "(0, ±3)",
+      "(±4, 0)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Major axis along y (25 > 16): c = √(25 − 16) = 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The asymptotes of the hyperbola x²/9 − y²/4 = 1 are",
+    "options": [
+      "y = ±(2/3)x",
+      "y = ±(3/2)x",
+      "y = ±(4/9)x",
+      "y = ±x"
+    ],
+    "correctIndex": 0,
+    "explanation": "y = ±(b/a)x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The conic x²/a² − y²/b² = 1 is a rectangular hyperbola when",
+    "options": [
+      "a = 2b",
+      "a = b, and then e = √2",
+      "b = 0",
+      "a = b, and then e = 1"
+    ],
+    "correctIndex": 1,
+    "explanation": "Equal axes give perpendicular asymptotes and e = √(1 + 1)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The sum of the distances of any point on the ellipse x²/36 + y²/20 = 1 from its two foci is",
+    "options": [
+      "6",
+      "2√20",
+      "16",
+      "12"
+    ],
+    "correctIndex": 3,
+    "explanation": "Focal distances add up to the major axis 2a = 12."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For the hyperbola x²/25 − y²/11 = 1, the absolute difference of focal distances of any point on it is",
+    "options": [
+      "10",
+      "12",
+      "2√11",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "|PS − PS′| = 2a = 10."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The vertex of the parabola y² − 4y − 8x + 20 = 0 is",
+    "options": [
+      "(2, 2)",
+      "(−2, 2)",
+      "(2, −2)",
+      "(0, 2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "(y − 2)² = 8x − 16 = 8(x − 2)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The point on the parabola y² = 16x whose focal distance is 8 is",
+    "options": [
+      "(8, ±8√2)",
+      "(2, ±4√2)",
+      "(4, ±8)",
+      "(4, ±4)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Focal distance = x + a = x + 4 = 8 ⇒ x = 4, y² = 64."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Conic Sections",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The parametric point (a cos θ, b sin θ) lies on",
+    "options": [
+      "the circle x² + y² = a²",
+      "the ellipse x²/a² + y²/b² = 1",
+      "the hyperbola x²/a² − y²/b² = 1",
+      "the parabola y² = 4ax"
+    ],
+    "correctIndex": 1,
+    "explanation": "cos²θ + sin²θ = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "sin 15° equals",
+    "options": [
+      "(√6 + √2)/4",
+      "(√3 − 1)/2",
+      "(√6 − √2)/4",
+      "√3/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "sin(45° − 30°) = (√2/2)(√3/2) − (√2/2)(1/2)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "cos 36° · cos 72° equals",
+    "options": [
+      "1/2",
+      "1/8",
+      "1/4",
+      "√5/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "cos 36° = (√5 + 1)/4, cos 72° = (√5 − 1)/4; product = 4/16."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "sin 10° · sin 50° · sin 70° equals",
+    "options": [
+      "1/4",
+      "√3/8",
+      "1/16",
+      "1/8"
+    ],
+    "correctIndex": 3,
+    "explanation": "sin θ sin(60° − θ) sin(60° + θ) = ¼ sin 3θ = ¼ sin 30°."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The maximum value of 3 sin x + 4 cos x + 2 is",
+    "options": [
+      "9",
+      "5",
+      "6",
+      "7"
+    ],
+    "correctIndex": 3,
+    "explanation": "a sin x + b cos x ranges over [−√(a² + b²), √(a² + b²)] = [−5, 5]."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of solutions of sin 2x = sin x in [0, 2π] is",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "5"
+    ],
+    "correctIndex": 3,
+    "explanation": "sin x(2 cos x − 1) = 0: x = 0, π, 2π and x = π/3, 5π/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The general solution of cos x = 1/2 is",
+    "options": [
+      "x = nπ + π/3",
+      "x = nπ ± π/6",
+      "x = 2nπ ± π/3, n ∈ ℤ",
+      "x = 2nπ + π/3 only"
+    ],
+    "correctIndex": 2,
+    "explanation": "cos θ = cos α ⇒ θ = 2nπ ± α."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "tan 22.5° equals",
+    "options": [
+      "√2 + 1",
+      "1/√2",
+      "√2 − 1",
+      "2 − √3"
+    ],
+    "correctIndex": 2,
+    "explanation": "tan(θ/2) = (1 − cos θ)/sin θ with θ = 45°."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If tan A = 1/2 and tan B = 1/3 (A, B acute), then A + B equals",
+    "options": [
+      "π/3",
+      "π/6",
+      "π/2",
+      "π/4"
+    ],
+    "correctIndex": 3,
+    "explanation": "tan(A + B) = (5/6)/(1 − 1/6) = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The minimum value of sin⁴x + cos⁴x is",
+    "options": [
+      "0",
+      "1/2",
+      "1/4",
+      "1"
+    ],
+    "correctIndex": 1,
+    "explanation": "sin⁴ + cos⁴ = 1 − ½ sin²2x ≥ 1/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "cos²x + cos²(x + 120°) + cos²(x − 120°) equals",
+    "options": [
+      "1",
+      "3/2",
+      "3/4",
+      "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "Using cos² = (1 + cos 2θ)/2 and the three cos 2θ terms summing to 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The period of f(x) = |sin x| + |cos x| is",
+    "options": [
+      "π",
+      "2π",
+      "π/2",
+      "π/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Both |sin x| and |cos x| have period π, and f(x + π/2) = |cos x| + |sin x| = f(x)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a triangle, a = 7, b = 5, c = 3. The angle A is",
+    "options": [
+      "90°",
+      "60°",
+      "150°",
+      "120°"
+    ],
+    "correctIndex": 3,
+    "explanation": "cos A = (25 + 9 − 49)/(2 × 15) = −1/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Trigonometric Functions and Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "sin 54° − sin 18° equals",
+    "options": [
+      "√5/4",
+      "1/4",
+      "1/2",
+      "(√5 − 1)/4"
+    ],
+    "correctIndex": 2,
+    "explanation": "(√5 + 1)/4 − (√5 − 1)/4 = 1/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If y = xˣ, then dy/dx at x = 1 is",
+    "options": [
+      "0",
+      "1",
+      "e",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "ln y = x ln x ⇒ y′ = xˣ(1 + ln x) = 1 at x = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If y = √(x + √x), then dy/dx at x = 4 is",
+    "options": [
+      "1/(2√6)",
+      "5/(4√6)",
+      "5/(8√6)",
+      "1/(4√6)"
+    ],
+    "correctIndex": 2,
+    "explanation": "y′ = (1 + 1/(2√x))/(2√(x + √x)) = (5/4)/(2√6)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For |x| < 1, d/dx[tan⁻¹(2x/(1 − x²))] at x = 1/2 equals",
+    "options": [
+      "4/5",
+      "2/5",
+      "8/5",
+      "16/5"
+    ],
+    "correctIndex": 2,
+    "explanation": "tan⁻¹(2x/(1 − x²)) = 2 tan⁻¹x for |x| < 1, derivative 2/(1 + x²) = 2/(5/4)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If x² + y² = 25, then d²y/dx² at (3, 4) is",
+    "options": [
+      "−3/4",
+      "25/64",
+      "−5/16",
+      "−25/64"
+    ],
+    "correctIndex": 3,
+    "explanation": "y′ = −x/y = −3/4; y″ = −(y − xy′)/y² = −(4 + 9/4)/16 = −25/64."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "d/dx[ln(sin x)] at x = π/4 is",
+    "options": [
+      "0",
+      "1",
+      "√2",
+      "1/√2"
+    ],
+    "correctIndex": 1,
+    "explanation": "cot(π/4) = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "d/dx[e^{2x} sin x] at x = 0 is",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explanation": "e^{2x}(2 sin x + cos x) at 0 = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If y = sin⁻¹x, then (1 − x²)y″ − xy′ equals",
+    "options": [
+      "0",
+      "1",
+      "y",
+      "−1"
+    ],
+    "correctIndex": 0,
+    "explanation": "y′ = 1/√(1 − x²) ⇒ √(1 − x²)y′ = 1; differentiate: (1 − x²)y″ − xy′ = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If y = A e^{3x} + B e^{−3x}, then d²y/dx² equals",
+    "options": [
+      "9y",
+      "3y",
+      "−9y",
+      "y"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each term differentiates twice to 9 times itself."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The derivative of sin x with respect to cos x at x = π/3 is",
+    "options": [
+      "√3",
+      "−√3",
+      "1/√3",
+      "−1/√3"
+    ],
+    "correctIndex": 3,
+    "explanation": "d(sin x)/d(cos x) = cos x/(−sin x) = −cot(π/3)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differentiation",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "d/dx[ln(x + √(x² + 1))] equals",
+    "options": [
+      "1/(x + √(x² + 1))",
+      "x/√(x² + 1)",
+      "√(x² + 1)",
+      "1/√(x² + 1)"
+    ],
+    "correctIndex": 3,
+    "explanation": "(1 + x/√(x² + 1))/(x + √(x² + 1)) = 1/√(x² + 1)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The centre and radius of x² + y² − 6x + 8y − 11 = 0 are",
+    "options": [
+      "(−3, 4) and 6",
+      "(3, −4) and √11",
+      "(6, −8) and 6",
+      "(3, −4) and 6"
+    ],
+    "correctIndex": 3,
+    "explanation": "r = √(9 + 16 + 11) = 6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The length of the tangent from (5, 3) to the circle x² + y² − 4x − 2y + 1 = 0 is",
+    "options": [
+      "√15",
+      "5",
+      "√17",
+      "3"
+    ],
+    "correctIndex": 3,
+    "explanation": "Length = √S₁ = √(25 + 9 − 20 − 6 + 1) = √9 = 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The equation of the circle with (1, 2) and (5, 6) as ends of a diameter is",
+    "options": [
+      "x² + y² + 6x + 8y + 17 = 0",
+      "x² + y² − 6x − 8y − 17 = 0",
+      "x² + y² − 3x − 4y + 17 = 0",
+      "x² + y² − 6x − 8y + 17 = 0"
+    ],
+    "correctIndex": 3,
+    "explanation": "(x − 1)(x − 5) + (y − 2)(y − 6) = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The line 3x + 4y = k touches the circle x² + y² = 25 when k equals",
+    "options": [
+      "±25",
+      "±5",
+      "±20",
+      "±125"
+    ],
+    "correctIndex": 0,
+    "explanation": "Distance from origin = |k|/5 = 5."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The circles x² + y² = 9 and x² + y² − 8x + 7 = 0 (centre (4, 0), radius 3) are such that",
+    "options": [
+      "they touch externally",
+      "they intersect at two points",
+      "one lies inside the other",
+      "they do not meet"
+    ],
+    "correctIndex": 1,
+    "explanation": "Distance of centres 4 lies between |3 − 3| = 0 and 3 + 3 = 6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The radius of the circle passing through (0, 0), (4, 0) and (0, 3) is",
+    "options": [
+      "5",
+      "7/2",
+      "3",
+      "5/2"
+    ],
+    "correctIndex": 3,
+    "explanation": "The right angle at the origin means (4, 0)–(0, 3) is a diameter of length 5."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The length of the chord cut by the line x + y = 2 on the circle x² + y² = 4 is",
+    "options": [
+      "4",
+      "√2",
+      "2",
+      "2√2"
+    ],
+    "correctIndex": 3,
+    "explanation": "Distance from centre = 2/√2 = √2; chord = 2√(4 − 2) = 2√2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The equation x² + y² + 2gx + 2fy + c = 0 represents a real circle only when",
+    "options": [
+      "g² + f² − c > 0",
+      "g² + f² + c > 0",
+      "c > 0",
+      "g = f"
+    ],
+    "correctIndex": 0,
+    "explanation": "Radius² = g² + f² − c must be positive."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The parametric equations x = 2 + 3 cos θ, y = −1 + 3 sin θ represent a circle with",
+    "options": [
+      "centre (3, 3) and radius 2",
+      "centre (2, −1) and radius 3",
+      "centre (−2, 1) and radius 3",
+      "centre (2, −1) and radius 9"
+    ],
+    "correctIndex": 1,
+    "explanation": "(x − 2)² + (y + 1)² = 9."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Circles",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The equation of the circle with centre (2, 3) touching the x-axis is",
+    "options": [
+      "x² + y² − 4x − 6y + 9 = 0",
+      "x² + y² − 4x − 6y + 4 = 0",
+      "x² + y² − 4x − 6y + 13 = 0",
+      "x² + y² + 4x + 6y + 4 = 0"
+    ],
+    "correctIndex": 1,
+    "explanation": "Radius = |k| = 3: (x − 2)² + (y − 3)² = 9 ⇒ x² + y² − 4x − 6y + 4 = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The distance of the point (3, 4) from the line 3x + 4y − 5 = 0 is",
+    "options": [
+      "5",
+      "20",
+      "4",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explanation": "|9 + 16 − 5|/5 = 20/5."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The distance between the parallel lines 3x + 4y = 7 and 6x + 8y = 9 is",
+    "options": [
+      "2/5",
+      "1",
+      "1/2",
+      "5/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Write the second as 3x + 4y = 4.5: |7 − 4.5|/5 = 1/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The acute angle between the lines y = 2x + 1 and y = −3x + 4 is",
+    "options": [
+      "45°",
+      "60°",
+      "30°",
+      "90°"
+    ],
+    "correctIndex": 0,
+    "explanation": "tan θ = |(2 − (−3))/(1 + 2(−3))| = |5/(−5)| = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The foot of the perpendicular from (1, 2) to the line x + y = 5 is",
+    "options": [
+      "(3, 2)",
+      "(2, 3)",
+      "(1, 4)",
+      "(5/2, 5/2)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moving along (1, 1): (1 + t, 2 + t) with 3 + 2t = 5 ⇒ t = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The point dividing the join of (2, 3) and (8, 9) internally in the ratio 1 : 2 is",
+    "options": [
+      "(4, 5)",
+      "(6, 7)",
+      "(5, 6)",
+      "(3, 4)"
+    ],
+    "correctIndex": 0,
+    "explanation": "((1·8 + 2·2)/3, (1·9 + 2·3)/3)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The lines x + y = 3, 2x − y = 0 and kx + 3y = 9 are concurrent when k equals",
+    "options": [
+      "6",
+      "9",
+      "−3",
+      "3"
+    ],
+    "correctIndex": 3,
+    "explanation": "The first two meet at (1, 2); it must lie on the third: k + 6 = 9 ⇒ k = 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The line through (2, −3) perpendicular to 2x − 3y + 5 = 0 is",
+    "options": [
+      "2x − 3y = 13",
+      "3x − 2y = 12",
+      "3x + 2y = 0",
+      "3x + 2y = 12"
+    ],
+    "correctIndex": 2,
+    "explanation": "Slope of given line 2/3 ⇒ required slope −3/2: y + 3 = −(3/2)(x − 2) ⇒ 3x + 2y = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area of the triangle formed by the line 3x + 4y = 12 with the coordinate axes is",
+    "options": [
+      "12",
+      "7",
+      "6",
+      "24"
+    ],
+    "correctIndex": 2,
+    "explanation": "Intercepts 4 and 3: ½ × 4 × 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The locus of a point equidistant from (1, 2) and (3, 4) is",
+    "options": [
+      "x − y = 1",
+      "x + y = 3",
+      "x − y + 1 = 0",
+      "x + y = 5"
+    ],
+    "correctIndex": 3,
+    "explanation": "Perpendicular bisector: midpoint (2, 3), slope −1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The lines 2x + 3y = 5 and 4x + 6y = 7 are",
+    "options": [
+      "perpendicular",
+      "coincident",
+      "intersecting at one point",
+      "parallel and distinct"
+    ],
+    "correctIndex": 3,
+    "explanation": "Same slope −2/3, different constants (2.5 vs 3.5 after scaling)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Straight Lines",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The centroid of the triangle with vertices (1, 2), (3, −4) and (5, 8) is",
+    "options": [
+      "(3, 6)",
+      "(9, 6)",
+      "(3, 2)",
+      "(2, 3)"
+    ],
+    "correctIndex": 2,
+    "explanation": "((1 + 3 + 5)/3, (2 − 4 + 8)/3)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫₀^π x sin x dx equals",
+    "options": [
+      "π",
+      "2",
+      "π/2",
+      "2π"
+    ],
+    "correctIndex": 0,
+    "explanation": "By parts: [−x cos x]₀^π + ∫cos x = π + 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫₀² |x² − 1| dx equals",
+    "options": [
+      "2/3",
+      "2",
+      "4/3",
+      "8/3"
+    ],
+    "correctIndex": 1,
+    "explanation": "∫₀¹(1 − x²) + ∫₁²(x² − 1) = 2/3 + 4/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫₀¹ dx/(1 + x²) equals",
+    "options": [
+      "π/2",
+      "π/4",
+      "1",
+      "ln 2"
+    ],
+    "correctIndex": 1,
+    "explanation": "tan⁻¹1 − tan⁻¹0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫₀¹ x eˣ dx equals",
+    "options": [
+      "e",
+      "1",
+      "e − 1",
+      "1/e"
+    ],
+    "correctIndex": 1,
+    "explanation": "[(x − 1)eˣ]₀¹ = 0 − (−1)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{n→∞} (1² + 2² + … + n²)/n³ equals",
+    "options": [
+      "1/2",
+      "1",
+      "1/6",
+      "1/3"
+    ],
+    "correctIndex": 3,
+    "explanation": "As a Riemann sum this is ∫₀¹ x² dx."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫_{π/8}^{3π/8} ln(tan x) dx equals",
+    "options": [
+      "π/4",
+      "ln 2",
+      "−π/8",
+      "0"
+    ],
+    "correctIndex": 3,
+    "explanation": "x → π/2 − x turns ln tan x into −ln tan x over the same interval, so I = −I."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫₀^∞ e^{−x} dx equals",
+    "options": [
+      "0",
+      "1",
+      "∞",
+      "e"
+    ],
+    "correctIndex": 1,
+    "explanation": "[−e^{−x}]₀^∞ = 0 + 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Definite Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫₀¹ dx/√(4 − x²) equals",
+    "options": [
+      "π/3",
+      "π/4",
+      "π/6",
+      "π/2"
+    ],
+    "correctIndex": 2,
+    "explanation": "sin⁻¹(x/2) from 0 to 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two fair dice are thrown. The probability that the sum is at least 10 is",
+    "options": [
+      "1/4",
+      "1/9",
+      "5/36",
+      "1/6"
+    ],
+    "correctIndex": 3,
+    "explanation": "Sums 10, 11, 12: 3 + 2 + 1 = 6 outcomes."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A bag has 4 red and 6 black balls. Three are drawn at random. The probability of exactly 2 red is",
+    "options": [
+      "1/5",
+      "2/5",
+      "1/2",
+      "3/10"
+    ],
+    "correctIndex": 3,
+    "explanation": "C(4,2)C(6,1)/C(10,3) = 36/120."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Bag A has 2 red, 3 white balls; bag B has 3 red, 4 white. A bag is chosen at random and a ball drawn is red. The probability that it came from A is",
+    "options": [
+      "14/29",
+      "15/29",
+      "2/5",
+      "1/2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bayes: (½ × 2/5)/(½ × 2/5 + ½ × 3/7) = (1/5)/(1/5 + 3/14) = 14/29."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A fair coin is tossed 5 times. The probability of exactly 3 heads is",
+    "options": [
+      "3/5",
+      "5/16",
+      "1/2",
+      "5/32"
+    ],
+    "correctIndex": 1,
+    "explanation": "C(5, 3)/2⁵ = 10/32."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If P(A) = 0.4, P(B) = 0.5 and A, B are independent, then P(A ∪ B) is",
+    "options": [
+      "0.7",
+      "0.9",
+      "0.2",
+      "0.1"
+    ],
+    "correctIndex": 0,
+    "explanation": "0.4 + 0.5 − 0.2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If P(A) = 0.6, P(B) = 0.5 and P(A ∩ B) = 0.3, then P(A | B′) is",
+    "options": [
+      "0.3",
+      "0.6",
+      "0.5",
+      "0.4"
+    ],
+    "correctIndex": 1,
+    "explanation": "P(A ∩ B′) = 0.6 − 0.3 = 0.3; P(B′) = 0.5; ratio 0.6. (A and B are independent here.)"
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The mean (expected value) of the number shown on a fair die is",
+    "options": [
+      "3",
+      "7/2",
+      "4",
+      "6"
+    ],
+    "correctIndex": 1,
+    "explanation": "(1 + 2 + … + 6)/6 = 21/6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "X is the number of heads when 2 fair coins are tossed. The variance of X is",
+    "options": [
+      "1",
+      "1/2",
+      "1/4",
+      "3/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "E(X) = 1, E(X²) = 0·¼ + 1·½ + 4·¼ = 3/2; Var = 3/2 − 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Three persons hit a target with probabilities 1/2, 1/3 and 1/4 independently. The probability that the target is hit at least once is",
+    "options": [
+      "1/24",
+      "3/4",
+      "13/12",
+      "1/4"
+    ],
+    "correctIndex": 1,
+    "explanation": "1 − (1/2)(2/3)(3/4) = 1 − 1/4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Five people sit in a row at random. The probability that two particular persons sit together is",
+    "options": [
+      "2/5",
+      "1/5",
+      "1/10",
+      "3/5"
+    ],
+    "correctIndex": 0,
+    "explanation": "Treat the two as one block: 4!·2!/5! = 48/120."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If A and B are mutually exclusive with P(A) = 0.3 and P(B) = 0.4, then P(A ∩ B) and P(A ∪ B) are",
+    "options": [
+      "0.12 and 0.58",
+      "0.12 and 0.7",
+      "0 and 0.58",
+      "0 and 0.7"
+    ],
+    "correctIndex": 3,
+    "explanation": "Mutually exclusive means they cannot happen together."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Probability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two cards are drawn from a well-shuffled pack of 52. The probability that at least one is an ace is",
+    "options": [
+      "33/221",
+      "1/13",
+      "2/13",
+      "188/221"
+    ],
+    "correctIndex": 0,
+    "explanation": "1 − C(48,2)/C(52,2) = 1 − 188/221."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The standard deviation of 2, 4, 4, 4, 5, 5, 7, 9 is",
+    "options": [
+      "4",
+      "5",
+      "2",
+      "√5"
+    ],
+    "correctIndex": 2,
+    "explanation": "Mean 5; squared deviations 9,1,1,1,0,0,4,16 sum to 32; variance 32/8 = 4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Each observation of a data set with mean 20 and variance 9 is multiplied by 2 and then 5 is added. The new mean and variance are",
+    "options": [
+      "45 and 18",
+      "40 and 36",
+      "45 and 23",
+      "45 and 36"
+    ],
+    "correctIndex": 3,
+    "explanation": "Mean → 2(20) + 5; variance → 2² × 9 (adding a constant does not change it)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The mean of 5 observations is 4 and their variance is 5.2. If three of them are 1, 2 and 6, the other two are",
+    "options": [
+      "4 and 7",
+      "3 and 8",
+      "5 and 6",
+      "2 and 9"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sum = 20 ⇒ a + b = 11. Σx² = 5(5.2 + 16) = 106 ⇒ a² + b² = 106 − 41 = 65 ⇒ {4, 7}."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The mean of 10 numbers is 15. One number 24 was wrongly read as 42. The correct mean is",
+    "options": [
+      "16.8",
+      "15",
+      "13.2",
+      "12.6"
+    ],
+    "correctIndex": 2,
+    "explanation": "Correct sum = 150 − 42 + 24 = 132."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The median of 12, 5, 9, 15, 7, 10 is",
+    "options": [
+      "9",
+      "9.5",
+      "10",
+      "9.67"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sorted: 5, 7, 9, 10, 12, 15; median = (9 + 10)/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The coefficient of variation of a data set with mean 40 and standard deviation 10 is",
+    "options": [
+      "4%",
+      "40%",
+      "25%",
+      "10%"
+    ],
+    "correctIndex": 2,
+    "explanation": "CV = (σ/x̄) × 100."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two groups of 20 and 30 students have mean marks 60 and 70. The combined mean is",
+    "options": [
+      "65",
+      "66",
+      "64",
+      "68"
+    ],
+    "correctIndex": 1,
+    "explanation": "(1200 + 2100)/50."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Statistics",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If every observation is increased by 10, the standard deviation",
+    "options": [
+      "increases by 10",
+      "increases 10 times",
+      "stays the same",
+      "decreases by 10"
+    ],
+    "correctIndex": 2,
+    "explanation": "Shifting all data does not change spread."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The local maximum value of f(x) = x³ − 6x² + 9x + 1 is",
+    "options": [
+      "1",
+      "3",
+      "9",
+      "5"
+    ],
+    "correctIndex": 3,
+    "explanation": "f′ = 3(x − 1)(x − 3); f″(1) < 0 ⇒ local max f(1) = 5 (local min f(3) = 1)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "f(x) = x³ − 3x is decreasing on",
+    "options": [
+      "(−∞, −1)",
+      "(1, ∞)",
+      "(−∞, ∞)",
+      "(−1, 1)"
+    ],
+    "correctIndex": 3,
+    "explanation": "f′ = 3(x² − 1) < 0 for |x| < 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The equation of the tangent to y = x² at (2, 4) is",
+    "options": [
+      "y = 4x − 4",
+      "y = 2x",
+      "y = 4x + 4",
+      "y = x + 2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Slope 2x = 4: y − 4 = 4(x − 2)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Of all rectangles with perimeter 40 cm, the maximum possible area is",
+    "options": [
+      "100 cm²",
+      "400 cm²",
+      "96 cm²",
+      "200 cm²"
+    ],
+    "correctIndex": 0,
+    "explanation": "A = x(20 − x) is largest at x = 10: a square."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Equal squares are cut from the corners of a 12 cm × 12 cm sheet to make an open box. The maximum volume is",
+    "options": [
+      "144 cm³",
+      "100 cm³",
+      "128 cm³",
+      "216 cm³"
+    ],
+    "correctIndex": 2,
+    "explanation": "V = x(12 − 2x)²; V′ = 0 at x = 2 (x = 6 gives zero volume); V(2) = 2 × 64."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The radius of a circle increases at 2 cm/s. The rate of increase of its area when r = 5 cm is",
+    "options": [
+      "10π cm²/s",
+      "20π cm²/s",
+      "25π cm²/s",
+      "4π cm²/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "dA/dt = 2πr dr/dt = 2π × 5 × 2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A spherical balloon is inflated at 100 cm³/s. The rate at which its radius grows when r = 5 cm is",
+    "options": [
+      "4π cm/s",
+      "1/(4π) cm/s",
+      "1/π cm/s",
+      "π cm/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "dV/dt = 4πr² dr/dt ⇒ dr/dt = 100/(100π)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The minimum value of f(x) = x + 1/x for x > 0 is",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "1/2"
+    ],
+    "correctIndex": 0,
+    "explanation": "AM ≥ GM, or f′ = 1 − 1/x² = 0 at x = 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The function f(x) = eˣ + e^{−x} is",
+    "options": [
+      "increasing for all x",
+      "decreasing for x < 0 and increasing for x > 0",
+      "decreasing for all x",
+      "constant"
+    ],
+    "correctIndex": 1,
+    "explanation": "f′ = eˣ − e^{−x} has the sign of x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The absolute maximum and minimum of f(x) = 2x³ − 3x² − 12x + 5 on [−2, 3] are",
+    "options": [
+      "12 and 1",
+      "5 and −15",
+      "−4 and −15",
+      "12 and −15"
+    ],
+    "correctIndex": 3,
+    "explanation": "Critical points x = −1, 2: f(−2) = 1, f(−1) = 12, f(2) = −15, f(3) = −4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The normal to y = x³ at (1, 1) meets the x-axis at",
+    "options": [
+      "(2/3, 0)",
+      "(−2, 0)",
+      "(4, 0)",
+      "(3, 0)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Slope of tangent 3 ⇒ normal y − 1 = −(x − 1)/3; y = 0 ⇒ x = 4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Application of Derivatives",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Rolle's theorem applied to f(x) = x² − 4x on [0, 4] gives c equal to",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 1,
+    "explanation": "f(0) = f(4) = 0 and f′(c) = 2c − 4 = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The angle θ between a = i + 2j + 2k and b = 2i − j + 2k satisfies",
+    "options": [
+      "cos θ = 4/3",
+      "cos θ = 2/9",
+      "θ = 90°",
+      "cos θ = 4/9"
+    ],
+    "correctIndex": 3,
+    "explanation": "a·b = 2 − 2 + 4 = 4; |a| = |b| = 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The area of the parallelogram with adjacent sides i + j and j + k is",
+    "options": [
+      "1",
+      "√2",
+      "√3",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explanation": "(i + j) × (j + k) = i − j + k, magnitude √3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The scalar triple product [a b c] for a = i + 2j + 3k, b = j + 2k, c = i + k is",
+    "options": [
+      "0",
+      "−2",
+      "2",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explanation": "Determinant of the components: 1(1 − 0) − 2(0 − 2) + 3(0 − 1) = 1 + 4 − 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The vectors 2i − j + k, i + 2j − 3k and 3i + λj + 5k are coplanar when λ equals",
+    "options": [
+      "4",
+      "−2",
+      "2",
+      "−4"
+    ],
+    "correctIndex": 3,
+    "explanation": "Determinant = 0: 2(10 + 3λ) + 1(5 + 9) + 1(λ − 6) = 7λ + 28 = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The projection of a = 2i + 3j + 6k on b = i + 2j + 2k is",
+    "options": [
+      "20/3",
+      "20/7",
+      "20",
+      "6"
+    ],
+    "correctIndex": 0,
+    "explanation": "a·b/|b| = (2 + 6 + 12)/3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If |a + b| = |a − b|, then a and b are",
+    "options": [
+      "parallel",
+      "perpendicular",
+      "equal",
+      "of equal length"
+    ],
+    "correctIndex": 1,
+    "explanation": "Squaring: a·b = −a·b ⇒ a·b = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The unit vector along 3i − 4k is",
+    "options": [
+      "(3i − 4k)/7",
+      "(3i − 4k)/√7",
+      "(3i − 4k)/5",
+      "3i − 4k"
+    ],
+    "correctIndex": 2,
+    "explanation": "|3i − 4k| = 5."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If |a| = 3, |b| = 4 and |a + b| = 5, then |a − b| equals",
+    "options": [
+      "1",
+      "7",
+      "5",
+      "√7"
+    ],
+    "correctIndex": 2,
+    "explanation": "5² = 9 + 16 + 2a·b ⇒ a·b = 0, so |a − b|² = 25 too."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The value of λ for which 2i + λj + k and i − 2j + 3k are perpendicular is",
+    "options": [
+      "5/2",
+      "−5/2",
+      "1/2",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "2 − 2λ + 3 = 0."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Vector Algebra",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The work done by force F = 2i + 3j + k in moving a particle from (1, 1, 1) to (3, 2, 4) is",
+    "options": [
+      "10 units",
+      "7 units",
+      "13 units",
+      "6 units"
+    ],
+    "correctIndex": 0,
+    "explanation": "d = 2i + j + 3k; F·d = 4 + 3 + 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If dy/dx = 2xy and y(0) = 1, then y(1) equals",
+    "options": [
+      "e",
+      "e²",
+      "2",
+      "1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Separable: ln y = x² ⇒ y = e^{x²}."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The solution of dy/dx + y = e^{−x} with y(0) = 0 gives y(1) equal to",
+    "options": [
+      "e",
+      "0",
+      "1/e",
+      "2/e"
+    ],
+    "correctIndex": 2,
+    "explanation": "IF = eˣ: (yeˣ)′ = 1 ⇒ yeˣ = x ⇒ y = xe^{−x}."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The integrating factor of dy/dx + (2/x)y = x is",
+    "options": [
+      "x²",
+      "e^{2x}",
+      "2 ln x",
+      "1/x²"
+    ],
+    "correctIndex": 0,
+    "explanation": "e^{∫2/x dx} = e^{2 ln x}."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The differential equation of all straight lines y = mx (through the origin) is",
+    "options": [
+      "dy/dx = m",
+      "y dy/dx = x",
+      "d²y/dx² = 1",
+      "x dy/dx = y"
+    ],
+    "correctIndex": 3,
+    "explanation": "Eliminate m: m = dy/dx = y/x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The general solution of dy/dx = (x + y)/x (homogeneous) is",
+    "options": [
+      "y = x ln|x| + Cx",
+      "y = ln|x| + C",
+      "y = x + C",
+      "y = Cx²"
+    ],
+    "correctIndex": 0,
+    "explanation": "Put y = vx: v + xv′ = 1 + v ⇒ v = ln|x| + C."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If dy/dx = 1 + y² and y(0) = 0, then y(π/4) equals",
+    "options": [
+      "0",
+      "π/4",
+      "√3",
+      "1"
+    ],
+    "correctIndex": 3,
+    "explanation": "tan⁻¹y = x ⇒ y = tan x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of arbitrary constants in the general solution of a differential equation of order 3 is",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "3"
+    ],
+    "correctIndex": 3,
+    "explanation": "It equals the order."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Differential Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The population of a town grows at a rate proportional to its size and doubles in 20 years. It will triple in about",
+    "options": [
+      "30 years",
+      "31.7 years",
+      "40 years",
+      "60 years"
+    ],
+    "correctIndex": 1,
+    "explanation": "P = P₀e^{kt}: k = ln 2/20; t = ln 3/k = 20 × 1.585."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{x→0} (tan x − sin x)/x³ equals",
+    "options": [
+      "1/2",
+      "1",
+      "0",
+      "1/6"
+    ],
+    "correctIndex": 0,
+    "explanation": "tan x − sin x = tan x(1 − cos x) ≈ x · x²/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{x→∞} (1 + 3/x)ˣ equals",
+    "options": [
+      "3",
+      "e",
+      "e³",
+      "1"
+    ],
+    "correctIndex": 2,
+    "explanation": "1^∞ form: e^{lim x(3/x)}."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{x→0} (e^{2x} − 1)/sin 3x equals",
+    "options": [
+      "2/3",
+      "3/2",
+      "1",
+      "2"
+    ],
+    "correctIndex": 0,
+    "explanation": "≈ 2x/3x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{x→2} (x⁵ − 32)/(x − 2) equals",
+    "options": [
+      "32",
+      "80",
+      "16",
+      "40"
+    ],
+    "correctIndex": 1,
+    "explanation": "naⁿ⁻¹ = 5 × 2⁴."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{x→0} ln(1 + 2x)/x equals",
+    "options": [
+      "1",
+      "2",
+      "1/2",
+      "0"
+    ],
+    "correctIndex": 1,
+    "explanation": "ln(1 + u)/u → 1 with u = 2x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "f(x) = (sin 2x)/x for x ≠ 0 and f(0) = k is continuous at x = 0 when k equals",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "1/2"
+    ],
+    "correctIndex": 1,
+    "explanation": "lim sin 2x/x = 2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of points in (0, 3) where f(x) = [x] (greatest integer) is discontinuous is",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "0"
+    ],
+    "correctIndex": 0,
+    "explanation": "Jumps at x = 1 and x = 2 only."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "f(x) = |x − 1| + |x − 2| is not differentiable at",
+    "options": [
+      "x = 1 and x = 2",
+      "x = 1 only",
+      "x = 1.5",
+      "nowhere"
+    ],
+    "correctIndex": 0,
+    "explanation": "Each modulus has a corner where its argument is zero."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{x→0} (1 − cos 4x)/x² equals",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "1 − cos 4x = 2 sin²2x ≈ 8x²."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "lim_{x→∞} (√(x² + 4x) − x) equals",
+    "options": [
+      "4",
+      "2",
+      "0",
+      "∞"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rationalise: 4x/(√(x² + 4x) + x) → 4/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Limits, Continuity and Differentiability",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "f(x) = x|x| at x = 0 is",
+    "options": [
+      "continuous but not differentiable",
+      "discontinuous",
+      "differentiable, with f′(0) = 0",
+      "differentiable, with f′(0) = 1"
+    ],
+    "correctIndex": 2,
+    "explanation": "(h|h|)/h = |h| → 0 from both sides."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The distance between (1, 2, 3) and (4, 6, 15) is",
+    "options": [
+      "12",
+      "√13",
+      "169",
+      "13"
+    ],
+    "correctIndex": 3,
+    "explanation": "√(9 + 16 + 144)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The direction cosines of the line joining (1, 2, 3) and (3, 3, 5) are",
+    "options": [
+      "2/3, 1/3, 2/3",
+      "2, 1, 2",
+      "1/3, 2/3, 2/3",
+      "2/9, 1/9, 2/9"
+    ],
+    "correctIndex": 0,
+    "explanation": "Direction ratios 2, 1, 2 with magnitude 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The angle between the lines with direction ratios 1, 1, 0 and 0, 1, 1 is",
+    "options": [
+      "90°",
+      "45°",
+      "30°",
+      "60°"
+    ],
+    "correctIndex": 3,
+    "explanation": "cos θ = 1/(√2·√2) = 1/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The point dividing the join of (2, 3, 4) and (5, 6, 7) internally in the ratio 2 : 1 is",
+    "options": [
+      "(3, 4, 5)",
+      "(4, 5, 6)",
+      "(7/2, 9/2, 11/2)",
+      "(8, 9, 10)"
+    ],
+    "correctIndex": 1,
+    "explanation": "((2·5 + 1·2)/3, …)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The shortest distance between the line through (1, 2, 3) along i and the line through the origin along j is",
+    "options": [
+      "1",
+      "2",
+      "√14",
+      "3"
+    ],
+    "correctIndex": 3,
+    "explanation": "SD = |(p₁ − p₂)·(d₁ × d₂)|/|d₁ × d₂| = |(1, 2, 3)·(0, 0, 1)| = 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Two lines in space that are neither parallel nor intersecting are called",
+    "options": [
+      "coplanar lines",
+      "concurrent lines",
+      "coincident lines",
+      "skew lines"
+    ],
+    "correctIndex": 3,
+    "explanation": "Skew lines do not lie in one plane."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The line (x − 1)/2 = (y + 1)/3 = (z − 2)/4 passes through which point?",
+    "options": [
+      "(3, 2, 6)",
+      "(2, 3, 4)",
+      "(1, 1, 2)",
+      "(3, 2, 4)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Parameter 1: (1 + 2, −1 + 3, 2 + 4)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If a line makes angles α, β, γ with the axes, then cos²α + cos²β + cos²γ equals",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "3"
+    ],
+    "correctIndex": 1,
+    "explanation": "Direction cosines satisfy l² + m² + n² = 1 (so sin² terms sum to 2)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The lines (x − 1)/2 = (y − 2)/3 = (z − 3)/4 and (x − 4)/1 = (y − 6)/1 = (z − 8)/1 intersect at",
+    "options": [
+      "(1, 2, 3)",
+      "(3, 5, 7)",
+      "(4, 6, 8)",
+      "(5, 8, 11)"
+    ],
+    "correctIndex": 1,
+    "explanation": "(1 + 2s, 2 + 3s, 3 + 4s) = (4 + t, 6 + t, 8 + t): the first two give s = 1, t = −1, which also satisfies the third ⇒ (3, 5, 7)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The angle between two lines with direction ratios a₁, b₁, c₁ and a₂, b₂, c₂ is 90° exactly when",
+    "options": [
+      "a₁/a₂ = b₁/b₂ = c₁/c₂",
+      "a₁a₂ + b₁b₂ + c₁c₂ = 0",
+      "a₁ + a₂ = 0",
+      "a₁b₂ = a₂b₁"
+    ],
+    "correctIndex": 1,
+    "explanation": "Their dot product must vanish (the second option is the condition for parallel lines)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of arrangements of the letters of BALLOON is",
+    "options": [
+      "5040",
+      "1260",
+      "2520",
+      "630"
+    ],
+    "correctIndex": 1,
+    "explanation": "7!/(2!·2!) — two L's and two O's."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of ways 5 boys and 3 girls can sit in a row so that no two girls are together is",
+    "options": [
+      "40320",
+      "2880",
+      "14400",
+      "720"
+    ],
+    "correctIndex": 2,
+    "explanation": "Arrange boys: 5!; choose and arrange girls in 6 gaps: ⁶P₃ = 120 ⇒ 120 × 120."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of diagonals of a decagon is",
+    "options": [
+      "45",
+      "10",
+      "35",
+      "90"
+    ],
+    "correctIndex": 2,
+    "explanation": "C(10, 2) − 10."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A committee of 5 is chosen from 6 men and 4 women with at least 2 women. The number of ways is",
+    "options": [
+      "186",
+      "252",
+      "120",
+      "66"
+    ],
+    "correctIndex": 0,
+    "explanation": "C(4,2)C(6,3) + C(4,3)C(6,2) + C(4,4)C(6,1) = 120 + 60 + 6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of ways 6 people can sit around a round table is",
+    "options": [
+      "720",
+      "60",
+      "120",
+      "360"
+    ],
+    "correctIndex": 2,
+    "explanation": "(n − 1)! = 5!."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of 4-digit numbers with distinct digits that can be formed from 0, 1, 2, 3, 4, 5 is",
+    "options": [
+      "360",
+      "240",
+      "1080",
+      "300"
+    ],
+    "correctIndex": 3,
+    "explanation": "First digit 5 choices (not 0), then ⁵P₃ = 60."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of non-negative integer solutions of a + b + c = 10 is",
+    "options": [
+      "55",
+      "66",
+      "45",
+      "120"
+    ],
+    "correctIndex": 1,
+    "explanation": "Stars and bars: C(12, 2)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of triangles that can be formed from 12 points in a plane of which 5 are collinear is",
+    "options": [
+      "210",
+      "220",
+      "200",
+      "215"
+    ],
+    "correctIndex": 0,
+    "explanation": "C(12, 3) − C(5, 3) = 220 − 10."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In how many ways can 8 identical balls be put into 3 distinct boxes so that no box is empty?",
+    "options": [
+      "45",
+      "28",
+      "56",
+      "21"
+    ],
+    "correctIndex": 3,
+    "explanation": "Positive solutions of a + b + c = 8: C(7, 2)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If ⁿC₈ = ⁿC₁₂, then n equals",
+    "options": [
+      "20",
+      "4",
+      "96",
+      "10"
+    ],
+    "correctIndex": 0,
+    "explanation": "ⁿCᵣ = ⁿC_{n−r} ⇒ 8 + 12 = n."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫ tan²x dx equals",
+    "options": [
+      "sec²x + C",
+      "tan x − x + C",
+      "tan x + x + C",
+      "(tan³x)/3 + C"
+    ],
+    "correctIndex": 1,
+    "explanation": "tan²x = sec²x − 1."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫ dx/(x² − 1) equals",
+    "options": [
+      "½ ln|(x + 1)/(x − 1)| + C",
+      "tan⁻¹x + C",
+      "ln|x² − 1| + C",
+      "½ ln|(x − 1)/(x + 1)| + C"
+    ],
+    "correctIndex": 3,
+    "explanation": "Partial fractions ½[1/(x − 1) − 1/(x + 1)]."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫ dx/(x² + 4) equals",
+    "options": [
+      "½ tan⁻¹(x/2) + C",
+      "tan⁻¹(x/2) + C",
+      "2 tan⁻¹(x/2) + C",
+      "½ ln(x² + 4) + C"
+    ],
+    "correctIndex": 0,
+    "explanation": "∫dx/(x² + a²) = (1/a)tan⁻¹(x/a)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫ sin³x dx equals",
+    "options": [
+      "(sin⁴x)/4 + C",
+      "cos x − (cos³x)/3 + C",
+      "−cos x + (cos³x)/3 + C",
+      "−(cos⁴x)/4 + C"
+    ],
+    "correctIndex": 2,
+    "explanation": "sin³x = sin x(1 − cos²x); put u = cos x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Indefinite Integrals",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "∫ dx/(x ln x) equals",
+    "options": [
+      "(ln x)²/2 + C",
+      "1/ln x + C",
+      "ln x + C",
+      "ln|ln x| + C"
+    ],
+    "correctIndex": 3,
+    "explanation": "u = ln x, du = dx/x."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The 20th term of the AP 3, 7, 11, … is",
+    "options": [
+      "83",
+      "80",
+      "76",
+      "79"
+    ],
+    "correctIndex": 3,
+    "explanation": "a + 19d = 3 + 76."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The sum of all two-digit numbers divisible by 3 is",
+    "options": [
+      "1665",
+      "1683",
+      "1584",
+      "1500"
+    ],
+    "correctIndex": 0,
+    "explanation": "12, 15, …, 99: 30 terms, sum = 30(12 + 99)/2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The sum to infinity of 1 + 1/3 + 1/9 + … is",
+    "options": [
+      "3",
+      "3/2",
+      "4/3",
+      "2"
+    ],
+    "correctIndex": 1,
+    "explanation": "a/(1 − r) = 1/(2/3)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The AM and GM of two positive numbers are 10 and 8. The numbers are",
+    "options": [
+      "12 and 8",
+      "16 and 4",
+      "18 and 2",
+      "14 and 6"
+    ],
+    "correctIndex": 1,
+    "explanation": "a + b = 20, ab = 64."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "1² + 2² + … + 10² equals",
+    "options": [
+      "355",
+      "505",
+      "385",
+      "100"
+    ],
+    "correctIndex": 2,
+    "explanation": "n(n + 1)(2n + 1)/6 = 10·11·21/6."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "1³ + 2³ + … + 10³ equals",
+    "options": [
+      "3025",
+      "2025",
+      "385",
+      "1000"
+    ],
+    "correctIndex": 0,
+    "explanation": "(n(n + 1)/2)² = 55²."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "1/(1·2) + 1/(2·3) + … + 1/(20·21) equals",
+    "options": [
+      "1/21",
+      "21/20",
+      "19/20",
+      "20/21"
+    ],
+    "correctIndex": 3,
+    "explanation": "Telescoping: 1 − 1/21."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If the pth, qth and rth terms of a GP are a, b, c, then a^{q−r} b^{r−p} c^{p−q} equals",
+    "options": [
+      "0",
+      "abc",
+      "pqr",
+      "1"
+    ],
+    "correctIndex": 3,
+    "explanation": "Write each as AR^{k−1}; the powers of A and R both cancel."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Three numbers in AP have sum 15 and product 80. The numbers are",
+    "options": [
+      "3, 5, 7",
+      "1, 5, 9",
+      "4, 5, 6",
+      "2, 5, 8"
+    ],
+    "correctIndex": 3,
+    "explanation": "a − d, a, a + d: a = 5, (25 − d²)5 = 80 ⇒ d = ±3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sequences and Series",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of terms of the AP 5, 8, 11, … needed for a sum of 98 is",
+    "options": [
+      "8",
+      "7",
+      "6",
+      "14"
+    ],
+    "correctIndex": 1,
+    "explanation": "n/2[10 + 3(n − 1)] = 98 ⇒ 3n² + 7n − 196 = 0 ⇒ n = 7."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The inverse of [[2, 1], [1, 1]] is",
+    "options": [
+      "[[1, 1], [1, 2]]",
+      "[[−1, 1], [1, −2]]",
+      "[[2, −1], [−1, 1]]",
+      "[[1, −1], [−1, 2]]"
+    ],
+    "correctIndex": 3,
+    "explanation": "det = 1; swap the diagonal, negate the off-diagonal."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If A is a 3 × 3 matrix with |A| = 4, then |adj A| equals",
+    "options": [
+      "4",
+      "64",
+      "12",
+      "16"
+    ],
+    "correctIndex": 3,
+    "explanation": "|adj A| = |A|^{n−1} = 4²."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If A is 3 × 3 with |A| = 2, then |3A| equals",
+    "options": [
+      "6",
+      "54",
+      "18",
+      "8"
+    ],
+    "correctIndex": 1,
+    "explanation": "|kA| = kⁿ|A| = 27 × 2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The value of the determinant |1 1 1; 1 2 3; 1 4 9| is",
+    "options": [
+      "0",
+      "6",
+      "4",
+      "2"
+    ],
+    "correctIndex": 3,
+    "explanation": "Vandermonde (b − a)(c − a)(c − b) with a, b, c = 1, 2, 3."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Matrices and Determinants",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The system x + y + z = 3, x + 2y + 3z = 6, x + 4y + kz = 9 has a unique solution when",
+    "options": [
+      "k = 7",
+      "k ≠ 9",
+      "k ≠ 7",
+      "for all k"
+    ],
+    "correctIndex": 2,
+    "explanation": "det = k − 7 (from |1 1 1; 1 2 3; 1 4 k|) must be non-zero."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The modulus of (3 + 4i)/(1 − i) is",
+    "options": [
+      "5",
+      "5√2",
+      "5/√2",
+      "7/√2"
+    ],
+    "correctIndex": 2,
+    "explanation": "|z₁/z₂| = 5/√2."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If one root of x² − 6x + k = 0 is 3 + 2i (k real), then k equals",
+    "options": [
+      "9",
+      "5",
+      "13",
+      "−13"
+    ],
+    "correctIndex": 2,
+    "explanation": "The other root is 3 − 2i; product = 9 + 4."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The values of k for which x² + kx + 9 = 0 has equal roots are",
+    "options": [
+      "±3",
+      "±9",
+      "6 only",
+      "±6"
+    ],
+    "correctIndex": 3,
+    "explanation": "k² = 36."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The roots of x² − (k + 1)x + k = 0 are both positive. The condition on k is",
+    "options": [
+      "k < 0",
+      "k > 0",
+      "k > 1",
+      "−1 < k < 0"
+    ],
+    "correctIndex": 1,
+    "explanation": "Roots are 1 and k."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If n(A) = 40, n(B) = 30 and n(A ∩ B) = 10, then n(A ∪ B) is",
+    "options": [
+      "60",
+      "70",
+      "80",
+      "50"
+    ],
+    "correctIndex": 0,
+    "explanation": "40 + 30 − 10."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The number of functions from a set with 3 elements to a set with 2 elements that are NOT onto is",
+    "options": [
+      "6",
+      "8",
+      "0",
+      "2"
+    ],
+    "correctIndex": 3,
+    "explanation": "Total 2³ = 8; onto ones = 8 − 2 = 6; the 2 constant maps are not onto."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Mathematics",
+    "chapter": "Sets, Relations and Functions",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If f(x) = 2x + 3 and g(x) = x², then (f ∘ g)(2) − (g ∘ f)(2) equals",
+    "options": [
+      "−38",
+      "38",
+      "0",
+      "−11"
+    ],
+    "correctIndex": 0,
+    "explanation": "f(g(2)) = 11; g(f(2)) = 49."
+  }
+]

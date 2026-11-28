@@ -188,7 +188,7 @@ def find_duplicates(files):
     remove = set()
     for root, members in clusters.items():
         allm = set(members) | {root}
-        rank = lambda k: ('batch3' in k[0], files[k[0]][k[1]]['difficulty'] != 'tough', -len(files[k[0]][k[1]]['explanation']), k)
+        rank = lambda k: ('batch3' in k[0] or 'batch5' in k[0], files[k[0]][k[1]]['difficulty'] != 'tough', -len(files[k[0]][k[1]]['explanation']), k)
         keep = min(allm, key=rank)
         remove |= allm - {keep}
     return remove, reasons
