@@ -133,7 +133,9 @@ export async function claimGuestAttempts(userId, examMode, gid) {
     const g = await GuestAttempt.findOneAndUpdate({ _id, claimedBy: null }, { $set: { claimedBy: userId, claimedAt: new Date() } }, { new: true }).lean();
     if (!g) continue;
     const r = g.result;
-    const t = await TestAttempt.create({
+    let t;
+    try {
+    t = await TestAttempt.create({
       userId, examMode: g.examMode, subject: "All Subjects", chapter: `${g.examMode} Free Quick Mock`, mode: "test",
       maxMarks: g.maxMarks, durationMinutes: g.durationMinutes,
       questions: g.questions.map(({ pyqRef, ...q }) => ({ ...q, ...(pyqRef ? { pyqRef } : {}) })),
@@ -141,6 +143,11 @@ export async function claimGuestAttempts(userId, examMode, gid) {
       score: Math.round((r.correct / g.questions.length) * 100), marksObtained: r.marks,
       status: "submitted", startedAt: g.startedAt, submittedAt: g.submittedAt,
     });
+    } catch (err) {
+      // Give it back so the next claim can try again (never stranded).
+      await GuestAttempt.updateOne({ _id: g._id, claimedBy: userId }, { $set: { claimedBy: null, claimedAt: null } });
+      throw err;
+    }
     await GuestAttempt.updateOne({ _id: g._id }, { $set: { testAttemptId: t._id } });
     await recordMistakes(t).catch((e) => console.error("[free-mock] mistakes:", e.message));
     moved.push(String(t._id));

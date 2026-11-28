@@ -15,9 +15,19 @@ export function FreeMockClaimer() {
   const navigate = useNavigate();
   const busy = useRef(false);
 
+  const warned = useRef(false);
+
   useEffect(() => {
     const pending = store.get(FM_PENDING);
     if (!user || !pending || !user.hasDateOfBirth || busy.current) return;
+    if (pending.exam && pending.exam !== user.examMode) {
+      // Kept for later: once they switch exam, this runs again and moves it in.
+      if (!warned.current) {
+        warned.current = true;
+        toast(`Your free mock was ${pending.exam === "JEE" ? "JEE Main" : "NEET UG"}. Switch your exam in Settings to add it to your account.`, { duration: 7000 });
+      }
+      return;
+    }
     busy.current = true;
     freeMockApi.claim()
       .then(({ data }) => {
@@ -25,8 +35,6 @@ export function FreeMockClaimer() {
         if (data.latest) {
           toast.success("Your free mock is saved. Answers and solutions are below.", { duration: 6000 });
           navigate(`/test/result/${data.latest}`);
-        } else if (pending.exam && pending.exam !== user.examMode) {
-          toast(`Your free mock was ${pending.exam === "JEE" ? "JEE Main" : "NEET UG"}, so it wasn't added to this ${user.examMode} account.`, { duration: 7000 });
         }
       })
       .catch(() => { busy.current = false; }); // try again next time the app opens

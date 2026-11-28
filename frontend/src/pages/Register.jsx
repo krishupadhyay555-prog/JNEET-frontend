@@ -23,6 +23,7 @@ import { useCountdown }   from "../hooks/useCountdown.js";
 import { Eye, EyeOff, ArrowLeft } from "lucide-react";
 import { deviceId } from "../utils/deviceId.js";
 import { signupSource } from "../utils/signupSource.js";
+import { store, FM_PENDING } from "../api/freeMockApi.js";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -82,7 +83,8 @@ export default function Register() {
   const [step, setStep] = useState(arrived ? 2 : 1);
   const [form, setForm] = useState({
     name: "", email: arrived ? location.state.email : "", dateOfBirth: "",
-    password: "", parentEmail: "", examMode: "NEET", acceptTerms: false,
+    // Coming from a Free Quick Mock: start on that exam, so the test moves in.
+    password: "", parentEmail: "", examMode: store.get(FM_PENDING)?.exam === "JEE" ? "JEE" : "NEET", acceptTerms: false,
   });
   const [otp,      setOtp]      = useState("");
   const [errors,   setErrors]   = useState({});

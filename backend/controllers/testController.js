@@ -396,6 +396,10 @@ export const answerQuestion = async (req, res, next) => {
     if (!question) {
       return res.status(404).json({ success: false, error: "Question not found in this attempt." });
     }
+    // One answer per question: once the key has been shown, it can't be re-answered.
+    if (question.selectedIndex !== null && question.selectedIndex !== undefined) {
+      return res.status(409).json({ success: false, code: "ALREADY_ANSWERED", error: "You've already answered this question." });
+    }
 
     if (question.type === "fill_blank") {
       const typed = typeof textAnswer === "string" ? textAnswer.trim() : "";
@@ -483,6 +487,8 @@ export const submitTest = async (req, res, next) => {
       let selected;
       if (q.type === "fill_blank") selected = q.selectedIndex;
       else if (q.type === "numeric" && attempt.mode === "revision") selected = q.selectedIndex;   // checked in /answer
+      // Revision MCQ already answered in /answer (key shown): keep THAT answer.
+      else if (attempt.mode === "revision" && q.selectedIndex !== null && q.selectedIndex !== undefined) selected = q.selectedIndex;
       else if (q.type === "numeric") {
         // A typed number: kept as typed, marked 0 (right) / 1 (wrong) / null (left blank).
         const typed = typeof textMap.get(key) === "string" ? textMap.get(key).trim().slice(0, 20) : "";
