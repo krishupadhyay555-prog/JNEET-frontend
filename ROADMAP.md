@@ -343,7 +343,7 @@ Founder: L3 OpenAI key, L7 Render Starter + Atlas, L9 hosting, L10 Razorpay (≈
 - [ ] **D36 Difficulty recalibrated from real accuracy.**
 
 ### D-h. Question bank growth (target ~35,000–40,000 total)
-- [ ] **D37 Original tough multi-concept questions written by Claude** — ~5,000–8,000 over 3–4 weeks; numericals verified by running code. ₹0 API. *Progress: first 216 added 11 Nov 2026 (PR #6) — NEET 87, JEE Main 82, JEE Advanced 47.*
+- [ ] **D37 Original tough multi-concept questions written by Claude** — ~5,000–8,000 over 3–4 weeks; numericals verified by running code. ₹0 API. *Progress: first 216 added 11 Nov 2026 (PR #6) — NEET 87, JEE Main 82, JEE Advanced 47.* *28 Nov 2026 — batch 5 (founder: "2k–5k more"; copying/rewording coaching-site questions declined): 691 original questions — Physics 485 (NEET + JEE, 19 chapters, weakest-count chapters first) + JEE Maths 206 (22 chapters); numbers computed in code, maths keys checked with sympy, 37 dropped as near-duplicates of the bank (`tools/bank/build_b5.py`). Bank ≈ 14,960. Next batches: NEET Chemistry, JEE Chemistry, NEET Biology, more JEE Maths.*
 - [ ] **D38 JEE Main PYQs 2019–2026** — ~12,000–14,000 from NTA papers + final answer keys; own solutions.
 - [ ] **D39 NEET PYQs 2013–2026** — ~3,000. Never copy coaching sites' solutions.
 - [ ] **D40 Diagram questions** (SVG figures) — physics needs them.
