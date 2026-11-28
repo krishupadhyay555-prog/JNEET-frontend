@@ -23,7 +23,10 @@ describe("Register", () => {
     expect(res.body.requiresVerification).toBe(true);
     expect(res.body.emailSent).toBe(true);
     expect(res.body.resendAfter).toBeGreaterThan(0);
-    expect(res.headers["set-cookie"]).toBeUndefined();
+    // No SESSION cookie yet — only the httpOnly signup ticket (code works in this browser only).
+    const cookies = (res.headers["set-cookie"] ?? []).map((c) => c.split("=")[0]);
+    expect(cookies).toEqual(["jneet_signup"]);
+    expect(String(res.headers["set-cookie"])).toMatch(/HttpOnly/i);
     expect(mailbox.verify.get(body.email)).toMatch(/^\d{6}$/);
     const me = await c.get("/api/auth/me");
     expect(me.status).toBe(401);
@@ -364,15 +367,15 @@ describe("audit: new-account caps (anti free-AI farming)", () => {
     expect((await client().post("/api/auth/register").send({ ...registerBody(), deviceId: "dev-other-99999999" })).status).toBe(201);
   });
 
-  it("one network: 10 new accounts a day, the 11th is refused", async () => {
+  it("one network: 30 new accounts a day (shared mobile IPs), the 31st is refused", async () => {
     const ip = "203.0.113.77";
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 30; i++) {
       const r = await request(app).post("/api/auth/register").set("X-Forwarded-For", ip).send(registerBody());
       expect(r.status).toBe(201);
     }
     const r = await request(app).post("/api/auth/register").set("X-Forwarded-For", ip).send(registerBody());
     expect(r.status).toBe(429);
-  });
+  }, 60000);
 
   it("stores only hashes, never the raw device id", async () => {
     const body = { ...registerBody(), deviceId: "dev-raw-secret-777" };
@@ -390,5 +393,64 @@ describe("signup source (utm / src)", () => {
     const u = await User.findOne({ email: body.email }).lean();
     expect(u.signupSource).toMatchObject({ src: "free-mock", utm_source: "instagram" });
     expect(u.signupSource.utm_campaign).toBeUndefined();
+  });
+});
+
+// ── 28 Nov audit: pre-signup account takeover ──
+describe("audit 28 Nov: someone else starting a signup with your email", () => {
+  it("attacker's earlier password never works after the real owner verifies", async () => {
+    const email = `victim${Date.now()}@example.com`;
+    const attacker = client();
+    expect((await attacker.post("/api/auth/register").send(registerBody({ email, password: "Attacker-Pass-11" }))).status).toBe(201);
+    await User.updateOne({ email }, { $set: { emailOtpExpiresAt: new Date(Date.now() - 1000) } }); // > 60 s later
+    const owner = client();
+    expect((await owner.post("/api/auth/register").send(registerBody({ email, password: "Owner-Real-Pass-22", dateOfBirth: "1999-01-01" }))).status).toBe(201);
+    const ver = await owner.post("/api/auth/verify-email").send({ email, otp: mailbox.verify.get(email) });
+    expect(ver.status).toBe(200);
+    expect((await client().post("/api/auth/login").send({ email, password: "Attacker-Pass-11" })).status).toBe(401);
+    expect((await client().post("/api/auth/login").send({ email, password: "Owner-Real-Pass-22" })).status).toBe(200);
+    expect(new Date((await User.findOne({ email }).lean()).dateOfBirth).getUTCFullYear()).toBe(1999);
+  });
+
+  it("the code only works in the browser that asked for it", async () => {
+    const body = registerBody();
+    const a = client();
+    await a.post("/api/auth/register").send(body);
+    const otp = mailbox.verify.get(body.email);
+    const other = await client().post("/api/auth/verify-email").send({ email: body.email, otp });
+    expect(other.status).toBe(400);
+    expect(other.body.code).toBe("OTHER_DEVICE");
+    expect((await a.post("/api/auth/verify-email").send({ email: body.email, otp })).status).toBe(200);
+  });
+
+  it("re-register within 60 s changes nothing and sends no new mail", async () => {
+    const body = registerBody();
+    await client().post("/api/auth/register").send(body);
+    const first = mailbox.verify.get(body.email);
+    const r = await client().post("/api/auth/register").send({ ...body, password: "Other-Pass-333" });
+    expect(r.status).toBe(200);
+    expect(mailbox.verify.get(body.email)).toBe(first);
+  });
+});
+
+describe("audit 28 Nov: shared mobile IP (Jio / Airtel NAT)", () => {
+  it("one student's 10 wrong passwords lock only THAT account's tries, not others on the same IP", async () => {
+    const a = await signedInClient();
+    const b = await signedInClient();
+    const ip = "100.64.9.9";
+    for (let i = 0; i < 10; i++) await request(app).post("/api/auth/login").set("X-Forwarded-For", ip).send({ email: a.body.email, password: "Wrong-Pass-000" });
+    const blocked = await request(app).post("/api/auth/login").set("X-Forwarded-For", ip).send({ email: a.body.email, password: "Wrong-Pass-000" });
+    expect(blocked.status).toBe(429);
+    const other = await request(app).post("/api/auth/login").set("X-Forwarded-For", ip).send({ email: b.body.email, password: b.body.password });
+    expect(other.status).toBe(200);
+  });
+});
+
+describe("audit 28 Nov: no date of birth → AI locked", () => {
+  it("an old account without a DOB can't use AI until it gives one", async () => {
+    const { isAiLocked } = await import("../utils/studentPayload.js");
+    expect(isAiLocked({ consent: {} })).toBe(true);
+    expect(isAiLocked({ dateOfBirth: new Date("2000-01-01"), consent: { ageGroup: "adult" } })).toBe(false);
+    expect(isAiLocked({ dateOfBirth: new Date("2010-01-01"), consent: { ageGroup: "minor", parentStatus: "pending" } })).toBe(true);
   });
 });

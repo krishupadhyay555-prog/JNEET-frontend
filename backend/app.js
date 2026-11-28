@@ -50,8 +50,8 @@ app.set("trust proxy", 1);
 app.disable("x-powered-by");
 
 const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:3000",
+  // Local dev origins are never trusted in production (cross-site cookie).
+  ...(env.NODE_ENV === "production" ? [] : ["http://localhost:5173", "http://localhost:3000"]),
   ...(env.FRONTEND_URL ? env.FRONTEND_URL.split(",") : []),
 ]
   .map((origin) => origin.trim().replace(/\/$/, ""))

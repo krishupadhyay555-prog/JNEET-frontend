@@ -49,7 +49,7 @@ import { isDisposableEmail } from "../utils/disposableEmails.js";
 import { normalizeEmail } from "../utils/email.js";
 import { parseDob, calcAge, ADULT_AGE } from "../utils/age.js";
 import { toStudent } from "../utils/studentPayload.js";
-import { setSessionCookie, clearSessionCookie } from "../utils/authCookie.js";
+import { setSessionCookie, clearSessionCookie, baseCookieOptions } from "../utils/authCookie.js";
 import { TERMS_VERSION, PRIVACY_VERSION } from "../config/legal.js";
 
 const LOGIN_LOCK_THRESHOLD = 5;
@@ -94,7 +94,7 @@ function logMailFailure(context, err) {
 // ── Register ─────────────────────────────────────────────────────
 // New accounts allowed per day. The network cap is generous because many
 // Indian mobile users share one IP (carrier NAT); the device cap is tight.
-const SIGNUPS_PER_NET_DAY = Number(process.env.SIGNUPS_PER_NET_DAY) || 10;
+const SIGNUPS_PER_NET_DAY = Number(process.env.SIGNUPS_PER_NET_DAY) || 30;
 const SIGNUPS_PER_DEVICE_DAY = Number(process.env.SIGNUPS_PER_DEVICE_DAY) || 3;
 function ipKey(ip = "") {
   if (!ip.includes(":")) return ip || "unknown";
@@ -103,6 +103,15 @@ function ipKey(ip = "") {
 }
 function signupHash(kind, value) {
   return crypto.createHmac("sha256", env.COOKIE_SECRET).update(`${kind}:${value}`).digest("hex").slice(0, 32);
+}
+
+// Signup ticket: random value in an httpOnly cookie, its hash on the user.
+const SIGNUP_COOKIE = "jneet_signup";
+const ticketHash = (t) => (t ? crypto.createHash("sha256").update(String(t)).digest("hex") : "none");
+function issueSignupTicket(res, user) {
+  const t = crypto.randomBytes(24).toString("hex");
+  user.signupTicketHash = ticketHash(t);
+  res.cookie(SIGNUP_COOKIE, t, { ...baseCookieOptions(), maxAge: 24 * 3600 * 1000 });
 }
 
 export const register = async (req, res, next) => {
@@ -145,42 +154,26 @@ export const register = async (req, res, next) => {
     }).select("+emailOtpExpiresAt");
 
     if (existing) {
-      // Signup started earlier but never verified → help them finish it.
+      // Signup started earlier but never verified. SECURITY: never keep the
+      // earlier password / date of birth — whoever started it may not own the
+      // email. A code sent < 60 s ago is left alone (no email bombing);
+      // otherwise the unverified, never-used account is replaced by this one.
       if (existing.isActive && !existing.isEmailVerified) {
         const wait = cooldownRemainingSec(existing.emailOtpExpiresAt);
-        let emailSent = wait > 0; // a recent code is already on its way
-        let resendAfter = wait;
-
-        if (wait === 0) {
-          const otp = await issueOtp(existing, "verify", OTP_FIELDS.verify);
-          try {
-            await sendVerificationOtp(existing.email, otp, existing.name);
-            emailSent = true;
-            resendAfter = RESEND_COOLDOWN_SEC;
-          } catch (mailErr) {
-            logMailFailure("Verification (re-register)", mailErr);
-            clearOtp(existing, OTP_FIELDS.verify);
-            await existing.save({ validateBeforeSave: false });
-          }
+        if (wait > 0) {
+          return res.status(200).json({
+            success: true, requiresVerification: true, email: existing.email, emailSent: true, resendAfter: wait,
+            message: "A code was just sent to this email. Enter it on the device where you signed up, or try again in a minute.",
+          });
         }
-
-        return res.status(200).json({
-          success: true,
-          requiresVerification: true,
-          email: existing.email,
-          emailSent,
-          resendAfter,
-          message: emailSent
-            ? "You already started signing up with this email. Enter the code we sent."
-            : "You already started signing up with this email, but we couldn't send the code. Tap 'Resend code'.",
-        });
-      }
-
+        await User.deleteOne({ _id: existing._id, isEmailVerified: false });
+      } else {
       return res.status(409).json({
         success:     false,
         error:       "This email is already registered. Please log in instead.",
         fieldErrors: [{ field: "email", message: "This email is already registered." }],
       });
+      }
     }
 
     // Anti-farming: cap new accounts per network and per device per day.
@@ -222,6 +215,8 @@ export const register = async (req, res, next) => {
     });
 
     const otp = await issueOtp(newUser, "verify", OTP_FIELDS.verify);
+    issueSignupTicket(res, newUser);
+    await newUser.save({ validateBeforeSave: false });
 
     let emailSent = true;
     try {
@@ -500,7 +495,7 @@ export const verifyEmail = async (req, res, next) => {
     const { email, otp } = req.body;
 
     const user = await User.findOne({ email }).select(
-      "+emailOtpHash +emailOtpExpiresAt +emailOtpAttempts +consent.parentTokenHash"
+      "+emailOtpHash +emailOtpExpiresAt +emailOtpAttempts +consent.parentTokenHash +signupTicketHash"
     );
 
     if (!user || !user.isActive) {
@@ -521,11 +516,23 @@ export const verifyEmail = async (req, res, next) => {
       });
     }
 
+    // The code only works in the browser that asked for it (signup ticket),
+    // so someone who started a signup with another person's email can never
+    // end up holding that account.
+    if (user.signupTicketHash && user.signupTicketHash !== ticketHash(req.cookies?.[SIGNUP_COOKIE])) {
+      return res.status(400).json({
+        success: false, code: "OTHER_DEVICE",
+        error: "Please enter the code on the device where you signed up — or sign up again here.",
+      });
+    }
+
     const check = await checkOtp(user, "verify", otp);
     if (!check.ok) {
       if (check.clear) await user.save({ validateBeforeSave: false });
       return res.status(check.status).json({ success: false, error: check.error });
     }
+    user.signupTicketHash = null;
+    res.clearCookie(SIGNUP_COOKIE, baseCookieOptions());
 
     user.isEmailVerified = true;
     clearOtp(user, OTP_FIELDS.verify);
