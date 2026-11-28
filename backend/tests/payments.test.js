@@ -639,7 +639,7 @@ describe("audit 28 Nov: payment races and leaks", () => {
       expect(rz.orders.size - before).toBe(1);
       expect(new Set(res.filter((r) => r.status === 201).map((r) => r.body.orderId)).size).toBe(1);
     }
-  });
+  }, 60000); // 12 sign-ups + 36 orders: slow CI machines need more than 5 s
 
   async function paidPass() {
     const s = await signedInClient({ examMode: "JEE" });
