@@ -115,6 +115,10 @@ testAttemptSchema.index({ userId: 1, examMode: 1, subject: 1, chapter: 1, status
 // Used by the (upcoming) auto-calculated WMS aggregation — groups
 // a user's submitted attempts by each question's own subject.
 testAttemptSchema.index({ userId: 1, status: 1, "questions.subject": 1 });
+// History / WMS / analysis lists: { userId, examMode, status } sorted by submittedAt;
+// "recent mocks" (PYQ avoid list): { userId, examMode, mode } sorted by startedAt.
+testAttemptSchema.index({ userId: 1, examMode: 1, status: 1, submittedAt: -1 });
+testAttemptSchema.index({ userId: 1, examMode: 1, mode: 1, startedAt: -1 });
 
 // All-India Mock: one sitting per student per mock; the rank list reads all sittings of a mock.
 testAttemptSchema.index({ allIndiaMockId: 1, userId: 1 }, { unique: true, partialFilterExpression: { allIndiaMockId: { $exists: true } } });

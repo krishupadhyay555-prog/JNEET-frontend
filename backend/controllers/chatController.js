@@ -19,6 +19,7 @@
 import Chat from "../models/Chat.js";
 import { env } from "../config/env.js";
 import { generateChatTitle } from "../services/ai/index.js";
+import mongoose from "mongoose";
 
 function generateTitle(content, maxLen = 48) {
   const clean = content.replace(/\s+/g, " ").trim();
@@ -52,23 +53,30 @@ async function getOrCreateChat(userId, examMode) {
 // ── GET /sessions — pinned-first, then most-recent-first ─────
 export const getSessions = async (req, res, next) => {
   try {
-    const chat = await Chat.findOne({
-      userId:   req.user.id,
-      examMode: req.user.examMode,
-    })
-      .select("sessions._id sessions.title sessions.createdAt sessions.messages sessions.pinned sessions.pinnedAt activeSessionId")
-      .lean();
+    // Only the preview leaves Mongo (not every message of every chat).
+    const [chat] = await Chat.aggregate([
+      { $match: { userId: new mongoose.Types.ObjectId(String(req.user.id)), examMode: req.user.examMode } },
+      { $limit: 1 },
+      { $project: {
+        activeSessionId: 1,
+        sessions: { $map: { input: "$sessions", as: "s", in: {
+          _id: "$$s._id", title: "$$s.title", createdAt: "$$s.createdAt", pinned: "$$s.pinned", pinnedAt: "$$s.pinnedAt",
+          messageCount: { $size: { $ifNull: ["$$s.messages", []] } },
+          lastMessage: { $substrCP: [{ $ifNull: [{ $arrayElemAt: ["$$s.messages.content", -1] }, ""] }, 0, 80] },
+        } } },
+      } },
+    ]);
 
     if (!chat) {
       return res.json({ success: true, sessions: [], activeSessionId: null });
     }
 
-    const mapped = chat.sessions.map((s) => ({
+    const mapped = (chat.sessions ?? []).map((s) => ({
       _id:          s._id,
       title:        s.title,
-      messageCount: s.messages.length,
+      messageCount: s.messageCount,
       createdAt:    s.createdAt,
-      lastMessage:  s.messages[s.messages.length - 1]?.content?.slice(0, 80) || "",
+      lastMessage:  s.lastMessage || "",
       pinned:       !!s.pinned,
       pinnedAt:     s.pinnedAt || null,
     }));

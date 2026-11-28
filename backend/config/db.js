@@ -12,7 +12,9 @@ const RETRY_DELAY_MS = 3000;
 
 const connectOptions = {
   // Let Mongoose manage connection pooling
-  maxPoolSize: 10,
+  // 1,000+ students at once: 10 sockets made requests queue (tested locally).
+  maxPoolSize: Number(process.env.MONGO_POOL_SIZE) || 50,
+  minPoolSize: 5,
   serverSelectionTimeoutMS: 10000,
   socketTimeoutMS: 45000,
   // Keeps connection alive on long-idle processes
