@@ -111,7 +111,7 @@ function daysAhead(date, now = new Date()) {
 // the order isn't paid within 30 min or the student opens another order.
 async function ensureCounter(plan) {
   if (await SeatCounter.exists({ _id: plan.id })) return;
-  const used = await Payment.countDocuments({ planId: plan.id, amount: plan.early.amount, appliedAt: { $ne: null } });
+  const used = await Payment.countDocuments({ planId: plan.id, amount: plan.early.amount, appliedAt: { $ne: null }, status: { $ne: "refunded" } });
   await SeatCounter.updateOne({ _id: plan.id }, { $setOnInsert: { reserved: used } }, { upsert: true })
     .catch((err) => { if (err?.code !== 11000) throw err; });
 }
@@ -197,6 +197,17 @@ export async function startOrder(user, planId, { payer }) {
   );
   if (!locked) throw new BillingError(409, "ORDER_IN_PROGRESS", "A payment is already being started. Please wait a few seconds.");
 
+  // Look again now that we hold the lock: a second tab may have just
+  // finished creating an order between our first check and the lock.
+  const openNow = await Payment.findOne({
+    userId: user._id, planId: plan.id, payer, status: "created", appliedAt: null,
+    supersededAt: null, createdAt: { $gt: new Date(now.getTime() - REUSE_ORDER_MS) },
+  }).sort({ createdAt: -1 }).lean();
+  if (openNow && (openNow.amount === base.amount || (base.early && openNow.seatHeld && openNow.amount === base.early.amount))) {
+    await User.updateOne({ _id: user._id }, { $set: { payLockUntil: null } });
+    return { ...orderResponse(openNow, plan, preview), reused: true };
+  }
+
   // Early-bird: take a seat atomically, or charge the full price.
   let seatHeld = false;
   plan.amount = base.amount;
@@ -223,12 +234,20 @@ export async function startOrder(user, planId, { payer }) {
     throw new BillingError(502, "GATEWAY_ERROR", "Couldn't start the payment right now. Please try again in a minute.");
   }
 
-  const doc = await Payment.create({
+  let doc;
+  try {
+  doc = await Payment.create({
     userId: user._id, payer, planId: plan.id, tier: plan.tier, days: plan.days,
     exam, pass: plan.duration === "pass", passEndsAt: plan.duration === "pass" ? new Date(plan.endsAt) : null,
     amount: plan.amount, currency: "INR", orderId: order.id, seatHeld,
     events: [ev("order_created", payer, seatHeld ? "early-bird seat held" : "")],
   });
+  } catch (err) {
+    // No Payment doc → the sweeper could never free this seat: free it now.
+    await abort();
+    console.error("[pay] saving order failed:", err.message);
+    throw new BillingError(503, "TRY_AGAIN", "Couldn't start the payment right now. Please try again in a minute.");
+  }
   // Any other open order of this student is now "superseded": if it is
   // still paid later (old tab), the money is honoured but flagged.
   await Payment.updateMany(
@@ -356,7 +375,7 @@ export async function applyPaid(paymentDocId, { paymentId, method, email, source
     const passUntil = claimed.pass
       ? new Date(Math.max(passUntilBefore?.getTime() ?? 0, new Date(claimed.passEndsAt ?? period.end).getTime()))
       : null;
-    if (claimed.pass && claimed.passEndsAt) {
+    if (claimed.pass && claimed.passEndsAt && period.tier === claimed.tier) {
       // A pass ends on its fixed date (or later, if the student already had more).
       const curEnd = user.planExpiresAt ? new Date(user.planExpiresAt) : null;
       period = { ...period, end: curEnd && curEnd > claimed.passEndsAt && before !== "free" ? curEnd : new Date(claimed.passEndsAt) };
@@ -440,10 +459,26 @@ async function handleRefund(evt) {
     return 200;
   }
 
+  // refund.created and refund.processed often arrive together: only the
+  // one that flips the status takes the days back.
+  if (!(await markRefunded(doc, "refund", `${refund.id}; paid days removed`))) return 200;
   await takeBackPaid(doc);
-  await Payment.updateOne({ _id: doc._id }, { $set: { status: "refunded", flag: "refund" }, $push: { events: ev("refunded", "webhook", `${refund.id}; paid days removed`) } });
   alertFounder("Refund processed — paid days removed", [`Order ${doc.orderId} · ₹${doc.amount / 100} refunded (${refund.id}).`]);
   return 200;
+}
+
+// Atomically marks a payment refunded (true only for the caller that did
+// it) and gives back its early-bird seat, so refunded seats return to the 500.
+async function markRefunded(doc, flag, note) {
+  const won = await Payment.findOneAndUpdate(
+    { _id: doc._id, status: { $ne: "refunded" } },
+    { $set: { status: "refunded", flag }, $push: { events: ev(flag === "dispute" ? "dispute_lost" : "refunded", "webhook", note) } },
+    { projection: { _id: 1 } }
+  );
+  if (!won) return false;
+  const freed = await Payment.updateOne({ _id: doc._id, seatHeld: true }, { $set: { seatHeld: false } });
+  if (freed.modifiedCount === 1) await giveBackSeat(doc.planId);
+  return true;
 }
 
 // Takes back exactly what one activated payment added.
@@ -486,9 +521,8 @@ async function handleDispute(evt) {
   const doc = await Payment.findOne({ paymentId });
   if (!doc) return 200;
   if (evt.event === "payment.dispute.lost") {
-    if (doc.status === "refunded") return 200;
+    if (!(await markRefunded(doc, "dispute", `${d?.id ?? ""}; paid days removed`))) return 200;
     if (doc.appliedAt) await takeBackPaid(doc);
-    await Payment.updateOne({ _id: doc._id }, { $set: { status: "refunded", flag: "dispute" }, $push: { events: ev("dispute_lost", "webhook", `${d?.id ?? ""}; paid days removed`) } });
     alertFounder("Chargeback lost — paid days removed", [`Order ${doc.orderId} · ₹${doc.amount / 100} · dispute ${d?.id ?? "?"}.`]);
     return 200;
   }
@@ -507,7 +541,7 @@ export async function reconcilePayments({ now = new Date() } = {}) {
   if (!paymentsEnabled()) return { checked: 0, applied: 0 };
   await releaseExpiredSeats({ now }).catch((err) => console.warn("[pay] seat release failed:", err.message));
   const docs = await Payment.find({
-    appliedAt: null, status: { $in: ["created", "paid"] },
+    appliedAt: null, status: { $in: ["created", "paid", "failed"] }, // a retry on a "failed" order can still be captured
     createdAt: { $lt: new Date(now.getTime() - RECONCILE_MIN_AGE_MS), $gt: new Date(now.getTime() - RECONCILE_MAX_AGE_MS) },
   }).limit(50).lean();
 

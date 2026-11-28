@@ -627,3 +627,88 @@ describe("audit: refunds and chargebacks take back exactly what was bought", () 
     expect(effectivePlan(await User.findOne({ email: body.email }).lean())).toBe("pro");
   });
 });
+
+// ── 28 Nov audit: order race, double refund webhooks, seats, caps ──
+describe("audit 28 Nov: payment races and leaks", () => {
+  it("stress: 3 taps at once, 12 rounds → never more than one Razorpay order per student", async () => {
+    for (let round = 0; round < 12; round += 1) {
+      const { c } = await signedInClient();
+      const before = rz.orders.size;
+      const res = await Promise.all([1, 2, 3].map(() => c.post("/api/payments/order").send({ planId: "pro_1m" })));
+      expect(res.every((r) => [201, 409].includes(r.status))).toBe(true);
+      expect(rz.orders.size - before).toBe(1);
+      expect(new Set(res.filter((r) => r.status === 201).map((r) => r.body.orderId)).size).toBe(1);
+    }
+  });
+
+  async function paidPass() {
+    const s = await signedInClient({ examMode: "JEE" });
+    const o = await s.c.post("/api/payments/order").send({ planId: "jee_pass" });
+    const paid = payOrder(o.body.orderId);
+    await s.c.post("/api/payments/verify").send(paid);
+    return { ...s, paid };
+  }
+
+  it("refund.created + refund.processed arriving together take the days back ONCE and free the early-bird seat", async () => {
+    const { c, body, paid } = await paidPass();
+    const plan1 = await User.findOne({ email: body.email }).lean();
+    expect(plan1.plan).toBe("pro");
+    const seatsBefore = (await SeatCounter.findById("jee_pass").lean()).reserved;
+    const mk = (event, id) => JSON.stringify({ event, payload: { refund: { entity: { id, payment_id: paid.paymentId, amount: 59900 } } } });
+    const [a, b] = await Promise.all([
+      sendWebhookWithId(c, mk("refund.created", "rfnd_1"), "evt_r1"),
+      sendWebhookWithId(c, mk("refund.processed", "rfnd_1"), "evt_r2"),
+    ]);
+    expect([a.status, b.status]).toEqual([200, 200]);
+    const d = await Payment.findOne({ paymentId: paid.paymentId }).lean();
+    expect(d.events.filter((e) => e.type === "refunded")).toHaveLength(1);
+    expect(d.seatHeld).toBe(false);
+    expect((await SeatCounter.findById("jee_pass").lean()).reserved).toBe(seatsBefore - 1);
+    expect(effectivePlan(await User.findOne({ email: body.email }).lean())).toBe("free");
+  });
+
+  it("saving the order fails after the seat was taken → seat and lock are given back", async () => {
+    await SeatCounter.create({ _id: "jee_pass", reserved: 5 });
+    const { c } = await signedInClient({ examMode: "JEE" });
+    const spy = vi.spyOn(Payment, "create").mockRejectedValueOnce(new Error("db blip"));
+    const r = await c.post("/api/payments/order").send({ planId: "jee_pass" });
+    spy.mockRestore();
+    expect(r.status).toBe(503);
+    expect((await SeatCounter.findById("jee_pass").lean()).reserved).toBe(5);
+    expect((await c.post("/api/payments/order").send({ planId: "jee_pass" })).status).toBe(201); // lock was cleared
+  });
+
+  it("a captured retry on a 'failed' order is still found by the reconcile sweep", async () => {
+    const { c, body } = await signedInClient();
+    const o = await c.post("/api/payments/order").send({ planId: "elite_1m" });
+    await Payment.updateOne({ orderId: o.body.orderId }, { $set: { status: "failed" } });
+    payOrder(o.body.orderId);                       // retry succeeded at Razorpay; webhook lost
+    const r = await reconcilePayments({ now: new Date(Date.now() + 4 * 60 * 1000) });
+    expect(r.applied).toBe(1);
+    expect((await User.findOne({ email: body.email }).lean()).plan).toBe("elite");
+  });
+
+  it("an old pass tab paid while Elite is on does NOT give Elite until the pass date", async () => {
+    const { c, body } = await signedInClient({ examMode: "JEE" });
+    const passOrder = await c.post("/api/payments/order").send({ planId: "jee_pass" });
+    const e = await c.post("/api/payments/order").send({ planId: "elite_1m" });
+    await c.post("/api/payments/verify").send(payOrder(e.body.orderId));
+    const eliteEnd = new Date((await User.findOne({ email: body.email }).lean()).planExpiresAt);
+    await c.post("/api/payments/verify").send(payOrder(passOrder.body.orderId));
+    const u = await User.findOne({ email: body.email }).lean();
+    expect(u.plan).toBe("elite");
+    const passEnd = new Date((await Payment.findOne({ orderId: passOrder.body.orderId }).lean()).passEndsAt);
+    expect(new Date(u.planExpiresAt) < passEnd).toBe(true);           // value-converted, not till 30 Apr
+    expect(new Date(u.planExpiresAt) >= eliteEnd).toBe(true);         // money still honoured
+  });
+});
+
+describe("audit 28 Nov: AI monthly cap with a pass", () => {
+  it("pass = ₹30, Elite bought after a pass keeps ₹100", async () => {
+    const { capFor } = await import("../services/ai/monthlyCap.js");
+    expect(capFor({ plan: "pro", planPass: true })).toBe(30);
+    expect(capFor({ plan: "elite", planPass: true })).toBe(100);
+    expect(capFor({ plan: "pro" })).toBe(50);
+    expect(capFor({ plan: "free" })).toBe(10);
+  });
+});
