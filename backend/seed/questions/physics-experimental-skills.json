@@ -1,0 +1,1464 @@
+[
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a vernier callipers, 20 vernier divisions coincide with 19 main-scale divisions of 1 mm each. The least count is",
+    "options": [
+      "0.1 mm",
+      "0.05 mm",
+      "0.5 mm",
+      "0.95 mm"
+    ],
+    "correctIndex": 1,
+    "explanation": "LC = 1 MSD − 1 VSD = 1 − 19/20 = 1/20 mm = 0.05 mm."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a vernier callipers, 20 vernier divisions coincide with 19 main-scale divisions of 1 mm each. The least count is",
+    "options": [
+      "0.1 mm",
+      "0.05 mm",
+      "0.5 mm",
+      "0.95 mm"
+    ],
+    "correctIndex": 1,
+    "explanation": "LC = 1 MSD − 1 VSD = 1 − 19/20 = 1/20 mm = 0.05 mm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A vernier callipers (LC 0.01 cm) has a positive zero error of 0.03 cm. While measuring a rod, the main-scale reading is 2.5 cm and the 7th vernier division coincides. The correct length is",
+    "options": [
+      "2.57 cm",
+      "2.60 cm",
+      "2.50 cm",
+      "2.54 cm"
+    ],
+    "correctIndex": 3,
+    "explanation": "Observed = 2.5 + 7 × 0.01 = 2.57 cm. Correct = observed − zero error = 2.57 − 0.03 = 2.54 cm."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A vernier callipers (LC 0.01 cm) has a positive zero error of 0.03 cm. While measuring a rod, the main-scale reading is 2.5 cm and the 7th vernier division coincides. The correct length is",
+    "options": [
+      "2.57 cm",
+      "2.60 cm",
+      "2.50 cm",
+      "2.54 cm"
+    ],
+    "correctIndex": 3,
+    "explanation": "Observed = 2.5 + 7 × 0.01 = 2.57 cm. Correct = observed − zero error = 2.57 − 0.03 = 2.54 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A screw gauge has pitch 1 mm and 100 circular divisions. With the studs touching, the zero of the circular scale is 3 divisions ABOVE the reference line. For a wire, the main-scale reading is 4 mm and the circular-scale reading is 52. The diameter of the wire is",
+    "options": [
+      "4.55 mm",
+      "4.49 mm",
+      "4.52 mm",
+      "4.58 mm"
+    ],
+    "correctIndex": 0,
+    "explanation": "LC = 1/100 = 0.01 mm. Zero above the line means a negative zero error of −0.03 mm. Observed = 4 + 52 × 0.01 = 4.52 mm. Correct = 4.52 − (−0.03) = 4.55 mm."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A screw gauge has pitch 1 mm and 100 circular divisions. With the studs touching, the zero of the circular scale is 3 divisions ABOVE the reference line. For a wire, the main-scale reading is 4 mm and the circular-scale reading is 52. The diameter of the wire is",
+    "options": [
+      "4.55 mm",
+      "4.49 mm",
+      "4.52 mm",
+      "4.58 mm"
+    ],
+    "correctIndex": 0,
+    "explanation": "LC = 1/100 = 0.01 mm. Zero above the line means a negative zero error of −0.03 mm. Observed = 4 + 52 × 0.01 = 4.52 mm. Correct = 4.52 − (−0.03) = 4.55 mm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The depth of a beaker is measured with a vernier callipers using its",
+    "options": [
+      "outer jaws",
+      "inner jaws",
+      "thin strip (depth rod) at the end of the main scale",
+      "ratchet"
+    ],
+    "correctIndex": 2,
+    "explanation": "Outer jaws give the external diameter, inner jaws the internal diameter, and the sliding strip at the end gives depth. A ratchet belongs to a screw gauge."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The depth of a beaker is measured with a vernier callipers using its",
+    "options": [
+      "outer jaws",
+      "inner jaws",
+      "thin strip (depth rod) at the end of the main scale",
+      "ratchet"
+    ],
+    "correctIndex": 2,
+    "explanation": "Outer jaws give the external diameter, inner jaws the internal diameter, and the sliding strip at the end gives depth. A ratchet belongs to a screw gauge."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a screw gauge the screw is always turned in one direction near the final reading. This avoids",
+    "options": [
+      "parallax error",
+      "zero error",
+      "backlash error",
+      "end error"
+    ],
+    "correctIndex": 2,
+    "explanation": "Wear in the threads lets the screw turn a little without moving the spindle when the direction is reversed — the backlash error."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a screw gauge the screw is always turned in one direction near the final reading. This avoids",
+    "options": [
+      "parallax error",
+      "zero error",
+      "backlash error",
+      "end error"
+    ],
+    "correctIndex": 2,
+    "explanation": "Wear in the threads lets the screw turn a little without moving the spindle when the direction is reversed — the backlash error."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "To study the dissipation of energy of a simple pendulum, a student plots the square of the amplitude (A²) against time t. The graph obtained is",
+    "options": [
+      "a straight line rising with time",
+      "a curve that decreases with time (energy ∝ A² dies out)",
+      "a horizontal line",
+      "a curve that increases with time"
+    ],
+    "correctIndex": 1,
+    "explanation": "Damping makes A fall with time and energy ∝ A², so A² keeps decreasing (exponentially for linear damping). ln A against t would be the straight line."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "To study the dissipation of energy of a simple pendulum, a student plots the square of the amplitude (A²) against time t. The graph obtained is",
+    "options": [
+      "a straight line rising with time",
+      "a curve that decreases with time (energy ∝ A² dies out)",
+      "a horizontal line",
+      "a curve that increases with time"
+    ],
+    "correctIndex": 1,
+    "explanation": "Damping makes A fall with time and energy ∝ A², so A² keeps decreasing (exponentially for linear damping). ln A against t would be the straight line."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For small oscillations, the time period of a simple pendulum",
+    "options": [
+      "increases with amplitude",
+      "decreases as the amplitude dies out",
+      "depends on the mass of the bob",
+      "does not depend on the amplitude"
+    ],
+    "correctIndex": 3,
+    "explanation": "T = 2π√(l/g) for small amplitudes, independent of amplitude and mass. So T stays the same while the amplitude decays."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For small oscillations, the time period of a simple pendulum",
+    "options": [
+      "increases with amplitude",
+      "decreases as the amplitude dies out",
+      "depends on the mass of the bob",
+      "does not depend on the amplitude"
+    ],
+    "correctIndex": 3,
+    "explanation": "T = 2π√(l/g) for small amplitudes, independent of amplitude and mass. So T stays the same while the amplitude decays."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A uniform metre scale balances at its 50 cm mark. A 200 g mass hangs at the 80 cm mark. To keep it balanced, the mass that must hang at the 10 cm mark is",
+    "options": [
+      "200 g",
+      "100 g",
+      "600 g",
+      "150 g"
+    ],
+    "correctIndex": 3,
+    "explanation": "Moments about 50 cm: m × 40 = 200 × 30 ⇒ m = 150 g."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A uniform metre scale balances at its 50 cm mark. A 200 g mass hangs at the 80 cm mark. To keep it balanced, the mass that must hang at the 10 cm mark is",
+    "options": [
+      "200 g",
+      "100 g",
+      "600 g",
+      "150 g"
+    ],
+    "correctIndex": 3,
+    "explanation": "Moments about 50 cm: m × 40 = 200 × 30 ⇒ m = 150 g."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A uniform metre scale of mass 100 g is balanced on a knife edge at the 40 cm mark by hanging a mass m at the 10 cm mark. The value of m is about",
+    "options": [
+      "33.3 g",
+      "100 g",
+      "50 g",
+      "25 g"
+    ],
+    "correctIndex": 0,
+    "explanation": "The scale's weight acts at 50 cm, 10 cm from the pivot; m acts 30 cm from it. m × 30 = 100 × 10 ⇒ m ≈ 33.3 g."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A uniform metre scale of mass 100 g is balanced on a knife edge at the 40 cm mark by hanging a mass m at the 10 cm mark. The value of m is about",
+    "options": [
+      "33.3 g",
+      "100 g",
+      "50 g",
+      "25 g"
+    ],
+    "correctIndex": 0,
+    "explanation": "The scale's weight acts at 50 cm, 10 cm from the pivot; m acts 30 cm from it. m × 30 = 100 × 10 ⇒ m ≈ 33.3 g."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Searle's experiment a wire 1.5 m long and 0.6 mm in diameter stretches by 1.0 mm under a 4 kg load (g = 9.8 m/s²). Young's modulus of the wire is about",
+    "options": [
+      "5.2 × 10¹⁰ N/m²",
+      "8.3 × 10¹¹ N/m²",
+      "2.1 × 10¹⁰ N/m²",
+      "2.1 × 10¹¹ N/m²"
+    ],
+    "correctIndex": 3,
+    "explanation": "r = 0.3 mm. Y = MgL/(πr²Δl) = 4 × 9.8 × 1.5/(π × (0.3 × 10⁻³)² × 10⁻³) ≈ 2.1 × 10¹¹ N/m². Using the diameter as radius gives a value 4 times too small."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Searle's experiment a wire 1.5 m long and 0.6 mm in diameter stretches by 1.0 mm under a 4 kg load (g = 9.8 m/s²). Young's modulus of the wire is about",
+    "options": [
+      "5.2 × 10¹⁰ N/m²",
+      "8.3 × 10¹¹ N/m²",
+      "2.1 × 10¹⁰ N/m²",
+      "2.1 × 10¹¹ N/m²"
+    ],
+    "correctIndex": 3,
+    "explanation": "r = 0.3 mm. Y = MgL/(πr²Δl) = 4 × 9.8 × 1.5/(π × (0.3 × 10⁻³)² × 10⁻³) ≈ 2.1 × 10¹¹ N/m². Using the diameter as radius gives a value 4 times too small."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Searle's apparatus a second (reference) wire hangs from the same support. Its purpose is to",
+    "options": [
+      "double the load on the experimental wire",
+      "measure the diameter of the wire",
+      "reduce the extension to half",
+      "cancel the effect of temperature change and sagging of the support"
+    ],
+    "correctIndex": 3,
+    "explanation": "Both wires change equally with temperature and yielding of the support, so the spirit level/micrometer reads only the extra stretch due to the load."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Searle's apparatus a second (reference) wire hangs from the same support. Its purpose is to",
+    "options": [
+      "double the load on the experimental wire",
+      "measure the diameter of the wire",
+      "reduce the extension to half",
+      "cancel the effect of temperature change and sagging of the support"
+    ],
+    "correctIndex": 3,
+    "explanation": "Both wires change equally with temperature and yielding of the support, so the spirit level/micrometer reads only the extra stretch due to the load."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Searle's experiment the graph of extension Δl (y-axis) against load M (x-axis) has slope s. For a wire of length L and radius r, Young's modulus is",
+    "options": [
+      "gL/(πr²s)",
+      "gLs/(πr²)",
+      "πr²s/(gL)",
+      "gL/(2πrs)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Y = MgL/(πr²Δl) and Δl/M = s, so Y = gL/(πr² s)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In Searle's experiment the graph of extension Δl (y-axis) against load M (x-axis) has slope s. For a wire of length L and radius r, Young's modulus is",
+    "options": [
+      "gL/(πr²s)",
+      "gLs/(πr²)",
+      "πr²s/(gL)",
+      "gL/(2πrs)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Y = MgL/(πr²Δl) and Δl/M = s, so Y = gL/(πr² s)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If the radius of a capillary tube is halved, the height to which water rises in it becomes",
+    "options": [
+      "half",
+      "four times",
+      "unchanged",
+      "double"
+    ],
+    "correctIndex": 3,
+    "explanation": "h = 2T cos θ/(rρg), so h ∝ 1/r."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "If the radius of a capillary tube is halved, the height to which water rises in it becomes",
+    "options": [
+      "half",
+      "four times",
+      "unchanged",
+      "double"
+    ],
+    "correctIndex": 3,
+    "explanation": "h = 2T cos θ/(rρg), so h ∝ 1/r."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A little detergent is added to water in the capillary-rise experiment. The height of water in the capillary",
+    "options": [
+      "decreases, because detergent lowers surface tension",
+      "increases, because detergent raises surface tension",
+      "stays the same",
+      "becomes negative (depression)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Detergent molecules collect at the surface and reduce surface tension; since h ∝ T, the rise is smaller."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A little detergent is added to water in the capillary-rise experiment. The height of water in the capillary",
+    "options": [
+      "decreases, because detergent lowers surface tension",
+      "increases, because detergent raises surface tension",
+      "stays the same",
+      "becomes negative (depression)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Detergent molecules collect at the surface and reduce surface tension; since h ∝ T, the rise is smaller."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water (surface tension 0.07 N/m, angle of contact 0) rises in a glass capillary of radius 0.2 mm. The capillary rise is about (g = 9.8 m/s²)",
+    "options": [
+      "3.6 cm",
+      "7.1 cm",
+      "14.3 cm",
+      "0.71 cm"
+    ],
+    "correctIndex": 1,
+    "explanation": "h = 2T/(rρg) = 0.14/(0.2 × 10⁻³ × 1000 × 9.8) ≈ 0.0714 m ≈ 7.1 cm."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Water (surface tension 0.07 N/m, angle of contact 0) rises in a glass capillary of radius 0.2 mm. The capillary rise is about (g = 9.8 m/s²)",
+    "options": [
+      "3.6 cm",
+      "7.1 cm",
+      "14.3 cm",
+      "0.71 cm"
+    ],
+    "correctIndex": 1,
+    "explanation": "h = 2T/(rρg) = 0.14/(0.2 × 10⁻³ × 1000 × 9.8) ≈ 0.0714 m ≈ 7.1 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the falling-ball experiment, if the radius of the steel ball is doubled, its terminal velocity in the same liquid becomes",
+    "options": [
+      "two times",
+      "four times",
+      "half",
+      "eight times"
+    ],
+    "correctIndex": 1,
+    "explanation": "v_t = 2r²(ρ − σ)g/(9η), so v_t ∝ r²."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the falling-ball experiment, if the radius of the steel ball is doubled, its terminal velocity in the same liquid becomes",
+    "options": [
+      "two times",
+      "four times",
+      "half",
+      "eight times"
+    ],
+    "correctIndex": 1,
+    "explanation": "v_t = 2r²(ρ − σ)g/(9η), so v_t ∝ r²."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A steel ball of radius 2 mm (density 7800 kg/m³) falls through glycerine (density 1260 kg/m³, η = 1.5 Pa s). Its terminal velocity is about (g = 9.8 m/s²)",
+    "options": [
+      "3.8 cm/s",
+      "1.9 cm/s",
+      "7.6 cm/s",
+      "4.5 cm/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "v = 2r²(ρ − σ)g/(9η) = 2 × 4 × 10⁻⁶ × 6540 × 9.8/(9 × 1.5) ≈ 0.038 m/s ≈ 3.8 cm/s. Forgetting the buoyancy term (σ) gives the last option."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A steel ball of radius 2 mm (density 7800 kg/m³) falls through glycerine (density 1260 kg/m³, η = 1.5 Pa s). Its terminal velocity is about (g = 9.8 m/s²)",
+    "options": [
+      "3.8 cm/s",
+      "1.9 cm/s",
+      "7.6 cm/s",
+      "4.5 cm/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "v = 2r²(ρ − σ)g/(9η) = 2 × 4 × 10⁻⁶ × 6540 × 9.8/(9 × 1.5) ≈ 0.038 m/s ≈ 3.8 cm/s. Forgetting the buoyancy term (σ) gives the last option."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the viscosity experiment, the time of fall is measured between two marks well below the liquid surface because",
+    "options": [
+      "the liquid is hotter near the surface",
+      "the ball must first reach terminal velocity",
+      "surface tension stops the ball at the top",
+      "the ball speeds up near the bottom"
+    ],
+    "correctIndex": 1,
+    "explanation": "Near the surface the ball is still accelerating; only after viscous drag + buoyancy balance its weight does it move at constant (terminal) speed."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the viscosity experiment, the time of fall is measured between two marks well below the liquid surface because",
+    "options": [
+      "the liquid is hotter near the surface",
+      "the ball must first reach terminal velocity",
+      "surface tension stops the ball at the top",
+      "the ball speeds up near the bottom"
+    ],
+    "correctIndex": 1,
+    "explanation": "Near the surface the ball is still accelerating; only after viscous drag + buoyancy balance its weight does it move at constant (terminal) speed."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a resonance-tube experiment with a 340 Hz tuning fork, the first and second resonances occur at 24 cm and 74 cm. The speed of sound is",
+    "options": [
+      "326.4 m/s",
+      "340 m/s",
+      "170 m/s",
+      "1006.4 m/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "v = 2f(l₂ − l₁) = 2 × 340 × 0.50 = 340 m/s."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a resonance-tube experiment with a 340 Hz tuning fork, the first and second resonances occur at 24 cm and 74 cm. The speed of sound is",
+    "options": [
+      "326.4 m/s",
+      "340 m/s",
+      "170 m/s",
+      "1006.4 m/s"
+    ],
+    "correctIndex": 1,
+    "explanation": "v = 2f(l₂ − l₁) = 2 × 340 × 0.50 = 340 m/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a resonance tube the first and second resonance lengths are 24 cm and 74 cm. The end correction is",
+    "options": [
+      "2 cm",
+      "1 cm",
+      "0.5 cm",
+      "3 cm"
+    ],
+    "correctIndex": 1,
+    "explanation": "l₁ + e = λ/4 and l₂ + e = 3λ/4 ⇒ e = (l₂ − 3l₁)/2 = (74 − 72)/2 = 1 cm."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a resonance tube the first and second resonance lengths are 24 cm and 74 cm. The end correction is",
+    "options": [
+      "2 cm",
+      "1 cm",
+      "0.5 cm",
+      "3 cm"
+    ],
+    "correctIndex": 1,
+    "explanation": "l₁ + e = λ/4 and l₂ + e = 3λ/4 ⇒ e = (l₂ − 3l₁)/2 = (74 − 72)/2 = 1 cm."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The end correction of a resonance tube of internal diameter d is about",
+    "options": [
+      "0.6d",
+      "d",
+      "3d",
+      "0.3d"
+    ],
+    "correctIndex": 3,
+    "explanation": "e ≈ 0.6 × radius = 0.3 × diameter."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The end correction of a resonance tube of internal diameter d is about",
+    "options": [
+      "0.6d",
+      "d",
+      "3d",
+      "0.3d"
+    ],
+    "correctIndex": 3,
+    "explanation": "e ≈ 0.6 × radius = 0.3 × diameter."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Neglecting end correction, a 500 Hz fork gives its first resonance in a resonance tube at 17 cm. The speed of sound is",
+    "options": [
+      "170 m/s",
+      "85 m/s",
+      "340 m/s",
+      "680 m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "First resonance: l = λ/4 ⇒ λ = 68 cm, v = fλ = 500 × 0.68 = 340 m/s."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Neglecting end correction, a 500 Hz fork gives its first resonance in a resonance tube at 17 cm. The speed of sound is",
+    "options": [
+      "170 m/s",
+      "85 m/s",
+      "340 m/s",
+      "680 m/s"
+    ],
+    "correctIndex": 2,
+    "explanation": "First resonance: l = λ/4 ⇒ λ = 68 cm, v = fλ = 500 × 0.68 = 340 m/s."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "50 g of a metal at 150 °C is dropped into 100 g of water at 25 °C. The final temperature is 30 °C. Ignoring the calorimeter, the specific heat of the metal is about",
+    "options": [
+      "0.083 cal g⁻¹ °C⁻¹",
+      "0.067 cal g⁻¹ °C⁻¹",
+      "0.12 cal g⁻¹ °C⁻¹",
+      "0.08 cal g⁻¹ °C⁻¹"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heat lost = heat gained: 50 × s × (150 − 30) = 100 × 1 × (30 − 25) ⇒ s = 500/6000 ≈ 0.083 cal g⁻¹ °C⁻¹."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "50 g of a metal at 150 °C is dropped into 100 g of water at 25 °C. The final temperature is 30 °C. Ignoring the calorimeter, the specific heat of the metal is about",
+    "options": [
+      "0.083 cal g⁻¹ °C⁻¹",
+      "0.067 cal g⁻¹ °C⁻¹",
+      "0.12 cal g⁻¹ °C⁻¹",
+      "0.08 cal g⁻¹ °C⁻¹"
+    ],
+    "correctIndex": 0,
+    "explanation": "Heat lost = heat gained: 50 × s × (150 − 30) = 100 × 1 × (30 − 25) ⇒ s = 500/6000 ≈ 0.083 cal g⁻¹ °C⁻¹."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the method-of-mixtures experiment the calorimeter is polished and kept in a lagged (insulated) jacket mainly to",
+    "options": [
+      "reduce heat lost to the surroundings by radiation and conduction",
+      "increase the specific heat of water",
+      "make the solid cool faster",
+      "remove the need to stir"
+    ],
+    "correctIndex": 0,
+    "explanation": "Any heat lost to the surroundings is not counted as 'heat gained', making the measured specific heat wrong; polishing cuts radiation, lagging cuts conduction/convection."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the method-of-mixtures experiment the calorimeter is polished and kept in a lagged (insulated) jacket mainly to",
+    "options": [
+      "reduce heat lost to the surroundings by radiation and conduction",
+      "increase the specific heat of water",
+      "make the solid cool faster",
+      "remove the need to stir"
+    ],
+    "correctIndex": 0,
+    "explanation": "Any heat lost to the surroundings is not counted as 'heat gained', making the measured specific heat wrong; polishing cuts radiation, lagging cuts conduction/convection."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a metre bridge the unknown resistance X is in the left gap and 10 Ω in the right gap. The null point is 60 cm from the left end. X is",
+    "options": [
+      "6.67 Ω",
+      "10 Ω",
+      "15 Ω",
+      "6 Ω"
+    ],
+    "correctIndex": 2,
+    "explanation": "X/R = l/(100 − l) ⇒ X = 10 × 60/40 = 15 Ω."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a metre bridge the unknown resistance X is in the left gap and 10 Ω in the right gap. The null point is 60 cm from the left end. X is",
+    "options": [
+      "6.67 Ω",
+      "10 Ω",
+      "15 Ω",
+      "6 Ω"
+    ],
+    "correctIndex": 2,
+    "explanation": "X/R = l/(100 − l) ⇒ X = 10 × 60/40 = 15 Ω."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A metre bridge gives the resistance of a 0.5 m wire of diameter 0.5 mm as 2 Ω. The resistivity of its material is about",
+    "options": [
+      "3.1 × 10⁻⁶ Ω m",
+      "3.9 × 10⁻⁷ Ω m",
+      "2 × 10⁻⁷ Ω m",
+      "7.9 × 10⁻⁷ Ω m"
+    ],
+    "correctIndex": 3,
+    "explanation": "ρ = RA/L = 2 × π × (0.25 × 10⁻³)²/0.5 ≈ 7.9 × 10⁻⁷ Ω m. Using the diameter as radius gives 4 times the value."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A metre bridge gives the resistance of a 0.5 m wire of diameter 0.5 mm as 2 Ω. The resistivity of its material is about",
+    "options": [
+      "3.1 × 10⁻⁶ Ω m",
+      "3.9 × 10⁻⁷ Ω m",
+      "2 × 10⁻⁷ Ω m",
+      "7.9 × 10⁻⁷ Ω m"
+    ],
+    "correctIndex": 3,
+    "explanation": "ρ = RA/L = 2 × π × (0.25 × 10⁻³)²/0.5 ≈ 7.9 × 10⁻⁷ Ω m. Using the diameter as radius gives 4 times the value."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a metre bridge experiment the null point is obtained near the middle of the wire and the resistances are then interchanged. This is done to",
+    "options": [
+      "increase the current in the galvanometer",
+      "heat the wire evenly",
+      "increase sensitivity and cancel the end error",
+      "remove the need for a jockey"
+    ],
+    "correctIndex": 2,
+    "explanation": "Near the middle the percentage error in l and 100 − l is smallest; interchanging X and R and averaging removes the end resistance at the metal strips."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a metre bridge experiment the null point is obtained near the middle of the wire and the resistances are then interchanged. This is done to",
+    "options": [
+      "increase the current in the galvanometer",
+      "heat the wire evenly",
+      "increase sensitivity and cancel the end error",
+      "remove the need for a jockey"
+    ],
+    "correctIndex": 2,
+    "explanation": "Near the middle the percentage error in l and 100 − l is smallest; interchanging X and R and averaging removes the end resistance at the metal strips."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the Ohm's law experiment, current I is plotted on the y-axis and potential difference V on the x-axis. The slope of the straight line equals",
+    "options": [
+      "1/R",
+      "R",
+      "R²",
+      "V·I"
+    ],
+    "correctIndex": 0,
+    "explanation": "I = V/R, so the slope of I against V is 1/R (slope of V against I would be R)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the Ohm's law experiment, current I is plotted on the y-axis and potential difference V on the x-axis. The slope of the straight line equals",
+    "options": [
+      "1/R",
+      "R",
+      "R²",
+      "V·I"
+    ],
+    "correctIndex": 0,
+    "explanation": "I = V/R, so the slope of I against V is 1/R (slope of V against I would be R)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the half-deflection method, with a series resistance of 4000 Ω, a shunt of 40 Ω across the galvanometer halves the deflection. The galvanometer resistance is about",
+    "options": [
+      "40 Ω",
+      "40.4 Ω",
+      "80 Ω",
+      "39.6 Ω"
+    ],
+    "correctIndex": 1,
+    "explanation": "G = RS/(R − S) = 4000 × 40/3960 ≈ 40.4 Ω (close to S because R ≫ G)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the half-deflection method, with a series resistance of 4000 Ω, a shunt of 40 Ω across the galvanometer halves the deflection. The galvanometer resistance is about",
+    "options": [
+      "40 Ω",
+      "40.4 Ω",
+      "80 Ω",
+      "39.6 Ω"
+    ],
+    "correctIndex": 1,
+    "explanation": "G = RS/(R − S) = 4000 × 40/3960 ≈ 40.4 Ω (close to S because R ≫ G)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A galvanometer of resistance 50 Ω in series with 9950 Ω and a 3 V cell (negligible internal resistance) shows 30 divisions. Its figure of merit is",
+    "options": [
+      "1 × 10⁻⁵ A/div",
+      "1 × 10⁻⁴ A/div",
+      "1 × 10⁵ div/A",
+      "1 × 10⁻⁶ A/div"
+    ],
+    "correctIndex": 0,
+    "explanation": "I = 3/10000 = 3 × 10⁻⁴ A. Figure of merit = I/θ = 3 × 10⁻⁴/30 = 1 × 10⁻⁵ A per division."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "tough",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A galvanometer of resistance 50 Ω in series with 9950 Ω and a 3 V cell (negligible internal resistance) shows 30 divisions. Its figure of merit is",
+    "options": [
+      "1 × 10⁻⁵ A/div",
+      "1 × 10⁻⁴ A/div",
+      "1 × 10⁵ div/A",
+      "1 × 10⁻⁶ A/div"
+    ],
+    "correctIndex": 0,
+    "explanation": "I = 3/10000 = 3 × 10⁻⁴ A. Figure of merit = I/θ = 3 × 10⁻⁴/30 = 1 × 10⁻⁵ A per division."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "To find the focal length of a convex mirror by the parallax method, an extra convex lens is used because",
+    "options": [
+      "a convex mirror has no focal length",
+      "a convex mirror alone forms only virtual images, which cannot be located on a needle directly",
+      "the lens increases the brightness of the image",
+      "the mirror must be placed at the focus of the lens"
+    ],
+    "correctIndex": 1,
+    "explanation": "The lens first forms a real image; the convex mirror is placed so that this image acts as its (virtual) object, and the rays retrace their path."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "To find the focal length of a convex mirror by the parallax method, an extra convex lens is used because",
+    "options": [
+      "a convex mirror has no focal length",
+      "a convex mirror alone forms only virtual images, which cannot be located on a needle directly",
+      "the lens increases the brightness of the image",
+      "the mirror must be placed at the focus of the lens"
+    ],
+    "correctIndex": 1,
+    "explanation": "The lens first forms a real image; the convex mirror is placed so that this image acts as its (virtual) object, and the rays retrace their path."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a concave-mirror experiment the object needle is at 30 cm and the image needle at 60 cm in front of the mirror (no parallax). The focal length is",
+    "options": [
+      "45 cm",
+      "90 cm",
+      "30 cm",
+      "20 cm"
+    ],
+    "correctIndex": 3,
+    "explanation": "With sign convention u = −30 cm, v = −60 cm: 1/f = 1/v + 1/u = −1/60 − 1/30 = −1/20, so f = −20 cm (focal length 20 cm)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In a concave-mirror experiment the object needle is at 30 cm and the image needle at 60 cm in front of the mirror (no parallax). The focal length is",
+    "options": [
+      "45 cm",
+      "90 cm",
+      "30 cm",
+      "20 cm"
+    ],
+    "correctIndex": 3,
+    "explanation": "With sign convention u = −30 cm, v = −60 cm: 1/f = 1/v + 1/u = −1/60 − 1/30 = −1/20, so f = −20 cm (focal length 20 cm)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For a convex lens, a graph of 1/v (y-axis) against 1/u (x-axis, with sign convention) is",
+    "options": [
+      "a rectangular hyperbola",
+      "a parabola through the origin",
+      "a straight line of slope −1 through the origin",
+      "a straight line of slope +1 with y-intercept 1/f"
+    ],
+    "correctIndex": 3,
+    "explanation": "1/v = 1/u + 1/f is a straight line of slope 1; its y-intercept is 1/f (and its x-intercept is −1/f)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For a convex lens, a graph of 1/v (y-axis) against 1/u (x-axis, with sign convention) is",
+    "options": [
+      "a rectangular hyperbola",
+      "a parabola through the origin",
+      "a straight line of slope −1 through the origin",
+      "a straight line of slope +1 with y-intercept 1/f"
+    ],
+    "correctIndex": 3,
+    "explanation": "1/v = 1/u + 1/f is a straight line of slope 1; its y-intercept is 1/f (and its x-intercept is −1/f)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The graph of angle of deviation δ against angle of incidence i for a prism is",
+    "options": [
+      "a straight line through the origin",
+      "U-shaped, with a minimum at δm",
+      "a straight line parallel to the i-axis",
+      "an increasing curve with no minimum"
+    ],
+    "correctIndex": 1,
+    "explanation": "δ first decreases as i increases, reaches the minimum deviation δm (when i = e) and then increases again."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The graph of angle of deviation δ against angle of incidence i for a prism is",
+    "options": [
+      "a straight line through the origin",
+      "U-shaped, with a minimum at δm",
+      "a straight line parallel to the i-axis",
+      "an increasing curve with no minimum"
+    ],
+    "correctIndex": 1,
+    "explanation": "δ first decreases as i increases, reaches the minimum deviation δm (when i = e) and then increases again."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For a 60° prism the minimum deviation from the i–δ graph is 30°. The refractive index of the prism is",
+    "options": [
+      "1.414",
+      "0.577",
+      "1.5",
+      "1.732"
+    ],
+    "correctIndex": 0,
+    "explanation": "μ = sin((A + δm)/2)/sin(A/2) = sin 45°/sin 30° = √2 ≈ 1.414."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "For a 60° prism the minimum deviation from the i–δ graph is 30°. The refractive index of the prism is",
+    "options": [
+      "1.414",
+      "0.577",
+      "1.5",
+      "1.732"
+    ],
+    "correctIndex": 0,
+    "explanation": "μ = sin((A + δm)/2)/sin(A/2) = sin 45°/sin 30° = √2 ≈ 1.414."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Travelling-microscope readings: mark without the slab 3.000 cm, mark seen through the slab 3.800 cm, top surface of the slab 5.400 cm. The refractive index of the glass is",
+    "options": [
+      "0.667",
+      "1.42",
+      "1.27",
+      "1.5"
+    ],
+    "correctIndex": 3,
+    "explanation": "Real thickness = 5.400 − 3.000 = 2.400 cm; apparent = 5.400 − 3.800 = 1.600 cm. μ = 2.4/1.6 = 1.5."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "Travelling-microscope readings: mark without the slab 3.000 cm, mark seen through the slab 3.800 cm, top surface of the slab 5.400 cm. The refractive index of the glass is",
+    "options": [
+      "0.667",
+      "1.42",
+      "1.27",
+      "1.5"
+    ],
+    "correctIndex": 3,
+    "explanation": "Real thickness = 5.400 − 3.000 = 2.400 cm; apparent = 5.400 − 3.800 = 1.600 cm. μ = 2.4/1.6 = 1.5."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the travelling-microscope method for a glass slab, lycopodium powder is sprinkled on the top surface so that",
+    "options": [
+      "the slab does not slip",
+      "the top surface can be focused clearly",
+      "light is reflected back into the slab",
+      "the apparent depth increases"
+    ],
+    "correctIndex": 1,
+    "explanation": "A clean glass surface is hard to focus on; the fine powder gives a sharp mark to read the top surface (R₃)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the travelling-microscope method for a glass slab, lycopodium powder is sprinkled on the top surface so that",
+    "options": [
+      "the slab does not slip",
+      "the top surface can be focused clearly",
+      "light is reflected back into the slab",
+      "the apparent depth increases"
+    ],
+    "correctIndex": 1,
+    "explanation": "A clean glass surface is hard to focus on; the fine powder gives a sharp mark to read the top surface (R₃)."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A Zener diode used as a voltage regulator works in",
+    "options": [
+      "forward bias, below the knee voltage",
+      "reverse bias, in the breakdown region",
+      "forward bias, above the knee voltage",
+      "reverse bias, below breakdown"
+    ],
+    "correctIndex": 1,
+    "explanation": "After reverse breakdown the Zener voltage stays nearly constant over a wide range of current — that is what regulates the output."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A Zener diode used as a voltage regulator works in",
+    "options": [
+      "forward bias, below the knee voltage",
+      "reverse bias, in the breakdown region",
+      "forward bias, above the knee voltage",
+      "reverse bias, below breakdown"
+    ],
+    "correctIndex": 1,
+    "explanation": "After reverse breakdown the Zener voltage stays nearly constant over a wide range of current — that is what regulates the output."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The forward characteristic of a silicon p-n junction diode shows a sharp rise in current after about",
+    "options": [
+      "0.3 V",
+      "0.7 V",
+      "7 V",
+      "0.07 V"
+    ],
+    "correctIndex": 1,
+    "explanation": "The knee (cut-in) voltage is about 0.7 V for Si and 0.3 V for Ge."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "The forward characteristic of a silicon p-n junction diode shows a sharp rise in current after about",
+    "options": [
+      "0.3 V",
+      "0.7 V",
+      "7 V",
+      "0.07 V"
+    ],
+    "correctIndex": 1,
+    "explanation": "The knee (cut-in) voltage is about 0.7 V for Si and 0.3 V for Ge."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "On the forward characteristic of a diode, increasing the voltage from 0.70 V to 0.80 V raises the current from 10 mA to 30 mA. The dynamic resistance in this region is",
+    "options": [
+      "20 Ω",
+      "0.5 Ω",
+      "5 Ω",
+      "40 Ω"
+    ],
+    "correctIndex": 2,
+    "explanation": "r_d = ΔV/ΔI = 0.10 V/0.020 A = 5 Ω."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "On the forward characteristic of a diode, increasing the voltage from 0.70 V to 0.80 V raises the current from 10 mA to 30 mA. The dynamic resistance in this region is",
+    "options": [
+      "20 Ω",
+      "0.5 Ω",
+      "5 Ω",
+      "40 Ω"
+    ],
+    "correctIndex": 2,
+    "explanation": "r_d = ΔV/ΔI = 0.10 V/0.020 A = 5 Ω."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "When the two leads of an unknown component are touched to a multimeter (resistance range), the needle first deflects and then slowly returns to zero (infinite resistance). The component is a",
+    "options": [
+      "resistor",
+      "diode",
+      "LED",
+      "capacitor"
+    ],
+    "correctIndex": 3,
+    "explanation": "The capacitor draws a charging current that dies out; once charged no steady current flows."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "When the two leads of an unknown component are touched to a multimeter (resistance range), the needle first deflects and then slowly returns to zero (infinite resistance). The component is a",
+    "options": [
+      "resistor",
+      "diode",
+      "LED",
+      "capacitor"
+    ],
+    "correctIndex": 3,
+    "explanation": "The capacitor draws a charging current that dies out; once charged no steady current flows."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An unknown component conducts only when connected one way and also glows. It is a",
+    "options": [
+      "resistor",
+      "light emitting diode (LED)",
+      "capacitor",
+      "ordinary p-n junction diode"
+    ],
+    "correctIndex": 1,
+    "explanation": "An LED is a diode: it conducts in forward bias only and emits light when it conducts."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "An unknown component conducts only when connected one way and also glows. It is a",
+    "options": [
+      "resistor",
+      "light emitting diode (LED)",
+      "capacitor",
+      "ordinary p-n junction diode"
+    ],
+    "correctIndex": 1,
+    "explanation": "An LED is a diode: it conducts in forward bias only and emits light when it conducts."
+  },
+  {
+    "examMode": "NEET",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A component shows the same steady resistance reading whichever way it is connected to a multimeter. It is a",
+    "options": [
+      "diode",
+      "resistor",
+      "LED",
+      "capacitor"
+    ],
+    "correctIndex": 1,
+    "explanation": "A resistor has no polarity and allows a steady current in both directions."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Physics",
+    "chapter": "Experimental Skills",
+    "difficulty": "easy",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A component shows the same steady resistance reading whichever way it is connected to a multimeter. It is a",
+    "options": [
+      "diode",
+      "resistor",
+      "LED",
+      "capacitor"
+    ],
+    "correctIndex": 1,
+    "explanation": "A resistor has no polarity and allows a steady current in both directions."
+  }
+]

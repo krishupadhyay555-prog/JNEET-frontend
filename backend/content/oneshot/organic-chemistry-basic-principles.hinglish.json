@@ -126,6 +126,10 @@
  ],
  "topics": [
   {
+   "title": "Classification and homologous series",
+   "explain": "Organic compounds acyclic (open chain: alkanes, alkenes, alkynes) ya cyclic hote hain — alicyclic (cyclohexane) ya aromatic (benzenoid jaise benzene, non-benzenoid jaise tropolone, aur heterocyclic jaise pyridine, furan). Inhe functional group se bhi group kiya jaata hai. Homologous series ek family hai jismein functional group same hota hai aur lagataar members mein –CH₂– (14 u) ka farak hota hai: general formula same (alkanes CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂, alcohols CₙH₂ₙ₊₁OH), chemical properties milti-julti, aur physical properties (boiling point) molar mass ke saath dheere-dheere badalti hain."
+  },
+  {
    "title": "IUPAC nomenclature",
    "explain": "Principal functional group wali sabse lambi chain lo, use itna number karo ki us group ko sabse chhota locant mile, substituents alphabetical order mein. Suffix priority: –COOH > –SO₃H > –COOR > –COCl > –CONH₂ > –CN > –CHO > >C=O > –OH > –NH₂ > C=C > C≡C."
   },

@@ -126,6 +126,10 @@
  ],
  "topics": [
   {
+   "title": "Classification and homologous series",
+   "explain": "Organic compounds are acyclic (open chain: alkanes, alkenes, alkynes) or cyclic — alicyclic (cyclohexane) or aromatic (benzenoid like benzene, non-benzenoid like tropolone, and heterocyclic like pyridine, furan). They are also grouped by functional group. A homologous series is a family with the same functional group in which successive members differ by –CH₂– (14 u): same general formula (alkanes CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂, alcohols CₙH₂ₙ₊₁OH), similar chemical properties, and physical properties (boiling point) that change gradually with molar mass."
+  },
+  {
    "title": "IUPAC nomenclature",
    "explain": "Find the longest chain containing the principal functional group, number it to give that group the lowest locant, name substituents alphabetically. Priority of suffixes: –COOH > –SO₃H > –COOR > –COCl > –CONH₂ > –CN > –CHO > >C=O > –OH > –NH₂ > C=C > C≡C."
   },

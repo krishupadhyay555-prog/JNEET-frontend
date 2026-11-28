@@ -2,7 +2,8 @@
  "slug": "practical-chemistry",
  "subject": "Chemistry",
  "chapters": {
-  "NEET": "Practical Chemistry"
+  "NEET": "Practical Chemistry",
+  "JEE": "Practical Chemistry"
  },
  "title": "Practical Chemistry",
  "readMinutes": 12,
@@ -10,7 +11,7 @@
   "Detection of extra elements (N, S, halogens) in organic compounds uses Lassaigne's sodium fusion extract; functional groups are identified by simple colour or precipitate tests.",
   "Inorganic salt analysis finds one cation and one anion: dilute and concentrated H₂SO₄ tests for anions, then group reagents separate cations into groups 0 to VI.",
   "Redox titrations of KMnO₄ against oxalic acid and Mohr's salt need no indicator — KMnO₄ is its own indicator (colourless to permanent light pink).",
-  "Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) and the chemistry behind each step are common NEET questions."
+  "Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) and the chemistry behind each step are common NEET and JEE Main questions."
  ],
  "formulas": [
   {

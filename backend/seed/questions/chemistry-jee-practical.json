@@ -1,0 +1,1706 @@
+[
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A salt solution gives a deep blue colour when excess ammonia solution is added. The cation is",
+    "options": [
+      "Fe³⁺",
+      "Zn²⁺",
+      "Pb²⁺",
+      "Cu²⁺"
+    ],
+    "correctIndex": 3,
+    "explanation": "Cu²⁺ forms the deep blue complex [Cu(NH₃)₄]²⁺."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A salt gives a red (rosy) precipitate with dimethylglyoxime in ammoniacal medium. The cation is",
+    "options": [
+      "Co²⁺",
+      "Ni²⁺",
+      "Mn²⁺",
+      "Ca²⁺"
+    ],
+    "correctIndex": 1,
+    "explanation": "Nickel dimethylglyoximate is bright red."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "With Nessler's reagent, a solution gives a brown precipitate. This confirms",
+    "options": [
+      "Cl⁻",
+      "Fe³⁺",
+      "NH₄⁺",
+      "Ba²⁺"
+    ],
+    "correctIndex": 2,
+    "explanation": "Nessler's reagent (K₂HgI₄ in KOH) gives a brown precipitate with ammonium ions."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A solution of a salt gives a Prussian-blue colour with potassium ferrocyanide. The cation is",
+    "options": [
+      "Fe²⁺ only",
+      "Cu²⁺",
+      "Fe³⁺",
+      "Al³⁺"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fe³⁺ + [Fe(CN)₆]⁴⁻ → Fe₄[Fe(CN)₆]₃ (Prussian blue)."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A salt solution gives a white precipitate with BaCl₂ that does NOT dissolve in dilute HCl. The anion is",
+    "options": [
+      "CO₃²⁻",
+      "Cl⁻",
+      "SO₄²⁻",
+      "NO₃⁻"
+    ],
+    "correctIndex": 2,
+    "explanation": "BaSO₄ is insoluble in acids; BaCO₃ would dissolve with effervescence."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A salt solution gives a yellow precipitate with KI that dissolves in hot water and reappears as golden spangles on cooling. The cation is",
+    "options": [
+      "Ag⁺",
+      "Pb²⁺",
+      "Hg²⁺",
+      "Cu²⁺"
+    ],
+    "correctIndex": 1,
+    "explanation": "PbI₂ is yellow and recrystallises as shiny golden spangles ('golden rain')."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "A white precipitate with AgNO₃ dissolves readily in ammonia solution. The anion is",
+    "options": [
+      "I⁻",
+      "Br⁻",
+      "SO₄²⁻",
+      "Cl⁻"
+    ],
+    "correctIndex": 3,
+    "explanation": "AgCl dissolves in NH₃ forming [Ag(NH₃)₂]⁺; AgI is yellow and insoluble."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "level": "main",
+    "type": "mcq",
+    "questionText": "In the titration of oxalic acid with KMnO₄, no external indicator is needed because",
+    "options": [
+      "the solution is colourless throughout",
+      "oxalic acid is coloured",
+      "phenolphthalein is formed",
+      "KMnO₄ acts as a self-indicator"
+    ],
+    "correctIndex": 3,
+    "explanation": "The first excess drop of MnO₄⁻ gives a permanent light pink colour at the end point."
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "The gas evolved when a carbonate reacts with a dilute acid is:",
+    "options": [
+      "H2",
+      "O2",
+      "CO2",
+      "SO2"
+    ],
+    "correctIndex": 2,
+    "explanation": "Carbonates react with acids to form salt, water and carbon dioxide gas.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In qualitative analysis, addition of AgNO3 to a chloride-containing solution followed by acidification with dilute HNO3 gives:",
+    "options": [
+      "A black precipitate of Ag2S",
+      "A white precipitate of AgCl",
+      "A yellow precipitate of AgI",
+      "No precipitate"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chloride ions react with Ag+ to form white AgCl. Acidification with dilute HNO3 helps remove interfering carbonate and similar ions before the silver nitrate test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which indicator is commonly used in a strong acid–strong base titration because its transition range lies near the steep pH change around equivalence?",
+    "options": [
+      "Methyl orange",
+      "Phenolphthalein",
+      "Either methyl orange or phenolphthalein",
+      "Starch"
+    ],
+    "correctIndex": 2,
+    "explanation": "A strong acid–strong base titration has a very steep pH change around equivalence, so both methyl orange and phenolphthalein can provide suitable endpoints. Starch is primarily used in iodine-related titrations.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In qualitative analysis, a violet colour in the flame test is characteristic of:",
+    "options": [
+      "Na+",
+      "K+",
+      "Ca2+",
+      "Ba2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Potassium salts produce a characteristic lilac or violet flame. Sodium produces an intense yellow flame, while calcium and barium give different characteristic colours.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A white precipitate formed on adding AgNO3 to a solution dissolves in dilute NH3. The precipitate is most likely:",
+    "options": [
+      "AgCl",
+      "AgBr",
+      "AgI",
+      "Ag2S"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl forms a white precipitate that dissolves in dilute NH3 due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated NH3 and AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which observation indicates the presence of a carbonate ion when dilute HCl is added to the salt?",
+    "options": [
+      "Brown precipitate forms",
+      "Effervescence occurs due to CO2 evolution",
+      "Blue solution forms",
+      "No visible change occurs"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbonate reacts with dilute HCl to release CO2 gas, producing brisk effervescence. The gas turns limewater milky due to CaCO3 formation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A white precipitate formed on adding AgNO3 to a halide solution dissolves readily in dilute NH3. The halide ion is most likely:",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "F−"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl is white and dissolves in dilute ammonia through formation of the soluble [Ag(NH3)2]+ complex. AgBr requires concentrated ammonia, while AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which indicator is commonly suitable for titrating a strong acid against a strong base?",
+    "options": [
+      "Starch",
+      "Phenolphthalein",
+      "Methyl red only",
+      "No indicator can be used"
+    ],
+    "correctIndex": 1,
+    "explanation": "A strong acid–strong base titration has a very steep pH change near equivalence, so phenolphthalein gives a sharp endpoint within this transition region.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In qualitative analysis, the precipitate of AgCl is distinguished from AgI because:",
+    "options": [
+      "AgCl dissolves in dilute NH3 whereas AgI does not",
+      "AgI dissolves in dilute NH3 whereas AgCl does not",
+      "Both dissolve completely in dilute NH3",
+      "Neither dissolves in concentrated NH3"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl dissolves in dilute ammonia because it forms the soluble diamminesilver(I) complex. AgI is much less soluble and does not dissolve appreciably in dilute ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which indicator is generally suitable for the titration of a strong acid with a weak base?",
+    "options": [
+      "Phenolphthalein",
+      "Methyl orange",
+      "Both are equally suitable",
+      "Neither can be used"
+    ],
+    "correctIndex": 1,
+    "explanation": "A strong acid–weak base titration has an equivalence point below pH 7, so methyl orange, whose transition range lies in the acidic region, is more suitable than phenolphthalein.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a white precipitate with AgNO3 that dissolves in dilute ammonia. Which anion is most consistent with this observation?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "SO4^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cl− forms white AgCl, which dissolves in dilute NH3 due to complex formation. AgBr requires concentrated ammonia and AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with BaCl2 that remains insoluble in dilute HCl. Which anion is most consistent with this observation?",
+    "options": [
+      "CO3^2−",
+      "SO4^2−",
+      "SO3^2−",
+      "Cl−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ba2+ forms BaSO4, a white precipitate that is highly insoluble in dilute hydrochloric acid. Carbonates and sulfites react with dilute acid, while chloride does not precipitate with BaCl2.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In a titration of a strong acid with a strong base, the equivalence point occurs approximately at:",
+    "options": [
+      "pH 3",
+      "pH 5",
+      "pH 7",
+      "pH 10"
+    ],
+    "correctIndex": 2,
+    "explanation": "At the equivalence point of a strong acid–strong base titration, the solution contains essentially a neutral salt and water. At 25 °C the pH is approximately 7.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which apparatus is most appropriate for accurately transferring a fixed volume such as 25.00 mL of a solution during titration?",
+    "options": [
+      "Beaker",
+      "Pipette",
+      "Watch glass",
+      "Funnel"
+    ],
+    "correctIndex": 1,
+    "explanation": "A volumetric pipette is designed to deliver a highly accurate fixed volume. Therefore it is preferred for transferring a measured aliquot during titration.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a white precipitate with AgNO3 that dissolves in dilute NH3. Which anion is indicated?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "SO4^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cl− forms white AgCl, which dissolves in dilute NH3 due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated ammonia and AgI is insoluble.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution produces a white precipitate with BaCl2 that remains insoluble in dilute HCl. Which anion is most likely present?",
+    "options": [
+      "CO3^2−",
+      "SO4^2−",
+      "SO3^2−",
+      "Cl−"
+    ],
+    "correctIndex": 1,
+    "explanation": "SO4^2− forms white BaSO4, which is highly insoluble in dilute HCl. Carbonate and sulfite precipitates react with dilute acid.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which indicator is more appropriate for titrating a strong acid against a weak base?",
+    "options": [
+      "Phenolphthalein",
+      "Methyl orange",
+      "Both are equally appropriate",
+      "Neither"
+    ],
+    "correctIndex": 1,
+    "explanation": "The equivalence point of a strong acid–weak base titration lies below pH 7. Methyl orange changes colour in the acidic pH range and is therefore more suitable.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which apparatus is designed to deliver an accurately measured fixed volume such as 25.00 mL?",
+    "options": [
+      "Beaker",
+      "Volumetric pipette",
+      "Conical flask",
+      "Funnel"
+    ],
+    "correctIndex": 1,
+    "explanation": "A volumetric pipette is calibrated to deliver a precise fixed volume and is therefore used for accurate aliquot transfer in volumetric analysis.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a brick-red flame and forms a white precipitate with sodium carbonate solution. Which cation is most consistent with these observations?",
+    "options": [
+      "Na+",
+      "Ca2+",
+      "K+",
+      "Ba2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Calcium gives a characteristic brick-red flame. Its carbonate is insoluble, giving a white precipitate with carbonate ions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which reagent is most appropriate for detecting chloride ions in an aqueous salt solution after acidifying the solution with dilute nitric acid?",
+    "options": [
+      "AgNO3",
+      "BaCl2",
+      "NaOH",
+      "NH4OH alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "After acidification with dilute HNO3, addition of AgNO3 produces a curdy white precipitate of AgCl if chloride ions are present. Nitric acid prevents interference from carbonate and similar anions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with AgNO3, and the precipitate dissolves in dilute NH3 solution. Which anion is most consistent with this observation?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "CO3^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl is a white precipitate that dissolves in dilute NH3 because it forms the soluble diamminesilver(I) complex. AgBr requires concentrated NH3, while AgI is insoluble in NH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a brick-red flame and its aqueous solution forms a white precipitate with sodium carbonate. Which cation is indicated?",
+    "options": [
+      "Na+",
+      "K+",
+      "Ca2+",
+      "Ba2+"
+    ],
+    "correctIndex": 2,
+    "explanation": "Calcium ions give a brick-red flame and form insoluble calcium carbonate with sodium carbonate. Therefore Ca2+ is indicated.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a white precipitate with AgNO3 after acidification with dilute HNO3. The precipitate dissolves in aqueous NH3. The anion most likely present is:",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "CO3^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cl− forms white AgCl with AgNO3, and AgCl dissolves in dilute aqueous NH3 due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated NH3 and AgI is insoluble in NH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A halide solution gives a pale yellow precipitate with AgNO3 after acidification with dilute HNO3. The precipitate dissolves in concentrated NH3 but not readily in dilute NH3. The halide is:",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "F−"
+    ],
+    "correctIndex": 1,
+    "explanation": "AgBr is pale yellow or cream and dissolves in concentrated ammonia but not in dilute ammonia. AgCl dissolves in dilute ammonia, while AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with BaCl2 that dissolves on treatment with dilute HCl with effervescence. The anion most likely present is:",
+    "options": [
+      "SO4^2−",
+      "CO3^2−",
+      "Cl−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbonate gives white BaCO3 with BaCl2, which reacts with dilute HCl to release CO2 with effervescence. Barium sulfate would remain insoluble in dilute HCl.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a white precipitate with BaCl2 that dissolves in dilute HCl with effervescence. Which anion is indicated?",
+    "options": [
+      "SO4^2−",
+      "CO3^2−",
+      "Cl−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbonate forms white BaCO3 with BaCl2, and BaCO3 reacts with dilute HCl to release CO2 with effervescence. BaSO4 remains insoluble in dilute HCl.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with BaCl2 after acidification with dilute HCl. The precipitate is insoluble in dilute HCl. This observation indicates the presence of:",
+    "options": [
+      "Cl−",
+      "SO4^2−",
+      "NO3−",
+      "CH3COO−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sulfate ions give white BaSO4 with BaCl2, and BaSO4 remains insoluble in dilute hydrochloric acid. Acidification helps prevent interference from ions such as carbonate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "In qualitative analysis, a white precipitate formed on adding AgNO3 solution to an acidified aqueous solution indicates the presence of",
+    "options": [
+      "SO4²−",
+      "Cl−",
+      "NO3−",
+      "CO3²−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chloride ions react with Ag+ to form white AgCl precipitate. The solution is acidified to remove interfering ions such as carbonate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A solution gives a brick-red precipitate when heated with Fehling's solution. Which type of compound is most likely responsible?",
+    "options": [
+      "A typical ketone",
+      "An aliphatic aldehyde",
+      "An ether",
+      "A tertiary amine"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aliphatic aldehydes reduce Cu2+ in Fehling's solution to Cu2O, producing a characteristic brick-red precipitate. Ordinary ketones generally do not give this test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a white precipitate with AgNO3 that dissolves in dilute NH3 solution. Which halide ion is most consistent with this observation?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "F−"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl forms a white precipitate that dissolves in dilute NH3 due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated NH3 and AgI is insoluble in NH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a deep blue colour after adding freshly prepared FeSO4 solution followed carefully by concentrated H2SO4, forming a brown ring at the interface. Which ion is indicated?",
+    "options": [
+      "SO4^2−",
+      "NO3−",
+      "Cl−",
+      "CO3^2−"
+    ],
+    "correctIndex": 1,
+    "explanation": "The brown-ring test is characteristic of nitrate. Nitrate is reduced to NO, which forms a brown nitrosyl complex with Fe2+ at the acid-solution interface.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which indicator is most suitable for a strong acid–strong base titration when the equivalence point is near pH 7?",
+    "options": [
+      "Methyl orange only",
+      "Phenolphthalein only",
+      "Either methyl orange or phenolphthalein",
+      "Neither indicator"
+    ],
+    "correctIndex": 2,
+    "explanation": "A strong acid–strong base titration has a very steep pH change around the equivalence point, spanning both methyl orange and phenolphthalein transition ranges. Hence either can generally indicate the endpoint.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "Which indicator changes from colourless to pink in a basic medium?",
+    "options": [
+      "Phenolphthalein",
+      "Methyl orange",
+      "Litmus only in acidic medium",
+      "Starch"
+    ],
+    "correctIndex": 0,
+    "explanation": "Phenolphthalein is colourless in acidic solution and becomes pink in basic solution, making it a common acid–base indicator.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "In an acid-base titration, phenolphthalein is generally colourless in acidic solution and becomes pink in basic solution. Which change is observed when a strong base is added gradually to a strong acid containing phenolphthalein?",
+    "options": [
+      "Pink to colourless",
+      "Colourless to faint pink near the endpoint",
+      "Blue to red",
+      "Yellow to orange"
+    ],
+    "correctIndex": 1,
+    "explanation": "Phenolphthalein is colourless in acidic medium and develops a pink colour as the solution becomes sufficiently basic. Thus the endpoint is indicated by the appearance of a faint persistent pink colour.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "Which indicator is commonly used for titration of a strong acid against a strong base?",
+    "options": [
+      "Phenolphthalein only",
+      "Methyl orange only",
+      "Either phenolphthalein or methyl orange",
+      "Starch"
+    ],
+    "correctIndex": 2,
+    "explanation": "A strong acid-strong base titration has a very sharp pH change near the equivalence point, so both phenolphthalein and methyl orange can provide a suitable endpoint.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution containing Ag+ ions is treated with dilute HCl. A white precipitate forms that dissolves in aqueous ammonia. Which ion is most likely present?",
+    "options": [
+      "Ag+",
+      "Pb2+",
+      "Ba2+",
+      "Fe3+"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ag+ reacts with Cl− to form white AgCl, which dissolves in aqueous ammonia due to formation of the diamminesilver(I) complex. This is a characteristic qualitative test for Ag+.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a brick-red precipitate with alkaline Fehling solution on warming. Which type of compound is most consistent with this observation?",
+    "options": [
+      "A typical aldehyde",
+      "A typical ketone",
+      "An alkane",
+      "An ether"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aliphatic aldehydes reduce Cu2+ in Fehling solution to Cu2O, producing a characteristic brick-red precipitate on warming. Ordinary ketones, alkanes and ethers do not give this test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In qualitative analysis, a solution containing chloride ions gives a white precipitate with AgNO3. The precipitate is:",
+    "options": [
+      "Ag2O",
+      "AgCl",
+      "Ag2SO4",
+      "AgNO3"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chloride ions react with Ag+ to form sparingly soluble AgCl, which appears as a white precipitate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a deep blue colour after addition of freshly prepared sodium nitroprusside solution in alkaline medium. Which ion is indicated by this test?",
+    "options": [
+      "Cl−",
+      "SO4^2−",
+      "S2−",
+      "NO3−"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sulphide ions react with sodium nitroprusside in alkaline medium to produce a characteristic violet to deep purple-blue coloration, indicating S2−.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a curdy white precipitate with AgNO3 after acidification with dilute HNO3, and the precipitate dissolves in aqueous NH3. Which anion is most consistent with these observations?",
+    "options": [
+      "CO3^2−",
+      "Cl−",
+      "SO4^2−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chloride ions form white AgCl with AgNO3 after acidification, and AgCl dissolves in aqueous ammonia due to formation of the diamminesilver(I) complex. The other listed anions do not give this characteristic sequence.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In a qualitative analysis test, a salt solution gives a deep blue colour after treatment with freshly prepared starch-iodide reagent in the presence of an oxidising species. Which observation is primarily due to iodine formation?",
+    "options": [
+      "Formation of Cu2+ ions",
+      "Oxidation of iodide to iodine followed by formation of a starch-iodine complex",
+      "Reduction of starch to glucose",
+      "Precipitation of NaI"
+    ],
+    "correctIndex": 1,
+    "explanation": "An oxidising agent converts I− into I2, which forms an intense blue complex with starch. Thus the blue colour originates from iodine-starch complex formation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a brick-red precipitate with Fehling's solution on warming. Which conclusion is most appropriate?",
+    "options": [
+      "It necessarily contains sucrose",
+      "It contains a substance capable of reducing Cu2+ to Cu2O under the test conditions",
+      "It necessarily contains a ketone with no alpha hydrogen",
+      "It contains chloride ions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fehling's test involves reduction of Cu2+ to brick-red Cu2O by suitable reducing compounds, commonly aliphatic aldehydes and reducing sugars. The observation establishes reducing behaviour, not a unique compound identity.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "During qualitative analysis, a salt solution gives a brick-red flame and a white precipitate with ammonium oxalate in suitable conditions. The cation is most likely:",
+    "options": [
+      "Na+",
+      "Ca2+",
+      "Ba2+",
+      "K+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ca2+ gives a characteristic brick-red flame and forms calcium oxalate, CaC2O4, as a white precipitate. Sodium gives a yellow flame, potassium lilac, and barium apple-green.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In an acid-base titration, a student uses phenolphthalein as indicator. Which colour change indicates the endpoint when a basic solution is added to an acidic solution?",
+    "options": [
+      "Pink to colourless",
+      "Colourless to faint pink",
+      "Blue to green",
+      "Yellow to red"
+    ],
+    "correctIndex": 1,
+    "explanation": "Phenolphthalein is colourless in acidic medium and becomes pink in basic medium. Therefore, when base is added to acid, the endpoint is indicated by the appearance of a persistent faint pink colour.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with AgNO3 that dissolves in dilute NH3 solution. Which halide ion is most consistent with this observation?",
+    "options": [
+      "F-",
+      "Cl-",
+      "Br-",
+      "I-"
+    ],
+    "correctIndex": 1,
+    "explanation": "AgCl forms a white precipitate that dissolves in dilute ammonia due to formation of the soluble diamminesilver(I) complex. AgBr requires concentrated ammonia and AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which reagent is commonly used to distinguish an aldehyde from a ketone by producing a silver mirror with the aldehyde?",
+    "options": [
+      "Lucas reagent",
+      "Tollens' reagent",
+      "Conc. H2SO4",
+      "FeCl3"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tollens' reagent contains the diamminesilver(I) complex and is reduced by aldehydes to metallic silver, producing a characteristic silver mirror. Ordinary ketones generally do not give this test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a brick-red flame and its aqueous solution produces a white precipitate with ammonium oxalate. Which cation is indicated?",
+    "options": [
+      "Na+",
+      "K+",
+      "Ca2+",
+      "Ba2+"
+    ],
+    "correctIndex": 2,
+    "explanation": "Calcium salts impart a brick-red flame, and Ca2+ reacts with ammonium oxalate to form white calcium oxalate. Hence the cation is Ca2+.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "In paper chromatography, a component travels 4.0 cm while the solvent front travels 8.0 cm. What is the Rf value of the component?",
+    "options": [
+      "0.25",
+      "0.50",
+      "2.0",
+      "4.0"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rf is the ratio of distance travelled by the solute to distance travelled by the solvent front. Thus Rf=4.0/8.0=0.50.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a brick-red precipitate with freshly prepared alkaline CuSO4 solution on warming. Which ion is indicated by this test?",
+    "options": [
+      "Cl−",
+      "SO4^2−",
+      "NH4+",
+      "Reducing aldehyde group"
+    ],
+    "correctIndex": 3,
+    "explanation": "A reducing sugar or aldehyde-containing reducing substance reduces Cu2+ in alkaline solution to Cu2O, which forms a brick-red precipitate on heating. Therefore the observation indicates a reducing aldehyde-type functionality rather than a simple inorganic anion.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with dilute HCl, and the precipitate dissolves in hot water. Which ion is most consistent with this observation?",
+    "options": [
+      "Ag+",
+      "Pb2+",
+      "Ba2+",
+      "Na+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Pb2+ forms white PbCl2 with dilute HCl, and PbCl2 is appreciably more soluble in hot water. AgCl does not dissolve in hot water in the same characteristic manner.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a brick-red precipitate with Fehling solution on warming. Which functional group is most strongly indicated?",
+    "options": [
+      "Aldehyde group",
+      "Ether group",
+      "Alkene group",
+      "Tertiary amine group"
+    ],
+    "correctIndex": 0,
+    "explanation": "Aliphatic aldehydes reduce Cu2+ in Fehling solution to Cu2O, which appears as a brick-red precipitate on warming. Therefore an aldehyde group is indicated.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a white precipitate with BaCl2 after acidification with dilute HCl. The precipitate is insoluble in dilute mineral acids. Which anion is most strongly indicated?",
+    "options": [
+      "Cl−",
+      "NO3−",
+      "SO4^2−",
+      "CH3COO−"
+    ],
+    "correctIndex": 2,
+    "explanation": "Sulphate ions react with Ba2+ to form white BaSO4, which remains insoluble in dilute mineral acids. Acidification before the test helps prevent interference from some other anions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a brick-red precipitate with a freshly prepared alkaline copper(II) solution on warming. Which ion is most consistent with this observation?",
+    "options": [
+      "NH4+",
+      "Cl−",
+      "Reducing organic species",
+      "SO4^2−"
+    ],
+    "correctIndex": 2,
+    "explanation": "Reducing substances can reduce Cu2+ in alkaline Fehling-type conditions to brick-red Cu2O on heating. This observation is characteristic of reducing organic compounds such as aldehydes and reducing sugars.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which observation is characteristic of a positive test for chloride ions using acidified silver nitrate solution?",
+    "options": [
+      "Black precipitate",
+      "Cream precipitate",
+      "White precipitate",
+      "Yellow precipitate"
+    ],
+    "correctIndex": 2,
+    "explanation": "Chloride ions react with Ag+ to form white AgCl precipitate. Acidification helps prevent interference from certain other anions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a brick-red precipitate with Fehling solution on warming. Which class of compound is most consistent with this observation?",
+    "options": [
+      "Aldehyde",
+      "Ether",
+      "Tertiary amine",
+      "Alkane"
+    ],
+    "correctIndex": 0,
+    "explanation": "Many aliphatic aldehydes reduce Cu2+ in Fehling solution to brick-red Cu2O on warming. Ethers, tertiary amines and alkanes do not give this characteristic test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution produces a deep blue colour when freshly prepared starch solution is added in the presence of iodine. Which ion is most directly associated with the oxidizing test involving iodide in qualitative analysis?",
+    "options": [
+      "Fe3+",
+      "Na+",
+      "K+",
+      "Ca2+"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fe3+ can oxidize iodide to iodine, and iodine forms a deep blue complex with starch. Thus Fe3+ is associated with this characteristic redox-based observation.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with BaCl2, and the precipitate dissolves on adding dilute HCl with effervescence. Which anion is most consistent with these observations?",
+    "options": [
+      "SO4^2−",
+      "CO3^2−",
+      "Cl−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "BaCO3 forms a white precipitate with BaCl2 and dissolves in dilute HCl with evolution of CO2. BaSO4, in contrast, remains insoluble in dilute HCl.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In an acid-base titration, 20.0 mL of 0.10 M HCl exactly neutralizes a NaOH solution. If 25.0 mL of NaOH is required, what is its molarity?",
+    "options": [
+      "0.050 M",
+      "0.080 M",
+      "0.100 M",
+      "0.125 M"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moles of HCl = 0.0200 × 0.10 = 0.00200 mol. Since HCl and NaOH react 1:1, 25.0 mL NaOH contains 0.00200 mol, so M = 0.00200/0.0250 = 0.080 M.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution gives a brick-red precipitate with Fehling's solution on warming. Which type of compound is most consistent with this observation?",
+    "options": [
+      "A typical ketone",
+      "An aldehyde capable of reducing Cu2+",
+      "An ether",
+      "A tertiary amine"
+    ],
+    "correctIndex": 1,
+    "explanation": "Reducing aldehydes reduce Cu2+ in Fehling's solution to Cu2O, producing a brick-red precipitate on heating. Therefore the observation indicates a suitable reducing aldehyde.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In a flame test, sodium salts characteristically produce which flame colour?",
+    "options": [
+      "Brick red",
+      "Golden yellow",
+      "Apple green",
+      "Lilac"
+    ],
+    "correctIndex": 1,
+    "explanation": "Excited sodium atoms emit characteristic yellow light when returning to lower energy states, producing the familiar golden-yellow flame.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a violet flame and forms a white precipitate with sodium tetraphenylborate under suitable conditions. Which cation is indicated?",
+    "options": [
+      "Na+",
+      "K+",
+      "Ca2+",
+      "Ba2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Potassium ions produce a lilac or violet flame and can form a characteristic precipitate with sodium tetraphenylborate. Sodium gives an intense yellow flame instead.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with AgNO3 after acidification with dilute HNO3. The precipitate dissolves in aqueous ammonia. Which ion is present?",
+    "options": [
+      "Cl−",
+      "NO3−",
+      "SO4^2−",
+      "CO3^2−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cl− forms white AgCl with AgNO3, and AgCl dissolves in aqueous ammonia because of complex formation with NH3. Acidification removes interfering carbonate ions before the test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which gas is evolved when a carbonate salt is treated with dilute HCl and turns limewater milky?",
+    "options": [
+      "SO2",
+      "CO2",
+      "NH3",
+      "H2S"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbonates react with dilute HCl to release CO2. Passing CO2 through limewater forms insoluble CaCO3, producing the characteristic milky appearance.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt gives a violet flame and its aqueous solution forms a yellow precipitate with sodium cobaltinitrite under suitable conditions. The cation is most likely:",
+    "options": [
+      "Na+",
+      "K+",
+      "Ca2+",
+      "Ba2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Potassium gives a characteristic lilac or violet flame and forms yellow potassium cobaltinitrite, K3[Co(NO2)6], under the appropriate confirmatory test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution containing chloride ions is acidified with dilute HNO3 before adding AgNO3 during qualitative analysis. The acidification is mainly done to:",
+    "options": [
+      "Convert chloride into chlorine",
+      "Remove interfering anions such as carbonate that could also form precipitates with Ag+",
+      "Increase the concentration of Ag+",
+      "Reduce Ag+ to metallic silver"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dilute HNO3 removes interfering carbonate and similar ions that can form silver precipitates. Nitrate does not introduce a precipitating anion, allowing AgCl formation to be observed specifically.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A compound gives a positive Tollens test but a negative iodoform test. Which compound is most consistent with both observations?",
+    "options": [
+      "Ethanal",
+      "Propanone",
+      "Propanal",
+      "Ethanol"
+    ],
+    "correctIndex": 2,
+    "explanation": "Propanal is an aldehyde and therefore gives Tollens' test, but it lacks the CH3CO- group required for the iodoform reaction. Hence it gives the stated combination of results.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with AgNO3 that dissolves in dilute ammonia. Which anion is indicated?",
+    "options": [
+      "Cl-",
+      "Br-",
+      "I-",
+      "SO4^2-"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl forms a white precipitate that dissolves in dilute NH3 due to formation of the soluble diamminesilver(I) complex. AgBr requires more concentrated ammonia, while AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A salt solution gives a white precipitate with AgNO3 that dissolves in dilute aqueous ammonia. Which ion is indicated?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "NO3−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ag+ reacts with Cl− to form white AgCl, which dissolves in dilute aqueous ammonia due to formation of a soluble diamminesilver(I) complex. AgBr is less soluble in ammonia and AgI is essentially insoluble.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which reagent is most appropriate for detecting an aldehyde through formation of a silver mirror?",
+    "options": [
+      "Tollens' reagent",
+      "Lucas reagent",
+      "FeCl3 solution",
+      "Bromine water"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tollens' reagent contains the diamminesilver(I) complex, which is reduced by aldehydes to metallic silver. The deposited silver produces the characteristic silver-mirror test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A compound gives a positive sodium fusion test for nitrogen, and its aqueous extract gives Prussian blue colour after treatment with freshly prepared FeSO4 and subsequent acidification. Which element is confirmed?",
+    "options": [
+      "Sulfur",
+      "Nitrogen",
+      "Halogen",
+      "Phosphorus"
+    ],
+    "correctIndex": 1,
+    "explanation": "In Lassaigne's test, nitrogen is converted into cyanide in the sodium fusion extract. Treatment with FeSO4 followed by acidification produces ferric ferrocyanide, giving the characteristic Prussian blue colour.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which indicator is most suitable for titrating a weak acid with a strong base?",
+    "options": [
+      "Methyl orange",
+      "Phenolphthalein",
+      "Methyl red only",
+      "Starch"
+    ],
+    "correctIndex": 1,
+    "explanation": "A weak acid–strong base titration has an equivalence point above pH 7, so phenolphthalein, whose transition range lies in the basic region, is appropriate.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution containing Cl−, Br− and I− is treated with AgNO3 followed by dilute NH3. Which precipitate would remain undissolved under these conditions?",
+    "options": [
+      "AgCl",
+      "AgBr",
+      "AgI",
+      "All three dissolve completely"
+    ],
+    "correctIndex": 2,
+    "explanation": "AgNO3 precipitates the halides as silver halides. AgCl dissolves in dilute NH3, whereas AgBr requires concentrated NH3 and AgI remains insoluble, so AgI remains.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In paper chromatography, a solute travels 6.0 cm while the solvent front travels 10.0 cm. What is the Rf value of the solute?",
+    "options": [
+      "0.40",
+      "0.60",
+      "1.67",
+      "4.00"
+    ],
+    "correctIndex": 1,
+    "explanation": "Rf = distance travelled by solute / distance travelled by solvent front = 6.0/10.0 = 0.60.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which observation most specifically indicates the presence of NH4+ in a salt during qualitative analysis?",
+    "options": [
+      "A pungent gas is evolved on warming the salt with a strong base and turns moist red litmus blue",
+      "A yellow precipitate forms with AgNO3",
+      "A white precipitate forms with BaCl2 and remains insoluble in dilute acid",
+      "A brown ring appears with freshly prepared FeSO4 and nitrate reagent"
+    ],
+    "correctIndex": 0,
+    "explanation": "NH4+ reacts with a strong base on warming to liberate NH3 gas. Ammonia has a pungent smell and turns moist red litmus paper blue, providing the characteristic test.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a pale yellow precipitate with AgNO3 that dissolves only in concentrated NH3 solution. Which halide ion is indicated?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "F−"
+    ],
+    "correctIndex": 1,
+    "explanation": "AgBr forms a pale yellow precipitate and dissolves in concentrated ammonia. AgCl dissolves in dilute ammonia, whereas AgI is insoluble in ammonia.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In Lassaigne's test, a sodium fusion extract gives a violet colour with sodium nitroprusside. This observation most strongly indicates the presence of",
+    "options": [
+      "nitrogen only",
+      "sulphur",
+      "halogen only",
+      "phosphorus only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sulphur in the organic compound can produce sulphide ions in the sodium fusion extract, which give a violet colour with sodium nitroprusside.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which substance is commonly used as a primary standard for standardising an acid solution in volumetric analysis?",
+    "options": [
+      "Na2CO3",
+      "NaOH",
+      "HCl",
+      "NH4OH"
+    ],
+    "correctIndex": 0,
+    "explanation": "Anhydrous sodium carbonate is sufficiently pure, stable and non-hygroscopic, so it is commonly used as a primary standard for standardising strong acids.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a white precipitate with BaCl2 even after acidification with dilute HCl, and the precipitate remains insoluble in dilute acid. Which anion is indicated?",
+    "options": [
+      "CO3^2−",
+      "SO4^2−",
+      "Cl−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "Sulfate ions form white BaSO4 with Ba2+, and BaSO4 remains insoluble in dilute acids. Acidification also removes carbonate interference, making sulfate the indicated ion.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A salt solution gives a cream precipitate with AgNO3 after acidification with dilute HNO3. Which anion is indicated?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "NO3−"
+    ],
+    "correctIndex": 1,
+    "explanation": "AgBr is a cream-coloured precipitate, whereas AgCl is white and AgI is yellow. Therefore the observation indicates bromide ions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt produces a brick-red flame and forms a white precipitate with ammonium oxalate under suitable conditions. The cation is:",
+    "options": [
+      "Na+",
+      "Ca2+",
+      "K+",
+      "Ba2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ca2+ gives a brick-red flame and forms white calcium oxalate, CaC2O4, with ammonium oxalate. Na+ gives a yellow flame and K+ gives a lilac flame.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "In qualitative analysis, which gas is evolved when a carbonate reacts with a dilute acid?",
+    "options": [
+      "H2",
+      "CO2",
+      "SO2",
+      "NH3"
+    ],
+    "correctIndex": 1,
+    "explanation": "Carbonates react with dilute acids to form the corresponding salt, water and CO2. The evolved CO2 turns limewater milky due to formation of CaCO3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "Which indicator is commonly used in a strong acid–strong base titration because its colour change occurs near the equivalence point?",
+    "options": [
+      "Phenolphthalein",
+      "Starch",
+      "Methyl orange only",
+      "Potassium permanganate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Phenolphthalein changes from colourless to pink over a mildly basic pH range and is suitable for many strong acid–strong base titrations. The exact indicator choice can depend on the titration conditions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A solution gives a white precipitate with AgNO3 that dissolves readily in dilute aqueous ammonia. Which anion is present?",
+    "options": [
+      "Cl−",
+      "Br−",
+      "I−",
+      "SO4²−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cl− forms white AgCl with AgNO3, and AgCl dissolves in dilute ammonia because of formation of the soluble diamminesilver(I) complex. AgBr requires concentrated ammonia, while AgI is essentially insoluble.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "Which reagent is used in the silver mirror test for aldehydes?",
+    "options": [
+      "Tollens' reagent",
+      "Lucas reagent",
+      "FeCl3 solution",
+      "Benedict's reagent"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tollens' reagent contains the diamminesilver(I) complex and is reduced by aldehydes to metallic silver, producing a characteristic silver mirror.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a brick-red precipitate with Fehling's solution after suitable treatment. Which type of species is most directly indicated by this test?",
+    "options": [
+      "A reducing sugar or aliphatic aldehyde",
+      "A tertiary amine",
+      "A non-reducing disaccharide only",
+      "A saturated hydrocarbon"
+    ],
+    "correctIndex": 0,
+    "explanation": "Fehling's solution is reduced by many aliphatic aldehydes and reducing sugars, producing red Cu2O. Thus a positive test indicates a reducing species of this type.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In qualitative analysis, addition of dilute HCl to a salt solution produces a gas that turns limewater milky. Which anion is most directly indicated?",
+    "options": [
+      "CO3^2−",
+      "SO4^2−",
+      "NO3−",
+      "Cl−"
+    ],
+    "correctIndex": 0,
+    "explanation": "Carbonate ions react with dilute HCl to release CO2. The gas turns limewater milky because CaCO3 precipitates when CO2 is passed through Ca(OH)2 solution.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In a titration, 25.0 mL of 0.20 M HCl completely neutralizes a NaOH solution. If 20.0 mL of the NaOH solution is required, what is its molarity?",
+    "options": [
+      "0.10 M",
+      "0.20 M",
+      "0.25 M",
+      "0.40 M"
+    ],
+    "correctIndex": 2,
+    "explanation": "Moles of HCl = 0.0250 × 0.20 = 0.00500 mol. Since HCl and NaOH react 1:1, 20.0 mL NaOH contains 0.00500 mol, giving M = 0.00500/0.0200 = 0.25 M.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A salt solution gives a deep blue solution when excess NH3 is added to a precipitate initially formed with NaOH. Which metal ion is most likely present?",
+    "options": [
+      "Cu2+",
+      "Fe3+",
+      "Al3+",
+      "Ca2+"
+    ],
+    "correctIndex": 0,
+    "explanation": "Cu2+ initially forms Cu(OH)2 with NaOH and, in excess NH3, forms the deep-blue tetraamminecopper(II) complex. This characteristic colour is used as a qualitative test for Cu2+.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which ion gives a brick-red precipitate when an alkaline solution containing the ion is warmed with Fehling's solution?",
+    "options": [
+      "Cl−",
+      "Cu2+",
+      "Ag+",
+      "Zn2+"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fehling's solution itself contains Cu2+, which is reduced by suitable reducing compounds to Cu2O, giving a brick-red precipitate. Thus Cu2+ is the metal ion involved in the characteristic Fehling reaction.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A compound containing an aldehyde group gives a positive Tollens test. What substance is deposited on the inner surface of a clean test tube?",
+    "options": [
+      "Copper metal",
+      "Silver metal",
+      "Iron metal",
+      "Mercury"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aldehydes reduce the diamminesilver(I) complex in Tollens reagent to metallic silver. Under suitable conditions, the silver coats the test tube as a characteristic silver mirror.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "Which gas turns limewater milky when passed through it in moderate amount?",
+    "options": [
+      "O2",
+      "N2",
+      "CO2",
+      "H2"
+    ],
+    "correctIndex": 2,
+    "explanation": "CO2 reacts with Ca(OH)2 to form insoluble CaCO3, producing a milky appearance. Therefore the gas is carbon dioxide.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "Which indicator is commonly suitable for a titration of a strong acid with a strong base?",
+    "options": [
+      "Phenolphthalein only",
+      "Methyl orange only",
+      "Either methyl orange or phenolphthalein",
+      "Starch only"
+    ],
+    "correctIndex": 2,
+    "explanation": "A strong acid–strong base titration has a large, steep pH change around the equivalence point, so both methyl orange and phenolphthalein can provide suitable end points.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "A solution containing Cl− is treated with AgNO3 solution in the presence of dilute HNO3. What observation is expected?",
+    "options": [
+      "Yellow precipitate of AgI",
+      "Cream precipitate of AgBr",
+      "White precipitate of AgCl",
+      "Black precipitate of Ag2S"
+    ],
+    "correctIndex": 2,
+    "explanation": "Chloride ions react with Ag+ to form AgCl, which is a white precipitate. Dilute nitric acid is used to acidify the solution without introducing interfering chloride ions.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "Which reagent gives a characteristic coloured complex with phenol in a simple qualitative test?",
+    "options": [
+      "Neutral FeCl3 solution",
+      "NaCl solution",
+      "Dilute HCl",
+      "BaCl2 solution"
+    ],
+    "correctIndex": 0,
+    "explanation": "Phenol gives a characteristic violet or purple coloration with neutral ferric chloride due to formation of a ferric phenolate-type complex.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "moderate",
+    "questionText": "A white precipitate of AgCl is obtained in qualitative analysis. Which observation best distinguishes AgCl from AgBr?",
+    "options": [
+      "AgCl dissolves in dilute NH3, whereas AgBr requires concentrated NH3",
+      "AgCl is insoluble in NH3, whereas AgBr dissolves in dilute NH3",
+      "Both dissolve equally in dilute NH3",
+      "AgCl dissolves only in concentrated HCl"
+    ],
+    "correctIndex": 0,
+    "explanation": "AgCl dissolves readily in dilute aqueous NH3 due to formation of the diamminesilver(I) complex. AgBr is less soluble in ammonia and generally requires concentrated NH3.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "In qualitative analysis, a solution containing NH4+ ions is warmed with NaOH. Which gas is evolved?",
+    "options": [
+      "CO2",
+      "SO2",
+      "NH3",
+      "Cl2"
+    ],
+    "correctIndex": 2,
+    "explanation": "NH4+ reacts with OH− to form NH3 and water: NH4+ + OH− → NH3 + H2O. The liberated ammonia has a characteristic pungent smell and turns moist red litmus blue.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "easy",
+    "questionText": "Which reagent is commonly used to test for chloride ions by formation of a white precipitate?",
+    "options": [
+      "AgNO3",
+      "BaCl2",
+      "NaOH",
+      "NH4OH only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chloride ions react with AgNO3 to form white AgCl precipitate: Ag+ + Cl− → AgCl.",
+    "imageUrl": null
+  },
+  {
+    "examMode": "JEE",
+    "subject": "Chemistry",
+    "chapter": "Practical Chemistry",
+    "difficulty": "tough",
+    "questionText": "Which compound is expected to give a positive carbylamine test when heated with chloroform and alcoholic KOH?",
+    "options": [
+      "Ethylamine",
+      "Diethylamine",
+      "Triethylamine",
+      "Acetamide"
+    ],
+    "correctIndex": 0,
+    "explanation": "The carbylamine reaction is given only by primary amines. Ethylamine is a primary amine and forms the characteristic foul-smelling ethyl isocyanide.",
+    "imageUrl": null
+  }
+]

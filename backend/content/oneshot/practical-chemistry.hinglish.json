@@ -2,7 +2,8 @@
  "slug": "practical-chemistry",
  "subject": "Chemistry",
  "chapters": {
-  "NEET": "Practical Chemistry"
+  "NEET": "Practical Chemistry",
+  "JEE": "Practical Chemistry"
  },
  "title": "Practical Chemistry",
  "readMinutes": 12,
@@ -10,7 +11,7 @@
   "Organic compounds mein extra elements (N, S, halogens) Lassaigne ke sodium fusion extract se detect hote hain; functional groups (alcohol, phenol, aldehyde, carboxyl, amine) simple colour ya precipitate tests se pehchaante hain.",
   "Inorganic salt analysis mein ek cation aur ek anion dhoondhte hain: anions ke liye dilute aur concentrated H₂SO₄ tests, phir group reagents cations ko group 0 se VI mein baant-te hain.",
   "KMnO₄ ki oxalic acid aur Mohr's salt ke saath redox titration mein indicator nahi chahiye — KMnO₄ khud indicator hai (colourless se permanent halka gulabi).",
-  "Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) aur har step ki chemistry NEET ke common sawal hain."
+  "Lab preparations (Mohr's salt, potash alum, acetanilide, p-nitroacetanilide, aniline yellow, iodoform) aur har step ki chemistry NEET aur JEE Main dono ke common sawal hain."
  ],
  "formulas": [
   {
