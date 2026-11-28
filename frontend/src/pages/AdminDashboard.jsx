@@ -16,6 +16,7 @@ import { useGoBack } from "../hooks/useGoBack.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { ReportedQuestions } from "../components/admin/ReportedQuestions.jsx";
 import { SupportInbox } from "../components/admin/SupportInbox.jsx";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 const nf = new Intl.NumberFormat("en-IN");
 const inr = (v) => `₹${nf.format(Math.round(v ?? 0))}`;
@@ -178,7 +179,7 @@ export default function AdminDashboard() {
       <main className="max-w-5xl mx-auto px-4 py-5 space-y-4">
         {error && <p className="text-xs text-red-500">{error}</p>}
         {!s ? (
-          <div className="flex justify-center py-20"><Spinner size={22} /></div>
+          <PageLoader />
         ) : (
           <>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">

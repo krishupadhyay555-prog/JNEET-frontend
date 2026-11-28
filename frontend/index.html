@@ -31,7 +31,16 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Boot screen: visible from the very first byte (Slow 3G), replaced by the app. -->
+    <style>
+      #boot{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#F6F5F2;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#6B6572}
+      html:not(.light) #boot{background:#10121a;color:#9AA0AE}
+      #boot img{width:56px;height:56px;border-radius:16px}
+      #boot i{width:22px;height:22px;border:2px solid #0D9488;border-right-color:transparent;border-radius:50%;animation:bootspin 1.1s linear infinite}
+      @keyframes bootspin{to{transform:rotate(360deg)}}
+      @media (prefers-reduced-motion:reduce){#boot i{animation:none}}
+    </style>
+    <div id="root"><div id="boot" aria-busy="true"><img src="/icon-192.png" alt="JNEET+ AI" width="56" height="56" /><i></i><span>Loading JNEET+ AI…</span></div></div>
     <noscript>JNEET+ AI needs JavaScript to run. Please enable it in your browser settings.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>

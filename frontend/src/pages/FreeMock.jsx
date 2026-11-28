@@ -16,6 +16,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { predictJee, predictNeet } from "../utils/rankPredict.js";
 import { freeMockApi, store, FM_ACTIVE, rememberFreeMockSource } from "../api/freeMockApi.js";
 import { EXAMS, friendly, fmtTime } from "../components/freemock/shared.js";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 // The CBT screen (with the maths renderer) is a separate chunk, fetched
 // while the student is still choosing the exam — fast on Slow 3G.
@@ -40,9 +41,9 @@ export default function FreeMock() {
 
   useEffect(() => { document.title = "Free JEE Main & NEET Quick Mock — JNEET+ AI"; }, []);
 
-  if (phase === "loading") return <div className="min-h-screen flex items-center justify-center"><Spinner size={24} /></div>;
+  if (phase === "loading") return <PageLoader full />;
   if (phase === "test") {
-    return <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Spinner size={24} /></div>}><Runner paper={paper} onDone={(r) => { setResult({ exam: paper.exam, attemptId: paper.attemptId, ...r }); setPhase("result"); window.scrollTo(0, 0); }} /></Suspense>;
+    return <Suspense fallback={<PageLoader full />}><Runner paper={paper} onDone={(r) => { setResult({ exam: paper.exam, attemptId: paper.attemptId, ...r }); setPhase("result"); window.scrollTo(0, 0); }} /></Suspense>;
   }
   return (
     <PublicShell>

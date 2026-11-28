@@ -19,18 +19,22 @@
 import { useState, useEffect } from "react";
 
 const LOADING_LINES = [
-  "Loading your session...",
-  "Waking up your AI Mentor...",
-  "Getting your progress ready...",
+  "Loading your session…",
+  "Getting your progress ready…",
 ];
 
 export function LoadingScreen() {
   const [lineIndex, setLineIndex] = useState(0);
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setSlow(true), 15000);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => {
-      setLineIndex((i) => (i + 1) % LOADING_LINES.length);
-    }, 1400);
+      setLineIndex((i) => Math.min(i + 1, LOADING_LINES.length - 1));
+    }, 1800);
     return () => clearInterval(id);
   }, []);
 
@@ -46,10 +50,16 @@ export function LoadingScreen() {
 
       <p
         key={lineIndex}
-        className="text-sm text-gray-600 animate-fade-in font-medium"
+        className="text-sm text-gray-600 animate-fade-in font-medium min-h-[20px]"
       >
-        {LOADING_LINES[lineIndex]}
+        {slow ? "Taking longer than usual — your internet may be slow." : LOADING_LINES[lineIndex]}
       </p>
+      {slow ? (
+        <button type="button" onClick={() => window.location.reload()}
+          className="min-h-[44px] px-5 rounded-xl border border-bg-border text-sm font-semibold text-fg-primary">
+          Retry
+        </button>
+      ) : null}
     </div>
   );
 }

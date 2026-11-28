@@ -14,6 +14,7 @@ import { Spinner } from "../components/ui/Spinner.jsx";
 import { MathText } from "../components/learn/MathText.jsx";
 import { DiagramGallery } from "../components/learn/DiagramGallery.jsx";
 import { diagramsFor } from "../api/diagrams.js";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 const TABS = [
   { id: "summary",  label: "Summary" },
@@ -147,7 +148,7 @@ export default function OneShotChapter() {
           </div>
         )}
         {loading ? (
-          <div className="flex justify-center py-16"><Spinner size={20} /></div>
+          <PageLoader />
         ) : error ? (
           <p className="text-sm text-gray-600 text-center pt-10">{error}</p>
         ) : tab === "summary" ? (

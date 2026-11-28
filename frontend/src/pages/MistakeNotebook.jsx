@@ -14,6 +14,7 @@ import { mistakesApi } from "../api/testApi.js";
 import { CbtQuestion } from "../components/tests/CbtQuestion.jsx";
 import { ExplainWithAi } from "../components/tests/ExplainWithAi.jsx";
 import { MathTex } from "../components/learn/MathTex.jsx";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 const TABS = [["due", "Due today"], ["open", "All open"], ["cleared", "Cleared"]];
 
@@ -98,6 +99,7 @@ function Review({ items, onDone }) {
 export default function MistakeNotebook() {
   const goBack = useGoBack("/dashboard");
   const [summary, setSummary] = useState(null);
+  const [loadFailed, setLoadFailed] = useState(false);
   const [tab, setTab] = useState("due");
   const [subject, setSubject] = useState("");
   const [items, setItems] = useState([]);
@@ -112,12 +114,13 @@ export default function MistakeNotebook() {
     mistakesApi.summary()
       .then(async ({ data }) => {
         if (off) return;
+        setLoadFailed(false);
         setSummary(data);
         if (!data.unlocked) return;
         const res = await mistakesApi.list({ status: tab, ...(subject ? { subject } : {}), limit: 50 });
         if (!off) setItems(res.data.items);
       })
-      .catch(() => { if (!off) toast.error("Could not load your Mistake Notebook."); });
+      .catch(() => { if (!off) setLoadFailed(true); });
     return () => { off = true; };
   }, [tab, subject, reloadKey]);
 
@@ -143,8 +146,13 @@ export default function MistakeNotebook() {
       <div className="max-w-2xl mx-auto px-5 py-6 space-y-4">
         {reviewing ? (
           <Review items={reviewing} onDone={() => { setReviewing(null); load(); toast.success("Revision done!"); }} />
+        ) : !summary && loadFailed ? (
+          <div className="min-h-[40vh] flex flex-col items-center justify-center gap-3 text-center">
+            <p className="text-sm text-gray-600">Couldn&apos;t load your Mistake Notebook. Please check your internet.</p>
+            <button type="button" onClick={load} className="min-h-[44px] px-5 rounded-xl bg-violet-600 text-white text-sm font-semibold">Try again</button>
+          </div>
         ) : !summary ? (
-          <p className="text-sm text-gray-600">Loading…</p>
+          <PageLoader />
         ) : (
           <>
             <p className="text-sm text-gray-600">Every question you get wrong in a test or revision lands here. It comes back after 1 day, then 3 days — get it right twice in a row and it&apos;s cleared.</p>

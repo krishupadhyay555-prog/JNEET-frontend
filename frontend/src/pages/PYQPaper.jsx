@@ -12,6 +12,7 @@ import { useGoBack } from "../hooks/useGoBack.js";
 import { pyqApi } from "../api/pyqApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { PyqQuestion } from "../components/pyq/PyqQuestion.jsx";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 export default function PYQPaper() {
   const { id } = useParams();
@@ -61,7 +62,7 @@ export default function PYQPaper() {
 
       <div className="max-w-2xl mx-auto px-5 py-6 space-y-4">
         {state.loading ? (
-          <div className="flex justify-center py-16"><Spinner size={20} /></div>
+          <PageLoader />
         ) : state.error ? (
           <p className="text-xs text-red-500 text-center pt-8">{state.error}</p>
         ) : (

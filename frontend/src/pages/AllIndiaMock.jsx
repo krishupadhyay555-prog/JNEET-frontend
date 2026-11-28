@@ -13,6 +13,7 @@ import { useGoBack } from "../hooks/useGoBack.js";
 import { allIndiaApi } from "../api/testApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import toast from "react-hot-toast";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 const IST = { timeZone: "Asia/Kolkata" };
 const fmtDay = (d) => new Date(d).toLocaleDateString("en-IN", { ...IST, weekday: "long", day: "numeric", month: "short" });
@@ -149,7 +150,7 @@ export default function AllIndiaMock() {
 
       <div className="max-w-2xl mx-auto px-5 py-8 space-y-5">
         {!data ? (
-          <div className="py-16 flex justify-center"><Spinner size={20} /></div>
+          <PageLoader />
         ) : data.failed ? (
           <p className="text-sm text-gray-600 text-center py-10">Couldn&apos;t load the All-India Mock. Check your internet and open this page again.</p>
         ) : !cur ? (
