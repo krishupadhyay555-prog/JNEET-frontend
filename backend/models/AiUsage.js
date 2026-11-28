@@ -32,6 +32,7 @@ const aiUsageSchema = new mongoose.Schema(
 );
 
 aiUsageSchema.index({ userId: 1, createdAt: -1 });
+aiUsageSchema.index({ userId: 1, day: 1 });   // monthly ₹ cap: { userId, day >= month start }
 // Keep the ledger for a year, then let MongoDB drop it.
 aiUsageSchema.index({ createdAt: 1 }, { expireAfterSeconds: 365 * 24 * 60 * 60 });
 

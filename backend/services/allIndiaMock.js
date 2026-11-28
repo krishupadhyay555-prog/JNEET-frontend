@@ -103,7 +103,23 @@ export function studentCode(mockId, userId) {
 }
 
 // Sittings that count: submitted within the time limit (+ 10 min grace).
-async function countedSittings(mock) {
+// Cached per mock (30 s while open, 10 min once closed) so a thousand
+// students opening the leaderboard after close don't each load every sitting.
+const sittingsCache = new Map(); // mockId → { at, ttl, rows }
+export function _resetLeaderboardCache() { sittingsCache.clear(); }
+async function countedSittings(mock, now = new Date()) {
+  const key = String(mock._id);
+  const hit = sittingsCache.get(key);
+  // A cheap indexed count tells us if anyone submitted since: then reload.
+  const submitted = await TestAttempt.countDocuments({ allIndiaMockId: mock._id, status: "submitted" });
+  if (hit && hit.submitted === submitted && now.getTime() - hit.at < hit.ttl) return hit.rows;
+  const rows = await loadSittings(mock);
+  const ttl = now > mock.closesAt ? 10 * 60 * 1000 : 30 * 1000;
+  sittingsCache.set(key, { at: now.getTime(), ttl, rows, submitted });
+  if (sittingsCache.size > 20) sittingsCache.delete(sittingsCache.keys().next().value);
+  return rows;
+}
+async function loadSittings(mock) {
   const rows = await TestAttempt.find({ allIndiaMockId: mock._id, status: "submitted" })
     .select("userId marksObtained startedAt submittedAt").lean();
   const limit = mock.durationMinutes * 60 * 1000 + GRACE_MS;
@@ -118,7 +134,7 @@ async function countedSittings(mock) {
 }
 
 export async function leaderboard(mock, userId, now = new Date()) {
-  const rows = await countedSittings(mock);
+  const rows = await countedSittings(mock, now);
   const n = rows.length;
   const top = rows.slice(0, 10).map((r, i) => ({
     rank: i + 1,
