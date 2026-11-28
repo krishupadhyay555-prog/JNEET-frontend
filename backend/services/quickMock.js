@@ -112,8 +112,11 @@ export function pickSpread(items, n, seen, key) {
   return out;
 }
 
+// PYQ options keep NTA's order: the saved solutions (Explain with AI) say
+// "option (3)" against the original paper, so shuffling would contradict them.
 function shuffledPyq(p) {
   const snap = pyqSnapshot(p);
+  if (snap) return snap;
   const canShuffle = snap.type === "mcq" && !snap.optionsInImage && !(snap.optionImages ?? []).some(Boolean)
     && Array.isArray(snap.options) && snap.options.length === 4 && snap.options.every((o) => String(o ?? "").trim());
   if (!canShuffle) return snap;

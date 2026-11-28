@@ -11,6 +11,7 @@
 
 import TestAttempt from "../models/TestAttempt.js";
 import { buildWMSSummary, foldAttempts } from "../services/wmsScoringService.js";
+import AllIndiaMock from "../models/AllIndiaMock.js";
 
 // Only the most recent attempts count: a student who has improved must see
 // that improvement, and the work done per request stays bounded.
@@ -26,10 +27,18 @@ export const getSummary = async (req, res, next) => {
     })
       .sort({ submittedAt: -1 })
       .limit(WMS_RECENT_ATTEMPTS)
-      .select("questions.subject questions.chapter questions.selectedIndex questions.correctIndex")
+      .select("allIndiaMockId questions.subject questions.chapter questions.selectedIndex questions.correctIndex")
       .lean();
 
-    const summary = buildWMSSummary(foldAttempts(attempts));
+    // All-India results stay hidden until that mock closes (per-chapter
+    // right/wrong would reveal the key to friends still sitting it).
+    const aiIds = attempts.map((a) => a.allIndiaMockId).filter(Boolean);
+    const open = aiIds.length
+      ? new Set((await AllIndiaMock.find({ _id: { $in: aiIds }, closesAt: { $gt: new Date() } }).select("_id").lean()).map((m) => String(m._id)))
+      : new Set();
+    const visible = open.size ? attempts.filter((a) => !a.allIndiaMockId || !open.has(String(a.allIndiaMockId))) : attempts;
+
+    const summary = buildWMSSummary(foldAttempts(visible));
     summary.window = { attempts: attempts.length, max: WMS_RECENT_ATTEMPTS };
 
     return res.json({ success: true, summary });

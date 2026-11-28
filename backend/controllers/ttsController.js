@@ -6,6 +6,11 @@ import { checkMonthlyCap } from "../services/ai/monthlyCap.js";
 // POST /api/ai/tts { text } → audio/mpeg (Elite; route is tier-gated)
 export const tts = async (req, res, next) => {
   try {
+    // Same consent lock as chat: an under-18 student whose parent hasn't
+    // approved (or withdrew approval) can't use any AI, voice included.
+    if (req.user.aiLocked) {
+      return res.status(403).json({ success: false, code: "AI_LOCKED", error: "AI features are locked until your parent approves." });
+    }
     if (!isAiConfigured() || await isOverBudget()) {
       return res.status(503).json({ success: false, code: "AI_BUSY", error: "Voice is busy right now. Please try again later." });
     }
