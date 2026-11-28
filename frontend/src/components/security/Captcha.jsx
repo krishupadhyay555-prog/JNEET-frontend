@@ -1,7 +1,9 @@
 // ============================================================
 //  JNEET+ AI — components/security/Captcha.jsx
-//  Invisible Cloudflare Turnstile. Renders nothing visible unless
-//  Cloudflare needs the student to tick a box. Use with a ref:
+//  Visible Cloudflare Turnstile box (founder, 28 Nov 2026: show it on
+//  login, register, forgot password, contact and the free mock). It
+//  checks on load and shows a tick; Cloudflare asks for a click only if
+//  it is suspicious. Use with a ref:
 //     const captchaRef = useRef(null);
 //     <Captcha ref={captchaRef} />
 //     const token = await captchaRef.current.getToken();   // fresh each call
@@ -35,12 +37,16 @@ export const Captcha = forwardRef(function Captcha(_props, ref) {
       widgetRef.current = ts.render(boxRef.current, {
         sitekey: SITE_KEY,
         execution: "execute",
-        appearance: "interaction-only",
+        appearance: "always",
+        size: "flexible",
         retry: "auto",
         callback: (token) => settle("resolve", token),
         "error-callback": () => settle("reject", new Error("captcha error")),
         "timeout-callback": () => settle("reject", new Error("captcha timeout")),
       });
+      // Run the check once on load so the student sees the "Success" tick
+      // before submitting. Submit still asks for a fresh single-use token.
+      try { ts.execute(widgetRef.current); } catch { /* retried on submit */ }
       return ts;
     });
     readyRef.current.catch(() => { /* surfaced by getToken() */ });
@@ -75,5 +81,5 @@ export const Captcha = forwardRef(function Captcha(_props, ref) {
   }), []);
 
   if (!captchaEnabled) return null;
-  return <div ref={boxRef} className="flex justify-center empty:hidden" aria-live="polite" />;
+  return <div ref={boxRef} className="flex justify-center w-full min-h-[65px]" aria-live="polite" />;
 });
