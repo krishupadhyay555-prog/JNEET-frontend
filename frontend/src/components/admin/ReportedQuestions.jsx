@@ -10,6 +10,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Flag } from "lucide-react";
 import { reportApi } from "../../api/testApi.js";
 import { Spinner } from "../ui/Spinner.jsx";
+import { PageLoader } from "../ui/PageLoader.jsx";
 
 const TABS = [["open", "Open"], ["fixed", "Fixed"], ["dismissed", "Dismissed"]];
 const dt = (d) => (d ? new Date(d).toLocaleString("en-IN", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" }) : "—");
@@ -53,7 +54,7 @@ export function ReportedQuestions() {
       </div>
       {error && <p className="text-xs text-tone-warn mb-2">{error}</p>}
       {!data ? (
-        <div className="flex justify-center py-6"><Spinner size={18} /></div>
+        <PageLoader size="sm" />
       ) : data.items.length === 0 ? (
         <p className="text-[12.5px] text-gray-600">{status === "open" ? "No open reports. 🎉" : "Nothing here yet."}</p>
       ) : (

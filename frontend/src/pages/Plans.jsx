@@ -17,6 +17,7 @@ import { paymentApi } from "../api/paymentApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
 import { isAppShell } from "../utils/appShell.js";
 import { loadCheckout, openCheckout, rupees, istDate } from "../utils/razorpay.js";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 const TIER_META = {
   free:  { name: "Free",  icon: Leaf,  tone: "text-emerald-600 bg-emerald-500/10" },
@@ -163,7 +164,7 @@ export default function Plans() {
         {error ? (
           <p className="text-xs text-red-500 text-center pt-8">{error}</p>
         ) : !catalog || !me ? (
-          <div className="flex justify-center py-16"><Spinner size={20} /></div>
+          <PageLoader />
         ) : inApp ? (
           <CurrentPlanBanner me={me} />
         ) : success ? (

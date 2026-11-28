@@ -14,6 +14,7 @@ import { Spinner } from "../components/ui/Spinner.jsx";
 import { paymentApi } from "../api/paymentApi.js";
 import { isAppShell } from "../utils/appShell.js";
 import { loadCheckout, openCheckout, rupees, istDate } from "../utils/razorpay.js";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 const NAMES = { pro: "Pro", elite: "Elite" };
 
@@ -83,7 +84,7 @@ export default function ParentPay() {
   } else if (loadError) {
     body = <Notice tone="error">{loadError}</Notice>;
   } else if (!info) {
-    body = <div className="flex justify-center py-6"><Spinner size={22} /></div>;
+    body = <PageLoader size="sm" />;
   } else if (done) {
     body = (
       <div className="text-center py-2 animate-fade-up">

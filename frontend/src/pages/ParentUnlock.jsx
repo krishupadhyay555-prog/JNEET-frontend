@@ -13,6 +13,7 @@ import { consentApi }          from "../api/authApi.js";
 import { AuthShell, SubmitButton, Notice } from "../components/auth/AuthShell.jsx";
 import { Spinner }             from "../components/ui/Spinner.jsx";
 import { CheckCircle2, ShieldCheck, XCircle } from "lucide-react";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 function Done({ icon, tone, title, children }) {
   return (
@@ -66,7 +67,7 @@ export default function ParentUnlock() {
   const { loading, info, error: loadError } = load;
   let body;
   if (loading) {
-    body = <div className="flex justify-center py-6"><Spinner size={22} /></div>;
+    body = <PageLoader size="sm" />;
   } else if (loadError) {
     body = <Notice tone="error">{loadError}</Notice>;
   } else if (info?.state === "invalid") {

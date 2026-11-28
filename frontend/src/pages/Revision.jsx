@@ -122,7 +122,7 @@ export default function Revision() {
 
         {loading ? (
           <div className="flex justify-center py-16">
-            <Spinner size={20} />
+            <Spinner size={22} className="text-violet-500" />
           </div>
         ) : chapters.length === 0 ? (
           <p className="text-[11px] text-gray-700 text-center pt-10">

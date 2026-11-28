@@ -11,6 +11,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { useGoBack } from "../hooks/useGoBack.js";
 import { oneshotApi } from "../api/learnApi.js";
 import { Spinner } from "../components/ui/Spinner.jsx";
+import { PageLoader } from "../components/ui/PageLoader.jsx";
 
 const SUBJECTS_BY_EXAM = {
   NEET: ["Physics", "Chemistry", "Biology"],
@@ -76,7 +77,7 @@ export default function OneShot() {
         </div>
 
         {state.loading ? (
-          <div className="flex justify-center py-16"><Spinner size={20} /></div>
+          <PageLoader />
         ) : state.error ? (
           <p className="text-xs text-red-500 text-center pt-8">{state.error}</p>
         ) : shown.length === 0 ? (

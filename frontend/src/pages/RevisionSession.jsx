@@ -140,7 +140,7 @@ export default function RevisionSession() {
   if (loading) {
     return (
       <div className="min-h-screen bg-bg-base flex items-center justify-center">
-        <Spinner size={20} />
+        <Spinner size={22} className="text-violet-500" />
       </div>
     );
   }
